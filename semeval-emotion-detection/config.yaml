@@ -1,0 +1,103 @@
+# Emotion Detection (SemEval-style)
+# Based on SemEval shared tasks for emotion detection
+#
+# This configuration supports multi-label emotion classification
+# with optional intensity ratings for detected emotions.
+#
+# Emotion Taxonomy (Ekman's basic emotions):
+# - Joy: Happiness, pleasure, contentment, elation
+# - Sadness: Grief, sorrow, melancholy, disappointment
+# - Fear: Anxiety, worry, terror, apprehension
+# - Anger: Frustration, irritation, rage, annoyance
+# - Surprise: Astonishment, amazement (can be positive or negative)
+# - Disgust: Revulsion, aversion, distaste
+#
+# Annotation Guidelines:
+# 1. Read the entire text before making judgments
+# 2. Select ALL emotions that are expressed or evoked
+# 3. An emotion is "expressed" if the author conveys feeling it
+# 4. An emotion is "evoked" if the text would cause readers to feel it
+# 5. Multiple emotions can co-occur (e.g., sad and angry)
+# 6. "Neutral" should only be selected if NO emotion is present
+# 7. For intensity, consider strength of emotional language
+
+port: 8000
+server_name: localhost
+task_name: "Emotion Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Multi-label emotion classification
+  - annotation_type: multiselect
+    name: emotions
+    description: "Select ALL emotions expressed or evoked by this text (select multiple if applicable)"
+    labels:
+      - "Joy"
+      - "Sadness"
+      - "Fear"
+      - "Anger"
+      - "Surprise"
+      - "Disgust"
+      - "Neutral"
+    label_colors:
+      "Joy": "#22c55e"
+      "Sadness": "#3b82f6"
+      "Fear": "#8b5cf6"
+      "Anger": "#ef4444"
+      "Surprise": "#f59e0b"
+      "Disgust": "#84cc16"
+      "Neutral": "#9ca3af"
+    tooltips:
+      "Joy": "Happiness, pleasure, contentment, elation, amusement, or positive excitement"
+      "Sadness": "Grief, sorrow, melancholy, disappointment, or loneliness"
+      "Fear": "Anxiety, worry, terror, apprehension, or nervousness about potential threats"
+      "Anger": "Frustration, irritation, rage, annoyance, or hostility"
+      "Surprise": "Astonishment, amazement, or unexpectedness (can be positive or negative)"
+      "Disgust": "Revulsion, aversion, distaste, or strong disapproval"
+      "Neutral": "No discernible emotion - factual or emotionally flat content"
+    min_selections: 1
+    max_selections: 7
+
+  # Step 2: Intensity rating for primary emotion
+  - annotation_type: likert
+    name: intensity
+    description: "How intense is the strongest emotion in this text?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very weak"
+      2: "Weak"
+      3: "Moderate"
+      4: "Strong"
+      5: "Very strong"
+    tooltips:
+      1: "Barely perceptible emotion, subtle hints"
+      2: "Mild emotional content, understated"
+      3: "Clear but not overwhelming emotion"
+      4: "Strong emotional language, clearly intense"
+      5: "Extremely intense, powerful emotional expression"
+
+  # Step 3: Confidence in annotation
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your emotion labels?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

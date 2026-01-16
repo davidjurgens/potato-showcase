@@ -1,0 +1,110 @@
+# Temporal Relation Annotation
+# Based on TimeML/TempEval annotation guidelines
+#
+# This task involves identifying temporal relations between:
+# - Events (actions, states, occurrences)
+# - Time expressions (dates, times, durations)
+#
+# Temporal Relations (TLINK types):
+# - BEFORE: Event 1 ends before Event 2 begins
+# - AFTER: Event 1 begins after Event 2 ends
+# - SIMULTANEOUS: Events occur at the same time
+# - INCLUDES: Event 1's timespan contains Event 2
+# - IS_INCLUDED: Event 1 is contained within Event 2's timespan
+# - VAGUE: Temporal relationship cannot be determined
+#
+# Annotation Guidelines:
+# 1. First identify all events (verbs, nominalizations, states)
+# 2. Identify all time expressions (dates, times, durations)
+# 3. For each pair of adjacent/related events, determine their temporal relation
+# 4. Use VAGUE only when there is genuine ambiguity
+# 5. Consider both explicit markers (before, after, then) and implicit ordering
+# 6. Pay attention to tense, aspect, and temporal adverbs
+
+port: 8000
+server_name: localhost
+task_name: "Temporal Relation Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Mark events
+  - annotation_type: span
+    name: events
+    description: "Highlight all events (actions, states, occurrences) in the text"
+    labels:
+      - "Event"
+      - "State"
+      - "Reporting"
+      - "Perception"
+      - "Aspectual"
+      - "Intentional"
+      - "Occurrence"
+    label_colors:
+      "Event": "#3b82f6"
+      "State": "#22c55e"
+      "Reporting": "#f59e0b"
+      "Perception": "#8b5cf6"
+      "Aspectual": "#06b6d4"
+      "Intentional": "#ec4899"
+      "Occurrence": "#6366f1"
+    tooltips:
+      "Event": "General action or happening (e.g., 'attacked', 'meeting')"
+      "State": "Ongoing condition or state (e.g., 'is president', 'remained')"
+      "Reporting": "Speech or communication act (e.g., 'said', 'announced')"
+      "Perception": "Sensing or perceiving (e.g., 'saw', 'heard', 'felt')"
+      "Aspectual": "Beginning, continuing, or ending (e.g., 'started', 'continued', 'finished')"
+      "Intentional": "Planning or wanting (e.g., 'planned', 'intended', 'tried')"
+      "Occurrence": "Natural or uncontrolled event (e.g., 'earthquake', 'storm')"
+    allow_overlapping: false
+
+  # Step 2: Mark time expressions
+  - annotation_type: span
+    name: time_expressions
+    description: "Highlight all time expressions (dates, times, durations)"
+    labels:
+      - "DATE"
+      - "TIME"
+      - "DURATION"
+      - "SET"
+    label_colors:
+      "DATE": "#f97316"
+      "TIME": "#eab308"
+      "DURATION": "#84cc16"
+      "SET": "#14b8a6"
+    tooltips:
+      "DATE": "Calendar date (e.g., 'January 15', '2024', 'last Monday')"
+      "TIME": "Clock time (e.g., '3 PM', 'noon', 'midnight')"
+      "DURATION": "Length of time (e.g., 'three hours', 'for a week')"
+      "SET": "Recurring time (e.g., 'every Monday', 'daily', 'annually')"
+    allow_overlapping: false
+
+  # Step 3: Temporal relation between consecutive events
+  - annotation_type: radio
+    name: temporal_relation
+    description: "What is the temporal relation between the two most recently marked events?"
+    labels:
+      - "BEFORE"
+      - "AFTER"
+      - "SIMULTANEOUS"
+      - "INCLUDES"
+      - "IS_INCLUDED"
+      - "VAGUE"
+    tooltips:
+      "BEFORE": "First event ends before the second event begins"
+      "AFTER": "First event begins after the second event ends"
+      "SIMULTANEOUS": "Events occur at the same time or overlap significantly"
+      "INCLUDES": "First event's timespan fully contains the second event"
+      "IS_INCLUDED": "First event is fully contained within the second event's timespan"
+      "VAGUE": "Temporal relationship cannot be determined from the text"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

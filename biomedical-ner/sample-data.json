@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bio_001",
+    "text": "The patient was diagnosed with type 2 diabetes mellitus and started on metformin 500mg twice daily. Blood glucose levels improved significantly after 3 months of treatment."
+  },
+  {
+    "id": "bio_002",
+    "text": "MRI of the brain revealed a 2cm lesion in the left temporal lobe, suspicious for glioblastoma. The patient was referred to neurosurgery for biopsy."
+  },
+  {
+    "id": "bio_003",
+    "text": "Patient presents with fever, cough, and shortness of breath. COVID-19 PCR test positive. Chest X-ray shows bilateral pneumonia. Started on dexamethasone and supplemental oxygen."
+  },
+  {
+    "id": "bio_004",
+    "text": "Genetic testing revealed a pathogenic variant in the BRCA1 gene, conferring increased risk for breast and ovarian cancer. Prophylactic mastectomy was discussed."
+  },
+  {
+    "id": "bio_005",
+    "text": "The patient has a history of hypertension and hyperlipidemia, currently managed with lisinopril 10mg daily and atorvastatin 40mg at bedtime."
+  },
+  {
+    "id": "bio_006",
+    "text": "Blood culture grew Staphylococcus aureus. Patient started on vancomycin IV for suspected endocarditis. Echocardiogram ordered to evaluate cardiac valves."
+  },
+  {
+    "id": "bio_007",
+    "text": "The study found elevated levels of inflammatory cytokines including IL-6 and TNF-alpha in patients with rheumatoid arthritis compared to healthy controls."
+  },
+  {
+    "id": "bio_008",
+    "text": "Patient underwent laparoscopic cholecystectomy for symptomatic gallstones. Post-operative recovery was uncomplicated. Discharged on acetaminophen for pain management."
+  },
+  {
+    "id": "bio_009",
+    "text": "Lab results: hemoglobin 9.2 g/dL, WBC 12,500/μL, platelets 180,000/μL. Iron studies consistent with iron deficiency anemia. Started on ferrous sulfate 325mg daily."
+  },
+  {
+    "id": "bio_010",
+    "text": "The patient developed severe allergic reaction to penicillin, presenting with angioedema and urticaria. Treated with epinephrine 0.3mg IM and diphenhydramine 50mg IV."
+  }
+]
