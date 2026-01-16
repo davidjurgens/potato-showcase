@@ -1,0 +1,108 @@
+# iWildCam Wildlife Detection & Classification Configuration
+# Based on Beery et al., CVPR 2019
+
+annotation_task_name: "iWildCam Wildlife Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "location_info"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_species"
+    description: "Select the primary species visible"
+    labels:
+      - name: "empty"
+        tooltip: "No animal visible"
+      - name: "deer"
+        tooltip: "Deer species"
+      - name: "wild_boar"
+        tooltip: "Wild boar/pig"
+      - name: "raccoon"
+        tooltip: "Raccoon"
+      - name: "fox"
+        tooltip: "Fox"
+      - name: "coyote"
+        tooltip: "Coyote"
+      - name: "bear"
+        tooltip: "Bear"
+      - name: "mountain_lion"
+        tooltip: "Mountain lion/cougar"
+      - name: "rabbit"
+        tooltip: "Rabbit/hare"
+      - name: "squirrel"
+        tooltip: "Squirrel"
+      - name: "bird"
+        tooltip: "Bird species"
+      - name: "cattle"
+        tooltip: "Cattle"
+      - name: "domestic_dog"
+        tooltip: "Domestic dog"
+      - name: "domestic_cat"
+        tooltip: "Domestic cat"
+      - name: "human"
+        tooltip: "Human"
+      - name: "other"
+        tooltip: "Other species"
+
+  - annotation_type: "radio"
+    name: "animal_count"
+    description: "How many animals are visible?"
+    labels:
+      - name: "zero"
+        tooltip: "No animals"
+      - name: "one"
+        tooltip: "Single animal"
+      - name: "few"
+        tooltip: "2-5 animals"
+      - name: "many"
+        tooltip: "More than 5 animals"
+
+  - annotation_type: "radio"
+    name: "image_quality"
+    description: "Image quality"
+    labels:
+      - name: "clear"
+        tooltip: "Clear, well-exposed"
+      - name: "blurry"
+        tooltip: "Motion blur"
+      - name: "dark"
+        tooltip: "Underexposed/dark"
+      - name: "overexposed"
+        tooltip: "Overexposed/washed out"
+      - name: "partial"
+        tooltip: "Animal partially visible"
+
+  - annotation_type: "multiselect"
+    name: "behavior"
+    description: "Select observed behaviors (if animal present)"
+    labels:
+      - name: "walking"
+        tooltip: "Walking or moving"
+      - name: "running"
+        tooltip: "Running"
+      - name: "standing"
+        tooltip: "Standing still"
+      - name: "feeding"
+        tooltip: "Eating/foraging"
+      - name: "resting"
+        tooltip: "Lying down/resting"
+      - name: "looking_at_camera"
+        tooltip: "Looking at camera"
+
+  - annotation_type: "text"
+    name: "specific_species"
+    description: "Enter specific species name if known"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>Location: {{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

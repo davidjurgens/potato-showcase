@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fashion_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_coat.jpg/800px-Red_coat.jpg",
+    "context": "Annotate this clothing item with category, texture, style, and fabric attributes."
+  },
+  {
+    "id": "fashion_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aiga_toiletsq_men.svg/800px-Aiga_toiletsq_men.svg.png",
+    "context": "Classify the clothing and select all applicable attributes."
+  },
+  {
+    "id": "fashion_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Schloss_Neuschwanstein_2013.jpg/1200px-Schloss_Neuschwanstein_2013.jpg",
+    "context": "Fashion item. Label category and fine-grained attributes."
+  }
+]

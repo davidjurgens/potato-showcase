@@ -1,0 +1,113 @@
+# CelebA Face Attributes Classification Configuration
+# Based on Liu et al., ICCV 2015
+
+annotation_task_name: "CelebA Face Attributes"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "hair_attributes"
+    description: "Select hair attributes"
+    labels:
+      - name: "bald"
+        tooltip: "Little or no hair"
+      - name: "bangs"
+        tooltip: "Has bangs/fringe"
+      - name: "black_hair"
+        tooltip: "Black hair color"
+      - name: "blond_hair"
+        tooltip: "Blonde hair color"
+      - name: "brown_hair"
+        tooltip: "Brown hair color"
+      - name: "gray_hair"
+        tooltip: "Gray or white hair"
+      - name: "straight_hair"
+        tooltip: "Straight hair"
+      - name: "wavy_hair"
+        tooltip: "Wavy hair"
+      - name: "receding_hairline"
+        tooltip: "Receding hairline"
+
+  - annotation_type: "multiselect"
+    name: "facial_features"
+    description: "Select facial features"
+    labels:
+      - name: "arched_eyebrows"
+        tooltip: "Arched eyebrows"
+      - name: "bushy_eyebrows"
+        tooltip: "Bushy eyebrows"
+      - name: "big_lips"
+        tooltip: "Full/big lips"
+      - name: "big_nose"
+        tooltip: "Big nose"
+      - name: "pointy_nose"
+        tooltip: "Pointy nose"
+      - name: "high_cheekbones"
+        tooltip: "High cheekbones"
+      - name: "narrow_eyes"
+        tooltip: "Narrow eyes"
+      - name: "bags_under_eyes"
+        tooltip: "Bags under eyes"
+      - name: "double_chin"
+        tooltip: "Double chin"
+
+  - annotation_type: "multiselect"
+    name: "facial_hair"
+    description: "Select facial hair attributes"
+    labels:
+      - name: "5_o_clock_shadow"
+        tooltip: "Light stubble"
+      - name: "goatee"
+        tooltip: "Goatee"
+      - name: "mustache"
+        tooltip: "Mustache"
+      - name: "no_beard"
+        tooltip: "Clean shaven"
+      - name: "sideburns"
+        tooltip: "Sideburns"
+
+  - annotation_type: "multiselect"
+    name: "accessories"
+    description: "Select accessories"
+    labels:
+      - name: "eyeglasses"
+        tooltip: "Wearing eyeglasses"
+      - name: "wearing_hat"
+        tooltip: "Wearing a hat"
+      - name: "wearing_earrings"
+        tooltip: "Wearing earrings"
+      - name: "wearing_necktie"
+        tooltip: "Wearing necktie"
+      - name: "wearing_lipstick"
+        tooltip: "Wearing lipstick"
+      - name: "heavy_makeup"
+        tooltip: "Heavy makeup"
+
+  - annotation_type: "multiselect"
+    name: "demographics"
+    description: "Select demographic attributes"
+    labels:
+      - name: "male"
+        tooltip: "Male presenting"
+      - name: "young"
+        tooltip: "Young (under ~40)"
+      - name: "attractive"
+        tooltip: "Conventionally attractive"
+      - name: "smiling"
+        tooltip: "Smiling expression"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

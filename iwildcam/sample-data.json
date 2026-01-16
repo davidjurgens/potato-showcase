@@ -1,0 +1,17 @@
+[
+  {
+    "id": "wild_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dog_Breeds.jpg/1200px-Dog_Breeds.jpg",
+    "location_info": "Camera trap image from North American forest. Identify species, count, and behavior."
+  },
+  {
+    "id": "wild_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg",
+    "location_info": "Wildlife camera capture. Classify the animal species visible."
+  },
+  {
+    "id": "wild_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/1200px-Camponotus_flavomarginatus_ant.jpg",
+    "location_info": "Camera trap from tropical region. Mark species and observed behaviors."
+  }
+]

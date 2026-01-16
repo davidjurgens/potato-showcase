@@ -1,0 +1,17 @@
+[
+  {
+    "id": "celeba_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aiga_toiletsq_men.svg/800px-Aiga_toiletsq_men.svg.png",
+    "context": "Annotate face attributes: hair, facial features, facial hair, accessories, and demographics."
+  },
+  {
+    "id": "celeba_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg",
+    "context": "Select all applicable face attributes from the CelebA attribute list."
+  },
+  {
+    "id": "celeba_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_coat.jpg/800px-Red_coat.jpg",
+    "context": "Face attribute annotation task. Label 40 binary attributes."
+  }
+]

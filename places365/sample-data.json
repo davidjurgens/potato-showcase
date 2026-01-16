@@ -1,0 +1,17 @@
+[
+  {
+    "id": "places_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/800px-Empire_State_Building_%28aerial_view%29.jpg",
+    "context": "Classify this scene. Consider whether it's indoor/outdoor and what category it belongs to."
+  },
+  {
+    "id": "places_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "context": "Identify the scene type and applicable attributes."
+  },
+  {
+    "id": "places_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sushi_platter.jpg/1200px-Sushi_platter.jpg",
+    "context": "What type of scene is depicted? Select all relevant attributes."
+  }
+]

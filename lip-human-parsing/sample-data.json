@@ -1,0 +1,17 @@
+[
+  {
+    "id": "lip_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aiga_toiletsq_men.svg/800px-Aiga_toiletsq_men.svg.png",
+    "context": "Parse this human image into semantic body parts. Label all visible body parts and clothing items."
+  },
+  {
+    "id": "lip_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_coat.jpg/800px-Red_coat.jpg",
+    "context": "Segment body parts: face, hair, arms, legs, and clothing."
+  },
+  {
+    "id": "lip_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dog_Breeds.jpg/1200px-Dog_Breeds.jpg",
+    "context": "Human parsing task. Identify all LIP categories visible."
+  }
+]

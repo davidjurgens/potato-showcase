@@ -1,0 +1,98 @@
+# PASCAL VOC Object Detection Configuration
+# Based on Everingham et al., IJCV 2010
+
+annotation_task_name: "PASCAL VOC Object Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "object_class"
+    description: "Select all object classes present in the image"
+    labels:
+      # Vehicles
+      - name: "aeroplane"
+        tooltip: "Aircraft, planes"
+      - name: "bicycle"
+        tooltip: "Bicycles"
+      - name: "boat"
+        tooltip: "Boats, ships"
+      - name: "bus"
+        tooltip: "Buses"
+      - name: "car"
+        tooltip: "Cars, automobiles"
+      - name: "motorbike"
+        tooltip: "Motorcycles"
+      - name: "train"
+        tooltip: "Trains"
+      # Indoor
+      - name: "bottle"
+        tooltip: "Bottles"
+      - name: "chair"
+        tooltip: "Chairs"
+      - name: "diningtable"
+        tooltip: "Dining tables"
+      - name: "pottedplant"
+        tooltip: "Potted plants"
+      - name: "sofa"
+        tooltip: "Sofas, couches"
+      - name: "tvmonitor"
+        tooltip: "TV monitors"
+      # Animals
+      - name: "bird"
+        tooltip: "Birds"
+      - name: "cat"
+        tooltip: "Cats"
+      - name: "cow"
+        tooltip: "Cows"
+      - name: "dog"
+        tooltip: "Dogs"
+      - name: "horse"
+        tooltip: "Horses"
+      - name: "sheep"
+        tooltip: "Sheep"
+      # Person
+      - name: "person"
+        tooltip: "People"
+
+  - annotation_type: "radio"
+    name: "difficulty"
+    description: "Is the object difficult to detect?"
+    labels:
+      - name: "not_difficult"
+        tooltip: "Object is clearly visible and easy to detect"
+      - name: "difficult"
+        tooltip: "Object is occluded, truncated, or hard to see"
+
+  - annotation_type: "radio"
+    name: "truncated"
+    description: "Is the object truncated (partially outside image)?"
+    labels:
+      - name: "not_truncated"
+        tooltip: "Object is fully visible in the image"
+      - name: "truncated"
+        tooltip: "Object extends beyond the image boundary"
+
+  - annotation_type: "radio"
+    name: "occluded"
+    description: "Is the object occluded by another object?"
+    labels:
+      - name: "not_occluded"
+        tooltip: "Object is not blocked by other objects"
+      - name: "occluded"
+        tooltip: "Object is partially hidden by other objects"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

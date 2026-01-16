@@ -1,0 +1,98 @@
+# Cityscapes Instance Segmentation Configuration
+# Based on Cordts et al., CVPR 2016
+
+annotation_task_name: "Cityscapes Urban Scene Segmentation"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "flat_surfaces"
+    description: "Select visible flat surface classes"
+    labels:
+      - name: "road"
+        tooltip: "Drivable road surface"
+      - name: "sidewalk"
+        tooltip: "Pedestrian sidewalk"
+      - name: "parking"
+        tooltip: "Parking area"
+      - name: "rail_track"
+        tooltip: "Rail tracks"
+
+  - annotation_type: "multiselect"
+    name: "humans"
+    description: "Select visible human classes"
+    labels:
+      - name: "person"
+        tooltip: "Pedestrian or person"
+      - name: "rider"
+        tooltip: "Person on bicycle/motorcycle"
+
+  - annotation_type: "multiselect"
+    name: "vehicles"
+    description: "Select visible vehicle classes"
+    labels:
+      - name: "car"
+        tooltip: "Cars, SUVs"
+      - name: "truck"
+        tooltip: "Trucks"
+      - name: "bus"
+        tooltip: "Buses"
+      - name: "train"
+        tooltip: "Trains, trams"
+      - name: "motorcycle"
+        tooltip: "Motorcycles, mopeds"
+      - name: "bicycle"
+        tooltip: "Bicycles"
+
+  - annotation_type: "multiselect"
+    name: "construction"
+    description: "Select visible construction elements"
+    labels:
+      - name: "building"
+        tooltip: "Buildings"
+      - name: "wall"
+        tooltip: "Walls"
+      - name: "fence"
+        tooltip: "Fences"
+      - name: "bridge"
+        tooltip: "Bridges"
+      - name: "tunnel"
+        tooltip: "Tunnels"
+
+  - annotation_type: "multiselect"
+    name: "nature"
+    description: "Select visible nature elements"
+    labels:
+      - name: "vegetation"
+        tooltip: "Trees, bushes, plants"
+      - name: "terrain"
+        tooltip: "Grass, soil"
+      - name: "sky"
+        tooltip: "Sky"
+
+  - annotation_type: "multiselect"
+    name: "objects"
+    description: "Select visible objects"
+    labels:
+      - name: "pole"
+        tooltip: "Poles, posts"
+      - name: "traffic_sign"
+        tooltip: "Traffic signs"
+      - name: "traffic_light"
+        tooltip: "Traffic lights"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

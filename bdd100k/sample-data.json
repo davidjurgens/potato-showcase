@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bdd_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Spyker_C8_Spyder.jpg/1200px-Spyker_C8_Spyder.jpg",
+    "context": "Driving scene from dash cam. Annotate objects, lane markings, drivable areas, weather, and time of day."
+  },
+  {
+    "id": "bdd_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Frankfurt_Skyline.jpg/1200px-Frankfurt_Skyline.jpg",
+    "context": "Urban driving scene. Mark vehicles, pedestrians, traffic signs, and lane markings."
+  },
+  {
+    "id": "bdd_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1200px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+    "context": "Road scene. Complete BDD100K multi-task annotation."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cub_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/1200px-Eopsaltria_australis_-_Mogo_Campground.jpg",
+    "context": "Identify the bird species and annotate visible attributes. Note any distinctive features."
+  },
+  {
+    "id": "cub_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/1200px-Camponotus_flavomarginatus_ant.jpg",
+    "context": "Classify this bird and mark all visible body part attributes."
+  },
+  {
+    "id": "cub_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cyanocitta-cristata-004.jpg/1200px-Cyanocitta-cristata-004.jpg",
+    "context": "Blue Jay example. Identify family, species, and visual attributes."
+  }
+]

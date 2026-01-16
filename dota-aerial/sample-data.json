@@ -1,0 +1,17 @@
+[
+  {
+    "id": "dota_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/800px-Empire_State_Building_%28aerial_view%29.jpg",
+    "context": "Aerial image. Detect objects with oriented bounding boxes. Objects may appear at any angle."
+  },
+  {
+    "id": "dota_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1200px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+    "context": "Aerial view. Mark all DOTA categories: planes, ships, vehicles, sports facilities, etc."
+  },
+  {
+    "id": "dota_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Frankfurt_Skyline.jpg/1200px-Frankfurt_Skyline.jpg",
+    "context": "Overhead imagery. Annotate with oriented bounding boxes for rotated objects."
+  }
+]

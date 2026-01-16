@@ -1,0 +1,118 @@
+# WikiArt Artwork Classification Configuration
+# Based on Saleh & Elgammal, 2015
+
+annotation_task_name: "WikiArt Art Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "art_style"
+    description: "Select the artistic style/movement"
+    labels:
+      - name: "impressionism"
+        tooltip: "Impressionism (Monet, Renoir)"
+      - name: "post_impressionism"
+        tooltip: "Post-Impressionism (Van Gogh, Cézanne)"
+      - name: "expressionism"
+        tooltip: "Expressionism (Munch, Kandinsky)"
+      - name: "cubism"
+        tooltip: "Cubism (Picasso, Braque)"
+      - name: "surrealism"
+        tooltip: "Surrealism (Dalí, Magritte)"
+      - name: "abstract"
+        tooltip: "Abstract Art"
+      - name: "romanticism"
+        tooltip: "Romanticism"
+      - name: "realism"
+        tooltip: "Realism"
+      - name: "renaissance"
+        tooltip: "Renaissance"
+      - name: "baroque"
+        tooltip: "Baroque"
+      - name: "pop_art"
+        tooltip: "Pop Art"
+      - name: "minimalism"
+        tooltip: "Minimalism"
+      - name: "other"
+        tooltip: "Other style"
+
+  - annotation_type: "radio"
+    name: "genre"
+    description: "Select the painting genre"
+    labels:
+      - name: "portrait"
+        tooltip: "Portrait"
+      - name: "landscape"
+        tooltip: "Landscape"
+      - name: "still_life"
+        tooltip: "Still Life"
+      - name: "religious"
+        tooltip: "Religious/Mythological"
+      - name: "historical"
+        tooltip: "Historical painting"
+      - name: "genre_scene"
+        tooltip: "Genre scene (everyday life)"
+      - name: "abstract"
+        tooltip: "Abstract/non-representational"
+      - name: "cityscape"
+        tooltip: "Cityscape/urban"
+      - name: "nude"
+        tooltip: "Nude"
+      - name: "animal"
+        tooltip: "Animal painting"
+
+  - annotation_type: "multiselect"
+    name: "visual_elements"
+    description: "Select dominant visual elements"
+    labels:
+      - name: "bold_colors"
+        tooltip: "Bold, vibrant colors"
+      - name: "muted_colors"
+        tooltip: "Muted, subtle colors"
+      - name: "geometric"
+        tooltip: "Geometric shapes"
+      - name: "organic"
+        tooltip: "Organic, flowing forms"
+      - name: "high_contrast"
+        tooltip: "High contrast"
+      - name: "soft_focus"
+        tooltip: "Soft, blurred edges"
+      - name: "detailed"
+        tooltip: "Fine detail"
+      - name: "loose_brushwork"
+        tooltip: "Loose, visible brushwork"
+
+  - annotation_type: "radio"
+    name: "era"
+    description: "Estimated era"
+    labels:
+      - name: "pre_1500"
+        tooltip: "Before 1500 (Medieval, Early Renaissance)"
+      - name: "1500_1700"
+        tooltip: "1500-1700 (Renaissance, Baroque)"
+      - name: "1700_1850"
+        tooltip: "1700-1850 (Rococo, Neoclassicism)"
+      - name: "1850_1945"
+        tooltip: "1850-1945 (Modern Art)"
+      - name: "post_1945"
+        tooltip: "After 1945 (Contemporary)"
+
+  - annotation_type: "text"
+    name: "artist_guess"
+    description: "Artist attribution guess (if recognizable)"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

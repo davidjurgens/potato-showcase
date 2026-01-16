@@ -1,0 +1,91 @@
+# MVTec AD Industrial Defect Detection Configuration
+# Based on Bergmann et al., CVPR 2019
+
+annotation_task_name: "MVTec AD Defect Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "product_type"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "product_category"
+    description: "Select the product category"
+    labels:
+      - name: "bottle"
+        tooltip: "Glass or plastic bottles"
+      - name: "cable"
+        tooltip: "Electrical cables"
+      - name: "capsule"
+        tooltip: "Capsules, pills"
+      - name: "carpet"
+        tooltip: "Carpet texture"
+      - name: "grid"
+        tooltip: "Grid patterns"
+      - name: "hazelnut"
+        tooltip: "Hazelnuts"
+      - name: "leather"
+        tooltip: "Leather texture"
+      - name: "metal_nut"
+        tooltip: "Metal nuts"
+      - name: "pill"
+        tooltip: "Pills"
+      - name: "screw"
+        tooltip: "Screws"
+      - name: "tile"
+        tooltip: "Tiles"
+      - name: "toothbrush"
+        tooltip: "Toothbrushes"
+      - name: "transistor"
+        tooltip: "Transistors"
+      - name: "wood"
+        tooltip: "Wood texture"
+      - name: "zipper"
+        tooltip: "Zippers"
+
+  - annotation_type: "radio"
+    name: "anomaly_status"
+    description: "Is this image normal or defective?"
+    labels:
+      - name: "good"
+        tooltip: "No defects, normal sample"
+      - name: "defective"
+        tooltip: "Contains defects or anomalies"
+
+  - annotation_type: "multiselect"
+    name: "defect_types"
+    description: "Select defect types (if defective)"
+    labels:
+      - name: "scratch"
+        tooltip: "Surface scratches"
+      - name: "dent"
+        tooltip: "Dents or deformations"
+      - name: "hole"
+        tooltip: "Holes or punctures"
+      - name: "crack"
+        tooltip: "Cracks or fractures"
+      - name: "contamination"
+        tooltip: "Contamination or stains"
+      - name: "color_defect"
+        tooltip: "Color abnormalities"
+      - name: "missing_part"
+        tooltip: "Missing components"
+      - name: "misalignment"
+        tooltip: "Misaligned parts"
+
+  - annotation_type: "text"
+    name: "defect_location"
+    description: "Describe the location of defects (e.g., 'top-left corner')"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>Product type: {{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

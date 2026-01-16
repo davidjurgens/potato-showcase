@@ -1,0 +1,23 @@
+{
+  "title": "ImageNet Image Classification",
+  "description": "Large-scale image classification following the ImageNet dataset (Deng et al., CVPR 2009). Classify images into 1000+ synsets organized according to the WordNet hierarchy.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Deng et al.",
+    "email": "jurgens@umich.edu",
+    "github": "imagenet",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Computer Vision", "Image Classification"],
+  "useCase": ["Image Classification", "Visual Recognition", "Transfer Learning"],
+  "complexity": "intermediate",
+  "tags": ["imagenet", "classification", "wordnet", "cvpr2009", "large-scale"],
+  "featured": true,
+  "paperReference": "Deng et al., CVPR 2009",
+  "paperUrl": "https://ieeexplore.ieee.org/document/5206848",
+  "datasetUrl": "https://www.image-net.org",
+  "citation": "@inproceedings{deng2009imagenet,\n    title = \"{ImageNet}: A large-scale hierarchical image database\",\n    author = \"Deng, Jia  and Dong, Wei  and Socher, Richard  and Li, Li-Jia  and Li, Kai  and Fei-Fei, Li\",\n    booktitle = \"2009 IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"248--255\",\n    year = \"2009\",\n    organization = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/5206848\"\n}"
+}

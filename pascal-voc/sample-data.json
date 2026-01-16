@@ -1,0 +1,17 @@
+[
+  {
+    "id": "voc_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg",
+    "context": "Identify all objects in the image and mark their bounding boxes. Note if objects are truncated, occluded, or difficult to detect."
+  },
+  {
+    "id": "voc_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dog_Breeds.jpg/1200px-Dog_Breeds.jpg",
+    "context": "Mark all visible objects with bounding boxes. Indicate difficulty level for each object."
+  },
+  {
+    "id": "voc_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+    "context": "Annotate all PASCAL VOC categories visible in this scene."
+  }
+]

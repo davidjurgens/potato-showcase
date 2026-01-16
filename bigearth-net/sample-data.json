@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ben_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/1200px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+    "context": "Sentinel-2 satellite patch (120x120 pixels). Classify all visible land cover types according to CORINE Land Cover taxonomy."
+  },
+  {
+    "id": "ben_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-702704.jpg/1200px-24701-nature-702704.jpg",
+    "context": "Satellite image patch. Select all applicable land cover classes."
+  },
+  {
+    "id": "ben_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Schloss_Neuschwanstein_2013.jpg/1200px-Schloss_Neuschwanstein_2013.jpg",
+    "context": "Remote sensing image. Label artificial surfaces, agricultural areas, forests, and water bodies."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "city_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Frankfurt_Skyline.jpg/1200px-Frankfurt_Skyline.jpg",
+    "context": "Urban street scene. Label all visible objects according to Cityscapes categories: vehicles, humans, construction, nature, and objects."
+  },
+  {
+    "id": "city_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Spyker_C8_Spyder.jpg/1200px-Spyker_C8_Spyder.jpg",
+    "context": "Street scene with vehicles. Annotate all semantic categories visible."
+  },
+  {
+    "id": "city_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1200px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+    "context": "City scene. Mark all Cityscapes-compatible categories."
+  }
+]

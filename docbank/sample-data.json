@@ -1,0 +1,17 @@
+[
+  {
+    "id": "doc_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_academic_paper.pdf/page1-424px-Example_academic_paper.pdf.jpg",
+    "context": "Document page image. Identify all layout elements: title, abstract, sections, figures, tables, captions, etc."
+  },
+  {
+    "id": "doc_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Schloss_Neuschwanstein_2013.jpg/1200px-Schloss_Neuschwanstein_2013.jpg",
+    "context": "Analyze document layout structure. Mark headers, paragraphs, lists, and other elements."
+  },
+  {
+    "id": "doc_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "context": "Document layout detection task. Classify document type and identify semantic regions."
+  }
+]

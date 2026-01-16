@@ -1,0 +1,116 @@
+# BDD100K Autonomous Driving Segmentation Configuration
+# Based on Yu et al., CVPR 2020
+
+annotation_task_name: "BDD100K Driving Scene Annotation"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "objects"
+    description: "Select all object types visible"
+    labels:
+      - name: "pedestrian"
+        tooltip: "People walking"
+      - name: "rider"
+        tooltip: "Person on bike/motorcycle"
+      - name: "car"
+        tooltip: "Cars"
+      - name: "truck"
+        tooltip: "Trucks"
+      - name: "bus"
+        tooltip: "Buses"
+      - name: "train"
+        tooltip: "Trains"
+      - name: "motorcycle"
+        tooltip: "Motorcycles"
+      - name: "bicycle"
+        tooltip: "Bicycles"
+      - name: "traffic_light"
+        tooltip: "Traffic lights"
+      - name: "traffic_sign"
+        tooltip: "Traffic signs"
+
+  - annotation_type: "multiselect"
+    name: "lane_markings"
+    description: "Select lane marking types"
+    labels:
+      - name: "road_curb"
+        tooltip: "Road curb/edge"
+      - name: "double_white"
+        tooltip: "Double white lines"
+      - name: "double_yellow"
+        tooltip: "Double yellow lines"
+      - name: "single_white"
+        tooltip: "Single white line"
+      - name: "single_yellow"
+        tooltip: "Single yellow line"
+      - name: "crosswalk"
+        tooltip: "Crosswalk markings"
+
+  - annotation_type: "multiselect"
+    name: "drivable_area"
+    description: "Select drivable area types"
+    labels:
+      - name: "direct"
+        tooltip: "Directly drivable (same direction)"
+      - name: "alternative"
+        tooltip: "Alternatively drivable (lane change possible)"
+
+  - annotation_type: "radio"
+    name: "weather"
+    description: "Weather condition"
+    labels:
+      - name: "clear"
+        tooltip: "Clear weather"
+      - name: "partly_cloudy"
+        tooltip: "Partly cloudy"
+      - name: "overcast"
+        tooltip: "Overcast"
+      - name: "rainy"
+        tooltip: "Rainy"
+      - name: "snowy"
+        tooltip: "Snowy"
+      - name: "foggy"
+        tooltip: "Foggy"
+
+  - annotation_type: "radio"
+    name: "scene"
+    description: "Scene type"
+    labels:
+      - name: "city_street"
+        tooltip: "City street"
+      - name: "highway"
+        tooltip: "Highway"
+      - name: "residential"
+        tooltip: "Residential area"
+      - name: "parking_lot"
+        tooltip: "Parking lot"
+      - name: "tunnel"
+        tooltip: "Tunnel"
+
+  - annotation_type: "radio"
+    name: "time_of_day"
+    description: "Time of day"
+    labels:
+      - name: "daytime"
+        tooltip: "Daytime"
+      - name: "dawn_dusk"
+        tooltip: "Dawn or dusk"
+      - name: "night"
+        tooltip: "Nighttime"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

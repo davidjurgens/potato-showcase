@@ -1,0 +1,109 @@
+# CheXpert Chest X-Ray Classification Configuration
+# Based on Irvin et al., AAAI 2019
+
+annotation_task_name: "CheXpert Chest X-Ray Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "cardiomegaly"
+    description: "Cardiomegaly (enlarged heart)"
+    labels:
+      - name: "positive"
+        tooltip: "Finding is present"
+      - name: "negative"
+        tooltip: "Finding is absent"
+      - name: "uncertain"
+        tooltip: "Cannot determine with certainty"
+      - name: "not_mentioned"
+        tooltip: "Not applicable or not assessed"
+
+  - annotation_type: "radio"
+    name: "edema"
+    description: "Pulmonary edema"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "consolidation"
+    description: "Lung consolidation"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "atelectasis"
+    description: "Atelectasis (lung collapse)"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "pleural_effusion"
+    description: "Pleural effusion (fluid around lungs)"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "pneumonia"
+    description: "Pneumonia"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "pneumothorax"
+    description: "Pneumothorax (collapsed lung)"
+    labels:
+      - name: "positive"
+      - name: "negative"
+      - name: "uncertain"
+      - name: "not_mentioned"
+
+  - annotation_type: "radio"
+    name: "no_finding"
+    description: "No significant findings"
+    labels:
+      - name: "positive"
+        tooltip: "Normal study, no findings"
+      - name: "negative"
+        tooltip: "Abnormalities present"
+
+  - annotation_type: "radio"
+    name: "image_quality"
+    description: "Rate the image quality"
+    labels:
+      - name: "diagnostic"
+        tooltip: "Adequate for diagnosis"
+      - name: "suboptimal"
+        tooltip: "Limited but usable"
+      - name: "non_diagnostic"
+        tooltip: "Inadequate for diagnosis"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px; background:#000;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

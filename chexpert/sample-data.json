@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cxr_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Normal_posteroanterior_%28PA%29_chest_radiograph_%28X-ray%29.jpg",
+    "context": "Chest X-ray PA view. Assess for cardiomegaly, edema, consolidation, atelectasis, pleural effusion, pneumonia, and pneumothorax."
+  },
+  {
+    "id": "cxr_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Chest_X-ray_of_RTI.jpg",
+    "context": "Chest radiograph. Label all visible pathological findings. Use 'uncertain' when findings are equivocal."
+  },
+  {
+    "id": "cxr_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/X-ray_chest_-_posteroanterior_view.jpg",
+    "context": "Posteroanterior chest X-ray. Evaluate for the 14 CheXpert observation labels."
+  }
+]

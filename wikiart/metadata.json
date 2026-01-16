@@ -1,0 +1,23 @@
+{
+  "title": "WikiArt Artwork Classification",
+  "description": "Art classification by style, genre, and artist (Saleh & Elgammal, 2015). Classify paintings into artistic movements, genres, and predict artist attribution.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saleh & Elgammal",
+    "email": "jurgens@umich.edu",
+    "github": "cs-chan",
+    "affiliation": "Rutgers University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Computer Vision", "Art History"],
+  "useCase": ["Art Classification", "Style Recognition", "Cultural Heritage"],
+  "complexity": "intermediate",
+  "tags": ["wikiart", "art", "painting", "style", "genre", "artist"],
+  "featured": true,
+  "paperReference": "Saleh & Elgammal, 2015",
+  "paperUrl": "https://arxiv.org/abs/1505.00855",
+  "datasetUrl": "https://www.wikiart.org",
+  "citation": "@article{saleh2015large,\n    title = \"Large-scale Classification of Fine-Art Paintings: Learning The Right Metric on The Right Feature\",\n    author = \"Saleh, Babak  and Elgammal, Ahmed\",\n    journal = \"arXiv preprint arXiv:1505.00855\",\n    year = \"2015\",\n    url = \"https://arxiv.org/abs/1505.00855\"\n}"
+}

@@ -1,0 +1,70 @@
+# DOTA Aerial Image Object Detection Configuration
+# Based on Xia et al., CVPR 2018
+
+annotation_task_name: "DOTA Aerial Object Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "object_classes"
+    description: "Select all object classes visible"
+    labels:
+      - name: "plane"
+        tooltip: "Airplanes"
+      - name: "ship"
+        tooltip: "Ships and vessels"
+      - name: "storage_tank"
+        tooltip: "Storage tanks"
+      - name: "baseball_diamond"
+        tooltip: "Baseball diamonds"
+      - name: "tennis_court"
+        tooltip: "Tennis courts"
+      - name: "basketball_court"
+        tooltip: "Basketball courts"
+      - name: "ground_track_field"
+        tooltip: "Running tracks"
+      - name: "harbor"
+        tooltip: "Harbors"
+      - name: "bridge"
+        tooltip: "Bridges"
+      - name: "large_vehicle"
+        tooltip: "Large vehicles (trucks, buses)"
+      - name: "small_vehicle"
+        tooltip: "Small vehicles (cars)"
+      - name: "helicopter"
+        tooltip: "Helicopters"
+      - name: "roundabout"
+        tooltip: "Roundabouts"
+      - name: "soccer_field"
+        tooltip: "Soccer fields"
+      - name: "swimming_pool"
+        tooltip: "Swimming pools"
+
+  - annotation_type: "radio"
+    name: "difficulty"
+    description: "Annotation difficulty"
+    labels:
+      - name: "easy"
+        tooltip: "Clear, large objects"
+      - name: "difficult"
+        tooltip: "Small, occluded, or crowded"
+
+  - annotation_type: "text"
+    name: "oriented_bbox"
+    description: "Oriented bounding box: x1,y1,x2,y2,x3,y3,x4,y4,class,difficulty"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

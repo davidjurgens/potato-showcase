@@ -1,0 +1,77 @@
+# MIMIC-CXR Chest Radiograph Classification Configuration
+# Based on Johnson et al., Scientific Data 2019
+
+annotation_task_name: "MIMIC-CXR Chest Radiograph Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "report_excerpt"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "findings"
+    description: "Select all findings present in the image"
+    labels:
+      - name: "atelectasis"
+        tooltip: "Partial or complete lung collapse"
+      - name: "cardiomegaly"
+        tooltip: "Enlarged heart"
+      - name: "consolidation"
+        tooltip: "Lung tissue filled with fluid"
+      - name: "edema"
+        tooltip: "Pulmonary edema"
+      - name: "enlarged_cardiomediastinum"
+        tooltip: "Enlarged heart and mediastinum"
+      - name: "fracture"
+        tooltip: "Bone fracture visible"
+      - name: "lung_lesion"
+        tooltip: "Mass or nodule"
+      - name: "lung_opacity"
+        tooltip: "Abnormal opacity"
+      - name: "pleural_effusion"
+        tooltip: "Fluid in pleural space"
+      - name: "pleural_other"
+        tooltip: "Other pleural abnormality"
+      - name: "pneumonia"
+        tooltip: "Pneumonia"
+      - name: "pneumothorax"
+        tooltip: "Air in pleural space"
+      - name: "support_devices"
+        tooltip: "Medical devices present"
+
+  - annotation_type: "radio"
+    name: "no_finding"
+    description: "Is this a normal study?"
+    labels:
+      - name: "normal"
+        tooltip: "No significant findings"
+      - name: "abnormal"
+        tooltip: "Abnormalities present"
+
+  - annotation_type: "radio"
+    name: "view_position"
+    description: "What is the view position?"
+    labels:
+      - name: "PA"
+        tooltip: "Posteroanterior"
+      - name: "AP"
+        tooltip: "Anteroposterior"
+      - name: "lateral"
+        tooltip: "Lateral view"
+
+  - annotation_type: "text"
+    name: "additional_notes"
+    description: "Additional clinical notes or observations"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px; background:#000;'/><br/><small>Report: {{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

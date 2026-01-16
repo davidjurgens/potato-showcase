@@ -1,0 +1,17 @@
+[
+  {
+    "id": "oi_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Felis_silvestris_catus_lying_on_rice_straw.jpg/1200px-Felis_silvestris_catus_lying_on_rice_straw.jpg",
+    "context": "Annotate all visible objects. Note occlusion, truncation, and any visual relationships between objects."
+  },
+  {
+    "id": "oi_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dog_Breeds.jpg/1200px-Dog_Breeds.jpg",
+    "context": "Identify objects and mark whether they are groups or single instances."
+  },
+  {
+    "id": "oi_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+    "context": "Detect all objects and describe their spatial relationships."
+  }
+]

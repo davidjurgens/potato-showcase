@@ -1,0 +1,23 @@
+{
+  "title": "KITTI Road Object Detection",
+  "description": "Autonomous driving benchmark for object detection (Geiger et al., CVPR 2012). Annotate vehicles, pedestrians, and cyclists with 3D bounding boxes and occlusion/truncation labels.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Geiger et al.",
+    "email": "jurgens@umich.edu",
+    "github": "cvlibs",
+    "affiliation": "Karlsruhe Institute of Technology"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "radio"],
+  "domain": ["Computer Vision", "Autonomous Driving"],
+  "useCase": ["Object Detection", "3D Detection", "Autonomous Vehicles"],
+  "complexity": "advanced",
+  "tags": ["kitti", "autonomous-driving", "3d-detection", "vehicles", "cvpr2012"],
+  "featured": true,
+  "paperReference": "Geiger et al., CVPR 2012",
+  "paperUrl": "https://ieeexplore.ieee.org/document/6248074",
+  "datasetUrl": "http://www.cvlibs.net/datasets/kitti",
+  "citation": "@inproceedings{geiger2012we,\n    title = \"Are we ready for Autonomous Driving? {The KITTI} Vision Benchmark Suite\",\n    author = \"Geiger, Andreas  and Lenz, Philip  and Urtasun, Raquel\",\n    booktitle = \"2012 IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"3354--3361\",\n    year = \"2012\",\n    organization = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/6248074\"\n}"
+}

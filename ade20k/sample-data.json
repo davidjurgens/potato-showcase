@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ade_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Schloss_Neuschwanstein_2013.jpg/1200px-Schloss_Neuschwanstein_2013.jpg",
+    "context": "Parse this scene by identifying all visible objects, structures, and nature elements."
+  },
+  {
+    "id": "ade_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/1200px-Camponotus_flavomarginatus_ant.jpg",
+    "context": "Annotate all semantic categories visible in this scene."
+  },
+  {
+    "id": "ade_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-702704.jpg/1200px-24701-nature-702704.jpg",
+    "context": "Label building elements, furniture, nature, and objects."
+  }
+]
