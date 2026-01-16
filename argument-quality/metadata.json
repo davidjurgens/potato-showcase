@@ -16,7 +16,8 @@
   "complexity": "intermediate",
   "tags": ["argument-quality", "argumentation", "cogency", "rhetoric", "debate", "persuasion"],
   "featured": true,
-  "paperReference": "Wachsmuth et al., COLING 2017",
-  "paperUrl": "https://aclanthology.org/2020.coling-main.402/",
-  "datasetUrl": "https://webis.de/data/webis-argquality-20.html"
+  "paperReference": "Wachsmuth et al., EACL 2017",
+  "paperUrl": "https://aclanthology.org/E17-1017/",
+  "datasetUrl": "https://webis.de/data/webis-argquality-20.html",
+  "citation": "@inproceedings{wachsmuth-etal-2017-computational,\n    title = \"Computational Argumentation Quality Assessment in Natural Language\",\n    author = \"Wachsmuth, Henning  and Naderi, Nona  and Hou, Yufang  and Bilu, Yonatan  and Prabhakaran, Vinodkumar  and Thijm, Tim Alberdingk  and Hirst, Graeme  and Stein, Benno\",\n    booktitle = \"Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers\",\n    month = apr,\n    year = \"2017\",\n    address = \"Valencia, Spain\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/E17-1017\",\n    pages = \"176--187\"\n}"
 }

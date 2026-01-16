@@ -18,5 +18,6 @@
   "featured": false,
   "paperReference": "Rogers et al., COLING 2018",
   "paperUrl": "https://aclanthology.org/C18-1064/",
-  "datasetUrl": "https://github.com/text-machine-lab/rusentiment"
+  "datasetUrl": "https://github.com/text-machine-lab/rusentiment",
+  "citation": "@inproceedings{rogers-etal-2018-rusentiment,\n    title = \"{R}u{S}entiment: An Enriched Sentiment Analysis Dataset for Social Media in {R}ussian\",\n    author = \"Rogers, Anna  and Romanov, Alexey  and Rumshisky, Anna  and Volkova, Svitlana  and Gronas, Mikhail  and Gribov, Alex\",\n    booktitle = \"Proceedings of the 27th International Conference on Computational Linguistics\",\n    month = aug,\n    year = \"2018\",\n    address = \"Santa Fe, New Mexico, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/C18-1064\",\n    pages = \"755--763\"\n}"
 }

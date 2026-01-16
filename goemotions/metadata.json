@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Demszky et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.372/",
-  "datasetUrl": "https://github.com/google-research/google-research/tree/master/goemotions"
+  "datasetUrl": "https://github.com/google-research/google-research/tree/master/goemotions",
+  "citation": "@inproceedings{demszky-etal-2020-goemotions,\n    title = \"{G}o{E}motions: A Dataset of Fine-Grained Emotions\",\n    author = \"Demszky, Dorottya  and Movshovitz-Attias, Dana  and Ko, Jeongwoo  and Cowen, Alan  and Nemade, Gaurav  and Ravi, Sujith\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.372\",\n    pages = \"4040--4054\"\n}"
 }

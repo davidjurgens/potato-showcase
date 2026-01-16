@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Lybarger et al., JAMIA 2023",
   "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/36795066/",
-  "datasetUrl": "https://n2c2.dbmi.hms.harvard.edu/2022-track-2"
+  "datasetUrl": "https://n2c2.dbmi.hms.harvard.edu/2022-track-2",
+  "citation": "@article{lybarger2023shac,\n    title = \"Leveraging natural language processing to augment structured social determinants of health data in the electronic health record\",\n    author = \"Lybarger, Kevin  and Yetisgen, Meliha  and Ostendorf, Mari\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1389--1397\",\n    year = \"2023\",\n    publisher = \"Oxford University Press\",\n    url = \"https://pubmed.ncbi.nlm.nih.gov/36795066/\"\n}"
 }

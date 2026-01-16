@@ -1,5 +1,5 @@
 {
-  "title": "Adverse Drug Event Extraction (CADEC-style)",
+  "title": "Adverse Drug Event Extraction (CADEC)",
   "description": "Named entity recognition for adverse drug events from patient-reported experiences, based on the CADEC corpus (Karimi et al., 2015). Annotates drugs, adverse effects, symptoms, diseases, and findings from colloquial health forum posts with mapping to medical vocabularies (SNOMED-CT, MedDRA).",
   "version": "1.0.0",
   "author": {
@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Karimi et al., J Biomed Inform 2015",
   "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/25817970/",
-  "datasetUrl": "https://data.csiro.au/collection/csiro:10948"
+  "datasetUrl": "https://data.csiro.au/collection/csiro:10948",
+  "citation": "@article{karimi2015cadec,\n    title = \"Cadec: A corpus of adverse drug event annotations\",\n    author = \"Karimi, Sarvnaz  and Metke-Jimenez, Alejandro  and Kemp, Madonna  and Wang, Chen\",\n    journal = \"Journal of Biomedical Informatics\",\n    volume = \"55\",\n    pages = \"73--81\",\n    year = \"2015\",\n    publisher = \"Elsevier\",\n    url = \"https://pubmed.ncbi.nlm.nih.gov/25817970/\"\n}"
 }

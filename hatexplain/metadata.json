@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Mathew et al., AAAI 2021",
   "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/17745",
-  "datasetUrl": "https://huggingface.co/datasets/hatexplain"
+  "datasetUrl": "https://huggingface.co/datasets/hatexplain",
+  "citation": "@inproceedings{mathew2021hatexplain,\n    title = \"{H}ate{X}plain: A Benchmark Dataset for Explainable Hate Speech Detection\",\n    author = \"Mathew, Binny  and Saha, Punyajoy  and Yimam, Seid Muhie  and Biemann, Chris  and Goyal, Pawan  and Mukherjee, Animesh\",\n    booktitle = \"Proceedings of the AAAI Conference on Artificial Intelligence\",\n    volume = \"35\",\n    number = \"17\",\n    pages = \"14867--14875\",\n    year = \"2021\",\n    url = \"https://ojs.aaai.org/index.php/AAAI/article/view/17745\"\n}"
 }
