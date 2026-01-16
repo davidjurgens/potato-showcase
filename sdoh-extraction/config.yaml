@@ -1,0 +1,132 @@
+# Social Determinants of Health (SDOH) Extraction
+# Based on n2c2 2022 Track 2 / SHAC Corpus
+# Paper: https://pubmed.ncbi.nlm.nih.gov/36795066/
+# Task: https://n2c2.dbmi.hms.harvard.edu/2022-track-2
+#
+# Event-based annotation schema:
+# - Each SDOH event has a TRIGGER (event type) and ARGUMENTS (attributes)
+# - Event types: Alcohol, Drug, Tobacco, Employment, LivingStatus
+# - Arguments characterize status, extent, temporality, and type
+#
+# Example: "Patient quit smoking 5 years ago"
+#   Trigger: Tobacco (anchored to "smoking")
+#   Arguments: Status=past, StatusTime=past ("quit", "5 years ago")
+
+port: 8000
+server_name: localhost
+task_name: "Social Determinants of Health (SDOH) Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify SDOH event triggers
+  - annotation_type: span
+    name: sdoh_trigger
+    description: "Highlight the trigger word/phrase that indicates an SDOH event"
+    labels:
+      - Alcohol
+      - Drug
+      - Tobacco
+      - Employment
+      - LivingStatus
+    label_colors:
+      Alcohol: "#ef4444"
+      Drug: "#f97316"
+      Tobacco: "#eab308"
+      Employment: "#22c55e"
+      LivingStatus: "#3b82f6"
+    tooltips:
+      Alcohol: "Mentions of alcohol use, drinking, or alcohol-related behaviors"
+      Drug: "Mentions of illicit drug use, substance abuse, or recreational drug use"
+      Tobacco: "Mentions of smoking, tobacco use, vaping, or nicotine"
+      Employment: "Mentions of job status, work, occupation, unemployment, or retirement"
+      LivingStatus: "Mentions of housing, living situation, homelessness, or living arrangements"
+    allow_overlapping: false
+
+  # Step 2: Status of the SDOH event
+  - annotation_type: radio
+    name: status
+    description: "What is the status of this SDOH factor?"
+    labels:
+      - "current"
+      - "past"
+      - "none"
+      - "unknown"
+    keyboard_shortcuts:
+      "current": "c"
+      "past": "p"
+      "none": "n"
+      "unknown": "u"
+    tooltips:
+      "current": "Patient currently has this status (e.g., currently smokes, currently employed)"
+      "past": "Patient had this status in the past (e.g., former smoker, previously unemployed)"
+      "none": "Patient does not have this status (e.g., never smoked, denies alcohol use)"
+      "unknown": "Status cannot be determined from the text"
+
+  # Step 3: Additional arguments for substance use
+  - annotation_type: multiselect
+    name: substance_attributes
+    description: "For substance use events, select applicable attributes"
+    labels:
+      - "Amount mentioned"
+      - "Frequency mentioned"
+      - "Duration mentioned"
+      - "Type/Method specified"
+      - "Quit attempt mentioned"
+    tooltips:
+      "Amount mentioned": "Text specifies quantity (e.g., '2 drinks/day', 'pack of cigarettes')"
+      "Frequency mentioned": "Text specifies how often (e.g., 'daily', 'occasionally', 'weekends')"
+      "Duration mentioned": "Text specifies time period (e.g., '10 years', 'since college')"
+      "Type/Method specified": "Text specifies substance type or method (e.g., 'beer', 'marijuana', 'vaping')"
+      "Quit attempt mentioned": "Text mentions attempt to quit or cessation efforts"
+
+  # Step 4: Living status type (for LivingStatus events)
+  - annotation_type: radio
+    name: living_type
+    description: "For LivingStatus events, what is the living arrangement?"
+    labels:
+      - "alone"
+      - "with_family"
+      - "with_others"
+      - "homeless"
+      - "institution"
+      - "not_specified"
+    tooltips:
+      "alone": "Patient lives alone"
+      "with_family": "Patient lives with family members (spouse, children, parents)"
+      "with_others": "Patient lives with non-family (roommates, friends)"
+      "homeless": "Patient is homeless, in shelter, or has unstable housing"
+      "institution": "Patient lives in facility (nursing home, assisted living, group home)"
+      "not_specified": "Living arrangement not specified in text"
+
+  # Step 5: Employment type (for Employment events)
+  - annotation_type: radio
+    name: employment_type
+    description: "For Employment events, what is the employment status?"
+    labels:
+      - "employed"
+      - "unemployed"
+      - "retired"
+      - "disabled"
+      - "student"
+      - "homemaker"
+      - "not_specified"
+    tooltips:
+      "employed": "Patient is currently working"
+      "unemployed": "Patient is not working and seeking employment"
+      "retired": "Patient has retired from work"
+      "disabled": "Patient is unable to work due to disability"
+      "student": "Patient is a student"
+      "homemaker": "Patient works in the home/is a caregiver"
+      "not_specified": "Employment type not specified"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

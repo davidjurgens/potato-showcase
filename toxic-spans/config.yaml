@@ -1,0 +1,78 @@
+# Toxic Spans Detection
+# Based on SemEval-2021 Task 5 (Pavlopoulos et al., 2021)
+# Paper: https://aclanthology.org/2021.semeval-1.6/
+# Dataset: https://github.com/ipavlopoulos/toxic_spans
+#
+# Task: Identify the specific character sequences within comments that
+# contribute to toxicity, rather than making binary judgments about
+# entire comments.
+#
+# Guidelines:
+# - Mark the exact words/phrases that make the text toxic
+# - Focus on language that is abusive, offensive, or harmful
+# - Be precise: highlight only the toxic portions, not surrounding context
+# - Multiple spans can be marked in a single comment
+# - Some comments may have no toxic spans (false positives in toxicity detection)
+
+port: 8000
+server_name: localhost
+task_name: "Toxic Spans Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # First: determine if the text contains toxicity
+  - annotation_type: radio
+    name: contains_toxicity
+    description: "Does this text contain any toxic content?"
+    labels:
+      - "Yes - contains toxic content"
+      - "No - not toxic"
+    keyboard_shortcuts:
+      "Yes - contains toxic content": "y"
+      "No - not toxic": "n"
+    tooltips:
+      "Yes - contains toxic content": "The text contains language that is abusive, offensive, or harmful"
+      "No - not toxic": "The text does not contain toxic language (may be critical but not abusive)"
+
+  # Then: highlight the specific toxic spans
+  - annotation_type: span
+    name: toxic_spans
+    description: "Highlight the specific words or phrases that make this text toxic"
+    labels:
+      - Toxic
+    label_colors:
+      Toxic: "#ef4444"
+    tooltips:
+      Toxic: "Words or phrases that are abusive, offensive, threatening, or otherwise harmful"
+    allow_overlapping: false
+
+  # Optional: categorize the type of toxicity
+  - annotation_type: multiselect
+    name: toxicity_type
+    description: "What type(s) of toxicity are present? (select all that apply)"
+    labels:
+      - Insult
+      - Profanity
+      - Threat
+      - Identity Attack
+      - Sexual Content
+      - Other
+    tooltips:
+      Insult: "Personal attacks or demeaning language"
+      Profanity: "Vulgar or obscene language"
+      Threat: "Expressions of intent to harm"
+      "Identity Attack": "Attacks based on identity (race, gender, religion, etc.)"
+      "Sexual Content": "Sexually explicit or inappropriate content"
+      Other: "Other forms of toxic content"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

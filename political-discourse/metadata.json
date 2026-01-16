@@ -1,0 +1,22 @@
+{
+  "title": "Political Discourse Analysis (AgoraSpeech)",
+  "description": "Multi-task annotation of political speeches covering sentiment, polarization, populism, topic identification, and named entities. Based on AgoraSpeech (Sermpezis et al., 2025), featuring human-validated labels for comprehensive political discourse analysis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sermpezis et al.",
+    "email": "jurgens@umich.edu",
+    "github": "sermpezis",
+    "affiliation": "Aristotle University of Thessaloniki"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "span"],
+  "domain": ["Political Science", "Social Media"],
+  "useCase": ["Political Analysis", "Sentiment Analysis", "Discourse Analysis"],
+  "complexity": "intermediate",
+  "tags": ["political", "polarization", "populism", "sentiment", "discourse", "multi-task"],
+  "featured": true,
+  "paperReference": "Sermpezis et al., arXiv 2025",
+  "paperUrl": "https://arxiv.org/abs/2501.06265",
+  "datasetUrl": "https://arxiv.org/abs/2501.06265"
+}

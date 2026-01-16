@@ -1,0 +1,214 @@
+# Event Argument Extraction (MAVEN-Arg style)
+# Based on Wang et al., ACL 2024
+# Paper: https://aclanthology.org/2024.acl-long.224/
+# Dataset: https://github.com/THU-KEG/MAVEN-Argument
+#
+# MAVEN-Arg provides:
+# - 162 event types with expert-written definitions
+# - 612 argument roles across all event types
+# - Document-level annotation (arguments can be anywhere in document)
+# - Both entity and non-entity arguments
+#
+# This showcase demonstrates a subset of common event types and argument roles.
+# Full schema available in the dataset download.
+#
+# Annotation process:
+# 1. Identify event trigger (word/phrase indicating event occurrence)
+# 2. Classify event type
+# 3. Identify arguments filling semantic roles for that event
+# 4. Arguments may be entities (linked) or non-entity spans
+
+port: 8000
+server_name: localhost
+task_name: "Event Argument Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Event trigger identification and typing
+  - annotation_type: span
+    name: event_trigger
+    description: "Highlight the event trigger and select its event type"
+    labels:
+      # Life events
+      - "Life:Birth"
+      - "Life:Death"
+      - "Life:Injury"
+      # Movement events
+      - "Movement:Transport"
+      - "Movement:Travel"
+      # Conflict events
+      - "Conflict:Attack"
+      - "Conflict:Protest"
+      - "Conflict:War"
+      # Transaction events
+      - "Transaction:Purchase"
+      - "Transaction:Sale"
+      - "Transaction:Transfer"
+      # Business events
+      - "Business:Start"
+      - "Business:End"
+      - "Business:Merge"
+      # Communication events
+      - "Communication:Statement"
+      - "Communication:Meeting"
+      - "Communication:Announcement"
+      # Justice events
+      - "Justice:Arrest"
+      - "Justice:Trial"
+      - "Justice:Sentence"
+      # Personnel events
+      - "Personnel:Hire"
+      - "Personnel:Fire"
+      - "Personnel:Elect"
+      # Other
+      - "Other"
+    label_colors:
+      "Life:Birth": "#22c55e"
+      "Life:Death": "#6b7280"
+      "Life:Injury": "#ef4444"
+      "Movement:Transport": "#3b82f6"
+      "Movement:Travel": "#06b6d4"
+      "Conflict:Attack": "#dc2626"
+      "Conflict:Protest": "#f97316"
+      "Conflict:War": "#991b1b"
+      "Transaction:Purchase": "#8b5cf6"
+      "Transaction:Sale": "#a855f7"
+      "Transaction:Transfer": "#c084fc"
+      "Business:Start": "#14b8a6"
+      "Business:End": "#64748b"
+      "Business:Merge": "#0ea5e9"
+      "Communication:Statement": "#eab308"
+      "Communication:Meeting": "#facc15"
+      "Communication:Announcement": "#fde047"
+      "Justice:Arrest": "#b91c1c"
+      "Justice:Trial": "#7c3aed"
+      "Justice:Sentence": "#4c1d95"
+      "Personnel:Hire": "#10b981"
+      "Personnel:Fire": "#f43f5e"
+      "Personnel:Elect": "#06b6d4"
+      "Other": "#9ca3af"
+    tooltips:
+      "Life:Birth": "Birth of a person"
+      "Life:Death": "Death of a person (natural, accident, or killing)"
+      "Life:Injury": "Physical harm or injury to a person"
+      "Movement:Transport": "Moving objects or goods from one place to another"
+      "Movement:Travel": "Person traveling from one location to another"
+      "Conflict:Attack": "Violent physical act causing harm"
+      "Conflict:Protest": "Public demonstration or protest"
+      "Conflict:War": "Armed conflict between groups/nations"
+      "Transaction:Purchase": "Buying something with money"
+      "Transaction:Sale": "Selling something for money"
+      "Transaction:Transfer": "Transfer of ownership or possession"
+      "Business:Start": "Starting a business or organization"
+      "Business:End": "Closing or ending a business"
+      "Business:Merge": "Combining two or more organizations"
+      "Communication:Statement": "Formal statement or declaration"
+      "Communication:Meeting": "Meeting or gathering of people"
+      "Communication:Announcement": "Public announcement of information"
+      "Justice:Arrest": "Law enforcement taking someone into custody"
+      "Justice:Trial": "Legal court proceeding"
+      "Justice:Sentence": "Legal judgment or sentencing"
+      "Personnel:Hire": "Hiring or employing someone"
+      "Personnel:Fire": "Terminating someone's employment"
+      "Personnel:Elect": "Electing someone to a position"
+      "Other": "Event type not covered by above categories"
+    allow_overlapping: false
+
+  # Step 2: Argument identification
+  - annotation_type: span
+    name: arguments
+    description: "Highlight arguments (participants/properties) of the identified events"
+    labels:
+      # Core arguments
+      - "Agent"
+      - "Patient"
+      - "Theme"
+      # Participants
+      - "Victim"
+      - "Attacker"
+      - "Buyer"
+      - "Seller"
+      - "Giver"
+      - "Recipient"
+      # Circumstantial
+      - "Location"
+      - "Origin"
+      - "Destination"
+      - "Time"
+      - "Duration"
+      # Other
+      - "Instrument"
+      - "Cause"
+      - "Purpose"
+      - "Content"
+      - "Value"
+    label_colors:
+      "Agent": "#3b82f6"
+      "Patient": "#22c55e"
+      "Theme": "#8b5cf6"
+      "Victim": "#ef4444"
+      "Attacker": "#dc2626"
+      "Buyer": "#06b6d4"
+      "Seller": "#0891b2"
+      "Giver": "#14b8a6"
+      "Recipient": "#10b981"
+      "Location": "#f59e0b"
+      "Origin": "#fbbf24"
+      "Destination": "#f97316"
+      "Time": "#a855f7"
+      "Duration": "#c084fc"
+      "Instrument": "#6b7280"
+      "Cause": "#ec4899"
+      "Purpose": "#db2777"
+      "Content": "#eab308"
+      "Value": "#84cc16"
+    tooltips:
+      "Agent": "Entity performing or causing the event (doer)"
+      "Patient": "Entity affected by or undergoing the event"
+      "Theme": "Entity being moved, transferred, or described"
+      "Victim": "Person harmed in the event"
+      "Attacker": "Person/entity causing harm"
+      "Buyer": "Entity purchasing something"
+      "Seller": "Entity selling something"
+      "Giver": "Entity giving or transferring something"
+      "Recipient": "Entity receiving something"
+      "Location": "Where the event takes place"
+      "Origin": "Starting point of movement"
+      "Destination": "End point of movement"
+      "Time": "When the event occurs"
+      "Duration": "How long the event lasts"
+      "Instrument": "Object used to perform the event"
+      "Cause": "What caused the event"
+      "Purpose": "Goal or intention of the event"
+      "Content": "What is communicated or expressed"
+      "Value": "Monetary or quantitative value involved"
+    allow_overlapping: true
+
+  # Step 3: Link argument to event
+  - annotation_type: radio
+    name: argument_event_link
+    description: "Which event does the most recently annotated argument belong to? (Enter event number)"
+    labels:
+      - "Event 1"
+      - "Event 2"
+      - "Event 3"
+      - "Event 4"
+      - "Multiple events"
+    tooltips:
+      "Event 1": "Argument belongs to the first event in the text"
+      "Event 2": "Argument belongs to the second event"
+      "Event 3": "Argument belongs to the third event"
+      "Event 4": "Argument belongs to the fourth event"
+      "Multiple events": "Argument is shared across multiple events"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

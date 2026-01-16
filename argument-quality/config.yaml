@@ -1,0 +1,158 @@
+# Argument Quality Assessment
+# Based on Wachsmuth et al., 2017 taxonomy
+# Paper: https://aclanthology.org/2020.coling-main.402/
+#
+# Three main quality dimensions:
+#
+# 1. COGENCY (Logic) - Is the reasoning valid?
+#    - Local Acceptability: Are premises believable?
+#    - Local Relevance: Do premises support the conclusion?
+#    - Local Sufficiency: Is there enough support?
+#
+# 2. EFFECTIVENESS (Rhetoric) - Is it persuasive?
+#    - Credibility: Does the author seem trustworthy?
+#    - Emotional Appeal: Does it engage emotions appropriately?
+#    - Clarity: Is the argument easy to understand?
+#
+# 3. REASONABLENESS (Dialectic) - Does it contribute to resolution?
+#    - Global Acceptability: Are claims defensible?
+#    - Global Relevance: Does it address the issue?
+#    - Global Sufficiency: Does it adequately resolve the issue?
+#
+# Note: Correlations with overall quality - Cogency (.84), Effectiveness (.81), Reasonableness (.86)
+
+port: 8000
+server_name: localhost
+task_name: "Argument Quality Assessment"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: argument
+context_key: topic
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Overall Quality Rating
+  - annotation_type: radio
+    name: overall_quality
+    description: "Rate the OVERALL quality of this argument (1=very poor, 5=excellent)"
+    labels:
+      - "1 - Very Poor"
+      - "2 - Poor"
+      - "3 - Average"
+      - "4 - Good"
+      - "5 - Excellent"
+    keyboard_shortcuts:
+      "1 - Very Poor": "1"
+      "2 - Poor": "2"
+      "3 - Average": "3"
+      "4 - Good": "4"
+      "5 - Excellent": "5"
+    tooltips:
+      "1 - Very Poor": "Fails on most quality dimensions; not convincing at all"
+      "2 - Poor": "Significant weaknesses in logic, persuasion, or relevance"
+      "3 - Average": "Adequate argument with some strengths and weaknesses"
+      "4 - Good": "Strong argument with minor issues"
+      "5 - Excellent": "Highly convincing, well-reasoned, and relevant"
+
+  # Dimension 1: Cogency (Logic)
+  - annotation_type: radio
+    name: cogency
+    description: "COGENCY: Is the argument logically valid? Are the premises acceptable, relevant, and sufficient?"
+    labels:
+      - "1 - Not cogent"
+      - "2 - Slightly cogent"
+      - "3 - Moderately cogent"
+      - "4 - Quite cogent"
+      - "5 - Very cogent"
+    keyboard_shortcuts:
+      "1 - Not cogent": "q"
+      "2 - Slightly cogent": "w"
+      "3 - Moderately cogent": "e"
+      "4 - Quite cogent": "r"
+      "5 - Very cogent": "t"
+    tooltips:
+      "1 - Not cogent": "Premises are false, irrelevant, or completely insufficient"
+      "2 - Slightly cogent": "Major logical flaws; premises barely support conclusion"
+      "3 - Moderately cogent": "Some logical issues but reasoning is followable"
+      "4 - Quite cogent": "Sound reasoning with minor gaps"
+      "5 - Very cogent": "Excellent logic; premises clearly and fully support conclusion"
+
+  # Dimension 2: Effectiveness (Rhetoric)
+  - annotation_type: radio
+    name: effectiveness
+    description: "EFFECTIVENESS: Is the argument persuasive? Does it establish credibility and engage the audience?"
+    labels:
+      - "1 - Not effective"
+      - "2 - Slightly effective"
+      - "3 - Moderately effective"
+      - "4 - Quite effective"
+      - "5 - Very effective"
+    keyboard_shortcuts:
+      "1 - Not effective": "a"
+      "2 - Slightly effective": "s"
+      "3 - Moderately effective": "d"
+      "4 - Quite effective": "f"
+      "5 - Very effective": "g"
+    tooltips:
+      "1 - Not effective": "Unpersuasive; poor clarity, no credibility, inappropriate tone"
+      "2 - Slightly effective": "Weak persuasive appeal; hard to follow or unconvincing"
+      "3 - Moderately effective": "Somewhat persuasive but could be more compelling"
+      "4 - Quite effective": "Persuasive with good clarity and appropriate appeal"
+      "5 - Very effective": "Highly persuasive; clear, credible, and engaging"
+
+  # Dimension 3: Reasonableness (Dialectic)
+  - annotation_type: radio
+    name: reasonableness
+    description: "REASONABLENESS: Does the argument contribute to resolving the issue? Is it globally relevant and acceptable?"
+    labels:
+      - "1 - Not reasonable"
+      - "2 - Slightly reasonable"
+      - "3 - Moderately reasonable"
+      - "4 - Quite reasonable"
+      - "5 - Very reasonable"
+    keyboard_shortcuts:
+      "1 - Not reasonable": "z"
+      "2 - Slightly reasonable": "x"
+      "3 - Moderately reasonable": "c"
+      "4 - Quite reasonable": "v"
+      "5 - Very reasonable": "b"
+    tooltips:
+      "1 - Not reasonable": "Does not address the issue; claims are indefensible"
+      "2 - Slightly reasonable": "Tangential to the issue; weak contribution"
+      "3 - Moderately reasonable": "Addresses the issue but doesn't fully resolve it"
+      "4 - Quite reasonable": "Relevant contribution that advances the discussion"
+      "5 - Very reasonable": "Directly addresses and substantially resolves the issue"
+
+  # Specific quality issues (optional detailed feedback)
+  - annotation_type: multiselect
+    name: quality_issues
+    description: "Select any specific quality issues present in this argument"
+    labels:
+      - "Factual errors"
+      - "Logical fallacy"
+      - "Missing evidence"
+      - "Unclear reasoning"
+      - "Off-topic"
+      - "Ad hominem attack"
+      - "Emotional manipulation"
+      - "Overgeneralization"
+      - "No issues detected"
+    tooltips:
+      "Factual errors": "Contains false or unverifiable claims"
+      "Logical fallacy": "Contains identifiable reasoning error (e.g., straw man, false dichotomy)"
+      "Missing evidence": "Makes claims without supporting evidence"
+      "Unclear reasoning": "Hard to follow the logical flow"
+      "Off-topic": "Does not address the actual topic/question"
+      "Ad hominem attack": "Attacks person rather than argument"
+      "Emotional manipulation": "Uses fear, anger, or other emotions inappropriately"
+      "Overgeneralization": "Makes sweeping claims from limited evidence"
+      "No issues detected": "No significant quality issues identified"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

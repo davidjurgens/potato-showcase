@@ -1,0 +1,121 @@
+# GoEmotions - Fine-Grained Emotion Classification
+# Based on Demszky et al., ACL 2020
+# Paper: https://aclanthology.org/2020.acl-main.372/
+# Dataset: https://github.com/google-research/google-research/tree/master/goemotions
+#
+# Taxonomy: 27 emotions organized by sentiment:
+# - Positive (12): admiration, amusement, approval, caring, desire, excitement,
+#                  gratitude, joy, love, optimism, pride, relief
+# - Negative (11): anger, annoyance, disappointment, disapproval, disgust,
+#                  embarrassment, fear, grief, nervousness, remorse, sadness
+# - Ambiguous (4): confusion, curiosity, realization, surprise
+# - Plus: neutral
+#
+# Guidelines:
+# - Select ALL emotions expressed in the text (multi-label)
+# - Focus on emotion expressed by author, not evoked in reader
+# - Related emotions differ by intensity (annoyance -> anger)
+
+port: 8000
+server_name: localhost
+task_name: "GoEmotions: Fine-Grained Emotion Classification"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: multiselect
+    name: emotions
+    description: "Select ALL emotions expressed in this text (multiple selections allowed)"
+    labels:
+      # Positive emotions (12)
+      - Admiration
+      - Amusement
+      - Approval
+      - Caring
+      - Desire
+      - Excitement
+      - Gratitude
+      - Joy
+      - Love
+      - Optimism
+      - Pride
+      - Relief
+      # Negative emotions (11)
+      - Anger
+      - Annoyance
+      - Disappointment
+      - Disapproval
+      - Disgust
+      - Embarrassment
+      - Fear
+      - Grief
+      - Nervousness
+      - Remorse
+      - Sadness
+      # Ambiguous emotions (4)
+      - Confusion
+      - Curiosity
+      - Realization
+      - Surprise
+
+    keyboard_shortcuts:
+      Admiration: "1"
+      Amusement: "2"
+      Approval: "3"
+      Caring: "4"
+      Joy: "5"
+      Love: "6"
+      Anger: "7"
+      Sadness: "8"
+      Fear: "9"
+      Surprise: "0"
+
+    tooltips:
+      Admiration: "Finding something impressive or worthy of respect"
+      Amusement: "Finding something funny or being entertained"
+      Approval: "Having or expressing a favorable opinion"
+      Caring: "Displaying kindness and concern for others"
+      Desire: "A strong feeling of wanting something"
+      Excitement: "Feeling very enthusiastic and eager"
+      Gratitude: "Being thankful, ready to show appreciation"
+      Joy: "A feeling of great pleasure and happiness"
+      Love: "A strong positive feeling of affection"
+      Optimism: "Hopefulness and confidence about the future"
+      Pride: "Pleasure or satisfaction from achievements"
+      Relief: "Reassurance and relaxation after anxiety"
+      Anger: "A strong feeling of displeasure or hostility"
+      Annoyance: "Slight irritation or frustration"
+      Disappointment: "Sadness caused by unfulfilled expectations"
+      Disapproval: "Possession or expression of an unfavorable opinion"
+      Disgust: "A strong feeling of aversion or revulsion"
+      Embarrassment: "Self-conscious awkwardness or shame"
+      Fear: "Being afraid or worried about something"
+      Grief: "Deep sorrow, especially caused by loss"
+      Nervousness: "Easily agitated or worried"
+      Remorse: "Deep regret or guilt for wrongdoing"
+      Sadness: "Feeling or showing sorrow; unhappiness"
+      Confusion: "Lack of understanding; uncertainty"
+      Curiosity: "A strong desire to know or learn something"
+      Realization: "Becoming fully aware of something"
+      Surprise: "Feeling of astonishment or shock"
+
+  - annotation_type: radio
+    name: is_neutral
+    description: "Is this text emotionally neutral?"
+    labels:
+      - "Contains emotion(s)"
+      - "Neutral (no emotion)"
+    keyboard_shortcuts:
+      "Contains emotion(s)": "e"
+      "Neutral (no emotion)": "n"
+
+allow_all_users: true
+instances_per_annotator: 200
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

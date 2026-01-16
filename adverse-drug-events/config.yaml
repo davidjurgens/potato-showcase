@@ -1,0 +1,124 @@
+# Adverse Drug Event Extraction (CADEC-style)
+# Based on Karimi et al., J Biomed Inform 2015
+# Paper: https://pubmed.ncbi.nlm.nih.gov/25817970/
+# Dataset: https://data.csiro.au/collection/csiro:10948
+#
+# Entity Types:
+# - Drug: medication names (brand or generic)
+# - ADR (Adverse Drug Reaction): side effects caused by the drug
+# - Disease: conditions for which the patient takes medication
+# - Symptom: symptoms of a disease leading to medication use
+# - Finding: clinical concepts with unclear categorization
+#
+# Note: CADEC uses colloquial language from patient forums (askapatient.com)
+# Annotations are mapped to SNOMED-CT and MedDRA vocabularies
+
+port: 8000
+server_name: localhost
+task_name: "Adverse Drug Event Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Primary entity annotation
+  - annotation_type: span
+    name: entities
+    description: "Highlight and classify medical entities in the text"
+    labels:
+      - Drug
+      - ADR
+      - Disease
+      - Symptom
+      - Finding
+    label_colors:
+      Drug: "#3b82f6"
+      ADR: "#ef4444"
+      Disease: "#8b5cf6"
+      Symptom: "#f59e0b"
+      Finding: "#6b7280"
+    tooltips:
+      Drug: "Medication name - brand name (e.g., Lipitor) or generic name (e.g., atorvastatin)"
+      ADR: "Adverse Drug Reaction - side effect or negative reaction caused by the drug (e.g., 'terrible muscle pain', 'made me dizzy')"
+      Disease: "Medical condition for which the patient takes the medication (e.g., 'high cholesterol', 'arthritis')"
+      Symptom: "Symptom of the underlying disease, not caused by the drug (e.g., 'joint pain' that led to taking the drug)"
+      Finding: "Other clinical concepts that don't clearly fit above categories"
+    allow_overlapping: false
+
+  # Severity of ADR (for ADR spans)
+  - annotation_type: radio
+    name: adr_severity
+    description: "If an ADR is present, how severe does the patient describe it?"
+    labels:
+      - Mild
+      - Moderate
+      - Severe
+      - Life-threatening
+      - Not specified
+      - N/A (no ADR)
+    keyboard_shortcuts:
+      Mild: "1"
+      Moderate: "2"
+      Severe: "3"
+      "Life-threatening": "4"
+      "Not specified": "5"
+      "N/A (no ADR)": "0"
+    tooltips:
+      Mild: "Minor inconvenience, patient continued medication"
+      Moderate: "Significant discomfort, may have affected daily activities"
+      Severe: "Serious reaction, patient stopped medication or sought medical help"
+      "Life-threatening": "Emergency situation, hospitalization, or risk of death"
+      "Not specified": "Severity not clearly indicated in text"
+      "N/A (no ADR)": "No adverse drug reaction in this text"
+
+  # Temporal relation to drug
+  - annotation_type: radio
+    name: temporal_relation
+    description: "When did the ADR occur relative to taking the drug?"
+    labels:
+      - "Immediate (within hours)"
+      - "Short-term (days to weeks)"
+      - "Long-term (months)"
+      - "After stopping drug"
+      - "Not specified"
+      - "N/A"
+    tooltips:
+      "Immediate (within hours)": "Reaction occurred shortly after taking the medication"
+      "Short-term (days to weeks)": "Reaction developed within days or weeks of starting"
+      "Long-term (months)": "Reaction appeared after prolonged use"
+      "After stopping drug": "Reaction occurred after discontinuing the medication"
+      "Not specified": "Timing not clearly indicated"
+      "N/A": "Not applicable (no ADR present)"
+
+  # Drug-ADR relationship certainty
+  - annotation_type: radio
+    name: causality_certainty
+    description: "How certain is the patient that the drug caused the reaction?"
+    labels:
+      - "Definite"
+      - "Probable"
+      - "Possible"
+      - "Uncertain"
+      - "N/A"
+    keyboard_shortcuts:
+      "Definite": "d"
+      "Probable": "p"
+      "Possible": "o"
+      "Uncertain": "u"
+      "N/A": "n"
+    tooltips:
+      "Definite": "Patient explicitly states drug caused the reaction (e.g., 'this drug gave me...')"
+      "Probable": "Strong implication of causation (e.g., 'started having X after taking Y')"
+      "Possible": "Temporal association but causation unclear"
+      "Uncertain": "Patient unsure if drug is responsible"
+      "N/A": "Not applicable (no ADR present)"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

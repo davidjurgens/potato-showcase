@@ -1,0 +1,22 @@
+{
+  "title": "Argument Quality Assessment",
+  "description": "Multi-dimensional argument quality annotation based on the Wachsmuth et al. (2017) taxonomy. Rates arguments on three dimensions: Cogency (logical validity), Effectiveness (persuasive power), and Reasonableness (contribution to resolution). Used in Dagstuhl-ArgQuality and GAQCorpus datasets.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wachsmuth et al.",
+    "email": "jurgens@umich.edu",
+    "github": "webis-de",
+    "affiliation": "Bauhaus-Universität Weimar"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "radio"],
+  "domain": ["NLP", "Argumentation"],
+  "useCase": ["Argument Mining", "Debate Analysis", "Writing Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["argument-quality", "argumentation", "cogency", "rhetoric", "debate", "persuasion"],
+  "featured": true,
+  "paperReference": "Wachsmuth et al., COLING 2017",
+  "paperUrl": "https://aclanthology.org/2020.coling-main.402/",
+  "datasetUrl": "https://webis.de/data/webis-argquality-20.html"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Fine-Grained Propaganda Detection",
+  "description": "Span-level annotation of propaganda techniques in news articles based on SemEval 2020 Task 11 (Da San Martino et al., EMNLP 2019). Identifies 14 techniques including Loaded Language, Name Calling, Appeal to Fear, and more across rhetorical dimensions (ethos, logos, pathos).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Da San Martino et al.",
+    "email": "jurgens@umich.edu",
+    "github": "proppy",
+    "affiliation": "Qatar Computing Research Institute"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span"],
+  "domain": ["NLP", "Media Analysis"],
+  "useCase": ["Propaganda Detection", "Media Bias", "Misinformation"],
+  "complexity": "advanced",
+  "tags": ["propaganda", "persuasion", "rhetoric", "news", "media-bias", "semeval2020", "span-annotation"],
+  "featured": true,
+  "paperReference": "Da San Martino et al., EMNLP 2019",
+  "paperUrl": "https://aclanthology.org/D19-1565/",
+  "datasetUrl": "https://propaganda.qcri.org/"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Adverse Drug Event Extraction (CADEC-style)",
+  "description": "Named entity recognition for adverse drug events from patient-reported experiences, based on the CADEC corpus (Karimi et al., 2015). Annotates drugs, adverse effects, symptoms, diseases, and findings from colloquial health forum posts with mapping to medical vocabularies (SNOMED-CT, MedDRA).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Karimi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "CSIRO",
+    "affiliation": "CSIRO"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["Biomedical NLP", "Healthcare"],
+  "useCase": ["Pharmacovigilance", "Adverse Event Detection", "Drug Safety"],
+  "complexity": "intermediate",
+  "tags": ["adverse-drug-events", "pharmacovigilance", "biomedical", "ner", "patient-reports", "cadec"],
+  "featured": true,
+  "paperReference": "Karimi et al., J Biomed Inform 2015",
+  "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/25817970/",
+  "datasetUrl": "https://data.csiro.au/collection/csiro:10948"
+}

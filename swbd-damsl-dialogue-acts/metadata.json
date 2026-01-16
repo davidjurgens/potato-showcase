@@ -1,0 +1,22 @@
+{
+  "title": "SWBD-DAMSL Dialogue Acts",
+  "description": "Dialogue act annotation following the Switchboard DAMSL tagset (Jurafsky et al., 1997). Covers statements, questions, backchannels, agreements, and more for conversational speech analysis. Achieved 0.80 inter-rater Kappa on 1,155 conversations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jurafsky et al.",
+    "email": "jurgens@umich.edu",
+    "github": "CornellNLP",
+    "affiliation": "Stanford / UC Boulder"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "Dialogue Systems"],
+  "useCase": ["Dialogue Act Classification", "Conversational AI", "Discourse Analysis"],
+  "complexity": "advanced",
+  "tags": ["dialogue", "speech-acts", "conversation", "discourse", "damsl", "switchboard"],
+  "featured": true,
+  "paperReference": "Jurafsky et al., 1997",
+  "paperUrl": "https://web.stanford.edu/~jurafsky/ws97/manual.august1.html",
+  "datasetUrl": "https://github.com/CornellNLP/ConvoKit"
+}

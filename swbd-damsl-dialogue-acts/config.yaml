@@ -1,0 +1,137 @@
+# SWBD-DAMSL Dialogue Act Annotation
+# Based on Jurafsky et al., 1997
+# Manual: https://web.stanford.edu/~jurafsky/ws97/manual.august1.html
+# Dataset: https://github.com/CornellNLP/ConvoKit
+#
+# Key principles:
+# - Label based on pragmatic function, not grammatical form
+# - Utterances can have both forward and backward functions
+# - Context matters for interpretation
+# - Default to sd (statement-non-opinion) when uncertain
+#
+# Forward functions: What the speaker is trying to accomplish
+# Backward functions: How the utterance relates to previous turns
+
+port: 8000
+server_name: localhost
+task_name: "SWBD-DAMSL Dialogue Act Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: utterance
+context_key: context
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Primary dialogue act
+  - annotation_type: radio
+    name: primary_act
+    description: "Select the PRIMARY dialogue act for this utterance"
+    labels:
+      # Statements
+      - "sd: Statement-non-opinion"
+      - "sv: Statement-opinion"
+      # Questions
+      - "qy: Yes-No-Question"
+      - "qw: Wh-Question"
+      - "qo: Open-Question"
+      - "qr: Or-Question"
+      - "^d: Declarative-Question"
+      - "^g: Tag-Question"
+      - "qh: Rhetorical-Question"
+      # Directives
+      - "ad: Action-directive"
+      - "co: Commit"
+      # Conventional
+      - "fp: Conventional-opening"
+      - "fc: Conventional-closing"
+      - "ft: Thanking"
+      - "fa: Apology"
+      # Backchannels & Acknowledgments
+      - "b: Backchannel"
+      - "bk: Acknowledge-answer"
+      - "ba: Appreciation"
+      # Answers
+      - "ny: Yes-answer"
+      - "nn: No-answer"
+      - "no: Other-answer"
+      # Agreement/Disagreement
+      - "aa: Accept/Agree"
+      - "ar: Reject/Disagree"
+      - "am: Maybe"
+      # Special
+      - "%: Uninterpretable"
+      - "x: Non-verbal"
+      - "+: Continuation"
+
+    keyboard_shortcuts:
+      "sd: Statement-non-opinion": "s"
+      "sv: Statement-opinion": "v"
+      "qy: Yes-No-Question": "y"
+      "qw: Wh-Question": "w"
+      "b: Backchannel": "b"
+      "aa: Accept/Agree": "a"
+      "ny: Yes-answer": "1"
+      "nn: No-answer": "2"
+
+    tooltips:
+      "sd: Statement-non-opinion": "Descriptive/narrative statements the listener cannot dispute"
+      "sv: Statement-opinion": "Opinions or viewpoints the listener could disagree with"
+      "qy: Yes-No-Question": "Questions expecting yes/no responses"
+      "qw: Wh-Question": "Questions with who, what, where, when, why, how"
+      "qo: Open-Question": "Open-ended questions like 'How about you?'"
+      "qr: Or-Question": "Questions offering alternative choices"
+      "^d: Declarative-Question": "Statement syntax with question intonation/pragmatics"
+      "^g: Tag-Question": "Statements with confirmation-seeking tags"
+      "qh: Rhetorical-Question": "Questions not seeking literal answers"
+      "ad: Action-directive": "Commands, requests, or proposals for action"
+      "co: Commit": "Speaker commits to future action"
+      "fp: Conventional-opening": "Greetings and opening sequences"
+      "fc: Conventional-closing": "Farewells and closing sequences"
+      "ft: Thanking": "Expressions of gratitude"
+      "fa: Apology": "Apologies for interruptions or errors"
+      "b: Backchannel": "Continuers: uh-huh, yeah, right, mm-hmm"
+      "bk: Acknowledge-answer": "Acknowledging received answer: 'Oh, okay'"
+      "ba: Appreciation": "Emotional support or positive assessment"
+      "ny: Yes-answer": "Affirmative responses to questions"
+      "nn: No-answer": "Negative responses to questions"
+      "no: Other-answer": "Other answers: 'I don't know', 'Maybe'"
+      "aa: Accept/Agree": "Agreement with previous statement or proposal"
+      "ar: Reject/Disagree": "Disagreement or rejection"
+      "am: Maybe": "Tentative or partial agreement"
+      "%: Uninterpretable": "Unclear or abandoned utterances"
+      "x: Non-verbal": "Laughter, coughs, non-speech sounds"
+      "+: Continuation": "Continues from speaker's own previous turn"
+
+  # Backward functions (optional, for utterances responding to previous turns)
+  - annotation_type: multiselect
+    name: backward_functions
+    description: "Select any BACKWARD functions (how this responds to previous utterance)"
+    labels:
+      - "None"
+      - "aa: Accept/Agree"
+      - "ar: Reject/Disagree"
+      - "am: Maybe"
+      - "b: Backchannel"
+      - "bk: Acknowledge-answer"
+      - "ba: Appreciation"
+      - "ny: Yes-answer"
+      - "nn: No-answer"
+    tooltips:
+      "None": "No backward-looking function"
+      "aa: Accept/Agree": "Agreement with previous statement"
+      "ar: Reject/Disagree": "Disagreement or rejection"
+      "am: Maybe": "Tentative or partial agreement"
+      "b: Backchannel": "Continuer signal"
+      "bk: Acknowledge-answer": "Acknowledging received answer"
+      "ba: Appreciation": "Emotional support or assessment"
+      "ny: Yes-answer": "Answering yes to a question"
+      "nn: No-answer": "Answering no to a question"
+
+allow_all_users: true
+instances_per_annotator: 300
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

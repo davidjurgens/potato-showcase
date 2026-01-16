@@ -1,0 +1,22 @@
+{
+  "title": "RuSentiment - Social Media Sentiment",
+  "description": "5-class sentiment annotation for social media posts based on RuSentiment (Rogers et al., COLING 2018). Includes Positive, Negative, Neutral, Speech Act (greetings/thanks), and Skip categories. Achieved 0.654 Fleiss kappa with 250-350 posts/hour annotation speed.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rogers et al.",
+    "email": "jurgens@umich.edu",
+    "github": "text-machine-lab",
+    "affiliation": "UMass Lowell"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Social Media"],
+  "useCase": ["Sentiment Analysis", "Social Media Analysis"],
+  "complexity": "beginner",
+  "tags": ["sentiment", "social-media", "russian", "speech-acts", "coling2018"],
+  "featured": false,
+  "paperReference": "Rogers et al., COLING 2018",
+  "paperUrl": "https://aclanthology.org/C18-1064/",
+  "datasetUrl": "https://github.com/text-machine-lab/rusentiment"
+}
