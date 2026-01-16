@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ecqa_001",
+    "question": "Where would you put a plant if you want it to get lots of sunlight?",
+    "choices": ["A) windowsill", "B) basement", "C) closet", "D) refrigerator", "E) garden center"],
+    "correct_answer": "A) windowsill"
+  },
+  {
+    "id": "ecqa_002",
+    "question": "What do people typically do when they feel cold?",
+    "choices": ["A) open windows", "B) wear shorts", "C) turn on heater", "D) go swimming", "E) eat ice cream"],
+    "correct_answer": "C) turn on heater"
+  },
+  {
+    "id": "ecqa_003",
+    "question": "Where is a good place to store ice cream for later?",
+    "choices": ["A) cupboard", "B) freezer", "C) microwave", "D) bathtub", "E) mailbox"],
+    "correct_answer": "B) freezer"
+  },
+  {
+    "id": "ecqa_004",
+    "question": "What might happen if you forget to water a plant for weeks?",
+    "choices": ["A) it grows faster", "B) it turns blue", "C) it dies", "D) it starts talking", "E) it floats away"],
+    "correct_answer": "C) it dies"
+  },
+  {
+    "id": "ecqa_005",
+    "question": "Why do people use an umbrella?",
+    "choices": ["A) to fly", "B) to stay dry in rain", "C) to dig holes", "D) to cook food", "E) to make phone calls"],
+    "correct_answer": "B) to stay dry in rain"
+  },
+  {
+    "id": "ecqa_006",
+    "question": "What do you need to do before driving a car?",
+    "choices": ["A) take a nap", "B) learn to drive", "C) paint your house", "D) write a book", "E) climb a mountain"],
+    "correct_answer": "B) learn to drive"
+  },
+  {
+    "id": "ecqa_007",
+    "question": "Where would you find a cashier?",
+    "choices": ["A) in a tree", "B) at a store", "C) under water", "D) on the moon", "E) inside a book"],
+    "correct_answer": "B) at a store"
+  },
+  {
+    "id": "ecqa_008",
+    "question": "What happens after sunset?",
+    "choices": ["A) it gets dark", "B) it snows", "C) flowers bloom", "D) rivers freeze", "E) birds sing louder"],
+    "correct_answer": "A) it gets dark"
+  }
+]

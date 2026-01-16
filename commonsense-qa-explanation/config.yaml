@@ -1,0 +1,97 @@
+# Commonsense QA Explanation (ECQA)
+# Based on Aggarwal et al., ACL 2021
+# Paper: https://aclanthology.org/2021.acl-long.238/
+# Dataset: https://github.com/dair-iitd/ECQA-Dataset
+#
+# ECQA provides explanations for CommonsenseQA that:
+# 1. Justify why the correct answer is right (positive properties)
+# 2. Explain why incorrect answers are wrong (negative properties)
+# 3. Combine into a free-flow explanation
+#
+# Explanation Structure:
+# - Positives: Facts that support the correct answer
+# - Negatives: Facts that refute the incorrect answers
+# - Full explanation: Natural language justification
+#
+# Annotation Guidelines:
+# 1. First identify what makes the correct answer correct
+# 2. Then identify why each wrong answer fails
+# 3. Use commonsense knowledge, not just word matching
+# 4. Explanations should be clear to someone unfamiliar with the question
+# 5. Focus on the KEY distinguishing properties
+
+port: 8000
+server_name: localhost
+task_name: "Commonsense QA Explanation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: question
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Verify the correct answer
+  - annotation_type: radio
+    name: answer_verification
+    description: "Is the marked answer correct?"
+    labels:
+      - "Yes, correct"
+      - "No, incorrect"
+      - "Ambiguous"
+    tooltips:
+      "Yes, correct": "The marked answer is definitely correct"
+      "No, incorrect": "The marked answer is wrong"
+      "Ambiguous": "Multiple answers could be correct"
+
+  # Step 2: Explanation completeness
+  - annotation_type: radio
+    name: explanation_quality
+    description: "How complete is a good explanation for this question?"
+    labels:
+      - "Simple - one fact needed"
+      - "Moderate - few facts needed"
+      - "Complex - many facts needed"
+    tooltips:
+      "Simple - one fact needed": "One commonsense fact explains the answer"
+      "Moderate - few facts needed": "2-3 facts are needed"
+      "Complex - many facts needed": "Requires combining multiple pieces of knowledge"
+
+  # Step 3: Knowledge type required
+  - annotation_type: radio
+    name: knowledge_type
+    description: "What type of knowledge is primarily needed to answer this?"
+    labels:
+      - "Physical/spatial"
+      - "Social/cultural"
+      - "Temporal"
+      - "Causal"
+      - "Definitional"
+      - "Other"
+    tooltips:
+      "Physical/spatial": "Knowledge about physical properties or locations"
+      "Social/cultural": "Knowledge about social norms or cultural practices"
+      "Temporal": "Knowledge about time, sequences, or duration"
+      "Causal": "Knowledge about cause and effect"
+      "Definitional": "Knowledge about what things are or mean"
+      "Other": "Other type of commonsense knowledge"
+
+  # Step 4: Difficulty
+  - annotation_type: likert
+    name: difficulty
+    description: "How difficult is this question for most people?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very easy"
+      2: "Easy"
+      3: "Moderate"
+      4: "Hard"
+      5: "Very hard"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dre_001",
+    "dialogue": "Speaker 1: Hey, have you met my sister Rachel?\nSpeaker 2: No, I don't think so. Is she the one who works at the museum?\nSpeaker 1: That's right! She just got promoted to curator last month.\nSpeaker 2: That's great! Tell her congratulations from me."
+  },
+  {
+    "id": "dre_002",
+    "dialogue": "Speaker 1: I ran into your old college roommate yesterday.\nSpeaker 2: Oh, you mean Tom? How's he doing?\nSpeaker 1: Pretty good. He's working at Google now.\nSpeaker 2: Wow, I haven't talked to him since we graduated from Stanford."
+  },
+  {
+    "id": "dre_003",
+    "dialogue": "Speaker 1: My boss wants me to work this weekend again.\nSpeaker 2: That's tough. Who's your boss again?\nSpeaker 1: Mr. Johnson. He's the VP of Engineering at the company.\nSpeaker 2: Maybe you should talk to HR about this."
+  },
+  {
+    "id": "dre_004",
+    "dialogue": "Speaker 1: Did you hear? Monica and Chandler are getting married!\nSpeaker 2: Finally! They've been dating for three years.\nSpeaker 1: I know. Monica's parents must be thrilled.\nSpeaker 2: Are her parents still living in Long Island?"
+  },
+  {
+    "id": "dre_005",
+    "dialogue": "Speaker 1: I need to pick up my son from soccer practice.\nSpeaker 2: How old is he now?\nSpeaker 1: He just turned 10. He goes to Lincoln Elementary.\nSpeaker 2: That's the same school my neighbor's kids go to!"
+  },
+  {
+    "id": "dre_006",
+    "dialogue": "Speaker 1: I'm having lunch with my colleague Sarah tomorrow.\nSpeaker 2: Oh, she works in your department?\nSpeaker 1: Yes, we both work in marketing at Acme Corp.\nSpeaker 2: That's where my husband works too! In the finance department."
+  }
+]

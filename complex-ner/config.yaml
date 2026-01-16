@@ -1,0 +1,73 @@
+# Complex Named Entity Recognition (MultiCoNER)
+# Based on SemEval 2022/2023 MultiCoNER Shared Tasks
+# Paper: https://aclanthology.org/2022.semeval-1.196/
+#
+# Traditional NER focuses on Person, Location, Organization.
+# Complex NER handles challenging entities like:
+# - Creative works ("Dial M for Murder", "Game of Thrones")
+# - Products ("iPhone 15", "Tesla Model S")
+# - Groups ("Anonymous", "BTS Army")
+#
+# Entity Types (Coarse-grained):
+# - PER: Person names
+# - LOC: Locations, facilities
+# - CORP: Corporations, businesses
+# - GRP: Other groups (bands, teams, movements)
+# - PROD: Products (consumer goods, vehicles)
+# - CW: Creative works (movies, books, songs)
+#
+# Challenges:
+# - Creative works can be any linguistic form
+# - Product names blend with common words
+# - Group names may be descriptive phrases
+# - Emerging entities lack context
+#
+# Annotation Guidelines:
+# 1. Mark the full entity span including modifiers
+# 2. Creative works include titles in any form
+# 3. Products include brand + product name
+# 4. When uncertain, consider: would this have a Wikipedia page?
+
+port: 8000
+server_name: localhost
+task_name: "Complex Named Entity Recognition"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: span
+    name: entities
+    description: "Highlight all named entities in the text"
+    labels:
+      - "Person"
+      - "Location"
+      - "Corporation"
+      - "Group"
+      - "Product"
+      - "Creative Work"
+    label_colors:
+      "Person": "#3b82f6"
+      "Location": "#22c55e"
+      "Corporation": "#8b5cf6"
+      "Group": "#f59e0b"
+      "Product": "#06b6d4"
+      "Creative Work": "#ec4899"
+    tooltips:
+      "Person": "Names of people (including fictional characters)"
+      "Location": "Places, addresses, facilities, geographic features"
+      "Corporation": "Companies, businesses, corporations"
+      "Group": "Other groups: bands, sports teams, movements, organizations"
+      "Product": "Consumer products: devices, vehicles, software, games"
+      "Creative Work": "Movies, TV shows, books, songs, albums, artworks"
+    allow_overlapping: false
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

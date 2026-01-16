@@ -1,0 +1,104 @@
+# Claim Perspectives (Perspectrum)
+# Based on Chen et al., NAACL 2019
+# Paper: https://aclanthology.org/N19-1053/
+# Dataset: https://github.com/CogComp/perspectrum
+#
+# Perspectrum captures diverse viewpoints on controversial claims.
+# For each claim, multiple perspectives are collected that either
+# support or oppose the claim, along with evidence.
+#
+# Key Concepts:
+# - Claim: A controversial statement that can be debated
+# - Perspective: A specific viewpoint on the claim
+# - Evidence: Documents that support the perspective
+# - Stance: Whether the perspective supports or opposes the claim
+#
+# Annotation Task:
+# Given a claim and a perspective, determine:
+# 1. Does the perspective SUPPORT or OPPOSE the claim?
+# 2. Is the perspective relevant to the claim?
+# 3. How strong is this perspective?
+#
+# Guidelines:
+# 1. Read the claim carefully first
+# 2. A perspective SUPPORTS if accepting it would support the claim
+# 3. A perspective OPPOSES if accepting it would undermine the claim
+# 4. Perspectives can be factual or opinion-based
+
+port: 8000
+server_name: localhost
+task_name: "Claim Perspectives"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: pair
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Stance classification
+  - annotation_type: radio
+    name: stance
+    description: "Does the PERSPECTIVE support or oppose the CLAIM?"
+    labels:
+      - "Supports"
+      - "Opposes"
+      - "Neutral/Unclear"
+    tooltips:
+      "Supports": "The perspective, if true, would support the claim"
+      "Opposes": "The perspective, if true, would oppose or undermine the claim"
+      "Neutral/Unclear": "The perspective doesn't clearly support or oppose"
+
+  # Step 2: Relevance
+  - annotation_type: radio
+    name: relevance
+    description: "How relevant is this perspective to the claim?"
+    labels:
+      - "Highly relevant"
+      - "Somewhat relevant"
+      - "Barely relevant"
+      - "Not relevant"
+    tooltips:
+      "Highly relevant": "Directly addresses the core of the claim"
+      "Somewhat relevant": "Related but not central to the claim"
+      "Barely relevant": "Only tangentially related"
+      "Not relevant": "Not related to the claim at all"
+
+  # Step 3: Perspective strength
+  - annotation_type: likert
+    name: strength
+    description: "How strong/convincing is this perspective?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very weak"
+      2: "Weak"
+      3: "Moderate"
+      4: "Strong"
+      5: "Very strong"
+    tooltips:
+      1: "Unconvincing or poorly reasoned"
+      2: "Has some merit but not compelling"
+      3: "Reasonable argument"
+      4: "Compelling argument"
+      5: "Highly convincing argument"
+
+  # Step 4: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your annotation?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

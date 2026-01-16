@@ -1,0 +1,21 @@
+{
+  "title": "Dialogue Relation Extraction (DialogRE)",
+  "description": "Extract relations between entities in dialogue. Based on Yu et al., ACL 2020. Identify 36 relation types between speakers and entities mentioned in conversations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yu et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "Tencent AI Lab"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Dialogue", "Information Extraction"],
+  "useCase": ["Relation Extraction", "Knowledge Base Construction", "Dialogue Understanding"],
+  "complexity": "advanced",
+  "tags": ["dialogue", "relation-extraction", "dialogre", "acl2020", "conversation"],
+  "featured": true,
+  "paperReference": "Yu et al., ACL 2020",
+  "paperUrl": "https://aclanthology.org/2020.acl-main.444/",
+  "datasetUrl": "https://github.com/nlpdata/dialogre"
+}

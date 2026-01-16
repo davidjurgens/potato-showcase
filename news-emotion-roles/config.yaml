@@ -1,0 +1,121 @@
+# News Headline Emotion Roles (GoodNewsEveryone)
+# Based on Bostan et al., LREC 2020
+# Paper: https://aclanthology.org/2020.lrec-1.194/
+#
+# This task annotates emotions in news headlines with semantic roles:
+# - Emotion: What emotion is conveyed?
+# - Experiencer: Who feels the emotion?
+# - Cause: What caused the emotion?
+# - Target: What is the emotion directed at?
+# - Cue: What words signal the emotion?
+#
+# Emotion Categories (Extended Plutchik):
+# Joy, Sadness, Fear, Anger, Surprise (positive/negative),
+# Disgust, Trust, Anticipation (positive/negative),
+# Love, Pride, Guilt, Shame, Annoyance
+#
+# Annotation Guidelines:
+# 1. First identify IF there's an emotion in the headline
+# 2. Classify the emotion type
+# 3. Identify semantic roles (may not all be present)
+# 4. Consider both writer's emotion and reader's reaction
+# 5. Headlines can evoke emotions even without explicit cues
+
+port: 8000
+server_name: localhost
+task_name: "News Emotion Roles"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: headline
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Emotion classification
+  - annotation_type: radio
+    name: emotion
+    description: "What is the primary emotion in this headline?"
+    labels:
+      - "Joy"
+      - "Sadness"
+      - "Fear"
+      - "Anger"
+      - "Positive Surprise"
+      - "Negative Surprise"
+      - "Disgust"
+      - "Trust"
+      - "Positive Anticipation"
+      - "Negative Anticipation"
+      - "No emotion"
+    tooltips:
+      "Joy": "Happiness, delight, celebration"
+      "Sadness": "Grief, sorrow, disappointment"
+      "Fear": "Anxiety, worry, terror"
+      "Anger": "Frustration, outrage, annoyance"
+      "Positive Surprise": "Pleasant amazement, good news"
+      "Negative Surprise": "Shock, disbelief at bad news"
+      "Disgust": "Revulsion, disapproval"
+      "Trust": "Confidence, faith, security"
+      "Positive Anticipation": "Hope, excitement for future"
+      "Negative Anticipation": "Dread, pessimism"
+      "No emotion": "Neutral, factual headline"
+
+  # Step 2: Emotion intensity
+  - annotation_type: likert
+    name: intensity
+    description: "How intense is the emotion?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very weak"
+      2: "Weak"
+      3: "Moderate"
+      4: "Strong"
+      5: "Very strong"
+
+  # Step 3: Mark emotion cue
+  - annotation_type: span
+    name: emotion_cue
+    description: "Highlight words that signal the emotion (if any)"
+    labels:
+      - "Emotion Cue"
+    label_colors:
+      "Emotion Cue": "#ef4444"
+    tooltips:
+      "Emotion Cue": "Words or phrases that indicate the emotion"
+    allow_overlapping: false
+
+  # Step 4: Mark cause
+  - annotation_type: span
+    name: cause
+    description: "Highlight what CAUSED the emotion (if present)"
+    labels:
+      - "Cause"
+    label_colors:
+      "Cause": "#3b82f6"
+    tooltips:
+      "Cause": "The event or entity that caused the emotion"
+    allow_overlapping: false
+
+  # Step 5: Reader vs writer emotion
+  - annotation_type: radio
+    name: perspective
+    description: "Whose emotion is this primarily?"
+    labels:
+      - "Writer/Subject's emotion"
+      - "Intended reader reaction"
+      - "Both"
+      - "Unclear"
+    tooltips:
+      "Writer/Subject's emotion": "The emotion of people in the story"
+      "Intended reader reaction": "The emotion the headline is meant to evoke in readers"
+      "Both": "Both writer and reader perspective"
+      "Unclear": "Cannot determine the perspective"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

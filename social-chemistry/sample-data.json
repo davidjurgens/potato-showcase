@@ -1,0 +1,52 @@
+[
+  {
+    "id": "sc_001",
+    "situation": "Someone cuts in line at a busy coffee shop.",
+    "action": "Cutting in line"
+  },
+  {
+    "id": "sc_002",
+    "situation": "A person helps an elderly stranger carry their groceries to the car.",
+    "action": "Helping a stranger"
+  },
+  {
+    "id": "sc_003",
+    "situation": "Someone tells a white lie to avoid hurting a friend's feelings about their cooking.",
+    "action": "Telling a white lie"
+  },
+  {
+    "id": "sc_004",
+    "situation": "A person loudly talks on their phone during a movie in a theater.",
+    "action": "Using phone in a movie theater"
+  },
+  {
+    "id": "sc_005",
+    "situation": "Someone returns a lost wallet with all the cash still inside.",
+    "action": "Returning lost property"
+  },
+  {
+    "id": "sc_006",
+    "situation": "A person takes the last slice of pizza without asking if others want it.",
+    "action": "Taking the last portion without asking"
+  },
+  {
+    "id": "sc_007",
+    "situation": "Someone reports a coworker for stealing office supplies.",
+    "action": "Reporting misconduct"
+  },
+  {
+    "id": "sc_008",
+    "situation": "A person parks in a handicapped spot because they're 'just running in quickly'.",
+    "action": "Parking in handicapped spot without permit"
+  },
+  {
+    "id": "sc_009",
+    "situation": "Someone gives their seat on the bus to a pregnant woman.",
+    "action": "Giving up seat for someone in need"
+  },
+  {
+    "id": "sc_010",
+    "situation": "A person keeps a $20 bill they found on the ground in a busy store.",
+    "action": "Keeping found money"
+  }
+]

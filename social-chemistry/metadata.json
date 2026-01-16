@@ -1,0 +1,22 @@
+{
+  "title": "Social Chemistry 101 (Social Norms)",
+  "description": "Annotate rules-of-thumb for social and moral norms. Based on Forbes et al., EMNLP 2020. Capture 12 dimensions of social judgment including cultural pressure, moral foundations, and legality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Forbes et al.",
+    "email": "jurgens@umich.edu",
+    "github": "mbforbes",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "likert"],
+  "domain": ["NLP", "Ethics", "Commonsense"],
+  "useCase": ["Social Norms", "Moral Reasoning", "Commonsense AI"],
+  "complexity": "advanced",
+  "tags": ["social-norms", "ethics", "rules-of-thumb", "emnlp2020", "moral-foundations"],
+  "featured": true,
+  "paperReference": "Forbes et al., EMNLP 2020",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.48/",
+  "datasetUrl": "https://maxwellforbes.com/social-chemistry/"
+}

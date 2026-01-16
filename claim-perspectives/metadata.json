@@ -1,0 +1,22 @@
+{
+  "title": "Claim Perspectives (Perspectrum)",
+  "description": "Annotate diverse perspectives on claims with stance and evidence. Based on Chen et al., NAACL 2019. Identify supporting and opposing perspectives for controversial claims.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "CogComp",
+    "affiliation": "University of Pennsylvania"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Argumentation", "Fact-Checking"],
+  "useCase": ["Argument Mining", "Perspective Detection", "Fact Checking"],
+  "complexity": "intermediate",
+  "tags": ["perspectives", "claims", "stance", "argumentation", "naacl2019"],
+  "featured": false,
+  "paperReference": "Chen et al., NAACL 2019",
+  "paperUrl": "https://aclanthology.org/N19-1053/",
+  "datasetUrl": "https://github.com/CogComp/perspectrum"
+}

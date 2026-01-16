@@ -1,0 +1,50 @@
+[
+  {
+    "id": "persp_001",
+    "claim": "College education should be free for all students.",
+    "perspective": "Free college would increase social mobility by allowing students from low-income families to access higher education.",
+    "pair": "CLAIM: College education should be free for all students.\n\nPERSPECTIVE: Free college would increase social mobility by allowing students from low-income families to access higher education."
+  },
+  {
+    "id": "persp_002",
+    "claim": "College education should be free for all students.",
+    "perspective": "Making college free would devalue degrees and reduce the incentive for academic excellence.",
+    "pair": "CLAIM: College education should be free for all students.\n\nPERSPECTIVE: Making college free would devalue degrees and reduce the incentive for academic excellence."
+  },
+  {
+    "id": "persp_003",
+    "claim": "Autonomous vehicles should be allowed on public roads.",
+    "perspective": "Self-driving cars could significantly reduce accidents caused by human error, which accounts for over 90% of crashes.",
+    "pair": "CLAIM: Autonomous vehicles should be allowed on public roads.\n\nPERSPECTIVE: Self-driving cars could significantly reduce accidents caused by human error, which accounts for over 90% of crashes."
+  },
+  {
+    "id": "persp_004",
+    "claim": "Autonomous vehicles should be allowed on public roads.",
+    "perspective": "The technology is not mature enough, and recent fatal accidents show autonomous vehicles are still dangerous.",
+    "pair": "CLAIM: Autonomous vehicles should be allowed on public roads.\n\nPERSPECTIVE: The technology is not mature enough, and recent fatal accidents show autonomous vehicles are still dangerous."
+  },
+  {
+    "id": "persp_005",
+    "claim": "Social media platforms should ban political advertising.",
+    "perspective": "Political ads on social media spread misinformation and can be micro-targeted to vulnerable populations.",
+    "pair": "CLAIM: Social media platforms should ban political advertising.\n\nPERSPECTIVE: Political ads on social media spread misinformation and can be micro-targeted to vulnerable populations."
+  },
+  {
+    "id": "persp_006",
+    "claim": "Social media platforms should ban political advertising.",
+    "perspective": "Banning political ads would give an unfair advantage to incumbents and well-known candidates.",
+    "pair": "CLAIM: Social media platforms should ban political advertising.\n\nPERSPECTIVE: Banning political ads would give an unfair advantage to incumbents and well-known candidates."
+  },
+  {
+    "id": "persp_007",
+    "claim": "Zoos should be abolished.",
+    "perspective": "Modern zoos play a crucial role in conservation efforts and have saved many species from extinction.",
+    "pair": "CLAIM: Zoos should be abolished.\n\nPERSPECTIVE: Modern zoos play a crucial role in conservation efforts and have saved many species from extinction."
+  },
+  {
+    "id": "persp_008",
+    "claim": "Zoos should be abolished.",
+    "perspective": "Animals in captivity cannot exhibit natural behaviors and often suffer psychological distress.",
+    "pair": "CLAIM: Zoos should be abolished.\n\nPERSPECTIVE: Animals in captivity cannot exhibit natural behaviors and often suffer psychological distress."
+  }
+]
