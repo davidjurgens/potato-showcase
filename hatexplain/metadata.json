@@ -1,0 +1,22 @@
+{
+  "title": "HateXplain - Explainable Hate Speech Detection",
+  "description": "Multi-task hate speech annotation with classification (hate/offensive/normal), target community identification, and rationale span highlighting. Based on the HateXplain benchmark (Mathew et al., AAAI 2021) - the first dataset covering classification, target identification, and rationale extraction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mathew et al.",
+    "email": "jurgens@umich.edu",
+    "github": "hate-alert",
+    "affiliation": "IIT Kharagpur"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "span"],
+  "domain": ["NLP", "Content Moderation"],
+  "useCase": ["Hate Speech Detection", "Explainable AI", "Content Moderation"],
+  "complexity": "advanced",
+  "tags": ["hate-speech", "explainability", "rationales", "spans", "target-identification", "aaai2021"],
+  "featured": true,
+  "paperReference": "Mathew et al., AAAI 2021",
+  "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/17745",
+  "datasetUrl": "https://huggingface.co/datasets/hatexplain"
+}

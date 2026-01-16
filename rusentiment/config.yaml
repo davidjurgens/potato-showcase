@@ -1,0 +1,76 @@
+# RuSentiment - Social Media Sentiment Classification
+# Based on Rogers et al., COLING 2018
+# Paper: https://aclanthology.org/C18-1064/
+# Dataset: https://github.com/text-machine-lab/rusentiment
+#
+# 5-class sentiment scheme designed for social media:
+# - Positive: explicit or implicit positive sentiment
+# - Negative: explicit or implicit negative sentiment
+# - Neutral: no sentiment expressed
+# - Speech Act: formulaic posts (greetings, thanks, congratulations)
+# - Skip: unclear, noisy, or user-generated content like poems
+#
+# Guidelines:
+# - Mixed sentiment: annotate based on dominant sentiment
+# - Hashtags and emojis are NOT automatic sentiment labels
+# - Speech Acts may not reflect sender's actual sentiment
+# - Annotation speed target: 250-350 posts per hour
+
+port: 8000
+server_name: localhost
+task_name: "RuSentiment: Social Media Sentiment Classification"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "Classify the sentiment of this social media post"
+    labels:
+      - Positive
+      - Negative
+      - Neutral
+      - Speech Act
+      - Skip
+    keyboard_shortcuts:
+      Positive: "1"
+      Negative: "2"
+      Neutral: "3"
+      "Speech Act": "4"
+      Skip: "5"
+    tooltips:
+      Positive: "Post expresses positive emotion or favorable attitude (explicit or implicit)"
+      Negative: "Post expresses negative emotion or unfavorable attitude (explicit or implicit)"
+      Neutral: "Post contains no sentiment markers; purely informational"
+      "Speech Act": "Formulaic posts: greetings, thank-yous, congratulations, wishes (may not reflect true sentiment)"
+      Skip: "Unclear posts, excessive noise, user-generated content like poems or lyrics"
+
+  # Optional: For mixed sentiment posts
+  - annotation_type: radio
+    name: mixed_sentiment
+    description: "Does this post contain mixed sentiment?"
+    labels:
+      - "No - single sentiment"
+      - "Yes - but positive dominant"
+      - "Yes - but negative dominant"
+      - "Yes - balanced/unclear"
+    keyboard_shortcuts:
+      "No - single sentiment": "n"
+      "Yes - but positive dominant": "p"
+      "Yes - but negative dominant": "g"
+      "Yes - balanced/unclear": "b"
+    tooltips:
+      "No - single sentiment": "The post expresses only one type of sentiment"
+      "Yes - but positive dominant": "Mixed, but overall more positive"
+      "Yes - but negative dominant": "Mixed, but overall more negative"
+      "Yes - balanced/unclear": "Cannot determine dominant sentiment"
+
+allow_all_users: true
+instances_per_annotator: 500
+annotation_per_instance: 3
+allow_skip: false

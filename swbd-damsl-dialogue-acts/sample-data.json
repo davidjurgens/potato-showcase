@@ -1,0 +1,92 @@
+[
+  {
+    "id": "swbd_001",
+    "context": "[Start of conversation]",
+    "utterance": "Hello, how are you doing today?",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_002",
+    "context": "A: Hello, how are you doing today?",
+    "utterance": "Oh, I'm doing pretty well, thanks for asking.",
+    "speaker": "B"
+  },
+  {
+    "id": "swbd_003",
+    "context": "A: Hello, how are you doing today?\nB: Oh, I'm doing pretty well, thanks for asking.",
+    "utterance": "Uh-huh.",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_004",
+    "context": "Previous: Discussion about weekend plans",
+    "utterance": "So what do you think about the new policy at work?",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_005",
+    "context": "A: So what do you think about the new policy at work?",
+    "utterance": "Well, I think it's actually going to help a lot of people, you know?",
+    "speaker": "B"
+  },
+  {
+    "id": "swbd_006",
+    "context": "B: Well, I think it's actually going to help a lot of people, you know?",
+    "utterance": "Yeah, I agree with that.",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_007",
+    "context": "Discussion about travel experiences",
+    "utterance": "Have you ever been to California?",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_008",
+    "context": "A: Have you ever been to California?",
+    "utterance": "No, I haven't actually.",
+    "speaker": "B"
+  },
+  {
+    "id": "swbd_009",
+    "context": "B: No, I haven't actually.",
+    "utterance": "Oh really? You should definitely go sometime.",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_010",
+    "context": "A: The weather there is just amazing.",
+    "utterance": "Right.",
+    "speaker": "B"
+  },
+  {
+    "id": "swbd_011",
+    "context": "Discussion wrapping up",
+    "utterance": "Well, it was really nice talking to you.",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_012",
+    "context": "A: Well, it was really nice talking to you.",
+    "utterance": "Yeah, you too. Take care!",
+    "speaker": "B"
+  },
+  {
+    "id": "swbd_013",
+    "context": "A: I went to the store yesterday.",
+    "utterance": "And then I picked up some groceries and came back home.",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_014",
+    "context": "Discussion about preferences",
+    "utterance": "Do you prefer coffee or tea?",
+    "speaker": "A"
+  },
+  {
+    "id": "swbd_015",
+    "context": "A: That new restaurant downtown is supposed to be really good.",
+    "utterance": "Is it?",
+    "speaker": "B"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "title": "Toxic Spans Detection",
+  "description": "Character-level toxic span annotation based on SemEval-2021 Task 5 (Pavlopoulos et al., 2021). Instead of binary toxicity classification, annotators identify the specific words/phrases that make a comment toxic, enabling more nuanced content moderation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pavlopoulos et al.",
+    "email": "jurgens@umich.edu",
+    "github": "ipavlopoulos",
+    "affiliation": "Athens University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Content Moderation"],
+  "useCase": ["Toxicity Detection", "Content Moderation", "Explainable AI"],
+  "complexity": "intermediate",
+  "tags": ["toxicity", "spans", "content-moderation", "explainability", "semeval2021"],
+  "featured": true,
+  "paperReference": "Pavlopoulos et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.6/",
+  "datasetUrl": "https://github.com/ipavlopoulos/toxic_spans"
+}

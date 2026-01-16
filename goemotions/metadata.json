@@ -1,0 +1,22 @@
+{
+  "title": "GoEmotions - Fine-Grained Emotion Classification",
+  "description": "Multi-label emotion classification with 27 emotion categories plus neutral, based on the Google Research GoEmotions dataset (Demszky et al., ACL 2020). Taxonomy covers 12 positive, 11 negative, and 4 ambiguous emotions designed for Reddit comment analysis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Demszky et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google-research",
+    "affiliation": "Google Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "radio"],
+  "domain": ["NLP", "Social Media"],
+  "useCase": ["Emotion Detection", "Sentiment Analysis", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["emotion", "multi-label", "reddit", "fine-grained", "goemotions", "acl2020"],
+  "featured": true,
+  "paperReference": "Demszky et al., ACL 2020",
+  "paperUrl": "https://aclanthology.org/2020.acl-main.372/",
+  "datasetUrl": "https://github.com/google-research/google-research/tree/master/goemotions"
+}

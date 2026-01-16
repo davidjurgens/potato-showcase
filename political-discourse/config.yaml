@@ -1,0 +1,166 @@
+# Political Discourse Analysis (AgoraSpeech-style)
+# Based on Sermpezis et al., arXiv 2025
+# Paper: https://arxiv.org/abs/2501.06265
+#
+# Multi-task annotation covering 6 NLP tasks:
+# 1. Sentiment Analysis - emotional tone
+# 2. Polarization Detection - divisive language
+# 3. Populism Detection - populist rhetoric
+# 4. Topic Identification - subject matter
+# 5. Named Entity Recognition - persons, organizations, locations
+# 6. Text Classification - speech type/category
+#
+# Designed for political speeches, campaign statements, and public discourse
+
+port: 8000
+server_name: localhost
+task_name: "Political Discourse Analysis"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Task 1: Sentiment Analysis
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the overall emotional tone of this text?"
+    labels:
+      - Positive
+      - Negative
+      - Neutral
+      - Mixed
+    keyboard_shortcuts:
+      Positive: "1"
+      Negative: "2"
+      Neutral: "3"
+      Mixed: "4"
+    tooltips:
+      Positive: "Optimistic, hopeful, praising, or celebratory tone"
+      Negative: "Critical, pessimistic, condemning, or fearful tone"
+      Neutral: "Balanced, factual, or emotionally detached tone"
+      Mixed: "Contains both positive and negative sentiment"
+
+  # Task 2: Polarization Detection
+  - annotation_type: radio
+    name: polarization
+    description: "Does this text contain polarizing or divisive language?"
+    labels:
+      - "Highly polarizing"
+      - "Moderately polarizing"
+      - "Slightly polarizing"
+      - "Not polarizing"
+    keyboard_shortcuts:
+      "Highly polarizing": "h"
+      "Moderately polarizing": "m"
+      "Slightly polarizing": "s"
+      "Not polarizing": "n"
+    tooltips:
+      "Highly polarizing": "Strong us-vs-them rhetoric, demonization of opponents, inflammatory language"
+      "Moderately polarizing": "Clear partisan framing, criticism of opposing views"
+      "Slightly polarizing": "Some partisan elements but mostly balanced"
+      "Not polarizing": "Neutral, inclusive, or consensus-seeking language"
+
+  # Task 3: Populism Detection
+  - annotation_type: multiselect
+    name: populism_markers
+    description: "Select any populist rhetoric markers present in the text"
+    labels:
+      - "People vs. Elite"
+      - "Anti-establishment"
+      - "Crisis framing"
+      - "Nationalism/Nativism"
+      - "Direct democracy appeal"
+      - "Charismatic leadership"
+      - "None detected"
+    tooltips:
+      "People vs. Elite": "Framing ordinary people against corrupt/out-of-touch elites"
+      "Anti-establishment": "Criticism of mainstream parties, media, or institutions"
+      "Crisis framing": "Portraying situation as urgent crisis requiring immediate action"
+      "Nationalism/Nativism": "Appeals to national identity, sovereignty, or anti-immigration sentiment"
+      "Direct democracy appeal": "Bypassing institutions, appealing directly to 'the people's will'"
+      "Charismatic leadership": "Positioning speaker as unique voice/savior of the people"
+      "None detected": "No populist rhetoric markers identified"
+
+  # Task 4: Topic Identification
+  - annotation_type: multiselect
+    name: topics
+    description: "What topics are discussed in this text? (select all that apply)"
+    labels:
+      - Economy/Jobs
+      - Healthcare
+      - Immigration
+      - Education
+      - Environment/Climate
+      - Foreign Policy/Security
+      - Social Issues/Rights
+      - Corruption/Ethics
+      - Infrastructure
+      - Taxes/Budget
+      - Other
+    tooltips:
+      "Economy/Jobs": "Employment, wages, economic growth, business"
+      "Healthcare": "Health policy, insurance, medical care"
+      "Immigration": "Immigration policy, borders, refugees"
+      "Education": "Schools, universities, education policy"
+      "Environment/Climate": "Climate change, environmental protection, energy"
+      "Foreign Policy/Security": "International relations, defense, national security"
+      "Social Issues/Rights": "Civil rights, equality, social justice, family values"
+      "Corruption/Ethics": "Political corruption, ethics, accountability"
+      "Infrastructure": "Roads, bridges, public works, broadband"
+      "Taxes/Budget": "Tax policy, government spending, budget"
+      "Other": "Topics not covered above"
+
+  # Task 5: Named Entity Recognition
+  - annotation_type: span
+    name: entities
+    description: "Highlight named entities in the text"
+    labels:
+      - Person
+      - Organization
+      - Location
+      - Political Party
+      - Event
+    label_colors:
+      Person: "#3b82f6"
+      Organization: "#22c55e"
+      Location: "#f59e0b"
+      "Political Party": "#8b5cf6"
+      Event: "#ec4899"
+    tooltips:
+      Person: "Names of politicians, public figures, or individuals"
+      Organization: "Government bodies, companies, NGOs, institutions"
+      Location: "Countries, cities, regions, places"
+      "Political Party": "Names of political parties or movements"
+      Event: "Elections, summits, protests, historical events"
+    allow_overlapping: false
+
+  # Task 6: Speech Classification
+  - annotation_type: radio
+    name: speech_type
+    description: "What type of political communication is this?"
+    labels:
+      - Campaign speech
+      - Policy statement
+      - Parliamentary address
+      - Interview/Debate
+      - Social media post
+      - Press release
+      - Other
+    tooltips:
+      "Campaign speech": "Electoral campaign rally or event speech"
+      "Policy statement": "Official policy announcement or position paper"
+      "Parliamentary address": "Speech in legislative body or official chamber"
+      "Interview/Debate": "Response to questions or debate format"
+      "Social media post": "Tweet, Facebook post, or similar short-form content"
+      "Press release": "Official statement to media"
+      "Other": "Other type of political communication"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

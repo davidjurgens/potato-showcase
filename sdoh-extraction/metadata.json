@@ -1,0 +1,22 @@
+{
+  "title": "Social Determinants of Health (SDOH) Extraction",
+  "description": "Event-based extraction of social determinants of health from clinical notes based on the n2c2 2022 Track 2 shared task and SHAC corpus. Annotates substance use (alcohol, drug, tobacco), employment, and living status with temporal and status attributes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lybarger et al.",
+    "email": "jurgens@umich.edu",
+    "github": "Lybarger",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio", "multiselect"],
+  "domain": ["Clinical NLP", "Healthcare"],
+  "useCase": ["Information Extraction", "Clinical Documentation", "Public Health"],
+  "complexity": "advanced",
+  "tags": ["sdoh", "clinical", "social-determinants", "n2c2", "event-extraction", "healthcare"],
+  "featured": true,
+  "paperReference": "Lybarger et al., JAMIA 2023",
+  "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/36795066/",
+  "datasetUrl": "https://n2c2.dbmi.hms.harvard.edu/2022-track-2"
+}

@@ -1,0 +1,93 @@
+# HateXplain - Explainable Hate Speech Detection
+# Based on Mathew et al., AAAI 2021
+# Paper: https://ojs.aaai.org/index.php/AAAI/article/view/17745
+# Dataset: https://huggingface.co/datasets/hatexplain
+#
+# Three annotation tasks:
+# 1. Classification: hate speech, offensive, or normal
+# 2. Target community: which group is targeted (if hate/offensive)
+# 3. Rationale spans: which words justify the classification
+#
+# Guidelines:
+# - Hate speech: attacks or demeans a group based on identity
+# - Offensive: rude/disrespectful but not targeting identity groups
+# - Normal: neither hateful nor offensive
+# - Rationale: highlight words that justify your classification (avg 5.5 tokens)
+
+port: 8000
+server_name: localhost
+task_name: "HateXplain: Explainable Hate Speech Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Task 1: Classification
+  - annotation_type: radio
+    name: classification
+    description: "Classify this text as hate speech, offensive, or normal"
+    labels:
+      - Hate Speech
+      - Offensive
+      - Normal
+    keyboard_shortcuts:
+      "Hate Speech": "h"
+      "Offensive": "o"
+      "Normal": "n"
+    tooltips:
+      "Hate Speech": "Content that attacks or demeans a group based on identity attributes (race, religion, gender, etc.)"
+      "Offensive": "Rude, disrespectful, or profane content that does NOT target identity groups"
+      "Normal": "Content that is neither hateful nor offensive"
+
+  # Task 2: Target community (only for hate/offensive)
+  - annotation_type: multiselect
+    name: target_community
+    description: "If hate/offensive, select the targeted community/communities"
+    labels:
+      - African
+      - Arab
+      - Asian
+      - Caucasian
+      - Hispanic
+      - Jewish
+      - LGBTQ
+      - Islam
+      - Women
+      - Refugee
+      - Other
+      - None/Not Applicable
+    tooltips:
+      African: "People of African descent"
+      Arab: "People of Arab descent or from Arab countries"
+      Asian: "People of Asian descent"
+      Caucasian: "People of European/white descent"
+      Hispanic: "People of Hispanic/Latino descent"
+      Jewish: "Jewish people (ethnic or religious)"
+      LGBTQ: "Lesbian, gay, bisexual, transgender, queer individuals"
+      Islam: "Muslims or Islamic religion"
+      Women: "Women or girls"
+      Refugee: "Refugees, immigrants, or asylum seekers"
+      Other: "Other identity group not listed"
+      "None/Not Applicable": "No specific group targeted (for Normal texts)"
+
+  # Task 3: Rationale span annotation
+  - annotation_type: span
+    name: rationale
+    description: "Highlight the words/phrases that justify your classification decision"
+    labels:
+      - Rationale
+    label_colors:
+      Rationale: "#ef4444"
+    tooltips:
+      Rationale: "Words or phrases that are the reason for classifying as hate/offensive (avg ~5.5 tokens per post)"
+    allow_overlapping: false
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: true

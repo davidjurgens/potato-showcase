@@ -1,0 +1,99 @@
+# Fine-Grained Propaganda Detection
+# Based on Da San Martino et al., EMNLP 2019 and SemEval 2020 Task 11
+# Paper: https://aclanthology.org/D19-1565/
+# Task: https://propaganda.qcri.org/semeval2020-task11/
+#
+# 14 propaganda techniques organized by rhetorical dimension:
+#
+# PATHOS (Appeal to Emotions):
+# - Loaded Language: emotionally charged words
+# - Name Calling/Labeling: assigning negative labels
+# - Exaggeration/Minimisation: amplifying or downplaying
+# - Appeal to Fear/Prejudice: creating worry using biases
+# - Flag-Waving: exploiting national/group pride
+# - Slogans: brief striking phrases
+# - Doubt: undermining credibility
+#
+# LOGOS (Appeal to Logic):
+# - Causal Oversimplification: single cause for complex issues
+# - Black-and-White Fallacy: false binary choices
+# - Thought-terminating Cliches: phrases that stop critical thinking
+# - Straw Man/Whataboutism/Red Herring: misrepresentation or deflection
+#
+# ETHOS (Appeal to Authority):
+# - Appeal to Authority: citing experts without evidence
+# - Bandwagon/Reductio ad Hitlerum: everyone does it / Hitler did it
+
+port: 8000
+server_name: localhost
+task_name: "Fine-Grained Propaganda Technique Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: span
+    name: propaganda_technique
+    description: "Highlight text spans and label them with the propaganda technique used"
+    labels:
+      # Pathos - Appeal to Emotions
+      - Loaded Language
+      - Name Calling/Labeling
+      - Exaggeration/Minimisation
+      - Appeal to Fear/Prejudice
+      - Flag-Waving
+      - Slogans
+      - Doubt
+      # Logos - Appeal to Logic
+      - Causal Oversimplification
+      - Black-and-White Fallacy
+      - Thought-terminating Cliches
+      - Whataboutism/Straw Man/Red Herring
+      # Ethos - Appeal to Authority
+      - Appeal to Authority
+      - Bandwagon
+      - Repetition
+
+    label_colors:
+      "Loaded Language": "#ef4444"
+      "Name Calling/Labeling": "#f97316"
+      "Exaggeration/Minimisation": "#eab308"
+      "Appeal to Fear/Prejudice": "#84cc16"
+      "Flag-Waving": "#22c55e"
+      "Slogans": "#14b8a6"
+      "Doubt": "#06b6d4"
+      "Causal Oversimplification": "#0ea5e9"
+      "Black-and-White Fallacy": "#3b82f6"
+      "Thought-terminating Cliches": "#6366f1"
+      "Whataboutism/Straw Man/Red Herring": "#8b5cf6"
+      "Appeal to Authority": "#a855f7"
+      "Bandwagon": "#d946ef"
+      "Repetition": "#ec4899"
+
+    tooltips:
+      "Loaded Language": "Words with strong emotional connotations to influence the audience (e.g., 'brutal regime', 'freedom fighters')"
+      "Name Calling/Labeling": "Assigning labels that the audience despises or fears (e.g., 'radical', 'extremist')"
+      "Exaggeration/Minimisation": "Making something bigger or smaller than reality (e.g., 'the greatest disaster ever')"
+      "Appeal to Fear/Prejudice": "Building support by creating anxiety, often leveraging existing biases"
+      "Flag-Waving": "Exploiting patriotism or group pride to promote a position (e.g., 'true Americans believe...')"
+      "Slogans": "Brief, striking phrases that combine labeling with emotional appeal (e.g., 'Make X Great Again')"
+      "Doubt": "Questioning someone's credibility or character to undermine their argument"
+      "Causal Oversimplification": "Attributing complex problems to a single cause (e.g., 'immigration is why...')"
+      "Black-and-White Fallacy": "Presenting only two choices when more exist (e.g., 'you're either with us or against us')"
+      "Thought-terminating Cliches": "Phrases that discourage critical thinking (e.g., 'it is what it is')"
+      "Whataboutism/Straw Man/Red Herring": "Deflecting by changing the subject or misrepresenting the opponent's position"
+      "Appeal to Authority": "Claiming truth based on expert endorsement without evidence"
+      "Bandwagon": "Suggesting everyone supports something to pressure agreement (e.g., 'millions of people agree')"
+      "Repetition": "Repeating a message until it becomes accepted through familiarity"
+
+    allow_overlapping: true
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

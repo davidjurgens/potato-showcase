@@ -1,0 +1,22 @@
+{
+  "title": "Event Argument Extraction (MAVEN-Arg style)",
+  "description": "Document-level event argument extraction based on MAVEN-Arg (Wang et al., ACL 2024). Annotates event triggers with their argument roles including Agent, Patient, Location, Time, Instrument, and more. Supports both entity and non-entity arguments across document context.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "THU-KEG",
+    "affiliation": "Tsinghua University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Information Extraction"],
+  "useCase": ["Event Extraction", "Information Extraction", "Knowledge Graphs"],
+  "complexity": "advanced",
+  "tags": ["event-extraction", "argument-extraction", "eae", "maven", "acl2024", "document-level"],
+  "featured": true,
+  "paperReference": "Wang et al., ACL 2024",
+  "paperUrl": "https://aclanthology.org/2024.acl-long.224/",
+  "datasetUrl": "https://github.com/THU-KEG/MAVEN-Argument"
+}

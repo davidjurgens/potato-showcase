@@ -1,0 +1,52 @@
+[
+  {
+    "id": "arg_001",
+    "topic": "Should college education be free for all students?",
+    "argument": "College education should be free because education is a right, not a privilege. Countries like Germany and Norway offer free university education and have thriving economies. Making college free would reduce student debt, increase social mobility, and create a more educated workforce that benefits everyone."
+  },
+  {
+    "id": "arg_002",
+    "topic": "Should college education be free for all students?",
+    "argument": "Free college is a terrible idea. Nothing in life is free - someone has to pay for it. Why should hardworking taxpayers subsidize people who want to study useless degrees? These students are just lazy and want handouts."
+  },
+  {
+    "id": "arg_003",
+    "topic": "Should social media platforms ban political advertising?",
+    "argument": "Social media platforms should ban political ads because they enable the spread of misinformation. Unlike traditional media, social media ads can be micro-targeted to vulnerable populations without fact-checking. Twitter has already implemented such a ban, and democracies would benefit from reducing the influence of money in politics."
+  },
+  {
+    "id": "arg_004",
+    "topic": "Should social media platforms ban political advertising?",
+    "argument": "Banning political ads is censorship and violates free speech. Everyone knows politicians lie anyway, so what's the big deal? If you ban political ads, you might as well ban all advertising."
+  },
+  {
+    "id": "arg_005",
+    "topic": "Is remote work better than office work?",
+    "argument": "Remote work offers significant advantages: reduced commute time (saving an average of 40 minutes daily), better work-life balance, and lower overhead costs for companies. Studies show remote workers are often more productive. However, it may not suit all roles or personalities, so a hybrid approach might be optimal."
+  },
+  {
+    "id": "arg_006",
+    "topic": "Is remote work better than office work?",
+    "argument": "Office work is clearly better. You can't build real relationships through a screen. My cousin works from home and he's miserable. Plus, how do you even know if people are actually working? They're probably just watching Netflix."
+  },
+  {
+    "id": "arg_007",
+    "topic": "Should governments implement a carbon tax?",
+    "argument": "A carbon tax is an economically efficient way to address climate change. By putting a price on carbon emissions, it creates market incentives for businesses and consumers to reduce their carbon footprint. British Columbia implemented a carbon tax in 2008 and saw emissions decrease while maintaining economic growth."
+  },
+  {
+    "id": "arg_008",
+    "topic": "Should governments implement a carbon tax?",
+    "argument": "Carbon taxes will destroy the economy and cost millions of jobs. Climate change might not even be real - scientists have been wrong before. Why should we sacrifice our way of life based on uncertain predictions?"
+  },
+  {
+    "id": "arg_009",
+    "topic": "Should voting be mandatory?",
+    "argument": "Mandatory voting, as practiced in Australia, ensures higher civic participation and more representative outcomes. Critics argue it infringes on freedom, but citizens already have mandatory duties like jury service and taxes. Compulsory voting could reduce the influence of extreme voices and encourage more moderate policies."
+  },
+  {
+    "id": "arg_010",
+    "topic": "Should voting be mandatory?",
+    "argument": "Forcing people to vote is stupid. If someone doesn't care enough to vote, their uninformed vote will just make things worse. This is America - freedom means the freedom NOT to do something too."
+  }
+]
