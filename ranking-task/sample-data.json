@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rank_001",
+    "prompt": "What are the benefits of regular exercise?",
+    "responses": [
+      "Exercise is good for you and you should do it.",
+      "Regular exercise offers numerous benefits including improved cardiovascular health, better mood through endorphin release, weight management, stronger muscles and bones, and reduced risk of chronic diseases like diabetes.",
+      "Working out helps with: 1) Heart health 2) Mental wellness 3) Weight control 4) Energy levels. Even 30 minutes daily makes a big difference!",
+      "Exercise benefits include health improvements, better sleep, stress reduction, and increased longevity based on numerous scientific studies."
+    ]
+  },
+  {
+    "id": "rank_002",
+    "prompt": "How do I make scrambled eggs?",
+    "responses": [
+      "Crack eggs, cook them, stir.",
+      "Beat 2-3 eggs with a splash of milk. Heat butter in a pan over medium-low heat. Pour in eggs and gently stir with a spatula, pushing curds from edges to center. Remove when slightly wet - they'll finish cooking off heat. Season with salt and pepper.",
+      "Making scrambled eggs: First crack some eggs into a bowl. Add milk if you want. Put butter in a pan and heat it up. Pour the eggs in and stir them around until they're cooked. Add salt.",
+      "For perfect scrambled eggs: whisk eggs vigorously, cook low and slow, remove from heat early, and let residual heat finish the job."
+    ]
+  },
+  {
+    "id": "rank_003",
+    "prompt": "Explain why the sky is blue",
+    "responses": [
+      "The sky is blue because of the way light works.",
+      "Sunlight contains all colors. When it hits our atmosphere, blue light scatters more than other colors because of its shorter wavelength. This scattered blue light reaches our eyes from all directions, making the sky appear blue.",
+      "Blue light has a shorter wavelength than other visible light. Earth's atmosphere scatters short wavelengths more efficiently (Rayleigh scattering). Since blue scatters most, we see a blue sky. At sunset, light travels through more atmosphere, scattering away blue and leaving red/orange.",
+      "The atmosphere scatters sunlight and blue scatters the most so we see blue."
+    ]
+  }
+]

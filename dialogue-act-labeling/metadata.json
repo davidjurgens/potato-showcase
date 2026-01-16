@@ -1,0 +1,10 @@
+{
+  "title": "Dialogue Act Labeling",
+  "description": "Classify utterances in conversations by their communicative function (question, statement, request, etc.).",
+  "category": "text",
+  "annotationType": ["radio"],
+  "domain": ["nlp", "conversational-ai"],
+  "useCase": ["dialogue-understanding", "conversation-analysis"],
+  "complexity": "intermediate",
+  "tags": ["dialogue", "conversation", "speech-acts", "classification", "chat"]
+}

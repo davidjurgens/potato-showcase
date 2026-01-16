@@ -1,0 +1,29 @@
+task_name: "Object Detection"
+task_description: "Draw bounding boxes around all objects of interest."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  image_key: image_url
+
+annotation_schemes:
+  - annotation_type: bbox
+    name: objects
+    description: "Draw boxes around objects"
+    labels:
+      - name: "Person"
+        color: "#ef4444"
+      - name: "Car"
+        color: "#3b82f6"
+      - name: "Dog"
+        color: "#22c55e"
+      - name: "Cat"
+        color: "#f59e0b"
+    required: true
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

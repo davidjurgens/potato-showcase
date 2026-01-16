@@ -1,0 +1,20 @@
+[
+  {
+    "id": "fact_001",
+    "claim": "The Eiffel Tower is the tallest structure in France.",
+    "evidence": "The Eiffel Tower stands at 330 meters including antennas. The Millau Viaduct, also in France, reaches 343 meters at its highest point, making it the tallest structure in France.",
+    "display": "**CLAIM:** The Eiffel Tower is the tallest structure in France.\n\n**EVIDENCE:** The Eiffel Tower stands at 330 meters including antennas. The Millau Viaduct, also in France, reaches 343 meters at its highest point, making it the tallest structure in France."
+  },
+  {
+    "id": "fact_002",
+    "claim": "Python is the most popular programming language in 2024.",
+    "evidence": "According to the TIOBE Index from January 2024, Python holds the top position with a rating of 13.97%, followed by C at 11.44% and C++ at 10.66%. The PYPL index also ranks Python first based on Google search trends for language tutorials.",
+    "display": "**CLAIM:** Python is the most popular programming language in 2024.\n\n**EVIDENCE:** According to the TIOBE Index from January 2024, Python holds the top position with a rating of 13.97%, followed by C at 11.44% and C++ at 10.66%. The PYPL index also ranks Python first based on Google search trends for language tutorials."
+  },
+  {
+    "id": "fact_003",
+    "claim": "Coffee consumption has been linked to reduced risk of heart disease.",
+    "evidence": "A 2022 study published in the European Journal of Preventive Cardiology found that drinking 2-3 cups of coffee per day was associated with a 10-15% lower risk of cardiovascular disease. However, other studies have shown mixed results depending on brewing method and individual factors.",
+    "display": "**CLAIM:** Coffee consumption has been linked to reduced risk of heart disease.\n\n**EVIDENCE:** A 2022 study published in the European Journal of Preventive Cardiology found that drinking 2-3 cups of coffee per day was associated with a 10-15% lower risk of cardiovascular disease. However, other studies have shown mixed results depending on brewing method and individual factors."
+  }
+]

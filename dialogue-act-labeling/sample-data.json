@@ -1,0 +1,30 @@
+[
+  {
+    "id": "da_001",
+    "speaker": "A",
+    "utterance": "Hey, how's it going?",
+    "context": "[Start of conversation]",
+    "display": "**Context:** [Start of conversation]\n\n**Speaker A:** Hey, how's it going?"
+  },
+  {
+    "id": "da_002",
+    "speaker": "B",
+    "utterance": "Pretty good! I just finished that project we talked about.",
+    "context": "A: Hey, how's it going?",
+    "display": "**Context:** A: Hey, how's it going?\n\n**Speaker B:** Pretty good! I just finished that project we talked about."
+  },
+  {
+    "id": "da_003",
+    "speaker": "A",
+    "utterance": "Oh nice! Can you send me the files when you get a chance?",
+    "context": "A: Hey, how's it going?\nB: Pretty good! I just finished that project we talked about.",
+    "display": "**Context:** A: Hey, how's it going?\nB: Pretty good! I just finished that project we talked about.\n\n**Speaker A:** Oh nice! Can you send me the files when you get a chance?"
+  },
+  {
+    "id": "da_004",
+    "speaker": "B",
+    "utterance": "Sure, I'll email them over in about an hour.",
+    "context": "...\nA: Oh nice! Can you send me the files when you get a chance?",
+    "display": "**Context:** ...\nA: Oh nice! Can you send me the files when you get a chance?\n\n**Speaker B:** Sure, I'll email them over in about an hour."
+  }
+]

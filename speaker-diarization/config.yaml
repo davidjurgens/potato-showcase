@@ -1,0 +1,76 @@
+# Speaker Diarization Annotation Configuration
+# Identify and label different speakers in audio recordings
+
+annotation_task_name: "Speaker Diarization"
+
+data_files:
+  - "data/audio_segments.json"
+
+item_properties:
+  id_key: "id"
+  audio_key: "audio_url"
+  text_display_key: "transcript"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "speaker_id"
+    description: "Who is speaking in this segment?"
+    labels:
+      - name: "Speaker A"
+        tooltip: "First/primary speaker in the conversation"
+        key_value: "1"
+      - name: "Speaker B"
+        tooltip: "Second speaker in the conversation"
+        key_value: "2"
+      - name: "Speaker C"
+        tooltip: "Third speaker (if present)"
+        key_value: "3"
+      - name: "Speaker D"
+        tooltip: "Fourth speaker (if present)"
+        key_value: "4"
+      - name: "Multiple/Overlap"
+        tooltip: "Multiple speakers talking simultaneously"
+        key_value: "5"
+      - name: "Unknown"
+        tooltip: "Cannot determine the speaker"
+        key_value: "6"
+
+  - annotation_type: "radio"
+    name: "audio_quality"
+    description: "Rate the audio quality for this segment"
+    labels:
+      - name: "Clear"
+        tooltip: "Audio is clear and easy to understand"
+      - name: "Acceptable"
+        tooltip: "Some noise but speech is understandable"
+      - name: "Poor"
+        tooltip: "Significant noise or distortion"
+      - name: "Unintelligible"
+        tooltip: "Cannot understand the speech"
+
+  - annotation_type: "multiselect"
+    name: "speech_characteristics"
+    description: "Select any notable characteristics"
+    labels:
+      - name: "Accented speech"
+      - name: "Fast speech"
+      - name: "Slow speech"
+      - name: "Whispered"
+      - name: "Shouting"
+      - name: "Emotional"
+      - name: "Background noise"
+
+  - annotation_type: "text"
+    name: "notes"
+    description: "Additional notes about this segment"
+
+audio_display:
+  show_waveform: true
+  show_spectrogram: false
+  playback_controls: true
+  loop_segment: true
+
+output: "annotation_output/"

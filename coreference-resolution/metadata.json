@@ -1,0 +1,10 @@
+{
+  "title": "Coreference Resolution",
+  "description": "Link pronouns and noun phrases to the entities they refer to in text.",
+  "category": "text",
+  "annotationType": ["span", "radio"],
+  "domain": ["nlp", "linguistics"],
+  "useCase": ["coreference", "entity-linking"],
+  "complexity": "advanced",
+  "tags": ["coreference", "pronouns", "entities", "linking", "nlp"]
+}

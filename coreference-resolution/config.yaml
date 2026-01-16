@@ -1,0 +1,58 @@
+# Coreference Resolution Configuration
+# Link pronouns and mentions to their referents
+
+annotation_task_name: "Coreference Resolution"
+
+data_files:
+  - "data/documents.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "coreference"
+    description: "Does the highlighted mention refer to the same entity as the target?"
+    labels:
+      - name: "Same Entity"
+        tooltip: "The mention refers to the same entity"
+        key_value: "y"
+        color: "#22c55e"
+      - name: "Different Entity"
+        tooltip: "The mention refers to a different entity"
+        key_value: "n"
+        color: "#ef4444"
+      - name: "Ambiguous"
+        tooltip: "Cannot determine from context"
+        key_value: "a"
+        color: "#eab308"
+
+  - annotation_type: "radio"
+    name: "mention_type"
+    description: "What type of mention is this?"
+    labels:
+      - name: "Pronoun"
+        tooltip: "he, she, it, they, etc."
+      - name: "Proper noun"
+        tooltip: "Names of people, places, organizations"
+      - name: "Common noun"
+        tooltip: "the company, the scientist, etc."
+      - name: "Demonstrative"
+        tooltip: "this, that, these, those"
+
+  - annotation_type: "text"
+    name: "antecedent"
+    description: "What is the full antecedent (what does this refer to)?"
+
+  - annotation_type: "likert"
+    name: "difficulty"
+    description: "How difficult was this decision?"
+    size: 5
+    min_label: "Very easy"
+    max_label: "Very difficult"
+
+output: "annotation_output/"

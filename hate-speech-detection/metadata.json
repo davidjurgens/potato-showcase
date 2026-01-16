@@ -1,0 +1,10 @@
+{
+  "title": "Hate Speech Detection",
+  "description": "Identify and categorize hate speech, offensive language, and toxic content in text.",
+  "category": "text",
+  "annotationType": ["radio", "multiselect"],
+  "domain": ["nlp", "content-moderation"],
+  "useCase": ["content-moderation", "toxicity-detection"],
+  "complexity": "intermediate",
+  "tags": ["hate-speech", "toxicity", "moderation", "offensive", "classification"]
+}

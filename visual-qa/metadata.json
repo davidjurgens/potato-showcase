@@ -1,0 +1,14 @@
+{
+  "title": "Visual Question Answering",
+  "description": "Answer questions about images for VQA dataset creation.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["text", "radio", "image"],
+  "domain": ["Computer Vision", "NLP"],
+  "useCase": ["Visual QA", "Multimodal"],
+  "complexity": "beginner",
+  "tags": ["vqa", "visual-qa", "multimodal", "image"],
+  "featured": true
+}

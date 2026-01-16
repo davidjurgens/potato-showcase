@@ -1,0 +1,10 @@
+{
+  "title": "Relation Extraction",
+  "description": "Identify and classify relationships between entities in text (e.g., works-for, located-in, married-to).",
+  "category": "text",
+  "annotationType": ["radio", "span"],
+  "domain": ["nlp", "information-extraction"],
+  "useCase": ["knowledge-graph", "relation-classification"],
+  "complexity": "advanced",
+  "tags": ["relation", "entities", "knowledge-graph", "extraction", "nlp"]
+}

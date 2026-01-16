@@ -1,0 +1,10 @@
+{
+  "title": "Fact Verification",
+  "description": "Verify claims as supported, refuted, or not enough information based on provided evidence.",
+  "category": "text",
+  "annotationType": ["radio", "text"],
+  "domain": ["nlp", "fact-checking"],
+  "useCase": ["fact-checking", "misinformation-detection"],
+  "complexity": "intermediate",
+  "tags": ["fact-check", "verification", "claims", "evidence", "nlp"]
+}

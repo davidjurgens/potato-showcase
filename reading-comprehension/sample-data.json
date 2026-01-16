@@ -1,0 +1,23 @@
+[
+  {
+    "id": "rc_001",
+    "passage": "The Amazon rainforest, often referred to as the 'lungs of the Earth,' produces about 20% of the world's oxygen. Spanning across nine countries in South America, it is the world's largest tropical rainforest, covering approximately 5.5 million square kilometers. The forest is home to an estimated 10% of all species on Earth.",
+    "question": "What percentage of the world's oxygen does the Amazon produce?",
+    "provided_answer": "About 20%",
+    "display": "**PASSAGE:**\nThe Amazon rainforest, often referred to as the 'lungs of the Earth,' produces about 20% of the world's oxygen. Spanning across nine countries in South America, it is the world's largest tropical rainforest, covering approximately 5.5 million square kilometers. The forest is home to an estimated 10% of all species on Earth.\n\n**QUESTION:** What percentage of the world's oxygen does the Amazon produce?\n\n**PROVIDED ANSWER:** About 20%"
+  },
+  {
+    "id": "rc_002",
+    "passage": "Marie Curie was a Polish-born physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person to win Nobel Prizes in two different sciences (Physics in 1903 and Chemistry in 1911), and the first woman to become a professor at the University of Paris.",
+    "question": "How many Nobel Prizes did Marie Curie win?",
+    "provided_answer": "She won three Nobel Prizes.",
+    "display": "**PASSAGE:**\nMarie Curie was a Polish-born physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person to win Nobel Prizes in two different sciences (Physics in 1903 and Chemistry in 1911), and the first woman to become a professor at the University of Paris.\n\n**QUESTION:** How many Nobel Prizes did Marie Curie win?\n\n**PROVIDED ANSWER:** She won three Nobel Prizes."
+  },
+  {
+    "id": "rc_003",
+    "passage": "The Great Wall of China was built over many centuries by various Chinese dynasties. The most well-known sections were built during the Ming Dynasty (1368-1644). Contrary to popular belief, the wall is not visible from space with the naked eye.",
+    "question": "When was the Statue of Liberty built?",
+    "provided_answer": "During the Ming Dynasty",
+    "display": "**PASSAGE:**\nThe Great Wall of China was built over many centuries by various Chinese dynasties. The most well-known sections were built during the Ming Dynasty (1368-1644). Contrary to popular belief, the wall is not visible from space with the naked eye.\n\n**QUESTION:** When was the Statue of Liberty built?\n\n**PROVIDED ANSWER:** During the Ming Dynasty"
+  }
+]

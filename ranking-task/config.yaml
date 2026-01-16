@@ -1,0 +1,51 @@
+# Ranking Task Configuration
+# Drag-and-drop interface to order items
+
+annotation_task_name: "Response Ranking"
+
+data_files:
+  - "data/ranking_sets.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "prompt"
+  list_display_key: "responses"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "ranking"
+    name: "response_ranking"
+    description: "Rank the responses from BEST (1) to WORST"
+    allow_ties: false
+    show_numbers: true
+
+  - annotation_type: "radio"
+    name: "ranking_criterion"
+    description: "What criterion did you primarily use for ranking?"
+    labels:
+      - name: "Accuracy"
+        tooltip: "Correctness of information"
+      - name: "Clarity"
+        tooltip: "How easy to understand"
+      - name: "Helpfulness"
+        tooltip: "How useful the response is"
+      - name: "Engagement"
+        tooltip: "How interesting or engaging"
+      - name: "Multiple criteria"
+        tooltip: "Combination of factors"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you in this ranking?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+  - annotation_type: "text"
+    name: "notes"
+    description: "Any notes about your ranking decision"
+    required: false
+
+output: "annotation_output/"

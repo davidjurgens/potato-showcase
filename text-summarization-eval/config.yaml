@@ -1,0 +1,45 @@
+task_name: "Text Summarization Evaluation"
+task_description: "Rate the quality of the summary compared to the source document."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  text_key: source
+  context_key: summary
+
+annotation_schemes:
+  - annotation_type: likert
+    name: fluency
+    description: "How fluent and grammatical is the summary?"
+    size: 5
+    min_label: "Not fluent"
+    max_label: "Very fluent"
+    required: true
+
+  - annotation_type: likert
+    name: coherence
+    description: "How well-organized and coherent is the summary?"
+    size: 5
+    min_label: "Incoherent"
+    max_label: "Very coherent"
+    required: true
+
+  - annotation_type: likert
+    name: faithfulness
+    description: "Does the summary accurately reflect the source without hallucinations?"
+    size: 5
+    min_label: "Unfaithful"
+    max_label: "Faithful"
+    required: true
+
+  - annotation_type: text
+    name: comments
+    description: "Optional comments on the summary quality"
+    required: false
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

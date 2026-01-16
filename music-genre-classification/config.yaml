@@ -1,0 +1,99 @@
+# Music Genre Classification Configuration
+# Classify music clips into genres with mood and instrumentation tags
+
+annotation_task_name: "Music Genre Classification"
+
+data_files:
+  - "data/music_clips.json"
+
+item_properties:
+  id_key: "id"
+  audio_key: "audio_url"
+  text_display_key: "title"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_genre"
+    description: "What is the primary genre of this music?"
+    labels:
+      - name: "Rock"
+        key_value: "1"
+      - name: "Pop"
+        key_value: "2"
+      - name: "Hip-Hop/Rap"
+        key_value: "3"
+      - name: "Electronic/Dance"
+        key_value: "4"
+      - name: "Jazz"
+        key_value: "5"
+      - name: "Classical"
+        key_value: "6"
+      - name: "R&B/Soul"
+        key_value: "7"
+      - name: "Country"
+        key_value: "8"
+      - name: "Folk/Acoustic"
+        key_value: "9"
+      - name: "Metal"
+        key_value: "0"
+
+  - annotation_type: "multiselect"
+    name: "subgenres"
+    description: "Select any applicable subgenres"
+    labels:
+      - name: "Indie"
+      - name: "Alternative"
+      - name: "Punk"
+      - name: "Blues"
+      - name: "Reggae"
+      - name: "Latin"
+      - name: "World Music"
+      - name: "Ambient"
+      - name: "Lo-fi"
+      - name: "Synthwave"
+
+  - annotation_type: "multiselect"
+    name: "mood"
+    description: "What mood does this music convey?"
+    labels:
+      - name: "Happy/Upbeat"
+      - name: "Sad/Melancholic"
+      - name: "Energetic"
+      - name: "Calm/Relaxing"
+      - name: "Aggressive"
+      - name: "Romantic"
+      - name: "Dark/Mysterious"
+      - name: "Nostalgic"
+
+  - annotation_type: "multiselect"
+    name: "instruments"
+    description: "What instruments are prominent?"
+    labels:
+      - name: "Vocals"
+      - name: "Electric Guitar"
+      - name: "Acoustic Guitar"
+      - name: "Piano/Keys"
+      - name: "Drums"
+      - name: "Bass"
+      - name: "Synthesizer"
+      - name: "Strings"
+      - name: "Brass"
+      - name: "Woodwinds"
+
+  - annotation_type: "radio"
+    name: "tempo"
+    description: "Approximate tempo"
+    labels:
+      - name: "Slow (< 80 BPM)"
+      - name: "Medium (80-120 BPM)"
+      - name: "Fast (> 120 BPM)"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: false
+
+output: "annotation_output/"

@@ -1,0 +1,30 @@
+task_name: "Image Segmentation"
+task_description: "Draw precise polygon boundaries around objects."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  image_key: image_url
+
+annotation_schemes:
+  - annotation_type: polygon
+    name: segments
+    description: "Draw polygons around each object"
+    labels:
+      - name: "Person"
+        color: "#ef4444"
+      - name: "Vehicle"
+        color: "#3b82f6"
+      - name: "Animal"
+        color: "#22c55e"
+      - name: "Object"
+        color: "#8b5cf6"
+    allow_overlapping: false
+    required: true
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

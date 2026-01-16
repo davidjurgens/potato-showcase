@@ -1,0 +1,60 @@
+# Semantic Similarity Configuration
+# Rate similarity between sentence pairs
+
+annotation_task_name: "Semantic Similarity"
+
+data_files:
+  - "data/sentence_pairs.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "slider"
+    name: "similarity_score"
+    description: "How similar are these two sentences in meaning?"
+    min: 0
+    max: 5
+    step: 0.5
+    min_label: "Completely different"
+    max_label: "Identical meaning"
+    show_value: true
+
+  - annotation_type: "radio"
+    name: "relationship_type"
+    description: "What is the relationship between the sentences?"
+    labels:
+      - name: "Paraphrase"
+        tooltip: "Same meaning, different words"
+      - name: "Entailment"
+        tooltip: "If A is true, B must be true"
+      - name: "Partial overlap"
+        tooltip: "Share some meaning but differ in details"
+      - name: "Contradiction"
+        tooltip: "Opposite or conflicting meanings"
+      - name: "Unrelated"
+        tooltip: "Different topics entirely"
+
+  - annotation_type: "multiselect"
+    name: "similarity_aspects"
+    description: "In what ways are they similar?"
+    labels:
+      - name: "Same topic"
+      - name: "Same entities mentioned"
+      - name: "Same event/action"
+      - name: "Same sentiment"
+      - name: "Similar structure"
+      - name: "Shared vocabulary"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you in your rating?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+output: "annotation_output/"

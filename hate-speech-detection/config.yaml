@@ -1,0 +1,80 @@
+# Hate Speech Detection Configuration
+# Identify and categorize toxic content
+
+annotation_task_name: "Hate Speech Detection"
+
+data_files:
+  - "data/posts.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "text"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_label"
+    description: "How would you classify this content?"
+    labels:
+      - name: "Hate Speech"
+        tooltip: "Attacks a group based on protected characteristics"
+        key_value: "h"
+        color: "#dc2626"
+      - name: "Offensive Language"
+        tooltip: "Vulgar or inappropriate but not targeting a group"
+        key_value: "o"
+        color: "#f97316"
+      - name: "Neither"
+        tooltip: "No hate speech or offensive language"
+        key_value: "n"
+        color: "#22c55e"
+
+  - annotation_type: "multiselect"
+    name: "target_groups"
+    description: "If hate speech, which groups are targeted?"
+    labels:
+      - name: "Race/Ethnicity"
+      - name: "Religion"
+      - name: "Gender"
+      - name: "Sexual Orientation"
+      - name: "Disability"
+      - name: "National Origin"
+      - name: "Age"
+      - name: "Other"
+    show_if:
+      field: "primary_label"
+      value: "Hate Speech"
+
+  - annotation_type: "multiselect"
+    name: "hate_type"
+    description: "What type of hate speech?"
+    labels:
+      - name: "Slurs/Epithets"
+      - name: "Dehumanization"
+      - name: "Stereotyping"
+      - name: "Threats/Incitement"
+      - name: "Exclusion/Marginalization"
+    show_if:
+      field: "primary_label"
+      value: "Hate Speech"
+
+  - annotation_type: "likert"
+    name: "severity"
+    description: "How severe is this content?"
+    size: 5
+    min_label: "Mild"
+    max_label: "Severe"
+
+  - annotation_type: "radio"
+    name: "action_recommendation"
+    description: "Recommended action"
+    labels:
+      - name: "No action"
+      - name: "Warning label"
+      - name: "Hide behind warning"
+      - name: "Remove content"
+      - name: "Remove + ban user"
+
+output: "annotation_output/"

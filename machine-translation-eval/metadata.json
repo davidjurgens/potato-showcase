@@ -1,0 +1,14 @@
+{
+  "title": "Machine Translation Evaluation",
+  "description": "Evaluate machine translation quality with adequacy and fluency ratings.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["likert", "multiselect"],
+  "domain": ["NLP", "Translation"],
+  "useCase": ["Machine Translation", "MT Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["translation", "mt", "evaluation", "multilingual"],
+  "featured": false
+}

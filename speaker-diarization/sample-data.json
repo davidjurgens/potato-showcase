@@ -1,0 +1,23 @@
+[
+  {
+    "id": "segment_001",
+    "audio_url": "https://example.com/audio/conversation1_seg1.wav",
+    "transcript": "Hello, welcome to the meeting. Let's start with introductions.",
+    "start_time": 0.0,
+    "end_time": 4.5
+  },
+  {
+    "id": "segment_002",
+    "audio_url": "https://example.com/audio/conversation1_seg2.wav",
+    "transcript": "Thanks for having me. I'm John from the engineering team.",
+    "start_time": 4.5,
+    "end_time": 8.2
+  },
+  {
+    "id": "segment_003",
+    "audio_url": "https://example.com/audio/conversation1_seg3.wav",
+    "transcript": "And I'm Sarah from product management.",
+    "start_time": 8.2,
+    "end_time": 10.8
+  }
+]

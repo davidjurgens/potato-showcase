@@ -1,0 +1,10 @@
+{
+  "title": "Music Genre Classification",
+  "description": "Classify music clips into genres and subgenres with mood and instrumentation tags.",
+  "category": "audio",
+  "annotationType": ["radio", "multiselect"],
+  "domain": ["music", "entertainment"],
+  "useCase": ["genre-classification", "music-tagging"],
+  "complexity": "beginner",
+  "tags": ["audio", "music", "genre", "classification", "tagging"]
+}

@@ -1,0 +1,30 @@
+task_name: "Visual Question Answering"
+task_description: "Answer the question about the image."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  image_key: image_url
+  context_key: question
+
+annotation_schemes:
+  - annotation_type: text
+    name: answer
+    description: "Provide a concise answer to the question"
+    required: true
+
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in your answer?"
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not confident"
+    required: true
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

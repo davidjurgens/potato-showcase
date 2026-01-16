@@ -1,0 +1,10 @@
+{
+  "title": "Sarcasm Detection",
+  "description": "Identify sarcastic statements and label their type and target in social media and conversational text.",
+  "category": "text",
+  "annotationType": ["radio", "text"],
+  "domain": ["nlp", "social-media"],
+  "useCase": ["sentiment-analysis", "irony-detection"],
+  "complexity": "intermediate",
+  "tags": ["sarcasm", "irony", "sentiment", "social-media", "nlp"]
+}

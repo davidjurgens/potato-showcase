@@ -1,0 +1,14 @@
+{
+  "title": "Question Answering",
+  "description": "Annotate answer spans in text passages for reading comprehension tasks.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP"],
+  "useCase": ["Question Answering", "Reading Comprehension"],
+  "complexity": "intermediate",
+  "tags": ["qa", "span", "reading-comprehension"],
+  "featured": true
+}

@@ -1,0 +1,102 @@
+task_name: "Audio Transcription Review"
+
+# Server configuration
+server:
+  port: 8000
+
+# Audio settings
+audio:
+  enabled: true
+  display: waveform
+  waveform_color: "#6E56CF"
+  progress_color: "#A18FFF"
+  speed_control: true
+  speed_options: [0.5, 0.75, 1.0, 1.25, 1.5]
+  keyboard_controls:
+    play_pause: "space"
+    rewind_5s: "left"
+    forward_5s: "right"
+
+# Data configuration
+data_files:
+  - path: data/transcripts.json
+    audio_field: audio_file
+    text_field: transcript
+
+# Annotation schemes
+annotation_schemes:
+  # Overall quality assessment
+  - annotation_type: radio
+    name: overall_accuracy
+    description: "How accurate is the transcript overall?"
+    labels:
+      - Perfect (no errors)
+      - Minor errors (1-2 words)
+      - Moderate errors (3-5 words)
+      - Major errors (>5 words or meaning changed)
+      - Completely wrong
+    keyboard_shortcuts:
+      "Perfect (no errors)": "1"
+      "Minor errors (1-2 words)": "2"
+      "Moderate errors (3-5 words)": "3"
+      "Major errors (>5 words or meaning changed)": "4"
+      "Completely wrong": "5"
+
+  # Error types observed
+  - annotation_type: multiselect
+    name: error_types
+    description: "What types of errors are present? (Select all that apply)"
+    labels:
+      - Word substitution
+      - Missing words
+      - Extra words inserted
+      - Word order errors
+      - Punctuation errors
+      - Speaker confusion
+      - Background noise interference
+      - No errors
+
+  # Corrected transcript
+  - annotation_type: text
+    name: corrected_transcript
+    description: "Provide the corrected transcript (if needed)"
+    textarea: true
+    required: false
+    placeholder: "Type the corrected version here..."
+
+  # Audio quality rating
+  - annotation_type: likert
+    name: audio_quality
+    description: "Rate the audio quality"
+    size: 5
+    min_label: "Very poor"
+    max_label: "Excellent"
+    keyboard_shortcuts: true
+
+  # Difficulty rating
+  - annotation_type: likert
+    name: difficulty
+    description: "How difficult was this to transcribe?"
+    size: 5
+    min_label: "Very easy"
+    max_label: "Very difficult"
+
+  # Additional notes
+  - annotation_type: text
+    name: notes
+    description: "Any additional notes? (Optional)"
+    textarea: true
+    required: false
+
+# User settings
+allow_all_users: false
+authorized_users:
+  - transcriber1@example.com
+  - transcriber2@example.com
+
+instances_per_annotator: 100
+
+# Output
+output:
+  path: annotations/
+  format: json

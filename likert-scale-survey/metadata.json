@@ -1,0 +1,10 @@
+{
+  "title": "Likert Scale Survey",
+  "description": "Multi-question survey using Likert scales to measure agreement, satisfaction, or frequency.",
+  "category": "survey",
+  "annotationType": ["likert", "multirate"],
+  "domain": ["research", "user-feedback"],
+  "useCase": ["survey", "user-research", "feedback"],
+  "complexity": "beginner",
+  "tags": ["survey", "likert", "rating", "feedback", "questionnaire"]
+}

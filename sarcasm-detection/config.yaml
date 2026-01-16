@@ -1,0 +1,74 @@
+# Sarcasm Detection Configuration
+# Identify and categorize sarcastic statements
+
+annotation_task_name: "Sarcasm Detection"
+
+data_files:
+  - "data/tweets.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "text"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "is_sarcastic"
+    description: "Is this text sarcastic?"
+    labels:
+      - name: "Sarcastic"
+        tooltip: "The text means the opposite of what it literally says"
+        key_value: "s"
+      - name: "Not Sarcastic"
+        tooltip: "The text is meant literally"
+        key_value: "n"
+      - name: "Unclear"
+        tooltip: "Cannot determine without more context"
+        key_value: "u"
+
+  - annotation_type: "radio"
+    name: "sarcasm_type"
+    description: "What type of sarcasm?"
+    labels:
+      - name: "Verbal Irony"
+        tooltip: "Saying the opposite of what is meant"
+      - name: "Self-deprecating"
+        tooltip: "Mocking oneself"
+      - name: "Situational"
+        tooltip: "Pointing out ironic situations"
+      - name: "Exaggeration"
+        tooltip: "Over-the-top statements"
+      - name: "Understatement"
+        tooltip: "Downplaying something significant"
+    show_if:
+      field: "is_sarcastic"
+      value: "Sarcastic"
+
+  - annotation_type: "radio"
+    name: "sarcasm_target"
+    description: "What is the target of the sarcasm?"
+    labels:
+      - name: "Self"
+      - name: "Other person"
+      - name: "Organization/Company"
+      - name: "Situation/Event"
+      - name: "General/Unclear"
+    show_if:
+      field: "is_sarcastic"
+      value: "Sarcastic"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+  - annotation_type: "text"
+    name: "literal_interpretation"
+    description: "What would this mean if taken literally?"
+    required: false
+
+output: "annotation_output/"

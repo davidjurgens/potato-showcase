@@ -1,0 +1,14 @@
+[
+  {
+    "id": "survey_001",
+    "product_description": "Please rate your experience with Potato Annotation Tool - a lightweight, configurable annotation platform for NLP research."
+  },
+  {
+    "id": "survey_002",
+    "product_description": "Please rate your experience with our new documentation system - an interactive guide for setting up annotation tasks."
+  },
+  {
+    "id": "survey_003",
+    "product_description": "Please rate your experience with the Config Playground - a visual builder for creating annotation configurations."
+  }
+]
