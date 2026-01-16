@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nli_001",
+    "premise": "A woman in a green jacket is sitting on a bench.",
+    "hypothesis": "A person is sitting outside.",
+    "pair": "PREMISE: A woman in a green jacket is sitting on a bench.\nHYPOTHESIS: A person is sitting outside."
+  },
+  {
+    "id": "nli_002",
+    "premise": "Two dogs are running through a snowy field.",
+    "hypothesis": "The dogs are sleeping inside a house.",
+    "pair": "PREMISE: Two dogs are running through a snowy field.\nHYPOTHESIS: The dogs are sleeping inside a house."
+  },
+  {
+    "id": "nli_003",
+    "premise": "A child is playing with a red ball in the park.",
+    "hypothesis": "The child is enjoying their birthday party.",
+    "pair": "PREMISE: A child is playing with a red ball in the park.\nHYPOTHESIS: The child is enjoying their birthday party."
+  },
+  {
+    "id": "nli_004",
+    "premise": "Several people are waiting at a bus stop in the rain.",
+    "hypothesis": "People are outdoors during bad weather.",
+    "pair": "PREMISE: Several people are waiting at a bus stop in the rain.\nHYPOTHESIS: People are outdoors during bad weather."
+  },
+  {
+    "id": "nli_005",
+    "premise": "A man in a business suit is talking on his phone.",
+    "hypothesis": "A person is having a conversation.",
+    "pair": "PREMISE: A man in a business suit is talking on his phone.\nHYPOTHESIS: A person is having a conversation."
+  },
+  {
+    "id": "nli_006",
+    "premise": "The restaurant is empty with no customers.",
+    "hypothesis": "The restaurant is crowded with diners.",
+    "pair": "PREMISE: The restaurant is empty with no customers.\nHYPOTHESIS: The restaurant is crowded with diners."
+  },
+  {
+    "id": "nli_007",
+    "premise": "A group of students are studying in the library.",
+    "hypothesis": "The students are preparing for their final exams.",
+    "pair": "PREMISE: A group of students are studying in the library.\nHYPOTHESIS: The students are preparing for their final exams."
+  },
+  {
+    "id": "nli_008",
+    "premise": "A chef is preparing food in a commercial kitchen.",
+    "hypothesis": "Someone is cooking.",
+    "pair": "PREMISE: A chef is preparing food in a commercial kitchen.\nHYPOTHESIS: Someone is cooking."
+  }
+]

@@ -1,0 +1,110 @@
+# Implicit Hate Speech Detection
+# Based on ElSherief et al., EMNLP 2021 "Latent Hatred"
+# Paper: https://aclanthology.org/2021.emnlp-main.29/
+# Dataset: https://github.com/SALT-NLP/implicit-hate
+#
+# Implicit hate speech is harder to detect than explicit hate because it
+# relies on stereotypes, coded language, and indirect expression.
+#
+# Six-Category Taxonomy:
+# 1. Grievance (24.2%): Positions majority groups as unfairly disadvantaged
+# 2. Incitement (20.0%): Promotes hate groups/ideologies, flaunts in-group power
+# 3. Stereotypes (17.9%): Associates groups with negative attributes via euphemisms
+# 4. Inferiority (13.6%): Implies some group is of lesser value
+# 5. Irony (12.6%): Uses sarcasm, humor, satire to demean
+# 6. Threats (10.5%): Indirect threats to safety, well-being, reputation
+#
+# Annotation Guidelines:
+# 1. First determine if the text contains implicit hate (vs explicit or none)
+# 2. Implicit hate lacks slurs but conveys hateful meaning through context
+# 3. Consider: Would someone from the target group feel attacked?
+# 4. Look for coded language, dog whistles, and stereotypical references
+# 5. Irony/sarcasm requires understanding the speaker's actual intent
+#
+# Key Distinction from Explicit Hate:
+# - Explicit: Uses slurs, direct insults, clear threats
+# - Implicit: Uses stereotypes, innuendo, coded language, sarcasm
+
+port: 8000
+server_name: localhost
+task_name: "Implicit Hate Speech Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Hate classification
+  - annotation_type: radio
+    name: hate_type
+    description: "Does this text contain hate speech?"
+    labels:
+      - "Explicit hate"
+      - "Implicit hate"
+      - "Not hateful"
+    tooltips:
+      "Explicit hate": "Contains clear slurs, direct insults, or obvious threats"
+      "Implicit hate": "Conveys hate through stereotypes, coded language, or indirect means"
+      "Not hateful": "Does not contain hateful content"
+
+  # Step 2: Implicit hate category (if implicit)
+  - annotation_type: radio
+    name: implicit_category
+    description: "What type of implicit hate is expressed?"
+    labels:
+      - "Grievance"
+      - "Incitement"
+      - "Stereotypes"
+      - "Inferiority"
+      - "Irony"
+      - "Threats"
+    tooltips:
+      "Grievance": "Positions majority groups as unfairly disadvantaged (e.g., 'reverse racism', 'they get special treatment')"
+      "Incitement": "Promotes hate groups/ideologies, celebrates in-group power (e.g., praising extremist symbols)"
+      "Stereotypes": "Associates groups with negative attributes using euphemisms or coded language"
+      "Inferiority": "Implies some group or person is of lesser value or capability"
+      "Irony": "Uses sarcasm, humor, or satire to mock or demean a group"
+      "Threats": "Indirect threats to body, well-being, reputation, or rights"
+
+  # Step 3: Target group
+  - annotation_type: radio
+    name: target
+    description: "Which group is targeted?"
+    labels:
+      - "Racial/ethnic minority"
+      - "Religious group"
+      - "Women"
+      - "LGBTQ+ people"
+      - "Immigrants"
+      - "Other group"
+      - "No specific group"
+    tooltips:
+      "Racial/ethnic minority": "Black, Asian, Hispanic, Indigenous, or other racial/ethnic groups"
+      "Religious group": "Muslims, Jewish people, or other religious groups"
+      "Women": "Women or girls based on gender"
+      "LGBTQ+ people": "Gay, lesbian, bisexual, transgender, or other LGBTQ+ individuals"
+      "Immigrants": "Immigrants, refugees, or non-citizens"
+      "Other group": "Another identifiable group not listed"
+      "No specific group": "No clear target group identified"
+
+  # Step 4: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your annotation?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

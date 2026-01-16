@@ -1,0 +1,22 @@
+{
+  "title": "Implicit Hate Speech Detection",
+  "description": "Detect and categorize implicit hate speech using a six-category taxonomy. Based on ElSherief et al., EMNLP 2021. Identifies grievance, incitement, stereotypes, inferiority, irony, and threats.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ElSherief et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SALT-NLP",
+    "affiliation": "Georgia Tech"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Content Moderation", "Social Media"],
+  "useCase": ["Hate Speech Detection", "Content Moderation", "Online Safety"],
+  "complexity": "advanced",
+  "tags": ["implicit-hate", "hate-speech", "stereotypes", "emnlp2021", "content-moderation"],
+  "featured": true,
+  "paperReference": "ElSherief et al., EMNLP 2021",
+  "paperUrl": "https://aclanthology.org/2021.emnlp-main.29/",
+  "datasetUrl": "https://github.com/SALT-NLP/implicit-hate"
+}

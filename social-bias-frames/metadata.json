@@ -1,0 +1,22 @@
+{
+  "title": "Social Bias Frames (SBIC)",
+  "description": "Annotate social media posts for bias using structured frames. Based on Sap et al., ACL 2020. Identify offensiveness, intent, implied stereotypes, and targeted groups.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sap et al.",
+    "email": "jurgens@umich.edu",
+    "github": "maartensap",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["NLP", "Social Media", "Bias Detection"],
+  "useCase": ["Bias Detection", "Content Moderation", "Fairness"],
+  "complexity": "advanced",
+  "tags": ["bias", "stereotypes", "social-media", "sbic", "acl2020", "fairness"],
+  "featured": true,
+  "paperReference": "Sap et al., ACL 2020",
+  "paperUrl": "https://aclanthology.org/2020.acl-main.409/",
+  "datasetUrl": "https://maartensap.com/social-bias-frames/"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Deceptive Review Detection",
+  "description": "Distinguish between truthful and deceptive (fake) reviews. Based on Ott et al., ACL 2011. Identify fake reviews written to deceive vs genuine customer experiences.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ott et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "Cornell University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "Misinformation", "E-commerce"],
+  "useCase": ["Fake Review Detection", "Content Moderation", "Trust & Safety"],
+  "complexity": "intermediate",
+  "tags": ["deception", "fake-reviews", "opinion-spam", "misinformation", "e-commerce"],
+  "featured": false,
+  "paperReference": "Ott et al., ACL 2011",
+  "paperUrl": "https://aclanthology.org/P11-1032/",
+  "datasetUrl": "https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus"
+}

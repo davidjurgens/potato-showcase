@@ -1,0 +1,96 @@
+# NLI with Explanations (e-SNLI)
+# Based on Camburu et al., NeurIPS 2018
+# Paper: https://papers.nips.cc/paper/8163-e-snli
+# Dataset: https://github.com/OanaMariaCamburu/e-SNLI
+#
+# Natural Language Inference (NLI) determines the relationship between
+# a premise and hypothesis. e-SNLI adds human-written explanations.
+#
+# NLI Labels:
+# - Entailment: The hypothesis is definitely TRUE given the premise
+# - Contradiction: The hypothesis is definitely FALSE given the premise
+# - Neutral: The hypothesis may or may not be true (can't determine)
+#
+# Explanation Guidelines:
+# 1. First classify the relationship
+# 2. Then highlight key words in premise and hypothesis
+# 3. Write a natural language explanation justifying your label
+# 4. Focus on NON-OBVIOUS elements that determine the relation
+# 5. Don't just repeat what's identical in both sentences
+#
+# For Entailment: Explain why hypothesis must be true
+# For Contradiction: Identify the conflicting information
+# For Neutral: Explain what information is missing/uncertain
+#
+# Good explanations are:
+# - Concise but complete
+# - Reference specific words/phrases
+# - Explain the reasoning, not just restate
+
+port: 8000
+server_name: localhost
+task_name: "NLI with Explanations"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: pair
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: NLI label
+  - annotation_type: radio
+    name: label
+    description: "Given the PREMISE, what is the relationship with the HYPOTHESIS?"
+    labels:
+      - "Entailment"
+      - "Contradiction"
+      - "Neutral"
+    tooltips:
+      "Entailment": "If the premise is true, the hypothesis MUST be true"
+      "Contradiction": "If the premise is true, the hypothesis MUST be false"
+      "Neutral": "The premise doesn't determine whether the hypothesis is true or false"
+
+  # Step 2: Highlight key words in premise
+  - annotation_type: span
+    name: premise_highlights
+    description: "Highlight the words in the PREMISE that are most relevant to your decision"
+    labels:
+      - "Key Evidence"
+    label_colors:
+      "Key Evidence": "#3b82f6"
+    tooltips:
+      "Key Evidence": "Words or phrases that are crucial for determining the relationship"
+    allow_overlapping: false
+
+  # Step 3: Highlight key words in hypothesis
+  - annotation_type: span
+    name: hypothesis_highlights
+    description: "Highlight the words in the HYPOTHESIS that are most relevant to your decision"
+    labels:
+      - "Key Evidence"
+    label_colors:
+      "Key Evidence": "#22c55e"
+    tooltips:
+      "Key Evidence": "Words or phrases that are crucial for determining the relationship"
+    allow_overlapping: false
+
+  # Step 4: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your classification?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

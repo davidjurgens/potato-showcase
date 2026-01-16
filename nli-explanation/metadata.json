@@ -1,0 +1,22 @@
+{
+  "title": "NLI with Explanations (e-SNLI)",
+  "description": "Natural language inference with human explanations. Based on e-SNLI (Camburu et al., NeurIPS 2018). Classify entailment/contradiction/neutral and provide natural language justifications.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Camburu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "OanaMariaCamburu",
+    "affiliation": "University of Oxford"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Explainability", "Reasoning"],
+  "useCase": ["Natural Language Inference", "Explainable AI", "Reasoning"],
+  "complexity": "intermediate",
+  "tags": ["nli", "explanation", "entailment", "esnli", "neurips2018", "explainability"],
+  "featured": false,
+  "paperReference": "Camburu et al., NeurIPS 2018",
+  "paperUrl": "https://papers.nips.cc/paper/8163-e-snli-natural-language-inference-with-natural-language-explanations",
+  "datasetUrl": "https://github.com/OanaMariaCamburu/e-SNLI"
+}

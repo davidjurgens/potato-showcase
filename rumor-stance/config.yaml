@@ -1,0 +1,90 @@
+# Rumor Stance Detection (PHEME)
+# Based on Zubiaga et al., EMNLP 2018
+# Paper: https://aclanthology.org/D18-1401/
+# Dataset: https://figshare.com/articles/dataset/PHEME_dataset
+#
+# This task classifies how users respond to rumors on social media.
+# Understanding stance helps assess rumor veracity and spread patterns.
+#
+# Stance Labels (SDQC):
+# - Support: The reply endorses or agrees with the rumor
+# - Deny: The reply refutes or contradicts the rumor
+# - Query: The reply questions the rumor's veracity
+# - Comment: The reply discusses the rumor without taking a stance
+#
+# Annotation Guidelines:
+# 1. Read the original rumor (source claim) first
+# 2. Read the reply in context of the conversation thread
+# 3. Focus on the reply's stance toward the SOURCE rumor
+# 4. Support: Agrees, shares, adds confirming information
+# 5. Deny: Disagrees, corrects, provides counter-evidence
+# 6. Query: Asks for evidence, expresses doubt, questions truth
+# 7. Comment: Neutral discussion, jokes, tangential remarks
+#
+# Note: A reply might support the rumor while denying someone else's
+# denial. Focus on stance toward the ORIGINAL claim.
+
+port: 8000
+server_name: localhost
+task_name: "Rumor Stance Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: reply
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Stance classification
+  - annotation_type: radio
+    name: stance
+    description: "What is the stance of this REPLY toward the RUMOR?"
+    labels:
+      - "Support"
+      - "Deny"
+      - "Query"
+      - "Comment"
+    tooltips:
+      "Support": "The reply endorses, agrees with, or spreads the rumor as true"
+      "Deny": "The reply refutes, contradicts, or provides evidence against the rumor"
+      "Query": "The reply questions the rumor, asks for evidence, or expresses doubt"
+      "Comment": "The reply discusses the topic without taking a clear stance on truth/falsity"
+
+  # Step 2: Certainty
+  - annotation_type: likert
+    name: certainty
+    description: "How certain does the reply author seem about their stance?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Neutral"
+      4: "Somewhat certain"
+      5: "Very certain"
+    tooltips:
+      1: "Expresses strong doubt or hedging"
+      2: "Shows some hesitation"
+      3: "Neutral tone"
+      4: "Fairly confident expression"
+      5: "Expresses strong conviction"
+
+  # Step 3: Confidence in annotation
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your stance classification?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false
