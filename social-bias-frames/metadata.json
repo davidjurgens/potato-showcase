@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Sap et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.409/",
-  "datasetUrl": "https://maartensap.com/social-bias-frames/"
+  "datasetUrl": "https://maartensap.com/social-bias-frames/",
+  "citation": "@inproceedings{sap-etal-2020-social,\n    title = \"Social Bias Frames: Reasoning about Social and Power Implications of Language\",\n    author = \"Sap, Maarten  and Gabriel, Saadia  and Qin, Lianhui  and Jurafsky, Dan  and Smith, Noah A.  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.409\",\n    pages = \"5477--5490\"\n}"
 }

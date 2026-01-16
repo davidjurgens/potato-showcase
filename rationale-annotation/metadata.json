@@ -1,5 +1,5 @@
 {
-  "title": "Rationale Annotation (ERASER-style)",
+  "title": "Rationale Annotation (ERASER)",
   "description": "Annotate rationales (evidence spans) that justify classification decisions. Based on the ERASER benchmark (DeYoung et al., ACL 2020). Identify which parts of the text are necessary and sufficient for making a prediction.",
   "version": "1.0.0",
   "author": {
@@ -17,5 +17,6 @@
   "featured": false,
   "paperReference": "DeYoung et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.408/",
-  "datasetUrl": "https://www.eraserbenchmark.com"
+  "datasetUrl": "https://www.eraserbenchmark.com",
+  "citation": "@inproceedings{deyoung-etal-2020-eraser,\n    title = \"{ERASER}: A Benchmark to Evaluate Rationalized {NLP} Models\",\n    author = \"DeYoung, Jay  and Jain, Sarthak  and Rajani, Nazneen Fatema  and Lehman, Eric  and Xiong, Caiming  and Socher, Richard  and Wallace, Byron C.\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.408\",\n    pages = \"4443--4458\"\n}"
 }

@@ -18,5 +18,6 @@
   "featured": false,
   "paperReference": "Rashkin et al., ACL 2019",
   "paperUrl": "https://aclanthology.org/P19-1534/",
-  "datasetUrl": "https://github.com/facebookresearch/EmpatheticDialogues"
+  "datasetUrl": "https://github.com/facebookresearch/EmpatheticDialogues",
+  "citation": "@inproceedings{rashkin-etal-2019-towards,\n    title = \"Towards Empathetic Open-domain Conversation Models: A New Benchmark and Dataset\",\n    author = \"Rashkin, Hannah  and Smith, Eric Michael  and Li, Margaret  and Boureau, Y-Lan\",\n    booktitle = \"Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2019\",\n    address = \"Florence, Italy\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P19-1534\",\n    pages = \"5370--5381\"\n}"
 }

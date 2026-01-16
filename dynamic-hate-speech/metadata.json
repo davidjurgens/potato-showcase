@@ -1,5 +1,5 @@
 {
-  "title": "Dynamic Hate Speech Detection (Vidgen et al.)",
+  "title": "Dynamic Hate Speech Detection",
   "description": "Hate speech classification with fine-grained type labels based on the Dynamically Generated Hate Speech Dataset (Vidgen et al., ACL 2021). Classify content as hateful or not, then identify hate type (animosity, derogation, dehumanization, threatening, support for hateful entities) and target group.",
   "version": "1.0.0",
   "author": {
@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Vidgen et al., ACL 2021",
   "paperUrl": "https://aclanthology.org/2021.acl-long.132/",
-  "datasetUrl": "https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset"
+  "datasetUrl": "https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset",
+  "citation": "@inproceedings{vidgen-etal-2021-learning,\n    title = \"Learning from the Worst: Dynamically Generated Datasets to Improve Online Hate Detection\",\n    author = \"Vidgen, Bertie  and Thrush, Tristan  and Waseem, Zeerak  and Kiela, Douwe\",\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.acl-long.132\",\n    pages = \"1667--1682\"\n}"
 }

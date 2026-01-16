@@ -17,5 +17,6 @@
   "featured": false,
   "paperReference": "Malmasi et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.196/",
-  "datasetUrl": "https://multiconer.github.io/"
+  "datasetUrl": "https://multiconer.github.io/",
+  "citation": "@inproceedings{malmasi-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 11: Multilingual Complex Named Entity Recognition ({M}ulti{C}o{NER})\",\n    author = \"Malmasi, Shervin  and Fang, Anjie  and Fetahu, Besnik  and Kar, Sudipta  and Rokhlenko, Oleg\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.196\",\n    pages = \"1412--1437\"\n}"
 }

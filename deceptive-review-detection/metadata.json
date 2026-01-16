@@ -13,9 +13,10 @@
   "domain": ["NLP", "Misinformation", "E-commerce"],
   "useCase": ["Fake Review Detection", "Content Moderation", "Trust & Safety"],
   "complexity": "intermediate",
-  "tags": ["deception", "fake-reviews", "opinion-spam", "misinformation", "e-commerce"],
+  "tags": ["deception", "fake-reviews", "opinion-spam", "misinformation", "e-commerce", "acl2011"],
   "featured": false,
   "paperReference": "Ott et al., ACL 2011",
   "paperUrl": "https://aclanthology.org/P11-1032/",
-  "datasetUrl": "https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus"
+  "datasetUrl": "https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus",
+  "citation": "@inproceedings{ott-etal-2011-finding,\n    title = \"Finding Deceptive Opinion Spam by Any Stretch of the Imagination\",\n    author = \"Ott, Myle  and Choi, Yejin  and Cardie, Claire  and Hancock, Jeffrey T.\",\n    booktitle = \"Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies\",\n    month = jun,\n    year = \"2011\",\n    address = \"Portland, Oregon, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P11-1032\",\n    pages = \"309--319\"\n}"
 }

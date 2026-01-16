@@ -1,5 +1,5 @@
 {
-  "title": "Stance Detection (VAST-style)",
+  "title": "Stance Detection (VAST)",
   "description": "Detect the stance of a text toward a given topic. Based on VAST (Allaway & McKeown, EMNLP 2020) for zero-shot stance detection. Classify text as expressing favor, opposition, or neutrality toward various topics.",
   "version": "1.0.0",
   "author": {
@@ -17,5 +17,6 @@
   "featured": true,
   "paperReference": "Allaway & McKeown, EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.197/",
-  "datasetUrl": "https://github.com/emilyallaway/zero-shot-stance"
+  "datasetUrl": "https://github.com/emilyallaway/zero-shot-stance",
+  "citation": "@inproceedings{allaway-mckeown-2020-zero,\n    title = \"Zero-Shot Stance Detection: A Dataset and Model using Generalized Topic Representations\",\n    author = \"Allaway, Emily  and McKeown, Kathleen\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.197\",\n    pages = \"2453--2463\"\n}"
 }

@@ -18,5 +18,6 @@
   "featured": false,
   "paperReference": "Aggarwal et al., ACL 2021",
   "paperUrl": "https://aclanthology.org/2021.acl-long.238/",
-  "datasetUrl": "https://github.com/dair-iitd/ECQA-Dataset"
+  "datasetUrl": "https://github.com/dair-iitd/ECQA-Dataset",
+  "citation": "@inproceedings{aggarwal-etal-2021-explanations,\n    title = \"Explanations for {C}ommonsense{QA}: New Dataset and Models\",\n    author = \"Aggarwal, Shourya  and Mandowara, Divyanshu  and Aber, Vishwajeet  and Gupta, Dinesh  and Shah, Soumen\",\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.acl-long.238\",\n    pages = \"3050--3065\"\n}"
 }

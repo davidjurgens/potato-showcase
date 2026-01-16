@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Forbes et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.48/",
-  "datasetUrl": "https://maxwellforbes.com/social-chemistry/"
+  "datasetUrl": "https://maxwellforbes.com/social-chemistry/",
+  "citation": "@inproceedings{forbes-etal-2020-social,\n    title = \"Social Chemistry 101: Learning to Reason about Social and Moral Norms\",\n    author = \"Forbes, Maxwell  and Hwang, Jena D.  and Shwartz, Vered  and Sap, Maarten  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.48\",\n    pages = \"653--670\"\n}"
 }

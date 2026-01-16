@@ -17,5 +17,6 @@
   "featured": false,
   "paperReference": "Bostan et al., LREC 2020",
   "paperUrl": "https://aclanthology.org/2020.lrec-1.194/",
-  "datasetUrl": "https://www.ims.uni-stuttgart.de/en/research/resources/corpora/goodnewseveryone/"
+  "datasetUrl": "https://www.ims.uni-stuttgart.de/en/research/resources/corpora/goodnewseveryone/",
+  "citation": "@inproceedings{bostan-etal-2020-goodnewseveryone,\n    title = \"{G}ood{N}ews{E}veryone: A Corpus of News Headlines Annotated with Emotions, Semantic Roles, and Reader Perception\",\n    author = \"Bostan, Laura Ana Maria  and Kim, Evgeny  and Klinger, Roman\",\n    booktitle = \"Proceedings of the 12th Language Resources and Evaluation Conference\",\n    month = may,\n    year = \"2020\",\n    address = \"Marseille, France\",\n    publisher = \"European Language Resources Association\",\n    url = \"https://aclanthology.org/2020.lrec-1.194\",\n    pages = \"1554--1566\"\n}"
 }

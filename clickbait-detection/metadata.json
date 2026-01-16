@@ -1,11 +1,11 @@
 {
-  "title": "Clickbait Detection",
-  "description": "Classify headlines and social media posts as clickbait or non-clickbait. Identify manipulative content designed to attract clicks through sensationalism, curiosity gaps, or misleading framing.",
+  "title": "Clickbait Detection (Webis Clickbait Corpus)",
+  "description": "Classify headlines and social media posts as clickbait or non-clickbait based on the Webis Clickbait Corpus. Identify manipulative content designed to attract clicks through sensationalism, curiosity gaps, or misleading framing.",
   "version": "1.0.0",
   "author": {
-    "name": "Clickbait Detection Research",
+    "name": "Potthast et al.",
     "email": "jurgens@umich.edu",
-    "affiliation": "University of Michigan"
+    "affiliation": "Bauhaus-Universität Weimar"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -15,6 +15,8 @@
   "complexity": "beginner",
   "tags": ["clickbait", "headlines", "social-media", "content-quality", "misinformation"],
   "featured": false,
-  "paperReference": "Clickbait Detection Shared Tasks",
-  "paperUrl": "https://pan.webis.de/"
+  "paperReference": "Potthast et al., ECIR 2016",
+  "paperUrl": "https://webis.de/publications.html#potthast_2016",
+  "datasetUrl": "https://webis.de/data/webis-clickbait-16.html",
+  "citation": "@inproceedings{potthast-etal-2016-clickbait,\n    title = \"A Stylometric Inquiry into Hyperpartisan and Fake News\",\n    author = \"Potthast, Martin  and K{\\\"o}psel, Sebastian  and Stein, Benno  and Hagen, Matthias\",\n    booktitle = \"Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P17-1066\"\n}"
 }
