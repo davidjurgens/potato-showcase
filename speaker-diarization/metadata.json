@@ -1,0 +1,10 @@
+{
+  "title": "Speaker Diarization",
+  "description": "Identify and label different speakers in audio recordings with timestamp-based segment annotation.",
+  "category": "audio",
+  "annotationType": ["span", "radio"],
+  "domain": ["speech", "conversational-ai"],
+  "useCase": ["speaker-identification", "transcription"],
+  "complexity": "intermediate",
+  "tags": ["audio", "speaker", "diarization", "conversation", "multi-speaker"]
+}

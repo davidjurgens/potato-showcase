@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "source": "The International Space Station (ISS) has been continuously occupied since November 2000. It serves as a microgravity and space environment research laboratory where crew members conduct experiments in biology, physics, astronomy, and other fields. The ISS is a joint project among five space agencies: NASA, Roscosmos, JAXA, ESA, and CSA.",
+    "summary": "The ISS has been occupied since 2000 and serves as a research lab for experiments. It's run by five space agencies including NASA."
+  },
+  {
+    "id": "2",
+    "source": "Machine learning models require large amounts of training data to achieve good performance. Data annotation is the process of labeling data to provide ground truth for model training. High-quality annotations are essential for building reliable AI systems.",
+    "summary": "ML models need lots of labeled training data. Good annotations are crucial for building reliable AI."
+  }
+]

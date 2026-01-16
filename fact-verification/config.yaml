@@ -1,0 +1,60 @@
+# Fact Verification Configuration
+# Verify claims against provided evidence
+
+annotation_task_name: "Fact Verification"
+
+data_files:
+  - "data/claims.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "verdict"
+    description: "Based on the evidence, is the claim..."
+    labels:
+      - name: "Supported"
+        tooltip: "Evidence confirms the claim is true"
+        key_value: "s"
+        color: "#22c55e"
+      - name: "Refuted"
+        tooltip: "Evidence contradicts the claim"
+        key_value: "r"
+        color: "#ef4444"
+      - name: "Not Enough Info"
+        tooltip: "Evidence doesn't clearly support or refute"
+        key_value: "n"
+        color: "#eab308"
+
+  - annotation_type: "text"
+    name: "evidence_quote"
+    description: "Quote the most relevant part of the evidence"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you in your verdict?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+  - annotation_type: "multiselect"
+    name: "reasoning_type"
+    description: "What type of reasoning did you use?"
+    labels:
+      - name: "Direct statement"
+      - name: "Numerical/Statistical"
+      - name: "Logical inference"
+      - name: "Temporal reasoning"
+      - name: "Multiple sources"
+
+  - annotation_type: "text"
+    name: "explanation"
+    description: "Explain your reasoning"
+    required: false
+
+output: "annotation_output/"

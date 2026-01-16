@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sim_001",
+    "sentence1": "The cat sat on the mat.",
+    "sentence2": "A feline was resting on the rug.",
+    "display": "**Sentence 1:** The cat sat on the mat.\n\n**Sentence 2:** A feline was resting on the rug."
+  },
+  {
+    "id": "sim_002",
+    "sentence1": "The stock market crashed yesterday.",
+    "sentence2": "Stock prices plummeted in yesterday's trading.",
+    "display": "**Sentence 1:** The stock market crashed yesterday.\n\n**Sentence 2:** Stock prices plummeted in yesterday's trading."
+  },
+  {
+    "id": "sim_003",
+    "sentence1": "She is running a marathon this weekend.",
+    "sentence2": "The weather will be sunny on Saturday.",
+    "display": "**Sentence 1:** She is running a marathon this weekend.\n\n**Sentence 2:** The weather will be sunny on Saturday."
+  },
+  {
+    "id": "sim_004",
+    "sentence1": "The restaurant was crowded and noisy.",
+    "sentence2": "The eatery was quiet and nearly empty.",
+    "display": "**Sentence 1:** The restaurant was crowded and noisy.\n\n**Sentence 2:** The eatery was quiet and nearly empty."
+  },
+  {
+    "id": "sim_005",
+    "sentence1": "Python is a programming language.",
+    "sentence2": "Python is a type of snake found in tropical regions.",
+    "display": "**Sentence 1:** Python is a programming language.\n\n**Sentence 2:** Python is a type of snake found in tropical regions."
+  }
+]

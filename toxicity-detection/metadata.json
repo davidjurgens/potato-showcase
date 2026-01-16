@@ -1,0 +1,14 @@
+{
+  "title": "Toxicity Detection",
+  "description": "Multi-label toxicity classification with severity ratings for content moderation.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["multiselect", "likert"],
+  "domain": ["NLP", "Content Moderation"],
+  "useCase": ["Toxicity Detection", "Content Moderation", "Hate Speech"],
+  "complexity": "intermediate",
+  "tags": ["toxicity", "moderation", "hate-speech", "safety"],
+  "featured": true
+}

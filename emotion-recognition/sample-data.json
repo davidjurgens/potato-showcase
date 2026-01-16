@@ -1,0 +1,20 @@
+[
+  {
+    "id": "emo_001",
+    "audio_url": "https://example.com/audio/emotion_sample1.wav",
+    "transcript": "I can't believe this is happening! This is the best day ever!",
+    "duration": 3.2
+  },
+  {
+    "id": "emo_002",
+    "audio_url": "https://example.com/audio/emotion_sample2.wav",
+    "transcript": "I'm so disappointed. I really thought things would be different.",
+    "duration": 4.1
+  },
+  {
+    "id": "emo_003",
+    "audio_url": "https://example.com/audio/emotion_sample3.wav",
+    "transcript": "This is absolutely unacceptable. I demand to speak to someone in charge.",
+    "duration": 3.8
+  }
+]

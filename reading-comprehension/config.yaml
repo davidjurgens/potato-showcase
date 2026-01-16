@@ -1,0 +1,69 @@
+# Reading Comprehension QA Configuration
+# Evaluate question-answer pairs for reading comprehension
+
+annotation_task_name: "Reading Comprehension QA"
+
+data_files:
+  - "data/qa_pairs.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "answer_correctness"
+    description: "Is the provided answer correct?"
+    labels:
+      - name: "Correct"
+        tooltip: "The answer is fully correct"
+        key_value: "c"
+        color: "#22c55e"
+      - name: "Partially Correct"
+        tooltip: "The answer is partly right but incomplete or has minor errors"
+        key_value: "p"
+        color: "#eab308"
+      - name: "Incorrect"
+        tooltip: "The answer is wrong"
+        key_value: "i"
+        color: "#ef4444"
+      - name: "Unanswerable"
+        tooltip: "The question cannot be answered from the passage"
+        key_value: "u"
+        color: "#6b7280"
+
+  - annotation_type: "radio"
+    name: "question_type"
+    description: "What type of reasoning is needed?"
+    labels:
+      - name: "Explicit"
+        tooltip: "Answer stated directly in text"
+      - name: "Implicit"
+        tooltip: "Requires inference from text"
+      - name: "Multi-hop"
+        tooltip: "Requires connecting multiple pieces of information"
+      - name: "Numerical"
+        tooltip: "Requires counting or calculation"
+
+  - annotation_type: "text"
+    name: "correct_answer"
+    description: "If incorrect/partially correct, what is the right answer?"
+    show_if:
+      field: "answer_correctness"
+      value_in: ["Partially Correct", "Incorrect"]
+
+  - annotation_type: "text"
+    name: "evidence_span"
+    description: "Copy the text span that supports the answer"
+
+  - annotation_type: "likert"
+    name: "question_quality"
+    description: "How good is this question?"
+    size: 5
+    min_label: "Poor question"
+    max_label: "Excellent question"
+
+output: "annotation_output/"

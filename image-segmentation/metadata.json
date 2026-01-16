@@ -1,0 +1,14 @@
+{
+  "title": "Image Segmentation",
+  "description": "Draw polygon masks around objects for semantic segmentation tasks.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["polygon", "image"],
+  "domain": ["Computer Vision"],
+  "useCase": ["Segmentation", "Instance Segmentation"],
+  "complexity": "advanced",
+  "tags": ["segmentation", "polygon", "mask", "computer-vision"],
+  "featured": false
+}

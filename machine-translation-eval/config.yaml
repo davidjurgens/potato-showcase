@@ -1,0 +1,44 @@
+task_name: "Machine Translation Evaluation"
+task_description: "Evaluate the quality of the machine translation."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  text_key: source
+  context_key: translation
+
+annotation_schemes:
+  - annotation_type: likert
+    name: adequacy
+    description: "How much of the source meaning is preserved in the translation?"
+    size: 5
+    min_label: "None"
+    max_label: "All"
+    required: true
+
+  - annotation_type: likert
+    name: fluency
+    description: "How fluent is the translation in the target language?"
+    size: 5
+    min_label: "Incomprehensible"
+    max_label: "Flawless"
+    required: true
+
+  - annotation_type: multiselect
+    name: errors
+    description: "Select any errors present in the translation"
+    labels:
+      - "Mistranslation"
+      - "Omission"
+      - "Addition"
+      - "Grammar error"
+      - "Word order"
+      - "Terminology"
+    required: false
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

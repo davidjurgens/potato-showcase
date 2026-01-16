@@ -1,0 +1,14 @@
+{
+  "title": "Object Detection",
+  "description": "Draw bounding boxes around objects for object detection model training.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["bbox", "image"],
+  "domain": ["Computer Vision"],
+  "useCase": ["Object Detection", "Bounding Box"],
+  "complexity": "intermediate",
+  "tags": ["object-detection", "bbox", "computer-vision", "yolo"],
+  "featured": true
+}

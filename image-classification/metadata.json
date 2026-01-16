@@ -1,0 +1,14 @@
+{
+  "title": "Image Classification",
+  "description": "Multi-class image classification with thumbnail preview and zoom controls.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["radio", "image"],
+  "domain": ["Computer Vision"],
+  "useCase": ["Image Classification", "Object Recognition"],
+  "complexity": "beginner",
+  "tags": ["image", "classification", "computer-vision"],
+  "featured": true
+}

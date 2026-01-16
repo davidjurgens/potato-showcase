@@ -1,0 +1,116 @@
+task_name: "Image Classification"
+
+# Server configuration
+server:
+  port: 8000
+
+# Image display settings
+image:
+  enabled: true
+  max_width: 800
+  max_height: 600
+  zoom_enabled: true
+  preserve_aspect_ratio: true
+
+# Data configuration
+data_files:
+  - path: data/images.json
+    image_field: image_path
+
+# Annotation schemes
+annotation_schemes:
+  # Primary category (single choice)
+  - annotation_type: radio
+    name: primary_category
+    description: "What is the main subject of this image?"
+    labels:
+      - Person/People
+      - Animal
+      - Vehicle
+      - Building/Architecture
+      - Nature/Landscape
+      - Food
+      - Object/Product
+      - Text/Document
+      - Other
+    keyboard_shortcuts:
+      "Person/People": "1"
+      "Animal": "2"
+      "Vehicle": "3"
+      "Building/Architecture": "4"
+      "Nature/Landscape": "5"
+      "Food": "6"
+      "Object/Product": "7"
+      "Text/Document": "8"
+      "Other": "9"
+
+  # Additional tags (multi-label)
+  - annotation_type: multiselect
+    name: tags
+    description: "Select all applicable tags"
+    labels:
+      - Indoor
+      - Outdoor
+      - Daytime
+      - Nighttime
+      - Close-up
+      - Wide shot
+      - Multiple subjects
+      - Text visible
+      - Watermark present
+
+  # Scene type
+  - annotation_type: radio
+    name: scene_type
+    description: "What type of scene is this?"
+    labels:
+      - Natural
+      - Urban
+      - Studio/Staged
+      - Screenshot
+      - Artwork/Illustration
+      - Mixed/Unclear
+
+  # Image quality assessment
+  - annotation_type: likert
+    name: image_quality
+    description: "Rate the overall image quality"
+    size: 5
+    min_label: "Very poor"
+    max_label: "Excellent"
+
+  # Usability for training
+  - annotation_type: radio
+    name: usable_for_training
+    description: "Is this image suitable for model training?"
+    labels:
+      - Yes - High quality
+      - Yes - Acceptable
+      - No - Quality issues
+      - No - Content issues
+      - Unsure
+
+  # Quality issues (if any)
+  - annotation_type: multiselect
+    name: quality_issues
+    description: "Select any quality issues (if applicable)"
+    labels:
+      - Blurry
+      - Too dark
+      - Too bright
+      - Low resolution
+      - Cropped badly
+      - Watermark obstructs content
+      - NSFW content
+      - Duplicate
+      - No issues
+
+# User settings
+allow_all_users: true
+instances_per_annotator: 200
+annotation_per_instance: 2
+
+# Output
+output:
+  path: annotations/
+  format: json

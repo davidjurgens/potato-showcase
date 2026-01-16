@@ -1,0 +1,93 @@
+# Intent Classification Configuration
+# Classify user utterances for chatbot training
+
+annotation_task_name: "Intent Classification"
+
+data_files:
+  - "data/utterances.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "utterance"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_intent"
+    description: "What is the user's primary intent?"
+    labels:
+      - name: "greeting"
+        tooltip: "Hello, hi, good morning, etc."
+        key_value: "g"
+      - name: "goodbye"
+        tooltip: "Bye, see you, take care, etc."
+        key_value: "b"
+      - name: "thanks"
+        tooltip: "Thank you, appreciate it, etc."
+        key_value: "t"
+      - name: "help"
+        tooltip: "Request for assistance or information"
+        key_value: "h"
+      - name: "complaint"
+        tooltip: "Expressing dissatisfaction"
+        key_value: "c"
+      - name: "purchase"
+        tooltip: "Wanting to buy something"
+        key_value: "p"
+      - name: "cancel"
+        tooltip: "Wanting to cancel order/subscription"
+        key_value: "x"
+      - name: "status_check"
+        tooltip: "Checking order/delivery status"
+        key_value: "s"
+      - name: "account_issue"
+        tooltip: "Login, password, account problems"
+        key_value: "a"
+      - name: "refund"
+        tooltip: "Requesting money back"
+        key_value: "r"
+      - name: "feedback"
+        tooltip: "Providing feedback or suggestions"
+        key_value: "f"
+      - name: "other"
+        tooltip: "Doesn't fit other categories"
+        key_value: "o"
+
+  - annotation_type: "multiselect"
+    name: "secondary_intents"
+    description: "Any secondary intents present?"
+    labels:
+      - name: "expressing_urgency"
+      - name: "requesting_human"
+      - name: "expressing_frustration"
+      - name: "asking_for_clarification"
+      - name: "providing_information"
+      - name: "confirming"
+      - name: "declining"
+
+  - annotation_type: "radio"
+    name: "sentiment"
+    description: "What is the sentiment of the message?"
+    labels:
+      - name: "Positive"
+        key_value: "+"
+      - name: "Neutral"
+        key_value: "0"
+      - name: "Negative"
+        key_value: "-"
+
+  - annotation_type: "likert"
+    name: "clarity"
+    description: "How clear is the user's intent?"
+    size: 5
+    min_label: "Very unclear"
+    max_label: "Very clear"
+
+  - annotation_type: "text"
+    name: "entities"
+    description: "List any key entities (product names, dates, etc.)"
+    required: false
+
+output: "annotation_output/"

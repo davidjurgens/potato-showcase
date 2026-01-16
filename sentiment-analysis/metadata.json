@@ -1,0 +1,19 @@
+{
+  "title": "Sentiment Analysis",
+  "description": "Simple 3-way sentiment classification with radio buttons. Perfect for social media analysis, product reviews, and customer feedback.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Social Media"],
+  "useCase": ["Sentiment Analysis", "Text Classification"],
+  "complexity": "beginner",
+  "tags": ["sentiment", "classification", "twitter", "reviews"],
+  "featured": true
+}

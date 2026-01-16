@@ -1,0 +1,10 @@
+{
+  "title": "Speech Emotion Recognition",
+  "description": "Classify emotional states from speech audio including happiness, sadness, anger, fear, and more.",
+  "category": "audio",
+  "annotationType": ["radio", "likert"],
+  "domain": ["speech", "affective-computing"],
+  "useCase": ["emotion-detection", "sentiment"],
+  "complexity": "intermediate",
+  "tags": ["audio", "emotion", "speech", "affective", "sentiment"]
+}

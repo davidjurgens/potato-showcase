@@ -1,0 +1,14 @@
+{
+  "title": "Text Summarization Evaluation",
+  "description": "Rate the quality of AI-generated summaries on fluency, coherence, and faithfulness.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-15",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["likert", "text"],
+  "domain": ["NLP", "Evaluation"],
+  "useCase": ["Summarization", "NLG Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["summarization", "evaluation", "nlg", "quality"],
+  "featured": true
+}

@@ -1,0 +1,112 @@
+task_name: "LLM Response Preference Collection"
+
+# Server configuration
+server:
+  port: 8000
+
+# Data configuration
+data_files:
+  - path: data/response_pairs.json
+    item_a_field: response_a
+    item_b_field: response_b
+    context_field: prompt
+
+# Display settings
+display:
+  layout: side_by_side
+  show_context: true
+  context_title: "User Prompt"
+  item_a_title: "Response A"
+  item_b_title: "Response B"
+
+# Randomize to prevent position bias
+randomize_pair_order: true
+
+# Annotation schemes
+annotation_schemes:
+  # Main preference rating
+  - annotation_type: pairwise
+    name: overall_preference
+    description: "Overall, which response is better?"
+    options:
+      - label: "A is much better"
+        value: "A++"
+      - label: "A is slightly better"
+        value: "A+"
+      - label: "About equal"
+        value: "="
+      - label: "B is slightly better"
+        value: "B+"
+      - label: "B is much better"
+        value: "B++"
+    keyboard_shortcuts:
+      "A++": "1"
+      "A+": "2"
+      "=": "3"
+      "B+": "4"
+      "B++": "5"
+
+  # Individual aspect ratings
+  - annotation_type: pairwise
+    name: helpfulness
+    description: "Which response is more helpful?"
+    options:
+      - label: "A"
+        value: "A"
+      - label: "Equal"
+        value: "="
+      - label: "B"
+        value: "B"
+
+  - annotation_type: pairwise
+    name: accuracy
+    description: "Which response is more accurate?"
+    options:
+      - label: "A"
+        value: "A"
+      - label: "Equal"
+        value: "="
+      - label: "B"
+        value: "B"
+
+  - annotation_type: pairwise
+    name: safety
+    description: "Which response is safer/less harmful?"
+    options:
+      - label: "A"
+        value: "A"
+      - label: "Equal"
+        value: "="
+      - label: "B"
+        value: "B"
+
+  # Reasons for preference
+  - annotation_type: multiselect
+    name: preference_reasons
+    description: "What factors influenced your choice? (Select all that apply)"
+    labels:
+      - More accurate information
+      - Better explained
+      - More concise
+      - More thorough
+      - Better formatting
+      - More appropriate tone
+      - Safer/less harmful
+
+  # Free-text justification
+  - annotation_type: text
+    name: justification
+    description: "Briefly explain your preference"
+    textarea: true
+    required: false
+    placeholder: "Why did you prefer one response over the other?"
+
+# User settings
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+
+# Output
+output:
+  path: annotations/
+  format: json

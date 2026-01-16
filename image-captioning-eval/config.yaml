@@ -1,0 +1,40 @@
+task_name: "Image Captioning Evaluation"
+task_description: "Rate the quality of the generated caption for the image."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  image_key: image_url
+  context_key: caption
+
+annotation_schemes:
+  - annotation_type: likert
+    name: accuracy
+    description: "Does the caption accurately describe what's in the image?"
+    size: 5
+    min_label: "Inaccurate"
+    max_label: "Accurate"
+    required: true
+
+  - annotation_type: likert
+    name: detail
+    description: "How detailed is the caption?"
+    size: 5
+    min_label: "Too vague"
+    max_label: "Appropriate detail"
+    required: true
+
+  - annotation_type: radio
+    name: hallucination
+    description: "Does the caption mention things not in the image?"
+    labels:
+      - "Yes, hallucinations present"
+      - "No hallucinations"
+    required: true
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

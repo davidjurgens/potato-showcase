@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rel_001",
+    "text": "Tim Cook has been the CEO of Apple since 2011.",
+    "subject": "Tim Cook",
+    "object": "Apple",
+    "subject_type": "PERSON",
+    "object_type": "ORGANIZATION",
+    "display": "**Text:** Tim Cook has been the CEO of Apple since 2011.\n\n**Subject:** [Tim Cook] (PERSON)\n**Object:** [Apple] (ORGANIZATION)"
+  },
+  {
+    "id": "rel_002",
+    "text": "The Eiffel Tower is located in Paris, France.",
+    "subject": "Eiffel Tower",
+    "object": "Paris",
+    "subject_type": "LOCATION",
+    "object_type": "LOCATION",
+    "display": "**Text:** The Eiffel Tower is located in Paris, France.\n\n**Subject:** [Eiffel Tower] (LOCATION)\n**Object:** [Paris] (LOCATION)"
+  },
+  {
+    "id": "rel_003",
+    "text": "Jeff Bezos founded Amazon in his garage in 1994.",
+    "subject": "Amazon",
+    "object": "Jeff Bezos",
+    "subject_type": "ORGANIZATION",
+    "object_type": "PERSON",
+    "display": "**Text:** Jeff Bezos founded Amazon in his garage in 1994.\n\n**Subject:** [Amazon] (ORGANIZATION)\n**Object:** [Jeff Bezos] (PERSON)"
+  },
+  {
+    "id": "rel_004",
+    "text": "Marie Curie was born in Warsaw and later moved to France.",
+    "subject": "Marie Curie",
+    "object": "Warsaw",
+    "subject_type": "PERSON",
+    "object_type": "LOCATION",
+    "display": "**Text:** Marie Curie was born in Warsaw and later moved to France.\n\n**Subject:** [Marie Curie] (PERSON)\n**Object:** [Warsaw] (LOCATION)"
+  }
+]

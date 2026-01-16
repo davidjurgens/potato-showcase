@@ -1,0 +1,10 @@
+{
+  "title": "Semantic Similarity",
+  "description": "Rate the semantic similarity between pairs of sentences on a continuous scale.",
+  "category": "text",
+  "annotationType": ["slider", "likert"],
+  "domain": ["nlp", "linguistics"],
+  "useCase": ["similarity", "paraphrase-detection"],
+  "complexity": "beginner",
+  "tags": ["similarity", "semantic", "paraphrase", "sentences", "nlp"]
+}

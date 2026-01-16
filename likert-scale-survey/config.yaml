@@ -1,0 +1,68 @@
+# Likert Scale Survey Configuration
+# Multi-question survey for measuring attitudes and opinions
+
+annotation_task_name: "User Experience Survey"
+
+data_files:
+  - "data/survey_items.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "product_description"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "likert"
+    name: "ease_of_use"
+    description: "The product is easy to use"
+    size: 5
+    min_label: "Strongly Disagree"
+    max_label: "Strongly Agree"
+
+  - annotation_type: "likert"
+    name: "meets_needs"
+    description: "The product meets my needs"
+    size: 5
+    min_label: "Strongly Disagree"
+    max_label: "Strongly Agree"
+
+  - annotation_type: "likert"
+    name: "would_recommend"
+    description: "I would recommend this product to others"
+    size: 5
+    min_label: "Strongly Disagree"
+    max_label: "Strongly Agree"
+
+  - annotation_type: "likert"
+    name: "value_for_money"
+    description: "The product provides good value for money"
+    size: 5
+    min_label: "Strongly Disagree"
+    max_label: "Strongly Agree"
+
+  - annotation_type: "likert"
+    name: "overall_satisfaction"
+    description: "Overall, I am satisfied with the product"
+    size: 7
+    min_label: "Very Dissatisfied"
+    max_label: "Very Satisfied"
+
+  - annotation_type: "multiselect"
+    name: "best_features"
+    description: "Which features do you like most?"
+    labels:
+      - name: "Design"
+      - name: "Performance"
+      - name: "Reliability"
+      - name: "Customer Support"
+      - name: "Documentation"
+      - name: "Price"
+
+  - annotation_type: "text"
+    name: "feedback"
+    description: "Any additional feedback?"
+    required: false
+
+output: "annotation_output/"

@@ -1,0 +1,77 @@
+# Relation Extraction Configuration
+# Identify relationships between entities in text
+
+annotation_task_name: "Relation Extraction"
+
+data_files:
+  - "data/sentences.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "relation_type"
+    description: "What is the relationship between the highlighted entities?"
+    labels:
+      - name: "works_for"
+        tooltip: "Subject works for/is employed by object"
+        key_value: "w"
+      - name: "located_in"
+        tooltip: "Subject is located in object (place)"
+        key_value: "l"
+      - name: "founded_by"
+        tooltip: "Subject was founded by object"
+        key_value: "f"
+      - name: "ceo_of"
+        tooltip: "Subject is CEO/leader of object"
+        key_value: "c"
+      - name: "born_in"
+        tooltip: "Subject was born in object (place)"
+        key_value: "b"
+      - name: "married_to"
+        tooltip: "Subject is married to object"
+        key_value: "m"
+      - name: "subsidiary_of"
+        tooltip: "Subject is a subsidiary of object"
+        key_value: "s"
+      - name: "part_of"
+        tooltip: "Subject is part of object"
+        key_value: "p"
+      - name: "no_relation"
+        tooltip: "No clear relationship between entities"
+        key_value: "n"
+      - name: "other"
+        tooltip: "Relationship exists but not in list"
+        key_value: "o"
+
+  - annotation_type: "text"
+    name: "other_relation"
+    description: "If 'other', describe the relationship"
+    show_if:
+      field: "relation_type"
+      value: "other"
+
+  - annotation_type: "radio"
+    name: "direction"
+    description: "What is the direction of the relation?"
+    labels:
+      - name: "Subject → Object"
+        tooltip: "Relation goes from Subject to Object"
+      - name: "Object → Subject"
+        tooltip: "Relation goes from Object to Subject"
+      - name: "Bidirectional"
+        tooltip: "Relation works both ways"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you in this relation?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+output: "annotation_output/"

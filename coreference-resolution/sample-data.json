@@ -1,0 +1,34 @@
+[
+  {
+    "id": "coref_001",
+    "text": "Sarah told Emily that she would help with the project tomorrow.",
+    "target_entity": "Sarah",
+    "mention": "she",
+    "mention_position": [24, 27],
+    "display": "**Text:** Sarah told Emily that **[she]** would help with the project tomorrow.\n\n**Target Entity:** Sarah\n**Mention to evaluate:** she\n\n*Question: Does 'she' refer to 'Sarah'?*"
+  },
+  {
+    "id": "coref_002",
+    "text": "The company announced record profits. It plans to expand into new markets next year.",
+    "target_entity": "The company",
+    "mention": "It",
+    "mention_position": [37, 39],
+    "display": "**Text:** The company announced record profits. **[It]** plans to expand into new markets next year.\n\n**Target Entity:** The company\n**Mention to evaluate:** It\n\n*Question: Does 'It' refer to 'The company'?*"
+  },
+  {
+    "id": "coref_003",
+    "text": "John gave his book to Michael. He thanked him for the gift.",
+    "target_entity": "Michael",
+    "mention": "He",
+    "mention_position": [31, 33],
+    "display": "**Text:** John gave his book to Michael. **[He]** thanked him for the gift.\n\n**Target Entity:** Michael\n**Mention to evaluate:** He\n\n*Question: Does 'He' refer to 'Michael'?*"
+  },
+  {
+    "id": "coref_004",
+    "text": "The scientists published their findings. The researchers received widespread acclaim.",
+    "target_entity": "The scientists",
+    "mention": "The researchers",
+    "mention_position": [41, 56],
+    "display": "**Text:** The scientists published their findings. **[The researchers]** received widespread acclaim.\n\n**Target Entity:** The scientists\n**Mention to evaluate:** The researchers\n\n*Question: Does 'The researchers' refer to 'The scientists'?*"
+  }
+]

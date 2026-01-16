@@ -1,0 +1,10 @@
+{
+  "title": "Ranking Task",
+  "description": "Drag-and-drop ranking interface to order items from best to worst.",
+  "category": "comparison",
+  "annotationType": ["ranking"],
+  "domain": ["nlp", "evaluation"],
+  "useCase": ["ranking", "preference-learning", "ordering"],
+  "complexity": "beginner",
+  "tags": ["comparison", "ranking", "ordering", "preference", "drag-drop"]
+}

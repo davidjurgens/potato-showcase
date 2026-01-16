@@ -1,0 +1,14 @@
+{
+  "title": "Survey Feedback",
+  "description": "Multi-question survey with Likert scales, text fields, and multiple choice.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["likert", "text", "radio"],
+  "domain": ["Survey", "UX Research"],
+  "useCase": ["User Feedback", "Surveys", "Questionnaires"],
+  "complexity": "beginner",
+  "tags": ["survey", "feedback", "likert", "questionnaire"],
+  "featured": false
+}

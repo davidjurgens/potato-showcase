@@ -1,0 +1,82 @@
+# Speech Emotion Recognition Configuration
+# Classify emotional states from speech audio
+
+annotation_task_name: "Speech Emotion Recognition"
+
+data_files:
+  - "data/speech_clips.json"
+
+item_properties:
+  id_key: "id"
+  audio_key: "audio_url"
+  text_display_key: "transcript"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_emotion"
+    description: "What is the primary emotion expressed?"
+    labels:
+      - name: "Neutral"
+        tooltip: "No strong emotion detected"
+        key_value: "n"
+      - name: "Happy"
+        tooltip: "Joy, excitement, contentment"
+        key_value: "h"
+      - name: "Sad"
+        tooltip: "Sorrow, disappointment, grief"
+        key_value: "s"
+      - name: "Angry"
+        tooltip: "Frustration, irritation, rage"
+        key_value: "a"
+      - name: "Fearful"
+        tooltip: "Anxiety, worry, terror"
+        key_value: "f"
+      - name: "Disgusted"
+        tooltip: "Revulsion, distaste"
+        key_value: "d"
+      - name: "Surprised"
+        tooltip: "Shock, amazement"
+        key_value: "u"
+
+  - annotation_type: "likert"
+    name: "emotion_intensity"
+    description: "How intense is the emotion?"
+    size: 5
+    min_label: "Very mild"
+    max_label: "Very intense"
+
+  - annotation_type: "likert"
+    name: "confidence"
+    description: "How confident are you in your judgment?"
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+
+  - annotation_type: "multiselect"
+    name: "secondary_emotions"
+    description: "Any secondary emotions present?"
+    labels:
+      - name: "Contempt"
+      - name: "Boredom"
+      - name: "Interest"
+      - name: "Confusion"
+      - name: "Embarrassment"
+      - name: "Pride"
+
+  - annotation_type: "radio"
+    name: "valence"
+    description: "Overall emotional valence"
+    labels:
+      - name: "Positive"
+      - name: "Neutral"
+      - name: "Negative"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+output: "annotation_output/"

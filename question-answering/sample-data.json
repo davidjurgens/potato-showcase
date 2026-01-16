@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "passage": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It was constructed from 1887 to 1889 as the centerpiece of the 1889 World's Fair. The tower is 330 metres tall and was the tallest man-made structure in the world until 1930.",
+    "question": "When was the Eiffel Tower built?"
+  },
+  {
+    "id": "2",
+    "passage": "Python is a high-level programming language created by Guido van Rossum and first released in 1991. It emphasizes code readability with its use of significant indentation.",
+    "question": "Who created Python?"
+  }
+]

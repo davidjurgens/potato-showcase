@@ -1,0 +1,71 @@
+# Dialogue Act Labeling Configuration
+# Classify utterances by communicative function
+
+annotation_task_name: "Dialogue Act Labeling"
+
+data_files:
+  - "data/dialogue_turns.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "display"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "dialogue_act"
+    description: "What is the primary function of this utterance?"
+    labels:
+      - name: "Statement"
+        tooltip: "Provides information or expresses an opinion"
+        key_value: "s"
+      - name: "Question"
+        tooltip: "Requests information"
+        key_value: "q"
+      - name: "Directive"
+        tooltip: "Request, command, or suggestion for action"
+        key_value: "d"
+      - name: "Commissive"
+        tooltip: "Promise, offer, or commitment"
+        key_value: "c"
+      - name: "Acknowledgment"
+        tooltip: "Shows understanding or agreement (yes, okay, uh-huh)"
+        key_value: "a"
+      - name: "Greeting"
+        tooltip: "Social greeting or farewell"
+        key_value: "g"
+      - name: "Expressive"
+        tooltip: "Expresses emotion (thanks, sorry, wow)"
+        key_value: "e"
+      - name: "Other"
+        tooltip: "None of the above"
+        key_value: "o"
+
+  - annotation_type: "radio"
+    name: "question_type"
+    description: "If this is a question, what type?"
+    labels:
+      - name: "Yes/No Question"
+      - name: "Wh-Question"
+      - name: "Choice Question"
+      - name: "Tag Question"
+      - name: "Rhetorical Question"
+      - name: "N/A (not a question)"
+    show_if:
+      field: "dialogue_act"
+      value: "Question"
+
+  - annotation_type: "multiselect"
+    name: "secondary_acts"
+    description: "Any secondary dialogue acts?"
+    labels:
+      - name: "Humor/Sarcasm"
+      - name: "Politeness marker"
+      - name: "Topic shift"
+      - name: "Clarification"
+      - name: "Elaboration"
+      - name: "Correction"
+
+output: "annotation_output/"

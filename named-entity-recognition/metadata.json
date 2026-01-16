@@ -1,0 +1,14 @@
+{
+  "title": "Named Entity Recognition",
+  "description": "Span-based entity labeling for identifying people, organizations, locations, and more.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["span"],
+  "domain": ["NLP"],
+  "useCase": ["Named Entity Recognition", "Information Extraction"],
+  "complexity": "intermediate",
+  "tags": ["ner", "span", "entities", "nlp"],
+  "featured": true
+}

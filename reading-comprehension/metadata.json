@@ -1,0 +1,10 @@
+{
+  "title": "Reading Comprehension QA",
+  "description": "Evaluate question-answer pairs for reading comprehension by verifying answers and rating quality.",
+  "category": "text",
+  "annotationType": ["radio", "span", "text"],
+  "domain": ["nlp", "qa"],
+  "useCase": ["question-answering", "comprehension"],
+  "complexity": "intermediate",
+  "tags": ["qa", "reading", "comprehension", "answers", "nlp"]
+}

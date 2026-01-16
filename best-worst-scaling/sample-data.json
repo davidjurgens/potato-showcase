@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bws_001",
+    "prompt": "Write a haiku about spring",
+    "options": [
+      "Cherry blossoms fall / Gentle breeze carries petals / Nature awakens",
+      "Spring is here now / Flowers bloom in the garden / Birds sing songs today",
+      "Pink flowers bloom / The sun is warm and nice / I like spring a lot",
+      "Melting snow reveals / Hidden crocuses emerge / Life begins anew"
+    ]
+  },
+  {
+    "id": "bws_002",
+    "prompt": "Explain photosynthesis to a 10-year-old",
+    "options": [
+      "Plants eat sunlight and make food from it.",
+      "Photosynthesis is like cooking for plants! They use sunlight as their stove, water and air as ingredients, and make their own food called glucose. The bonus? They release oxygen for us to breathe!",
+      "Plants absorb light energy through chlorophyll in their leaves, converting carbon dioxide and water into glucose and oxygen through a complex biochemical process.",
+      "Plants are green because they have chlorophyll. This helps them make food from the sun."
+    ]
+  },
+  {
+    "id": "bws_003",
+    "prompt": "Write a product description for a coffee mug",
+    "options": [
+      "This is a mug. It holds coffee. It is ceramic.",
+      "Start your morning right with our premium ceramic mug! Holding 12oz of your favorite brew, this dishwasher-safe beauty keeps drinks hot while staying cool to the touch.",
+      "Experience coffee perfection. Our artisanal ceramic vessel cradles your beverage in 12 ounces of pure bliss.",
+      "A nice mug for drinking coffee or tea. Good size and comfortable handle. Works well."
+    ]
+  }
+]

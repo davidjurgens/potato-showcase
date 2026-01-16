@@ -1,0 +1,132 @@
+task_name: "User Feedback Survey"
+
+# Server configuration
+server:
+  port: 8000
+
+# Data configuration
+data_files:
+  - path: data/survey_context.json
+    text_field: product_name
+
+# Annotation schemes (survey questions)
+annotation_schemes:
+  # Overall satisfaction
+  - annotation_type: likert
+    name: overall_satisfaction
+    description: "How satisfied are you overall with the product?"
+    size: 5
+    min_label: "Very Dissatisfied"
+    max_label: "Very Satisfied"
+    keyboard_shortcuts: true
+
+  # Ease of use
+  - annotation_type: likert
+    name: ease_of_use
+    description: "How easy was the product to use?"
+    size: 5
+    min_label: "Very Difficult"
+    max_label: "Very Easy"
+    keyboard_shortcuts: true
+
+  # Feature completeness
+  - annotation_type: likert
+    name: feature_completeness
+    description: "How well does the product meet your needs?"
+    size: 5
+    min_label: "Not at All"
+    max_label: "Completely"
+    keyboard_shortcuts: true
+
+  # Recommendation likelihood (NPS-style)
+  - annotation_type: likert
+    name: recommend_likelihood
+    description: "How likely are you to recommend this product to others?"
+    size: 10
+    min_label: "Not Likely"
+    max_label: "Very Likely"
+
+  # Most valuable features
+  - annotation_type: multiselect
+    name: valuable_features
+    description: "Which features do you find most valuable? (Select up to 3)"
+    max_selections: 3
+    labels:
+      - Easy configuration
+      - Multiple annotation types
+      - Quality control features
+      - Crowdsourcing integration
+      - AI-powered assistance
+      - Audio/Image support
+      - Export options
+      - Admin dashboard
+
+  # Improvement areas
+  - annotation_type: multiselect
+    name: improvement_areas
+    description: "Which areas need the most improvement?"
+    labels:
+      - Documentation
+      - User interface
+      - Performance
+      - Feature set
+      - Reliability
+      - Support
+      - Pricing
+      - None - it's great!
+
+  # Usage frequency
+  - annotation_type: radio
+    name: usage_frequency
+    description: "How often do you use this product?"
+    labels:
+      - Daily
+      - Several times a week
+      - Weekly
+      - Monthly
+      - Rarely
+      - This is my first time
+
+  # Primary use case
+  - annotation_type: radio
+    name: primary_use_case
+    description: "What is your primary use case?"
+    labels:
+      - Academic research
+      - Industry/Commercial
+      - Personal projects
+      - Education/Teaching
+      - Other
+
+  # What do you like most?
+  - annotation_type: text
+    name: likes
+    description: "What do you like most about the product?"
+    textarea: true
+    required: false
+    placeholder: "Tell us what's working well..."
+
+  # What could be improved?
+  - annotation_type: text
+    name: improvements
+    description: "What could be improved?"
+    textarea: true
+    required: false
+    placeholder: "Share your suggestions..."
+
+  # Any other feedback
+  - annotation_type: text
+    name: additional_feedback
+    description: "Any other feedback or comments?"
+    textarea: true
+    required: false
+    placeholder: "Anything else you'd like to share..."
+
+# User settings
+allow_all_users: true
+instances_per_annotator: 1
+
+# Output
+output:
+  path: survey_responses/
+  format: json

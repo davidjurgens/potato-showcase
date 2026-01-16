@@ -1,0 +1,14 @@
+{
+  "title": "Audio Transcription Review",
+  "description": "Review and correct automatic speech recognition transcriptions with waveform visualization.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["text", "audio"],
+  "domain": ["Audio", "Speech"],
+  "useCase": ["Transcription", "ASR Correction"],
+  "complexity": "intermediate",
+  "tags": ["audio", "transcription", "speech", "asr"],
+  "featured": true
+}

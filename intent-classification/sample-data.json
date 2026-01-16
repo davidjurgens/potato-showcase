@@ -1,0 +1,42 @@
+[
+  {
+    "id": "intent_001",
+    "utterance": "Hi there! I need help with my order.",
+    "context": "User just opened chat"
+  },
+  {
+    "id": "intent_002",
+    "utterance": "Where is my package? I ordered it a week ago and it still hasn't arrived!",
+    "context": "Returning customer"
+  },
+  {
+    "id": "intent_003",
+    "utterance": "I want to cancel my subscription effective immediately.",
+    "context": "Premium subscriber"
+  },
+  {
+    "id": "intent_004",
+    "utterance": "Thanks so much for your help! You've been great.",
+    "context": "End of successful support interaction"
+  },
+  {
+    "id": "intent_005",
+    "utterance": "I'd like to buy the blue widget, size medium please.",
+    "context": "Browsing product catalog"
+  },
+  {
+    "id": "intent_006",
+    "utterance": "This product is terrible. I want my money back right now.",
+    "context": "Recent purchase"
+  },
+  {
+    "id": "intent_007",
+    "utterance": "I can't log into my account. I've tried resetting my password three times!",
+    "context": "Login page"
+  },
+  {
+    "id": "intent_008",
+    "utterance": "bye",
+    "context": "End of conversation"
+  }
+]

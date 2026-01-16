@@ -1,0 +1,43 @@
+# Best-Worst Scaling (MaxDiff) Configuration
+# Annotators select the best and worst items from a set
+
+annotation_task_name: "Best-Worst Scaling"
+
+data_files:
+  - "data/comparison_sets.json"
+
+item_properties:
+  id_key: "id"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "best-worst"
+    name: "quality_comparison"
+    description: "Select the BEST and WORST response to the given prompt"
+    best_label: "Best Response"
+    worst_label: "Worst Response"
+    use_colors: true
+    best_color: "#22c55e"
+    worst_color: "#ef4444"
+
+  - annotation_type: "text"
+    name: "reasoning"
+    description: "Briefly explain your choices (optional)"
+    required: false
+
+  - annotation_type: "radio"
+    name: "difficulty"
+    description: "How difficult was this comparison?"
+    labels:
+      - name: "Easy"
+        tooltip: "Clear difference between options"
+      - name: "Moderate"
+        tooltip: "Some thought required"
+      - name: "Hard"
+        tooltip: "Very similar quality, difficult to choose"
+
+output: "annotation_output/"

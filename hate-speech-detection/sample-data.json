@@ -1,0 +1,20 @@
+[
+  {
+    "id": "hs_001",
+    "text": "I can't believe how long the line was at the DMV today. Absolutely ridiculous!",
+    "source": "social_media",
+    "timestamp": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "hs_002",
+    "text": "That movie was so stupid, I want my two hours back.",
+    "source": "social_media",
+    "timestamp": "2024-01-15T11:45:00Z"
+  },
+  {
+    "id": "hs_003",
+    "text": "I think the new policy changes are unfair to employees. We should organize and voice our concerns.",
+    "source": "forum",
+    "timestamp": "2024-01-15T14:20:00Z"
+  }
+]

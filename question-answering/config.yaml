@@ -1,0 +1,33 @@
+task_name: "Question Answering"
+task_description: "Select the span in the passage that answers the question."
+task_dir: "."
+port: 8000
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: id
+  text_key: passage
+  context_key: question
+
+annotation_schemes:
+  - annotation_type: span
+    name: answer
+    description: "Highlight the answer span in the passage"
+    labels:
+      - name: "Answer"
+        color: "#22c55e"
+    allow_overlapping: false
+    required: true
+
+  - annotation_type: radio
+    name: answerable
+    description: "Is the question answerable from the passage?"
+    labels:
+      - "Yes"
+      - "No"
+    required: true
+
+output_annotation_dir: "output/"
+output_annotation_format: "json"

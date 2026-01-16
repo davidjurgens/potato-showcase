@@ -1,0 +1,14 @@
+{
+  "title": "Pairwise Preference",
+  "description": "Compare two items and select the preferred one. Great for ranking and preference learning.",
+  "version": "1.0.0",
+  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "createdAt": "2025-01-01",
+  "updatedAt": "2025-01-15",
+  "annotationTypes": ["pairwise"],
+  "domain": ["NLP", "Evaluation"],
+  "useCase": ["Preference Learning", "Ranking", "A/B Testing"],
+  "complexity": "beginner",
+  "tags": ["pairwise", "comparison", "preference", "ranking"],
+  "featured": true
+}
