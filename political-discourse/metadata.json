@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Sermpezis et al., arXiv 2025",
   "paperUrl": "https://arxiv.org/abs/2501.06265",
-  "datasetUrl": "https://arxiv.org/abs/2501.06265"
+  "datasetUrl": "https://arxiv.org/abs/2501.06265",
+  "citation": "@article{sermpezis2025agoraspeech,\n    title = \"{A}gora{S}peech: A multi-task benchmark for political discourse understanding\",\n    author = \"Sermpezis, Pavlos  and others\",\n    journal = \"arXiv preprint arXiv:2501.06265\",\n    year = \"2025\",\n    url = \"https://arxiv.org/abs/2501.06265\"\n}"
 }

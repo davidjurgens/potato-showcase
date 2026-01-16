@@ -1,5 +1,5 @@
 {
-  "title": "Event Argument Extraction (MAVEN-Arg style)",
+  "title": "Event Argument Extraction (MAVEN-Arg)",
   "description": "Document-level event argument extraction based on MAVEN-Arg (Wang et al., ACL 2024). Annotates event triggers with their argument roles including Agent, Patient, Location, Time, Instrument, and more. Supports both entity and non-entity arguments across document context.",
   "version": "1.0.0",
   "author": {
@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Wang et al., ACL 2024",
   "paperUrl": "https://aclanthology.org/2024.acl-long.224/",
-  "datasetUrl": "https://github.com/THU-KEG/MAVEN-Argument"
+  "datasetUrl": "https://github.com/THU-KEG/MAVEN-Argument",
+  "citation": "@inproceedings{wang-etal-2024-maven,\n    title = \"{MAVEN}-Arg: Completing the Puzzle of All-in-One Event Understanding Dataset with Event Argument Annotation\",\n    author = \"Wang, Xiaozhi  and Peng, Hao  and Guan, Yong  and Zeng, Kaisheng  and Chen, Jianhui  and Hou, Lei  and Li, Juanzi  and Liu, Zhiyuan\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.acl-long.224\"\n}"
 }

@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Jurafsky et al., 1997",
   "paperUrl": "https://web.stanford.edu/~jurafsky/ws97/manual.august1.html",
-  "datasetUrl": "https://github.com/CornellNLP/ConvoKit"
+  "datasetUrl": "https://github.com/CornellNLP/ConvoKit",
+  "citation": "@techreport{jurafsky1997switchboard,\n    title = \"Switchboard {SWBD-DAMSL} Shallow-Discourse-Function Annotation Coders Manual, Draft 13\",\n    author = \"Jurafsky, Daniel  and Shriberg, Elizabeth  and Biasca, Debra\",\n    institution = \"University of Colorado, Boulder\",\n    year = \"1997\",\n    url = \"https://web.stanford.edu/~jurafsky/ws97/manual.august1.html\"\n}"
 }
