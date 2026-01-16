@@ -10,13 +10,14 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "span"],
+  "annotationTypes": ["radio", "text"],
   "domain": ["NLP", "Explainability", "Reasoning"],
   "useCase": ["Natural Language Inference", "Explainable AI", "Reasoning"],
   "complexity": "intermediate",
   "tags": ["nli", "explanation", "entailment", "esnli", "neurips2018", "explainability"],
   "featured": false,
   "paperReference": "Camburu et al., NeurIPS 2018",
-  "paperUrl": "https://papers.nips.cc/paper/8163-e-snli-natural-language-inference-with-natural-language-explanations",
-  "datasetUrl": "https://github.com/OanaMariaCamburu/e-SNLI"
+  "paperUrl": "https://proceedings.neurips.cc/paper/2018/hash/4c7a167bb329bd92800a858552f2e32a-Abstract.html",
+  "datasetUrl": "https://github.com/OanaMariaCamburu/e-SNLI",
+  "citation": "@inproceedings{camburu2018snli,\n    title = \"e-{SNLI}: Natural Language Inference with Natural Language Explanations\",\n    author = \"Camburu, Oana-Maria  and Rockt{\\\"a}schel, Tim  and Lukasiewicz, Thomas  and Blunsom, Phil\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    volume = \"31\",\n    year = \"2018\",\n    publisher = \"Curran Associates, Inc.\",\n    url = \"https://proceedings.neurips.cc/paper/2018/hash/4c7a167bb329bd92800a858552f2e32a-Abstract.html\"\n}"
 }

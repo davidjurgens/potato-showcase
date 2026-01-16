@@ -15,7 +15,8 @@
   "complexity": "intermediate",
   "tags": ["rumor", "stance", "social-media", "pheme", "misinformation", "twitter"],
   "featured": false,
-  "paperReference": "Zubiaga et al., EMNLP 2018",
-  "paperUrl": "https://aclanthology.org/D18-1401/",
-  "datasetUrl": "https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078"
+  "paperReference": "Zubiaga et al., ACL 2016",
+  "paperUrl": "https://aclanthology.org/P16-2061/",
+  "datasetUrl": "https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078",
+  "citation": "@inproceedings{zubiaga-etal-2016-stance,\n    title = \"Stance Classification in Rumours as a Sequential Task Exploiting the Tree Structure of Social Media Conversations\",\n    author = \"Zubiaga, Arkaitz  and Kochkina, Elena  and Liakata, Maria  and Procter, Rob  and Lukasik, Michal\",\n    booktitle = \"Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers\",\n    month = dec,\n    year = \"2016\",\n    address = \"Osaka, Japan\",\n    publisher = \"The COLING 2016 Organizing Committee\",\n    url = \"https://aclanthology.org/C16-1230\",\n    pages = \"2438--2448\"\n}"
 }

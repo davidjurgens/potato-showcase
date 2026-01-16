@@ -1,11 +1,11 @@
 {
-  "title": "Biomedical Named Entity Recognition",
-  "description": "Named entity recognition for biomedical and clinical text. Annotate entities including diseases, medications, procedures, anatomical structures, genes, and chemicals following standard biomedical NER guidelines.",
+  "title": "Biomedical Named Entity Recognition (JNLPBA)",
+  "description": "Named entity recognition for biomedical text based on the JNLPBA shared task. Annotate entities including proteins, DNA, RNA, cell lines, and cell types following BioNLP community standards.",
   "version": "1.0.0",
   "author": {
-    "name": "Biomedical NLP Community",
+    "name": "Kim et al.",
     "email": "jurgens@umich.edu",
-    "affiliation": "University of Michigan"
+    "affiliation": "KAIST"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -13,8 +13,10 @@
   "domain": ["Biomedical", "Clinical NLP", "Healthcare"],
   "useCase": ["Named Entity Recognition", "Information Extraction", "Clinical Text Mining"],
   "complexity": "advanced",
-  "tags": ["biomedical", "ner", "clinical", "healthcare", "entities", "medical"],
+  "tags": ["biomedical", "ner", "clinical", "healthcare", "entities", "jnlpba", "bionlp"],
   "featured": true,
-  "paperReference": "Various BioNLP Shared Tasks",
-  "paperUrl": "https://aclanthology.org/venues/bionlp/"
+  "paperReference": "Kim et al., BioNLP 2004",
+  "paperUrl": "https://aclanthology.org/W04-1213/",
+  "datasetUrl": "https://huggingface.co/datasets/jnlpba",
+  "citation": "@inproceedings{kim-etal-2004-introduction,\n    title = \"Introduction to the Bio-Entity Recognition Task at {JNLPBA}\",\n    author = \"Kim, Jin-Dong  and Ohta, Tomoko  and Tsuruoka, Yoshimasa  and Tateisi, Yuka  and Collier, Nigel\",\n    booktitle = \"Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications ({NLPBA}/{B}io{NLP})\",\n    month = aug,\n    year = \"2004\",\n    address = \"Geneva, Switzerland\",\n    publisher = \"COLING\",\n    url = \"https://aclanthology.org/W04-1213\",\n    pages = \"70--75\"\n}"
 }

@@ -18,5 +18,6 @@
   "featured": false,
   "paperReference": "Poria et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.431/",
-  "datasetUrl": "https://github.com/declare-lab/RECCON"
+  "datasetUrl": "https://github.com/declare-lab/RECCON",
+  "citation": "@inproceedings{poria-etal-2021-recognizing,\n    title = \"Recognizing Emotion Cause in Conversations\",\n    author = \"Poria, Soujanya  and Majumder, Navonil  and Hazarika, Devamanyu  and Ghosal, Deepanway  and Bhardwaj, Rishabh  and Jian, Samuel Yew Boon  and Hong, Pengfei  and Ghosh, Romila  and Roy, Abhinaba  and Chhaya, Niyati  and Gelbukh, Alexander  and Mihalcea, Rada\",\n    booktitle = \"Cognitive Computation\",\n    year = \"2021\",\n    publisher = \"Springer\",\n    url = \"https://aclanthology.org/2020.emnlp-main.431\"\n}"
 }

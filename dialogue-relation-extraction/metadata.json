@@ -17,5 +17,6 @@
   "featured": true,
   "paperReference": "Yu et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.444/",
-  "datasetUrl": "https://github.com/nlpdata/dialogre"
+  "datasetUrl": "https://github.com/nlpdata/dialogre",
+  "citation": "@inproceedings{yu-etal-2020-dialogue,\n    title = \"Dialogue-Based Relation Extraction\",\n    author = \"Yu, Dian  and Sun, Kai  and Cardie, Claire  and Yu, Dong\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.444\",\n    pages = \"4927--4940\"\n}"
 }

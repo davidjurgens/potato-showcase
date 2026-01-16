@@ -1,11 +1,11 @@
 {
-  "title": "Emotion Detection (SemEval-style)",
-  "description": "Multi-label emotion classification with intensity ratings based on SemEval shared tasks. Annotate text for six basic emotions (Joy, Sadness, Fear, Anger, Surprise, Disgust) with support for co-occurring emotions and intensity scales.",
+  "title": "Emotion Detection (SemEval-2018 Task 1)",
+  "description": "Multi-label emotion classification with intensity ratings based on SemEval-2018 Task 1. Annotate text for emotions (anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust) with intensity scales.",
   "version": "1.0.0",
   "author": {
-    "name": "SemEval Emotion Detection Tasks",
+    "name": "Mohammad et al.",
     "email": "jurgens@umich.edu",
-    "affiliation": "University of Michigan"
+    "affiliation": "National Research Council Canada"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -13,8 +13,10 @@
   "domain": ["NLP", "Affective Computing"],
   "useCase": ["Emotion Detection", "Sentiment Analysis", "Social Media Analysis"],
   "complexity": "intermediate",
-  "tags": ["emotion", "affect", "multi-label", "intensity", "semeval"],
+  "tags": ["emotion", "affect", "multi-label", "intensity", "semeval2018"],
   "featured": true,
-  "paperReference": "SemEval Emotion Detection Shared Tasks",
-  "paperUrl": "https://semeval.github.io/"
+  "paperReference": "Mohammad et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1001/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/17751",
+  "citation": "@inproceedings{mohammad-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 1: Affect in Tweets\",\n    author = \"Mohammad, Saif  and Bravo-Marquez, Felipe  and Salameh, Mohammad  and Kiritchenko, Svetlana\",\n    booktitle = \"Proceedings of The 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1001\",\n    pages = \"1--17\"\n}"
 }

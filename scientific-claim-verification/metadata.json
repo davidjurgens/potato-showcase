@@ -1,5 +1,5 @@
 {
-  "title": "Scientific Claim Verification (SciFact-style)",
+  "title": "Scientific Claim Verification (SciFact)",
   "description": "Verify scientific claims against evidence from research abstracts. Based on SciFact (Wadden et al., EMNLP 2020). Classify claims as supported, refuted, or having insufficient evidence, and identify rationale sentences.",
   "version": "1.0.0",
   "author": {
@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Wadden et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.609/",
-  "datasetUrl": "https://github.com/allenai/scifact"
+  "datasetUrl": "https://github.com/allenai/scifact",
+  "citation": "@inproceedings{wadden-etal-2020-fact,\n    title = \"Fact or Fiction: Verifying Scientific Claims\",\n    author = \"Wadden, David  and Lin, Shanchuan  and Lo, Kyle  and Wang, Lucy Lu  and van Zuylen, Madeleine  and Cohan, Arman  and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.609\",\n    pages = \"7534--7550\"\n}"
 }

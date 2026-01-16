@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "ElSherief et al., EMNLP 2021",
   "paperUrl": "https://aclanthology.org/2021.emnlp-main.29/",
-  "datasetUrl": "https://github.com/SALT-NLP/implicit-hate"
+  "datasetUrl": "https://github.com/SALT-NLP/implicit-hate",
+  "citation": "@inproceedings{elsherief-etal-2021-latent,\n    title = \"Latent Hatred: A Benchmark for Understanding Implicit Hate Speech\",\n    author = \"ElSherief, Mai  and Ziems, Caleb  and Muchlinski, David  and Anber, Vaishnavi  and Belgrave, Jordyn  and Chen, Emily  and Ramsbottom, Carly  and Yang, Diyi\",\n    booktitle = \"Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2021\",\n    address = \"Online and Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.emnlp-main.29\",\n    pages = \"345--363\"\n}"
 }

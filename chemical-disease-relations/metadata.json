@@ -3,7 +3,7 @@
   "description": "Extract chemical-disease relations from biomedical literature. Based on BioCreative V CDR task. Identify chemical and disease entities, then annotate causal relationships between them (chemical induces disease).",
   "version": "1.0.0",
   "author": {
-    "name": "BioCreative V CDR Task",
+    "name": "Li et al.",
     "email": "jurgens@umich.edu",
     "affiliation": "NCBI/NIH"
   },
@@ -15,7 +15,8 @@
   "complexity": "advanced",
   "tags": ["biomedical", "relation-extraction", "chemicals", "diseases", "bc5cdr", "pharmacovigilance"],
   "featured": false,
-  "paperReference": "BioCreative V CDR Task",
-  "paperUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/",
-  "datasetUrl": "https://huggingface.co/datasets/bigbio/bc5cdr"
+  "paperReference": "Li et al., Database 2016",
+  "paperUrl": "https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414",
+  "datasetUrl": "https://huggingface.co/datasets/bigbio/bc5cdr",
+  "citation": "@article{li2016biocreative,\n    title = \"{BioCreative V CDR} task corpus: a resource for chemical disease relation extraction\",\n    author = \"Li, Jiao  and Sun, Yueping  and Johnson, Robin J  and Sciaky, Daniela  and Wei, Chih-Hsuan  and Leaman, Robert  and Davis, Allan Peter  and Mattingly, Carolyn J  and Wiegers, Thomas C  and Lu, Zhiyong\",\n    journal = \"Database\",\n    volume = \"2016\",\n    year = \"2016\",\n    publisher = \"Oxford University Press\",\n    url = \"https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414\"\n}"
 }

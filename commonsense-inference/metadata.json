@@ -1,9 +1,9 @@
 {
-  "title": "Commonsense Inference (ATOMIC-style)",
-  "description": "Annotate commonsense inferences about events, mental states, and social interactions. Based on ATOMIC (Sap et al.). Generate if-then knowledge about causes, effects, intents, and reactions.",
+  "title": "Commonsense Inference (ATOMIC 2020)",
+  "description": "Annotate commonsense inferences about events, mental states, and social interactions. Based on ATOMIC 2020 (Hwang et al., AAAI 2021). Generate if-then knowledge about causes, effects, intents, and reactions.",
   "version": "1.0.0",
   "author": {
-    "name": "Sap et al.",
+    "name": "Hwang et al.",
     "email": "jurgens@umich.edu",
     "github": "allenai",
     "affiliation": "Allen Institute for AI"
@@ -14,9 +14,10 @@
   "domain": ["NLP", "Commonsense", "Knowledge Graphs"],
   "useCase": ["Commonsense Reasoning", "Knowledge Base Construction", "QA"],
   "complexity": "intermediate",
-  "tags": ["commonsense", "atomic", "knowledge-graph", "mental-states", "inference"],
+  "tags": ["commonsense", "atomic", "knowledge-graph", "mental-states", "inference", "aaai2021"],
   "featured": false,
-  "paperReference": "Sap et al., AAAI 2019 / Hwang et al., AAAI 2021",
-  "paperUrl": "https://arxiv.org/abs/2010.05953",
-  "datasetUrl": "https://allenai.org/data/atomic-2020"
+  "paperReference": "Hwang et al., AAAI 2021",
+  "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/16792",
+  "datasetUrl": "https://allenai.org/data/atomic-2020",
+  "citation": "@inproceedings{hwang2021comet,\n    title = \"{COMET-ATOMIC} 2020: On Symbolic and Neural Commonsense Knowledge Graphs\",\n    author = \"Hwang, Jena D.  and Bhagavatula, Chandra  and Le Bras, Ronan  and Da, Jeff  and Sakaguchi, Keisuke  and Bosselut, Antoine  and Choi, Yejin\",\n    booktitle = \"Proceedings of the AAAI Conference on Artificial Intelligence\",\n    volume = \"35\",\n    number = \"7\",\n    pages = \"6384--6392\",\n    year = \"2021\",\n    url = \"https://ojs.aaai.org/index.php/AAAI/article/view/16792\"\n}"
 }

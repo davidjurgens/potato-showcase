@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Habernal et al., NAACL 2018",
   "paperUrl": "https://aclanthology.org/N18-1175/",
-  "datasetUrl": "https://github.com/UKPLab/argument-reasoning-comprehension-task"
+  "datasetUrl": "https://github.com/UKPLab/argument-reasoning-comprehension-task",
+  "citation": "@inproceedings{habernal-etal-2018-argument,\n    title = \"The Argument Reasoning Comprehension Task: Identification and Reconstruction of Implicit Warrants\",\n    author = \"Habernal, Ivan  and Wachsmuth, Henning  and Gurevych, Iryna  and Stein, Benno\",\n    booktitle = \"Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N18-1175\",\n    pages = \"1930--1940\"\n}"
 }

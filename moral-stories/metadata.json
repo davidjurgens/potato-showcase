@@ -18,5 +18,6 @@
   "featured": true,
   "paperReference": "Emelin et al., EMNLP 2021",
   "paperUrl": "https://aclanthology.org/2021.emnlp-main.54/",
-  "datasetUrl": "https://huggingface.co/datasets/demelin/moral_stories"
+  "datasetUrl": "https://huggingface.co/datasets/demelin/moral_stories",
+  "citation": "@inproceedings{emelin-etal-2021-moral,\n    title = \"Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences\",\n    author = \"Emelin, Denis  and Le Bras, Ronan  and Hwang, Jena D.  and Forbes, Maxwell  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2021\",\n    address = \"Online and Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.emnlp-main.54\",\n    pages = \"698--718\"\n}"
 }
