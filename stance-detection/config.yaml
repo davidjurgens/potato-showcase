@@ -1,0 +1,88 @@
+# Stance Detection (VAST-style)
+# Based on Allaway & McKeown, EMNLP 2020
+# Paper: https://aclanthology.org/2020.emnlp-main.197/
+#
+# Stance detection determines the author's position toward a target topic.
+# This is crucial for understanding public opinion, debate analysis, and
+# identifying polarization in social media.
+#
+# Stance Labels:
+# - FAVOR: The text supports or agrees with the topic/claim
+# - AGAINST: The text opposes or disagrees with the topic/claim
+# - NEUTRAL: The text neither supports nor opposes (discusses without position)
+#
+# Annotation Guidelines:
+# 1. Read the topic/target first, then read the text
+# 2. Focus on the AUTHOR's stance, not what they're reporting about
+# 3. Implicit stances count - look for sentiment, word choice, framing
+# 4. NEUTRAL means genuinely balanced or discussing without taking sides
+# 5. Don't confuse "not mentioning" with "neutral" - text must be relevant
+# 6. Consider: Would the author agree with "Topic is good/should happen"?
+#
+# Common Pitfalls:
+# - Sarcasm: The literal words may oppose the actual stance
+# - Quotations: Distinguish author's stance from quoted opinions
+# - Conditional statements: "If X, then Y" may not indicate stance on X
+
+port: 8000
+server_name: localhost
+task_name: "Stance Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Stance classification
+  - annotation_type: radio
+    name: stance
+    description: "What is the author's stance toward the given TOPIC?"
+    labels:
+      - "FAVOR"
+      - "AGAINST"
+      - "NEUTRAL"
+    tooltips:
+      "FAVOR": "The author supports, agrees with, or promotes the topic"
+      "AGAINST": "The author opposes, disagrees with, or argues against the topic"
+      "NEUTRAL": "The author discusses the topic without taking a clear position"
+
+  # Step 2: Stance strength
+  - annotation_type: likert
+    name: strength
+    description: "How strong is the expressed stance?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very weak/implicit"
+      2: "Weak"
+      3: "Moderate"
+      4: "Strong"
+      5: "Very strong/explicit"
+    tooltips:
+      1: "Stance is barely detectable, highly implicit"
+      2: "Stance is present but understated"
+      3: "Clear stance without strong language"
+      4: "Explicit stance with conviction"
+      5: "Extremely strong, emphatic stance"
+
+  # Step 3: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in this annotation?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

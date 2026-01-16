@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sci_001",
+    "claim": "Vitamin D supplementation reduces the risk of respiratory infections.",
+    "abstract": "Background: Vitamin D has immunomodulatory effects that may protect against respiratory infections. Methods: We conducted a meta-analysis of 25 randomized controlled trials including 11,321 participants. Results: Vitamin D supplementation reduced the risk of acute respiratory infection (OR 0.88, 95% CI 0.81-0.96). The protective effect was strongest in participants with baseline vitamin D deficiency. Conclusion: Vitamin D supplementation is safe and provides modest protection against respiratory infections."
+  },
+  {
+    "id": "sci_002",
+    "claim": "Coffee consumption increases the risk of cardiovascular disease.",
+    "abstract": "Objective: To examine the association between coffee consumption and cardiovascular disease risk. Methods: Prospective cohort study of 468,629 UK Biobank participants followed for 11 years. Results: Compared to non-coffee drinkers, moderate coffee consumption (3-4 cups/day) was associated with lower risk of cardiovascular disease (HR 0.85, 95% CI 0.79-0.92). Heavy consumption (>6 cups/day) showed no significant association. Conclusion: Moderate coffee consumption is associated with reduced cardiovascular risk."
+  },
+  {
+    "id": "sci_003",
+    "claim": "Exercise improves symptoms of depression.",
+    "abstract": "Purpose: To evaluate the effects of exercise on depression symptoms. Methods: Systematic review of 35 RCTs comparing exercise interventions to control conditions in adults with depression. Results: Exercise significantly reduced depression symptoms (SMD -0.66, 95% CI -0.86 to -0.46). Effects were similar for aerobic and resistance training. Higher intensity exercise showed larger effects. Limitations: High heterogeneity and risk of bias in some studies. Conclusion: Exercise is an effective intervention for depression."
+  },
+  {
+    "id": "sci_004",
+    "claim": "Artificial sweeteners help with weight loss.",
+    "abstract": "Background: Artificial sweeteners are widely used as sugar substitutes for weight management. Methods: We conducted a randomized trial of 200 overweight adults assigned to beverages with sugar, artificial sweeteners, or water for 12 weeks. Results: The artificial sweetener group showed no significant difference in weight change compared to the sugar group (-0.2 kg vs -0.3 kg, p=0.78). Only the water group showed significant weight loss (-1.8 kg). Conclusion: Replacing sugar with artificial sweeteners did not result in weight loss in this trial."
+  },
+  {
+    "id": "sci_005",
+    "claim": "Probiotics prevent antibiotic-associated diarrhea.",
+    "abstract": "Aim: To assess probiotic efficacy in preventing antibiotic-associated diarrhea. Methods: Meta-analysis of 42 RCTs with 11,811 participants receiving antibiotics with or without probiotic co-administration. Results: Probiotic supplementation significantly reduced the risk of antibiotic-associated diarrhea (RR 0.58, 95% CI 0.50-0.68, NNT=13). Lactobacillus rhamnosus GG and Saccharomyces boulardii showed the strongest evidence. Adverse events were rare. Conclusion: Probiotics are effective for preventing antibiotic-associated diarrhea."
+  },
+  {
+    "id": "sci_006",
+    "claim": "Mediterranean diet reduces Alzheimer's disease risk.",
+    "abstract": "Introduction: Diet may influence dementia risk through multiple mechanisms. Methods: We examined Mediterranean diet adherence and brain volumes in 512 participants from the Lothian Birth Cohort. Results: Higher Mediterranean diet scores were associated with less total brain atrophy over 3 years (β=0.12, p=0.04). The association was attenuated after controlling for education and social class. No association was found with specific regional volumes or cognitive decline. Conclusion: Mediterranean diet may protect against general brain atrophy, though confounding cannot be ruled out."
+  }
+]

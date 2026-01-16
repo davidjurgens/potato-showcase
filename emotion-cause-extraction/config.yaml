@@ -1,0 +1,88 @@
+# Emotion Cause Extraction (RECCON)
+# Based on Poria et al., EMNLP 2020
+# Paper: https://aclanthology.org/2020.emnlp-main.431/
+# Dataset: https://github.com/declare-lab/RECCON
+#
+# RECCON focuses on recognizing emotion causes in conversations.
+# For each utterance expressing an emotion, annotators identify:
+# 1. The emotion being expressed
+# 2. Which prior utterance(s) contain the cause
+# 3. The specific span within those utterances that is causal
+#
+# Cause Types:
+# - Self-contagion: Cause is in the same speaker's prior utterance
+# - Inter-personal: Cause is in another speaker's utterance
+# - No explicit cause: Emotion has no identifiable textual cause
+#
+# Annotation Guidelines:
+# 1. First identify the target emotion in the highlighted utterance
+# 2. Look backwards in the conversation for potential causes
+# 3. Mark specific spans that directly trigger the emotion
+# 4. A cause must be NECESSARY for the emotion (counterfactual test)
+# 5. Multiple causes can exist for a single emotion
+
+port: 8000
+server_name: localhost
+task_name: "Emotion Cause Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: dialogue
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify the emotion in the target utterance
+  - annotation_type: radio
+    name: emotion
+    description: "What emotion is expressed in the highlighted (last) utterance?"
+    labels:
+      - "Happiness"
+      - "Sadness"
+      - "Anger"
+      - "Fear"
+      - "Surprise"
+      - "Disgust"
+      - "Neutral"
+    tooltips:
+      "Happiness": "Joy, excitement, contentment, satisfaction, amusement"
+      "Sadness": "Sorrow, disappointment, grief, melancholy"
+      "Anger": "Frustration, irritation, annoyance, rage"
+      "Fear": "Anxiety, worry, nervousness, terror"
+      "Surprise": "Astonishment, amazement, shock (positive or negative)"
+      "Disgust": "Revulsion, disapproval, contempt"
+      "Neutral": "No clear emotion expressed"
+
+  # Step 2: Identify cause location
+  - annotation_type: radio
+    name: cause_type
+    description: "Where is the cause of this emotion located?"
+    labels:
+      - "In speaker's own prior utterance"
+      - "In other speaker's utterance"
+      - "In multiple utterances"
+      - "No explicit cause in text"
+    tooltips:
+      "In speaker's own prior utterance": "Self-contagion: the speaker's earlier words triggered their current emotion"
+      "In other speaker's utterance": "Inter-personal: another speaker's words triggered this emotion"
+      "In multiple utterances": "The cause spans multiple prior utterances"
+      "No explicit cause in text": "The emotion has no identifiable textual cause in the conversation"
+
+  # Step 3: Mark causal spans
+  - annotation_type: span
+    name: causal_spans
+    description: "Highlight the specific text spans that CAUSED the emotion"
+    labels:
+      - "Cause"
+    label_colors:
+      "Cause": "#ef4444"
+    tooltips:
+      "Cause": "The specific words/phrases that directly triggered the emotion (necessary condition)"
+    allow_overlapping: false
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

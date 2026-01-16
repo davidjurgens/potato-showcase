@@ -1,0 +1,123 @@
+# Empathetic Dialogue Annotation
+# Based on Rashkin et al., ACL 2019
+# Paper: https://aclanthology.org/P19-1534/
+# Dataset: https://github.com/facebookresearch/EmpatheticDialogues
+#
+# This task annotates emotional situations and evaluates empathetic responses.
+# The goal is to train conversational agents that respond appropriately to
+# users' emotional states.
+#
+# Emotion Categories (32 situations grouped):
+# Positive: Joyful, Excited, Proud, Hopeful, Grateful, Content, Confident, Trusting
+# Negative: Sad, Anxious, Angry, Afraid, Disgusted, Guilty, Lonely, Embarrassed
+# Surprise: Surprised, Impressed, Curious
+# Other: Nostalgic, Sentimental, Anticipating, Jealous, Devastated, Disappointed
+#
+# Empathy Components:
+# - Emotional Reactions: Expressing appropriate emotions in response
+# - Interpretations: Showing understanding of the situation
+# - Explorations: Asking questions to understand better
+#
+# Annotation Guidelines:
+# 1. Identify the emotional situation the speaker describes
+# 2. Evaluate if the response acknowledges the emotion
+# 3. Rate the response's empathy level
+# 4. Consider: Does the response make the speaker feel heard?
+
+port: 8000
+server_name: localhost
+task_name: "Empathetic Dialogue Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: dialogue
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Emotional situation classification
+  - annotation_type: radio
+    name: emotion
+    description: "What emotion is the speaker experiencing in this situation?"
+    labels:
+      # Positive emotions
+      - "Joyful"
+      - "Excited"
+      - "Proud"
+      - "Grateful"
+      - "Hopeful"
+      - "Content"
+      # Negative emotions
+      - "Sad"
+      - "Anxious"
+      - "Angry"
+      - "Afraid"
+      - "Lonely"
+      - "Embarrassed"
+      - "Disappointed"
+      - "Devastated"
+      # Other
+      - "Surprised"
+      - "Nostalgic"
+      - "Jealous"
+    tooltips:
+      "Joyful": "Feeling happy, delighted, or cheerful"
+      "Excited": "Feeling enthusiastic, eager, or thrilled"
+      "Proud": "Feeling accomplished or pleased with achievements"
+      "Grateful": "Feeling thankful or appreciative"
+      "Hopeful": "Feeling optimistic about the future"
+      "Content": "Feeling satisfied and at peace"
+      "Sad": "Feeling unhappy, sorrowful, or down"
+      "Anxious": "Feeling worried, nervous, or uneasy"
+      "Angry": "Feeling frustrated, irritated, or mad"
+      "Afraid": "Feeling scared, fearful, or terrified"
+      "Lonely": "Feeling isolated, alone, or disconnected"
+      "Embarrassed": "Feeling self-conscious, ashamed, or awkward"
+      "Disappointed": "Feeling let down when expectations weren't met"
+      "Devastated": "Feeling extremely upset or heartbroken"
+      "Surprised": "Feeling astonished or caught off guard"
+      "Nostalgic": "Feeling wistful about the past"
+      "Jealous": "Feeling envious of others"
+
+  # Step 2: Empathy rating
+  - annotation_type: likert
+    name: empathy_level
+    description: "How empathetic is the RESPONSE to the speaker's emotional situation?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Not empathetic"
+      2: "Slightly empathetic"
+      3: "Moderately empathetic"
+      4: "Very empathetic"
+      5: "Extremely empathetic"
+    tooltips:
+      1: "Response ignores or dismisses the emotion"
+      2: "Response shows minimal acknowledgment"
+      3: "Response acknowledges the emotion appropriately"
+      4: "Response shows genuine understanding and care"
+      5: "Response is deeply understanding and supportive"
+
+  # Step 3: Empathy type
+  - annotation_type: radio
+    name: empathy_type
+    description: "What type of empathetic response is this?"
+    labels:
+      - "Emotional Reaction"
+      - "Interpretation"
+      - "Exploration"
+      - "Mixed"
+      - "Not Empathetic"
+    tooltips:
+      "Emotional Reaction": "Expresses emotions in response (e.g., 'That's wonderful!' or 'I'm so sorry')"
+      "Interpretation": "Shows understanding of the situation (e.g., 'That must have been hard')"
+      "Exploration": "Asks questions to understand better (e.g., 'What happened next?')"
+      "Mixed": "Combines multiple empathy strategies"
+      "Not Empathetic": "Response doesn't demonstrate empathy"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

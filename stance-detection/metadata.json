@@ -1,0 +1,21 @@
+{
+  "title": "Stance Detection (VAST-style)",
+  "description": "Detect the stance of a text toward a given topic. Based on VAST (Allaway & McKeown, EMNLP 2020) for zero-shot stance detection. Classify text as expressing favor, opposition, or neutrality toward various topics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Allaway & McKeown",
+    "email": "jurgens@umich.edu",
+    "affiliation": "Columbia University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Social Media", "Opinion Mining"],
+  "useCase": ["Stance Detection", "Opinion Mining", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["stance", "opinion", "social-media", "vast", "emnlp2020", "zero-shot"],
+  "featured": true,
+  "paperReference": "Allaway & McKeown, EMNLP 2020",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.197/",
+  "datasetUrl": "https://github.com/emilyallaway/zero-shot-stance"
+}

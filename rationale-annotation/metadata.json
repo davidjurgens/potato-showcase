@@ -1,0 +1,21 @@
+{
+  "title": "Rationale Annotation (ERASER-style)",
+  "description": "Annotate rationales (evidence spans) that justify classification decisions. Based on the ERASER benchmark (DeYoung et al., ACL 2020). Identify which parts of the text are necessary and sufficient for making a prediction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "DeYoung et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "Northeastern University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Explainability", "Machine Learning"],
+  "useCase": ["Explainable AI", "Evidence Extraction", "Model Interpretability"],
+  "complexity": "intermediate",
+  "tags": ["rationale", "explainability", "evidence", "eraser", "acl2020", "interpretability"],
+  "featured": false,
+  "paperReference": "DeYoung et al., ACL 2020",
+  "paperUrl": "https://aclanthology.org/2020.acl-main.408/",
+  "datasetUrl": "https://www.eraserbenchmark.com"
+}

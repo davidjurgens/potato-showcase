@@ -1,0 +1,79 @@
+# Rationale Annotation (ERASER-style)
+# Based on DeYoung et al., ACL 2020
+# Paper: https://aclanthology.org/2020.acl-main.408/
+# Benchmark: https://www.eraserbenchmark.com
+#
+# Rationales are text spans that provide evidence for a classification decision.
+# Good rationales should be:
+# - SUFFICIENT: The rationale alone should support the label
+# - NECESSARY: Removing the rationale should change the prediction
+# - MINIMAL: Don't include extra context that isn't needed
+#
+# Annotation Guidelines:
+# 1. First make the classification decision for the full text
+# 2. Then identify which spans were most important for that decision
+# 3. Ask: "If I only saw these spans, would I make the same decision?"
+# 4. Ask: "If these spans were removed, would the label change?"
+# 5. Prefer shorter, more precise spans over longer ones
+# 6. Multiple separate rationales are okay
+#
+# Common Patterns:
+# - For sentiment: words expressing opinion, emotion
+# - For topics: key phrases indicating subject matter
+# - For NLI: phrases showing contradiction or entailment
+
+port: 8000
+server_name: localhost
+task_name: "Rationale Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Make the classification
+  - annotation_type: radio
+    name: classification
+    description: "What is the sentiment of this movie review?"
+    labels:
+      - "Positive"
+      - "Negative"
+    tooltips:
+      "Positive": "The reviewer liked the movie (recommending it)"
+      "Negative": "The reviewer disliked the movie (not recommending it)"
+
+  # Step 2: Highlight rationales
+  - annotation_type: span
+    name: rationales
+    description: "Highlight the text spans that JUSTIFY your classification (evidence)"
+    labels:
+      - "Rationale"
+    label_colors:
+      "Rationale": "#3b82f6"
+    tooltips:
+      "Rationale": "Spans that provide evidence for the classification. Should be sufficient (enough to justify label) and necessary (removing them would change the label)"
+    allow_overlapping: false
+
+  # Step 3: Rationale sufficiency check
+  - annotation_type: radio
+    name: sufficiency
+    description: "Looking ONLY at your highlighted rationales, would you make the same classification?"
+    labels:
+      - "Yes, definitely"
+      - "Probably yes"
+      - "Uncertain"
+      - "Probably no"
+    tooltips:
+      "Yes, definitely": "The rationales alone are completely sufficient"
+      "Probably yes": "The rationales are mostly sufficient"
+      "Uncertain": "Hard to tell from rationales alone"
+      "Probably no": "More context would be needed"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false
