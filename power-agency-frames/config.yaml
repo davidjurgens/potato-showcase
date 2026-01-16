@@ -1,0 +1,101 @@
+# Connotation Frames of Power and Agency
+# Based on Sap et al., EMNLP 2017
+# Paper: https://aclanthology.org/D17-1247/
+#
+# Connotation frames capture how verbs implicitly project different
+# levels of power and agency onto their participants.
+#
+# Key Concepts:
+# - Agency: How much control/initiative does a participant have?
+#   - High agency: "She decided", "He led"
+#   - Low agency: "She was told", "He followed"
+#
+# - Power: Who has power over whom in the interaction?
+#   - Agent has power: "She commands him"
+#   - Theme has power: "She obeys him"
+#   - Equal: "They collaborate"
+#
+# Applications:
+# - Detecting gender bias in media portrayal
+# - Analyzing power dynamics in narratives
+# - Understanding implicit framing in text
+#
+# Annotation Guidelines:
+# 1. Focus on what the VERB implies, not the sentence context
+# 2. Consider: Does this verb make the doer seem active/passive?
+# 3. Consider: Does this verb give the doer power over others?
+# 4. Think about typical usage, not edge cases
+
+port: 8000
+server_name: localhost
+task_name: "Power and Agency Frames"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: sentence
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Agency of the subject
+  - annotation_type: radio
+    name: agency
+    description: "How much AGENCY (control, initiative) does the verb imply for the subject?"
+    labels:
+      - "High agency"
+      - "Moderate agency"
+      - "Low agency"
+      - "Neutral"
+    tooltips:
+      "High agency": "The subject is active, in control, making decisions (e.g., 'decides', 'leads', 'creates')"
+      "Moderate agency": "The subject has some control but within constraints"
+      "Low agency": "The subject is passive, reactive, or acted upon (e.g., 'follows', 'receives', 'is told')"
+      "Neutral": "The verb doesn't clearly convey agency level"
+
+  # Step 2: Power dynamics
+  - annotation_type: radio
+    name: power
+    description: "Who has POWER in the relationship implied by the verb?"
+    labels:
+      - "Subject has power"
+      - "Object has power"
+      - "Equal power"
+      - "No power dynamic"
+    tooltips:
+      "Subject has power": "The subject dominates or controls the object (e.g., 'commands', 'criticizes')"
+      "Object has power": "The object has power over the subject (e.g., 'obeys', 'serves')"
+      "Equal power": "Neither has power over the other (e.g., 'collaborates', 'discusses')"
+      "No power dynamic": "The verb doesn't imply a power relationship"
+
+  # Step 3: Sentiment toward subject
+  - annotation_type: radio
+    name: subject_sentiment
+    description: "Does the verb cast the subject in a positive or negative light?"
+    labels:
+      - "Positive"
+      - "Neutral"
+      - "Negative"
+    tooltips:
+      "Positive": "The verb portrays the subject favorably"
+      "Neutral": "The verb is neutral toward the subject"
+      "Negative": "The verb portrays the subject unfavorably"
+
+  # Step 4: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your annotations?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

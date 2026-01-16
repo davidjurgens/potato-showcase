@@ -1,0 +1,22 @@
+{
+  "title": "Argument Reasoning Comprehension (ARCT)",
+  "description": "Identify implicit warrants in arguments. Based on Habernal et al., NAACL 2018 / SemEval 2018 Task 12. Given a claim and premise, choose the correct warrant that connects them.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Habernal et al.",
+    "email": "jurgens@umich.edu",
+    "github": "UKPLab",
+    "affiliation": "TU Darmstadt"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Argumentation", "Reasoning"],
+  "useCase": ["Argument Mining", "Reasoning", "Critical Thinking"],
+  "complexity": "advanced",
+  "tags": ["argumentation", "warrants", "reasoning", "naacl2018", "semeval", "comprehension"],
+  "featured": true,
+  "paperReference": "Habernal et al., NAACL 2018",
+  "paperUrl": "https://aclanthology.org/N18-1175/",
+  "datasetUrl": "https://github.com/UKPLab/argument-reasoning-comprehension-task"
+}

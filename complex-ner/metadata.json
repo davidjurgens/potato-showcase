@@ -1,0 +1,21 @@
+{
+  "title": "Complex Named Entity Recognition (MultiCoNER)",
+  "description": "Recognize complex and emerging named entities. Based on SemEval 2022/2023 MultiCoNER. Identify creative works, products, groups, and other challenging entity types.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Malmasi et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "Amazon"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span"],
+  "domain": ["NLP", "Information Extraction"],
+  "useCase": ["Named Entity Recognition", "Information Extraction", "Knowledge Base"],
+  "complexity": "advanced",
+  "tags": ["ner", "complex-entities", "multiconer", "semeval2022", "creative-works"],
+  "featured": false,
+  "paperReference": "Malmasi et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.196/",
+  "datasetUrl": "https://multiconer.github.io/"
+}

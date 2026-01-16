@@ -1,0 +1,52 @@
+[
+  {
+    "id": "paf_001",
+    "verb": "commands",
+    "sentence": "The manager commands the team to finish the project."
+  },
+  {
+    "id": "paf_002",
+    "verb": "accepts",
+    "sentence": "She accepts the decision made by the committee."
+  },
+  {
+    "id": "paf_003",
+    "verb": "leads",
+    "sentence": "He leads the expedition through the mountains."
+  },
+  {
+    "id": "paf_004",
+    "verb": "follows",
+    "sentence": "The assistant follows the instructions carefully."
+  },
+  {
+    "id": "paf_005",
+    "verb": "negotiates",
+    "sentence": "The diplomat negotiates the terms with her counterpart."
+  },
+  {
+    "id": "paf_006",
+    "verb": "submits",
+    "sentence": "He submits the report to his supervisor."
+  },
+  {
+    "id": "paf_007",
+    "verb": "creates",
+    "sentence": "The artist creates a stunning masterpiece."
+  },
+  {
+    "id": "paf_008",
+    "verb": "receives",
+    "sentence": "She receives instructions from headquarters."
+  },
+  {
+    "id": "paf_009",
+    "verb": "challenges",
+    "sentence": "The lawyer challenges the witness's testimony."
+  },
+  {
+    "id": "paf_010",
+    "verb": "assists",
+    "sentence": "The nurse assists the doctor during surgery."
+  }
+]

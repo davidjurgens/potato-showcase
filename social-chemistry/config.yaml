@@ -1,0 +1,131 @@
+# Social Chemistry 101 (Social Norms)
+# Based on Forbes et al., EMNLP 2020
+# Paper: https://aclanthology.org/2020.emnlp-main.48/
+#
+# Social Chemistry catalogs rules-of-thumb (RoTs) for social/moral norms.
+# Each RoT is annotated across 12 dimensions capturing different aspects
+# of social judgment.
+#
+# Key Concepts:
+# - Rule-of-Thumb (RoT): A descriptive norm like "It's rude to be late"
+# - Situation: The context that evokes the RoT
+# - Action: The specific behavior being judged
+#
+# 12 Annotation Dimensions:
+# 1. Social judgment: Is the action good/bad/expected/unexpected?
+# 2. Moral foundations: Care, fairness, loyalty, authority, purity
+# 3. Cultural pressure: How strongly does society expect this?
+# 4. Legality: Is this legal/illegal?
+# 5. Agency: Who should do/avoid the action?
+# 6. Anticipated agreement: Would others agree with this judgment?
+#
+# Annotation Guidelines:
+# 1. Consider the SPECIFIC situation, not abstract principles
+# 2. Think about what MOST people in your culture would think
+# 3. RoTs can conflict - the same action may have multiple valid judgments
+# 4. Consider both the action and its consequences
+
+port: 8000
+server_name: localhost
+task_name: "Social Chemistry - Social Norms"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: situation
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Social judgment
+  - annotation_type: radio
+    name: judgment
+    description: "How would most people judge this action?"
+    labels:
+      - "Very bad"
+      - "Bad"
+      - "Expected/okay"
+      - "Good"
+      - "Very good"
+    tooltips:
+      "Very bad": "Strongly condemned by society"
+      "Bad": "Generally disapproved of"
+      "Expected/okay": "Neutral, normal, or expected behavior"
+      "Good": "Generally approved of"
+      "Very good": "Strongly praised by society"
+
+  # Step 2: Moral foundation
+  - annotation_type: radio
+    name: moral_foundation
+    description: "Which moral foundation does this primarily relate to?"
+    labels:
+      - "Care/Harm"
+      - "Fairness/Cheating"
+      - "Loyalty/Betrayal"
+      - "Authority/Subversion"
+      - "Purity/Degradation"
+      - "Liberty/Oppression"
+      - "None/Other"
+    tooltips:
+      "Care/Harm": "About protecting others from harm, showing compassion"
+      "Fairness/Cheating": "About justice, rights, reciprocity"
+      "Loyalty/Betrayal": "About group membership, patriotism, self-sacrifice"
+      "Authority/Subversion": "About respect for tradition, hierarchy, duty"
+      "Purity/Degradation": "About cleanliness, sanctity, disgust"
+      "Liberty/Oppression": "About freedom, autonomy, avoiding domination"
+      "None/Other": "Doesn't clearly map to moral foundations"
+
+  # Step 3: Cultural pressure
+  - annotation_type: likert
+    name: cultural_pressure
+    description: "How strongly does society expect/pressure this behavior?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very weak pressure"
+      2: "Weak pressure"
+      3: "Moderate pressure"
+      4: "Strong pressure"
+      5: "Very strong pressure"
+    tooltips:
+      1: "Society rarely enforces this norm"
+      2: "Mild social expectation"
+      3: "Moderate social expectation"
+      4: "Strong social expectation with consequences"
+      5: "Violating this would be severely condemned"
+
+  # Step 4: Legality
+  - annotation_type: radio
+    name: legality
+    description: "Is this action legal or illegal?"
+    labels:
+      - "Clearly legal"
+      - "Legal but regulated"
+      - "Gray area"
+      - "Illegal (minor)"
+      - "Illegal (serious)"
+    tooltips:
+      "Clearly legal": "No legal issues"
+      "Legal but regulated": "Legal with some restrictions"
+      "Gray area": "Legal status unclear or varies"
+      "Illegal (minor)": "Minor infraction or misdemeanor"
+      "Illegal (serious)": "Serious crime or felony"
+
+  # Step 5: Anticipated agreement
+  - annotation_type: likert
+    name: agreement
+    description: "How much would others agree with your judgment?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very controversial"
+      2: "Somewhat controversial"
+      3: "Mixed opinions"
+      4: "Mostly agree"
+      5: "Nearly everyone agrees"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

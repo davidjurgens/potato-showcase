@@ -1,0 +1,50 @@
+[
+  {
+    "id": "arct_001",
+    "claim": "Schools should require students to wear uniforms.",
+    "premise": "Uniforms reduce visible economic differences between students.",
+    "warrant_a": "Reducing visible economic differences promotes equality and reduces bullying.",
+    "warrant_b": "Students should be free to express themselves through clothing choices.",
+    "argument": "CLAIM: Schools should require students to wear uniforms.\nPREMISE: Uniforms reduce visible economic differences between students.\n\nWarrant A: Reducing visible economic differences promotes equality and reduces bullying.\nWarrant B: Students should be free to express themselves through clothing choices."
+  },
+  {
+    "id": "arct_002",
+    "claim": "Cities should invest more in public transportation.",
+    "premise": "Public transportation reduces traffic congestion.",
+    "warrant_a": "Reducing traffic congestion improves quality of life and productivity.",
+    "warrant_b": "People prefer the convenience of private vehicles.",
+    "argument": "CLAIM: Cities should invest more in public transportation.\nPREMISE: Public transportation reduces traffic congestion.\n\nWarrant A: Reducing traffic congestion improves quality of life and productivity.\nWarrant B: People prefer the convenience of private vehicles."
+  },
+  {
+    "id": "arct_003",
+    "claim": "Social media companies should not censor content.",
+    "premise": "Censorship can be applied inconsistently and with bias.",
+    "warrant_a": "Inconsistent application of rules undermines trust and fairness.",
+    "warrant_b": "Some content is harmful and should be removed regardless of consistency.",
+    "argument": "CLAIM: Social media companies should not censor content.\nPREMISE: Censorship can be applied inconsistently and with bias.\n\nWarrant A: Inconsistent application of rules undermines trust and fairness.\nWarrant B: Some content is harmful and should be removed regardless of consistency."
+  },
+  {
+    "id": "arct_004",
+    "claim": "Companies should allow employees to work from home.",
+    "premise": "Remote work increases employee productivity.",
+    "warrant_a": "Higher productivity benefits both employees and employers.",
+    "warrant_b": "In-person collaboration is essential for company culture.",
+    "argument": "CLAIM: Companies should allow employees to work from home.\nPREMISE: Remote work increases employee productivity.\n\nWarrant A: Higher productivity benefits both employees and employers.\nWarrant B: In-person collaboration is essential for company culture."
+  },
+  {
+    "id": "arct_005",
+    "claim": "Voting should be mandatory.",
+    "premise": "Mandatory voting ensures higher civic participation.",
+    "warrant_a": "Higher civic participation leads to more representative democracy.",
+    "warrant_b": "Freedom includes the right not to participate.",
+    "argument": "CLAIM: Voting should be mandatory.\nPREMISE: Mandatory voting ensures higher civic participation.\n\nWarrant A: Higher civic participation leads to more representative democracy.\nWarrant B: Freedom includes the right not to participate."
+  },
+  {
+    "id": "arct_006",
+    "claim": "Zoos should be abolished.",
+    "premise": "Animals in zoos often exhibit signs of psychological distress.",
+    "warrant_a": "Causing psychological distress to animals is unethical.",
+    "warrant_b": "Zoos serve important conservation and educational purposes.",
+    "argument": "CLAIM: Zoos should be abolished.\nPREMISE: Animals in zoos often exhibit signs of psychological distress.\n\nWarrant A: Causing psychological distress to animals is unethical.\nWarrant B: Zoos serve important conservation and educational purposes."
+  }
+]

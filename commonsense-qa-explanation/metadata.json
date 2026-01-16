@@ -1,0 +1,22 @@
+{
+  "title": "Commonsense QA Explanation (ECQA)",
+  "description": "Annotate explanations for commonsense QA with positive and negative properties. Based on ECQA (Aggarwal et al., ACL 2021). Explain why an answer is correct and why others are wrong.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aggarwal et al.",
+    "email": "jurgens@umich.edu",
+    "github": "dair-iitd",
+    "affiliation": "IIT Delhi / IBM Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Commonsense", "Explainability"],
+  "useCase": ["Commonsense Reasoning", "Explainable AI", "QA"],
+  "complexity": "intermediate",
+  "tags": ["commonsense", "explanation", "qa", "ecqa", "acl2021", "explainability"],
+  "featured": false,
+  "paperReference": "Aggarwal et al., ACL 2021",
+  "paperUrl": "https://aclanthology.org/2021.acl-long.238/",
+  "datasetUrl": "https://github.com/dair-iitd/ECQA-Dataset"
+}

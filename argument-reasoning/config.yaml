@@ -1,0 +1,85 @@
+# Argument Reasoning Comprehension Task (ARCT)
+# Based on Habernal et al., NAACL 2018 / SemEval 2018 Task 12
+# Paper: https://aclanthology.org/N18-1175/
+# Dataset: https://github.com/UKPLab/argument-reasoning-comprehension-task
+#
+# Arguments have three components:
+# - Claim: The conclusion being argued for
+# - Premise (Reason): Evidence or reasoning supporting the claim
+# - Warrant: The implicit assumption connecting premise to claim
+#
+# Example:
+# Claim: "We should ban plastic bags"
+# Premise: "Plastic bags pollute the ocean"
+# Warrant: "Things that pollute the ocean should be banned" (implicit!)
+#
+# Task:
+# Given a claim and premise, identify which of two possible warrants
+# correctly connects them. Both warrants are plausible but lead to
+# different conclusions.
+#
+# Annotation Guidelines:
+# 1. Read the claim and premise carefully
+# 2. Identify what assumption would make the argument valid
+# 3. Choose the warrant that, combined with the premise, supports the claim
+# 4. The other warrant should lead to a CONTRADICTING claim
+# 5. Consider logical coherence, not personal opinion
+
+port: 8000
+server_name: localhost
+task_name: "Argument Reasoning Comprehension"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: argument
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Select correct warrant
+  - annotation_type: radio
+    name: warrant_choice
+    description: "Which warrant correctly connects the premise to the claim?"
+    labels:
+      - "Warrant A"
+      - "Warrant B"
+    tooltips:
+      "Warrant A": "The first warrant option"
+      "Warrant B": "The second warrant option"
+
+  # Step 2: Confidence in choice
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your choice?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Guessing"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+  # Step 3: Argument quality
+  - annotation_type: radio
+    name: argument_quality
+    description: "How strong is this argument overall?"
+    labels:
+      - "Very weak"
+      - "Weak"
+      - "Moderate"
+      - "Strong"
+      - "Very strong"
+    tooltips:
+      "Very weak": "The reasoning is fundamentally flawed"
+      "Weak": "The argument has significant gaps"
+      "Moderate": "The argument is reasonable but not compelling"
+      "Strong": "The argument is well-reasoned"
+      "Very strong": "The argument is highly compelling"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

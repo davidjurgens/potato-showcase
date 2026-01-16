@@ -1,0 +1,21 @@
+{
+  "title": "News Headline Emotion Roles (GoodNewsEveryone)",
+  "description": "Annotate emotions in news headlines with semantic roles. Based on Bostan et al., LREC 2020. Identify emotion, experiencer, cause, target, and textual cue.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bostan et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "University of Stuttgart"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Affective Computing", "News"],
+  "useCase": ["Emotion Detection", "News Analysis", "Media Studies"],
+  "complexity": "advanced",
+  "tags": ["emotion", "news", "semantic-roles", "goodnewseveryone", "lrec2020"],
+  "featured": false,
+  "paperReference": "Bostan et al., LREC 2020",
+  "paperUrl": "https://aclanthology.org/2020.lrec-1.194/",
+  "datasetUrl": "https://www.ims.uni-stuttgart.de/en/research/resources/corpora/goodnewseveryone/"
+}
