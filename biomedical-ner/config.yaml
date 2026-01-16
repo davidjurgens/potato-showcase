@@ -1,0 +1,89 @@
+# Biomedical Named Entity Recognition
+# Based on standard biomedical NER annotation guidelines
+# (JNLPBA, BC5CDR, NCBI Disease, i2b2, etc.)
+#
+# Entity Types:
+# - Disease/Condition: Diseases, disorders, symptoms, findings
+# - Medication/Drug: Medications, drugs, therapeutic agents
+# - Procedure: Medical procedures, surgeries, treatments
+# - Anatomy: Body parts, organs, tissues, cells
+# - Gene/Protein: Genes, proteins, gene products
+# - Chemical: Chemical compounds (non-drug)
+# - Organism: Species, pathogens, organisms
+#
+# Annotation Guidelines:
+# 1. Annotate the full noun phrase, including modifiers
+#    - "severe acute respiratory syndrome" not just "syndrome"
+# 2. Include abbreviations when they stand alone
+#    - "COVID-19", "HIV", "NSAID"
+# 3. Do NOT include articles (a, the) in the span
+# 4. For nested entities, annotate the outermost mention
+# 5. Annotate each mention, even if repeated
+# 6. When uncertain, prefer broader entity boundaries
+#
+# Difficult Cases:
+# - "Heart attack" → Disease (entire phrase)
+# - "Blood pressure" → can be Anatomy or finding depending on context
+# - "Insulin treatment" → Medication (insulin) + Procedure (treatment)
+
+port: 8000
+server_name: localhost
+task_name: "Biomedical Named Entity Recognition"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: span
+    name: entities
+    description: "Highlight all biomedical entities in the text"
+    labels:
+      # Core clinical entities
+      - "Disease"
+      - "Symptom"
+      - "Medication"
+      - "Procedure"
+      - "Anatomy"
+      # Molecular/biological entities
+      - "Gene"
+      - "Protein"
+      - "Chemical"
+      - "Organism"
+      # Clinical values
+      - "Lab_Value"
+      - "Dosage"
+    label_colors:
+      "Disease": "#ef4444"
+      "Symptom": "#f97316"
+      "Medication": "#3b82f6"
+      "Procedure": "#8b5cf6"
+      "Anatomy": "#22c55e"
+      "Gene": "#06b6d4"
+      "Protein": "#0891b2"
+      "Chemical": "#eab308"
+      "Organism": "#84cc16"
+      "Lab_Value": "#a855f7"
+      "Dosage": "#ec4899"
+    tooltips:
+      "Disease": "Diseases, disorders, conditions, syndromes (e.g., 'diabetes', 'hypertension', 'COVID-19')"
+      "Symptom": "Signs, symptoms, clinical findings (e.g., 'fever', 'chest pain', 'fatigue')"
+      "Medication": "Drugs, medications, therapeutic agents (e.g., 'aspirin', 'metformin', 'insulin')"
+      "Procedure": "Medical procedures, surgeries, treatments (e.g., 'biopsy', 'MRI', 'chemotherapy')"
+      "Anatomy": "Body parts, organs, tissues, cells (e.g., 'liver', 'left ventricle', 'neurons')"
+      "Gene": "Gene names and symbols (e.g., 'BRCA1', 'TP53', 'insulin gene')"
+      "Protein": "Protein names (e.g., 'hemoglobin', 'albumin', 'cytokines')"
+      "Chemical": "Chemical compounds, non-drug chemicals (e.g., 'glucose', 'sodium chloride')"
+      "Organism": "Species, pathogens, microorganisms (e.g., 'E. coli', 'SARS-CoV-2', 'Staphylococcus')"
+      "Lab_Value": "Laboratory measurements and values (e.g., 'blood glucose 120 mg/dL', 'WBC count')"
+      "Dosage": "Drug dosages and frequencies (e.g., '500mg twice daily', '10mg/kg')"
+    allow_overlapping: false
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

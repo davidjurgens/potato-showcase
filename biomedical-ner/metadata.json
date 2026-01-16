@@ -1,0 +1,20 @@
+{
+  "title": "Biomedical Named Entity Recognition",
+  "description": "Named entity recognition for biomedical and clinical text. Annotate entities including diseases, medications, procedures, anatomical structures, genes, and chemicals following standard biomedical NER guidelines.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Biomedical NLP Community",
+    "email": "jurgens@umich.edu",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span"],
+  "domain": ["Biomedical", "Clinical NLP", "Healthcare"],
+  "useCase": ["Named Entity Recognition", "Information Extraction", "Clinical Text Mining"],
+  "complexity": "advanced",
+  "tags": ["biomedical", "ner", "clinical", "healthcare", "entities", "medical"],
+  "featured": true,
+  "paperReference": "Various BioNLP Shared Tasks",
+  "paperUrl": "https://aclanthology.org/venues/bionlp/"
+}

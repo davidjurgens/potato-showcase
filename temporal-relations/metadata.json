@@ -1,0 +1,20 @@
+{
+  "title": "Temporal Relation Annotation",
+  "description": "Annotate temporal relations between events and time expressions following TimeML/TIMELINE guidelines. Label relations as BEFORE, AFTER, SIMULTANEOUS, or VAGUE to capture how events relate in time.",
+  "version": "1.0.0",
+  "author": {
+    "name": "TimeML/TempEval Tasks",
+    "email": "jurgens@umich.edu",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Temporal Reasoning"],
+  "useCase": ["Temporal Information Extraction", "Event Ordering", "Timeline Construction"],
+  "complexity": "advanced",
+  "tags": ["temporal", "timeml", "events", "timeline", "tempeval"],
+  "featured": false,
+  "paperReference": "TempEval/TimeML Shared Tasks",
+  "paperUrl": "https://www.timeml.org/"
+}

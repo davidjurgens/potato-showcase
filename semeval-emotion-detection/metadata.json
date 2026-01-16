@@ -1,0 +1,20 @@
+{
+  "title": "Emotion Detection (SemEval-style)",
+  "description": "Multi-label emotion classification with intensity ratings based on SemEval shared tasks. Annotate text for six basic emotions (Joy, Sadness, Fear, Anger, Surprise, Disgust) with support for co-occurring emotions and intensity scales.",
+  "version": "1.0.0",
+  "author": {
+    "name": "SemEval Emotion Detection Tasks",
+    "email": "jurgens@umich.edu",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "likert"],
+  "domain": ["NLP", "Affective Computing"],
+  "useCase": ["Emotion Detection", "Sentiment Analysis", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["emotion", "affect", "multi-label", "intensity", "semeval"],
+  "featured": true,
+  "paperReference": "SemEval Emotion Detection Shared Tasks",
+  "paperUrl": "https://semeval.github.io/"
+}

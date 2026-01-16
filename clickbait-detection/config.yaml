@@ -1,0 +1,107 @@
+# Clickbait Detection
+# Based on clickbait detection research and shared tasks
+#
+# Clickbait Definition:
+# Content designed to attract attention and encourage visitors to click
+# on a link, often using sensationalized, misleading, or vague headlines.
+#
+# Clickbait Characteristics:
+# - Curiosity gap: Withholding information to create curiosity
+#   ("You won't believe what happened next...")
+# - Sensationalism: Exaggerated claims or emotional language
+#   ("SHOCKING revelation!", "This will BLOW your mind")
+# - Listicles with enticing numbers: "10 things that will change your life"
+# - Forward referencing: Using "this" without context
+#   ("This one trick...", "This is why...")
+# - Misleading framing: Title doesn't match content
+# - Emotional manipulation: Triggering outrage, fear, or excitement
+#
+# Non-Clickbait Characteristics:
+# - Informative and specific headlines
+# - Accurate representation of content
+# - Professional/journalistic tone
+# - Complete information provided upfront
+#
+# Annotation Guidelines:
+# 1. Judge the headline/post in isolation (don't consider what article might say)
+# 2. Focus on whether it uses manipulative techniques
+# 3. A headline can be interesting without being clickbait
+# 4. Sponsored content is not automatically clickbait
+
+port: 8000
+server_name: localhost
+task_name: "Clickbait Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: headline
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Binary clickbait classification
+  - annotation_type: radio
+    name: is_clickbait
+    description: "Is this headline clickbait?"
+    labels:
+      - "Clickbait"
+      - "Not Clickbait"
+      - "Borderline"
+    tooltips:
+      "Clickbait": "Uses manipulative techniques to bait clicks (curiosity gap, sensationalism, misleading)"
+      "Not Clickbait": "Informative, accurate, and straightforward headline"
+      "Borderline": "Has some clickbait elements but not clearly manipulative"
+
+  # Step 2: Identify clickbait techniques (if clickbait)
+  - annotation_type: multiselect
+    name: techniques
+    description: "Which clickbait techniques are used? (Select all that apply)"
+    labels:
+      - "Curiosity Gap"
+      - "Sensationalism"
+      - "Listicle Bait"
+      - "Forward Reference"
+      - "Emotional Appeal"
+      - "Exaggeration"
+      - "Vague/Ambiguous"
+      - "Question Bait"
+    label_colors:
+      "Curiosity Gap": "#ef4444"
+      "Sensationalism": "#f97316"
+      "Listicle Bait": "#eab308"
+      "Forward Reference": "#22c55e"
+      "Emotional Appeal": "#3b82f6"
+      "Exaggeration": "#8b5cf6"
+      "Vague/Ambiguous": "#06b6d4"
+      "Question Bait": "#ec4899"
+    tooltips:
+      "Curiosity Gap": "Withholds key information to create curiosity ('You won't believe...', 'What happened next...')"
+      "Sensationalism": "Uses shocking or extreme language ('EXPLOSIVE', 'DEVASTATING', 'UNBELIEVABLE')"
+      "Listicle Bait": "Uses numbered lists to promise valuable content ('10 ways to...', '5 things you must know')"
+      "Forward Reference": "Uses vague references like 'this', 'here's why', 'the reason' without context"
+      "Emotional Appeal": "Tries to trigger strong emotions (fear, outrage, excitement) rather than inform"
+      "Exaggeration": "Overstates importance or impact ('will change your life', 'everyone is talking about')"
+      "Vague/Ambiguous": "Intentionally unclear to force clicking for basic information"
+      "Question Bait": "Asks provocative questions designed to make readers want the answer"
+    min_selections: 0
+    max_selections: 8
+
+  # Step 3: Confidence rating
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your classification?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Not confident"
+      2: "Slightly confident"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false
