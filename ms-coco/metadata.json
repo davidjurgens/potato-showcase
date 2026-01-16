@@ -1,0 +1,23 @@
+{
+  "title": "MS COCO Object Detection & Segmentation",
+  "description": "Object detection and instance segmentation annotation following the MS COCO format (Lin et al., ECCV 2014). Annotate objects with bounding boxes and polygon segmentation masks across 80 common object categories.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lin et al.",
+    "email": "jurgens@umich.edu",
+    "github": "cocodataset",
+    "affiliation": "Microsoft"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "polygon"],
+  "domain": ["Computer Vision", "Object Detection"],
+  "useCase": ["Object Detection", "Instance Segmentation", "Scene Understanding"],
+  "complexity": "advanced",
+  "tags": ["coco", "object-detection", "segmentation", "bounding-box", "polygon", "eccv2014"],
+  "featured": true,
+  "paperReference": "Lin et al., ECCV 2014",
+  "paperUrl": "https://arxiv.org/abs/1405.0312",
+  "datasetUrl": "https://cocodataset.org",
+  "citation": "@inproceedings{lin2014microsoft,\n    title = \"{Microsoft COCO}: Common Objects in Context\",\n    author = \"Lin, Tsung-Yi  and Maire, Michael  and Belongie, Serge  and Hays, James  and Perona, Pietro  and Ramanan, Deva  and Doll{\\'a}r, Piotr  and Zitnick, C. Lawrence\",\n    booktitle = \"European Conference on Computer Vision (ECCV)\",\n    pages = \"740--755\",\n    year = \"2014\",\n    publisher = \"Springer\",\n    url = \"https://arxiv.org/abs/1405.0312\"\n}"
+}

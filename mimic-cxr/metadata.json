@@ -1,0 +1,23 @@
+{
+  "title": "MIMIC-CXR Chest Radiograph Classification",
+  "description": "Large-scale chest radiograph classification based on MIMIC-CXR (Johnson et al., Scientific Data 2019). Multi-label classification with 14 observations derived from radiology reports.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Johnson et al.",
+    "email": "jurgens@umich.edu",
+    "github": "MIT-LCP",
+    "affiliation": "MIT"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Medical Imaging", "Radiology"],
+  "useCase": ["Chest X-Ray Classification", "Radiology AI", "Clinical Documentation"],
+  "complexity": "advanced",
+  "tags": ["mimic", "medical", "chest-xray", "radiology", "physionet", "healthcare"],
+  "featured": true,
+  "paperReference": "Johnson et al., Scientific Data 2019",
+  "paperUrl": "https://www.nature.com/articles/s41597-019-0322-0",
+  "datasetUrl": "https://physionet.org/content/mimic-cxr",
+  "citation": "@article{johnson2019mimic,\n    title = \"{MIMIC-CXR}, a de-identified publicly available database of chest radiographs with free-text reports\",\n    author = \"Johnson, Alistair E. W.  and Pollard, Tom J.  and Greenbaum, Nathaniel R.  and Lungren, Matthew P.  and Deng, Chih-ying  and Peng, Yifan  and Lu, Zhiyong  and Mark, Roger G.  and Berkowitz, Seth J.  and Horng, Steven\",\n    journal = \"Scientific Data\",\n    volume = \"6\",\n    pages = \"317\",\n    year = \"2019\",\n    publisher = \"Nature Publishing Group\",\n    url = \"https://www.nature.com/articles/s41597-019-0322-0\"\n}"
+}

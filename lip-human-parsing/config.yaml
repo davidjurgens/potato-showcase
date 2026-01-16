@@ -1,0 +1,89 @@
+# LIP Human Parsing Configuration
+# Based on Gong et al., CVPR 2017
+
+annotation_task_name: "LIP Human Body Part Parsing"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "body_parts"
+    description: "Select all visible body parts"
+    labels:
+      - name: "hat"
+        tooltip: "Hat or head covering"
+      - name: "hair"
+        tooltip: "Hair"
+      - name: "face"
+        tooltip: "Face"
+      - name: "sunglasses"
+        tooltip: "Sunglasses or glasses"
+      - name: "upper_clothes"
+        tooltip: "Upper body clothing"
+      - name: "dress"
+        tooltip: "Dress"
+      - name: "coat"
+        tooltip: "Coat or jacket"
+      - name: "socks"
+        tooltip: "Socks"
+      - name: "pants"
+        tooltip: "Pants"
+      - name: "gloves"
+        tooltip: "Gloves"
+      - name: "scarf"
+        tooltip: "Scarf"
+      - name: "skirt"
+        tooltip: "Skirt"
+      - name: "jumpsuits"
+        tooltip: "Jumpsuits"
+      - name: "left_arm"
+        tooltip: "Left arm"
+      - name: "right_arm"
+        tooltip: "Right arm"
+      - name: "left_leg"
+        tooltip: "Left leg"
+      - name: "right_leg"
+        tooltip: "Right leg"
+      - name: "left_shoe"
+        tooltip: "Left shoe"
+      - name: "right_shoe"
+        tooltip: "Right shoe"
+
+  - annotation_type: "radio"
+    name: "pose_type"
+    description: "What is the primary pose?"
+    labels:
+      - name: "standing"
+        tooltip: "Person is standing"
+      - name: "sitting"
+        tooltip: "Person is sitting"
+      - name: "walking"
+        tooltip: "Person is walking"
+      - name: "other"
+        tooltip: "Other pose"
+
+  - annotation_type: "radio"
+    name: "occlusion"
+    description: "Are body parts occluded?"
+    labels:
+      - name: "no_occlusion"
+        tooltip: "All visible parts are clear"
+      - name: "partial_occlusion"
+        tooltip: "Some parts are partially hidden"
+      - name: "heavy_occlusion"
+        tooltip: "Significant occlusion"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

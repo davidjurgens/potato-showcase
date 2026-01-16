@@ -1,0 +1,97 @@
+# BigEarthNet Remote Sensing Classification Configuration
+# Based on Sumbul et al., IGARSS 2019
+
+annotation_task_name: "BigEarthNet Land Cover Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "artificial_surfaces"
+    description: "Select visible artificial surfaces"
+    labels:
+      - name: "urban_fabric"
+        tooltip: "Continuous and discontinuous urban fabric"
+      - name: "industrial"
+        tooltip: "Industrial or commercial units"
+      - name: "road_rail"
+        tooltip: "Road and rail networks"
+      - name: "port"
+        tooltip: "Port areas"
+      - name: "airport"
+        tooltip: "Airports"
+      - name: "construction"
+        tooltip: "Construction sites"
+      - name: "green_urban"
+        tooltip: "Green urban areas"
+      - name: "sport_leisure"
+        tooltip: "Sport and leisure facilities"
+
+  - annotation_type: "multiselect"
+    name: "agricultural"
+    description: "Select agricultural land types"
+    labels:
+      - name: "arable_land"
+        tooltip: "Arable land (crops)"
+      - name: "permanent_crops"
+        tooltip: "Vineyards, fruit trees, olive groves"
+      - name: "pastures"
+        tooltip: "Pastures"
+      - name: "heterogeneous"
+        tooltip: "Mixed agricultural areas"
+
+  - annotation_type: "multiselect"
+    name: "forest"
+    description: "Select forest types"
+    labels:
+      - name: "broad_leaved"
+        tooltip: "Broad-leaved forest"
+      - name: "coniferous"
+        tooltip: "Coniferous forest"
+      - name: "mixed_forest"
+        tooltip: "Mixed forest"
+
+  - annotation_type: "multiselect"
+    name: "natural"
+    description: "Select natural vegetation and open spaces"
+    labels:
+      - name: "natural_grassland"
+        tooltip: "Natural grasslands"
+      - name: "moors_heathland"
+        tooltip: "Moors and heathland"
+      - name: "sclerophyllous"
+        tooltip: "Sclerophyllous vegetation"
+      - name: "transitional_woodland"
+        tooltip: "Transitional woodland-shrub"
+      - name: "bare_rock"
+        tooltip: "Bare rocks"
+      - name: "sparsely_vegetated"
+        tooltip: "Sparsely vegetated areas"
+
+  - annotation_type: "multiselect"
+    name: "water"
+    description: "Select water bodies"
+    labels:
+      - name: "inland_waters"
+        tooltip: "Inland waters"
+      - name: "marine_waters"
+        tooltip: "Marine waters"
+      - name: "coastal_lagoons"
+        tooltip: "Coastal lagoons"
+      - name: "estuaries"
+        tooltip: "Estuaries"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

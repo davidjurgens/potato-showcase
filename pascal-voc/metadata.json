@@ -1,0 +1,23 @@
+{
+  "title": "PASCAL VOC Object Detection",
+  "description": "Bounding box object detection following the PASCAL Visual Object Classes challenge (Everingham et al., IJCV 2010). Annotate 20 object categories with axis-aligned bounding boxes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Everingham et al.",
+    "email": "jurgens@umich.edu",
+    "github": "pascal-voc",
+    "affiliation": "University of Oxford"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "radio"],
+  "domain": ["Computer Vision", "Object Detection"],
+  "useCase": ["Object Detection", "Image Classification"],
+  "complexity": "intermediate",
+  "tags": ["pascal-voc", "object-detection", "bounding-box", "ijcv2010", "benchmark"],
+  "featured": true,
+  "paperReference": "Everingham et al., IJCV 2010",
+  "paperUrl": "https://link.springer.com/article/10.1007/s11263-009-0275-4",
+  "datasetUrl": "http://host.robots.ox.ac.uk/pascal/VOC",
+  "citation": "@article{everingham2010pascal,\n    title = \"The {PASCAL} Visual Object Classes ({VOC}) Challenge\",\n    author = \"Everingham, Mark  and Van Gool, Luc  and Williams, Christopher K. I.  and Winn, John  and Zisserman, Andrew\",\n    journal = \"International Journal of Computer Vision\",\n    volume = \"88\",\n    number = \"2\",\n    pages = \"303--338\",\n    year = \"2010\",\n    publisher = \"Springer\",\n    url = \"https://link.springer.com/article/10.1007/s11263-009-0275-4\"\n}"
+}

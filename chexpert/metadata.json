@@ -1,0 +1,23 @@
+{
+  "title": "CheXpert Chest X-Ray Classification",
+  "description": "Multi-label classification of chest radiographs for 14 observations (Irvin et al., AAAI 2019). Annotate chest X-rays with pathology labels including uncertainty handling for clinical findings.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Irvin et al.",
+    "email": "jurgens@umich.edu",
+    "github": "stanfordmlgroup",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Medical Imaging", "Radiology"],
+  "useCase": ["Chest X-Ray Classification", "Medical Diagnosis", "Clinical AI"],
+  "complexity": "advanced",
+  "tags": ["chexpert", "medical", "chest-xray", "radiology", "aaai2019", "healthcare"],
+  "featured": true,
+  "paperReference": "Irvin et al., AAAI 2019",
+  "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/3834",
+  "datasetUrl": "https://stanfordmlgroup.github.io/competitions/chexpert",
+  "citation": "@inproceedings{irvin2019chexpert,\n    title = \"{CheXpert}: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison\",\n    author = \"Irvin, Jeremy  and Rajpurkar, Pranav  and Ko, Michael  and Yu, Yifan  and Ciurea-Ilcus, Silviana  and Chute, Chris  and Marklund, Henrik  and Haghgoo, Behzad  and Ball, Robyn  and Shpanskaya, Katie  and others\",\n    booktitle = \"Proceedings of the AAAI Conference on Artificial Intelligence\",\n    volume = \"33\",\n    pages = \"590--597\",\n    year = \"2019\",\n    url = \"https://ojs.aaai.org/index.php/AAAI/article/view/3834\"\n}"
+}

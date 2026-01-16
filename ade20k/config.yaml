@@ -1,0 +1,101 @@
+# ADE20K Semantic Segmentation Configuration
+# Based on Zhou et al., CVPR 2017
+
+annotation_task_name: "ADE20K Scene Parsing"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "building_elements"
+    description: "Select visible building/structure elements"
+    labels:
+      - name: "wall"
+        tooltip: "Walls"
+      - name: "floor"
+        tooltip: "Floor surfaces"
+      - name: "ceiling"
+        tooltip: "Ceilings"
+      - name: "door"
+        tooltip: "Doors"
+      - name: "window"
+        tooltip: "Windows"
+      - name: "stairs"
+        tooltip: "Stairs, steps"
+
+  - annotation_type: "multiselect"
+    name: "furniture"
+    description: "Select visible furniture"
+    labels:
+      - name: "chair"
+        tooltip: "Chairs, seats"
+      - name: "table"
+        tooltip: "Tables"
+      - name: "bed"
+        tooltip: "Beds"
+      - name: "sofa"
+        tooltip: "Sofas, couches"
+      - name: "cabinet"
+        tooltip: "Cabinets, shelves"
+      - name: "desk"
+        tooltip: "Desks"
+
+  - annotation_type: "multiselect"
+    name: "nature"
+    description: "Select visible nature elements"
+    labels:
+      - name: "tree"
+        tooltip: "Trees"
+      - name: "grass"
+        tooltip: "Grass"
+      - name: "plant"
+        tooltip: "Plants, flowers"
+      - name: "sky"
+        tooltip: "Sky"
+      - name: "water"
+        tooltip: "Water bodies"
+      - name: "mountain"
+        tooltip: "Mountains, hills"
+
+  - annotation_type: "multiselect"
+    name: "objects"
+    description: "Select visible objects"
+    labels:
+      - name: "lamp"
+        tooltip: "Lamps, lights"
+      - name: "painting"
+        tooltip: "Paintings, artwork"
+      - name: "curtain"
+        tooltip: "Curtains, drapes"
+      - name: "rug"
+        tooltip: "Rugs, carpets"
+      - name: "mirror"
+        tooltip: "Mirrors"
+      - name: "clock"
+        tooltip: "Clocks"
+
+  - annotation_type: "radio"
+    name: "scene_type"
+    description: "What type of scene is this?"
+    labels:
+      - name: "indoor"
+        tooltip: "Indoor scene"
+      - name: "outdoor"
+        tooltip: "Outdoor scene"
+      - name: "mixed"
+        tooltip: "Mixed indoor/outdoor"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

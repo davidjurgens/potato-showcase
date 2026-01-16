@@ -1,0 +1,84 @@
+# MS COCO Object Detection & Segmentation Configuration
+# Based on Lin et al., ECCV 2014
+
+annotation_task_name: "MS COCO Object Detection & Segmentation"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "object_categories"
+    description: "Select all object categories visible in the image"
+    labels:
+      - name: "person"
+        tooltip: "Human figures, any age"
+      - name: "bicycle"
+        tooltip: "Bicycles, including parts"
+      - name: "car"
+        tooltip: "Cars, sedans, coupes"
+      - name: "motorcycle"
+        tooltip: "Motorcycles, scooters"
+      - name: "airplane"
+        tooltip: "Aircraft of any type"
+      - name: "bus"
+        tooltip: "Buses, shuttles"
+      - name: "train"
+        tooltip: "Trains, trams, metros"
+      - name: "truck"
+        tooltip: "Trucks, vans, pickups"
+      - name: "boat"
+        tooltip: "Boats, ships, watercraft"
+      - name: "dog"
+        tooltip: "Dogs of any breed"
+      - name: "cat"
+        tooltip: "Cats, domestic felines"
+      - name: "horse"
+        tooltip: "Horses, ponies"
+      - name: "chair"
+        tooltip: "Chairs, seats"
+      - name: "couch"
+        tooltip: "Sofas, couches"
+      - name: "dining_table"
+        tooltip: "Tables for dining"
+      - name: "tv"
+        tooltip: "Television sets, monitors"
+      - name: "laptop"
+        tooltip: "Laptop computers"
+      - name: "cell_phone"
+        tooltip: "Mobile phones"
+      - name: "bottle"
+        tooltip: "Bottles of any kind"
+      - name: "cup"
+        tooltip: "Cups, mugs, glasses"
+
+  - annotation_type: "text"
+    name: "bounding_boxes"
+    description: "Draw bounding boxes around each object (format: category,x,y,width,height per line)"
+
+  - annotation_type: "radio"
+    name: "image_quality"
+    description: "Rate the overall image quality for annotation"
+    labels:
+      - name: "excellent"
+        tooltip: "Clear, well-lit, easy to annotate"
+      - name: "good"
+        tooltip: "Minor issues but annotatable"
+      - name: "poor"
+        tooltip: "Difficult to annotate due to quality"
+      - name: "unusable"
+        tooltip: "Cannot be reliably annotated"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

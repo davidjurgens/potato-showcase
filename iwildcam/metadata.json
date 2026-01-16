@@ -1,0 +1,23 @@
+{
+  "title": "iWildCam Wildlife Detection & Classification",
+  "description": "Camera trap image classification for wildlife monitoring (Beery et al., CVPR 2019). Classify wildlife species from camera trap images across diverse ecosystems worldwide.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Beery et al.",
+    "email": "jurgens@umich.edu",
+    "github": "microsoft",
+    "affiliation": "Microsoft AI for Earth"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "bbox"],
+  "domain": ["Computer Vision", "Wildlife Conservation"],
+  "useCase": ["Wildlife Detection", "Species Classification", "Camera Trap Analysis"],
+  "complexity": "intermediate",
+  "tags": ["iwildcam", "wildlife", "camera-trap", "conservation", "ecology", "cvpr2019"],
+  "featured": true,
+  "paperReference": "Beery et al., CVPR 2019",
+  "paperUrl": "https://arxiv.org/abs/1904.05986",
+  "datasetUrl": "https://github.com/visipedia/iwildcam_comp",
+  "citation": "@inproceedings{beery2019iwildcam,\n    title = \"The {iWildCam} 2019 Challenge Dataset\",\n    author = \"Beery, Sara  and Morris, Dan  and Yang, Siyu\",\n    booktitle = \"arXiv preprint arXiv:1904.05986\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1904.05986\"\n}"
+}

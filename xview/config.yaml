@@ -1,0 +1,90 @@
+# xView Satellite Object Detection Configuration
+# Based on Lam et al., arXiv 2018
+
+annotation_task_name: "xView Satellite Object Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "vehicles"
+    description: "Select visible vehicle types"
+    labels:
+      - name: "small_car"
+        tooltip: "Passenger vehicles"
+      - name: "bus"
+        tooltip: "Buses"
+      - name: "truck"
+        tooltip: "Trucks and cargo vehicles"
+      - name: "cargo_plane"
+        tooltip: "Cargo aircraft"
+      - name: "helicopter"
+        tooltip: "Helicopters"
+      - name: "small_aircraft"
+        tooltip: "Small planes"
+      - name: "ship"
+        tooltip: "Ships and vessels"
+      - name: "motorboat"
+        tooltip: "Motorboats"
+      - name: "train"
+        tooltip: "Trains"
+
+  - annotation_type: "multiselect"
+    name: "structures"
+    description: "Select visible structures"
+    labels:
+      - name: "building"
+        tooltip: "Buildings"
+      - name: "storage_tank"
+        tooltip: "Storage tanks"
+      - name: "shipping_container"
+        tooltip: "Shipping containers"
+      - name: "tower"
+        tooltip: "Towers, antennas"
+      - name: "helipad"
+        tooltip: "Helipads"
+      - name: "facility"
+        tooltip: "Industrial facilities"
+
+  - annotation_type: "multiselect"
+    name: "equipment"
+    description: "Select visible equipment"
+    labels:
+      - name: "crane"
+        tooltip: "Cranes"
+      - name: "construction_vehicle"
+        tooltip: "Construction vehicles"
+      - name: "agricultural_vehicle"
+        tooltip: "Farm equipment"
+      - name: "engineering_vehicle"
+        tooltip: "Engineering vehicles"
+
+  - annotation_type: "radio"
+    name: "image_quality"
+    description: "Rate the image quality"
+    labels:
+      - name: "clear"
+        tooltip: "Clear, high-resolution"
+      - name: "moderate"
+        tooltip: "Some noise or blur"
+      - name: "poor"
+        tooltip: "Significant quality issues"
+
+  - annotation_type: "text"
+    name: "bbox_list"
+    description: "List bounding boxes: class,x,y,w,h (one per line)"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

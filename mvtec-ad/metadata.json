@@ -1,0 +1,23 @@
+{
+  "title": "MVTec AD Industrial Defect Detection",
+  "description": "Anomaly detection and localization in industrial images (Bergmann et al., CVPR 2019). Detect defects across 15 object and texture categories including metal nuts, transistors, and leather.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bergmann et al.",
+    "email": "jurgens@umich.edu",
+    "github": "mvtec",
+    "affiliation": "MVTec Software GmbH"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "bbox", "polygon"],
+  "domain": ["Computer Vision", "Industrial Inspection"],
+  "useCase": ["Anomaly Detection", "Defect Detection", "Quality Control"],
+  "complexity": "intermediate",
+  "tags": ["mvtec", "anomaly-detection", "defect", "industrial", "quality-control", "cvpr2019"],
+  "featured": true,
+  "paperReference": "Bergmann et al., CVPR 2019",
+  "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html",
+  "datasetUrl": "https://www.mvtec.com/company/research/datasets/mvtec-ad",
+  "citation": "@inproceedings{bergmann2019mvtec,\n    title = \"{MVTec AD} -- A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection\",\n    author = \"Bergmann, Paul  and Fauser, Michael  and Sattlegger, David  and Steger, Carsten\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    pages = \"9592--9600\",\n    year = \"2019\",\n    url = \"https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html\"\n}"
+}

@@ -1,0 +1,84 @@
+# Open Images V6 Object Detection Configuration
+# Based on Kuznetsova et al., IJCV 2020
+
+annotation_task_name: "Open Images V6 Object Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "object_classes"
+    description: "Select all object classes visible in the image"
+    labels:
+      - name: "person"
+        tooltip: "Human figure"
+      - name: "car"
+        tooltip: "Automobile"
+      - name: "chair"
+        tooltip: "Chair or seat"
+      - name: "table"
+        tooltip: "Table or desk"
+      - name: "dog"
+        tooltip: "Dog"
+      - name: "cat"
+        tooltip: "Cat"
+      - name: "tree"
+        tooltip: "Tree"
+      - name: "building"
+        tooltip: "Building structure"
+      - name: "food"
+        tooltip: "Food items"
+      - name: "clothing"
+        tooltip: "Clothing items"
+      - name: "book"
+        tooltip: "Book"
+      - name: "phone"
+        tooltip: "Phone"
+
+  - annotation_type: "radio"
+    name: "is_occluded"
+    description: "Is the primary object occluded?"
+    labels:
+      - name: "not_occluded"
+        tooltip: "Object is fully visible"
+      - name: "partially_occluded"
+        tooltip: "Object is partially hidden"
+      - name: "heavily_occluded"
+        tooltip: "Object is mostly hidden"
+
+  - annotation_type: "radio"
+    name: "is_truncated"
+    description: "Is the object truncated by image boundary?"
+    labels:
+      - name: "not_truncated"
+        tooltip: "Object is fully within frame"
+      - name: "truncated"
+        tooltip: "Object extends beyond image"
+
+  - annotation_type: "radio"
+    name: "is_group"
+    description: "Is this a group of objects?"
+    labels:
+      - name: "single"
+        tooltip: "Single object instance"
+      - name: "group"
+        tooltip: "Group of similar objects"
+
+  - annotation_type: "text"
+    name: "visual_relationships"
+    description: "Describe visual relationships (e.g., 'person holding cup', 'dog on sofa')"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

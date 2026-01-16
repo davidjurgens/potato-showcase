@@ -1,0 +1,23 @@
+{
+  "title": "CUB-200-2011 Fine-Grained Bird Classification",
+  "description": "Fine-grained visual categorization of 200 bird species (Wah et al., 2011). Annotate bird images with species labels, part locations, and attribute annotations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wah et al.",
+    "email": "jurgens@umich.edu",
+    "github": "caltech-vision",
+    "affiliation": "Caltech"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "bbox"],
+  "domain": ["Computer Vision", "Fine-Grained Classification"],
+  "useCase": ["Bird Species Classification", "Fine-Grained Recognition", "Attribute Annotation"],
+  "complexity": "advanced",
+  "tags": ["birds", "fine-grained", "species", "attributes", "caltech", "wildlife"],
+  "featured": true,
+  "paperReference": "Wah et al., 2011",
+  "paperUrl": "https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf",
+  "datasetUrl": "https://www.vision.caltech.edu/datasets/cub_200_2011",
+  "citation": "@techreport{wah2011caltech,\n    title = \"The {Caltech-UCSD} Birds-200-2011 Dataset\",\n    author = \"Wah, Catherine  and Branson, Steve  and Welinder, Peter  and Perona, Pietro  and Belongie, Serge\",\n    institution = \"California Institute of Technology\",\n    number = \"CNS-TR-2011-001\",\n    year = \"2011\",\n    url = \"https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf\"\n}"
+}

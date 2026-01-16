@@ -1,0 +1,75 @@
+# ImageNet Image Classification Configuration
+# Based on Deng et al., CVPR 2009
+
+annotation_task_name: "ImageNet Image Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "synset_candidates"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "primary_category"
+    description: "Select the primary object category shown in the image"
+    labels:
+      - name: "dog"
+        tooltip: "Domestic dogs (n02084071)"
+      - name: "cat"
+        tooltip: "Domestic cats (n02121620)"
+      - name: "bird"
+        tooltip: "Birds (n01503061)"
+      - name: "fish"
+        tooltip: "Fish (n02512053)"
+      - name: "vehicle"
+        tooltip: "Vehicles and conveyances (n04524313)"
+      - name: "furniture"
+        tooltip: "Furniture (n03405725)"
+      - name: "food"
+        tooltip: "Food items (n07555863)"
+      - name: "plant"
+        tooltip: "Plants and flora (n00017222)"
+      - name: "building"
+        tooltip: "Buildings and structures (n02913152)"
+      - name: "person"
+        tooltip: "People (n00007846)"
+      - name: "other"
+        tooltip: "Other category not listed"
+
+  - annotation_type: "radio"
+    name: "synset_match"
+    description: "Does the image correctly represent the given synset?"
+    labels:
+      - name: "correct"
+        tooltip: "Image correctly shows the synset category"
+      - name: "incorrect"
+        tooltip: "Image does not match the synset"
+      - name: "ambiguous"
+        tooltip: "Multiple interpretations possible"
+
+  - annotation_type: "radio"
+    name: "image_quality"
+    description: "Rate the image quality for classification"
+    labels:
+      - name: "high"
+        tooltip: "Clear, centered object, good lighting"
+      - name: "medium"
+        tooltip: "Acceptable quality with minor issues"
+      - name: "low"
+        tooltip: "Poor quality, difficult to classify"
+
+  - annotation_type: "text"
+    name: "fine_grained_label"
+    description: "Provide a more specific label if known (e.g., 'golden retriever' instead of 'dog')"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>Candidate synsets: {{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

@@ -1,0 +1,83 @@
+# Places365 Scene Classification Configuration
+# Based on Zhou et al., TPAMI 2017
+
+annotation_task_name: "Places365 Scene Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "scene_category"
+    description: "Select the primary scene category"
+    labels:
+      - name: "indoor_home"
+        tooltip: "Indoor home environments (bedroom, kitchen, living room)"
+      - name: "indoor_work"
+        tooltip: "Indoor work environments (office, conference room)"
+      - name: "indoor_public"
+        tooltip: "Indoor public spaces (mall, museum, restaurant)"
+      - name: "outdoor_urban"
+        tooltip: "Outdoor urban scenes (street, plaza, parking lot)"
+      - name: "outdoor_nature"
+        tooltip: "Natural outdoor scenes (forest, beach, mountain)"
+      - name: "outdoor_sports"
+        tooltip: "Sports venues (stadium, tennis court, golf course)"
+      - name: "transportation"
+        tooltip: "Transportation scenes (airport, train station, highway)"
+      - name: "water"
+        tooltip: "Water-related scenes (ocean, lake, river)"
+
+  - annotation_type: "multiselect"
+    name: "scene_attributes"
+    description: "Select scene attributes that apply"
+    labels:
+      - name: "natural"
+        tooltip: "Scene contains natural elements"
+      - name: "man-made"
+        tooltip: "Scene contains man-made structures"
+      - name: "open"
+        tooltip: "Open, expansive space"
+      - name: "enclosed"
+        tooltip: "Enclosed or bounded space"
+      - name: "rugged"
+        tooltip: "Uneven, rough terrain"
+      - name: "smooth"
+        tooltip: "Smooth, even surfaces"
+      - name: "vegetation"
+        tooltip: "Contains plants or greenery"
+      - name: "water"
+        tooltip: "Contains water"
+      - name: "crowded"
+        tooltip: "Contains many people"
+      - name: "empty"
+        tooltip: "Few or no people"
+
+  - annotation_type: "radio"
+    name: "indoor_outdoor"
+    description: "Is this an indoor or outdoor scene?"
+    labels:
+      - name: "indoor"
+        tooltip: "Scene is indoors"
+      - name: "outdoor"
+        tooltip: "Scene is outdoors"
+      - name: "semi_outdoor"
+        tooltip: "Partially covered or transitional space"
+
+  - annotation_type: "text"
+    name: "specific_place"
+    description: "Enter a more specific place description if known"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

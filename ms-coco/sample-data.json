@@ -1,0 +1,17 @@
+[
+  {
+    "id": "coco_001",
+    "image_url": "https://images.cocodataset.org/val2017/000000397133.jpg",
+    "context": "Street scene with various objects. Identify and mark all visible objects."
+  },
+  {
+    "id": "coco_002",
+    "image_url": "https://images.cocodataset.org/val2017/000000037777.jpg",
+    "context": "Indoor scene. Identify all objects and their locations."
+  },
+  {
+    "id": "coco_003",
+    "image_url": "https://images.cocodataset.org/val2017/000000252219.jpg",
+    "context": "Outdoor scene with people and objects. Mark each instance separately."
+  }
+]

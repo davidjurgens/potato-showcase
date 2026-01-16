@@ -1,0 +1,99 @@
+# DeepFashion Fine-Grained Fashion Classification Configuration
+# Based on Liu et al., CVPR 2016
+
+annotation_task_name: "DeepFashion Clothing Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "clothing_category"
+    description: "Select the clothing category"
+    labels:
+      - name: "upper_body"
+        tooltip: "Tops, shirts, jackets"
+      - name: "lower_body"
+        tooltip: "Pants, skirts, shorts"
+      - name: "full_body"
+        tooltip: "Dresses, jumpsuits"
+      - name: "outerwear"
+        tooltip: "Coats, jackets, blazers"
+
+  - annotation_type: "multiselect"
+    name: "texture_attributes"
+    description: "Select texture attributes"
+    labels:
+      - name: "solid"
+        tooltip: "Solid color"
+      - name: "striped"
+        tooltip: "Striped pattern"
+      - name: "floral"
+        tooltip: "Floral pattern"
+      - name: "plaid"
+        tooltip: "Plaid/checkered"
+      - name: "spotted"
+        tooltip: "Polka dots or spots"
+      - name: "graphic"
+        tooltip: "Graphics or prints"
+
+  - annotation_type: "multiselect"
+    name: "style_attributes"
+    description: "Select style attributes"
+    labels:
+      - name: "casual"
+        tooltip: "Casual style"
+      - name: "formal"
+        tooltip: "Formal/business"
+      - name: "sporty"
+        tooltip: "Athletic/sporty"
+      - name: "vintage"
+        tooltip: "Vintage/retro"
+      - name: "bohemian"
+        tooltip: "Bohemian style"
+      - name: "minimalist"
+        tooltip: "Minimalist design"
+
+  - annotation_type: "multiselect"
+    name: "fabric_attributes"
+    description: "Select fabric attributes"
+    labels:
+      - name: "cotton"
+        tooltip: "Cotton fabric"
+      - name: "denim"
+        tooltip: "Denim/jeans"
+      - name: "leather"
+        tooltip: "Leather"
+      - name: "silk"
+        tooltip: "Silk or satin"
+      - name: "wool"
+        tooltip: "Wool or knit"
+      - name: "lace"
+        tooltip: "Lace"
+
+  - annotation_type: "radio"
+    name: "sleeve_length"
+    description: "Sleeve length (if applicable)"
+    labels:
+      - name: "sleeveless"
+        tooltip: "No sleeves"
+      - name: "short_sleeve"
+        tooltip: "Short sleeves"
+      - name: "long_sleeve"
+        tooltip: "Long sleeves"
+      - name: "not_applicable"
+        tooltip: "Not applicable"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

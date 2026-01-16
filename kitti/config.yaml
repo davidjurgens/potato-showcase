@@ -1,0 +1,82 @@
+# KITTI Road Object Detection Configuration
+# Based on Geiger et al., CVPR 2012
+
+annotation_task_name: "KITTI Object Detection"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "multiselect"
+    name: "object_types"
+    description: "Select all object types visible"
+    labels:
+      - name: "car"
+        tooltip: "Cars, vans"
+      - name: "van"
+        tooltip: "Vans, minivans"
+      - name: "truck"
+        tooltip: "Trucks"
+      - name: "pedestrian"
+        tooltip: "People walking"
+      - name: "person_sitting"
+        tooltip: "Person sitting"
+      - name: "cyclist"
+        tooltip: "Person on bicycle"
+      - name: "tram"
+        tooltip: "Trams, streetcars"
+      - name: "misc"
+        tooltip: "Other objects"
+      - name: "dontcare"
+        tooltip: "Regions to ignore"
+
+  - annotation_type: "radio"
+    name: "occlusion_level"
+    description: "Occlusion level of primary object"
+    labels:
+      - name: "fully_visible"
+        tooltip: "0: Fully visible"
+      - name: "partly_occluded"
+        tooltip: "1: Partly occluded"
+      - name: "largely_occluded"
+        tooltip: "2: Largely occluded"
+      - name: "unknown"
+        tooltip: "3: Unknown"
+
+  - annotation_type: "radio"
+    name: "truncation"
+    description: "Truncation level (object leaving image)"
+    labels:
+      - name: "not_truncated"
+        tooltip: "Object fully within image"
+      - name: "truncated"
+        tooltip: "Object partially outside image"
+
+  - annotation_type: "radio"
+    name: "difficulty"
+    description: "Detection difficulty"
+    labels:
+      - name: "easy"
+        tooltip: "Min height 40px, fully visible"
+      - name: "moderate"
+        tooltip: "Min height 25px, partly occluded"
+      - name: "hard"
+        tooltip: "Min height 25px, difficult to see"
+
+  - annotation_type: "text"
+    name: "bbox_coordinates"
+    description: "Bounding box: left, top, right, bottom (pixels)"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

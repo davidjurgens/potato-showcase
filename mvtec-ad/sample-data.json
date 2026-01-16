@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mvtec_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
+    "product_type": "Example industrial product. Inspect for defects such as scratches, dents, holes, or contamination."
+  },
+  {
+    "id": "mvtec_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/VW_Lupo.jpg/1200px-VW_Lupo.jpg",
+    "product_type": "Industrial component. Mark whether this is a normal (good) sample or contains defects."
+  },
+  {
+    "id": "mvtec_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Felis_silvestris_catus_lying_on_rice_straw.jpg/1200px-Felis_silvestris_catus_lying_on_rice_straw.jpg",
+    "product_type": "Product inspection image. Classify defect types and describe their locations."
+  }
+]

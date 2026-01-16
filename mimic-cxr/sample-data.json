@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mimic_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Normal_posteroanterior_%28PA%29_chest_radiograph_%28X-ray%29.jpg",
+    "report_excerpt": "PA and lateral views of the chest. Heart size normal. Lungs are clear."
+  },
+  {
+    "id": "mimic_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Chest_X-ray_of_RTI.jpg",
+    "report_excerpt": "Frontal chest radiograph. Evaluate for cardiopulmonary disease."
+  },
+  {
+    "id": "mimic_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/X-ray_chest_-_posteroanterior_view.jpg",
+    "report_excerpt": "Single frontal view of the chest. Compare to prior if available."
+  }
+]

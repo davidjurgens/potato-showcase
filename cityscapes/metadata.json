@@ -1,0 +1,23 @@
+{
+  "title": "Cityscapes Instance Segmentation",
+  "description": "Urban scene understanding with instance-level semantic labeling (Cordts et al., CVPR 2016). Annotate street scenes with pixel-level labels for 30 classes across vehicles, humans, construction, and nature.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cordts et al.",
+    "email": "jurgens@umich.edu",
+    "github": "mcordts",
+    "affiliation": "Daimler AG"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["polygon", "multiselect"],
+  "domain": ["Computer Vision", "Autonomous Driving"],
+  "useCase": ["Semantic Segmentation", "Instance Segmentation", "Urban Scene Understanding"],
+  "complexity": "advanced",
+  "tags": ["cityscapes", "segmentation", "autonomous-driving", "urban", "cvpr2016"],
+  "featured": true,
+  "paperReference": "Cordts et al., CVPR 2016",
+  "paperUrl": "https://arxiv.org/abs/1604.01685",
+  "datasetUrl": "https://www.cityscapes-dataset.com",
+  "citation": "@inproceedings{cordts2016cityscapes,\n    title = \"The {Cityscapes} Dataset for Semantic Urban Scene Understanding\",\n    author = \"Cordts, Marius  and Omran, Mohamed  and Ramos, Sebastian  and Rehfeld, Timo  and Enzweiler, Markus  and Benenson, Rodrigo  and Franke, Uwe  and Roth, Stefan  and Schiele, Bernt\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"3213--3223\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1604.01685\"\n}"
+}

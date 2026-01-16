@@ -1,0 +1,87 @@
+# CUB-200-2011 Fine-Grained Bird Classification Configuration
+# Based on Wah et al., 2011
+
+annotation_task_name: "CUB-200 Bird Species Classification"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "context"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "radio"
+    name: "bird_family"
+    description: "Select the bird family"
+    labels:
+      - name: "warbler"
+        tooltip: "Small songbirds including warblers"
+      - name: "sparrow"
+        tooltip: "Sparrows and related species"
+      - name: "vireo"
+        tooltip: "Vireos"
+      - name: "woodpecker"
+        tooltip: "Woodpeckers and related"
+      - name: "flycatcher"
+        tooltip: "Flycatchers"
+      - name: "wren"
+        tooltip: "Wrens"
+      - name: "gull"
+        tooltip: "Gulls and terns"
+      - name: "tern"
+        tooltip: "Terns"
+      - name: "blackbird"
+        tooltip: "Blackbirds and orioles"
+      - name: "other"
+        tooltip: "Other bird families"
+
+  - annotation_type: "multiselect"
+    name: "visual_attributes"
+    description: "Select visible attributes"
+    labels:
+      - name: "has_bill_shape_hooked"
+        tooltip: "Bill is hooked"
+      - name: "has_bill_shape_cone"
+        tooltip: "Bill is cone-shaped"
+      - name: "has_wing_pattern_striped"
+        tooltip: "Wings have striped pattern"
+      - name: "has_wing_pattern_solid"
+        tooltip: "Wings are solid colored"
+      - name: "has_breast_pattern_spotted"
+        tooltip: "Breast has spots"
+      - name: "has_breast_color_yellow"
+        tooltip: "Breast is yellow"
+      - name: "has_breast_color_white"
+        tooltip: "Breast is white"
+      - name: "has_crown_color_black"
+        tooltip: "Crown is black"
+      - name: "has_eye_color_red"
+        tooltip: "Eyes are red"
+      - name: "has_tail_shape_forked"
+        tooltip: "Tail is forked"
+
+  - annotation_type: "radio"
+    name: "visibility"
+    description: "How visible is the bird?"
+    labels:
+      - name: "fully_visible"
+        tooltip: "Bird is completely visible"
+      - name: "partially_occluded"
+        tooltip: "Bird is partially hidden"
+      - name: "mostly_occluded"
+        tooltip: "Most of bird is hidden"
+
+  - annotation_type: "text"
+    name: "species_name"
+    description: "Enter the specific species name if known"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

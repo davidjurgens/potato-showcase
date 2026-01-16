@@ -1,0 +1,17 @@
+[
+  {
+    "id": "xview_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/800px-Empire_State_Building_%28aerial_view%29.jpg",
+    "context": "Overhead satellite imagery. Detect all visible objects including vehicles, buildings, and equipment."
+  },
+  {
+    "id": "xview_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1200px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+    "context": "Satellite view. Mark all xView object categories visible."
+  },
+  {
+    "id": "xview_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Frankfurt_Skyline.jpg/1200px-Frankfurt_Skyline.jpg",
+    "context": "Aerial imagery. Annotate vehicles, structures, and equipment."
+  }
+]

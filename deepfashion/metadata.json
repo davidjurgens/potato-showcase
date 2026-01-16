@@ -1,0 +1,23 @@
+{
+  "title": "DeepFashion Fine-Grained Fashion Classification",
+  "description": "Large-scale fashion dataset with attribute prediction, consumer-to-shop matching, and landmark detection (Liu et al., CVPR 2016). Annotate clothing with 1000 categories and 50 attributes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Liu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "liuziwei7",
+    "affiliation": "Chinese University of Hong Kong"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "bbox"],
+  "domain": ["Computer Vision", "Fashion"],
+  "useCase": ["Fashion Classification", "Attribute Prediction", "Visual Search"],
+  "complexity": "intermediate",
+  "tags": ["deepfashion", "fashion", "clothing", "attributes", "cvpr2016"],
+  "featured": true,
+  "paperReference": "Liu et al., CVPR 2016",
+  "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2016/html/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.html",
+  "datasetUrl": "https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html",
+  "citation": "@inproceedings{liu2016deepfashion,\n    title = \"{DeepFashion}: Powering Robust Clothes Recognition and Retrieval with Rich Annotations\",\n    author = \"Liu, Ziwei  and Luo, Ping  and Qiu, Shi  and Wang, Xiaogang  and Tang, Xiaoou\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"1096--1104\",\n    year = \"2016\",\n    url = \"https://openaccess.thecvf.com/content_cvpr_2016/html/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.html\"\n}"
+}

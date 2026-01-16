@@ -1,0 +1,17 @@
+[
+  {
+    "id": "inet_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/YellowLabradorLooking_new.jpg/1200px-YellowLabradorLooking_new.jpg",
+    "synset_candidates": "dog (n02084071), Labrador retriever (n02099712), golden retriever (n02099601)"
+  },
+  {
+    "id": "inet_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg",
+    "synset_candidates": "cat (n02121620), tabby cat (n02123045), tiger cat (n02123159)"
+  },
+  {
+    "id": "inet_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG",
+    "synset_candidates": "coffee (n07930864), espresso (n07932039), cup (n03147509)"
+  }
+]

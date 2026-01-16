@@ -1,0 +1,23 @@
+{
+  "title": "xView Satellite Object Detection",
+  "description": "Large-scale overhead imagery object detection (Lam et al., arXiv 2018). Detect 60 object classes including vehicles, buildings, and infrastructure from satellite images.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lam et al.",
+    "email": "jurgens@umich.edu",
+    "github": "DIUx-xView",
+    "affiliation": "DIUx"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "multiselect"],
+  "domain": ["Remote Sensing", "Satellite Imagery"],
+  "useCase": ["Object Detection", "Satellite Analysis", "Geospatial Intelligence"],
+  "complexity": "advanced",
+  "tags": ["xview", "satellite", "overhead", "object-detection", "geospatial"],
+  "featured": true,
+  "paperReference": "Lam et al., arXiv 2018",
+  "paperUrl": "https://arxiv.org/abs/1802.07856",
+  "datasetUrl": "https://challenge.xviewdataset.org",
+  "citation": "@article{lam2018xview,\n    title = \"{xView}: Objects in Context in Overhead Imagery\",\n    author = \"Lam, Darius  and Kuzma, Richard  and McGee, Kevin  and Dooley, Samuel  and Laiber, Michael  and Ber, Matthew  and Manjunatha, Varun  and Naber, Jonathan\",\n    journal = \"arXiv preprint arXiv:1802.07856\",\n    year = \"2018\",\n    url = \"https://arxiv.org/abs/1802.07856\"\n}"
+}

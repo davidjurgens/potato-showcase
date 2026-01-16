@@ -1,0 +1,23 @@
+{
+  "title": "DocBank Document Layout Detection",
+  "description": "Document layout analysis benchmark (Li et al., COLING 2020). Detect and classify document elements including titles, abstracts, paragraphs, figures, tables, and captions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Li et al.",
+    "email": "jurgens@umich.edu",
+    "github": "doc-analysis",
+    "affiliation": "Microsoft Research Asia"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "multiselect"],
+  "domain": ["Document AI", "Layout Analysis"],
+  "useCase": ["Document Understanding", "Layout Detection", "Information Extraction"],
+  "complexity": "intermediate",
+  "tags": ["docbank", "document", "layout", "ocr", "coling2020"],
+  "featured": true,
+  "paperReference": "Li et al., COLING 2020",
+  "paperUrl": "https://aclanthology.org/2020.coling-main.476/",
+  "datasetUrl": "https://github.com/doc-analysis/DocBank",
+  "citation": "@inproceedings{li2020docbank,\n    title = \"{DocBank}: A Benchmark Dataset for Document Layout Analysis\",\n    author = \"Li, Minghao  and Xu, Yiheng  and Cui, Lei  and Huang, Shaohan  and Wei, Furu  and Li, Zhoujun  and Zhou, Ming\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    pages = \"5371--5381\",\n    year = \"2020\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.coling-main.476/\"\n}"
+}

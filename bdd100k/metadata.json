@@ -1,0 +1,23 @@
+{
+  "title": "BDD100K Autonomous Driving Segmentation",
+  "description": "Large-scale diverse driving video dataset (Yu et al., CVPR 2020). Annotate driving scenes with bounding boxes, lane markings, drivable areas, and full-frame instance segmentation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "bdd100k",
+    "affiliation": "UC Berkeley"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "polygon", "multiselect"],
+  "domain": ["Computer Vision", "Autonomous Driving"],
+  "useCase": ["Object Detection", "Lane Detection", "Drivable Area Segmentation"],
+  "complexity": "advanced",
+  "tags": ["bdd100k", "driving", "autonomous-vehicle", "segmentation", "cvpr2020"],
+  "featured": true,
+  "paperReference": "Yu et al., CVPR 2020",
+  "paperUrl": "https://arxiv.org/abs/1805.04687",
+  "datasetUrl": "https://bdd-data.berkeley.edu",
+  "citation": "@inproceedings{yu2020bdd100k,\n    title = \"{BDD100K}: A Diverse Driving Dataset for Heterogeneous Multitask Learning\",\n    author = \"Yu, Fisher  and Chen, Haofeng  and Wang, Xin  and Xian, Wenqi  and Chen, Yingying  and Liu, Fangchen  and Madhavan, Vashisht  and Darrell, Trevor\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    pages = \"2636--2645\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/1805.04687\"\n}"
+}

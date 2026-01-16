@@ -1,0 +1,23 @@
+{
+  "title": "Open Images V6 Object Detection",
+  "description": "Large-scale object detection following Open Images V6 (Kuznetsova et al., IJCV 2020). Annotate 600 object classes with bounding boxes, visual relationships, and instance segmentation masks.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kuznetsova et al.",
+    "email": "jurgens@umich.edu",
+    "github": "openimages",
+    "affiliation": "Google"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "multiselect", "radio"],
+  "domain": ["Computer Vision", "Object Detection"],
+  "useCase": ["Object Detection", "Visual Relationships", "Instance Segmentation"],
+  "complexity": "advanced",
+  "tags": ["open-images", "object-detection", "relationships", "large-scale", "ijcv2020"],
+  "featured": true,
+  "paperReference": "Kuznetsova et al., IJCV 2020",
+  "paperUrl": "https://link.springer.com/article/10.1007/s11263-020-01316-z",
+  "datasetUrl": "https://storage.googleapis.com/openimages/web/index.html",
+  "citation": "@article{kuznetsova2020open,\n    title = \"Open Images Dataset V6: A Large-Scale Dataset for Object Detection, Visual Relationship Detection, Instance Segmentation, and More\",\n    author = \"Kuznetsova, Alina  and Rom, Hassan  and Alldrin, Neil  and Uijlings, Jasper  and Krasin, Ivan  and Pont-Tuset, Jordi  and Kamali, Shahab  and Popov, Stefan  and Malloci, Matteo  and Kolesnikov, Alexander  and Duerig, Tom  and Ferrari, Vittorio\",\n    journal = \"International Journal of Computer Vision\",\n    volume = \"128\",\n    number = \"7\",\n    pages = \"1956--1981\",\n    year = \"2020\",\n    publisher = \"Springer\",\n    url = \"https://link.springer.com/article/10.1007/s11263-020-01316-z\"\n}"
+}

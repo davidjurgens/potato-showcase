@@ -1,0 +1,23 @@
+{
+  "title": "ADE20K Semantic Segmentation",
+  "description": "Comprehensive scene parsing with 150 semantic categories (Zhou et al., CVPR 2017). Annotate indoor and outdoor scenes with pixel-level labels covering objects, parts, and stuff classes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zhou et al.",
+    "email": "jurgens@umich.edu",
+    "github": "CSAILVision",
+    "affiliation": "MIT CSAIL"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["polygon", "multiselect"],
+  "domain": ["Computer Vision", "Scene Parsing"],
+  "useCase": ["Semantic Segmentation", "Scene Understanding", "Part Parsing"],
+  "complexity": "advanced",
+  "tags": ["ade20k", "segmentation", "scene-parsing", "cvpr2017", "mit"],
+  "featured": true,
+  "paperReference": "Zhou et al., CVPR 2017",
+  "paperUrl": "https://arxiv.org/abs/1608.05442",
+  "datasetUrl": "https://groups.csail.mit.edu/vision/datasets/ADE20K",
+  "citation": "@inproceedings{zhou2017scene,\n    title = \"Scene Parsing through {ADE20K} Dataset\",\n    author = \"Zhou, Bolei  and Zhao, Hang  and Puig, Xavier  and Fidler, Sanja  and Barriuso, Adela  and Torralba, Antonio\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"633--641\",\n    year = \"2017\",\n    url = \"https://arxiv.org/abs/1608.05442\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "CelebA Face Attributes Classification",
+  "description": "Large-scale face attributes dataset with 40 binary attributes (Liu et al., ICCV 2015). Annotate celebrity face images with attributes including hair color, age, gender, and facial features.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Liu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "liuziwei7",
+    "affiliation": "Chinese University of Hong Kong"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "bbox"],
+  "domain": ["Computer Vision", "Face Analysis"],
+  "useCase": ["Face Attribute Classification", "Face Detection", "Demographic Analysis"],
+  "complexity": "intermediate",
+  "tags": ["celeba", "face", "attributes", "celebrity", "iccv2015"],
+  "featured": true,
+  "paperReference": "Liu et al., ICCV 2015",
+  "paperUrl": "https://openaccess.thecvf.com/content_iccv_2015/html/Liu_Deep_Learning_Face_ICCV_2015_paper.html",
+  "datasetUrl": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
+  "citation": "@inproceedings{liu2015deep,\n    title = \"Deep Learning Face Attributes in the Wild\",\n    author = \"Liu, Ziwei  and Luo, Ping  and Wang, Xiaogang  and Tang, Xiaoou\",\n    booktitle = \"Proceedings of the IEEE International Conference on Computer Vision\",\n    pages = \"3730--3738\",\n    year = \"2015\",\n    url = \"https://openaccess.thecvf.com/content_iccv_2015/html/Liu_Deep_Learning_Face_ICCV_2015_paper.html\"\n}"
+}

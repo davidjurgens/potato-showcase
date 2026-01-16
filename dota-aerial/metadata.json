@@ -1,0 +1,23 @@
+{
+  "title": "DOTA Aerial Image Object Detection",
+  "description": "Oriented bounding box detection in aerial images (Xia et al., CVPR 2018). Detect 15 object categories with arbitrary orientations including planes, ships, vehicles, and sports facilities.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Xia et al.",
+    "email": "jurgens@umich.edu",
+    "github": "captain-whu",
+    "affiliation": "Wuhan University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bbox", "multiselect"],
+  "domain": ["Remote Sensing", "Aerial Imagery"],
+  "useCase": ["Object Detection", "Oriented Detection", "Aerial Analysis"],
+  "complexity": "advanced",
+  "tags": ["dota", "aerial", "oriented-bbox", "remote-sensing", "cvpr2018"],
+  "featured": true,
+  "paperReference": "Xia et al., CVPR 2018",
+  "paperUrl": "https://arxiv.org/abs/1711.10398",
+  "datasetUrl": "https://captain-whu.github.io/DOTA",
+  "citation": "@inproceedings{xia2018dota,\n    title = \"{DOTA}: A Large-scale Dataset for Object Detection in Aerial Images\",\n    author = \"Xia, Gui-Song  and Bai, Xiang  and Ding, Jian  and Zhu, Zhen  and Belongie, Serge  and Luo, Jiebo  and Datcu, Mihai  and Pelillo, Marcello  and Zhang, Liangpei\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"3974--3983\",\n    year = \"2018\",\n    url = \"https://arxiv.org/abs/1711.10398\"\n}"
+}

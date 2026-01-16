@@ -1,0 +1,23 @@
+{
+  "title": "Places365 Scene Classification",
+  "description": "Scene recognition and classification following the Places365 dataset (Zhou et al., TPAMI 2017). Classify images into 365 scene categories spanning indoor, outdoor, and natural environments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zhou et al.",
+    "email": "jurgens@umich.edu",
+    "github": "CSAILVision",
+    "affiliation": "MIT CSAIL"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Computer Vision", "Scene Recognition"],
+  "useCase": ["Scene Classification", "Place Recognition", "Environment Understanding"],
+  "complexity": "intermediate",
+  "tags": ["places", "scene", "classification", "indoor-outdoor", "tpami2017"],
+  "featured": true,
+  "paperReference": "Zhou et al., TPAMI 2017",
+  "paperUrl": "https://ieeexplore.ieee.org/document/7968387",
+  "datasetUrl": "http://places2.csail.mit.edu",
+  "citation": "@article{zhou2017places,\n    title = \"Places: A 10 Million Image Database for Scene Recognition\",\n    author = \"Zhou, Bolei  and Lapedriza, Agata  and Khosla, Aditya  and Oliva, Aude  and Torralba, Antonio\",\n    journal = \"IEEE Transactions on Pattern Analysis and Machine Intelligence\",\n    volume = \"40\",\n    number = \"6\",\n    pages = \"1452--1464\",\n    year = \"2017\",\n    publisher = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/7968387\"\n}"
+}

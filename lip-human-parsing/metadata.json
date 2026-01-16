@@ -1,0 +1,23 @@
+{
+  "title": "LIP Human Parsing",
+  "description": "Pixel-level human body part segmentation (Gong et al., CVPR 2017). Parse human images into 20 semantic parts including hair, face, arms, legs, and clothing items.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gong et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lemondan",
+    "affiliation": "Sun Yat-sen University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["polygon", "multiselect"],
+  "domain": ["Computer Vision", "Human Analysis"],
+  "useCase": ["Human Parsing", "Body Part Segmentation", "Fashion Analysis"],
+  "complexity": "advanced",
+  "tags": ["lip", "human-parsing", "body-parts", "segmentation", "cvpr2017"],
+  "featured": true,
+  "paperReference": "Gong et al., CVPR 2017",
+  "paperUrl": "https://arxiv.org/abs/1703.05446",
+  "datasetUrl": "http://sysu-hcp.net/lip",
+  "citation": "@inproceedings{gong2017look,\n    title = \"Look into Person: Self-supervised Structure-sensitive Learning and A New Benchmark for Human Parsing\",\n    author = \"Gong, Ke  and Liang, Xiaodan  and Zhang, Dongyu  and Shen, Xiaohui  and Lin, Liang\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"932--940\",\n    year = \"2017\",\n    url = \"https://arxiv.org/abs/1703.05446\"\n}"
+}

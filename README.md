@@ -2,7 +2,7 @@
 
 A collection of example annotation task configurations for [Potato](https://github.com/davidjurgens/potato), the lightweight annotation tool for NLP research.
 
-## Research-Based Designs (38)
+## Research-Based Designs (60)
 
 These designs are based on published academic papers and shared tasks.
 
@@ -83,6 +83,48 @@ These designs are based on published academic papers and shared tasks.
 | Design | Description | Reference | Complexity |
 |--------|-------------|-----------|------------|
 | [political-discourse](./political-discourse) | Multi-task political speech analysis | [Sermpezis et al., arXiv 2025](https://arxiv.org/abs/2501.06265) | Intermediate |
+
+### Image & Vision
+| Design | Description | Reference | Complexity |
+|--------|-------------|-----------|------------|
+| [ms-coco](./ms-coco) | Object detection & instance segmentation (80 categories) | [Lin et al., ECCV 2014](https://arxiv.org/abs/1405.0312) | Advanced |
+| [pascal-voc](./pascal-voc) | Object detection with bounding boxes (20 classes) | [Everingham et al., IJCV 2010](https://link.springer.com/article/10.1007/s11263-009-0275-4) | Intermediate |
+| [imagenet](./imagenet) | Large-scale image classification (1000+ synsets) | [Deng et al., CVPR 2009](https://ieeexplore.ieee.org/document/5206848) | Intermediate |
+| [cub-200-birds](./cub-200-birds) | Fine-grained bird species classification (200 species) | [Wah et al., 2011](https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf) | Advanced |
+| [places365](./places365) | Scene classification (365 categories) | [Zhou et al., TPAMI 2017](https://ieeexplore.ieee.org/document/7968387) | Intermediate |
+| [open-images](./open-images) | Large-scale object detection (600 classes) | [Kuznetsova et al., IJCV 2020](https://link.springer.com/article/10.1007/s11263-020-01316-z) | Advanced |
+| [cityscapes](./cityscapes) | Urban scene instance segmentation | [Cordts et al., CVPR 2016](https://arxiv.org/abs/1604.01685) | Advanced |
+| [ade20k](./ade20k) | Semantic segmentation (150 classes) | [Zhou et al., CVPR 2017](https://arxiv.org/abs/1608.05442) | Advanced |
+
+### Medical Imaging
+| Design | Description | Reference | Complexity |
+|--------|-------------|-----------|------------|
+| [chexpert](./chexpert) | Chest X-ray multi-label classification (14 observations) | [Irvin et al., AAAI 2019](https://ojs.aaai.org/index.php/AAAI/article/view/3834) | Advanced |
+| [mimic-cxr](./mimic-cxr) | Chest radiograph classification with reports | [Johnson et al., Scientific Data 2019](https://www.nature.com/articles/s41597-019-0322-0) | Advanced |
+
+### Autonomous Driving
+| Design | Description | Reference | Complexity |
+|--------|-------------|-----------|------------|
+| [kitti](./kitti) | Road object detection with 3D bounding boxes | [Geiger et al., CVPR 2012](https://ieeexplore.ieee.org/document/6248074) | Advanced |
+| [bdd100k](./bdd100k) | Diverse driving scene segmentation | [Yu et al., CVPR 2020](https://arxiv.org/abs/1805.04687) | Advanced |
+
+### Remote Sensing & Aerial
+| Design | Description | Reference | Complexity |
+|--------|-------------|-----------|------------|
+| [bigearth-net](./bigearth-net) | Sentinel-2 land cover classification (43 classes) | [Sumbul et al., IGARSS 2019](https://ieeexplore.ieee.org/document/8900532) | Intermediate |
+| [xview](./xview) | Satellite object detection (60 classes) | [Lam et al., arXiv 2018](https://arxiv.org/abs/1802.07856) | Advanced |
+| [dota-aerial](./dota-aerial) | Oriented bounding box detection in aerial images | [Xia et al., CVPR 2018](https://arxiv.org/abs/1711.10398) | Advanced |
+
+### Specialized Domains
+| Design | Description | Reference | Complexity |
+|--------|-------------|-----------|------------|
+| [mvtec-ad](./mvtec-ad) | Industrial defect detection (15 categories) | [Bergmann et al., CVPR 2019](https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html) | Intermediate |
+| [deepfashion](./deepfashion) | Fine-grained fashion classification | [Liu et al., CVPR 2016](https://openaccess.thecvf.com/content_cvpr_2016/html/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.html) | Intermediate |
+| [lip-human-parsing](./lip-human-parsing) | Human body part segmentation (20 parts) | [Gong et al., CVPR 2017](https://arxiv.org/abs/1703.05446) | Advanced |
+| [celeba](./celeba) | Face attributes classification (40 attributes) | [Liu et al., ICCV 2015](https://openaccess.thecvf.com/content_iccv_2015/html/Liu_Deep_Learning_Face_ICCV_2015_paper.html) | Intermediate |
+| [iwildcam](./iwildcam) | Wildlife camera trap classification | [Beery et al., CVPR 2019](https://arxiv.org/abs/1904.05986) | Intermediate |
+| [wikiart](./wikiart) | Artwork style and genre classification | [Saleh & Elgammal, 2015](https://arxiv.org/abs/1505.00855) | Intermediate |
+| [docbank](./docbank) | Document layout analysis | [Li et al., COLING 2020](https://aclanthology.org/2020.coling-main.476/) | Intermediate |
 
 ---
 

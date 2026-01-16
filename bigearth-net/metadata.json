@@ -1,0 +1,23 @@
+{
+  "title": "BigEarthNet Remote Sensing Classification",
+  "description": "Multi-label land cover classification from Sentinel-2 imagery (Sumbul et al., IGARSS 2019). Classify satellite patches into 43 land cover classes following the CORINE taxonomy.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sumbul et al.",
+    "email": "jurgens@umich.edu",
+    "github": "BigEarthNet",
+    "affiliation": "TU Berlin"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect"],
+  "domain": ["Remote Sensing", "Earth Observation"],
+  "useCase": ["Land Cover Classification", "Satellite Image Analysis", "Environmental Monitoring"],
+  "complexity": "intermediate",
+  "tags": ["bigearth", "satellite", "sentinel-2", "land-cover", "remote-sensing", "igarss2019"],
+  "featured": true,
+  "paperReference": "Sumbul et al., IGARSS 2019",
+  "paperUrl": "https://ieeexplore.ieee.org/document/8900532",
+  "datasetUrl": "https://bigearth.net",
+  "citation": "@inproceedings{sumbul2019bigearthnet,\n    title = \"{BigEarthNet}: A Large-Scale Benchmark Archive For Remote Sensing Image Understanding\",\n    author = \"Sumbul, Gencer  and Charfuelan, Marcela  and Demir, Beg{\\\"u}m  and Markl, Volker\",\n    booktitle = \"2019 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)\",\n    pages = \"5901--5904\",\n    year = \"2019\",\n    organization = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/8900532\"\n}"
+}
