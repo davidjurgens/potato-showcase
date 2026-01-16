@@ -1,0 +1,128 @@
+# Commonsense Inference (ATOMIC-style)
+# Based on ATOMIC (Sap et al., AAAI 2019) and ATOMIC 2020 (Hwang et al.)
+# Paper: https://arxiv.org/abs/2010.05953
+#
+# ATOMIC captures inferential knowledge as if-then relations.
+# Given an event, annotators provide commonsense inferences about
+# mental states, causes, effects, and attributes.
+#
+# Inference Dimensions:
+# - xIntent: Why did PersonX do this? (motivation/intent)
+# - xNeed: What did PersonX need to do before this?
+# - xWant: What will PersonX want to do after?
+# - xEffect: What effect does this have on PersonX?
+# - xReact: How does PersonX feel after?
+# - oReact: How do others feel about this?
+# - oWant: What will others want to do after?
+# - oEffect: What effect does this have on others?
+# - xAttr: How would PersonX be described? (attribute)
+#
+# Annotation Guidelines:
+# 1. Read the event carefully
+# 2. For each dimension, provide plausible inferences
+# 3. "none" is acceptable if no inference applies
+# 4. Be specific - "happy" is less useful than "relieved"
+# 5. Consider typical/common scenarios, not edge cases
+# 6. Multiple valid inferences may exist for each dimension
+
+port: 8000
+server_name: localhost
+task_name: "Commonsense Inference"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: event
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: PersonX's intent
+  - annotation_type: radio
+    name: xIntent
+    description: "Why did PersonX do this? What was their motivation?"
+    labels:
+      - "To be helpful"
+      - "To achieve a goal"
+      - "To express emotions"
+      - "To fulfill an obligation"
+      - "To satisfy a need"
+      - "For enjoyment"
+      - "Other/unclear"
+    tooltips:
+      "To be helpful": "PersonX wanted to help someone or make things easier"
+      "To achieve a goal": "PersonX wanted to accomplish something specific"
+      "To express emotions": "PersonX wanted to show how they feel"
+      "To fulfill an obligation": "PersonX had to do this (duty, promise, expectation)"
+      "To satisfy a need": "PersonX needed something (hunger, comfort, etc.)"
+      "For enjoyment": "PersonX did this for fun or pleasure"
+      "Other/unclear": "The motivation doesn't fit other categories or is unclear"
+
+  # Step 2: PersonX's reaction
+  - annotation_type: radio
+    name: xReact
+    description: "How does PersonX feel as a result of this event?"
+    labels:
+      - "Happy/satisfied"
+      - "Relieved"
+      - "Proud"
+      - "Anxious/worried"
+      - "Tired/exhausted"
+      - "Frustrated"
+      - "Neutral"
+    tooltips:
+      "Happy/satisfied": "PersonX feels good about what happened"
+      "Relieved": "PersonX feels relief that something is done/resolved"
+      "Proud": "PersonX feels accomplished"
+      "Anxious/worried": "PersonX feels nervous or concerned"
+      "Tired/exhausted": "PersonX feels drained of energy"
+      "Frustrated": "PersonX feels annoyed or disappointed"
+      "Neutral": "No strong emotional reaction"
+
+  # Step 3: Others' reaction
+  - annotation_type: radio
+    name: oReact
+    description: "How do OTHER people (not PersonX) feel about this?"
+    labels:
+      - "Grateful/appreciative"
+      - "Happy for PersonX"
+      - "Impressed"
+      - "Indifferent"
+      - "Annoyed"
+      - "Concerned"
+      - "Other"
+    tooltips:
+      "Grateful/appreciative": "Others are thankful for what PersonX did"
+      "Happy for PersonX": "Others feel joy on PersonX's behalf"
+      "Impressed": "Others admire what PersonX did"
+      "Indifferent": "Others don't have strong feelings about it"
+      "Annoyed": "Others are bothered by what PersonX did"
+      "Concerned": "Others are worried about PersonX or the situation"
+      "Other": "Other reaction not listed"
+
+  # Step 4: What PersonX wants next
+  - annotation_type: radio
+    name: xWant
+    description: "What will PersonX likely want to do next?"
+    labels:
+      - "Relax/rest"
+      - "Continue with related activity"
+      - "Celebrate/reward themselves"
+      - "Move on to something else"
+      - "Get feedback/validation"
+      - "Fix a problem"
+      - "Nothing specific"
+    tooltips:
+      "Relax/rest": "PersonX wants to take a break"
+      "Continue with related activity": "PersonX wants to keep doing similar things"
+      "Celebrate/reward themselves": "PersonX wants to enjoy their success"
+      "Move on to something else": "PersonX wants to do something different"
+      "Get feedback/validation": "PersonX wants others' opinions or approval"
+      "Fix a problem": "PersonX needs to address an issue"
+      "Nothing specific": "No clear next desire"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

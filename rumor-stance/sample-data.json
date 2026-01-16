@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rum_001",
+    "rumor": "Breaking: Major earthquake reported in Los Angeles, buildings collapsing across the city.",
+    "reply": "My cousin lives there and says everything is fine. This is fake news."
+  },
+  {
+    "id": "rum_002",
+    "rumor": "Breaking: Major earthquake reported in Los Angeles, buildings collapsing across the city.",
+    "reply": "OMG I hope everyone is okay! Sharing this so people can stay safe."
+  },
+  {
+    "id": "rum_003",
+    "rumor": "Breaking: Major earthquake reported in Los Angeles, buildings collapsing across the city.",
+    "reply": "Has anyone verified this? I can't find any news coverage of it."
+  },
+  {
+    "id": "rum_004",
+    "rumor": "Breaking: Major earthquake reported in Los Angeles, buildings collapsing across the city.",
+    "reply": "California really needs to invest more in earthquake preparedness."
+  },
+  {
+    "id": "rum_005",
+    "rumor": "Celebrity X has been arrested for tax fraud according to inside sources.",
+    "reply": "Not surprised at all. I always knew something was off about them."
+  },
+  {
+    "id": "rum_006",
+    "rumor": "Celebrity X has been arrested for tax fraud according to inside sources.",
+    "reply": "This is completely false. Their publicist just confirmed they're on vacation."
+  },
+  {
+    "id": "rum_007",
+    "rumor": "Celebrity X has been arrested for tax fraud according to inside sources.",
+    "reply": "Source? I don't see this anywhere on reliable news sites."
+  },
+  {
+    "id": "rum_008",
+    "rumor": "New study shows coffee causes cancer, scientists warn.",
+    "reply": "Here's the actual study - it says no such thing. Classic misrepresentation."
+  },
+  {
+    "id": "rum_009",
+    "rumor": "New study shows coffee causes cancer, scientists warn.",
+    "reply": "First they say it's bad, then good, then bad again. Make up your minds!"
+  },
+  {
+    "id": "rum_010",
+    "rumor": "New study shows coffee causes cancer, scientists warn.",
+    "reply": "I just read about this. Time to switch to tea I guess."
+  }
+]

@@ -1,0 +1,110 @@
+# Deceptive Review Detection
+# Based on Ott et al., ACL 2011
+# Paper: https://aclanthology.org/P11-1032/
+#
+# This task distinguishes truthful reviews (genuine experiences)
+# from deceptive reviews (fake, written to mislead).
+#
+# Key Findings from Research:
+# - Humans perform at chance level (50%) at detecting fake reviews
+# - Deceptive reviews contain more verbs, adverbs, pronouns
+# - Truthful reviews contain more nouns, adjectives, details
+# - Fake reviews often set the scene (vacation, business trip)
+# - Truthful reviews focus on specific hotel features
+#
+# Linguistic Patterns:
+# Truthful reviews tend to be:
+# - More specific about features (room, bathroom, bed)
+# - More concrete and detailed
+# - More nouns and spatial information
+#
+# Deceptive reviews tend to:
+# - Use more superlatives and exaggeration
+# - Focus on why the reviewer was there
+# - Be more narrative/story-like
+# - Use more first-person pronouns
+#
+# Annotation Guidelines:
+# 1. Read the full review carefully
+# 2. Look for specificity vs vagueness
+# 3. Consider: Does this feel like lived experience?
+# 4. Watch for excessive praise or generic descriptions
+# 5. Note: This is difficult - humans struggle at this task
+
+port: 8000
+server_name: localhost
+task_name: "Deceptive Review Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: review
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Authenticity classification
+  - annotation_type: radio
+    name: authenticity
+    description: "Is this review truthful or deceptive?"
+    labels:
+      - "Truthful"
+      - "Deceptive"
+      - "Uncertain"
+    tooltips:
+      "Truthful": "The review appears to describe a genuine experience"
+      "Deceptive": "The review appears to be fake or fabricated"
+      "Uncertain": "Cannot determine with reasonable confidence"
+
+  # Step 2: Deception indicators (if applicable)
+  - annotation_type: multiselect
+    name: indicators
+    description: "Which indicators influenced your judgment? (Select all that apply)"
+    labels:
+      - "Too generic/vague"
+      - "Excessive superlatives"
+      - "Narrative/story-like"
+      - "Lacks specific details"
+      - "Focuses on reviewer not product"
+      - "Specific concrete details"
+      - "Mentions negatives honestly"
+      - "Balanced perspective"
+    label_colors:
+      "Too generic/vague": "#ef4444"
+      "Excessive superlatives": "#f97316"
+      "Narrative/story-like": "#eab308"
+      "Lacks specific details": "#f59e0b"
+      "Focuses on reviewer not product": "#dc2626"
+      "Specific concrete details": "#22c55e"
+      "Mentions negatives honestly": "#10b981"
+      "Balanced perspective": "#14b8a6"
+    tooltips:
+      "Too generic/vague": "Could apply to any hotel, lacks specificity"
+      "Excessive superlatives": "Too many 'best', 'amazing', 'perfect' claims"
+      "Narrative/story-like": "Focuses on the story of their trip rather than the hotel"
+      "Lacks specific details": "No mention of specific rooms, features, or experiences"
+      "Focuses on reviewer not product": "More about why they traveled than the hotel itself"
+      "Specific concrete details": "Mentions specific features, room numbers, staff names"
+      "Mentions negatives honestly": "Acknowledges some downsides or imperfections"
+      "Balanced perspective": "Neither overly positive nor negative"
+    min_selections: 0
+    max_selections: 8
+
+  # Step 3: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your classification?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Just guessing"
+      2: "Slightly confident"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

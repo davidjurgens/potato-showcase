@@ -1,0 +1,102 @@
+# Moral Stories Annotation
+# Based on Emelin et al., EMNLP 2021
+# Paper: https://aclanthology.org/2021.emnlp-main.54/
+# Dataset: https://huggingface.co/datasets/demelin/moral_stories
+#
+# Moral Stories contains structured narratives for moral reasoning.
+# Each story has seven components:
+# 1. Norm: A social guideline (e.g., "It's good to help others")
+# 2. Situation: The context and setting
+# 3. Intention: What the actor wants to achieve
+# 4. Moral action: An action that follows the norm
+# 5. Moral consequence: Positive outcome of moral action
+# 6. Immoral action: An action that violates the norm
+# 7. Immoral consequence: Negative outcome of immoral action
+#
+# Annotation Guidelines:
+# 1. Consider the NORM as the ethical standard
+# 2. Evaluate actions against this norm
+# 3. A moral action achieves the intention while respecting the norm
+# 4. An immoral action achieves the intention but violates the norm
+# 5. Consider both intent and method when evaluating
+#
+# Key Questions:
+# - Does the action respect the stated norm?
+# - Would most people consider this action acceptable?
+# - Does the actor consider others' well-being?
+
+port: 8000
+server_name: localhost
+task_name: "Moral Stories Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: scenario
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Action classification
+  - annotation_type: radio
+    name: action_morality
+    description: "Does the described ACTION adhere to or violate the NORM?"
+    labels:
+      - "Moral (follows norm)"
+      - "Immoral (violates norm)"
+      - "Neutral/unclear"
+    tooltips:
+      "Moral (follows norm)": "The action achieves the goal while respecting the ethical norm"
+      "Immoral (violates norm)": "The action achieves the goal but violates the ethical norm"
+      "Neutral/unclear": "The action's morality is ambiguous or doesn't clearly relate to the norm"
+
+  # Step 2: Consequence prediction
+  - annotation_type: radio
+    name: likely_consequence
+    description: "What is the likely consequence of this action?"
+    labels:
+      - "Positive for all"
+      - "Positive for actor, negative for others"
+      - "Negative for actor"
+      - "Negative for all"
+      - "Neutral/mixed"
+    tooltips:
+      "Positive for all": "The action benefits everyone involved"
+      "Positive for actor, negative for others": "The actor gains but others suffer"
+      "Negative for actor": "The action backfires on the actor"
+      "Negative for all": "Everyone is worse off"
+      "Neutral/mixed": "Consequences are mixed or unclear"
+
+  # Step 3: Norm applicability
+  - annotation_type: radio
+    name: norm_applicability
+    description: "How applicable is the stated norm to this situation?"
+    labels:
+      - "Highly applicable"
+      - "Somewhat applicable"
+      - "Not very applicable"
+      - "Not applicable"
+    tooltips:
+      "Highly applicable": "The norm directly addresses this situation"
+      "Somewhat applicable": "The norm is relevant but not perfectly matched"
+      "Not very applicable": "The norm only loosely relates to the situation"
+      "Not applicable": "The norm doesn't really apply here"
+
+  # Step 4: Agreement with norm
+  - annotation_type: likert
+    name: norm_agreement
+    description: "Do you personally agree that this norm is a good ethical guideline?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Strongly disagree"
+      2: "Disagree"
+      3: "Neutral"
+      4: "Agree"
+      5: "Strongly agree"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

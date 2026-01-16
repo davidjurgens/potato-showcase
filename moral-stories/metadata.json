@@ -1,0 +1,22 @@
+{
+  "title": "Moral Stories Annotation",
+  "description": "Annotate moral reasoning in situated narratives. Based on Emelin et al., EMNLP 2021. Evaluate whether actions adhere to or diverge from social norms given situations and intentions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Emelin et al.",
+    "email": "jurgens@umich.edu",
+    "github": "demelin",
+    "affiliation": "ETH Zurich"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Ethics", "Commonsense"],
+  "useCase": ["Moral Reasoning", "Ethics AI", "Value Alignment"],
+  "complexity": "intermediate",
+  "tags": ["moral", "ethics", "norms", "emnlp2021", "commonsense", "values"],
+  "featured": true,
+  "paperReference": "Emelin et al., EMNLP 2021",
+  "paperUrl": "https://aclanthology.org/2021.emnlp-main.54/",
+  "datasetUrl": "https://huggingface.co/datasets/demelin/moral_stories"
+}

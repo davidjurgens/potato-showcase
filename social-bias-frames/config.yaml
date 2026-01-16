@@ -1,0 +1,119 @@
+# Social Bias Frames (SBIC)
+# Based on Sap et al., ACL 2020
+# Paper: https://aclanthology.org/2020.acl-main.409/
+# Dataset: https://maartensap.com/social-bias-frames/
+#
+# Social Bias Frames capture multiple dimensions of biased language:
+# 1. Offensiveness: Is the post offensive?
+# 2. Intent: Was the speaker trying to be offensive?
+# 3. Lewdness: Is it sexual or lewd?
+# 4. Group implication: Does it imply something about a group?
+# 5. Targeted group: Which group is targeted?
+# 6. Implied statement: What stereotype is implied?
+#
+# Annotation Guidelines:
+# 1. Consider the post in isolation (not broader context)
+# 2. Offensiveness is about potential to offend, not your personal reaction
+# 3. Intent considers whether offense seems deliberate
+# 4. Group implications apply when stereotypes about demographics are implied
+# 5. Targeted groups should be specific (e.g., "Black women" not just "women")
+# 6. Implied statements should be written as generalizations
+#
+# Key Distinctions:
+# - A post can be offensive without intent (ignorance)
+# - A post can have intent without being offensive (failed joke)
+# - Group implications require stereotyping, not just mentioning groups
+
+port: 8000
+server_name: localhost
+task_name: "Social Bias Frames"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Offensiveness
+  - annotation_type: radio
+    name: offensive
+    description: "Could this post be considered offensive to anyone?"
+    labels:
+      - "Yes, offensive"
+      - "Maybe offensive"
+      - "Not offensive"
+    tooltips:
+      "Yes, offensive": "The post would likely offend members of some group"
+      "Maybe offensive": "The post could be seen as offensive by some people"
+      "Not offensive": "The post is unlikely to offend anyone"
+
+  # Step 2: Intent
+  - annotation_type: radio
+    name: intent
+    description: "Was the intent of the post to be offensive or hurtful?"
+    labels:
+      - "Intentionally offensive"
+      - "Possibly intentional"
+      - "Not intentional"
+      - "Can't tell"
+    tooltips:
+      "Intentionally offensive": "The speaker clearly meant to offend or demean"
+      "Possibly intentional": "The offense might have been deliberate"
+      "Not intentional": "The speaker likely didn't mean to offend (ignorance, poor wording)"
+      "Can't tell": "Intent is unclear from the post"
+
+  # Step 3: Lewdness
+  - annotation_type: radio
+    name: lewd
+    description: "Is the post lewd or sexual in nature?"
+    labels:
+      - "Yes"
+      - "Somewhat"
+      - "No"
+    tooltips:
+      "Yes": "The post is explicitly sexual or lewd"
+      "Somewhat": "The post has sexual undertones or innuendo"
+      "No": "The post is not sexual"
+
+  # Step 4: Group implication
+  - annotation_type: radio
+    name: group_implication
+    description: "Does the post imply something negative about a group of people?"
+    labels:
+      - "Yes, implies stereotype"
+      - "Mentions group but no stereotype"
+      - "No group mentioned"
+    tooltips:
+      "Yes, implies stereotype": "The post implies a generalization or stereotype about a demographic group"
+      "Mentions group but no stereotype": "A group is mentioned but no stereotype is implied"
+      "No group mentioned": "No demographic group is referenced"
+
+  # Step 5: Target group (if applicable)
+  - annotation_type: multiselect
+    name: target_group
+    description: "Which group(s) are targeted? (Select all that apply)"
+    labels:
+      - "Women"
+      - "Men"
+      - "Black people"
+      - "Asian people"
+      - "Hispanic/Latino people"
+      - "White people"
+      - "LGBTQ+ people"
+      - "Muslims"
+      - "Jewish people"
+      - "Immigrants"
+      - "Disabled people"
+      - "Elderly people"
+      - "Poor/working class"
+      - "Other group"
+    min_selections: 0
+    max_selections: 14
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

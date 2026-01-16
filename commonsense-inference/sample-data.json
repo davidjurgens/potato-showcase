@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cs_001",
+    "event": "PersonX gives PersonY a gift"
+  },
+  {
+    "id": "cs_002",
+    "event": "PersonX finishes a marathon"
+  },
+  {
+    "id": "cs_003",
+    "event": "PersonX apologizes to PersonY"
+  },
+  {
+    "id": "cs_004",
+    "event": "PersonX cooks dinner for the family"
+  },
+  {
+    "id": "cs_005",
+    "event": "PersonX fails an important exam"
+  },
+  {
+    "id": "cs_006",
+    "event": "PersonX helps a stranger with directions"
+  },
+  {
+    "id": "cs_007",
+    "event": "PersonX gets promoted at work"
+  },
+  {
+    "id": "cs_008",
+    "event": "PersonX breaks PersonY's favorite mug"
+  },
+  {
+    "id": "cs_009",
+    "event": "PersonX learns a new language"
+  },
+  {
+    "id": "cs_010",
+    "event": "PersonX cancels plans with friends"
+  }
+]

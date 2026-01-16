@@ -1,0 +1,22 @@
+{
+  "title": "Commonsense Inference (ATOMIC-style)",
+  "description": "Annotate commonsense inferences about events, mental states, and social interactions. Based on ATOMIC (Sap et al.). Generate if-then knowledge about causes, effects, intents, and reactions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sap et al.",
+    "email": "jurgens@umich.edu",
+    "github": "allenai",
+    "affiliation": "Allen Institute for AI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Commonsense", "Knowledge Graphs"],
+  "useCase": ["Commonsense Reasoning", "Knowledge Base Construction", "QA"],
+  "complexity": "intermediate",
+  "tags": ["commonsense", "atomic", "knowledge-graph", "mental-states", "inference"],
+  "featured": false,
+  "paperReference": "Sap et al., AAAI 2019 / Hwang et al., AAAI 2021",
+  "paperUrl": "https://arxiv.org/abs/2010.05953",
+  "datasetUrl": "https://allenai.org/data/atomic-2020"
+}

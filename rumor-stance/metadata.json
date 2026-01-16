@@ -1,0 +1,21 @@
+{
+  "title": "Rumor Stance Detection (PHEME)",
+  "description": "Classify stance toward rumors in social media threads. Based on PHEME (Zubiaga et al.). Label replies as supporting, denying, querying, or commenting on rumorous claims.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zubiaga et al.",
+    "email": "jurgens@umich.edu",
+    "affiliation": "University of Warwick"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Social Media", "Misinformation"],
+  "useCase": ["Rumor Detection", "Fact Checking", "Misinformation Detection"],
+  "complexity": "intermediate",
+  "tags": ["rumor", "stance", "social-media", "pheme", "misinformation", "twitter"],
+  "featured": false,
+  "paperReference": "Zubiaga et al., EMNLP 2018",
+  "paperUrl": "https://aclanthology.org/D18-1401/",
+  "datasetUrl": "https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078"
+}
