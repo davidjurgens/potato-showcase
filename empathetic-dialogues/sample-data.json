@@ -1,0 +1,42 @@
+[
+  {
+    "id": "emp_001",
+    "dialogue": "Speaker: I just found out I got the scholarship I applied for! I've been working so hard for this.\nResponse: That's amazing news! You must be so proud of yourself. All that hard work really paid off!"
+  },
+  {
+    "id": "emp_002",
+    "dialogue": "Speaker: My dog passed away yesterday. We had her for 14 years.\nResponse: I'm so sorry for your loss. Losing a pet is incredibly hard - they really become part of the family."
+  },
+  {
+    "id": "emp_003",
+    "dialogue": "Speaker: I have a big presentation tomorrow and I can't stop worrying about it.\nResponse: That sounds stressful. What part of it are you most worried about?"
+  },
+  {
+    "id": "emp_004",
+    "dialogue": "Speaker: I just got back from visiting my childhood home. So many memories came flooding back.\nResponse: Cool. So what else is new?"
+  },
+  {
+    "id": "emp_005",
+    "dialogue": "Speaker: My coworker took credit for my project in front of the whole team.\nResponse: That's really frustrating and unfair. Have you had a chance to talk to your manager about it?"
+  },
+  {
+    "id": "emp_006",
+    "dialogue": "Speaker: I'm the only one of my friends who didn't get invited to the party.\nResponse: That must feel really hurtful to be left out like that. I'm sorry you're going through this."
+  },
+  {
+    "id": "emp_007",
+    "dialogue": "Speaker: I tripped and fell in front of everyone at the company meeting today.\nResponse: Oh no, that sounds embarrassing! Are you okay though? Everyone trips sometimes."
+  },
+  {
+    "id": "emp_008",
+    "dialogue": "Speaker: I'm really nervous about my first day at the new job tomorrow.\nResponse: Don't worry about it. You'll be fine."
+  },
+  {
+    "id": "emp_009",
+    "dialogue": "Speaker: My sister just had a baby! I'm an aunt for the first time!\nResponse: Congratulations! That's so exciting! Do you have any pictures?"
+  },
+  {
+    "id": "emp_010",
+    "dialogue": "Speaker: I studied all week for this exam and still failed.\nResponse: That's so disappointing, especially after all that effort. What do you think went wrong?"
+  }
+]

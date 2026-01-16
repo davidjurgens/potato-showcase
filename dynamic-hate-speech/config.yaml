@@ -1,0 +1,117 @@
+# Dynamic Hate Speech Detection
+# Based on Vidgen et al., ACL 2021
+# Paper: https://aclanthology.org/2021.acl-long.132/
+# Dataset: https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset
+#
+# This task uses a hierarchical annotation scheme:
+# 1. Binary classification: Hate vs Not Hate
+# 2. Hate type (if hateful): 5 categories
+# 3. Target group identification
+#
+# Hate Type Definitions:
+# - Animosity: Expression of negative feelings, hostility, or opposition
+# - Derogation: Insulting, demeaning, or belittling language
+# - Dehumanization: Comparing groups to animals, diseases, or subhuman entities
+# - Threatening: Direct or implicit threats of violence or harm
+# - Support for Hateful Entities: Praising hateful groups, symbols, or ideologies
+#
+# Annotation Guidelines:
+# 1. Consider the overall message and intent
+# 2. Slurs alone may not be hateful (reclaimed language, discussion)
+# 3. Criticism of ideas/behaviors differs from attacks on identity groups
+# 4. Context matters - sarcasm, quotes, and counter-speech should be considered
+# 5. When uncertain, consider how a member of the target group would perceive it
+
+port: 8000
+server_name: localhost
+task_name: "Hate Speech Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Binary hate classification
+  - annotation_type: radio
+    name: is_hateful
+    description: "Is this content hateful?"
+    labels:
+      - "Hate"
+      - "Not Hate"
+    tooltips:
+      "Hate": "Content that attacks, demeans, or threatens individuals or groups based on protected characteristics"
+      "Not Hate": "Content that is not hateful, including legitimate criticism, counter-speech, or neutral discussion"
+
+  # Step 2: Hate type classification (if hateful)
+  - annotation_type: radio
+    name: hate_type
+    description: "What type of hate is expressed? (Select the primary type)"
+    labels:
+      - "Animosity"
+      - "Derogation"
+      - "Dehumanization"
+      - "Threatening"
+      - "Support for Hateful Entities"
+    tooltips:
+      "Animosity": "Expression of negative feelings, hostility, antipathy, or opposition toward a group"
+      "Derogation": "Insulting, demeaning, belittling, or degrading language about a group"
+      "Dehumanization": "Comparing a group to animals, vermin, diseases, or subhuman entities"
+      "Threatening": "Direct or implicit threats of violence, harm, or calls for exclusion/extermination"
+      "Support for Hateful Entities": "Praising, supporting, or glorifying hateful groups, symbols, figures, or ideologies"
+
+  # Step 3: Target group identification
+  - annotation_type: multiselect
+    name: target_groups
+    description: "Which groups are targeted? (Select all that apply)"
+    labels:
+      - "Black people"
+      - "Asian people"
+      - "Hispanic/Latino people"
+      - "Arab/Middle Eastern people"
+      - "Indigenous people"
+      - "Jewish people"
+      - "Muslims"
+      - "Women"
+      - "LGBTQ+ people"
+      - "Trans people"
+      - "People with disabilities"
+      - "Immigrants/Refugees"
+      - "Other group"
+    label_colors:
+      "Black people": "#3b82f6"
+      "Asian people": "#06b6d4"
+      "Hispanic/Latino people": "#8b5cf6"
+      "Arab/Middle Eastern people": "#f59e0b"
+      "Indigenous people": "#22c55e"
+      "Jewish people": "#6366f1"
+      "Muslims": "#14b8a6"
+      "Women": "#ec4899"
+      "LGBTQ+ people": "#a855f7"
+      "Trans people": "#d946ef"
+      "People with disabilities": "#f97316"
+      "Immigrants/Refugees": "#0ea5e9"
+      "Other group": "#9ca3af"
+    min_selections: 0
+    max_selections: 13
+
+  # Step 4: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your annotation?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

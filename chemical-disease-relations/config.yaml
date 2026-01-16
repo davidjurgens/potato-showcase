@@ -1,0 +1,95 @@
+# Chemical-Disease Relation Extraction (BC5CDR)
+# Based on BioCreative V CDR Task
+# Guidelines: https://biocreative.bioinformatics.udel.edu/
+#
+# This task identifies chemical-induced disease (CID) relations from
+# biomedical abstracts. A CID relation exists when a chemical is
+# reported to cause or induce a disease.
+#
+# Entity Definitions:
+# - Chemical: Drugs, small molecules, elements, chemical compounds
+# - Disease: Diseases, disorders, symptoms, adverse effects
+#
+# Relation Types:
+# - CID (Chemical-Induced Disease): The chemical causes or induces the disease
+# - No Relation: Entities are mentioned but no causal relationship
+#
+# Annotation Guidelines:
+# 1. First identify all chemical and disease mentions
+# 2. For each chemical-disease pair, determine if a CID relation exists
+# 3. CID requires evidence of causation (not just co-occurrence)
+# 4. Include: adverse effects, side effects, toxicity
+# 5. Exclude: treatments (chemical treats disease), preventions
+# 6. Hypothetical or negated relations should not be annotated
+#
+# Evidence Patterns for CID:
+# - "X causes Y", "X-induced Y", "X leads to Y"
+# - "Side effects of X include Y"
+# - "Y was observed in patients taking X"
+
+port: 8000
+server_name: localhost
+task_name: "Chemical-Disease Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Mark chemical entities
+  - annotation_type: span
+    name: chemicals
+    description: "Highlight all CHEMICAL mentions (drugs, compounds, elements)"
+    labels:
+      - "Chemical"
+    label_colors:
+      "Chemical": "#3b82f6"
+    tooltips:
+      "Chemical": "Drugs, medications, chemical compounds, elements, or small molecules"
+    allow_overlapping: false
+
+  # Step 2: Mark disease entities
+  - annotation_type: span
+    name: diseases
+    description: "Highlight all DISEASE mentions (diseases, disorders, symptoms, adverse effects)"
+    labels:
+      - "Disease"
+    label_colors:
+      "Disease": "#ef4444"
+    tooltips:
+      "Disease": "Diseases, disorders, medical conditions, symptoms, or adverse effects"
+    allow_overlapping: false
+
+  # Step 3: Identify CID relations
+  - annotation_type: radio
+    name: cid_relation
+    description: "Is there a Chemical-Induced Disease (CID) relation in this text?"
+    labels:
+      - "Yes - CID relation present"
+      - "No - No causal relation"
+      - "Uncertain"
+    tooltips:
+      "Yes - CID relation present": "The text states or implies that a chemical causes/induces a disease"
+      "No - No causal relation": "Chemicals and diseases are mentioned but no causation is stated"
+      "Uncertain": "The relationship is ambiguous or hypothetical"
+
+  # Step 4: Relation evidence
+  - annotation_type: span
+    name: evidence
+    description: "Highlight the text that indicates the CID relationship (if present)"
+    labels:
+      - "CID Evidence"
+    label_colors:
+      "CID Evidence": "#22c55e"
+    tooltips:
+      "CID Evidence": "Words or phrases that indicate the chemical causes the disease"
+    allow_overlapping: true
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

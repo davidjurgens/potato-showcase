@@ -1,0 +1,52 @@
+[
+  {
+    "id": "stance_001",
+    "topic": "Universal Basic Income",
+    "text": "UBI would give everyone financial security and the freedom to pursue meaningful work. It's time to modernize our social safety net for the 21st century economy."
+  },
+  {
+    "id": "stance_002",
+    "topic": "Universal Basic Income",
+    "text": "Giving people free money would destroy the incentive to work. UBI is just socialism dressed up in a new package."
+  },
+  {
+    "id": "stance_003",
+    "topic": "Universal Basic Income",
+    "text": "Several pilot programs have tested UBI in different countries. Finland ran a two-year experiment, while Kenya has an ongoing study. Results have been mixed."
+  },
+  {
+    "id": "stance_004",
+    "topic": "Renewable Energy Transition",
+    "text": "Solar and wind power are now cheaper than coal. The transition to clean energy is inevitable and will create millions of jobs while saving the planet."
+  },
+  {
+    "id": "stance_005",
+    "topic": "Renewable Energy Transition",
+    "text": "Rushing to abandon fossil fuels will destroy our economy. We need a balanced approach that doesn't sacrifice reliability for green fantasies."
+  },
+  {
+    "id": "stance_006",
+    "topic": "Social Media Regulation",
+    "text": "Big Tech companies have too much power over public discourse. We need regulations to protect free speech and prevent censorship."
+  },
+  {
+    "id": "stance_007",
+    "topic": "Social Media Regulation",
+    "text": "Government regulation of social media would be the real threat to free speech. Private companies should be free to moderate their platforms."
+  },
+  {
+    "id": "stance_008",
+    "topic": "Remote Work",
+    "text": "The debate about remote work continues as companies announce various policies. Some have gone fully remote, while others require office attendance."
+  },
+  {
+    "id": "stance_009",
+    "topic": "Artificial Intelligence in Healthcare",
+    "text": "AI can detect diseases earlier and more accurately than human doctors. We should embrace this technology to save lives and reduce healthcare costs."
+  },
+  {
+    "id": "stance_010",
+    "topic": "Artificial Intelligence in Healthcare",
+    "text": "Replacing human judgment with algorithms in healthcare is dangerous. AI systems can be biased and make mistakes that cost lives."
+  }
+]

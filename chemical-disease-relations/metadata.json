@@ -1,0 +1,21 @@
+{
+  "title": "Chemical-Disease Relation Extraction (BC5CDR)",
+  "description": "Extract chemical-disease relations from biomedical literature. Based on BioCreative V CDR task. Identify chemical and disease entities, then annotate causal relationships between them (chemical induces disease).",
+  "version": "1.0.0",
+  "author": {
+    "name": "BioCreative V CDR Task",
+    "email": "jurgens@umich.edu",
+    "affiliation": "NCBI/NIH"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["Biomedical", "Pharmacovigilance", "Healthcare"],
+  "useCase": ["Relation Extraction", "Drug Safety", "Biomedical Text Mining"],
+  "complexity": "advanced",
+  "tags": ["biomedical", "relation-extraction", "chemicals", "diseases", "bc5cdr", "pharmacovigilance"],
+  "featured": false,
+  "paperReference": "BioCreative V CDR Task",
+  "paperUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/",
+  "datasetUrl": "https://huggingface.co/datasets/bigbio/bc5cdr"
+}

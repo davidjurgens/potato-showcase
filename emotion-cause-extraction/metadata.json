@@ -1,0 +1,22 @@
+{
+  "title": "Emotion Cause Extraction (RECCON)",
+  "description": "Extract emotion causes from conversational text based on RECCON (Poria et al., EMNLP 2020). Identify which utterances and specific spans caused an emotion expressed in dialogue.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Poria et al.",
+    "email": "jurgens@umich.edu",
+    "github": "declare-lab",
+    "affiliation": "Singapore University of Technology and Design"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Dialogue", "Affective Computing"],
+  "useCase": ["Emotion Cause Extraction", "Conversational AI", "Sentiment Analysis"],
+  "complexity": "advanced",
+  "tags": ["emotion", "cause-extraction", "dialogue", "reccon", "emnlp2020", "conversation"],
+  "featured": false,
+  "paperReference": "Poria et al., EMNLP 2020",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.431/",
+  "datasetUrl": "https://github.com/declare-lab/RECCON"
+}

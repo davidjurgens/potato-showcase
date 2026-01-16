@@ -1,0 +1,22 @@
+{
+  "title": "Dynamic Hate Speech Detection (Vidgen et al.)",
+  "description": "Hate speech classification with fine-grained type labels based on the Dynamically Generated Hate Speech Dataset (Vidgen et al., ACL 2021). Classify content as hateful or not, then identify hate type (animosity, derogation, dehumanization, threatening, support for hateful entities) and target group.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vidgen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "bvidgen",
+    "affiliation": "Alan Turing Institute"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "Content Moderation", "Social Media"],
+  "useCase": ["Hate Speech Detection", "Content Moderation", "Online Safety"],
+  "complexity": "intermediate",
+  "tags": ["hate-speech", "content-moderation", "social-media", "acl2021", "target-groups"],
+  "featured": true,
+  "paperReference": "Vidgen et al., ACL 2021",
+  "paperUrl": "https://aclanthology.org/2021.acl-long.132/",
+  "datasetUrl": "https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset"
+}

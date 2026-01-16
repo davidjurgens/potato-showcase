@@ -1,0 +1,22 @@
+{
+  "title": "Scientific Claim Verification (SciFact-style)",
+  "description": "Verify scientific claims against evidence from research abstracts. Based on SciFact (Wadden et al., EMNLP 2020). Classify claims as supported, refuted, or having insufficient evidence, and identify rationale sentences.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wadden et al.",
+    "email": "jurgens@umich.edu",
+    "github": "allenai",
+    "affiliation": "Allen Institute for AI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Scientific NLP", "Fact-Checking"],
+  "useCase": ["Fact Verification", "Scientific Literature", "Misinformation Detection"],
+  "complexity": "advanced",
+  "tags": ["fact-checking", "scientific", "evidence", "scifact", "emnlp2020", "rationale"],
+  "featured": true,
+  "paperReference": "Wadden et al., EMNLP 2020",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.609/",
+  "datasetUrl": "https://github.com/allenai/scifact"
+}

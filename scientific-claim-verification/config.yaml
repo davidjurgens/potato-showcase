@@ -1,0 +1,83 @@
+# Scientific Claim Verification (SciFact-style)
+# Based on Wadden et al., EMNLP 2020
+# Paper: https://aclanthology.org/2020.emnlp-main.609/
+# Dataset: https://github.com/allenai/scifact
+#
+# This task verifies scientific claims against evidence from research abstracts.
+# Annotators determine if a claim is SUPPORTED, REFUTED, or has NOT ENOUGH INFO
+# based on the provided abstract, and identify which sentences provide evidence.
+#
+# Verification Labels:
+# - SUPPORTS: The abstract provides evidence that the claim is true
+# - REFUTES: The abstract provides evidence that the claim is false
+# - NOT ENOUGH INFO: The abstract doesn't address the claim conclusively
+#
+# Annotation Guidelines:
+# 1. Read the claim carefully and identify what it's asserting
+# 2. Read the full abstract before making a judgment
+# 3. Look for sentences that directly address the claim
+# 4. SUPPORTS: Evidence confirms the claim (same finding)
+# 5. REFUTES: Evidence contradicts the claim (opposite finding)
+# 6. NOT ENOUGH INFO: Evidence is tangentially related but doesn't verify/refute
+# 7. Mark ALL sentences that provide relevant evidence (rationales)
+#
+# Important Distinctions:
+# - "No effect found" REFUTES claims of an effect
+# - Correlation claims differ from causation claims
+# - Population-specific findings may not generalize
+
+port: 8000
+server_name: localhost
+task_name: "Scientific Claim Verification"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: abstract
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Verification label
+  - annotation_type: radio
+    name: verification
+    description: "Based on the abstract, is the CLAIM supported, refuted, or is there not enough information?"
+    labels:
+      - "SUPPORTS"
+      - "REFUTES"
+      - "NOT ENOUGH INFO"
+    tooltips:
+      "SUPPORTS": "The abstract provides evidence that confirms the claim is true"
+      "REFUTES": "The abstract provides evidence that contradicts the claim (claim is false)"
+      "NOT ENOUGH INFO": "The abstract doesn't contain sufficient information to verify or refute the claim"
+
+  # Step 2: Evidence/rationale identification
+  - annotation_type: span
+    name: evidence
+    description: "Highlight the sentence(s) that provide evidence for your verification decision"
+    labels:
+      - "Evidence"
+    label_colors:
+      "Evidence": "#22c55e"
+    tooltips:
+      "Evidence": "Sentences that directly support or refute the claim"
+    allow_overlapping: false
+
+  # Step 3: Confidence
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your verification?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

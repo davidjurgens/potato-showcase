@@ -1,0 +1,22 @@
+{
+  "title": "Empathetic Dialogue Annotation",
+  "description": "Annotate emotional situations and empathetic responses in conversations. Based on EmpatheticDialogues (Rashkin et al., ACL 2019). Classify the emotional context and evaluate response empathy.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rashkin et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Facebook AI Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "likert"],
+  "domain": ["NLP", "Dialogue", "Affective Computing"],
+  "useCase": ["Conversational AI", "Empathy Detection", "Chatbot Development"],
+  "complexity": "intermediate",
+  "tags": ["empathy", "dialogue", "emotion", "conversation", "acl2019", "chatbot"],
+  "featured": false,
+  "paperReference": "Rashkin et al., ACL 2019",
+  "paperUrl": "https://aclanthology.org/P19-1534/",
+  "datasetUrl": "https://github.com/facebookresearch/EmpatheticDialogues"
+}
