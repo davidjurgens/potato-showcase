@@ -1,0 +1,42 @@
+[
+  {
+    "id": "charades_001",
+    "video_url": "https://example.com/videos/living_room_001.mp4",
+    "duration_seconds": 30,
+    "scene": "living_room",
+    "script": "Person enters, sits on sofa, picks up book, reads",
+    "expected_actions": ["walking", "sitting_on_sofa", "holding_book"]
+  },
+  {
+    "id": "charades_002",
+    "video_url": "https://example.com/videos/kitchen_001.mp4",
+    "duration_seconds": 28,
+    "scene": "kitchen",
+    "script": "Person opens refrigerator, takes out drink, closes refrigerator, drinks",
+    "expected_actions": ["opening_refrigerator", "closing_refrigerator", "drinking_from_cup"]
+  },
+  {
+    "id": "charades_003",
+    "video_url": "https://example.com/videos/bedroom_001.mp4",
+    "duration_seconds": 32,
+    "scene": "bedroom",
+    "script": "Person enters room, turns on light, sits on bed, picks up phone",
+    "expected_actions": ["walking", "turning_on_light", "sitting_on_chair", "holding_phone"]
+  },
+  {
+    "id": "charades_004",
+    "video_url": "https://example.com/videos/living_room_002.mp4",
+    "duration_seconds": 35,
+    "scene": "living_room",
+    "script": "Person watching TV, stands up, turns off TV, walks to door",
+    "expected_actions": ["watching_tv", "standing_up", "turning_off_tv", "walking", "opening_door"]
+  },
+  {
+    "id": "charades_005",
+    "video_url": "https://example.com/videos/home_office_001.mp4",
+    "duration_seconds": 27,
+    "scene": "home_office",
+    "script": "Person sits at desk, opens laptop, puts down coffee cup",
+    "expected_actions": ["sitting_on_chair", "putting_down_cup"]
+  }
+]

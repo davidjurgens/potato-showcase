@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tvsum_001",
+    "video_url": "https://example.com/videos/changing_tire.mp4",
+    "title": "Changing a Tire Tutorial",
+    "category": "HowTo",
+    "duration_seconds": 180,
+    "description": "A step-by-step tutorial on how to change a flat tire on your car."
+  },
+  {
+    "id": "tvsum_002",
+    "video_url": "https://example.com/videos/dog_show.mp4",
+    "title": "Best Dog Show Moments",
+    "category": "Entertainment",
+    "duration_seconds": 240,
+    "description": "Highlights from a local dog show competition featuring various breeds."
+  },
+  {
+    "id": "tvsum_003",
+    "video_url": "https://example.com/videos/flash_mob.mp4",
+    "title": "Flash Mob Dance Performance",
+    "category": "Entertainment",
+    "duration_seconds": 300,
+    "description": "A surprise flash mob dance performance in a shopping mall."
+  },
+  {
+    "id": "tvsum_004",
+    "video_url": "https://example.com/videos/parade.mp4",
+    "title": "City Parade Celebration",
+    "category": "Events",
+    "duration_seconds": 420,
+    "description": "Annual city parade with floats, bands, and community performances."
+  },
+  {
+    "id": "tvsum_005",
+    "video_url": "https://example.com/videos/cooking_demo.mp4",
+    "title": "Chef's Cooking Demonstration",
+    "category": "HowTo",
+    "duration_seconds": 360,
+    "description": "Professional chef demonstrates how to prepare a gourmet dish."
+  }
+]

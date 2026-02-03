@@ -1,0 +1,23 @@
+{
+  "title": "ActivityNet Temporal Localization",
+  "description": "Temporal activity localization in untrimmed videos. Annotators identify activity instances by marking precise start and end timestamps across 200 activity classes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video Understanding"],
+  "useCase": ["Activity Recognition", "Temporal Localization", "Action Detection"],
+  "complexity": "intermediate",
+  "tags": ["video", "activity", "temporal", "localization", "activitynet", "untrimmed"],
+  "featured": false,
+  "paperReference": "Heilbron et al., CVPR 2015",
+  "paperUrl": "https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf",
+  "datasetUrl": "http://activity-net.org",
+  "citation": "@inproceedings{heilbron2015activitynet,\n  title={ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding},\n  author={Heilbron, Fabian Caba and Escorcia, Victor and Ghanem, Bernard and Niebles, Juan Carlos},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={961--970},\n  year={2015}\n}"
+}

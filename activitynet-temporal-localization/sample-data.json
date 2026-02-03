@@ -1,0 +1,42 @@
+[
+  {
+    "id": "anet_001",
+    "video_url": "https://example.com/videos/basketball_practice.mp4",
+    "duration_seconds": 180,
+    "source": "youtube",
+    "expected_activity": "playing_basketball",
+    "description": "Amateur basketball practice session in a gym"
+  },
+  {
+    "id": "anet_002",
+    "video_url": "https://example.com/videos/cooking_tutorial.mp4",
+    "duration_seconds": 420,
+    "source": "youtube",
+    "expected_activity": "cooking",
+    "description": "Home cooking tutorial - making pasta from scratch"
+  },
+  {
+    "id": "anet_003",
+    "video_url": "https://example.com/videos/guitar_lesson.mp4",
+    "duration_seconds": 300,
+    "source": "youtube",
+    "expected_activity": "playing_guitar",
+    "description": "Beginner guitar lesson with practice segments"
+  },
+  {
+    "id": "anet_004",
+    "video_url": "https://example.com/videos/morning_routine.mp4",
+    "duration_seconds": 240,
+    "source": "youtube",
+    "expected_activity": "multiple",
+    "description": "Morning routine vlog - may contain brushing teeth, doing makeup, etc."
+  },
+  {
+    "id": "anet_005",
+    "video_url": "https://example.com/videos/hiking_vlog.mp4",
+    "duration_seconds": 600,
+    "source": "youtube",
+    "expected_activity": "hiking",
+    "description": "Hiking trail vlog with scenic views and rest stops"
+  }
+]

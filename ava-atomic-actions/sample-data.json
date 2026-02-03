@@ -1,0 +1,52 @@
+[
+  {
+    "id": "clip_001",
+    "video_url": "https://example.com/videos/movie_scene_001.mp4",
+    "movie_id": "movie_001",
+    "timestamp_start": 120.0,
+    "timestamp_end": 121.0,
+    "keyframe_timestamp": 120.5,
+    "scene_description": "Indoor office scene - two people having a conversation",
+    "num_expected_persons": 2
+  },
+  {
+    "id": "clip_002",
+    "video_url": "https://example.com/videos/movie_scene_002.mp4",
+    "movie_id": "movie_001",
+    "timestamp_start": 245.0,
+    "timestamp_end": 246.0,
+    "keyframe_timestamp": 245.5,
+    "scene_description": "Restaurant scene - group dining",
+    "num_expected_persons": 4
+  },
+  {
+    "id": "clip_003",
+    "video_url": "https://example.com/videos/movie_scene_003.mp4",
+    "movie_id": "movie_002",
+    "timestamp_start": 89.0,
+    "timestamp_end": 90.0,
+    "keyframe_timestamp": 89.5,
+    "scene_description": "Outdoor street scene - person walking and using phone",
+    "num_expected_persons": 1
+  },
+  {
+    "id": "clip_004",
+    "video_url": "https://example.com/videos/movie_scene_004.mp4",
+    "movie_id": "movie_002",
+    "timestamp_start": 567.0,
+    "timestamp_end": 568.0,
+    "keyframe_timestamp": 567.5,
+    "scene_description": "Living room - person reading on couch",
+    "num_expected_persons": 1
+  },
+  {
+    "id": "clip_005",
+    "video_url": "https://example.com/videos/movie_scene_005.mp4",
+    "movie_id": "movie_003",
+    "timestamp_start": 312.0,
+    "timestamp_end": 313.0,
+    "keyframe_timestamp": 312.5,
+    "scene_description": "Dance floor scene - multiple people dancing",
+    "num_expected_persons": 6
+  }
+]

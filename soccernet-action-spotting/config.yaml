@@ -1,0 +1,122 @@
+# SoccerNet Action Spotting Configuration
+# Based on Giancola et al., CVPR 2018
+# Task: Identify and timestamp key soccer match events
+
+port: 8000
+server_name: localhost
+task_name: "SoccerNet Action Spotting"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  - name: "soccer_events"
+    description: |
+      Mark key events in the soccer match. Click at the exact moment each event occurs.
+      Use keyboard shortcuts for faster annotation.
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      # Scoring events
+      - name: "goal"
+        color: "#22C55E"
+        key_value: "g"
+      - name: "penalty"
+        color: "#EAB308"
+        key_value: "p"
+      - name: "own_goal"
+        color: "#DC2626"
+        key_value: "o"
+
+      # Card events
+      - name: "yellow_card"
+        color: "#FACC15"
+        key_value: "y"
+      - name: "red_card"
+        color: "#EF4444"
+        key_value: "r"
+      - name: "second_yellow"
+        color: "#F97316"
+        key_value: "2"
+
+      # Game flow events
+      - name: "substitution"
+        color: "#3B82F6"
+        key_value: "s"
+      - name: "kick_off"
+        color: "#8B5CF6"
+        key_value: "k"
+      - name: "foul"
+        color: "#EC4899"
+        key_value: "f"
+
+      # Set pieces
+      - name: "corner"
+        color: "#06B6D4"
+        key_value: "c"
+      - name: "free_kick"
+        color: "#14B8A6"
+        key_value: "1"
+      - name: "offside"
+        color: "#6366F1"
+        key_value: "3"
+
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    zoom_enabled: true
+    video_fps: 25
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 20
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Soccer Action Spotting Task
+
+  Your goal is to identify and timestamp key events in soccer match footage.
+
+  ### Event Types to Annotate:
+
+  **Scoring Events:**
+  - **Goal (g)**: When the ball crosses the goal line
+  - **Penalty (p)**: When a penalty kick is awarded or taken
+  - **Own Goal (o)**: When a player scores against their own team
+
+  **Card Events:**
+  - **Yellow Card (y)**: When referee shows yellow card
+  - **Red Card (r)**: When referee shows red card
+  - **Second Yellow (2)**: Second yellow card leading to red
+
+  **Game Flow:**
+  - **Substitution (s)**: Player substitution
+  - **Kick-off (k)**: Start/restart of play
+  - **Foul (f)**: When referee calls a foul
+
+  **Set Pieces:**
+  - **Corner (c)**: Corner kick awarded
+  - **Free Kick (1)**: Free kick awarded
+  - **Offside (3)**: Offside called
+
+  ### Instructions:
+  1. Watch the video carefully
+  2. When you see an event, pause at the exact moment it occurs
+  3. Press the keyboard shortcut or click the label to mark the event
+  4. The timestamp will be recorded automatically
+
+  ### Tips:
+  - Use frame stepping (< >) for precise timing
+  - Mark events at the moment they START (e.g., when card is shown, not raised)
+  - Use playback speed control to slow down fast action
+  - You can zoom the timeline for precision
