@@ -1,0 +1,23 @@
+{
+  "title": "SoccerNet Action Spotting",
+  "description": "Temporal action spotting in soccer broadcast videos. Annotators identify and timestamp key match events including goals, cards, substitutions, and fouls.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Sports Analytics"],
+  "useCase": ["Action Spotting", "Event Detection", "Sports Video Analysis"],
+  "complexity": "intermediate",
+  "tags": ["video", "soccer", "sports", "action-spotting", "events", "soccernet"],
+  "featured": false,
+  "paperReference": "Giancola et al., CVPR 2018",
+  "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w34/Giancola_SoccerNet_A_Scalable_CVPR_2018_paper.pdf",
+  "datasetUrl": "https://www.soccer-net.org",
+  "citation": "@inproceedings{giancola2018soccernet,\n  title={SoccerNet: A Scalable Dataset for Action Spotting in Soccer Videos},\n  author={Giancola, Silvio and Amine, Mohieddine and Dghaily, Tarek and Ghanem, Bernard},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={1711--1721},\n  year={2018}\n}"
+}

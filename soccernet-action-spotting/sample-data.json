@@ -1,0 +1,50 @@
+[
+  {
+    "id": "match_001_half1",
+    "video_url": "https://example.com/videos/match001_half1.mp4",
+    "match_id": "match_001",
+    "half": 1,
+    "home_team": "Team A",
+    "away_team": "Team B",
+    "competition": "League Cup",
+    "date": "2024-10-15",
+    "duration_seconds": 2700,
+    "description": "First half of League Cup match between Team A and Team B"
+  },
+  {
+    "id": "match_001_half2",
+    "video_url": "https://example.com/videos/match001_half2.mp4",
+    "match_id": "match_001",
+    "half": 2,
+    "home_team": "Team A",
+    "away_team": "Team B",
+    "competition": "League Cup",
+    "date": "2024-10-15",
+    "duration_seconds": 2850,
+    "description": "Second half of League Cup match between Team A and Team B"
+  },
+  {
+    "id": "match_002_half1",
+    "video_url": "https://example.com/videos/match002_half1.mp4",
+    "match_id": "match_002",
+    "half": 1,
+    "home_team": "Team C",
+    "away_team": "Team D",
+    "competition": "Championship",
+    "date": "2024-10-20",
+    "duration_seconds": 2750,
+    "description": "First half of Championship match between Team C and Team D"
+  },
+  {
+    "id": "match_003_highlights",
+    "video_url": "https://example.com/videos/match003_highlights.mp4",
+    "match_id": "match_003",
+    "half": 0,
+    "home_team": "Team E",
+    "away_team": "Team F",
+    "competition": "Premier League",
+    "date": "2024-10-22",
+    "duration_seconds": 600,
+    "description": "Highlight reel from Premier League match - contains multiple key events"
+  }
+]

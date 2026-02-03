@@ -1,0 +1,146 @@
+# THUMOS14 Temporal Action Localization Configuration
+# Based on Jiang et al., ECCV 2014 Workshop
+# Task: Localize 20 sports action classes in untrimmed YouTube videos
+
+port: 8000
+server_name: localhost
+task_name: "THUMOS14 Action Localization"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  - name: "sports_actions"
+    description: |
+      Identify and localize sports actions in the video.
+      Mark the precise start and end times for each action instance.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      # Ball sports
+      - name: "baseball_pitch"
+        color: "#EF4444"
+        key_value: "1"
+      - name: "basketball_dunk"
+        color: "#F97316"
+        key_value: "2"
+      - name: "billiards"
+        color: "#84CC16"
+        key_value: "3"
+      - name: "cricket_bowling"
+        color: "#22C55E"
+      - name: "cricket_shot"
+        color: "#14B8A6"
+      - name: "frisbee_catch"
+        color: "#06B6D4"
+      - name: "golf_swing"
+        color: "#3B82F6"
+        key_value: "4"
+      - name: "soccer_penalty"
+        color: "#6366F1"
+        key_value: "5"
+      - name: "tennis_swing"
+        color: "#8B5CF6"
+        key_value: "6"
+      - name: "throw_discus"
+        color: "#A855F7"
+      - name: "volleyball_spiking"
+        color: "#D946EF"
+
+      # Combat/Strength sports
+      - name: "clean_and_jerk"
+        color: "#EC4899"
+        key_value: "7"
+      - name: "hammer_throw"
+        color: "#F472B6"
+      - name: "high_jump"
+        color: "#FB7185"
+      - name: "javelin_throw"
+        color: "#FDA4AF"
+      - name: "long_jump"
+        color: "#FECDD3"
+      - name: "pole_vault"
+        color: "#FEE2E2"
+        key_value: "8"
+      - name: "shot_put"
+        color: "#FEF2F2"
+
+      # Water/Other
+      - name: "cliff_diving"
+        color: "#0EA5E9"
+        key_value: "9"
+      - name: "diving"
+        color: "#38BDF8"
+        key_value: "0"
+
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    show_timecode: true
+    timeline_height: 80
+    video_fps: 30
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 3
+
+# Instructions
+annotation_instructions: |
+  ## THUMOS14 Sports Action Localization Task
+
+  Your goal is to identify and temporally localize sports actions in YouTube videos.
+
+  ### The 20 THUMOS14 Action Classes:
+
+  **Ball Sports:**
+  - Baseball Pitch, Basketball Dunk, Billiards
+  - Cricket Bowling, Cricket Shot
+  - Frisbee Catch, Golf Swing
+  - Soccer Penalty, Tennis Swing
+  - Volleyball Spiking
+
+  **Track & Field:**
+  - Clean and Jerk, Hammer Throw
+  - High Jump, Javelin Throw
+  - Long Jump, Pole Vault
+  - Shot Put, Throw Discus
+
+  **Water Sports:**
+  - Cliff Diving, Diving
+
+  ### Annotation Guidelines:
+
+  **Temporal Boundaries:**
+  - **Start**: First frame of the action (wind-up/preparation counts)
+  - **End**: Last frame of action completion (follow-through counts)
+
+  **What to Include:**
+  - Full motion from preparation to follow-through
+  - Multiple instances if action repeats
+  - Close-up and wide shots of the same action
+
+  **What NOT to Include:**
+  - Walking between actions
+  - Celebrations after the action
+  - Replays (annotate separately if distinguishable)
+
+  ### Examples:
+  - **Golf Swing**: From backswing start to follow-through end
+  - **Basketball Dunk**: From jump initiation to landing
+  - **Diving**: From leaving platform to entering water
+
+  ### Tips:
+  - Use frame stepping for precise boundaries
+  - Slow playback helps with fast actions
+  - Some videos have multiple instances of the same action
+  - Background/filler content should NOT be annotated

@@ -1,0 +1,130 @@
+# ActivityNet Temporal Localization Configuration
+# Based on Heilbron et al., CVPR 2015
+# Task: Localize activity instances with start/end times in untrimmed videos
+
+port: 8000
+server_name: localhost
+task_name: "ActivityNet Temporal Localization"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  - name: "activity_segments"
+    description: |
+      Mark the temporal boundaries of each activity instance in the video.
+      Draw segments from when the activity STARTS to when it ENDS.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      # Sports activities
+      - name: "playing_basketball"
+        color: "#F97316"
+        key_value: "1"
+      - name: "playing_soccer"
+        color: "#22C55E"
+        key_value: "2"
+      - name: "swimming"
+        color: "#3B82F6"
+        key_value: "3"
+      - name: "running"
+        color: "#EF4444"
+        key_value: "4"
+      - name: "gymnastics"
+        color: "#A855F7"
+        key_value: "5"
+
+      # Household activities
+      - name: "cooking"
+        color: "#EC4899"
+        key_value: "6"
+      - name: "cleaning"
+        color: "#06B6D4"
+        key_value: "7"
+      - name: "gardening"
+        color: "#84CC16"
+        key_value: "8"
+
+      # Personal care
+      - name: "brushing_teeth"
+        color: "#14B8A6"
+        key_value: "9"
+      - name: "doing_makeup"
+        color: "#F472B6"
+        key_value: "0"
+
+      # Music/Performance
+      - name: "playing_guitar"
+        color: "#8B5CF6"
+      - name: "playing_piano"
+        color: "#6366F1"
+      - name: "singing"
+        color: "#D946EF"
+
+      # Outdoor activities
+      - name: "hiking"
+        color: "#65A30D"
+      - name: "fishing"
+        color: "#0891B2"
+      - name: "camping"
+        color: "#059669"
+
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    show_timecode: true
+    timeline_height: 80
+    video_fps: 30
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 40
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## ActivityNet Temporal Localization Task
+
+  Your goal is to identify and localize activity instances in untrimmed videos.
+
+  ### What is Temporal Localization?
+  - Finding the precise START and END times of activities
+  - Videos may contain multiple activities or none at all
+  - Activities may overlap or occur sequentially
+
+  ### How to Annotate:
+  1. Watch the video to understand its content
+  2. For each activity you identify:
+     - Select the activity type from the labels
+     - Mark the START time (when activity begins)
+     - Mark the END time (when activity ends)
+
+  ### Defining Boundaries:
+  - **Start**: First frame where the activity is clearly happening
+  - **End**: Last frame where the activity is still happening
+  - Include preparation if it's part of the activity
+  - Exclude unrelated pauses or interruptions
+
+  ### Activity Categories:
+
+  **Sports:** basketball, soccer, swimming, running, gymnastics
+  **Household:** cooking, cleaning, gardening
+  **Personal Care:** brushing teeth, doing makeup
+  **Music:** playing guitar, playing piano, singing
+  **Outdoor:** hiking, fishing, camping
+
+  ### Tips:
+  - Use slow playback for precise boundaries
+  - Zoom the timeline for long videos
+  - One video may have multiple instances of the same activity
+  - If unsure about boundaries, mark your best estimate
+  - Skip segments that don't match any activity class

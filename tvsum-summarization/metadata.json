@@ -1,0 +1,23 @@
+{
+  "title": "TVSum Video Summarization",
+  "description": "Frame-level importance scoring for video summarization. Annotators rate 2-second shots on a 1-5 importance scale to identify key moments worth including in a summary.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation", "likert"],
+  "domain": ["Computer Vision", "Video Understanding"],
+  "useCase": ["Video Summarization", "Highlight Detection"],
+  "complexity": "intermediate",
+  "tags": ["video", "summarization", "importance", "keyframes", "tvsum"],
+  "featured": false,
+  "paperReference": "Song et al., CVPR 2015",
+  "paperUrl": "https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Song_TVSum_Summarizing_Web_2015_CVPR_paper.pdf",
+  "datasetUrl": "https://github.com/yalesong/tvsum",
+  "citation": "@inproceedings{song2015tvsum,\n  title={TVSum: Summarizing web videos using titles},\n  author={Song, Yale and Vallmitjana, Jordi and Stent, Amanda and Jaimes, Alejandro},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={5179--5187},\n  year={2015}\n}"
+}

@@ -1,0 +1,159 @@
+# Charades Indoor Activity Segmentation Configuration
+# Based on Sigurdsson et al., ECCV 2016
+# Task: Multi-label activity segmentation with compositional verb-object actions
+
+port: 8000
+server_name: localhost
+task_name: "Charades Activity Segmentation"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  - name: "indoor_activities"
+    description: |
+      Mark all activity instances in the indoor home video.
+      Multiple activities may occur simultaneously or sequentially.
+      Use verb-object format labels (e.g., "opening door", "sitting on chair").
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      # Door interactions
+      - name: "opening_door"
+        color: "#3B82F6"
+        key_value: "1"
+      - name: "closing_door"
+        color: "#1D4ED8"
+        key_value: "2"
+
+      # Window interactions
+      - name: "opening_window"
+        color: "#06B6D4"
+      - name: "closing_window"
+        color: "#0891B2"
+
+      # Sitting/Standing
+      - name: "sitting_on_chair"
+        color: "#22C55E"
+        key_value: "3"
+      - name: "sitting_on_sofa"
+        color: "#16A34A"
+        key_value: "4"
+      - name: "standing_up"
+        color: "#84CC16"
+        key_value: "5"
+
+      # Object manipulation
+      - name: "holding_book"
+        color: "#A855F7"
+      - name: "putting_down_book"
+        color: "#9333EA"
+      - name: "holding_phone"
+        color: "#D946EF"
+      - name: "putting_down_phone"
+        color: "#C026D3"
+
+      # Household items
+      - name: "opening_refrigerator"
+        color: "#F97316"
+      - name: "closing_refrigerator"
+        color: "#EA580C"
+      - name: "drinking_from_cup"
+        color: "#EF4444"
+        key_value: "6"
+      - name: "putting_down_cup"
+        color: "#DC2626"
+
+      # Blanket/Pillow
+      - name: "taking_blanket"
+        color: "#EC4899"
+      - name: "putting_blanket"
+        color: "#DB2777"
+      - name: "holding_pillow"
+        color: "#F472B6"
+
+      # TV/Electronics
+      - name: "watching_tv"
+        color: "#6366F1"
+        key_value: "7"
+      - name: "turning_on_tv"
+        color: "#4F46E5"
+      - name: "turning_off_tv"
+        color: "#4338CA"
+
+      # Walking
+      - name: "walking"
+        color: "#F59E0B"
+        key_value: "8"
+      - name: "running"
+        color: "#D97706"
+
+      # Light switches
+      - name: "turning_on_light"
+        color: "#FACC15"
+      - name: "turning_off_light"
+        color: "#EAB308"
+
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    show_timecode: true
+    timeline_height: 100
+    video_fps: 24
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Charades Activity Segmentation Task
+
+  Your goal is to identify all activities in short indoor home videos.
+
+  ### Video Characteristics:
+  - Duration: ~30 seconds each
+  - Setting: Indoor home environments
+  - Content: Person(s) performing daily activities
+  - Multiple activities often occur in sequence
+
+  ### Annotation Format:
+  Activities use **verb + object** composition:
+  - "opening door" (not just "opening")
+  - "sitting on chair" (not just "sitting")
+  - "drinking from cup" (not just "drinking")
+
+  ### How to Annotate:
+  1. Watch the entire video first
+  2. Replay and mark each activity:
+     - Select the activity label
+     - Mark START when action begins
+     - Mark END when action completes
+  3. Activities can OVERLAP (e.g., "holding phone" while "sitting on sofa")
+
+  ### Boundary Guidelines:
+  - **Start**: First intentional movement toward the action
+  - **End**: Action is complete (door fully open, seated, etc.)
+  - Include the full action, not just the peak moment
+
+  ### Common Activity Categories:
+  - **Door/Window**: opening, closing
+  - **Furniture**: sitting on chair/sofa, standing up
+  - **Objects**: holding, putting down (book, phone, cup)
+  - **Appliances**: refrigerator, TV, lights
+  - **Movement**: walking, running
+
+  ### Tips:
+  - Multiple activities can happen simultaneously
+  - "Holding" actions continue until the object is put down
+  - Don't annotate activities that happen off-screen

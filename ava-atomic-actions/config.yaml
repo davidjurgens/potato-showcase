@@ -1,0 +1,137 @@
+# AVA Atomic Visual Actions Configuration
+# Based on Gu et al., CVPR 2018
+# Task: Localize people and label their atomic actions in 1-second clips
+
+port: 8000
+server_name: localhost
+task_name: "AVA Atomic Visual Actions"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Track people with bounding boxes
+  - name: "person_tracking"
+    description: |
+      Draw bounding boxes around each person visible in the frame.
+      Track the same person across frames using consistent IDs.
+    annotation_type: "video_annotation"
+    mode: "tracking"
+    labels:
+      - name: "person"
+        color: "#3B82F6"
+    frame_stepping: true
+    show_timecode: true
+    video_fps: 30
+
+  # Classify actions for each tracked person
+  # Simplified subset of AVA's 80 action classes
+  - name: "pose_actions"
+    description: "Select all POSE actions the person is performing"
+    annotation_type: multiselect
+    labels:
+      - "stand"
+      - "sit"
+      - "lie/sleep"
+      - "bend/bow"
+      - "crouch/kneel"
+      - "walk"
+      - "run/jog"
+      - "jump/leap"
+      - "swim"
+      - "dance"
+    keyboard_shortcuts:
+      stand: "1"
+      sit: "2"
+      walk: "3"
+      run/jog: "4"
+
+  - name: "object_interactions"
+    description: "Select all PERSON-OBJECT interactions"
+    annotation_type: multiselect
+    labels:
+      - "carry/hold object"
+      - "eat"
+      - "drink"
+      - "smoke"
+      - "read"
+      - "write"
+      - "play musical instrument"
+      - "use phone"
+      - "work on computer"
+      - "open (door/container)"
+      - "close (door/container)"
+      - "pour"
+      - "throw"
+      - "catch"
+      - "hit (object)"
+      - "kick (object)"
+      - "drive"
+      - "ride (bike/horse)"
+
+  - name: "person_interactions"
+    description: "Select all PERSON-PERSON interactions"
+    annotation_type: multiselect
+    labels:
+      - "talk to"
+      - "listen to"
+      - "watch (person)"
+      - "hug"
+      - "kiss"
+      - "hand shake"
+      - "fight/hit (person)"
+      - "push (person)"
+      - "give/serve to"
+      - "take from"
+      - "dance with"
+      - "sing to"
+      - "martial art"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## AVA Atomic Visual Actions Task
+
+  Your goal is to annotate atomic human actions in video clips from movies.
+
+  ### Step 1: Track People
+  - Draw bounding boxes around each person visible in the frame
+  - Track the same person across frames with consistent IDs
+  - Only annotate people who are at least partially visible
+
+  ### Step 2: Label Actions (for each person)
+  For each tracked person, select ALL actions they are performing:
+
+  **Pose Actions:** Body position/movement
+  - stand, sit, lie, walk, run, jump, dance, etc.
+
+  **Person-Object Interactions:** Actions with objects
+  - eating, drinking, using phone, driving, etc.
+
+  **Person-Person Interactions:** Actions with other people
+  - talking, hugging, fighting, shaking hands, etc.
+
+  ### Important Notes:
+  - Actions are annotated per 1-second intervals
+  - One person can have MULTIPLE actions simultaneously
+    (e.g., "sit" + "talk to" + "use phone")
+  - Focus on the KEYFRAME (middle frame of the 1-second clip)
+  - Only annotate clearly visible actions
+
+  ### Action Definitions:
+  - **Atomic**: Simple, basic actions (not complex activities)
+  - **Visual**: Action must be visually apparent in the frame
+  - **Current**: Action happening at this moment, not before/after

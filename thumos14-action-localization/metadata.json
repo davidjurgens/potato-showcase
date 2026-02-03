@@ -1,0 +1,23 @@
+{
+  "title": "THUMOS14 Action Localization",
+  "description": "Temporal action localization in untrimmed sports videos. Annotators identify precise start and end times of 20 sports action classes in YouTube videos.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Sports Analytics"],
+  "useCase": ["Action Recognition", "Temporal Localization", "Sports Video Analysis"],
+  "complexity": "intermediate",
+  "tags": ["video", "sports", "action", "temporal", "thumos", "localization"],
+  "featured": false,
+  "paperReference": "Jiang et al., ECCV 2014 Workshop",
+  "paperUrl": "http://crcv.ucf.edu/THUMOS14/papers/THUMOS14_Paper.pdf",
+  "datasetUrl": "http://crcv.ucf.edu/THUMOS14",
+  "citation": "@misc{jiang2014thumos,\n  title={THUMOS Challenge: Action Recognition with a Large Number of Classes},\n  author={Jiang, Y.-G. and Liu, J. and Roshan Zamir, A. and Toderici, G. and Laptev, I. and Shah, M. and Sukthankar, R.},\n  howpublished={http://crcv.ucf.edu/THUMOS14/},\n  year={2014}\n}"
+}

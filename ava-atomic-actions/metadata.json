@@ -1,0 +1,23 @@
+{
+  "title": "AVA Atomic Visual Actions",
+  "description": "Spatio-temporal action annotation in movie clips. Annotators localize people with bounding boxes and label their atomic actions (pose, person-object, person-person interactions) in 1-second intervals.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video Understanding"],
+  "useCase": ["Action Recognition", "Person Detection", "Activity Understanding"],
+  "complexity": "advanced",
+  "tags": ["video", "actions", "bounding-box", "spatio-temporal", "ava", "movies"],
+  "featured": false,
+  "paperReference": "Gu et al., CVPR 2018",
+  "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2018/papers/Gu_AVA_A_Video_CVPR_2018_paper.pdf",
+  "datasetUrl": "https://research.google.com/ava",
+  "citation": "@inproceedings{gu2018ava,\n  title={AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions},\n  author={Gu, Chunhui and Sun, Chen and Ross, David A and Vondrick, Carl and Pantofaru, Caroline and Li, Yeqing and Vijayanarasimhan, Sudheendra and Toderici, George and Ricco, Susanna and Sukthankar, Rahul and others},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={6047--6056},\n  year={2018}\n}"
+}

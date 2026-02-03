@@ -1,0 +1,102 @@
+# TVSum Video Summarization Configuration
+# Based on Song et al., CVPR 2015
+# Task: Rate 2-second shots on importance scale for video summarization
+
+port: 8000
+server_name: localhost
+task_name: "TVSum Video Summarization"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Video player for viewing the content
+  - name: "video_player"
+    description: "Watch the video and rate the importance of each segment"
+    annotation_type: "video"
+    video_path: "{{video_url}}"
+    controls: true
+    autoplay: false
+
+  # Current segment importance rating (1-5 scale as per TVSum methodology)
+  - name: "segment_importance"
+    description: |
+      Rate how important the current 2-second segment is for a video summary.
+      Consider: Would someone watching only a summary want to see this moment?
+    annotation_type: likert
+    size: 5
+    min_label: "Not Important"
+    max_label: "Very Important"
+    labels:
+      - "1 - Not important at all"
+      - "2 - Slightly important"
+      - "3 - Moderately important"
+      - "4 - Important"
+      - "5 - Very important (must include)"
+
+  # Optional: Mark specific highlight moments
+  - name: "highlight_moments"
+    description: "Mark any particularly memorable or highlight-worthy moments"
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      - name: "key_moment"
+        color: "#22C55E"
+        key_value: "k"
+      - name: "climax"
+        color: "#EF4444"
+        key_value: "c"
+      - name: "transition"
+        color: "#F59E0B"
+        key_value: "t"
+    frame_stepping: true
+    show_timecode: true
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 3
+
+# Instructions
+surveyflow:
+  on: true
+  order:
+    - prolific_id
+  prolific_id:
+    type: text
+    question: "Please enter your annotator ID:"
+
+annotation_instructions: |
+  ## Video Summarization Task
+
+  Your goal is to help create automatic video summaries by rating the importance
+  of video segments.
+
+  ### Instructions:
+  1. Watch the video carefully
+  2. For each 2-second segment, rate its importance on a 1-5 scale:
+     - **1**: Not important - Can be skipped entirely
+     - **2**: Slightly important - Background/filler content
+     - **3**: Moderately important - Relevant but not essential
+     - **4**: Important - Should probably be in a summary
+     - **5**: Very important - Must be included in any summary
+
+  ### What makes a segment important?
+  - Key events or actions
+  - Emotional high points
+  - Information that's essential to understanding the video
+  - Visually striking or memorable moments
+
+  ### Tips:
+  - Compare segments relative to each other within the same video
+  - Think: "If I only had 15 seconds, would I include this?"
+  - Use keyboard shortcuts for faster annotation

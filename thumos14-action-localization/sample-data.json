@@ -1,0 +1,56 @@
+[
+  {
+    "id": "thumos_001",
+    "video_url": "https://example.com/videos/golf_compilation.mp4",
+    "duration_seconds": 180,
+    "sport": "golf",
+    "expected_action": "golf_swing",
+    "source": "youtube",
+    "description": "Golf swing compilation from various tournaments"
+  },
+  {
+    "id": "thumos_002",
+    "video_url": "https://example.com/videos/basketball_dunks.mp4",
+    "duration_seconds": 120,
+    "sport": "basketball",
+    "expected_action": "basketball_dunk",
+    "source": "youtube",
+    "description": "NBA slam dunk highlights"
+  },
+  {
+    "id": "thumos_003",
+    "video_url": "https://example.com/videos/diving_competition.mp4",
+    "duration_seconds": 240,
+    "sport": "diving",
+    "expected_action": "diving",
+    "source": "youtube",
+    "description": "Olympic diving competition - multiple divers"
+  },
+  {
+    "id": "thumos_004",
+    "video_url": "https://example.com/videos/track_field_throws.mp4",
+    "duration_seconds": 200,
+    "sport": "track_and_field",
+    "expected_action": "multiple",
+    "source": "youtube",
+    "description": "Track and field throwing events - shot put, javelin, hammer"
+  },
+  {
+    "id": "thumos_005",
+    "video_url": "https://example.com/videos/tennis_serves.mp4",
+    "duration_seconds": 150,
+    "sport": "tennis",
+    "expected_action": "tennis_swing",
+    "source": "youtube",
+    "description": "Tennis serve and forehand compilation"
+  },
+  {
+    "id": "thumos_006",
+    "video_url": "https://example.com/videos/soccer_penalties.mp4",
+    "duration_seconds": 180,
+    "sport": "soccer",
+    "expected_action": "soccer_penalty",
+    "source": "youtube",
+    "description": "Soccer penalty kick shootout compilation"
+  }
+]
