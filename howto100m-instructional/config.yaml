@@ -1,0 +1,108 @@
+# HowTo100M Instructional Video Annotation Configuration
+# Based on Miech et al., ICCV 2019
+# Task: Annotate instructional steps and visual grounding
+
+port: 8000
+server_name: localhost
+task_name: "HowTo100M Instructional Video Annotation"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "step_segments"
+    description: |
+      Mark the temporal boundaries of each INSTRUCTIONAL STEP.
+      A step is one distinct action or instruction being demonstrated.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "step"
+        color: "#22C55E"
+        key_value: "s"
+      - name: "intro_outro"
+        color: "#94A3B8"
+        key_value: "i"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 30
+
+  - name: "step_description"
+    description: "Describe what is being done in this step (imperative form):"
+    annotation_type: text
+
+  - name: "visual_alignment"
+    description: "How well does the visual content match what's being said?"
+    annotation_type: radio
+    labels:
+      - "Perfect - visual shows exactly what's narrated"
+      - "Good - visual mostly matches narration"
+      - "Partial - some mismatch between visual and audio"
+      - "Poor - visual doesn't match narration"
+      - "No narration in this segment"
+
+  - name: "task_category"
+    description: "What category of task is this video?"
+    annotation_type: radio
+    labels:
+      - "Cooking/Food"
+      - "Home Repair/DIY"
+      - "Crafts/Art"
+      - "Beauty/Personal Care"
+      - "Fitness/Exercise"
+      - "Technology/Software"
+      - "Gardening/Outdoor"
+      - "Other"
+
+  - name: "step_clarity"
+    description: "How clear is this instructional step?"
+    annotation_type: radio
+    labels:
+      - "Very clear - easy to follow"
+      - "Clear - understandable"
+      - "Somewhat clear - some confusion"
+      - "Unclear - hard to follow"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## HowTo100M Instructional Video Annotation
+
+  Annotate instructional/tutorial video clips with step boundaries and descriptions.
+
+  ### Task:
+  1. Mark the temporal boundaries of each instructional step
+  2. Write a brief description of what's being demonstrated
+  3. Rate how well the visual matches the narration
+
+  ### What is a step?
+  - One distinct action or instruction
+  - "Add the flour", "Stir until combined", "Press the button"
+  - NOT background talk or transitions
+
+  ### Step descriptions:
+  - Use imperative form: "Mix the ingredients" not "The person mixes"
+  - Be concise: 3-10 words typically
+  - Focus on the ACTION being demonstrated
+
+  ### Visual-Narration Alignment:
+  - Perfect: Narrator says "crack the egg" and we see egg cracking
+  - Partial: Narrator says "add salt" but we see general cooking
+  - Poor: Narrator talks about something not shown
+
+  ### Guidelines:
+  - Some clips may have no clear instructional content
+  - Mark intro/outro segments separately
+  - Narration may be noisy (auto-generated ASR)
+
+  ### Tips:
+  - Watch with audio to understand the instruction
+  - Steps may overlap with narration timing
+  - Focus on what would help someone learn the task

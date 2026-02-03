@@ -1,0 +1,23 @@
+{
+  "title": "DiDeMo Moment Retrieval",
+  "description": "Localizing natural language descriptions to specific video moments. Given a text query, annotators identify the corresponding temporal segment in the video.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "NLP", "Video Understanding"],
+  "useCase": ["Moment Retrieval", "Video Grounding", "Temporal Localization"],
+  "complexity": "intermediate",
+  "tags": ["video", "moment", "retrieval", "grounding", "language", "didemo"],
+  "featured": false,
+  "paperReference": "Hendricks et al., ICCV 2017",
+  "paperUrl": "https://arxiv.org/abs/1708.01641",
+  "datasetUrl": "https://github.com/LisaAnne/LocalizingMoments",
+  "citation": "@inproceedings{hendricks2017localizing,\n  title={Localizing moments in video with natural language},\n  author={Hendricks, Lisa Anne and Wang, Oliver and Shechtman, Eli and Sivic, Josef and Darrell, Trevor and Russell, Bryan},\n  booktitle={Proceedings of the IEEE International Conference on Computer Vision},\n  pages={5803--5812},\n  year={2017}\n}"
+}

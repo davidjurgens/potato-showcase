@@ -1,0 +1,23 @@
+{
+  "title": "OpenAssistant Conversation Quality",
+  "description": "Rate AI assistant responses across multiple quality dimensions. Evaluate conversations for the OpenAssistant crowdsourced dataset.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["likert", "radio", "text"],
+  "domain": ["Conversational AI", "Natural Language Processing"],
+  "useCase": ["RLHF", "Quality Rating", "Conversation Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["preference", "quality", "conversation", "assistant", "open-source", "crowdsourced"],
+  "featured": false,
+  "paperReference": "Köpf et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2304.07327",
+  "datasetUrl": "https://huggingface.co/datasets/OpenAssistant/oasst1",
+  "citation": "@article{kopf2023openassistant,\n  title={OpenAssistant Conversations--Democratizing Large Language Model Alignment},\n  author={K{\\\"o}pf, Andreas and Kilcher, Yannic and von R{\\\"u}tte, Dimitri and Anagnostidis, Sotiris and Tam, Zhi-Rui and Stevens, Keith and Barhoum, Abdullah and Duc, Nguyen Minh and Stanley, Oliver and Nagyfi, Rich{\\'a}rd and others},\n  journal={arXiv preprint arXiv:2304.07327},\n  year={2023}\n}"
+}

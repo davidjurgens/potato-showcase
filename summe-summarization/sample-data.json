@@ -1,0 +1,14 @@
+[
+  {
+    "id": "summe_001",
+    "video_url": "https://example.com/videos/user_video_cooking.mp4",
+    "category": "cooking",
+    "duration": 180
+  },
+  {
+    "id": "summe_002",
+    "video_url": "https://example.com/videos/user_video_travel.mp4",
+    "category": "travel",
+    "duration": 240
+  }
+]

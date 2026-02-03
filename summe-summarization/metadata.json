@@ -1,0 +1,23 @@
+{
+  "title": "SumMe Video Summarization",
+  "description": "Create video summaries by selecting key segments that best represent the content. Annotators identify important moments for automatic video summarization research.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video Summarization"],
+  "useCase": ["Video Summarization", "Highlight Detection", "Importance Scoring"],
+  "complexity": "intermediate",
+  "tags": ["video", "summarization", "highlights", "importance", "user-generated"],
+  "featured": false,
+  "paperReference": "Gygli et al., ECCV 2014",
+  "paperUrl": "https://link.springer.com/chapter/10.1007/978-3-319-10584-0_33",
+  "datasetUrl": "https://gyglim.github.io/me/vsum/index.html",
+  "citation": "@inproceedings{gygli2014creating,\n  title={Creating summaries from user videos},\n  author={Gygli, Michael and Grabner, Helmut and Riemenschneider, Hayko and Van Gool, Luc},\n  booktitle={European Conference on Computer Vision},\n  pages={505--520},\n  year={2014}\n}"
+}

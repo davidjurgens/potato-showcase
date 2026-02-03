@@ -1,0 +1,109 @@
+# Breakfast Actions Segmentation Configuration
+# Based on Kuehne et al., IJCV 2014
+# Task: Fine-grained temporal segmentation of breakfast preparation
+
+port: 8000
+server_name: localhost
+task_name: "Breakfast Actions Segmentation"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "breakfast_actions"
+    description: |
+      Segment the video into fine-grained cooking actions.
+      Mark each atomic action from start to finish.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      # Object manipulation
+      - name: "take"
+        color: "#3B82F6"
+        key_value: "t"
+      - name: "put"
+        color: "#1D4ED8"
+        key_value: "p"
+
+      # Pouring actions
+      - name: "pour"
+        color: "#22C55E"
+        key_value: "o"
+      - name: "spoon"
+        color: "#16A34A"
+        key_value: "s"
+
+      # Mixing actions
+      - name: "stir"
+        color: "#F97316"
+        key_value: "r"
+      - name: "crack"
+        color: "#EA580C"
+        key_value: "c"
+
+      # Cutting actions
+      - name: "cut"
+        color: "#EF4444"
+        key_value: "u"
+      - name: "peel"
+        color: "#DC2626"
+        key_value: "l"
+
+      # Cooking actions
+      - name: "fry"
+        color: "#8B5CF6"
+        key_value: "f"
+      - name: "butter"
+        color: "#A855F7"
+        key_value: "b"
+
+      # Other
+      - name: "squeeze"
+        color: "#EC4899"
+        key_value: "q"
+      - name: "background"
+        color: "#6B7280"
+        key_value: "g"
+
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    timeline_height: 90
+
+  - name: "object_involved"
+    description: "What object is involved in this action?"
+    annotation_type: text
+    placeholder: "e.g., cup, egg, pan, butter, cereal"
+
+allow_all_users: true
+instances_per_annotator: 25
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Breakfast Actions Segmentation Task
+
+  Segment cooking videos into atomic actions.
+
+  ### Action Vocabulary:
+  - **take**: Pick up an object
+  - **put**: Put down an object
+  - **pour**: Pour liquid/granules
+  - **spoon**: Scoop with spoon
+  - **stir**: Mix with stirring motion
+  - **crack**: Crack open (eggs)
+  - **cut**: Cut with knife
+  - **peel**: Remove outer layer
+  - **fry**: Cook in pan
+  - **butter**: Spread butter
+  - **squeeze**: Squeeze (juice)
+  - **background**: Non-action segments
+
+  ### Guidelines:
+  - Segment ALL frames (no gaps)
+  - Each segment = one atomic action
+  - Note the object involved
+  - Actions can repeat multiple times

@@ -1,0 +1,23 @@
+{
+  "title": "Charades-STA Temporal Grounding",
+  "description": "Ground natural language descriptions to video segments. Given a sentence describing an action, identify the exact temporal boundaries where that action occurs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video-Language", "Temporal Grounding"],
+  "useCase": ["Temporal Grounding", "Video-Text Alignment", "Moment Retrieval"],
+  "complexity": "intermediate",
+  "tags": ["video", "grounding", "temporal", "language", "localization", "charades"],
+  "featured": false,
+  "paperReference": "Gao et al., ICCV 2017",
+  "paperUrl": "https://openaccess.thecvf.com/content_ICCV_2017/papers/Gao_TALL_Temporal_Activity_ICCV_2017_paper.pdf",
+  "datasetUrl": "https://github.com/jiyanggao/TALL",
+  "citation": "@inproceedings{gao2017tall,\n  title={TALL: Temporal activity localization via language query},\n  author={Gao, Jiyang and Sun, Chen and Yang, Zhenheng and Nevatia, Ram},\n  booktitle={IEEE International Conference on Computer Vision},\n  pages={5267--5275},\n  year={2017}\n}"
+}

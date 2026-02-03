@@ -1,0 +1,12 @@
+[
+  {
+    "id": "beaver_001",
+    "prompt": "How can I make my garden more eco-friendly?",
+    "response": "Here are some ways to make your garden more eco-friendly: 1) Use native plants that require less water, 2) Compost kitchen scraps, 3) Avoid chemical pesticides, 4) Install a rain barrel to collect water, 5) Create habitat for pollinators with flowers."
+  },
+  {
+    "id": "beaver_002",
+    "prompt": "Tell me about renewable energy sources.",
+    "response": "Renewable energy sources include solar, wind, hydroelectric, geothermal, and biomass. Solar panels convert sunlight to electricity, wind turbines harness wind power, and hydroelectric dams use flowing water. These sources produce less pollution than fossil fuels and help combat climate change."
+  }
+]

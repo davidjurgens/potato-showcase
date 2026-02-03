@@ -1,0 +1,86 @@
+# DiDeMo Moment Retrieval Configuration
+# Based on Hendricks et al., ICCV 2017
+# Task: Localize text descriptions to video moments
+
+port: 8000
+server_name: localhost
+task_name: "DiDeMo Moment Retrieval"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+html_layout: |
+  <div class="moment-retrieval">
+    <div class="query-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">🔍 Find this moment:</h3>
+      <div class="query-text" style="font-size: 18px; font-weight: bold;">{{query}}</div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "moment_segment"
+    description: |
+      Mark the temporal segment that corresponds to the text description.
+      Select the 5-second segment(s) that best match the query.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "matches_query"
+        color: "#22C55E"
+        key_value: "m"
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    show_timecode: true
+
+  - name: "confidence"
+    description: "How confident are you that this is the correct moment?"
+    annotation_type: radio
+    labels:
+      - "Very confident - exact match"
+      - "Confident - good match"
+      - "Somewhat confident - partial match"
+      - "Not confident - best guess"
+
+  - name: "ambiguity"
+    description: "Is the query ambiguous or could match multiple moments?"
+    annotation_type: radio
+    labels:
+      - "Clear - only one possible match"
+      - "Slightly ambiguous - 1-2 alternatives"
+      - "Very ambiguous - multiple valid matches"
+
+allow_all_users: true
+instances_per_annotator: 60
+annotation_per_instance: 3
+
+annotation_instructions: |
+  ## Video Moment Retrieval Task
+
+  Given a text description, find the matching moment in the video.
+
+  ### How to Annotate:
+  1. Read the query carefully
+  2. Watch the video to understand the content
+  3. Mark the segment that BEST matches the description
+  4. Rate your confidence
+
+  ### Guidelines:
+  - Videos are ~30 seconds, divided into 5-second segments
+  - Select the segment(s) that match the query
+  - If multiple segments match, select all of them
+  - If no segment matches well, select the closest one
+
+  ### Example Queries:
+  - "The dog runs across the yard"
+  - "Someone opens a door"
+  - "A person laughs at something"
+
+  ### Tips:
+  - Focus on the action/event described
+  - Consider synonyms (e.g., "runs" = "sprints")
+  - The query may not describe every detail visible

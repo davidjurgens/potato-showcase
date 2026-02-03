@@ -1,0 +1,23 @@
+{
+  "title": "WebGPT Answer Comparison",
+  "description": "Compare answers with and without web search access. Evaluate whether web-augmented responses are more accurate, helpful, and well-sourced.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["pairwise", "radio"],
+  "domain": ["Information Retrieval", "Question Answering"],
+  "useCase": ["Preference Learning", "QA Evaluation", "Retrieval Augmentation"],
+  "complexity": "intermediate",
+  "tags": ["preference", "comparison", "web", "retrieval", "qa", "sources"],
+  "featured": false,
+  "paperReference": "Nakano et al., 2021",
+  "paperUrl": "https://arxiv.org/abs/2112.09332",
+  "datasetUrl": "https://huggingface.co/datasets/openai/webgpt_comparisons",
+  "citation": "@article{nakano2021webgpt,\n  title={WebGPT: Browser-assisted question-answering with human feedback},\n  author={Nakano, Reiichiro and Hilton, Jacob and Balaji, Suchir and Wu, Jeff and Ouyang, Long and Kim, Christina and Hesse, Christopher and Jain, Shantanu and Kosaraju, Vineet and Saunders, William and others},\n  journal={arXiv preprint arXiv:2112.09332},\n  year={2021}\n}"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "webgpt_001",
+    "question": "What is the tallest building in the world as of 2024?",
+    "response_a": "The Burj Khalifa in Dubai is the tallest building in the world, standing at 828 meters (2,717 feet). It was completed in 2010 and has held the record since then.",
+    "response_b": "The Burj Khalifa in Dubai, UAE is the tallest building in the world at 828 meters [1]. It surpassed Taipei 101 when completed in 2010. The Jeddah Tower in Saudi Arabia is under construction and planned to exceed 1,000 meters when completed [2].\n\nSources:\n[1] https://www.burjkhalifa.ae\n[2] https://www.jeddahtower.com"
+  },
+  {
+    "id": "webgpt_002",
+    "question": "How does CRISPR gene editing work?",
+    "response_a": "CRISPR uses a guide RNA to direct the Cas9 enzyme to a specific location in DNA. The enzyme cuts both strands, and the cell's repair mechanisms either disable the gene or allow insertion of new sequences.",
+    "response_b": "CRISPR-Cas9 is a gene editing tool adapted from bacterial immune systems. A guide RNA (gRNA) complementary to the target sequence directs Cas9 to make a double-strand break. This triggers either non-homologous end joining (NHEJ), causing insertions/deletions, or homology-directed repair (HDR) for precise edits when a template is provided."
+  }
+]

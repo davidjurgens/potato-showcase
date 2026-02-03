@@ -1,0 +1,122 @@
+# AlpacaFarm Preference Simulation Configuration
+# Based on Dubois et al., NeurIPS 2023
+# Task: Collect preferences for instruction-following
+
+port: 8000
+server_name: localhost
+task_name: "AlpacaFarm Preference Simulation"
+
+data_files:
+  - data.json
+id_key: id
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "preference"
+    description: |
+      Which response better follows the instruction?
+      Consider helpfulness, accuracy, and appropriateness.
+    annotation_type: radio
+    labels:
+      - "Response 1 is much better"
+      - "Response 1 is slightly better"
+      - "Tie - both are equal"
+      - "Response 2 is slightly better"
+      - "Response 2 is much better"
+
+  - name: "preference_reason"
+    description: "Primary reason for your preference:"
+    annotation_type: radio
+    labels:
+      - "More accurate/correct"
+      - "More helpful/useful"
+      - "Better formatted/organized"
+      - "More appropriate tone"
+      - "More complete"
+      - "More concise"
+      - "Followed instructions better"
+      - "Both equally good/bad"
+      - "Other"
+
+  - name: "response1_quality"
+    description: "Rate Response 1 quality (1-5):"
+    annotation_type: likert
+    min_label: "1 - Very poor"
+    max_label: "5 - Excellent"
+    size: 5
+
+  - name: "response2_quality"
+    description: "Rate Response 2 quality (1-5):"
+    annotation_type: likert
+    min_label: "1 - Very poor"
+    max_label: "5 - Excellent"
+    size: 5
+
+  - name: "task_difficulty"
+    description: "How difficult was this instruction to follow well?"
+    annotation_type: radio
+    labels:
+      - "Very easy"
+      - "Easy"
+      - "Moderate"
+      - "Difficult"
+      - "Very difficult"
+
+  - name: "annotation_confidence"
+    description: "How confident are you in your preference?"
+    annotation_type: radio
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not very confident"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## AlpacaFarm Preference Annotation
+
+  Compare two AI responses to the same instruction and indicate your preference.
+
+  ### Evaluation Criteria:
+
+  **Instruction Following**
+  - Did it do what was asked?
+  - Did it follow any specific requirements?
+  - Did it stay on topic?
+
+  **Helpfulness**
+  - Would this actually help the user?
+  - Is the information useful?
+  - Is it actionable?
+
+  **Accuracy**
+  - Is the information correct?
+  - Are there factual errors?
+  - Is it misleading?
+
+  **Quality**
+  - Is it well-written?
+  - Is it appropriately detailed?
+  - Is the tone appropriate?
+
+  ### Preference Scale:
+  - **Much better**: Clear, obvious winner
+  - **Slightly better**: Marginal advantage
+  - **Tie**: Genuinely indistinguishable
+
+  ### Guidelines:
+  - Read the instruction first
+  - Consider what a typical user would want
+  - Don't overthink - go with your gut
+  - Ties are okay when responses are equal
+
+  ### Common Reasons for Preference:
+  - More accurate information
+  - Better addresses the actual question
+  - More helpful/actionable
+  - Better organized/formatted
+  - More appropriate length
+  - Better tone for the context

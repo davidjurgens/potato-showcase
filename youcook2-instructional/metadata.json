@@ -1,0 +1,23 @@
+{
+  "title": "YouCook2 Recipe Step Annotation",
+  "description": "Annotate cooking videos with recipe step boundaries and descriptions. Segment instructional cooking content into distinct procedural steps.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video-Language", "Instructional Video"],
+  "useCase": ["Dense Video Captioning", "Recipe Understanding", "Procedural Learning"],
+  "complexity": "intermediate",
+  "tags": ["video", "cooking", "recipe", "steps", "instructional", "captioning"],
+  "featured": false,
+  "paperReference": "Zhou et al., AAAI 2018",
+  "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/12342",
+  "datasetUrl": "http://youcook2.eecs.umich.edu/",
+  "citation": "@inproceedings{zhou2018towards,\n  title={Towards automatic learning of procedures from web instructional videos},\n  author={Zhou, Luowei and Xu, Chenliang and Corso, Jason J},\n  booktitle={AAAI Conference on Artificial Intelligence},\n  volume={32},\n  number={1},\n  year={2018}\n}"
+}

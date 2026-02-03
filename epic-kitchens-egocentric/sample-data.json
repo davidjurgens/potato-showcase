@@ -1,0 +1,16 @@
+[
+  {
+    "id": "epic_001",
+    "video_url": "https://example.com/videos/kitchen_egocentric_001.mp4",
+    "participant": "P01",
+    "kitchen": "kitchen_01",
+    "duration": 30
+  },
+  {
+    "id": "epic_002",
+    "video_url": "https://example.com/videos/kitchen_egocentric_002.mp4",
+    "participant": "P01",
+    "kitchen": "kitchen_01",
+    "duration": 45
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "yt_highlight_001",
+    "video_url": "https://example.com/videos/surfing_clip.mp4",
+    "domain": "surfing",
+    "duration": 120
+  },
+  {
+    "id": "yt_highlight_002",
+    "video_url": "https://example.com/videos/skating_clip.mp4",
+    "domain": "skating",
+    "duration": 90
+  }
+]

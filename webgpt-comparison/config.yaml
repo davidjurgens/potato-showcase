@@ -1,0 +1,112 @@
+# WebGPT Answer Comparison Configuration
+# Based on Nakano et al., 2021
+# Task: Compare web-augmented vs standard AI answers
+
+port: 8000
+server_name: localhost
+task_name: "WebGPT Answer Comparison"
+
+data_files:
+  - data.json
+id_key: id
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "overall_preference"
+    description: |
+      Which answer is BETTER overall?
+      Consider accuracy, helpfulness, and sourcing.
+    annotation_type: radio
+    labels:
+      - "Response A is much better"
+      - "Response A is slightly better"
+      - "About equal"
+      - "Response B is slightly better"
+      - "Response B is much better"
+
+  - name: "factual_accuracy"
+    description: "Which response is more FACTUALLY ACCURATE?"
+    annotation_type: radio
+    labels:
+      - "A is more accurate"
+      - "Both equally accurate"
+      - "B is more accurate"
+      - "Cannot determine"
+
+  - name: "source_quality"
+    description: "Which response has BETTER SOURCES/CITATIONS?"
+    annotation_type: radio
+    labels:
+      - "A has better sources"
+      - "Both have similar source quality"
+      - "B has better sources"
+      - "Neither provides sources"
+
+  - name: "completeness"
+    description: "Which response is more COMPLETE?"
+    annotation_type: radio
+    labels:
+      - "A is more complete"
+      - "Both equally complete"
+      - "B is more complete"
+
+  - name: "relevance"
+    description: "Which response better ADDRESSES THE QUESTION?"
+    annotation_type: radio
+    labels:
+      - "A is more relevant"
+      - "Both equally relevant"
+      - "B is more relevant"
+
+  - name: "confidence"
+    description: "How confident are you in your overall preference?"
+    annotation_type: radio
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not very confident"
+      - "Guessing"
+
+allow_all_users: true
+instances_per_annotator: 80
+annotation_per_instance: 3
+
+annotation_instructions: |
+  ## WebGPT Answer Comparison
+
+  Compare two AI-generated answers to the same question.
+
+  ### What to evaluate:
+
+  **Factual Accuracy**
+  - Are the facts correct?
+  - Are claims supported?
+  - Any obvious errors?
+
+  **Source Quality**
+  - Are sources provided?
+  - Are sources reliable?
+  - Do sources support the claims?
+
+  **Completeness**
+  - Does it fully answer the question?
+  - Are important aspects covered?
+  - Appropriate level of detail?
+
+  **Relevance**
+  - Does it address what was asked?
+  - Is the information pertinent?
+  - Stays on topic?
+
+  ### Guidelines:
+  - Read the question carefully first
+  - Evaluate each dimension independently
+  - "About equal" is valid when truly indistinguishable
+  - Note: One response may have used web search
+
+  ### Tips:
+  - Look for specific details and citations
+  - Check if claims seem verifiable
+  - Consider whether you'd trust the answer
+  - More sources ≠ better (quality matters)

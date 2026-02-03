@@ -1,0 +1,102 @@
+# MovieNet Scene Classification Configuration
+# Based on Qian et al., ECCV 2020
+# Task: Classify movie scenes by various attributes
+
+port: 8000
+server_name: localhost
+task_name: "MovieNet Scene Classification"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "place_type"
+    description: "What type of place/location is this scene set in?"
+    annotation_type: radio
+    labels:
+      - "Indoor - Home/Apartment"
+      - "Indoor - Office/Workplace"
+      - "Indoor - Public (restaurant, store, etc.)"
+      - "Indoor - Vehicle"
+      - "Outdoor - Urban/City"
+      - "Outdoor - Nature/Rural"
+      - "Outdoor - Road/Street"
+      - "Mixed/Transitional"
+
+  - name: "time_of_day"
+    description: "What time of day is depicted?"
+    annotation_type: radio
+    labels:
+      - "Day - Morning"
+      - "Day - Afternoon"
+      - "Day - Evening/Dusk"
+      - "Night"
+      - "Unclear/Mixed"
+
+  - name: "weather"
+    description: "What is the weather/lighting condition?"
+    annotation_type: radio
+    labels:
+      - "Clear/Sunny"
+      - "Cloudy/Overcast"
+      - "Rainy"
+      - "Snowy"
+      - "Foggy/Misty"
+      - "Indoor (N/A)"
+      - "Unclear"
+
+  - name: "scene_function"
+    description: "What narrative function does this scene serve?"
+    annotation_type: multiselect
+    labels:
+      - "Exposition (introduces information)"
+      - "Action/Chase"
+      - "Dialogue/Conversation"
+      - "Emotional/Dramatic"
+      - "Comedic"
+      - "Romantic"
+      - "Suspense/Tension"
+      - "Flashback/Dream"
+      - "Montage/Transition"
+
+  - name: "shot_scale"
+    description: "What is the predominant shot scale?"
+    annotation_type: radio
+    labels:
+      - "Extreme Close-up"
+      - "Close-up"
+      - "Medium Shot"
+      - "Full Shot"
+      - "Long Shot"
+      - "Extreme Long Shot"
+      - "Mixed/Varied"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Movie Scene Classification Task
+
+  Classify movie scenes by their visual and narrative attributes.
+
+  ### Attributes to Label:
+
+  **Place Type**: Where does the scene take place?
+
+  **Time of Day**: When does the scene occur?
+
+  **Weather**: What's the lighting/weather condition?
+
+  **Scene Function**: What purpose does this scene serve narratively?
+
+  **Shot Scale**: What's the typical camera distance?
+
+  ### Tips:
+  - Consider the OVERALL scene, not just one shot
+  - Scene function can have multiple labels
+  - If unsure, choose the most prominent/frequent option

@@ -1,0 +1,23 @@
+{
+  "title": "YouTube Highlights Detection",
+  "description": "Detect highlight-worthy moments in domain-specific videos. Annotators identify the most engaging segments for automatic highlight generation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video Understanding"],
+  "useCase": ["Highlight Detection", "Video Summarization", "Content Curation"],
+  "complexity": "beginner",
+  "tags": ["video", "highlights", "youtube", "engagement", "domain-specific"],
+  "featured": false,
+  "paperReference": "Sun et al., ECCV 2014",
+  "paperUrl": "https://link.springer.com/chapter/10.1007/978-3-319-10590-1_51",
+  "datasetUrl": "https://github.com/aliensunmin/DomainSpecificHighlight",
+  "citation": "@inproceedings{sun2014ranking,\n  title={Ranking domain-specific highlights by analyzing edited videos},\n  author={Sun, Min and Farhadi, Ali and Seitz, Steve},\n  booktitle={European Conference on Computer Vision},\n  pages={787--802},\n  year={2014}\n}"
+}

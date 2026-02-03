@@ -1,0 +1,14 @@
+[
+  {
+    "id": "charades_sta_001",
+    "video_url": "https://example.com/videos/charades_home_001.mp4",
+    "query": "Person opens a door",
+    "duration": 30
+  },
+  {
+    "id": "charades_sta_002",
+    "video_url": "https://example.com/videos/charades_home_002.mp4",
+    "query": "Person sits down on a couch",
+    "duration": 25
+  }
+]

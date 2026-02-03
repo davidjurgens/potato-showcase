@@ -1,0 +1,69 @@
+# Scene Boundary Detection Configuration
+# Based on BBC Planet Earth Scene Dataset (Sidiropoulos et al., 2011)
+# Task: Mark scene transitions in documentary videos
+
+port: 8000
+server_name: localhost
+task_name: "Scene Boundary Detection"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "scene_boundaries"
+    description: |
+      Mark the START of each new scene. A scene is a semantically coherent
+      segment unified by location, time, characters, or narrative topic.
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      - name: "scene_start"
+        color: "#EF4444"
+        key_value: "s"
+      - name: "gradual_transition"
+        color: "#F97316"
+        key_value: "g"
+      - name: "cut_transition"
+        color: "#3B82F6"
+        key_value: "c"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+
+  - name: "scene_type"
+    description: "What type of scene follows this boundary?"
+    annotation_type: radio
+    labels:
+      - "Establishing shot"
+      - "Action/Event"
+      - "Dialogue/Interview"
+      - "Transition/Montage"
+      - "Credits/Title"
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Scene Boundary Detection Task
+
+  Mark where each new SCENE begins in the video.
+
+  ### What defines a scene boundary?
+  - Change in location or setting
+  - Significant time jump
+  - Change in main subject/topic
+  - Narrative shift
+
+  ### Transition Types:
+  - **Cut**: Instantaneous change between shots
+  - **Gradual**: Fade, dissolve, or wipe transition
+
+  ### Tips:
+  - A scene is NOT the same as a shot (scenes contain multiple shots)
+  - Mark the FIRST frame of the new scene
+  - Use frame stepping for precision

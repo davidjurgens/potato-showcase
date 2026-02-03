@@ -1,0 +1,136 @@
+# OpenAssistant Conversation Quality Configuration
+# Based on Köpf et al., NeurIPS 2023
+# Task: Rate conversation quality across multiple dimensions
+
+port: 8000
+server_name: localhost
+task_name: "OpenAssistant Conversation Quality"
+
+data_files:
+  - data.json
+id_key: id
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "quality"
+    description: "Overall QUALITY of this response (0=worst, 4=best):"
+    annotation_type: likert
+    min_label: "0 - Very poor"
+    max_label: "4 - Excellent"
+    size: 5
+
+  - name: "helpfulness"
+    description: "How HELPFUL is this response? (0=not helpful, 4=very helpful)"
+    annotation_type: likert
+    min_label: "0 - Not helpful"
+    max_label: "4 - Very helpful"
+    size: 5
+
+  - name: "creativity"
+    description: "How CREATIVE is this response? (0=generic, 4=highly creative)"
+    annotation_type: likert
+    min_label: "0 - Generic"
+    max_label: "4 - Highly creative"
+    size: 5
+
+  - name: "humor"
+    description: "If applicable, how HUMOROUS is this response? (0=not funny, 4=very funny)"
+    annotation_type: likert
+    min_label: "0 - Not funny"
+    max_label: "4 - Very funny"
+    size: 5
+
+  - name: "truthfulness"
+    description: "How TRUTHFUL is this response?"
+    annotation_type: radio
+    labels:
+      - "Completely truthful"
+      - "Mostly truthful"
+      - "Partially truthful"
+      - "Mostly false"
+      - "Completely false"
+      - "Cannot assess"
+
+  - name: "harmlessness"
+    description: "Is this response HARMLESS?"
+    annotation_type: radio
+    labels:
+      - "Completely harmless"
+      - "Mostly harmless"
+      - "Potentially problematic"
+      - "Harmful"
+      - "Very harmful"
+
+  - name: "spam"
+    description: "Is this response SPAM or low-effort?"
+    annotation_type: radio
+    labels:
+      - "Not spam - genuine response"
+      - "Low effort but not spam"
+      - "Likely spam"
+      - "Definite spam"
+
+  - name: "lang_mismatch"
+    description: "Is the response in the WRONG LANGUAGE?"
+    annotation_type: radio
+    labels:
+      - "Correct language"
+      - "Wrong language"
+      - "Mixed languages"
+
+  - name: "feedback"
+    description: "Optional feedback for the response author:"
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+
+annotation_instructions: |
+  ## OpenAssistant Conversation Quality
+
+  Rate AI assistant responses across multiple quality dimensions.
+
+  ### Rating Scales (0-4):
+
+  **Quality**: Overall response quality
+  - 4: Excellent - couldn't be better
+  - 3: Good - minor issues only
+  - 2: Acceptable - noticeable issues
+  - 1: Poor - significant problems
+  - 0: Very poor - fails completely
+
+  **Helpfulness**: Does it help the user?
+  - Consider the user's apparent goal
+  - Is information actionable?
+  - Does it address the question?
+
+  **Creativity**: Is it creative/original?
+  - Only rate if relevant (skip for factual Q&A)
+  - Novel approaches or perspectives
+  - Engaging presentation
+
+  **Humor**: Is it funny?
+  - Only rate if humor was attempted
+  - N/A for serious responses
+
+  ### Quality Flags:
+
+  **Truthfulness**: Is the content accurate?
+  - "Cannot assess" for opinions or unknowable things
+
+  **Harmlessness**: Could this cause harm?
+  - Consider advice quality
+  - Potential for misuse
+  - Respectfulness
+
+  **Spam**: Is this low-quality filler?
+  - Nonsense or irrelevant text
+  - Copied content
+  - No genuine attempt to help
+
+  ### Guidelines:
+  - Rate based on the specific context
+  - A simple question needs a simple answer
+  - Don't penalize brevity if complete

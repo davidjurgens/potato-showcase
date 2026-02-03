@@ -1,0 +1,94 @@
+# Charades-STA Temporal Grounding Configuration
+# Based on Gao et al., ICCV 2017
+# Task: Ground language descriptions to video segments
+
+port: 8000
+server_name: localhost
+task_name: "Charades-STA Temporal Grounding"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "grounded_segment"
+    description: |
+      Mark the EXACT temporal segment where the described action occurs.
+      Read the query carefully and find where it happens in the video.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "grounded_moment"
+        color: "#22C55E"
+        key_value: "g"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 24
+
+  - name: "grounding_confidence"
+    description: "How confident are you in the temporal boundaries?"
+    annotation_type: radio
+    labels:
+      - "Very confident - clear start and end"
+      - "Confident - boundaries are reasonably clear"
+      - "Somewhat confident - boundaries are approximate"
+      - "Not confident - hard to determine exact timing"
+
+  - name: "query_ambiguity"
+    description: "Is the language query ambiguous?"
+    annotation_type: radio
+    labels:
+      - "Clear - unambiguous description"
+      - "Slightly ambiguous - minor interpretation needed"
+      - "Ambiguous - multiple interpretations possible"
+      - "Very ambiguous - unclear what to look for"
+
+  - name: "action_visible"
+    description: "Is the described action visible in the video?"
+    annotation_type: radio
+    labels:
+      - "Fully visible - entire action shown"
+      - "Partially visible - action partly shown"
+      - "Barely visible - hard to see"
+      - "Not visible - action not in video"
+
+allow_all_users: true
+instances_per_annotator: 60
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Charades-STA Temporal Grounding
+
+  Ground natural language descriptions to video segments.
+
+  ### Task:
+  Given a sentence describing an action, mark the EXACT segment where that action occurs.
+
+  ### Example:
+  - Query: "Person opens a door"
+  - Your task: Find and mark the segment where a person opens a door
+
+  ### Guidelines:
+  - Read the query BEFORE watching the video
+  - Mark from action START to action END
+  - Include preparation if it's part of the action
+  - The segment should be as tight as possible
+
+  ### Boundary Rules:
+  - START: When the person begins the action (not before)
+  - END: When the action is complete (not after)
+  - If the action repeats, mark only the FIRST occurrence
+
+  ### Common issues:
+  - Actions may be brief (1-2 seconds)
+  - Multiple similar actions may occur
+  - Some queries may not have a match (mark "not visible")
+
+  ### Tips:
+  - Use frame stepping for precise boundaries
+  - The action should match the ENTIRE query, not just part
+  - Pay attention to object mentions ("opens a door" vs "opens a window")

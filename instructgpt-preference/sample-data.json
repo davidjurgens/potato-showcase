@@ -1,0 +1,14 @@
+[
+  {
+    "id": "instruct_001",
+    "instruction": "Explain quantum entanglement in simple terms that a high school student could understand.",
+    "response_a": "Quantum entanglement is when two particles become connected in a special way. When you measure one particle, you instantly know something about the other, no matter how far apart they are. It's like having two magic coins that always land on opposite sides - if one shows heads, the other must be tails, even if they're on different continents.",
+    "response_b": "Quantum entanglement occurs when particles become correlated such that the quantum state of one particle cannot be described independently of the others. This phenomenon, which Einstein called 'spooky action at a distance,' involves non-local correlations that persist regardless of spatial separation."
+  },
+  {
+    "id": "instruct_002",
+    "instruction": "Write a haiku about programming.",
+    "response_a": "Bugs hide in the code\nDebugging late into night\nSyntax error found",
+    "response_b": "Programming is fun and challenging. You write code to make computers do things. Sometimes there are bugs that need to be fixed. It requires patience and logical thinking."
+  }
+]

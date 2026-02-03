@@ -1,0 +1,94 @@
+# SumMe Video Summarization Configuration
+# Based on Gygli et al., ECCV 2014
+# Task: Select important segments for video summarization
+
+port: 8000
+server_name: localhost
+task_name: "SumMe Video Summarization"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "summary_segments"
+    description: |
+      Mark segments that should be INCLUDED in a summary of this video.
+      Select the most important/interesting parts that capture the essence.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "include_in_summary"
+        color: "#22C55E"
+        key_value: "s"
+      - name: "highly_important"
+        color: "#EF4444"
+        key_value: "h"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 30
+
+  - name: "importance_score"
+    description: "Overall, how interesting/important is this video's content?"
+    annotation_type: radio
+    labels:
+      - "5 - Very interesting/important"
+      - "4 - Interesting"
+      - "3 - Moderately interesting"
+      - "2 - Somewhat boring"
+      - "1 - Not interesting"
+
+  - name: "video_category"
+    description: "What category best describes this video?"
+    annotation_type: radio
+    labels:
+      - "Sports/Action"
+      - "Travel/Scenery"
+      - "Events/Celebrations"
+      - "Animals/Nature"
+      - "Tutorial/How-to"
+      - "Social/People"
+      - "Other"
+
+  - name: "summary_difficulty"
+    description: "How difficult was it to select summary segments?"
+    annotation_type: radio
+    labels:
+      - "Easy - clear highlights"
+      - "Moderate - some judgment needed"
+      - "Difficult - many equally important parts"
+      - "Very difficult - no clear structure"
+
+allow_all_users: true
+instances_per_annotator: 25
+annotation_per_instance: 3
+
+annotation_instructions: |
+  ## Video Summarization Task
+
+  Select segments that should be included in a summary of each video.
+
+  ### Goal:
+  If the video were shortened to ~15% of its length, what parts should remain?
+
+  ### What makes a good summary segment?
+  - Captures key moments or highlights
+  - Shows the main subject/action clearly
+  - Is visually interesting or informative
+  - Would make sense to someone who hasn't seen the full video
+
+  ### Guidelines:
+  - Mark all segments you think should be in the summary
+  - Use "highly_important" for the absolute best moments
+  - Try to select 10-20% of the video
+  - Avoid: repetitive content, blurry/unclear footage, transitions
+
+  ### Tips:
+  - Watch the whole video first before marking
+  - Consider what would be lost if a segment were removed
+  - For action videos, focus on peak moments
+  - For scenic videos, focus on the best views

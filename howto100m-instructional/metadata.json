@@ -1,0 +1,23 @@
+{
+  "title": "HowTo100M Instructional Video Annotation",
+  "description": "Annotate instructional video clips with step descriptions and visual grounding. Link narrated instructions to visual actions for video-language understanding.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video-Language", "Instructional Video"],
+  "useCase": ["Video-Text Alignment", "Step Recognition", "Procedural Understanding"],
+  "complexity": "intermediate",
+  "tags": ["video", "instructional", "howto", "narration", "steps", "grounding"],
+  "featured": false,
+  "paperReference": "Miech et al., ICCV 2019",
+  "paperUrl": "https://openaccess.thecvf.com/content_ICCV_2019/html/Miech_HowTo100M_Learning_a_Text-Video_Embedding_by_Watching_Hundred_Million_Narrated_ICCV_2019_paper.html",
+  "datasetUrl": "https://www.di.ens.fr/willow/research/howto100m/",
+  "citation": "@inproceedings{miech2019howto100m,\n  title={HowTo100M: Learning a text-video embedding by watching hundred million narrated video clips},\n  author={Miech, Antoine and Zhukov, Dimitri and Alayrac, Jean-Baptiste and Tapaswi, Makarand and Laptev, Ivan and Sivic, Josef},\n  booktitle={IEEE/CVF International Conference on Computer Vision},\n  pages={2630--2640},\n  year={2019}\n}"
+}

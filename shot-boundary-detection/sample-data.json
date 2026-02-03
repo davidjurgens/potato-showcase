@@ -1,0 +1,14 @@
+[
+  {
+    "id": "sbd_001",
+    "video_url": "https://example.com/videos/news_broadcast.mp4",
+    "source": "broadcast_news",
+    "duration_seconds": 180
+  },
+  {
+    "id": "sbd_002",
+    "video_url": "https://example.com/videos/documentary_clip.mp4",
+    "source": "documentary",
+    "duration_seconds": 240
+  }
+]

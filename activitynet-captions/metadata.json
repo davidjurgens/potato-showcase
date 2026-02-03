@@ -1,0 +1,23 @@
+{
+  "title": "ActivityNet Captions Dense Annotation",
+  "description": "Dense temporal annotation with natural language descriptions. Annotators segment videos into events and write descriptive captions for each temporal segment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation", "text"],
+  "domain": ["Computer Vision", "Video Understanding", "NLP"],
+  "useCase": ["Dense Captioning", "Video Description", "Temporal Grounding"],
+  "complexity": "advanced",
+  "tags": ["video", "captions", "dense", "temporal", "activitynet", "description"],
+  "featured": false,
+  "paperReference": "Krishna et al., ICCV 2017",
+  "paperUrl": "https://arxiv.org/abs/1705.00754",
+  "datasetUrl": "http://activity-net.org/challenges/2017/captions.html",
+  "citation": "@inproceedings{krishna2017dense,\n  title={Dense-captioning events in videos},\n  author={Krishna, Ranjay and Hata, Kenji and Ren, Frederic and Fei-Fei, Li and Niebles, Juan Carlos},\n  booktitle={Proceedings of the IEEE International Conference on Computer Vision},\n  pages={706--715},\n  year={2017}\n}"
+}

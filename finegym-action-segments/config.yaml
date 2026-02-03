@@ -1,0 +1,119 @@
+# FineGym Action Segmentation Configuration
+# Based on Shao et al., CVPR 2020
+# Task: Annotate hierarchical gymnastic actions
+
+port: 8000
+server_name: localhost
+task_name: "FineGym Action Segmentation"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "action_segments"
+    description: |
+      Mark the temporal boundaries of each ELEMENT (distinct skill/move).
+      An element is one complete gymnastic skill.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "element"
+        color: "#22C55E"
+        key_value: "e"
+      - name: "transition"
+        color: "#94A3B8"
+        key_value: "t"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 25
+
+  - name: "event_type"
+    description: "What gymnastic EVENT is this?"
+    annotation_type: radio
+    labels:
+      - "Floor Exercise (FX)"
+      - "Vault (VT)"
+      - "Uneven Bars (UB)"
+      - "Balance Beam (BB)"
+      - "Pommel Horse (PH)"
+      - "Still Rings (SR)"
+      - "Parallel Bars (PB)"
+      - "Horizontal Bar (HB)"
+
+  - name: "element_group"
+    description: "What GROUP does the current element belong to?"
+    annotation_type: radio
+    labels:
+      - "Leap/Jump"
+      - "Turn/Spin"
+      - "Tumbling"
+      - "Balance/Hold"
+      - "Swing"
+      - "Flight/Release"
+      - "Mount"
+      - "Dismount"
+      - "Dance/Choreography"
+
+  - name: "element_difficulty"
+    description: "Estimated difficulty of the element:"
+    annotation_type: radio
+    labels:
+      - "A - Basic"
+      - "B - Intermediate"
+      - "C - Advanced"
+      - "D - Superior"
+      - "E+ - Elite"
+      - "Unsure"
+
+  - name: "execution_quality"
+    description: "How well was the element executed?"
+    annotation_type: radio
+    labels:
+      - "Excellent - no visible errors"
+      - "Good - minor deductions"
+      - "Fair - noticeable errors"
+      - "Poor - major errors"
+      - "Fall/incomplete"
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## FineGym Action Segmentation
+
+  Annotate gymnastic routines with hierarchical action labels.
+
+  ### Hierarchy:
+  1. **Event** - The apparatus (Floor, Beam, Bars, etc.)
+  2. **Set** - A connected sequence of elements
+  3. **Element** - One distinct skill/move
+
+  ### What is an element?
+  - A single, complete gymnastic skill
+  - Has clear start and end positions
+  - Examples: back handspring, split leap, giant swing
+
+  ### Element Groups (examples):
+  - **Leap/Jump**: Split leap, straddle jump, tour jeté
+  - **Turn/Spin**: Pirouette, wolf turn, fouetté
+  - **Tumbling**: Handspring, salto, twist
+  - **Balance/Hold**: Scale, handstand, planche
+  - **Swing**: Giant, clear hip, stalder
+  - **Flight/Release**: Tkatchev, Jaeger, Gienger
+
+  ### Guidelines:
+  - Mark each element separately
+  - Include transitions between elements
+  - Use frame-stepping for precise boundaries
+  - Gymnastics expertise helpful but not required
+
+  ### Tips:
+  - Elements start/end at defined positions
+  - Watch for connection bonuses (elements linked together)
+  - Slow motion helps identify complex skills

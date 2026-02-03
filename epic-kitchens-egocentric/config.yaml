@@ -1,0 +1,118 @@
+# EPIC-KITCHENS Egocentric Action Annotation Configuration
+# Based on Damen et al., ECCV 2018
+# Task: Annotate verb-noun action pairs in egocentric kitchen videos
+
+port: 8000
+server_name: localhost
+task_name: "EPIC-KITCHENS Egocentric Action Annotation"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "action_segments"
+    description: |
+      Mark the temporal boundaries of each distinct ACTION.
+      An action starts when hands begin moving toward an object
+      and ends when the interaction is complete.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "action"
+        color: "#22C55E"
+        key_value: "a"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 60
+
+  - name: "verb"
+    description: "What VERB describes this action?"
+    annotation_type: radio
+    labels:
+      - "take"
+      - "put"
+      - "open"
+      - "close"
+      - "wash"
+      - "cut"
+      - "mix"
+      - "pour"
+      - "turn-on"
+      - "turn-off"
+      - "move"
+      - "remove"
+      - "other"
+
+  - name: "noun"
+    description: "What NOUN/OBJECT is being interacted with?"
+    annotation_type: radio
+    labels:
+      - "pan"
+      - "plate"
+      - "knife"
+      - "spoon"
+      - "cup"
+      - "bowl"
+      - "fridge"
+      - "tap"
+      - "drawer"
+      - "cupboard"
+      - "food item"
+      - "container"
+      - "other"
+
+  - name: "verb_free_text"
+    description: "If 'other' verb, specify:"
+    annotation_type: text
+
+  - name: "noun_free_text"
+    description: "If 'other' noun, specify the object:"
+    annotation_type: text
+
+  - name: "visibility"
+    description: "How visible is the action?"
+    annotation_type: radio
+    labels:
+      - "Fully visible - clear view of hands and object"
+      - "Partially visible - some occlusion"
+      - "Mostly occluded - hard to see"
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## EPIC-KITCHENS Egocentric Action Annotation
+
+  Annotate cooking actions from first-person (egocentric) video.
+
+  ### Task:
+  1. Mark the temporal boundaries of each action
+  2. Label the VERB (what is being done)
+  3. Label the NOUN (what object is involved)
+
+  ### What counts as an action?
+  - Any intentional interaction with an object
+  - Starts when hands begin reaching/moving
+  - Ends when the interaction is complete
+
+  ### Common verb-noun pairs:
+  - "take pan", "put plate", "open fridge"
+  - "wash spoon", "cut vegetable", "pour water"
+  - "turn-on tap", "close drawer", "mix bowl"
+
+  ### Guidelines:
+  - One action = one verb + one noun
+  - If multiple objects, annotate the PRIMARY one
+  - Mark ALL actions, even brief ones
+  - Use free text for objects not in the list
+
+  ### Egocentric video tips:
+  - Hands often occlude objects - do your best
+  - Fast movements may need frame-stepping
+  - Camera shake is normal in egocentric video

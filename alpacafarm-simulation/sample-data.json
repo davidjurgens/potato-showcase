@@ -1,0 +1,14 @@
+[
+  {
+    "id": "alpaca_001",
+    "instruction": "Explain the concept of compound interest to a teenager.",
+    "response_1": "Compound interest is when you earn interest on both your original money AND on the interest you've already earned. Imagine you put $100 in a savings account with 10% interest. After year 1, you have $110. In year 2, you earn 10% on $110 (not just $100), giving you $121. It's like a snowball rolling downhill, getting bigger and bigger!",
+    "response_2": "Compound interest is the interest calculated on the initial principal and also on the accumulated interest from previous periods. The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is principal, r is the annual interest rate, n is the number of times interest is compounded per year, and t is the number of years."
+  },
+  {
+    "id": "alpaca_002",
+    "instruction": "Write a short poem about coffee.",
+    "response_1": "Morning's dark embrace,\nSteam rises, warmth fills the cup,\nEnergy awaits.",
+    "response_2": "Coffee, oh coffee, so brown and so hot,\nI drink you each morning, I like you a lot.\nYou wake me up when I'm feeling so tired,\nYour caffeine boost is what I desired."
+  }
+]
