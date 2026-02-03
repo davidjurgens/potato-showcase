@@ -1,0 +1,23 @@
+{
+  "title": "SafeRLHF Dual-Dimension Preference",
+  "description": "Safety-aware preference annotation with separate judgments for helpfulness and harmlessness. Includes safety category labeling across 19 harm types for constrained AI alignment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["radio", "multiselect", "likert"],
+  "domain": ["NLP", "AI Safety", "AI Alignment"],
+  "useCase": ["Safe RLHF", "Harmlessness Evaluation", "Content Moderation"],
+  "complexity": "advanced",
+  "tags": ["preference", "rlhf", "safety", "harmlessness", "helpfulness", "dual-objective"],
+  "featured": false,
+  "paperReference": "Ji et al., 2024 / Dai et al., ICLR 2024",
+  "paperUrl": "https://arxiv.org/abs/2406.15513",
+  "datasetUrl": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF",
+  "citation": "@article{ji2024pkusaferlhf,\n  title={PKU-SafeRLHF: Towards Multi-Level Safety Alignment for LLMs with Human Preference},\n  author={Ji, Jiaming and others},\n  journal={arXiv preprint arXiv:2406.15513},\n  year={2024}\n}"
+}

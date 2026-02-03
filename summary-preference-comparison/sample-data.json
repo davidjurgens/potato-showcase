@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sum_001",
+    "source_text": "Scientists at MIT have developed a new type of battery that could revolutionize electric vehicles. The solid-state battery uses a lithium-metal anode instead of the graphite anodes in current lithium-ion batteries, potentially doubling energy density. In tests, the battery maintained 80% capacity after 10,000 charge cycles, far exceeding current batteries which typically last 1,000-2,000 cycles. The researchers say the technology could be commercially available within 5 years, though manufacturing challenges remain. Major automakers including Toyota and BMW have expressed interest in licensing the technology.",
+    "summary_a": "MIT scientists created a new solid-state battery with lithium-metal anode that doubles energy density and lasts 10,000 cycles. Commercial availability expected in 5 years, with Toyota and BMW interested in the technology.",
+    "summary_b": "A revolutionary new battery technology has been developed that will change everything about electric cars. The battery is much better than current ones and big car companies want to use it."
+  },
+  {
+    "id": "sum_002",
+    "source_text": "The city council voted 7-2 last night to approve a controversial new zoning ordinance that will allow higher-density housing developments in traditionally single-family neighborhoods. Supporters argue the measure will address the housing shortage and make homes more affordable for young families. Opponents, including several neighborhood associations, say it will increase traffic, strain schools, and change the character of established communities. The ordinance takes effect in 90 days but faces a potential ballot challenge from a coalition of homeowner groups who are gathering signatures for a referendum.",
+    "summary_a": "City council approved (7-2) a zoning ordinance allowing higher-density housing in single-family areas to address housing shortage. Opponents cite traffic and school concerns. The ordinance takes effect in 90 days but may face a referendum challenge.",
+    "summary_b": "The city approved new housing rules despite opposition from homeowner groups who are concerned."
+  },
+  {
+    "id": "sum_003",
+    "source_text": "A new study published in Nature Medicine found that intermittent fasting may have significant benefits for brain health. Researchers at Johns Hopkins followed 500 adults over three years and found that those who practiced time-restricted eating (eating only during an 8-hour window) showed 23% less cognitive decline compared to a control group eating normally. Brain scans revealed increased connectivity in regions associated with memory. However, the researchers caution that the study only shows correlation, not causation, and that more research is needed. They also note that intermittent fasting is not recommended for pregnant women, children, or those with eating disorders.",
+    "summary_a": "Johns Hopkins study in Nature Medicine found intermittent fasting (8-hour eating window) associated with 23% less cognitive decline over 3 years. Brain scans showed improved memory region connectivity. Researchers note correlation only and caution against fasting for pregnant women, children, and those with eating disorders.",
+    "summary_b": "Scientists proved that intermittent fasting prevents brain decline by 23%. Everyone should try the 8-hour eating window to improve their memory and brain health."
+  },
+  {
+    "id": "sum_004",
+    "source_text": "The Federal Reserve announced it will maintain interest rates at current levels, citing persistent inflation concerns despite recent improvements. Fed Chair Jerome Powell said in a press conference that while inflation has fallen from its 9% peak to 3.2%, it remains above the 2% target. Powell indicated the Fed is prepared to raise rates again if inflation resurges but expects to begin cutting rates in the second half of 2024 if current trends continue. Markets reacted positively to the news, with the S&P 500 rising 1.2% following the announcement.",
+    "summary_a": "The Fed held rates steady due to inflation concerns. Despite inflation falling from 9% to 3.2%, it exceeds the 2% target. Rate cuts possible in H2 2024 if trends continue. Markets rose 1.2%.",
+    "summary_b": "Federal Reserve keeps interest rates unchanged as inflation remains a concern at 3.2%, down from 9% peak but above 2% target. Chair Powell suggests possible rate cuts in late 2024. S&P 500 increased 1.2% on the news."
+  },
+  {
+    "id": "sum_005",
+    "source_text": "Local chef Maria Santos has been named a James Beard Award semifinalist for her work at downtown restaurant Sabor. Santos, who immigrated from Mexico City in 2010, is known for combining traditional Mexican techniques with locally-sourced Pacific Northwest ingredients. Her signature dish, a mole made with Oregon hazelnuts and Washington cherries, has drawn national attention. 'I want to honor my grandmother's recipes while celebrating my new home,' Santos said. Sabor has seen a 40% increase in reservations since the nomination was announced. The James Beard Awards, often called the Oscars of the food world, will announce finalists in March.",
+    "summary_a": "Chef Maria Santos of Sabor restaurant is a James Beard Award semifinalist for fusing Mexican traditions with Pacific Northwest ingredients. Her hazelnut-cherry mole is a signature dish. Reservations up 40% since nomination.",
+    "summary_b": "Maria Santos, originally from Mexico City, received a James Beard nomination for her restaurant Sabor. She makes a special mole with hazelnuts and cherries that honors her grandmother while using local ingredients. The award finalists will be announced in March and the restaurant has become more popular."
+  }
+]

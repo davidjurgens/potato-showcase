@@ -1,0 +1,23 @@
+{
+  "title": "UltraFeedback Rubric Evaluation",
+  "description": "Fine-grained response evaluation across 4 dimensions with written rationales. Rate responses on helpfulness, honesty, instruction-following, and truthfulness using detailed rubrics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["likert", "text"],
+  "domain": ["NLP", "AI Alignment"],
+  "useCase": ["Reward Modeling", "DPO Training", "Quality Evaluation"],
+  "complexity": "advanced",
+  "tags": ["preference", "rlhf", "ultrafeedback", "rubric", "multi-dimensional", "rationale"],
+  "featured": false,
+  "paperReference": "OpenBMB, 2023",
+  "paperUrl": "https://github.com/OpenBMB/UltraFeedback",
+  "datasetUrl": "https://huggingface.co/datasets/openbmb/UltraFeedback",
+  "citation": "@misc{ultrafeedback2023,\n  title={UltraFeedback: A Large-Scale, Fine-Grained, Diverse Preference Dataset},\n  author={OpenBMB},\n  year={2023},\n  url={https://github.com/OpenBMB/UltraFeedback}\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Pairwise Preference with Rationale",
+  "description": "Compare two AI responses and select the better one while providing a written justification. Used for reward model training with interpretable preference signals.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "AI Alignment"],
+  "useCase": ["Reward Modeling", "RLHF", "Preference Learning"],
+  "complexity": "intermediate",
+  "tags": ["preference", "rlhf", "pairwise", "comparison", "rationale", "justification"],
+  "featured": false,
+  "paperReference": "Wang et al., 2024",
+  "paperUrl": "https://arxiv.org/abs/2410.01257",
+  "datasetUrl": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+  "citation": "@article{wang2024helpsteer2preference,\n  title={HelpSteer2-Preference: Complementing Ratings with Human Preferences},\n  author={Wang, Zhilin and others},\n  journal={arXiv preprint arXiv:2410.01257},\n  year={2024}\n}"
+}

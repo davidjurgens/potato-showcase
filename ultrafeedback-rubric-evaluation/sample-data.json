@@ -1,0 +1,27 @@
+[
+  {
+    "id": "uf_001",
+    "instruction": "Write a haiku about artificial intelligence.",
+    "response": "Silicon neurons\nLearning patterns in the void\nMachine dreams awake\n\nThis haiku captures the essence of AI: the hardware (silicon), the learning process, and the emergence of something resembling consciousness or awareness."
+  },
+  {
+    "id": "uf_002",
+    "instruction": "Explain quantum computing to a 5-year-old in exactly 3 sentences.",
+    "response": "Normal computers use tiny switches that are either on or off, like light switches. Quantum computers are special because their switches can be on AND off at the same time, like magic! This lets them solve really hard puzzles much faster than normal computers."
+  },
+  {
+    "id": "uf_003",
+    "instruction": "What is the capital of Australia?",
+    "response": "The capital of Australia is Sydney. Sydney is the largest city in Australia and home to the famous Opera House and Harbour Bridge. It's located on the southeast coast of Australia in the state of New South Wales."
+  },
+  {
+    "id": "uf_004",
+    "instruction": "List 5 benefits of meditation with brief explanations for each.",
+    "response": "Here are 5 benefits of meditation:\n\n1. **Reduced Stress**: Meditation activates the parasympathetic nervous system, lowering cortisol levels and promoting relaxation.\n\n2. **Improved Focus**: Regular practice strengthens attention span and the ability to concentrate on tasks.\n\n3. **Better Sleep**: Meditation can help quiet racing thoughts that interfere with falling asleep.\n\n4. **Emotional Regulation**: It helps create space between stimulus and response, allowing for more thoughtful reactions.\n\n5. **Lower Blood Pressure**: Studies show meditation can reduce blood pressure by promoting relaxation and reducing stress hormones.\n\nNote: While research supports these benefits, results vary by individual and practice consistency."
+  },
+  {
+    "id": "uf_005",
+    "instruction": "Write Python code to reverse a string without using built-in reverse functions.",
+    "response": "Here's how to reverse a string in Python without built-in reverse:\n\n```python\ndef reverse_string(s):\n    reversed_str = \"\"\n    for char in s:\n        reversed_str = char + reversed_str\n    return reversed_str\n\n# Example usage\nprint(reverse_string(\"hello\"))  # Output: olleh\n```\n\nAlternatively, using slicing (which is technically a Python feature but not a reverse function):\n\n```python\ndef reverse_string_slice(s):\n    return s[::-1]\n```\n\nThe first method manually builds the reversed string by prepending each character. Time complexity is O(n) for iteration, though string concatenation in Python can make it O(n²) in some implementations. For better performance with large strings, consider using a list and join."
+  }
+]

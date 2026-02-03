@@ -1,0 +1,138 @@
+# Pairwise Preference with Rationale Configuration
+# Based on HelpSteer2-Preference / HelpSteer3-Preference methodology
+# Task: Compare two responses, select the better one, and explain why
+
+port: 8000
+server_name: localhost
+task_name: "Pairwise Preference with Rationale"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+text_key: prompt
+
+# Output
+output_file: annotations.json
+
+# Display layout showing prompt and both responses
+html_layout: |
+  <div class="comparison-container">
+    <div class="prompt-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">User Prompt:</h3>
+      <div class="prompt-text">{{prompt}}</div>
+    </div>
+    <div class="responses-row" style="display: flex; gap: 20px;">
+      <div class="response-a" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #1565c0;">Response A:</h3>
+        <div class="response-text">{{response_a}}</div>
+      </div>
+      <div class="response-b" style="flex: 1; background: #fce4ec; padding: 15px; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #c62828;">Response B:</h3>
+        <div class="response-text">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  - name: "preference"
+    description: "Which response is better overall?"
+    annotation_type: radio
+    labels:
+      - "Response A is significantly better"
+      - "Response A is slightly better"
+      - "About the same (tie)"
+      - "Response B is slightly better"
+      - "Response B is significantly better"
+    keyboard_shortcuts:
+      "Response A is significantly better": "1"
+      "Response A is slightly better": "2"
+      "About the same (tie)": "3"
+      "Response B is slightly better": "4"
+      "Response B is significantly better": "5"
+
+  - name: "confidence"
+    description: "How confident are you in your preference judgment?"
+    annotation_type: radio
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not very confident"
+    keyboard_shortcuts:
+      "Very confident": "q"
+      "Somewhat confident": "w"
+      "Not very confident": "e"
+
+  - name: "rationale"
+    description: |
+      Explain why you prefer one response over the other.
+      Consider: helpfulness, accuracy, clarity, completeness, and appropriateness.
+    annotation_type: text
+    min_length: 20
+    max_length: 500
+    placeholder: "Explain your preference (e.g., 'Response A is better because it provides more specific examples and addresses the question directly, while Response B is too vague and misses key points...')"
+
+  - name: "key_differences"
+    description: "What are the main factors that influenced your decision? (Select all that apply)"
+    annotation_type: multiselect
+    labels:
+      - "Accuracy/Correctness"
+      - "Helpfulness"
+      - "Completeness"
+      - "Clarity/Organization"
+      - "Relevance"
+      - "Appropriate length"
+      - "Better examples"
+      - "More engaging tone"
+      - "Safety/Appropriateness"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 80
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Pairwise Response Comparison Task
+
+  Your goal is to compare two AI responses and determine which is better.
+
+  ### Steps:
+  1. Read the user prompt carefully
+  2. Read both Response A and Response B thoroughly
+  3. Select your preference (A better, B better, or tie)
+  4. Rate your confidence in the judgment
+  5. Write a brief rationale explaining your choice
+  6. Select the key factors that influenced your decision
+
+  ### Evaluation Criteria:
+
+  **Primary Factors:**
+  - **Helpfulness**: Does it address what the user actually needs?
+  - **Accuracy**: Is the information correct and reliable?
+  - **Completeness**: Does it fully answer the question?
+
+  **Secondary Factors:**
+  - **Clarity**: Is it well-organized and easy to understand?
+  - **Relevance**: Does it stay on topic?
+  - **Appropriateness**: Is the tone and length suitable?
+
+  ### Writing Your Rationale:
+  - Be specific about what makes one response better
+  - Reference concrete examples from the responses
+  - Keep it concise (2-4 sentences typically sufficient)
+  - Focus on the most important differences
+
+  ### When to Choose "Tie":
+  - Both responses are roughly equally good (or equally bad)
+  - They have different strengths that balance out
+  - Use sparingly - most pairs will have a clear winner
+
+  ### Tips:
+  - Read the prompt first to understand user intent
+  - Don't let response length alone determine your preference
+  - Consider what would be most useful for the user
+  - Be consistent in your evaluation criteria
