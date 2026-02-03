@@ -1,0 +1,27 @@
+[
+  {
+    "id": "hs_001",
+    "prompt": "What is the capital of France?",
+    "response": "The capital of France is Paris. Paris is located in the north-central part of France along the Seine River. It is not only the political capital but also the cultural and economic center of France, known for landmarks like the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral."
+  },
+  {
+    "id": "hs_002",
+    "prompt": "Write a Python function to calculate the factorial of a number.",
+    "response": "Here's a Python function to calculate factorial:\n\n```python\ndef factorial(n):\n    if n < 0:\n        raise ValueError(\"Factorial is not defined for negative numbers\")\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\n```\n\nThis recursive implementation handles edge cases (negative numbers, 0, and 1) and calculates the factorial for positive integers."
+  },
+  {
+    "id": "hs_003",
+    "prompt": "Explain quantum entanglement to a 10-year-old.",
+    "response": "Imagine you have two magic coins. When you flip them, they always land the same way - if one shows heads, the other shows heads too, even if they're on opposite sides of the world! Scientists call this 'quantum entanglement.' It's like the coins are best friends who always match, no matter how far apart they are. This is one of the strangest and coolest things in science!"
+  },
+  {
+    "id": "hs_004",
+    "prompt": "What are the health benefits of drinking green tea?",
+    "response": "Green tea offers several potential health benefits:\n\n1. **Antioxidants**: Rich in catechins that may protect cells from damage\n2. **Brain function**: Contains caffeine and L-theanine for alertness\n3. **Heart health**: May help lower cholesterol and blood pressure\n4. **Weight management**: Could boost metabolism slightly\n5. **Blood sugar**: May help regulate glucose levels\n\nNote: While research is promising, consult a healthcare provider for personalized advice."
+  },
+  {
+    "id": "hs_005",
+    "prompt": "Summarize the plot of Romeo and Juliet in one paragraph.",
+    "response": "Romeo and Juliet is Shakespeare's tragic love story about two teenagers from feuding families in Verona - the Montagues and Capulets. Romeo Montague and Juliet Capulet meet at a ball, fall instantly in love, and secretly marry. After Romeo kills Juliet's cousin Tybalt in a fight and is banished, Juliet takes a potion to fake her death to escape an arranged marriage. Romeo, unaware of the plan, finds her seemingly dead and drinks poison. Juliet awakens, discovers Romeo dead, and stabs herself. Their deaths finally end their families' bitter feud."
+  }
+]

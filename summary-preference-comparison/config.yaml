@@ -1,0 +1,209 @@
+# Summary Preference Comparison Configuration
+# Based on OpenAI summarize_from_feedback (Stiennon et al., NeurIPS 2020)
+# Task: Compare two summaries and rate quality on multiple axes
+
+port: 8000
+server_name: localhost
+task_name: "Summary Preference Comparison"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+text_key: source_text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing source text and both summaries
+html_layout: |
+  <div class="summary-comparison">
+    <div class="source-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px; max-height: 300px; overflow-y: auto;">
+      <h3 style="margin-top: 0;">📄 Original Text:</h3>
+      <div class="source-text" style="font-size: 14px; line-height: 1.6;">{{source_text}}</div>
+    </div>
+    <div class="summaries-row" style="display: flex; gap: 20px;">
+      <div class="summary-a" style="flex: 1; background: #e8f5e9; padding: 15px; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #2e7d32;">Summary A:</h3>
+        <div class="summary-text">{{summary_a}}</div>
+      </div>
+      <div class="summary-b" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #1565c0;">Summary B:</h3>
+        <div class="summary-text">{{summary_b}}</div>
+      </div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Overall preference
+  - name: "preference"
+    description: "Which summary is better overall?"
+    annotation_type: radio
+    labels:
+      - "Summary A is clearly better"
+      - "Summary A is slightly better"
+      - "About the same"
+      - "Summary B is slightly better"
+      - "Summary B is clearly better"
+    keyboard_shortcuts:
+      "Summary A is clearly better": "1"
+      "Summary A is slightly better": "2"
+      "About the same": "3"
+      "Summary B is slightly better": "4"
+      "Summary B is clearly better": "5"
+
+  # Confidence in preference
+  - name: "confidence"
+    description: "How confident are you in your preference?"
+    annotation_type: likert
+    size: 5
+    min_label: "Not confident"
+    max_label: "Very confident"
+    labels:
+      - "1 - Wild guess"
+      - "2 - Somewhat uncertain"
+      - "3 - Moderately confident"
+      - "4 - Fairly confident"
+      - "5 - Very confident"
+
+  # Axis ratings for Summary A
+  - name: "summary_a_accuracy"
+    description: "Summary A - Accuracy: Does it only contain information from the source text?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Many errors"
+    max_label: "7 - Perfectly accurate"
+    labels:
+      - "1 - Contains major false information"
+      - "2"
+      - "3"
+      - "4 - Some minor inaccuracies"
+      - "5"
+      - "6"
+      - "7 - Completely accurate"
+
+  - name: "summary_a_coverage"
+    description: "Summary A - Coverage: Does it capture the main points of the original?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Missing key info"
+    max_label: "7 - Complete coverage"
+    labels:
+      - "1 - Misses most important points"
+      - "2"
+      - "3"
+      - "4 - Captures some main points"
+      - "5"
+      - "6"
+      - "7 - Covers all important points"
+
+  - name: "summary_a_coherence"
+    description: "Summary A - Coherence: Is it well-written and easy to understand?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Incoherent"
+    max_label: "7 - Perfectly clear"
+    labels:
+      - "1 - Confusing and poorly written"
+      - "2"
+      - "3"
+      - "4 - Understandable but awkward"
+      - "5"
+      - "6"
+      - "7 - Clear and well-written"
+
+  # Axis ratings for Summary B
+  - name: "summary_b_accuracy"
+    description: "Summary B - Accuracy: Does it only contain information from the source text?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Many errors"
+    max_label: "7 - Perfectly accurate"
+    labels:
+      - "1 - Contains major false information"
+      - "2"
+      - "3"
+      - "4 - Some minor inaccuracies"
+      - "5"
+      - "6"
+      - "7 - Completely accurate"
+
+  - name: "summary_b_coverage"
+    description: "Summary B - Coverage: Does it capture the main points of the original?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Missing key info"
+    max_label: "7 - Complete coverage"
+    labels:
+      - "1 - Misses most important points"
+      - "2"
+      - "3"
+      - "4 - Captures some main points"
+      - "5"
+      - "6"
+      - "7 - Covers all important points"
+
+  - name: "summary_b_coherence"
+    description: "Summary B - Coherence: Is it well-written and easy to understand?"
+    annotation_type: likert
+    size: 7
+    min_label: "1 - Incoherent"
+    max_label: "7 - Perfectly clear"
+    labels:
+      - "1 - Confusing and poorly written"
+      - "2"
+      - "3"
+      - "4 - Understandable but awkward"
+      - "5"
+      - "6"
+      - "7 - Clear and well-written"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 100
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Summary Comparison Task
+
+  Your goal is to compare two summaries of the same text and evaluate their quality.
+
+  ### Step 1: Read the Original Text
+  - Understand the main points and key information
+  - Note what's most important to include in a summary
+
+  ### Step 2: Compare Summaries
+  - Read both Summary A and Summary B
+  - Decide which one is better overall
+
+  ### Step 3: Rate Each Summary on 3 Axes
+
+  **Accuracy (1-7)**
+  - Does the summary contain ONLY true information from the source?
+  - Deduct points for: fabricated details, misrepresentation, factual errors
+  - A summary can be accurate but incomplete
+
+  **Coverage (1-7)**
+  - Does the summary include the MAIN POINTS?
+  - Deduct points for: missing key information, unbalanced emphasis
+  - A good summary captures what's most important
+
+  **Coherence (1-7)**
+  - Is the summary WELL-WRITTEN and easy to follow?
+  - Deduct points for: grammatical errors, awkward phrasing, poor flow
+  - Consider readability independent of content
+
+  ### What Makes a Good Summary?
+  - Captures the essential information
+  - Is factually accurate (no hallucinations)
+  - Is concise without losing important details
+  - Reads smoothly and is easy to understand
+
+  ### Tips:
+  - Re-read the source if needed to verify accuracy
+  - A shorter summary isn't always better
+  - Consider what a reader who only sees the summary would understand

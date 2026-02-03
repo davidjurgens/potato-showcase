@@ -1,0 +1,23 @@
+{
+  "title": "HH-RLHF Pairwise Preference",
+  "description": "Classic pairwise preference annotation for helpfulness and harmlessness. The foundational RLHF dataset format where annotators choose between 'chosen' and 'rejected' responses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "AI Alignment"],
+  "useCase": ["RLHF", "Reward Modeling", "Preference Learning"],
+  "complexity": "beginner",
+  "tags": ["preference", "rlhf", "anthropic", "helpfulness", "harmlessness", "pairwise"],
+  "featured": true,
+  "paperReference": "Bai et al., 2022",
+  "paperUrl": "https://arxiv.org/abs/2204.05862",
+  "datasetUrl": "https://huggingface.co/datasets/Anthropic/hh-rlhf",
+  "citation": "@article{bai2022training,\n  title={Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback},\n  author={Bai, Yuntao and Jones, Andy and Ndousse, Kamal and Askell, Amanda and Chen, Anna and DasSarma, Nova and Drain, Dawn and Fort, Stanislav and Ganguli, Deep and Henighan, Tom and others},\n  journal={arXiv preprint arXiv:2204.05862},\n  year={2022}\n}"
+}

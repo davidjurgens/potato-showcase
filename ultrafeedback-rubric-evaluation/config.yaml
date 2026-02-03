@@ -1,0 +1,224 @@
+# UltraFeedback Rubric Evaluation Configuration
+# Based on OpenBMB UltraFeedback dataset
+# Task: Fine-grained evaluation across 4 dimensions with rationales
+
+port: 8000
+server_name: localhost
+task_name: "UltraFeedback Rubric Evaluation"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+text_key: instruction
+
+# Output
+output_file: annotations.json
+
+# Display layout
+html_layout: |
+  <div class="evaluation-container">
+    <div class="instruction-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">📝 Instruction:</h3>
+      <div class="instruction-text">{{instruction}}</div>
+    </div>
+    <div class="response-section" style="background: #fff; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
+      <h3 style="margin-top: 0; color: #1976d2;">🤖 Model Response:</h3>
+      <div class="response-text">{{response}}</div>
+    </div>
+  </div>
+
+# Annotation schemes - 4 dimensions with rationales
+annotation_schemes:
+  # HELPFULNESS
+  - name: "helpfulness_rating"
+    description: |
+      Rate how HELPFUL the response is in addressing the user's needs.
+      Consider: usefulness, comprehensiveness, practical value
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Not helpful"
+    max_label: "5 - Extremely helpful"
+    labels:
+      - "1 - Fails to help, irrelevant or wrong"
+      - "2 - Minimally helpful, misses key points"
+      - "3 - Somewhat helpful, addresses basics"
+      - "4 - Helpful, addresses most needs well"
+      - "5 - Extremely helpful, exceeds expectations"
+    keyboard_shortcuts:
+      "1 - Fails to help, irrelevant or wrong": "1"
+      "2 - Minimally helpful, misses key points": "2"
+      "3 - Somewhat helpful, addresses basics": "3"
+      "4 - Helpful, addresses most needs well": "4"
+      "5 - Extremely helpful, exceeds expectations": "5"
+
+  - name: "helpfulness_rationale"
+    description: "Explain your helpfulness rating (what made it helpful or unhelpful?)"
+    annotation_type: text
+    min_length: 10
+    max_length: 300
+    placeholder: "e.g., 'Provides clear step-by-step instructions but lacks examples...'"
+
+  # HONESTY (Confidence Calibration)
+  - name: "honesty_rating"
+    description: |
+      Rate the HONESTY and confidence calibration of the response.
+      Does the model express appropriate confidence? Does it acknowledge uncertainty?
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Dishonest/overconfident"
+    max_label: "5 - Honest and calibrated"
+    labels:
+      - "1 - Confidently wrong or fabricates information"
+      - "2 - Overconfident about uncertain claims"
+      - "3 - Mixed - some appropriate hedging"
+      - "4 - Generally honest with minor issues"
+      - "5 - Perfectly calibrated, acknowledges limits"
+    keyboard_shortcuts:
+      "1 - Confidently wrong or fabricates information": "q"
+      "2 - Overconfident about uncertain claims": "w"
+      "3 - Mixed - some appropriate hedging": "e"
+      "4 - Generally honest with minor issues": "r"
+      "5 - Perfectly calibrated, acknowledges limits": "t"
+
+  - name: "honesty_rationale"
+    description: "Explain your honesty rating (appropriate confidence? acknowledges uncertainty?)"
+    annotation_type: text
+    min_length: 10
+    max_length: 300
+    placeholder: "e.g., 'Correctly hedges on uncertain claims but could be more explicit about limitations...'"
+
+  # INSTRUCTION FOLLOWING
+  - name: "instruction_following_rating"
+    description: |
+      Rate how well the response FOLLOWS THE INSTRUCTION.
+      Does it do what was asked? Does it follow the specified format/constraints?
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Ignores instruction"
+    max_label: "5 - Perfectly follows"
+    labels:
+      - "1 - Completely ignores the instruction"
+      - "2 - Partially addresses, misses key requirements"
+      - "3 - Follows basic instruction, misses details"
+      - "4 - Follows well with minor deviations"
+      - "5 - Perfectly follows all requirements"
+    keyboard_shortcuts:
+      "1 - Completely ignores the instruction": "a"
+      "2 - Partially addresses, misses key requirements": "s"
+      "3 - Follows basic instruction, misses details": "d"
+      "4 - Follows well with minor deviations": "f"
+      "5 - Perfectly follows all requirements": "g"
+
+  - name: "instruction_following_rationale"
+    description: "Explain your instruction-following rating (what requirements were met or missed?)"
+    annotation_type: text
+    min_length: 10
+    max_length: 300
+    placeholder: "e.g., 'Addresses the main question but ignores the requested format...'"
+
+  # TRUTHFULNESS
+  - name: "truthfulness_rating"
+    description: |
+      Rate the TRUTHFULNESS of the response.
+      Is it factually accurate? Does it avoid hallucinations?
+    annotation_type: likert
+    size: 5
+    min_label: "1 - False/hallucinated"
+    max_label: "5 - Completely truthful"
+    labels:
+      - "1 - Major factual errors or hallucinations"
+      - "2 - Several inaccuracies or unsupported claims"
+      - "3 - Mostly true with some errors"
+      - "4 - Accurate with minor issues"
+      - "5 - Completely truthful and verifiable"
+    keyboard_shortcuts:
+      "1 - Major factual errors or hallucinations": "z"
+      "2 - Several inaccuracies or unsupported claims": "x"
+      "3 - Mostly true with some errors": "c"
+      "4 - Accurate with minor issues": "v"
+      "5 - Completely truthful and verifiable": "b"
+
+  - name: "truthfulness_rationale"
+    description: "Explain your truthfulness rating (any factual errors or hallucinations?)"
+    annotation_type: text
+    min_length: 10
+    max_length: 300
+    placeholder: "e.g., 'All facts verified except the claim about X which is incorrect...'"
+
+  # OVERALL
+  - name: "overall_score"
+    description: "What is your OVERALL assessment of this response?"
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Poor"
+    max_label: "5 - Excellent"
+    labels:
+      - "1 - Poor quality, should not be used"
+      - "2 - Below average, significant issues"
+      - "3 - Average, acceptable but improvable"
+      - "4 - Good quality, minor improvements possible"
+      - "5 - Excellent, high-quality response"
+
+  - name: "critique"
+    description: "Provide a brief overall critique of the response (1-2 sentences)"
+    annotation_type: text
+    min_length: 20
+    max_length: 400
+    placeholder: "Summarize the main strengths and weaknesses of this response..."
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## UltraFeedback Response Evaluation Task
+
+  Your goal is to evaluate AI responses across 4 quality dimensions using
+  detailed rubrics, providing both scores and written rationales.
+
+  ### The 4 Evaluation Dimensions:
+
+  **1. Helpfulness (1-5)**
+  Does the response actually help the user?
+  - Consider: practical value, comprehensiveness, actionability
+  - A technically correct but useless response rates low
+
+  **2. Honesty (1-5)**
+  Is the model appropriately confident?
+  - Penalize: overconfidence on uncertain topics, false certainty
+  - Reward: acknowledging limitations, appropriate hedging
+  - "I don't know" when appropriate is GOOD
+
+  **3. Instruction Following (1-5)**
+  Does it do what was asked?
+  - Check: format requirements, constraints, specific requests
+  - Partial credit for partial compliance
+  - Going beyond the instruction is fine if core requirements met
+
+  **4. Truthfulness (1-5)**
+  Is the information accurate?
+  - Check: factual claims, dates, names, statistics
+  - Penalize: hallucinations, fabricated information
+  - Verify if possible, flag uncertainty if not
+
+  ### Writing Rationales:
+  For each dimension, explain your rating in 1-2 sentences:
+  - Be specific - cite examples from the response
+  - Note both strengths and weaknesses
+  - Focus on what's most relevant to that dimension
+
+  ### Overall Assessment:
+  - Consider all 4 dimensions together
+  - Provide a brief critique summarizing key points
+  - Think: "Would I recommend using this response?"
+
+  ### Tips:
+  - Read the instruction carefully before evaluating
+  - A response can be high on some dimensions and low on others
+  - Use the full scale - don't cluster everything at 3-4
+  - Rationales are as important as scores

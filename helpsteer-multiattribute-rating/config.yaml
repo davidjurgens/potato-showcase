@@ -1,0 +1,183 @@
+# HelpSteer Multi-Attribute Rating Configuration
+# Based on Wang et al., NAACL 2024
+# Task: Rate AI responses on 5 quality dimensions for reward model training
+
+port: 8000
+server_name: localhost
+task_name: "HelpSteer Multi-Attribute Rating"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+text_key: prompt
+
+# Output
+output_file: annotations.json
+
+# Display the response being evaluated
+html_layout: |
+  <div class="annotation-container">
+    <div class="prompt-section">
+      <h3>User Prompt:</h3>
+      <div class="prompt-text">{{prompt}}</div>
+    </div>
+    <div class="response-section">
+      <h3>AI Response:</h3>
+      <div class="response-text">{{response}}</div>
+    </div>
+  </div>
+
+# Annotation schemes - 5 dimensions on 0-4 scale
+annotation_schemes:
+  - name: "helpfulness"
+    description: |
+      How helpful is the response in addressing the user's request?
+      Consider whether it provides useful information, actionable guidance, or satisfies the user's intent.
+    annotation_type: likert
+    size: 5
+    min_label: "0 - Not helpful"
+    max_label: "4 - Extremely helpful"
+    labels:
+      - "0 - Not helpful at all, fails to address the request"
+      - "1 - Slightly helpful, addresses request minimally"
+      - "2 - Moderately helpful, partially addresses request"
+      - "3 - Helpful, addresses most of the request well"
+      - "4 - Extremely helpful, fully addresses request with excellence"
+    keyboard_shortcuts:
+      "0 - Not helpful at all, fails to address the request": "1"
+      "1 - Slightly helpful, addresses request minimally": "2"
+      "2 - Moderately helpful, partially addresses request": "3"
+      "3 - Helpful, addresses most of the request well": "4"
+      "4 - Extremely helpful, fully addresses request with excellence": "5"
+
+  - name: "correctness"
+    description: |
+      How factually accurate and correct is the response?
+      Consider whether statements are true, calculations are right, and claims are verifiable.
+    annotation_type: likert
+    size: 5
+    min_label: "0 - Incorrect"
+    max_label: "4 - Fully correct"
+    labels:
+      - "0 - Contains major errors or false information"
+      - "1 - Contains several inaccuracies"
+      - "2 - Mostly correct with some minor errors"
+      - "3 - Correct with negligible issues"
+      - "4 - Fully correct and accurate"
+    keyboard_shortcuts:
+      "0 - Contains major errors or false information": "q"
+      "1 - Contains several inaccuracies": "w"
+      "2 - Mostly correct with some minor errors": "e"
+      "3 - Correct with negligible issues": "r"
+      "4 - Fully correct and accurate": "t"
+
+  - name: "coherence"
+    description: |
+      How well-organized, clear, and easy to follow is the response?
+      Consider logical flow, structure, and readability.
+    annotation_type: likert
+    size: 5
+    min_label: "0 - Incoherent"
+    max_label: "4 - Perfectly coherent"
+    labels:
+      - "0 - Confusing, disorganized, hard to follow"
+      - "1 - Somewhat unclear or poorly structured"
+      - "2 - Reasonably clear but could be better organized"
+      - "3 - Clear and well-organized"
+      - "4 - Exceptionally clear, logical, and well-structured"
+    keyboard_shortcuts:
+      "0 - Confusing, disorganized, hard to follow": "a"
+      "1 - Somewhat unclear or poorly structured": "s"
+      "2 - Reasonably clear but could be better organized": "d"
+      "3 - Clear and well-organized": "f"
+      "4 - Exceptionally clear, logical, and well-structured": "g"
+
+  - name: "complexity"
+    description: |
+      How appropriate is the complexity level for the intended audience?
+      Consider technical depth, vocabulary, and assumed knowledge.
+    annotation_type: likert
+    size: 5
+    min_label: "0 - Too simple"
+    max_label: "4 - Ideal complexity"
+    labels:
+      - "0 - Far too simple or too complex for the context"
+      - "1 - Somewhat mismatched complexity"
+      - "2 - Acceptable complexity level"
+      - "3 - Good complexity match for the audience"
+      - "4 - Perfect complexity level for the context"
+    keyboard_shortcuts:
+      "0 - Far too simple or too complex for the context": "z"
+      "1 - Somewhat mismatched complexity": "x"
+      "2 - Acceptable complexity level": "c"
+      "3 - Good complexity match for the audience": "v"
+      "4 - Perfect complexity level for the context": "b"
+
+  - name: "verbosity"
+    description: |
+      How appropriate is the response length?
+      Consider whether it's too brief, too long, or just right for the request.
+    annotation_type: likert
+    size: 5
+    min_label: "0 - Very inappropriate length"
+    max_label: "4 - Perfect length"
+    labels:
+      - "0 - Far too short or excessively long"
+      - "1 - Somewhat too brief or verbose"
+      - "2 - Acceptable length"
+      - "3 - Good length for the request"
+      - "4 - Perfect length, neither too short nor too long"
+    keyboard_shortcuts:
+      "0 - Far too short or excessively long": "n"
+      "1 - Somewhat too brief or verbose": "m"
+      "2 - Acceptable length": ","
+      "3 - Good length for the request": "."
+      "4 - Perfect length, neither too short nor too long": "/"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 100
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Multi-Attribute Response Rating Task
+
+  Your goal is to evaluate AI assistant responses across 5 quality dimensions.
+  Each dimension uses a 0-4 scale.
+
+  ### Rating Dimensions:
+
+  **1. Helpfulness (0-4)**
+  Does the response help the user accomplish their goal?
+  - 0: Completely unhelpful
+  - 4: Exceptionally helpful
+
+  **2. Correctness (0-4)**
+  Is the information accurate and factually correct?
+  - 0: Major errors or false information
+  - 4: Completely accurate
+
+  **3. Coherence (0-4)**
+  Is the response well-organized and easy to follow?
+  - 0: Confusing and disorganized
+  - 4: Crystal clear and logical
+
+  **4. Complexity (0-4)**
+  Is the complexity appropriate for the context?
+  - 0: Completely mismatched (too simple or too complex)
+  - 4: Perfect complexity level
+
+  **5. Verbosity (0-4)**
+  Is the response length appropriate?
+  - 0: Far too short or too long
+  - 4: Perfect length
+
+  ### Tips:
+  - Read the prompt carefully to understand user intent
+  - Consider each dimension independently
+  - Use keyboard shortcuts for faster annotation
+  - When uncertain, consider what would be most useful for the user

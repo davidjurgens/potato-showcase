@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pref_001",
+    "prompt": "How do I make a good cup of coffee at home?",
+    "response_a": "To make good coffee: 1) Use fresh, quality beans. 2) Grind just before brewing. 3) Use proper water temperature (195-205°F). 4) Measure your coffee (1:16 ratio of coffee to water). 5) Use filtered water. The key is consistency - once you find what you like, stick with it.",
+    "response_b": "Just put coffee in the machine and press start. Add cream and sugar if you want."
+  },
+  {
+    "id": "pref_002",
+    "prompt": "Explain machine learning in simple terms.",
+    "response_a": "Machine learning is when computers learn patterns from examples. Like how you learned to recognize dogs by seeing many dogs, a computer can learn to recognize spam emails by seeing thousands of examples labeled 'spam' or 'not spam'. It finds patterns and uses them to make predictions on new data it hasn't seen before.",
+    "response_b": "Machine learning is a subset of artificial intelligence that uses statistical techniques to enable computer systems to learn from data, identify patterns, and make decisions with minimal human intervention. It employs algorithms that iteratively learn from data, allowing computers to find hidden insights without being explicitly programmed where to look. The three main types are supervised learning, unsupervised learning, and reinforcement learning."
+  },
+  {
+    "id": "pref_003",
+    "prompt": "What should I do if I get a flat tire?",
+    "response_a": "Call AAA or a tow truck. They'll handle it for you. Most people don't change tires themselves anymore.",
+    "response_b": "Here's how to change a flat tire safely:\n\n1. **Pull over safely** - Find a flat, stable surface away from traffic\n2. **Turn on hazards** and apply parking brake\n3. **Get your equipment** - Jack, lug wrench, spare tire\n4. **Loosen lug nuts** slightly while tire is on ground\n5. **Jack up the car** at the designated point\n6. **Remove lug nuts** and flat tire\n7. **Mount spare tire** and hand-tighten nuts\n8. **Lower car** and fully tighten nuts in star pattern\n9. **Check tire pressure** on spare when possible\n\nIf you're uncomfortable or it's unsafe, calling roadside assistance is a valid option."
+  },
+  {
+    "id": "pref_004",
+    "prompt": "Write a haiku about autumn.",
+    "response_a": "Leaves turn red and gold\nCrisp air whispers through the trees\nNature says goodbye",
+    "response_b": "Autumn is a beautiful season when the leaves change colors from green to various shades of red, orange, and yellow. The weather becomes cooler and people start wearing sweaters and jackets. It's a great time for apple picking, pumpkin patches, and enjoying warm drinks like apple cider. Many animals prepare for winter during this time by gathering food or migrating to warmer places."
+  },
+  {
+    "id": "pref_005",
+    "prompt": "What's the difference between a virus and bacteria?",
+    "response_a": "Both can make you sick, but they're very different:\n\n**Bacteria:**\n- Living single-celled organisms\n- Can reproduce on their own\n- Some are beneficial (gut bacteria)\n- Treated with antibiotics\n\n**Viruses:**\n- Not technically 'alive'\n- Need a host cell to reproduce\n- Generally harmful\n- Antibiotics don't work; treated with antivirals or vaccines\n\nKey point: Antibiotics only work on bacteria, not viruses - that's why they don't help with the common cold (caused by viruses).",
+    "response_b": "Viruses are smaller than bacteria. Bacteria are living things but viruses are not really alive. They cause different diseases."
+  }
+]

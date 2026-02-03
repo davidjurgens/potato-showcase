@@ -1,0 +1,23 @@
+{
+  "title": "Summary Preference Comparison",
+  "description": "Pairwise comparison of text summaries with axis-based quality ratings. Annotators select preferred summaries and rate them on accuracy, coverage, and coherence for reward model training.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["radio", "likert"],
+  "domain": ["NLP", "Summarization"],
+  "useCase": ["Summary Evaluation", "RLHF", "Text Quality"],
+  "complexity": "intermediate",
+  "tags": ["preference", "rlhf", "summarization", "comparison", "quality-rating"],
+  "featured": false,
+  "paperReference": "Stiennon et al., NeurIPS 2020",
+  "paperUrl": "https://arxiv.org/abs/2009.01325",
+  "datasetUrl": "https://huggingface.co/datasets/openai/summarize_from_feedback",
+  "citation": "@article{stiennon2020learning,\n  title={Learning to summarize from human feedback},\n  author={Stiennon, Nisan and Ouyang, Long and Wu, Jeff and Ziegler, Daniel M and Lowe, Ryan and Voss, Chelsea and Radford, Alec and Amodei, Dario and Christiano, Paul},\n  journal={arXiv preprint arXiv:2009.01325},\n  year={2020}\n}"
+}

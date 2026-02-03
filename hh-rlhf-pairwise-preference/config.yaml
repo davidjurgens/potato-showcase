@@ -1,0 +1,143 @@
+# HH-RLHF Pairwise Preference Configuration
+# Based on Anthropic's "Training a Helpful and Harmless Assistant" (Bai et al., 2022)
+# Task: Simple pairwise preference - choose the better response
+
+port: 8000
+server_name: localhost
+task_name: "HH-RLHF Pairwise Preference"
+
+# Data configuration
+data_files:
+  - data.json
+id_key: id
+text_key: conversation
+
+# Output
+output_file: annotations.json
+
+# Display layout showing conversation and both responses
+html_layout: |
+  <div class="preference-container">
+    <div class="conversation-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">💬 Conversation Context:</h3>
+      <div class="conversation-text" style="white-space: pre-wrap;">{{conversation}}</div>
+    </div>
+    <div class="responses-section">
+      <h3>Choose the better assistant response:</h3>
+      <div style="display: flex; gap: 20px;">
+        <div class="response-a" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
+          <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
+          <div class="response-text" style="white-space: pre-wrap;">{{response_a}}</div>
+        </div>
+        <div class="response-b" style="flex: 1; background: #fce4ec; padding: 15px; border-radius: 8px; border: 2px solid #c62828;">
+          <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+          <div class="response-text" style="white-space: pre-wrap;">{{response_b}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  - name: "preference"
+    description: "Which response is better? Consider both helpfulness AND harmlessness."
+    annotation_type: radio
+    labels:
+      - "Response A is better"
+      - "Response B is better"
+    keyboard_shortcuts:
+      "Response A is better": "a"
+      "Response B is better": "b"
+
+  - name: "evaluation_type"
+    description: "What type of evaluation is this? (Select based on the conversation content)"
+    annotation_type: radio
+    labels:
+      - "Helpfulness evaluation"
+      - "Harmlessness evaluation"
+      - "Both (helpfulness and harmlessness)"
+    keyboard_shortcuts:
+      "Helpfulness evaluation": "1"
+      "Harmlessness evaluation": "2"
+      "Both (helpfulness and harmlessness)": "3"
+
+  - name: "confidence"
+    description: "How confident are you in your choice?"
+    annotation_type: radio
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not confident"
+    keyboard_shortcuts:
+      "Very confident": "q"
+      "Somewhat confident": "w"
+      "Not confident": "e"
+
+  - name: "difficulty"
+    description: "How difficult was this comparison?"
+    annotation_type: radio
+    labels:
+      - "Easy - clear winner"
+      - "Medium - required some thought"
+      - "Hard - very close or complex"
+    keyboard_shortcuts:
+      "Easy - clear winner": "z"
+      "Medium - required some thought": "x"
+      "Hard - very close or complex": "c"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 150
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## RLHF Pairwise Preference Task
+
+  Your goal is to choose which AI assistant response is better.
+  This data will be used to train AI systems to be more helpful and harmless.
+
+  ### What to Consider:
+
+  **Helpfulness**
+  - Does the response actually help the user?
+  - Is it accurate, complete, and relevant?
+  - Does it provide useful information or assistance?
+
+  **Harmlessness**
+  - Is the response safe and appropriate?
+  - Does it avoid harmful, dangerous, or unethical content?
+  - Does it appropriately decline harmful requests?
+
+  ### Decision Guidelines:
+
+  1. **Read the conversation context** carefully
+  2. **Compare both responses** on helpfulness AND harmlessness
+  3. **Choose the better response** overall
+
+  ### Key Principles:
+
+  - A helpful but harmful response is WORSE than a less helpful but safe response
+  - Appropriate refusals to harmful requests are GOOD
+  - Unhelpful responses to legitimate requests are BAD
+  - Both responses might be good (or bad) - choose the BETTER one
+
+  ### Examples of Good Responses:
+  - Provides accurate, helpful information
+  - Politely declines dangerous requests
+  - Acknowledges limitations honestly
+  - Stays on topic and addresses the question
+
+  ### Examples of Bad Responses:
+  - Provides dangerous or harmful information
+  - Gives incorrect or misleading information
+  - Refuses reasonable requests without justification
+  - Is unnecessarily verbose or off-topic
+
+  ### Tips:
+  - Trust your judgment - if one "feels" better, it probably is
+  - When in doubt, prioritize safety over helpfulness
+  - Use keyboard shortcuts (A/B) for faster annotation
+  - Mark your confidence and difficulty honestly
