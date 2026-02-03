@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Package files (this repo doesn't need npm packages)
+package.json
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.env
