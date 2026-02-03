@@ -1,0 +1,23 @@
+{
+  "title": "EPIC-KITCHENS Egocentric Action Annotation",
+  "description": "Annotate fine-grained actions in egocentric kitchen videos with verb-noun pairs. Identify cooking actions from a first-person perspective.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Egocentric Vision", "Activity Recognition"],
+  "useCase": ["Action Recognition", "Verb-Noun Classification", "Kitchen Activities"],
+  "complexity": "advanced",
+  "tags": ["video", "egocentric", "kitchen", "cooking", "verb-noun", "fine-grained"],
+  "featured": false,
+  "paperReference": "Damen et al., ECCV 2018",
+  "paperUrl": "https://openaccess.thecvf.com/content_ECCV_2018/html/Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html",
+  "datasetUrl": "https://epic-kitchens.github.io/",
+  "citation": "@inproceedings{damen2018scaling,\n  title={Scaling egocentric vision: The EPIC-KITCHENS dataset},\n  author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria and Fidler, Sanja and Furnari, Antonino and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan and Perrett, Toby and Price, Will and Wray, Michael},\n  booktitle={European Conference on Computer Vision},\n  pages={720--736},\n  year={2018}\n}"
+}

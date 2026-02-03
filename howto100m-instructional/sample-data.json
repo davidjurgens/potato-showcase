@@ -1,0 +1,16 @@
+[
+  {
+    "id": "howto_001",
+    "video_url": "https://example.com/videos/howto_cooking.mp4",
+    "category": "cooking",
+    "narration": "First, we're going to add the flour to the bowl",
+    "duration": 60
+  },
+  {
+    "id": "howto_002",
+    "video_url": "https://example.com/videos/howto_repair.mp4",
+    "category": "home_repair",
+    "narration": "Now take your screwdriver and remove these screws",
+    "duration": 45
+  }
+]

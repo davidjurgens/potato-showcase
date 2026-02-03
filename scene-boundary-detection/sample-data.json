@@ -1,0 +1,14 @@
+[
+  {
+    "id": "scene_001",
+    "video_url": "https://example.com/videos/nature_documentary_ep1.mp4",
+    "title": "Planet Earth - Mountains Episode",
+    "duration_seconds": 600
+  },
+  {
+    "id": "scene_002",
+    "video_url": "https://example.com/videos/nature_documentary_ep2.mp4",
+    "title": "Planet Earth - Ocean Deep",
+    "duration_seconds": 540
+  }
+]

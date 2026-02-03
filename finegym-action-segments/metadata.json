@@ -1,0 +1,23 @@
+{
+  "title": "FineGym Action Segmentation",
+  "description": "Annotate fine-grained gymnastic actions with hierarchical labels. Identify specific elements, sub-actions, and routines in competition videos.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Sports Analytics", "Activity Recognition"],
+  "useCase": ["Action Segmentation", "Hierarchical Classification", "Sports Analysis"],
+  "complexity": "advanced",
+  "tags": ["video", "gymnastics", "sports", "fine-grained", "hierarchical", "segments"],
+  "featured": false,
+  "paperReference": "Shao et al., CVPR 2020",
+  "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shao_FineGym_A_Hierarchical_Video_Dataset_for_Fine-Grained_Action_Understanding_CVPR_2020_paper.html",
+  "datasetUrl": "https://sdolivia.github.io/FineGym/",
+  "citation": "@inproceedings{shao2020finegym,\n  title={FineGym: A hierarchical video dataset for fine-grained action understanding},\n  author={Shao, Dian and Zhao, Yue and Dai, Bo and Lin, Dahua},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2616--2625},\n  year={2020}\n}"
+}

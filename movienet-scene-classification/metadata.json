@@ -1,0 +1,23 @@
+{
+  "title": "MovieNet Scene Classification",
+  "description": "Classify movie scenes by type, place, and cinematic attributes. Annotators label scenes with location, time of day, weather, and narrative function.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation", "multiselect"],
+  "domain": ["Computer Vision", "Film Studies"],
+  "useCase": ["Scene Classification", "Movie Understanding", "Content Analysis"],
+  "complexity": "intermediate",
+  "tags": ["video", "movie", "scene", "classification", "movienet", "cinematic"],
+  "featured": false,
+  "paperReference": "Qian et al., ECCV 2020",
+  "paperUrl": "https://arxiv.org/abs/2007.10937",
+  "datasetUrl": "https://movienet.github.io",
+  "citation": "@inproceedings{qian2020movienet,\n  title={Movienet: A holistic dataset for movie understanding},\n  author={Qian, Yuanliang and others},\n  booktitle={European Conference on Computer Vision},\n  pages={709--727},\n  year={2020}\n}"
+}

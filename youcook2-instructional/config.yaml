@@ -1,0 +1,104 @@
+# YouCook2 Recipe Step Annotation Configuration
+# Based on Zhou et al., AAAI 2018
+# Task: Segment cooking videos into recipe steps with descriptions
+
+port: 8000
+server_name: localhost
+task_name: "YouCook2 Recipe Step Annotation"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "recipe_steps"
+    description: |
+      Mark the temporal boundaries of each RECIPE STEP.
+      A step is one distinct cooking action or procedure.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "recipe_step"
+        color: "#22C55E"
+        key_value: "r"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 30
+
+  - name: "step_description"
+    description: "Describe this recipe step in one sentence:"
+    annotation_type: text
+
+  - name: "step_type"
+    description: "What type of cooking action is this step?"
+    annotation_type: radio
+    labels:
+      - "Preparation (cutting, measuring, gathering)"
+      - "Cooking (heating, frying, boiling)"
+      - "Mixing (combining, stirring, blending)"
+      - "Seasoning (adding spices, salt, sauce)"
+      - "Plating (arranging, serving, garnishing)"
+      - "Other"
+
+  - name: "ingredients_visible"
+    description: "Are the main ingredients clearly visible?"
+    annotation_type: radio
+    labels:
+      - "Yes - all ingredients visible"
+      - "Partially - some ingredients visible"
+      - "No - ingredients not clearly shown"
+
+  - name: "step_difficulty"
+    description: "How difficult is this cooking step?"
+    annotation_type: radio
+    labels:
+      - "Easy - basic technique"
+      - "Moderate - some skill required"
+      - "Difficult - advanced technique"
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## YouCook2 Recipe Step Annotation
+
+  Segment cooking videos into distinct recipe steps and describe each.
+
+  ### What is a Recipe Step?
+  - One distinct cooking action
+  - Has clear beginning and end
+  - Can be described in one sentence
+
+  ### Example Steps:
+  - "Dice the onions into small pieces"
+  - "Add olive oil to the heated pan"
+  - "Stir the mixture until smooth"
+  - "Bake in the oven for 20 minutes"
+
+  ### Step Description Guidelines:
+  - Use imperative form ("Add..." not "Adding...")
+  - Include key ingredients/tools mentioned
+  - Be specific but concise (5-15 words)
+  - Don't include timing unless essential
+
+  ### Boundary Rules:
+  - START: When the cook begins the action
+  - END: When the action is complete
+  - Brief pauses within an action = same step
+  - Talking without action = exclude if possible
+
+  ### NOT separate steps:
+  - Repeated actions (stirring multiple times = one step)
+  - Camera angle changes during same action
+  - Brief interruptions
+
+  ### Tips:
+  - Watch the whole clip first to understand the recipe
+  - Typical recipes have 5-15 major steps
+  - Focus on actions, not commentary
+  - Some steps may overlap with narration timing

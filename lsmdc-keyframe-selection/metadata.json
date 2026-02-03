@@ -1,0 +1,23 @@
+{
+  "title": "LSMDC Keyframe Selection",
+  "description": "Select representative keyframes from movie clips for video description tasks. Annotators identify frames that best summarize the visual content of each shot.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Film Studies"],
+  "useCase": ["Keyframe Selection", "Video Summarization", "Movie Description"],
+  "complexity": "intermediate",
+  "tags": ["video", "keyframe", "movie", "description", "lsmdc", "representative"],
+  "featured": false,
+  "paperReference": "Rohrbach et al., IJCV 2017",
+  "paperUrl": "https://link.springer.com/article/10.1007/s11263-016-0987-1",
+  "datasetUrl": "https://sites.google.com/site/describingmovies/",
+  "citation": "@article{rohrbach2017movie,\n  title={Movie description},\n  author={Rohrbach, Anna and Rohrbach, Marcus and Tandon, Niket and Schiele, Bernt},\n  journal={International Journal of Computer Vision},\n  volume={123},\n  number={1},\n  pages={94--120},\n  year={2017}\n}"
+}

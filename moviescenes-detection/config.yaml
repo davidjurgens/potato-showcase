@@ -1,0 +1,108 @@
+# MovieScenes Scene Detection Configuration
+# Based on Rao et al., CVPR 2020
+# Task: Detect scene boundaries in movies
+
+port: 8000
+server_name: localhost
+task_name: "MovieScenes Scene Detection"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "scene_boundaries"
+    description: |
+      Mark SCENE BOUNDARIES - points where the scene changes.
+      A scene change typically involves a shift in location, time, or narrative focus.
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      - name: "scene_boundary"
+        color: "#EF4444"
+        key_value: "b"
+      - name: "soft_boundary"
+        color: "#F59E0B"
+        key_value: "s"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 24
+
+  - name: "boundary_type"
+    description: "What type of scene change is this?"
+    annotation_type: radio
+    labels:
+      - "Location change - different place"
+      - "Time change - different time (flashback, time skip)"
+      - "Character change - focus shifts to different characters"
+      - "Narrative shift - new plot thread"
+      - "Multiple changes - combination of above"
+
+  - name: "transition_type"
+    description: "How does the scene transition occur?"
+    annotation_type: radio
+    labels:
+      - "Hard cut - instant change"
+      - "Fade - fade to/from black"
+      - "Dissolve - cross-dissolve"
+      - "Wipe - wipe transition"
+      - "Other visual effect"
+      - "Continuous (soft boundary)"
+
+  - name: "boundary_clarity"
+    description: "How clear is this scene boundary?"
+    annotation_type: radio
+    labels:
+      - "Very clear - obvious scene change"
+      - "Clear - definite boundary"
+      - "Moderate - noticeable change"
+      - "Subtle - minor shift"
+      - "Ambiguous - could be same scene"
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## MovieScenes Scene Detection
+
+  Mark the boundaries where scenes change in movie clips.
+
+  ### What is a Scene?
+  A scene is a continuous unit of action taking place in:
+  - One location
+  - Continuous time
+  - With consistent narrative focus
+
+  ### Scene Boundary Types:
+
+  **Hard boundaries** (use "scene_boundary"):
+  - Clear location change
+  - Time jump (flashback, "3 hours later")
+  - Complete shift in characters/action
+
+  **Soft boundaries** (use "soft_boundary"):
+  - Same location, minor time skip
+  - Brief cutaway and return
+  - Parallel action in same timeframe
+
+  ### NOT a scene boundary:
+  - Shot changes within the same scene
+  - Camera angle changes
+  - Reaction shots in dialogue
+
+  ### Guidelines:
+  - Mark the FIRST FRAME of the new scene
+  - Use frame stepping for precision
+  - Consider audio cues (music changes, dialogue)
+  - A typical movie has 100-200 scenes
+
+  ### Tips:
+  - Watch for establishing shots (often start new scenes)
+  - Fade to black usually indicates scene boundary
+  - Continuous dialogue typically means same scene
+  - Cross-cutting between locations = multiple scenes

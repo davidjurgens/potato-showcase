@@ -1,0 +1,23 @@
+{
+  "title": "Scene Boundary Detection",
+  "description": "Identify scene boundaries in documentary and narrative videos. Annotators mark transitions between semantically coherent scenes based on visual, audio, and narrative cues.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Video Understanding"],
+  "useCase": ["Scene Detection", "Video Segmentation", "Content Analysis"],
+  "complexity": "intermediate",
+  "tags": ["video", "scene", "boundary", "segmentation", "documentary"],
+  "featured": false,
+  "paperReference": "Sidiropoulos et al., ACM MM 2011",
+  "paperUrl": "https://ieeexplore.ieee.org/document/6095496",
+  "datasetUrl": "https://www.bbc.co.uk/rd/projects/bbc-planet-earth",
+  "citation": "@inproceedings{sidiropoulos2011temporal,\n  title={Temporal video segmentation to scenes using high-level audiovisual features},\n  author={Sidiropoulos, Panagiotis and Mezaris, Vasileios and Kompatsiaris, Ioannis and Meinedo, Hugo and Bugalho, Miguel and Trancoso, Isabel},\n  booktitle={Proceedings of the 2011 ACM Multimedia Conference},\n  year={2011}\n}"
+}

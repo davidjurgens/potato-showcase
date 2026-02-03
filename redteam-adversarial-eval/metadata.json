@@ -1,0 +1,23 @@
+{
+  "title": "Red Team Adversarial Evaluation",
+  "description": "Evaluate AI responses to adversarial prompts. Assess whether the model was successfully attacked and rate the severity of any harmful outputs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["AI Safety", "Adversarial ML"],
+  "useCase": ["Red Teaming", "Safety Evaluation", "Attack Detection"],
+  "complexity": "advanced",
+  "tags": ["safety", "redteam", "adversarial", "attack", "jailbreak", "evaluation"],
+  "featured": false,
+  "paperReference": "Ganguli et al., 2022",
+  "paperUrl": "https://arxiv.org/abs/2209.07858",
+  "datasetUrl": "https://github.com/anthropics/hh-rlhf",
+  "citation": "@article{ganguli2022red,\n  title={Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned},\n  author={Ganguli, Deep and Lovitt, Liane and Kernion, Jackson and Askell, Amanda and Bai, Yuntao and Kadavath, Saurav and Mann, Ben and Perez, Ethan and Schiefer, Nicholas and Ndousse, Kamal and others},\n  journal={arXiv preprint arXiv:2209.07858},\n  year={2022}\n}"
+}

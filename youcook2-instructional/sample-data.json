@@ -1,0 +1,14 @@
+[
+  {
+    "id": "youcook_001",
+    "video_url": "https://example.com/videos/cooking_pasta.mp4",
+    "recipe": "Pasta Carbonara",
+    "duration": 300
+  },
+  {
+    "id": "youcook_002",
+    "video_url": "https://example.com/videos/cooking_salad.mp4",
+    "recipe": "Caesar Salad",
+    "duration": 180
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "lsmdc_001",
+    "video_url": "https://example.com/videos/movie_clip_001.mp4",
+    "movie": "Sample Movie",
+    "clip_duration": 5
+  },
+  {
+    "id": "lsmdc_002",
+    "video_url": "https://example.com/videos/movie_clip_002.mp4",
+    "movie": "Sample Movie",
+    "clip_duration": 8
+  }
+]

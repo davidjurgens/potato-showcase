@@ -1,0 +1,71 @@
+# ActivityNet Captions Dense Annotation Configuration
+# Based on Krishna et al., ICCV 2017
+# Task: Segment videos and write captions for each event
+
+port: 8000
+server_name: localhost
+task_name: "ActivityNet Dense Captioning"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "event_segments"
+    description: |
+      Mark temporal segments for each distinct event in the video.
+      Events should be semantically meaningful and non-overlapping.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "event"
+        color: "#3B82F6"
+        key_value: "e"
+    zoom_enabled: true
+    playback_rate_control: true
+    frame_stepping: true
+    show_timecode: true
+    timeline_height: 80
+
+  - name: "event_caption"
+    description: |
+      Write a natural language description of the event you just marked.
+      Be specific about WHO does WHAT. Start with a verb.
+    annotation_type: text
+    min_length: 10
+    max_length: 200
+    placeholder: "e.g., 'A man in a red shirt kicks a soccer ball into the goal'"
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Dense Video Captioning Task
+
+  Your goal is to segment the video into events and describe each one.
+
+  ### Step 1: Identify Events
+  - Watch the video and identify distinct events
+  - Mark the START and END of each event
+  - Events should be meaningful actions/happenings
+
+  ### Step 2: Write Captions
+  - Describe WHAT happens in each segment
+  - Be specific: mention people, objects, actions
+  - Start with a verb (e.g., "A woman picks up...")
+  - Keep it concise but complete
+
+  ### Caption Guidelines:
+  - Describe visible actions, not intentions
+  - Include relevant details (clothing, objects, location)
+  - Use present tense
+  - Don't describe audio unless relevant
+
+  ### Example Captions:
+  - "A chef chops vegetables on a cutting board"
+  - "Two children run across a playground"
+  - "The camera pans across a mountain landscape"

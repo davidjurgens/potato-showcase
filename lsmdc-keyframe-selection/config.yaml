@@ -1,0 +1,80 @@
+# LSMDC Keyframe Selection Configuration
+# Based on Rohrbach et al., IJCV 2017
+# Task: Select representative keyframes from movie clips
+
+port: 8000
+server_name: localhost
+task_name: "LSMDC Keyframe Selection"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "keyframes"
+    description: |
+      Select the most REPRESENTATIVE frame(s) from this clip.
+      A good keyframe captures the main action or content of the shot.
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      - name: "best_keyframe"
+        color: "#22C55E"
+        key_value: "k"
+      - name: "alternative_keyframe"
+        color: "#3B82F6"
+        key_value: "a"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 24
+
+  - name: "keyframe_quality"
+    description: "How representative is the best keyframe of the clip?"
+    annotation_type: radio
+    labels:
+      - "Excellent - captures everything important"
+      - "Good - captures main content"
+      - "Fair - captures some content"
+      - "Poor - no single frame works well"
+
+  - name: "clip_content"
+    description: "What does this clip primarily show?"
+    annotation_type: radio
+    labels:
+      - "Person/Character focus"
+      - "Action/Movement"
+      - "Dialogue scene"
+      - "Establishing shot/Environment"
+      - "Object focus"
+      - "Multiple subjects"
+
+allow_all_users: true
+instances_per_annotator: 80
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Keyframe Selection Task
+
+  Select the best frame(s) to represent each movie clip.
+
+  ### What makes a good keyframe?
+  - Shows the main subject clearly
+  - Captures the key action or moment
+  - Is visually clear (not blurry)
+  - Could stand alone as a summary of the clip
+
+  ### Guidelines:
+  - Select ONE best keyframe per clip
+  - Optionally mark alternative keyframes
+  - Avoid: blurry frames, transitions, extreme close-ups
+  - Prefer: clear faces, complete actions, informative composition
+
+  ### Tips:
+  - Use frame stepping to find the exact best frame
+  - For dialogue, choose a frame with visible faces
+  - For action, choose the peak of the action
+  - For establishing shots, choose the most informative view

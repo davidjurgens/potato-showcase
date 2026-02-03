@@ -1,0 +1,16 @@
+[
+  {
+    "id": "moviescene_001",
+    "video_url": "https://example.com/videos/movie_segment_001.mp4",
+    "movie": "Sample Movie",
+    "segment_start": 0,
+    "segment_end": 300
+  },
+  {
+    "id": "moviescene_002",
+    "video_url": "https://example.com/videos/movie_segment_002.mp4",
+    "movie": "Sample Movie",
+    "segment_start": 300,
+    "segment_end": 600
+  }
+]

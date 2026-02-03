@@ -1,0 +1,14 @@
+[
+  {
+    "id": "anetcap_001",
+    "video_url": "https://example.com/videos/cooking_video.mp4",
+    "duration_seconds": 300,
+    "category": "Cooking"
+  },
+  {
+    "id": "anetcap_002",
+    "video_url": "https://example.com/videos/sports_clip.mp4",
+    "duration_seconds": 180,
+    "category": "Sports"
+  }
+]

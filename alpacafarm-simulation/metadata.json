@@ -1,0 +1,23 @@
+{
+  "title": "AlpacaFarm Preference Simulation",
+  "description": "Simulate human preferences for instruction-following responses. Create preference data for efficient RLHF research and LLM evaluation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["pairwise", "radio", "likert"],
+  "domain": ["Natural Language Processing", "AI Alignment"],
+  "useCase": ["RLHF", "Preference Learning", "Model Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["preference", "simulation", "instruction", "alpaca", "rlhf", "llm"],
+  "featured": false,
+  "paperReference": "Dubois et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2305.14387",
+  "datasetUrl": "https://github.com/tatsu-lab/alpaca_farm",
+  "citation": "@article{dubois2023alpacafarm,\n  title={AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback},\n  author={Dubois, Yann and Li, Xuechen and Taori, Rohan and Zhang, Tianyi and Gulrajani, Ishaan and Ba, Jimmy and Guestrin, Carlos and Liang, Percy and Hashimoto, Tatsunori B},\n  journal={arXiv preprint arXiv:2305.14387},\n  year={2023}\n}"
+}

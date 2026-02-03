@@ -1,0 +1,20 @@
+[
+  {
+    "id": "breakfast_001",
+    "video_url": "https://example.com/videos/making_cereal.mp4",
+    "activity": "cereal",
+    "duration_seconds": 120
+  },
+  {
+    "id": "breakfast_002",
+    "video_url": "https://example.com/videos/making_pancakes.mp4",
+    "activity": "pancake",
+    "duration_seconds": 300
+  },
+  {
+    "id": "breakfast_003",
+    "video_url": "https://example.com/videos/making_eggs.mp4",
+    "activity": "fried_egg",
+    "duration_seconds": 180
+  }
+]

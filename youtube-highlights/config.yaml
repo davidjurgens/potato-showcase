@@ -1,0 +1,86 @@
+# YouTube Highlights Detection Configuration
+# Based on Sun et al., ECCV 2014
+# Task: Identify highlight-worthy moments in domain-specific videos
+
+port: 8000
+server_name: localhost
+task_name: "YouTube Highlights Detection"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "highlights"
+    description: |
+      Mark the HIGHLIGHT moments in this video.
+      These are the parts viewers would most want to see.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "highlight"
+        color: "#F59E0B"
+        key_value: "h"
+      - name: "best_moment"
+        color: "#EF4444"
+        key_value: "b"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 30
+
+  - name: "highlight_type"
+    description: "What type of highlight is the BEST moment in this video?"
+    annotation_type: radio
+    labels:
+      - "Skill/Trick - impressive technique"
+      - "Fail/Funny - entertaining mistake"
+      - "Scenic/Beautiful - visually stunning"
+      - "Dramatic - emotional peak"
+      - "Informative - key learning moment"
+      - "Social - interesting interaction"
+
+  - name: "domain_relevance"
+    description: "How relevant is this video to its category?"
+    annotation_type: radio
+    labels:
+      - "Highly relevant - typical example"
+      - "Relevant - fits the category"
+      - "Somewhat relevant - partial fit"
+      - "Not very relevant - miscategorized"
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+
+annotation_instructions: |
+  ## YouTube Highlights Detection
+
+  Identify the most highlight-worthy moments in each video.
+
+  ### What is a highlight?
+  - The moment you'd share with a friend
+  - The part that makes the video worth watching
+  - Peak action, emotion, or visual interest
+
+  ### Domain-specific guidance:
+
+  **Surfing**: Big waves, successful rides, wipeouts
+  **Skating**: Tricks landing, impressive moves, falls
+  **Gymnastics**: Difficult moves, perfect landings
+  **Parkour**: Creative moves, big jumps, close calls
+  **Dog**: Cute moments, tricks, funny behavior
+
+  ### Guidelines:
+  - Mark ALL highlight-worthy segments
+  - Use "best_moment" for the single best highlight
+  - Highlights are typically 2-10 seconds
+  - Consider what would make a good thumbnail/preview
+
+  ### Tips:
+  - Put yourself in the viewer's shoes
+  - Think about what would get the most engagement
+  - Domain expertise helps identify skill-based highlights

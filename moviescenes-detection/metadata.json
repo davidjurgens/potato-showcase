@@ -1,0 +1,23 @@
+{
+  "title": "MovieScenes Scene Detection",
+  "description": "Detect and annotate scene boundaries in movies. Identify where semantic scene changes occur based on location, time, or narrative shifts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Film Studies", "Video Segmentation"],
+  "useCase": ["Scene Detection", "Video Segmentation", "Movie Analysis"],
+  "complexity": "intermediate",
+  "tags": ["video", "movie", "scene", "boundary", "detection", "segmentation"],
+  "featured": false,
+  "paperReference": "Rao et al., CVPR 2020",
+  "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2020/html/Rao_A_Local-to-Global_Approach_to_Multi-Modal_Movie_Scene_Segmentation_CVPR_2020_paper.html",
+  "datasetUrl": "https://anyirao.com/projects/SceneSeg.html",
+  "citation": "@inproceedings{rao2020local,\n  title={A local-to-global approach to multi-modal movie scene segmentation},\n  author={Rao, Anyi and Xu, Linning and Xiong, Yu and Xu, Guodong and Huang, Qingqiu and Zhou, Bolei and Lin, Dahua},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={10146--10155},\n  year={2020}\n}"
+}

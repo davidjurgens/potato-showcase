@@ -1,0 +1,23 @@
+{
+  "title": "BeaverTails Safety Preference",
+  "description": "Annotate AI responses for safety across multiple harm categories. Identify unsafe content and rate response quality for building safer AI systems.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["pairwise", "multiselect", "radio"],
+  "domain": ["AI Safety", "Natural Language Processing"],
+  "useCase": ["Safety Evaluation", "Harm Classification", "RLHF"],
+  "complexity": "advanced",
+  "tags": ["safety", "preference", "harm", "classification", "rlhf", "alignment"],
+  "featured": false,
+  "paperReference": "Ji et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2307.04657",
+  "datasetUrl": "https://huggingface.co/datasets/PKU-Alignment/BeaverTails",
+  "citation": "@inproceedings{ji2024beavertails,\n  title={BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset},\n  author={Ji, Jiaming and Liu, Mickel and Dai, Juntao and Pan, Xuehai and Zhang, Chi and Bian, Ce and Chen, Boyuan and Sun, Ruiyang and Wang, Yizhou and Yang, Yaodong},\n  booktitle={Advances in Neural Information Processing Systems},\n  volume={36},\n  year={2023}\n}"
+}

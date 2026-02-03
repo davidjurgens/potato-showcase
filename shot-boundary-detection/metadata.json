@@ -1,0 +1,23 @@
+{
+  "title": "TRECVID Shot Boundary Detection",
+  "description": "Detect shot boundaries and classify transition types in broadcast video. Mark cuts, dissolves, fades, and other transitions between camera shots.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-02-02",
+  "updatedAt": "2025-02-02",
+  "annotationTypes": ["video_annotation"],
+  "domain": ["Computer Vision", "Broadcast Media"],
+  "useCase": ["Shot Detection", "Video Editing", "Content Indexing"],
+  "complexity": "intermediate",
+  "tags": ["video", "shot", "boundary", "transition", "trecvid", "broadcast"],
+  "featured": false,
+  "paperReference": "Over et al., TRECVID Overview",
+  "paperUrl": "https://trecvid.nist.gov",
+  "datasetUrl": "https://trecvid.nist.gov",
+  "citation": "@misc{trecvid,\n  title={TRECVID Shot Boundary Detection Task},\n  author={Over, Paul and others},\n  howpublished={https://trecvid.nist.gov},\n  year={2020}\n}"
+}

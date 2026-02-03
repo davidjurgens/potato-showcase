@@ -1,0 +1,65 @@
+# TRECVID Shot Boundary Detection Configuration
+# Task: Detect and classify shot transitions in broadcast video
+
+port: 8000
+server_name: localhost
+task_name: "Shot Boundary Detection"
+
+data_files:
+  - data.json
+id_key: id
+video_key: video_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - name: "shot_boundaries"
+    description: |
+      Mark every shot boundary and classify the transition type.
+      A shot is a continuous sequence from a single camera.
+    annotation_type: "video_annotation"
+    mode: "keyframe"
+    labels:
+      - name: "cut"
+        color: "#EF4444"
+        key_value: "c"
+      - name: "dissolve"
+        color: "#8B5CF6"
+        key_value: "d"
+      - name: "fade_in"
+        color: "#22C55E"
+        key_value: "i"
+      - name: "fade_out"
+        color: "#F97316"
+        key_value: "o"
+      - name: "wipe"
+        color: "#3B82F6"
+        key_value: "w"
+      - name: "other_gradual"
+        color: "#EC4899"
+        key_value: "g"
+    frame_stepping: true
+    show_timecode: true
+    video_fps: 30
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+
+annotation_instructions: |
+  ## Shot Boundary Detection Task
+
+  Mark every transition between camera shots.
+
+  ### Transition Types:
+  - **Cut (c)**: Instantaneous change (most common)
+  - **Dissolve (d)**: Two shots overlap/blend
+  - **Fade In (i)**: From black to image
+  - **Fade Out (o)**: From image to black
+  - **Wipe (w)**: One shot pushes another off screen
+  - **Other Gradual (g)**: Any other gradual transition
+
+  ### Guidelines:
+  - Mark at the FIRST frame of the new shot (for cuts)
+  - For gradual transitions, mark the midpoint
+  - Use frame stepping for accuracy
