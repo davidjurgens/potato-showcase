@@ -1,6 +1,7 @@
 # Speaker Diarization Annotation Configuration
 # Identify and label different speakers in audio recordings
 
+task_dir: "."
 annotation_task_name: "Speaker Diarization"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "transcript"
   audio_key: "audio_url"
   text_display_key: "transcript"
 
@@ -74,3 +76,6 @@ audio_display:
   loop_segment: true
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

@@ -33,16 +33,17 @@
 # 5. Descriptor-entity pairs typically use modify
 # 6. Consider negation and uncertainty in observations
 
-port: 8000
-server_name: localhost
-task_name: "RadGraph-XL: Radiology Relation Extraction"
+annotation_task_name: "RadGraph-XL: Radiology Relation Extraction"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify clinical entities

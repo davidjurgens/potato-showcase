@@ -1,6 +1,7 @@
 # Intent Classification Configuration
 # Classify user utterances for chatbot training
 
+task_dir: "."
 annotation_task_name: "Intent Classification"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "utterance"
   text_display_key: "utterance"
 
 user_config:
@@ -91,3 +93,6 @@ annotation_schemes:
     required: false
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

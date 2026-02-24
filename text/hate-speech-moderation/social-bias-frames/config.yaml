@@ -24,16 +24,17 @@
 # - A post can have intent without being offensive (failed joke)
 # - Group implications require stereotyping, not just mentioning groups
 
-port: 8000
-server_name: localhost
-task_name: "Social Bias Frames"
+annotation_task_name: "Social Bias Frames"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Offensiveness

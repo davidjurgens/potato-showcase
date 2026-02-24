@@ -2,18 +2,19 @@
 # Based on OpenAI summarize_from_feedback (Stiennon et al., NeurIPS 2020)
 # Task: Compare two summaries and rate quality on multiple axes
 
-port: 8000
-server_name: localhost
-task_name: "Summary Preference Comparison"
+annotation_task_name: "Summary Preference Comparison"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-text_key: source_text
+item_properties:
+  id_key: "id"
+  text_key: "source_text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing source text and both summaries
 html_layout: |

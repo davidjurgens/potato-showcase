@@ -2,18 +2,19 @@
 # Based on HelpSteer2-Preference / HelpSteer3-Preference methodology
 # Task: Compare two responses, select the better one, and explain why
 
-port: 8000
-server_name: localhost
-task_name: "Pairwise Preference with Rationale"
+annotation_task_name: "Pairwise Preference with Rationale"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-text_key: prompt
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing prompt and both responses
 html_layout: |

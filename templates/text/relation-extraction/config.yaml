@@ -1,6 +1,7 @@
 # Relation Extraction Configuration
 # Identify relationships between entities in text
 
+task_dir: "."
 annotation_task_name: "Relation Extraction"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "display"
   text_display_key: "display"
 
 user_config:
@@ -75,3 +77,6 @@ annotation_schemes:
     max_label: "Very confident"
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

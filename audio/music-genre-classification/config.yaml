@@ -1,6 +1,7 @@
 # Music Genre Classification Configuration
 # Classify music clips into genres with mood and instrumentation tags
 
+task_dir: "."
 annotation_task_name: "Music Genre Classification"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "title"
   audio_key: "audio_url"
   text_display_key: "title"
 
@@ -97,3 +99,6 @@ audio_display:
   allow_speed_control: false
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

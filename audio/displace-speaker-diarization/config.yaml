@@ -13,16 +13,17 @@
 # - Identify the language spoken in each segment
 # - Note any overlapping speech or code-switching
 
-port: 8000
-server_name: localhost
-task_name: "DISPLACE 2024: Speaker and Language Diarization"
+annotation_task_name: "DISPLACE 2024: Speaker and Language Diarization"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: span

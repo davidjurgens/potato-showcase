@@ -1,4 +1,5 @@
-task_name: "Question Answering"
+annotation_task_name: "Question Answering"
+
 task_description: "Select the span in the passage that answers the question."
 task_dir: "."
 port: 8000

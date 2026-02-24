@@ -1,6 +1,7 @@
 # Dialogue Act Labeling Configuration
 # Classify utterances by communicative function
 
+task_dir: "."
 annotation_task_name: "Dialogue Act Labeling"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "display"
   text_display_key: "display"
 
 user_config:
@@ -69,3 +71,6 @@ annotation_schemes:
       - name: "Correction"
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

@@ -2,6 +2,7 @@
 # Based on Everingham et al., IJCV 2010
 
 annotation_task_name: "PASCAL VOC Object Detection"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

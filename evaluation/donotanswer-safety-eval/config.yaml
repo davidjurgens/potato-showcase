@@ -2,18 +2,19 @@
 # Based on "Do-Not-Answer: Evaluating Safeguards in LLMs" (Wang et al., Findings EACL 2024)
 # Task: Assess whether LLM responses appropriately handle risky prompts
 
-port: 8000
-server_name: localhost
-task_name: "Do-Not-Answer Safety Evaluation"
+annotation_task_name: "Do-Not-Answer Safety Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing prompt and response
 html_layout: |

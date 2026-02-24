@@ -2,6 +2,7 @@
 # Based on Lin et al., ECCV 2014
 
 annotation_task_name: "MS COCO Object Detection & Segmentation"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

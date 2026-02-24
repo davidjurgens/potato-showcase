@@ -24,16 +24,17 @@
 # - Quotations: Distinguish author's stance from quoted opinions
 # - Conditional statements: "If X, then Y" may not indicate stance on X
 
-port: 8000
-server_name: localhost
-task_name: "Stance Detection"
+annotation_task_name: "Stance Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Stance classification

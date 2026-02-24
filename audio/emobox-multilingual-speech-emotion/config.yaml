@@ -12,16 +12,17 @@
 # - Rate emotional intensity on a 1-5 scale
 # - Consider arousal level (energy/activation) separately from emotion category
 
-port: 8000
-server_name: localhost
-task_name: "EmoBox: Multilingual Speech Emotion Recognition"
+annotation_task_name: "EmoBox: Multilingual Speech Emotion Recognition"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: radio

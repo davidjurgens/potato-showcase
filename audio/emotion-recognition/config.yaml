@@ -1,6 +1,7 @@
 # Speech Emotion Recognition Configuration
 # Classify emotional states from speech audio
 
+task_dir: "."
 annotation_task_name: "Speech Emotion Recognition"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "transcript"
   audio_key: "audio_url"
   text_display_key: "transcript"
 
@@ -80,3 +82,6 @@ audio_display:
   allow_speed_control: true
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

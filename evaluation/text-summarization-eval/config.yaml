@@ -1,4 +1,5 @@
-task_name: "Text Summarization Evaluation"
+annotation_task_name: "Text Summarization Evaluation"
+
 task_description: "Rate the quality of the summary compared to the source document."
 task_dir: "."
 port: 8000

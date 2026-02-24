@@ -2,18 +2,19 @@
 # Based on "RewardBench: Evaluating Reward Models for Language Modeling" (Lambert et al., Findings NAACL 2025)
 # Task: Pairwise preference annotation across chat, safety, reasoning, and coding categories
 
-port: 8000
-server_name: localhost
-task_name: "RewardBench Reward Model Evaluation"
+annotation_task_name: "RewardBench Reward Model Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing prompt and both responses side-by-side
 html_layout: |

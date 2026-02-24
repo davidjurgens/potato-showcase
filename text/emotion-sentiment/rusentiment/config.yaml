@@ -16,16 +16,17 @@
 # - Speech Acts may not reflect sender's actual sentiment
 # - Annotation speed target: 250-350 posts per hour
 
-port: 8000
-server_name: localhost
-task_name: "RuSentiment: Social Media Sentiment Classification"
+annotation_task_name: "RuSentiment: Social Media Sentiment Classification"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: radio

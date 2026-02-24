@@ -1,0 +1,766 @@
+2026-02-24 13:12:54 [DEBUG] potato (logging_config.py:180): Logging initialized with level=DEBUG
+2026-02-24 13:12:54 [DEBUG] potato.authentication (authentication.py:524): User config path: user_config.json
+2026-02-24 13:12:54 [INFO] potato.authentication (authentication.py:530): Initialized UserAuthenticator with method: in_memory, require_password: True
+2026-02-24 13:12:54 [INFO] potato.item_state_management (item_state_management.py:789): ItemStateManager initialized with random_seed=1234
+2026-02-24 13:12:54 [INFO] server_utils.front_end (front_end.py:194): Generating anntotation site at /Users/jurgens/Documents/Projects/potato/potato/templates
+2026-02-24 13:12:54 [DEBUG] server_utils.front_end (front_end.py:205): Reading html annotation template: /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/base_template_v2.html
+2026-02-24 13:12:54 [DEBUG] server_utils.front_end (front_end.py:215): Reading html header /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/header.html
+2026-02-24 13:12:54 [DEBUG] server_utils.front_end (front_end.py:241): Saw 5 annotation scheme(s)
+2026-02-24 13:12:54 [INFO] server_utils.front_end (front_end.py:123): Annotation layout file not found or hash mismatch, generating: /Users/jurgens/Documents/Projects/potato-showcase/image/specialized/iwildcam/layouts/task_layout.html
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: primary_species
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: primary_species
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: empty, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: deer, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: wild_boar, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: raccoon, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: fox, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: coyote, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bear, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: mountain_lion, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: rabbit, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: squirrel, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bird, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: cattle, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_dog, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_cat, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: human, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: other, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for primary_species with 16 options
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: animal_count
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: animal_count
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: zero, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: one, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: few, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: many, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for animal_count with 4 options
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: image_quality
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: image_quality
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:54 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: clear, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: blurry, Validation: ''
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:54 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: dark, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: overexposed, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: partial, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for image_quality with 5 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: multiselect
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: behavior
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:68): Generating multiselect layout for schema: behavior
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:89): Using 1 column layout
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: walking
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: running
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: standing
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: feeding
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: resting
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: looking_at_camera
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.multiselect (multiselect.py:161): Successfully generated multiselect layout for behavior with 6 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: text
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: specific_species
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:48): Generating textbox layout for schema: specific_species
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:143): Generated textbox schematic for specific_species
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.textbox (textbox.py:144): Successfully generated textbox layout for specific_species with 1 fields
+2026-02-24 13:12:55 [INFO] server_utils.front_end (front_end.py:92): Generated annotation layout file: /Users/jurgens/Documents/Projects/potato-showcase/image/specialized/iwildcam/layouts/task_layout.html
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: primary_species
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: primary_species
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: empty, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: deer, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: wild_boar, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: raccoon, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: fox, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: coyote, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bear, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: mountain_lion, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: rabbit, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: squirrel, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bird, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: cattle, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_dog, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_cat, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: human, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: other, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for primary_species with 16 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: animal_count
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: animal_count
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: zero, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: one, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: few, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: many, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for animal_count with 4 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: image_quality
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: image_quality
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: clear, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: blurry, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: dark, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: overexposed, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: partial, Validation: ''
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for image_quality with 5 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: multiselect
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: behavior
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:68): Generating multiselect layout for schema: behavior
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:89): Using 1 column layout
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: walking
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: running
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: standing
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: feeding
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: resting
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: looking_at_camera
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.multiselect (multiselect.py:161): Successfully generated multiselect layout for behavior with 6 options
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: text
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: specific_species
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:48): Generating textbox layout for schema: specific_species
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:12:55 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:12:55 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:143): Generated textbox schematic for specific_species
+2026-02-24 13:12:55 [INFO] potato.server_utils.schemas.textbox (textbox.py:144): Successfully generated textbox layout for specific_species with 1 fields
+2026-02-24 13:12:55 [DEBUG] server_utils.front_end (front_end.py:363): Output HTML filename: /Users/jurgens/Documents/Projects/potato/potato/templates/generated/iWildCam-Wildlife-Classification-base_template_v2.html
+2026-02-24 13:12:55 [DEBUG] server_utils.front_end (front_end.py:376): writing annotation html to /Users/jurgens/Documents/Projects/potato/potato/templates/generated/iWildCam-Wildlife-Classification-base_template_v2.html
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:368): Loading data from 1 files
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:386): Reading data from sample-data.json
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:400): Parsed sample-data.json as JSON array with 3 items
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:491): Loaded 3 instances from sample-data.json
+2026-02-24 13:12:55 [INFO] potato.flask_server (flask_server.py:593): Loaded user data for 0 users
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:995): Loaded keyword highlight settings: {'keyword_probability': 1.0, 'random_word_probability': 0.0, 'random_word_label': 'distractor', 'random_word_schema': 'keyword'}
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:999): No keyword_highlights_file specified in config
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:615): Training not enabled, skipping training data loading
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:798): No Prolific configuration found
+2026-02-24 13:12:55 [WARNING] potato.server_utils.mturk_apis (mturk_apis.py:466): boto3 not available, MTurk API disabled
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:923): STATES: defaultdict(<class 'collections.OrderedDict'>, {<UserPhase.ANNOTATION: 'annotation'>: OrderedDict([('iWildCam Wildlife Classification', 'iWildCam-Wildlife-Classification-base_template_v2.html')])})
+2026-02-24 13:12:55 [INFO] potato.flask_server (flask_server.py:2630): Knowledge base manager initialized
+2026-02-24 13:12:55 [DEBUG] potato.flask_server (flask_server.py:2435): No audio_annotation schemes found, skipping WaveformService initialization
+2026-02-24 13:12:55 [INFO] potato.flask_server (flask_server.py:2700): Password authentication required: True
+2026-02-24 13:12:55 [INFO] potato.server_utils.html_sanitizer (html_sanitizer.py:319): Registered HTML sanitization Jinja2 filters
+2026-02-24 13:46:35 [DEBUG] potato (logging_config.py:180): Logging initialized with level=DEBUG
+2026-02-24 13:46:35 [DEBUG] potato.authentication (authentication.py:524): User config path: user_config.json
+2026-02-24 13:46:35 [INFO] potato.authentication (authentication.py:530): Initialized UserAuthenticator with method: in_memory, require_password: True
+2026-02-24 13:46:35 [INFO] potato.item_state_management (item_state_management.py:789): ItemStateManager initialized with random_seed=1234
+2026-02-24 13:46:35 [INFO] server_utils.front_end (front_end.py:194): Generating anntotation site at /Users/jurgens/Documents/Projects/potato/potato/templates
+2026-02-24 13:46:35 [DEBUG] server_utils.front_end (front_end.py:205): Reading html annotation template: /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/base_template_v2.html
+2026-02-24 13:46:35 [DEBUG] server_utils.front_end (front_end.py:215): Reading html header /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/header.html
+2026-02-24 13:46:35 [DEBUG] server_utils.front_end (front_end.py:241): Saw 5 annotation scheme(s)
+2026-02-24 13:46:35 [INFO] server_utils.front_end (front_end.py:123): Annotation layout file not found or hash mismatch, generating: /Users/jurgens/Documents/Projects/potato-showcase/image/specialized/iwildcam/layouts/task_layout.html
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: primary_species
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: primary_species
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: empty, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: deer, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: wild_boar, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: raccoon, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: fox, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: coyote, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bear, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: mountain_lion, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: rabbit, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: squirrel, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bird, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: cattle, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_dog, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_cat, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: human, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: other, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for primary_species with 16 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: animal_count
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: animal_count
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: zero, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: one, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: few, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: many, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for animal_count with 4 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: image_quality
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: image_quality
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: clear, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: blurry, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: dark, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: overexposed, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: partial, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for image_quality with 5 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: multiselect
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: behavior
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:68): Generating multiselect layout for schema: behavior
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:89): Using 1 column layout
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: walking
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: running
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: standing
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: feeding
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: resting
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: looking_at_camera
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.multiselect (multiselect.py:161): Successfully generated multiselect layout for behavior with 6 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: text
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: specific_species
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:48): Generating textbox layout for schema: specific_species
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:143): Generated textbox schematic for specific_species
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.textbox (textbox.py:144): Successfully generated textbox layout for specific_species with 1 fields
+2026-02-24 13:46:35 [INFO] server_utils.front_end (front_end.py:92): Generated annotation layout file: /Users/jurgens/Documents/Projects/potato-showcase/image/specialized/iwildcam/layouts/task_layout.html
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: primary_species
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: primary_species
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: empty, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: deer, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: wild_boar, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: raccoon, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: fox, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: coyote, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bear, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: mountain_lion, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: rabbit, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: squirrel, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: bird, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: cattle, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_dog, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: domestic_cat, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: human, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: primary_species, Label: other, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for primary_species with 16 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: animal_count
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: animal_count
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: zero, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: one, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: few, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: animal_count, Label: many, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for animal_count with 4 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: image_quality
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: image_quality
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: clear, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: blurry, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: dark, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: overexposed, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: image_quality, Label: partial, Validation: ''
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for image_quality with 5 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: multiselect
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: behavior
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:68): Generating multiselect layout for schema: behavior
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.multiselect (multiselect.py:89): Using 1 column layout
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: walking
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: running
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: standing
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: feeding
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: resting
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: looking_at_camera
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.multiselect (multiselect.py:161): Successfully generated multiselect layout for behavior with 6 options
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: text
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: specific_species
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:48): Generating textbox layout for schema: specific_species
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:46:35 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:46:35 [DEBUG] potato.server_utils.schemas.textbox (textbox.py:143): Generated textbox schematic for specific_species
+2026-02-24 13:46:35 [INFO] potato.server_utils.schemas.textbox (textbox.py:144): Successfully generated textbox layout for specific_species with 1 fields
+2026-02-24 13:46:35 [DEBUG] server_utils.front_end (front_end.py:363): Output HTML filename: /Users/jurgens/Documents/Projects/potato/potato/templates/generated/iWildCam-Wildlife-Classification-base_template_v2.html
+2026-02-24 13:46:35 [DEBUG] server_utils.front_end (front_end.py:376): writing annotation html to /Users/jurgens/Documents/Projects/potato/potato/templates/generated/iWildCam-Wildlife-Classification-base_template_v2.html
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:368): Loading data from 1 files
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:386): Reading data from sample-data.json
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:400): Parsed sample-data.json as JSON array with 3 items
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:491): Loaded 3 instances from sample-data.json
+2026-02-24 13:46:35 [INFO] potato.flask_server (flask_server.py:593): Loaded user data for 0 users
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:995): Loaded keyword highlight settings: {'keyword_probability': 1.0, 'random_word_probability': 0.0, 'random_word_label': 'distractor', 'random_word_schema': 'keyword'}
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:999): No keyword_highlights_file specified in config
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:615): Training not enabled, skipping training data loading
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:798): No Prolific configuration found
+2026-02-24 13:46:35 [WARNING] potato.server_utils.mturk_apis (mturk_apis.py:466): boto3 not available, MTurk API disabled
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:923): STATES: defaultdict(<class 'collections.OrderedDict'>, {<UserPhase.ANNOTATION: 'annotation'>: OrderedDict([('iWildCam Wildlife Classification', 'iWildCam-Wildlife-Classification-base_template_v2.html')])})
+2026-02-24 13:46:35 [INFO] potato.flask_server (flask_server.py:2630): Knowledge base manager initialized
+2026-02-24 13:46:35 [DEBUG] potato.flask_server (flask_server.py:2435): No audio_annotation schemes found, skipping WaveformService initialization
+2026-02-24 13:46:35 [INFO] potato.flask_server (flask_server.py:2700): Password authentication required: True
+2026-02-24 13:46:35 [INFO] potato.server_utils.html_sanitizer (html_sanitizer.py:319): Registered HTML sanitization Jinja2 filters

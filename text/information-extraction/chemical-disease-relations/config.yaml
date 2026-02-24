@@ -27,16 +27,17 @@
 # - "Side effects of X include Y"
 # - "Y was observed in patients taking X"
 
-port: 8000
-server_name: localhost
-task_name: "Chemical-Disease Relation Extraction"
+annotation_task_name: "Chemical-Disease Relation Extraction"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Mark chemical entities

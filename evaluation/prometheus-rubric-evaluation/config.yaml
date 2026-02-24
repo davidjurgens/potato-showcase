@@ -2,18 +2,19 @@
 # Based on "Prometheus: Inducing Fine-grained Evaluation Capability in Language Models" (Kim et al., ICLR 2024)
 # Task: Score LLM responses against detailed rubrics and provide written feedback
 
-port: 8000
-server_name: localhost
-task_name: "Prometheus Rubric-based Evaluation"
+annotation_task_name: "Prometheus Rubric-based Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing instruction, response, rubric, and reference answer
 html_layout: |

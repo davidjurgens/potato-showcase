@@ -2,18 +2,19 @@
 # Based on Wang et al., NAACL 2024
 # Task: Rate AI responses on 5 quality dimensions for reward model training
 
-port: 8000
-server_name: localhost
-task_name: "HelpSteer Multi-Attribute Rating"
+annotation_task_name: "HelpSteer Multi-Attribute Rating"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-text_key: prompt
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display the response being evaluated
 html_layout: |

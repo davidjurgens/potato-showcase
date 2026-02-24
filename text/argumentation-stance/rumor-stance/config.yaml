@@ -24,16 +24,17 @@
 # Note: A reply might support the rumor while denying someone else's
 # denial. Focus on stance toward the ORIGINAL claim.
 
-port: 8000
-server_name: localhost
-task_name: "Rumor Stance Detection"
+annotation_task_name: "Rumor Stance Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: reply
+item_properties:
+  id_key: "id"
+  text_key: "reply"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Stance classification

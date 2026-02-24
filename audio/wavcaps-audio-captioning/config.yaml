@@ -14,16 +14,17 @@
 # - Include temporal information if relevant (e.g., "A dog barks, then a door slams")
 # - List individual sound events separately in the sound events field
 
-port: 8000
-server_name: localhost
-task_name: "WavCaps: Audio Captioning"
+annotation_task_name: "WavCaps: Audio Captioning"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: text

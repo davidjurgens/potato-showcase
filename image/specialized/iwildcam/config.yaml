@@ -2,6 +2,7 @@
 # Based on Beery et al., CVPR 2019
 
 annotation_task_name: "iWildCam Wildlife Classification"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

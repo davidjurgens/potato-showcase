@@ -2,18 +2,19 @@
 # Based on "SORRY-Bench: Systematically Evaluating Large Language Model Safety Refusal" (Xie et al., ICLR 2025)
 # Task: Judge LLM responses to unsafe requests with nuanced refusal assessment
 
-port: 8000
-server_name: localhost
-task_name: "SORRY-Bench Refusal Evaluation"
+annotation_task_name: "SORRY-Bench Refusal Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing prompt metadata, prompt, and response
 html_layout: |

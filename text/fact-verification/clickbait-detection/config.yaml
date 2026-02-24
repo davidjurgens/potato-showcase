@@ -28,16 +28,17 @@
 # 3. A headline can be interesting without being clickbait
 # 4. Sponsored content is not automatically clickbait
 
-port: 8000
-server_name: localhost
-task_name: "Clickbait Detection"
+annotation_task_name: "Clickbait Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: headline
+item_properties:
+  id_key: "id"
+  text_key: "headline"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Binary clickbait classification

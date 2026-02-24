@@ -2,6 +2,7 @@
 # Based on Pfitzmann et al., KDD 2022
 
 annotation_task_name: "DocLayNet Document Layout Analysis"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

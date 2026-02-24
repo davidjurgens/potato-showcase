@@ -2,15 +2,17 @@
 # Based on Dubois et al., NeurIPS 2023
 # Task: Collect preferences for instruction-following
 
-port: 8000
-server_name: localhost
-task_name: "AlpacaFarm Preference Simulation"
+annotation_task_name: "AlpacaFarm Preference Simulation"
+task_dir: "."
 
 data_files:
   - data.json
-id_key: id
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - name: "preference"

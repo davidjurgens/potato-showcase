@@ -38,16 +38,17 @@
 # 4. Select the TAC relation type for the entity pair
 # 5. Assess translation quality if applicable
 
-port: 8000
-server_name: localhost
-task_name: "MultiTACRED: Multilingual Relation Extraction"
+annotation_task_name: "MultiTACRED: Multilingual Relation Extraction"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify subject and object entities

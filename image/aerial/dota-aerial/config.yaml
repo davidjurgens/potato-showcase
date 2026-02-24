@@ -2,6 +2,7 @@
 # Based on Xia et al., CVPR 2018
 
 annotation_task_name: "DOTA Aerial Object Detection"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

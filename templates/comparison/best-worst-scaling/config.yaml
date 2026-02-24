@@ -1,6 +1,7 @@
 # Best-Worst Scaling (MaxDiff) Configuration
 # Annotators select the best and worst items from a set
 
+task_dir: "."
 annotation_task_name: "Best-Worst Scaling"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "prompt"
   text_display_key: "prompt"
   list_display_key: "options"
 
@@ -41,3 +43,6 @@ annotation_schemes:
         tooltip: "Very similar quality, difficult to choose"
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

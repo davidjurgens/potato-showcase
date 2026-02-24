@@ -2,6 +2,7 @@
 # Based on Sumbul et al., IGARSS 2019
 
 annotation_task_name: "BigEarthNet Land Cover Classification"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

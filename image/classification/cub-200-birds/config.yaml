@@ -2,6 +2,7 @@
 # Based on Wah et al., 2011
 
 annotation_task_name: "CUB-200 Bird Species Classification"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

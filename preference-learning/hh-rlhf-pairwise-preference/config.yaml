@@ -2,18 +2,19 @@
 # Based on Anthropic's "Training a Helpful and Harmless Assistant" (Bai et al., 2022)
 # Task: Simple pairwise preference - choose the better response
 
-port: 8000
-server_name: localhost
-task_name: "HH-RLHF Pairwise Preference"
+annotation_task_name: "HH-RLHF Pairwise Preference"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-text_key: conversation
+item_properties:
+  id_key: "id"
+  text_key: "conversation"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing conversation and both responses
 html_layout: |

@@ -2,6 +2,7 @@
 # Based on Zhou et al., CVPR 2017
 
 annotation_task_name: "ADE20K Scene Parsing"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

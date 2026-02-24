@@ -2,18 +2,19 @@
 # Based on "WebArena: A Realistic Web Environment for Building Autonomous Agents" (Zhou et al., ICLR 2024)
 # Task: Evaluate whether an agent's actions correctly complete a given web task
 
-port: 8000
-server_name: localhost
-task_name: "WebArena Web Agent Evaluation"
+annotation_task_name: "WebArena Web Agent Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing task, trajectory, and final state
 html_layout: |

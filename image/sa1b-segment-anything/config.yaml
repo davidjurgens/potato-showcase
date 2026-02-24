@@ -2,6 +2,7 @@
 # Based on Kirillov et al., ICCV 2023
 
 annotation_task_name: "SA-1B Interactive Segmentation"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

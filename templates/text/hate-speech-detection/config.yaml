@@ -1,6 +1,7 @@
 # Hate Speech Detection Configuration
 # Identify and categorize toxic content
 
+task_dir: "."
 annotation_task_name: "Hate Speech Detection"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "text"
   text_display_key: "text"
 
 user_config:
@@ -78,3 +80,6 @@ annotation_schemes:
       - name: "Remove + ban user"
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

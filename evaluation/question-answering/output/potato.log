@@ -1,0 +1,73 @@
+2026-02-24 13:42:04 [DEBUG] potato (logging_config.py:180): Logging initialized with level=DEBUG
+2026-02-24 13:42:04 [DEBUG] potato.authentication (authentication.py:524): User config path: output/user_config.json
+2026-02-24 13:42:04 [INFO] potato.authentication (authentication.py:530): Initialized UserAuthenticator with method: in_memory, require_password: True
+2026-02-24 13:42:04 [INFO] potato.item_state_management (item_state_management.py:789): ItemStateManager initialized with random_seed=1234
+2026-02-24 13:42:04 [INFO] server_utils.front_end (front_end.py:194): Generating anntotation site at /Users/jurgens/Documents/Projects/potato/potato/templates
+2026-02-24 13:42:04 [DEBUG] server_utils.front_end (front_end.py:205): Reading html annotation template: /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/base_template_v2.html
+2026-02-24 13:42:04 [DEBUG] server_utils.front_end (front_end.py:215): Reading html header /Users/jurgens/Documents/Projects/potato/potato/server_utils/../templates/header.html
+2026-02-24 13:42:04 [DEBUG] server_utils.front_end (front_end.py:241): Saw 2 annotation scheme(s)
+2026-02-24 13:42:04 [INFO] server_utils.front_end (front_end.py:123): Annotation layout file not found or hash mismatch, generating: /Users/jurgens/Documents/Projects/potato-showcase/evaluation/question-answering/layouts/task_layout.html
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: span
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: answer
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: answerable
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: answerable
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: answerable, Label: Yes, Validation: ''
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: answerable, Label: No, Validation: ''
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:42:04 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for answerable with 2 options
+2026-02-24 13:42:04 [INFO] server_utils.front_end (front_end.py:92): Generated annotation layout file: /Users/jurgens/Documents/Projects/potato-showcase/evaluation/question-answering/layouts/task_layout.html
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: span
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: answer
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.registry (registry.py:129): Generating layout for annotation type: radio
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:68): Schema configuration validation passed for: answerable
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:64): Generating radio layout for schema: answerable
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:200): [get_ai_wrapper] DYNAMICAIHELP is None
+2026-02-24 13:42:04 [DEBUG] potato.ai.ai_help_wrapper (ai_help_wrapper.py:202): [get_ai_wrapper] Returning: 'empty...'
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: answerable, Label: Yes, Validation: ''
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:193): generate_validation_attribute called with label_requirement: {}
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:194): label_name: None
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.identifier_utils (identifier_utils.py:211): Returning empty string - no validation requirements met
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:100): Schema: answerable, Label: No, Validation: ''
+2026-02-24 13:42:04 [DEBUG] potato.server_utils.schemas.radio (radio.py:101): Label requirement: NOT_FOUND
+2026-02-24 13:42:04 [INFO] potato.server_utils.schemas.radio (radio.py:181): Successfully generated radio layout for answerable with 2 options
+2026-02-24 13:42:04 [DEBUG] server_utils.front_end (front_end.py:363): Output HTML filename: /Users/jurgens/Documents/Projects/potato/potato/templates/generated/Question-Answering-base_template_v2.html
+2026-02-24 13:42:04 [DEBUG] server_utils.front_end (front_end.py:376): writing annotation html to /Users/jurgens/Documents/Projects/potato/potato/templates/generated/Question-Answering-base_template_v2.html
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:368): Loading data from 1 files
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:386): Reading data from sample-data.json
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:400): Parsed sample-data.json as JSON array with 2 items
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:491): Loaded 2 instances from sample-data.json
+2026-02-24 13:42:04 [INFO] potato.flask_server (flask_server.py:593): Loaded user data for 0 users
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:995): Loaded keyword highlight settings: {'keyword_probability': 1.0, 'random_word_probability': 0.0, 'random_word_label': 'distractor', 'random_word_schema': 'keyword'}
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:999): No keyword_highlights_file specified in config
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:615): Training not enabled, skipping training data loading
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:798): No Prolific configuration found
+2026-02-24 13:42:04 [WARNING] potato.server_utils.mturk_apis (mturk_apis.py:466): boto3 not available, MTurk API disabled
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:923): STATES: defaultdict(<class 'collections.OrderedDict'>, {<UserPhase.ANNOTATION: 'annotation'>: OrderedDict([('Question Answering', 'Question-Answering-base_template_v2.html')])})
+2026-02-24 13:42:04 [INFO] potato.flask_server (flask_server.py:2630): Knowledge base manager initialized
+2026-02-24 13:42:04 [DEBUG] potato.flask_server (flask_server.py:2435): No audio_annotation schemes found, skipping WaveformService initialization
+2026-02-24 13:42:04 [INFO] potato.flask_server (flask_server.py:2700): Password authentication required: True
+2026-02-24 13:42:04 [INFO] potato.server_utils.html_sanitizer (html_sanitizer.py:319): Registered HTML sanitization Jinja2 filters

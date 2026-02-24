@@ -21,16 +21,17 @@
 # 4. A cause must be NECESSARY for the emotion (counterfactual test)
 # 5. Multiple causes can exist for a single emotion
 
-port: 8000
-server_name: localhost
-task_name: "Emotion Cause Extraction"
+annotation_task_name: "Emotion Cause Extraction"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: dialogue
+item_properties:
+  id_key: "id"
+  text_key: "dialogue"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify the emotion in the target utterance

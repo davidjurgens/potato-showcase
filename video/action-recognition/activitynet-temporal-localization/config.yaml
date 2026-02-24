@@ -2,18 +2,19 @@
 # Based on Heilbron et al., CVPR 2015
 # Task: Localize activity instances with start/end times in untrimmed videos
 
-port: 8000
-server_name: localhost
-task_name: "ActivityNet Temporal Localization"
+annotation_task_name: "ActivityNet Temporal Localization"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-video_key: video_url
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Annotation schemes
 annotation_schemes:

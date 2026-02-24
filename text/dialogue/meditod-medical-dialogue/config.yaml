@@ -12,17 +12,19 @@
 # - Assess communication quality dimensions for doctor-patient interaction
 # - Use the dialogue context to disambiguate entity types
 
-port: 8000
-server_name: localhost
-task_name: "MediTOD Medical Dialogue Annotation"
+annotation_task_name: "MediTOD Medical Dialogue Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
 context_key: dialogue_context
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Medical entity spans

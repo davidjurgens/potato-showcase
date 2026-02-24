@@ -21,16 +21,17 @@
 # 4. Consider both writer's emotion and reader's reaction
 # 5. Headlines can evoke emotions even without explicit cues
 
-port: 8000
-server_name: localhost
-task_name: "News Emotion Roles"
+annotation_task_name: "News Emotion Roles"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: headline
+item_properties:
+  id_key: "id"
+  text_key: "headline"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Emotion classification
