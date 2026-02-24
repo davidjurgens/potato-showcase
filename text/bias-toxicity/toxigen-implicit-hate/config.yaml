@@ -34,16 +34,17 @@
 # - Avoid over-sensitivity: mentioning a group is not inherently toxic
 # - Avoid under-sensitivity: lack of slurs does not mean lack of toxicity
 
-port: 8000
-server_name: localhost
-task_name: "Implicit Hate Speech Detection (ToxiGen)"
+annotation_task_name: "Implicit Hate Speech Detection (ToxiGen)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Toxicity classification

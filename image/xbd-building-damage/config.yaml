@@ -13,16 +13,17 @@
 # 3. Identify the building type and disaster type
 # 4. Describe specific damage features visible in the imagery
 
-port: 8000
-server_name: localhost
-task_name: "xBD: Building Damage Assessment from Satellite Imagery"
+annotation_task_name: "xBD: Building Damage Assessment from Satellite Imagery"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-image_key: post_image_url
+item_properties:
+  id_key: "id"
+  text_key: "post_image_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_task_name: "xBD Building Damage Assessment"
 

@@ -25,16 +25,17 @@
 # - Consider the document topic and domain when disambiguating
 # - When truly ambiguous, mark as "ambiguous" and add notes
 
-port: 8000
-server_name: localhost
-task_name: "Named Entity Disambiguation (AIDA-CoNLL)"
+annotation_task_name: "Named Entity Disambiguation (AIDA-CoNLL)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Span annotation for entity mentions

@@ -3,18 +3,19 @@
 # Paper: https://link.springer.com/chapter/10.1007/11677482_3
 # Task: ELAN-style multi-tier annotation of multi-party meeting recordings
 
-port: 8000
-server_name: localhost
-task_name: "AMI Meeting Multi-Tier Annotation"
+annotation_task_name: "AMI Meeting Multi-Tier Annotation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-video_key: video_url
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:

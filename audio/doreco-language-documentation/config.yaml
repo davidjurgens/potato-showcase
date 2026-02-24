@@ -22,16 +22,17 @@
 #   - Provide an idiomatic free translation on Tier 4
 #   - Select the clause type on Tier 5 based on the full utterance
 
-port: 8000
-server_name: localhost
-task_name: "DoReCo Language Documentation Annotation"
+annotation_task_name: "DoReCo Language Documentation Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_instructions: |
   ## DoReCo Language Documentation Annotation

@@ -29,16 +29,17 @@
 # - Some claims involve multiple conditions that all must be verified
 # - Distinguish between "not supported" and "actively contradicted"
 
-port: 8000
-server_name: localhost
-task_name: "Table-Based Fact Verification (TabFact)"
+annotation_task_name: "Table-Based Fact Verification (TabFact)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: claim
+item_properties:
+  id_key: "id"
+  text_key: "claim"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Verdict on the claim

@@ -39,16 +39,17 @@
 # - Do not overthink -- go with the most natural/common interpretation
 # - Some items may require cultural or world knowledge
 
-port: 8000
-server_name: localhost
-task_name: "Cross-lingual Causal Commonsense Reasoning (XCOPA)"
+annotation_task_name: "Cross-lingual Causal Commonsense Reasoning (XCOPA)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: premise
+item_properties:
+  id_key: "id"
+  text_key: "premise"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Select the more plausible alternative

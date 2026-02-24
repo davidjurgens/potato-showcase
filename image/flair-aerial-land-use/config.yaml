@@ -14,16 +14,17 @@
 # 4. Rate the image quality
 # 5. Add any additional observations
 
-port: 8000
-server_name: localhost
-task_name: "FLAIR: French Land Cover from Aerospace Imagery"
+annotation_task_name: "FLAIR: French Land Cover from Aerospace Imagery"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-image_key: image_url
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_task_name: "FLAIR Land Cover Classification"
 

@@ -2,18 +2,19 @@
 # Based on "Common Voice: A Massively-Multilingual Speech Corpus" (Ardila et al., LREC 2020)
 # Task: Classify speaker accents and assess speech quality from audio recordings
 
-port: 8000
-server_name: localhost
-task_name: "Speech Accent Classification"
+annotation_task_name: "Speech Accent Classification"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout with audio player and transcription
 html_layout: |
