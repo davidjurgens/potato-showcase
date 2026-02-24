@@ -1,0 +1,251 @@
+# ToBI Prosodic Annotation
+# Based on Silverman et al., Speech Communication 1992
+# Paper: https://doi.org/10.1016/0167-6393(92)90016-Z
+# Dataset: https://www.ling.ohio-state.edu/~tobi/
+#
+# Task: Multi-tier prosodic annotation following the ToBI (Tones and Break
+# Indices) framework. Annotators produce layered prosodic transcriptions
+# aligned to the audio timeline, labeling pitch accents on stressed
+# syllables, prosodic boundary strength between words, phrase accents, and
+# boundary tones at the edges of intonational phrases.
+#
+# ELAN-style multi-tier design:
+#   Tier 1 (span)  - tone_tier: pitch accent labels on words
+#   Tier 2 (span)  - break_index_tier: prosodic boundary strength at each word boundary
+#   Tier 3 (radio) - boundary_tone: intonational phrase boundary tone
+#   Tier 4 (radio) - phrase_accent: intermediate phrase accent
+#   Tier 5 (text)  - transcription: orthographic transcription
+#
+# Guidelines:
+#   - Listen to the full utterance before annotating any tier
+#   - Identify pitch-accented words first (tone_tier), then annotate break
+#     indices at word boundaries (break_index_tier)
+#   - Assign phrase accents and boundary tones only at phrase edges
+#   - Use the transcription tier for verbatim orthographic text
+#   - When unsure between two accent types, replay the relevant portion
+
+port: 8000
+server_name: localhost
+task_name: "ToBI Prosodic Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_instructions: |
+  ## ToBI Prosodic Annotation
+
+  You will annotate speech utterances using the **ToBI (Tones and Break Indices)**
+  framework. This is a multi-tier annotation task modeled after ELAN-style temporal
+  annotation: each tier captures a different layer of prosodic structure, and all
+  tiers are aligned to the same audio timeline.
+
+  ### Tier 1 -- Tone Tier (pitch accents on words)
+  Select each word span and assign a pitch accent type:
+  - **H\*** -- Simple high accent (most common in English)
+  - **L\*** -- Simple low accent
+  - **L+H\*** -- Rising accent with low leading tone
+  - **L\*+H** -- Scooped accent, low target with high trailing tone
+  - **H+!H\*** -- Downstepped high accent
+  - **no-accent** -- Word does not carry a pitch accent
+
+  ### Tier 2 -- Break Index Tier (prosodic boundary strength)
+  Annotate the boundary after each word:
+  - **0-clitic** -- Clitic boundary (no perceived break)
+  - **1-word** -- Normal word boundary
+  - **2-phrase-minor** -- Minor phrase break (slight disjuncture)
+  - **3-intermediate-phrase** -- Intermediate phrase boundary
+  - **4-intonational-phrase** -- Full intonational phrase boundary
+
+  ### Tier 3 -- Boundary Tone
+  Select the boundary tone at the end of each intonational phrase:
+  - **L-L%** -- Low phrase accent + low boundary tone (declarative fall)
+  - **L-H%** -- Low phrase accent + high boundary tone (yes/no question rise)
+  - **H-L%** -- High phrase accent + low boundary tone
+  - **H-H%** -- High phrase accent + high boundary tone (continuation rise)
+  - **no-boundary** -- No intonational phrase boundary at this point
+
+  ### Tier 4 -- Phrase Accent
+  Select the phrase accent at the edge of each intermediate phrase:
+  - **L-** -- Low phrase accent
+  - **H-** -- High phrase accent
+  - **!H-** -- Downstepped high phrase accent
+  - **none** -- No intermediate phrase boundary here
+
+  ### Tier 5 -- Transcription
+  Provide an orthographic transcription of the utterance.
+
+annotation_schemes:
+  - annotation_type: span
+    name: tone_tier
+    description: "Pitch accent annotation on words. Select each word span and assign its pitch accent type."
+    span_mode: temporal
+    labels:
+      - name: "H*"
+        color: "#3B82F6"
+        tooltip: "Simple high pitch accent -- the most common accent in English declaratives"
+        key_value: "1"
+      - name: "L*"
+        color: "#10B981"
+        tooltip: "Simple low pitch accent -- a low tonal target on the stressed syllable"
+        key_value: "2"
+      - name: "L+H*"
+        color: "#F59E0B"
+        tooltip: "Rising accent with a low leading tone followed by a high peak on the stressed syllable"
+        key_value: "3"
+      - name: "L*+H"
+        color: "#EF4444"
+        tooltip: "Scooped accent -- low target on the stressed syllable with a high trailing tone"
+        key_value: "4"
+      - name: "H+!H*"
+        color: "#8B5CF6"
+        tooltip: "Downstepped high accent -- a high tone followed by a lower high on the stressed syllable"
+        key_value: "5"
+      - name: "no-accent"
+        color: "#9CA3AF"
+        tooltip: "This word does not carry a pitch accent"
+        key_value: "0"
+
+  - annotation_type: span
+    name: break_index_tier
+    description: "Prosodic boundary strength between words. Annotate the juncture after each word on a 0-4 scale."
+    span_mode: temporal
+    labels:
+      - name: "0-clitic"
+        color: "#E5E7EB"
+        tooltip: "Level 0 -- clitic boundary; the word is phonologically joined to the next (e.g., 'wanna')"
+        key_value: "q"
+      - name: "1-word"
+        color: "#93C5FD"
+        tooltip: "Level 1 -- normal word boundary; no perceived prosodic break"
+        key_value: "w"
+      - name: "2-phrase-minor"
+        color: "#FCD34D"
+        tooltip: "Level 2 -- minor phrase break; slight disjuncture without tonal marking"
+        key_value: "e"
+      - name: "3-intermediate-phrase"
+        color: "#FDBA74"
+        tooltip: "Level 3 -- intermediate phrase boundary; clear break with a phrase accent"
+        key_value: "r"
+      - name: "4-intonational-phrase"
+        color: "#F87171"
+        tooltip: "Level 4 -- intonational phrase boundary; major break with boundary tone"
+        key_value: "t"
+
+  - annotation_type: radio
+    name: boundary_tone
+    description: "Boundary tone at the end of each intonational phrase."
+    labels:
+      - name: "L-L%"
+        tooltip: "Low phrase accent + low boundary tone (typical declarative falling contour)"
+        key_value: "a"
+      - name: "L-H%"
+        tooltip: "Low phrase accent + high boundary tone (typical yes/no question rise)"
+        key_value: "s"
+      - name: "H-L%"
+        tooltip: "High phrase accent + low boundary tone (calling contour or plateau-fall)"
+        key_value: "d"
+      - name: "H-H%"
+        tooltip: "High phrase accent + high boundary tone (continuation rise)"
+        key_value: "f"
+      - name: "no-boundary"
+        tooltip: "No intonational phrase boundary at this point"
+        key_value: "g"
+
+  - annotation_type: radio
+    name: phrase_accent
+    description: "Phrase accent at the edge of each intermediate phrase."
+    labels:
+      - name: "L-"
+        tooltip: "Low phrase accent -- pitch falls or stays low after the last pitch accent"
+        key_value: "z"
+      - name: "H-"
+        tooltip: "High phrase accent -- pitch rises or stays high after the last pitch accent"
+        key_value: "x"
+      - name: "!H-"
+        tooltip: "Downstepped high phrase accent -- lower than a preceding H-"
+        key_value: "c"
+      - name: "none"
+        tooltip: "No intermediate phrase boundary; phrase accent not applicable"
+        key_value: "v"
+
+  - annotation_type: text
+    name: transcription
+    description: "Orthographic transcription of the utterance. Type the words exactly as spoken."
+
+html_layout: |
+  <div class="annotator-container" style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
+    <h3 style="margin-bottom: 4px;">ToBI Prosodic Annotation</h3>
+    <p style="color: #6B7280; margin-top: 0;">
+      Speaker: <strong>{{speaker_id}}</strong> | Genre: <strong>{{genre}}</strong>
+    </p>
+
+    <div class="audio-container" style="background: #F3F4F6; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <div id="waveform" style="width: 100%; height: 128px; margin-top: 8px; background: #E5E7EB; border-radius: 4px;"></div>
+      <p style="font-size: 0.85em; color: #9CA3AF; margin: 4px 0 0;">
+        Click and drag on the waveform to select a time span for annotation.
+      </p>
+    </div>
+
+    <div class="utterance-text" style="background: #FEF3C7; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+      <strong>Reference text:</strong> {{utterance_text}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #3B82F6;">Tier 1 -- Tone (Pitch Accents)</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Select word spans and assign pitch accent labels.
+      </p>
+      {{tone_tier}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #F59E0B;">Tier 2 -- Break Index</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Annotate prosodic boundary strength at each word juncture.
+      </p>
+      {{break_index_tier}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #EF4444;">Tier 3 -- Boundary Tone</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Select the boundary tone for this intonational phrase.
+      </p>
+      {{boundary_tone}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #8B5CF6;">Tier 4 -- Phrase Accent</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Select the phrase accent at the intermediate phrase edge.
+      </p>
+      {{phrase_accent}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #10B981;">Tier 5 -- Transcription</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Provide the orthographic transcription of the utterance.
+      </p>
+      {{transcription}}
+    </div>
+  </div>
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

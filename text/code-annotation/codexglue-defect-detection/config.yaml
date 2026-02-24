@@ -1,0 +1,137 @@
+# Code Defect Detection (CodeXGLUE)
+# Based on Lu et al., NeurIPS 2021
+#
+# This configuration supports binary defect classification and
+# vulnerability localization for C/C++ functions from open-source projects.
+#
+# Defect Types:
+# - buffer-overflow: Writing beyond allocated buffer boundaries
+# - null-pointer: Dereferencing null or uninitialized pointers
+# - memory-leak: Allocated memory not properly freed
+# - use-after-free: Accessing memory after it has been deallocated
+# - integer-overflow: Arithmetic operations exceeding integer bounds
+# - resource-leak: File handles, sockets, or locks not properly released
+# - race-condition: Concurrent access without proper synchronization
+# - other: Other vulnerability types not listed above
+#
+# Annotation Guidelines:
+# 1. Read the entire function carefully, including comments
+# 2. First determine if the function contains a defect (defective/non-defective)
+# 3. If defective, highlight the specific lines containing the vulnerability
+# 4. Classify the defect type from the predefined categories
+# 5. Assess the severity (critical, high, medium, low)
+# 6. Provide a brief explanation of the defect and potential exploitation
+# 7. Consider the broader context: what project is this from, what does the function do?
+#
+# Common Vulnerability Patterns:
+# - strcpy/strcat without bounds checking -> buffer overflow
+# - malloc without NULL check -> null pointer dereference
+# - Missing free() in error paths -> memory leak
+# - free() followed by continued use -> use-after-free
+# - Signed/unsigned comparison -> integer overflow
+
+port: 8000
+server_name: localhost
+task_name: "Code Defect Detection (CodeXGLUE)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: code
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Binary defect classification
+  - annotation_type: radio
+    name: has_defect
+    description: "Does this function contain a defect or vulnerability?"
+    labels:
+      - "defective"
+      - "non-defective"
+      - "uncertain"
+    keyboard_shortcuts:
+      "defective": "1"
+      "non-defective": "2"
+      "uncertain": "3"
+    tooltips:
+      "defective": "Function contains one or more bugs, vulnerabilities, or security issues"
+      "non-defective": "Function appears correct and free of vulnerabilities"
+      "uncertain": "Cannot determine with confidence; code is complex or context-dependent"
+
+  # Step 2: Defect location (span annotation)
+  - annotation_type: span
+    name: defect_location
+    description: "If defective, highlight the specific code region containing the vulnerability."
+    labels:
+      - "buffer-overflow"
+      - "null-pointer"
+      - "memory-leak"
+      - "use-after-free"
+      - "integer-overflow"
+      - "resource-leak"
+      - "race-condition"
+      - "other"
+    label_colors:
+      "buffer-overflow": "#ef4444"
+      "null-pointer": "#f97316"
+      "memory-leak": "#8b5cf6"
+      "use-after-free": "#dc2626"
+      "integer-overflow": "#f59e0b"
+      "resource-leak": "#3b82f6"
+      "race-condition": "#06b6d4"
+      "other": "#9ca3af"
+    tooltips:
+      "buffer-overflow": "Writing beyond allocated buffer boundaries (e.g., strcpy without size check)"
+      "null-pointer": "Dereferencing null or uninitialized pointers (e.g., missing NULL check after malloc)"
+      "memory-leak": "Allocated memory not properly freed on all code paths"
+      "use-after-free": "Accessing memory after it has been deallocated"
+      "integer-overflow": "Arithmetic operation exceeding integer bounds, signed/unsigned mismatch"
+      "resource-leak": "File handles, sockets, or locks not properly released"
+      "race-condition": "Concurrent access to shared data without proper synchronization"
+      "other": "Other vulnerability types (describe in explanation field)"
+    allow_overlapping: false
+
+  # Step 3: Defect severity
+  - annotation_type: radio
+    name: defect_severity
+    description: "If defective, how severe is the vulnerability?"
+    labels:
+      - "critical"
+      - "high"
+      - "medium"
+      - "low"
+    tooltips:
+      "critical": "Remotely exploitable, leads to arbitrary code execution or data breach"
+      "high": "Significant security impact, denial of service, or data corruption"
+      "medium": "Limited impact, requires specific conditions to exploit"
+      "low": "Minor issue, unlikely to be exploitable in practice"
+
+  # Step 4: Defect explanation
+  - annotation_type: text
+    name: defect_explanation
+    description: "Explain the defect: what is wrong, how it could be triggered, and how to fix it. Leave blank if non-defective."
+
+annotation_instructions: |
+  You are analyzing C/C++ functions for security vulnerabilities and defects.
+  For each function:
+  1. Read the code carefully and determine if it contains a defect (press 1, 2, or 3)
+  2. If defective, highlight the vulnerable code region and select the defect type
+  3. Rate the severity of the defect (critical, high, medium, or low)
+  4. Explain the defect: what is wrong, how it could be triggered, and how to fix it
+
+html_layout: |
+  <div style="padding: 15px; font-family: sans-serif;">
+    <div style="margin-bottom: 10px; color: #6b7280; font-size: 13px;">
+      <strong>Function:</strong> <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 3px;">{{function_name}}</code> |
+      <strong>Project:</strong> {{project}} |
+      <strong>Commit:</strong> <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 3px;">{{commit_id}}</code>
+    </div>
+    <pre style="background: #0d1117; color: #c9d1d9; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; counter-reset: line;">{{code}}</pre>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

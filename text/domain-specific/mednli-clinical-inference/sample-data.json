@@ -1,0 +1,62 @@
+[
+  {
+    "id": "mednli_001",
+    "premise": "The patient was started on a heparin drip for anticoagulation given the new diagnosis of atrial fibrillation with rapid ventricular response.",
+    "hypothesis": "The patient has an irregular heart rhythm.",
+    "clinical_department": "cardiology"
+  },
+  {
+    "id": "mednli_002",
+    "premise": "Chest X-ray showed bilateral infiltrates with air bronchograms consistent with pneumonia, and the patient was febrile to 39.2 degrees Celsius.",
+    "hypothesis": "The patient has a normal body temperature.",
+    "clinical_department": "pulmonology"
+  },
+  {
+    "id": "mednli_003",
+    "premise": "The patient presented with sudden onset right-sided weakness and slurred speech with a last known well time of 2 hours ago.",
+    "hypothesis": "The patient may be having a cerebrovascular accident.",
+    "clinical_department": "neurology"
+  },
+  {
+    "id": "mednli_004",
+    "premise": "Laboratory results showed a hemoglobin of 6.8 g/dL, down from 10.2 g/dL three days ago, with melena noted on exam.",
+    "hypothesis": "The patient has a gastrointestinal bleed.",
+    "clinical_department": "gastroenterology"
+  },
+  {
+    "id": "mednli_005",
+    "premise": "The patient is a 72-year-old male with a history of COPD on 2L home oxygen who presents with worsening dyspnea and productive cough with green sputum for 3 days.",
+    "hypothesis": "The patient has never smoked cigarettes.",
+    "clinical_department": "pulmonology"
+  },
+  {
+    "id": "mednli_006",
+    "premise": "Serum creatinine was 4.2 mg/dL, up from baseline of 1.1 mg/dL, with oliguria and potassium of 6.1 mEq/L.",
+    "hypothesis": "The patient has acute kidney injury.",
+    "clinical_department": "nephrology"
+  },
+  {
+    "id": "mednli_007",
+    "premise": "The patient underwent a successful total knee arthroplasty of the left knee and was ambulating with physical therapy on postoperative day one.",
+    "hypothesis": "The patient had surgery on the right knee.",
+    "clinical_department": "orthopedics"
+  },
+  {
+    "id": "mednli_008",
+    "premise": "Blood cultures grew gram-positive cocci in clusters in 2 out of 4 bottles, and vancomycin was started empirically pending sensitivities.",
+    "hypothesis": "The patient has diabetes mellitus.",
+    "clinical_department": "infectious-disease"
+  },
+  {
+    "id": "mednli_009",
+    "premise": "Troponin I was elevated at 2.4 ng/mL with ST-segment elevations in leads II, III, and aVF on the 12-lead ECG.",
+    "hypothesis": "The patient is having an inferior myocardial infarction.",
+    "clinical_department": "cardiology"
+  },
+  {
+    "id": "mednli_010",
+    "premise": "The patient was found to have a TSH of 0.01 mIU/L with elevated free T4 of 4.8 ng/dL, tremor, and unintentional weight loss of 15 pounds over two months.",
+    "hypothesis": "The patient has hypothyroidism.",
+    "clinical_department": "endocrinology"
+  }
+]

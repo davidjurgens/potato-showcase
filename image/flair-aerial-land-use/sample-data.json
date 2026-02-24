@@ -1,0 +1,82 @@
+[
+  {
+    "id": "flair_001",
+    "image_url": "https://example.com/flair/patches/D013_0001.png",
+    "patch_id": "D013_0001",
+    "region": "Ile-de-France",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-06-15"
+  },
+  {
+    "id": "flair_002",
+    "image_url": "https://example.com/flair/patches/D033_0045.png",
+    "patch_id": "D033_0045",
+    "region": "Nouvelle-Aquitaine",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-07-22"
+  },
+  {
+    "id": "flair_003",
+    "image_url": "https://example.com/flair/patches/D069_0112.png",
+    "patch_id": "D069_0112",
+    "region": "Auvergne-Rhone-Alpes",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-08-03"
+  },
+  {
+    "id": "flair_004",
+    "image_url": "https://example.com/flair/patches/D044_0078.png",
+    "patch_id": "D044_0078",
+    "region": "Pays de la Loire",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-05-30"
+  },
+  {
+    "id": "flair_005",
+    "image_url": "https://example.com/flair/patches/D006_0203.png",
+    "patch_id": "D006_0203",
+    "region": "Provence-Alpes-Cote d'Azur",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-09-10"
+  },
+  {
+    "id": "flair_006",
+    "image_url": "https://example.com/flair/patches/D067_0056.png",
+    "patch_id": "D067_0056",
+    "region": "Grand Est",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-06-28"
+  },
+  {
+    "id": "flair_007",
+    "image_url": "https://example.com/flair/patches/D029_0189.png",
+    "patch_id": "D029_0189",
+    "region": "Bretagne",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-07-14"
+  },
+  {
+    "id": "flair_008",
+    "image_url": "https://example.com/flair/patches/D031_0342.png",
+    "patch_id": "D031_0342",
+    "region": "Occitanie",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-08-19"
+  },
+  {
+    "id": "flair_009",
+    "image_url": "https://example.com/flair/patches/D059_0091.png",
+    "patch_id": "D059_0091",
+    "region": "Hauts-de-France",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-05-12"
+  },
+  {
+    "id": "flair_010",
+    "image_url": "https://example.com/flair/patches/D074_0267.png",
+    "patch_id": "D074_0267",
+    "region": "Auvergne-Rhone-Alpes",
+    "spatial_resolution": "0.2m",
+    "acquisition_date": "2020-10-01"
+  }
+]

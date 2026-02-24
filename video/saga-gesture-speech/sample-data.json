@@ -1,0 +1,58 @@
+[
+  {
+    "id": "saga_001",
+    "video_url": "https://example.com/videos/saga/route_desc_participant_03.mp4",
+    "participant_id": "participant_03",
+    "task_type": "route-description",
+    "duration_seconds": 14.2
+  },
+  {
+    "id": "saga_002",
+    "video_url": "https://example.com/videos/saga/scene_desc_participant_07.mp4",
+    "participant_id": "participant_07",
+    "task_type": "scene-description",
+    "duration_seconds": 18.6
+  },
+  {
+    "id": "saga_003",
+    "video_url": "https://example.com/videos/saga/free_narr_participant_01.mp4",
+    "participant_id": "participant_01",
+    "task_type": "free-narrative",
+    "duration_seconds": 22.1
+  },
+  {
+    "id": "saga_004",
+    "video_url": "https://example.com/videos/saga/route_desc_participant_12.mp4",
+    "participant_id": "participant_12",
+    "task_type": "route-description",
+    "duration_seconds": 16.8
+  },
+  {
+    "id": "saga_005",
+    "video_url": "https://example.com/videos/saga/scene_desc_participant_05.mp4",
+    "participant_id": "participant_05",
+    "task_type": "scene-description",
+    "duration_seconds": 20.3
+  },
+  {
+    "id": "saga_006",
+    "video_url": "https://example.com/videos/saga/free_narr_participant_09.mp4",
+    "participant_id": "participant_09",
+    "task_type": "free-narrative",
+    "duration_seconds": 25.7
+  },
+  {
+    "id": "saga_007",
+    "video_url": "https://example.com/videos/saga/route_desc_participant_15.mp4",
+    "participant_id": "participant_15",
+    "task_type": "route-description",
+    "duration_seconds": 13.4
+  },
+  {
+    "id": "saga_008",
+    "video_url": "https://example.com/videos/saga/scene_desc_participant_11.mp4",
+    "participant_id": "participant_11",
+    "task_type": "scene-description",
+    "duration_seconds": 19.5
+  }
+]

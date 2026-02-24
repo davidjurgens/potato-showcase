@@ -1,0 +1,23 @@
+{
+  "title": "Biomedical Entity Linking (MedMentions)",
+  "description": "Entity mention detection and UMLS concept linking for biomedical text based on MedMentions. Annotators identify biomedical entity mentions in PubMed abstracts and link them to UMLS Concept Unique Identifiers (CUIs), supporting large-scale biomedical knowledge base construction and clinical NLP.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "text"],
+  "domain": ["Biomedical NLP", "Entity Linking", "Clinical Text Mining"],
+  "useCase": ["Entity Linking", "Concept Normalization", "Biomedical Knowledge Base Construction"],
+  "complexity": "advanced",
+  "tags": ["entity-linking", "biomedical", "umls", "medmentions", "akbc2019", "concept-normalization"],
+  "featured": false,
+  "paperReference": "Mohan & Li, AKBC 2019",
+  "paperUrl": "https://arxiv.org/abs/1902.09476",
+  "datasetUrl": "https://github.com/chanzuckerberg/MedMentions",
+  "citation": "@inproceedings{mohan2019medmentions,\n    title = \"{M}ed{M}entions: A Large Biomedical Corpus Annotated with {UMLS} Concepts\",\n    author = \"Mohan, Sunil and Li, Donghui\",\n    booktitle = \"Proceedings of the 1st Conference on Automated Knowledge Base Construction\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1902.09476\"\n}"
+}

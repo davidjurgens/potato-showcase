@@ -1,0 +1,121 @@
+# RadQA: Radiology Report Question Answering
+# Based on Soni et al., ACL BioNLP Workshop 2022
+# Paper: https://aclanthology.org/2022.louhi-1.6/
+# Dataset: https://physionet.org/content/radqa/1.0.0/
+#
+# Task: Extractive question answering on clinical radiology reports
+# Annotators read radiology reports and highlight answer spans that address
+# clinical questions, classify answerability, and identify answer types.
+#
+# Annotation workflow:
+# 1. Read the clinical question displayed above the report
+# 2. Read the full radiology report carefully
+# 3. Highlight the span(s) in the report that answer the question
+# 4. Classify whether the question is answerable from the report
+# 5. Identify the type of answer (finding, measurement, location, etc.)
+
+port: 8000
+server_name: localhost
+task_name: "RadQA: Radiology Report Question Answering"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: report
+
+output_file: annotations.json
+
+annotation_task_name: "RadQA Answer Extraction"
+
+annotation_instructions: |
+  You are performing extractive question answering on clinical radiology reports.
+
+  **Instructions:**
+  1. Read the **clinical question** displayed above the report text.
+  2. Carefully read the entire **radiology report**.
+  3. **Highlight** the text span(s) in the report that answer the question.
+     - Use "answer" for spans that directly and fully answer the question.
+     - Use "partial-answer" for spans that provide relevant but incomplete information.
+  4. Classify whether the question is **answerable** from the report.
+  5. Identify the **answer type** (what kind of clinical information the answer conveys).
+  6. Copy the extracted answer text into the answer text field.
+
+  **Important Notes:**
+  - Select the minimal span that answers the question — do not include unnecessary context.
+  - If the answer appears in multiple places, highlight the most informative occurrence.
+  - Clinical abbreviations are acceptable in answer spans.
+  - If the report does not contain information to answer the question, mark it as "unanswerable."
+
+annotation_schemes:
+  - annotation_type: span
+    name: answer_span
+    description: "Highlight the text span(s) in the report that answer the clinical question"
+    labels:
+      - "answer"
+      - "partial-answer"
+    label_colors:
+      "answer": "#4caf50"
+      "partial-answer": "#ff9800"
+    tooltips:
+      "answer": "Text that directly and fully answers the question"
+      "partial-answer": "Text that provides relevant but incomplete information toward answering the question"
+    allow_overlapping: false
+
+  - annotation_type: radio
+    name: answerability
+    description: "Can the clinical question be answered from this radiology report?"
+    labels:
+      - name: "answerable"
+        tooltip: "The report contains sufficient information to fully answer the question"
+      - name: "unanswerable"
+        tooltip: "The report does not contain information needed to answer the question"
+      - name: "partially-answerable"
+        tooltip: "The report contains some relevant information but not enough for a complete answer"
+    keyboard_shortcuts:
+      "answerable": "a"
+      "unanswerable": "u"
+      "partially-answerable": "p"
+
+  - annotation_type: radio
+    name: answer_type
+    description: "What type of clinical information does the answer convey?"
+    labels:
+      - name: "finding"
+        tooltip: "A clinical observation or abnormality (e.g., opacity, mass, effusion)"
+      - name: "measurement"
+        tooltip: "A quantitative value (e.g., size, volume, Hounsfield units)"
+      - name: "location"
+        tooltip: "An anatomical location or spatial relationship"
+      - name: "comparison"
+        tooltip: "A comparison with prior studies or temporal change"
+      - name: "recommendation"
+        tooltip: "A suggested follow-up action or further workup"
+      - name: "diagnosis"
+        tooltip: "A diagnostic impression or differential diagnosis"
+    keyboard_shortcuts:
+      "finding": "f"
+      "measurement": "m"
+      "location": "l"
+      "comparison": "c"
+      "recommendation": "r"
+      "diagnosis": "d"
+
+  - annotation_type: text
+    name: answer_text
+    description: "Copy the extracted answer text here (the text you highlighted as answering the question)"
+
+html_layout: |
+  <div style="margin-bottom: 12px; padding: 12px; background: #e3f2fd; border-radius: 6px; border-left: 4px solid #1565c0;">
+    <strong>Report Type:</strong> {{report_type}}<br/>
+    <strong style="font-size: 1.1em;">Question:</strong>
+    <span style="font-size: 1.1em; color: #1565c0;">{{question}}</span>
+  </div>
+  <div style="padding: 12px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-family: 'Courier New', monospace; background: #fafafa;">
+    {{report}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "medm_001",
+    "text": "Metformin is the first-line treatment for type 2 diabetes mellitus. It acts primarily by reducing hepatic glucose production and improving insulin sensitivity in peripheral tissues. Common adverse effects include gastrointestinal symptoms such as nausea, diarrhea, and abdominal pain.",
+    "source": "PubMed",
+    "pmid": "30012345"
+  },
+  {
+    "id": "medm_002",
+    "text": "BRCA1 and BRCA2 mutations are associated with increased risk of breast cancer and ovarian cancer. Prophylactic bilateral mastectomy reduces the risk of breast cancer by approximately 90% in carriers of these pathogenic variants.",
+    "source": "PubMed",
+    "pmid": "29876543"
+  },
+  {
+    "id": "medm_003",
+    "text": "The patient presented with acute myocardial infarction and was treated with percutaneous coronary intervention. Dual antiplatelet therapy with aspirin and clopidogrel was initiated. Echocardiography revealed reduced left ventricular ejection fraction of 35%.",
+    "source": "PubMed",
+    "pmid": "31234567"
+  },
+  {
+    "id": "medm_004",
+    "text": "Tumor necrosis factor alpha (TNF-alpha) plays a central role in the pathogenesis of rheumatoid arthritis. Adalimumab, a monoclonal antibody targeting TNF-alpha, has demonstrated significant efficacy in reducing joint inflammation and preventing structural damage.",
+    "source": "PubMed",
+    "pmid": "30567890"
+  },
+  {
+    "id": "medm_005",
+    "text": "Genome-wide association studies have identified polymorphisms in the HLA-DRB1 gene as major risk factors for multiple sclerosis. Demyelination of axons in the central nervous system leads to progressive neurological disability.",
+    "source": "PubMed",
+    "pmid": "28901234"
+  },
+  {
+    "id": "medm_006",
+    "text": "Chronic obstructive pulmonary disease (COPD) is characterized by persistent airflow limitation. Spirometry showing a post-bronchodilator FEV1/FVC ratio below 0.70 confirms the diagnosis. Inhaled corticosteroids combined with long-acting beta-agonists improve lung function.",
+    "source": "PubMed",
+    "pmid": "31987654"
+  },
+  {
+    "id": "medm_007",
+    "text": "Cisplatin-based chemotherapy remains the standard of care for advanced non-small cell lung cancer. However, nephrotoxicity and ototoxicity are dose-limiting side effects. Carboplatin is often substituted in patients with renal insufficiency.",
+    "source": "PubMed",
+    "pmid": "29345678"
+  },
+  {
+    "id": "medm_008",
+    "text": "The hippocampus plays a critical role in memory consolidation. Magnetic resonance imaging revealed bilateral hippocampal atrophy in patients with Alzheimer disease. Elevated cerebrospinal fluid levels of phosphorylated tau protein correlated with cognitive decline.",
+    "source": "PubMed",
+    "pmid": "30654321"
+  },
+  {
+    "id": "medm_009",
+    "text": "Staphylococcus aureus is a leading cause of hospital-acquired bacteremia. Methicillin-resistant strains (MRSA) require treatment with vancomycin or daptomycin. Blood cultures should be obtained before initiating empiric antibiotic therapy.",
+    "source": "PubMed",
+    "pmid": "31456789"
+  },
+  {
+    "id": "medm_010",
+    "text": "Insulin-like growth factor 1 (IGF-1) signaling through the PI3K/AKT pathway promotes cell proliferation in hepatocellular carcinoma. Sorafenib, a multi-kinase inhibitor, targets the Raf/MEK/ERK cascade and has been approved for first-line treatment of unresectable liver cancer.",
+    "source": "PubMed",
+    "pmid": "30789012"
+  }
+]

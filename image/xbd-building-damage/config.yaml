@@ -1,0 +1,135 @@
+# xBD: Building Damage Assessment from Satellite Imagery
+# Based on Gupta et al., CVPR Workshops 2019
+# Paper: https://arxiv.org/abs/1911.09296
+# Dataset: https://xview2.org/
+#
+# Task: Assess building damage from pre- and post-disaster satellite imagery
+# Annotators compare side-by-side satellite images to classify damage severity
+# using the Joint Damage Scale, identify building types, and note damage features.
+#
+# Annotation workflow:
+# 1. Compare pre-disaster and post-disaster satellite images
+# 2. Classify the damage level using the Joint Damage Scale
+# 3. Identify the building type and disaster type
+# 4. Describe specific damage features visible in the imagery
+
+port: 8000
+server_name: localhost
+task_name: "xBD: Building Damage Assessment from Satellite Imagery"
+
+data_files:
+  - sample-data.json
+id_key: id
+image_key: post_image_url
+
+output_file: annotations.json
+
+annotation_task_name: "xBD Building Damage Assessment"
+
+annotation_instructions: |
+  You are assessing building damage from satellite imagery collected before and after a natural disaster.
+
+  **Instructions:**
+  1. Examine the **pre-disaster** image (left) to understand the original state of the building/area.
+  2. Examine the **post-disaster** image (right) to identify visible damage.
+  3. Compare both images carefully and classify the damage level according to the Joint Damage Scale.
+  4. Identify the building type and the type of disaster depicted.
+  5. Provide notes describing specific damage features you observe.
+
+  **Joint Damage Scale Reference:**
+  - **No Damage:** Building appears intact with no visible changes between pre and post images.
+  - **Minor Damage:** Small visible changes such as roof damage, broken windows, or minor debris.
+  - **Major Damage:** Significant structural damage visible — partial collapse, large sections of roof missing, heavy debris.
+  - **Destroyed:** Building is completely or nearly completely destroyed — only foundation or rubble remains.
+
+annotation_schemes:
+  - annotation_type: radio
+    name: damage_level
+    description: "Classify the damage severity using the Joint Damage Scale"
+    labels:
+      - name: "no-damage"
+        tooltip: "Building appears intact with no visible changes between pre- and post-disaster images"
+      - name: "minor-damage"
+        tooltip: "Small visible changes such as roof damage, broken windows, minor debris, or cosmetic damage"
+      - name: "major-damage"
+        tooltip: "Significant structural damage — partial collapse, large sections of roof missing, heavy debris fields"
+      - name: "destroyed"
+        tooltip: "Building is completely or nearly completely destroyed — only foundation or rubble visible"
+    keyboard_shortcuts:
+      "no-damage": "1"
+      "minor-damage": "2"
+      "major-damage": "3"
+      "destroyed": "4"
+
+  - annotation_type: radio
+    name: building_type
+    description: "Identify the type of building visible in the imagery"
+    labels:
+      - name: "residential"
+        tooltip: "Single-family homes, apartments, housing complexes"
+      - name: "commercial"
+        tooltip: "Shops, offices, malls, hotels, restaurants"
+      - name: "industrial"
+        tooltip: "Factories, warehouses, manufacturing plants, storage facilities"
+      - name: "institutional"
+        tooltip: "Schools, hospitals, government buildings, religious structures"
+      - name: "infrastructure"
+        tooltip: "Bridges, roads, utility structures, communication towers"
+      - name: "unknown"
+        tooltip: "Building type cannot be determined from the satellite imagery"
+    keyboard_shortcuts:
+      "residential": "r"
+      "commercial": "c"
+      "industrial": "i"
+      "institutional": "t"
+      "infrastructure": "f"
+      "unknown": "u"
+
+  - annotation_type: radio
+    name: disaster_type
+    description: "Identify the type of natural disaster depicted"
+    labels:
+      - name: "earthquake"
+        tooltip: "Damage patterns consistent with seismic activity — structural collapse, ground displacement"
+      - name: "tsunami"
+        tooltip: "Damage from large wave inundation — debris fields, displaced structures, waterline marks"
+      - name: "flood"
+        tooltip: "Damage from water inundation — waterlogging, sediment deposits, structural weakening"
+      - name: "wildfire"
+        tooltip: "Burn damage — charred structures, scorched vegetation, ash deposits"
+      - name: "volcanic-eruption"
+        tooltip: "Damage from volcanic activity — ash deposits, lava flows, pyroclastic damage"
+      - name: "wind-storm"
+        tooltip: "Damage from high winds — roof removal, structural deformation, wind-blown debris"
+
+  - annotation_type: text
+    name: damage_notes
+    description: "Describe specific damage features visible in the post-disaster image (e.g., roof collapse, debris field, foundation only, partial wall collapse)"
+
+html_layout: |
+  <div style="margin-bottom: 12px; padding: 10px; background: #fff3e0; border-radius: 6px; border-left: 4px solid #e65100;">
+    <strong>Disaster:</strong> {{disaster_name}} &nbsp;|&nbsp;
+    <strong>Location:</strong> {{location}} &nbsp;|&nbsp;
+    <strong>Pre-capture:</strong> {{capture_date_pre}} &nbsp;|&nbsp;
+    <strong>Post-capture:</strong> {{capture_date_post}}
+  </div>
+  <div style="display: flex; gap: 16px; margin-bottom: 12px;">
+    <div style="flex: 1; text-align: center;">
+      <div style="font-weight: bold; margin-bottom: 6px; padding: 4px; background: #e8f5e9; border-radius: 4px;">
+        Pre-Disaster
+      </div>
+      <img src="{{pre_image_url}}" style="max-width: 100%; border: 2px solid #4caf50; border-radius: 4px;" />
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <div style="font-weight: bold; margin-bottom: 6px; padding: 4px; background: #ffebee; border-radius: 4px;">
+        Post-Disaster
+      </div>
+      <img src="{{post_image_url}}" style="max-width: 100%; border: 2px solid #f44336; border-radius: 4px;" />
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

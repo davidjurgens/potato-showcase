@@ -1,0 +1,128 @@
+# Cross-lingual Causal Commonsense Reasoning (XCOPA)
+# Based on Ponti et al., EMNLP 2020
+# Paper: https://aclanthology.org/2020.emnlp-main.185/
+# Dataset: https://github.com/cambridgeltl/xcopa
+#
+# This task presents a premise and asks annotators to choose the more
+# plausible cause or effect from two alternatives. XCOPA extends the
+# original English COPA (Choice of Plausible Alternatives) benchmark
+# to 11 typologically diverse languages, testing whether causal
+# commonsense reasoning transfers across linguistic boundaries.
+#
+# Answer Labels:
+# - CHOICE_1: The first alternative is more plausible
+# - CHOICE_2: The second alternative is more plausible
+#
+# Confidence Levels:
+# - CERTAIN: Very confident in the answer
+# - FAIRLY CERTAIN: Reasonably confident but can see some ambiguity
+# - UNCERTAIN: Both alternatives seem somewhat plausible
+#
+# Reasoning Difficulty:
+# - STRAIGHTFORWARD: Common everyday causal relationship
+# - REQUIRES WORLD KNOWLEDGE: Needs factual knowledge about the world
+# - REQUIRES CULTURAL KNOWLEDGE: Needs understanding of cultural norms
+# - AMBIGUOUS: Both alternatives are roughly equally plausible
+#
+# Annotation Guidelines:
+# 1. Read the premise and understand the situation described
+# 2. Note the question type: CAUSE (what led to this?) or EFFECT (what happened next?)
+# 3. Read both choices and select the one that is more plausible
+# 4. For CAUSE questions: which choice better explains WHY the premise happened?
+# 5. For EFFECT questions: which choice more naturally FOLLOWS from the premise?
+# 6. Use common sense and everyday knowledge to make your selection
+# 7. Rate your confidence in the choice
+# 8. Assess what kind of reasoning was needed
+#
+# Key Considerations:
+# - Both choices may be possible, but one should be MORE plausible
+# - Do not overthink -- go with the most natural/common interpretation
+# - Some items may require cultural or world knowledge
+
+port: 8000
+server_name: localhost
+task_name: "Cross-lingual Causal Commonsense Reasoning (XCOPA)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: premise
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Select the more plausible alternative
+  - annotation_type: radio
+    name: correct_answer
+    description: "Which alternative is the more plausible cause or effect of the premise?"
+    labels:
+      - "choice_1"
+      - "choice_2"
+    keyboard_shortcuts:
+      "choice_1": "1"
+      "choice_2": "2"
+    tooltips:
+      "choice_1": "The first alternative is more plausible"
+      "choice_2": "The second alternative is more plausible"
+
+  # Step 2: Confidence rating
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in your answer?"
+    labels:
+      - "certain"
+      - "fairly-certain"
+      - "uncertain"
+    tooltips:
+      "certain": "Very confident -- one alternative is clearly more plausible"
+      "fairly-certain": "Reasonably confident but can see some ambiguity"
+      "uncertain": "Both alternatives seem somewhat plausible; difficult to decide"
+
+  # Step 3: Reasoning difficulty
+  - annotation_type: radio
+    name: reasoning_difficulty
+    description: "What kind of reasoning was needed to answer this question?"
+    labels:
+      - "straightforward"
+      - "requires-world-knowledge"
+      - "requires-cultural-knowledge"
+      - "ambiguous"
+    tooltips:
+      "straightforward": "Common everyday causal relationship that most people would agree on"
+      "requires-world-knowledge": "Needs factual or scientific knowledge about how the world works"
+      "requires-cultural-knowledge": "Needs understanding of cultural practices, norms, or conventions"
+      "ambiguous": "Both alternatives are roughly equally plausible; genuinely hard to choose"
+
+annotation_instructions: |
+  You will be shown a premise (a short sentence describing a situation) and a question type (CAUSE or EFFECT). Two alternative sentences are provided:
+  - For CAUSE questions: select the alternative that better explains WHY the premise happened.
+  - For EFFECT questions: select the alternative that more naturally FOLLOWS from the premise.
+
+  Use your common sense to pick the more plausible alternative. Both may be possible, but one should be clearly better. Rate your confidence and the type of reasoning required.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Premise:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{premise}}</p>
+    </div>
+    <div style="background: #fefce8; border-left: 4px solid #f59e0b; padding: 10px 16px; border-radius: 4px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Question type:</strong> What is the most plausible <strong>{{question_type}}</strong>?
+    </div>
+    <div style="display: flex; gap: 12px;">
+      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+        <strong style="color: #475569;">Choice 1:</strong>
+        <p style="margin: 6px 0 0 0; font-size: 15px;">{{choice_1}}</p>
+      </div>
+      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+        <strong style="color: #475569;">Choice 2:</strong>
+        <p style="margin: 6px 0 0 0; font-size: 15px;">{{choice_2}}</p>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

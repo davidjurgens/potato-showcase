@@ -1,0 +1,23 @@
+{
+  "title": "AMI Meeting Multi-Tier Annotation",
+  "description": "Multi-tier ELAN-style annotation of multi-party meeting recordings. Annotators segment speaker turns, head gestures, and focus of attention on parallel timeline tiers, then classify dialogue acts and topic segments. Based on the AMI Meeting Corpus.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "radio"],
+  "domain": ["Discourse Analysis", "Meeting Understanding", "HCI"],
+  "useCase": ["Meeting Summarization", "Dialogue Act Classification", "Focus of Attention Tracking"],
+  "complexity": "advanced",
+  "tags": ["meeting", "dialogue", "multi-tier", "elan-style", "discourse", "focus-attention", "mlmi2005"],
+  "featured": false,
+  "paperReference": "Carletta et al., MLMI 2005",
+  "paperUrl": "https://link.springer.com/chapter/10.1007/11677482_3",
+  "datasetUrl": "https://groups.inf.ed.ac.uk/ami/corpus/",
+  "citation": "@inproceedings{carletta2005ami,\n  title={The AMI Meeting Corpus: A Pre-announcement},\n  author={Carletta, Jean and Ashby, Simone and Bourban, Sebastien and Flynn, Mike and Guillemot, Mael and Hain, Thomas and Kadlec, Jaroslav and Karaiskos, Vasilis and Kraaij, Wessel and Kronenthal, Melissa and others},\n  booktitle={Proceedings of the Second International Conference on Machine Learning for Multimodal Interaction},\n  pages={28--39},\n  year={2005},\n  publisher={Springer}\n}"
+}

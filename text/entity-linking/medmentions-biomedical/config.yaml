@@ -1,0 +1,134 @@
+# Biomedical Entity Linking (MedMentions)
+# Based on Mohan & Li, AKBC 2019
+#
+# This configuration supports entity mention detection and UMLS concept
+# linking for biomedical text from PubMed abstracts.
+#
+# Entity Types:
+# - Disease: Diseases, disorders, syndromes, pathological conditions
+# - Chemical: Drugs, chemicals, metabolites, therapeutic agents
+# - Procedure: Medical/surgical procedures, diagnostic tests, therapies
+# - Anatomy: Body parts, organs, tissues, cell components
+# - Gene: Genes, gene products, genetic variants
+# - Device: Medical devices, instruments, implants
+# - Finding: Clinical findings, lab results, vital signs
+# - Other: Other biomedical concepts not fitting above categories
+#
+# Annotation Guidelines:
+# 1. Read the entire abstract before beginning annotation
+# 2. Highlight all biomedical entity mentions, including abbreviations
+# 3. Select the most specific entity type for each mention
+# 4. For each highlighted mention, enter the UMLS CUI if known
+# 5. Indicate how the mention refers to the concept (exact, abbreviation, etc.)
+# 6. Rate your confidence in the linking decision
+# 7. Nested mentions: annotate the outermost span only
+# 8. Include modifiers that are part of the concept name
+#    (e.g., "type 2 diabetes mellitus" not just "diabetes")
+# 9. Abbreviations should be annotated separately from their expansions
+
+port: 8000
+server_name: localhost
+task_name: "Biomedical Entity Linking (MedMentions)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Span annotation for entity mentions
+  - annotation_type: span
+    name: entity_mentions
+    description: "Highlight all biomedical entity mentions in the text. Select the most specific entity type for each mention."
+    labels:
+      - "Disease"
+      - "Chemical"
+      - "Procedure"
+      - "Anatomy"
+      - "Gene"
+      - "Device"
+      - "Finding"
+      - "Other"
+    label_colors:
+      "Disease": "#ef4444"
+      "Chemical": "#3b82f6"
+      "Procedure": "#8b5cf6"
+      "Anatomy": "#22c55e"
+      "Gene": "#06b6d4"
+      "Device": "#f59e0b"
+      "Finding": "#f97316"
+      "Other": "#9ca3af"
+    tooltips:
+      "Disease": "Diseases, disorders, syndromes, pathological conditions (e.g., 'diabetes mellitus', 'hypertension', 'pneumonia')"
+      "Chemical": "Drugs, chemicals, metabolites, therapeutic agents (e.g., 'metformin', 'glucose', 'aspirin')"
+      "Procedure": "Medical/surgical procedures, diagnostic tests, therapies (e.g., 'biopsy', 'MRI', 'chemotherapy')"
+      "Anatomy": "Body parts, organs, tissues, cell components (e.g., 'liver', 'mitochondria', 'cerebral cortex')"
+      "Gene": "Genes, gene products, genetic variants (e.g., 'BRCA1', 'TP53', 'insulin receptor')"
+      "Device": "Medical devices, instruments, implants (e.g., 'stent', 'pacemaker', 'catheter')"
+      "Finding": "Clinical findings, lab results, vital signs (e.g., 'elevated blood pressure', 'leukocytosis')"
+      "Other": "Other biomedical concepts not fitting above categories"
+    allow_overlapping: false
+
+  # Step 2: UMLS CUI entry
+  - annotation_type: text
+    name: umls_cui
+    description: "Enter UMLS Concept Unique Identifier (e.g., C0011849 for Diabetes Mellitus). Leave blank if unknown."
+
+  # Step 3: Mention type classification
+  - annotation_type: radio
+    name: mention_type
+    description: "How does the text mention refer to the concept?"
+    labels:
+      - "exact"
+      - "abbreviation"
+      - "acronym"
+      - "synonym"
+      - "metonymy"
+      - "implicit"
+    tooltips:
+      "exact": "The mention matches the preferred UMLS term exactly (e.g., 'diabetes mellitus')"
+      "abbreviation": "The mention is an abbreviated form (e.g., 'DM' for diabetes mellitus)"
+      "acronym": "The mention is an acronym (e.g., 'HIV' for human immunodeficiency virus)"
+      "synonym": "The mention is a known synonym (e.g., 'sugar disease' for diabetes)"
+      "metonymy": "The mention uses a related concept to refer to the entity (e.g., 'the virus' for SARS-CoV-2)"
+      "implicit": "The concept is implied but not directly named in text"
+
+  # Step 4: Linking confidence
+  - annotation_type: radio
+    name: linking_confidence
+    description: "How confident are you in the UMLS concept linking?"
+    labels:
+      - "certain"
+      - "probable"
+      - "uncertain"
+    tooltips:
+      "certain": "Confident the CUI is correct; unambiguous mapping"
+      "probable": "Likely correct but some ambiguity exists among similar concepts"
+      "uncertain": "Low confidence; multiple plausible CUIs or unfamiliar concept"
+
+annotation_instructions: |
+  You are annotating biomedical text from PubMed abstracts for entity linking.
+  For each abstract:
+  1. Highlight all biomedical entity mentions using the span tool
+  2. Classify each mention by entity type (Disease, Chemical, Procedure, etc.)
+  3. Enter the UMLS CUI for the most recently highlighted entity
+  4. Indicate the mention type (exact match, abbreviation, synonym, etc.)
+  5. Rate your confidence in the linking decision
+
+html_layout: |
+  <div style="padding: 15px; font-family: Georgia, serif;">
+    <div style="margin-bottom: 8px; color: #6b7280; font-size: 13px;">
+      <strong>Source:</strong> {{source}} | <strong>PMID:</strong> {{pmid}}
+    </div>
+    <div style="font-size: 16px; line-height: 1.8; background: #f9fafb; padding: 15px; border-left: 4px solid #3b82f6; border-radius: 4px;">
+      {{text}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

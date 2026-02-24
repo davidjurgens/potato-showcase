@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cr_001",
+    "code_diff": "def get_user_data(user_id):\n-    query = \"SELECT * FROM users WHERE id = \" + user_id\n+    query = \"SELECT * FROM users WHERE id = \" + str(user_id)\n     cursor.execute(query)\n     result = cursor.fetchone()\n-    return result\n+    return result if result else None",
+    "language": "Python",
+    "repository": "user-service",
+    "change_type": "bug-fix"
+  },
+  {
+    "id": "cr_002",
+    "code_diff": "function processPayment(amount, currency) {\n-  const total = amount * 1.08;\n+  const taxRate = getTaxRate(currency);\n+  const total = amount * (1 + taxRate);\n+  if (total <= 0) {\n+    throw new Error('Invalid payment amount');\n+  }\n   return fetch('/api/payments', {\n     method: 'POST',\n-    body: JSON.stringify({ amount: total })\n+    body: JSON.stringify({ amount: total, currency: currency })\n   });\n }",
+    "language": "JavaScript",
+    "repository": "payment-gateway",
+    "change_type": "feature"
+  },
+  {
+    "id": "cr_003",
+    "code_diff": "class DataProcessor:\n     def __init__(self, config):\n         self.config = config\n+        self.cache = {}\n \n     def process(self, items):\n-        results = []\n-        for item in items:\n-            result = self._transform(item)\n-            results.append(result)\n-        return results\n+        return [self._transform(item) for item in items]\n \n     def _transform(self, item):\n+        if item['id'] in self.cache:\n+            return self.cache[item['id']]\n         processed = item['value'] * self.config['multiplier']\n+        self.cache[item['id']] = processed\n         return processed",
+    "language": "Python",
+    "repository": "data-pipeline",
+    "change_type": "refactor"
+  },
+  {
+    "id": "cr_004",
+    "code_diff": "app.post('/api/login', async (req, res) => {\n   const { username, password } = req.body;\n-  const user = await User.findOne({ username });\n+  const user = await User.findOne({ username: username.trim().toLowerCase() });\n   if (!user) {\n-    return res.status(401).json({ error: 'Invalid credentials' });\n+    return res.status(401).json({ error: 'Invalid username or password' });\n   }\n-  if (password === user.password) {\n+  const isValid = await bcrypt.compare(password, user.passwordHash);\n+  if (isValid) {\n     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);\n     res.json({ token });\n   } else {\n-    res.status(401).json({ error: 'Invalid credentials' });\n+    res.status(401).json({ error: 'Invalid username or password' });\n   }\n });",
+    "language": "JavaScript",
+    "repository": "auth-service",
+    "change_type": "bug-fix"
+  },
+  {
+    "id": "cr_005",
+    "code_diff": "def calculate_statistics(data):\n+    \"\"\"Calculate mean and standard deviation of input data.\"\"\"\n     if not data:\n-        return None\n+        return {'mean': 0.0, 'std': 0.0, 'count': 0}\n     total = sum(data)\n-    mean = total / len(data)\n-    variance = sum((x - mean) ** 2 for x in data) / len(data)\n+    n = len(data)\n+    mean = total / n\n+    variance = sum((x - mean) ** 2 for x in data) / (n - 1)\n     std = variance ** 0.5\n-    return mean, std\n+    return {'mean': round(mean, 4), 'std': round(std, 4), 'count': n}",
+    "language": "Python",
+    "repository": "analytics-lib",
+    "change_type": "bug-fix"
+  },
+  {
+    "id": "cr_006",
+    "code_diff": "public class FileHandler {\n-    public String readFile(String path) {\n-        FileReader reader = new FileReader(path);\n-        StringBuilder content = new StringBuilder();\n-        int c;\n-        while ((c = reader.read()) != -1) {\n-            content.append((char) c);\n-        }\n-        return content.toString();\n+    public String readFile(String path) throws IOException {\n+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {\n+            StringBuilder content = new StringBuilder();\n+            String line;\n+            while ((line = reader.readLine()) != null) {\n+                content.append(line).append(System.lineSeparator());\n+            }\n+            return content.toString();\n+        }\n     }\n }",
+    "language": "Java",
+    "repository": "file-utils",
+    "change_type": "bug-fix"
+  },
+  {
+    "id": "cr_007",
+    "code_diff": "async def fetch_all_records(db, table_name):\n-    records = await db.execute(f\"SELECT * FROM {table_name}\")\n+    # Validate table name to prevent SQL injection\n+    allowed_tables = ['users', 'orders', 'products', 'reviews']\n+    if table_name not in allowed_tables:\n+        raise ValueError(f\"Invalid table name: {table_name}\")\n+    records = await db.execute(f\"SELECT * FROM {table_name}\")\n     results = []\n     for record in records:\n-        results.append(dict(record))\n+        results.append({\n+            k: v for k, v in dict(record).items()\n+            if not k.startswith('_')\n+        })\n     return results",
+    "language": "Python",
+    "repository": "api-backend",
+    "change_type": "feature"
+  },
+  {
+    "id": "cr_008",
+    "code_diff": "const UserProfile = ({ userId }) => {\n-  const [user, setUser] = useState(null);\n+  const [user, setUser] = useState(null);\n+  const [loading, setLoading] = useState(true);\n+  const [error, setError] = useState(null);\n \n   useEffect(() => {\n-    fetch(`/api/users/${userId}`)\n-      .then(res => res.json())\n-      .then(data => setUser(data));\n-  });\n+    let cancelled = false;\n+    setLoading(true);\n+    fetch(`/api/users/${userId}`)\n+      .then(res => {\n+        if (!res.ok) throw new Error('Failed to fetch');\n+        return res.json();\n+      })\n+      .then(data => { if (!cancelled) { setUser(data); setLoading(false); }})\n+      .catch(err => { if (!cancelled) { setError(err.message); setLoading(false); }});\n+    return () => { cancelled = true; };\n+  }, [userId]);\n \n-  return <div>{user?.name}</div>;\n+  if (loading) return <Spinner />;\n+  if (error) return <ErrorMessage message={error} />;\n+  return <div>{user?.name}</div>;\n };",
+    "language": "JavaScript",
+    "repository": "web-frontend",
+    "change_type": "refactor"
+  }
+]

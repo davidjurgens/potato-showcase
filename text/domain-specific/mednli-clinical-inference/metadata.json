@@ -1,0 +1,23 @@
+{
+  "title": "MedNLI: Clinical Natural Language Inference",
+  "description": "Natural language inference for clinical text. Annotators determine whether a clinical hypothesis is entailed by, contradicted by, or neutral with respect to a premise sentence from clinical notes. Based on the MedNLI dataset derived from MIMIC-III clinical notes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Romanov & Shivade",
+    "email": "jurgens@umich.edu",
+    "github": "jgc128",
+    "affiliation": "University of Massachusetts Amherst / IBM Research"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio"],
+  "domain": ["Clinical NLP", "Natural Language Inference", "Medical Text"],
+  "useCase": ["Natural Language Inference", "Clinical Text Understanding", "Medical Reasoning"],
+  "complexity": "beginner",
+  "tags": ["clinical-nlp", "natural-language-inference", "mednli", "medical", "emnlp2018", "nli"],
+  "featured": false,
+  "paperReference": "Romanov & Shivade, EMNLP 2018",
+  "paperUrl": "https://aclanthology.org/D18-1187/",
+  "datasetUrl": "https://physionet.org/content/mednli/1.0.0/",
+  "citation": "@inproceedings{romanov-shivade-2018-lessons,\n    title = \"Lessons from Natural Language Inference in the Clinical Domain\",\n    author = \"Romanov, Alexey and Shivade, Chaitanya\",\n    booktitle = \"Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing\",\n    month = oct # \"-\" # nov,\n    year = \"2018\",\n    address = \"Brussels, Belgium\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D18-1187\",\n    doi = \"10.18653/v1/D18-1187\",\n    pages = \"1586--1596\"\n}"
+}

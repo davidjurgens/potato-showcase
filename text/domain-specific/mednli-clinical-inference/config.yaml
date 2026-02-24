@@ -1,0 +1,103 @@
+# MedNLI: Clinical Natural Language Inference
+# Based on Romanov & Shivade, EMNLP 2018
+# Paper: https://aclanthology.org/D18-1187/
+# Dataset: https://physionet.org/content/mednli/1.0.0/
+#
+# Task: Natural language inference for clinical text
+# Annotators determine whether a clinical hypothesis is entailed by,
+# contradicted by, or neutral with respect to a premise from clinical notes.
+#
+# Annotation workflow:
+# 1. Read the premise (a sentence from a clinical note)
+# 2. Read the hypothesis (a clinical statement)
+# 3. Determine the relationship: entailment, contradiction, or neutral
+# 4. Indicate your confidence level
+# 5. Optionally explain your reasoning
+
+port: 8000
+server_name: localhost
+task_name: "MedNLI: Clinical Natural Language Inference"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: premise
+
+output_file: annotations.json
+
+annotation_task_name: "MedNLI Clinical Inference"
+
+annotation_instructions: |
+  You are performing natural language inference (NLI) on clinical text from medical records.
+
+  **Instructions:**
+  1. Read the **Premise** — a sentence extracted from a real clinical note.
+  2. Read the **Hypothesis** — a clinical statement that may or may not follow from the premise.
+  3. Determine the **relationship** between the premise and hypothesis:
+
+  **Label Definitions:**
+  - **Entailment (E):** The hypothesis is definitely true given the premise. The premise provides sufficient evidence to conclude the hypothesis is correct.
+    - *Example:* Premise: "Patient has a heart rate of 120 bpm." -> Hypothesis: "Patient is tachycardic." = Entailment
+  - **Contradiction (C):** The hypothesis is definitely false given the premise. The premise provides evidence that directly contradicts the hypothesis.
+    - *Example:* Premise: "No evidence of fracture on X-ray." -> Hypothesis: "The X-ray shows a broken bone." = Contradiction
+  - **Neutral (N):** The hypothesis might be true or false — the premise does not provide enough information to determine either way.
+    - *Example:* Premise: "Patient presents with chest pain." -> Hypothesis: "Patient has coronary artery disease." = Neutral
+
+  **Important Notes:**
+  - Base your judgment only on the information in the premise.
+  - Clinical knowledge may be needed to interpret medical terminology.
+  - If the premise is ambiguous, choose "neutral" unless the relationship is clear.
+
+annotation_schemes:
+  - annotation_type: radio
+    name: nli_label
+    description: "What is the relationship between the premise and hypothesis?"
+    labels:
+      - name: "entailment"
+        tooltip: "The hypothesis is definitely true given the premise — the premise provides sufficient evidence to conclude the hypothesis"
+      - name: "contradiction"
+        tooltip: "The hypothesis is definitely false given the premise — the premise provides evidence that directly contradicts the hypothesis"
+      - name: "neutral"
+        tooltip: "The hypothesis might or might not be true — the premise does not provide enough information to determine the relationship"
+    keyboard_shortcuts:
+      "entailment": "e"
+      "contradiction": "c"
+      "neutral": "n"
+
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in your label?"
+    labels:
+      - name: "high"
+        tooltip: "Very confident — the relationship is clear and unambiguous"
+      - name: "medium"
+        tooltip: "Moderately confident — the relationship seems likely but there is some ambiguity"
+      - name: "low"
+        tooltip: "Low confidence — the relationship is difficult to determine, possibly requiring specialist knowledge"
+    keyboard_shortcuts:
+      "high": "h"
+      "medium": "m"
+      "low": "l"
+
+  - annotation_type: text
+    name: reasoning
+    description: "Optional: Briefly explain your reasoning for the chosen label"
+
+html_layout: |
+  <div style="margin-bottom: 14px; padding: 14px; background: #e8eaf6; border-radius: 6px; border-left: 4px solid #3f51b5;">
+    <div style="font-size: 0.85em; color: #666; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Department: {{clinical_department}}</div>
+  </div>
+  <div style="margin-bottom: 12px; padding: 14px; background: #fff8e1; border-radius: 6px; border-left: 4px solid #f9a825;">
+    <strong style="color: #f57f17;">Premise (from clinical note):</strong>
+    <p style="margin: 8px 0 0 0; font-size: 1.05em; line-height: 1.6;">{{premise}}</p>
+  </div>
+  <div style="margin-bottom: 12px; padding: 14px; background: #e0f2f1; border-radius: 6px; border-left: 4px solid #00897b;">
+    <strong style="color: #00695c;">Hypothesis:</strong>
+    <p style="margin: 8px 0 0 0; font-size: 1.05em; line-height: 1.6;">{{hypothesis}}</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

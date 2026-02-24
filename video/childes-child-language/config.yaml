@@ -1,0 +1,189 @@
+# CHILDES Child Language Multi-Tier Annotation Configuration
+# Based on MacWhinney, Journal of Child Language 2000
+# Paper: https://doi.org/10.1017/S0305000900003581
+# Task: ELAN-style multi-tier annotation of child-adult interaction for language acquisition
+
+port: 8000
+server_name: localhost
+task_name: "CHILDES Child Language Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Utterance boundary segmentation
+  - name: "utterance_tier"
+    description: |
+      Segment the video timeline into individual utterances. Mark who is
+      speaking (child or adult) and identify overlapping speech, non-verbal
+      vocalizations, and unintelligible segments.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "child-utterance"
+        color: "#3B82F6"
+        tooltip: "Clear, interpretable utterance produced by the child"
+      - name: "adult-utterance"
+        color: "#10B981"
+        tooltip: "Utterance produced by the adult caregiver or interlocutor"
+      - name: "overlap"
+        color: "#F59E0B"
+        tooltip: "Child and adult speaking simultaneously"
+      - name: "vocalization"
+        color: "#A855F7"
+        tooltip: "Non-linguistic vocalization (babbling, cooing, crying, laughing)"
+      - name: "unintelligible"
+        color: "#EF4444"
+        tooltip: "Speech that cannot be reliably transcribed"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 2: Morphological annotation (free text)
+  - name: "morphology"
+    description: |
+      Provide a morphological annotation of the child's utterance using CHAT
+      conventions. Break words into morphemes and mark inflectional morphology
+      (e.g., want-3SG, go-PAST, dog-PL).
+    annotation_type: text
+    textarea: true
+
+  # Tier 3: Syntactic annotation (free text)
+  - name: "syntax"
+    description: |
+      Provide a syntactic annotation of the child's utterance. Note phrase
+      structure, word order patterns, and any syntactic constructions
+      (e.g., SVO, Wh-question, negation, relative clause).
+    annotation_type: text
+    textarea: true
+
+  # Tier 4: Communicative context classification
+  - name: "communicative_context"
+    description: "Classify the communicative context or function of the child's utterance."
+    annotation_type: radio
+    labels:
+      - "spontaneous"
+      - "imitation"
+      - "routine"
+      - "response"
+      - "question"
+      - "self-talk"
+      - "directed-speech"
+    keyboard_shortcuts:
+      spontaneous: "1"
+      imitation: "2"
+      routine: "3"
+      response: "4"
+      question: "5"
+      self-talk: "6"
+      directed-speech: "7"
+
+  # Tier 5: Error type classification
+  - name: "error_type"
+    description: "Classify the type of linguistic error in the child's utterance, if any."
+    annotation_type: radio
+    labels:
+      - "none"
+      - "phonological"
+      - "morphological"
+      - "syntactic"
+      - "lexical"
+      - "pragmatic"
+    keyboard_shortcuts:
+      none: "q"
+      phonological: "w"
+      morphological: "e"
+      syntactic: "r"
+      lexical: "t"
+      pragmatic: "y"
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">CHILDES: Multi-Tier Child Language Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate child-adult interaction videos across multiple tiers for utterance
+      boundaries, morphology, syntax, communicative context, and error analysis.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate the child-adult interaction across
+      five parallel tiers: utterance segmentation, morphological coding, syntactic structure,
+      communicative context, and error classification. Focus primarily on the child's productions.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## CHILDES Child Language Multi-Tier Annotation
+
+  This task uses ELAN-style multi-tier annotation for child-adult interaction
+  videos following CHILDES/TalkBank conventions.
+
+  ### Tier 1: Utterance Boundary Segmentation
+  - Segment the timeline into individual utterances:
+    - **Child utterance**: Interpretable speech produced by the child
+    - **Adult utterance**: Speech from the caregiver or adult interlocutor
+    - **Overlap**: Simultaneous speech from both parties
+    - **Vocalization**: Non-linguistic sounds (babbling, cooing, crying, laughing)
+    - **Unintelligible**: Speech that cannot be reliably understood
+  - Use intonation contours and pauses to determine utterance boundaries
+  - An utterance is defined as a single communicative unit with one intonation contour
+
+  ### Tier 2: Morphological Annotation
+  - Code the child's utterance morphologically using CHAT-style notation:
+    - Separate morphemes with hyphens: "want-3SG", "dog-PL", "go-PAST"
+    - Mark overregularizations: "go-ed" for "went" (overregularized past)
+    - Use standard glosses: PL (plural), PAST (past tense), PROG (progressive),
+      3SG (third person singular), POSS (possessive), NEG (negation)
+  - Leave blank for adult utterances or unintelligible segments
+
+  ### Tier 3: Syntactic Annotation
+  - Note the syntactic structure of the child's utterance:
+    - Word order pattern (SVO, SV, VO, single word, etc.)
+    - Sentence type (declarative, interrogative, imperative, exclamatory)
+    - Notable constructions (negation, questions, relative clauses, coordination)
+    - Missing obligatory elements (e.g., "want cookie" = missing determiner)
+
+  ### Tier 4: Communicative Context
+  - Classify the communicative function:
+    - **Spontaneous**: Self-initiated utterance, not prompted
+    - **Imitation**: Direct repetition of an adult model
+    - **Routine**: Part of a practiced routine (counting, song, greeting)
+    - **Response**: Answer to an adult question or prompt
+    - **Question**: Child asking a question
+    - **Self-talk**: Speech directed to self or toys, not to the adult
+    - **Directed speech**: Speech clearly addressed to a specific person
+
+  ### Tier 5: Error Classification
+  - Identify the primary error type, if any:
+    - **None**: Target-like production
+    - **Phonological**: Sound substitution, deletion, or addition
+    - **Morphological**: Missing or incorrect inflection (e.g., "goed" for "went")
+    - **Syntactic**: Word order error, missing function words
+    - **Lexical**: Wrong word choice or neologism
+    - **Pragmatic**: Contextually inappropriate utterance
+
+  ### Developmental Notes
+  - Child age is provided in the metadata; keep developmental expectations in mind
+  - What counts as an "error" depends on the child's age and stage
+  - At early stages (12-24 months), single words and babbling are expected
+  - By 36+ months, expect more complex multi-word utterances

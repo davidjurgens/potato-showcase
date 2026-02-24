@@ -1,0 +1,52 @@
+[
+  {
+    "id": "aida_001",
+    "text": "Michael Jordan announced his retirement from the Chicago Bulls in January 1999, ending an era that brought six NBA championships to the city of Chicago. The decision surprised fans across the United States.",
+    "source": "Reuters"
+  },
+  {
+    "id": "aida_002",
+    "text": "The European Union imposed sanctions on Russia following the annexation of Crimea. German Chancellor Angela Merkel and French President Emmanuel Macron led the diplomatic efforts in Brussels.",
+    "source": "Reuters"
+  },
+  {
+    "id": "aida_003",
+    "text": "Apple Inc. unveiled its latest iPhone at an event in Cupertino, California. CEO Tim Cook said the device would compete directly with Samsung's Galaxy series in the Asian market.",
+    "source": "CoNLL"
+  },
+  {
+    "id": "aida_004",
+    "text": "Paris Saint-Germain defeated FC Barcelona 4-1 at the Parc des Princes in the Champions League round of 16. Kylian Mbappe scored a hat trick to seal the victory for the French club.",
+    "source": "Reuters"
+  },
+  {
+    "id": "aida_005",
+    "text": "The Amazon rainforest lost an area the size of Belgium to deforestation last year, according to a report by the World Wildlife Fund. Brazil's environment minister pledged stronger enforcement measures.",
+    "source": "CoNLL"
+  },
+  {
+    "id": "aida_006",
+    "text": "Washington imposed new trade tariffs on Chinese imports, escalating tensions between the two nations. The World Trade Organization warned that the measures could disrupt global supply chains.",
+    "source": "Reuters"
+  },
+  {
+    "id": "aida_007",
+    "text": "Nobel Prize laureate Malala Yousafzai addressed the United Nations General Assembly in New York, calling for increased investment in girls' education across Pakistan and Afghanistan.",
+    "source": "CoNLL"
+  },
+  {
+    "id": "aida_008",
+    "text": "Tesla announced plans to build a new Gigafactory near Berlin, Germany. Elon Musk said the facility would create thousands of jobs and produce vehicles for the European market.",
+    "source": "Reuters"
+  },
+  {
+    "id": "aida_009",
+    "text": "The Jordan River, which forms the border between Jordan and Israel, has seen its water levels drop dramatically. The Dead Sea, fed by the Jordan, is shrinking at an alarming rate.",
+    "source": "CoNLL"
+  },
+  {
+    "id": "aida_010",
+    "text": "Mercury levels in the Pacific Ocean have tripled since the Industrial Revolution, according to researchers at Harvard University. The study, published in Nature, linked the increase to coal-burning power plants in China and India.",
+    "source": "Reuters"
+  }
+]

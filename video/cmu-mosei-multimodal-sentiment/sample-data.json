@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mosei_001",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_electronics_001.mp4",
+    "speaker_id": "speaker_142",
+    "topic": "review of new wireless headphones",
+    "duration_seconds": 18.5,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_002",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_movie_001.mp4",
+    "speaker_id": "speaker_087",
+    "topic": "reaction to a recent blockbuster film",
+    "duration_seconds": 22.1,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_003",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_politics_001.mp4",
+    "speaker_id": "speaker_215",
+    "topic": "commentary on a new policy proposal",
+    "duration_seconds": 25.3,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_004",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_food_001.mp4",
+    "speaker_id": "speaker_063",
+    "topic": "restaurant review and food tasting",
+    "duration_seconds": 15.7,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_005",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_travel_001.mp4",
+    "speaker_id": "speaker_178",
+    "topic": "travel vlog about a European city visit",
+    "duration_seconds": 20.9,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_006",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_education_001.mp4",
+    "speaker_id": "speaker_301",
+    "topic": "thoughts on online learning platforms",
+    "duration_seconds": 19.4,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_007",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_sports_001.mp4",
+    "speaker_id": "speaker_055",
+    "topic": "post-game analysis and player performance",
+    "duration_seconds": 24.6,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_008",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_health_001.mp4",
+    "speaker_id": "speaker_129",
+    "topic": "review of a fitness program and results",
+    "duration_seconds": 17.2,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_009",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_music_001.mp4",
+    "speaker_id": "speaker_244",
+    "topic": "reaction to a new album release",
+    "duration_seconds": 21.8,
+    "source": "YouTube"
+  },
+  {
+    "id": "mosei_010",
+    "video_url": "https://example.com/videos/cmu-mosei/opinion_gaming_001.mp4",
+    "speaker_id": "speaker_091",
+    "topic": "hands-on review of a video game",
+    "duration_seconds": 23.5,
+    "source": "YouTube"
+  }
+]

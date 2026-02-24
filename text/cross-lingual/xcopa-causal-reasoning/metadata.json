@@ -1,0 +1,23 @@
+{
+  "title": "Cross-lingual Causal Commonsense Reasoning (XCOPA)",
+  "description": "Select the most plausible cause or effect for a given premise, testing causal commonsense reasoning across languages. Based on XCOPA (Ponti et al., EMNLP 2020). Annotators choose between two alternatives, rate their confidence, and assess the reasoning difficulty.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ponti et al.",
+    "email": "jurgens@umich.edu",
+    "github": "cambridgeltl",
+    "affiliation": "University of Cambridge"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Commonsense Reasoning", "Cross-lingual Transfer"],
+  "useCase": ["Commonsense Reasoning", "Causal Reasoning", "Cross-lingual Evaluation"],
+  "complexity": "beginner",
+  "tags": ["cross-lingual", "causal-reasoning", "commonsense", "xcopa", "emnlp2020", "copa"],
+  "featured": false,
+  "paperReference": "Ponti et al., EMNLP 2020",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.185/",
+  "datasetUrl": "https://github.com/cambridgeltl/xcopa",
+  "citation": "@inproceedings{ponti-etal-2020-xcopa,\n    title = \"{XCOPA}: A Multilingual Dataset for Causal Commonsense Reasoning\",\n    author = \"Ponti, Edoardo Maria  and Glava{\\v{s}}, Goran  and Majewska, Olga  and Liu, Qianchu  and Vuli{\\'c}, Ivan  and Korhonen, Anna\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.185\",\n    pages = \"2362--2376\"\n}"
+}

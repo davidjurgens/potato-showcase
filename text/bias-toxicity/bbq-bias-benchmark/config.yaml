@@ -1,0 +1,148 @@
+# Bias Benchmark for QA (BBQ)
+# Based on Parrish et al., Findings of ACL 2022
+# Paper: https://aclanthology.org/2022.findings-acl.165/
+# Dataset: https://github.com/nyu-mll/BBQ
+#
+# This task presents question-answering examples that probe social biases.
+# Each example contains an ambiguous or disambiguated context about two
+# people from different social groups, followed by a question that may
+# invoke stereotypes. Annotators assess the correct answer and analyze
+# the nature and direction of any bias present.
+#
+# Answer Labels:
+# - ANSWER_A: The first person mentioned in the answer options
+# - ANSWER_B: The second person mentioned in the answer options
+# - UNKNOWN: Cannot be determined from the given context
+#
+# Bias Direction:
+# - STEREOTYPICAL: Answer aligns with common social stereotypes
+# - ANTI-STEREOTYPICAL: Answer goes against common social stereotypes
+# - NEUTRAL: Neither answer choice invokes stereotypes
+# - AMBIGUOUS: Context does not provide enough information to determine
+#
+# Annotation Guidelines:
+# 1. Read the context carefully -- note which details are provided and which are missing
+# 2. In AMBIGUOUS contexts, neither person is clearly associated with the answer
+# 3. In DISAMBIGUATED contexts, specific details point to one answer
+# 4. If the context is ambiguous, the correct answer should be UNKNOWN
+# 5. Do NOT rely on stereotypes to fill in missing information
+# 6. Assess whether choosing a specific person would reflect a social stereotype
+# 7. Identify the category of bias the question is probing
+# 8. Explain your reasoning, especially if the answer is UNKNOWN
+#
+# Key Insight:
+# - In ambiguous contexts, selecting a specific person (instead of UNKNOWN)
+#   reveals reliance on social stereotypes for reasoning
+
+port: 8000
+server_name: localhost
+task_name: "Bias Benchmark for QA (BBQ)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: context
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Correct answer selection
+  - annotation_type: radio
+    name: correct_answer
+    description: "Based on the context, which answer is correct?"
+    labels:
+      - "answer_a"
+      - "answer_b"
+      - "unknown"
+    keyboard_shortcuts:
+      "answer_a": "a"
+      "answer_b": "b"
+      "unknown": "u"
+    tooltips:
+      "answer_a": "The first answer option is correct based on the context"
+      "answer_b": "The second answer option is correct based on the context"
+      "unknown": "The context does not provide enough information to determine the answer"
+
+  # Step 2: Bias direction assessment
+  - annotation_type: radio
+    name: bias_direction
+    description: "Does the expected or stereotypical answer align with common social biases?"
+    labels:
+      - "stereotypical"
+      - "anti-stereotypical"
+      - "neutral"
+      - "ambiguous"
+    tooltips:
+      "stereotypical": "Selecting a specific answer would align with a common social stereotype"
+      "anti-stereotypical": "Selecting a specific answer would go against common social stereotypes"
+      "neutral": "Neither answer choice invokes or relates to social stereotypes"
+      "ambiguous": "The context is too ambiguous to determine bias direction"
+
+  # Step 3: Bias category
+  - annotation_type: radio
+    name: bias_category
+    description: "What category of social bias does this question probe?"
+    labels:
+      - "age"
+      - "disability"
+      - "gender"
+      - "nationality"
+      - "physical-appearance"
+      - "race-ethnicity"
+      - "religion"
+      - "socioeconomic"
+      - "sexual-orientation"
+    tooltips:
+      "age": "Bias related to a person's age (young vs. old)"
+      "disability": "Bias related to disability status"
+      "gender": "Bias related to gender identity or expression"
+      "nationality": "Bias related to nationality or country of origin"
+      "physical-appearance": "Bias related to physical appearance or body type"
+      "race-ethnicity": "Bias related to race or ethnicity"
+      "religion": "Bias related to religious affiliation"
+      "socioeconomic": "Bias related to socioeconomic status or class"
+      "sexual-orientation": "Bias related to sexual orientation"
+
+  # Step 4: Reasoning
+  - annotation_type: text
+    name: reasoning
+    description: "Explain your answer choice and describe any bias present in the question."
+
+annotation_instructions: |
+  You will be shown a short context describing a scenario involving two people, followed by a question and two answer options. Your task is to:
+  1. Select the CORRECT answer based solely on the information in the context.
+  2. If the context is ambiguous and does not clearly point to one answer, select UNKNOWN.
+  3. Assess whether selecting a particular answer would align with social stereotypes.
+  4. Identify the category of social bias the question is probing.
+  5. Explain your reasoning.
+
+  CRITICAL: Do NOT use stereotypes to fill in missing information. If the context does not provide enough detail, the answer is UNKNOWN.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Context:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{context}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{question}}</p>
+    </div>
+    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">A:</strong> {{answer_a}}
+      </div>
+      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">B:</strong> {{answer_b}}
+      </div>
+    </div>
+    <div style="font-size: 13px; color: #6b7280;">
+      <em>Bias category: {{bias_category}} | Type: {{disambiguation_type}}</em>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

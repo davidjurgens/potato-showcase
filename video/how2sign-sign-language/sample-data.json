@@ -1,0 +1,58 @@
+[
+  {
+    "id": "how2sign_001",
+    "video_url": "https://example.com/videos/how2sign/cooking_tutorial_001.mp4",
+    "signer_id": "signer_03",
+    "topic": "cooking tutorial - making pasta",
+    "duration_seconds": 12.4
+  },
+  {
+    "id": "how2sign_002",
+    "video_url": "https://example.com/videos/how2sign/travel_guide_001.mp4",
+    "signer_id": "signer_07",
+    "topic": "travel guide - visiting national parks",
+    "duration_seconds": 15.8
+  },
+  {
+    "id": "how2sign_003",
+    "video_url": "https://example.com/videos/how2sign/diy_repair_001.mp4",
+    "signer_id": "signer_01",
+    "topic": "DIY home repair - fixing a leaky faucet",
+    "duration_seconds": 18.2
+  },
+  {
+    "id": "how2sign_004",
+    "video_url": "https://example.com/videos/how2sign/science_explainer_001.mp4",
+    "signer_id": "signer_05",
+    "topic": "science explainer - how volcanoes work",
+    "duration_seconds": 20.1
+  },
+  {
+    "id": "how2sign_005",
+    "video_url": "https://example.com/videos/how2sign/fitness_routine_001.mp4",
+    "signer_id": "signer_02",
+    "topic": "fitness routine - morning stretches",
+    "duration_seconds": 14.6
+  },
+  {
+    "id": "how2sign_006",
+    "video_url": "https://example.com/videos/how2sign/tech_review_001.mp4",
+    "signer_id": "signer_09",
+    "topic": "technology review - smartphone features",
+    "duration_seconds": 16.3
+  },
+  {
+    "id": "how2sign_007",
+    "video_url": "https://example.com/videos/how2sign/history_lesson_001.mp4",
+    "signer_id": "signer_04",
+    "topic": "history lesson - American Revolution",
+    "duration_seconds": 22.7
+  },
+  {
+    "id": "how2sign_008",
+    "video_url": "https://example.com/videos/how2sign/gardening_tips_001.mp4",
+    "signer_id": "signer_06",
+    "topic": "gardening tips - planting vegetables",
+    "duration_seconds": 13.9
+  }
+]

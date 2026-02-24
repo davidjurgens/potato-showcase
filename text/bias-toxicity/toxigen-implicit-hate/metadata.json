@@ -1,0 +1,23 @@
+{
+  "title": "Implicit Hate Speech Detection (ToxiGen)",
+  "description": "Detect and classify implicit hate speech in machine-generated text targeting various demographic groups. Based on ToxiGen (Hartvigsen et al., ACL 2022). Annotators assess toxicity, implicitness level, target group, and provide explanations for their judgments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hartvigsen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "microsoft",
+    "affiliation": "MIT / Microsoft"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Hate Speech Detection", "Content Safety"],
+  "useCase": ["Hate Speech Detection", "Content Moderation", "Bias Analysis"],
+  "complexity": "intermediate",
+  "tags": ["hate-speech", "implicit-toxicity", "toxigen", "acl2022", "content-safety", "bias-detection"],
+  "featured": false,
+  "paperReference": "Hartvigsen et al., ACL 2022",
+  "paperUrl": "https://aclanthology.org/2022.acl-long.234/",
+  "datasetUrl": "https://github.com/microsoft/TOXIGEN",
+  "citation": "@inproceedings{hartvigsen-etal-2022-toxigen,\n    title = \"{T}oxi{G}en: A Large-Scale Machine-Generated Dataset for Adversarial and Implicit Hate Speech Detection\",\n    author = \"Hartvigsen, Thomas  and Gabriel, Saadia  and Palangi, Hamid  and Sap, Maarten  and Ray, Dipankar  and Kamar, Ece\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.acl-long.234\",\n    pages = \"3309--3326\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Structured Fact Verification (FEVEROUS)",
+  "description": "Verify claims against Wikipedia pages containing both unstructured text and structured data (tables, lists, infoboxes). Based on FEVEROUS (Aly et al., NeurIPS 2021). Annotators assess verdict, identify evidence across different modalities, evaluate evidence sufficiency, and provide justification.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aly et al.",
+    "email": "jurgens@umich.edu",
+    "github": "fever-ai",
+    "affiliation": "University of Cambridge"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "span", "text"],
+  "domain": ["NLP", "Fact Verification", "Information Extraction"],
+  "useCase": ["Fact Verification", "Evidence Extraction", "Multi-modal Reasoning"],
+  "complexity": "advanced",
+  "tags": ["fact-verification", "feverous", "structured-unstructured", "neurips2021", "wikipedia", "evidence-extraction"],
+  "featured": false,
+  "paperReference": "Aly et al., NeurIPS 2021",
+  "paperUrl": "https://arxiv.org/abs/2106.05707",
+  "datasetUrl": "https://fever.ai/dataset/feverous.html",
+  "citation": "@inproceedings{aly2021feverous,\n    title = \"{FEVEROUS}: Fact Extraction and {VER}ification Over Unstructured and Structured information\",\n    author = \"Aly, Rami  and Guo, Zhijiang  and Schlichtkrull, Michael  and Thorne, James  and Vlachos, Andreas  and Christodoulopoulos, Christos  and Cocarascu, Oana  and Mittal, Arpit\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS)\",\n    year = \"2021\",\n    url = \"https://arxiv.org/abs/2106.05707\"\n}"
+}

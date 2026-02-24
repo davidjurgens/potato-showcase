@@ -1,0 +1,185 @@
+# Speech Accent Classification
+# Based on "Common Voice: A Massively-Multilingual Speech Corpus" (Ardila et al., LREC 2020)
+# Task: Classify speaker accents and assess speech quality from audio recordings
+
+port: 8000
+server_name: localhost
+task_name: "Speech Accent Classification"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+# Output
+output_file: annotations.json
+
+# Display layout with audio player and transcription
+html_layout: |
+  <div class="accent-container" style="font-family: Arial, sans-serif; max-width: 750px; margin: 0 auto;">
+    <div class="metadata-bar" style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+      <div style="background: #e8eaf6; padding: 7px 14px; border-radius: 8px;">
+        <strong>Language:</strong> {{language}}
+      </div>
+      <div style="background: #e0f2f1; padding: 7px 14px; border-radius: 8px;">
+        <strong>Speaker:</strong> {{speaker_id}}
+      </div>
+      <div style="background: #fff3e0; padding: 7px 14px; border-radius: 8px;">
+        <strong>Duration:</strong> {{duration_seconds}}s
+      </div>
+    </div>
+    <div class="audio-section" style="background: #263238; padding: 20px; border-radius: 8px; margin-bottom: 16px; text-align: center;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <p style="color: #b0bec5; font-size: 12px; margin-top: 10px;">Listen to the full recording before annotating</p>
+    </div>
+    <div class="transcription-section" style="background: #f5f5f5; padding: 16px; border-radius: 8px; border-left: 5px solid #1976d2;">
+      <h4 style="margin-top: 0; color: #1565c0;">Provided Transcription</h4>
+      <div style="font-size: 15px; line-height: 1.6; font-style: italic;">{{provided_transcription}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Accent region classification
+  - name: "accent_region"
+    description: "What regional accent does the speaker have? Choose the most specific category that applies."
+    annotation_type: radio
+    labels:
+      - name: "north-american"
+        tooltip: "US or Canadian English accent (General American, Southern, etc.)"
+        key_value: "1"
+      - name: "british"
+        tooltip: "UK English accent (RP, Cockney, Scottish, Welsh, etc.)"
+        key_value: "2"
+      - name: "australian"
+        tooltip: "Australian or New Zealand English accent"
+        key_value: "3"
+      - name: "south-asian"
+        tooltip: "Indian, Pakistani, Bangladeshi, or Sri Lankan English accent"
+        key_value: "4"
+      - name: "east-asian"
+        tooltip: "Chinese, Japanese, Korean, or Southeast Asian English accent"
+        key_value: "5"
+      - name: "african"
+        tooltip: "English accent from any African country"
+        key_value: "6"
+      - name: "latin-american"
+        tooltip: "English accent influenced by Spanish or Portuguese"
+        key_value: "7"
+      - name: "middle-eastern"
+        tooltip: "English accent influenced by Arabic, Farsi, Turkish, etc."
+        key_value: "8"
+      - name: "european-non-native"
+        tooltip: "English accent influenced by French, German, Russian, etc."
+        key_value: "9"
+      - name: "other"
+        tooltip: "Accent that does not fit the above categories"
+        key_value: "0"
+
+  # Accent strength
+  - name: "accent_strength"
+    description: "How strong is the speaker's accent?"
+    annotation_type: radio
+    labels:
+      - name: "native"
+        tooltip: "Speaker sounds like a native English speaker from the identified region"
+        key_value: "n"
+      - name: "mild-accent"
+        tooltip: "Slight non-native features but easily understood"
+        key_value: "m"
+      - name: "moderate-accent"
+        tooltip: "Noticeable accent that does not impede understanding"
+        key_value: "d"
+      - name: "strong-accent"
+        tooltip: "Pronounced accent that occasionally makes comprehension harder"
+        key_value: "s"
+      - name: "very-strong-accent"
+        tooltip: "Very heavy accent that frequently impedes comprehension"
+        key_value: "v"
+
+  # Audio quality assessment
+  - name: "audio_quality"
+    description: "How is the overall audio recording quality?"
+    annotation_type: radio
+    labels:
+      - name: "excellent"
+        tooltip: "Clear audio with no background noise or distortion"
+      - name: "good"
+        tooltip: "Mostly clear with minimal background noise"
+      - name: "acceptable"
+        tooltip: "Some background noise or minor distortion but speech is audible"
+      - name: "poor"
+        tooltip: "Significant noise or distortion that makes parts hard to hear"
+      - name: "unusable"
+        tooltip: "Audio is too noisy, distorted, or quiet to evaluate the speaker"
+
+  # Speech clarity
+  - name: "speech_clarity"
+    description: "How clearly does the speaker articulate their words?"
+    annotation_type: radio
+    labels:
+      - name: "very-clear"
+        tooltip: "Every word is distinctly articulated and easy to understand"
+        key_value: "a"
+      - name: "clear"
+        tooltip: "Most words are clearly spoken with occasional mumbling"
+        key_value: "b"
+      - name: "somewhat-clear"
+        tooltip: "Some words are hard to make out"
+        key_value: "c"
+      - name: "unclear"
+        tooltip: "Many words are mumbled or poorly articulated"
+        key_value: "x"
+      - name: "unintelligible"
+        tooltip: "Cannot understand what the speaker is saying"
+        key_value: "z"
+
+  # Transcription correction
+  - name: "transcription_correction"
+    description: "If the provided transcription contains errors, type the corrected version here. Leave blank if the transcription is correct."
+    annotation_type: text
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+# Detailed annotation instructions
+annotation_instructions: |
+  ## Speech Accent Classification
+
+  You are classifying speaker accents from audio recordings and assessing
+  speech and audio quality. These recordings come from the Mozilla Common Voice
+  corpus of read English speech.
+
+  ### Your Tasks:
+
+  1. **Listen to the full audio clip** at least once before annotating.
+  2. **Classify the accent region**: Identify the speaker's regional accent.
+  3. **Rate accent strength**: How strong is the accent?
+  4. **Assess audio quality**: Rate the recording quality (noise, distortion).
+  5. **Rate speech clarity**: How well does the speaker articulate?
+  6. **Correct transcription**: Fix any errors in the provided transcription.
+
+  ### Accent Classification Tips:
+  - Focus on vowel pronunciation, intonation patterns, and rhythm.
+  - "Native" accent strength means the speaker sounds like a native speaker
+    from the identified region (not necessarily a native English speaker).
+  - If you cannot determine the accent, listen again at a slower speed.
+  - For non-native speakers, classify by their L1 influence region.
+
+  ### Audio Quality vs. Speech Clarity:
+  - **Audio quality** refers to the recording itself (noise, volume, distortion).
+  - **Speech clarity** refers to how the speaker articulates (mumbling, speed).
+  - A clear speaker can have a poor recording, and vice versa.
+
+  ### Transcription Correction:
+  - Only correct the transcription if you hear clear errors.
+  - Leave the correction field blank if the transcription matches the audio.
+  - Common errors include misheard words, missing words, or wrong homophones.

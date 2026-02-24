@@ -1,0 +1,208 @@
+# DGS Corpus Sign Language Multi-Tier Annotation Configuration
+# Based on Hanke et al., LREC 2020
+# Paper: https://aclanthology.org/2020.lrec-1.720/
+# Task: ELAN-style multi-tier annotation of German Sign Language corpus videos
+
+port: 8000
+server_name: localhost
+task_name: "DGS Corpus Sign Language Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Sign type segmentation
+  - name: "sign_type_tier"
+    description: |
+      Segment the signing stream into individual sign tokens and classify each
+      by its linguistic type. Mark precise onset and offset boundaries for
+      every manual sign produced by the signer.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "lexical"
+        color: "#3B82F6"
+        tooltip: "Standard lexical sign from the DGS lexicon"
+      - name: "pointing"
+        color: "#F59E0B"
+        tooltip: "Indexical pointing sign (pronouns, locatives, determiners)"
+      - name: "gesture"
+        color: "#8B5CF6"
+        tooltip: "Non-lexical communicative gesture"
+      - name: "classifier"
+        color: "#10B981"
+        tooltip: "Classifier predicate or depicting sign"
+      - name: "fingerspelling"
+        color: "#EF4444"
+        tooltip: "Manual alphabet spelling of a German word"
+      - name: "fragment"
+        color: "#6B7280"
+        tooltip: "Incomplete or aborted sign"
+      - name: "palm-up"
+        color: "#EC4899"
+        tooltip: "Palm-up gesture (discourse marker or uncertainty)"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 2: Mouth gesture patterns
+  - name: "mouth_gesture_tier"
+    description: |
+      Annotate the mouth activity accompanying each sign. Distinguish between
+      mouth gestures (language-internal, non-derived from spoken language),
+      mouthings (derived from German words), and neutral mouth positions.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "mouth-gesture"
+        color: "#06B6D4"
+        tooltip: "Language-internal mouth gesture not derived from spoken German"
+      - name: "mouthing"
+        color: "#84CC16"
+        tooltip: "Mouth pattern derived from a German spoken word"
+      - name: "mouth-open"
+        color: "#F97316"
+        tooltip: "Open mouth without clear gestural or mouthing pattern"
+      - name: "neutral"
+        color: "#9CA3AF"
+        tooltip: "Neutral or resting mouth position"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 3: Non-manual signals
+  - name: "nonmanual_tier"
+    description: |
+      Annotate non-manual signals that carry grammatical or pragmatic meaning.
+      These include head movements, eyebrow activity, eye gaze shifts, and
+      body movements that co-occur with manual signing.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "head-nod"
+        color: "#22C55E"
+        tooltip: "Vertical head nod (affirmation, agreement, assertion)"
+      - name: "head-shake"
+        color: "#EF4444"
+        tooltip: "Horizontal head shake (negation, disagreement)"
+      - name: "brow-raise"
+        color: "#A855F7"
+        tooltip: "Raised eyebrows (yes/no question, topic marker, conditional)"
+      - name: "brow-furrow"
+        color: "#6366F1"
+        tooltip: "Furrowed eyebrows (wh-question, focus, intensity)"
+      - name: "eye-gaze-shift"
+        color: "#14B8A6"
+        tooltip: "Deliberate shift in eye gaze direction (role shift, reference)"
+      - name: "squint"
+        color: "#F59E0B"
+        tooltip: "Narrowed eyes (specificity, shared knowledge, rhetorical question)"
+      - name: "shoulder-shift"
+        color: "#EC4899"
+        tooltip: "Lateral shoulder shift (role shift, contrastive topics)"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 4: Discourse function classification
+  - name: "discourse_function"
+    description: "Classify the discourse function of the current utterance or clause."
+    annotation_type: radio
+    labels:
+      - "statement"
+      - "question"
+      - "negation"
+      - "topic"
+      - "comment"
+      - "emphasis"
+    keyboard_shortcuts:
+      statement: "1"
+      question: "2"
+      negation: "3"
+      topic: "4"
+      comment: "5"
+      emphasis: "6"
+
+  # Tier 5: German translation (free text)
+  - name: "german_translation"
+    description: "Provide a fluent German translation of the signed content in this clip."
+    annotation_type: text
+    textarea: true
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">DGS Corpus: Multi-Tier German Sign Language Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate German Sign Language (DGS) videos across multiple parallel tiers,
+      following ELAN-style conventions used in the DGS Corpus project.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate across five parallel tiers: sign types,
+      mouth gestures, non-manual signals, discourse function, and German translation. Each tier
+      captures a different linguistic layer of the DGS utterance.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## DGS Corpus Multi-Tier Annotation
+
+  This task applies ELAN-style multi-tier annotation to German Sign Language (DGS)
+  videos from the Public DGS Corpus.
+
+  ### Tier 1: Sign Type Segmentation
+  - Segment the signing stream into individual tokens
+  - Classify each sign by type:
+    - **Lexical**: Standard DGS signs from the lexicon
+    - **Pointing**: Index signs for pronouns, locations, determiners
+    - **Gesture**: Non-lexical communicative gestures
+    - **Classifier**: Depicting signs and classifier predicates
+    - **Fingerspelling**: Manual alphabet spellings of German words
+    - **Fragment**: Incomplete or self-corrected signs
+    - **Palm-up**: Palm-up gestures used as discourse markers
+
+  ### Tier 2: Mouth Activity
+  - Annotate mouth patterns in parallel with manual signs:
+    - **Mouth gesture**: DGS-internal mouth component (not from spoken German)
+    - **Mouthing**: Mouth pattern derived from a German spoken word
+    - **Mouth open**: Open mouth without clear linguistic function
+    - **Neutral**: Resting or closed mouth position
+
+  ### Tier 3: Non-Manual Signals
+  - Mark grammatically significant non-manual signals:
+    - **Head nod/shake**: Affirmation vs. negation
+    - **Brow raise**: Yes/no questions, topics, conditionals
+    - **Brow furrow**: Wh-questions, focus, intensification
+    - **Eye gaze shift**: Role shift, referent tracking
+    - **Squint**: Specificity, shared knowledge
+    - **Shoulder shift**: Role shift, contrastive topics
+
+  ### Tier 4: Discourse Function
+  - Classify the overall discourse function of the utterance
+
+  ### Tier 5: German Translation
+  - Provide a natural German translation of the signed content
+
+  ### Quality Notes
+  - Pay special attention to non-manual markers that change sentence type
+  - Mouth gestures and mouthings may overlap with sign boundaries differently
+  - Use frame-by-frame navigation for precise boundary placement
+  - For dialogues, annotate only the designated signer's productions

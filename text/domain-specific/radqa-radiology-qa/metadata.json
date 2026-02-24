@@ -1,0 +1,23 @@
+{
+  "title": "RadQA: Radiology Report Question Answering",
+  "description": "Extractive question answering on radiology reports. Annotators read clinical radiology reports and highlight answer spans that address given clinical questions, classify answerability, and identify the type of information conveyed by the answer. Based on the RadQA dataset for improving comprehension of radiology reports.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Soni et al.",
+    "email": "jurgens@umich.edu",
+    "github": "krobertslab",
+    "affiliation": "University of Pittsburgh"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["Clinical NLP", "Radiology", "Question Answering"],
+  "useCase": ["Clinical Question Answering", "Radiology Report Comprehension", "Information Extraction"],
+  "complexity": "intermediate",
+  "tags": ["radiology", "clinical-nlp", "question-answering", "radqa", "bionlp2023", "medical"],
+  "featured": false,
+  "paperReference": "Soni et al., ACL BioNLP Workshop 2022",
+  "paperUrl": "https://aclanthology.org/2022.louhi-1.6/",
+  "datasetUrl": "https://physionet.org/content/radqa/1.0.0/",
+  "citation": "@inproceedings{soni-etal-2022-radqa,\n    title = \"{RadQA}: A Question Answering Dataset to Improve Comprehension of Radiology Reports\",\n    author = \"Soni, Sarvesh and Gudala, Meghana and Pajouhi, Atieh and Roberts, Kirk\",\n    booktitle = \"Proceedings of the 13th International Workshop on Health Text Mining and Information Analysis (LOUHI)\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.louhi-1.6\",\n    pages = \"47--56\"\n}"
+}

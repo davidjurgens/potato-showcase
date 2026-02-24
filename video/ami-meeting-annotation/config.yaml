@@ -1,0 +1,237 @@
+# AMI Meeting Multi-Tier Annotation Configuration
+# Based on Carletta et al., MLMI 2005
+# Paper: https://link.springer.com/chapter/10.1007/11677482_3
+# Task: ELAN-style multi-tier annotation of multi-party meeting recordings
+
+port: 8000
+server_name: localhost
+task_name: "AMI Meeting Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Speaker turn segmentation
+  - name: "speaker_turn_tier"
+    description: |
+      Segment the meeting timeline by speaker turns. Mark who is speaking at
+      each point, including overlapping speech. Each segment should capture
+      a continuous turn by one speaker or an overlap between multiple speakers.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "speaker-A"
+        color: "#3B82F6"
+        tooltip: "Participant A is the primary speaker"
+      - name: "speaker-B"
+        color: "#EF4444"
+        tooltip: "Participant B is the primary speaker"
+      - name: "speaker-C"
+        color: "#10B981"
+        tooltip: "Participant C is the primary speaker"
+      - name: "speaker-D"
+        color: "#F59E0B"
+        tooltip: "Participant D is the primary speaker"
+      - name: "overlap"
+        color: "#8B5CF6"
+        tooltip: "Two or more participants speaking simultaneously"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 2: Head gesture segmentation
+  - name: "head_gesture_tier"
+    description: |
+      Annotate visible head gestures of the currently active speaker or the
+      participant being focused on. Mark the type and duration of each
+      distinct head movement.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "nod"
+        color: "#22C55E"
+        tooltip: "Vertical head nod (agreement, acknowledgment, backchannel)"
+      - name: "shake"
+        color: "#EF4444"
+        tooltip: "Horizontal head shake (disagreement, negation)"
+      - name: "tilt"
+        color: "#A855F7"
+        tooltip: "Lateral head tilt (thought, consideration, uncertainty)"
+      - name: "turn"
+        color: "#F97316"
+        tooltip: "Head turn toward a specific person or object"
+      - name: "neutral"
+        color: "#9CA3AF"
+        tooltip: "No notable head movement; neutral or still position"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 3: Focus of attention tracking
+  - name: "focus_of_attention_tier"
+    description: |
+      Track where the active speaker or focal participant is directing their
+      visual attention. Mark the target of gaze or visual focus at each
+      point in time.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "whiteboard"
+        color: "#06B6D4"
+        tooltip: "Looking at the whiteboard"
+      - name: "slides"
+        color: "#84CC16"
+        tooltip: "Looking at the projected slides or screen"
+      - name: "speaker-A"
+        color: "#3B82F6"
+        tooltip: "Looking at participant A"
+      - name: "speaker-B"
+        color: "#EF4444"
+        tooltip: "Looking at participant B"
+      - name: "speaker-C"
+        color: "#10B981"
+        tooltip: "Looking at participant C"
+      - name: "speaker-D"
+        color: "#F59E0B"
+        tooltip: "Looking at participant D"
+      - name: "notes"
+        color: "#6366F1"
+        tooltip: "Looking down at personal notes or documents"
+      - name: "table"
+        color: "#78716C"
+        tooltip: "Looking at the table or objects on it"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 4: Dialogue act classification
+  - name: "dialogue_act"
+    description: "Classify the dialogue act type of the current speaker turn or utterance."
+    annotation_type: radio
+    labels:
+      - "inform"
+      - "suggest"
+      - "assess"
+      - "comment"
+      - "elicit-inform"
+      - "elicit-suggest"
+      - "elicit-assessment"
+      - "backchannel"
+      - "stall"
+      - "fragment"
+    keyboard_shortcuts:
+      inform: "1"
+      suggest: "2"
+      assess: "3"
+      comment: "4"
+      backchannel: "5"
+
+  # Tier 5: Topic segment classification
+  - name: "topic_segment"
+    description: "Classify the meeting topic or phase that this segment belongs to."
+    annotation_type: radio
+    labels:
+      - "opening"
+      - "agenda"
+      - "design-discussion"
+      - "budget"
+      - "action-items"
+      - "closing"
+      - "off-topic"
+    keyboard_shortcuts:
+      opening: "q"
+      agenda: "w"
+      design-discussion: "e"
+      budget: "r"
+      action-items: "t"
+      closing: "y"
+      off-topic: "u"
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">AMI Meeting: Multi-Tier Meeting Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate multi-party meeting recordings across parallel tiers for speaker turns,
+      head gestures, visual attention, dialogue acts, and topic segments.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate the meeting across five parallel tiers:
+      speaker turns, head gestures, focus of attention, dialogue acts, and topic segments.
+      Use the video controls to navigate frame by frame for precise boundary placement.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## AMI Meeting Multi-Tier Annotation
+
+  This task uses ELAN-style multi-tier annotation for multi-party meeting
+  recordings from the AMI Meeting Corpus.
+
+  ### Tier 1: Speaker Turn Segmentation
+  - Segment the meeting timeline by who is speaking:
+    - **Speaker A/B/C/D**: The identified participant holds the floor
+    - **Overlap**: Two or more participants speaking simultaneously
+  - Mark clean turn boundaries at the start and end of each contribution
+  - Short backchannels (e.g., "mm-hmm") during another speaker's turn
+    should be marked as overlap if they are audible
+
+  ### Tier 2: Head Gesture Annotation
+  - Mark visible head gestures of the focal participant:
+    - **Nod**: Vertical movement (agreement, acknowledgment)
+    - **Shake**: Horizontal movement (disagreement, negation)
+    - **Tilt**: Lateral tilt (consideration, uncertainty)
+    - **Turn**: Deliberate head turn toward a person or object
+    - **Neutral**: No notable head movement
+
+  ### Tier 3: Focus of Attention
+  - Track the visual attention target of the focal participant:
+    - **Whiteboard/Slides**: Looking at shared visual resources
+    - **Speaker A-D**: Looking at a specific participant
+    - **Notes**: Looking at personal notes or documents
+    - **Table**: Looking at the table or objects on it
+  - Gaze shifts should be marked at the moment of transition
+
+  ### Tier 4: Dialogue Act Classification
+  - Classify each speaker turn by its communicative function:
+    - **Inform**: Providing information or facts
+    - **Suggest**: Making a suggestion or proposal
+    - **Assess**: Evaluating or judging something
+    - **Comment**: Personal reaction or remark
+    - **Elicit-inform/suggest/assessment**: Requesting information, suggestions, or opinions
+    - **Backchannel**: Minimal response showing attention (mm-hmm, yeah, ok)
+    - **Stall**: Hesitation or time-buying (well, so, let me think)
+    - **Fragment**: Incomplete or abandoned utterance
+
+  ### Tier 5: Topic Segment
+  - Classify the meeting phase or topic:
+    - **Opening**: Greetings and meeting start
+    - **Agenda**: Setting or reviewing the agenda
+    - **Design discussion**: Core design-related conversation
+    - **Budget**: Budget or resource-related discussion
+    - **Action items**: Assigning tasks and next steps
+    - **Closing**: Wrap-up and meeting end
+    - **Off-topic**: Social chat or tangential discussion
+
+  ### Quality Notes
+  - Focus on one participant at a time for head gesture and attention tiers
+  - Speaker turns should have no gaps (silence = previous speaker's turn end)
+  - Dialogue acts apply per utterance within a turn, not per entire turn

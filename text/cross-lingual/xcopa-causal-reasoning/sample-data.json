@@ -1,0 +1,82 @@
+[
+  {
+    "id": "xcopa_001",
+    "premise": "The man turned on the faucet.",
+    "question_type": "effect",
+    "choice_1": "The toilet flushed.",
+    "choice_2": "Water flowed from the spout.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_002",
+    "premise": "The woman hired a lawyer.",
+    "question_type": "cause",
+    "choice_1": "She wanted to sue her neighbor.",
+    "choice_2": "She wanted to learn how to cook.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_003",
+    "premise": "The girl found a wallet on the sidewalk.",
+    "question_type": "effect",
+    "choice_1": "She turned it in to the police.",
+    "choice_2": "She dropped her phone.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_004",
+    "premise": "The company went bankrupt.",
+    "question_type": "cause",
+    "choice_1": "It had too many profitable products.",
+    "choice_2": "It accumulated unsustainable debt.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_005",
+    "premise": "The teacher praised the student.",
+    "question_type": "cause",
+    "choice_1": "The student submitted an excellent essay.",
+    "choice_2": "The student forgot to do the homework.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_006",
+    "premise": "The hikers reached the summit of the mountain.",
+    "question_type": "effect",
+    "choice_1": "They celebrated and took photographs.",
+    "choice_2": "They decided to start climbing.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_007",
+    "premise": "The child started crying at the grocery store.",
+    "question_type": "cause",
+    "choice_1": "The parent bought the child a toy.",
+    "choice_2": "The parent refused to buy the child candy.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_008",
+    "premise": "The roads were covered in ice.",
+    "question_type": "effect",
+    "choice_1": "Many drivers lost control of their vehicles.",
+    "choice_2": "People went swimming in the lake.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_009",
+    "premise": "The scientist published the research paper.",
+    "question_type": "cause",
+    "choice_1": "The experiments yielded significant results.",
+    "choice_2": "The laboratory equipment broke down.",
+    "language": "English"
+  },
+  {
+    "id": "xcopa_010",
+    "premise": "The patient felt much better after a week.",
+    "question_type": "cause",
+    "choice_1": "The doctor prescribed the wrong medication.",
+    "choice_2": "The doctor prescribed an effective treatment.",
+    "language": "English"
+  }
+]

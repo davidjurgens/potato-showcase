@@ -1,0 +1,23 @@
+{
+  "title": "Code Generation Evaluation (HumanEval)",
+  "description": "Evaluation of LLM-generated code based on the HumanEval benchmark. Annotators assess functional correctness, code quality, and efficiency of generated Python functions, and provide explanations of errors and improvement suggestions, supporting research in code generation and LLM evaluation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Code Generation", "Program Synthesis", "AI Evaluation"],
+  "useCase": ["LLM Evaluation", "Code Correctness Assessment", "Code Quality Rating"],
+  "complexity": "intermediate",
+  "tags": ["code-generation", "humaneval", "program-synthesis", "llm-evaluation", "openai"],
+  "featured": false,
+  "paperReference": "Chen et al., arXiv 2021",
+  "paperUrl": "https://arxiv.org/abs/2107.03374",
+  "datasetUrl": "https://github.com/openai/human-eval",
+  "citation": "@article{chen2021evaluating,\n    title = \"Evaluating Large Language Models Trained on Code\",\n    author = \"Chen, Mark and Tworek, Jerry and Jun, Heewoo and Yuan, Qiming and Pinto, Henrique Ponde de Oliveira and Kaplan, Jared and Edwards, Harri and Burda, Yuri and Joseph, Nicholas and Brockman, Greg and Ray, Alex and Puri, Raul and Krueger, Gretchen and Petrov, Michael and Khlaaf, Heidy and Sastry, Girish and Mishkin, Pamela and Chan, Brooke and Gray, Scott and Ryder, Nick and Pavlov, Mikhail and Power, Alethea and Kaiser, Lukasz and Bavarian, Mohammad and Winter, Clemens and Tillet, Philippe and Such, Felipe Petroski and Cummings, Dave and Plappert, Matthias and Chanber, Fotios and Amodei, Dario and Zaremba, Wojciech\",\n    journal = \"arXiv preprint arXiv:2107.03374\",\n    year = \"2021\",\n    url = \"https://arxiv.org/abs/2107.03374\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "IEMOCAP Dyadic Emotion Multi-Tier Annotation",
+  "description": "Multi-tier ELAN-style annotation of emotional dyadic interactions. Annotators segment per-speaker behavior on parallel timeline tiers, classify discrete emotion categories, and rate dimensional affect (valence, activation, dominance) on Likert-style scales. Based on the IEMOCAP motion capture database.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "radio"],
+  "domain": ["Emotion Recognition", "Affective Computing", "Multimodal Analysis"],
+  "useCase": ["Emotion Detection", "Affective Dimension Rating", "Dyadic Interaction Analysis"],
+  "complexity": "advanced",
+  "tags": ["emotion", "dyadic", "multi-tier", "elan-style", "affective-computing", "motion-capture", "iemocap"],
+  "featured": false,
+  "paperReference": "Busso et al., Language Resources and Evaluation 2008",
+  "paperUrl": "https://doi.org/10.1007/s10579-008-9076-6",
+  "datasetUrl": "https://sail.usc.edu/iemocap/",
+  "citation": "@article{busso2008iemocap,\n  title={IEMOCAP: Interactive Emotional Dyadic Motion Capture Database},\n  author={Busso, Carlos and Bulut, Murtaza and Lee, Chi-Chun and Kazemzadeh, Abe and Mower, Emily and Kim, Samuel and Chang, Jeannette N and Lee, Sungbok and Narayanan, Shrikanth S},\n  journal={Language Resources and Evaluation},\n  volume={42},\n  number={4},\n  pages={335--359},\n  year={2008},\n  publisher={Springer}\n}"
+}

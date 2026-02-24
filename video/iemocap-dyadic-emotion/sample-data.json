@@ -1,0 +1,92 @@
+[
+  {
+    "id": "iemocap_001",
+    "video_url": "https://example.com/videos/iemocap/ses01_script_argument_001.mp4",
+    "session_id": "session_01",
+    "scenario_type": "scripted",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 28.3
+  },
+  {
+    "id": "iemocap_002",
+    "video_url": "https://example.com/videos/iemocap/ses01_improv_breakup_001.mp4",
+    "session_id": "session_01",
+    "scenario_type": "improvised",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 35.7
+  },
+  {
+    "id": "iemocap_003",
+    "video_url": "https://example.com/videos/iemocap/ses02_script_celebration_001.mp4",
+    "session_id": "session_02",
+    "scenario_type": "scripted",
+    "speaker_a_gender": "male",
+    "speaker_b_gender": "female",
+    "duration_seconds": 22.1
+  },
+  {
+    "id": "iemocap_004",
+    "video_url": "https://example.com/videos/iemocap/ses02_improv_surprise_001.mp4",
+    "session_id": "session_02",
+    "scenario_type": "improvised",
+    "speaker_a_gender": "male",
+    "speaker_b_gender": "female",
+    "duration_seconds": 30.5
+  },
+  {
+    "id": "iemocap_005",
+    "video_url": "https://example.com/videos/iemocap/ses03_script_comfort_001.mp4",
+    "session_id": "session_03",
+    "scenario_type": "scripted",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 25.8
+  },
+  {
+    "id": "iemocap_006",
+    "video_url": "https://example.com/videos/iemocap/ses03_improv_negotiation_001.mp4",
+    "session_id": "session_03",
+    "scenario_type": "improvised",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 40.2
+  },
+  {
+    "id": "iemocap_007",
+    "video_url": "https://example.com/videos/iemocap/ses04_script_apology_001.mp4",
+    "session_id": "session_04",
+    "scenario_type": "scripted",
+    "speaker_a_gender": "male",
+    "speaker_b_gender": "female",
+    "duration_seconds": 18.9
+  },
+  {
+    "id": "iemocap_008",
+    "video_url": "https://example.com/videos/iemocap/ses04_improv_excitement_001.mp4",
+    "session_id": "session_04",
+    "scenario_type": "improvised",
+    "speaker_a_gender": "male",
+    "speaker_b_gender": "female",
+    "duration_seconds": 33.4
+  },
+  {
+    "id": "iemocap_009",
+    "video_url": "https://example.com/videos/iemocap/ses05_script_disappointment_001.mp4",
+    "session_id": "session_05",
+    "scenario_type": "scripted",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 27.6
+  },
+  {
+    "id": "iemocap_010",
+    "video_url": "https://example.com/videos/iemocap/ses05_improv_reunion_001.mp4",
+    "session_id": "session_05",
+    "scenario_type": "improvised",
+    "speaker_a_gender": "female",
+    "speaker_b_gender": "male",
+    "duration_seconds": 38.1
+  }
+]

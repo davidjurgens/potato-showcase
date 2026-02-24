@@ -1,0 +1,166 @@
+# How2Sign Sign Language Multi-Tier Annotation Configuration
+# Based on Duarte et al., CVPR 2021
+# Paper: https://openaccess.thecvf.com/content/CVPR2021/papers/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.pdf
+# Task: ELAN-style multi-tier annotation of continuous ASL signing
+
+port: 8000
+server_name: localhost
+task_name: "How2Sign Sign Language Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Gloss segmentation - mark individual sign boundaries and types
+  - name: "gloss_tier"
+    description: |
+      Segment the video into individual sign units and classify each sign type.
+      Mark the start and end time of each sign, identifying whether it is a
+      lexical sign, fingerspelling, classifier construction, pointing, or gesture.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "lexical-sign"
+        color: "#3B82F6"
+        tooltip: "A standard ASL sign from the lexicon"
+      - name: "fingerspelling"
+        color: "#EF4444"
+        tooltip: "Manual spelling of a word letter by letter"
+      - name: "classifier"
+        color: "#10B981"
+        tooltip: "Classifier predicate showing shape, movement, or location"
+      - name: "pointing"
+        color: "#F59E0B"
+        tooltip: "Indexical pointing to establish or reference a location"
+      - name: "gesture"
+        color: "#8B5CF6"
+        tooltip: "Non-lexical communicative gesture (e.g., shrug, head tilt)"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 2: Mouthing patterns - mark mouth activity aligned to signs
+  - name: "mouthing_tier"
+    description: |
+      Annotate the mouthing patterns visible during signing. Mark segments
+      where the signer produces full English-derived mouthings, reduced
+      mouthings, or no mouthing at all.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "full-mouth"
+        color: "#06B6D4"
+        tooltip: "Full English word mouthing visible on lips"
+      - name: "reduced-mouth"
+        color: "#84CC16"
+        tooltip: "Partial or reduced mouthing of an English word"
+      - name: "no-mouthing"
+        color: "#9CA3AF"
+        tooltip: "No visible mouthing component"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 3: Sign handedness classification
+  - name: "sign_handedness"
+    description: "Classify the dominant handedness pattern for the current sign segment."
+    annotation_type: radio
+    labels:
+      - "one-handed"
+      - "two-handed"
+      - "body-anchored"
+    keyboard_shortcuts:
+      one-handed: "1"
+      two-handed: "2"
+      body-anchored: "3"
+
+  # Tier 4: English translation (free text)
+  - name: "english_translation"
+    description: "Provide a fluent English translation of the signed content in this clip."
+    annotation_type: text
+    textarea: true
+
+  # Tier 5: ASL gloss notation (free text)
+  - name: "gloss_text"
+    description: |
+      Write the ASL gloss notation for the signed content using standard
+      conventions (e.g., UPPERCASE for glosses, fs- prefix for fingerspelling,
+      IX for pointing, CL: for classifiers).
+    annotation_type: text
+    textarea: true
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">How2Sign: Multi-Tier ASL Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate the signing video across multiple parallel tiers, similar to ELAN annotation.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Use the timeline-aligned tiers below to annotate
+      sign glosses, mouthing patterns, handedness, and provide translations. Each tier captures
+      a different linguistic dimension of the signing.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## How2Sign Multi-Tier ASL Annotation
+
+  This task uses an ELAN-style multi-tier approach to annotate continuous
+  American Sign Language videos from the How2Sign dataset.
+
+  ### Tier 1: Gloss Segmentation
+  - Segment the video into individual sign units on the timeline
+  - For each segment, select the sign type:
+    - **Lexical sign**: A standard ASL sign from the lexicon
+    - **Fingerspelling**: Manual spelling of a word (e.g., names, technical terms)
+    - **Classifier**: Classifier predicates showing shape, size, movement, or location
+    - **Pointing**: Indexical pointing to establish referents in signing space
+    - **Gesture**: Non-lexical communicative gestures (shrugs, head tilts, etc.)
+
+  ### Tier 2: Mouthing Patterns
+  - In parallel, mark the mouthing behavior visible on the signer's face
+  - **Full mouthing**: Clear English-derived word shape on the lips
+  - **Reduced mouthing**: Partial or abbreviated lip movement
+  - **No mouthing**: No visible mouth component for that segment
+
+  ### Tier 3: Sign Handedness
+  - For each gloss segment, classify the hand configuration:
+    - **One-handed**: Produced with the dominant hand only
+    - **Two-handed**: Requires both hands
+    - **Body-anchored**: Contact with the body is a key part of the sign
+
+  ### Tier 4: English Translation
+  - Provide a natural, fluent English translation of the entire clip
+
+  ### Tier 5: ASL Gloss Notation
+  - Write the gloss sequence using standard ASL transcription conventions:
+    - UPPERCASE for sign glosses (e.g., HOUSE, WANT)
+    - fs- prefix for fingerspelling (e.g., fs-JOHN)
+    - IX for indexical pointing
+    - CL: for classifiers (e.g., CL:3-vehicle-move)
+
+  ### Quality Guidelines
+  - Align tier boundaries precisely to sign onset and offset
+  - When unsure of a sign boundary, use slow-motion playback
+  - Mouthing tiers should align with but may not exactly match gloss boundaries
+  - Translation should be natural English, not word-for-word gloss

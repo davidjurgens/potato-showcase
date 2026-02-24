@@ -1,0 +1,74 @@
+[
+  {
+    "id": "doreco_001",
+    "audio_url": "https://example.com/audio/doreco/beja_narrative_001.wav",
+    "language_name": "Beja",
+    "language_iso": "bej",
+    "speaker_id": "bej_spk01",
+    "genre": "narrative",
+    "duration": 6.4
+  },
+  {
+    "id": "doreco_002",
+    "audio_url": "https://example.com/audio/doreco/sanzhi_conversation_001.wav",
+    "language_name": "Sanzhi Dargwa",
+    "language_iso": "dar",
+    "speaker_id": "dar_spk01",
+    "genre": "conversation",
+    "duration": 4.8
+  },
+  {
+    "id": "doreco_003",
+    "audio_url": "https://example.com/audio/doreco/evenki_procedural_001.wav",
+    "language_name": "Evenki",
+    "language_iso": "evn",
+    "speaker_id": "evn_spk01",
+    "genre": "procedural",
+    "duration": 7.2
+  },
+  {
+    "id": "doreco_004",
+    "audio_url": "https://example.com/audio/doreco/arapaho_narrative_001.wav",
+    "language_name": "Arapaho",
+    "language_iso": "arp",
+    "speaker_id": "arp_spk01",
+    "genre": "narrative",
+    "duration": 5.5
+  },
+  {
+    "id": "doreco_005",
+    "audio_url": "https://example.com/audio/doreco/texistepec_elicitation_001.wav",
+    "language_name": "Texistepec Popoluca",
+    "language_iso": "poq",
+    "speaker_id": "poq_spk01",
+    "genre": "elicitation",
+    "duration": 3.1
+  },
+  {
+    "id": "doreco_006",
+    "audio_url": "https://example.com/audio/doreco/yucatec_conversation_001.wav",
+    "language_name": "Yucatec Maya",
+    "language_iso": "yua",
+    "speaker_id": "yua_spk01",
+    "genre": "conversation",
+    "duration": 5.9
+  },
+  {
+    "id": "doreco_007",
+    "audio_url": "https://example.com/audio/doreco/savosavo_narrative_001.wav",
+    "language_name": "Savosavo",
+    "language_iso": "svs",
+    "speaker_id": "svs_spk01",
+    "genre": "narrative",
+    "duration": 8.3
+  },
+  {
+    "id": "doreco_008",
+    "audio_url": "https://example.com/audio/doreco/gorwaa_procedural_001.wav",
+    "language_name": "Gorwaa",
+    "language_iso": "gow",
+    "speaker_id": "gow_spk01",
+    "genre": "procedural",
+    "duration": 6.7
+  }
+]

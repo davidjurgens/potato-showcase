@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tobi_001",
+    "audio_url": "https://example.com/audio/tobi/read_news_001.wav",
+    "speaker_id": "spk_F01",
+    "utterance_text": "The president will address the nation tonight at eight o'clock.",
+    "genre": "broadcast-news",
+    "duration": 3.8
+  },
+  {
+    "id": "tobi_002",
+    "audio_url": "https://example.com/audio/tobi/read_speech_001.wav",
+    "speaker_id": "spk_M01",
+    "utterance_text": "Marianna made the marmalade.",
+    "genre": "read-speech",
+    "duration": 2.4
+  },
+  {
+    "id": "tobi_003",
+    "audio_url": "https://example.com/audio/tobi/spontaneous_001.wav",
+    "speaker_id": "spk_F02",
+    "utterance_text": "You really think that's gonna work?",
+    "genre": "spontaneous",
+    "duration": 2.1
+  },
+  {
+    "id": "tobi_004",
+    "audio_url": "https://example.com/audio/tobi/broadcast_002.wav",
+    "speaker_id": "spk_M02",
+    "utterance_text": "Temperatures will drop sharply by the weekend, forecasters say.",
+    "genre": "broadcast-news",
+    "duration": 4.2
+  },
+  {
+    "id": "tobi_005",
+    "audio_url": "https://example.com/audio/tobi/read_speech_002.wav",
+    "speaker_id": "spk_F03",
+    "utterance_text": "A legendary warrior sailed across the dangerous seas.",
+    "genre": "read-speech",
+    "duration": 3.5
+  },
+  {
+    "id": "tobi_006",
+    "audio_url": "https://example.com/audio/tobi/spontaneous_002.wav",
+    "speaker_id": "spk_M03",
+    "utterance_text": "Well I mean it depends on what you mean by that.",
+    "genre": "spontaneous",
+    "duration": 2.9
+  },
+  {
+    "id": "tobi_007",
+    "audio_url": "https://example.com/audio/tobi/read_speech_003.wav",
+    "speaker_id": "spk_F01",
+    "utterance_text": "Only a millionaire could afford such a lavish estate.",
+    "genre": "read-speech",
+    "duration": 3.1
+  },
+  {
+    "id": "tobi_008",
+    "audio_url": "https://example.com/audio/tobi/spontaneous_003.wav",
+    "speaker_id": "spk_M01",
+    "utterance_text": "No no no that's not what I said at all.",
+    "genre": "spontaneous",
+    "duration": 2.6
+  },
+  {
+    "id": "tobi_009",
+    "audio_url": "https://example.com/audio/tobi/broadcast_003.wav",
+    "speaker_id": "spk_F04",
+    "utterance_text": "The committee has announced three new policy recommendations.",
+    "genre": "broadcast-news",
+    "duration": 3.9
+  },
+  {
+    "id": "tobi_010",
+    "audio_url": "https://example.com/audio/tobi/read_speech_004.wav",
+    "speaker_id": "spk_M04",
+    "utterance_text": "Amanda brought the documents to the office yesterday morning.",
+    "genre": "read-speech",
+    "duration": 3.3
+  }
+]

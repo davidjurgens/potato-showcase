@@ -1,0 +1,23 @@
+{
+  "title": "Bias Benchmark for QA (BBQ)",
+  "description": "Annotate question-answering examples designed to probe social biases. Based on BBQ (Parrish et al., Findings of ACL 2022). Annotators select the correct answer given a context, assess the direction of bias in the question, categorize the type of bias, and explain their reasoning.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Parrish et al.",
+    "email": "jurgens@umich.edu",
+    "github": "nyu-mll",
+    "affiliation": "New York University"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Bias Detection", "Question Answering", "Fairness"],
+  "useCase": ["Bias Detection", "Fairness Evaluation", "QA Benchmarking"],
+  "complexity": "intermediate",
+  "tags": ["bias", "fairness", "question-answering", "bbq", "acl2022", "stereotypes", "social-bias"],
+  "featured": false,
+  "paperReference": "Parrish et al., Findings of ACL 2022",
+  "paperUrl": "https://aclanthology.org/2022.findings-acl.165/",
+  "datasetUrl": "https://github.com/nyu-mll/BBQ",
+  "citation": "@inproceedings{parrish-etal-2022-bbq,\n    title = \"{BBQ}: A Hand-Built Bias Benchmark for Question Answering\",\n    author = \"Parrish, Alicia  and Chen, Angelica  and Nangia, Nikita  and Padmakumar, Vishakh  and Phang, Jason  and Thompson, Jana  and Htut, Phu Mon  and Bowman, Samuel\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.165\",\n    pages = \"2086--2105\"\n}"
+}

@@ -1,0 +1,234 @@
+# Miami Bangor Code-Switching Annotation
+# Based on Deuchar et al., International Journal of Bilingualism 2014
+# Paper: https://doi.org/10.1177/1367006913487303
+# Dataset: http://bangortalk.org.uk/speakers.php?c=miami
+#
+# Task: Multi-tier annotation of Spanish-English bilingual speech for
+# code-switching analysis. Annotators label each word with its language,
+# mark code-switch boundary points and their types, classify the overall
+# switch direction and utterance-level language dominance, and provide
+# orthographic transcriptions with language markers.
+#
+# ELAN-style multi-tier design:
+#   Tier 1 (span)  - word_tier: per-word language identification
+#   Tier 2 (span)  - code_switch_boundary: code-switch points and types
+#   Tier 3 (radio) - switch_direction: direction of the language switch
+#   Tier 4 (radio) - utterance_language: predominant language of the utterance
+#   Tier 5 (text)  - transcription: orthographic transcription with language markers
+#
+# Guidelines:
+#   - Listen to the full utterance before annotating
+#   - On Tier 1, assign a language label to every word span
+#   - On Tier 2, mark only the boundary points where switching occurs
+#   - Use "mixed" for portmanteau words blending both languages
+#   - Use "ambiguous" for cognates or words shared by both languages
+
+port: 8000
+server_name: localhost
+task_name: "Miami Bangor Code-Switching Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_instructions: |
+  ## Miami Bangor Code-Switching Annotation
+
+  You will annotate bilingual Spanish-English speech using a multi-tier ELAN-style
+  annotation scheme. Each tier captures a different aspect of code-switching
+  behavior, and all tiers are aligned to the same audio timeline.
+
+  ### Tier 1 -- Word Tier (per-word language identification)
+  Select each word span and assign its language:
+  - **english** -- The word is English
+  - **spanish** -- The word is Spanish
+  - **mixed** -- Portmanteau or morphologically blended word (e.g., "parquear" = park + -ear)
+  - **ambiguous** -- Cognate or form shared by both languages that cannot be attributed to one
+  - **other** -- Word from a third language or unintelligible
+
+  ### Tier 2 -- Code-Switch Boundary (switch points)
+  Mark the boundaries where language switching occurs and classify the type:
+  - **inter-sentential** -- Switch occurs at a sentence or clause boundary
+  - **intra-sentential** -- Switch occurs within a single clause
+  - **tag-switch** -- An inserted tag, filler, or discourse marker from the other language
+  - **intra-word** -- Switch occurs inside a single word (e.g., morphological mixing)
+
+  ### Tier 3 -- Switch Direction
+  Indicate the direction of language switching at each switch point:
+  - **english-to-spanish** -- Speaker switches from English to Spanish
+  - **spanish-to-english** -- Speaker switches from Spanish to English
+  - **to-other** -- Switch involves a third language
+  - **no-switch** -- No language switch in this utterance
+
+  ### Tier 4 -- Utterance Language
+  Classify the predominant language of the overall utterance:
+  - **predominantly-english** -- Most of the utterance is in English
+  - **predominantly-spanish** -- Most of the utterance is in Spanish
+  - **balanced-mix** -- Roughly equal use of both languages
+  - **other** -- Predominantly a third language
+
+  ### Tier 5 -- Transcription
+  Provide an orthographic transcription. You may mark language boundaries with
+  angle brackets if helpful (e.g., "<en>I want</en> <es>ir al parque</es>").
+
+annotation_schemes:
+  - annotation_type: span
+    name: word_tier
+    description: "Per-word language identification. Select each word span and assign its language."
+    span_mode: temporal
+    labels:
+      - name: "english"
+        color: "#3B82F6"
+        tooltip: "Word is English"
+        key_value: "1"
+      - name: "spanish"
+        color: "#EF4444"
+        tooltip: "Word is Spanish"
+        key_value: "2"
+      - name: "mixed"
+        color: "#F59E0B"
+        tooltip: "Portmanteau or morphologically blended word combining both languages"
+        key_value: "3"
+      - name: "ambiguous"
+        color: "#8B5CF6"
+        tooltip: "Cognate or shared form that cannot be attributed to one language"
+        key_value: "4"
+      - name: "other"
+        color: "#6B7280"
+        tooltip: "Third language or unintelligible word"
+        key_value: "5"
+
+  - annotation_type: span
+    name: code_switch_boundary
+    description: "Mark the points where code-switching occurs and classify the switch type."
+    span_mode: temporal
+    labels:
+      - name: "inter-sentential"
+        color: "#059669"
+        tooltip: "Switch at a sentence or clause boundary"
+        key_value: "q"
+      - name: "intra-sentential"
+        color: "#D97706"
+        tooltip: "Switch within a single clause"
+        key_value: "w"
+      - name: "tag-switch"
+        color: "#7C3AED"
+        tooltip: "Inserted tag, filler, or discourse marker from the other language"
+        key_value: "e"
+      - name: "intra-word"
+        color: "#DC2626"
+        tooltip: "Switch occurs inside a single word (morphological mixing)"
+        key_value: "r"
+
+  - annotation_type: radio
+    name: switch_direction
+    description: "Direction of the language switch at the annotated switch point."
+    labels:
+      - name: "english-to-spanish"
+        tooltip: "Speaker switches from English to Spanish"
+        key_value: "a"
+      - name: "spanish-to-english"
+        tooltip: "Speaker switches from Spanish to English"
+        key_value: "s"
+      - name: "to-other"
+        tooltip: "Switch involves a third language"
+        key_value: "d"
+      - name: "no-switch"
+        tooltip: "No language switch occurs in this utterance"
+        key_value: "f"
+
+  - annotation_type: radio
+    name: utterance_language
+    description: "Predominant language of the overall utterance."
+    labels:
+      - name: "predominantly-english"
+        tooltip: "Most of the utterance is in English"
+        key_value: "z"
+      - name: "predominantly-spanish"
+        tooltip: "Most of the utterance is in Spanish"
+        key_value: "x"
+      - name: "balanced-mix"
+        tooltip: "Roughly equal use of both languages"
+        key_value: "c"
+      - name: "other"
+        tooltip: "Predominantly a third language"
+        key_value: "v"
+
+  - annotation_type: text
+    name: transcription
+    description: "Orthographic transcription with optional language boundary markers (e.g., <en>word</en> <es>palabra</es>)."
+
+html_layout: |
+  <div class="annotator-container" style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
+    <h3 style="margin-bottom: 4px;">Miami Bangor Code-Switching Annotation</h3>
+    <p style="color: #6B7280; margin-top: 0;">
+      Speaker: <strong>{{speaker_id}}</strong> ({{speaker_age_group}}, {{speaker_gender}}) |
+      Topic: <strong>{{conversation_topic}}</strong> |
+      Setting: <strong>{{recording_setting}}</strong>
+    </p>
+
+    <div class="audio-container" style="background: #F3F4F6; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <div id="waveform" style="width: 100%; height: 128px; margin-top: 8px; background: #E5E7EB; border-radius: 4px;"></div>
+      <p style="font-size: 0.85em; color: #9CA3AF; margin: 4px 0 0;">
+        Click and drag on the waveform to select word spans for language annotation.
+      </p>
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #3B82F6;">Tier 1 -- Word-Level Language ID</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Select each word and label its language (English, Spanish, mixed, ambiguous, or other).
+      </p>
+      {{word_tier}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #059669;">Tier 2 -- Code-Switch Boundaries</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Mark the points where language switching occurs and classify the switch type.
+      </p>
+      {{code_switch_boundary}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #D97706;">Tier 3 -- Switch Direction</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Indicate the direction of the language switch.
+      </p>
+      {{switch_direction}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #EF4444;">Tier 4 -- Utterance Language</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Classify the predominant language of this utterance.
+      </p>
+      {{utterance_language}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #8B5CF6;">Tier 5 -- Transcription</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Provide orthographic transcription with optional language markers.
+      </p>
+      {{transcription}}
+    </div>
+  </div>
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false
