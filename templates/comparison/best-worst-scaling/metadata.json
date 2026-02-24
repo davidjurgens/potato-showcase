@@ -2,9 +2,28 @@
   "title": "Best-Worst Scaling",
   "description": "MaxDiff annotation where annotators select the best and worst items from a set for relative comparison.",
   "category": "comparison",
-  "annotationType": ["best-worst"],
-  "domain": ["nlp", "evaluation"],
-  "useCase": ["preference-learning", "ranking", "quality-assessment"],
+  "annotationType": [
+    "best-worst"
+  ],
+  "domain": [
+    "nlp",
+    "evaluation"
+  ],
+  "useCase": [
+    "preference-learning",
+    "ranking",
+    "quality-assessment"
+  ],
   "complexity": "beginner",
-  "tags": ["comparison", "maxdiff", "best-worst", "ranking", "preference"]
+  "tags": [
+    "comparison",
+    "maxdiff",
+    "best-worst",
+    "ranking",
+    "preference"
+  ],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ]
 }

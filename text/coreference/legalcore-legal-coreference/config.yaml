@@ -53,7 +53,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Coreference linking between legal events
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: coreference_links
     description: "Link pairs of legal event mentions that refer to the same real-world event. Draw a link from one event mention to another if they are coreferent."
     source_scheme: legal_events

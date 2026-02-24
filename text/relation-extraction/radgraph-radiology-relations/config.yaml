@@ -77,7 +77,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Link entities with clinical relation types
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: clinical_relations
     description: "Draw relations between clinical entities"
     labels:

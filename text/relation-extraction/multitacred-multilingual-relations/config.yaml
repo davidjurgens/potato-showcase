@@ -102,7 +102,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Link entities with TAC relation types
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: tac_relations
     description: "Draw relations between subject and object entities using TAC relation types"
     labels:

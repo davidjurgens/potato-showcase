@@ -50,7 +50,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Coreference chain linking
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: coreference_chains
     description: "Link entity mentions that refer to the same real-world entity. Connect each mention to an earlier mention in the same coreference chain."
     source_scheme: entity_mentions

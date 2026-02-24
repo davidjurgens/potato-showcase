@@ -13,19 +13,16 @@ item_properties:
   image_key: image_url
 
 annotation_schemes:
-  - annotation_type: bbox
+  - annotation_type: image_annotation
     name: objects
     description: "Draw boxes around objects"
+    tools:
+      - bbox
     labels:
-      - name: "Person"
-        color: "#ef4444"
-      - name: "Car"
-        color: "#3b82f6"
-      - name: "Dog"
-        color: "#22c55e"
-      - name: "Cat"
-        color: "#f59e0b"
-    required: true
+      - "Person"
+      - "Car"
+      - "Dog"
+      - "Cat"
 
 output_annotation_dir: "output/"
 output_annotation_format: "json"
