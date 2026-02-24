@@ -1,0 +1,73 @@
+# FActScore: Fine-grained Atomic Evaluation of Factual Precision
+# Based on Min et al., EMNLP 2023
+# Paper: https://aclanthology.org/2023.emnlp-main.741/
+# Dataset: https://github.com/shmsw25/FActScore
+#
+# This task evaluates factual precision in LLM-generated text at the
+# atomic fact level. Each item presents a generated paragraph alongside
+# an extracted atomic fact and a reference source for verification.
+#
+# Factuality Verdicts:
+# - Supported: The atomic fact is confirmed by the reference source
+# - Not Supported: The atomic fact is contradicted by or absent from the reference
+# - Irrelevant: The atomic fact cannot be verified (opinion, trivial, or out of scope)
+#
+# Annotation Guidelines:
+# 1. Read the full generated paragraph for context
+# 2. Focus on the specific atomic fact to be verified
+# 3. Carefully check the reference source for matching information
+# 4. A fact is Supported only if the reference explicitly confirms it
+# 5. Minor discrepancies (e.g., wrong year, wrong location) mean Not Supported
+# 6. If the fact is correct but the reference doesn't mention it, mark Not Supported
+# 7. If a correction is needed, provide the corrected version
+
+port: 8000
+server_name: localhost
+task_name: "FActScore: Atomic Factuality"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Factuality verdict
+  - annotation_type: radio
+    name: factuality
+    description: "Is this atomic fact supported by the reference source?"
+    labels:
+      - "Supported"
+      - "Not Supported"
+      - "Irrelevant"
+    keyboard_shortcuts:
+      "Supported": "s"
+      "Not Supported": "n"
+      "Irrelevant": "i"
+    tooltips:
+      "Supported": "The reference source explicitly confirms this atomic fact"
+      "Not Supported": "The reference source contradicts this fact or does not contain information to confirm it"
+      "Irrelevant": "The fact is an opinion, trivially true, or cannot be verified against the reference"
+
+  # Step 2: Correction (if Not Supported)
+  - annotation_type: text
+    name: correction
+    description: "If the fact is Not Supported, provide the correct information from the reference source (leave blank if Supported or Irrelevant)"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 10px; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 4px;">
+    <strong>Generated Paragraph:</strong><br>{{text}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
+    <strong>Atomic Fact to Verify:</strong> {{atomic_fact}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
+    <strong>Reference Source:</strong><br>{{reference_source}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

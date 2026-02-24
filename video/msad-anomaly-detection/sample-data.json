@@ -1,0 +1,72 @@
+[
+  {
+    "id": "msad_001",
+    "video_url": "https://example.com/videos/parking_lot_night_001.mp4",
+    "scenario": "parking_lot",
+    "duration": 120,
+    "description": "Nighttime parking lot surveillance showing vehicles entering and exiting, with a suspicious figure near a parked car"
+  },
+  {
+    "id": "msad_002",
+    "video_url": "https://example.com/videos/intersection_traffic_001.mp4",
+    "scenario": "traffic",
+    "duration": 90,
+    "description": "Busy urban intersection during rush hour with multiple vehicles and pedestrians crossing"
+  },
+  {
+    "id": "msad_003",
+    "video_url": "https://example.com/videos/retail_store_001.mp4",
+    "scenario": "retail",
+    "duration": 150,
+    "description": "Indoor retail store footage showing customers browsing aisles and approaching checkout counters"
+  },
+  {
+    "id": "msad_004",
+    "video_url": "https://example.com/videos/subway_platform_001.mp4",
+    "scenario": "public_transit",
+    "duration": 180,
+    "description": "Subway platform during evening commute with passengers waiting and boarding trains"
+  },
+  {
+    "id": "msad_005",
+    "video_url": "https://example.com/videos/warehouse_exterior_001.mp4",
+    "scenario": "industrial",
+    "duration": 200,
+    "description": "Warehouse exterior with loading dock area, showing delivery trucks and workers during daytime operations"
+  },
+  {
+    "id": "msad_006",
+    "video_url": "https://example.com/videos/campus_quad_001.mp4",
+    "scenario": "campus",
+    "duration": 160,
+    "description": "University campus quad area with students walking between buildings during midday"
+  },
+  {
+    "id": "msad_007",
+    "video_url": "https://example.com/videos/highway_overpass_001.mp4",
+    "scenario": "traffic",
+    "duration": 110,
+    "description": "Highway overpass camera showing multi-lane traffic flow with occasional lane changes and merging"
+  },
+  {
+    "id": "msad_008",
+    "video_url": "https://example.com/videos/bank_lobby_001.mp4",
+    "scenario": "commercial",
+    "duration": 140,
+    "description": "Bank lobby interior with customers in queue, tellers at windows, and security guard at entrance"
+  },
+  {
+    "id": "msad_009",
+    "video_url": "https://example.com/videos/park_evening_001.mp4",
+    "scenario": "public_space",
+    "duration": 175,
+    "description": "Public park during evening hours with joggers, dog walkers, and groups gathered on benches"
+  },
+  {
+    "id": "msad_010",
+    "video_url": "https://example.com/videos/construction_site_001.mp4",
+    "scenario": "industrial",
+    "duration": 130,
+    "description": "Construction site perimeter camera showing workers, heavy machinery, and fenced boundary area"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "disrpt_001",
+    "text": "The company reported a 20% increase in revenue last quarter. This growth was primarily driven by strong demand in the Asian market. However, operating costs also rose significantly due to supply chain disruptions. As a result, net profit margins remained flat compared to the previous year.",
+    "genre": "business"
+  },
+  {
+    "id": "disrpt_002",
+    "text": "Although renewable energy sources have become more affordable, many developing nations still rely heavily on fossil fuels. Coal remains the primary energy source in several Southeast Asian countries because infrastructure for solar and wind power requires substantial upfront investment. Governments are exploring public-private partnerships to address this gap.",
+    "genre": "science"
+  },
+  {
+    "id": "disrpt_003",
+    "text": "The researchers collected survey responses from 2,500 participants across five countries. Participants were asked to rate their satisfaction with public transportation on a scale from 1 to 10. The results showed that cities with dedicated bus lanes scored significantly higher. According to the lead author, these findings support the case for investment in bus rapid transit systems.",
+    "genre": "academic"
+  },
+  {
+    "id": "disrpt_004",
+    "text": "The new policy requires all employees to complete cybersecurity training before accessing sensitive systems. If an employee fails the assessment, they must retake the training within two weeks. This measure was introduced after a data breach in March exposed thousands of customer records. Management believes the training will reduce the risk of future incidents.",
+    "genre": "business"
+  },
+  {
+    "id": "disrpt_005",
+    "text": "Marie Curie was born in Warsaw in 1867 and moved to Paris in 1891 to pursue her studies. She became the first woman to win a Nobel Prize when she received the award in Physics in 1903. Despite facing widespread discrimination as a woman in science, she went on to win a second Nobel Prize in Chemistry in 1911. Her pioneering research on radioactivity laid the foundation for modern nuclear physics.",
+    "genre": "biography"
+  },
+  {
+    "id": "disrpt_006",
+    "text": "The defendant claims he was at home at the time of the robbery. However, security camera footage places him near the scene at 9:45 PM. His attorney argues that the footage is inconclusive because the image quality is poor. The prosecution counters that the defendant's vehicle was also identified in the parking lot by two independent witnesses.",
+    "genre": "legal"
+  },
+  {
+    "id": "disrpt_007",
+    "text": "To improve patient outcomes, the hospital implemented a new triage protocol in the emergency department. Nurses now assess patients using a standardized severity scale within five minutes of arrival. Early results indicate that average wait times have decreased by 30 percent. The chief medical officer noted that staff morale has also improved since the change was introduced.",
+    "genre": "medical"
+  },
+  {
+    "id": "disrpt_008",
+    "text": "The city council approved the construction of a new light rail line connecting the downtown core to the airport. The project is expected to cost $2.3 billion and will take approximately four years to complete. Supporters argue that it will reduce traffic congestion and carbon emissions, while opponents worry about the impact on small businesses along the route during construction.",
+    "genre": "news"
+  },
+  {
+    "id": "disrpt_009",
+    "text": "Deep learning models have achieved remarkable performance on image classification benchmarks. These models require large amounts of labeled training data, which is expensive to obtain. Transfer learning addresses this limitation by pre-training on large generic datasets and fine-tuning on smaller domain-specific data. This approach has proven particularly effective in medical imaging, where labeled examples are scarce.",
+    "genre": "academic"
+  },
+  {
+    "id": "disrpt_010",
+    "text": "The hurricane made landfall on the Florida coast early Saturday morning, bringing sustained winds of 130 miles per hour. Authorities had issued evacuation orders for coastal communities two days earlier. While most residents complied, some chose to remain in their homes. Emergency crews began search and rescue operations as soon as conditions allowed.",
+    "genre": "news"
+  }
+]

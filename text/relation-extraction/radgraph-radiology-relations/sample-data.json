@@ -1,0 +1,52 @@
+[
+  {
+    "id": "radgraph_001",
+    "text": "There is a small bilateral pleural effusion, greater on the right than the left, with associated compressive atelectasis at the lung bases.",
+    "report_section": "Findings"
+  },
+  {
+    "id": "radgraph_002",
+    "text": "The endotracheal tube is in satisfactory position with the tip approximately 4 cm above the carina. A right internal jugular central venous catheter terminates in the superior vena cava.",
+    "report_section": "Findings"
+  },
+  {
+    "id": "radgraph_003",
+    "text": "The heart is mildly enlarged. There is no pericardial effusion. The mediastinal contours are within normal limits.",
+    "report_section": "Findings"
+  },
+  {
+    "id": "radgraph_004",
+    "text": "New patchy opacity in the right lower lobe is concerning for developing pneumonia. Left lung remains clear.",
+    "report_section": "Impression"
+  },
+  {
+    "id": "radgraph_005",
+    "text": "Status post median sternotomy and coronary artery bypass graft surgery. Sternal wires are intact. A dual-chamber pacemaker is noted with leads in the right atrium and right ventricle.",
+    "report_section": "Findings"
+  },
+  {
+    "id": "radgraph_006",
+    "text": "There is a large right-sided pneumothorax with near-complete collapse of the right lung. A right-sided chest tube has been placed.",
+    "report_section": "Findings"
+  },
+  {
+    "id": "radgraph_007",
+    "text": "Stable appearance of bilateral pulmonary nodules, the largest measuring 8 mm in the right upper lobe. No new nodules identified. Recommend follow-up CT in 6 months.",
+    "report_section": "Impression"
+  },
+  {
+    "id": "radgraph_008",
+    "text": "Worsening consolidation in the left lower lobe with air bronchograms, suggestive of lobar pneumonia. Small left pleural effusion has slightly increased compared to prior examination.",
+    "report_section": "Impression"
+  },
+  {
+    "id": "radgraph_009",
+    "text": "No acute cardiopulmonary abnormality. The lungs are well expanded and clear. Heart size is normal. The osseous structures demonstrate mild degenerative changes in the thoracic spine.",
+    "report_section": "Impression"
+  },
+  {
+    "id": "radgraph_010",
+    "text": "A nasogastric tube courses below the diaphragm with the tip projecting over the gastric body. Bilateral basal atelectasis is noted without focal consolidation.",
+    "report_section": "Findings"
+  }
+]

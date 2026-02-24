@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sa1b_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/800px-PNG_transparency_demonstration_1.png",
+    "scene_description": "A still life arrangement of dice and game pieces on a wooden surface. Segment each individual object.",
+    "expected_objects": ["dice", "game piece", "wooden surface"]
+  },
+  {
+    "id": "sa1b_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg",
+    "scene_description": "A domestic cat sitting on a grassy lawn. Draw masks around the cat and background regions.",
+    "expected_objects": ["cat", "grass", "ground"]
+  },
+  {
+    "id": "sa1b_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/800px-Red_Apple.jpg",
+    "scene_description": "A single red apple against a white background. Segment the apple from the background.",
+    "expected_objects": ["apple", "stem", "background"]
+  },
+  {
+    "id": "sa1b_004",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "scene_description": "Van Gogh's Starry Night painting. Segment distinct visual regions including sky, stars, village, and cypress tree.",
+    "expected_objects": ["sky", "stars", "moon", "village", "cypress tree", "hills"]
+  },
+  {
+    "id": "sa1b_005",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/A_photo_of_a_busy_city_street.jpg/1280px-A_photo_of_a_busy_city_street.jpg",
+    "scene_description": "A busy city street with pedestrians, vehicles, and buildings. Segment each visible object individually.",
+    "expected_objects": ["person", "car", "bus", "building", "road", "sidewalk", "traffic light"]
+  },
+  {
+    "id": "sa1b_006",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/1200px-Camponotus_flavomarginatus_ant.jpg",
+    "scene_description": "A macro photograph of an ant on a leaf surface. Segment the ant body parts and the leaf.",
+    "expected_objects": ["ant head", "ant thorax", "ant abdomen", "legs", "antennae", "leaf"]
+  },
+  {
+    "id": "sa1b_007",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg",
+    "scene_description": "An assortment of fresh fruits and vegetables arranged together. Segment each individual food item.",
+    "expected_objects": ["apple", "banana", "grape", "broccoli", "pepper", "tomato", "carrot"]
+  },
+  {
+    "id": "sa1b_008",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+    "scene_description": "A sunset landscape with silhouetted trees. Segment the sky, sun, clouds, trees, and ground.",
+    "expected_objects": ["sky", "sun", "clouds", "tree", "ground", "horizon"]
+  },
+  {
+    "id": "sa1b_009",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sunflower_from_Silesia2.jpg/1200px-Sunflower_from_Silesia2.jpg",
+    "scene_description": "A close-up of a sunflower with detailed petals and center disc. Segment flower parts individually.",
+    "expected_objects": ["petals", "center disc", "stem", "leaves", "background"]
+  },
+  {
+    "id": "sa1b_010",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Golden_Gate_bridge.jpg/1200px-Golden_Gate_bridge.jpg",
+    "scene_description": "The Golden Gate Bridge spanning across the bay with hills in the background. Segment bridge, water, sky, and hills.",
+    "expected_objects": ["bridge tower", "bridge cables", "bridge deck", "water", "sky", "hills", "fog"]
+  }
+]

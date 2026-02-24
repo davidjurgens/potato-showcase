@@ -1,0 +1,23 @@
+{
+  "title": "Prometheus: Rubric-based LLM Evaluation",
+  "description": "Fine-grained rubric-based evaluation of LLM outputs. Annotators score responses against detailed rubrics (1-5 scale) with specific criteria for each score level, and provide written feedback.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["likert", "text"],
+  "domain": ["NLP", "LLM Evaluation", "Rubric-based Assessment"],
+  "useCase": ["Rubric Evaluation", "LLM Scoring", "Quality Feedback"],
+  "complexity": "advanced",
+  "tags": ["rubric", "prometheus", "llm-evaluation", "fine-grained", "feedback", "scoring"],
+  "featured": false,
+  "paperReference": "Kim et al., ICLR 2024",
+  "paperUrl": "https://openreview.net/forum?id=prometheus2024",
+  "datasetUrl": "https://github.com/kaistAI/Prometheus",
+  "citation": "@inproceedings{kim2024prometheus,\n  title={Prometheus: Inducing Fine-grained Evaluation Capability in Language Models},\n  author={Kim, Seungone and Shin, Jamin and Cho, Yejin and Jang, Joel and Longpre, Shayne and Lee, Hwaran and Yun, Sangdoo and Shin, Seongjin and Kim, Sungdong and Thorne, James and others},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
+}

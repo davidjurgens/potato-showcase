@@ -1,0 +1,52 @@
+[
+  {
+    "id": "n2c2_001",
+    "text": "SOCIAL HISTORY: The patient is a 58-year-old male, retired truck driver. He quit smoking approximately 10 years ago after a 30 pack-year history. He reports occasional alcohol use, approximately 2-3 beers per week. Denies any illicit drug use. He lives with his wife in a single-family home.",
+    "note_type": "History and Physical"
+  },
+  {
+    "id": "n2c2_002",
+    "text": "Social Hx: Current smoker, 1 PPD x 25 years. Drinks heavily, approximately 6 beers daily. Reports prior marijuana use but states he stopped 5 years ago. Currently unemployed, lost his job 3 months ago. Living in a shelter. No health insurance.",
+    "note_type": "Admission Note"
+  },
+  {
+    "id": "n2c2_003",
+    "text": "The patient is a 42-year-old female nurse who presents for annual physical. She is a never smoker. She drinks wine socially, about one glass per week. No recreational drug use. She lives alone in a rented apartment. She has private insurance through her employer.",
+    "note_type": "Progress Note"
+  },
+  {
+    "id": "n2c2_004",
+    "text": "SH: Former smoker, quit 2019. Previous heroin use with IV drug use history, currently on methadone maintenance program for the past 3 years. Denies current alcohol use but has history of alcohol abuse requiring detox in 2018. He is on disability and lives in a group home. Covered by Medicaid.",
+    "note_type": "Discharge Summary"
+  },
+  {
+    "id": "n2c2_005",
+    "text": "Social History: Pt is a 71-year-old retired school teacher. Never used tobacco. Moderate alcohol use - wine with dinner most nights. No illicit drug history. Widowed, lives alone in an assisted living facility. Medicare with supplemental insurance.",
+    "note_type": "Consultation Note"
+  },
+  {
+    "id": "n2c2_006",
+    "text": "SOCIAL HISTORY: Active tobacco use, patient chews tobacco (1 tin per day for 15 years). Denies cigarette smoking. Drinks 1-2 beers on weekends only. Admits to occasional recreational marijuana use on weekends. Employed as an auto mechanic. Lives with girlfriend and her two children. Has employer-sponsored health insurance.",
+    "note_type": "History and Physical"
+  },
+  {
+    "id": "n2c2_007",
+    "text": "Social history is significant for homelessness for the past 6 months after eviction. Patient sleeps in his car or at a local shelter. He is a current smoker at half a pack per day. He endorses daily alcohol use, primarily vodka, about a pint daily. He uses crack cocaine intermittently, last use was two days ago. He is unemployed and has no insurance coverage.",
+    "note_type": "Emergency Department Note"
+  },
+  {
+    "id": "n2c2_008",
+    "text": "SH: Non-smoker, non-drinker, no drug use. Patient is a graduate student in biology at the local university. She lives with two roommates in an apartment near campus. She has student health insurance through the university.",
+    "note_type": "Progress Note"
+  },
+  {
+    "id": "n2c2_009",
+    "text": "SOCIAL: Patient is a 65-year-old male, recently retired from construction work. He has a remote history of cocaine use in his 20s but has been clean for over 30 years. He quit smoking 8 years ago after 40 pack-year history. Currently drinks 2-3 glasses of whiskey per night. Lives with his wife of 38 years in their own home. Insured through Medicare.",
+    "note_type": "Admission Note"
+  },
+  {
+    "id": "n2c2_010",
+    "text": "Social Hx: Patient is a 35-year-old single mother of three. She works part-time as a home health aide. She vapes nicotine daily, started 2 years ago, never smoked cigarettes. Denies alcohol and drug use. She lives with her children in subsidized housing. She has Medicaid coverage for herself and her children.",
+    "note_type": "History and Physical"
+  }
+]

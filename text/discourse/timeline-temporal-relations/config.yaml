@@ -1,0 +1,107 @@
+# TIMELINE: Exhaustive Temporal Relation Annotation
+# Based on Mathur et al., EMNLP 2023
+# Paper: https://aclanthology.org/2023.emnlp-main.788/
+# Dataset: https://github.com/timeline-nlp/timeline
+#
+# This task annotates exhaustive temporal relations between events in text.
+# Annotators first identify event mentions and temporal expressions, then
+# link all pairs with temporal relation types.
+#
+# Event/Time Types:
+# - Event: Actions, states, or occurrences (e.g., "attacked", "meeting")
+# - Time Expression: Temporal references (e.g., "Monday", "last year", "2023")
+#
+# Temporal Relation Types:
+# - BEFORE: Event A occurs before Event B
+# - AFTER: Event A occurs after Event B
+# - INCLUDES: Event A temporally includes Event B
+# - IS_INCLUDED: Event A is temporally included in Event B
+# - SIMULTANEOUS: Events A and B occur at the same time
+# - VAGUE: Temporal relation cannot be determined
+#
+# Annotation Guidelines:
+# 1. Read the entire passage to understand the timeline
+# 2. Mark all event mentions and temporal expressions as spans
+# 3. For each pair of marked spans, assign a temporal relation
+# 4. Consider tense, aspect, and temporal connectives as cues
+# 5. Use VAGUE only when the relation is genuinely ambiguous
+
+port: 8000
+server_name: localhost
+task_name: "TIMELINE: Exhaustive Temporal Relations"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify events and temporal expressions
+  - annotation_type: span
+    name: temporal_mentions
+    description: "Highlight all event mentions and temporal expressions in the text"
+    labels:
+      - "Event"
+      - "Time Expression"
+    label_colors:
+      "Event": "#3b82f6"
+      "Time Expression": "#f59e0b"
+    keyboard_shortcuts:
+      "Event": "1"
+      "Time Expression": "2"
+    tooltips:
+      "Event": "Actions, states, or occurrences (e.g., attacked, signed, meeting, earthquake)"
+      "Time Expression": "Temporal references (e.g., Monday, last year, 2023, three days later)"
+    allow_overlapping: false
+
+  # Step 2: Link pairs with temporal relations
+  - annotation_type: span_linking
+    name: temporal_relations
+    description: "Draw temporal relations between pairs of events/time expressions"
+    labels:
+      - "BEFORE"
+      - "AFTER"
+      - "INCLUDES"
+      - "IS_INCLUDED"
+      - "SIMULTANEOUS"
+      - "VAGUE"
+    tooltips:
+      "BEFORE": "The source event occurs before the target event"
+      "AFTER": "The source event occurs after the target event"
+      "INCLUDES": "The source event temporally includes the target event"
+      "IS_INCLUDED": "The source event is temporally included in the target event"
+      "SIMULTANEOUS": "Both events occur at the same time"
+      "VAGUE": "The temporal relation cannot be determined from context"
+
+  # Step 3: Confidence in relation judgments
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in the temporal relations you assigned?"
+    labels:
+      - "High"
+      - "Medium"
+      - "Low"
+    keyboard_shortcuts:
+      "High": "h"
+      "Medium": "m"
+      "Low": "l"
+    tooltips:
+      "High": "Temporal relations are clearly indicated by text cues"
+      "Medium": "Some relations required inference but are fairly clear"
+      "Low": "Many relations were ambiguous and required guessing"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Genre:</strong> {{genre}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.8;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

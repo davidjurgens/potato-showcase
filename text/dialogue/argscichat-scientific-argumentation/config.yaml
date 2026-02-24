@@ -1,0 +1,126 @@
+# ArgSciChat Scientific Argumentation Dialogue
+# Based on Ruiz-Dolz et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.414/
+# Dataset: https://github.com/UKPLab/ArgSciChat
+#
+# Task: Annotate argumentative dialogues about scientific papers.
+# Label each dialogue turn for argument components and assess
+# argument quality dimensions.
+#
+# Argument Components:
+# - Claim: A statement the speaker wants the listener to accept
+# - Evidence: Data, findings, or references supporting a claim
+# - Rebuttal: A counter-argument challenging a previous claim or evidence
+# - Clarification: Requesting or providing clarification on an argument
+# - Concession: Acknowledging the validity of a counterpoint
+#
+# Guidelines:
+# - Consider the scientific context when labeling argument components
+# - A single turn may contain multiple argument components
+# - Evidence should be grounded in the paper or external references
+# - Assess quality based on how well arguments are constructed, not agreement
+
+port: 8000
+server_name: localhost
+task_name: "ArgSciChat Scientific Argumentation Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Argument component type
+  - annotation_type: radio
+    name: argument_component
+    description: "Select the PRIMARY argument component type for this dialogue turn"
+    labels:
+      - "Claim"
+      - "Evidence"
+      - "Rebuttal"
+      - "Clarification Request"
+      - "Clarification Response"
+      - "Concession"
+      - "Question"
+      - "Agreement"
+      - "Meta-Discussion"
+      - "Other"
+    keyboard_shortcuts:
+      "Claim": "c"
+      "Evidence": "e"
+      "Rebuttal": "r"
+      "Clarification Request": "q"
+      "Clarification Response": "a"
+      "Concession": "o"
+      "Question": "u"
+      "Agreement": "g"
+    tooltips:
+      "Claim": "A statement or assertion the speaker wants the listener to accept (e.g., 'This method outperforms the baseline')"
+      "Evidence": "Data, experimental results, citations, or facts supporting or undermining a claim"
+      "Rebuttal": "A counter-argument that challenges a previous claim, evidence, or reasoning"
+      "Clarification Request": "Asking for more details, definitions, or explanation of an argument"
+      "Clarification Response": "Providing additional details or explanation in response to a question"
+      "Concession": "Acknowledging the validity of a counterpoint while potentially maintaining one's position"
+      "Question": "A general question about the paper or topic (not specifically requesting clarification)"
+      "Agreement": "Expressing agreement with a previous claim or argument"
+      "Meta-Discussion": "Discussion about the dialogue process itself, not the scientific content"
+      "Other": "Turns that do not fit the above categories (e.g., greetings, tangents)"
+
+  # Argument quality dimensions (multiselect)
+  - annotation_type: multiselect
+    name: quality_dimensions
+    description: "Select all quality dimensions that are WELL demonstrated in this argument turn"
+    labels:
+      - "Clarity"
+      - "Relevance"
+      - "Sufficiency"
+      - "Logical Soundness"
+      - "Specificity"
+      - "Novelty"
+      - "Grounded in Paper"
+      - "Acknowledges Limitations"
+      - "None Notable"
+    tooltips:
+      "Clarity": "The argument is clearly articulated and easy to understand"
+      "Relevance": "The argument is directly relevant to the paper or topic under discussion"
+      "Sufficiency": "Adequate evidence or reasoning is provided to support the claim"
+      "Logical Soundness": "The reasoning follows logically without fallacies"
+      "Specificity": "The argument references specific methods, results, or sections of the paper"
+      "Novelty": "The argument raises a new point or perspective not previously discussed"
+      "Grounded in Paper": "The argument is directly supported by content from the paper"
+      "Acknowledges Limitations": "The speaker acknowledges limitations or caveats in their argument"
+      "None Notable": "No quality dimensions are particularly well demonstrated"
+
+  # Persuasiveness rating
+  - annotation_type: radio
+    name: persuasiveness
+    description: "How persuasive is this argument turn?"
+    labels:
+      - "Very Persuasive"
+      - "Somewhat Persuasive"
+      - "Neutral"
+      - "Somewhat Unpersuasive"
+      - "Not Persuasive"
+      - "Not Applicable"
+    keyboard_shortcuts:
+      "Very Persuasive": "1"
+      "Somewhat Persuasive": "2"
+      "Neutral": "3"
+      "Somewhat Unpersuasive": "4"
+      "Not Persuasive": "5"
+      "Not Applicable": "6"
+    tooltips:
+      "Very Persuasive": "Strong, well-supported argument that would likely convince most readers"
+      "Somewhat Persuasive": "Reasonable argument with some support, moderately convincing"
+      "Neutral": "Neither particularly persuasive nor unpersuasive"
+      "Somewhat Unpersuasive": "Weak argument with limited support or questionable reasoning"
+      "Not Persuasive": "Poorly constructed argument, unsupported, or logically flawed"
+      "Not Applicable": "The turn is not argumentative (e.g., a question or greeting)"
+
+allow_all_users: true
+instances_per_annotator: 150
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

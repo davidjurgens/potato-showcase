@@ -1,0 +1,52 @@
+[
+  {
+    "id": "crossre_001",
+    "text": "Barack Obama served as the 44th President of the United States from 2009 to 2017, having previously represented Illinois in the U.S. Senate.",
+    "domain": "politics"
+  },
+  {
+    "id": "crossre_002",
+    "text": "The Beatles, formed in Liverpool in 1960, became the best-selling music act of all time, with estimated sales of over 600 million units worldwide.",
+    "domain": "music"
+  },
+  {
+    "id": "crossre_003",
+    "text": "In the 2022 FIFA World Cup final held in Qatar, Argentina defeated France in a penalty shootout after a 3-3 draw.",
+    "domain": "news"
+  },
+  {
+    "id": "crossre_004",
+    "text": "Charles Darwin published On the Origin of Species in 1859, which introduced the theory of natural selection as the mechanism for evolution.",
+    "domain": "natural_science"
+  },
+  {
+    "id": "crossre_005",
+    "text": "George Orwell, born Eric Arthur Blair in British India in 1903, wrote Nineteen Eighty-Four while living on the Scottish island of Jura.",
+    "domain": "literature"
+  },
+  {
+    "id": "crossre_006",
+    "text": "OpenAI released GPT-4 in March 2023, a large language model that outperformed its predecessor GPT-3.5 on multiple reasoning benchmarks.",
+    "domain": "ai"
+  },
+  {
+    "id": "crossre_007",
+    "text": "Angela Merkel, leader of the Christian Democratic Union, stepped down as Chancellor of Germany in December 2021 after 16 years in office.",
+    "domain": "politics"
+  },
+  {
+    "id": "crossre_008",
+    "text": "Marie Curie was awarded the Nobel Prize in Physics in 1903, shared with her husband Pierre Curie and Henri Becquerel for their research on radioactivity.",
+    "domain": "natural_science"
+  },
+  {
+    "id": "crossre_009",
+    "text": "Bob Dylan, originally from Duluth, Minnesota, was awarded the Nobel Prize in Literature in 2016 for creating new poetic expressions within the American song tradition.",
+    "domain": "music"
+  },
+  {
+    "id": "crossre_010",
+    "text": "DeepMind, a subsidiary of Alphabet based in London, developed AlphaFold to predict protein structures using deep learning techniques.",
+    "domain": "ai"
+  }
+]

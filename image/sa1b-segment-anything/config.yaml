@@ -1,0 +1,75 @@
+# Segment Anything (SA-1B) Interactive Segmentation Configuration
+# Based on Kirillov et al., ICCV 2023
+
+annotation_task_name: "SA-1B Interactive Segmentation"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "scene_description"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "text"
+    name: "segmentation_masks"
+    description: "Draw polygon segmentation masks around each distinct object (format: object_label,x1,y1,x2,y2,...,xn,yn per line)"
+
+  - annotation_type: "text"
+    name: "bounding_boxes"
+    description: "Draw bounding boxes around each distinct object (format: object_label,x,y,width,height per line)"
+
+  - annotation_type: "radio"
+    name: "object_category"
+    description: "Select the primary object category visible in the image"
+    labels:
+      - name: "person"
+        tooltip: "Human figures, body parts"
+      - name: "animal"
+        tooltip: "Animals of any species"
+      - name: "vehicle"
+        tooltip: "Cars, trucks, bicycles, boats, etc."
+      - name: "furniture"
+        tooltip: "Chairs, tables, beds, etc."
+      - name: "food"
+        tooltip: "Food items, dishes, produce"
+      - name: "electronics"
+        tooltip: "Phones, laptops, screens, etc."
+      - name: "nature"
+        tooltip: "Plants, trees, rocks, water"
+      - name: "building"
+        tooltip: "Structures, architecture"
+      - name: "other"
+        tooltip: "Objects not in the above categories"
+
+  - annotation_type: "radio"
+    name: "scene_complexity"
+    description: "Rate the segmentation complexity of this image"
+    labels:
+      - name: "low"
+        tooltip: "Few objects, clear boundaries (1-5 objects)"
+      - name: "medium"
+        tooltip: "Moderate number of objects, some overlap (6-15 objects)"
+      - name: "high"
+        tooltip: "Many objects, significant overlap or clutter (16+ objects)"
+
+  - annotation_type: "radio"
+    name: "annotation_difficulty"
+    description: "How difficult is it to draw precise segmentation masks?"
+    labels:
+      - name: "easy"
+        tooltip: "Clear object boundaries, high contrast"
+      - name: "moderate"
+        tooltip: "Some ambiguous boundaries or partial occlusion"
+      - name: "hard"
+        tooltip: "Complex shapes, heavy occlusion, or low contrast"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{scene_description}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

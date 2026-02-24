@@ -1,0 +1,62 @@
+[
+  {
+    "id": "audiohate_001",
+    "audio_url": "https://example.com/audio/audiohate/clip_001.wav",
+    "transcript": "Those people don't belong here. They should go back to where they came from.",
+    "duration": 4.2
+  },
+  {
+    "id": "audiohate_002",
+    "audio_url": "https://example.com/audio/audiohate/clip_002.wav",
+    "transcript": "I think we need to have a more open discussion about immigration policy.",
+    "duration": 3.8
+  },
+  {
+    "id": "audiohate_003",
+    "audio_url": "https://example.com/audio/audiohate/clip_003.wav",
+    "transcript": "You're such an idiot, I can't believe how stupid that comment was.",
+    "duration": 3.1
+  },
+  {
+    "id": "audiohate_004",
+    "audio_url": "https://example.com/audio/audiohate/clip_004.wav",
+    "transcript": "All members of that religion are terrorists, every single one of them.",
+    "duration": 3.9
+  },
+  {
+    "id": "audiohate_005",
+    "audio_url": "https://example.com/audio/audiohate/clip_005.wav",
+    "transcript": "We had a great community meeting yesterday and discussed neighborhood safety.",
+    "duration": 4.5
+  },
+  {
+    "id": "audiohate_006",
+    "audio_url": "https://example.com/audio/audiohate/clip_006.wav",
+    "transcript": "Women shouldn't be in leadership positions, they're too emotional for that.",
+    "duration": 4.0
+  },
+  {
+    "id": "audiohate_007",
+    "audio_url": "https://example.com/audio/audiohate/clip_007.wav",
+    "transcript": "I'm so tired of this traffic, the commute is getting worse every day.",
+    "duration": 3.3
+  },
+  {
+    "id": "audiohate_008",
+    "audio_url": "https://example.com/audio/audiohate/clip_008.wav",
+    "transcript": "People with disabilities are just looking for handouts from the government.",
+    "duration": 4.1
+  },
+  {
+    "id": "audiohate_009",
+    "audio_url": "https://example.com/audio/audiohate/clip_009.wav",
+    "transcript": "That comedian's routine was really offensive, especially the jokes about race.",
+    "duration": 3.7
+  },
+  {
+    "id": "audiohate_010",
+    "audio_url": "https://example.com/audio/audiohate/clip_010.wav",
+    "transcript": "The new diversity program at work has been really helpful for everyone.",
+    "duration": 3.5
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "DISRPT: Discourse Segmentation and Relation Classification",
+  "description": "Discourse segmentation and relation classification. Annotators identify Elementary Discourse Units (EDUs) and label rhetorical relations between them. Based on the DISRPT 2023 shared task covering multiple discourse frameworks and languages.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Braud et al.",
+    "email": "jurgens@umich.edu",
+    "github": "disrpt",
+    "affiliation": "Universite Paris Cite"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Discourse Analysis"],
+  "useCase": ["Discourse Segmentation", "Discourse Relation Classification", "Rhetorical Structure Analysis"],
+  "complexity": "advanced",
+  "tags": ["discourse", "edu-segmentation", "rhetorical-relations", "rst", "discourse-parsing", "disrpt", "acl2023"],
+  "featured": false,
+  "paperReference": "Braud et al., DISRPT@ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.disrpt-1.1/",
+  "datasetUrl": "https://github.com/disrpt/sharedtask2023",
+  "citation": "@inproceedings{braud-etal-2023-disrpt,\n    title = \"{DISRPT}: A Multilingual, Multi-domain, Cross-framework Benchmark for Discourse Processing\",\n    author = \"Braud, Chlo{\\'e}  and Zeldes, Amir  and Liu, Yang Janet  and Muller, Philippe  and Badene, Stefania  and Aoyama, Tatsuya\",\n    booktitle = \"Proceedings of the 3rd Shared Task on Discourse Relation Parsing and Treebanking (DISRPT 2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.disrpt-1.1\",\n    pages = \"1--17\"\n}"
+}

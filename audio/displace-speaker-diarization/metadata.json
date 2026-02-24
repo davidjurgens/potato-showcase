@@ -1,0 +1,23 @@
+{
+  "title": "DISPLACE 2024 - Speaker and Language Diarization",
+  "description": "Speaker and language diarization in multilingual conversational audio. Annotators mark speaker turn boundaries, identify speakers, and label the language of each segment in conversational environments (Kundu et al., INTERSPEECH 2024).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kundu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "displace2024",
+    "affiliation": "Multiple Institutions"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["Speech Processing", "Speaker Diarization"],
+  "useCase": ["Speaker Identification", "Language Identification", "Conversation Analysis"],
+  "complexity": "advanced",
+  "tags": ["audio", "diarization", "speaker", "language-identification", "multilingual", "interspeech2024"],
+  "featured": false,
+  "paperReference": "Kundu et al., INTERSPEECH 2024",
+  "paperUrl": "https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html",
+  "datasetUrl": "https://displace2024.github.io/",
+  "citation": "@inproceedings{kundu24_interspeech,\n    title = \"{DISPLACE} 2024: {DI}arization of {SP}eaker and {LA}nguage in {C}onversational {E}nvironments\",\n    author = \"Kundu, Shikha and others\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html\"\n}"
+}

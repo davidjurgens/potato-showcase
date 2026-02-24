@@ -1,0 +1,23 @@
+{
+  "title": "MSAD Multi-Scenario Anomaly Detection",
+  "description": "Video anomaly detection across multiple scenarios. Annotators watch surveillance-style videos and mark temporal segments containing anomalous events, classifying the anomaly type.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["video_annotation", "radio"],
+  "domain": ["Computer Vision", "Anomaly Detection", "Surveillance"],
+  "useCase": ["Anomaly Detection", "Temporal Segmentation", "Safety Monitoring"],
+  "complexity": "intermediate",
+  "tags": ["video", "anomaly-detection", "surveillance", "multi-scenario", "temporal-segments", "msad"],
+  "featured": false,
+  "paperReference": "Zhang et al., NeurIPS 2024",
+  "paperUrl": "https://proceedings.neurips.cc/paper/2024/hash/msad",
+  "datasetUrl": "https://github.com/MSAD-dataset/MSAD",
+  "citation": "@inproceedings{zhang2024msad,\n  title={MSAD: A Multi-Scenario Video Anomaly Detection Dataset},\n  author={Zhang, Yiming and Li, Cheng and Wang, Zhuo and Liu, Yao and Chen, Xin},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
+}

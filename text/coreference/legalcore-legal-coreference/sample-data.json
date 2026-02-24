@@ -1,0 +1,52 @@
+[
+  {
+    "id": "legal_001",
+    "text": "The defendant entered into a lease agreement with the plaintiff on January 15, 2019. Under the terms of the lease, the defendant was obligated to make monthly payments of $2,500. The defendant failed to make the required payments beginning in March 2020. The plaintiff notified the defendant of the breach on April 1, 2020, and demanded that the defendant cure the default within thirty days. When the defendant did not remedy the violation, the plaintiff initiated eviction proceedings.",
+    "document_type": "court_opinion"
+  },
+  {
+    "id": "legal_002",
+    "text": "The Seller agrees to transfer all rights, title, and interest in the Property to the Buyer upon execution of this Agreement. The conveyance shall be completed no later than sixty days following the signing of this contract. The Buyer shall deposit the purchase price into escrow within ten business days. If the Buyer fails to make the deposit, the Seller may terminate this Agreement and retain the earnest money as liquidated damages.",
+    "document_type": "contract"
+  },
+  {
+    "id": "legal_003",
+    "text": "On June 3, 2021, Officer Martinez observed the defendant operating a motor vehicle at excessive speed on Interstate 95. The officer initiated a traffic stop and, upon approaching the vehicle, detected the odor of marijuana. A subsequent search of the vehicle revealed approximately two pounds of a controlled substance. The defendant was placed under arrest and transported to the county detention facility. The defendant was charged with possession with intent to distribute.",
+    "document_type": "court_opinion"
+  },
+  {
+    "id": "legal_004",
+    "text": "Any person who knowingly and willfully makes or causes to be made any false statement or representation of a material fact in any application for benefits under this title shall be guilty of a felony. Upon conviction, such person shall be fined not more than $250,000 or imprisoned for not more than five years, or both. The penalties prescribed herein shall apply to each instance of fraudulent conduct.",
+    "document_type": "statute"
+  },
+  {
+    "id": "legal_005",
+    "text": "The employer terminated the plaintiff's employment on September 30, 2022, citing poor performance as the basis for the dismissal. The plaintiff alleges that the termination was retaliatory and occurred within weeks of her filing a workplace safety complaint. The plaintiff had reported unsafe working conditions to OSHA on September 10, 2022. The employer denies that the firing was connected to the complaint and maintains that the decision to terminate was based solely on documented performance deficiencies.",
+    "document_type": "court_opinion"
+  },
+  {
+    "id": "legal_006",
+    "text": "The Licensee is hereby granted a non-exclusive license to use the Software for internal business purposes only. The Licensee shall not sublicense, distribute, or make the Software available to any third party without prior written consent. In the event that the Licensee breaches any provision of this Agreement, the Licensor may revoke the license immediately upon written notice. The revocation shall not relieve the Licensee of any obligations incurred prior to the termination.",
+    "document_type": "contract"
+  },
+  {
+    "id": "legal_007",
+    "text": "The Board of Directors approved the merger at a special meeting held on November 5, 2023. Shareholders were notified of the proposed acquisition on November 12, 2023. A shareholder vote was conducted on December 15, 2023, and the merger was approved by a margin of 78% to 22%. The consolidation was completed on January 31, 2024, when all outstanding shares were converted into shares of the acquiring entity. The SEC had granted regulatory approval for the transaction on January 15, 2024.",
+    "document_type": "court_opinion"
+  },
+  {
+    "id": "legal_008",
+    "text": "The parties agree to submit any dispute arising under this Agreement to binding arbitration in accordance with the rules of the American Arbitration Association. The arbitration shall take place in New York, New York. Each party shall bear its own costs and attorneys' fees in connection with the arbitration. The arbitrator's decision shall be final and binding, and judgment on the award may be entered in any court of competent jurisdiction.",
+    "document_type": "contract"
+  },
+  {
+    "id": "legal_009",
+    "text": "The court finds that the defendant's actions constituted a willful violation of the Clean Water Act. The defendant discharged pollutants into the river on multiple occasions between 2019 and 2022. The contamination caused significant harm to the local ecosystem. The court orders the defendant to pay a civil penalty of $1.5 million and to undertake remediation of the affected waterways. The defendant's failure to comply with the remediation order may result in additional sanctions.",
+    "document_type": "court_opinion"
+  },
+  {
+    "id": "legal_010",
+    "text": "No employee shall engage in any activity that creates a conflict of interest with the duties and responsibilities of their position. Any employee who becomes aware of a potential conflict shall promptly disclose the matter to the Ethics Committee. The Committee shall investigate the disclosure and issue a determination within thirty days. An employee who fails to report a conflict of interest shall be subject to disciplinary action, up to and including termination of employment.",
+    "document_type": "statute"
+  }
+]

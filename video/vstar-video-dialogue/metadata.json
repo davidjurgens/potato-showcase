@@ -1,0 +1,23 @@
+{
+  "title": "VSTAR Video-grounded Dialogue",
+  "description": "Video-grounded dialogue annotation. Annotators watch videos and answer questions requiring situated understanding, write dialogue turns grounded in specific video moments, and mark relevant temporal segments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["video_annotation", "text", "radio"],
+  "domain": ["Computer Vision", "Video Understanding", "Dialogue"],
+  "useCase": ["Video QA", "Dialogue Generation", "Temporal Grounding"],
+  "complexity": "advanced",
+  "tags": ["video", "dialogue", "grounding", "question-answering", "temporal", "situated-understanding", "vstar"],
+  "featured": false,
+  "paperReference": "Wang et al., ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.acl-long.276/",
+  "datasetUrl": "https://github.com/Yuxuan-W/VSTAR",
+  "citation": "@inproceedings{wang2023vstar,\n  title={VSTAR: A Video-grounded Dialogue Dataset for Situated Semantic Understanding with Scene and Topic Transitions},\n  author={Wang, Yuxuan and Liang, Zilong and Zhang, Xin Eric and Feng, Yutong},\n  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics},\n  pages={5004--5024},\n  year={2023}\n}"
+}

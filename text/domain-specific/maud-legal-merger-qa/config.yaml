@@ -1,0 +1,92 @@
+# MAUD: Legal Merger Agreement Understanding
+# Based on Wang et al., EMNLP 2023
+# Paper: https://aclanthology.org/2023.emnlp-main.1009/
+# Dataset: https://github.com/TheAtticusProject/maud
+#
+# Task: Legal document understanding for merger agreements
+# Annotators identify key clauses and answer structured questions
+# about deal terms in M&A agreements.
+#
+# Two-step annotation:
+# 1. Highlight the relevant clause span(s) answering the question
+# 2. Select the structured answer category for the question
+#
+# Categories cover: Deal Protection, Conditions to Closing,
+# Material Adverse Effect, Termination, Representations & Warranties
+
+port: 8000
+server_name: localhost
+task_name: "MAUD: Legal Merger Agreement Understanding"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify relevant clause spans
+  - annotation_type: span
+    name: clause_span
+    description: "Highlight the clause or provision that answers the question"
+    labels:
+      - "Deal Protection"
+      - "Conditions to Closing"
+      - "Material Adverse Effect"
+      - "Termination"
+      - "Representations & Warranties"
+      - "Indemnification"
+    label_colors:
+      "Deal Protection": "#3b82f6"
+      "Conditions to Closing": "#22c55e"
+      "Material Adverse Effect": "#ef4444"
+      "Termination": "#f97316"
+      "Representations & Warranties": "#8b5cf6"
+      "Indemnification": "#eab308"
+    tooltips:
+      "Deal Protection": "Provisions protecting the deal (no-shop, matching rights, break-up fees)"
+      "Conditions to Closing": "Conditions that must be satisfied before closing (regulatory approval, shareholder vote)"
+      "Material Adverse Effect": "Clauses defining or referencing material adverse effects/changes"
+      "Termination": "Provisions related to termination rights, fees, or conditions"
+      "Representations & Warranties": "Statements of fact about the company (financial, legal, operational)"
+      "Indemnification": "Provisions for indemnification, liability, or damage recovery"
+    allow_overlapping: false
+
+  # Step 2: Structured answer to the legal question
+  - annotation_type: radio
+    name: answer
+    description: "Based on the clause, select the answer to the question shown above"
+    labels:
+      - "Yes"
+      - "No"
+      - "Partial / Qualified"
+      - "Not Addressed"
+      - "Ambiguous"
+    keyboard_shortcuts:
+      "Yes": "y"
+      "No": "n"
+      "Partial / Qualified": "p"
+      "Not Addressed": "a"
+      "Ambiguous": "b"
+    tooltips:
+      "Yes": "The agreement clearly and fully addresses the question in the affirmative"
+      "No": "The agreement clearly addresses the question in the negative"
+      "Partial / Qualified": "The agreement addresses the question but with qualifications, exceptions, or limitations"
+      "Not Addressed": "The agreement does not contain a provision addressing this question"
+      "Ambiguous": "The language is unclear or could be interpreted in multiple ways"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 10px; background: #f0f4ff; border-radius: 6px;">
+    <strong>Category:</strong> {{category}}<br/>
+    <strong>Question:</strong> {{question}}
+  </div>
+  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

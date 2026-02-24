@@ -1,0 +1,23 @@
+{
+  "title": "RadGraph-XL: Radiology Entity and Relation Extraction",
+  "description": "Entity and relation extraction from radiology reports. Annotators identify clinical entities (Anatomy, Observation, Medical Device, Procedure, Descriptor) and label relations between them (located_at, suggestive_of, modify, part_of).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Khanna et al.",
+    "email": "jurgens@umich.edu",
+    "github": "StanfordMIMI",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking"],
+  "domain": ["NLP", "Medical/Clinical", "Radiology"],
+  "useCase": ["Relation Extraction", "Clinical NLP", "Radiology Report Understanding"],
+  "complexity": "advanced",
+  "tags": ["radiology", "relation-extraction", "clinical", "medical", "radgraph", "acl2024", "healthcare"],
+  "featured": false,
+  "paperReference": "Khanna et al., Findings ACL 2024",
+  "paperUrl": "https://aclanthology.org/2024.findings-acl.765/",
+  "datasetUrl": "https://physionet.org/content/radgraph-xl/",
+  "citation": "@inproceedings{khanna-etal-2024-radgraph,\n    title = \"{RadGraph-XL}: A Large-Scale Expert-Annotated Dataset for Entity and Relation Extraction from Radiology Reports\",\n    author = \"Khanna, Jean-Benoit  and Kahn Jr., Charles E.  and Langlotz, Curtis P.  and Rajpurkar, Pranav\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2024\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.findings-acl.765\"\n}"
+}

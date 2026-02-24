@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wavcaps_001",
+    "audio_url": "https://example.com/audio/wavcaps/urban_street_001.wav",
+    "duration": 10.0,
+    "source": "Freesound"
+  },
+  {
+    "id": "wavcaps_002",
+    "audio_url": "https://example.com/audio/wavcaps/kitchen_cooking_001.wav",
+    "duration": 8.5,
+    "source": "AudioSet"
+  },
+  {
+    "id": "wavcaps_003",
+    "audio_url": "https://example.com/audio/wavcaps/forest_birds_001.wav",
+    "duration": 12.3,
+    "source": "Freesound"
+  },
+  {
+    "id": "wavcaps_004",
+    "audio_url": "https://example.com/audio/wavcaps/thunderstorm_001.wav",
+    "duration": 15.0,
+    "source": "BBC Sound Effects"
+  },
+  {
+    "id": "wavcaps_005",
+    "audio_url": "https://example.com/audio/wavcaps/construction_site_001.wav",
+    "duration": 9.7,
+    "source": "AudioSet"
+  },
+  {
+    "id": "wavcaps_006",
+    "audio_url": "https://example.com/audio/wavcaps/playground_children_001.wav",
+    "duration": 11.2,
+    "source": "Freesound"
+  },
+  {
+    "id": "wavcaps_007",
+    "audio_url": "https://example.com/audio/wavcaps/ocean_waves_001.wav",
+    "duration": 14.8,
+    "source": "SoundBible"
+  },
+  {
+    "id": "wavcaps_008",
+    "audio_url": "https://example.com/audio/wavcaps/coffee_shop_001.wav",
+    "duration": 10.5,
+    "source": "Freesound"
+  },
+  {
+    "id": "wavcaps_009",
+    "audio_url": "https://example.com/audio/wavcaps/train_station_001.wav",
+    "duration": 13.1,
+    "source": "BBC Sound Effects"
+  },
+  {
+    "id": "wavcaps_010",
+    "audio_url": "https://example.com/audio/wavcaps/rainy_window_001.wav",
+    "duration": 8.9,
+    "source": "Freesound"
+  }
+]

@@ -1,0 +1,93 @@
+# FLUTE: Figurative Language Understanding through Textual Explanations
+# Based on Chakrabarty et al., EMNLP 2022
+# Paper: https://aclanthology.org/2022.emnlp-main.481/
+# Dataset: https://github.com/google/FLUTE
+#
+# This task combines figurative language classification with NLI.
+# Annotators see a premise containing figurative language and a literal
+# hypothesis, then classify the entailment relationship, identify the
+# type of figurative language, and provide an explanation.
+#
+# NLI Labels:
+# - Entailment: The hypothesis follows from the figurative meaning
+# - Contradiction: The hypothesis contradicts the figurative meaning
+# - Neutral: The hypothesis is unrelated to the figurative meaning
+#
+# Figurative Language Types:
+# - Sarcasm: Saying the opposite of what is meant, often with irony
+# - Simile: Explicit comparison using "like" or "as"
+# - Metaphor: Implicit comparison without "like" or "as"
+# - Idiom: Fixed expression with non-compositional meaning
+#
+# Annotation Guidelines:
+# 1. Read the premise and identify the figurative expression
+# 2. Determine what the figurative expression actually means
+# 3. Classify the NLI relationship based on the figurative meaning
+# 4. Select all applicable figurative language types
+# 5. Write an explanation of what the figurative language means literally
+
+port: 8000
+server_name: localhost
+task_name: "FLUTE: Figurative Language NLI"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Entailment label
+  - annotation_type: radio
+    name: entailment_label
+    description: "Based on the figurative meaning of the PREMISE, what is the relationship with the HYPOTHESIS?"
+    labels:
+      - "Entailment"
+      - "Contradiction"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Entailment": "e"
+      "Contradiction": "c"
+      "Neutral": "n"
+    tooltips:
+      "Entailment": "The hypothesis follows from the intended (figurative) meaning of the premise"
+      "Contradiction": "The hypothesis contradicts the intended (figurative) meaning of the premise"
+      "Neutral": "The hypothesis is not clearly supported or contradicted by the figurative meaning"
+
+  # Step 2: Figurative language type
+  - annotation_type: multiselect
+    name: figure_type
+    description: "What type(s) of figurative language are present in the premise? (select all that apply)"
+    labels:
+      - "Sarcasm"
+      - "Simile"
+      - "Metaphor"
+      - "Idiom"
+    tooltips:
+      "Sarcasm": "The speaker says the opposite of what they mean, often with mocking or ironic intent"
+      "Simile": "An explicit comparison using 'like' or 'as' (e.g., 'fast as lightning')"
+      "Metaphor": "An implicit comparison without 'like' or 'as' (e.g., 'time is money')"
+      "Idiom": "A fixed expression with non-literal meaning (e.g., 'break the ice')"
+
+  # Step 3: Explanation of figurative meaning
+  - annotation_type: text
+    name: explanation
+    description: "Explain what the figurative language in the premise literally means and how it relates to the hypothesis"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 10px; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;">
+    <strong>Premise:</strong> {{text}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
+    <strong>Hypothesis:</strong> {{hypothesis}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 6px; background: #fefce8; border-radius: 4px;">
+    <em>Figurative type hint:</em> {{figure_type}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 80
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

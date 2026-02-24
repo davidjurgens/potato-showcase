@@ -1,0 +1,23 @@
+{
+  "title": "AnnoMI Counselling Dialogue Annotation",
+  "description": "Annotation of motivational interviewing counselling dialogues based on the AnnoMI dataset. Annotators label therapist and client utterances for MI techniques (open questions, reflections, affirmations) and client change talk (sustain talk, change talk), with quality ratings for therapeutic interactions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "uccollab",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "multiselect", "likert"],
+  "domain": ["NLP", "Mental Health", "Counselling"],
+  "useCase": ["Motivational Interviewing Analysis", "Therapist Training", "Counselling Quality Assessment"],
+  "complexity": "advanced",
+  "tags": ["counselling", "motivational-interviewing", "mental-health", "dialogue", "change-talk", "therapy"],
+  "featured": false,
+  "paperReference": "Wu et al., ICASSP 2022",
+  "paperUrl": "https://ieeexplore.ieee.org/document/9746035",
+  "datasetUrl": "https://github.com/uccollab/AnnoMI",
+  "citation": "@inproceedings{wu2022annomi,\n    title = \"{A}nno{MI}: A Dataset of Expert-Annotated Counselling Dialogues\",\n    author = \"Wu, Zixiu  and Balloccu, Simone  and Kumar, Vivek  and Helaoui, Rim  and Reiter, Ehud  and Recupero, Diego Reforgiato  and Riboni, Daniele\",\n    booktitle = \"IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)\",\n    year = \"2022\",\n    publisher = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/9746035\"\n}"
+}

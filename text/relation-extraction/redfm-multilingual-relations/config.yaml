@@ -1,0 +1,142 @@
+# REDFM: Filtered and Multilingual Relation Extraction
+# Based on Huguet Cabot et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.367/
+# Dataset: https://huggingface.co/datasets/DFKI-SLT/REDFM
+#
+# REDFM is a large-scale multilingual relation extraction dataset derived
+# from Wikidata, covering 20+ languages with curated relation types.
+# The dataset uses distant supervision from Wikidata, with filtering
+# to reduce noise and improve annotation quality.
+#
+# Languages include: English, French, German, Spanish, Italian, Portuguese,
+# Chinese, Japanese, Korean, Arabic, Hindi, Russian, and more.
+#
+# Entity Types:
+# - Person, Organization, Location, Date, Event, Work, Other
+#
+# Relation Types (subset of common Wikidata properties):
+# - country (P17): Located in country
+# - instance_of (P31): Is an instance of
+# - part_of (P361): Is a part of
+# - occupation (P106): Has occupation
+# - located_in (P131): Located in administrative entity
+# - birth_place (P19): Place of birth
+# - death_place (P20): Place of death
+# - nationality (P27): Country of citizenship
+# - employer (P108): Employed by
+# - educated_at (P69): Educated at institution
+# - author (P50): Author of work
+# - genre (P136): Genre of work
+# - capital (P36): Capital city of
+# - language (P407): Language of work or name
+# - inception (P571): Date of inception
+#
+# Annotation Guidelines:
+# 1. Read the sentence and note the language
+# 2. Verify that subject and object entity spans are correct
+# 3. Identify and label all entities in the text
+# 4. For each entity pair, select the Wikidata relation type
+# 5. If no relation applies, skip the pair
+
+port: 8000
+server_name: localhost
+task_name: "REDFM: Multilingual Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify and verify entity spans
+  - annotation_type: span
+    name: entities
+    description: "Highlight all entities in the text and verify subject/object spans"
+    labels:
+      - "Person"
+      - "Organization"
+      - "Location"
+      - "Date"
+      - "Event"
+      - "Work"
+      - "Other"
+    label_colors:
+      "Person": "#3b82f6"
+      "Organization": "#22c55e"
+      "Location": "#ef4444"
+      "Date": "#8b5cf6"
+      "Event": "#f59e0b"
+      "Work": "#06b6d4"
+      "Other": "#6b7280"
+    keyboard_shortcuts:
+      "Person": "1"
+      "Organization": "2"
+      "Location": "3"
+      "Date": "4"
+      "Event": "5"
+      "Work": "6"
+      "Other": "7"
+    tooltips:
+      "Person": "Names of people (any language)"
+      "Organization": "Companies, institutions, governments, groups"
+      "Location": "Countries, cities, geographic features, addresses"
+      "Date": "Dates, years, time periods"
+      "Event": "Named events, wars, elections, festivals"
+      "Work": "Books, films, songs, artworks, software"
+      "Other": "Entities not fitting other categories"
+    allow_overlapping: false
+
+  # Step 2: Link entities with Wikidata relation types
+  - annotation_type: span_linking
+    name: wikidata_relations
+    description: "Draw relations between entity pairs using Wikidata property types"
+    labels:
+      - "country (P17)"
+      - "instance_of (P31)"
+      - "part_of (P361)"
+      - "occupation (P106)"
+      - "located_in (P131)"
+      - "birth_place (P19)"
+      - "death_place (P20)"
+      - "nationality (P27)"
+      - "employer (P108)"
+      - "educated_at (P69)"
+      - "author (P50)"
+      - "genre (P136)"
+      - "capital (P36)"
+      - "language (P407)"
+      - "inception (P571)"
+    tooltips:
+      "country (P17)": "Entity is located in or belongs to this country"
+      "instance_of (P31)": "Entity is an instance of a class or type"
+      "part_of (P361)": "Entity is a part or component of another entity"
+      "occupation (P106)": "Person has this occupation or profession"
+      "located_in (P131)": "Entity is located in this administrative territory"
+      "birth_place (P19)": "Person was born in this location"
+      "death_place (P20)": "Person died in this location"
+      "nationality (P27)": "Person holds citizenship of this country"
+      "employer (P108)": "Person is employed by this organization"
+      "educated_at (P69)": "Person was educated at this institution"
+      "author (P50)": "Work was authored by this person"
+      "genre (P136)": "Work belongs to this genre or category"
+      "capital (P36)": "Location is the capital of this entity"
+      "language (P407)": "Work or name is in this language"
+      "inception (P571)": "Entity was created or founded at this date"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Language:</strong> {{language}} |
+    <strong>Subject:</strong> {{subject_entity}} |
+    <strong>Object:</strong> {{object_entity}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.6;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

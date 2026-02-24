@@ -1,0 +1,52 @@
+# WavCaps - Audio Captioning
+# Based on Mei et al., IEEE TASLP 2024
+# Paper: https://ieeexplore.ieee.org/document/10637816
+# Dataset: https://github.com/XinhaoMei/WavCaps
+#
+# Task: Write natural language descriptions of audio content.
+# Listen to audio clips and write detailed captions describing all sounds,
+# events, and acoustic scenes.
+#
+# Guidelines:
+# - Listen to the full audio clip before writing a caption
+# - Describe all notable sounds, events, and background ambience
+# - Use clear, concise natural language
+# - Include temporal information if relevant (e.g., "A dog barks, then a door slams")
+# - List individual sound events separately in the sound events field
+
+port: 8000
+server_name: localhost
+task_name: "WavCaps: Audio Captioning"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: text
+    name: caption
+    description: "Write a detailed natural language caption describing the audio content. Include all sounds, events, and acoustic scenes you hear."
+    min_length: 10
+    max_length: 500
+    placeholder: "Describe what you hear in this audio clip..."
+
+  - annotation_type: text
+    name: sound_events
+    description: "List the individual sound events heard in the clip, separated by commas (e.g., 'dog barking, car engine, wind blowing')"
+    min_length: 3
+    max_length: 300
+    placeholder: "List sound events separated by commas..."
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,143 @@
+# AnnoMI Counselling Dialogue Annotation
+# Based on Wu et al., ICASSP 2022
+# Paper: https://ieeexplore.ieee.org/document/9746035
+# Dataset: https://github.com/uccollab/AnnoMI
+#
+# Task: Annotate motivational interviewing counselling dialogues.
+# Label therapist utterances for MI behavior codes and client utterances
+# for change talk / sustain talk categories.
+#
+# MI Behavior Codes (Therapist):
+# - Open Question: Questions that invite elaboration
+# - Closed Question: Questions with limited answer options
+# - Simple Reflection: Repeating/rephrasing what client said
+# - Complex Reflection: Adding meaning, emphasis, or interpretation
+# - Affirmation: Acknowledging client's strengths or efforts
+# - Giving Information: Providing educational content
+# - Advise with Permission: Offering advice with client's agreement
+#
+# Change Talk Categories (Client):
+# - Change Talk: Statements favoring change (desire, ability, reasons, need, commitment)
+# - Sustain Talk: Statements favoring status quo
+# - Neutral: Neither change talk nor sustain talk
+
+port: 8000
+server_name: localhost
+task_name: "AnnoMI Counselling Dialogue Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+context_key: dialogue_context
+
+output_file: annotations.json
+
+annotation_schemes:
+  # MI behavior code (for therapist turns) or change talk type (for client turns)
+  - annotation_type: radio
+    name: behavior_code
+    description: "Select the MI behavior code (therapist) or change talk type (client) for this utterance"
+    labels:
+      # Therapist codes
+      - "Open Question"
+      - "Closed Question"
+      - "Simple Reflection"
+      - "Complex Reflection"
+      - "Affirmation"
+      - "Giving Information"
+      - "Advise with Permission"
+      - "Confront"
+      - "Direct"
+      # Client codes
+      - "Change Talk - Desire"
+      - "Change Talk - Ability"
+      - "Change Talk - Reasons"
+      - "Change Talk - Need"
+      - "Change Talk - Commitment"
+      - "Sustain Talk"
+      - "Neutral/Follow"
+    keyboard_shortcuts:
+      "Open Question": "o"
+      "Closed Question": "c"
+      "Simple Reflection": "s"
+      "Complex Reflection": "x"
+      "Affirmation": "a"
+      "Change Talk - Desire": "d"
+      "Change Talk - Commitment": "k"
+      "Sustain Talk": "u"
+      "Neutral/Follow": "n"
+    tooltips:
+      "Open Question": "Questions that cannot be answered with yes/no and invite the client to elaborate"
+      "Closed Question": "Questions that can be answered with a short response or yes/no"
+      "Simple Reflection": "Repeating or slightly rephrasing what the client has said"
+      "Complex Reflection": "Reflecting with added meaning, emphasis, metaphor, or a new interpretation"
+      "Affirmation": "Statements that recognize client strengths, efforts, or positive behaviors"
+      "Giving Information": "Providing factual or educational information without directing behavior"
+      "Advise with Permission": "Offering suggestions or advice after asking or receiving the client's permission"
+      "Confront": "Directly challenging or arguing against the client (MI non-adherent)"
+      "Direct": "Giving orders, commands, or directing the client without permission (MI non-adherent)"
+      "Change Talk - Desire": "Client expresses wanting to change ('I wish I could...', 'I want to...')"
+      "Change Talk - Ability": "Client expresses ability to change ('I could...', 'I'm able to...')"
+      "Change Talk - Reasons": "Client provides reasons for change ('It would be better for my health...')"
+      "Change Talk - Need": "Client expresses need to change ('I need to...', 'I have to...')"
+      "Change Talk - Commitment": "Client expresses commitment to change ('I will...', 'I'm going to...')"
+      "Sustain Talk": "Client argues for maintaining the status quo or against change"
+      "Neutral/Follow": "Client provides information or follows along without clear change or sustain talk"
+
+  # MI techniques observed (multiselect)
+  - annotation_type: multiselect
+    name: techniques
+    description: "Select all MI-consistent or MI-inconsistent techniques observed"
+    labels:
+      - "Empathy"
+      - "Autonomy Support"
+      - "Collaboration"
+      - "Evocation"
+      - "Rolling with Resistance"
+      - "Developing Discrepancy"
+      - "Normalizing"
+      - "Decisional Balance"
+      - "Elicit-Provide-Elicit"
+      - "Confrontation (MI-inconsistent)"
+      - "Unsolicited Advice (MI-inconsistent)"
+      - "None Notable"
+    tooltips:
+      "Empathy": "Speaker demonstrates understanding of the other's perspective"
+      "Autonomy Support": "Therapist supports the client's autonomy and right to choose"
+      "Collaboration": "Therapist works with rather than directing the client"
+      "Evocation": "Therapist draws out the client's own motivations for change"
+      "Rolling with Resistance": "Therapist avoids arguing and reframes resistance"
+      "Developing Discrepancy": "Therapist helps client see gap between current behavior and goals"
+      "Normalizing": "Therapist normalizes the client's experience or ambivalence"
+      "Decisional Balance": "Exploring pros and cons of change and status quo"
+      "Elicit-Provide-Elicit": "Asking what client knows, sharing information, then asking for reaction"
+      "Confrontation (MI-inconsistent)": "Therapist directly confronts or argues with client"
+      "Unsolicited Advice (MI-inconsistent)": "Therapist gives advice without permission"
+      "None Notable": "No specific MI techniques observed in this utterance"
+
+  # Quality rating
+  - annotation_type: likert
+    name: quality
+    description: "Rate the MI quality of this utterance (1=poor MI adherence, 5=excellent MI adherence)"
+    size: 5
+    min_label: "1 - Poor MI adherence"
+    max_label: "5 - Excellent MI adherence"
+    labels:
+      - "1 - MI non-adherent: confrontational, directive, or dismissive"
+      - "2 - Below average: minimal MI skill demonstrated"
+      - "3 - Adequate: basic MI skills present but room for improvement"
+      - "4 - Good: clear MI-consistent behavior with minor gaps"
+      - "5 - Excellent: exemplary MI practice, skillful and empathic"
+    keyboard_shortcuts:
+      "1 - MI non-adherent: confrontational, directive, or dismissive": "1"
+      "2 - Below average: minimal MI skill demonstrated": "2"
+      "3 - Adequate: basic MI skills present but room for improvement": "3"
+      "4 - Good: clear MI-consistent behavior with minor gaps": "4"
+      "5 - Excellent: exemplary MI practice, skillful and empathic": "5"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

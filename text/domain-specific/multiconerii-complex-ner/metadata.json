@@ -1,0 +1,23 @@
+{
+  "title": "MultiCoNER II: Multilingual Complex Named Entity Recognition",
+  "description": "Complex and ambiguous named entity recognition across 12 languages. Annotators identify fine-grained entity types including creative works, groups, medical terms, and complex entities that require world knowledge. Based on the SemEval-2023 Task 2 shared task for multilingual complex NER.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Fetahu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "multiconer",
+    "affiliation": "Amazon"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span"],
+  "domain": ["NLP", "Named Entity Recognition", "Multilingual"],
+  "useCase": ["Named Entity Recognition", "Multilingual NLP", "Knowledge Base Population"],
+  "complexity": "intermediate",
+  "tags": ["ner", "multilingual", "multiconer", "semeval2023", "complex-entities", "fine-grained-ner"],
+  "featured": false,
+  "paperReference": "Fetahu et al., SemEval@ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.281/",
+  "datasetUrl": "https://multiconer.github.io/dataset",
+  "citation": "@inproceedings{fetahu-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 2: Fine-Grained Multilingual Named Entity Recognition ({M}ulti{C}o{NER} 2)\",\n    author = \"Fetahu, Besnik  and Kar, Sudipta  and Chen, Zhiyu  and Rokhlenko, Oleg  and Malmasi, Shervin\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.281\",\n    pages = \"2017--2038\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "FLUTE: Figurative Language Understanding through Textual Explanations",
+  "description": "Figurative language understanding via NLI. Annotators classify figurative sentences (sarcasm, simile, metaphor, idiom) and provide textual explanations of the figurative meaning. The task combines natural language inference with fine-grained figurative language type classification.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chakrabarty et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google",
+    "affiliation": "Columbia University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "text", "multiselect"],
+  "domain": ["NLP", "Figurative Language", "NLI"],
+  "useCase": ["Figurative Language Understanding", "Natural Language Inference", "Explanation Generation"],
+  "complexity": "intermediate",
+  "tags": ["figurative-language", "sarcasm", "metaphor", "simile", "idiom", "nli", "emnlp2022", "explanation"],
+  "featured": false,
+  "paperReference": "Chakrabarty et al., EMNLP 2022",
+  "paperUrl": "https://aclanthology.org/2022.emnlp-main.481/",
+  "datasetUrl": "https://github.com/google/FLUTE",
+  "citation": "@inproceedings{chakrabarty-etal-2022-flute,\n    title = \"{FLUTE}: Figurative Language Understanding through Textual Explanations\",\n    author = \"Chakrabarty, Tuhin  and Saakyan, Arkadiy  and Ghosh, Debanjan  and Muresan, Smaranda\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.emnlp-main.481\",\n    pages = \"7139--7159\"\n}"
+}

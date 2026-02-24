@@ -1,0 +1,115 @@
+# ESA: Error Span Annotation for Machine Translation
+# Based on "Error Span Annotation for Machine Translation Evaluation" (Kocmi et al., WMT@EMNLP 2024)
+# Task: Identify error spans in translations, classify error types, and rate severity
+
+port: 8000
+server_name: localhost
+task_name: "ESA: Error Span Annotation for MT"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing source and translation
+html_layout: |
+  <div class="esa-container">
+    <div class="source-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">Source Text ({{language_pair}}):</h3>
+      <div class="source-text" style="font-size: 16px; line-height: 1.6;">{{source_text}}</div>
+    </div>
+    <div class="translation-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
+      <h3 style="margin-top: 0; color: #1976d2;">Translation (select error spans below):</h3>
+      <div class="translation-text" style="font-size: 16px; line-height: 1.6;">{{text}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Span annotation for error identification
+  - name: "error_spans"
+    description: "Select spans in the translation that contain errors. Highlight each error span individually."
+    annotation_type: span
+    labels:
+      - "Accuracy - Mistranslation"
+      - "Accuracy - Omission"
+      - "Accuracy - Addition"
+      - "Fluency - Grammar"
+      - "Fluency - Spelling/Punctuation"
+      - "Fluency - Register"
+      - "Terminology"
+      - "Style"
+    label_colors:
+      "Accuracy - Mistranslation": "#ff5252"
+      "Accuracy - Omission": "#ff7043"
+      "Accuracy - Addition": "#ff9800"
+      "Fluency - Grammar": "#ab47bc"
+      "Fluency - Spelling/Punctuation": "#7e57c2"
+      "Fluency - Register": "#5c6bc0"
+      "Terminology": "#26a69a"
+      "Style": "#78909c"
+
+  # Error type classification
+  - name: "primary_error_type"
+    description: "What is the primary (most severe) error type in this translation?"
+    annotation_type: radio
+    labels:
+      - "Accuracy"
+      - "Fluency"
+      - "Terminology"
+      - "Style"
+      - "No errors found"
+    keyboard_shortcuts:
+      "Accuracy": "1"
+      "Fluency": "2"
+      "Terminology": "3"
+      "Style": "4"
+      "No errors found": "0"
+
+  # Severity rating
+  - name: "error_severity"
+    description: "Rate the overall severity of errors in this translation."
+    annotation_type: likert
+    size: 5
+    min_label: "1 - No errors"
+    max_label: "5 - Critical errors"
+    labels:
+      - "1 - No errors (perfect translation)"
+      - "2 - Minor errors (meaning preserved)"
+      - "3 - Moderate errors (some meaning lost)"
+      - "4 - Major errors (significant meaning loss)"
+      - "5 - Critical errors (wrong or incomprehensible)"
+    keyboard_shortcuts:
+      "1 - No errors (perfect translation)": "q"
+      "2 - Minor errors (meaning preserved)": "w"
+      "3 - Moderate errors (some meaning lost)": "e"
+      "4 - Major errors (significant meaning loss)": "r"
+      "5 - Critical errors (wrong or incomprehensible)": "t"
+
+  # Overall quality rating
+  - name: "overall_quality"
+    description: "Rate the overall translation quality."
+    annotation_type: radio
+    labels:
+      - "Perfect"
+      - "Good"
+      - "Acceptable"
+      - "Poor"
+      - "Unacceptable"
+    keyboard_shortcuts:
+      "Perfect": "z"
+      "Good": "x"
+      "Acceptable": "c"
+      "Poor": "v"
+      "Unacceptable": "b"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 100
+annotation_per_instance: 2

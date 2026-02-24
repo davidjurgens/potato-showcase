@@ -1,0 +1,52 @@
+[
+  {
+    "id": "fava_001",
+    "text": "The Eiffel Tower was built in 1889 for the World's Fair in Paris. Designed by Alexandre Gustave Eiffel, it stands 324 meters tall and was originally intended as a permanent monument to French engineering. It is the most visited paid monument in the world, attracting over 7 million visitors annually.",
+    "source_text": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris. It was constructed from 1887 to 1889 as the centerpiece of the 1889 World's Fair. Named after engineer Gustave Eiffel, whose company designed and built the tower, it stands 330 metres tall. The tower was originally intended to be dismantled after 20 years but was saved because of its usefulness as a radio transmission tower. It is the most visited paid monument in the world, with 6.91 million visitors in 2015."
+  },
+  {
+    "id": "fava_002",
+    "text": "The Great Wall of China was primarily built during the Ming Dynasty between 1368 and 1644. It stretches approximately 13,000 miles across northern China. The wall was constructed to protect against invasions from Mongol tribes. It is visible from space with the naked eye and is one of the most impressive architectural feats in human history.",
+    "source_text": "The Great Wall of China is a series of fortifications built along the historical northern borders of China. While walls were built as early as the 7th century BC, the most well-known sections were built during the Ming Dynasty (1368-1644). The total length of all sections ever built is approximately 13,171 miles (21,196 km). The wall was built primarily to protect Chinese states and empires against various nomadic groups. Contrary to popular belief, the Great Wall is not visible from space with the naked eye under normal conditions, according to astronauts."
+  },
+  {
+    "id": "fava_003",
+    "text": "Marie Curie was born Maria Sklodowska in Warsaw, Poland in 1867. She moved to Paris to study physics at the Sorbonne and married Pierre Curie in 1895. Together, they discovered the elements polonium and radium. She won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1915. She died of aplastic anemia in 1934, likely caused by radiation exposure.",
+    "source_text": "Marie Sklodowska Curie (1867-1934) was a Polish-French physicist and chemist born in Warsaw. She enrolled at the University of Paris (Sorbonne) in 1891 and married fellow physicist Pierre Curie in 1895. The couple discovered polonium and radium in 1898. Marie Curie received the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel. In 1911, she received the Nobel Prize in Chemistry. She died on 4 July 1934 from aplastic anemia, believed to have been caused by prolonged exposure to radiation."
+  },
+  {
+    "id": "fava_004",
+    "text": "The Amazon River is the longest river in the world at approximately 6,400 kilometers. It flows through Brazil, Peru, and Colombia before emptying into the Atlantic Ocean. The Amazon basin contains the largest tropical rainforest on Earth, covering about 5.5 million square kilometers. The river is home to more than 3,000 species of fish, including piranhas and the Amazon river dolphin.",
+    "source_text": "The Amazon River is one of the longest rivers in the world, with a length of approximately 6,400 km. The Nile River is generally considered the longest at approximately 6,650 km, though some measurements place the Amazon as longer. The Amazon flows through Peru, Colombia, and Brazil, emptying into the Atlantic Ocean. The Amazon basin is the largest drainage basin in the world, with the tropical rainforest covering approximately 5.5 million square kilometers. The river system supports extraordinary biodiversity, including over 3,000 known fish species such as piranhas, arapaima, and the Amazon river dolphin (boto)."
+  },
+  {
+    "id": "fava_005",
+    "text": "Vincent van Gogh was a Dutch Post-Impressionist painter who lived from 1853 to 1890. He produced approximately 2,100 artworks during his lifetime, including over 860 oil paintings. His most famous work, Starry Night, was painted in 1889 while he was staying at a hospital in Arles, France. Van Gogh sold only one painting during his lifetime and struggled with poverty throughout his career.",
+    "source_text": "Vincent Willem van Gogh (1853-1890) was a Dutch Post-Impressionist painter. During approximately the last ten years of his life, he created about 2,100 artworks, including around 860 oil paintings. His painting The Starry Night (1889) was created while he was a patient at the Saint-Paul-de-Mausole asylum in Saint-Remy-de-Provence, France. It is widely believed that van Gogh sold only one painting during his lifetime, The Red Vineyard, though recent research suggests he may have sold or traded a few others."
+  },
+  {
+    "id": "fava_006",
+    "text": "The International Space Station orbits Earth at an altitude of approximately 408 kilometers. It was first launched in 1998 as a joint project between NASA and the European Space Agency. The station has been continuously occupied since November 2000 and has hosted astronauts from 19 different countries. It travels at a speed of about 27,600 kilometers per hour, completing one orbit every 90 minutes.",
+    "source_text": "The International Space Station (ISS) orbits Earth at an average altitude of about 408 km. Assembly began in 1998 as a collaborative project involving five space agencies: NASA, Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada). The ISS has been continuously inhabited since November 2, 2000. It travels at approximately 27,600 km/h, completing an orbit of Earth roughly every 90 minutes. As of 2023, the station has been visited by astronauts and cosmonauts from 21 different countries."
+  },
+  {
+    "id": "fava_007",
+    "text": "Machu Picchu is an ancient Incan citadel located in the Andes Mountains of Peru. It was built around 1450 AD during the reign of Emperor Pachacuti and served as a royal estate. The site sits at an elevation of 2,430 meters above sea level. It was discovered by American explorer Hiram Bingham in 1911 and has since become Peru's most popular tourist destination, attracting about 1.5 million visitors each year.",
+    "source_text": "Machu Picchu is a 15th-century Incan citadel situated on a mountain ridge in the Eastern Cordillera of southern Peru, at an elevation of 2,430 metres. Most archaeologists believe it was built as an estate for the Inca emperor Pachacuti around 1450. The site was brought to international attention in 1911 by American historian and explorer Hiram Bingham III, though local people had known about it earlier. It is Peru's most visited tourist attraction, receiving approximately 1.5 million visitors annually."
+  },
+  {
+    "id": "fava_008",
+    "text": "The human brain contains approximately 86 billion neurons connected by trillions of synapses. It weighs about 1.4 kilograms and consumes roughly 20% of the body's total energy despite comprising only 2% of body weight. The brain is divided into two hemispheres, with the left hemisphere controlling language and logic and the right hemisphere governing creativity and spatial reasoning. The prefrontal cortex, responsible for decision-making, is not fully developed until around age 25.",
+    "source_text": "The human brain is composed of approximately 86 billion neurons, connected by roughly 100 trillion synapses. The average adult brain weighs about 1.4 kg and accounts for about 2% of total body weight while consuming approximately 20% of the body's energy. The brain is divided into two cerebral hemispheres. While the popular notion of strict left-brain/right-brain specialization is an oversimplification, language processing does tend to be lateralized to the left hemisphere in most people. Research indicates that the prefrontal cortex, involved in complex decision-making and impulse control, continues to develop until approximately age 25."
+  },
+  {
+    "id": "fava_009",
+    "text": "The Sahara Desert covers an area of approximately 9.2 million square kilometers, making it the largest hot desert in the world. Located in North Africa, it spans 11 countries including Egypt, Libya, Algeria, and Morocco. Average temperatures in the summer can exceed 50 degrees Celsius, while winter nights can drop below freezing. The Sahara was once a lush grassland approximately 5,000 to 11,000 years ago during the African Humid Period.",
+    "source_text": "The Sahara is the largest hot desert in the world and the third largest desert overall, after Antarctica and the Arctic. It covers approximately 9.2 million square kilometres across North Africa, spanning parts of 11 countries. Summer temperatures frequently exceed 50 degrees Celsius in the hottest regions, while winter nights in highland areas can drop below freezing. During the African Humid Period, roughly 5,000 to 11,000 years ago, the Sahara region received significantly more rainfall and supported savanna-like vegetation and large lakes."
+  },
+  {
+    "id": "fava_010",
+    "text": "William Shakespeare was born in Stratford-upon-Avon in 1564 and is widely regarded as the greatest writer in the English language. He wrote approximately 37 plays, 154 sonnets, and several longer poems during his career. His works include tragedies such as Hamlet, Macbeth, and King Lear, as well as beloved comedies like A Midsummer Night's Dream. He performed at the Globe Theatre, which he co-owned, until his retirement in 1613. He died on April 23, 1616, which was also his birthday.",
+    "source_text": "William Shakespeare (1564-1616) was an English playwright and poet, widely regarded as one of the greatest writers in the English language. His surviving works include approximately 39 plays, 154 sonnets, three longer narrative poems, and other verses. His plays are traditionally classified as comedies, tragedies, and histories. Shakespeare was a part-owner of the Globe Theatre, a playing company called the Lord Chamberlain's Men. He is believed to have been born on or around April 23, 1564, and died on April 23, 1616."
+  }
+]

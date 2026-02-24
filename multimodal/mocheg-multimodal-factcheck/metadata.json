@@ -1,0 +1,23 @@
+{
+  "title": "MOCHEG: Multi-modal Multi-hop Fact-Checking with Explanations",
+  "description": "Multimodal fact-checking requiring reasoning over both text and images. Annotators verify claims using multimodal evidence, identify relevant spans in text evidence, and provide explanations for their verdicts. Supports multi-hop reasoning across modalities.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yao et al.",
+    "email": "jurgens@umich.edu",
+    "github": "Mocheg-SIGIR23",
+    "affiliation": "University of Sheffield"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "text", "span"],
+  "domain": ["Multimodal", "Fact-Checking"],
+  "useCase": ["Fact Verification", "Multimodal Reasoning", "Evidence Extraction"],
+  "complexity": "advanced",
+  "tags": ["mocheg", "fact-checking", "multimodal", "multi-hop", "evidence", "sigir2023", "misinformation", "explanation"],
+  "featured": false,
+  "paperReference": "Yao et al., SIGIR 2023",
+  "paperUrl": "https://dl.acm.org/doi/10.1145/3539618.3591766",
+  "datasetUrl": "https://github.com/Mocheg-SIGIR23/MOCHEG",
+  "citation": "@inproceedings{yao2023mocheg,\n    title = \"{MOCHEG}: Multi-modal Multi-hop Fact-Checking and Explanation Generation\",\n    author = \"Yao, Barry Menglong  and Shah, Aditya  and Sun, Lichao  and Cho, Jin-Hee  and Huang, Lifu\",\n    booktitle = \"Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval\",\n    year = \"2023\",\n    publisher = \"Association for Computing Machinery\",\n    url = \"https://dl.acm.org/doi/10.1145/3539618.3591766\",\n    pages = \"2560--2565\"\n}"
+}

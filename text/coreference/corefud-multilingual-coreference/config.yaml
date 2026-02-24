@@ -1,0 +1,88 @@
+# Multilingual Coreference Resolution (CorefUD)
+# Based on Zabokrtsky et al., CRAC@EMNLP 2023
+# Paper: https://aclanthology.org/2023.crac-sharedtask.1/
+# Dataset: https://ufal.mff.cuni.cz/corefud
+#
+# CorefUD provides multilingual coreference annotations across 17 languages
+# using Universal Dependencies-style annotation guidelines:
+# - Mention types: Name, Nominal, Pronoun
+# - Mentions are linked into coreference chains
+# - Supports entity, event, and bridging coreference
+#
+# Annotation process:
+# 1. Identify all entity mentions (names, nominals, pronouns)
+# 2. Classify each mention by its type
+# 3. Link coreferent mentions into chains
+
+port: 8000
+server_name: localhost
+task_name: "CorefUD Multilingual Coreference Resolution"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Entity mention identification
+  - annotation_type: span
+    name: entity_mentions
+    description: "Highlight all entity mentions in the text and classify their mention type."
+    labels:
+      - "Name"
+      - "Nominal"
+      - "Pronoun"
+    label_colors:
+      "Name": "#3b82f6"
+      "Nominal": "#22c55e"
+      "Pronoun": "#f59e0b"
+    tooltips:
+      "Name": "Proper noun or named entity (e.g., 'Marie Curie', 'Paris', 'the Sorbonne')"
+      "Nominal": "Common noun phrase referring to an entity (e.g., 'the scientist', 'the committee', 'a new plan')"
+      "Pronoun": "Pronominal reference (e.g., 'she', 'it', 'they', 'his', 'her')"
+    keyboard_shortcuts:
+      "Name": "n"
+      "Nominal": "m"
+      "Pronoun": "p"
+    allow_overlapping: false
+
+  # Step 2: Coreference chain linking
+  - annotation_type: span_linking
+    name: coreference_chains
+    description: "Link entity mentions that refer to the same real-world entity. Connect each mention to an earlier mention in the same coreference chain."
+    source_scheme: entity_mentions
+    target_scheme: entity_mentions
+    labels:
+      - "Coreference"
+    label_colors:
+      "Coreference": "#6366f1"
+    tooltips:
+      "Coreference": "Both mentions refer to the same real-world entity (e.g., 'Marie Curie' and 'She' referring to the same person)"
+    keyboard_shortcuts:
+      "Coreference": "c"
+
+html_layout: |
+  <div style="margin-bottom: 10px;">
+    <span style="background: #e0e7ff; padding: 2px 8px; border-radius: 3px; font-size: 13px;">
+      Language: <strong>{{language}}</strong>
+    </span>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <p style="line-height: 1.8; font-size: 15px;">{{text}}</p>
+  </div>
+  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
+    <strong>Instructions:</strong>
+    <ol>
+      <li>Highlight all entity mentions (names, nominals, pronouns) in the text.</li>
+      <li>Link mentions that refer to the same entity by creating coreference links.</li>
+      <li>Each mention should be linked to the nearest preceding coreferent mention to form a chain.</li>
+    </ol>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

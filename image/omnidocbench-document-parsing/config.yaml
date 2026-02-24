@@ -1,0 +1,89 @@
+# OmniDocBench Comprehensive Document Parsing Configuration
+# Based on Chen et al., CVPR 2025
+
+annotation_task_name: "OmniDocBench Document Parsing"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "document_type"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "text"
+    name: "element_bounding_boxes"
+    description: "Draw bounding boxes around each document element (format: element_type,x,y,width,height per line). Element types: Text, Title, Table, Figure, Formula, Header, Footer, Caption, Reference, Abstract"
+
+  - annotation_type: "text"
+    name: "ocr_transcription"
+    description: "Provide OCR text transcription for each detected element (format: element_id|transcribed_text per line)"
+
+  - annotation_type: "text"
+    name: "table_structure"
+    description: "For each table element, describe its structure (format: table_id|num_rows,num_cols|cell_content_summary)"
+
+  - annotation_type: "text"
+    name: "formula_latex"
+    description: "For each formula element, provide the LaTeX transcription (format: formula_id|latex_expression)"
+
+  - annotation_type: "multiselect"
+    name: "element_types_present"
+    description: "Select all element types present on this document page"
+    labels:
+      - name: "Text"
+        tooltip: "Regular paragraph body text"
+      - name: "Title"
+        tooltip: "Document title or major headings"
+      - name: "Table"
+        tooltip: "Tabular data with rows and columns"
+      - name: "Figure"
+        tooltip: "Images, charts, diagrams, plots"
+      - name: "Formula"
+        tooltip: "Mathematical equations or expressions"
+      - name: "Header"
+        tooltip: "Page headers or running titles"
+      - name: "Footer"
+        tooltip: "Page footers, page numbers"
+      - name: "Caption"
+        tooltip: "Captions for figures or tables"
+      - name: "Reference"
+        tooltip: "Bibliography or reference entries"
+      - name: "Abstract"
+        tooltip: "Paper or document abstract section"
+
+  - annotation_type: "radio"
+    name: "document_language"
+    description: "What is the primary language of this document?"
+    labels:
+      - name: "english"
+        tooltip: "English language document"
+      - name: "chinese"
+        tooltip: "Chinese language document"
+      - name: "mixed"
+        tooltip: "Multiple languages present"
+      - name: "other"
+        tooltip: "Other language"
+
+  - annotation_type: "radio"
+    name: "parsing_difficulty"
+    description: "Rate the overall parsing difficulty of this document page"
+    labels:
+      - name: "easy"
+        tooltip: "Simple layout, clear text, no complex elements"
+      - name: "moderate"
+        tooltip: "Some tables or figures, standard formatting"
+      - name: "hard"
+        tooltip: "Complex tables, formulas, multi-column, or degraded quality"
+      - name: "very_hard"
+        tooltip: "Highly complex layout with many overlapping element types"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:600px; border:1px solid #ccc;'/><br/><small>Document type: {{document_type}} | Page: {{page_number}} | Source: {{source}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

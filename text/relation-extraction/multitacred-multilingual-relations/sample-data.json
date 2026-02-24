@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mtacred_001",
+    "text": "John Smith, a senior engineer at Microsoft, has been working at the company's headquarters in Redmond since 2015.",
+    "language": "en",
+    "subject": "John Smith",
+    "subject_type": "PERSON",
+    "object": "Microsoft",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "id": "mtacred_002",
+    "text": "Angela Merkel wurde 1954 in Hamburg geboren und wuchs in Templin in der DDR auf.",
+    "language": "de",
+    "subject": "Angela Merkel",
+    "subject_type": "PERSON",
+    "object": "Hamburg",
+    "object_type": "CITY"
+  },
+  {
+    "id": "mtacred_003",
+    "text": "La empresa Tesla fue fundada por Elon Musk en 2003 y tiene su sede central en Austin, Texas.",
+    "language": "es",
+    "subject": "Tesla",
+    "subject_type": "ORGANIZATION",
+    "object": "Elon Musk",
+    "object_type": "PERSON"
+  },
+  {
+    "id": "mtacred_004",
+    "text": "Le président Emmanuel Macron, diplômé de l'ENA, a été élu à l'âge de 39 ans en 2017.",
+    "language": "fr",
+    "subject": "Emmanuel Macron",
+    "subject_type": "PERSON",
+    "object": "ENA",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "id": "mtacred_005",
+    "text": "Samsung Electronics, headquartered in Suwon, South Korea, is a subsidiary of Samsung Group.",
+    "language": "en",
+    "subject": "Samsung Electronics",
+    "subject_type": "ORGANIZATION",
+    "object": "Samsung Group",
+    "object_type": "ORGANIZATION"
+  },
+  {
+    "id": "mtacred_006",
+    "text": "Fizyikçi Stephen Hawking, 1942'de Oxford'da doğmuş ve 2018'de Cambridge'de hayatını kaybetmiştir.",
+    "language": "tr",
+    "subject": "Stephen Hawking",
+    "subject_type": "PERSON",
+    "object": "Oxford",
+    "object_type": "CITY"
+  },
+  {
+    "id": "mtacred_007",
+    "text": "Papież Jan Paweł II, urodzony jako Karol Wojtyła w Wadowicach w Polsce, był głową Kościoła katolickiego od 1978 roku.",
+    "language": "pl",
+    "subject": "Jan Paweł II",
+    "subject_type": "PERSON",
+    "object": "Wadowicach",
+    "object_type": "CITY"
+  },
+  {
+    "id": "mtacred_008",
+    "text": "Alibaba Group was founded by Jack Ma in Hangzhou in 1999 and has since expanded to become one of the world's largest e-commerce companies.",
+    "language": "en",
+    "subject": "Alibaba Group",
+    "subject_type": "ORGANIZATION",
+    "object": "Jack Ma",
+    "object_type": "PERSON"
+  },
+  {
+    "id": "mtacred_009",
+    "text": "Компания Яндекс была основана Аркадием Воложем в 2000 году и базируется в Москве.",
+    "language": "ru",
+    "subject": "Яндекс",
+    "subject_type": "ORGANIZATION",
+    "object": "Москве",
+    "object_type": "CITY"
+  },
+  {
+    "id": "mtacred_010",
+    "text": "Nokia Oyj, originally founded in 1865 in Tampere, Finland, served as the world's largest mobile phone manufacturer from 1998 to 2012.",
+    "language": "en",
+    "subject": "Nokia Oyj",
+    "subject_type": "ORGANIZATION",
+    "object": "Tampere",
+    "object_type": "CITY"
+  }
+]

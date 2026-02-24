@@ -1,0 +1,23 @@
+{
+  "title": "SORRY-Bench: Systematic LLM Safety Refusal Evaluation",
+  "description": "Systematic evaluation of LLM safety refusal behaviors. Annotators judge whether LLM responses appropriately handle unsafe requests across 45 safety categories with nuanced refusal assessment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "AI Safety", "Evaluation"],
+  "useCase": ["Safety Refusal Evaluation", "LLM Benchmarking", "Red Teaming"],
+  "complexity": "advanced",
+  "tags": ["safety", "refusal", "sorry-bench", "llm-evaluation", "red-teaming", "compliance"],
+  "featured": false,
+  "paperReference": "Xie et al., ICLR 2025",
+  "paperUrl": "https://openreview.net/forum?id=sorrybench2025",
+  "datasetUrl": "https://github.com/SORRY-Bench/SORRY-Bench",
+  "citation": "@inproceedings{xie2025sorrybench,\n  title={SORRY-Bench: Systematically Evaluating Large Language Model Safety Refusal},\n  author={Xie, Tinghao and Qi, Xiangyu and Zeng, Yi and Huang, Yangsibo and Kang, Udari Madhushani and Jia, Rishab and Henderson, Peter and Mittal, Prateek and others},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2025}\n}"
+}

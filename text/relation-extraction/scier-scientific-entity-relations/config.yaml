@@ -1,0 +1,108 @@
+# SciER: Scientific Entity and Relation Extraction
+# Based on Luan et al., EMNLP 2024
+# Paper: https://aclanthology.org/2024.emnlp-main.59/
+# Dataset: https://github.com/Alab-NII/SciER
+#
+# This task annotates scientific entities and relations in research papers.
+# Annotators first identify scientific entities, then link them with typed
+# relations describing how the entities interact.
+#
+# Entity Types:
+# - Method: Algorithms, models, techniques, systems
+# - Task: Research tasks, problems, objectives
+# - Material: Datasets, corpora, resources, inputs
+# - Metric: Evaluation measures, scores, performance indicators
+# - Generic: General scientific terms not fitting other categories
+#
+# Relation Types:
+# - Used-for: Entity A is used for entity B
+# - Feature-of: Entity A is a feature/property of entity B
+# - Hyponym-of: Entity A is a subtype of entity B
+# - Part-of: Entity A is a component of entity B
+# - Compare: Entity A is compared with entity B
+# - Conjunction: Entity A and entity B are coordinated
+# - Evaluate-for: Entity A is used to evaluate entity B
+#
+# Annotation Guidelines:
+# 1. Read the sentence in context of the paper section
+# 2. Identify all scientific entity mentions
+# 3. Assign appropriate entity types
+# 4. For each pair of related entities, select the relation type
+# 5. Relations are directional: consider which entity is subject vs object
+
+port: 8000
+server_name: localhost
+task_name: "SciER: Scientific Entity and Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify scientific entities
+  - annotation_type: span
+    name: scientific_entities
+    description: "Highlight all scientific entities in the text"
+    labels:
+      - "Method"
+      - "Task"
+      - "Material"
+      - "Metric"
+      - "Generic"
+    label_colors:
+      "Method": "#3b82f6"
+      "Task": "#ef4444"
+      "Material": "#22c55e"
+      "Metric": "#f59e0b"
+      "Generic": "#8b5cf6"
+    keyboard_shortcuts:
+      "Method": "1"
+      "Task": "2"
+      "Material": "3"
+      "Metric": "4"
+      "Generic": "5"
+    tooltips:
+      "Method": "Algorithms, models, techniques, or systems (e.g., BERT, gradient descent, CNN)"
+      "Task": "Research tasks, problems, or objectives (e.g., named entity recognition, machine translation)"
+      "Material": "Datasets, corpora, resources, or inputs (e.g., CoNLL-2003, Wikipedia, training data)"
+      "Metric": "Evaluation measures or performance indicators (e.g., F1 score, BLEU, accuracy)"
+      "Generic": "General scientific terms not fitting other categories (e.g., features, parameters, embeddings)"
+    allow_overlapping: false
+
+  # Step 2: Link entities with typed relations
+  - annotation_type: span_linking
+    name: scientific_relations
+    description: "Draw relations between pairs of scientific entities"
+    labels:
+      - "Used-for"
+      - "Feature-of"
+      - "Hyponym-of"
+      - "Part-of"
+      - "Compare"
+      - "Conjunction"
+      - "Evaluate-for"
+    tooltips:
+      "Used-for": "Entity A is used for entity B (e.g., BERT is Used-for NER)"
+      "Feature-of": "Entity A is a feature or property of entity B"
+      "Hyponym-of": "Entity A is a subtype or instance of entity B"
+      "Part-of": "Entity A is a component or part of entity B"
+      "Compare": "Entity A is compared with entity B"
+      "Conjunction": "Entity A and entity B are coordinated or listed together"
+      "Evaluate-for": "Entity A is used to evaluate entity B (e.g., F1 is Evaluate-for NER)"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Section:</strong> {{context}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.6;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

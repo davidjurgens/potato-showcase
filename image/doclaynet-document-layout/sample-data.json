@@ -1,0 +1,62 @@
+[
+  {
+    "id": "doclaynet_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pubmed_central_abstract.png/800px-Pubmed_central_abstract.png",
+    "document_type": "scientific_paper",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Wikiversity-logo-en.svg/800px-Wikiversity-logo-en.svg.png",
+    "document_type": "educational_material",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/US_patent_1.png/800px-US_patent_1.png",
+    "document_type": "patent",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_004",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg/1200px-Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg",
+    "document_type": "government_document",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_005",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/800px-PDF_file_icon.svg.png",
+    "document_type": "financial_report",
+    "page_number": 3
+  },
+  {
+    "id": "doclaynet_006",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+    "document_type": "technical_manual",
+    "page_number": 12
+  },
+  {
+    "id": "doclaynet_007",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/English_Wikipedia_-_The_Free_Encyclopedia.png/800px-English_Wikipedia_-_The_Free_Encyclopedia.png",
+    "document_type": "encyclopedia_entry",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_008",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Handwritten_letter%2C_1894.jpg/800px-Handwritten_letter%2C_1894.jpg",
+    "document_type": "correspondence",
+    "page_number": 1
+  },
+  {
+    "id": "doclaynet_009",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_mean_median_mode.svg/800px-Comparison_mean_median_mode.svg.png",
+    "document_type": "scientific_paper",
+    "page_number": 5
+  },
+  {
+    "id": "doclaynet_010",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Social_Network_Analysis_Visualization.png/800px-Social_Network_Analysis_Visualization.png",
+    "document_type": "research_report",
+    "page_number": 8
+  }
+]

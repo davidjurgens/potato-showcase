@@ -1,0 +1,96 @@
+# Mind2Web: Web Agent Task Annotation
+# Based on "Mind2Web: Towards a Generalist Agent for the Web" (Deng et al., NeurIPS 2023)
+# Task: Annotate web navigation actions - identify target elements and action types
+
+port: 8000
+server_name: localhost
+task_name: "Mind2Web Web Agent Task Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing task description, URL, and HTML snippet
+html_layout: |
+  <div class="mind2web-container">
+    <div class="task-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">Task Description:</h3>
+      <div class="task-text" style="font-size: 16px; font-weight: bold;">{{text}}</div>
+    </div>
+    <div class="url-section" style="background: #e8eaf6; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Website URL:</strong> {{url}}
+    </div>
+    <div class="action-section" style="background: #fff3e0; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Action Sequence Context:</strong> {{action_sequence}}
+    </div>
+    <div class="html-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; border: 2px solid #424242;">
+      <h3 style="margin-top: 0;">HTML Snippet (identify the target element):</h3>
+      <pre style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.5; overflow-x: auto;">{{html_snippet}}</pre>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Span annotation for target element identification in HTML
+  - name: "target_element"
+    description: "Highlight the target HTML element that the agent should interact with to perform the action."
+    annotation_type: span
+    labels:
+      - "Target Element"
+      - "Secondary Element"
+      - "Context Element"
+    label_colors:
+      "Target Element": "#f44336"
+      "Secondary Element": "#ff9800"
+      "Context Element": "#9e9e9e"
+
+  # Action type
+  - name: "action_type"
+    description: "What type of action should the agent perform on the target element?"
+    annotation_type: radio
+    labels:
+      - "Click"
+      - "Type"
+      - "Select (dropdown)"
+      - "Scroll"
+      - "Navigate"
+      - "Hover"
+    keyboard_shortcuts:
+      "Click": "1"
+      "Type": "2"
+      "Select (dropdown)": "3"
+      "Scroll": "4"
+      "Navigate": "5"
+      "Hover": "6"
+
+  # Action parameter (e.g., text to type, option to select)
+  - name: "action_value"
+    description: "If the action is Type or Select, what value should be entered or selected? Leave blank for Click/Scroll/Navigate."
+    annotation_type: text
+    required: false
+    placeholder: "e.g., 'New York' for a search field, or 'Economy' for a dropdown"
+
+  # Step correctness
+  - name: "step_completeness"
+    description: "Does this action step make progress toward completing the task?"
+    annotation_type: radio
+    labels:
+      - "Yes - directly advances the task"
+      - "Partially - indirect but useful"
+      - "No - does not help complete the task"
+    keyboard_shortcuts:
+      "Yes - directly advances the task": "a"
+      "Partially - indirect but useful": "s"
+      "No - does not help complete the task": "d"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 100
+annotation_per_instance: 2

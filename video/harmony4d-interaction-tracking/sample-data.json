@@ -1,0 +1,82 @@
+[
+  {
+    "id": "harmony4d_001",
+    "video_url": "https://example.com/videos/ballroom_dance_001.mp4",
+    "interaction_type": "dancing",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 15.0
+  },
+  {
+    "id": "harmony4d_002",
+    "video_url": "https://example.com/videos/martial_arts_sparring_001.mp4",
+    "interaction_type": "martial_arts",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 20.0
+  },
+  {
+    "id": "harmony4d_003",
+    "video_url": "https://example.com/videos/furniture_assembly_001.mp4",
+    "interaction_type": "collaborative_task",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 30.0
+  },
+  {
+    "id": "harmony4d_004",
+    "video_url": "https://example.com/videos/salsa_dance_001.mp4",
+    "interaction_type": "dancing",
+    "num_people": 2,
+    "timestamp_start": 5.0,
+    "timestamp_end": 22.0
+  },
+  {
+    "id": "harmony4d_005",
+    "video_url": "https://example.com/videos/judo_practice_001.mp4",
+    "interaction_type": "martial_arts",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 18.0
+  },
+  {
+    "id": "harmony4d_006",
+    "video_url": "https://example.com/videos/group_yoga_001.mp4",
+    "interaction_type": "collaborative_task",
+    "num_people": 3,
+    "timestamp_start": 0.0,
+    "timestamp_end": 25.0
+  },
+  {
+    "id": "harmony4d_007",
+    "video_url": "https://example.com/videos/acrobatics_duo_001.mp4",
+    "interaction_type": "acrobatics",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 12.0
+  },
+  {
+    "id": "harmony4d_008",
+    "video_url": "https://example.com/videos/wrestling_practice_001.mp4",
+    "interaction_type": "martial_arts",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 16.0
+  },
+  {
+    "id": "harmony4d_009",
+    "video_url": "https://example.com/videos/cooking_together_001.mp4",
+    "interaction_type": "collaborative_task",
+    "num_people": 2,
+    "timestamp_start": 0.0,
+    "timestamp_end": 28.0
+  },
+  {
+    "id": "harmony4d_010",
+    "video_url": "https://example.com/videos/contemporary_dance_001.mp4",
+    "interaction_type": "dancing",
+    "num_people": 3,
+    "timestamp_start": 0.0,
+    "timestamp_end": 20.0
+  }
+]

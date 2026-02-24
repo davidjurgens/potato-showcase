@@ -1,0 +1,76 @@
+# VoiceMOS Challenge 2024 - Speech Quality Assessment
+# Based on Cooper et al., INTERSPEECH 2024
+# Paper: https://www.isca-archive.org/interspeech_2024/cooper24_interspeech.html
+# Dataset: https://voicemos-challenge-2024.github.io/
+#
+# Task: Rate synthesized/processed speech quality using Mean Opinion Score (MOS).
+# Evaluate naturalness, intelligibility, and overall quality on 1-5 scales.
+#
+# Guidelines:
+# - Listen to each clip fully before rating
+# - Rate naturalness: How close to natural human speech?
+# - Rate intelligibility: How easy is it to understand the words?
+# - Rate overall quality: General impression of the speech quality
+# - Use the full 1-5 scale; avoid always rating in the middle
+
+port: 8000
+server_name: localhost
+task_name: "VoiceMOS Challenge 2024: Speech Quality Assessment"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: likert
+    name: naturalness
+    description: "How natural does the speech sound? (1 = Very unnatural, 5 = Completely natural)"
+    size: 5
+    min_label: "Very unnatural"
+    max_label: "Completely natural"
+    labels:
+      - "1 - Very unnatural"
+      - "2 - Somewhat unnatural"
+      - "3 - Moderately natural"
+      - "4 - Mostly natural"
+      - "5 - Completely natural"
+
+  - annotation_type: likert
+    name: intelligibility
+    description: "How easy is it to understand the speech? (1 = Unintelligible, 5 = Perfectly clear)"
+    size: 5
+    min_label: "Unintelligible"
+    max_label: "Perfectly clear"
+    labels:
+      - "1 - Unintelligible"
+      - "2 - Mostly unintelligible"
+      - "3 - Somewhat intelligible"
+      - "4 - Mostly intelligible"
+      - "5 - Perfectly clear"
+
+  - annotation_type: likert
+    name: overall_quality
+    description: "What is the overall quality of this speech? (1 = Bad, 5 = Excellent)"
+    size: 5
+    min_label: "Bad"
+    max_label: "Excellent"
+    labels:
+      - "1 - Bad"
+      - "2 - Poor"
+      - "3 - Fair"
+      - "4 - Good"
+      - "5 - Excellent"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 200
+annotation_per_instance: 5
+allow_skip: true
+skip_reason_required: false

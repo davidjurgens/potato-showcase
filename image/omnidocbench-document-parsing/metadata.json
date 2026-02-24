@@ -1,0 +1,23 @@
+{
+  "title": "OmniDocBench Comprehensive Document Parsing",
+  "description": "Comprehensive document parsing annotation covering layout detection, text recognition, table structure, and formula recognition. Annotators draw bounding boxes and provide text transcriptions for document elements.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "opendatalab",
+    "affiliation": "Shanghai AI Laboratory"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["bbox", "text"],
+  "domain": ["Document AI", "PDF Parsing"],
+  "useCase": ["Document Parsing", "Layout Detection", "OCR", "Table Recognition", "Formula Recognition"],
+  "complexity": "advanced",
+  "tags": ["omnidocbench", "document-parsing", "pdf", "ocr", "table-structure", "formula", "cvpr2025"],
+  "featured": false,
+  "paperReference": "Chen et al., CVPR 2025",
+  "paperUrl": "https://arxiv.org/abs/2412.07626",
+  "datasetUrl": "https://github.com/opendatalab/OmniDocBench",
+  "citation": "@inproceedings{chen2025omnidocbench,\n    title = \"{OmniDocBench}: Benchmarking Diverse {PDF} Document Parsing with Comprehensive Annotations\",\n    author = \"Chen, Linbin  and Zhu, Ruoyu  and Wang, Bin  and Li, Chao  and Zhang, Yiwei  and Li, Yinqi  and He, Conghui  and Li, Hongbin\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    year = \"2025\",\n    url = \"https://arxiv.org/abs/2412.07626\"\n}"
+}

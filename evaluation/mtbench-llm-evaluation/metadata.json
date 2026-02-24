@@ -1,0 +1,23 @@
+{
+  "title": "MT-Bench: LLM Response Quality Evaluation",
+  "description": "LLM response quality evaluation using pairwise comparison and absolute scoring. Annotators compare pairs of LLM responses and rate individual responses on a 1-10 scale across multiple turns.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["pairwise", "likert"],
+  "domain": ["NLP", "LLM Evaluation"],
+  "useCase": ["LLM Benchmarking", "Model Comparison", "Quality Assessment"],
+  "complexity": "intermediate",
+  "tags": ["llm-evaluation", "mt-bench", "pairwise", "chatbot-arena", "response-quality", "multi-turn"],
+  "featured": false,
+  "paperReference": "Zheng et al., NeurIPS 2023",
+  "paperUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html",
+  "datasetUrl": "https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard",
+  "citation": "@inproceedings{zheng2023judging,\n  title={Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena},\n  author={Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and others},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2023}\n}"
+}

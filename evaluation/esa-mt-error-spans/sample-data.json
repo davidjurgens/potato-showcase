@@ -1,0 +1,62 @@
+[
+  {
+    "id": "esa_001",
+    "text": "The committee decided to postpone the meeting until next week due to the absence of several key members.",
+    "source_text": "Das Komitee beschloss, die Sitzung auf nächste Woche zu verschieben, da mehrere wichtige Mitglieder abwesend waren.",
+    "language_pair": "German-English"
+  },
+  {
+    "id": "esa_002",
+    "text": "The new policy will effect all employees starting from January, including those who work part-time in the remote offices.",
+    "source_text": "Die neue Richtlinie wird ab Januar alle Mitarbeiter betreffen, einschließlich derjenigen, die in Teilzeit in den Außenstellen arbeiten.",
+    "language_pair": "German-English"
+  },
+  {
+    "id": "esa_003",
+    "text": "Scientists have discovered a new species of deep-sea fish that can survive in extremely high pressures and low temperatures.",
+    "source_text": "Les scientifiques ont découvert une nouvelle espèce de poisson des grands fonds capable de survivre dans des pressions extrêmement élevées et des températures basses.",
+    "language_pair": "French-English"
+  },
+  {
+    "id": "esa_004",
+    "text": "The president announced that the country will invest heavily in the renewable energies to reduce the carbon footprint by 50% until 2030.",
+    "source_text": "Le président a annoncé que le pays investira massivement dans les énergies renouvelables pour réduire l'empreinte carbone de 50 % d'ici 2030.",
+    "language_pair": "French-English"
+  },
+  {
+    "id": "esa_005",
+    "text": "The hospital reported that the number of patients with respiratory infections has raised significantly during the winter months.",
+    "source_text": "O hospital informou que o número de pacientes com infecções respiratórias aumentou significativamente durante os meses de inverno.",
+    "language_pair": "Portuguese-English"
+  },
+  {
+    "id": "esa_006",
+    "text": "According to the latest report, the economy growed by 3.2 percent in the second quarter, surpassing analyst expectations.",
+    "source_text": "Según el último informe, la economía creció un 3,2 por ciento en el segundo trimestre, superando las expectativas de los analistas.",
+    "language_pair": "Spanish-English"
+  },
+  {
+    "id": "esa_007",
+    "text": "The researchers found that regular exercises can significantly reduce the risk of cardiovascular disease in elderly populations.",
+    "source_text": "I ricercatori hanno scoperto che l'esercizio fisico regolare può ridurre significativamente il rischio di malattie cardiovascolari nelle popolazioni anziane.",
+    "language_pair": "Italian-English"
+  },
+  {
+    "id": "esa_008",
+    "text": "The ministry of education has proposed reforms that would make the university tuition free for students from low-income backgrounds.",
+    "source_text": "Das Bildungsministerium hat Reformen vorgeschlagen, die den Studiengebühren für Studierende aus einkommensschwachen Verhältnissen abschaffen würden.",
+    "language_pair": "German-English"
+  },
+  {
+    "id": "esa_009",
+    "text": "Climate change is causing the glaciers in the Alps to melt at a unprecedented rate, threatening water supplies for millions of people.",
+    "source_text": "Le changement climatique fait fondre les glaciers des Alpes à un rythme sans précédent, menaçant l'approvisionnement en eau de millions de personnes.",
+    "language_pair": "French-English"
+  },
+  {
+    "id": "esa_010",
+    "text": "The company announced they will lay off approximately 500 workers as part of a restructuring plan to improve the profitability.",
+    "source_text": "La empresa anunció que despedirá a aproximadamente 500 trabajadores como parte de un plan de reestructuración para mejorar la rentabilidad.",
+    "language_pair": "Spanish-English"
+  }
+]

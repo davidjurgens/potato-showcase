@@ -1,0 +1,62 @@
+[
+  {
+    "id": "annomi_001",
+    "text": "Tell me a little about what brings you in today and what's been going on with your drinking.",
+    "speaker": "therapist",
+    "dialogue_context": "[Start of counselling session]"
+  },
+  {
+    "id": "annomi_002",
+    "text": "Well, my wife has been on my case about it. She thinks I drink too much, but honestly I don't think it's that big of a deal. I have a couple of beers after work to unwind, maybe more on weekends.",
+    "speaker": "client",
+    "dialogue_context": "Therapist: Tell me a little about what brings you in today and what's been going on with your drinking."
+  },
+  {
+    "id": "annomi_003",
+    "text": "So on one hand, you don't see your drinking as a major problem, but on the other hand, it's important enough to your wife that it's causing some tension between you two.",
+    "speaker": "therapist",
+    "dialogue_context": "Client: Well, my wife has been on my case about it. She thinks I drink too much, but honestly I don't think it's that big of a deal. I have a couple of beers after work to unwind, maybe more on weekends."
+  },
+  {
+    "id": "annomi_004",
+    "text": "Yeah, exactly. I mean, I love my wife and I don't want this to come between us. But I also feel like I should be able to relax the way I want after a long day.",
+    "speaker": "client",
+    "dialogue_context": "Therapist: So on one hand, you don't see your drinking as a major problem, but on the other hand, it's important enough to your wife that it's causing some tension between you two."
+  },
+  {
+    "id": "annomi_005",
+    "text": "Your relationship with your wife is really important to you. What would it mean for your marriage if things continued the way they are right now?",
+    "speaker": "therapist",
+    "dialogue_context": "Client: Yeah, exactly. I mean, I love my wife and I don't want this to come between us. But I also feel like I should be able to relax the way I want after a long day."
+  },
+  {
+    "id": "annomi_006",
+    "text": "I guess I'm a little worried about that, to be honest. We've been arguing more lately, and not just about the drinking. I know I'm more irritable when I've had a few drinks. I don't want to lose her.",
+    "speaker": "client",
+    "dialogue_context": "Therapist: Your relationship with your wife is really important to you. What would it mean for your marriage if things continued the way they are right now?"
+  },
+  {
+    "id": "annomi_007",
+    "text": "It takes a lot of courage to be honest about that. You're noticing a connection between your drinking and the arguments, and you clearly care deeply about your marriage.",
+    "speaker": "therapist",
+    "dialogue_context": "Client: I guess I'm a little worried about that, to be honest. We've been arguing more lately, and not just about the drinking. I know I'm more irritable when I've had a few drinks. I don't want to lose her."
+  },
+  {
+    "id": "annomi_008",
+    "text": "But I don't know if I can just stop. All my friends drink. It's what we do when we get together. I'd feel weird being the only one not drinking.",
+    "speaker": "client",
+    "dialogue_context": "Therapist: It takes a lot of courage to be honest about that. You're noticing a connection between your drinking and the arguments, and you clearly care deeply about your marriage."
+  },
+  {
+    "id": "annomi_009",
+    "text": "A lot of people feel that way, and it makes sense that the social aspect is important to you. If you were to make a change, it wouldn't necessarily have to be all or nothing. What are some small steps you could imagine taking?",
+    "speaker": "therapist",
+    "dialogue_context": "Client: But I don't know if I can just stop. All my friends drink. It's what we do when we get together. I'd feel weird being the only one not drinking."
+  },
+  {
+    "id": "annomi_010",
+    "text": "I suppose I could try cutting back on the weekday drinking. Maybe just save it for weekends. And I could try to set a limit when I'm out with friends, like two or three drinks max. I think I could do that.",
+    "speaker": "client",
+    "dialogue_context": "Therapist: A lot of people feel that way, and it makes sense that the social aspect is important to you. If you were to make a change, it wouldn't necessarily have to be all or nothing. What are some small steps you could imagine taking?"
+  }
+]

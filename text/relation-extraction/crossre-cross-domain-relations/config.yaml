@@ -1,0 +1,146 @@
+# CrossRE: Cross-Domain Relation Extraction
+# Based on Bassignana & Plank, Findings EMNLP 2022
+# Paper: https://aclanthology.org/2022.findings-emnlp.263/
+# Dataset: https://github.com/mainlp/CrossRE
+#
+# CrossRE provides relation extraction annotations across 6 diverse domains:
+# news, politics, natural science, music, literature, and AI.
+# This enables studying how relation extraction models transfer across domains.
+#
+# Entity Types:
+# - Person, Organization, Location, Event, Date, Number, Other
+#
+# 17 Relation Types:
+# - physical: Physical proximity or containment
+# - personal-social: Personal or social relationships
+# - part-whole: Component or membership
+# - org-affiliation: Organizational affiliation
+# - gen-affiliation: General affiliation
+# - usage: One entity uses another
+# - topic: Entity is about a topic
+# - compare: Comparison between entities
+# - origin: Entity originates from another
+# - named: Entity is named after another
+# - role: Entity has a role
+# - temporal: Temporal relationship
+# - win-defeat: Competitive outcome
+# - located-in: Spatial containment
+# - cause-effect: Causal relationship
+# - member: Membership in a group
+# - no-relation: No meaningful relation
+#
+# Annotation Guidelines:
+# 1. Read the sentence and note the domain
+# 2. Identify all named entities and classify them
+# 3. For each entity pair, determine the relation type
+# 4. Optionally add notes about ambiguous cases
+
+port: 8000
+server_name: localhost
+task_name: "CrossRE: Cross-Domain Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify entities
+  - annotation_type: span
+    name: entities
+    description: "Highlight all entities in the text"
+    labels:
+      - "Person"
+      - "Organization"
+      - "Location"
+      - "Event"
+      - "Date"
+      - "Number"
+      - "Other"
+    label_colors:
+      "Person": "#3b82f6"
+      "Organization": "#22c55e"
+      "Location": "#ef4444"
+      "Event": "#f59e0b"
+      "Date": "#8b5cf6"
+      "Number": "#06b6d4"
+      "Other": "#6b7280"
+    keyboard_shortcuts:
+      "Person": "1"
+      "Organization": "2"
+      "Location": "3"
+      "Event": "4"
+      "Date": "5"
+      "Number": "6"
+      "Other": "7"
+    tooltips:
+      "Person": "Names of people, including fictional characters"
+      "Organization": "Companies, institutions, bands, teams, political parties"
+      "Location": "Countries, cities, geographic regions, addresses"
+      "Event": "Named events, wars, festivals, elections, discoveries"
+      "Date": "Dates, years, time periods, centuries"
+      "Number": "Numerical values, quantities, measurements"
+      "Other": "Entities not fitting other categories (works of art, products, etc.)"
+    allow_overlapping: false
+
+  # Step 2: Link entities with relation types
+  - annotation_type: span_linking
+    name: relations
+    description: "Draw relations between entity pairs"
+    labels:
+      - "physical"
+      - "personal-social"
+      - "part-whole"
+      - "org-affiliation"
+      - "gen-affiliation"
+      - "usage"
+      - "topic"
+      - "compare"
+      - "origin"
+      - "named"
+      - "role"
+      - "temporal"
+      - "win-defeat"
+      - "located-in"
+      - "cause-effect"
+      - "member"
+      - "no-relation"
+    tooltips:
+      "physical": "Physical proximity, containment, or spatial relationship"
+      "personal-social": "Personal or social relationship between people"
+      "part-whole": "Entity A is a part or component of entity B"
+      "org-affiliation": "Person or entity is affiliated with an organization"
+      "gen-affiliation": "General affiliation not covered by org-affiliation"
+      "usage": "Entity A uses or employs entity B"
+      "topic": "Entity A is about or concerns entity B"
+      "compare": "Entity A is compared with entity B"
+      "origin": "Entity A originates from or is derived from entity B"
+      "named": "Entity A is named after entity B"
+      "role": "Entity A has a role or function related to entity B"
+      "temporal": "Temporal relationship between entities"
+      "win-defeat": "Competitive outcome between entities"
+      "located-in": "Entity A is located within entity B"
+      "cause-effect": "Entity A causes or leads to entity B"
+      "member": "Entity A is a member of entity B"
+      "no-relation": "No meaningful relation between the entities"
+
+  # Step 3: Optional annotator notes
+  - annotation_type: text
+    name: notes
+    description: "Optional notes about ambiguous cases or difficult decisions"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Domain:</strong> {{domain}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.6;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

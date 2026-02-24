@@ -1,0 +1,153 @@
+# FineSports Fine-grained Action Recognition Configuration
+# Based on Xu et al., CVPR 2024
+# Task: Track athletes and label fine-grained hierarchical actions in sports videos
+
+port: 8000
+server_name: localhost
+task_name: "FineSports Fine-grained Action Recognition"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Track athletes with bounding boxes
+  - name: "athlete_tracking"
+    description: |
+      Draw bounding boxes around each athlete visible in the frame.
+      Track the same athlete across frames using consistent IDs.
+      Focus on athletes actively performing actions.
+    annotation_type: "video_annotation"
+    mode: "tracking"
+    labels:
+      - name: "athlete"
+        color: "#3B82F6"
+      - name: "referee"
+        color: "#EF4444"
+      - name: "coach"
+        color: "#F59E0B"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    zoom_enabled: true
+    video_fps: 30
+
+  # Hierarchical action labels - Gymnastics
+  - name: "gymnastics_actions"
+    description: "Select all fine-grained gymnastics actions (if applicable)"
+    annotation_type: multiselect
+    labels:
+      - "vault_run"
+      - "vault_takeoff"
+      - "vault_flight"
+      - "vault_landing"
+      - "balance_beam_mount"
+      - "balance_beam_walk"
+      - "balance_beam_leap"
+      - "balance_beam_turn"
+      - "balance_beam_dismount"
+      - "floor_tumbling_pass"
+      - "floor_dance_sequence"
+      - "floor_leap_series"
+      - "uneven_bars_swing"
+      - "uneven_bars_release"
+      - "uneven_bars_dismount"
+
+  # Hierarchical action labels - Diving
+  - name: "diving_actions"
+    description: "Select all fine-grained diving actions (if applicable)"
+    annotation_type: multiselect
+    labels:
+      - "approach"
+      - "hurdle"
+      - "takeoff_forward"
+      - "takeoff_backward"
+      - "takeoff_armstand"
+      - "flight_tuck"
+      - "flight_pike"
+      - "flight_layout"
+      - "flight_free"
+      - "twist"
+      - "somersault"
+      - "entry"
+      - "splash"
+
+  # Hierarchical action labels - Figure Skating
+  - name: "figure_skating_actions"
+    description: "Select all fine-grained figure skating actions (if applicable)"
+    annotation_type: multiselect
+    labels:
+      - "jump_axel"
+      - "jump_lutz"
+      - "jump_flip"
+      - "jump_loop"
+      - "jump_salchow"
+      - "jump_toe_loop"
+      - "spin_upright"
+      - "spin_sit"
+      - "spin_camel"
+      - "spin_combination"
+      - "step_sequence"
+      - "spiral_sequence"
+      - "lift"
+      - "throw_jump"
+
+  # Hierarchical action labels - General Sports
+  - name: "general_sports_actions"
+    description: "Select general sports actions applicable across sports"
+    annotation_type: multiselect
+    labels:
+      - "preparation"
+      - "execution"
+      - "recovery"
+      - "celebration"
+      - "waiting"
+      - "walking"
+      - "running"
+      - "jumping"
+      - "landing"
+      - "falling"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 20
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## FineSports Fine-grained Action Recognition Task
+
+  Your goal is to track athletes and label their fine-grained actions in sports video clips.
+
+  ### Step 1: Track Athletes
+  - Draw bounding boxes around each athlete performing actions
+  - Track the same athlete across frames with consistent IDs
+  - Also mark referees and coaches if visible
+
+  ### Step 2: Label Hierarchical Actions
+  For each tracked athlete, select ALL fine-grained actions from the relevant sport category:
+
+  **Gymnastics Actions:** vault, balance beam, floor, uneven bars phases
+  **Diving Actions:** approach, takeoff, flight, twist, entry phases
+  **Figure Skating Actions:** jumps, spins, step sequences, lifts
+  **General Actions:** preparation, execution, recovery, etc.
+
+  ### Important Notes:
+  - Actions are organized hierarchically by sport type
+  - One athlete can perform MULTIPLE actions simultaneously
+  - Label the finest-grained action visible (e.g., "jump_axel" not just "jumping")
+  - Only select actions from the sport category matching the video content
+  - Use frame stepping for precise action boundary marking
+
+  ### Tips:
+  - Use playback speed control to slow down fast movements
+  - Pay attention to transitions between action phases
+  - Some actions are very brief (< 1 second), use frame stepping

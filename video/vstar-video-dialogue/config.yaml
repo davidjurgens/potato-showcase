@@ -1,0 +1,137 @@
+# VSTAR Video-grounded Dialogue Configuration
+# Based on Wang et al., ACL 2023
+# Task: Answer questions and write dialogue grounded in specific video moments
+
+port: 8000
+server_name: localhost
+task_name: "VSTAR Video-grounded Dialogue"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Temporal grounding - mark relevant video segments
+  - name: "temporal_grounding"
+    description: |
+      Mark the temporal segment(s) in the video that are relevant to answering the question.
+      These segments should contain the visual evidence needed for the answer.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "relevant_segment"
+        color: "#3B82F6"
+        key_value: "r"
+      - name: "supporting_context"
+        color: "#22C55E"
+        key_value: "s"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    zoom_enabled: true
+    timeline_height: 80
+
+  # Answer / dialogue response
+  - name: "answer"
+    description: |
+      Write your answer to the question based on what you observe in the video.
+      Ground your answer in specific visual evidence from the marked segments.
+      Be detailed and specific about what you see.
+    annotation_type: text
+    min_length: 15
+    max_length: 500
+    placeholder: "e.g., 'The person in the blue shirt picks up the book from the table and hands it to the woman standing by the door...'"
+
+  # Answer type classification
+  - name: "answer_type"
+    description: |
+      Classify the type of reasoning required to answer this question.
+      Consider what kind of understanding is needed.
+    annotation_type: radio
+    labels:
+      - name: "Factual"
+        tooltip: "Answer is directly observable in the video (e.g., 'What color is the car?')"
+        key_value: "f"
+      - name: "Inferential"
+        tooltip: "Answer requires inference from visual cues (e.g., 'Why did the person leave?')"
+        key_value: "i"
+      - name: "Predictive"
+        tooltip: "Answer requires predicting what happens next (e.g., 'What will the person do?')"
+        key_value: "p"
+
+  # Confidence assessment
+  - name: "confidence"
+    description: "How confident are you in your answer?"
+    annotation_type: radio
+    labels:
+      - name: "Very Confident"
+        tooltip: "The answer is clearly supported by the video"
+        key_value: "1"
+      - name: "Somewhat Confident"
+        tooltip: "The answer is likely correct but some ambiguity exists"
+        key_value: "2"
+      - name: "Not Confident"
+        tooltip: "The answer is a best guess; the video does not clearly support it"
+        key_value: "3"
+
+  # Dialogue continuation
+  - name: "follow_up_question"
+    description: |
+      Write a natural follow-up question that could continue the dialogue
+      about this video. The question should require watching a different
+      part of the video or reasoning about what was discussed.
+    annotation_type: text
+    min_length: 10
+    max_length: 200
+    placeholder: "e.g., 'What happens after the person leaves the room?'"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 25
+annotation_per_instance: 3
+
+# Instructions
+annotation_instructions: |
+  ## VSTAR Video-grounded Dialogue Task
+
+  Your goal is to answer questions about videos and write grounded dialogue responses.
+
+  ### Step 1: Watch the Video
+  - Watch the entire video to understand the full context
+  - Read the question and any dialogue context provided
+
+  ### Step 2: Mark Relevant Segments
+  - Identify the video segment(s) that contain evidence for your answer
+  - Mark primary evidence as "relevant_segment" (blue)
+  - Mark additional context as "supporting_context" (green)
+  - Be precise with segment boundaries
+
+  ### Step 3: Write Your Answer
+  - Answer the question based on what you observe in the video
+  - Reference specific visual details (people, objects, actions, locations)
+  - Be descriptive but concise
+  - Ground your answer in the marked segments
+
+  ### Step 4: Classify Answer Type
+  - **Factual (f)**: Answer is directly observable in the video
+  - **Inferential (i)**: Answer requires reasoning beyond what is shown
+  - **Predictive (p)**: Answer involves predicting future events
+
+  ### Step 5: Write a Follow-up Question
+  - Write a natural question that would continue the conversation
+  - The question should require watching the video to answer
+  - Avoid yes/no questions; ask for descriptive responses
+
+  ### Tips:
+  - Read the dialogue context carefully; it provides important background
+  - Some questions require understanding events across multiple time points
+  - If unsure, mark your confidence accordingly
+  - Follow-up questions should be genuinely interesting and answerable from the video

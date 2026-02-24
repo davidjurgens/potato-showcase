@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vbench_001",
+    "video_url": "https://example.com/videos/gen_sunset_beach_modelA.mp4",
+    "prompt": "A golden sunset over a calm ocean beach with gentle waves rolling onto the sand",
+    "model_name": "ModelA-v2",
+    "video_url_b": "https://example.com/videos/gen_sunset_beach_modelB.mp4"
+  },
+  {
+    "id": "vbench_002",
+    "video_url": "https://example.com/videos/gen_city_rain_modelA.mp4",
+    "prompt": "A bustling city street at night during heavy rain with neon reflections on wet pavement",
+    "model_name": "ModelA-v2",
+    "video_url_b": "https://example.com/videos/gen_city_rain_modelB.mp4"
+  },
+  {
+    "id": "vbench_003",
+    "video_url": "https://example.com/videos/gen_dog_park_modelC.mp4",
+    "prompt": "A golden retriever running through a park, catching a frisbee mid-air and landing gracefully",
+    "model_name": "ModelC-v1",
+    "video_url_b": "https://example.com/videos/gen_dog_park_modelD.mp4"
+  },
+  {
+    "id": "vbench_004",
+    "video_url": "https://example.com/videos/gen_astronaut_modelA.mp4",
+    "prompt": "An astronaut floating in space with Earth visible in the background, slowly rotating",
+    "model_name": "ModelA-v2",
+    "video_url_b": "https://example.com/videos/gen_astronaut_modelC.mp4"
+  },
+  {
+    "id": "vbench_005",
+    "video_url": "https://example.com/videos/gen_waterfall_modelB.mp4",
+    "prompt": "A majestic waterfall cascading down a mossy cliff into a turquoise pool surrounded by tropical foliage",
+    "model_name": "ModelB-v3",
+    "video_url_b": "https://example.com/videos/gen_waterfall_modelD.mp4"
+  },
+  {
+    "id": "vbench_006",
+    "video_url": "https://example.com/videos/gen_coffee_shop_modelC.mp4",
+    "prompt": "A barista pouring steaming latte art in a cozy coffee shop with warm lighting",
+    "model_name": "ModelC-v1",
+    "video_url_b": "https://example.com/videos/gen_coffee_shop_modelA.mp4"
+  },
+  {
+    "id": "vbench_007",
+    "video_url": "https://example.com/videos/gen_butterfly_modelD.mp4",
+    "prompt": "A blue morpho butterfly emerging from its chrysalis and spreading its wings for the first time",
+    "model_name": "ModelD-v1",
+    "video_url_b": "https://example.com/videos/gen_butterfly_modelB.mp4"
+  },
+  {
+    "id": "vbench_008",
+    "video_url": "https://example.com/videos/gen_snow_cabin_modelA.mp4",
+    "prompt": "A cozy log cabin in a snowy forest with smoke rising from the chimney and snowflakes falling gently",
+    "model_name": "ModelA-v2",
+    "video_url_b": "https://example.com/videos/gen_snow_cabin_modelC.mp4"
+  },
+  {
+    "id": "vbench_009",
+    "video_url": "https://example.com/videos/gen_robot_kitchen_modelB.mp4",
+    "prompt": "A humanoid robot carefully cooking pasta in a modern kitchen, stirring a pot on the stove",
+    "model_name": "ModelB-v3",
+    "video_url_b": "https://example.com/videos/gen_robot_kitchen_modelD.mp4"
+  },
+  {
+    "id": "vbench_010",
+    "video_url": "https://example.com/videos/gen_timelapse_flower_modelC.mp4",
+    "prompt": "Time-lapse of a red rose blooming from a tight bud to full flower over a dark background",
+    "model_name": "ModelC-v1",
+    "video_url_b": "https://example.com/videos/gen_timelapse_flower_modelA.mp4"
+  }
+]

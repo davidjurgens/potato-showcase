@@ -1,0 +1,23 @@
+{
+  "title": "DICES Diversity in Conversational AI Safety",
+  "description": "Diverse annotator perspectives on conversational AI safety based on the DICES dataset. Annotators rate chatbot responses for safety, quality, and harmfulness, with explicit emphasis on capturing diverse demographic perspectives in the rater pool to study disagreement patterns.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aroyo et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google-research-datasets",
+    "affiliation": "Google Research"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "likert", "multiselect"],
+  "domain": ["NLP", "AI Safety", "Conversational AI"],
+  "useCase": ["Safety Evaluation", "Diverse Annotation", "Chatbot Quality Assessment"],
+  "complexity": "intermediate",
+  "tags": ["safety", "diversity", "conversational-ai", "chatbot", "harm-detection", "disagreement"],
+  "featured": false,
+  "paperReference": "Aroyo et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2306.11247",
+  "datasetUrl": "https://github.com/google-research-datasets/dices-dataset",
+  "citation": "@inproceedings{aroyo2023dices,\n    title = \"{DICES} Dataset: Diversity in Conversational {AI} Evaluation for Safety\",\n    author = \"Aroyo, Lora  and Taylor, Alex S.  and Diaz, Mark  and Hershcovich, Christopher  and Prabhakaran, Vinodkumar  and Wang, Ding\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    volume = \"36\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2306.11247\"\n}"
+}

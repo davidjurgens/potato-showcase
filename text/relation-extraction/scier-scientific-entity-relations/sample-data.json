@@ -1,0 +1,52 @@
+[
+  {
+    "id": "scier_001",
+    "text": "We apply BERT to the task of named entity recognition on the CoNLL-2003 dataset, achieving a new state-of-the-art F1 score of 93.5%.",
+    "context": "Experiments"
+  },
+  {
+    "id": "scier_002",
+    "text": "Our proposed transformer-based architecture incorporates a multi-head attention mechanism and positional encodings to capture long-range dependencies in text classification.",
+    "context": "Methods"
+  },
+  {
+    "id": "scier_003",
+    "text": "We compare our method against BiLSTM-CRF and SpanBERT on relation extraction, evaluating with both micro and macro F1 scores on the TACRED benchmark.",
+    "context": "Experiments"
+  },
+  {
+    "id": "scier_004",
+    "text": "The feature extraction module uses convolutional neural networks to produce dense vector representations from the input word embeddings.",
+    "context": "Methods"
+  },
+  {
+    "id": "scier_005",
+    "text": "Pre-trained language models such as GPT-2 and RoBERTa have significantly advanced the state of the art in text generation and natural language understanding tasks.",
+    "context": "Related Work"
+  },
+  {
+    "id": "scier_006",
+    "text": "We train our coreference resolution system on the OntoNotes 5.0 corpus and evaluate using the standard MUC, B-cubed, and CEAFe metrics.",
+    "context": "Experiments"
+  },
+  {
+    "id": "scier_007",
+    "text": "The graph neural network propagates information through entity nodes using message passing, where edge weights are learned via an attention mechanism.",
+    "context": "Methods"
+  },
+  {
+    "id": "scier_008",
+    "text": "Dependency parsing serves as an upstream task for semantic role labeling, providing syntactic structure that guides argument identification.",
+    "context": "Introduction"
+  },
+  {
+    "id": "scier_009",
+    "text": "Our model outperforms the baseline CRF tagger by 2.3 BLEU points on machine translation and 1.8 accuracy points on sentiment analysis using the SST-2 dataset.",
+    "context": "Results"
+  },
+  {
+    "id": "scier_010",
+    "text": "We extend the SciBERT model with a span-level representation layer and a biaffine classifier for joint entity and relation extraction from scientific abstracts.",
+    "context": "Methods"
+  }
+]

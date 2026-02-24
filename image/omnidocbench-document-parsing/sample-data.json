@@ -1,0 +1,72 @@
+[
+  {
+    "id": "omnidoc_001",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pubmed_central_abstract.png/800px-Pubmed_central_abstract.png",
+    "document_type": "scientific_paper",
+    "page_number": 1,
+    "source": "arxiv"
+  },
+  {
+    "id": "omnidoc_002",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/US_patent_1.png/800px-US_patent_1.png",
+    "document_type": "patent",
+    "page_number": 1,
+    "source": "uspto"
+  },
+  {
+    "id": "omnidoc_003",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_mean_median_mode.svg/800px-Comparison_mean_median_mode.svg.png",
+    "document_type": "textbook",
+    "page_number": 42,
+    "source": "openstax"
+  },
+  {
+    "id": "omnidoc_004",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Social_Network_Analysis_Visualization.png/800px-Social_Network_Analysis_Visualization.png",
+    "document_type": "research_report",
+    "page_number": 15,
+    "source": "institutional_report"
+  },
+  {
+    "id": "omnidoc_005",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/English_Wikipedia_-_The_Free_Encyclopedia.png/800px-English_Wikipedia_-_The_Free_Encyclopedia.png",
+    "document_type": "encyclopedia",
+    "page_number": 1,
+    "source": "wikipedia"
+  },
+  {
+    "id": "omnidoc_006",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/800px-PDF_file_icon.svg.png",
+    "document_type": "financial_report",
+    "page_number": 7,
+    "source": "sec_filing"
+  },
+  {
+    "id": "omnidoc_007",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Handwritten_letter%2C_1894.jpg/800px-Handwritten_letter%2C_1894.jpg",
+    "document_type": "historical_document",
+    "page_number": 1,
+    "source": "archive"
+  },
+  {
+    "id": "omnidoc_008",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Wikiversity-logo-en.svg/800px-Wikiversity-logo-en.svg.png",
+    "document_type": "educational_material",
+    "page_number": 3,
+    "source": "course_notes"
+  },
+  {
+    "id": "omnidoc_009",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+    "document_type": "technical_manual",
+    "page_number": 28,
+    "source": "engineering_docs"
+  },
+  {
+    "id": "omnidoc_010",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Elsevier.svg/800px-Elsevier.svg.png",
+    "document_type": "journal_article",
+    "page_number": 1,
+    "source": "elsevier"
+  }
+]

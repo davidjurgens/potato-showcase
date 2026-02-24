@@ -1,0 +1,62 @@
+[
+  {
+    "id": "covid_001",
+    "text": "Wearing masks significantly reduces the transmission of COVID-19.",
+    "evidence": "A large randomized trial in Bangladesh involving 342,000 participants found that surgical mask distribution and promotion reduced symptomatic SARS-CoV-2 seroprevalence by 11.2%. Villages where surgical masks were distributed showed a 35% reduction in symptomatic seroprevalence among individuals over 60 years old. Cloth masks showed a smaller, non-statistically significant reduction of 5%.",
+    "source": "Abaluck et al., Science 2022"
+  },
+  {
+    "id": "covid_002",
+    "text": "Hydroxychloroquine is an effective treatment for hospitalized COVID-19 patients.",
+    "evidence": "The RECOVERY trial, a large-scale randomized controlled trial conducted in the UK, enrolled 4,716 hospitalized COVID-19 patients. Patients receiving hydroxychloroquine showed no significant difference in 28-day mortality compared to usual care (27.0% vs 25.0%). There was also no evidence of benefit in terms of hospital stay duration or need for mechanical ventilation. The trial was stopped early due to lack of efficacy.",
+    "source": "Horby et al., NEJM 2020"
+  },
+  {
+    "id": "covid_003",
+    "text": "COVID-19 vaccines cause widespread infertility in women.",
+    "evidence": "A study of 2,000 women of reproductive age found no difference in pregnancy rates between vaccinated and unvaccinated women over a 12-month follow-up period. Analysis of in vitro fertilization outcomes showed similar implantation rates, clinical pregnancy rates, and live birth rates regardless of vaccination status. SARS-CoV-2 infection itself, however, was associated with a temporary reduction in sperm count in men.",
+    "source": "Wesselink et al., American Journal of Epidemiology 2022"
+  },
+  {
+    "id": "covid_004",
+    "text": "Children under 12 are essentially immune to COVID-19 and cannot transmit the virus.",
+    "evidence": "Seroprevalence studies from multiple countries indicate that children under 12 can be infected with SARS-CoV-2, though they tend to have milder symptoms than adults. A household transmission study found that children aged 5-11 had a secondary attack rate of 18%, compared to 29% for adults. While children are less likely to develop severe disease, rare cases of multisystem inflammatory syndrome in children (MIS-C) have been documented.",
+    "source": "Viner et al., JAMA Pediatrics 2022"
+  },
+  {
+    "id": "covid_005",
+    "text": "Natural immunity from prior COVID-19 infection provides stronger protection than vaccination.",
+    "evidence": "A large Israeli study compared reinfection rates among 32,000 individuals. Those with prior infection had slightly lower rates of reinfection than those who were vaccinated but not previously infected. However, the combination of prior infection plus vaccination (hybrid immunity) provided the strongest protection. The study also noted that relying on natural immunity requires surviving the initial infection, which carries meaningful health risks.",
+    "source": "Goldberg et al., NEJM 2022"
+  },
+  {
+    "id": "covid_006",
+    "text": "Ivermectin reduces COVID-19 mortality by 50% or more.",
+    "evidence": "The TOGETHER trial, a large adaptive platform randomized clinical trial in Brazil, enrolled 1,358 COVID-19 patients to receive either ivermectin or placebo. Ivermectin treatment did not result in a significant reduction in hospitalizations (relative risk 0.90, 95% CI 0.70-1.16). There was no statistically significant effect on viral clearance, disease progression, or mortality. These findings were consistent with multiple other large-scale randomized trials.",
+    "source": "Reis et al., NEJM 2022"
+  },
+  {
+    "id": "covid_007",
+    "text": "Long COVID affects a significant proportion of people who recover from the initial infection.",
+    "evidence": "A meta-analysis of 41 studies involving over 48,000 patients found that approximately 43% of COVID-19 survivors experienced at least one persistent symptom at 4 or more weeks after infection. The most common symptoms were fatigue (23%), cognitive impairment (14%), and shortness of breath (13%). The prevalence of long COVID was higher among hospitalized patients but was also observed in those with mild initial illness.",
+    "source": "Chen et al., Journal of Infection 2022"
+  },
+  {
+    "id": "covid_008",
+    "text": "Vitamin D supplementation prevents COVID-19 infection.",
+    "evidence": "Several observational studies found associations between low vitamin D levels and higher COVID-19 severity. However, a large randomized controlled trial in the UK involving 6,200 participants found that daily vitamin D supplementation did not significantly reduce the incidence of COVID-19 infection compared to placebo. Another trial in Norway found no difference in time to first positive SARS-CoV-2 test between supplemented and control groups.",
+    "source": "Jolliffe et al., BMJ 2022"
+  },
+  {
+    "id": "covid_009",
+    "text": "COVID-19 mRNA vaccines alter human DNA permanently.",
+    "evidence": "mRNA vaccines deliver synthetic messenger RNA that instructs cells to produce the SARS-CoV-2 spike protein temporarily. The mRNA does not enter the cell nucleus where DNA is stored and is degraded by normal cellular processes within days. Multiple studies have confirmed that mRNA from vaccines is not reverse-transcribed into DNA in human cells under physiological conditions. The spike protein production ceases once the mRNA is broken down.",
+    "source": "Aldén et al. retraction analysis; CDC Technical Report 2021"
+  },
+  {
+    "id": "covid_010",
+    "text": "Ventilation improvements in indoor spaces reduce airborne COVID-19 transmission.",
+    "evidence": "A study of 169 schools in Georgia found that improved ventilation, including HEPA filtration and opening windows, was associated with a 35% reduction in COVID-19 transmission. A separate study in Italian schools found similar results, with higher air exchange rates correlating with fewer outbreaks. Laboratory simulations confirmed that increasing ventilation from 1 to 6 air changes per hour reduced airborne viral particle concentration by over 80%.",
+    "source": "Gettings et al., MMWR 2021; Buonanno et al., Environment International 2022"
+  }
+]

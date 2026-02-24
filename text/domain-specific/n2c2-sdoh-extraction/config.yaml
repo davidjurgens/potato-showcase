@@ -1,0 +1,91 @@
+# n2c2 2022 Track 2: Social Determinants of Health Extraction
+# Based on Lybarger et al., JAMIA 2023
+# Paper: https://academic.oup.com/jamia/article/30/8/1382/7184752
+# Dataset: https://portal.dbmi.hms.harvard.edu/projects/n2c2-2022-track2/
+#
+# Task: Extract SDOH entities and attributes from clinical notes
+# Annotators identify mentions of social determinants and classify
+# their status attributes.
+#
+# SDOH Entity Types:
+# - Employment: job status, occupation, work-related information
+# - LivingStatus: housing, living arrangements, homelessness
+# - Alcohol: alcohol use, drinking behaviors
+# - Drug: illicit drug use, substance abuse
+# - Tobacco: smoking, tobacco/nicotine use
+# - Insurance: health insurance status, coverage information
+#
+# Status Attributes: Current, Past, None, Unknown
+
+port: 8000
+server_name: localhost
+task_name: "n2c2 SDOH Extraction from Clinical Notes"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify SDOH entity mentions
+  - annotation_type: span
+    name: sdoh_entity
+    description: "Highlight mentions of social determinants of health in the clinical text"
+    labels:
+      - "Employment"
+      - "LivingStatus"
+      - "Alcohol"
+      - "Drug"
+      - "Tobacco"
+      - "Insurance"
+    label_colors:
+      "Employment": "#22c55e"
+      "LivingStatus": "#3b82f6"
+      "Alcohol": "#ef4444"
+      "Drug": "#f97316"
+      "Tobacco": "#eab308"
+      "Insurance": "#8b5cf6"
+    tooltips:
+      "Employment": "Mentions of job status, occupation, work, unemployment, retirement, or disability"
+      "LivingStatus": "Mentions of housing situation, living arrangements, homelessness, or shelter"
+      "Alcohol": "Mentions of alcohol consumption, drinking, or alcohol-related behaviors"
+      "Drug": "Mentions of illicit drug use, substance abuse, or recreational drug use"
+      "Tobacco": "Mentions of smoking, tobacco use, vaping, chewing tobacco, or nicotine"
+      "Insurance": "Mentions of health insurance status, coverage type, or lack of insurance"
+    allow_overlapping: false
+
+  # Step 2: Status of the identified SDOH entity
+  - annotation_type: radio
+    name: entity_status
+    description: "What is the current status of the identified SDOH factor?"
+    labels:
+      - "Current"
+      - "Past"
+      - "None"
+      - "Unknown"
+    keyboard_shortcuts:
+      "Current": "c"
+      "Past": "p"
+      "None": "n"
+      "Unknown": "u"
+    tooltips:
+      "Current": "The patient currently has this SDOH status (e.g., currently smokes, currently employed)"
+      "Past": "The patient had this status in the past (e.g., former smoker, previously homeless)"
+      "None": "The patient explicitly does not have this status (e.g., denies alcohol, never smoked)"
+      "Unknown": "The status cannot be determined from the available text"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f8f9fa; border-radius: 6px;">
+    <strong>Note Type:</strong> {{note_type}}
+  </div>
+  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-family: monospace; white-space: pre-wrap;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

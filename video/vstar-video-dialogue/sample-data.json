@@ -1,0 +1,82 @@
+[
+  {
+    "id": "vstar_001",
+    "video_url": "https://example.com/videos/kitchen_cooking_001.mp4",
+    "question": "What does the person do after placing the vegetables on the cutting board?",
+    "dialogue_context": "Speaker A: It looks like they are preparing a meal. Speaker B: Yes, they just washed some vegetables.",
+    "timestamp_start": 15.0,
+    "timestamp_end": 45.0
+  },
+  {
+    "id": "vstar_002",
+    "video_url": "https://example.com/videos/office_meeting_001.mp4",
+    "question": "Why does the woman standing by the whiteboard look surprised?",
+    "dialogue_context": "Speaker A: The team seems to be discussing quarterly results. Speaker B: The presenter just revealed some numbers.",
+    "timestamp_start": 30.0,
+    "timestamp_end": 60.0
+  },
+  {
+    "id": "vstar_003",
+    "video_url": "https://example.com/videos/park_children_001.mp4",
+    "question": "How do the children react when the dog runs toward them?",
+    "dialogue_context": "Speaker A: The children are playing on the swings. Speaker B: There is a golden retriever off its leash nearby.",
+    "timestamp_start": 0.0,
+    "timestamp_end": 25.0
+  },
+  {
+    "id": "vstar_004",
+    "video_url": "https://example.com/videos/garage_repair_001.mp4",
+    "question": "What tool does the mechanic switch to after the wrench does not work?",
+    "dialogue_context": "Speaker A: He has been trying to remove that bolt for a while. Speaker B: The wrench seems too small for it.",
+    "timestamp_start": 40.0,
+    "timestamp_end": 70.0
+  },
+  {
+    "id": "vstar_005",
+    "video_url": "https://example.com/videos/classroom_lecture_001.mp4",
+    "question": "What happens when the professor asks the class a question?",
+    "dialogue_context": "Speaker A: The lecture is about photosynthesis. Speaker B: Most students seem to be taking notes.",
+    "timestamp_start": 20.0,
+    "timestamp_end": 50.0
+  },
+  {
+    "id": "vstar_006",
+    "video_url": "https://example.com/videos/airport_terminal_001.mp4",
+    "question": "What does the traveler do when they realize they dropped their boarding pass?",
+    "dialogue_context": "Speaker A: The terminal is very crowded today. Speaker B: That person with the red suitcase seems to be in a hurry.",
+    "timestamp_start": 10.0,
+    "timestamp_end": 35.0
+  },
+  {
+    "id": "vstar_007",
+    "video_url": "https://example.com/videos/music_rehearsal_001.mp4",
+    "question": "How does the conductor signal the orchestra to change tempo?",
+    "dialogue_context": "Speaker A: They are rehearsing the second movement. Speaker B: The tempo has been gradually increasing.",
+    "timestamp_start": 55.0,
+    "timestamp_end": 80.0
+  },
+  {
+    "id": "vstar_008",
+    "video_url": "https://example.com/videos/grocery_store_001.mp4",
+    "question": "What does the elderly woman do when she cannot reach the item on the top shelf?",
+    "dialogue_context": "Speaker A: The store seems well-stocked today. Speaker B: That woman is looking at the cereal aisle.",
+    "timestamp_start": 5.0,
+    "timestamp_end": 30.0
+  },
+  {
+    "id": "vstar_009",
+    "video_url": "https://example.com/videos/basketball_practice_001.mp4",
+    "question": "What play does the coach demonstrate after the team misses the layup?",
+    "dialogue_context": "Speaker A: The team is running shooting drills. Speaker B: They seem to be struggling with layups from the left side.",
+    "timestamp_start": 25.0,
+    "timestamp_end": 55.0
+  },
+  {
+    "id": "vstar_010",
+    "video_url": "https://example.com/videos/art_studio_001.mp4",
+    "question": "Why does the artist pause and step back from the canvas?",
+    "dialogue_context": "Speaker A: She has been working on the portrait for about an hour. Speaker B: The colors she is mixing look quite vibrant.",
+    "timestamp_start": 35.0,
+    "timestamp_end": 60.0
+  }
+]

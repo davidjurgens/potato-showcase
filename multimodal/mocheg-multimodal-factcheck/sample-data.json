@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mocheg_001",
+    "text": "The Eiffel Tower was painted red for the 2024 Paris Olympics opening ceremony.",
+    "evidence_text": "The Eiffel Tower has been repainted approximately every seven years since its construction. The tower's current color is a specially mixed shade called 'Eiffel Tower Brown.' For the 2024 Olympics, the city of Paris undertook extensive renovations of the tower area but the structure's color remained unchanged. The opening ceremony featured spectacular light shows projected onto landmarks across the city.",
+    "image_url": "https://example.com/mocheg/eiffel_tower_001.jpg",
+    "source": "Social Media Claim"
+  },
+  {
+    "id": "mocheg_002",
+    "text": "NASA's Perseverance rover discovered liquid water on the surface of Mars in 2023.",
+    "evidence_text": "NASA's Perseverance rover has been exploring Jezero Crater on Mars since February 2021. The rover has collected rock samples and analyzed soil composition. In 2023, the rover's instruments detected mineral deposits consistent with ancient water activity. Scientists have confirmed evidence of briny water beneath the surface using orbital radar data, but no liquid water has been observed on the current Martian surface.",
+    "image_url": "https://example.com/mocheg/mars_rover_002.jpg",
+    "source": "News Article"
+  },
+  {
+    "id": "mocheg_003",
+    "text": "The Amazon rainforest experienced a 30% increase in deforestation in the first quarter of 2023 compared to the same period in 2022.",
+    "evidence_text": "According to Brazil's National Institute for Space Research (INPE), deforestation alerts in the Amazon dropped significantly in early 2023 compared to 2022 levels. The Brazilian government reported a 33.6% decrease in deforestation alerts for the first quarter of 2023. Satellite imagery confirmed reduced clearing activity in previously vulnerable areas of the Legal Amazon region.",
+    "image_url": "https://example.com/mocheg/amazon_satellite_003.jpg",
+    "source": "Environmental Blog"
+  },
+  {
+    "id": "mocheg_004",
+    "text": "This photo shows flooding in Dubai caused by cloud seeding operations in April 2024.",
+    "evidence_text": "Dubai experienced unprecedented rainfall on April 16, 2024, with approximately 142mm of rain falling in a 24-hour period. The UAE does conduct regular cloud seeding operations. Meteorologists attributed the extreme rainfall primarily to a large-scale weather system and noted that cloud seeding's contribution to such events remains a subject of scientific debate. The flooding caused significant disruption to infrastructure and travel.",
+    "image_url": "https://example.com/mocheg/dubai_flooding_004.jpg",
+    "source": "Viral Social Media Post"
+  },
+  {
+    "id": "mocheg_005",
+    "text": "The Great Wall of China is visible from space with the naked eye.",
+    "evidence_text": "Multiple astronauts have addressed this common claim. NASA astronaut Leroy Chiao reported seeing what he believed to be the Great Wall from the International Space Station at approximately 400km altitude, though this was disputed. Chinese astronaut Yang Liwei stated he could not see the wall from space. The wall is narrow (about 5-8 meters wide) relative to its visibility from orbital distances. Most sources agree it is not visible from low Earth orbit without aid.",
+    "image_url": "https://example.com/mocheg/great_wall_space_005.jpg",
+    "source": "Educational Website"
+  },
+  {
+    "id": "mocheg_006",
+    "text": "Greenland's ice sheet lost over 200 billion tons of ice per year on average between 2002 and 2023.",
+    "evidence_text": "NASA's GRACE and GRACE-FO satellite missions have tracked ice mass changes in Greenland since 2002. Data shows Greenland has been losing ice at an accelerating rate. Between 2002 and 2020, the ice sheet lost an average of approximately 270 billion metric tons of ice per year. Recent studies published in Nature confirm these measurements and show the rate of loss has increased in the most recent decade.",
+    "image_url": "https://example.com/mocheg/greenland_ice_006.jpg",
+    "source": "Climate Report"
+  },
+  {
+    "id": "mocheg_007",
+    "text": "A new species of deep-sea fish was discovered in the Mariana Trench in 2023 at a record depth of 8,300 meters.",
+    "evidence_text": "In 2023, a joint Japanese-Australian research expedition reported observing a snailfish (Pseudoliparis) at approximately 8,336 meters in the Izu-Ogasawara Trench near Japan, not the Mariana Trench. This set a new record for the deepest fish ever observed. The previous record was held by a Mariana snailfish spotted at 8,178 meters in the Mariana Trench in 2017. The discovery was confirmed by the University of Western Australia.",
+    "image_url": "https://example.com/mocheg/deep_sea_fish_007.jpg",
+    "source": "Science News"
+  },
+  {
+    "id": "mocheg_008",
+    "text": "Electric vehicles produce zero emissions throughout their entire lifecycle.",
+    "evidence_text": "Electric vehicles produce zero direct tailpipe emissions during operation. However, lifecycle emissions analyses must account for manufacturing, particularly battery production, which is energy-intensive. The electricity source for charging also affects total emissions. A 2023 study in Nature Energy found EVs produce 50-70% fewer lifecycle emissions than comparable gasoline vehicles when charged from the average US grid, but they are not zero-emission on a lifecycle basis.",
+    "image_url": "https://example.com/mocheg/ev_factory_008.jpg",
+    "source": "Automotive Industry Claim"
+  },
+  {
+    "id": "mocheg_009",
+    "text": "The photograph shows a polar bear stranded on a small piece of melting ice in the Arctic Ocean.",
+    "evidence_text": "Polar bears regularly use sea ice as platforms for hunting seals and are often photographed on small ice floes. While Arctic sea ice has declined significantly due to climate change, individual photographs of bears on ice do not necessarily indicate immediate danger. Polar bears are strong swimmers capable of covering long distances. However, declining sea ice habitat does pose a genuine long-term threat to polar bear populations.",
+    "image_url": "https://example.com/mocheg/polar_bear_ice_009.jpg",
+    "source": "Environmental Campaign"
+  },
+  {
+    "id": "mocheg_010",
+    "text": "Japan's population declined by over 800,000 people in 2023, the largest annual decrease ever recorded.",
+    "evidence_text": "Japan's Ministry of Internal Affairs reported that the country's population continued to decline in 2023. The total resident population as of January 2024 showed a decrease of approximately 595,000 from the previous year. While this represents a significant decline, the figure of 800,000 overstates the actual decrease. Japan's population has been declining annually since 2008 due to low birth rates and limited immigration.",
+    "image_url": "https://example.com/mocheg/japan_population_chart_010.jpg",
+    "source": "Demographics Blog"
+  }
+]

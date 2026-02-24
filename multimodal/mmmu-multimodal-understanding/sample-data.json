@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mmmu_001",
+    "text": "A patient presents with the ECG tracing shown in the image. Which of the following is the most likely diagnosis?",
+    "image_url": "https://example.com/mmmu/ecg_tracing_001.png",
+    "options": "A) Atrial fibrillation\nB) Ventricular tachycardia\nC) Second-degree AV block (Mobitz Type I)\nD) Normal sinus rhythm",
+    "subject": "Clinical Medicine",
+    "subfield": "Cardiology"
+  },
+  {
+    "id": "mmmu_002",
+    "text": "Based on the circuit diagram shown, what is the total resistance between terminals A and B?",
+    "image_url": "https://example.com/mmmu/circuit_diagram_002.png",
+    "options": "A) 10 ohms\nB) 15 ohms\nC) 20 ohms\nD) 25 ohms",
+    "subject": "Electrical Engineering",
+    "subfield": "Circuit Analysis"
+  },
+  {
+    "id": "mmmu_003",
+    "text": "The bar chart shows GDP growth rates for five countries over the past decade. Which country experienced the largest decline between 2018 and 2020?",
+    "image_url": "https://example.com/mmmu/gdp_bar_chart_003.png",
+    "options": "A) Country A\nB) Country B\nC) Country C\nD) Country D",
+    "subject": "Economics",
+    "subfield": "Macroeconomics"
+  },
+  {
+    "id": "mmmu_004",
+    "text": "Examine the microscopy image of the tissue sample. Which cell type is indicated by the arrow?",
+    "image_url": "https://example.com/mmmu/histology_004.png",
+    "options": "A) Neutrophil\nB) Macrophage\nC) Lymphocyte\nD) Eosinophil",
+    "subject": "Biology",
+    "subfield": "Histology"
+  },
+  {
+    "id": "mmmu_005",
+    "text": "The phase diagram shown represents a binary alloy system. At point X (marked on the diagram), what phases are present?",
+    "image_url": "https://example.com/mmmu/phase_diagram_005.png",
+    "options": "A) Liquid only\nB) Liquid + Alpha\nC) Alpha + Beta\nD) Beta only",
+    "subject": "Materials Science",
+    "subfield": "Phase Equilibria"
+  },
+  {
+    "id": "mmmu_006",
+    "text": "Consider the architectural floor plan shown. What is the approximate total square footage of the living area (excluding the garage)?",
+    "image_url": "https://example.com/mmmu/floor_plan_006.png",
+    "options": "A) 1,200 sq ft\nB) 1,500 sq ft\nC) 1,800 sq ft\nD) 2,100 sq ft",
+    "subject": "Architecture",
+    "subfield": "Residential Design"
+  },
+  {
+    "id": "mmmu_007",
+    "text": "The painting shown is an example of which art movement?",
+    "image_url": "https://example.com/mmmu/painting_007.png",
+    "options": "A) Impressionism\nB) Cubism\nC) Surrealism\nD) Abstract Expressionism",
+    "subject": "Art History",
+    "subfield": "Modern Art Movements"
+  },
+  {
+    "id": "mmmu_008",
+    "text": "Given the scatter plot with regression line shown, what is the approximate correlation coefficient (r) between the two variables?",
+    "image_url": "https://example.com/mmmu/scatter_plot_008.png",
+    "options": "A) r = -0.85\nB) r = -0.30\nC) r = 0.45\nD) r = 0.92",
+    "subject": "Statistics",
+    "subfield": "Regression Analysis"
+  },
+  {
+    "id": "mmmu_009",
+    "text": "The molecular structure shown represents which organic compound?",
+    "image_url": "https://example.com/mmmu/molecular_structure_009.png",
+    "options": "A) Benzene\nB) Cyclohexane\nC) Toluene\nD) Naphthalene",
+    "subject": "Chemistry",
+    "subfield": "Organic Chemistry"
+  },
+  {
+    "id": "mmmu_010",
+    "text": "Examine the topographic map shown. What is the elevation change along the trail marked in red from point P to point Q?",
+    "image_url": "https://example.com/mmmu/topo_map_010.png",
+    "options": "A) 200 meters\nB) 350 meters\nC) 500 meters\nD) 650 meters",
+    "subject": "Geography",
+    "subfield": "Physical Geography"
+  }
+]

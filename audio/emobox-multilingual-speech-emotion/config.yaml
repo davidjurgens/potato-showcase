@@ -1,0 +1,83 @@
+# EmoBox - Multilingual Speech Emotion Recognition
+# Based on Ma et al., INTERSPEECH 2024
+# Paper: https://www.isca-archive.org/interspeech_2024/ma24_interspeech.html
+# Dataset: https://github.com/emo-box/EmoBox
+#
+# Task: Classify emotional states in multilingual speech clips and rate intensity.
+# Covers multiple languages and corpora for cross-lingual emotion recognition.
+#
+# Guidelines:
+# - Listen to the full audio clip before making a judgment
+# - Focus on vocal cues (tone, pitch, rhythm) rather than transcript content alone
+# - Rate emotional intensity on a 1-5 scale
+# - Consider arousal level (energy/activation) separately from emotion category
+
+port: 8000
+server_name: localhost
+task_name: "EmoBox: Multilingual Speech Emotion Recognition"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: radio
+    name: primary_emotion
+    description: "What is the primary emotion expressed in this speech clip?"
+    labels:
+      - name: "Happy"
+        tooltip: "Joy, excitement, contentment, amusement"
+        key_value: "h"
+      - name: "Sad"
+        tooltip: "Sorrow, disappointment, grief, melancholy"
+        key_value: "s"
+      - name: "Angry"
+        tooltip: "Frustration, irritation, rage, hostility"
+        key_value: "a"
+      - name: "Fearful"
+        tooltip: "Anxiety, worry, terror, nervousness"
+        key_value: "f"
+      - name: "Disgusted"
+        tooltip: "Revulsion, distaste, contempt"
+        key_value: "d"
+      - name: "Surprised"
+        tooltip: "Shock, amazement, astonishment"
+        key_value: "u"
+      - name: "Neutral"
+        tooltip: "No strong emotion detected, calm speech"
+        key_value: "n"
+
+  - annotation_type: likert
+    name: emotion_intensity
+    description: "How intense is the expressed emotion? (1 = Very mild, 5 = Very intense)"
+    size: 5
+    min_label: "Very mild"
+    max_label: "Very intense"
+
+  - annotation_type: radio
+    name: arousal_level
+    description: "What is the arousal/energy level of the speaker?"
+    labels:
+      - name: "Low"
+        tooltip: "Calm, subdued, low-energy speech"
+        key_value: "l"
+      - name: "Medium"
+        tooltip: "Moderate energy, conversational tone"
+        key_value: "m"
+      - name: "High"
+        tooltip: "Excited, agitated, high-energy speech"
+        key_value: "i"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

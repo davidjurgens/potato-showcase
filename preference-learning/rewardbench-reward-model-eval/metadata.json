@@ -1,0 +1,23 @@
+{
+  "title": "RewardBench: Reward Model Evaluation via Pairwise Preference",
+  "description": "Reward model evaluation through pairwise preference annotation. Annotators choose between a 'chosen' (better) and 'rejected' (worse) response across diverse categories (chat, safety, reasoning, coding).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["pairwise"],
+  "domain": ["NLP", "RLHF", "Reward Modeling"],
+  "useCase": ["Reward Model Evaluation", "Preference Learning", "RLHF Benchmarking"],
+  "complexity": "intermediate",
+  "tags": ["reward-model", "rewardbench", "pairwise", "rlhf", "preference", "evaluation"],
+  "featured": false,
+  "paperReference": "Lambert et al., Findings NAACL 2025",
+  "paperUrl": "https://arxiv.org/abs/2403.13787",
+  "datasetUrl": "https://huggingface.co/datasets/allenai/reward-bench",
+  "citation": "@inproceedings{lambert2025rewardbench,\n  title={RewardBench: Evaluating Reward Models for Language Modeling},\n  author={Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and Lin, Bill Yuchen and Chandu, Khyathi and Dziri, Nouha and Kumar, Sachin and Zick, Tom and Choi, Yejin and Smith, Noah A. and Hajishirzi, Hannaneh},\n  booktitle={Findings of the Association for Computational Linguistics: NAACL 2025},\n  year={2025}\n}"
+}
