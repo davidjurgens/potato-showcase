@@ -17,14 +17,23 @@ user_config:
   allow_all_users: true
 
 annotation_schemes:
-  - annotation_type: "best-worst"
-    name: "quality_comparison"
-    description: "Select the BEST and WORST response to the given prompt"
-    best_label: "Best Response"
-    worst_label: "Worst Response"
-    use_colors: true
-    best_color: "#22c55e"
-    worst_color: "#ef4444"
+  - annotation_type: "radio"
+    name: "best_response"
+    description: "Select the BEST response to the given prompt"
+    labels:
+      - "Option A"
+      - "Option B"
+      - "Option C"
+      - "Option D"
+
+  - annotation_type: "radio"
+    name: "worst_response"
+    description: "Select the WORST response to the given prompt"
+    labels:
+      - "Option A"
+      - "Option B"
+      - "Option C"
+      - "Option D"
 
   - annotation_type: "text"
     name: "reasoning"

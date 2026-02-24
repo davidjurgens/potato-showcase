@@ -35,23 +35,18 @@ output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify chart elements with bounding boxes
-  - annotation_type: bbox
+  - annotation_type: image_annotation
     name: chart_elements
     description: "Draw bounding boxes around the key structural elements of the chart."
+    tools:
+      - bbox
     labels:
-      - name: "Title"
-        color: "#3b82f6"
-      - name: "X-Axis Label"
-        color: "#22c55e"
-      - name: "Y-Axis Label"
-        color: "#ef4444"
-      - name: "Legend"
-        color: "#f59e0b"
-      - name: "Data Region"
-        color: "#8b5cf6"
-      - name: "Annotation"
-        color: "#06b6d4"
-    required: true
+      - "Title"
+      - "X-Axis Label"
+      - "Y-Axis Label"
+      - "Legend"
+      - "Data Region"
+      - "Annotation"
 
   # Step 2: Classify chart type
   - annotation_type: radio

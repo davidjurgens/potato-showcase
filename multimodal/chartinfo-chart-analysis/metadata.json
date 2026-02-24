@@ -10,11 +10,31 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["bbox", "radio", "text"],
-  "domain": ["Multimodal", "Chart Understanding", "Document AI"],
-  "useCase": ["Chart Classification", "Data Extraction", "Document Understanding"],
+  "annotationTypes": [
+    "image_annotation",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Multimodal",
+    "Chart Understanding",
+    "Document AI"
+  ],
+  "useCase": [
+    "Chart Classification",
+    "Data Extraction",
+    "Document Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["chart", "infographic", "document-ai", "bounding-box", "data-extraction", "icpr2024", "visualization"],
+  "tags": [
+    "chart",
+    "infographic",
+    "document-ai",
+    "bounding-box",
+    "data-extraction",
+    "icpr2024",
+    "visualization"
+  ],
   "featured": false,
   "paperReference": "Davila et al., ICPR 2024",
   "paperUrl": "https://link.springer.com/chapter/10.1007/978-3-031-78312-8_5",

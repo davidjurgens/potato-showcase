@@ -90,7 +90,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Link entities with Wikidata relation types
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: wikidata_relations
     description: "Draw relations between entity pairs using Wikidata property types"
     labels:

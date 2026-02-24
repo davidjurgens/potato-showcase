@@ -13,20 +13,16 @@ item_properties:
   image_key: image_url
 
 annotation_schemes:
-  - annotation_type: polygon
+  - annotation_type: image_annotation
     name: segments
     description: "Draw polygons around each object"
+    tools:
+      - polygon
     labels:
-      - name: "Person"
-        color: "#ef4444"
-      - name: "Vehicle"
-        color: "#3b82f6"
-      - name: "Animal"
-        color: "#22c55e"
-      - name: "Object"
-        color: "#8b5cf6"
-    allow_overlapping: false
-    required: true
+      - "Person"
+      - "Vehicle"
+      - "Animal"
+      - "Object"
 
 output_annotation_dir: "output/"
 output_annotation_format: "json"

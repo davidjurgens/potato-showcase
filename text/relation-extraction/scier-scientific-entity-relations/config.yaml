@@ -74,7 +74,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Link entities with typed relations
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: scientific_relations
     description: "Draw relations between pairs of scientific entities"
     labels:

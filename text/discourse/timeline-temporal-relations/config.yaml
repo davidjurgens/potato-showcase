@@ -58,7 +58,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Link pairs with temporal relations
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: temporal_relations
     description: "Draw temporal relations between pairs of events/time expressions"
     labels:

@@ -76,7 +76,7 @@ annotation_schemes:
     allow_overlapping: false
 
   # Step 2: Event relation linking
-  - annotation_type: span_linking
+  - annotation_type: span_link
     name: event_relations
     description: "Link pairs of event mentions with their relation type. Select two previously annotated event spans and specify the relation."
     source_scheme: event_mentions
