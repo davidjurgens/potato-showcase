@@ -15,10 +15,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Claude Code
-CLAUDE.md
-.paper-search-strategy.md
-
 # Python
 __pycache__/
 *.pyc
