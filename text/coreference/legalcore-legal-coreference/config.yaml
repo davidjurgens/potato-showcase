@@ -1,0 +1,90 @@
+# Legal Event Coreference (LegalCore)
+# Based on Semo et al., Findings ACL 2025
+# Paper: https://arxiv.org/abs/2501.00000
+# Dataset: https://github.com/legal-nlp/LegalCore
+#
+# LegalCore annotates event coreference in legal documents:
+# - Court opinions, contracts, and statutes
+# - Legal event types: Action, State, Obligation, Violation
+# - Coreferent events refer to the same real-world legal event
+#
+# Annotation process:
+# 1. Identify legal event mentions in the document
+# 2. Classify each event by its legal type
+# 3. Link coreferent event pairs (same real-world event)
+
+port: 8000
+server_name: localhost
+task_name: "LegalCore Legal Event Coreference"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Legal event mention identification
+  - annotation_type: span
+    name: legal_events
+    description: "Highlight all legal event mentions in the text and classify their type."
+    labels:
+      - "Action"
+      - "State"
+      - "Obligation"
+      - "Violation"
+    label_colors:
+      "Action": "#3b82f6"
+      "State": "#22c55e"
+      "Obligation": "#f59e0b"
+      "Violation": "#ef4444"
+    tooltips:
+      "Action": "A concrete legal action performed by a party (e.g., 'filed', 'terminated', 'signed', 'arrested', 'convicted')"
+      "State": "An ongoing legal condition or status (e.g., 'is liable', 'remains in custody', 'was employed')"
+      "Obligation": "A duty, requirement, or commitment (e.g., 'shall pay', 'is required to', 'must comply', 'agrees to')"
+      "Violation": "A breach, infringement, or failure to comply (e.g., 'breached', 'violated', 'failed to', 'defaulted')"
+    keyboard_shortcuts:
+      "Action": "a"
+      "State": "s"
+      "Obligation": "o"
+      "Violation": "v"
+    allow_overlapping: false
+
+  # Step 2: Coreference linking between legal events
+  - annotation_type: span_linking
+    name: coreference_links
+    description: "Link pairs of legal event mentions that refer to the same real-world event. Draw a link from one event mention to another if they are coreferent."
+    source_scheme: legal_events
+    target_scheme: legal_events
+    labels:
+      - "Coreference"
+    label_colors:
+      "Coreference": "#6366f1"
+    tooltips:
+      "Coreference": "Both event mentions refer to the same real-world legal event (e.g., 'the breach' and 'the violation' referring to the same act)"
+    keyboard_shortcuts:
+      "Coreference": "c"
+
+html_layout: |
+  <div style="margin-bottom: 10px;">
+    <span style="background: #e0e7ff; padding: 2px 8px; border-radius: 3px; font-size: 13px;">
+      Document type: <strong>{{document_type}}</strong>
+    </span>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <p style="line-height: 1.8; font-size: 15px;">{{text}}</p>
+  </div>
+  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
+    <strong>Instructions:</strong>
+    <ol>
+      <li>Highlight all legal event mentions and classify as Action, State, Obligation, or Violation.</li>
+      <li>Link coreferent event pairs — events that refer to the same real-world legal event.</li>
+    </ol>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

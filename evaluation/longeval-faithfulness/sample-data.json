@@ -1,0 +1,56 @@
+[
+  {
+    "id": "le_001",
+    "text": "The study found that regular consumption of green tea reduces the risk of heart disease by 25%. The researchers analyzed data from 50,000 participants over a 10-year period in Japan. They concluded that the catechins in green tea have a protective effect on cardiovascular health.",
+    "source_document": "A large-scale prospective study conducted in Japan examined the relationship between green tea consumption and cardiovascular disease. The study followed 40,530 adults aged 40-79 for 11 years. Results showed that participants who consumed 5 or more cups of green tea per day had a 26% lower risk of death from cardiovascular disease compared to those who drank less than one cup per day. The researchers attributed this benefit to the polyphenolic compounds found in green tea, particularly catechins, which have antioxidant and anti-inflammatory properties.",
+    "summary_model": "GPT-4"
+  },
+  {
+    "id": "le_002",
+    "text": "The Paris Agreement, signed in 2015, commits all signatory nations to limit global warming to 1.5 degrees Celsius above pre-industrial levels. Under the agreement, each country must submit nationally determined contributions every five years. The United States was the first major country to rejoin the agreement after initially withdrawing.",
+    "source_document": "The Paris Agreement is an international treaty on climate change adopted on December 12, 2015, at COP21 in Paris, France. The treaty aims to limit the global average temperature increase to well below 2 degrees Celsius above pre-industrial levels, while pursuing efforts to limit it to 1.5 degrees Celsius. Each party to the agreement is required to submit nationally determined contributions (NDCs) that outline their climate action plans. These NDCs must be updated every five years, with each successive plan expected to be more ambitious. The United States formally withdrew from the agreement in November 2020 under the Trump administration, but rejoined on February 19, 2021, under the Biden administration.",
+    "summary_model": "Claude-3"
+  },
+  {
+    "id": "le_003",
+    "text": "CRISPR-Cas9 gene editing technology was developed by Jennifer Doudna and Emmanuelle Charpentier, who received the Nobel Prize in Chemistry in 2020 for their work. The technology allows scientists to precisely edit DNA sequences in living organisms. Recent clinical trials have shown promising results in treating sickle cell disease and beta-thalassemia.",
+    "source_document": "CRISPR-Cas9 is a revolutionary gene-editing technology that has transformed molecular biology. Jennifer Doudna and Emmanuelle Charpentier published their seminal paper in 2012 describing how the CRISPR-Cas9 system could be programmed to cut specific DNA sequences. For this work, they were awarded the 2020 Nobel Prize in Chemistry. The technology works by using a guide RNA to direct the Cas9 protein to a specific location in the genome, where it makes a double-strand break. Clinical trials using CRISPR-based therapies have shown remarkable success, particularly Vertex Pharmaceuticals' exagamglogene autotemcel (exa-cel) for sickle cell disease and transfusion-dependent beta-thalassemia, which received FDA approval in December 2023.",
+    "summary_model": "Llama-3"
+  },
+  {
+    "id": "le_004",
+    "text": "The James Webb Space Telescope, launched in December 2021, has discovered evidence of water on several exoplanets. Operating at the L2 Lagrange point 1.5 million kilometers from Earth, it uses infrared imaging to peer through cosmic dust clouds. The telescope cost approximately $10 billion and took 25 years to develop.",
+    "source_document": "The James Webb Space Telescope (JWST) was launched on December 25, 2021, aboard an Ariane 5 rocket. It is positioned at the Sun-Earth L2 Lagrange point, approximately 1.5 million kilometers from Earth. JWST is designed primarily for infrared astronomy, enabling it to observe objects obscured by gas and dust. The telescope's development began in 1996, and its total cost is estimated at $10 billion. Among its early scientific results, JWST has detected water vapor in the atmosphere of exoplanet WASP-96 b, and has identified carbon dioxide in the atmosphere of exoplanet WASP-39 b. The telescope has also produced unprecedented images of distant galaxies and star-forming regions.",
+    "summary_model": "GPT-4"
+  },
+  {
+    "id": "le_005",
+    "text": "A comprehensive meta-analysis of 35 randomized controlled trials found that cognitive behavioral therapy is more effective than medication alone for treating moderate depression. The study showed a 45% reduction in symptoms after 12 weeks of CBT treatment. Researchers recommend combining CBT with medication for severe cases.",
+    "source_document": "A meta-analysis published in The Lancet Psychiatry examined 29 randomized controlled trials comparing cognitive behavioral therapy (CBT) with pharmacotherapy for major depressive disorder. The analysis found that CBT was equally effective to antidepressant medication for mild to moderate depression, with both approaches showing approximately 40% symptom reduction at 12-16 weeks. For severe depression, the combination of CBT and medication showed superior outcomes compared to either treatment alone. The authors noted significant heterogeneity across studies and recommended that treatment decisions be made on a case-by-case basis, taking into account patient preferences, availability of services, and severity of symptoms.",
+    "summary_model": "Claude-3"
+  },
+  {
+    "id": "le_006",
+    "text": "Tesla reported record revenue of $96.8 billion in 2023, with vehicle deliveries reaching 1.8 million units worldwide. The company's profit margins declined due to aggressive price cuts aimed at maintaining market share. CEO Elon Musk announced plans to begin production of the Cybertruck at the company's Texas Gigafactory.",
+    "source_document": "Tesla, Inc. reported full-year 2023 revenue of $96.77 billion, a 19% increase from 2022. The company delivered approximately 1.81 million vehicles globally, a new record but below some analyst expectations. Operating margins fell from 16.8% in 2022 to 9.2% in 2023, primarily due to multiple rounds of price reductions across Tesla's vehicle lineup. These price cuts were implemented to stimulate demand amid increasing competition from other EV manufacturers. Cybertruck production commenced at the Texas Gigafactory in late 2023, with initial deliveries beginning in November 2023. Elon Musk cautioned that volume production ramp-up would take time, with meaningful production levels expected by 2025.",
+    "summary_model": "Llama-3"
+  },
+  {
+    "id": "le_007",
+    "text": "The 2024 Olympic Games in Paris featured 32 sports and attracted over 10,000 athletes from 206 countries. The United States topped the medal table with 126 total medals. Notably, the games included breakdancing as a new Olympic sport for the first time.",
+    "source_document": "The 2024 Summer Olympic Games were held in Paris, France, from July 26 to August 11, 2024. The games featured 32 sports with 329 events across various venues in and around Paris. Approximately 10,714 athletes from 206 National Olympic Committees participated. The United States led the overall medal count with 126 medals (40 gold, 44 silver, 42 bronze), while China topped the gold medal count with 40 golds. Breaking (breakdancing) made its Olympic debut as a new sport, though it will not be included in the 2028 Los Angeles Olympics. Surfing events were held in Tahiti, French Polynesia, continuing the trend of geographically dispersed Olympic venues.",
+    "summary_model": "GPT-4"
+  },
+  {
+    "id": "le_008",
+    "text": "Researchers at MIT developed a new battery technology using aluminum and sulfur that could store renewable energy at one-sixth the cost of current lithium-ion batteries. The batteries operate at 110 degrees Celsius and use molten salt as an electrolyte. The technology is expected to be commercially available within three years.",
+    "source_document": "Researchers at the Massachusetts Institute of Technology (MIT) published a study in Nature describing a new type of battery using aluminum and sulfur electrodes with a molten chloroaluminate salt electrolyte. The battery operates at approximately 110 degrees Celsius (230 degrees Fahrenheit), which is maintained by the heat generated during charging and discharging. The researchers estimate that the raw materials for these batteries would cost about one-sixth that of comparable lithium-ion batteries. Professor Donald Sadoway, the lead researcher, noted that while the technology shows promise for grid-scale energy storage, significant engineering challenges remain before commercialization, and no specific timeline for commercial availability has been established.",
+    "summary_model": "Claude-3"
+  },
+  {
+    "id": "le_009",
+    "text": "The World Health Organization declared mpox (monkeypox) a global health emergency in July 2022 after cases spread to over 75 countries. The outbreak primarily affected men who have sex with men. Vaccination campaigns using the Jynneos vaccine helped contain the spread, with cases declining by 90% by early 2023.",
+    "source_document": "The World Health Organization (WHO) declared the mpox outbreak a Public Health Emergency of International Concern (PHEIC) on July 23, 2022. By that time, cases had been reported in over 75 countries across all WHO regions. The 2022 outbreak disproportionately affected gay, bisexual, and other men who have sex with men, though the virus can affect anyone through close physical contact. The Jynneos vaccine (also known as Imvanex or MVA-BN) was deployed in several countries as part of the response. Global case numbers declined significantly from peak levels, with weekly reported cases dropping by approximately 90% between August 2022 and February 2023. The WHO lifted the PHEIC declaration in May 2023, although a new emergency was declared in August 2024 related to a different clade of the virus spreading in the Democratic Republic of the Congo.",
+    "summary_model": "Llama-3"
+  }
+]

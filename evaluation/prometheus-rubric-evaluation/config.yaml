@@ -1,0 +1,88 @@
+# Prometheus: Rubric-based LLM Evaluation
+# Based on "Prometheus: Inducing Fine-grained Evaluation Capability in Language Models" (Kim et al., ICLR 2024)
+# Task: Score LLM responses against detailed rubrics and provide written feedback
+
+port: 8000
+server_name: localhost
+task_name: "Prometheus Rubric-based Evaluation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing instruction, response, rubric, and reference answer
+html_layout: |
+  <div class="prometheus-container">
+    <div class="instruction-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">Instruction:</h3>
+      <div class="instruction-text" style="font-size: 15px;">{{text}}</div>
+    </div>
+    <div class="response-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #1976d2;">
+      <h3 style="margin-top: 0; color: #1976d2;">Model Response:</h3>
+      <div class="response-text" style="font-size: 15px; white-space: pre-wrap;">{{response}}</div>
+    </div>
+    <div class="rubric-section" style="background: #fff8e1; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f9a825;">
+      <h3 style="margin-top: 0; color: #f9a825;">Scoring Rubric:</h3>
+      <div class="rubric-text" style="font-size: 14px; white-space: pre-wrap;">{{rubric}}</div>
+    </div>
+    <div class="reference-section" style="background: #f3e5f5; padding: 15px; border-radius: 8px; border: 2px solid #7b1fa2;">
+      <h3 style="margin-top: 0; color: #7b1fa2;">Reference Answer:</h3>
+      <div class="reference-text" style="font-size: 14px; white-space: pre-wrap;">{{reference_answer}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Rubric score (1-5)
+  - name: "rubric_score"
+    description: "Score the response according to the provided rubric (1-5 scale)."
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Fails criteria"
+    max_label: "5 - Exceeds criteria"
+    labels:
+      - "1 - Does not meet rubric criteria at all"
+      - "2 - Meets few rubric criteria with major gaps"
+      - "3 - Partially meets rubric criteria"
+      - "4 - Meets most rubric criteria well"
+      - "5 - Fully meets or exceeds all rubric criteria"
+    keyboard_shortcuts:
+      "1 - Does not meet rubric criteria at all": "1"
+      "2 - Meets few rubric criteria with major gaps": "2"
+      "3 - Partially meets rubric criteria": "3"
+      "4 - Meets most rubric criteria well": "4"
+      "5 - Fully meets or exceeds all rubric criteria": "5"
+
+  # Written feedback
+  - name: "feedback"
+    description: "Provide detailed written feedback explaining your score. Reference specific rubric criteria and cite examples from the response."
+    annotation_type: text
+    min_length: 50
+    max_length: 800
+    placeholder: "Explain how the response meets or fails to meet each rubric criterion. Cite specific examples from the response..."
+
+  # Comparison to reference
+  - name: "reference_comparison"
+    description: "How does the response compare to the reference answer?"
+    annotation_type: likert
+    size: 5
+    min_label: "1 - Much worse"
+    max_label: "5 - Much better"
+    labels:
+      - "1 - Much worse than reference"
+      - "2 - Somewhat worse than reference"
+      - "3 - About equal to reference"
+      - "4 - Somewhat better than reference"
+      - "5 - Much better than reference"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 3

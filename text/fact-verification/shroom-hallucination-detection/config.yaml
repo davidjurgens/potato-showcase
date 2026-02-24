@@ -1,0 +1,83 @@
+# SHROOM: Shared-task on Hallucinations and Related Observable Overgeneration Mistakes
+# Based on Mickus et al., SemEval@NAACL 2024
+# Paper: https://aclanthology.org/2024.semeval-1.289/
+# Dataset: https://github.com/Helsinki-NLP/shroom
+#
+# This task performs binary hallucination detection in NLG outputs.
+# Annotators judge whether a model-generated text contains hallucinations
+# (overgeneration mistakes) relative to the input.
+#
+# Task Types:
+# - MT (Machine Translation): Does the translation add/change meaning?
+# - DM (Definition Modeling): Does the definition match the target word?
+# - PG (Paraphrase Generation): Does the paraphrase preserve meaning?
+#
+# Hallucination Label:
+# - Hallucination: The output contains information not supported by or
+#   contradicting the input (overgeneration)
+# - Not Hallucination: The output faithfully represents the input
+#
+# Annotation Guidelines:
+# 1. Read the input text carefully
+# 2. Read the model output (generated text)
+# 3. Determine if the output adds, changes, or fabricates information
+# 4. For MT: Check if the translation adds meaning not in the source
+# 5. For DM: Check if the definition matches the word in context
+# 6. For PG: Check if the paraphrase changes the original meaning
+# 7. Rate your confidence in the judgment
+
+port: 8000
+server_name: localhost
+task_name: "SHROOM: Hallucination Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Hallucination judgment
+  - annotation_type: radio
+    name: hallucination_label
+    description: "Does the model output contain a hallucination (overgeneration) relative to the input?"
+    labels:
+      - "Hallucination"
+      - "Not Hallucination"
+    keyboard_shortcuts:
+      "Hallucination": "h"
+      "Not Hallucination": "n"
+    tooltips:
+      "Hallucination": "The output contains information that is not supported by or contradicts the input (added meaning, fabricated details, or changed facts)"
+      "Not Hallucination": "The output faithfully represents the input without adding or changing meaning"
+
+  # Step 2: Confidence rating
+  - annotation_type: likert
+    name: confidence
+    description: "How confident are you in your hallucination judgment?"
+    min_value: 1
+    max_value: 5
+    labels:
+      1: "Very uncertain"
+      2: "Somewhat uncertain"
+      3: "Moderately confident"
+      4: "Confident"
+      5: "Very confident"
+
+html_layout: |
+  <div style="margin-bottom: 8px; padding: 6px; background: #e0e7ff; border-radius: 4px; font-size: 13px;">
+    <strong>Task Type:</strong> {{task_type}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;">
+    <strong>Input:</strong><br>{{input_text}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
+    <strong>Model Output:</strong><br>{{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 150
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

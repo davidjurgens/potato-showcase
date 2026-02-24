@@ -1,0 +1,23 @@
+{
+  "title": "LongEval: Faithfulness Evaluation for Long-form Summarization",
+  "description": "Faithfulness evaluation of long-form summaries. Annotators identify atomic content units in summaries, check each against source documents for faithfulness, and rate overall summary quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "radio", "likert"],
+  "domain": ["NLP", "Summarization", "Evaluation"],
+  "useCase": ["Faithfulness Evaluation", "Summarization Quality", "Hallucination Detection"],
+  "complexity": "advanced",
+  "tags": ["summarization", "faithfulness", "long-form", "content-units", "hallucination", "evaluation"],
+  "featured": false,
+  "paperReference": "Krishna et al., EACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.eacl-main.121/",
+  "datasetUrl": "https://github.com/markevaluate/LongEval",
+  "citation": "@inproceedings{krishna2023longeval,\n  title={LongEval: Guidelines for Human Evaluation of Faithfulness in Long-form Summarization},\n  author={Krishna, Kalpesh and Khosla, Sopan and Bigham, Jeffrey and Lipton, Zachary C.},\n  booktitle={Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics (EACL)},\n  year={2023}\n}"
+}

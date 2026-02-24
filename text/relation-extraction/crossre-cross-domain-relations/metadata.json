@@ -1,0 +1,23 @@
+{
+  "title": "CrossRE: Cross-Domain Relation Extraction",
+  "description": "Cross-domain relation extraction across 6 domains (news, politics, science, music, literature, AI). Annotators identify entities and label 17 relation types between entity pairs, enabling study of domain transfer in relation extraction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bassignana & Plank",
+    "email": "jurgens@umich.edu",
+    "github": "mainlp",
+    "affiliation": "MaiNLP, LMU Munich"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking", "text"],
+  "domain": ["NLP", "Information Extraction"],
+  "useCase": ["Relation Extraction", "Cross-Domain Transfer", "Entity Recognition"],
+  "complexity": "intermediate",
+  "tags": ["cross-domain", "relation-extraction", "entity-extraction", "crossre", "emnlp2022", "domain-transfer"],
+  "featured": false,
+  "paperReference": "Bassignana & Plank, Findings EMNLP 2022",
+  "paperUrl": "https://aclanthology.org/2022.findings-emnlp.263/",
+  "datasetUrl": "https://github.com/mainlp/CrossRE",
+  "citation": "@inproceedings{bassignana-plank-2022-crossre,\n    title = \"{CrossRE}: A Cross-Domain Dataset for Relation Extraction\",\n    author = \"Bassignana, Elisa  and Plank, Barbara\",\n    booktitle = \"Findings of the Association for Computational Linguistics: EMNLP 2022\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-emnlp.263\"\n}"
+}

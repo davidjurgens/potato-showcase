@@ -1,0 +1,89 @@
+# Check-COVID: Fact-Checking COVID-19 News Claims
+# Based on Wang et al., Findings ACL 2023
+# Paper: https://aclanthology.org/2023.findings-acl.888/
+# Dataset: https://github.com/posuer/Check-COVID
+#
+# This task verifies COVID-19 news claims against scientific evidence.
+# Annotators determine if a claim is supported, refuted, or lacks
+# sufficient evidence, and highlight relevant evidence spans.
+#
+# Verdict Labels:
+# - Supported: Evidence confirms the claim
+# - Refuted: Evidence contradicts the claim
+# - Not Enough Evidence: Available evidence is insufficient to verify
+#
+# Annotation Guidelines:
+# 1. Read the COVID-19 claim carefully
+# 2. Read the evidence passage thoroughly
+# 3. Determine whether the evidence supports or refutes the claim
+# 4. Highlight the specific sentences/phrases in the evidence that
+#    are most relevant to your verdict
+# 5. Write a brief explanation justifying your decision
+# 6. Consider scientific nuance: preliminary findings vs established facts
+# 7. Be careful with claims about causation vs correlation
+
+port: 8000
+server_name: localhost
+task_name: "Check-COVID: Fact-Checking"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Verdict
+  - annotation_type: radio
+    name: verdict
+    description: "Based on the evidence, is the COVID-19 claim supported, refuted, or is there not enough evidence?"
+    labels:
+      - "Supported"
+      - "Refuted"
+      - "Not Enough Evidence"
+    keyboard_shortcuts:
+      "Supported": "s"
+      "Refuted": "r"
+      "Not Enough Evidence": "n"
+    tooltips:
+      "Supported": "The evidence confirms or is consistent with the claim"
+      "Refuted": "The evidence directly contradicts the claim"
+      "Not Enough Evidence": "The evidence does not provide sufficient information to verify or refute the claim"
+
+  # Step 2: Evidence highlighting
+  - annotation_type: span
+    name: evidence_spans
+    description: "Highlight the sentence(s) in the evidence that are most relevant to your verdict"
+    labels:
+      - "Supporting Evidence"
+      - "Refuting Evidence"
+    label_colors:
+      "Supporting Evidence": "#22c55e"
+      "Refuting Evidence": "#ef4444"
+    tooltips:
+      "Supporting Evidence": "Text that supports or confirms the claim"
+      "Refuting Evidence": "Text that contradicts or refutes the claim"
+    allow_overlapping: false
+
+  # Step 3: Explanation
+  - annotation_type: text
+    name: explanation
+    description: "Briefly explain why the evidence supports, refutes, or is insufficient for the claim"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 10px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px;">
+    <strong>Claim:</strong> {{text}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
+    <strong>Evidence:</strong> {{evidence}}
+  </div>
+  <div style="padding: 6px; background: #f5f5f5; border-radius: 4px; font-size: 13px;">
+    <em>Source:</em> {{source}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 60
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

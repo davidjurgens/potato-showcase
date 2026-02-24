@@ -1,0 +1,129 @@
+# Event Coreference and Relations (MAVEN-ERE)
+# Based on Wang et al., EMNLP 2022
+# Paper: https://aclanthology.org/2022.emnlp-main.60/
+# Dataset: https://github.com/THU-KEG/MAVEN-ERE
+#
+# MAVEN-ERE provides unified annotations for four types of event relations:
+# - Coreference: Two event mentions refer to the same real-world event
+# - Temporal: Ordering between events (before, after, overlap)
+# - Causal: One event causes or enables another
+# - Subevent: One event is a component of another
+#
+# Annotation process:
+# 1. Identify event mentions (triggers) in the text
+# 2. For each pair of events, determine if a relation exists
+# 3. Label the relation with its type
+
+port: 8000
+server_name: localhost
+task_name: "MAVEN-ERE Event Coreference and Relations"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Event mention identification
+  - annotation_type: span
+    name: event_mentions
+    description: "Highlight all event mentions (triggers) in the text. Select the event type for each mention."
+    labels:
+      - "Action"
+      - "State_change"
+      - "Movement"
+      - "Communication"
+      - "Conflict"
+      - "Life"
+      - "Transaction"
+      - "Natural_disaster"
+      - "Creation"
+      - "Perception"
+      - "Other"
+    label_colors:
+      "Action": "#3b82f6"
+      "State_change": "#22c55e"
+      "Movement": "#f59e0b"
+      "Communication": "#8b5cf6"
+      "Conflict": "#ef4444"
+      "Life": "#ec4899"
+      "Transaction": "#06b6d4"
+      "Natural_disaster": "#f97316"
+      "Creation": "#14b8a6"
+      "Perception": "#a855f7"
+      "Other": "#9ca3af"
+    tooltips:
+      "Action": "Deliberate action performed by an agent (e.g., 'arrested', 'built', 'signed')"
+      "State_change": "Change in state or condition (e.g., 'collapsed', 'increased', 'dissolved')"
+      "Movement": "Physical movement or transportation (e.g., 'moved', 'traveled', 'deployed')"
+      "Communication": "Speech, writing, or reporting (e.g., 'announced', 'said', 'published')"
+      "Conflict": "Violent or adversarial event (e.g., 'attacked', 'protested', 'clashed')"
+      "Life": "Birth, death, injury (e.g., 'born', 'died', 'injured')"
+      "Transaction": "Exchange or transfer (e.g., 'purchased', 'sold', 'donated')"
+      "Natural_disaster": "Natural event (e.g., 'earthquake', 'flood', 'erupted')"
+      "Creation": "Making or producing something (e.g., 'created', 'founded', 'invented')"
+      "Perception": "Sensing or observing (e.g., 'detected', 'observed', 'discovered')"
+      "Other": "Event type not covered by the above categories"
+    keyboard_shortcuts:
+      "Action": "1"
+      "State_change": "2"
+      "Movement": "3"
+      "Communication": "4"
+      "Conflict": "5"
+    allow_overlapping: false
+
+  # Step 2: Event relation linking
+  - annotation_type: span_linking
+    name: event_relations
+    description: "Link pairs of event mentions with their relation type. Select two previously annotated event spans and specify the relation."
+    source_scheme: event_mentions
+    target_scheme: event_mentions
+    labels:
+      - "Coreference"
+      - "Temporal_before"
+      - "Temporal_after"
+      - "Temporal_overlap"
+      - "Causal"
+      - "Subevent"
+    label_colors:
+      "Coreference": "#3b82f6"
+      "Temporal_before": "#f59e0b"
+      "Temporal_after": "#f97316"
+      "Temporal_overlap": "#eab308"
+      "Causal": "#ef4444"
+      "Subevent": "#22c55e"
+    tooltips:
+      "Coreference": "Both mentions refer to the same real-world event"
+      "Temporal_before": "The source event occurs before the target event"
+      "Temporal_after": "The source event occurs after the target event"
+      "Temporal_overlap": "The two events overlap in time"
+      "Causal": "The source event causes or enables the target event"
+      "Subevent": "The source event is a component or subevent of the target event"
+    keyboard_shortcuts:
+      "Coreference": "c"
+      "Temporal_before": "b"
+      "Temporal_after": "a"
+      "Temporal_overlap": "o"
+      "Causal": "u"
+      "Subevent": "s"
+
+html_layout: |
+  <div style="margin-bottom: 10px;">
+    <h4>Document: {{document_id}}</h4>
+    <p style="line-height: 1.8; font-size: 15px;">{{text}}</p>
+  </div>
+  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
+    <strong>Instructions:</strong>
+    <ol>
+      <li>Highlight all event mentions and classify their type.</li>
+      <li>Link event pairs with relation labels: coreference, temporal, causal, or subevent.</li>
+    </ol>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

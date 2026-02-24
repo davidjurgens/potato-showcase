@@ -1,0 +1,112 @@
+# MOCHEG: Multi-modal Multi-hop Fact-Checking with Explanations
+# Based on Yao et al., SIGIR 2023
+# Paper: https://dl.acm.org/doi/10.1145/3539618.3591766
+#
+# Multimodal fact-checking requires verifying claims using evidence from
+# multiple modalities (text and images). Annotators must reason across
+# both modalities and across multiple evidence pieces (multi-hop) to
+# arrive at a verdict.
+#
+# Annotation Guidelines:
+# 1. Read the claim carefully
+# 2. Examine ALL evidence: both the text evidence and the image evidence
+# 3. Highlight the specific spans in the text evidence that support your verdict
+# 4. Assign a verdict: Supported, Refuted, or Not Enough Evidence
+# 5. Write a brief explanation justifying your verdict
+# 6. Consider whether the image corroborates, contradicts, or is irrelevant
+#    to the textual evidence
+#
+# Verdict Definitions:
+# - Supported: The claim is fully supported by the combined evidence
+# - Refuted: The evidence directly contradicts the claim
+# - Not Enough Evidence: The evidence is insufficient to confirm or deny
+
+port: 8000
+server_name: localhost
+task_name: "MOCHEG: Multimodal Fact-Checking"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Verdict
+  - annotation_type: radio
+    name: verdict
+    description: "Based on the text and image evidence, what is the verdict for this claim?"
+    labels:
+      - "Supported"
+      - "Refuted"
+      - "Not Enough Evidence"
+    keyboard_shortcuts:
+      "Supported": "s"
+      "Refuted": "r"
+      "Not Enough Evidence": "n"
+    tooltips:
+      "Supported": "The claim is fully supported by the combined multimodal evidence"
+      "Refuted": "The evidence directly contradicts the claim"
+      "Not Enough Evidence": "The available evidence is insufficient to confirm or deny the claim"
+
+  # Step 2: Highlight relevant evidence spans
+  - annotation_type: span
+    name: evidence_spans
+    description: "Highlight the specific parts of the text evidence that are relevant to your verdict."
+    labels:
+      - "Supporting Evidence"
+      - "Contradicting Evidence"
+      - "Contextual Information"
+    label_colors:
+      "Supporting Evidence": "#22c55e"
+      "Contradicting Evidence": "#ef4444"
+      "Contextual Information": "#3b82f6"
+    tooltips:
+      "Supporting Evidence": "Text that directly supports the claim"
+      "Contradicting Evidence": "Text that directly contradicts the claim"
+      "Contextual Information": "Text that provides useful context but does not directly support or refute"
+    allow_overlapping: false
+
+  # Step 3: Image relevance
+  - annotation_type: radio
+    name: image_relevance
+    description: "How relevant is the image evidence to verifying this claim?"
+    labels:
+      - "Highly relevant - key to verdict"
+      - "Somewhat relevant - provides additional context"
+      - "Not relevant - does not help verify the claim"
+    tooltips:
+      "Highly relevant - key to verdict": "The image is essential for determining the verdict"
+      "Somewhat relevant - provides additional context": "The image provides useful but non-essential context"
+      "Not relevant - does not help verify the claim": "The image does not contribute to fact-checking"
+
+  # Step 4: Explanation
+  - annotation_type: text
+    name: explanation
+    description: "Explain your verdict. Describe how the text and image evidence together support your conclusion."
+
+html_layout: |
+  <div style="margin-bottom: 15px; padding: 12px; background: #fef3c7; border-radius: 6px; border-left: 4px solid #f59e0b;">
+    <strong>Claim to Verify:</strong>
+    <div style="font-size: 17px; margin-top: 6px;">{{text}}</div>
+  </div>
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Source:</strong> {{source}}
+  </div>
+  <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+    <div style="flex: 1; padding: 12px; background: #f9fafb; border-radius: 6px; border: 1px solid #e5e7eb;">
+      <strong>Text Evidence:</strong>
+      <div style="margin-top: 8px; line-height: 1.6;">{{evidence_text}}</div>
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <strong>Image Evidence:</strong><br/>
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 400px; margin-top: 8px; border: 1px solid #ddd; border-radius: 4px;" />
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

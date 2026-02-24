@@ -1,0 +1,62 @@
+[
+  {
+    "id": "meditod_001",
+    "text": "Good morning. What brings you in today?",
+    "speaker": "Doctor",
+    "dialogue_context": "[Start of consultation]"
+  },
+  {
+    "id": "meditod_002",
+    "text": "I've been having this persistent headache for the past two weeks, and it's been getting worse. I also feel nauseous in the mornings.",
+    "speaker": "Patient",
+    "dialogue_context": "Doctor: Good morning. What brings you in today?"
+  },
+  {
+    "id": "meditod_003",
+    "text": "I'm sorry to hear that. Can you describe the headache for me? Is it on one side of your head or both sides, and would you describe it as throbbing or more of a constant pressure?",
+    "speaker": "Doctor",
+    "dialogue_context": "Doctor: Good morning. What brings you in today?\nPatient: I've been having this persistent headache for the past two weeks, and it's been getting worse. I also feel nauseous in the mornings."
+  },
+  {
+    "id": "meditod_004",
+    "text": "It's mostly on the right side, kind of throbbing. Sometimes I also get sensitivity to light, and I have to lie down in a dark room.",
+    "speaker": "Patient",
+    "dialogue_context": "Doctor: Can you describe the headache for me? Is it on one side of your head or both sides, and would you describe it as throbbing or more of a constant pressure?"
+  },
+  {
+    "id": "meditod_005",
+    "text": "Do you have any history of migraines in your family? And are you currently taking any medications, including over-the-counter ones?",
+    "speaker": "Doctor",
+    "dialogue_context": "Patient: It's mostly on the right side, kind of throbbing. Sometimes I also get sensitivity to light, and I have to lie down in a dark room."
+  },
+  {
+    "id": "meditod_006",
+    "text": "My mother had migraines. I've been taking ibuprofen for the headaches, maybe two or three times a day, but it doesn't seem to help much anymore. I also take lisinopril for my blood pressure.",
+    "speaker": "Patient",
+    "dialogue_context": "Doctor: Do you have any history of migraines in your family? And are you currently taking any medications, including over-the-counter ones?"
+  },
+  {
+    "id": "meditod_007",
+    "text": "I see. The ibuprofen overuse could actually be contributing to the headaches. We call that medication overuse headache. I'd like to order a complete blood count and a basic metabolic panel, and we may also want to do an MRI to rule out anything else.",
+    "speaker": "Doctor",
+    "dialogue_context": "Patient: My mother had migraines. I've been taking ibuprofen for the headaches, maybe two or three times a day, but it doesn't seem to help much anymore. I also take lisinopril for my blood pressure."
+  },
+  {
+    "id": "meditod_008",
+    "text": "That makes sense. I didn't realize taking too much ibuprofen could make things worse. Is the MRI something I should be worried about?",
+    "speaker": "Patient",
+    "dialogue_context": "Doctor: I'd like to order a complete blood count and a basic metabolic panel, and we may also want to do an MRI to rule out anything else."
+  },
+  {
+    "id": "meditod_009",
+    "text": "Not at all, it's just a precaution. Given your symptoms, I think this is very likely migraine, especially with the family history. I'd like to start you on sumatriptan for acute attacks and discuss a preventive medication like topiramate if the frequency continues.",
+    "speaker": "Doctor",
+    "dialogue_context": "Patient: That makes sense. I didn't realize taking too much ibuprofen could make things worse. Is the MRI something I should be worried about?"
+  },
+  {
+    "id": "meditod_010",
+    "text": "I also wanted to mention that I've been under a lot of stress at work lately and haven't been sleeping well. Could that be related to the headaches?",
+    "speaker": "Patient",
+    "dialogue_context": "Doctor: Given your symptoms, I think this is very likely migraine, especially with the family history. I'd like to start you on sumatriptan for acute attacks and discuss a preventive medication like topiramate if the frequency continues."
+  }
+]

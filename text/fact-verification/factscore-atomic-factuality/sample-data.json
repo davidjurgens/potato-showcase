@@ -1,0 +1,62 @@
+[
+  {
+    "id": "factscore_001",
+    "text": "Albert Einstein was born in Ulm, Germany on March 14, 1879. He developed the theory of special relativity in 1905 while working as a patent clerk in Bern, Switzerland. He received the Nobel Prize in Physics in 1921 for his explanation of the photoelectric effect. He later became a professor at Princeton University in the United States.",
+    "atomic_fact": "Einstein was born in Ulm, Germany on March 14, 1879.",
+    "reference_source": "Albert Einstein (14 March 1879 - 18 April 1955) was a German-born theoretical physicist. He was born in Ulm, in the Kingdom of Wurttemberg in the German Empire. His family moved to Munich when he was an infant."
+  },
+  {
+    "id": "factscore_002",
+    "text": "Marie Curie was a Polish-born physicist who became the first woman to win a Nobel Prize. She discovered two elements, polonium and radium, during her research on radioactivity. She won Nobel Prizes in both Physics (1903) and Chemistry (1911), making her the first person to win Nobel Prizes in two different sciences.",
+    "atomic_fact": "Marie Curie was the first person to win Nobel Prizes in two different sciences.",
+    "reference_source": "Marie Curie (1867-1934) was a Polish-French physicist and chemist. She was awarded the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel. In 1911, she received the Nobel Prize in Chemistry. She remains the only person to have won Nobel Prizes in two different sciences."
+  },
+  {
+    "id": "factscore_003",
+    "text": "Ada Lovelace is widely regarded as the first computer programmer. She was the daughter of the poet Lord Byron and mathematician Anne Isabella Milbanke. She wrote detailed notes on Charles Babbage's Analytical Engine in 1843, including what is considered the first algorithm designed for machine execution.",
+    "atomic_fact": "Ada Lovelace was the daughter of the poet Lord Byron and mathematician Anne Isabella Milbanke.",
+    "reference_source": "Augusta Ada King, Countess of Lovelace (1815-1852) was an English mathematician and writer. She was the only legitimate child of the poet Lord Byron and his wife Lady Byron (Anne Isabella Milbanke). Ada's mother was interested in mathematics and promoted Ada's education in the subject."
+  },
+  {
+    "id": "factscore_004",
+    "text": "Nikola Tesla was born in Smiljan, Croatia on July 10, 1856. He immigrated to the United States in 1884 and briefly worked for Thomas Edison. Tesla is best known for designing the modern alternating current (AC) electrical supply system. He held over 300 patents and died in New York City on January 7, 1943.",
+    "atomic_fact": "Tesla held over 300 patents.",
+    "reference_source": "Nikola Tesla (1856-1943) was a Serbian-American inventor and electrical engineer. He obtained around 300 patents worldwide for his inventions. Some of Tesla's patents are not accounted for, and various sources have discovered some that have been hidden in patent archives."
+  },
+  {
+    "id": "factscore_005",
+    "text": "Alan Turing was born in London, England on June 23, 1912. He is considered the father of theoretical computer science and artificial intelligence. During World War II, he worked at Bletchley Park where he led the team that cracked the German Enigma code. He proposed the famous Turing Test in his 1950 paper published in the journal Nature.",
+    "atomic_fact": "Turing proposed the Turing Test in his 1950 paper published in the journal Nature.",
+    "reference_source": "Alan Turing (1912-1954) was a British mathematician and logician. In 1950, he published the paper 'Computing Machinery and Intelligence' in the journal Mind, in which he proposed what became known as the Turing test as a criterion for machine intelligence."
+  },
+  {
+    "id": "factscore_006",
+    "text": "Rosalind Franklin was a British chemist who made critical contributions to understanding the structure of DNA. Her famous Photo 51, an X-ray diffraction image of DNA taken in 1952, provided key evidence for the double helix structure. She was a professor at King's College London during this period and later conducted important research on viruses at Birkbeck College.",
+    "atomic_fact": "Rosalind Franklin was a professor at King's College London.",
+    "reference_source": "Rosalind Franklin (1920-1958) was a British chemist and X-ray crystallographer. She worked as a research associate at King's College London from 1951 to 1953, where she produced the X-ray diffraction images of DNA. She was not a professor but held a research fellowship. She later moved to Birkbeck College where she studied the structure of RNA and viruses."
+  },
+  {
+    "id": "factscore_007",
+    "text": "Charles Darwin published On the Origin of Species in 1859 after a five-year voyage on HMS Beagle. The journey began in 1831 when Darwin was just 22 years old. His observations of finches on the Galapagos Islands were pivotal to developing his theory of natural selection. He spent over 20 years refining his ideas before publishing.",
+    "atomic_fact": "Darwin's voyage on HMS Beagle lasted five years.",
+    "reference_source": "Charles Darwin (1809-1882) was an English naturalist. The voyage of the Beagle lasted almost five years, from 27 December 1831 to 2 October 1836. Darwin was 22 when the journey began. His observations during the voyage, particularly in the Galapagos Islands, were instrumental in forming his theory of evolution by natural selection."
+  },
+  {
+    "id": "factscore_008",
+    "text": "Grace Hopper was a computer scientist and United States Navy rear admiral. She invented the first compiler for a computer programming language in 1952. She is also credited with popularizing the term 'debugging' after finding a moth in the Harvard Mark II computer in 1947. She retired from the Navy at age 79, making her the oldest serving officer at the time.",
+    "atomic_fact": "Grace Hopper retired from the Navy at age 79, making her the oldest serving officer at the time.",
+    "reference_source": "Grace Hopper (1906-1992) was an American computer scientist and Navy rear admiral. She retired from the Naval Reserve in 1986 at the age of 79 with the rank of rear admiral. At the time of her retirement, she was the oldest active-duty commissioned officer in the United States Navy."
+  },
+  {
+    "id": "factscore_009",
+    "text": "Isaac Newton was born on December 25, 1642 in Woolsthorpe, England. He formulated the laws of motion and universal gravitation while studying at Cambridge University. His magnum opus, Principia Mathematica, was published in 1687 with financial support from Edmond Halley. Newton also served as Warden of the Royal Mint beginning in 1696.",
+    "atomic_fact": "Newton formulated the laws of motion and universal gravitation while studying at Cambridge University.",
+    "reference_source": "Isaac Newton (1642-1727) was an English mathematician and physicist. Much of his groundbreaking work on mechanics and gravitation was developed during 1665-1666 when he returned to his family home in Woolsthorpe during the Great Plague, a period known as his 'annus mirabilis.' He was a student and later a fellow at Trinity College, Cambridge, but the key insights came while he was away from the university."
+  },
+  {
+    "id": "factscore_010",
+    "text": "Katherine Johnson was a mathematician at NASA who calculated trajectories for the Mercury and Apollo programs. She was born in White Sulphur Springs, West Virginia in 1918. Her calculations were critical for the success of John Glenn's orbital mission in 1962. She received the Presidential Medal of Freedom from Barack Obama in 2015.",
+    "atomic_fact": "Katherine Johnson received the Presidential Medal of Freedom from Barack Obama in 2015.",
+    "reference_source": "Katherine Johnson (1918-2020) was an American mathematician whose work at NASA was critical to early spaceflight. In November 2015, President Barack Obama awarded Johnson the Presidential Medal of Freedom, the nation's highest civilian honor, for her contributions to the space program."
+  }
+]

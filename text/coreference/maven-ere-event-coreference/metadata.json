@@ -1,0 +1,23 @@
+{
+  "title": "Event Coreference and Relations (MAVEN-ERE)",
+  "description": "Unified event relation extraction covering coreference, temporal, causal, and subevent relations. Annotators identify event mentions and link them with typed relations (coreference, temporal_before/after/overlap, causal, subevent). Based on the MAVEN-ERE dataset which provides large-scale, unified annotations for four types of event relations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "THU-KEG",
+    "affiliation": "Tsinghua University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking"],
+  "domain": ["NLP", "Event Understanding"],
+  "useCase": ["Event Coreference", "Temporal Relation Extraction", "Causal Relation Extraction", "Subevent Detection"],
+  "complexity": "advanced",
+  "tags": ["event-coreference", "temporal-relations", "causal-relations", "subevent", "maven", "event-relations", "emnlp2022"],
+  "featured": false,
+  "paperReference": "Wang et al., EMNLP 2022",
+  "paperUrl": "https://aclanthology.org/2022.emnlp-main.60/",
+  "datasetUrl": "https://github.com/THU-KEG/MAVEN-ERE",
+  "citation": "@inproceedings{wang-etal-2022-maven-ere,\n    title = \"{MAVEN}-{ERE}: A Unified Large-scale Dataset for Event Coreference, Temporal, Causal, and Subevent Relations\",\n    author = \"Wang, Xiaozhi  and Chen, Yulin  and Ding, Ning  and Peng, Hao  and Wang, Zimu  and Lin, Yankai  and Han, Xu  and Hou, Lei  and Li, Juanzi  and Liu, Zhiyuan  and Li, Peng  and Zhou, Jie\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.emnlp-main.60\",\n    pages = \"926--941\"\n}"
+}

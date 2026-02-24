@@ -1,0 +1,23 @@
+{
+  "title": "MAUD: Legal Merger Agreement Understanding",
+  "description": "Legal document understanding for merger agreements. Annotators identify key clauses in merger agreements and answer structured questions about deal terms (termination fees, representations, conditions, etc.). Based on the MAUD dataset of expert-annotated legal NLP for merger agreement understanding.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "TheAtticusProject",
+    "affiliation": "NYU / Atticus Project"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Legal"],
+  "useCase": ["Legal Document Understanding", "Clause Identification", "Question Answering"],
+  "complexity": "advanced",
+  "tags": ["legal", "merger-agreement", "clause-extraction", "maud", "emnlp2023", "contract-analysis"],
+  "featured": false,
+  "paperReference": "Wang et al., EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.1009/",
+  "datasetUrl": "https://github.com/TheAtticusProject/maud",
+  "citation": "@inproceedings{wang-etal-2023-maud,\n    title = \"{MAUD}: An Expert-Annotated Legal {NLP} Dataset for Merger Agreement Understanding\",\n    author = \"Wang, Steven H.  and Scardigli, Antoine  and Tang, Leonard  and Chen, Wei  and Levitt, Dimitry  and Chen, Anya  and Spencer, Jillian  and Goldber, Michael  and Rattner, Daniel  and Nishi, Celine  and Potts, Chris  and Ho, Daniel E.\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1009\",\n    pages = \"16226--16250\"\n}"
+}

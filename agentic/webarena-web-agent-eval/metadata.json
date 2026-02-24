@@ -1,0 +1,23 @@
+{
+  "title": "WebArena: Web Agent Task Completion Evaluation",
+  "description": "Evaluation of autonomous web agent task completions. Annotators verify whether an agent's sequence of web actions correctly completes a given task, assess partial completion, and identify failure modes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Web Agents", "Autonomous Systems", "Evaluation"],
+  "useCase": ["Agent Evaluation", "Task Completion Assessment", "Failure Analysis"],
+  "complexity": "advanced",
+  "tags": ["web-agent", "webarena", "evaluation", "autonomous", "task-completion", "trajectory"],
+  "featured": false,
+  "paperReference": "Zhou et al., ICLR 2024",
+  "paperUrl": "https://openreview.net/forum?id=oKn9c6ytLx",
+  "datasetUrl": "https://webarena.dev/",
+  "citation": "@inproceedings{zhou2024webarena,\n  title={WebArena: A Realistic Web Environment for Building Autonomous Agents},\n  author={Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Ou, Tianyue and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
+}

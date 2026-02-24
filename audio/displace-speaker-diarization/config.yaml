@@ -1,0 +1,124 @@
+# DISPLACE 2024 - Speaker and Language Diarization
+# Based on Kundu et al., INTERSPEECH 2024
+# Paper: https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html
+# Dataset: https://displace2024.github.io/
+#
+# Task: Speaker and language diarization in multilingual conversational audio.
+# Mark speaker turn boundaries, identify speakers, and label language per segment.
+#
+# Guidelines:
+# - Listen to the full conversation to identify distinct speakers
+# - Mark temporal boundaries where speaker changes occur
+# - Assign consistent speaker labels throughout the conversation
+# - Identify the language spoken in each segment
+# - Note any overlapping speech or code-switching
+
+port: 8000
+server_name: localhost
+task_name: "DISPLACE 2024: Speaker and Language Diarization"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: span
+    name: speaker_segments
+    description: "Mark temporal speaker segments with start and end times (in seconds)"
+    span_mode: temporal
+    labels:
+      - name: "Speaker 1"
+        color: "#3B82F6"
+        tooltip: "First identified speaker"
+      - name: "Speaker 2"
+        color: "#EF4444"
+        tooltip: "Second identified speaker"
+      - name: "Speaker 3"
+        color: "#10B981"
+        tooltip: "Third identified speaker"
+      - name: "Speaker 4"
+        color: "#F59E0B"
+        tooltip: "Fourth identified speaker"
+      - name: "Speaker 5"
+        color: "#8B5CF6"
+        tooltip: "Fifth identified speaker"
+      - name: "Overlap"
+        color: "#6B7280"
+        tooltip: "Multiple speakers talking simultaneously"
+
+  - annotation_type: radio
+    name: speaker_identity
+    description: "Identify the current speaker for the selected segment"
+    labels:
+      - name: "Speaker 1"
+        tooltip: "First/primary speaker in the conversation"
+        key_value: "1"
+      - name: "Speaker 2"
+        tooltip: "Second speaker in the conversation"
+        key_value: "2"
+      - name: "Speaker 3"
+        tooltip: "Third speaker (if present)"
+        key_value: "3"
+      - name: "Speaker 4"
+        tooltip: "Fourth speaker (if present)"
+        key_value: "4"
+      - name: "Speaker 5"
+        tooltip: "Fifth speaker (if present)"
+        key_value: "5"
+      - name: "Unknown"
+        tooltip: "Cannot determine the speaker"
+        key_value: "0"
+
+  - annotation_type: radio
+    name: language
+    description: "What language is spoken in this segment?"
+    labels:
+      - name: "Hindi"
+        tooltip: "Speaker is using Hindi"
+        key_value: "h"
+      - name: "English"
+        tooltip: "Speaker is using English"
+        key_value: "e"
+      - name: "Tamil"
+        tooltip: "Speaker is using Tamil"
+        key_value: "t"
+      - name: "Telugu"
+        tooltip: "Speaker is using Telugu"
+        key_value: "l"
+      - name: "Kannada"
+        tooltip: "Speaker is using Kannada"
+        key_value: "k"
+      - name: "Code-switched"
+        tooltip: "Speaker switches between languages within this segment"
+        key_value: "c"
+      - name: "Other"
+        tooltip: "Language not listed above"
+        key_value: "o"
+
+  - annotation_type: radio
+    name: audio_quality
+    description: "Rate the audio quality for this segment"
+    labels:
+      - name: "Clear"
+        tooltip: "Audio is clear and easy to understand"
+      - name: "Acceptable"
+        tooltip: "Some noise but speech is understandable"
+      - name: "Poor"
+        tooltip: "Significant noise or distortion"
+      - name: "Unintelligible"
+        tooltip: "Cannot understand the speech"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+  show_spectrogram: true
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

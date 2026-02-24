@@ -1,0 +1,105 @@
+# WebArena: Web Agent Task Completion Evaluation
+# Based on "WebArena: A Realistic Web Environment for Building Autonomous Agents" (Zhou et al., ICLR 2024)
+# Task: Evaluate whether an agent's actions correctly complete a given web task
+
+port: 8000
+server_name: localhost
+task_name: "WebArena Web Agent Evaluation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing task, trajectory, and final state
+html_layout: |
+  <div class="webarena-container">
+    <div class="task-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+      <h3 style="margin-top: 0;">Task Instruction:</h3>
+      <div class="task-text" style="font-size: 16px; font-weight: bold;">{{text}}</div>
+    </div>
+    <div class="website-info" style="background: #e8eaf6; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Website Type:</strong> {{website_type}}
+    </div>
+    <div class="trajectory-section" style="background: #fff8e1; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f9a825;">
+      <h3 style="margin-top: 0; color: #f9a825;">Agent Action Trajectory:</h3>
+      <div class="trajectory-text" style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.6;">{{trajectory}}</div>
+    </div>
+    <div class="final-state-section" style="background: #f3e5f5; padding: 15px; border-radius: 8px; border: 2px solid #7b1fa2;">
+      <h3 style="margin-top: 0; color: #7b1fa2;">Final State:</h3>
+      <div class="final-state-text" style="white-space: pre-wrap; font-size: 14px;">{{final_state}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Task completion assessment
+  - name: "task_completion"
+    description: "Did the agent successfully complete the task?"
+    annotation_type: radio
+    labels:
+      - "Fully Complete - task achieved correctly"
+      - "Partially Complete - some subtasks done"
+      - "Failed - task not completed"
+      - "Wrong - completed a different task"
+    keyboard_shortcuts:
+      "Fully Complete - task achieved correctly": "1"
+      "Partially Complete - some subtasks done": "2"
+      "Failed - task not completed": "3"
+      "Wrong - completed a different task": "4"
+
+  # Failure explanation
+  - name: "failure_explanation"
+    description: "If the task was not fully completed, explain what went wrong. Leave blank for fully completed tasks."
+    annotation_type: text
+    required: false
+    placeholder: "Describe the failure: what step went wrong, what the agent should have done instead..."
+
+  # Failure type (if applicable)
+  - name: "failure_type"
+    description: "If the task failed or was partially complete, what type of failure occurred?"
+    annotation_type: radio
+    labels:
+      - "Navigation error - went to wrong page/section"
+      - "Element selection error - interacted with wrong element"
+      - "Input error - typed wrong value or parameters"
+      - "Sequence error - correct actions in wrong order"
+      - "Missing step - skipped a required action"
+      - "Premature termination - stopped too early"
+      - "Infinite loop - repeated actions without progress"
+      - "N/A - task was fully completed"
+    keyboard_shortcuts:
+      "Navigation error - went to wrong page/section": "q"
+      "Element selection error - interacted with wrong element": "w"
+      "Input error - typed wrong value or parameters": "e"
+      "Sequence error - correct actions in wrong order": "r"
+      "Missing step - skipped a required action": "t"
+      "Premature termination - stopped too early": "y"
+      "Infinite loop - repeated actions without progress": "u"
+      "N/A - task was fully completed": "i"
+
+  # Trajectory efficiency
+  - name: "trajectory_efficiency"
+    description: "How efficient was the agent's action trajectory?"
+    annotation_type: radio
+    labels:
+      - "Optimal - minimal steps needed"
+      - "Acceptable - some unnecessary steps but reasonable"
+      - "Inefficient - many unnecessary steps"
+      - "Very inefficient - excessive wandering or backtracking"
+    keyboard_shortcuts:
+      "Optimal - minimal steps needed": "a"
+      "Acceptable - some unnecessary steps but reasonable": "s"
+      "Inefficient - many unnecessary steps": "d"
+      "Very inefficient - excessive wandering or backtracking": "f"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 100
+annotation_per_instance: 2

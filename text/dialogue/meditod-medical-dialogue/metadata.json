@@ -1,0 +1,23 @@
+{
+  "title": "MediTOD Medical Dialogue Annotation",
+  "description": "Medical history-taking dialogue annotation based on the MediTOD dataset. Annotators label dialogue acts, identify medical entities (symptoms, conditions, medications, tests), and assess doctor-patient communication quality across multi-turn clinical conversations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kazi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "HealthNLPLab",
+    "affiliation": "University of Pittsburgh"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "span", "text", "multiselect"],
+  "domain": ["NLP", "Medical", "Dialogue Systems"],
+  "useCase": ["Medical Dialogue Analysis", "Clinical NER", "Dialogue Act Classification"],
+  "complexity": "advanced",
+  "tags": ["medical", "dialogue", "history-taking", "clinical-nlp", "entities", "dialogue-acts"],
+  "featured": false,
+  "paperReference": "Kazi et al., EMNLP 2024",
+  "paperUrl": "https://aclanthology.org/2024.emnlp-main.786/",
+  "datasetUrl": "https://github.com/HealthNLPLab/MediTOD",
+  "citation": "@inproceedings{kazi2024meditod,\n    title = \"{M}edi{TOD}: An {E}nglish Dialogue Dataset for Medical History Taking with Comprehensive Annotations\",\n    author = \"Kazi, Rhea Sunil  and Ning, Yilin  and Duong, Hanh  and Peng, Yifan  and Xia, Fei\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.786/\"\n}"
+}

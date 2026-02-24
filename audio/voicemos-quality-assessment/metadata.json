@@ -1,0 +1,23 @@
+{
+  "title": "VoiceMOS Challenge 2024 - Speech Quality Assessment",
+  "description": "Speech quality assessment using Mean Opinion Score (MOS). Annotators rate synthesized or processed speech on naturalness, intelligibility, and overall quality on 1-5 scales (Cooper et al., INTERSPEECH 2024).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cooper et al.",
+    "email": "jurgens@umich.edu",
+    "github": "voicemos-challenge-2024",
+    "affiliation": "Multiple Institutions"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["likert"],
+  "domain": ["Speech Processing", "Quality Assessment"],
+  "useCase": ["Speech Quality Rating", "TTS Evaluation", "Voice Synthesis Assessment"],
+  "complexity": "intermediate",
+  "tags": ["audio", "speech-quality", "mos", "tts", "voice-synthesis", "interspeech2024"],
+  "featured": false,
+  "paperReference": "Cooper et al., INTERSPEECH 2024",
+  "paperUrl": "https://www.isca-archive.org/interspeech_2024/cooper24_interspeech.html",
+  "datasetUrl": "https://voicemos-challenge-2024.github.io/",
+  "citation": "@inproceedings{cooper24_interspeech,\n    title = \"The {V}oice{MOS} Challenge 2024: Beyond Speech Quality Prediction\",\n    author = \"Cooper, Erica and others\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/cooper24_interspeech.html\"\n}"
+}

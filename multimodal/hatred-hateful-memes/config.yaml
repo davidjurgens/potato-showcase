@@ -1,0 +1,90 @@
+# HatReD: Multi-Domain Hateful Meme Detection
+# Based on Bhandari et al., IJCAI 2023
+# Paper: https://www.ijcai.org/proceedings/2023/0109.pdf
+#
+# Hateful meme detection requires understanding the interplay between image
+# and text. A meme may appear benign when either modality is considered in
+# isolation but become hateful when combined. Annotators must consider both
+# the visual content and the text overlay together.
+#
+# Annotation Guidelines:
+# 1. View the meme image and read the overlay text together
+# 2. Determine if the meme is hateful (attacks a group based on protected attributes)
+# 3. If hateful, identify the target group and explain why it is hateful
+# 4. Consider that sarcasm, irony, and coded language are common in memes
+# 5. A meme can be offensive without being hateful — hateful implies targeting
+#    a group based on identity characteristics
+
+port: 8000
+server_name: localhost
+task_name: "HatReD: Hateful Meme Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Classify as hateful or not
+  - annotation_type: radio
+    name: hateful_classification
+    description: "Is this meme hateful? (Attacks a group based on protected characteristics)"
+    labels:
+      - "Hateful"
+      - "Not Hateful"
+    keyboard_shortcuts:
+      "Hateful": "h"
+      "Not Hateful": "n"
+    tooltips:
+      "Hateful": "The meme attacks, demeans, or incites hatred against a group based on race, religion, gender, sexuality, disability, or other protected characteristics"
+      "Not Hateful": "The meme may be offensive, rude, or distasteful but does not target a protected group with hate"
+
+  # Step 2: Identify target group (if hateful)
+  - annotation_type: radio
+    name: target_group
+    description: "If hateful, which group is primarily targeted?"
+    labels:
+      - "Race / Ethnicity"
+      - "Religion"
+      - "Gender / Sexuality"
+      - "Disability"
+      - "Nationality / Immigration"
+      - "Political Group"
+      - "Other"
+      - "N/A (Not Hateful)"
+    tooltips:
+      "Race / Ethnicity": "Targets people based on race, ethnicity, or skin color"
+      "Religion": "Targets people based on religious beliefs or affiliation"
+      "Gender / Sexuality": "Targets people based on gender identity, sexual orientation, or sex"
+      "Disability": "Targets people based on physical or mental disability"
+      "Nationality / Immigration": "Targets people based on national origin or immigration status"
+      "Political Group": "Targets people based on political affiliation"
+      "Other": "Targets another group not listed above"
+      "N/A (Not Hateful)": "Select this if the meme is not hateful"
+
+  # Step 3: Explanation
+  - annotation_type: text
+    name: explanation
+    description: "If hateful, briefly explain why this meme is hateful and how the image and text interact to convey hate."
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #fef2f2; border-radius: 6px; border-left: 4px solid #ef4444;">
+    <strong>Content Warning:</strong> This task may contain offensive or hateful content for research purposes.
+  </div>
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Source Domain:</strong> {{source_domain}}
+  </div>
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border: 1px solid #ddd; border-radius: 4px;" />
+  </div>
+  <div style="font-size: 16px; line-height: 1.6; padding: 12px; background: #f9fafb; border-radius: 6px;">
+    <strong>Meme Text:</strong> {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

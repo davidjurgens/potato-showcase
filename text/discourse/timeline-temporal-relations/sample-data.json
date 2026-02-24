@@ -1,0 +1,52 @@
+[
+  {
+    "id": "timeline_001",
+    "text": "The earthquake struck the coastal city at 3:15 AM on Tuesday. Emergency services were dispatched within minutes. By dawn, rescue teams had pulled twelve survivors from the rubble. The governor declared a state of emergency later that morning and ordered an evacuation of the surrounding neighborhoods.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_002",
+    "text": "After graduating from MIT in 2018, Dr. Chen joined a pharmaceutical startup in Boston. She led the development of a novel drug candidate throughout 2019 and published her findings in Nature in early 2020. The FDA approved the drug for clinical trials three months after publication.",
+    "genre": "biography"
+  },
+  {
+    "id": "timeline_003",
+    "text": "The company announced its quarterly earnings on Monday, reporting a 15% increase in revenue. Investors responded positively, and the stock price surged during Tuesday's trading session. However, a downgrade by analysts on Wednesday erased most of the gains. The CEO addressed shareholders at a conference on Thursday.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_004",
+    "text": "Before the summit began, diplomats from both nations held preliminary talks in Geneva. The negotiations lasted three days and resulted in a draft agreement. The leaders signed the accord on Friday while protesters gathered outside the venue. Ratification by parliament is expected within six months.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_005",
+    "text": "The fire broke out in the warehouse district shortly after midnight. Firefighters arrived on scene at 12:30 AM and battled the blaze for over four hours. An investigation launched the following morning revealed that faulty wiring had caused the fire. The building had last been inspected in March 2022.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_006",
+    "text": "During the Renaissance, Leonardo da Vinci painted the Mona Lisa between 1503 and 1519. While working on the portrait, he simultaneously conducted anatomical studies and designed flying machines. The painting was acquired by King Francis I of France after Leonardo's death in 1519 and has remained in French collections ever since.",
+    "genre": "history"
+  },
+  {
+    "id": "timeline_007",
+    "text": "The patient was admitted to the hospital on January 5th with chest pain. An ECG performed upon arrival showed ST-segment elevation. The cardiologist performed an emergency angioplasty within two hours of admission. The patient recovered over the next week and was discharged on January 12th with a follow-up appointment scheduled for February.",
+    "genre": "clinical"
+  },
+  {
+    "id": "timeline_008",
+    "text": "The spacecraft launched from Cape Canaveral at 9:47 AM Eastern Time. After reaching orbit ninety minutes later, the crew deployed the solar panels and began system checks. Mission control confirmed all systems operational by noon. The first spacewalk was conducted the following day to install new equipment on the station.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_009",
+    "text": "Parliament debated the education reform bill throughout the spring session. The committee revised the bill in June based on public feedback gathered during April and May. The revised version passed the lower house in July and was sent to the upper chamber for review. The president is expected to sign the bill before the end of the year.",
+    "genre": "news"
+  },
+  {
+    "id": "timeline_010",
+    "text": "The trial began on Monday with opening statements from both the prosecution and the defense. Witnesses testified over the next three days, while the jury reviewed physical evidence presented on Wednesday. Closing arguments were delivered on Friday morning. The jury deliberated for six hours before reaching a unanimous verdict that afternoon.",
+    "genre": "news"
+  }
+]

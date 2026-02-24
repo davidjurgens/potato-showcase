@@ -1,0 +1,72 @@
+[
+  {
+    "id": "redfm_001",
+    "text": "Albert Einstein was born in Ulm, in the Kingdom of Württemberg in the German Empire, on 14 March 1879.",
+    "language": "en",
+    "subject_entity": "Albert Einstein",
+    "object_entity": "Ulm"
+  },
+  {
+    "id": "redfm_002",
+    "text": "Gabriel García Márquez, écrivain colombien, a reçu le prix Nobel de littérature en 1982 pour ses romans et nouvelles.",
+    "language": "fr",
+    "subject_entity": "Gabriel García Márquez",
+    "object_entity": "prix Nobel de littérature"
+  },
+  {
+    "id": "redfm_003",
+    "text": "Die Technische Universität München wurde 1868 gegründet und ist eine der führenden Universitäten in Deutschland.",
+    "language": "de",
+    "subject_entity": "Technische Universität München",
+    "object_entity": "Deutschland"
+  },
+  {
+    "id": "redfm_004",
+    "text": "Tokyo is the capital and most populous city of Japan, located at the head of Tokyo Bay.",
+    "language": "en",
+    "subject_entity": "Tokyo",
+    "object_entity": "Japan"
+  },
+  {
+    "id": "redfm_005",
+    "text": "Don Quijote de la Mancha es una novela escrita por Miguel de Cervantes y publicada en 1605.",
+    "language": "es",
+    "subject_entity": "Don Quijote de la Mancha",
+    "object_entity": "Miguel de Cervantes"
+  },
+  {
+    "id": "redfm_006",
+    "text": "Marie Curie studied at the University of Paris and later became a professor of physics there.",
+    "language": "en",
+    "subject_entity": "Marie Curie",
+    "object_entity": "University of Paris"
+  },
+  {
+    "id": "redfm_007",
+    "text": "Il Colosseo, noto anche come Anfiteatro Flavio, è situato nel centro della città di Roma, in Italia.",
+    "language": "it",
+    "subject_entity": "Colosseo",
+    "object_entity": "Roma"
+  },
+  {
+    "id": "redfm_008",
+    "text": "Samsung Electronics, headquartered in Suwon, South Korea, is one of the world's largest manufacturers of electronic devices.",
+    "language": "en",
+    "subject_entity": "Samsung Electronics",
+    "object_entity": "Suwon"
+  },
+  {
+    "id": "redfm_009",
+    "text": "A Organização das Nações Unidas foi fundada em 24 de outubro de 1945, com sede em Nova Iorque.",
+    "language": "pt",
+    "subject_entity": "Organização das Nações Unidas",
+    "object_entity": "Nova Iorque"
+  },
+  {
+    "id": "redfm_010",
+    "text": "Fyodor Dostoevsky, a Russian novelist, wrote Crime and Punishment in 1866 while living in Saint Petersburg.",
+    "language": "en",
+    "subject_entity": "Fyodor Dostoevsky",
+    "object_entity": "Crime and Punishment"
+  }
+]

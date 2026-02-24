@@ -1,0 +1,72 @@
+[
+  {
+    "id": "emobox_001",
+    "audio_url": "https://example.com/audio/emobox/en_happy_001.wav",
+    "language": "English",
+    "duration": 3.4,
+    "transcript": "Oh my gosh, I just got the promotion! I can't believe it, this is amazing!"
+  },
+  {
+    "id": "emobox_002",
+    "audio_url": "https://example.com/audio/emobox/zh_sad_001.wav",
+    "language": "Mandarin Chinese",
+    "duration": 4.1,
+    "transcript": "我真的很想念她，已经好几个月没见面了。"
+  },
+  {
+    "id": "emobox_003",
+    "audio_url": "https://example.com/audio/emobox/de_angry_001.wav",
+    "language": "German",
+    "duration": 3.8,
+    "transcript": "Das ist absolut inakzeptabel! Ich habe schon dreimal angerufen und niemand hilft mir!"
+  },
+  {
+    "id": "emobox_004",
+    "audio_url": "https://example.com/audio/emobox/fr_fearful_001.wav",
+    "language": "French",
+    "duration": 2.9,
+    "transcript": "Je ne sais pas ce qui va se passer... J'ai vraiment peur de ce qui nous attend."
+  },
+  {
+    "id": "emobox_005",
+    "audio_url": "https://example.com/audio/emobox/en_neutral_001.wav",
+    "language": "English",
+    "duration": 3.2,
+    "transcript": "The meeting is scheduled for three o'clock in the main conference room."
+  },
+  {
+    "id": "emobox_006",
+    "audio_url": "https://example.com/audio/emobox/ja_surprised_001.wav",
+    "language": "Japanese",
+    "duration": 2.6,
+    "transcript": "えっ、本当に？そんなことがあるなんて信じられない！"
+  },
+  {
+    "id": "emobox_007",
+    "audio_url": "https://example.com/audio/emobox/es_disgusted_001.wav",
+    "language": "Spanish",
+    "duration": 3.5,
+    "transcript": "Esto es repugnante, no puedo creer que alguien haya hecho algo así."
+  },
+  {
+    "id": "emobox_008",
+    "audio_url": "https://example.com/audio/emobox/it_happy_001.wav",
+    "language": "Italian",
+    "duration": 4.0,
+    "transcript": "Che bella giornata! Sono così contento di essere qui con tutti voi!"
+  },
+  {
+    "id": "emobox_009",
+    "audio_url": "https://example.com/audio/emobox/en_sad_002.wav",
+    "language": "English",
+    "duration": 4.5,
+    "transcript": "I just don't know what to do anymore. Everything feels so hopeless right now."
+  },
+  {
+    "id": "emobox_010",
+    "audio_url": "https://example.com/audio/emobox/ko_angry_001.wav",
+    "language": "Korean",
+    "duration": 3.1,
+    "transcript": "이건 정말 말도 안 돼! 왜 항상 이런 식인 거야?"
+  }
+]

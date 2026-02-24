@@ -1,0 +1,81 @@
+# DocLayNet Document Layout Analysis Configuration
+# Based on Pfitzmann et al., KDD 2022
+
+annotation_task_name: "DocLayNet Document Layout Analysis"
+
+data_files:
+  - "sample-data.json"
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+  context_key: "document_type"
+
+user_config:
+  allow_all_users: true
+
+annotation_schemes:
+  - annotation_type: "text"
+    name: "bounding_boxes"
+    description: "Draw bounding boxes around each document layout element (format: element_type,x,y,width,height per line)"
+
+  - annotation_type: "multiselect"
+    name: "element_types"
+    description: "Select all layout element types present in this document page"
+    labels:
+      - name: "Caption"
+        tooltip: "Captions for figures, tables, or other floats"
+      - name: "Footnote"
+        tooltip: "Footnotes at the bottom of the page"
+      - name: "Formula"
+        tooltip: "Mathematical formulas or equations"
+      - name: "List-item"
+        tooltip: "Individual items in bulleted or numbered lists"
+      - name: "Page-footer"
+        tooltip: "Footer content (page numbers, running text at bottom)"
+      - name: "Page-header"
+        tooltip: "Header content (running titles, section info at top)"
+      - name: "Picture"
+        tooltip: "Images, diagrams, charts, or other visual elements"
+      - name: "Section-header"
+        tooltip: "Section or subsection headings"
+      - name: "Table"
+        tooltip: "Tabular data structures"
+      - name: "Text"
+        tooltip: "Regular paragraph text or body content"
+      - name: "Title"
+        tooltip: "Document title or major heading"
+
+  - annotation_type: "radio"
+    name: "document_category"
+    description: "What category best describes this document?"
+    labels:
+      - name: "financial_report"
+        tooltip: "Annual reports, earnings, financial statements"
+      - name: "scientific_paper"
+        tooltip: "Research papers, journal articles"
+      - name: "legal_document"
+        tooltip: "Contracts, patents, regulations"
+      - name: "manual"
+        tooltip: "Technical manuals, user guides"
+      - name: "government"
+        tooltip: "Government publications, policy documents"
+      - name: "other"
+        tooltip: "Documents not fitting the above categories"
+
+  - annotation_type: "radio"
+    name: "layout_complexity"
+    description: "Rate the layout complexity of this document page"
+    labels:
+      - name: "simple"
+        tooltip: "Single column, mostly text, few elements"
+      - name: "moderate"
+        tooltip: "Multiple elements, some tables or figures"
+      - name: "complex"
+        tooltip: "Multi-column, many different element types, dense layout"
+
+interface_config:
+  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:600px; border:1px solid #ccc;'/><br/><small>Document type: {{document_type}} | Page: {{page_number}}</small>"
+
+output_annotation_format: "json"
+output_annotation_dir: "annotations"

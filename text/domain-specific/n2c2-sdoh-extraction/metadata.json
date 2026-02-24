@@ -1,0 +1,23 @@
+{
+  "title": "n2c2 2022: Social Determinants of Health Extraction",
+  "description": "Extract social determinants of health (SDOH) from clinical notes. Annotators identify SDOH entities (Employment, Housing, Substance Use, etc.) and their attributes (status, type, temporal information). Based on the n2c2 2022 Track 2 shared task for SDOH extraction from clinical narratives.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lybarger et al.",
+    "email": "jurgens@umich.edu",
+    "github": "Lybarger",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Clinical NLP", "Social Determinants of Health"],
+  "useCase": ["Entity Extraction", "Clinical Documentation", "Public Health Surveillance"],
+  "complexity": "advanced",
+  "tags": ["sdoh", "clinical-nlp", "n2c2", "social-determinants", "entity-extraction", "jamia2023"],
+  "featured": false,
+  "paperReference": "Lybarger et al., JAMIA 2023",
+  "paperUrl": "https://academic.oup.com/jamia/article/30/8/1382/7184752",
+  "datasetUrl": "https://portal.dbmi.hms.harvard.edu/projects/n2c2-2022-track2/",
+  "citation": "@article{lybarger-etal-2023-n2c2,\n    title = \"{n2c2} 2022 Track 2: Contextualized Medication Event Extraction and Social Determinants of Health\",\n    author = \"Lybarger, Kevin  and Yetisgen, Meliha  and Uzuner, \\\"Ozlem  and Ostendorf, Mari\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1382--1393\",\n    year = \"2023\",\n    publisher = \"Oxford University Press\",\n    url = \"https://academic.oup.com/jamia/article/30/8/1382/7184752\"\n}"
+}

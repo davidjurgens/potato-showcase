@@ -1,0 +1,23 @@
+{
+  "title": "MMMU: Massive Multi-discipline Multimodal Understanding",
+  "description": "Multi-discipline multimodal QA requiring college-level understanding. Annotators answer multiple-choice questions that require interpreting images (charts, diagrams, photos) along with text across 30 subjects spanning STEM, humanities, social sciences, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yue et al.",
+    "email": "jurgens@umich.edu",
+    "github": "MMMU-Benchmark",
+    "affiliation": "IN.AI Research / Waterloo"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio"],
+  "domain": ["Multimodal", "Education", "Reasoning"],
+  "useCase": ["Visual Question Answering", "Multimodal Reasoning", "Educational Assessment"],
+  "complexity": "intermediate",
+  "tags": ["mmmu", "multimodal", "vqa", "reasoning", "education", "cvpr2024", "multi-discipline", "college-level"],
+  "featured": false,
+  "paperReference": "Yue et al., CVPR 2024",
+  "paperUrl": "https://openaccess.thecvf.com/content/CVPR2024/papers/Yue_MMMU_CVPR_2024_paper.pdf",
+  "datasetUrl": "https://mmmu-benchmark.github.io/",
+  "citation": "@inproceedings{yue2024mmmu,\n    title = \"{MMMU}: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert {AGI}\",\n    author = \"Yue, Xiang  and Ni, Yuansheng  and Zhang, Kai  and Zheng, Tianyu  and Liu, Ruoqi  and Zhang, Ge  and Stevens, Samuel  and Jiang, Dongfu  and Ren, Weiming  and Sun, Yuxuan  and Wei, Cong  and Yu, Botao  and Yuan, Ruibin  and Sun, Renliang  and Huang, Ming  and Cheng, Binyuan  and Gu, Qianou  and Zheng, Liang  and Chen, Yizhi  and Li, Yunshi  and others\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    year = \"2024\",\n    url = \"https://openaccess.thecvf.com/content/CVPR2024/papers/Yue_MMMU_CVPR_2024_paper.pdf\"\n}"
+}

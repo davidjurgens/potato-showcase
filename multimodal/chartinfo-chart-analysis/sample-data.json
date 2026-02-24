@@ -1,0 +1,62 @@
+[
+  {
+    "id": "chart_001",
+    "image_url": "https://example.com/chartinfo/bar_chart_revenue_001.png",
+    "chart_source": "Annual Report 2023",
+    "description": "Grouped bar chart showing quarterly revenue for three product lines over fiscal year 2023."
+  },
+  {
+    "id": "chart_002",
+    "image_url": "https://example.com/chartinfo/line_chart_temperature_002.png",
+    "chart_source": "Climate Research Paper",
+    "description": "Multi-line chart displaying average monthly temperatures across five major cities from January to December."
+  },
+  {
+    "id": "chart_003",
+    "image_url": "https://example.com/chartinfo/pie_chart_budget_003.png",
+    "chart_source": "Government Budget Report",
+    "description": "Pie chart showing the breakdown of federal budget allocation across defense, healthcare, education, infrastructure, and other categories."
+  },
+  {
+    "id": "chart_004",
+    "image_url": "https://example.com/chartinfo/scatter_plot_correlation_004.png",
+    "chart_source": "Public Health Study",
+    "description": "Scatter plot with trend line showing the correlation between daily exercise duration and resting heart rate across 200 study participants."
+  },
+  {
+    "id": "chart_005",
+    "image_url": "https://example.com/chartinfo/area_chart_emissions_005.png",
+    "chart_source": "Environmental Agency Report",
+    "description": "Stacked area chart depicting CO2 emissions by sector (transportation, industry, residential, agriculture) from 2000 to 2023."
+  },
+  {
+    "id": "chart_006",
+    "image_url": "https://example.com/chartinfo/heatmap_performance_006.png",
+    "chart_source": "Machine Learning Conference Paper",
+    "description": "Heatmap showing model accuracy across different hyperparameter combinations (learning rate vs. batch size) with color intensity indicating F1 score."
+  },
+  {
+    "id": "chart_007",
+    "image_url": "https://example.com/chartinfo/horizontal_bar_ranking_007.png",
+    "chart_source": "World Development Indicators",
+    "description": "Horizontal bar chart ranking the top 15 countries by GDP per capita with color-coded regions (Americas, Europe, Asia, Oceania)."
+  },
+  {
+    "id": "chart_008",
+    "image_url": "https://example.com/chartinfo/dual_axis_chart_008.png",
+    "chart_source": "Financial News Article",
+    "description": "Dual-axis chart showing stock price (line, left axis) and trading volume (bars, right axis) for a technology company over 12 months."
+  },
+  {
+    "id": "chart_009",
+    "image_url": "https://example.com/chartinfo/infographic_population_009.png",
+    "chart_source": "Census Bureau Publication",
+    "description": "Infographic combining a choropleth map with bar charts showing population growth rates by state, with icons indicating urban vs. rural trends."
+  },
+  {
+    "id": "chart_010",
+    "image_url": "https://example.com/chartinfo/donut_chart_survey_010.png",
+    "chart_source": "Consumer Survey Report",
+    "description": "Donut chart with center annotation showing customer satisfaction survey results broken down by product category with percentage labels on each segment."
+  }
+]

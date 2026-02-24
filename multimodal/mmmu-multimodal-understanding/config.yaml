@@ -1,0 +1,89 @@
+# MMMU: Massive Multi-discipline Multimodal Understanding
+# Based on Yue et al., CVPR 2024
+# Paper: https://openaccess.thecvf.com/content/CVPR2024/papers/Yue_MMMU_CVPR_2024_paper.pdf
+#
+# Multi-discipline multimodal QA benchmark requiring college-level subject
+# knowledge and reasoning over images (charts, diagrams, photos) and text
+# across 30 subjects including STEM, humanities, and social sciences.
+#
+# Annotation Guidelines:
+# 1. Read the question carefully and examine the associated image
+# 2. Consider the subject area and apply relevant domain knowledge
+# 3. Select the best answer choice from the provided options
+# 4. Use the image content to inform your answer — many questions
+#    cannot be answered from text alone
+
+port: 8000
+server_name: localhost
+task_name: "MMMU: Multimodal Understanding"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Select the correct answer
+  - annotation_type: radio
+    name: answer
+    description: "Select the best answer to the question based on the image and text."
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+    keyboard_shortcuts:
+      "A": "a"
+      "B": "b"
+      "C": "c"
+      "D": "d"
+    tooltips:
+      "A": "Select option A"
+      "B": "Select option B"
+      "C": "Select option C"
+      "D": "Select option D"
+
+  # Step 2: Rate difficulty
+  - annotation_type: radio
+    name: difficulty
+    description: "How difficult was this question?"
+    labels:
+      - "Easy"
+      - "Medium"
+      - "Hard"
+    tooltips:
+      "Easy": "Answer is straightforward with basic subject knowledge"
+      "Medium": "Requires moderate reasoning or domain expertise"
+      "Hard": "Requires deep expertise or multi-step reasoning"
+
+  # Step 3: Confidence
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in your answer?"
+    labels:
+      - "Very confident"
+      - "Somewhat confident"
+      - "Not confident"
+
+html_layout: |
+  <div style="margin-bottom: 15px; padding: 10px; background: #f0f4f8; border-radius: 6px;">
+    <strong>Subject:</strong> {{subject}} &mdash; <strong>Subfield:</strong> {{subfield}}
+  </div>
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border: 1px solid #ddd; border-radius: 4px;" />
+  </div>
+  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+    <strong>Question:</strong> {{text}}
+  </div>
+  <div style="padding: 10px; background: #fafafa; border-radius: 6px; line-height: 1.8;">
+    <strong>Options:</strong><br/>
+    {{options}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

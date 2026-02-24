@@ -1,0 +1,101 @@
+# AudioHate - Audio Hate Speech Detection with Explanations
+# Based on Guo et al., SIGDIAL 2024
+# Paper: https://aclanthology.org/2024.sigdial-1.35/
+# Dataset: https://github.com/audio-hate/AudioHateXplain
+#
+# Task: Classify audio clips for hate speech, identify target groups,
+# and note acoustic indicators (tone, emphasis, prosody).
+#
+# Guidelines:
+# - Listen to the full audio clip carefully before annotating
+# - Consider both speech content and acoustic features (tone, emphasis)
+# - Distinguish between hate speech, offensive language, and neither
+# - Identify all applicable target groups when hate/offensive speech is present
+# - Rate your confidence in the classification
+
+port: 8000
+server_name: localhost
+task_name: "AudioHate: Explainable Audio Hate Speech Detection"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: radio
+    name: hate_speech_classification
+    description: "Classify this audio clip for hate speech content"
+    labels:
+      - name: "Hate Speech"
+        tooltip: "Speech that attacks or demeans a group based on protected attributes"
+        key_value: "h"
+      - name: "Offensive"
+        tooltip: "Offensive or inappropriate language that is not targeting a specific group"
+        key_value: "o"
+      - name: "Neither"
+        tooltip: "No hate speech or offensive language detected"
+        key_value: "n"
+
+  - annotation_type: multiselect
+    name: target_groups
+    description: "If hate speech or offensive, select ALL targeted groups (leave empty if Neither)"
+    labels:
+      - name: "Race"
+        tooltip: "Targeting based on race or ethnicity"
+      - name: "Gender"
+        tooltip: "Targeting based on gender or gender identity"
+      - name: "Religion"
+        tooltip: "Targeting based on religious beliefs or affiliation"
+      - name: "Sexuality"
+        tooltip: "Targeting based on sexual orientation"
+      - name: "Disability"
+        tooltip: "Targeting based on physical or mental disability"
+      - name: "Nationality"
+        tooltip: "Targeting based on national origin or citizenship"
+      - name: "Other"
+        tooltip: "Targeting based on other group characteristics"
+
+  - annotation_type: multiselect
+    name: acoustic_indicators
+    description: "Select any notable acoustic indicators in the speech"
+    labels:
+      - name: "Aggressive tone"
+        tooltip: "Speaker uses a hostile or aggressive vocal tone"
+      - name: "Mocking tone"
+        tooltip: "Speaker uses a sarcastic or mocking vocal pattern"
+      - name: "Emphasis on slurs"
+        tooltip: "Speaker places special emphasis on derogatory terms"
+      - name: "Raised voice"
+        tooltip: "Speaker is shouting or speaking loudly"
+      - name: "Threatening prosody"
+        tooltip: "Speech rhythm and intonation suggest a threat"
+      - name: "Sarcastic intonation"
+        tooltip: "Speaker uses sarcastic vocal inflection"
+
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in your classification?"
+    labels:
+      - name: "Very confident"
+        tooltip: "Clear and unambiguous classification"
+        key_value: "1"
+      - name: "Somewhat confident"
+        tooltip: "Fairly certain but some ambiguity"
+        key_value: "2"
+      - name: "Not confident"
+        tooltip: "Difficult to determine, significant ambiguity"
+        key_value: "3"
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

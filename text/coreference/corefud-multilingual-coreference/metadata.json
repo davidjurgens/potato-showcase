@@ -1,0 +1,23 @@
+{
+  "title": "Multilingual Coreference Resolution (CorefUD)",
+  "description": "Multilingual coreference resolution across 17 languages using Universal Dependencies-style annotations. Annotators identify entity mentions (names, nominals, pronouns) and link them into coreference chains. Based on the CorefUD dataset and the CRAC 2023 Shared Task on Multilingual Coreference Resolution.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zabokrtsky et al.",
+    "email": "jurgens@umich.edu",
+    "github": "ufal",
+    "affiliation": "Charles University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking"],
+  "domain": ["NLP", "Multilingual", "Coreference"],
+  "useCase": ["Coreference Resolution", "Entity Mention Detection", "Multilingual NLP"],
+  "complexity": "advanced",
+  "tags": ["coreference", "multilingual", "universal-dependencies", "corefud", "crac", "entity-mentions", "emnlp2023"],
+  "featured": false,
+  "paperReference": "Zabokrtsky et al., CRAC@EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.crac-sharedtask.1/",
+  "datasetUrl": "https://ufal.mff.cuni.cz/corefud",
+  "citation": "@inproceedings{zabokrtsky-etal-2023-findings,\n    title = \"Findings of the Second Shared Task on Multilingual Coreference Resolution\",\n    author = \"{\\v{Z}}abokrtsk{\\'y}, Zden{\\v{e}}k  and Nedoluzhko, Anna  and Novak, Michal  and Ogrodniczuk, Maciej  and Popel, Martin  and Praz{\\'a}k, Ondrej  and Sido, Jakub  and Urbanek, Daniel\",\n    booktitle = \"Proceedings of the CRAC 2023 Shared Task on Multilingual Coreference Resolution\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.crac-sharedtask.1\",\n    pages = \"1--18\"\n}"
+}

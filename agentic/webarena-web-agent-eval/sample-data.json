@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wa_001",
+    "text": "Find the most recent order on the shopping site and check its delivery status.",
+    "trajectory": "Step 1: Navigate to homepage -> https://shop.example.com/\nStep 2: Click 'My Account' link in top navigation\nStep 3: Click 'Order History' tab\nStep 4: Click on the first order (Order #2024-1847, placed Dec 15 2024)\nStep 5: Scroll down to 'Delivery Status' section\nStep 6: STOP - Task complete",
+    "final_state": "Page displays Order #2024-1847 details. Delivery status shows: 'In Transit - Expected delivery Dec 20, 2024'. Tracking number: 1Z999AA10123456784. Carrier: UPS.",
+    "website_type": "E-commerce (Shopping)"
+  },
+  {
+    "id": "wa_002",
+    "text": "Create a new repository named 'test-project' with a README file on the code hosting platform.",
+    "trajectory": "Step 1: Navigate to https://gitlab.example.com/\nStep 2: Click '+' button in top navigation bar\nStep 3: Click 'New project/repository' from dropdown\nStep 4: Select 'Create blank project'\nStep 5: Type 'test-project' in 'Project name' field\nStep 6: Check 'Initialize repository with a README' checkbox\nStep 7: Click 'Create project' button\nStep 8: STOP - Task complete",
+    "final_state": "New repository page displayed at gitlab.example.com/user/test-project. Repository contains a single README.md file. Project visibility is set to 'Private' (default). Branch: main.",
+    "website_type": "Code Hosting (GitLab)"
+  },
+  {
+    "id": "wa_003",
+    "text": "Post a new thread in the 'General Discussion' forum asking about Python best practices.",
+    "trajectory": "Step 1: Navigate to https://forum.example.com/\nStep 2: Click 'General Discussion' category\nStep 3: Click 'New Topic' button\nStep 4: Type 'What are your favorite Python best practices?' in title field\nStep 5: Type 'I am looking for recommendations on Python coding best practices for production code. What patterns and conventions do you follow?' in body field\nStep 6: Click 'Submit' button\nStep 7: STOP - Task complete",
+    "final_state": "New forum thread displayed with title 'What are your favorite Python best practices?'. Thread is in 'General Discussion' category. Post count: 1. Author: current_user. Status: Open.",
+    "website_type": "Forum (Discourse)"
+  },
+  {
+    "id": "wa_004",
+    "text": "Add a new event called 'Team Meeting' on January 15th from 2:00 PM to 3:00 PM on the calendar app.",
+    "trajectory": "Step 1: Navigate to https://calendar.example.com/\nStep 2: Click on January 15th in the calendar grid\nStep 3: Click 'Create Event' in the popup\nStep 4: Type 'Team Meeting' in event title field\nStep 5: Set start time to 2:00 PM\nStep 6: Set end time to 3:00 PM\nStep 7: Click 'Save' button\nStep 8: STOP - Task complete",
+    "final_state": "Calendar view shows 'Team Meeting' event on January 15th, 2:00 PM - 3:00 PM. Event appears as a blue block in the daily view. No attendees added. Reminder set to default (15 minutes before).",
+    "website_type": "Calendar Application"
+  },
+  {
+    "id": "wa_005",
+    "text": "Find all products under $20 in the Electronics category and sort them by customer rating (highest first).",
+    "trajectory": "Step 1: Navigate to https://shop.example.com/\nStep 2: Click 'Categories' in main navigation\nStep 3: Click 'Electronics' from category list\nStep 4: Click 'Price' filter in sidebar\nStep 5: Set max price to $20\nStep 6: Click 'Apply' button\nStep 7: Click 'Sort By' dropdown\nStep 8: Select 'Customer Rating: High to Low'\nStep 9: STOP - Task complete",
+    "final_state": "Electronics category page showing 23 products under $20. Products sorted by customer rating (highest first). Top result: USB-C Cable (4.8 stars, $9.99). Filters applied: Price $0-$20. Sort: Rating descending.",
+    "website_type": "E-commerce (Shopping)"
+  },
+  {
+    "id": "wa_006",
+    "text": "File a new issue on the 'web-framework' repository reporting a bug with the login page.",
+    "trajectory": "Step 1: Navigate to https://gitlab.example.com/\nStep 2: Search for 'web-framework' in search bar\nStep 3: Click on 'web-framework' repository from results\nStep 4: Click 'Issues' tab\nStep 5: Click 'New Issue' button\nStep 6: Type 'Login page returns 500 error on invalid email format' in title\nStep 7: Type 'When entering an email without @ symbol on the login page, the server returns a 500 Internal Server Error instead of a validation message. Steps to reproduce: 1. Go to /login 2. Enter \"testuser\" in email field 3. Click Submit. Expected: Validation error. Actual: 500 error.' in description\nStep 8: Select 'Bug' from label dropdown\nStep 9: Click 'Submit Issue' button\nStep 10: STOP - Task complete",
+    "final_state": "New issue #142 created in web-framework repository. Title: 'Login page returns 500 error on invalid email format'. Label: Bug. Status: Open. Assignee: None.",
+    "website_type": "Code Hosting (GitLab)"
+  },
+  {
+    "id": "wa_007",
+    "text": "Update my profile bio to say 'Software developer passionate about open source' and change my timezone to Pacific Time.",
+    "trajectory": "Step 1: Navigate to https://forum.example.com/\nStep 2: Click user avatar in top right\nStep 3: Click 'Preferences' from dropdown\nStep 4: Click 'Profile' tab\nStep 5: Clear existing bio text\nStep 6: Type 'Software developer passionate about open source' in bio field\nStep 7: Click 'Save Changes' button\nStep 8: STOP - Task complete",
+    "final_state": "Profile page shows updated bio: 'Software developer passionate about open source'. Save confirmation displayed. Timezone still shows 'Eastern Time (US & Canada)' - was not changed.",
+    "website_type": "Forum (Discourse)"
+  },
+  {
+    "id": "wa_008",
+    "text": "Send an email to john@example.com with subject 'Project Update' and attach the quarterly report.",
+    "trajectory": "Step 1: Navigate to https://mail.example.com/\nStep 2: Click 'Compose' button\nStep 3: Type 'john@example.com' in To field\nStep 4: Type 'Project Update' in Subject field\nStep 5: Type 'Hi John, Please find the quarterly report attached. Let me know if you have any questions. Best regards.' in body\nStep 6: Click 'Attach' button\nStep 7: Navigate to Documents folder\nStep 8: Click on 'quarterly_report.pdf'\nStep 9: Click 'Open' to attach\nStep 10: Click 'Send' button\nStep 11: STOP - Task complete",
+    "final_state": "Email sent confirmation displayed. Message in 'Sent' folder. To: john@example.com. Subject: Project Update. Attachment: quarterly_report.pdf (2.4 MB).",
+    "website_type": "Email (Webmail)"
+  },
+  {
+    "id": "wa_009",
+    "text": "Find the cheapest round-trip flight from Chicago to Miami departing next Friday and returning the following Sunday.",
+    "trajectory": "Step 1: Navigate to https://travel.example.com/\nStep 2: Click 'Flights' tab\nStep 3: Type 'Chicago' in departure field, select 'Chicago O'Hare (ORD)'\nStep 4: Type 'Miami' in destination field, select 'Miami International (MIA)'\nStep 5: Click departure date picker, select next Friday\nStep 6: Click return date picker, select following Sunday\nStep 7: Click 'Search' button\nStep 8: Wait for results to load\nStep 9: Click 'Price: Low to High' sort option\nStep 10: STOP - Task complete",
+    "final_state": "Flight search results displayed. 47 round-trip options found. Sorted by price (lowest first). Cheapest flight: Spirit Airlines - $187 round trip (depart 6:15 AM, return 4:30 PM). Filters: ORD to MIA, round-trip, specified dates.",
+    "website_type": "Travel Booking"
+  },
+  {
+    "id": "wa_010",
+    "text": "Delete all completed tasks from the 'Q4 Planning' project board.",
+    "trajectory": "Step 1: Navigate to https://project.example.com/\nStep 2: Click 'Projects' in left sidebar\nStep 3: Click 'Q4 Planning' project\nStep 4: Click 'Board' view tab\nStep 5: Click on 'Done' column header\nStep 6: Click 'Select All' checkbox\nStep 7: Click 'Delete Selected' button\nStep 8: Click 'Confirm' in confirmation dialog\nStep 9: STOP - Task complete",
+    "final_state": "Q4 Planning board displayed. 'Done' column is now empty (previously had 8 completed tasks). Other columns unchanged: 'To Do' (3 tasks), 'In Progress' (5 tasks), 'Review' (2 tasks). Deletion confirmation banner shown.",
+    "website_type": "Project Management"
+  }
+]

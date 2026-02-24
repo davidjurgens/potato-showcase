@@ -1,0 +1,62 @@
+[
+  {
+    "id": "maud_001",
+    "text": "Section 5.3 No Solicitation. From the date of this Agreement until the earlier of the Effective Time or the termination of this Agreement, the Company shall not, and shall cause its Subsidiaries and its and their respective directors, officers, employees, investment bankers, attorneys, accountants and other advisors or representatives not to, directly or indirectly, (a) solicit, initiate, knowingly encourage or knowingly facilitate any Acquisition Proposal, (b) enter into, continue or otherwise participate in any discussions or negotiations regarding, or furnish to any person any information with respect to, any Acquisition Proposal, or (c) enter into any letter of intent, agreement in principle, acquisition agreement, merger agreement or similar agreement relating to any Acquisition Proposal.",
+    "question": "Does the agreement contain a no-shop provision that prohibits the target from soliciting competing acquisition proposals?",
+    "category": "Deal Protection"
+  },
+  {
+    "id": "maud_002",
+    "text": "Section 7.1 Conditions to Each Party's Obligations. The respective obligation of each party to effect the Merger shall be subject to the satisfaction or waiver at or prior to the Effective Time of the following conditions: (a) Stockholder Approval. The Company Stockholder Approval shall have been obtained. (b) Regulatory Approvals. All waiting periods applicable to the consummation of the Merger under the HSR Act shall have expired or been terminated, and all consents required under applicable Antitrust Laws shall have been obtained. (c) No Injunctions or Restraints. No Governmental Entity shall have enacted, issued, promulgated, enforced or entered any Law or Order that is then in effect and that has the effect of making the Merger illegal or otherwise restraining or prohibiting consummation of the Merger.",
+    "question": "Is shareholder approval required as a condition to closing?",
+    "category": "Conditions to Closing"
+  },
+  {
+    "id": "maud_003",
+    "text": "\"Material Adverse Effect\" means any change, effect, event, occurrence, state of facts or development that, individually or in the aggregate, has had or would reasonably be expected to have a material adverse effect on the business, results of operations or financial condition of the Company and its Subsidiaries, taken as a whole; provided, however, that none of the following shall be deemed to constitute, and none of the following shall be taken into account in determining whether there has been, a Material Adverse Effect: (i) changes in general economic or political conditions; (ii) changes in the financial or securities markets generally; (iii) changes in applicable Law or GAAP; (iv) changes resulting from the announcement or pendency of the transactions contemplated hereby.",
+    "question": "Does the MAE definition include carve-outs for general economic conditions and changes in law?",
+    "category": "Material Adverse Effect"
+  },
+  {
+    "id": "maud_004",
+    "text": "Section 8.2 Termination Fee. (a) If this Agreement is terminated by Parent pursuant to Section 8.1(d)(ii) (Company Board Recommendation Change), then the Company shall pay to Parent in cash a termination fee equal to $450,000,000 (the \"Termination Fee\") within two (2) business days of such termination. (b) If this Agreement is terminated by either party pursuant to Section 8.1(b)(ii) (Failure to Obtain Stockholder Approval), and at the time of such termination an Acquisition Proposal shall have been publicly announced and not withdrawn, and within twelve (12) months following such termination the Company enters into a definitive agreement with respect to such Acquisition Proposal, then the Company shall pay to Parent the Termination Fee.",
+    "question": "Is the target required to pay a termination fee if the board changes its recommendation?",
+    "category": "Deal Protection"
+  },
+  {
+    "id": "maud_005",
+    "text": "Section 3.8 Representations Regarding Financial Statements. (a) The audited consolidated financial statements of the Company included in the Company SEC Reports fairly present in all material respects the consolidated financial position of the Company and its consolidated Subsidiaries as of the dates thereof and their consolidated results of operations and cash flows for the periods then ended, in conformity with GAAP applied on a consistent basis during the periods involved. (b) Each of the consolidated balance sheets included in the Company SEC Reports fairly presents the consolidated financial position of the Company as of the date thereof.",
+    "question": "Does the target represent that its financial statements comply with GAAP?",
+    "category": "Representations & Warranties"
+  },
+  {
+    "id": "maud_006",
+    "text": "Section 5.4 Fiduciary Exception. Notwithstanding Section 5.3, at any time prior to the receipt of the Company Stockholder Approval, if the Company receives a bona fide written Acquisition Proposal that did not result from a breach of Section 5.3, and the Company Board determines in good faith, after consultation with its outside financial advisor and outside legal counsel, that such Acquisition Proposal constitutes or would reasonably be expected to result in a Superior Proposal, the Company may (a) furnish information with respect to the Company to the person making such Acquisition Proposal pursuant to a confidentiality agreement no less restrictive than the Confidentiality Agreement, and (b) engage in discussions or negotiations with such person regarding such Acquisition Proposal.",
+    "question": "Does the no-shop provision include a fiduciary out that permits the board to engage with unsolicited superior proposals?",
+    "category": "Deal Protection"
+  },
+  {
+    "id": "maud_007",
+    "text": "Section 7.2(c) Absence of Material Adverse Effect. Since the date of this Agreement, there shall not have occurred any Material Adverse Effect with respect to the Company that is continuing. Parent shall have received a certificate signed by an executive officer of the Company to the effect that the conditions set forth in Section 7.2(a), Section 7.2(b) and this Section 7.2(c) have been satisfied.",
+    "question": "Is the absence of a material adverse effect a condition to closing in favor of the buyer?",
+    "category": "Conditions to Closing"
+  },
+  {
+    "id": "maud_008",
+    "text": "Section 8.3 Effect of Termination. If this Agreement is terminated pursuant to Section 8.1, this Agreement shall become void and of no further force or effect, and there shall be no liability on the part of any party hereto or any of their respective affiliates, officers, directors, stockholders or representatives; provided, however, that (i) the provisions of this Section 8.3, Section 8.2 (Termination Fee), Section 9.1 (Fees and Expenses) and Section 9.8 (Governing Law) shall survive such termination, and (ii) nothing herein shall relieve any party from liability for any Willful Breach of this Agreement prior to such termination.",
+    "question": "Does the agreement preserve liability for willful breach even after termination?",
+    "category": "Termination"
+  },
+  {
+    "id": "maud_009",
+    "text": "Section 6.6 Indemnification; Directors' and Officers' Insurance. (a) For a period of six (6) years following the Effective Time, Parent shall, and shall cause the Surviving Corporation to, indemnify and hold harmless each present and former director and officer of the Company against any costs or expenses (including reasonable attorneys' fees), judgments, fines, losses, claims, damages or liabilities incurred in connection with any claim, action, suit, proceeding or investigation arising out of or pertaining to matters existing or occurring at or prior to the Effective Time. (b) Parent shall cause the Surviving Corporation to maintain for a period of six (6) years after the Effective Time the Company's existing directors' and officers' liability insurance policy.",
+    "question": "Does the agreement provide post-closing indemnification for directors and officers of the target?",
+    "category": "Indemnification"
+  },
+  {
+    "id": "maud_010",
+    "text": "Section 3.4 No Conflicts; Consents. The execution, delivery and performance of this Agreement by the Company and the consummation of the transactions contemplated hereby do not and will not (a) conflict with or violate the certificate of incorporation or bylaws of the Company or any of its Subsidiaries, (b) assuming compliance with Section 3.4(c), conflict with or violate any Law applicable to the Company or its Subsidiaries, or (c) result in any breach of, or constitute a default under, or result in the loss of any benefit under, or give rise to any right of termination, cancellation, acceleration or lien under, any Contract to which the Company or any of its Subsidiaries is a party, except in the case of clauses (b) and (c) as would not reasonably be expected to have, individually or in the aggregate, a Material Adverse Effect.",
+    "question": "Does the target represent that the merger will not conflict with its organizational documents or material contracts?",
+    "category": "Representations & Warranties"
+  }
+]

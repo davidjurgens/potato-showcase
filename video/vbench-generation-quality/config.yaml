@@ -1,0 +1,170 @@
+# VBench Video Generation Quality Assessment Configuration
+# Based on Huang et al., CVPR 2024
+# Task: Rate and compare AI-generated video quality across multiple dimensions
+
+port: 8000
+server_name: localhost
+task_name: "VBench Video Generation Quality Assessment"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Temporal consistency rating
+  - name: "temporal_consistency"
+    description: |
+      Rate the temporal consistency of the generated video.
+      Consider: Do objects maintain their appearance across frames?
+      Are there flickering artifacts or sudden appearance changes?
+    annotation_type: likert
+    size: 5
+    min_label: "Very Inconsistent"
+    max_label: "Very Consistent"
+    labels:
+      - "1 - Severe flickering, objects change drastically"
+      - "2 - Noticeable inconsistencies across frames"
+      - "3 - Some minor temporal artifacts"
+      - "4 - Mostly consistent with rare artifacts"
+      - "5 - Perfectly consistent throughout"
+
+  # Motion smoothness rating
+  - name: "motion_smoothness"
+    description: |
+      Rate the smoothness and naturalness of motion in the video.
+      Consider: Are movements fluid? Are there jerky transitions?
+      Do objects move in physically plausible ways?
+    annotation_type: likert
+    size: 5
+    min_label: "Very Jerky"
+    max_label: "Very Smooth"
+    labels:
+      - "1 - Extremely jerky, unnatural movement"
+      - "2 - Frequently stuttering or abrupt motions"
+      - "3 - Somewhat smooth with occasional issues"
+      - "4 - Mostly smooth and natural motion"
+      - "5 - Perfectly smooth, natural movement"
+
+  # Aesthetic quality rating
+  - name: "aesthetic_quality"
+    description: |
+      Rate the overall aesthetic quality of the generated video.
+      Consider: Visual appeal, color harmony, composition, and artistic quality.
+    annotation_type: likert
+    size: 5
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    labels:
+      - "1 - Very poor visual quality, unappealing"
+      - "2 - Below average aesthetics"
+      - "3 - Acceptable visual quality"
+      - "4 - Good aesthetic quality"
+      - "5 - Excellent, visually impressive"
+
+  # Text-video alignment rating
+  - name: "text_alignment"
+    description: |
+      Rate how well the generated video matches the text prompt.
+      Consider: Are all elements from the prompt present?
+      Does the video accurately depict the described scene?
+    annotation_type: likert
+    size: 5
+    min_label: "No Match"
+    max_label: "Perfect Match"
+    labels:
+      - "1 - Completely unrelated to prompt"
+      - "2 - Vaguely related but misses key elements"
+      - "3 - Partially matches the prompt"
+      - "4 - Mostly matches with minor omissions"
+      - "5 - Perfectly depicts the prompt"
+
+  # Pairwise comparison
+  - name: "pairwise_preference"
+    description: |
+      Compare Video A and Video B generated from the same prompt.
+      Which video is better overall? Consider all quality dimensions.
+    annotation_type: pairwise
+    labels:
+      - name: "Video A is much better"
+        key_value: "1"
+      - name: "Video A is slightly better"
+        key_value: "2"
+      - name: "About the same"
+        key_value: "3"
+      - name: "Video B is slightly better"
+        key_value: "4"
+      - name: "Video B is much better"
+        key_value: "5"
+
+  # Temporal quality marking
+  - name: "quality_segments"
+    description: |
+      Mark any temporal segments where quality notably drops or improves.
+      Use this to flag specific moments of artifacts or excellence.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "quality_drop"
+        color: "#EF4444"
+        key_value: "d"
+      - name: "quality_peak"
+        color: "#22C55E"
+        key_value: "p"
+      - name: "artifact"
+        color: "#F59E0B"
+        key_value: "a"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 3
+
+# Instructions
+annotation_instructions: |
+  ## VBench Video Generation Quality Assessment Task
+
+  Your goal is to evaluate the quality of AI-generated videos on multiple dimensions.
+
+  ### Quality Dimensions to Rate (1-5 scale):
+
+  **Temporal Consistency:**
+  - Do objects maintain their appearance across frames?
+  - Are there flickering or morphing artifacts?
+
+  **Motion Smoothness:**
+  - Are movements fluid and natural?
+  - Are there jerky or physically impossible motions?
+
+  **Aesthetic Quality:**
+  - Is the video visually appealing?
+  - Consider color, composition, and overall look
+
+  **Text-Video Alignment:**
+  - Does the video match the given text prompt?
+  - Are all described elements present?
+
+  ### Pairwise Comparison:
+  - When two videos are shown, compare them holistically
+  - Consider all quality dimensions together
+
+  ### Temporal Quality Marking:
+  - Flag specific moments where quality drops (red)
+  - Mark segments of exceptional quality (green)
+  - Highlight visible artifacts (yellow)
+
+  ### Tips:
+  - Watch each video at least twice before rating
+  - Pay attention to edges and fine details for artifacts
+  - Compare motion to real-world physics
+  - Read the prompt carefully before rating alignment

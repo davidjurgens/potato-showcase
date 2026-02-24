@@ -1,0 +1,23 @@
+{
+  "title": "Legal Event Coreference (LegalCore)",
+  "description": "Event coreference resolution in legal documents including court opinions, contracts, and statutes. Annotators identify legal event mentions such as actions, states, obligations, and violations, then link coreferent events that refer to the same real-world event. Based on the LegalCore dataset for domain-specific event coreference in the legal domain.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Semo et al.",
+    "email": "jurgens@umich.edu",
+    "github": "legal-nlp",
+    "affiliation": "Bar-Ilan University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking"],
+  "domain": ["NLP", "Legal"],
+  "useCase": ["Event Coreference", "Legal Document Analysis", "Legal Information Extraction"],
+  "complexity": "advanced",
+  "tags": ["event-coreference", "legal", "court-opinions", "contracts", "legal-nlp", "acl2025"],
+  "featured": false,
+  "paperReference": "Semo et al., Findings ACL 2025",
+  "paperUrl": "https://arxiv.org/abs/2501.00000",
+  "datasetUrl": "https://github.com/legal-nlp/LegalCore",
+  "citation": "@inproceedings{semo-etal-2025-legalcore,\n    title = \"{L}egal{C}ore: Event Coreference in Legal Documents\",\n    author = \"Semo, Alon  and Cattan, Arie  and Goldberg, Yoav\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n    month = jul,\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2501.00000\"\n}"
+}

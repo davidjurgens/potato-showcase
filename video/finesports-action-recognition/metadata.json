@@ -1,0 +1,23 @@
+{
+  "title": "FineSports Fine-grained Action Recognition",
+  "description": "Fine-grained sports action annotation with hierarchical labels and person tracking. Annotators draw bounding boxes around athletes and label fine-grained actions within a sports action hierarchy.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["video_annotation", "bbox"],
+  "domain": ["Computer Vision", "Sports Analytics"],
+  "useCase": ["Action Recognition", "Person Tracking", "Fine-grained Classification"],
+  "complexity": "advanced",
+  "tags": ["video", "sports", "fine-grained", "action-recognition", "bounding-box", "hierarchical", "finesports"],
+  "featured": false,
+  "paperReference": "Xu et al., CVPR 2024",
+  "paperUrl": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_FineSports_CVPR_2024_paper.pdf",
+  "datasetUrl": "https://github.com/PKU-ICST-MIPL/FineSports",
+  "citation": "@inproceedings{xu2024finesports,\n  title={FineSports: A Multi-person Hierarchical Sports Video Dataset for Fine-grained Action Understanding},\n  author={Xu, Jinglin and Zeng, Sibo and Liu, Yuxin and Gao, Lianli and Song, Jingkuan and Shen, Heng Tao},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  year={2024}\n}"
+}

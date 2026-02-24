@@ -1,0 +1,85 @@
+# MT-Bench: LLM Response Quality Evaluation
+# Based on "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (Zheng et al., NeurIPS 2023)
+# Task: Pairwise comparison and absolute scoring of LLM responses
+
+port: 8000
+server_name: localhost
+task_name: "MT-Bench LLM Evaluation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+# Output
+output_file: annotations.json
+
+# Display layout showing question and both responses side-by-side
+html_layout: |
+  <div class="mtbench-container">
+    <div class="metadata-bar" style="display: flex; gap: 15px; margin-bottom: 15px;">
+      <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px;">
+        <strong>Category:</strong> {{category}}
+      </div>
+      <div style="background: #f3e5f5; padding: 8px 15px; border-radius: 8px;">
+        <strong>Turn:</strong> {{turn_number}}
+      </div>
+    </div>
+    <div class="question-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+      <h3 style="margin-top: 0;">Question:</h3>
+      <div class="question-text" style="font-size: 16px;">{{text}}</div>
+    </div>
+    <div class="responses-section" style="display: flex; gap: 20px;">
+      <div class="response-a" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
+        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
+        <div class="response-text" style="white-space: pre-wrap; font-size: 14px;">{{response_a}}</div>
+      </div>
+      <div class="response-b" style="flex: 1; background: #fce4ec; padding: 15px; border-radius: 8px; border: 2px solid #c62828;">
+        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+        <div class="response-text" style="white-space: pre-wrap; font-size: 14px;">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Pairwise preference
+  - name: "preference"
+    description: "Which response is better overall? Consider helpfulness, accuracy, depth, and clarity."
+    annotation_type: pairwise
+    labels:
+      - "Response A is much better"
+      - "Response A is slightly better"
+      - "Tie"
+      - "Response B is slightly better"
+      - "Response B is much better"
+    keyboard_shortcuts:
+      "Response A is much better": "1"
+      "Response A is slightly better": "2"
+      "Tie": "3"
+      "Response B is slightly better": "4"
+      "Response B is much better": "5"
+
+  # Absolute score for Response A
+  - name: "score_response_a"
+    description: "Rate Response A on a 1-10 scale for overall quality."
+    annotation_type: likert
+    size: 10
+    min_label: "1 - Terrible"
+    max_label: "10 - Perfect"
+
+  # Absolute score for Response B
+  - name: "score_response_b"
+    description: "Rate Response B on a 1-10 scale for overall quality."
+    annotation_type: likert
+    size: 10
+    min_label: "1 - Terrible"
+    max_label: "10 - Perfect"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 80
+annotation_per_instance: 3

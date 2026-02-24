@@ -1,0 +1,203 @@
+# MultiTACRED: Multilingual TAC Relation Extraction
+# Based on Hennig et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.210/
+# Dataset: https://github.com/DFKI-NLP/MultiTACRED
+#
+# MultiTACRED extends the TACRED relation extraction dataset to 12 languages
+# via professional translation. It covers 41 TAC relation types between
+# subject and object entities.
+#
+# Languages: English, German, French, Spanish, Finnish, Hungarian,
+# Japanese, Korean, Polish, Russian, Turkish, Arabic
+#
+# Subject Entity Types:
+# - PERSON: Named person
+# - ORGANIZATION: Named organization
+#
+# Object Entity Types:
+# - PERSON, ORGANIZATION, LOCATION, DATE, NUMBER,
+#   TITLE, RELIGION, NATIONALITY, CAUSE_OF_DEATH,
+#   CRIMINAL_CHARGE, URL, CITY, STATE_OR_PROVINCE, COUNTRY
+#
+# TAC Relation Types (41 total), including:
+# Person relations: per:origin, per:employee_of, per:spouse,
+#   per:children, per:parents, per:siblings, per:title,
+#   per:age, per:date_of_birth, per:date_of_death,
+#   per:cause_of_death, per:religion, per:schools_attended,
+#   per:city_of_birth, per:stateorprovince_of_birth,
+#   per:country_of_birth, per:charges
+# Organization relations: org:founded, org:founded_by,
+#   org:members, org:member_of, org:subsidiaries,
+#   org:parents, org:top_members/employees,
+#   org:city_of_headquarters, org:country_of_headquarters
+#
+# Annotation Guidelines:
+# 1. Read the sentence and note the language
+# 2. Identify subject and object entity spans
+# 3. Classify entity types
+# 4. Select the TAC relation type for the entity pair
+# 5. Assess translation quality if applicable
+
+port: 8000
+server_name: localhost
+task_name: "MultiTACRED: Multilingual Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify subject and object entities
+  - annotation_type: span
+    name: entities
+    description: "Highlight the subject and object entities in the text"
+    labels:
+      - "PERSON"
+      - "ORGANIZATION"
+      - "LOCATION"
+      - "DATE"
+      - "NUMBER"
+      - "TITLE"
+      - "RELIGION"
+      - "NATIONALITY"
+      - "CAUSE_OF_DEATH"
+      - "CITY"
+      - "STATE_OR_PROVINCE"
+      - "COUNTRY"
+    label_colors:
+      "PERSON": "#3b82f6"
+      "ORGANIZATION": "#22c55e"
+      "LOCATION": "#ef4444"
+      "DATE": "#8b5cf6"
+      "NUMBER": "#06b6d4"
+      "TITLE": "#f59e0b"
+      "RELIGION": "#ec4899"
+      "NATIONALITY": "#14b8a6"
+      "CAUSE_OF_DEATH": "#6b7280"
+      "CITY": "#f97316"
+      "STATE_OR_PROVINCE": "#a855f7"
+      "COUNTRY": "#dc2626"
+    keyboard_shortcuts:
+      "PERSON": "1"
+      "ORGANIZATION": "2"
+      "LOCATION": "3"
+      "DATE": "4"
+    tooltips:
+      "PERSON": "Named person (e.g., John Smith, Marie Curie)"
+      "ORGANIZATION": "Named organization (e.g., Google, United Nations)"
+      "LOCATION": "General location not covered by city/state/country"
+      "DATE": "Dates, years, or time expressions"
+      "NUMBER": "Numerical values (age, quantity, etc.)"
+      "TITLE": "Job titles, honorifics, or positions"
+      "RELIGION": "Religious denominations or beliefs"
+      "NATIONALITY": "National or ethnic identity"
+      "CAUSE_OF_DEATH": "Cause or manner of death"
+      "CITY": "City or town names"
+      "STATE_OR_PROVINCE": "State, province, or regional divisions"
+      "COUNTRY": "Country names"
+    allow_overlapping: false
+
+  # Step 2: Link entities with TAC relation types
+  - annotation_type: span_linking
+    name: tac_relations
+    description: "Draw relations between subject and object entities using TAC relation types"
+    labels:
+      - "per:origin"
+      - "per:employee_of"
+      - "per:spouse"
+      - "per:children"
+      - "per:parents"
+      - "per:siblings"
+      - "per:title"
+      - "per:age"
+      - "per:date_of_birth"
+      - "per:date_of_death"
+      - "per:cause_of_death"
+      - "per:religion"
+      - "per:schools_attended"
+      - "per:city_of_birth"
+      - "per:country_of_birth"
+      - "per:charges"
+      - "per:cities_of_residence"
+      - "per:countries_of_residence"
+      - "org:founded"
+      - "org:founded_by"
+      - "org:members"
+      - "org:member_of"
+      - "org:subsidiaries"
+      - "org:parents"
+      - "org:top_members/employees"
+      - "org:city_of_headquarters"
+      - "org:country_of_headquarters"
+      - "no_relation"
+    tooltips:
+      "per:origin": "Person's national or ethnic origin"
+      "per:employee_of": "Person is employed by organization"
+      "per:spouse": "Person is married to or in partnership with another person"
+      "per:children": "Person's children"
+      "per:parents": "Person's parents"
+      "per:siblings": "Person's brothers or sisters"
+      "per:title": "Person's job title or position"
+      "per:age": "Person's age"
+      "per:date_of_birth": "Person's date of birth"
+      "per:date_of_death": "Person's date of death"
+      "per:cause_of_death": "Cause of the person's death"
+      "per:religion": "Person's religious affiliation"
+      "per:schools_attended": "Schools or universities the person attended"
+      "per:city_of_birth": "City where the person was born"
+      "per:country_of_birth": "Country where the person was born"
+      "per:charges": "Criminal charges against the person"
+      "per:cities_of_residence": "Cities where the person resides or resided"
+      "per:countries_of_residence": "Countries where the person resides or resided"
+      "org:founded": "Date when the organization was founded"
+      "org:founded_by": "Person or entity that founded the organization"
+      "org:members": "Members of the organization"
+      "org:member_of": "Organization is a member of another organization"
+      "org:subsidiaries": "Subsidiary organizations"
+      "org:parents": "Parent organization"
+      "org:top_members/employees": "Top leaders or executives of the organization"
+      "org:city_of_headquarters": "City where the organization is headquartered"
+      "org:country_of_headquarters": "Country where the organization is headquartered"
+      "no_relation": "No TAC relation holds between the subject and object"
+
+  # Step 3: Assess translation quality
+  - annotation_type: radio
+    name: translation_quality
+    description: "Rate the quality of the translation (for non-English sentences)"
+    labels:
+      - "Excellent - Natural and accurate"
+      - "Good - Minor issues but meaning preserved"
+      - "Acceptable - Some awkwardness but understandable"
+      - "Poor - Meaning distorted or unnatural"
+      - "N/A - Original English text"
+    keyboard_shortcuts:
+      "Excellent - Natural and accurate": "q"
+      "Good - Minor issues but meaning preserved": "w"
+      "Acceptable - Some awkwardness but understandable": "e"
+      "Poor - Meaning distorted or unnatural": "r"
+      "N/A - Original English text": "t"
+    tooltips:
+      "Excellent - Natural and accurate": "Translation reads naturally and preserves all meaning"
+      "Good - Minor issues but meaning preserved": "Small grammatical or stylistic issues; meaning is clear"
+      "Acceptable - Some awkwardness but understandable": "Noticeable issues but core meaning is preserved"
+      "Poor - Meaning distorted or unnatural": "Translation significantly changes meaning or is hard to understand"
+      "N/A - Original English text": "This is the original English text, not a translation"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Language:</strong> {{language}} |
+    <strong>Subject:</strong> <span style="color: #3b82f6; font-weight: bold;">{{subject}}</span> ({{subject_type}}) |
+    <strong>Object:</strong> <span style="color: #ef4444; font-weight: bold;">{{object}}</span> ({{object_type}})
+  </div>
+  <div style="font-size: 16px; line-height: 1.6;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

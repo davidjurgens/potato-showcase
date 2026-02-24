@@ -1,0 +1,23 @@
+{
+  "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision",
+  "description": "Atomic fact evaluation in LLM-generated text. Annotators decompose generated text into atomic facts and verify each fact as supported, not-supported, or irrelevant against a reference source. Based on the FActScore framework for evaluating factual precision in long-form text generation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Min et al.",
+    "email": "jurgens@umich.edu",
+    "github": "shmsw25",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Factuality", "Evaluation"],
+  "useCase": ["Factuality Evaluation", "LLM Output Assessment", "Atomic Fact Verification"],
+  "complexity": "intermediate",
+  "tags": ["factuality", "atomic-facts", "llm-evaluation", "factscore", "text-generation", "emnlp2023"],
+  "featured": false,
+  "paperReference": "Min et al., EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.741/",
+  "datasetUrl": "https://github.com/shmsw25/FActScore",
+  "citation": "@inproceedings{min-etal-2023-factscore,\n    title = \"{FA}ct{S}core: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation\",\n    author = \"Min, Sewon  and Krishna, Kalpesh  and Lyu, Xinxi  and Lewis, Mike  and Yih, Wen-tau  and Koh, Pang Wei  and Iyyer, Mohit  and Zettlemoyer, Luke  and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.741\",\n    pages = \"12076--12100\"\n}"
+}

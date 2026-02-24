@@ -1,0 +1,150 @@
+# Harmony4D Human Interaction Tracking Configuration
+# Based on Jung et al., NeurIPS 2024
+# Task: Track multiple people during close physical interactions with bounding boxes and interaction labels
+
+port: 8000
+server_name: localhost
+task_name: "Harmony4D Human Interaction Tracking"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Multi-person tracking with bounding boxes
+  - name: "person_tracking"
+    description: |
+      Draw bounding boxes around each person visible in the frame.
+      Track the same person across frames using consistent IDs.
+      Pay special attention during close interactions where people overlap.
+    annotation_type: "video_annotation"
+    mode: "tracking"
+    labels:
+      - name: "person_1"
+        color: "#3B82F6"
+      - name: "person_2"
+        color: "#22C55E"
+      - name: "person_3"
+        color: "#F59E0B"
+      - name: "person_4"
+        color: "#8B5CF6"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    zoom_enabled: true
+    video_fps: 30
+
+  # Interaction type classification
+  - name: "interaction_type"
+    description: |
+      Select all types of interaction occurring between the tracked people.
+      Multiple interaction types can occur simultaneously.
+    annotation_type: multiselect
+    labels:
+      - name: "Physical Contact"
+        tooltip: "Direct physical contact between people (holding hands, hugging, pushing)"
+        key_value: "1"
+      - name: "Collaborative"
+        tooltip: "Working together on a shared task or goal (lifting, assembling, cooking)"
+        key_value: "2"
+      - name: "Competitive"
+        tooltip: "Opposing each other in a contest or struggle (wrestling, sparring, racing)"
+        key_value: "3"
+      - name: "Conversational"
+        tooltip: "Verbal or gestural communication (talking, gesturing, pointing)"
+        key_value: "4"
+
+  # Detailed interaction labels
+  - name: "interaction_details"
+    description: "Select the specific interaction actions observed"
+    annotation_type: multiselect
+    labels:
+      - "hand_holding"
+      - "hugging"
+      - "pushing"
+      - "pulling"
+      - "lifting_together"
+      - "dancing_together"
+      - "sparring"
+      - "grappling"
+      - "high_five"
+      - "handshake"
+      - "passing_object"
+      - "supporting_balance"
+      - "leading_following"
+      - "mirroring_movement"
+      - "blocking"
+      - "dodging"
+
+  # Contact region marking
+  - name: "contact_segments"
+    description: |
+      Mark temporal segments where people are in direct physical contact.
+      This helps identify the precise moments of close interaction.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "contact"
+        color: "#EF4444"
+        key_value: "c"
+      - name: "near_contact"
+        color: "#F59E0B"
+        key_value: "n"
+      - name: "separated"
+        color: "#22C55E"
+        key_value: "s"
+    frame_stepping: true
+    show_timecode: true
+    timeline_height: 60
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 20
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## Harmony4D Human Interaction Tracking Task
+
+  Your goal is to track multiple people during close physical interactions and label their interaction types.
+
+  ### Step 1: Track People
+  - Draw bounding boxes around each person visible in the frame
+  - Maintain consistent IDs for each person across frames
+  - During close interactions, people may overlap; track each person individually
+  - Use person_1 (blue), person_2 (green), person_3 (yellow), person_4 (purple)
+
+  ### Step 2: Classify Interaction Types
+  Select ALL applicable interaction categories:
+  - **Physical Contact (1)**: Direct touch between people
+  - **Collaborative (2)**: Working together on a shared task
+  - **Competitive (3)**: Opposing each other
+  - **Conversational (4)**: Verbal or gestural communication
+
+  ### Step 3: Label Specific Interactions
+  Select the specific interaction actions observed:
+  - hand_holding, hugging, pushing, pulling, dancing_together, sparring, etc.
+
+  ### Step 4: Mark Contact Segments
+  - Mark when people are in direct physical contact (red)
+  - Mark near-contact moments (yellow)
+  - Mark when people are separated (green)
+
+  ### Important Notes:
+  - Close interactions make tracking challenging; use frame stepping
+  - People may temporarily occlude each other; maintain tracking through occlusions
+  - Multiple interaction types often co-occur (e.g., "physical contact" + "collaborative")
+  - Focus on precise timing of contact initiation and release
+
+  ### Tips:
+  - Slow down playback for fast movements (martial arts, dance)
+  - Zoom in when people overlap to distinguish boundaries
+  - Track body center of mass when limbs are intertwined

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shroom_001",
+    "text": "The cat sat on the mat and watched the birds flying outside the window.",
+    "input_text": "Le chat etait assis sur le tapis et regardait les oiseaux voler dehors.",
+    "task_type": "MT"
+  },
+  {
+    "id": "shroom_002",
+    "text": "The government announced new tax reforms that will reduce income tax by 15% for all citizens starting next year.",
+    "input_text": "The government announced new tax reforms that will affect income tax rates starting next year.",
+    "task_type": "PG"
+  },
+  {
+    "id": "shroom_003",
+    "text": "A small, round fruit with a smooth red or green skin and crisp white flesh, typically eaten fresh or used in cooking and baking.",
+    "input_text": "Define the word 'apple' as used in: She picked a fresh apple from the tree in the garden.",
+    "task_type": "DM"
+  },
+  {
+    "id": "shroom_004",
+    "text": "The researcher presented the findings of the comprehensive study at the annual international medical conference in Geneva.",
+    "input_text": "Der Forscher prasentierte die Ergebnisse der Studie auf der jahrlichen Konferenz.",
+    "task_type": "MT"
+  },
+  {
+    "id": "shroom_005",
+    "text": "Students at the university protested against the proposed budget cuts to the science department.",
+    "input_text": "Students at the university demonstrated in opposition to the suggested reductions in funding for the science department.",
+    "task_type": "PG"
+  },
+  {
+    "id": "shroom_006",
+    "text": "A sturdy piece of furniture with a flat top surface supported by legs, commonly used for dining, working, or placing objects on.",
+    "input_text": "Define the word 'table' as used in: Please set the table for dinner tonight.",
+    "task_type": "DM"
+  },
+  {
+    "id": "shroom_007",
+    "text": "The company reported record quarterly profits of $2.3 billion, a 20% increase over the same period last year.",
+    "input_text": "La empresa informo ganancias trimestrales record, un aumento sobre el mismo periodo del ano pasado.",
+    "task_type": "MT"
+  },
+  {
+    "id": "shroom_008",
+    "text": "Heavy rainfall throughout the week caused widespread flooding in several low-lying areas of the region.",
+    "input_text": "Persistent rain over the course of the week led to significant flooding in multiple low-lying parts of the region.",
+    "task_type": "PG"
+  },
+  {
+    "id": "shroom_009",
+    "text": "The act of moving through water by using the arms and legs, typically as a form of exercise, recreation, or competitive sport performed in pools or natural bodies of water.",
+    "input_text": "Define the word 'swimming' as used in: She goes swimming at the local pool every morning before work.",
+    "task_type": "DM"
+  },
+  {
+    "id": "shroom_010",
+    "text": "The new policy requires all employees to work from the office at least three days per week, effective immediately, with penalties for non-compliance.",
+    "input_text": "The new policy encourages employees to work from the office more frequently, with the changes taking effect next month.",
+    "task_type": "PG"
+  }
+]

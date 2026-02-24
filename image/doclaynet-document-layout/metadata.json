@@ -1,0 +1,23 @@
+{
+  "title": "DocLayNet Document Layout Analysis",
+  "description": "Document layout analysis with bounding box annotations. Annotators draw bounding boxes around layout elements (text blocks, tables, figures, headers, footers, lists) in document page images.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pfitzmann et al.",
+    "email": "jurgens@umich.edu",
+    "github": "DS4SD",
+    "affiliation": "IBM Research"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["bbox"],
+  "domain": ["Document AI", "Layout Analysis"],
+  "useCase": ["Document Layout Detection", "Element Classification", "Document Digitization"],
+  "complexity": "intermediate",
+  "tags": ["doclaynet", "document-layout", "bounding-box", "document-ai", "kdd2022", "ibm"],
+  "featured": false,
+  "paperReference": "Pfitzmann et al., KDD 2022",
+  "paperUrl": "https://dl.acm.org/doi/10.1145/3534678.3539043",
+  "datasetUrl": "https://github.com/DS4SD/DocLayNet",
+  "citation": "@inproceedings{pfitzmann2022doclaynet,\n    title = \"{DocLayNet}: A Large Human-Annotated Dataset for Document-Layout Segmentation\",\n    author = \"Pfitzmann, Birgit  and Auer, Christoph  and Dolfi, Michele  and Nassar, Ahmed S.  and Staar, Peter\",\n    booktitle = \"Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\",\n    pages = \"3743--3751\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    url = \"https://dl.acm.org/doi/10.1145/3534678.3539043\"\n}"
+}

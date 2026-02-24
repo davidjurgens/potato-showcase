@@ -1,0 +1,118 @@
+# MediTOD Medical Dialogue Annotation
+# Based on Kazi et al., EMNLP 2024
+# Paper: https://aclanthology.org/2024.emnlp-main.786/
+# Dataset: https://github.com/HealthNLPLab/MediTOD
+#
+# Task: Annotate medical history-taking dialogues with dialogue acts,
+# medical entities, and communication quality assessments.
+#
+# Guidelines:
+# - Label dialogue acts based on the speaker's communicative intent
+# - Mark medical entity spans precisely (symptoms, conditions, medications, tests)
+# - Assess communication quality dimensions for doctor-patient interaction
+# - Use the dialogue context to disambiguate entity types
+
+port: 8000
+server_name: localhost
+task_name: "MediTOD Medical Dialogue Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+context_key: dialogue_context
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Medical entity spans
+  - annotation_type: span
+    name: medical_entities
+    description: "Highlight all medical entities in the dialogue turn"
+    labels:
+      - "Symptom"
+      - "Condition"
+      - "Medication"
+      - "Test"
+    label_colors:
+      "Symptom": "#f97316"
+      "Condition": "#ef4444"
+      "Medication": "#3b82f6"
+      "Test": "#8b5cf6"
+    tooltips:
+      "Symptom": "Signs and symptoms reported by patient (e.g., 'chest pain', 'nausea', 'shortness of breath')"
+      "Condition": "Diagnosed conditions or diseases (e.g., 'diabetes', 'hypertension', 'asthma')"
+      "Medication": "Medications, drugs, or treatments mentioned (e.g., 'metformin', 'ibuprofen', 'insulin')"
+      "Test": "Medical tests, procedures, or examinations (e.g., 'blood test', 'X-ray', 'MRI')"
+    allow_overlapping: false
+
+  # Dialogue act classification
+  - annotation_type: radio
+    name: dialogue_act
+    description: "Select the primary dialogue act for this turn"
+    labels:
+      - "Inform-Symptom"
+      - "Inform-Medical-History"
+      - "Inform-Medication"
+      - "Inform-Lifestyle"
+      - "Request-Information"
+      - "Request-Clarification"
+      - "Confirm"
+      - "Deny"
+      - "Greet"
+      - "Farewell"
+      - "Other"
+    keyboard_shortcuts:
+      "Inform-Symptom": "s"
+      "Inform-Medical-History": "h"
+      "Inform-Medication": "m"
+      "Request-Information": "r"
+      "Request-Clarification": "c"
+      "Confirm": "y"
+      "Deny": "n"
+    tooltips:
+      "Inform-Symptom": "Speaker describes a symptom, pain, or physical complaint"
+      "Inform-Medical-History": "Speaker provides past medical history or family history"
+      "Inform-Medication": "Speaker mentions current or past medications"
+      "Inform-Lifestyle": "Speaker describes lifestyle factors (diet, exercise, smoking, alcohol)"
+      "Request-Information": "Speaker asks for medical information or asks about symptoms"
+      "Request-Clarification": "Speaker asks to clarify a previous statement"
+      "Confirm": "Speaker confirms or agrees with a previous statement"
+      "Deny": "Speaker denies or disagrees with a previous statement"
+      "Greet": "Opening greeting or introduction"
+      "Farewell": "Closing or farewell statement"
+      "Other": "Other dialogue acts not covered above"
+
+  # Communication quality dimensions
+  - annotation_type: multiselect
+    name: communication_quality
+    description: "Select all communication quality dimensions demonstrated in this turn (if any)"
+    labels:
+      - "Empathy"
+      - "Active Listening"
+      - "Clear Explanation"
+      - "Open-ended Questioning"
+      - "Summarization"
+      - "Patient Education"
+      - "Shared Decision Making"
+      - "None Notable"
+    tooltips:
+      "Empathy": "Speaker shows understanding of the other party's feelings or concerns"
+      "Active Listening": "Speaker reflects back or acknowledges what was said"
+      "Clear Explanation": "Speaker explains medical concepts in understandable terms"
+      "Open-ended Questioning": "Doctor uses open-ended questions to elicit information"
+      "Summarization": "Speaker summarizes key points from the conversation"
+      "Patient Education": "Doctor provides educational information about condition or treatment"
+      "Shared Decision Making": "Doctor involves patient in treatment decisions"
+      "None Notable": "No notable communication quality dimensions in this turn"
+
+  # Free-text notes
+  - annotation_type: text
+    name: notes
+    description: "Optional notes about this annotation (e.g., ambiguous entities, context-dependent interpretation)"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

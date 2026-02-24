@@ -1,0 +1,122 @@
+# CHART-Infographics: Chart and Infographic Analysis
+# Based on Davila et al., ICPR 2024
+# Paper: https://link.springer.com/chapter/10.1007/978-3-031-78312-8_5
+#
+# Chart and infographic understanding requires identifying structural elements
+# (axes, legends, titles, data points) and extracting the underlying data.
+# This task combines visual element localization with semantic understanding.
+#
+# Annotation Guidelines:
+# 1. First classify the chart type
+# 2. Draw bounding boxes around key structural elements:
+#    - Chart Title, Axis Labels, Legend, Data Points/Bars/Slices
+# 3. Extract readable data values from the chart
+# 4. Note any special features (annotations, trend lines, dual axes)
+#
+# Element Types for Bounding Boxes:
+# - Title: The main title of the chart
+# - X-Axis Label: Label text along the horizontal axis
+# - Y-Axis Label: Label text along the vertical axis
+# - Legend: The legend/key area
+# - Data Region: The area containing actual data visualization
+# - Annotation: Any text annotations or callouts on the chart
+
+port: 8000
+server_name: localhost
+task_name: "CHART-Infographics: Chart Analysis"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: image_url
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify chart elements with bounding boxes
+  - annotation_type: bbox
+    name: chart_elements
+    description: "Draw bounding boxes around the key structural elements of the chart."
+    labels:
+      - name: "Title"
+        color: "#3b82f6"
+      - name: "X-Axis Label"
+        color: "#22c55e"
+      - name: "Y-Axis Label"
+        color: "#ef4444"
+      - name: "Legend"
+        color: "#f59e0b"
+      - name: "Data Region"
+        color: "#8b5cf6"
+      - name: "Annotation"
+        color: "#06b6d4"
+    required: true
+
+  # Step 2: Classify chart type
+  - annotation_type: radio
+    name: chart_type
+    description: "What type of chart or visualization is this?"
+    labels:
+      - "Bar"
+      - "Line"
+      - "Pie"
+      - "Scatter"
+      - "Area"
+      - "Heatmap"
+      - "Other"
+    keyboard_shortcuts:
+      "Bar": "1"
+      "Line": "2"
+      "Pie": "3"
+      "Scatter": "4"
+      "Area": "5"
+      "Heatmap": "6"
+      "Other": "7"
+    tooltips:
+      "Bar": "Bar chart (vertical or horizontal bars representing values)"
+      "Line": "Line chart (data points connected by lines showing trends)"
+      "Pie": "Pie or donut chart (circular chart showing proportions)"
+      "Scatter": "Scatter plot (individual data points plotted on x-y axes)"
+      "Area": "Area chart (filled region between line and axis)"
+      "Heatmap": "Heatmap or matrix visualization (color-coded grid)"
+      "Other": "Any other chart type not listed above (radar, treemap, Sankey, etc.)"
+
+  # Step 3: Chart complexity
+  - annotation_type: radio
+    name: chart_complexity
+    description: "How complex is this chart?"
+    labels:
+      - "Simple"
+      - "Moderate"
+      - "Complex"
+    tooltips:
+      "Simple": "Single data series, clear labels, no annotations (e.g., simple bar chart)"
+      "Moderate": "Multiple data series, legend present, some annotations"
+      "Complex": "Multiple chart types combined, dual axes, dense data, or infographic elements"
+
+  # Step 4: Data extraction
+  - annotation_type: text
+    name: extracted_data
+    description: "Extract the key data values from the chart. List the data as label: value pairs, one per line."
+
+  # Step 5: Additional notes
+  - annotation_type: text
+    name: notes
+    description: "Note any special features, issues with readability, or additional observations about the chart."
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Chart Source:</strong> {{chart_source}}
+  </div>
+  <div style="margin-bottom: 8px; padding: 8px; background: #fafafa; border-radius: 4px;">
+    <strong>Description:</strong> {{description}}
+  </div>
+  <div style="text-align: center; margin-bottom: 15px; padding: 10px; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 6px;">
+    <img src="{{image_url}}" style="max-width: 100%; max-height: 600px;" />
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

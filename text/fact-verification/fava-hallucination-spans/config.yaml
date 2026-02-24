@@ -1,0 +1,111 @@
+# FAVA: Fine-grained Hallucination Annotations for Faithful Generation
+# Based on Mishra et al., ACL 2024
+# Paper: https://aclanthology.org/2024.acl-long.664/
+# Dataset: https://github.com/fava-nlp/fava
+#
+# This task annotates fine-grained hallucination spans in LLM-generated text.
+# Annotators compare generated text against a source and identify spans that
+# contain hallucinations, classifying each by type.
+#
+# Hallucination Types:
+# - Entity Error: Wrong entity mentioned (e.g., wrong person, place, or organization)
+# - Relation Error: Entities are correct but the relation between them is wrong
+# - Contradicted: Information directly contradicts the source text
+# - Invented: Information not present in the source (fabricated details)
+# - Subjective: Subjective claims presented as facts
+# - Unverifiable: Claims that cannot be verified from the given source
+#
+# Annotation Guidelines:
+# 1. Read the source text carefully to understand the ground truth
+# 2. Read the generated text and compare against the source
+# 3. Highlight each hallucinated span precisely (mark only the incorrect part)
+# 4. Classify each span with the most specific hallucination type
+# 5. Entity Error: The generated text mentions a wrong entity
+# 6. Relation Error: Entities exist in source but their relationship is wrong
+# 7. Contradicted: Generated text says the opposite of the source
+# 8. Invented: Generated text includes details absent from the source
+# 9. Subjective: Opinions or value judgments not in the source
+# 10. Unverifiable: Cannot determine truth from the source alone
+
+port: 8000
+server_name: localhost
+task_name: "FAVA: Hallucination Span Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify hallucinated spans and classify type
+  - annotation_type: span
+    name: hallucination_spans
+    description: "Highlight spans in the generated text that contain hallucinations and select the hallucination type"
+    labels:
+      - "Entity Error"
+      - "Relation Error"
+      - "Contradicted"
+      - "Invented"
+      - "Subjective"
+      - "Unverifiable"
+    label_colors:
+      "Entity Error": "#ef4444"
+      "Relation Error": "#f97316"
+      "Contradicted": "#dc2626"
+      "Invented": "#8b5cf6"
+      "Subjective": "#f59e0b"
+      "Unverifiable": "#6b7280"
+    keyboard_shortcuts:
+      "Entity Error": "1"
+      "Relation Error": "2"
+      "Contradicted": "3"
+      "Invented": "4"
+      "Subjective": "5"
+      "Unverifiable": "6"
+    tooltips:
+      "Entity Error": "A wrong entity is mentioned (wrong name, place, date, number, etc.)"
+      "Relation Error": "Entities are correct but the relationship between them is wrong"
+      "Contradicted": "The information directly contradicts what the source says"
+      "Invented": "The information is fabricated and not present anywhere in the source"
+      "Subjective": "A subjective opinion or value judgment presented as objective fact"
+      "Unverifiable": "The claim cannot be verified or refuted using the given source"
+    allow_overlapping: false
+
+  # Step 2: Overall faithfulness rating
+  - annotation_type: radio
+    name: overall_faithfulness
+    description: "Overall, how faithful is the generated text to the source?"
+    labels:
+      - "Fully Faithful"
+      - "Mostly Faithful"
+      - "Partially Faithful"
+      - "Mostly Unfaithful"
+      - "Completely Unfaithful"
+    keyboard_shortcuts:
+      "Fully Faithful": "a"
+      "Mostly Faithful": "b"
+      "Partially Faithful": "c"
+      "Mostly Unfaithful": "d"
+      "Completely Unfaithful": "f"
+    tooltips:
+      "Fully Faithful": "No hallucinations detected; all information matches the source"
+      "Mostly Faithful": "Minor hallucinations that do not change the overall meaning"
+      "Partially Faithful": "Some significant hallucinations mixed with faithful content"
+      "Mostly Unfaithful": "Most of the generated text contains hallucinated information"
+      "Completely Unfaithful": "The generated text is almost entirely hallucinated"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
+    <strong>Source Text:</strong><br>{{source_text}}
+  </div>
+  <div style="margin-bottom: 10px; padding: 10px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px;">
+    <strong>Generated Text (annotate hallucinations below):</strong><br>{{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

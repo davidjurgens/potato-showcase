@@ -1,0 +1,23 @@
+{
+  "title": "Do-Not-Answer: Safety Evaluation of LLM Responses",
+  "description": "Safety evaluation of LLM responses to risky prompts. Annotators assess whether LLM responses appropriately refuse or engage with harmful prompts across 5 risk areas and 12 harm types.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "AI Safety", "Evaluation"],
+  "useCase": ["Safety Evaluation", "LLM Assessment", "Content Moderation"],
+  "complexity": "intermediate",
+  "tags": ["safety", "llm-evaluation", "harmful-content", "refusal", "risk-assessment", "moderation"],
+  "featured": false,
+  "paperReference": "Wang et al., Findings EACL 2024",
+  "paperUrl": "https://aclanthology.org/2024.findings-eacl.61/",
+  "datasetUrl": "https://github.com/Libr-AI/do-not-answer",
+  "citation": "@inproceedings{wang2024donotanswer,\n  title={Do-Not-Answer: Evaluating Safeguards in LLMs},\n  author={Wang, Yuxia and Li, Haonan and Han, Xudong and Nakov, Preslav and Baldwin, Timothy},\n  booktitle={Findings of the Association for Computational Linguistics: EACL 2024},\n  year={2024}\n}"
+}

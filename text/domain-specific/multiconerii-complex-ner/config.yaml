@@ -1,0 +1,86 @@
+# MultiCoNER II: Multilingual Complex Named Entity Recognition
+# Based on SemEval-2023 Task 2 (Fetahu et al., SemEval@ACL 2023)
+# Paper: https://aclanthology.org/2023.semeval-1.281/
+# Dataset: https://multiconer.github.io/dataset
+#
+# Task: Fine-grained NER across 12 languages with complex entities
+# Annotators identify named entities from a fine-grained taxonomy
+# that includes creative works, groups, medical terms, and more.
+#
+# Key Challenges:
+# - Complex entities requiring world knowledge (e.g., song titles)
+# - Ambiguous entities that could belong to multiple types
+# - Multilingual text with code-switching
+# - Low-context short sentences from search queries and social media
+#
+# Entity Types (Fine-grained):
+# - Person: Real and fictional people
+# - Location: Places, facilities, geographical features
+# - Organization: Companies, institutions, agencies
+# - CreativeWork: Movies, books, songs, TV shows, games
+# - Group: Bands, teams, political parties, movements
+# - Medical: Diseases, symptoms, treatments, medications
+# - Product: Consumer goods, vehicles, software, devices
+# - Event: Named events, festivals, competitions
+# - MISC: Other named entities not fitting above categories
+
+port: 8000
+server_name: localhost
+task_name: "MultiCoNER II: Complex Named Entity Recognition"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  - annotation_type: span
+    name: entities
+    description: "Highlight all named entities and assign their fine-grained type"
+    labels:
+      - "Person"
+      - "Location"
+      - "Organization"
+      - "CreativeWork"
+      - "Group"
+      - "Medical"
+      - "Product"
+      - "Event"
+      - "MISC"
+    label_colors:
+      "Person": "#3b82f6"
+      "Location": "#22c55e"
+      "Organization": "#8b5cf6"
+      "CreativeWork": "#ec4899"
+      "Group": "#f59e0b"
+      "Medical": "#ef4444"
+      "Product": "#06b6d4"
+      "Event": "#f97316"
+      "MISC": "#6b7280"
+    tooltips:
+      "Person": "Names of real or fictional people (e.g., Albert Einstein, Harry Potter)"
+      "Location": "Places, facilities, geographical features (e.g., Tokyo, Central Park, Mount Everest)"
+      "Organization": "Companies, institutions, government agencies (e.g., Google, WHO, MIT)"
+      "CreativeWork": "Movies, books, songs, TV shows, video games, artworks (e.g., The Matrix, Bohemian Rhapsody)"
+      "Group": "Bands, sports teams, political parties, social movements (e.g., Coldplay, FC Barcelona, Greenpeace)"
+      "Medical": "Diseases, symptoms, treatments, medications, medical procedures (e.g., COVID-19, ibuprofen)"
+      "Product": "Consumer goods, vehicles, software, devices (e.g., iPhone, Windows 11, Boeing 747)"
+      "Event": "Named events, festivals, competitions, historical events (e.g., Olympics, Coachella, World War II)"
+      "MISC": "Other named entities not fitting the above categories"
+    allow_overlapping: false
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4ff; border-radius: 6px;">
+    <strong>Language:</strong> {{language}}
+  </div>
+  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-size: 16px;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

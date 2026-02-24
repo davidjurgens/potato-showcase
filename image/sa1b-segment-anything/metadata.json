@@ -1,0 +1,23 @@
+{
+  "title": "Segment Anything (SA-1B) Interactive Segmentation",
+  "description": "Interactive image segmentation annotation. Annotators draw segmentation masks (polygons) and bounding boxes around all distinct objects in images, following the Segment Anything Model (SAM) annotation protocol.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kirillov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Meta AI Research"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["polygon", "bbox"],
+  "domain": ["Computer Vision", "Segmentation"],
+  "useCase": ["Instance Segmentation", "Object Detection", "Interactive Annotation"],
+  "complexity": "intermediate",
+  "tags": ["segment-anything", "sam", "segmentation", "bounding-box", "polygon", "iccv2023", "meta"],
+  "featured": false,
+  "paperReference": "Kirillov et al., ICCV 2023",
+  "paperUrl": "https://openaccess.thecvf.com/content/ICCV2023/papers/Kirillov_Segment_Anything_ICCV_2023_paper.pdf",
+  "datasetUrl": "https://segment-anything.com/dataset/index.html",
+  "citation": "@inproceedings{kirillov2023segment,\n    title = \"Segment Anything\",\n    author = \"Kirillov, Alexander  and Mintun, Eric  and Ravi, Nikhila  and Mao, Hanzi  and Rolland, Chloe  and Gustafson, Laura  and Xiao, Tete  and Whitehead, Spencer  and Berg, Alexander C.  and Lo, Wan-Yen  and Doll{\\'a}r, Piotr  and Girshick, Ross\",\n    booktitle = \"Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)\",\n    pages = \"4015--4026\",\n    year = \"2023\",\n    url = \"https://openaccess.thecvf.com/content/ICCV2023/papers/Kirillov_Segment_Anything_ICCV_2023_paper.pdf\"\n}"
+}

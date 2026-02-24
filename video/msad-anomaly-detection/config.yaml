@@ -1,0 +1,131 @@
+# MSAD Multi-Scenario Anomaly Detection Configuration
+# Based on Zhang et al., NeurIPS 2024
+# Task: Detect and classify anomalous events in surveillance-style videos
+
+port: 8000
+server_name: localhost
+task_name: "MSAD Multi-Scenario Anomaly Detection"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes
+annotation_schemes:
+  # Temporal anomaly segment marking
+  - name: "anomaly_segments"
+    description: |
+      Mark temporal segments where anomalous events occur.
+      Drag to select the start and end of each anomalous event.
+      Normal segments do not need to be marked.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "anomaly"
+        color: "#EF4444"
+        key_value: "a"
+      - name: "suspicious"
+        color: "#F59E0B"
+        key_value: "s"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    zoom_enabled: true
+    timeline_height: 80
+
+  # Anomaly type classification
+  - name: "anomaly_type"
+    description: |
+      Classify the type of anomaly detected in the marked segment.
+      Select the most appropriate category for the anomalous event.
+    annotation_type: radio
+    labels:
+      - name: "Violence"
+        tooltip: "Physical altercation, fighting, assault"
+        key_value: "1"
+      - name: "Theft"
+        tooltip: "Stealing, pickpocketing, shoplifting, robbery"
+        key_value: "2"
+      - name: "Traffic Violation"
+        tooltip: "Running red lights, wrong-way driving, reckless driving"
+        key_value: "3"
+      - name: "Fire"
+        tooltip: "Fire, smoke, explosion"
+        key_value: "4"
+      - name: "Vandalism"
+        tooltip: "Property damage, graffiti, destruction"
+        key_value: "5"
+      - name: "Trespassing"
+        tooltip: "Unauthorized entry, breaking and entering, fence climbing"
+        key_value: "6"
+      - name: "Normal"
+        tooltip: "No anomaly detected, normal activity"
+        key_value: "7"
+
+  # Severity assessment
+  - name: "severity"
+    description: "Rate the severity of the detected anomaly"
+    annotation_type: radio
+    labels:
+      - name: "Low"
+        tooltip: "Minor incident, low risk"
+        key_value: "q"
+      - name: "Medium"
+        tooltip: "Moderate incident, potential risk"
+        key_value: "w"
+      - name: "High"
+        tooltip: "Serious incident, significant risk"
+        key_value: "e"
+      - name: "Critical"
+        tooltip: "Severe incident, immediate danger"
+        key_value: "r"
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 40
+annotation_per_instance: 3
+
+# Instructions
+annotation_instructions: |
+  ## Multi-Scenario Video Anomaly Detection Task
+
+  Your goal is to detect and classify anomalous events in surveillance-style video clips.
+
+  ### Step 1: Watch the Video
+  - Watch the entire video at normal speed first
+  - Note any unusual or abnormal events
+
+  ### Step 2: Mark Anomaly Segments
+  - Use the timeline to mark the START and END of each anomalous event
+  - Mark clearly anomalous events as "anomaly" (red)
+  - Mark borderline/uncertain events as "suspicious" (yellow)
+  - Normal segments do not need annotation
+
+  ### Step 3: Classify Anomaly Type
+  For each marked segment, select the anomaly type:
+  - **Violence (1)**: Physical fights, assaults, aggression
+  - **Theft (2)**: Stealing, pickpocketing, robbery
+  - **Traffic Violation (3)**: Reckless driving, red light running
+  - **Fire (4)**: Fire, smoke, explosions
+  - **Vandalism (5)**: Property damage, destruction
+  - **Trespassing (6)**: Unauthorized entry, fence climbing
+  - **Normal (7)**: No anomaly (use for false alarms)
+
+  ### Step 4: Rate Severity
+  - **Low**: Minor, no immediate harm
+  - **Medium**: Moderate risk, requires attention
+  - **High**: Serious, requires immediate response
+  - **Critical**: Life-threatening or extremely dangerous
+
+  ### Tips:
+  - Use slow motion for fast events
+  - Pay attention to background activity, not just foreground
+  - Mark the entire duration of the anomalous event
+  - When in doubt between types, choose the most severe classification

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "flute_001",
+    "text": "Oh great, another Monday morning meeting that will surely be the highlight of my week.",
+    "hypothesis": "The speaker dislikes Monday morning meetings.",
+    "figure_type": "sarcasm"
+  },
+  {
+    "id": "flute_002",
+    "text": "Her voice was like honey, smooth and sweet, drawing everyone in the room closer.",
+    "hypothesis": "The woman had a pleasant and attractive voice.",
+    "figure_type": "simile"
+  },
+  {
+    "id": "flute_003",
+    "text": "The news of the layoffs was a punch to the gut for the entire department.",
+    "hypothesis": "The employees were physically injured by the announcement.",
+    "figure_type": "metaphor"
+  },
+  {
+    "id": "flute_004",
+    "text": "After months of tension, the two neighbors finally decided to bury the hatchet.",
+    "hypothesis": "The neighbors resolved their disagreement and made peace.",
+    "figure_type": "idiom"
+  },
+  {
+    "id": "flute_005",
+    "text": "The politician's promises were as solid as quicksand, shifting with every poll.",
+    "hypothesis": "The politician was reliable and consistent in keeping promises.",
+    "figure_type": "simile"
+  },
+  {
+    "id": "flute_006",
+    "text": "Yeah, because spending three hours in traffic is exactly how I wanted to spend my Friday evening.",
+    "hypothesis": "The speaker was frustrated by the traffic delay.",
+    "figure_type": "sarcasm"
+  },
+  {
+    "id": "flute_007",
+    "text": "The classroom was a zoo, with children running and screaming in every direction.",
+    "hypothesis": "The classroom was chaotic and noisy.",
+    "figure_type": "metaphor"
+  },
+  {
+    "id": "flute_008",
+    "text": "When the startup lost its biggest client, the CEO knew they had to bite the bullet and lay off staff.",
+    "hypothesis": "The CEO reluctantly accepted the difficult decision to reduce the workforce.",
+    "figure_type": "idiom"
+  },
+  {
+    "id": "flute_009",
+    "text": "His temper was like a volcano, quiet for long stretches but devastating when it finally erupted.",
+    "hypothesis": "The man had a calm and even temperament.",
+    "figure_type": "simile"
+  },
+  {
+    "id": "flute_010",
+    "text": "Sure, the new software update is fantastic. It only crashed my computer three times today.",
+    "hypothesis": "The speaker is satisfied with the software update's performance.",
+    "figure_type": "sarcasm"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "HatReD: Multi-Domain Hateful Meme Detection",
+  "description": "Hateful meme detection requiring understanding of both image and text. Annotators classify memes as hateful or not, identify the target of hate, and explain why the meme is hateful. Based on the HatReD dataset spanning multiple domains of online meme content.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bhandari et al.",
+    "email": "jurgens@umich.edu",
+    "github": "HatReD-dataset",
+    "affiliation": "Singapore Management University"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Multimodal", "Content Moderation", "Hate Speech"],
+  "useCase": ["Hateful Meme Detection", "Content Moderation", "Multimodal Classification"],
+  "complexity": "intermediate",
+  "tags": ["hatred", "hateful-memes", "multimodal", "content-moderation", "hate-speech", "ijcai2023", "memes"],
+  "featured": false,
+  "paperReference": "Bhandari et al., IJCAI 2023",
+  "paperUrl": "https://www.ijcai.org/proceedings/2023/0109.pdf",
+  "datasetUrl": "https://github.com/HatReD-dataset/HatReD",
+  "citation": "@inproceedings{bhandari2023hatred,\n    title = \"{HatReD}: A Multi-Domain Dataset for Hateful Meme Detection\",\n    author = \"Bhandari, Nirmalendu Prakash  and  Rong, Weidong  and  Menon, Aditya Srivatsa  and  Bian, Jieyu\",\n    booktitle = \"Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence (IJCAI-23)\",\n    year = \"2023\",\n    pages = \"979--987\",\n    publisher = \"International Joint Conferences on Artificial Intelligence Organization\",\n    url = \"https://www.ijcai.org/proceedings/2023/0109.pdf\"\n}"
+}

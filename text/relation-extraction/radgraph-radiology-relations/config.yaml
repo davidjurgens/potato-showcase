@@ -1,0 +1,105 @@
+# RadGraph-XL: Radiology Entity and Relation Extraction
+# Based on Khanna et al., Findings ACL 2024
+# Paper: https://aclanthology.org/2024.findings-acl.765/
+# Dataset: https://physionet.org/content/radgraph-xl/
+#
+# RadGraph-XL provides expert annotations of radiology reports with clinical
+# entities and relations. This enables automated extraction of structured
+# information from free-text radiology reports.
+#
+# Entity Types:
+# - Anatomy: Body parts, organs, anatomical structures
+#   (e.g., lungs, heart, mediastinum, pleural space)
+# - Observation: Clinical findings, conditions, abnormalities
+#   (e.g., opacity, effusion, consolidation, pneumothorax)
+# - Medical Device: Tubes, lines, implants, equipment
+#   (e.g., endotracheal tube, central line, pacemaker)
+# - Procedure: Medical procedures, interventions
+#   (e.g., intubation, thoracentesis, CABG)
+# - Descriptor: Modifiers describing size, severity, change
+#   (e.g., bilateral, small, stable, worsening, new)
+#
+# Relation Types:
+# - located_at: Observation/device is located at an anatomy
+# - suggestive_of: Observation suggests a condition
+# - modify: Descriptor modifies an entity
+# - part_of: Anatomy is part of another anatomy
+#
+# Annotation Guidelines:
+# 1. Read the radiology report sentence in context
+# 2. Identify all clinical entities and assign types
+# 3. For each entity pair, determine the relation type
+# 4. Anatomy-observation pairs typically use located_at
+# 5. Descriptor-entity pairs typically use modify
+# 6. Consider negation and uncertainty in observations
+
+port: 8000
+server_name: localhost
+task_name: "RadGraph-XL: Radiology Relation Extraction"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify clinical entities
+  - annotation_type: span
+    name: clinical_entities
+    description: "Highlight all clinical entities in the radiology report"
+    labels:
+      - "Anatomy"
+      - "Observation"
+      - "Medical Device"
+      - "Procedure"
+      - "Descriptor"
+    label_colors:
+      "Anatomy": "#3b82f6"
+      "Observation": "#ef4444"
+      "Medical Device": "#22c55e"
+      "Procedure": "#f59e0b"
+      "Descriptor": "#8b5cf6"
+    keyboard_shortcuts:
+      "Anatomy": "1"
+      "Observation": "2"
+      "Medical Device": "3"
+      "Procedure": "4"
+      "Descriptor": "5"
+    tooltips:
+      "Anatomy": "Body parts, organs, anatomical structures (e.g., lungs, heart, mediastinum, pleural space)"
+      "Observation": "Clinical findings, conditions, abnormalities (e.g., opacity, effusion, consolidation, pneumothorax)"
+      "Medical Device": "Tubes, lines, implants, equipment (e.g., endotracheal tube, central line, pacemaker)"
+      "Procedure": "Medical procedures or interventions (e.g., intubation, thoracentesis, sternotomy)"
+      "Descriptor": "Modifiers describing size, severity, or change (e.g., bilateral, small, stable, worsening)"
+    allow_overlapping: false
+
+  # Step 2: Link entities with clinical relation types
+  - annotation_type: span_linking
+    name: clinical_relations
+    description: "Draw relations between clinical entities"
+    labels:
+      - "located_at"
+      - "suggestive_of"
+      - "modify"
+      - "part_of"
+    tooltips:
+      "located_at": "Observation or device is located at an anatomical structure (e.g., opacity located_at right lung)"
+      "suggestive_of": "Observation suggests or indicates a clinical condition (e.g., air-fluid level suggestive_of abscess)"
+      "modify": "Descriptor modifies another entity (e.g., bilateral modify effusion; small modify opacity)"
+      "part_of": "Anatomical structure is part of another structure (e.g., right lobe part_of liver)"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Report Section:</strong> {{report_section}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.6; font-family: 'Courier New', monospace;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

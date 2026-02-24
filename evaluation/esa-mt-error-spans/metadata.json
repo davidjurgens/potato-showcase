@@ -1,0 +1,23 @@
+{
+  "title": "ESA: Error Span Annotation for Machine Translation",
+  "description": "Error span annotation for machine translation output. Annotators identify error spans in translations, classify error types (accuracy, fluency, terminology, style), and rate severity.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "radio", "likert"],
+  "domain": ["NLP", "Machine Translation", "Evaluation"],
+  "useCase": ["MT Evaluation", "Error Analysis", "Translation Quality"],
+  "complexity": "advanced",
+  "tags": ["machine-translation", "error-spans", "wmt", "evaluation", "translation-quality", "mqm"],
+  "featured": false,
+  "paperReference": "Kocmi et al., WMT@EMNLP 2024",
+  "paperUrl": "https://aclanthology.org/2024.wmt-1.124/",
+  "datasetUrl": "https://github.com/WMT-Metrics-task/wmt24-esa",
+  "citation": "@inproceedings{kocmi2024error,\n  title={Error Span Annotation for Machine Translation Evaluation},\n  author={Kocmi, Tom and Avramidis, Eleftherios and Bawden, Rachel and Bojar, Ond{\\v{r}}ej and Dvorkovich, Anton and Federmann, Christian and Fishel, Mark and Freitag, Markus and Gowda, Thamme and Grundkiewicz, Roman and others},\n  booktitle={Proceedings of the Ninth Conference on Machine Translation (WMT@EMNLP)},\n  year={2024}\n}"
+}

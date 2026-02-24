@@ -1,0 +1,107 @@
+# DISRPT: Discourse Segmentation and Relation Classification
+# Based on Braud et al., DISRPT@ACL 2023
+# Paper: https://aclanthology.org/2023.disrpt-1.1/
+# Dataset: https://github.com/disrpt/sharedtask2023
+#
+# This task annotates discourse structure: segmenting text into Elementary
+# Discourse Units (EDUs) and labeling rhetorical relations between them.
+#
+# EDU Segmentation:
+# - EDUs are minimal discourse units, roughly clause-level segments
+# - Each EDU conveys a single proposition or idea
+# - Boundaries often align with clause boundaries but not always
+#
+# Discourse Relation Types (based on RST):
+# - Elaboration: One unit provides additional detail about another
+# - Contrast: Two units present opposing or contrasting information
+# - Cause: One unit presents the cause of the situation in the other
+# - Result: One unit presents the result/effect of the other
+# - Background: One unit provides background context for the other
+# - Condition: One unit specifies a condition for the other
+# - Purpose: One unit states the purpose of the action in the other
+# - Temporal: Units are related by temporal sequence
+# - Joint: Units are equally important and simply joined
+# - Attribution: One unit attributes content to a source
+#
+# Annotation Guidelines:
+# 1. Read the full text to understand overall discourse structure
+# 2. Mark EDU boundaries by highlighting each discourse unit
+# 3. For each adjacent pair of EDUs, select the discourse relation
+# 4. Consider which EDU is the nucleus (main) vs satellite (supporting)
+# 5. Use Joint when neither unit is subordinate to the other
+
+port: 8000
+server_name: localhost
+task_name: "DISRPT: Discourse Relations"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Identify EDU boundaries
+  - annotation_type: span
+    name: edu_segments
+    description: "Highlight each Elementary Discourse Unit (EDU) in the text. Each EDU should be a minimal clause-level segment."
+    labels:
+      - "EDU"
+    label_colors:
+      "EDU": "#3b82f6"
+    tooltips:
+      "EDU": "A minimal discourse unit that conveys a single proposition or idea, roughly clause-level"
+    allow_overlapping: false
+
+  # Step 2: Classify discourse relations between adjacent EDUs
+  - annotation_type: radio
+    name: discourse_relation
+    description: "What is the primary discourse relation between the highlighted EDU segments?"
+    labels:
+      - "Elaboration"
+      - "Contrast"
+      - "Cause"
+      - "Result"
+      - "Background"
+      - "Condition"
+      - "Purpose"
+      - "Temporal"
+      - "Joint"
+      - "Attribution"
+    keyboard_shortcuts:
+      "Elaboration": "1"
+      "Contrast": "2"
+      "Cause": "3"
+      "Result": "4"
+      "Background": "5"
+      "Condition": "6"
+      "Purpose": "7"
+      "Temporal": "8"
+      "Joint": "9"
+      "Attribution": "0"
+    tooltips:
+      "Elaboration": "One unit provides additional detail, specification, or explanation of the other"
+      "Contrast": "Two units present opposing, contrasting, or comparative information"
+      "Cause": "One unit presents the cause or reason for the situation described in the other"
+      "Result": "One unit presents the result, effect, or consequence of the other"
+      "Background": "One unit provides background information or context for understanding the other"
+      "Condition": "One unit specifies a condition under which the other holds"
+      "Purpose": "One unit states the purpose, goal, or intention of the action in the other"
+      "Temporal": "Units are related by temporal sequence or temporal framing"
+      "Joint": "Units are equally important and coordinated (neither is subordinate)"
+      "Attribution": "One unit attributes the content of the other to a source"
+
+html_layout: |
+  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+    <strong>Genre:</strong> {{genre}}
+  </div>
+  <div style="font-size: 16px; line-height: 1.8;">
+    {{text}}
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

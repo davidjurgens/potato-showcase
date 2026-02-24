@@ -1,0 +1,23 @@
+{
+  "title": "TIMELINE: Exhaustive Temporal Relation Annotation",
+  "description": "Exhaustive temporal relation annotation between events in text. Annotators identify temporal expressions and events, then label all pairwise temporal relations (BEFORE, AFTER, INCLUDES, IS_INCLUDED, SIMULTANEOUS, VAGUE). Based on the TIMELINE corpus for comprehensive temporal reasoning.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mathur et al.",
+    "email": "jurgens@umich.edu",
+    "github": "timeline-nlp",
+    "affiliation": "University of Rochester"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking", "radio"],
+  "domain": ["NLP", "Temporal Reasoning"],
+  "useCase": ["Temporal Relation Extraction", "Event Detection", "Timeline Construction"],
+  "complexity": "advanced",
+  "tags": ["temporal-relations", "events", "timeline", "temporal-reasoning", "emnlp2023", "exhaustive-annotation"],
+  "featured": false,
+  "paperReference": "Mathur et al., EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.788/",
+  "datasetUrl": "https://github.com/timeline-nlp/timeline",
+  "citation": "@inproceedings{mathur-etal-2023-timeline,\n    title = \"{TIMELINE}: Exhaustive Annotation of Temporal Relations\",\n    author = \"Mathur, Puneet  and Jain, Rajiv  and Dernoncourt, Franck  and Morariu, Vlad  and Tran, Quan Hung  and Manocha, Dinesh\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.788\",\n    pages = \"12798--12814\"\n}"
+}

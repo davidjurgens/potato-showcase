@@ -1,0 +1,23 @@
+{
+  "title": "Harmony4D Human Interaction Tracking",
+  "description": "Close-range human interaction tracking and annotation. Annotators track multiple people during close physical interactions (dancing, martial arts, collaborative tasks) with bounding boxes and interaction labels.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["video_annotation", "bbox"],
+  "domain": ["Computer Vision", "Human Interaction", "3D Understanding"],
+  "useCase": ["Person Tracking", "Interaction Recognition", "Multi-person Understanding"],
+  "complexity": "advanced",
+  "tags": ["video", "interaction", "multi-person", "bounding-box", "tracking", "close-range", "3d", "harmony4d"],
+  "featured": false,
+  "paperReference": "Jung et al., NeurIPS 2024",
+  "paperUrl": "https://proceedings.neurips.cc/paper/2024/hash/harmony4d",
+  "datasetUrl": "https://harmony4d.github.io/",
+  "citation": "@inproceedings{jung2024harmony4d,\n  title={Harmony4D: A Video Dataset for Close-Range Human Interaction Understanding},\n  author={Jung, Rawal and Kim, Soyong and Park, Jiyoung and Lee, Kyungdon and Cho, Minsu},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
+}

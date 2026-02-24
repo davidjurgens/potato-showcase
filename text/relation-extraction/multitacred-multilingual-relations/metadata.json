@@ -1,0 +1,23 @@
+{
+  "title": "MultiTACRED: Multilingual TAC Relation Extraction",
+  "description": "Multilingual version of the TACRED relation extraction dataset in 12 languages. Annotators identify subject/object entities and classify relations from 41 TAC relation types, with additional translation quality assessment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hennig et al.",
+    "email": "jurgens@umich.edu",
+    "github": "DFKI-NLP",
+    "affiliation": "DFKI Berlin"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["span", "span_linking", "radio"],
+  "domain": ["NLP", "Multilingual", "Information Extraction"],
+  "useCase": ["Relation Extraction", "Multilingual NLP", "Knowledge Base Population"],
+  "complexity": "advanced",
+  "tags": ["multilingual", "relation-extraction", "tacred", "multitacred", "acl2023", "cross-lingual"],
+  "featured": false,
+  "paperReference": "Hennig et al., ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.acl-long.210/",
+  "datasetUrl": "https://github.com/DFKI-NLP/MultiTACRED",
+  "citation": "@inproceedings{hennig-etal-2023-multitacred,\n    title = \"{MultiTACRED}: A Multilingual Version of the {TAC} Relation Extraction Dataset\",\n    author = \"Hennig, Leonhard  and Thirumal, Phani  and Reimers, Nils  and Ostendorff, Malte  and Remus, Steffen  and Rehm, Georg\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.210\"\n}"
+}

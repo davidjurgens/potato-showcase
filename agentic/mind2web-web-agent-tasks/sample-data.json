@@ -1,0 +1,72 @@
+[
+  {
+    "id": "m2w_001",
+    "text": "Book a one-way flight from New York to Los Angeles for December 15th",
+    "html_snippet": "<div class=\"search-form\">\n  <div class=\"trip-type\">\n    <label><input type=\"radio\" name=\"trip\" value=\"roundtrip\" checked> Round Trip</label>\n    <label><input type=\"radio\" name=\"trip\" value=\"oneway\"> One Way</label>\n    <label><input type=\"radio\" name=\"trip\" value=\"multi\"> Multi-City</label>\n  </div>\n  <div class=\"search-fields\">\n    <input type=\"text\" id=\"origin\" placeholder=\"From\" value=\"\">\n    <input type=\"text\" id=\"destination\" placeholder=\"To\" value=\"\">\n    <input type=\"date\" id=\"depart-date\" placeholder=\"Departure Date\">\n    <button class=\"search-btn\">Search Flights</button>\n  </div>\n</div>",
+    "url": "https://www.example-airline.com/flights",
+    "action_sequence": "Step 1 of 4: Select trip type"
+  },
+  {
+    "id": "m2w_002",
+    "text": "Find a hotel in San Francisco with a pool for January 5-8 under $200/night",
+    "html_snippet": "<div class=\"hotel-search\">\n  <input type=\"text\" id=\"location\" placeholder=\"Where are you going?\" class=\"location-input\">\n  <div class=\"date-picker\">\n    <input type=\"date\" id=\"checkin\" placeholder=\"Check-in\">\n    <input type=\"date\" id=\"checkout\" placeholder=\"Check-out\">\n  </div>\n  <div class=\"guests\">\n    <select id=\"rooms\">\n      <option value=\"1\">1 Room</option>\n      <option value=\"2\">2 Rooms</option>\n    </select>\n    <select id=\"adults\">\n      <option value=\"1\">1 Adult</option>\n      <option value=\"2\">2 Adults</option>\n    </select>\n  </div>\n  <button id=\"search-hotels\" class=\"btn-primary\">Search Hotels</button>\n</div>",
+    "url": "https://www.example-hotels.com/search",
+    "action_sequence": "Step 1 of 5: Enter destination"
+  },
+  {
+    "id": "m2w_003",
+    "text": "Add a pepperoni pizza and garlic bread to the cart on a food delivery app",
+    "html_snippet": "<div class=\"menu-section\">\n  <h2>Pizzas</h2>\n  <div class=\"menu-item\" data-id=\"pizza-001\">\n    <span class=\"item-name\">Margherita Pizza</span>\n    <span class=\"item-price\">$12.99</span>\n    <button class=\"add-to-cart\">Add</button>\n  </div>\n  <div class=\"menu-item\" data-id=\"pizza-002\">\n    <span class=\"item-name\">Pepperoni Pizza</span>\n    <span class=\"item-price\">$14.99</span>\n    <button class=\"add-to-cart\">Add</button>\n  </div>\n  <div class=\"menu-item\" data-id=\"pizza-003\">\n    <span class=\"item-name\">Hawaiian Pizza</span>\n    <span class=\"item-price\">$14.99</span>\n    <button class=\"add-to-cart\">Add</button>\n  </div>\n  <h2>Sides</h2>\n  <div class=\"menu-item\" data-id=\"side-001\">\n    <span class=\"item-name\">Garlic Bread</span>\n    <span class=\"item-price\">$5.99</span>\n    <button class=\"add-to-cart\">Add</button>\n  </div>\n</div>",
+    "url": "https://www.example-delivery.com/restaurant/pizza-palace",
+    "action_sequence": "Step 1 of 3: Add pepperoni pizza"
+  },
+  {
+    "id": "m2w_004",
+    "text": "Change the shipping address to 123 Main St, Boston, MA 02101 in my account settings",
+    "html_snippet": "<div class=\"account-settings\">\n  <nav class=\"settings-nav\">\n    <a href=\"#profile\" class=\"nav-link\">Profile</a>\n    <a href=\"#addresses\" class=\"nav-link\">Addresses</a>\n    <a href=\"#payment\" class=\"nav-link\">Payment Methods</a>\n    <a href=\"#notifications\" class=\"nav-link\">Notifications</a>\n    <a href=\"#security\" class=\"nav-link\">Security</a>\n  </nav>\n  <div class=\"settings-content\">\n    <h2>Account Overview</h2>\n    <p>Manage your account settings and preferences.</p>\n  </div>\n</div>",
+    "url": "https://www.example-store.com/account/settings",
+    "action_sequence": "Step 1 of 5: Navigate to address settings"
+  },
+  {
+    "id": "m2w_005",
+    "text": "Search for 'wireless headphones' and filter results by price under $50 and rating 4 stars or above",
+    "html_snippet": "<div class=\"search-results-page\">\n  <div class=\"filters-sidebar\">\n    <div class=\"filter-group\">\n      <h3>Price Range</h3>\n      <label><input type=\"checkbox\" name=\"price\" value=\"0-25\"> Under $25</label>\n      <label><input type=\"checkbox\" name=\"price\" value=\"25-50\"> $25 - $50</label>\n      <label><input type=\"checkbox\" name=\"price\" value=\"50-100\"> $50 - $100</label>\n      <label><input type=\"checkbox\" name=\"price\" value=\"100+\"> Over $100</label>\n    </div>\n    <div class=\"filter-group\">\n      <h3>Customer Rating</h3>\n      <label><input type=\"checkbox\" name=\"rating\" value=\"4\"> 4 Stars & Up</label>\n      <label><input type=\"checkbox\" name=\"rating\" value=\"3\"> 3 Stars & Up</label>\n      <label><input type=\"checkbox\" name=\"rating\" value=\"2\"> 2 Stars & Up</label>\n    </div>\n    <button class=\"apply-filters\">Apply Filters</button>\n  </div>\n</div>",
+    "url": "https://www.example-shop.com/search?q=wireless+headphones",
+    "action_sequence": "Step 2 of 4: Apply price filter"
+  },
+  {
+    "id": "m2w_006",
+    "text": "Schedule an appointment with Dr. Smith for a general checkup on Thursday at 2 PM",
+    "html_snippet": "<div class=\"appointment-booking\">\n  <div class=\"doctor-select\">\n    <label for=\"doctor\">Select Doctor:</label>\n    <select id=\"doctor\" class=\"form-select\">\n      <option value=\"\">Choose a doctor...</option>\n      <option value=\"dr-jones\">Dr. Jones - Cardiology</option>\n      <option value=\"dr-smith\">Dr. Smith - General Practice</option>\n      <option value=\"dr-patel\">Dr. Patel - Dermatology</option>\n      <option value=\"dr-chen\">Dr. Chen - Pediatrics</option>\n    </select>\n  </div>\n  <div class=\"visit-type\">\n    <label for=\"visit\">Visit Type:</label>\n    <select id=\"visit\" class=\"form-select\">\n      <option value=\"\">Select visit type...</option>\n      <option value=\"checkup\">General Checkup</option>\n      <option value=\"followup\">Follow-up Visit</option>\n      <option value=\"urgent\">Urgent Care</option>\n    </select>\n  </div>\n</div>",
+    "url": "https://www.example-health.com/appointments/new",
+    "action_sequence": "Step 1 of 4: Select doctor"
+  },
+  {
+    "id": "m2w_007",
+    "text": "Post a review for a recently purchased laptop with 4 stars and a written comment",
+    "html_snippet": "<div class=\"review-form\">\n  <h2>Write a Review</h2>\n  <div class=\"star-rating\">\n    <span class=\"star\" data-value=\"1\">&#9733;</span>\n    <span class=\"star\" data-value=\"2\">&#9733;</span>\n    <span class=\"star\" data-value=\"3\">&#9733;</span>\n    <span class=\"star\" data-value=\"4\">&#9733;</span>\n    <span class=\"star\" data-value=\"5\">&#9733;</span>\n  </div>\n  <div class=\"review-title\">\n    <input type=\"text\" id=\"review-title\" placeholder=\"Review Title\">\n  </div>\n  <div class=\"review-body\">\n    <textarea id=\"review-text\" placeholder=\"Write your review here...\" rows=\"5\"></textarea>\n  </div>\n  <button id=\"submit-review\" class=\"btn-submit\">Submit Review</button>\n</div>",
+    "url": "https://www.example-shop.com/products/laptop-pro-15/review",
+    "action_sequence": "Step 1 of 4: Select star rating"
+  },
+  {
+    "id": "m2w_008",
+    "text": "Transfer $500 from checking to savings account in online banking",
+    "html_snippet": "<div class=\"transfer-form\">\n  <h2>Transfer Funds</h2>\n  <div class=\"form-group\">\n    <label for=\"from-account\">From Account:</label>\n    <select id=\"from-account\">\n      <option value=\"\">Select account...</option>\n      <option value=\"checking\">Checking (...4521) - $2,340.67</option>\n      <option value=\"savings\">Savings (...7892) - $15,230.00</option>\n      <option value=\"money-market\">Money Market (...3345) - $8,100.50</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"to-account\">To Account:</label>\n    <select id=\"to-account\">\n      <option value=\"\">Select account...</option>\n      <option value=\"checking\">Checking (...4521)</option>\n      <option value=\"savings\">Savings (...7892)</option>\n      <option value=\"money-market\">Money Market (...3345)</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"amount\">Amount:</label>\n    <input type=\"number\" id=\"amount\" placeholder=\"$0.00\" step=\"0.01\">\n  </div>\n  <button id=\"transfer-btn\" class=\"btn-primary\">Transfer</button>\n</div>",
+    "url": "https://www.example-bank.com/transfers",
+    "action_sequence": "Step 1 of 4: Select source account"
+  },
+  {
+    "id": "m2w_009",
+    "text": "Create a new playlist called 'Workout Mix' and add the first three songs from the top charts",
+    "html_snippet": "<div class=\"music-library\">\n  <div class=\"sidebar\">\n    <nav class=\"library-nav\">\n      <a href=\"#home\" class=\"nav-item active\">Home</a>\n      <a href=\"#search\" class=\"nav-item\">Search</a>\n      <a href=\"#library\" class=\"nav-item\">Your Library</a>\n    </nav>\n    <div class=\"playlists\">\n      <h3>Your Playlists</h3>\n      <button class=\"create-playlist-btn\">+ Create Playlist</button>\n      <ul class=\"playlist-list\">\n        <li><a href=\"#pl1\">Chill Vibes</a></li>\n        <li><a href=\"#pl2\">Road Trip</a></li>\n      </ul>\n    </div>\n  </div>\n</div>",
+    "url": "https://www.example-music.com/library",
+    "action_sequence": "Step 1 of 5: Create new playlist"
+  },
+  {
+    "id": "m2w_010",
+    "text": "Apply for the Software Engineer position at TechCorp and upload a resume",
+    "html_snippet": "<div class=\"job-listing\">\n  <div class=\"job-header\">\n    <h1>Software Engineer</h1>\n    <p class=\"company\">TechCorp Inc.</p>\n    <p class=\"location\">San Francisco, CA (Remote OK)</p>\n    <p class=\"salary\">$120,000 - $180,000/year</p>\n  </div>\n  <div class=\"job-description\">\n    <h3>Requirements:</h3>\n    <ul>\n      <li>3+ years experience with Python or Java</li>\n      <li>Experience with cloud platforms (AWS/GCP)</li>\n      <li>Strong problem-solving skills</li>\n    </ul>\n  </div>\n  <div class=\"job-actions\">\n    <button class=\"btn-apply\" id=\"apply-now\">Apply Now</button>\n    <button class=\"btn-save\" id=\"save-job\">Save Job</button>\n    <button class=\"btn-share\" id=\"share-job\">Share</button>\n  </div>\n</div>",
+    "url": "https://www.example-jobs.com/listings/techcorp-software-engineer",
+    "action_sequence": "Step 1 of 5: Click apply button"
+  }
+]

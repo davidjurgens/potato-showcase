@@ -1,0 +1,62 @@
+[
+  {
+    "id": "argscichat_001",
+    "text": "I think the main contribution of this paper is the novel attention mechanism they propose. They claim it reduces computational complexity from quadratic to linear while maintaining comparable performance on machine translation benchmarks.",
+    "speaker": "Reviewer A",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_002",
+    "text": "That's a strong claim, but if you look at Table 3, the BLEU scores on WMT'14 En-De are actually 1.2 points below the standard Transformer. That's not exactly 'comparable performance' in my view.",
+    "speaker": "Reviewer B",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_003",
+    "text": "Fair point, but the efficiency gains are substantial. They show a 3x speedup on sequences longer than 1024 tokens, which is where this approach really shines. The slight quality drop may be acceptable for many real-world applications where speed matters more than marginal BLEU improvements.",
+    "speaker": "Reviewer A",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_004",
+    "text": "Could you clarify what exactly they mean by 'linear complexity'? Is it linear in sequence length, model dimension, or both? The notation in Section 3.2 wasn't entirely clear to me.",
+    "speaker": "Reviewer C",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_005",
+    "text": "They mean linear in sequence length. The standard self-attention is O(n^2 * d) where n is sequence length and d is the model dimension. Their method reduces this to O(n * d * k) where k is a fixed kernel size. So the quadratic dependency on n is eliminated.",
+    "speaker": "Reviewer A",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_006",
+    "text": "I have a more fundamental concern with the experimental setup. They only evaluate on machine translation and language modeling, but many of the motivating applications they mention, like document summarization and long-form QA, are never actually tested. The generalization claims seem overstated.",
+    "speaker": "Reviewer B",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_007",
+    "text": "I agree that the experimental coverage could be broader. However, machine translation and language modeling are standard benchmarks in the efficient Transformer literature, and the results are consistent with what we see from other linear attention methods like Performer and Linformer.",
+    "speaker": "Reviewer A",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_008",
+    "text": "One thing that concerns me is the ablation study in Section 5. They only ablate the kernel function choice but don't investigate the impact of the approximation rank. Prior work like Random Feature Attention showed that rank can significantly affect quality. This feels like a gap in the analysis.",
+    "speaker": "Reviewer C",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_009",
+    "text": "That's a valid criticism, and I think it would strengthen the paper to include rank sensitivity analysis. But looking at the broader picture, the method is simple to implement, shows clear efficiency gains, and the code is publicly available. For a workshop paper, I think the contribution is solid enough.",
+    "speaker": "Reviewer A",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  },
+  {
+    "id": "argscichat_010",
+    "text": "I respectfully disagree. Simplicity and code availability don't compensate for incomplete evaluation. If the authors want to claim broad applicability, they need to demonstrate it experimentally. I'd recommend a major revision to include downstream task evaluations and the rank ablation.",
+    "speaker": "Reviewer B",
+    "paper_title": "Efficient Attention: Attention with Linear Complexities"
+  }
+]

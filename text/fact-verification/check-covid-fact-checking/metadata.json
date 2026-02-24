@@ -1,0 +1,23 @@
+{
+  "title": "Check-COVID: Fact-Checking COVID-19 News Claims",
+  "description": "Fact-checking COVID-19 news claims. Annotators verify claims against evidence, identify supporting/refuting spans, and provide verdicts with explanations. Based on the Check-COVID dataset targeting misinformation during the pandemic.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "posuer",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-23",
+  "updatedAt": "2026-02-23",
+  "annotationTypes": ["radio", "span", "text"],
+  "domain": ["NLP", "Fact-Checking", "Public Health"],
+  "useCase": ["Fact Verification", "Misinformation Detection", "COVID-19 Research"],
+  "complexity": "intermediate",
+  "tags": ["fact-checking", "covid-19", "misinformation", "public-health", "evidence", "acl2023"],
+  "featured": false,
+  "paperReference": "Wang et al., Findings ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.findings-acl.888/",
+  "datasetUrl": "https://github.com/posuer/Check-COVID",
+  "citation": "@inproceedings{wang-etal-2023-check-covid,\n    title = \"Check-{COVID}: Fact-Checking {COVID}-19 News Claims with Scientific Evidence\",\n    author = \"Wang, Xia  and Yao, Bingqian  and Yao, Jiawei  and Wang, Qi  and Wang, Lu\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2023\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.findings-acl.888\",\n    pages = \"14078--14095\"\n}"
+}
