@@ -1,0 +1,23 @@
+{
+  "title": "Miami Bangor Code-Switching Annotation",
+  "description": "Multi-tier annotation of Spanish-English bilingual speech for code-switching analysis. Annotators perform per-word language identification, mark code-switch boundaries and types, classify switch direction and utterance-level language dominance, and provide orthographic transcriptions -- all on parallel tiers aligned to the audio timeline (Deuchar et al., International Journal of Bilingualism 2014).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "radio", "text"],
+  "domain": ["Bilingualism", "Code-switching", "Sociolinguistics"],
+  "useCase": ["Language Identification", "Code-switch Detection", "Bilingual Speech Analysis"],
+  "complexity": "intermediate",
+  "tags": ["code-switching", "bilingual", "spanish-english", "multi-tier", "elan-style", "sociolinguistics", "miami-corpus"],
+  "featured": false,
+  "paperReference": "Deuchar et al., International Journal of Bilingualism 2014",
+  "paperUrl": "https://doi.org/10.1177/1367006913487303",
+  "datasetUrl": "http://bangortalk.org.uk/speakers.php?c=miami",
+  "citation": "@article{deuchar2014miami,\n    title = \"Building Bilingual Corpora\",\n    author = \"Deuchar, Margaret and Davies, Peredur and Herring, Jon and Parafita Couto, M. Carmen and Carter, Diana\",\n    journal = \"International Journal of Bilingualism\",\n    volume = \"18\",\n    number = \"5\",\n    pages = \"451--472\",\n    year = \"2014\",\n    publisher = \"SAGE Publications\",\n    doi = \"10.1177/1367006913487303\"\n}"
+}

@@ -1,0 +1,138 @@
+# Implicit Hate Speech Detection (ToxiGen)
+# Based on Hartvigsen et al., ACL 2022
+# Paper: https://aclanthology.org/2022.acl-long.234/
+# Dataset: https://github.com/microsoft/TOXIGEN
+#
+# This task focuses on detecting implicit hate speech -- statements that
+# are toxic toward demographic groups but do not use overt slurs or
+# explicitly hateful language. The ToxiGen dataset uses large language
+# models to generate adversarial examples that challenge toxicity classifiers.
+#
+# Toxicity Labels:
+# - TOXIC: The statement expresses negativity, stereotypes, or prejudice toward a group
+# - BENIGN: The statement is neutral or positive; does not demean any group
+#
+# Implicitness Labels:
+# - EXPLICIT: Uses overt slurs, direct insults, or clearly hateful language
+# - IMPLICIT: Conveys negativity through stereotypes, dog whistles, or coded language
+# - BORDERLINE: Ambiguous; could be interpreted either way depending on context
+# - NEUTRAL: Not applicable (for benign statements)
+#
+# Annotation Guidelines:
+# 1. Read the statement carefully without assuming intent
+# 2. Consider whether the statement promotes negative stereotypes or prejudice
+# 3. Implicit hate may use seemingly neutral language to convey harmful ideas
+# 4. Consider the target group and historical context of statements
+# 5. A statement can be factually true but still be used in a toxic framing
+# 6. Look for generalizations about groups, dehumanizing comparisons, or dog whistles
+# 7. Benign statements may mention demographic groups without negativity
+# 8. Provide clear reasoning for your toxicity and implicitness decisions
+#
+# Important Considerations:
+# - Some statements are designed to be adversarial (hard to classify)
+# - Context matters: the same words can be toxic or benign depending on framing
+# - Avoid over-sensitivity: mentioning a group is not inherently toxic
+# - Avoid under-sensitivity: lack of slurs does not mean lack of toxicity
+
+port: 8000
+server_name: localhost
+task_name: "Implicit Hate Speech Detection (ToxiGen)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: text
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Toxicity classification
+  - annotation_type: radio
+    name: toxicity_label
+    description: "Is this statement toxic (harmful, stereotyping, prejudiced) or benign (neutral, positive)?"
+    labels:
+      - "toxic"
+      - "benign"
+    keyboard_shortcuts:
+      "toxic": "t"
+      "benign": "b"
+    tooltips:
+      "toxic": "The statement expresses negativity, promotes stereotypes, or conveys prejudice toward a demographic group"
+      "benign": "The statement is neutral or positive and does not demean or stereotype any group"
+
+  # Step 2: Implicitness level
+  - annotation_type: radio
+    name: implicitness
+    description: "If toxic, how implicit is the hate speech? If benign, select neutral."
+    labels:
+      - "explicit"
+      - "implicit"
+      - "borderline"
+      - "neutral"
+    tooltips:
+      "explicit": "Uses overt slurs, direct insults, or clearly hateful language targeting a group"
+      "implicit": "Conveys toxicity through stereotypes, dog whistles, coded language, or subtle framing without overt slurs"
+      "borderline": "Ambiguous -- could be toxic or benign depending on interpretation and context"
+      "neutral": "Not applicable (statement is benign)"
+
+  # Step 3: Target group identification
+  - annotation_type: radio
+    name: target_group
+    description: "Which demographic group is targeted by the statement (if any)?"
+    labels:
+      - "racial-minority"
+      - "religious-group"
+      - "gender-identity"
+      - "sexual-orientation"
+      - "disability"
+      - "nationality"
+      - "political-group"
+      - "other"
+      - "none"
+    tooltips:
+      "racial-minority": "Statement targets a racial or ethnic minority group"
+      "religious-group": "Statement targets a religious group"
+      "gender-identity": "Statement targets based on gender identity or expression"
+      "sexual-orientation": "Statement targets based on sexual orientation"
+      "disability": "Statement targets people with disabilities"
+      "nationality": "Statement targets based on nationality or immigration status"
+      "political-group": "Statement targets a political group or affiliation"
+      "other": "Statement targets a group not listed above"
+      "none": "No group is targeted (benign statement)"
+
+  # Step 4: Explanation
+  - annotation_type: text
+    name: explanation
+    description: "Explain why the text is toxic or benign. If toxic, describe the implicit cues or stereotypes present."
+
+annotation_instructions: |
+  You will be shown statements that may or may not contain implicit hate speech targeting various demographic groups. Your task is to:
+  1. Classify the statement as TOXIC or BENIGN.
+  2. If toxic, assess how implicit the hate is (explicit slurs vs. coded language vs. borderline).
+  3. Identify the demographic group being targeted, if any.
+  4. Explain your reasoning, pointing out specific cues in the text.
+
+  Key points:
+  - Implicit hate speech avoids slurs but promotes stereotypes or prejudice through subtle framing.
+  - A statement mentioning a group is NOT automatically toxic.
+  - Consider how the statement might affect members of the referenced group.
+  - Some statements are intentionally adversarial and difficult to classify.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; font-size: 13px; color: #92400e;">
+      <strong>Content Warning:</strong> This task may contain offensive or hateful language for research purposes.
+    </div>
+    <div style="font-size: 16px; line-height: 1.7; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+      {{text}}
+    </div>
+    <div style="margin-top: 10px; font-size: 13px; color: #6b7280;">
+      <em>Generation method: {{generation_method}} | Target category: {{target_demographic_category}}</em>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

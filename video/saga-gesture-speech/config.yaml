@@ -1,0 +1,198 @@
+# SaGA Gesture-Speech Alignment Multi-Tier Annotation Configuration
+# Based on Luecking et al., Gesture 2013
+# Paper: https://doi.org/10.1075/gest.13.2.07luc
+# Task: ELAN-style multi-tier annotation of co-speech gesture phases, types, and alignment
+
+port: 8000
+server_name: localhost
+task_name: "SaGA Gesture-Speech Alignment Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Gesture phase segmentation
+  - name: "gesture_phase_tier"
+    description: |
+      Segment each gesture into its kinematic phases following McNeill's
+      framework. Mark the onset and offset of each phase: preparation,
+      stroke (the meaningful core), hold, retraction, and rest position.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "preparation"
+        color: "#F59E0B"
+        tooltip: "Hand moves from rest to the beginning of the stroke; limb moves toward gesture space"
+      - name: "stroke"
+        color: "#EF4444"
+        tooltip: "The meaningful, effortful core of the gesture; peak of motion and meaning"
+      - name: "hold"
+        color: "#3B82F6"
+        tooltip: "Hand temporarily freezes in position before or after the stroke"
+      - name: "retraction"
+        color: "#10B981"
+        tooltip: "Hand returns from gesture space back toward rest position"
+      - name: "rest"
+        color: "#9CA3AF"
+        tooltip: "Hands at rest position (on lap, table, or at sides); no gestural activity"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 2: Gesture type classification (per gesture unit)
+  - name: "gesture_type_tier"
+    description: |
+      Classify each gesture unit by its semiotic type following Kendon and
+      McNeill's taxonomy. A gesture unit spans from the first preparation
+      to the final retraction of a continuous gestural movement.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "iconic"
+        color: "#3B82F6"
+        tooltip: "Represents a concrete object, action, or spatial relation through resemblance"
+      - name: "metaphoric"
+        color: "#8B5CF6"
+        tooltip: "Represents an abstract concept through a concrete spatial form"
+      - name: "deictic"
+        color: "#F59E0B"
+        tooltip: "Points to a real or virtual location, object, or direction in space"
+      - name: "beat"
+        color: "#EC4899"
+        tooltip: "Small rhythmic movement marking speech prosody or emphasis, no representational content"
+      - name: "emblem"
+        color: "#14B8A6"
+        tooltip: "Conventionalized gesture with a fixed meaning (e.g., thumbs up, OK sign)"
+      - name: "adaptor"
+        color: "#6B7280"
+        tooltip: "Self-touching or object manipulation without communicative intent (e.g., scratching, fidgeting)"
+    show_timecode: true
+    video_fps: 25
+
+  # Tier 3: Handedness classification
+  - name: "handedness"
+    description: "Classify which hand(s) are used for the current gesture."
+    annotation_type: radio
+    labels:
+      - "right-hand"
+      - "left-hand"
+      - "both-hands"
+      - "no-hands"
+    keyboard_shortcuts:
+      right-hand: "1"
+      left-hand: "2"
+      both-hands: "3"
+      no-hands: "4"
+
+  # Tier 4: Spatial reference frame
+  - name: "spatial_reference"
+    description: "Classify the spatial reference frame used by the gesture, if applicable."
+    annotation_type: radio
+    labels:
+      - "concrete-space"
+      - "abstract-space"
+      - "gesture-space"
+      - "body-anchored"
+      - "none"
+    keyboard_shortcuts:
+      concrete-space: "q"
+      abstract-space: "w"
+      gesture-space: "e"
+      body-anchored: "r"
+      none: "t"
+
+  # Tier 5: Speech transcript (free text)
+  - name: "speech_transcript"
+    description: |
+      Transcribe the speech occurring concurrently with the gesture. Include
+      hesitations, fillers, and prosodic emphasis markers where relevant.
+    annotation_type: text
+    textarea: true
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">SaGA: Multi-Tier Gesture-Speech Alignment Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate co-speech gestures and their temporal alignment with spoken language
+      across multiple parallel tiers following ELAN-style conventions.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate gesture phases, gesture types,
+      handedness, spatial reference, and concurrent speech on parallel tiers. Pay close
+      attention to how gesture strokes align with stressed syllables in speech.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## SaGA Gesture-Speech Alignment Multi-Tier Annotation
+
+  This task uses ELAN-style multi-tier annotation to capture the structure and
+  alignment of co-speech gestures from the SaGA corpus.
+
+  ### Tier 1: Gesture Phase Segmentation
+  - Decompose each gesture into its kinematic phases:
+    - **Preparation**: Hand lifts from rest and moves toward gesture space
+    - **Stroke**: The meaningful, effortful core movement of the gesture
+    - **Hold**: Temporary freeze of hand position (pre-stroke or post-stroke)
+    - **Retraction**: Hand returns to rest position after the gesture
+    - **Rest**: Hands at rest with no gestural activity
+  - The stroke is always the most important phase to identify precisely
+  - Not every gesture has all phases (e.g., beats may lack preparation)
+
+  ### Tier 2: Gesture Type Classification
+  - Classify each gesture unit by its semiotic function:
+    - **Iconic**: Depicts a concrete object, action, or spatial layout
+      (e.g., tracing a shape, mimicking an action)
+    - **Metaphoric**: Represents an abstract idea through a concrete spatial
+      image (e.g., "weighing options" with hand balance gesture)
+    - **Deictic**: Points to a location, object, or direction
+    - **Beat**: Small rhythmic pulse aligned with speech stress, no referential content
+    - **Emblem**: Conventional gesture with fixed meaning (OK sign, thumbs up)
+    - **Adaptor**: Self-touching or fidgeting without communicative intent
+
+  ### Tier 3: Handedness
+  - Mark which hand(s) perform each gesture:
+    - **Right/Left hand**: Single-hand gesture
+    - **Both hands**: Bimanual gesture (symmetric or asymmetric)
+    - **No hands**: No gestural activity (rest period)
+
+  ### Tier 4: Spatial Reference Frame
+  - Classify the spatial frame the gesture operates in:
+    - **Concrete space**: References real physical locations or objects
+    - **Abstract space**: References conceptual/metaphorical space
+    - **Gesture space**: Movement within the default gesture space in front of the body
+    - **Body-anchored**: Gesture makes contact with or references the body
+    - **None**: No spatial reference (beats, adaptors)
+
+  ### Tier 5: Speech Transcript
+  - Transcribe the concurrent speech
+  - Mark stressed words with CAPS (e.g., "you go LEFT at the CHURCH")
+  - Include fillers (uh, um) and pauses (...)
+
+  ### Alignment Tips
+  - Gesture strokes typically co-occur with or slightly precede the
+    semantically affiliated word in speech
+  - Look for synchrony between stroke onset and stressed syllables
+  - Use frame-by-frame playback to identify precise phase boundaries
+  - Preparation begins the moment the hand starts moving from rest

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ego4d_001",
+    "video_url": "https://example.com/ego4d/video_001_cooking_pasta.mp4",
+    "participant_id": "P001",
+    "scenario": "cooking",
+    "location_type": "indoor-home",
+    "duration_seconds": 180,
+    "country": "United States"
+  },
+  {
+    "id": "ego4d_002",
+    "video_url": "https://example.com/ego4d/video_002_woodworking.mp4",
+    "participant_id": "P014",
+    "scenario": "crafts",
+    "location_type": "indoor-workplace",
+    "duration_seconds": 240,
+    "country": "Italy"
+  },
+  {
+    "id": "ego4d_003",
+    "video_url": "https://example.com/ego4d/video_003_garden_planting.mp4",
+    "participant_id": "P027",
+    "scenario": "gardening",
+    "location_type": "outdoor-nature",
+    "duration_seconds": 150,
+    "country": "United Kingdom"
+  },
+  {
+    "id": "ego4d_004",
+    "video_url": "https://example.com/ego4d/video_004_family_dinner.mp4",
+    "participant_id": "P042",
+    "scenario": "social",
+    "location_type": "indoor-home",
+    "duration_seconds": 300,
+    "country": "India"
+  },
+  {
+    "id": "ego4d_005",
+    "video_url": "https://example.com/ego4d/video_005_grocery_shopping.mp4",
+    "participant_id": "P008",
+    "scenario": "shopping",
+    "location_type": "indoor-commercial",
+    "duration_seconds": 210,
+    "country": "Japan"
+  },
+  {
+    "id": "ego4d_006",
+    "video_url": "https://example.com/ego4d/video_006_bike_repair.mp4",
+    "participant_id": "P033",
+    "scenario": "crafts",
+    "location_type": "outdoor-urban",
+    "duration_seconds": 195,
+    "country": "Colombia"
+  },
+  {
+    "id": "ego4d_007",
+    "video_url": "https://example.com/ego4d/video_007_baking_bread.mp4",
+    "participant_id": "P019",
+    "scenario": "cooking",
+    "location_type": "indoor-home",
+    "duration_seconds": 270,
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ego4d_008",
+    "video_url": "https://example.com/ego4d/video_008_office_meeting.mp4",
+    "participant_id": "P055",
+    "scenario": "social",
+    "location_type": "indoor-workplace",
+    "duration_seconds": 165,
+    "country": "Kenya"
+  }
+]

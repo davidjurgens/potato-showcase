@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ami_001",
+    "video_url": "https://example.com/videos/ami/IS1009a_segment_001.mp4",
+    "meeting_id": "IS1009a",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 45.2
+  },
+  {
+    "id": "ami_002",
+    "video_url": "https://example.com/videos/ami/IS1009b_segment_001.mp4",
+    "meeting_id": "IS1009b",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 38.7
+  },
+  {
+    "id": "ami_003",
+    "video_url": "https://example.com/videos/ami/EN2001a_segment_001.mp4",
+    "meeting_id": "EN2001a",
+    "meeting_type": "non-scenario",
+    "num_participants": 4,
+    "duration_seconds": 52.1
+  },
+  {
+    "id": "ami_004",
+    "video_url": "https://example.com/videos/ami/IS1003c_segment_001.mp4",
+    "meeting_id": "IS1003c",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 41.5
+  },
+  {
+    "id": "ami_005",
+    "video_url": "https://example.com/videos/ami/EN2009d_segment_001.mp4",
+    "meeting_id": "EN2009d",
+    "meeting_type": "non-scenario",
+    "num_participants": 3,
+    "duration_seconds": 35.8
+  },
+  {
+    "id": "ami_006",
+    "video_url": "https://example.com/videos/ami/IS1008a_segment_001.mp4",
+    "meeting_id": "IS1008a",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 48.3
+  },
+  {
+    "id": "ami_007",
+    "video_url": "https://example.com/videos/ami/ES2004b_segment_001.mp4",
+    "meeting_id": "ES2004b",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 55.6
+  },
+  {
+    "id": "ami_008",
+    "video_url": "https://example.com/videos/ami/EN2003a_segment_001.mp4",
+    "meeting_id": "EN2003a",
+    "meeting_type": "non-scenario",
+    "num_participants": 4,
+    "duration_seconds": 42.9
+  },
+  {
+    "id": "ami_009",
+    "video_url": "https://example.com/videos/ami/IS1006d_segment_001.mp4",
+    "meeting_id": "IS1006d",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 39.4
+  },
+  {
+    "id": "ami_010",
+    "video_url": "https://example.com/videos/ami/TS3005c_segment_001.mp4",
+    "meeting_id": "TS3005c",
+    "meeting_type": "scenario",
+    "num_participants": 4,
+    "duration_seconds": 50.7
+  }
+]

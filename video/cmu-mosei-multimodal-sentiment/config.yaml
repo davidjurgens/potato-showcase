@@ -1,0 +1,196 @@
+# CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation Configuration
+# Based on Zadeh et al., ACL 2018
+# Paper: https://aclanthology.org/P18-1208/
+# Task: ELAN-style multi-tier annotation of visual behavior, acoustic events, emotion, and sentiment
+
+port: 8000
+server_name: localhost
+task_name: "CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Visual behavior segmentation
+  - name: "visual_behavior_tier"
+    description: |
+      Segment the video timeline by the speaker's visible facial expressions,
+      head movements, and gestures. Mark the onset and offset of each distinct
+      visual behavior observed.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "neutral-face"
+        color: "#9CA3AF"
+        tooltip: "Neutral facial expression with no strong affect signal"
+      - name: "smile"
+        color: "#22C55E"
+        tooltip: "Visible smile or positive facial expression"
+      - name: "frown"
+        color: "#EF4444"
+        tooltip: "Frown, grimace, or negative facial expression"
+      - name: "eyebrow-raise"
+        color: "#A855F7"
+        tooltip: "Raised eyebrows indicating surprise or emphasis"
+      - name: "head-nod"
+        color: "#3B82F6"
+        tooltip: "Vertical head nod indicating agreement or affirmation"
+      - name: "head-shake"
+        color: "#F97316"
+        tooltip: "Horizontal head shake indicating disagreement or negation"
+      - name: "gesture"
+        color: "#14B8A6"
+        tooltip: "Hand or arm gesture accompanying speech"
+      - name: "gaze-away"
+        color: "#6B7280"
+        tooltip: "Speaker looking away from camera (thinking, reading, etc.)"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 2: Acoustic event segmentation
+  - name: "acoustic_tier"
+    description: |
+      Segment the audio timeline by notable acoustic events and prosodic
+      patterns. Mark pitch changes, emphasis, pauses, laughter, and fillers
+      that carry affective information.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "rising-pitch"
+        color: "#3B82F6"
+        tooltip: "Rising intonation pattern (questions, uncertainty, excitement)"
+      - name: "falling-pitch"
+        color: "#6366F1"
+        tooltip: "Falling intonation pattern (statements, certainty, finality)"
+      - name: "emphasis"
+        color: "#EF4444"
+        tooltip: "Stressed or emphasized word/phrase with increased loudness"
+      - name: "pause"
+        color: "#9CA3AF"
+        tooltip: "Noticeable silence or pause in speech"
+      - name: "laughter"
+        color: "#22C55E"
+        tooltip: "Audible laughter or chuckling"
+      - name: "filler"
+        color: "#F59E0B"
+        tooltip: "Filler words or hesitation markers (um, uh, like, you know)"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 3: Emotion classification
+  - name: "emotion"
+    description: "Classify the dominant emotion expressed by the speaker in this segment."
+    annotation_type: radio
+    labels:
+      - "happiness"
+      - "sadness"
+      - "anger"
+      - "fear"
+      - "disgust"
+      - "surprise"
+    keyboard_shortcuts:
+      happiness: "1"
+      sadness: "2"
+      anger: "3"
+      fear: "4"
+      disgust: "5"
+      surprise: "6"
+
+  # Tier 4: Sentiment polarity (7-point Likert-style scale)
+  - name: "sentiment_polarity"
+    description: "Rate the overall sentiment polarity of the speaker's opinion on a 7-point scale."
+    annotation_type: radio
+    labels:
+      - "strongly-negative"
+      - "negative"
+      - "weakly-negative"
+      - "neutral"
+      - "weakly-positive"
+      - "positive"
+      - "strongly-positive"
+
+  # Tier 5: Speech transcription (free text)
+  - name: "transcription"
+    description: "Transcribe the speaker's utterance verbatim, including fillers and false starts."
+    annotation_type: text
+    textarea: true
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">CMU-MOSEI: Multi-Tier Multimodal Sentiment Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate visual behaviors, acoustic events, emotion, and sentiment across
+      parallel timeline tiers for multimodal sentiment analysis.
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate the video across five parallel tiers:
+      visual behavior segments, acoustic event segments, emotion category, sentiment polarity,
+      and verbatim transcription. Each modality provides complementary sentiment cues.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation
+
+  This task uses ELAN-style multi-tier annotation to capture visual, acoustic,
+  and linguistic signals of sentiment and emotion in YouTube opinion videos.
+
+  ### Tier 1: Visual Behavior Segmentation
+  - Segment the video timeline based on the speaker's facial expressions and movements:
+    - **Neutral face**: No strong affect visible
+    - **Smile**: Positive facial expression (Duchenne smile, grin, etc.)
+    - **Frown**: Negative facial expression (furrowed brow, pursed lips)
+    - **Eyebrow raise**: Surprise, emphasis, or question
+    - **Head nod/shake**: Agreement or disagreement signals
+    - **Gesture**: Communicative hand/arm movements
+    - **Gaze away**: Speaker looking away from camera
+
+  ### Tier 2: Acoustic Event Segmentation
+  - Segment the audio timeline by prosodic and vocal events:
+    - **Rising/falling pitch**: Intonation contour changes
+    - **Emphasis**: Louder or stressed words/phrases
+    - **Pause**: Noticeable silence in the speech stream
+    - **Laughter**: Any audible laughter
+    - **Filler**: Hesitation markers (um, uh, like, you know)
+
+  ### Tier 3: Emotion Classification
+  - Select the single dominant emotion expressed in this clip
+  - Choose from: happiness, sadness, anger, fear, disgust, surprise
+
+  ### Tier 4: Sentiment Polarity
+  - Rate the overall opinion sentiment on a 7-point scale
+  - Consider both what is said and how it is said (facial expression, tone)
+  - Scale: strongly-negative to strongly-positive
+
+  ### Tier 5: Speech Transcription
+  - Transcribe the speaker's words verbatim
+  - Include fillers (um, uh), false starts, and self-corrections
+  - Use standard punctuation to indicate prosodic phrasing
+
+  ### Multimodal Integration Tips
+  - Visual and acoustic tiers may not align perfectly; annotate each independently
+  - A smile during negative words may indicate sarcasm; note this in transcription
+  - Pay attention to mismatches between modalities as these are analytically important
+  - Use slow-motion playback to catch subtle facial expressions

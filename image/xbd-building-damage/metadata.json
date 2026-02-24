@@ -1,0 +1,23 @@
+{
+  "title": "xBD: Building Damage Assessment from Satellite Imagery",
+  "description": "Building damage assessment from pre- and post-disaster satellite imagery. Annotators compare side-by-side satellite images to classify damage severity using the Joint Damage Scale, identify building types, and note specific damage features visible in the imagery. Based on the xBD dataset for disaster response and recovery.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gupta et al.",
+    "email": "jurgens@umich.edu",
+    "github": "DIUx-xView",
+    "affiliation": "Carnegie Mellon University / Defense Innovation Unit"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Remote Sensing", "Disaster Response", "Computer Vision"],
+  "useCase": ["Building Damage Assessment", "Disaster Response", "Infrastructure Monitoring"],
+  "complexity": "advanced",
+  "tags": ["satellite-imagery", "building-damage", "disaster-response", "xbd", "xview2", "cvpr2019", "geospatial"],
+  "featured": false,
+  "paperReference": "Gupta et al., CVPR Workshops 2019",
+  "paperUrl": "https://arxiv.org/abs/1911.09296",
+  "datasetUrl": "https://xview2.org/",
+  "citation": "@inproceedings{gupta2019xbd,\n    title = \"xBD: A Dataset for Assessing Building Damage from Satellite Imagery\",\n    author = \"Gupta, Ritwik and Hosfelt, Richard and Saber, Sandra and Mittal, Nirav and Yarber, Robert and Kumber, Jocelyn and Liu, Matthew\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1911.09296\"\n}"
+}

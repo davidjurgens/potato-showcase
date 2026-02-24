@@ -1,0 +1,23 @@
+{
+  "title": "Multilingual Reading Comprehension (Belebele)",
+  "description": "Answer multiple-choice reading comprehension questions in a parallel multilingual benchmark spanning 122 languages. Based on Belebele (Bandarkar et al., ACL 2024). Annotators select the correct answer from four options, rate difficulty, and identify the type of reasoning required.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bandarkar et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Meta AI"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Cross-lingual Understanding", "Reading Comprehension"],
+  "useCase": ["Reading Comprehension", "Multilingual Evaluation", "Language Understanding"],
+  "complexity": "beginner",
+  "tags": ["cross-lingual", "multilingual", "reading-comprehension", "belebele", "acl2024", "122-languages"],
+  "featured": false,
+  "paperReference": "Bandarkar et al., ACL 2024",
+  "paperUrl": "https://arxiv.org/abs/2308.16884",
+  "datasetUrl": "https://github.com/facebookresearch/belebele",
+  "citation": "@inproceedings{bandarkar-etal-2024-belebele,\n    title = \"The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Languages\",\n    author = \"Bandarkar, Lucas  and Liang, Davis  and Muller, Benjamin  and Artetxe, Mikel  and Shukla, Satya Narayan  and Husa, Donald  and Gober, Naman  and Sez de Ocari{\\~n}a, Amir  and Ber, Alon  and Sagot, Beno{\\^\\i}t  and Conneau, Alexis\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2308.16884\"\n}"
+}

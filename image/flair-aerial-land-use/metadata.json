@@ -1,0 +1,23 @@
+{
+  "title": "FLAIR: French Land Cover from Aerospace Imagery",
+  "description": "Land use and land cover classification from high-resolution aerial imagery. Annotators classify the primary land use category of aerial image patches and identify any secondary land uses present. Based on the FLAIR dataset from the French National Institute of Geographic and Forest Information (IGN).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Garioud et al.",
+    "email": "jurgens@umich.edu",
+    "github": "IGNF",
+    "affiliation": "IGN / Universite Gustave Eiffel"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["Remote Sensing", "Land Use Classification", "Computer Vision"],
+  "useCase": ["Land Use Classification", "Land Cover Mapping", "Urban Planning"],
+  "complexity": "intermediate",
+  "tags": ["aerial-imagery", "land-use", "land-cover", "flair", "neurips2023", "geospatial", "france"],
+  "featured": false,
+  "paperReference": "Garioud et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2310.13336",
+  "datasetUrl": "https://ignf.github.io/FLAIR/",
+  "citation": "@inproceedings{garioud2023flair,\n    title = \"{FLAIR}: {F}rench Land cover from {A}erospace {I}mage{R}y\",\n    author = \"Garioud, Anatol and Peillet, Stéphane and Bookjans, Eva and Giordano, Sébastien and Wattrelos, Boris\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2310.13336\"\n}"
+}

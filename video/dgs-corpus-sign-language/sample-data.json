@@ -1,0 +1,58 @@
+[
+  {
+    "id": "dgs_001",
+    "video_url": "https://example.com/videos/dgs-corpus/narrative_family_001.mp4",
+    "signer_pair_id": "pair_12",
+    "topic": "family and childhood memories",
+    "session_type": "narrative"
+  },
+  {
+    "id": "dgs_002",
+    "video_url": "https://example.com/videos/dgs-corpus/dialogue_vacation_001.mp4",
+    "signer_pair_id": "pair_05",
+    "topic": "planning a vacation together",
+    "session_type": "dialogue"
+  },
+  {
+    "id": "dgs_003",
+    "video_url": "https://example.com/videos/dgs-corpus/elicitation_spatial_001.mp4",
+    "signer_pair_id": "pair_08",
+    "topic": "describing room layouts and spatial relations",
+    "session_type": "elicitation"
+  },
+  {
+    "id": "dgs_004",
+    "video_url": "https://example.com/videos/dgs-corpus/narrative_work_001.mp4",
+    "signer_pair_id": "pair_03",
+    "topic": "experiences at work and with colleagues",
+    "session_type": "narrative"
+  },
+  {
+    "id": "dgs_005",
+    "video_url": "https://example.com/videos/dgs-corpus/dialogue_cooking_001.mp4",
+    "signer_pair_id": "pair_15",
+    "topic": "sharing favorite recipes",
+    "session_type": "dialogue"
+  },
+  {
+    "id": "dgs_006",
+    "video_url": "https://example.com/videos/dgs-corpus/elicitation_emotion_001.mp4",
+    "signer_pair_id": "pair_11",
+    "topic": "describing emotional situations from picture prompts",
+    "session_type": "elicitation"
+  },
+  {
+    "id": "dgs_007",
+    "video_url": "https://example.com/videos/dgs-corpus/narrative_school_001.mp4",
+    "signer_pair_id": "pair_07",
+    "topic": "deaf school experiences and education",
+    "session_type": "narrative"
+  },
+  {
+    "id": "dgs_008",
+    "video_url": "https://example.com/videos/dgs-corpus/dialogue_technology_001.mp4",
+    "signer_pair_id": "pair_02",
+    "topic": "discussing technology and communication tools",
+    "session_type": "dialogue"
+  }
+]

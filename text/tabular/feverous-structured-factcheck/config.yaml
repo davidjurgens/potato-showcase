@@ -1,0 +1,133 @@
+# Structured Fact Verification (FEVEROUS)
+# Based on Aly et al., NeurIPS 2021
+# Paper: https://arxiv.org/abs/2106.05707
+# Dataset: https://fever.ai/dataset/feverous.html
+#
+# This task requires annotators to verify claims against Wikipedia pages
+# containing a mix of unstructured text paragraphs, tables, lists, and
+# infoboxes. Unlike simpler fact verification, FEVEROUS demands reasoning
+# across multiple evidence modalities simultaneously.
+#
+# Verdict Labels:
+# - SUPPORTS: The page content provides evidence that the claim is true
+# - REFUTES: The page content provides evidence that contradicts the claim
+# - NOT ENOUGH INFO: The page does not contain sufficient evidence
+#
+# Evidence Types:
+# - text-evidence: Sentences from paragraphs that support/refute the claim
+# - table-evidence: Cells or rows from tables containing relevant data
+# - list-evidence: Items from bulleted or numbered lists
+# - infobox-evidence: Fields from the page's infobox/sidebar
+#
+# Annotation Guidelines:
+# 1. Read the claim carefully and identify all sub-claims within it
+# 2. Scan the entire page including text, tables, lists, and infobox
+# 3. For each sub-claim, locate the most relevant evidence
+# 4. Evidence may come from multiple modalities (e.g., text + table)
+# 5. Mark the evidence type for each highlighted span
+# 6. Assess whether the combined evidence is sufficient
+# 7. Claims requiring information NOT on the page are NOT ENOUGH INFO
+# 8. Provide a justification that references specific evidence pieces
+#
+# Important Notes:
+# - A claim can be REFUTED even if some parts are true
+# - Multiple evidence types may be needed for a single claim
+# - NOT ENOUGH INFO means the page lacks relevant information entirely
+
+port: 8000
+server_name: localhost
+task_name: "Structured Fact Verification (FEVEROUS)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: claim
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Overall verdict
+  - annotation_type: radio
+    name: verdict
+    description: "Based on the page content (text, tables, lists), is the claim supported, refuted, or is there not enough information?"
+    labels:
+      - "supports"
+      - "refutes"
+      - "not-enough-info"
+    keyboard_shortcuts:
+      "supports": "s"
+      "refutes": "r"
+      "not-enough-info": "n"
+    tooltips:
+      "supports": "The page provides sufficient evidence that the claim is true"
+      "refutes": "The page provides evidence that contradicts the claim"
+      "not-enough-info": "The page does not contain enough information to verify or refute"
+
+  # Step 2: Evidence type highlighting
+  - annotation_type: span
+    name: evidence_type
+    description: "Highlight evidence in the page content and classify by source type"
+    labels:
+      - "text-evidence"
+      - "table-evidence"
+      - "list-evidence"
+      - "infobox-evidence"
+    label_colors:
+      "text-evidence": "#3b82f6"
+      "table-evidence": "#22c55e"
+      "list-evidence": "#f59e0b"
+      "infobox-evidence": "#a855f7"
+    tooltips:
+      "text-evidence": "Evidence from paragraph text on the page"
+      "table-evidence": "Evidence from table cells or rows"
+      "list-evidence": "Evidence from bulleted or numbered lists"
+      "infobox-evidence": "Evidence from the page infobox or sidebar"
+    allow_overlapping: false
+
+  # Step 3: Evidence sufficiency
+  - annotation_type: radio
+    name: evidence_sufficiency
+    description: "How sufficient is the evidence on this page for making a verdict?"
+    labels:
+      - "sufficient"
+      - "partial"
+      - "insufficient"
+    tooltips:
+      "sufficient": "The page contains all evidence needed to conclusively determine the verdict"
+      "partial": "The page contains some relevant evidence but not enough for full certainty"
+      "insufficient": "The page lacks meaningful evidence related to the claim"
+
+  # Step 4: Justification
+  - annotation_type: text
+    name: justification
+    description: "Explain your verdict and describe which evidence (text, table, list, infobox) you relied on."
+
+annotation_instructions: |
+  You will be shown a claim and a Wikipedia page that contains text paragraphs, tables, lists, and/or infoboxes. Your task is to:
+  1. Determine whether the page content SUPPORTS, REFUTES, or does NOT provide ENOUGH INFO for the claim.
+  2. Highlight evidence spans and classify them by type (text, table, list, or infobox).
+  3. Assess whether the evidence you found is sufficient, partial, or insufficient.
+  4. Write a justification explaining your verdict and referencing the specific evidence you found.
+
+  Key considerations:
+  - Evidence may span multiple modalities (e.g., a name in text and a date in a table).
+  - A claim with partially correct information may still be REFUTED if key details are wrong.
+  - If the page simply does not address the claim, choose NOT ENOUGH INFO.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
+      <strong style="color: #92400e;">Claim:</strong>
+      <span style="font-size: 16px; line-height: 1.6;">{{claim}}</span>
+    </div>
+    <h3 style="color: #1e40af; margin-bottom: 10px; border-bottom: 2px solid #dbeafe; padding-bottom: 6px;">{{page_title}}</h3>
+    <div style="font-size: 15px; line-height: 1.7; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background: #f9fafb;">
+      {{page_content}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "How2Sign Sign Language Multi-Tier Annotation",
+  "description": "Multi-tier ELAN-style annotation of continuous American Sign Language videos. Annotators segment sign glosses, mark mouthing patterns, classify sign handedness, and provide English translations aligned to video timelines. Based on the How2Sign large-scale multimodal ASL dataset.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "radio", "text"],
+  "domain": ["Sign Language", "Computer Vision", "Accessibility"],
+  "useCase": ["Sign Language Recognition", "Gloss Annotation", "Translation"],
+  "complexity": "advanced",
+  "tags": ["sign-language", "asl", "multi-tier", "elan-style", "gloss", "translation", "cvpr2021"],
+  "featured": false,
+  "paperReference": "Duarte et al., CVPR 2021",
+  "paperUrl": "https://openaccess.thecvf.com/content/CVPR2021/papers/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.pdf",
+  "datasetUrl": "https://how2sign.github.io/",
+  "citation": "@inproceedings{duarte2021how2sign,\n  title={How2Sign: A Large-scale Multimodal Dataset for Continuous American Sign Language},\n  author={Duarte, Amanda and Palaskar, Shruti and Ventura, Lucas and Ghadiyaram, Deepti and DeHaan, Kenneth and Metze, Florian and Torres, Jordi and Giro-i-Nieto, Xavier},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2735--2744},\n  year={2021}\n}"
+}

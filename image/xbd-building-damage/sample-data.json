@@ -1,0 +1,102 @@
+[
+  {
+    "id": "xbd_001",
+    "pre_image_url": "https://example.com/xbd/hurricane-michael/pre_001.png",
+    "post_image_url": "https://example.com/xbd/hurricane-michael/post_001.png",
+    "disaster_name": "Hurricane Michael",
+    "disaster_type": "wind-storm",
+    "location": "Mexico Beach, Florida, USA",
+    "capture_date_pre": "2018-08-15",
+    "capture_date_post": "2018-10-12"
+  },
+  {
+    "id": "xbd_002",
+    "pre_image_url": "https://example.com/xbd/hurricane-michael/pre_002.png",
+    "post_image_url": "https://example.com/xbd/hurricane-michael/post_002.png",
+    "disaster_name": "Hurricane Michael",
+    "disaster_type": "wind-storm",
+    "location": "Panama City, Florida, USA",
+    "capture_date_pre": "2018-07-20",
+    "capture_date_post": "2018-10-13"
+  },
+  {
+    "id": "xbd_003",
+    "pre_image_url": "https://example.com/xbd/woolsey-fire/pre_003.png",
+    "post_image_url": "https://example.com/xbd/woolsey-fire/post_003.png",
+    "disaster_name": "Woolsey Fire",
+    "disaster_type": "wildfire",
+    "location": "Malibu, California, USA",
+    "capture_date_pre": "2018-09-10",
+    "capture_date_post": "2018-11-15"
+  },
+  {
+    "id": "xbd_004",
+    "pre_image_url": "https://example.com/xbd/palu-tsunami/pre_004.png",
+    "post_image_url": "https://example.com/xbd/palu-tsunami/post_004.png",
+    "disaster_name": "Palu Tsunami",
+    "disaster_type": "tsunami",
+    "location": "Palu, Central Sulawesi, Indonesia",
+    "capture_date_pre": "2018-06-01",
+    "capture_date_post": "2018-10-02"
+  },
+  {
+    "id": "xbd_005",
+    "pre_image_url": "https://example.com/xbd/midwest-flooding/pre_005.png",
+    "post_image_url": "https://example.com/xbd/midwest-flooding/post_005.png",
+    "disaster_name": "Midwest Flooding",
+    "disaster_type": "flood",
+    "location": "Nebraska City, Nebraska, USA",
+    "capture_date_pre": "2019-01-10",
+    "capture_date_post": "2019-03-20"
+  },
+  {
+    "id": "xbd_006",
+    "pre_image_url": "https://example.com/xbd/hurricane-florence/pre_006.png",
+    "post_image_url": "https://example.com/xbd/hurricane-florence/post_006.png",
+    "disaster_name": "Hurricane Florence",
+    "disaster_type": "wind-storm",
+    "location": "Wilmington, North Carolina, USA",
+    "capture_date_pre": "2018-07-05",
+    "capture_date_post": "2018-09-18"
+  },
+  {
+    "id": "xbd_007",
+    "pre_image_url": "https://example.com/xbd/mexico-earthquake/pre_007.png",
+    "post_image_url": "https://example.com/xbd/mexico-earthquake/post_007.png",
+    "disaster_name": "Mexico City Earthquake",
+    "disaster_type": "earthquake",
+    "location": "Mexico City, Mexico",
+    "capture_date_pre": "2017-08-01",
+    "capture_date_post": "2017-09-22"
+  },
+  {
+    "id": "xbd_008",
+    "pre_image_url": "https://example.com/xbd/guatemala-volcano/pre_008.png",
+    "post_image_url": "https://example.com/xbd/guatemala-volcano/post_008.png",
+    "disaster_name": "Fuego Volcano Eruption",
+    "disaster_type": "volcanic-eruption",
+    "location": "San Miguel Los Lotes, Guatemala",
+    "capture_date_pre": "2018-04-15",
+    "capture_date_post": "2018-06-05"
+  },
+  {
+    "id": "xbd_009",
+    "pre_image_url": "https://example.com/xbd/hurricane-harvey/pre_009.png",
+    "post_image_url": "https://example.com/xbd/hurricane-harvey/post_009.png",
+    "disaster_name": "Hurricane Harvey",
+    "disaster_type": "flood",
+    "location": "Houston, Texas, USA",
+    "capture_date_pre": "2017-06-20",
+    "capture_date_post": "2017-08-30"
+  },
+  {
+    "id": "xbd_010",
+    "pre_image_url": "https://example.com/xbd/camp-fire/pre_010.png",
+    "post_image_url": "https://example.com/xbd/camp-fire/post_010.png",
+    "disaster_name": "Camp Fire",
+    "disaster_type": "wildfire",
+    "location": "Paradise, California, USA",
+    "capture_date_pre": "2018-09-01",
+    "capture_date_post": "2018-11-12"
+  }
+]

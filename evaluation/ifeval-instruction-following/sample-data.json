@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ifeval_001",
+    "instruction": "Write a brief summary of photosynthesis. Your response must be exactly 3 paragraphs. Each paragraph must have at least 3 sentences. Include the word 'energy' at least 4 times.",
+    "constraints": "1. Exactly 3 paragraphs\n2. Each paragraph has at least 3 sentences\n3. The word 'energy' appears at least 4 times",
+    "model_response": "Photosynthesis is the process by which green plants and certain other organisms convert light energy into chemical energy. This remarkable biological mechanism takes place primarily in the chloroplasts of plant cells. It is one of the most important processes on Earth, as it provides the foundation for nearly all food chains.\n\nDuring photosynthesis, plants absorb sunlight energy through chlorophyll, the green pigment in their leaves. They use this energy along with carbon dioxide from the air and water from the soil to produce glucose. The chemical energy stored in glucose molecules serves as fuel for the plant's growth and metabolic activities.\n\nThe byproduct of photosynthesis is oxygen, which is essential for most life on Earth. Without photosynthesis, the energy that sustains ecosystems would not be available. Understanding this process is crucial for addressing challenges related to food production and renewable energy sources.",
+    "model_name": "GPT-4"
+  },
+  {
+    "id": "ifeval_002",
+    "instruction": "Explain what a black hole is. Do not use the letter 'e' anywhere in your response. Keep your response under 50 words.",
+    "constraints": "1. No occurrences of the letter 'e'\n2. Total word count under 50",
+    "model_response": "A black gap in our cosmos is a spot with gravity so strong nothing can fly out, not light or any physical thing. Stars that fall apart and crush down into a tiny point can form such gaps. Such cosmic formations warp all around.",
+    "model_name": "Claude-3"
+  },
+  {
+    "id": "ifeval_003",
+    "instruction": "List 5 benefits of regular exercise. Format your response as a JSON array of objects, where each object has a 'benefit' key and a 'description' key. Do not include any text outside the JSON structure.",
+    "constraints": "1. Exactly 5 items in the list\n2. JSON array format with objects\n3. Each object has 'benefit' and 'description' keys\n4. No text outside the JSON structure",
+    "model_response": "Here are the benefits of exercise:\n\n[\n  {\"benefit\": \"Cardiovascular Health\", \"description\": \"Regular exercise strengthens the heart and improves blood circulation.\"},\n  {\"benefit\": \"Weight Management\", \"description\": \"Physical activity helps burn calories and maintain a healthy weight.\"},\n  {\"benefit\": \"Mental Health\", \"description\": \"Exercise releases endorphins that reduce stress and anxiety.\"},\n  {\"benefit\": \"Bone Strength\", \"description\": \"Weight-bearing exercises increase bone density and reduce osteoporosis risk.\"},\n  {\"benefit\": \"Sleep Quality\", \"description\": \"Regular physical activity promotes better sleep patterns.\"}\n]",
+    "model_name": "Llama-3-70B"
+  },
+  {
+    "id": "ifeval_004",
+    "instruction": "Write a haiku about the ocean. Then write another haiku about the mountains. Separate the two haikus with exactly three asterisks (***). Each haiku must follow the 5-7-5 syllable pattern.",
+    "constraints": "1. Two haikus\n2. First haiku about the ocean\n3. Second haiku about the mountains\n4. Separated by exactly '***'\n5. Each haiku follows 5-7-5 syllable pattern",
+    "model_response": "Waves crash on the shore\nSalt and foam dance in moonlight\nOcean breathes with tide\n***\nPeaks touch morning clouds\nStone and snow in silence stand\nMountains hold the sky",
+    "model_name": "GPT-4"
+  },
+  {
+    "id": "ifeval_005",
+    "instruction": "Describe your favorite season. Your response must contain exactly 100 words. Every sentence must end with an exclamation mark. Include the word 'beautiful' at least twice and the word 'therefore' at least once.",
+    "constraints": "1. Exactly 100 words\n2. Every sentence ends with an exclamation mark\n3. 'beautiful' appears at least twice\n4. 'therefore' appears at least once",
+    "model_response": "Autumn is my absolute favorite season! The leaves transform into beautiful shades of red, orange, and gold! The crisp air carries the scent of fallen leaves and warm spices! I love wearing cozy sweaters and sipping hot apple cider on cool evenings! The beautiful sunsets paint the sky in warm hues every night! Therefore, I always look forward to this magical time of year! Harvest festivals and pumpkin patches make weekends exciting! The shorter days remind us to appreciate each moment of daylight! Nature puts on its most spectacular display before winter arrives! Autumn truly captures the essence of change and beauty!",
+    "model_name": "Claude-3"
+  },
+  {
+    "id": "ifeval_006",
+    "instruction": "Write a recipe for chocolate chip cookies. Use bullet points for the ingredients and numbered steps for the instructions. The recipe must have at least 6 ingredients and at least 5 steps. Include a title in all caps.",
+    "constraints": "1. Bullet points for ingredients\n2. Numbered steps for instructions\n3. At least 6 ingredients\n4. At least 5 steps\n5. Title in all caps",
+    "model_response": "CLASSIC CHOCOLATE CHIP COOKIES\n\nIngredients:\n- 2 1/4 cups all-purpose flour\n- 1 cup butter, softened\n- 3/4 cup granulated sugar\n- 3/4 cup packed brown sugar\n- 2 large eggs\n- 1 teaspoon vanilla extract\n- 1 teaspoon baking soda\n- 2 cups chocolate chips\n\nInstructions:\n1. Preheat your oven to 375 degrees Fahrenheit.\n2. In a large bowl, cream together the butter, granulated sugar, and brown sugar until light and fluffy.\n3. Beat in the eggs one at a time, then stir in the vanilla extract.\n4. In a separate bowl, whisk together the flour and baking soda, then gradually add to the wet mixture.\n5. Fold in the chocolate chips until evenly distributed.\n6. Drop rounded tablespoons of dough onto ungreased baking sheets.\n7. Bake for 9 to 11 minutes or until golden brown. Allow to cool on the baking sheet for 5 minutes before transferring to a wire rack.",
+    "model_name": "Gemini-Pro"
+  },
+  {
+    "id": "ifeval_007",
+    "instruction": "Tell me about the solar system. Respond in exactly 5 sentences. Do not use any commas in your entire response. Start every sentence with a different letter of the alphabet.",
+    "constraints": "1. Exactly 5 sentences\n2. No commas anywhere\n3. Each sentence starts with a different letter",
+    "model_response": "Our solar system is a vast and fascinating place. Eight planets orbit the Sun in elliptical paths. Jupiter is the largest planet and has dozens of moons. Mars has been a target for exploration due to its similarities with Earth. Tiny Pluto was reclassified as a dwarf planet in 2006.",
+    "model_name": "GPT-4"
+  },
+  {
+    "id": "ifeval_008",
+    "instruction": "Write a persuasive paragraph about why people should read more books. Your paragraph must be between 80 and 120 words. Include at least one rhetorical question. Use the word 'knowledge' exactly 3 times. End the paragraph with the phrase 'start reading today.'",
+    "constraints": "1. Between 80 and 120 words\n2. At least one rhetorical question\n3. 'knowledge' appears exactly 3 times\n4. Ends with 'start reading today.'",
+    "model_response": "In a world filled with distractions, why do so few people dedicate time to reading? Books are the most accessible gateway to knowledge, offering insights from the greatest minds in history. Every page turned expands your understanding and deepens your knowledge of the world. Reading improves vocabulary, enhances critical thinking, and reduces stress. It transports you to different cultures, time periods, and perspectives. The knowledge gained from books cannot be replicated by scrolling through social media. Whether fiction or nonfiction, every book has something valuable to offer. If you want to grow intellectually and emotionally, start reading today.",
+    "model_name": "Claude-3"
+  },
+  {
+    "id": "ifeval_009",
+    "instruction": "Explain the water cycle in simple terms. Format your response as a numbered list with exactly 4 steps. Each step must be exactly one sentence long. Do not use any words longer than 10 characters.",
+    "constraints": "1. Numbered list format\n2. Exactly 4 steps\n3. Each step is exactly one sentence\n4. No words longer than 10 characters",
+    "model_response": "1. The sun heats up water in lakes and oceans, turning it into vapor.\n2. The vapor rises high into the sky and forms clouds.\n3. When clouds get heavy, the water falls back down as rain or snow.\n4. The water flows into rivers and streams, going back to the ocean.",
+    "model_name": "Llama-3-70B"
+  },
+  {
+    "id": "ifeval_010",
+    "instruction": "Compare cats and dogs as pets. Write exactly 2 paragraphs: one arguing for cats, one arguing for dogs. Each paragraph must be 40-60 words. Use the word 'companion' in both paragraphs. Do not use the word 'best' anywhere.",
+    "constraints": "1. Exactly 2 paragraphs\n2. First paragraph argues for cats\n3. Second paragraph argues for dogs\n4. Each paragraph is 40-60 words\n5. 'companion' appears in both paragraphs\n6. The word 'best' does not appear",
+    "model_response": "Cats make an ideal companion for those who value independence and low-maintenance living. They groom themselves, use a litter box, and are perfectly content being alone during work hours. Their quiet, soothing purring has been shown to reduce stress and lower blood pressure, making them wonderful for apartment dwellers and busy professionals.\n\nDogs are an incredibly loyal companion that bring unmatched joy and energy to any household. They encourage daily exercise through walks and play, improving their owner's physical health. Dogs provide emotional support, can be trained for various tasks, and offer a level of social connection that enriches daily life immensely.",
+    "model_name": "Gemini-Pro"
+  }
+]

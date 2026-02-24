@@ -1,0 +1,23 @@
+{
+  "title": "CHILDES Child Language Multi-Tier Annotation",
+  "description": "Multi-tier ELAN-style annotation of child-adult interaction videos for language acquisition research. Annotators segment utterance boundaries on the timeline, provide morphological and syntactic annotations, and classify communicative context and error types. Based on the CHILDES/TalkBank project.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "text", "radio"],
+  "domain": ["Child Language Acquisition", "Developmental Psychology", "Linguistics"],
+  "useCase": ["Language Development Tracking", "Error Analysis", "Child-Adult Interaction"],
+  "complexity": "intermediate",
+  "tags": ["child-language", "developmental", "multi-tier", "elan-style", "childes", "talkbank", "language-acquisition"],
+  "featured": false,
+  "paperReference": "MacWhinney, Journal of Child Language 2000",
+  "paperUrl": "https://doi.org/10.1017/S0305000900003581",
+  "datasetUrl": "https://childes.talkbank.org/",
+  "citation": "@article{macwhinney2000childes,\n  title={The CHILDES Project: Tools for Analyzing Talk},\n  author={MacWhinney, Brian},\n  journal={Journal of Child Language},\n  volume={27},\n  number={2},\n  pages={375--382},\n  year={2000},\n  publisher={Cambridge University Press}\n}"
+}

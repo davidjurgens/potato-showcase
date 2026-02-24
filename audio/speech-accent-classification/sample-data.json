@@ -1,0 +1,82 @@
+[
+  {
+    "id": "accent_001",
+    "audio_url": "https://example.com/commonvoice/sample_001_en.wav",
+    "provided_transcription": "The quick brown fox jumps over the lazy dog near the riverbank.",
+    "language": "English",
+    "speaker_id": "SPK_4821",
+    "duration_seconds": 4.2
+  },
+  {
+    "id": "accent_002",
+    "audio_url": "https://example.com/commonvoice/sample_002_en.wav",
+    "provided_transcription": "She sells seashells by the seashore every summer afternoon.",
+    "language": "English",
+    "speaker_id": "SPK_1093",
+    "duration_seconds": 3.8
+  },
+  {
+    "id": "accent_003",
+    "audio_url": "https://example.com/commonvoice/sample_003_en.wav",
+    "provided_transcription": "The government announced new regulations for renewable energy production last week.",
+    "language": "English",
+    "speaker_id": "SPK_7264",
+    "duration_seconds": 5.1
+  },
+  {
+    "id": "accent_004",
+    "audio_url": "https://example.com/commonvoice/sample_004_en.wav",
+    "provided_transcription": "My grandmother used to make the most delicious apple pie during the holidays.",
+    "language": "English",
+    "speaker_id": "SPK_3517",
+    "duration_seconds": 4.5
+  },
+  {
+    "id": "accent_005",
+    "audio_url": "https://example.com/commonvoice/sample_005_en.wav",
+    "provided_transcription": "The university library is open twenty-four hours during examination period.",
+    "language": "English",
+    "speaker_id": "SPK_8902",
+    "duration_seconds": 4.0
+  },
+  {
+    "id": "accent_006",
+    "audio_url": "https://example.com/commonvoice/sample_006_en.wav",
+    "provided_transcription": "Please remember to bring your identification documents to the appointment tomorrow morning.",
+    "language": "English",
+    "speaker_id": "SPK_2146",
+    "duration_seconds": 5.3
+  },
+  {
+    "id": "accent_007",
+    "audio_url": "https://example.com/commonvoice/sample_007_en.wav",
+    "provided_transcription": "The children played happily in the park while their parents watched from the bench.",
+    "language": "English",
+    "speaker_id": "SPK_5673",
+    "duration_seconds": 4.7
+  },
+  {
+    "id": "accent_008",
+    "audio_url": "https://example.com/commonvoice/sample_008_en.wav",
+    "provided_transcription": "Scientists have discovered a new species of deep-sea fish in the Pacific Ocean.",
+    "language": "English",
+    "speaker_id": "SPK_9381",
+    "duration_seconds": 4.9
+  },
+  {
+    "id": "accent_009",
+    "audio_url": "https://example.com/commonvoice/sample_009_en.wav",
+    "provided_transcription": "The train to Manchester departs from platform seven at half past three.",
+    "language": "English",
+    "speaker_id": "SPK_6205",
+    "duration_seconds": 3.6
+  },
+  {
+    "id": "accent_010",
+    "audio_url": "https://example.com/commonvoice/sample_010_en.wav",
+    "provided_transcription": "I would like to order a large coffee with milk and two sugars please.",
+    "language": "English",
+    "speaker_id": "SPK_4058",
+    "duration_seconds": 3.9
+  }
+]

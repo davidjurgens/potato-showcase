@@ -1,0 +1,102 @@
+[
+  {
+    "id": "miami_001",
+    "audio_url": "https://example.com/audio/miami/sastre_clip_001.wav",
+    "speaker_id": "sastre_spk01",
+    "speaker_age_group": "young-adult",
+    "speaker_gender": "female",
+    "conversation_topic": "family gathering",
+    "recording_setting": "casual",
+    "duration": 5.2
+  },
+  {
+    "id": "miami_002",
+    "audio_url": "https://example.com/audio/miami/herring_clip_001.wav",
+    "speaker_id": "herring_spk01",
+    "speaker_age_group": "middle-aged",
+    "speaker_gender": "male",
+    "conversation_topic": "workplace",
+    "recording_setting": "casual",
+    "duration": 4.8
+  },
+  {
+    "id": "miami_003",
+    "audio_url": "https://example.com/audio/miami/zeledon_clip_001.wav",
+    "speaker_id": "zeledon_spk01",
+    "speaker_age_group": "older",
+    "speaker_gender": "female",
+    "conversation_topic": "cooking recipes",
+    "recording_setting": "interview",
+    "duration": 6.1
+  },
+  {
+    "id": "miami_004",
+    "audio_url": "https://example.com/audio/miami/sastre_clip_002.wav",
+    "speaker_id": "sastre_spk02",
+    "speaker_age_group": "young-adult",
+    "speaker_gender": "male",
+    "conversation_topic": "school and education",
+    "recording_setting": "casual",
+    "duration": 3.9
+  },
+  {
+    "id": "miami_005",
+    "audio_url": "https://example.com/audio/miami/herring_clip_002.wav",
+    "speaker_id": "herring_spk02",
+    "speaker_age_group": "middle-aged",
+    "speaker_gender": "female",
+    "conversation_topic": "neighborhood events",
+    "recording_setting": "casual",
+    "duration": 5.6
+  },
+  {
+    "id": "miami_006",
+    "audio_url": "https://example.com/audio/miami/zeledon_clip_002.wav",
+    "speaker_id": "zeledon_spk02",
+    "speaker_age_group": "older",
+    "speaker_gender": "male",
+    "conversation_topic": "immigration experience",
+    "recording_setting": "interview",
+    "duration": 7.3
+  },
+  {
+    "id": "miami_007",
+    "audio_url": "https://example.com/audio/miami/maria_clip_001.wav",
+    "speaker_id": "maria_spk01",
+    "speaker_age_group": "young-adult",
+    "speaker_gender": "female",
+    "conversation_topic": "weekend plans",
+    "recording_setting": "casual",
+    "duration": 4.4
+  },
+  {
+    "id": "miami_008",
+    "audio_url": "https://example.com/audio/miami/maria_clip_002.wav",
+    "speaker_id": "maria_spk02",
+    "speaker_age_group": "middle-aged",
+    "speaker_gender": "male",
+    "conversation_topic": "sports",
+    "recording_setting": "casual",
+    "duration": 5.0
+  },
+  {
+    "id": "miami_009",
+    "audio_url": "https://example.com/audio/miami/sastre_clip_003.wav",
+    "speaker_id": "sastre_spk03",
+    "speaker_age_group": "young-adult",
+    "speaker_gender": "female",
+    "conversation_topic": "music and entertainment",
+    "recording_setting": "formal",
+    "duration": 4.2
+  },
+  {
+    "id": "miami_010",
+    "audio_url": "https://example.com/audio/miami/herring_clip_003.wav",
+    "speaker_id": "herring_spk03",
+    "speaker_age_group": "older",
+    "speaker_gender": "female",
+    "conversation_topic": "health and doctors",
+    "recording_setting": "interview",
+    "duration": 6.8
+  }
+]

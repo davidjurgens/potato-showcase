@@ -1,0 +1,23 @@
+{
+  "title": "ToBI Prosodic Annotation",
+  "description": "Multi-tier prosodic annotation following the Tones and Break Indices (ToBI) framework. Annotators label pitch accents, phrase accents, boundary tones, and break indices on speech utterances, producing a layered prosodic transcription aligned to the audio timeline (Silverman et al., Speech Communication 1992).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "radio", "text"],
+  "domain": ["Prosody", "Phonology", "Speech Science"],
+  "useCase": ["Prosodic Labeling", "Intonation Analysis", "Speech Synthesis"],
+  "complexity": "advanced",
+  "tags": ["prosody", "tobi", "intonation", "multi-tier", "elan-style", "pitch-accent", "break-index"],
+  "featured": false,
+  "paperReference": "Silverman et al., Speech Communication 1992",
+  "paperUrl": "https://doi.org/10.1016/0167-6393(92)90016-Z",
+  "datasetUrl": "https://www.ling.ohio-state.edu/~tobi/",
+  "citation": "@article{silverman1992tobi,\n    title = \"{ToBI}: A Standard for Labeling {E}nglish Prosody\",\n    author = \"Silverman, Kim and Beckman, Mary and Pitrelli, John and Ostendorf, Mari and Wightman, Colin and Price, Patti and Pierrehumbert, Janet and Hirschberg, Julia\",\n    journal = \"Speech Communication\",\n    volume = \"11\",\n    number = \"2--3\",\n    pages = \"149--159\",\n    year = \"1992\",\n    publisher = \"Elsevier\",\n    doi = \"10.1016/0167-6393(92)90016-Z\"\n}"
+}

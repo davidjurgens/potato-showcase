@@ -1,0 +1,82 @@
+[
+  {
+    "id": "childes_001",
+    "video_url": "https://example.com/videos/childes/adam_freeplay_24m.mp4",
+    "child_id": "adam",
+    "child_age_months": 24,
+    "language": "English",
+    "recording_context": "free-play"
+  },
+  {
+    "id": "childes_002",
+    "video_url": "https://example.com/videos/childes/sarah_mealtime_30m.mp4",
+    "child_id": "sarah",
+    "child_age_months": 30,
+    "language": "English",
+    "recording_context": "mealtime"
+  },
+  {
+    "id": "childes_003",
+    "video_url": "https://example.com/videos/childes/naomi_bookreading_18m.mp4",
+    "child_id": "naomi",
+    "child_age_months": 18,
+    "language": "English",
+    "recording_context": "book-reading"
+  },
+  {
+    "id": "childes_004",
+    "video_url": "https://example.com/videos/childes/eve_structured_36m.mp4",
+    "child_id": "eve",
+    "child_age_months": 36,
+    "language": "English",
+    "recording_context": "structured-task"
+  },
+  {
+    "id": "childes_005",
+    "video_url": "https://example.com/videos/childes/peter_freeplay_28m.mp4",
+    "child_id": "peter",
+    "child_age_months": 28,
+    "language": "English",
+    "recording_context": "free-play"
+  },
+  {
+    "id": "childes_006",
+    "video_url": "https://example.com/videos/childes/nina_bookreading_22m.mp4",
+    "child_id": "nina",
+    "child_age_months": 22,
+    "language": "English",
+    "recording_context": "book-reading"
+  },
+  {
+    "id": "childes_007",
+    "video_url": "https://example.com/videos/childes/abe_mealtime_32m.mp4",
+    "child_id": "abe",
+    "child_age_months": 32,
+    "language": "English",
+    "recording_context": "mealtime"
+  },
+  {
+    "id": "childes_008",
+    "video_url": "https://example.com/videos/childes/ross_structured_42m.mp4",
+    "child_id": "ross",
+    "child_age_months": 42,
+    "language": "English",
+    "recording_context": "structured-task"
+  },
+  {
+    "id": "childes_009",
+    "video_url": "https://example.com/videos/childes/mark_freeplay_20m.mp4",
+    "child_id": "mark",
+    "child_age_months": 20,
+    "language": "English",
+    "recording_context": "free-play"
+  },
+  {
+    "id": "childes_010",
+    "video_url": "https://example.com/videos/childes/allison_bookreading_15m.mp4",
+    "child_id": "allison",
+    "child_age_months": 15,
+    "language": "English",
+    "recording_context": "book-reading"
+  }
+]

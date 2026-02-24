@@ -1,0 +1,23 @@
+{
+  "title": "IFEval: Instruction-Following Evaluation for LLMs",
+  "description": "Evaluate how well large language models follow verifiable instructions with specific constraints such as word count limits, formatting requirements, keyword inclusion, and structural rules. Annotators assess pass/fail per constraint and overall response quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["AI Evaluation", "Instruction Following", "LLM Assessment"],
+  "useCase": ["Instruction-Following Evaluation", "LLM Benchmarking", "Constraint Verification"],
+  "complexity": "intermediate",
+  "tags": ["instruction-following", "ifeval", "llm-evaluation", "constraints", "google-research"],
+  "featured": false,
+  "paperReference": "Zhou et al., arXiv 2023",
+  "paperUrl": "https://arxiv.org/abs/2311.07911",
+  "datasetUrl": "https://github.com/google-research/google-research/tree/master/instruction_following_eval",
+  "citation": "@article{zhou2023instruction,\n  title={Instruction-Following Evaluation for Large Language Models},\n  author={Zhou, Jeffrey and Lu, Tianjian and Mishra, Swaroop and Brahma, Siddhartha and Basu, Sujoy and Luan, Yi and Zhou, Denny and Hou, Le},\n  journal={arXiv preprint arXiv:2311.07911},\n  year={2023}\n}"
+}

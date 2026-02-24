@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cxg_001",
+    "code": "static int parse_header(const char *input, char *output, int max_len) {\n    int i = 0;\n    while (input[i] != '\\0' && input[i] != '\\n') {\n        output[i] = input[i];\n        i++;\n    }\n    output[i] = '\\0';\n    return i;\n}",
+    "function_name": "parse_header",
+    "project": "FFmpeg",
+    "commit_id": "a1b2c3d4e5f6"
+  },
+  {
+    "id": "cxg_002",
+    "code": "void process_packet(struct packet *pkt) {\n    struct buffer *buf = malloc(sizeof(struct buffer));\n    if (pkt->type == PKT_DATA) {\n        buf->data = malloc(pkt->len);\n        memcpy(buf->data, pkt->payload, pkt->len);\n        enqueue(buf);\n    } else if (pkt->type == PKT_CTRL) {\n        handle_control(pkt);\n    }\n    /* buf is not freed when pkt->type == PKT_CTRL */\n}",
+    "function_name": "process_packet",
+    "project": "QEMU",
+    "commit_id": "b2c3d4e5f6a7"
+  },
+  {
+    "id": "cxg_003",
+    "code": "static int read_config_value(FILE *fp, char *key, char *value) {\n    char line[256];\n    while (fgets(line, sizeof(line), fp) != NULL) {\n        char *sep = strchr(line, '=');\n        if (sep == NULL)\n            continue;\n        *sep = '\\0';\n        if (strcmp(line, key) == 0) {\n            strcpy(value, sep + 1);\n            /* Remove trailing newline */\n            char *nl = strchr(value, '\\n');\n            if (nl) *nl = '\\0';\n            return 0;\n        }\n    }\n    return -1;\n}",
+    "function_name": "read_config_value",
+    "project": "Linux",
+    "commit_id": "c3d4e5f6a7b8"
+  },
+  {
+    "id": "cxg_004",
+    "code": "int calculate_checksum(unsigned char *data, unsigned int length) {\n    unsigned int sum = 0;\n    int i;\n    for (i = 0; i < length; i += 2) {\n        sum += (data[i] << 8) + data[i + 1];\n    }\n    while (sum >> 16)\n        sum = (sum & 0xFFFF) + (sum >> 16);\n    return ~sum & 0xFFFF;\n}",
+    "function_name": "calculate_checksum",
+    "project": "Linux",
+    "commit_id": "d4e5f6a7b8c9"
+  },
+  {
+    "id": "cxg_005",
+    "code": "static void free_context(struct decode_ctx *ctx) {\n    if (ctx == NULL)\n        return;\n    free(ctx->frame_buffer);\n    free(ctx->temp_buffer);\n    av_free(ctx->codec_ctx);\n    free(ctx);\n    /* Access after free */\n    ctx->ref_count = 0;\n}",
+    "function_name": "free_context",
+    "project": "FFmpeg",
+    "commit_id": "e5f6a7b8c9d0"
+  },
+  {
+    "id": "cxg_006",
+    "code": "int safe_string_copy(char *dest, const char *src, size_t dest_size) {\n    if (dest == NULL || src == NULL || dest_size == 0)\n        return -1;\n    size_t src_len = strlen(src);\n    size_t copy_len = (src_len < dest_size - 1) ? src_len : dest_size - 1;\n    memcpy(dest, src, copy_len);\n    dest[copy_len] = '\\0';\n    return (int)copy_len;\n}",
+    "function_name": "safe_string_copy",
+    "project": "QEMU",
+    "commit_id": "f6a7b8c9d0e1"
+  },
+  {
+    "id": "cxg_007",
+    "code": "static int resize_array(struct dynamic_array *arr, int new_capacity) {\n    int *new_data = realloc(arr->data, new_capacity * sizeof(int));\n    arr->data = new_data;\n    arr->capacity = new_capacity;\n    return 0;\n}",
+    "function_name": "resize_array",
+    "project": "Linux",
+    "commit_id": "a7b8c9d0e1f2"
+  },
+  {
+    "id": "cxg_008",
+    "code": "void handle_client_request(int sockfd) {\n    char buffer[1024];\n    int bytes_read;\n    FILE *log_fp = fopen(\"/var/log/server.log\", \"a\");\n    \n    bytes_read = recv(sockfd, buffer, sizeof(buffer) - 1, 0);\n    if (bytes_read <= 0) {\n        close(sockfd);\n        return;\n    }\n    buffer[bytes_read] = '\\0';\n    fprintf(log_fp, \"Request: %s\\n\", buffer);\n    send(sockfd, \"OK\", 2, 0);\n    fclose(log_fp);\n    close(sockfd);\n}",
+    "function_name": "handle_client_request",
+    "project": "QEMU",
+    "commit_id": "b8c9d0e1f2a3"
+  },
+  {
+    "id": "cxg_009",
+    "code": "static int decode_frame_header(AVCodecContext *avctx, GetBitContext *gb) {\n    int width, height, format;\n    width = get_bits(gb, 16);\n    height = get_bits(gb, 16);\n    format = get_bits(gb, 8);\n    \n    if (width <= 0 || height <= 0) {\n        av_log(avctx, AV_LOG_ERROR, \"Invalid dimensions\\n\");\n        return AVERROR_INVALIDDATA;\n    }\n    \n    avctx->width = width;\n    avctx->height = height;\n    avctx->pix_fmt = format;\n    return 0;\n}",
+    "function_name": "decode_frame_header",
+    "project": "FFmpeg",
+    "commit_id": "c9d0e1f2a3b4"
+  },
+  {
+    "id": "cxg_010",
+    "code": "static uint64_t compute_block_size(uint32_t num_blocks, uint32_t block_size) {\n    uint64_t total = num_blocks * block_size;\n    if (total > MAX_ALLOCATION_SIZE) {\n        return 0;\n    }\n    return total;\n}",
+    "function_name": "compute_block_size",
+    "project": "QEMU",
+    "commit_id": "d0e1f2a3b4c5"
+  }
+]

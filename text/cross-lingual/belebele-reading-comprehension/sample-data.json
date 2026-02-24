@@ -1,0 +1,102 @@
+[
+  {
+    "id": "belebele_001",
+    "passage": "Photosynthesis is the process by which green plants and certain other organisms transform light energy into chemical energy. During photosynthesis, plants capture light energy from the sun and use it to convert water and carbon dioxide into oxygen and glucose. The glucose is used as food by the plant, while the oxygen is released into the atmosphere. This process primarily takes place in the leaves of the plant, specifically in organelles called chloroplasts that contain the green pigment chlorophyll.",
+    "question": "Where does photosynthesis primarily occur within a plant?",
+    "option_a": "In the roots where water is absorbed",
+    "option_b": "In the stem where nutrients are transported",
+    "option_c": "In the leaves, within chloroplasts",
+    "option_d": "In the flowers during pollination",
+    "language": "English"
+  },
+  {
+    "id": "belebele_002",
+    "passage": "The Renaissance was a cultural movement that began in Italy in the late 14th century and later spread throughout Europe. It marked a period of renewed interest in classical Greek and Roman art, literature, and philosophy. Key figures of the Renaissance include Leonardo da Vinci, Michelangelo, and Raphael in the visual arts, and Petrarch and Boccaccio in literature. The invention of the printing press by Johannes Gutenberg around 1440 played a crucial role in disseminating Renaissance ideas across the continent.",
+    "question": "What technology helped spread Renaissance ideas across Europe?",
+    "option_a": "The compass",
+    "option_b": "The printing press",
+    "option_c": "The telescope",
+    "option_d": "The steam engine",
+    "language": "English"
+  },
+  {
+    "id": "belebele_003",
+    "passage": "Coral reefs are among the most biologically diverse ecosystems on Earth. Although they cover less than one percent of the ocean floor, they are home to approximately 25 percent of all marine species. Coral reefs are formed by tiny animals called coral polyps, which secrete a hard limestone skeleton. Over thousands of years, these skeletons accumulate to form the massive reef structures we see today. However, coral reefs around the world are threatened by rising ocean temperatures, ocean acidification, and pollution.",
+    "question": "What percentage of marine species are found in coral reefs?",
+    "option_a": "Less than one percent",
+    "option_b": "About ten percent",
+    "option_c": "About 25 percent",
+    "option_d": "More than 50 percent",
+    "language": "English"
+  },
+  {
+    "id": "belebele_004",
+    "passage": "Sleep is essential for maintaining good health and well-being. During sleep, the body repairs tissues, consolidates memories, and releases hormones that regulate growth and appetite. Adults typically need seven to nine hours of sleep per night, while teenagers need eight to ten hours. Chronic sleep deprivation has been linked to an increased risk of obesity, diabetes, cardiovascular disease, and depression. Despite its importance, surveys show that about one-third of adults regularly get less than the recommended amount of sleep.",
+    "question": "How many hours of sleep do teenagers typically need per night?",
+    "option_a": "Five to seven hours",
+    "option_b": "Six to eight hours",
+    "option_c": "Seven to nine hours",
+    "option_d": "Eight to ten hours",
+    "language": "English"
+  },
+  {
+    "id": "belebele_005",
+    "passage": "The water cycle, also known as the hydrological cycle, describes the continuous movement of water within the Earth and atmosphere. It involves several key processes: evaporation, where water changes from liquid to vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in oceans, rivers, and underground aquifers. Solar energy drives the water cycle by heating surface water and causing evaporation.",
+    "question": "What is the primary energy source that drives the water cycle?",
+    "option_a": "Wind energy",
+    "option_b": "Geothermal energy",
+    "option_c": "Solar energy",
+    "option_d": "Gravitational energy",
+    "language": "English"
+  },
+  {
+    "id": "belebele_006",
+    "passage": "The human immune system is a complex network of cells, tissues, and organs that work together to defend the body against harmful invaders such as bacteria, viruses, and parasites. White blood cells, or leukocytes, are the primary soldiers of the immune system. There are two main types of immune responses: innate immunity, which provides a rapid but non-specific defense, and adaptive immunity, which develops over time and targets specific pathogens. Vaccines work by training the adaptive immune system to recognize and fight specific diseases.",
+    "question": "How do vaccines protect against disease?",
+    "option_a": "By killing all bacteria in the body",
+    "option_b": "By strengthening innate immunity only",
+    "option_c": "By training adaptive immunity to recognize specific pathogens",
+    "option_d": "By increasing the number of red blood cells",
+    "language": "English"
+  },
+  {
+    "id": "belebele_007",
+    "passage": "The Amazon rainforest produces approximately 20 percent of the world's oxygen and is often referred to as the lungs of the Earth. Spanning across nine countries in South America, the Amazon covers about 5.5 million square kilometers. It is home to an estimated 10 percent of all species on Earth, including many that have not yet been scientifically described. Deforestation, primarily driven by agriculture and logging, threatens this vital ecosystem. Between 2001 and 2020, the Amazon lost approximately 8 percent of its total forest cover.",
+    "question": "What is the primary cause of deforestation in the Amazon?",
+    "option_a": "Urbanization and city expansion",
+    "option_b": "Agriculture and logging",
+    "option_c": "Natural forest fires",
+    "option_d": "Mining operations",
+    "language": "English"
+  },
+  {
+    "id": "belebele_008",
+    "passage": "Black holes are regions of spacetime where gravity is so strong that nothing, not even light or other electromagnetic waves, can escape once past the event horizon. They are formed when massive stars collapse at the end of their life cycle. The concept of a body so massive that even light could not escape was first proposed by John Michell in 1784. The term black hole was coined by physicist John Wheeler in 1967. Supermassive black holes, with masses millions to billions of times that of the Sun, are found at the centers of most galaxies.",
+    "question": "Who first proposed the concept of a body from which light could not escape?",
+    "option_a": "Albert Einstein",
+    "option_b": "Stephen Hawking",
+    "option_c": "John Wheeler",
+    "option_d": "John Michell",
+    "language": "English"
+  },
+  {
+    "id": "belebele_009",
+    "passage": "The Great Barrier Reef, located off the coast of Queensland, Australia, is the world's largest coral reef system. It stretches over 2,300 kilometers and is composed of over 2,900 individual reef systems. The reef supports a wide variety of life, including over 1,500 species of fish, 400 types of coral, and numerous species of birds and marine mammals. It was designated a UNESCO World Heritage Site in 1981 due to its outstanding natural significance.",
+    "question": "How many individual reef systems make up the Great Barrier Reef?",
+    "option_a": "Over 1,500",
+    "option_b": "Over 2,300",
+    "option_c": "Over 2,900",
+    "option_d": "Over 4,000",
+    "language": "English"
+  },
+  {
+    "id": "belebele_010",
+    "passage": "Migration is a seasonal movement of animals from one region to another, typically in search of food, better weather conditions, or breeding grounds. The Arctic tern holds the record for the longest migration of any animal, traveling approximately 71,000 kilometers annually between the Arctic and Antarctic. Monarch butterflies are also famous for their migration, traveling up to 4,800 kilometers from Canada to central Mexico each autumn. Many bird species use the Earth's magnetic field to navigate during their migrations.",
+    "question": "What do many bird species use to navigate during migration?",
+    "option_a": "The position of the stars",
+    "option_b": "The Earth's magnetic field",
+    "option_c": "Ocean currents",
+    "option_d": "Wind patterns",
+    "language": "English"
+  }
+]

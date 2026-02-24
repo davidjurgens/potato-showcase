@@ -1,0 +1,23 @@
+{
+  "title": "Speech Accent Classification",
+  "description": "Classify speaker accents from audio recordings and assess speech quality. Annotators identify regional accent type, accent strength, audio quality, and speech clarity, with optional transcription correction. Based on the Mozilla Common Voice multilingual speech corpus.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Speech Processing", "Accent Classification", "Sociolinguistics"],
+  "useCase": ["Accent Identification", "Speech Quality Assessment", "Transcription Correction"],
+  "complexity": "beginner",
+  "tags": ["speech", "accent", "commonvoice", "lrec2020", "multilingual", "mozilla", "classification"],
+  "featured": false,
+  "paperReference": "Ardila et al., LREC 2020",
+  "paperUrl": "https://aclanthology.org/2020.lrec-1.520/",
+  "datasetUrl": "https://commonvoice.mozilla.org/",
+  "citation": "@inproceedings{ardila2020common,\n  title={Common Voice: A Massively-Multilingual Speech Corpus},\n  author={Ardila, Rosana and Branez, Megan and Davis, Kelly and Henretty, Michael and Kohler, Michael and Meyer, Josh and Morais, Reuben and Saunders, Lindsay and Tyers, Francis M. and Weber, Gregor},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference (LREC)},\n  pages={4218--4222},\n  year={2020}\n}"
+}

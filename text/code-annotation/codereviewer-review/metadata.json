@@ -1,0 +1,23 @@
+{
+  "title": "Code Review Annotation (CodeReviewer)",
+  "description": "Annotation of code review activities based on the CodeReviewer benchmark. Annotators identify issues in code diffs, classify defect types, assign severity levels, make review decisions, and provide natural language review comments, supporting research in automated code review and software engineering.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "radio", "text"],
+  "domain": ["Software Engineering", "Code Review", "NLP"],
+  "useCase": ["Code Review Automation", "Defect Detection", "Code Quality Assessment"],
+  "complexity": "advanced",
+  "tags": ["code-review", "software-engineering", "code-quality", "fse2022", "codereviewer"],
+  "featured": false,
+  "paperReference": "Li et al., FSE 2022",
+  "paperUrl": "https://doi.org/10.1145/3540250.3549081",
+  "datasetUrl": "https://github.com/microsoft/CodeBERT/tree/master/CodeReviewer",
+  "citation": "@inproceedings{li2022codereviewer,\n    title = \"{C}ode{R}eviewer: Pre-Training for Automating Code Review Activities\",\n    author = \"Li, Zhiyu and Lu, Shuai and Guo, Daya and Duan, Nan and Janber, Shailesh and Zheng, Ming and Svyatkovskiy, Alexey and Shangyin, Thomas and Liu, Jian and Yin, Shengyu\",\n    booktitle = \"Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    url = \"https://doi.org/10.1145/3540250.3549081\",\n    pages = \"1035--1047\"\n}"
+}

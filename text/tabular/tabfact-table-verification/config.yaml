@@ -1,0 +1,111 @@
+# Table-Based Fact Verification (TabFact)
+# Based on Chen et al., ICLR 2020
+# Paper: https://arxiv.org/abs/1909.02164
+# Dataset: https://github.com/wenhuchen/Table-Fact-Checking
+#
+# This task asks annotators to verify natural language claims against
+# structured tabular data extracted from Wikipedia. The annotator must
+# determine whether the table entails or refutes the claim, identify
+# which cells provide evidence, and explain their reasoning.
+#
+# Verdict Labels:
+# - ENTAILED: The table provides sufficient evidence that the claim is true
+# - REFUTED: The table provides evidence that contradicts the claim
+# - UNKNOWN: The table does not contain enough information to verify or refute
+#
+# Annotation Guidelines:
+# 1. Read the claim carefully and identify the specific assertion being made
+# 2. Examine the full table, paying attention to column headers and row labels
+# 3. Look for cells that directly relate to the entities and values in the claim
+# 4. Check for numerical comparisons (greater, less, equal, superlatives)
+# 5. Verify whether the claim correctly describes relationships in the table
+# 6. Highlight cells that serve as evidence for your verdict
+# 7. Mark contradicting evidence if the claim gets a detail wrong
+# 8. Provide a brief explanation of your reasoning
+#
+# Common Pitfalls:
+# - Claims may reference aggregated values (totals, averages) not in the table
+# - Watch for off-by-one errors in rankings and ordinal claims
+# - Some claims involve multiple conditions that all must be verified
+# - Distinguish between "not supported" and "actively contradicted"
+
+port: 8000
+server_name: localhost
+task_name: "Table-Based Fact Verification (TabFact)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: claim
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Verdict on the claim
+  - annotation_type: radio
+    name: verdict
+    description: "Based on the table, is the claim entailed (true), refuted (false), or unknown?"
+    labels:
+      - "entailed"
+      - "refuted"
+      - "unknown"
+    keyboard_shortcuts:
+      "entailed": "e"
+      "refuted": "r"
+      "unknown": "u"
+    tooltips:
+      "entailed": "The table provides sufficient evidence that the claim is true"
+      "refuted": "The table provides evidence that contradicts the claim"
+      "unknown": "The table does not contain enough information to determine truth"
+
+  # Step 2: Evidence cell highlighting
+  - annotation_type: span
+    name: evidence_cells
+    description: "Highlight the relevant parts of the table that support or contradict the claim"
+    labels:
+      - "supporting-evidence"
+      - "contradicting-evidence"
+      - "irrelevant"
+    label_colors:
+      "supporting-evidence": "#22c55e"
+      "contradicting-evidence": "#ef4444"
+      "irrelevant": "#9ca3af"
+    tooltips:
+      "supporting-evidence": "Cells or text that directly support the claim being true"
+      "contradicting-evidence": "Cells or text that directly contradict the claim"
+      "irrelevant": "Content that is related but does not serve as evidence"
+    allow_overlapping: false
+
+  # Step 3: Reasoning explanation
+  - annotation_type: text
+    name: reasoning
+    description: "Explain why the statement is entailed or refuted by the table. Reference specific cells or values."
+
+annotation_instructions: |
+  You will be shown a claim and an HTML table from Wikipedia. Your task is to:
+  1. Determine whether the claim is ENTAILED (supported by the table), REFUTED (contradicted by the table), or UNKNOWN (cannot be determined from the table).
+  2. Highlight the specific cells or text that serve as evidence for your decision.
+  3. Provide a brief explanation referencing the specific values or relationships you used.
+
+  Tips:
+  - Pay attention to numerical comparisons and rankings.
+  - Some claims require combining information from multiple cells.
+  - If the table simply does not contain the relevant information, choose "unknown".
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <h3 style="color: #1e40af; margin-bottom: 10px;">Table: {{table_title}}</h3>
+    <div style="overflow-x: auto; margin-bottom: 20px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; background: #f9fafb;">
+      {{table_html}}
+    </div>
+    <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px;">
+      <strong style="color: #92400e;">Claim:</strong>
+      <span style="font-size: 16px; line-height: 1.6;">{{claim}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

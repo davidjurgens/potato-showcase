@@ -1,0 +1,23 @@
+{
+  "title": "AlpacaEval: Instruction-Following Preference Evaluation",
+  "description": "Pairwise preference annotation for instruction-following language models. Annotators compare two model responses side by side, select their preferred response, indicate preference strength, and rate individual response quality across diverse instruction categories.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["pairwise", "radio", "text"],
+  "domain": ["AI Evaluation", "Preference Annotation", "LLM Comparison"],
+  "useCase": ["Preference Evaluation", "Pairwise Comparison", "Model Benchmarking"],
+  "complexity": "intermediate",
+  "tags": ["alpacaeval", "preference-evaluation", "pairwise-comparison", "instruction-following", "llm-comparison"],
+  "featured": false,
+  "paperReference": "Li et al., arXiv 2023",
+  "paperUrl": "https://arxiv.org/abs/2404.04475",
+  "datasetUrl": "https://github.com/tatsu-lab/alpaca_eval",
+  "citation": "@article{li2024alpacaeval,\n  title={AlpacaEval: An Automatic Evaluator for Instruction-following Language Models},\n  author={Li, Xuechen and Zhang, Tianyi and Dubois, Yann and Taori, Rohan and Gulrajani, Ishaan and Guestrin, Carlos and Liang, Percy and Hashimoto, Tatsunori B.},\n  journal={arXiv preprint arXiv:2404.04475},\n  year={2024}\n}"
+}

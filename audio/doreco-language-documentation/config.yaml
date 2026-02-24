@@ -1,0 +1,235 @@
+# DoReCo Language Documentation Annotation
+# Based on Paschen et al., Scientific Data 2022
+# Paper: https://doi.org/10.1038/s41597-022-01694-4
+# Dataset: https://doreco.huma-num.fr/
+#
+# Task: Multi-tier language documentation annotation following ELAN conventions.
+# Annotators segment field-recorded audio into words and morphemes, provide
+# Leipzig-style interlinear glosses, free translations, and clause-type
+# classifications -- all aligned to the same audio timeline in parallel tiers.
+#
+# ELAN-style multi-tier design:
+#   Tier 1 (span)  - word_tier: word-level segmentation with word-class labels
+#   Tier 2 (span)  - morpheme_tier: morpheme-level segmentation with morpheme types
+#   Tier 3 (text)  - gloss: Leipzig-style interlinear gloss for each morpheme
+#   Tier 4 (text)  - free_translation: sentence-level free translation
+#   Tier 5 (radio) - clause_type: syntactic clause type classification
+#
+# Guidelines:
+#   - Start by listening to the full utterance, then segment words on Tier 1
+#   - Subdivide each word into morphemes on Tier 2 where applicable
+#   - Use the Leipzig Glossing Rules for Tier 3 (capitalize grammatical glosses)
+#   - Provide an idiomatic free translation on Tier 4
+#   - Select the clause type on Tier 5 based on the full utterance
+
+port: 8000
+server_name: localhost
+task_name: "DoReCo Language Documentation Annotation"
+
+data_files:
+  - sample-data.json
+id_key: id
+audio_key: audio_url
+
+output_file: annotations.json
+
+annotation_instructions: |
+  ## DoReCo Language Documentation Annotation
+
+  You will annotate field-recorded audio from under-described languages using a
+  multi-tier ELAN-style annotation scheme. Each tier captures a different level
+  of linguistic analysis, and all tiers are time-aligned to the same audio file.
+
+  ### Tier 1 -- Word Tier (word-level segmentation)
+  Segment the audio into individual words and classify each:
+  - **content-word** -- Nouns, verbs, adjectives, adverbs with lexical meaning
+  - **function-word** -- Determiners, prepositions, conjunctions, auxiliaries
+  - **interjection** -- Discourse particles, response words (e.g., "mhm", "oh")
+  - **hesitation** -- Filled pauses, false starts, self-corrections
+  - **foreign-word** -- Words borrowed or code-switched from another language
+
+  ### Tier 2 -- Morpheme Tier (morpheme segmentation)
+  Segment each word into its constituent morphemes:
+  - **root** -- The lexical root or stem of the word
+  - **prefix** -- Morpheme attached before the root
+  - **suffix** -- Morpheme attached after the root
+  - **infix** -- Morpheme inserted within the root
+  - **clitic** -- Phonologically bound but syntactically free element
+  - **reduplication** -- Repeated morphological material
+
+  ### Tier 3 -- Gloss
+  Provide a Leipzig-style interlinear gloss for each morpheme. Use standard
+  abbreviations in CAPS for grammatical categories (e.g., PST, PL, NOM, ERG,
+  3SG). Gloss lexical morphemes in lowercase English.
+
+  ### Tier 4 -- Free Translation
+  Provide an idiomatic English translation of the full utterance.
+
+  ### Tier 5 -- Clause Type
+  Classify the syntactic type of the clause:
+  - **declarative** -- Statement
+  - **interrogative** -- Question
+  - **imperative** -- Command or request
+  - **exclamative** -- Exclamation
+  - **relative** -- Relative clause
+  - **subordinate** -- Subordinate/adverbial clause
+
+annotation_schemes:
+  - annotation_type: span
+    name: word_tier
+    description: "Word-level segmentation. Select each word span and classify it by word type."
+    span_mode: temporal
+    labels:
+      - name: "content-word"
+        color: "#3B82F6"
+        tooltip: "Lexical word carrying semantic content (nouns, verbs, adjectives, adverbs)"
+        key_value: "1"
+      - name: "function-word"
+        color: "#10B981"
+        tooltip: "Grammatical word (determiners, prepositions, conjunctions, auxiliaries)"
+        key_value: "2"
+      - name: "interjection"
+        color: "#F59E0B"
+        tooltip: "Discourse particle or response word (e.g., mhm, oh, yeah)"
+        key_value: "3"
+      - name: "hesitation"
+        color: "#EF4444"
+        tooltip: "Filled pause, false start, or self-correction"
+        key_value: "4"
+      - name: "foreign-word"
+        color: "#8B5CF6"
+        tooltip: "Borrowed word or code-switch from another language"
+        key_value: "5"
+
+  - annotation_type: span
+    name: morpheme_tier
+    description: "Morpheme-level segmentation within words. Identify morpheme boundaries and classify each morpheme."
+    span_mode: temporal
+    labels:
+      - name: "root"
+        color: "#1D4ED8"
+        tooltip: "Lexical root or stem -- the core meaning-bearing morpheme"
+        key_value: "q"
+      - name: "prefix"
+        color: "#059669"
+        tooltip: "Bound morpheme attached before the root"
+        key_value: "w"
+      - name: "suffix"
+        color: "#D97706"
+        tooltip: "Bound morpheme attached after the root"
+        key_value: "e"
+      - name: "infix"
+        color: "#DC2626"
+        tooltip: "Bound morpheme inserted within the root"
+        key_value: "r"
+      - name: "clitic"
+        color: "#7C3AED"
+        tooltip: "Phonologically bound but syntactically independent element"
+        key_value: "t"
+      - name: "reduplication"
+        color: "#DB2777"
+        tooltip: "Repeated morphological material (full or partial reduplication)"
+        key_value: "y"
+
+  - annotation_type: text
+    name: gloss
+    description: "Leipzig-style interlinear gloss. Use CAPS for grammatical categories (e.g., PST, PL, NOM) and lowercase for lexical glosses."
+
+  - annotation_type: text
+    name: free_translation
+    description: "Idiomatic English free translation of the full utterance."
+
+  - annotation_type: radio
+    name: clause_type
+    description: "Syntactic clause type of the utterance."
+    labels:
+      - name: "declarative"
+        tooltip: "Statement or assertion"
+        key_value: "a"
+      - name: "interrogative"
+        tooltip: "Question (content or polar)"
+        key_value: "s"
+      - name: "imperative"
+        tooltip: "Command, request, or instruction"
+        key_value: "d"
+      - name: "exclamative"
+        tooltip: "Exclamation expressing surprise, emphasis, or emotion"
+        key_value: "f"
+      - name: "relative"
+        tooltip: "Relative clause modifying a noun"
+        key_value: "g"
+      - name: "subordinate"
+        tooltip: "Subordinate or adverbial clause"
+        key_value: "h"
+
+html_layout: |
+  <div class="annotator-container" style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
+    <h3 style="margin-bottom: 4px;">DoReCo Language Documentation</h3>
+    <p style="color: #6B7280; margin-top: 0;">
+      Language: <strong>{{language_name}}</strong> ({{language_iso}}) |
+      Speaker: <strong>{{speaker_id}}</strong> |
+      Genre: <strong>{{genre}}</strong>
+    </p>
+
+    <div class="audio-container" style="background: #F3F4F6; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <div id="waveform" style="width: 100%; height: 128px; margin-top: 8px; background: #E5E7EB; border-radius: 4px;"></div>
+      <p style="font-size: 0.85em; color: #9CA3AF; margin: 4px 0 0;">
+        Click and drag on the waveform to select time-aligned spans for annotation.
+      </p>
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #3B82F6;">Tier 1 -- Word Segmentation</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Segment the utterance into words and classify each word.
+      </p>
+      {{word_tier}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #059669;">Tier 2 -- Morpheme Segmentation</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Subdivide words into morphemes and classify each morpheme type.
+      </p>
+      {{morpheme_tier}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #D97706;">Tier 3 -- Interlinear Gloss</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Provide Leipzig-style glosses (CAPS for grammatical categories, lowercase for lexical items).
+      </p>
+      {{gloss}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #DC2626;">Tier 4 -- Free Translation</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Provide an idiomatic English translation of the entire utterance.
+      </p>
+      {{free_translation}}
+    </div>
+
+    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <h4 style="margin: 0 0 6px; color: #7C3AED;">Tier 5 -- Clause Type</h4>
+      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
+        Classify the syntactic clause type of this utterance.
+      </p>
+      {{clause_type}}
+    </div>
+  </div>
+
+audio_display:
+  show_waveform: true
+  playback_controls: true
+  allow_speed_control: true
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

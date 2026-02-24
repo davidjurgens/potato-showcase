@@ -1,0 +1,131 @@
+# IFEval: Instruction-Following Evaluation for Large Language Models
+# Based on "Instruction-Following Evaluation for Large Language Models" (Zhou et al., arXiv 2023)
+# Task: Evaluate whether LLM responses satisfy verifiable instruction constraints
+
+port: 8000
+server_name: localhost
+task_name: "IFEval Instruction-Following Evaluation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: instruction
+
+# Output
+output_file: annotations.json
+
+# Display layout showing instruction, constraints, and model response
+html_layout: |
+  <div class="ifeval-container" style="font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto;">
+    <div class="instruction-section" style="background: #e8f5e9; padding: 18px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid #4caf50;">
+      <h3 style="margin-top: 0; color: #2e7d32;">Instruction / Prompt</h3>
+      <div style="font-size: 15px; line-height: 1.6; white-space: pre-wrap;">{{instruction}}</div>
+    </div>
+    <div class="constraints-section" style="background: #fff3e0; padding: 18px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid #ff9800;">
+      <h3 style="margin-top: 0; color: #e65100;">Verifiable Constraints</h3>
+      <div style="font-size: 14px; line-height: 1.8; white-space: pre-wrap;">{{constraints}}</div>
+    </div>
+    <div class="response-section" style="background: #e3f2fd; padding: 18px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid #1976d2;">
+      <h3 style="margin-top: 0; color: #1565c0;">Model Response <span style="font-size: 12px; font-weight: normal; color: #666;">({{model_name}})</span></h3>
+      <div style="font-size: 14px; line-height: 1.6; white-space: pre-wrap;">{{model_response}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Overall pass/fail for instruction following
+  - name: "overall_pass"
+    description: "Does the model response satisfy ALL verifiable constraints in the instruction?"
+    annotation_type: radio
+    labels:
+      - name: "pass"
+        tooltip: "The response satisfies all listed constraints"
+        key_value: "p"
+      - name: "fail"
+        tooltip: "The response fails to satisfy one or more constraints"
+        key_value: "f"
+
+  # Which specific constraints were satisfied
+  - name: "constraints_satisfied"
+    description: "Select ALL constraints that the model response successfully satisfies."
+    annotation_type: multiselect
+    labels:
+      - name: "length-constraint"
+        tooltip: "Word count, sentence count, paragraph count, or character limits"
+      - name: "format-constraint"
+        tooltip: "Output format such as JSON, bullet points, numbered lists, markdown"
+      - name: "keyword-constraint"
+        tooltip: "Required inclusion or exclusion of specific words or phrases"
+      - name: "language-constraint"
+        tooltip: "Language, register, or tone requirements"
+      - name: "style-constraint"
+        tooltip: "Writing style such as formal, casual, poetic, technical"
+      - name: "structural-constraint"
+        tooltip: "Structural requirements like sections, headings, or specific organization"
+      - name: "content-constraint"
+        tooltip: "Topical requirements, specific information to include or exclude"
+      - name: "punctuation-constraint"
+        tooltip: "Specific punctuation rules such as no commas, end with a period"
+
+  # Overall response quality beyond just constraint satisfaction
+  - name: "response_quality"
+    description: "How would you rate the overall quality of the response, independent of constraint satisfaction?"
+    annotation_type: radio
+    labels:
+      - name: "excellent"
+        tooltip: "High quality, informative, well-written response"
+        key_value: "1"
+      - name: "good"
+        tooltip: "Adequate quality, mostly well-written"
+        key_value: "2"
+      - name: "acceptable"
+        tooltip: "Passable quality, gets the point across"
+        key_value: "3"
+      - name: "poor"
+        tooltip: "Low quality, unclear, or unhelpful response"
+        key_value: "4"
+
+  # Free-text explanation of failures
+  - name: "failure_explanation"
+    description: "If the response fails any constraint, explain which constraints failed and why."
+    annotation_type: text
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+# Detailed annotation instructions
+annotation_instructions: |
+  ## IFEval: Instruction-Following Evaluation
+
+  You are evaluating whether a large language model correctly followed verifiable
+  instructions with specific constraints.
+
+  ### Your Tasks:
+
+  1. **Read the instruction** carefully, paying attention to all specific constraints.
+  2. **Review the listed constraints** -- these are the verifiable requirements.
+  3. **Read the model response** and check each constraint one by one.
+  4. **Mark overall pass/fail**: "pass" only if ALL constraints are satisfied.
+  5. **Select satisfied constraints**: Check each constraint type that was met.
+  6. **Rate response quality**: Assess the overall quality beyond constraint adherence.
+  7. **Explain failures**: If any constraint failed, describe what went wrong.
+
+  ### Constraint Types:
+  - **Length**: "Write exactly 3 paragraphs", "Use at most 50 words"
+  - **Format**: "Respond in JSON format", "Use bullet points"
+  - **Keyword**: "Include the word 'therefore' at least twice"
+  - **Language**: "Write in formal English", "Avoid slang"
+  - **Style**: "Write in a poetic style", "Use technical language"
+  - **Structural**: "Include a title and three sections"
+  - **Content**: "Do not mention any specific brand names"
+  - **Punctuation**: "Do not use any commas", "End every sentence with an exclamation mark"
+
+  ### Important Notes:
+  - Be strict: if a constraint says "exactly 3 paragraphs" and there are 4, it fails.
+  - Check constraints literally -- do not interpret them loosely.
+  - A response can be high quality but still fail constraints (or vice versa).

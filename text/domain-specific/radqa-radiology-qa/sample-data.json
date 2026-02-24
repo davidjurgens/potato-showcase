@@ -1,0 +1,62 @@
+[
+  {
+    "id": "radqa_001",
+    "report": "CHEST X-RAY, PA AND LATERAL. CLINICAL INDICATION: Shortness of breath. COMPARISON: Prior chest radiograph dated 3 days ago. FINDINGS: The heart size is mildly enlarged. There is a small left pleural effusion with associated left basilar atelectasis. The right lung is clear. No pneumothorax is identified. The mediastinal contours are unremarkable. Osseous structures are intact. IMPRESSION: 1. Small left pleural effusion with basilar atelectasis, new compared to prior study. 2. Mild cardiomegaly, stable.",
+    "question": "Is there any pleural effusion present?",
+    "report_type": "chest-xray"
+  },
+  {
+    "id": "radqa_002",
+    "report": "CT ABDOMEN AND PELVIS WITH CONTRAST. CLINICAL INDICATION: Abdominal pain, rule out appendicitis. COMPARISON: None. FINDINGS: The liver, spleen, pancreas, and adrenal glands appear normal. The kidneys enhance symmetrically without hydronephrosis or calculi. The appendix measures 11 mm in diameter with periappendiceal fat stranding and a 5 mm appendicolith at its base. There is mild free fluid in the pelvis. No bowel obstruction is identified. The abdominal aorta is normal in caliber. No pathologically enlarged lymph nodes are seen. IMPRESSION: Acute appendicitis with appendicolith. Recommend surgical consultation.",
+    "question": "What is the diameter of the appendix?",
+    "report_type": "ct-abdomen"
+  },
+  {
+    "id": "radqa_003",
+    "report": "MRI BRAIN WITHOUT AND WITH CONTRAST. CLINICAL INDICATION: New onset seizures. COMPARISON: None available. FINDINGS: There is a 2.3 x 1.8 cm ring-enhancing lesion in the left temporal lobe with surrounding vasogenic edema. The lesion demonstrates restricted diffusion centrally and peripheral enhancement following gadolinium administration. There is mild mass effect on the adjacent left lateral ventricle without midline shift. The remainder of the brain parenchyma is unremarkable. No additional enhancing lesions are identified. The major intracranial vessels demonstrate normal flow voids. IMPRESSION: Ring-enhancing left temporal lobe lesion with edema. Differential diagnosis includes high-grade glioma, metastasis, or abscess. Recommend neurosurgical consultation and consideration of stereotactic biopsy.",
+    "question": "What is the size of the brain lesion?",
+    "report_type": "mri-brain"
+  },
+  {
+    "id": "radqa_004",
+    "report": "CT CHEST WITH CONTRAST. CLINICAL INDICATION: Cough and hemoptysis. COMPARISON: CT chest 6 months prior. FINDINGS: There is a 3.5 cm spiculated mass in the right upper lobe, increased from 2.1 cm on the prior study. Multiple mediastinal lymph nodes are enlarged, the largest measuring 2.2 cm in the subcarinal region. A 1.2 cm right hilar lymph node is also noted. The left lung is clear without masses or consolidation. There is no pleural effusion bilaterally. The thoracic aorta and main pulmonary artery are normal in caliber. IMPRESSION: 1. Enlarging right upper lobe spiculated mass, highly suspicious for primary lung malignancy. 2. Mediastinal and hilar lymphadenopathy concerning for nodal metastases. Recommend tissue sampling.",
+    "question": "Has the lung mass changed compared to the prior study?",
+    "report_type": "ct-chest"
+  },
+  {
+    "id": "radqa_005",
+    "report": "CHEST X-RAY, PORTABLE AP. CLINICAL INDICATION: Fever, ICU patient on mechanical ventilation. COMPARISON: Chest radiograph from yesterday. FINDINGS: The endotracheal tube tip is positioned approximately 4 cm above the carina, in satisfactory position. A right internal jugular central venous catheter terminates in the superior vena cava. A nasogastric tube courses below the diaphragm with the tip in the gastric body. The cardiac silhouette is top normal in size. There are bilateral diffuse airspace opacities, worse on the right, with air bronchograms. No pneumothorax. Small bilateral pleural effusions are present. IMPRESSION: 1. Bilateral airspace disease consistent with ARDS or multifocal pneumonia, worsened from prior. 2. Lines and tubes in satisfactory position.",
+    "question": "Where is the endotracheal tube positioned?",
+    "report_type": "chest-xray"
+  },
+  {
+    "id": "radqa_006",
+    "report": "CT ABDOMEN AND PELVIS WITH CONTRAST. CLINICAL INDICATION: Follow-up pancreatic cyst. COMPARISON: CT abdomen 1 year ago. FINDINGS: A cystic lesion in the body of the pancreas measures 2.8 x 2.4 cm, previously 2.6 x 2.2 cm. The cyst has a thin wall without nodular enhancement or solid component. The main pancreatic duct measures 3 mm and is not dilated. The liver demonstrates a 1.5 cm hypodense lesion in segment 6 with characteristics consistent with a simple hepatic cyst. The gallbladder, spleen, adrenal glands, and kidneys are unremarkable. No lymphadenopathy or free fluid. IMPRESSION: 1. Pancreatic body cyst, minimally increased in size, stable in appearance. Continued surveillance recommended per ACR guidelines. 2. Simple hepatic cyst, stable.",
+    "question": "Has the pancreatic cyst changed in size?",
+    "report_type": "ct-abdomen"
+  },
+  {
+    "id": "radqa_007",
+    "report": "MRI BRAIN WITHOUT CONTRAST. CLINICAL INDICATION: Headache, evaluate for stroke. COMPARISON: None. FINDINGS: There is a focus of restricted diffusion in the right caudate nucleus and adjacent anterior limb of the internal capsule measuring approximately 1.5 x 0.8 cm, consistent with acute ischemic infarction in the lenticulostriate artery territory. No hemorrhagic transformation is identified. The remainder of the brain parenchyma demonstrates age-appropriate volume loss and scattered periventricular white matter T2 hyperintensities consistent with chronic small vessel ischemic changes. The ventricles are normal in size and configuration. No extra-axial collections. IMPRESSION: 1. Acute right caudate nucleus infarction. 2. Chronic small vessel ischemic disease.",
+    "question": "What is the location of the acute infarction?",
+    "report_type": "mri-brain"
+  },
+  {
+    "id": "radqa_008",
+    "report": "CT CHEST WITHOUT CONTRAST. CLINICAL INDICATION: Screening for lung cancer, 40 pack-year smoking history. COMPARISON: Initial screening study. FINDINGS: A 6 mm ground-glass nodule is noted in the right lower lobe (series 3, image 187). A 4 mm solid nodule is present in the left upper lobe (series 3, image 62). No dominant mass or consolidation. The airways are patent. Mild centrilobular emphysema is noted in the upper lobes bilaterally. Coronary artery calcifications are present. No pleural effusion or pneumothorax. The visualized upper abdomen is unremarkable. IMPRESSION: 1. 6 mm right lower lobe ground-glass nodule. Recommend follow-up CT in 6 months per Lung-RADS 3. 2. 4 mm left upper lobe solid nodule, Lung-RADS 2, likely benign. 3. Mild centrilobular emphysema.",
+    "question": "What follow-up is recommended for the lung nodule?",
+    "report_type": "ct-chest"
+  },
+  {
+    "id": "radqa_009",
+    "report": "CHEST X-RAY, PA AND LATERAL. CLINICAL INDICATION: Pre-operative evaluation. COMPARISON: Chest radiograph 2 years ago. FINDINGS: The lungs are clear bilaterally without focal consolidation, effusion, or pneumothorax. The heart size is normal. The mediastinal contours are within normal limits. The aorta is mildly tortuous consistent with age-related changes. The visualized osseous structures demonstrate mild degenerative changes of the thoracic spine. No acute bony abnormality. IMPRESSION: No acute cardiopulmonary abnormality. Stable mild aortic tortuosity and thoracic spondylosis.",
+    "question": "Are there any pulmonary nodules?",
+    "report_type": "chest-xray"
+  },
+  {
+    "id": "radqa_010",
+    "report": "CT ABDOMEN AND PELVIS WITH CONTRAST. CLINICAL INDICATION: Hematuria, evaluate for renal mass. COMPARISON: Ultrasound from 2 weeks ago showing right renal mass. FINDINGS: There is a 4.2 x 3.8 x 3.6 cm heterogeneously enhancing mass arising from the upper pole of the right kidney. The mass demonstrates avid arterial enhancement with washout. No renal vein invasion or extension into the inferior vena cava is identified. The left kidney is normal. No hydronephrosis bilaterally. The adrenal glands are normal. No retroperitoneal lymphadenopathy. The liver, spleen, and pancreas are unremarkable. No peritoneal carcinomatosis. IMPRESSION: Right renal upper pole mass, highly suspicious for renal cell carcinoma (cT1b). No evidence of local invasion or distant metastases. Recommend urologic consultation.",
+    "question": "Is there any vascular invasion by the renal mass?",
+    "report_type": "ct-abdomen"
+  }
+]

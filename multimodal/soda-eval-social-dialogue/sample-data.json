@@ -1,0 +1,72 @@
+[
+  {
+    "id": "soda_001",
+    "narrative": "Alex and Jordan have been close friends since college. Alex just got promoted at work and is excited to share the news. They meet at their favorite coffee shop after work.",
+    "dialogue": "Speaker 1 (Alex): Hey! You're not going to believe this. I got the promotion!\nSpeaker 2 (Jordan): No way! Are you serious? That's amazing, Alex!\nSpeaker 1 (Alex): Dead serious. They told me this morning. I'm going to be leading the entire product team.\nSpeaker 2 (Jordan): I knew it was going to happen. You've been working so hard on that project. When do you start?\nSpeaker 1 (Alex): Next Monday. I'm honestly a little nervous. It's a big jump.\nSpeaker 2 (Jordan): You're going to crush it. Remember when you thought you couldn't handle the presentation last quarter? You ended up getting a standing ovation.\nSpeaker 1 (Alex): Ha, that's true. Thanks, Jordan. It really means a lot to have your support.\nSpeaker 2 (Jordan): Always. Now let me buy you a celebratory coffee. Actually, make that two.",
+    "relation": "friends",
+    "head_event": "PersonX gets promoted at work"
+  },
+  {
+    "id": "soda_002",
+    "narrative": "A mother calls her adult son who has been living abroad for two years. She is worried because he hasn't called in three weeks and she heard about severe weather in his area.",
+    "dialogue": "Speaker 1 (Mom): Sweetie, I've been trying to reach you for days. Are you okay?\nSpeaker 2 (Son): Hi Mom, yeah I'm fine. Sorry I haven't called. Things have been really hectic at the lab.\nSpeaker 1 (Mom): I saw on the news there were terrible storms over there. Your father and I were worried sick.\nSpeaker 2 (Son): Oh, the storms were mostly south of the city. We just had some rain here. I should have called to let you know.\nSpeaker 1 (Mom): Yes, you should have. Three weeks without hearing from you, and then I see flooding on television. What am I supposed to think?\nSpeaker 2 (Son): You're right, Mom. I'm sorry. I'll set a reminder to call every weekend. I promise.\nSpeaker 1 (Mom): That's all I ask. Now tell me about your research. Are you eating properly?",
+    "relation": "family",
+    "head_event": "PersonX worries about PersonY's safety"
+  },
+  {
+    "id": "soda_003",
+    "narrative": "Two coworkers, Priya and Marcus, are in the break room. Priya has been asked to work overtime again this weekend, and she is frustrated because it keeps happening to her but not to other team members.",
+    "dialogue": "Speaker 1 (Priya): Can you believe it? Thompson asked me to work this weekend. Again.\nSpeaker 2 (Marcus): Again? That's the third weekend in a row, isn't it?\nSpeaker 1 (Priya): Fourth, actually. Meanwhile, Jake and Sofia never get asked. I'm starting to think I'm being singled out.\nSpeaker 2 (Marcus): Have you talked to HR about it?\nSpeaker 1 (Priya): I don't want to make waves. I'm still relatively new.\nSpeaker 2 (Marcus): But that's exactly why you should say something. If you don't set boundaries now, they'll keep pushing. You have the same rights as everyone else on the team.\nSpeaker 1 (Priya): I know you're right. Maybe I'll start by talking to Thompson directly. Just ask why it's always me.\nSpeaker 2 (Marcus): That's a good first step. And document everything -- dates, hours, who else was available. Just in case.",
+    "relation": "coworkers",
+    "head_event": "PersonX is asked to work overtime repeatedly"
+  },
+  {
+    "id": "soda_004",
+    "narrative": "Two strangers are waiting at a bus stop on a rainy evening. One of them notices the other is shivering and offers to share their umbrella.",
+    "dialogue": "Speaker 1: Excuse me, would you like to share my umbrella? You look like you're getting soaked.\nSpeaker 2: Oh, that's really kind of you. Thank you. I left mine at the office like an idiot.\nSpeaker 1: Happens to the best of us. I actually keep a spare in my bag because I've done that so many times.\nSpeaker 2: Smart thinking. Do you take this bus every day?\nSpeaker 1: Most evenings, yes. The 42 to Riverside?\nSpeaker 2: Same here, actually. I just started a new job downtown last week. Still figuring out the bus schedule.\nSpeaker 1: Well, the 42 is usually pretty reliable. Except on rainy days like this -- it tends to run about ten minutes late.\nSpeaker 2: Good to know. And thanks again for the umbrella. I'm Sam, by the way.\nSpeaker 1: Nice to meet you, Sam. I'm Taylor.",
+    "relation": "strangers",
+    "head_event": "PersonX offers help to a stranger"
+  },
+  {
+    "id": "soda_005",
+    "narrative": "A couple has been dating for six months. They are having dinner at home and one of them brings up the topic of meeting each other's parents for the first time.",
+    "dialogue": "Speaker 1 (Riley): So, my mom asked about you again today.\nSpeaker 2 (Casey): Really? What did she say?\nSpeaker 1 (Riley): She wants to know when she can meet you. She keeps saying 'bring that special person over for Sunday dinner.'\nSpeaker 2 (Casey): That's sweet. I'd love to meet her. I'm just... a little nervous, honestly.\nSpeaker 1 (Riley): Why? She's going to love you. Trust me.\nSpeaker 2 (Casey): What if she asks me a million questions? What do your parents do for fun? What should I bring?\nSpeaker 1 (Riley): Bring a dessert -- she has a sweet tooth. And don't worry about questions. She's warm and easygoing. My dad might quiz you about sports, though.\nSpeaker 2 (Casey): Sports? I know absolutely nothing about sports.\nSpeaker 1 (Riley): Then you'll have something in common with me. We'll survive together.\nSpeaker 2 (Casey): Okay, let's do it. How about next Sunday?",
+    "relation": "romantic-partners",
+    "head_event": "PersonX plans to introduce PersonY to family"
+  },
+  {
+    "id": "soda_006",
+    "narrative": "A college student goes to their professor's office hours to ask for an extension on an assignment. The student has been dealing with a family emergency.",
+    "dialogue": "Speaker 1 (Student): Professor Chen, do you have a moment? I wanted to talk about the research paper due Friday.\nSpeaker 2 (Professor): Of course, come in. What's on your mind?\nSpeaker 1 (Student): I've been dealing with a family situation -- my father was hospitalized last week. I've been traveling back and forth and I'm behind on the paper.\nSpeaker 2 (Professor): I'm sorry to hear that. Is he doing better now?\nSpeaker 1 (Student): He's stable, thank you. But I don't think I can submit something I'm proud of by Friday. Would it be possible to get a few extra days?\nSpeaker 2 (Professor): Absolutely. Family comes first. Let's say next Wednesday -- does that give you enough time?\nSpeaker 1 (Student): That would be perfect. I really appreciate it, Professor. I don't want you to think I'm taking advantage.\nSpeaker 2 (Professor): Not at all. You've been one of the most engaged students in the class. Just send me a brief email confirming the new deadline so we both have it in writing.",
+    "relation": "strangers",
+    "head_event": "PersonX asks for an extension due to personal circumstances"
+  },
+  {
+    "id": "soda_007",
+    "narrative": "Two siblings are cleaning out their childhood home because their parents are moving to a smaller apartment. They find old photo albums and toys in the attic.",
+    "dialogue": "Speaker 1 (Dana): Oh my god, look at this. It's your old stuffed elephant. What was his name?\nSpeaker 2 (Eli): Mr. Trunks! I can't believe Mom kept him. He used to go everywhere with me.\nSpeaker 1 (Dana): Remember when you lost him at the airport and Dad ran back through security to find him?\nSpeaker 2 (Eli): And they almost missed the flight. Mom was furious.\nSpeaker 1 (Dana): She wasn't furious. She was terrified. There's a difference.\nSpeaker 2 (Eli): Ha, maybe. Oh look, here are the photo albums from that summer at Grandma's lake house.\nSpeaker 1 (Dana): Those were the best summers. Do you think Mom and Dad are really okay with leaving this place?\nSpeaker 2 (Eli): I think they're ready. The house is too big for just the two of them now. But yeah, it's weird. This was the only home we ever knew.\nSpeaker 1 (Dana): We should take some of these photos and frame them for their new apartment. Give them something familiar.",
+    "relation": "family",
+    "head_event": "PersonX and PersonY reminisce about childhood memories"
+  },
+  {
+    "id": "soda_008",
+    "narrative": "Two friends meet after one of them has returned from a three-month solo backpacking trip through Southeast Asia. The traveler seems changed and more reflective.",
+    "dialogue": "Speaker 1 (Mika): You look different. I don't know what it is, but something's changed.\nSpeaker 2 (Lena): Three months of sleeping in hostels and eating street food will do that to you.\nSpeaker 1 (Mika): No, it's more than that. You seem calmer. More present. Was it everything you hoped for?\nSpeaker 2 (Lena): Honestly? It was harder than I expected. There were days I was lonely and wanted to come home. But then there were these moments -- watching the sunrise over Angkor Wat, or this random family in Laos that invited me for dinner even though we couldn't understand each other.\nSpeaker 1 (Mika): That sounds incredible.\nSpeaker 2 (Lena): It made me realize how much I was rushing through life here. Always planning the next thing instead of being where I am.\nSpeaker 1 (Mika): So you're not going back to the consulting job?\nSpeaker 2 (Lena): I don't know yet. I'm giving myself a month to figure it out. No rushing.",
+    "relation": "friends",
+    "head_event": "PersonX returns from a transformative travel experience"
+  },
+  {
+    "id": "soda_009",
+    "narrative": "A new employee is being shown around the office on their first day by a colleague from the same team. The new employee is anxious but the colleague is friendly and welcoming.",
+    "dialogue": "Speaker 1 (Colleague): And this is the kitchen. Most important place in the office, honestly.\nSpeaker 2 (New Employee): Ha, good to know. Is there a coffee machine?\nSpeaker 1 (Colleague): Two, actually. The one on the left is better. Don't tell anyone I told you that.\nSpeaker 2 (New Employee): Secret's safe with me. Everyone seems really nice. Is it always like this?\nSpeaker 1 (Colleague): For the most part, yeah. It's a pretty collaborative environment. You'll find your rhythm quickly.\nSpeaker 2 (New Employee): I hope so. I've been a little nervous, to be honest. New city, new job, new everything.\nSpeaker 1 (Colleague): That's totally normal. I felt the same way when I started eight months ago. If you need anything -- or just want to grab lunch -- my desk is right across from yours.\nSpeaker 2 (New Employee): I really appreciate that. Thanks for taking the time to show me around.\nSpeaker 1 (Colleague): Of course. We're a team. Now let me introduce you to Raj. He handles all the onboarding paperwork.",
+    "relation": "coworkers",
+    "head_event": "PersonX starts a new job and feels anxious"
+  },
+  {
+    "id": "soda_010",
+    "narrative": "An elderly woman is at a bookstore and strikes up a conversation with a young student who is browsing the same section. They bond over a shared love of classic literature.",
+    "dialogue": "Speaker 1 (Woman): You're looking at the Bronte collection? You have good taste.\nSpeaker 2 (Student): Thank you! I'm reading Wuthering Heights for my literature class, but I actually like it way more than I expected.\nSpeaker 1 (Woman): That happened to me fifty years ago. I picked it up expecting to hate it, and then I couldn't put it down.\nSpeaker 2 (Student): Fifty years! Have you read it more than once?\nSpeaker 1 (Woman): I've lost count. Every time I read it, I notice something new. That's the mark of a great book, I think.\nSpeaker 2 (Student): That's beautiful. My friends think I'm weird for loving old books.\nSpeaker 1 (Woman): They're not old. They're timeless. There's a difference. And the people who wrote them felt the same things you feel now. That's the magic of it.\nSpeaker 2 (Student): I never thought of it that way. Do you have any other recommendations?\nSpeaker 1 (Woman): Try Jane Eyre next. Same fierce spirit, different journey. I think you'll love her.",
+    "relation": "strangers",
+    "head_event": "PersonX bonds with a stranger over shared interests"
+  }
+]

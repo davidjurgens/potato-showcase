@@ -1,0 +1,23 @@
+{
+  "title": "CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation",
+  "description": "Multi-tier ELAN-style annotation of multimodal sentiment and emotion in YouTube opinion videos. Annotators segment visual behaviors and acoustic events on parallel timeline tiers, classify emotions and sentiment polarity, and transcribe speech for the CMU-MOSEI dataset.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "radio", "text"],
+  "domain": ["Multimodal Analysis", "Sentiment Analysis", "Emotion Recognition"],
+  "useCase": ["Sentiment Detection", "Emotion Classification", "Multimodal Fusion"],
+  "complexity": "advanced",
+  "tags": ["multimodal", "sentiment", "emotion", "multi-tier", "elan-style", "acl2018", "cmu-mosei"],
+  "featured": false,
+  "paperReference": "Zadeh et al., ACL 2018",
+  "paperUrl": "https://aclanthology.org/P18-1208/",
+  "datasetUrl": "http://multicomp.cs.cmu.edu/resources/cmu-mosei-dataset/",
+  "citation": "@inproceedings{zadeh2018multimodal,\n  title={Multimodal Language Analysis in the Wild: CMU-MOSEI Dataset and Interpretable Dynamic Fusion Graph},\n  author={Zadeh, AmirAli Bagher and Liang, Paul Pu and Poria, Soujanya and Cambria, Erik and Morency, Louis-Philippe},\n  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics},\n  pages={2236--2246},\n  year={2018},\n  publisher={Association for Computational Linguistics}\n}"
+}

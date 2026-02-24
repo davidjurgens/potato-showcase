@@ -1,0 +1,23 @@
+{
+  "title": "Table-Based Fact Verification (TabFact)",
+  "description": "Verify textual claims against structured tabular data from Wikipedia. Based on TabFact (Chen et al., ICLR 2020). Annotators determine whether a natural language statement is entailed or refuted by the contents of a given table, highlight evidence cells, and provide reasoning.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "wenhuchen",
+    "affiliation": "University of California, Santa Barbara"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "span", "text"],
+  "domain": ["NLP", "Fact Verification", "Table Understanding"],
+  "useCase": ["Fact Verification", "Structured Data Reasoning", "Table QA"],
+  "complexity": "intermediate",
+  "tags": ["fact-verification", "table-understanding", "tabfact", "iclr2020", "structured-data"],
+  "featured": false,
+  "paperReference": "Chen et al., ICLR 2020",
+  "paperUrl": "https://arxiv.org/abs/1909.02164",
+  "datasetUrl": "https://github.com/wenhuchen/Table-Fact-Checking",
+  "citation": "@inproceedings{chen2020tabfact,\n    title = \"TabFact: A Large-scale Dataset for Table-Based Fact Verification\",\n    author = \"Chen, Wenhu  and Wang, Hongmin  and Chen, Jianshu  and Zhang, Yunkai  and Wang, Hong  and Li, Shiyang  and Zhou, Xiyou  and Wang, William Yang\",\n    booktitle = \"International Conference on Learning Representations (ICLR)\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/1909.02164\"\n}"
+}

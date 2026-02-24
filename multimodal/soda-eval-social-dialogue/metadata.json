@@ -1,0 +1,23 @@
+{
+  "title": "SODA: Social Dialogue Quality Evaluation",
+  "description": "Evaluate the quality of socially-grounded dialogues generated through social commonsense contextualization. Annotators rate naturalness, coherence, social appropriateness, and commonsense alignment of dialogues situated in specific social contexts and interpersonal relationships.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Dialogue Systems", "Social Commonsense", "NLP"],
+  "useCase": ["Dialogue Evaluation", "Social Commonsense Assessment", "Conversation Quality"],
+  "complexity": "intermediate",
+  "tags": ["dialogue", "social-commonsense", "soda", "emnlp2023", "conversation-quality", "evaluation"],
+  "featured": false,
+  "paperReference": "Kim et al., EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.799/",
+  "datasetUrl": "https://github.com/skywalker023/sodaverse",
+  "citation": "@inproceedings{kim2023soda,\n  title={SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization},\n  author={Kim, Hyunwoo and Hessel, Jack and Jiang, Liwei and Lu, Ximing and Yu, Youngjae and Zhou, Pei and Bras, Ronan Le and Alikhani, Malihe and Kim, Gunhee and Sap, Maarten and Choi, Yejin},\n  booktitle={Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n  pages={12886--12906},\n  year={2023}\n}"
+}

@@ -1,0 +1,158 @@
+# SODA: Social Dialogue Quality Evaluation
+# Based on "SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization" (Kim et al., EMNLP 2023)
+# Task: Evaluate quality of socially-grounded dialogues
+
+port: 8000
+server_name: localhost
+task_name: "SODA Social Dialogue Evaluation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+text_key: narrative
+
+# Output
+output_file: annotations.json
+
+# Display layout showing social context and dialogue in chat format
+html_layout: |
+  <div class="soda-container" style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;">
+    <div class="metadata-bar" style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+      <div style="background: #e8eaf6; padding: 7px 14px; border-radius: 8px;">
+        <strong>Relationship:</strong> {{relation}}
+      </div>
+    </div>
+    <div class="context-section" style="background: #f3e5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid #9c27b0;">
+      <h3 style="margin-top: 0; color: #6a1b9a;">Social Context / Narrative</h3>
+      <div style="font-size: 15px; line-height: 1.6;">{{narrative}}</div>
+    </div>
+    <div class="commonsense-section" style="background: #fff8e1; padding: 14px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid #ffa000;">
+      <h4 style="margin-top: 0; color: #e65100;">Head Event (Social Commonsense)</h4>
+      <div style="font-size: 14px; font-style: italic;">{{head_event}}</div>
+    </div>
+    <div class="dialogue-section" style="background: #fafafa; padding: 16px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <h3 style="margin-top: 0; color: #424242;">Dialogue</h3>
+      <div class="dialogue-turns" style="font-size: 14px; line-height: 1.8; white-space: pre-wrap;">{{dialogue}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Naturalness rating
+  - name: "naturalness"
+    description: "How natural does this dialogue sound? Would real people in this situation talk like this?"
+    annotation_type: radio
+    labels:
+      - name: "very-natural"
+        tooltip: "The dialogue sounds completely natural and realistic for the given context"
+        key_value: "1"
+      - name: "somewhat-natural"
+        tooltip: "The dialogue mostly sounds natural with minor awkward moments"
+        key_value: "2"
+      - name: "neutral"
+        tooltip: "The dialogue is neither clearly natural nor clearly unnatural"
+        key_value: "3"
+      - name: "somewhat-unnatural"
+        tooltip: "The dialogue has several unnatural-sounding turns or phrasings"
+        key_value: "4"
+      - name: "very-unnatural"
+        tooltip: "The dialogue sounds robotic, scripted, or implausible for the context"
+        key_value: "5"
+
+  # Coherence rating
+  - name: "coherence"
+    description: "How coherent is the dialogue? Do the turns logically follow each other?"
+    annotation_type: radio
+    labels:
+      - name: "fully-coherent"
+        tooltip: "All turns follow logically; the conversation flows perfectly"
+        key_value: "q"
+      - name: "mostly-coherent"
+        tooltip: "Most turns connect well with minor coherence issues"
+        key_value: "w"
+      - name: "somewhat-coherent"
+        tooltip: "Some turns connect but there are noticeable coherence gaps"
+        key_value: "e"
+      - name: "mostly-incoherent"
+        tooltip: "Many turns do not follow logically from previous turns"
+        key_value: "r"
+      - name: "fully-incoherent"
+        tooltip: "The turns seem disconnected or randomly ordered"
+        key_value: "t"
+
+  # Social appropriateness
+  - name: "social_appropriateness"
+    description: "Is the dialogue socially appropriate for the described relationship and context?"
+    annotation_type: radio
+    labels:
+      - name: "appropriate"
+        tooltip: "Perfectly appropriate for the relationship and social context"
+      - name: "mostly-appropriate"
+        tooltip: "Largely appropriate with minor social missteps"
+      - name: "neutral"
+        tooltip: "Neither clearly appropriate nor inappropriate"
+      - name: "mostly-inappropriate"
+        tooltip: "Several socially awkward or inappropriate exchanges"
+      - name: "inappropriate"
+        tooltip: "The dialogue is clearly inappropriate for the given context"
+
+  # Commonsense alignment
+  - name: "commonsense_alignment"
+    description: "How well does the dialogue align with the social commonsense context (the head event and narrative)?"
+    annotation_type: radio
+    labels:
+      - name: "strong-alignment"
+        tooltip: "The dialogue clearly reflects and is grounded in the social context"
+      - name: "moderate-alignment"
+        tooltip: "The dialogue mostly connects to the social context"
+      - name: "weak-alignment"
+        tooltip: "The dialogue has only loose connection to the social context"
+      - name: "no-alignment"
+        tooltip: "The dialogue does not relate to the provided social context"
+
+  # Free-text feedback
+  - name: "feedback"
+    description: "Provide specific feedback on dialogue quality. Note any unnatural turns, coherence breaks, or social missteps."
+    annotation_type: text
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2
+
+# Detailed annotation instructions
+annotation_instructions: |
+  ## SODA: Social Dialogue Quality Evaluation
+
+  You are evaluating dialogues that were generated using social commonsense
+  contextualization. Each dialogue is grounded in a social narrative and a
+  commonsense event describing the relationship between speakers.
+
+  ### Your Tasks:
+
+  1. **Read the social context** (narrative) and head event carefully.
+  2. **Read the full dialogue** before rating.
+  3. **Rate naturalness**: Does this sound like a real conversation between people
+     in this situation?
+  4. **Rate coherence**: Do the dialogue turns logically follow each other?
+  5. **Rate social appropriateness**: Is the tone and content appropriate for the
+     described relationship (friends, family, coworkers, strangers, etc.)?
+  6. **Rate commonsense alignment**: Does the dialogue reflect the social context?
+  7. **Provide feedback**: Note specific turns that are problematic and explain why.
+
+  ### What to Look For:
+  - **Natural dialogue** uses contractions, filler words, varied sentence length.
+  - **Coherent dialogue** maintains topic continuity and responds to previous turns.
+  - **Socially appropriate dialogue** matches the register expected for the relationship
+    (e.g., friends are casual, coworkers may be more formal).
+  - **Aligned dialogue** reflects the narrative situation and social commonsense.
+
+  ### Common Issues:
+  - Overly formal language between close friends.
+  - Sudden topic changes without transition.
+  - Generic responses that could fit any context.
+  - Ignoring or contradicting the provided social narrative.
+  - Repetitive phrasing across turns.

@@ -1,0 +1,132 @@
+# Code Review Annotation (CodeReviewer)
+# Based on Li et al., FSE 2022
+#
+# This configuration supports annotation of code review activities,
+# including issue identification, severity assessment, and review comments.
+#
+# Issue Types:
+# - bug: Functional bugs, incorrect logic, wrong behavior
+# - style-violation: Code style, formatting, convention violations
+# - performance: Performance issues, unnecessary computation
+# - security: Security vulnerabilities, unsafe practices
+# - logic-error: Logical flaws, edge cases, off-by-one errors
+# - naming: Poor variable/function naming, unclear identifiers
+# - documentation: Missing or incorrect comments/docstrings
+# - redundancy: Dead code, redundant checks, unnecessary complexity
+#
+# Annotation Guidelines:
+# 1. Read the entire code diff carefully, understanding the change context
+# 2. Highlight specific lines or regions that contain issues
+# 3. Classify each issue by type (bug, style, performance, etc.)
+# 4. Make an overall review decision (approve, request-changes, etc.)
+# 5. Assign a severity level to the most critical issue found
+# 6. Write a natural language review comment as you would in a real code review
+# 7. Focus on actionable feedback, not just pointing out problems
+# 8. Consider both added (+) and removed (-) lines in the diff
+
+port: 8000
+server_name: localhost
+task_name: "Code Review Annotation (CodeReviewer)"
+
+data_files:
+  - sample-data.json
+id_key: id
+text_key: code_diff
+
+output_file: annotations.json
+
+annotation_schemes:
+  # Step 1: Span annotation for code issues
+  - annotation_type: span
+    name: code_issues
+    description: "Highlight code regions that contain issues. Select the appropriate issue type for each highlighted region."
+    labels:
+      - "bug"
+      - "style-violation"
+      - "performance"
+      - "security"
+      - "logic-error"
+      - "naming"
+      - "documentation"
+      - "redundancy"
+    label_colors:
+      "bug": "#ef4444"
+      "style-violation": "#f59e0b"
+      "performance": "#f97316"
+      "security": "#dc2626"
+      "logic-error": "#8b5cf6"
+      "naming": "#06b6d4"
+      "documentation": "#3b82f6"
+      "redundancy": "#9ca3af"
+    tooltips:
+      "bug": "Functional bugs: incorrect logic, wrong return values, missing error handling, crashes"
+      "style-violation": "Code style issues: formatting, indentation, convention violations, inconsistent patterns"
+      "performance": "Performance problems: unnecessary loops, inefficient algorithms, excessive memory usage"
+      "security": "Security vulnerabilities: SQL injection, XSS, hardcoded credentials, buffer overflows"
+      "logic-error": "Logical flaws: wrong conditions, off-by-one errors, missed edge cases, race conditions"
+      "naming": "Poor naming: unclear variable names, misleading function names, single-letter variables in large scope"
+      "documentation": "Missing or wrong documentation: absent docstrings, outdated comments, misleading descriptions"
+      "redundancy": "Redundant code: dead code, unnecessary checks, duplicated logic, over-engineering"
+    allow_overlapping: false
+
+  # Step 2: Overall review decision
+  - annotation_type: radio
+    name: review_decision
+    description: "What is your overall review decision for this code change?"
+    labels:
+      - "approve"
+      - "request-changes"
+      - "comment-only"
+      - "needs-discussion"
+    tooltips:
+      "approve": "Code is acceptable and can be merged as-is or with minor tweaks"
+      "request-changes": "Code has issues that must be fixed before merging"
+      "comment-only": "Leaving feedback but not blocking the merge"
+      "needs-discussion": "Code raises questions that require discussion with the author or team"
+
+  # Step 3: Severity of most critical issue
+  - annotation_type: radio
+    name: severity
+    description: "What is the severity of the most critical issue found?"
+    labels:
+      - "critical"
+      - "major"
+      - "minor"
+      - "nitpick"
+      - "praise"
+    tooltips:
+      "critical": "Blocks merge: data loss, security vulnerability, crash, or broken functionality"
+      "major": "Significant issue: incorrect behavior, missing error handling, or design flaw"
+      "minor": "Small issue: could be improved but not blocking (e.g., naming, minor refactor)"
+      "nitpick": "Trivial: style preference, optional improvement, cosmetic change"
+      "praise": "No issues found; the code is well-written and worth highlighting"
+
+  # Step 4: Free text review comment
+  - annotation_type: text
+    name: review_comment
+    description: "Write a review comment as you would in a real code review. Be specific and actionable."
+
+annotation_instructions: |
+  You are reviewing code diffs as part of a code review process.
+  For each diff:
+  1. Read the entire diff carefully, noting added (+) and removed (-) lines
+  2. Highlight any problematic code regions and classify the issue type
+  3. Make an overall review decision (approve, request changes, comment only, or needs discussion)
+  4. Rate the severity of the most critical issue
+  5. Write a constructive review comment with specific, actionable feedback
+
+html_layout: |
+  <div style="padding: 15px; font-family: monospace;">
+    <div style="margin-bottom: 10px; font-family: sans-serif; color: #6b7280; font-size: 13px;">
+      <strong>Repository:</strong> {{repository}} |
+      <strong>Language:</strong> {{language}} |
+      <strong>Change Type:</strong> {{change_type}}
+    </div>
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 14px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">{{code_diff}}</pre>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,177 @@
+# FLAIR: French Land Cover from Aerospace Imagery
+# Based on Garioud et al., NeurIPS 2023
+# Paper: https://arxiv.org/abs/2310.13336
+# Dataset: https://ignf.github.io/FLAIR/
+#
+# Task: Land use and land cover classification from high-resolution aerial imagery
+# Annotators classify the primary and secondary land use categories of
+# aerial image patches at 0.2m spatial resolution from the French IGN survey.
+#
+# Annotation workflow:
+# 1. Examine the aerial image patch
+# 2. Classify the dominant/primary land use category
+# 3. Select any secondary land uses also present in the patch
+# 4. Rate the image quality
+# 5. Add any additional observations
+
+port: 8000
+server_name: localhost
+task_name: "FLAIR: French Land Cover from Aerospace Imagery"
+
+data_files:
+  - sample-data.json
+id_key: id
+image_key: image_url
+
+output_file: annotations.json
+
+annotation_task_name: "FLAIR Land Cover Classification"
+
+annotation_instructions: |
+  You are classifying land use and land cover from high-resolution (0.2m) aerial imagery collected over France.
+
+  **Instructions:**
+  1. Examine the aerial image patch carefully.
+  2. Select the **primary land use** category that best describes the dominant coverage in the image.
+  3. Select any **secondary land uses** that are also visible in the image (there may be multiple).
+  4. Rate the overall **image quality** for annotation purposes.
+
+  **Category Definitions:**
+  - **Building:** Residential, commercial, or industrial structures
+  - **Pervious surface:** Natural permeable surfaces (grass, soil in gardens/parks)
+  - **Impervious surface:** Artificial sealed surfaces (roads, parking lots, sidewalks)
+  - **Bare soil:** Exposed earth without vegetation or artificial covering
+  - **Water:** Rivers, lakes, ponds, canals, swimming pools
+  - **Coniferous:** Evergreen needle-leaved trees (pine, spruce, fir)
+  - **Deciduous:** Broadleaf trees that shed leaves seasonally (oak, beech, maple)
+  - **Brushwood:** Shrubs, bushes, and low woody vegetation
+  - **Vineyard:** Cultivated grapevines in rows
+  - **Herbaceous vegetation:** Grass, meadows, lawns, and non-woody plants
+  - **Agricultural land:** Active cropland with visible cultivation patterns
+  - **Plowed land:** Recently tilled fields without standing crops
+  - **Swimming pool:** Artificial water basins for recreation
+  - **Snow:** Snow-covered areas
+  - **Greenhouse:** Glass or plastic covered agricultural structures
+
+annotation_schemes:
+  - annotation_type: radio
+    name: primary_land_use
+    description: "Select the dominant land use/land cover category in this image patch"
+    labels:
+      - name: "building"
+        tooltip: "Residential, commercial, or industrial structures"
+      - name: "pervious-surface"
+        tooltip: "Natural permeable surfaces such as grass or soil in gardens and parks"
+      - name: "impervious-surface"
+        tooltip: "Artificial sealed surfaces such as roads, parking lots, and sidewalks"
+      - name: "bare-soil"
+        tooltip: "Exposed earth without vegetation or artificial covering"
+      - name: "water"
+        tooltip: "Rivers, lakes, ponds, canals"
+      - name: "coniferous"
+        tooltip: "Evergreen needle-leaved trees (pine, spruce, fir)"
+      - name: "deciduous"
+        tooltip: "Broadleaf trees that shed leaves seasonally (oak, beech, maple)"
+      - name: "brushwood"
+        tooltip: "Shrubs, bushes, and low woody vegetation"
+      - name: "vineyard"
+        tooltip: "Cultivated grapevines arranged in rows"
+      - name: "herbaceous-vegetation"
+        tooltip: "Grass, meadows, lawns, and non-woody plants"
+      - name: "agricultural-land"
+        tooltip: "Active cropland with visible cultivation patterns"
+      - name: "plowed-land"
+        tooltip: "Recently tilled fields without standing crops"
+      - name: "swimming-pool"
+        tooltip: "Artificial water basins for recreation"
+      - name: "snow"
+        tooltip: "Snow-covered areas"
+      - name: "greenhouse"
+        tooltip: "Glass or plastic covered agricultural structures"
+    label_colors:
+      "building": "#e63946"
+      "pervious-surface": "#a8dadc"
+      "impervious-surface": "#6c757d"
+      "bare-soil": "#d4a373"
+      "water": "#1d3557"
+      "coniferous": "#2d6a4f"
+      "deciduous": "#52b788"
+      "brushwood": "#95d5b2"
+      "vineyard": "#7b2cbf"
+      "herbaceous-vegetation": "#b7e4c7"
+      "agricultural-land": "#ffd166"
+      "plowed-land": "#c9b99a"
+      "swimming-pool": "#00b4d8"
+      "snow": "#f8f9fa"
+      "greenhouse": "#e9ecef"
+
+  - annotation_type: multiselect
+    name: secondary_land_uses
+    description: "Select all other land use categories visible in this image (may select multiple)"
+    labels:
+      - name: "building"
+        tooltip: "Residential, commercial, or industrial structures"
+      - name: "pervious-surface"
+        tooltip: "Natural permeable surfaces"
+      - name: "impervious-surface"
+        tooltip: "Artificial sealed surfaces"
+      - name: "bare-soil"
+        tooltip: "Exposed earth"
+      - name: "water"
+        tooltip: "Water bodies"
+      - name: "coniferous"
+        tooltip: "Evergreen trees"
+      - name: "deciduous"
+        tooltip: "Broadleaf trees"
+      - name: "brushwood"
+        tooltip: "Shrubs and bushes"
+      - name: "vineyard"
+        tooltip: "Grapevines"
+      - name: "herbaceous-vegetation"
+        tooltip: "Grass and meadows"
+      - name: "agricultural-land"
+        tooltip: "Cropland"
+      - name: "plowed-land"
+        tooltip: "Tilled fields"
+      - name: "swimming-pool"
+        tooltip: "Pools"
+      - name: "snow"
+        tooltip: "Snow cover"
+      - name: "greenhouse"
+        tooltip: "Agricultural structures"
+
+  - annotation_type: radio
+    name: image_quality
+    description: "Rate the overall image quality for annotation purposes"
+    labels:
+      - name: "excellent"
+        tooltip: "Sharp, well-lit, no artifacts — ideal for annotation"
+      - name: "good"
+        tooltip: "Minor issues but land cover is clearly identifiable"
+      - name: "acceptable"
+        tooltip: "Some quality issues (slight blur, shadows) but annotation is feasible"
+      - name: "poor"
+        tooltip: "Significant quality issues that make annotation difficult"
+      - name: "unusable"
+        tooltip: "Image is too degraded for reliable annotation (heavy cloud, extreme blur)"
+
+  - annotation_type: text
+    name: notes
+    description: "Additional observations about the image patch (e.g., mixed-use areas, unusual features, boundary cases)"
+
+html_layout: |
+  <div style="margin-bottom: 12px; padding: 10px; background: #e8f5e9; border-radius: 6px; border-left: 4px solid #2e7d32;">
+    <strong>Patch ID:</strong> {{patch_id}} &nbsp;|&nbsp;
+    <strong>Region:</strong> {{region}} &nbsp;|&nbsp;
+    <strong>Resolution:</strong> {{spatial_resolution}} &nbsp;|&nbsp;
+    <strong>Acquired:</strong> {{acquisition_date}}
+  </div>
+  <div style="text-align: center; margin-bottom: 12px;">
+    <img src="{{image_url}}" style="max-width: 100%; max-height: 600px; border: 2px solid #2e7d32; border-radius: 4px;" />
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

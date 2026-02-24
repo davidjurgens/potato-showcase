@@ -1,0 +1,23 @@
+{
+  "title": "Ego4D: Egocentric Video Episodic Memory Annotation",
+  "description": "Annotate egocentric (first-person) video for episodic memory tasks including activity segmentation, hand state tracking, natural language query generation, and scene narration. Supports temporal segment annotation with multiple label tiers for the Ego4D benchmark.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["video_annotation", "text", "radio"],
+  "domain": ["Egocentric Vision", "Episodic Memory", "Video Understanding"],
+  "useCase": ["Activity Recognition", "Temporal Segmentation", "Video Narration"],
+  "complexity": "advanced",
+  "tags": ["egocentric", "episodic-memory", "ego4d", "cvpr2022", "first-person-video", "temporal-grounding"],
+  "featured": false,
+  "paperReference": "Grauman et al., CVPR 2022",
+  "paperUrl": "https://arxiv.org/abs/2110.07058",
+  "datasetUrl": "https://ego4d-data.org/",
+  "citation": "@inproceedings{grauman2022ego4d,\n  title={Ego4D: Around the World in 3,000 Hours of Egocentric Video},\n  author={Grauman, Kristen and Westbury, Andrew and Byrne, Eugene and Chavis, Zachary and Furnari, Antonino and Girdhar, Rohit and Hamburger, Jackson and Jiang, Hao and Liu, Miao and Liu, Xingyu and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={18995--19012},\n  year={2022}\n}"
+}

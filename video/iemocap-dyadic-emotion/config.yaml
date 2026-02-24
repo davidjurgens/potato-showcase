@@ -1,0 +1,223 @@
+# IEMOCAP Dyadic Emotion Multi-Tier Annotation Configuration
+# Based on Busso et al., Language Resources and Evaluation 2008
+# Paper: https://doi.org/10.1007/s10579-008-9076-6
+# Task: ELAN-style multi-tier annotation of emotional dyadic interactions
+
+port: 8000
+server_name: localhost
+task_name: "IEMOCAP Dyadic Emotion Multi-Tier Annotation"
+
+# Data configuration
+data_files:
+  - sample-data.json
+id_key: id
+video_key: video_url
+
+# Output
+output_file: annotations.json
+
+# Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
+annotation_schemes:
+  # Tier 1: Speaker A behavior segmentation
+  - name: "speaker_a_tier"
+    description: |
+      Segment the timeline by Speaker A's observable behavior. Mark when they
+      are speaking, listening, producing backchannels, laughing, or silent.
+      This tier tracks Speaker A's contribution to the dyadic interaction.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "speaking"
+        color: "#3B82F6"
+        tooltip: "Speaker A is actively speaking or vocalizing"
+      - name: "listening"
+        color: "#10B981"
+        tooltip: "Speaker A is silently attending to Speaker B"
+      - name: "backchannel"
+        color: "#F59E0B"
+        tooltip: "Speaker A produces a brief backchannel response (mm-hmm, yeah, uh-huh)"
+      - name: "laughing"
+        color: "#EC4899"
+        tooltip: "Speaker A is laughing (with or without speech)"
+      - name: "silence"
+        color: "#9CA3AF"
+        tooltip: "Speaker A is silent and not visibly engaged (pause, thinking)"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 2: Speaker B behavior segmentation
+  - name: "speaker_b_tier"
+    description: |
+      Segment the timeline by Speaker B's observable behavior. Mark when they
+      are speaking, listening, producing backchannels, laughing, or silent.
+      This tier tracks Speaker B's contribution to the dyadic interaction.
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "speaking"
+        color: "#6366F1"
+        tooltip: "Speaker B is actively speaking or vocalizing"
+      - name: "listening"
+        color: "#14B8A6"
+        tooltip: "Speaker B is silently attending to Speaker A"
+      - name: "backchannel"
+        color: "#F97316"
+        tooltip: "Speaker B produces a brief backchannel response (mm-hmm, yeah, uh-huh)"
+      - name: "laughing"
+        color: "#A855F7"
+        tooltip: "Speaker B is laughing (with or without speech)"
+      - name: "silence"
+        color: "#6B7280"
+        tooltip: "Speaker B is silent and not visibly engaged (pause, thinking)"
+    show_timecode: true
+    video_fps: 30
+
+  # Tier 3: Emotion category classification
+  - name: "emotion_category"
+    description: "Classify the dominant emotion expressed in this segment of the interaction."
+    annotation_type: radio
+    labels:
+      - "neutral"
+      - "happiness"
+      - "sadness"
+      - "anger"
+      - "frustration"
+      - "excitement"
+      - "fear"
+      - "surprise"
+      - "disgust"
+      - "other"
+    keyboard_shortcuts:
+      neutral: "0"
+      happiness: "1"
+      sadness: "2"
+      anger: "3"
+      frustration: "4"
+      excitement: "5"
+
+  # Tier 4: Valence rating (7-point Likert-style)
+  - name: "valence"
+    description: "Rate the emotional valence (pleasantness) on a 7-point scale from very negative to very positive."
+    annotation_type: radio
+    labels:
+      - "1-very-negative"
+      - "2-negative"
+      - "3-slightly-negative"
+      - "4-neutral"
+      - "5-slightly-positive"
+      - "6-positive"
+      - "7-very-positive"
+
+  # Tier 5: Activation/arousal rating (7-point Likert-style)
+  - name: "activation"
+    description: "Rate the emotional activation/arousal on a 7-point scale from very calm to very active."
+    annotation_type: radio
+    labels:
+      - "1-very-calm"
+      - "2-calm"
+      - "3-slightly-calm"
+      - "4-neutral"
+      - "5-slightly-active"
+      - "6-active"
+      - "7-very-active"
+
+  # Tier 6: Dominance rating (7-point Likert-style)
+  - name: "dominance"
+    description: "Rate the perceived dominance/control on a 7-point scale from very submissive to very dominant."
+    annotation_type: radio
+    labels:
+      - "1-very-submissive"
+      - "2-submissive"
+      - "3-slightly-submissive"
+      - "4-neutral"
+      - "5-slightly-dominant"
+      - "6-dominant"
+      - "7-very-dominant"
+
+# HTML layout
+html_layout: |
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h3 style="margin-bottom: 8px;">IEMOCAP: Multi-Tier Dyadic Emotion Annotation</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
+      Annotate emotional dyadic interactions across parallel tiers for speaker behaviors,
+      emotion categories, and dimensional affect ratings (valence, activation, dominance).
+    </p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+      <strong>Multi-Tier Instructions:</strong> Annotate the dyadic interaction across six
+      parallel tiers: Speaker A behavior, Speaker B behavior, emotion category, valence,
+      activation, and dominance. The two speaker tiers run in parallel to capture the
+      dynamics of turn-taking and emotional co-regulation.
+    </div>
+  </div>
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 30
+annotation_per_instance: 2
+
+# Instructions
+annotation_instructions: |
+  ## IEMOCAP Dyadic Emotion Multi-Tier Annotation
+
+  This task uses ELAN-style multi-tier annotation to capture emotional dynamics
+  in dyadic (two-person) interactions from the IEMOCAP database.
+
+  ### Tier 1: Speaker A Behavior
+  - Segment Speaker A's behavior throughout the interaction:
+    - **Speaking**: Actively talking or vocalizing
+    - **Listening**: Silently attending to Speaker B
+    - **Backchannel**: Brief vocal feedback (mm-hmm, yeah, uh-huh, right)
+    - **Laughing**: Audible laughter (may co-occur with speech)
+    - **Silence**: Not engaged in speaking or active listening
+
+  ### Tier 2: Speaker B Behavior
+  - Segment Speaker B's behavior using the same labels
+  - The two speaker tiers should run in parallel, allowing analysis of:
+    - Turn-taking patterns and timing
+    - Overlap and simultaneous speech
+    - Listener behavior during the other's turn
+    - Mutual laughter episodes
+
+  ### Tier 3: Emotion Category
+  - Classify the dominant emotion for the current segment:
+    - **Neutral**: No strong emotional expression
+    - **Happiness**: Joy, amusement, contentment
+    - **Sadness**: Sorrow, disappointment, grief
+    - **Anger**: Irritation, rage, hostility
+    - **Frustration**: Annoyance, exasperation (distinct from anger)
+    - **Excitement**: High-energy positive arousal
+    - **Fear**: Anxiety, worry, apprehension
+    - **Surprise**: Unexpected reaction (positive or negative)
+    - **Disgust**: Revulsion, distaste
+    - **Other**: Emotion not captured by the above categories
+  - Rate the emotion expressed, not what you think they feel internally
+
+  ### Tier 4: Valence (7-point scale)
+  - How pleasant or unpleasant is the expressed emotion?
+  - 1 = very negative/unpleasant, 4 = neutral, 7 = very positive/pleasant
+
+  ### Tier 5: Activation (7-point scale)
+  - How energetic or calm is the emotional expression?
+  - 1 = very calm/low energy, 4 = neutral, 7 = very active/high energy
+  - Note: Both positive (excitement) and negative (anger) emotions can be high activation
+
+  ### Tier 6: Dominance (7-point scale)
+  - How dominant or submissive does the speaker appear?
+  - 1 = very submissive/controlled, 4 = neutral, 7 = very dominant/in control
+  - Consider vocal power, posture, and conversational control
+
+  ### Annotation Strategy
+  - Watch each clip at least twice: once for overall impression, once for detail
+  - Annotate speaker tiers first to establish the interaction structure
+  - Then rate emotion, valence, activation, and dominance for each segment
+  - Consider both audio (voice, prosody) and visual (face, body) cues
+  - For scripted scenarios, rate the portrayed emotion, not acting quality
+  - Frustration and anger are separate: frustration is lower arousal and less hostile

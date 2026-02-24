@@ -1,0 +1,23 @@
+{
+  "title": "Named Entity Disambiguation (AIDA-CoNLL)",
+  "description": "Named entity disambiguation and linking to Wikidata knowledge base based on the AIDA-CoNLL dataset. Annotators identify named entity mentions in news text, classify them by type (PER, ORG, LOC, MISC), and link them to their corresponding Wikidata entities using QIDs, handling ambiguous references and NIL entities.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["span", "text"],
+  "domain": ["NLP", "Entity Disambiguation", "Knowledge Graphs"],
+  "useCase": ["Entity Linking", "Entity Disambiguation", "Knowledge Base Population"],
+  "complexity": "intermediate",
+  "tags": ["entity-linking", "entity-disambiguation", "wikidata", "aida", "conll", "emnlp2011"],
+  "featured": false,
+  "paperReference": "Hoffart et al., EMNLP 2011",
+  "paperUrl": "https://aclanthology.org/D11-1072/",
+  "datasetUrl": "https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/ambiverse-nlu/aida/",
+  "citation": "@inproceedings{hoffart-etal-2011-robust,\n    title = \"Robust Disambiguation of Named Entities in Text\",\n    author = \"Hoffart, Johannes and Yosef, Mohamed Amir and Bordino, Ilaria and F{\\\"u}rstenau, Hagen and Pinkal, Manfred and Spaniol, Marc and Taneva, Bilyana and Thater, Stefan and Weikum, Gerhard\",\n    booktitle = \"Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing\",\n    month = jul,\n    year = \"2011\",\n    address = \"Edinburgh, Scotland, UK\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D11-1072\",\n    pages = \"782--792\"\n}"
+}
