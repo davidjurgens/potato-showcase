@@ -23,16 +23,17 @@
 #   - Use "mixed" for portmanteau words blending both languages
 #   - Use "ambiguous" for cognates or words shared by both languages
 
-port: 8000
-server_name: localhost
-task_name: "Miami Bangor Code-Switching Annotation"
+annotation_task_name: "Miami Bangor Code-Switching Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_instructions: |
   ## Miami Bangor Code-Switching Annotation

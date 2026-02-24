@@ -2,18 +2,19 @@
 # Based on "Instruction-Following Evaluation for Large Language Models" (Zhou et al., arXiv 2023)
 # Task: Evaluate whether LLM responses satisfy verifiable instruction constraints
 
-port: 8000
-server_name: localhost
-task_name: "IFEval Instruction-Following Evaluation"
+annotation_task_name: "IFEval Instruction-Following Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: instruction
+item_properties:
+  id_key: "id"
+  text_key: "instruction"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing instruction, constraints, and model response
 html_layout: |

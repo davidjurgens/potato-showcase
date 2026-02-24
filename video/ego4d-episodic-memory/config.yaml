@@ -2,18 +2,19 @@
 # Based on "Ego4D: Around the World in 3,000 Hours of Egocentric Video" (Grauman et al., CVPR 2022)
 # Task: Annotate egocentric video with activity segments, hand states, queries, and narrations
 
-port: 8000
-server_name: localhost
-task_name: "Ego4D Episodic Memory Annotation"
+annotation_task_name: "Ego4D Episodic Memory Annotation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-video_key: video_url
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout for egocentric video
 html_layout: |

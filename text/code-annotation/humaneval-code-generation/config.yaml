@@ -25,16 +25,17 @@
 # - Inefficient algorithms where better approaches exist
 # - Code that works for examples but fails on edge cases
 
-port: 8000
-server_name: localhost
-task_name: "Code Generation Evaluation (HumanEval)"
+annotation_task_name: "Code Generation Evaluation (HumanEval)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: prompt
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Functional correctness

@@ -14,16 +14,17 @@
 # 4. Classify whether the question is answerable from the report
 # 5. Identify the type of answer (finding, measurement, location, etc.)
 
-port: 8000
-server_name: localhost
-task_name: "RadQA: Radiology Report Question Answering"
+annotation_task_name: "RadQA: Radiology Report Question Answering"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: report
+item_properties:
+  id_key: "id"
+  text_key: "report"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_task_name: "RadQA Answer Extraction"
 

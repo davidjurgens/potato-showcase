@@ -35,16 +35,21 @@
 # - Some distractors may be partially correct or plausible
 # - The passage contains all information needed to answer
 
-port: 8000
-server_name: localhost
-task_name: "Multilingual Reading Comprehension (Belebele)"
+annotation_task_name: "Multilingual Reading Comprehension (Belebele)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: passage
 
-output_file: annotations.json
+item_properties:
+  id_key: "id"
+  text_key: "passage"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
 
 annotation_schemes:
   # Step 1: Select the correct answer

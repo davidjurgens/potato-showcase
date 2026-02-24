@@ -2,18 +2,19 @@
 # Based on "AlpacaEval: An Automatic Evaluator for Instruction-following Language Models" (Li et al., arXiv 2023)
 # Task: Pairwise preference comparison of LLM instruction-following responses
 
-port: 8000
-server_name: localhost
-task_name: "AlpacaEval Instruction Preference Evaluation"
+annotation_task_name: "AlpacaEval Instruction Preference Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: instruction
+item_properties:
+  id_key: "id"
+  text_key: "instruction"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout with instruction and side-by-side responses
 html_layout: |

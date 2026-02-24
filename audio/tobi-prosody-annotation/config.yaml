@@ -24,16 +24,17 @@
 #   - Use the transcription tier for verbatim orthographic text
 #   - When unsure between two accent types, replay the relevant portion
 
-port: 8000
-server_name: localhost
-task_name: "ToBI Prosodic Annotation"
+annotation_task_name: "ToBI Prosodic Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_instructions: |
   ## ToBI Prosodic Annotation

@@ -2,18 +2,19 @@
 # Based on "SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization" (Kim et al., EMNLP 2023)
 # Task: Evaluate quality of socially-grounded dialogues
 
-port: 8000
-server_name: localhost
-task_name: "SODA Social Dialogue Evaluation"
+annotation_task_name: "SODA Social Dialogue Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: narrative
+item_properties:
+  id_key: "id"
+  text_key: "narrative"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing social context and dialogue in chat format
 html_layout: |

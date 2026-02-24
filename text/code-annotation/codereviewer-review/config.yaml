@@ -24,16 +24,17 @@
 # 7. Focus on actionable feedback, not just pointing out problems
 # 8. Consider both added (+) and removed (-) lines in the diff
 
-port: 8000
-server_name: localhost
-task_name: "Code Review Annotation (CodeReviewer)"
+annotation_task_name: "Code Review Annotation (CodeReviewer)"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: code_diff
+item_properties:
+  id_key: "id"
+  text_key: "code_diff"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Span annotation for code issues
