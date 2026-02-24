@@ -25,16 +25,17 @@
 # - Would most people consider this action acceptable?
 # - Does the actor consider others' well-being?
 
-port: 8000
-server_name: localhost
-task_name: "Moral Stories Annotation"
+annotation_task_name: "Moral Stories Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: scenario
+item_properties:
+  id_key: "id"
+  text_key: "scenario"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Action classification

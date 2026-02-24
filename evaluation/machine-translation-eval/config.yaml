@@ -1,4 +1,5 @@
-task_name: "Machine Translation Evaluation"
+annotation_task_name: "Machine Translation Evaluation"
+
 task_description: "Evaluate the quality of the machine translation."
 task_dir: "."
 port: 8000

@@ -2,6 +2,7 @@
 # Based on Cordts et al., CVPR 2016
 
 annotation_task_name: "Cityscapes Urban Scene Segmentation"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

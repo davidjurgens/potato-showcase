@@ -27,16 +27,17 @@
 # - Reference specific words/phrases
 # - Explain the reasoning, not just restate
 
-port: 8000
-server_name: localhost
-task_name: "NLI with Explanations"
+annotation_task_name: "NLI with Explanations"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: pair
+item_properties:
+  id_key: "id"
+  text_key: "pair"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: NLI label

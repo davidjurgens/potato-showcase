@@ -25,16 +25,17 @@
 # 5. Consider typical/common scenarios, not edge cases
 # 6. Multiple valid inferences may exist for each dimension
 
-port: 8000
-server_name: localhost
-task_name: "Commonsense Inference"
+annotation_task_name: "Commonsense Inference"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: event
+item_properties:
+  id_key: "id"
+  text_key: "event"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: PersonX's intent

@@ -2,18 +2,19 @@
 # Based on "Mind2Web: Towards a Generalist Agent for the Web" (Deng et al., NeurIPS 2023)
 # Task: Annotate web navigation actions - identify target elements and action types
 
-port: 8000
-server_name: localhost
-task_name: "Mind2Web Web Agent Task Annotation"
+annotation_task_name: "Mind2Web Web Agent Task Annotation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing task description, URL, and HTML snippet
 html_layout: |

@@ -26,16 +26,17 @@
 # 4. Consider tense, aspect, and temporal connectives as cues
 # 5. Use VAGUE only when the relation is genuinely ambiguous
 
-port: 8000
-server_name: localhost
-task_name: "TIMELINE: Exhaustive Temporal Relations"
+annotation_task_name: "TIMELINE: Exhaustive Temporal Relations"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify events and temporal expressions

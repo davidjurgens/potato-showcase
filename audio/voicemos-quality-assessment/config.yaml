@@ -13,16 +13,17 @@
 # - Rate overall quality: General impression of the speech quality
 # - Use the full 1-5 scale; avoid always rating in the middle
 
-port: 8000
-server_name: localhost
-task_name: "VoiceMOS Challenge 2024: Speech Quality Assessment"
+annotation_task_name: "VoiceMOS Challenge 2024: Speech Quality Assessment"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: likert

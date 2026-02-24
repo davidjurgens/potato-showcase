@@ -2,18 +2,19 @@
 # Based on "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (Zheng et al., NeurIPS 2023)
 # Task: Pairwise comparison and absolute scoring of LLM responses
 
-port: 8000
-server_name: localhost
-task_name: "MT-Bench LLM Evaluation"
+annotation_task_name: "MT-Bench LLM Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout showing question and both responses side-by-side
 html_layout: |

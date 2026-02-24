@@ -24,16 +24,17 @@
 # 3. Rate the response's empathy level
 # 4. Consider: Does the response make the speaker feel heard?
 
-port: 8000
-server_name: localhost
-task_name: "Empathetic Dialogue Annotation"
+annotation_task_name: "Empathetic Dialogue Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: dialogue
+item_properties:
+  id_key: "id"
+  text_key: "dialogue"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Emotional situation classification

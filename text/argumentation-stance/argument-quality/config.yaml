@@ -21,17 +21,19 @@
 #
 # Note: Correlations with overall quality - Cogency (.84), Effectiveness (.81), Reasonableness (.86)
 
-port: 8000
-server_name: localhost
-task_name: "Argument Quality Assessment"
+annotation_task_name: "Argument Quality Assessment"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: argument
+item_properties:
+  id_key: "id"
+  text_key: "argument"
+
 context_key: topic
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Overall Quality Rating

@@ -21,16 +21,17 @@
 # 6. If the fact is correct but the reference doesn't mention it, mark Not Supported
 # 7. If a correction is needed, provide the corrected version
 
-port: 8000
-server_name: localhost
-task_name: "FActScore: Atomic Factuality"
+annotation_task_name: "FActScore: Atomic Factuality"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Factuality verdict

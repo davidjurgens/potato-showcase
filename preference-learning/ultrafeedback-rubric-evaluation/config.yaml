@@ -2,18 +2,19 @@
 # Based on OpenBMB UltraFeedback dataset
 # Task: Fine-grained evaluation across 4 dimensions with rationales
 
-port: 8000
-server_name: localhost
-task_name: "UltraFeedback Rubric Evaluation"
+annotation_task_name: "UltraFeedback Rubric Evaluation"
+task_dir: "."
 
 # Data configuration
 data_files:
   - data.json
-id_key: id
-text_key: instruction
+item_properties:
+  id_key: "id"
+  text_key: "instruction"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Display layout
 html_layout: |

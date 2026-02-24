@@ -25,16 +25,17 @@
 # 3. RoTs can conflict - the same action may have multiple valid judgments
 # 4. Consider both the action and its consequences
 
-port: 8000
-server_name: localhost
-task_name: "Social Chemistry - Social Norms"
+annotation_task_name: "Social Chemistry - Social Norms"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: situation
+item_properties:
+  id_key: "id"
+  text_key: "situation"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Social judgment

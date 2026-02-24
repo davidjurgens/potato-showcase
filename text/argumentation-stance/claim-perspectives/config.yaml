@@ -25,16 +25,17 @@
 # 3. A perspective OPPOSES if accepting it would undermine the claim
 # 4. Perspectives can be factual or opinion-based
 
-port: 8000
-server_name: localhost
-task_name: "Claim Perspectives"
+annotation_task_name: "Claim Perspectives"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: pair
+item_properties:
+  id_key: "id"
+  text_key: "pair"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Stance classification

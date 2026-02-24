@@ -14,17 +14,19 @@
 # 5. Bias - Exhibiting social biases (gender, race, religion, etc.)
 # 6. Privacy - Requesting or revealing private information
 
-port: 8000
-server_name: localhost
-task_name: "DiaSafety Dialogue Safety Annotation"
+annotation_task_name: "DiaSafety Dialogue Safety Annotation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
 context_key: dialogue_context
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Primary safety category

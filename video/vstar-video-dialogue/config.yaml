@@ -2,18 +2,19 @@
 # Based on Wang et al., ACL 2023
 # Task: Answer questions and write dialogue grounded in specific video moments
 
-port: 8000
-server_name: localhost
-task_name: "VSTAR Video-grounded Dialogue"
+annotation_task_name: "VSTAR Video-grounded Dialogue"
+task_dir: "."
 
 # Data configuration
 data_files:
   - sample-data.json
-id_key: id
-video_key: video_url
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
 
 # Output
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 # Annotation schemes
 annotation_schemes:

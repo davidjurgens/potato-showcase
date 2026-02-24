@@ -2,6 +2,7 @@
 # Based on Zhou et al., TPAMI 2017
 
 annotation_task_name: "Places365 Scene Classification"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

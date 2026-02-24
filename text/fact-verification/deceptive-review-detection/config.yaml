@@ -31,16 +31,17 @@
 # 4. Watch for excessive praise or generic descriptions
 # 5. Note: This is difficult - humans struggle at this task
 
-port: 8000
-server_name: localhost
-task_name: "Deceptive Review Detection"
+annotation_task_name: "Deceptive Review Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: review
+item_properties:
+  id_key: "id"
+  text_key: "review"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Authenticity classification

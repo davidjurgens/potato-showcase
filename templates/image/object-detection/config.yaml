@@ -1,3 +1,4 @@
+annotation_task_name: "Object Detection"
 task_name: "Object Detection"
 task_description: "Draw bounding boxes around all objects of interest."
 task_dir: "."
@@ -7,7 +8,8 @@ data_files:
   - "sample-data.json"
 
 item_properties:
-  id_key: id
+  id_key: "id"
+  text_key: "image_url"
   image_key: image_url
 
 annotation_schemes:

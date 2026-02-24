@@ -26,16 +26,17 @@
 # - "Blood pressure" → can be Anatomy or finding depending on context
 # - "Insulin treatment" → Medication (insulin) + Procedure (treatment)
 
-port: 8000
-server_name: localhost
-task_name: "Biomedical Named Entity Recognition"
+annotation_task_name: "Biomedical Named Entity Recognition"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: span

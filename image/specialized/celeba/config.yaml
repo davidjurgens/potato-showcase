@@ -2,6 +2,7 @@
 # Based on Liu et al., ICCV 2015
 
 annotation_task_name: "CelebA Face Attributes"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

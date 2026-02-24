@@ -2,6 +2,7 @@
 # Based on Irvin et al., AAAI 2019
 
 annotation_task_name: "CheXpert Chest X-Ray Classification"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

@@ -22,16 +22,17 @@
 # 4. Context matters - sarcasm, quotes, and counter-speech should be considered
 # 5. When uncertain, consider how a member of the target group would perceive it
 
-port: 8000
-server_name: localhost
-task_name: "Hate Speech Detection"
+annotation_task_name: "Hate Speech Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Binary hate classification

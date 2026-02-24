@@ -27,16 +27,17 @@
 # 4. Mark supporting text that evidences the relation
 # 5. Relations can be inferred, not just explicitly stated
 
-port: 8000
-server_name: localhost
-task_name: "Dialogue Relation Extraction"
+annotation_task_name: "Dialogue Relation Extraction"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: dialogue
+item_properties:
+  id_key: "id"
+  text_key: "dialogue"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Mark entities

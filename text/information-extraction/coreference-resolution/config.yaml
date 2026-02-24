@@ -1,6 +1,7 @@
 # Coreference Resolution Configuration
 # Link pronouns and mentions to their referents
 
+task_dir: "."
 annotation_task_name: "Coreference Resolution"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "display"
   text_display_key: "display"
 
 user_config:
@@ -56,3 +58,6 @@ annotation_schemes:
     max_label: "Very difficult"
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

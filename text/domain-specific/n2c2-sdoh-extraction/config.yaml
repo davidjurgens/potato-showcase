@@ -17,16 +17,17 @@
 #
 # Status Attributes: Current, Past, None, Unknown
 
-port: 8000
-server_name: localhost
-task_name: "n2c2 SDOH Extraction from Clinical Notes"
+annotation_task_name: "n2c2 SDOH Extraction from Clinical Notes"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # Step 1: Identify SDOH entity mentions

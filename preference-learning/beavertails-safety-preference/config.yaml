@@ -2,15 +2,17 @@
 # Based on Ji et al., NeurIPS 2023
 # Task: Classify AI responses for safety and harm categories
 
-port: 8000
-server_name: localhost
-task_name: "BeaverTails Safety Preference"
+annotation_task_name: "BeaverTails Safety Preference"
+task_dir: "."
 
 data_files:
   - data.json
-id_key: id
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - name: "is_safe"

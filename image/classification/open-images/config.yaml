@@ -2,6 +2,7 @@
 # Based on Kuznetsova et al., IJCV 2020
 
 annotation_task_name: "Open Images V6 Object Detection"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

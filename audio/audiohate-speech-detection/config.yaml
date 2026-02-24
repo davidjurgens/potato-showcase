@@ -13,16 +13,17 @@
 # - Identify all applicable target groups when hate/offensive speech is present
 # - Rate your confidence in the classification
 
-port: 8000
-server_name: localhost
-task_name: "AudioHate: Explainable Audio Hate Speech Detection"
+annotation_task_name: "AudioHate: Explainable Audio Hate Speech Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-audio_key: audio_url
+item_properties:
+  id_key: "id"
+  text_key: "audio_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   - annotation_type: radio

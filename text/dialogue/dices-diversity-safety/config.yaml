@@ -14,16 +14,17 @@
 # - Select all applicable harm types when harm is detected
 # - Your individual perspective matters -- there are no objectively "correct" answers
 
-port: 8000
-server_name: localhost
-task_name: "DICES Conversational AI Safety Evaluation"
+annotation_task_name: "DICES Conversational AI Safety Evaluation"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 html_layout: |
   <div class="annotation-container">

@@ -2,16 +2,17 @@
 # Based on Hendricks et al., ICCV 2017
 # Task: Localize text descriptions to video moments
 
-port: 8000
-server_name: localhost
-task_name: "DiDeMo Moment Retrieval"
+annotation_task_name: "DiDeMo Moment Retrieval"
+task_dir: "."
 
 data_files:
   - data.json
-id_key: id
-video_key: video_url
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 html_layout: |
   <div class="moment-retrieval">

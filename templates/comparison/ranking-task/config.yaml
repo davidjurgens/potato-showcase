@@ -1,6 +1,7 @@
 # Ranking Task Configuration
 # Drag-and-drop interface to order items
 
+task_dir: "."
 annotation_task_name: "Response Ranking"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "prompt"
   text_display_key: "prompt"
   list_display_key: "responses"
 
@@ -49,3 +51,6 @@ annotation_schemes:
     required: false
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"

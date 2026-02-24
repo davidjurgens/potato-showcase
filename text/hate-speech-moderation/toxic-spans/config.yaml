@@ -14,16 +14,17 @@
 # - Multiple spans can be marked in a single comment
 # - Some comments may have no toxic spans (false positives in toxicity detection)
 
-port: 8000
-server_name: localhost
-task_name: "Toxic Spans Detection"
+annotation_task_name: "Toxic Spans Detection"
+task_dir: "."
 
 data_files:
   - sample-data.json
-id_key: id
-text_key: text
+item_properties:
+  id_key: "id"
+  text_key: "text"
 
-output_file: annotations.json
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 annotation_schemes:
   # First: determine if the text contains toxicity

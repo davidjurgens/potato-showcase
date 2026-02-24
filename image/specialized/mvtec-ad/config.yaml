@@ -2,6 +2,7 @@
 # Based on Bergmann et al., CVPR 2019
 
 annotation_task_name: "MVTec AD Defect Detection"
+task_dir: "."
 
 data_files:
   - "sample-data.json"

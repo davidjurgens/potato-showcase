@@ -1,6 +1,7 @@
 # Sarcasm Detection Configuration
 # Identify and categorize sarcastic statements
 
+task_dir: "."
 annotation_task_name: "Sarcasm Detection"
 
 data_files:
@@ -8,6 +9,7 @@ data_files:
 
 item_properties:
   id_key: "id"
+  text_key: "text"
   text_display_key: "text"
 
 user_config:
@@ -72,3 +74,6 @@ annotation_schemes:
     required: false
 
 output: "annotation_output/"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
