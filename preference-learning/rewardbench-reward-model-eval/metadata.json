@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["pairwise"],
-  "domain": ["NLP", "RLHF", "Reward Modeling"],
-  "useCase": ["Reward Model Evaluation", "Preference Learning", "RLHF Benchmarking"],
+  "annotationTypes": [
+    "pairwise",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "RLHF",
+    "Reward Modeling"
+  ],
+  "useCase": [
+    "Reward Model Evaluation",
+    "Preference Learning",
+    "RLHF Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["reward-model", "rewardbench", "pairwise", "rlhf", "preference", "evaluation"],
+  "tags": [
+    "reward-model",
+    "rewardbench",
+    "pairwise",
+    "rlhf",
+    "preference",
+    "evaluation"
+  ],
   "featured": false,
   "paperReference": "Lambert et al., Findings NAACL 2025",
   "paperUrl": "https://arxiv.org/abs/2403.13787",

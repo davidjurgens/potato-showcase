@@ -10,11 +10,28 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking"],
-  "domain": ["NLP", "Scientific Text"],
-  "useCase": ["Relation Extraction", "Entity Extraction", "Scientific Document Understanding"],
+  "annotationTypes": [
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Scientific Text"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Entity Extraction",
+    "Scientific Document Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["scientific", "relation-extraction", "entity-extraction", "scier", "emnlp2024", "scientific-text"],
+  "tags": [
+    "scientific",
+    "relation-extraction",
+    "entity-extraction",
+    "scier",
+    "emnlp2024",
+    "scientific-text"
+  ],
   "featured": false,
   "paperReference": "Luan et al., EMNLP 2024",
   "paperUrl": "https://aclanthology.org/2024.emnlp-main.59/",

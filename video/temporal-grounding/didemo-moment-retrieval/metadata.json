@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "NLP", "Video Understanding"],
-  "useCase": ["Moment Retrieval", "Video Grounding", "Temporal Localization"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "NLP",
+    "Video Understanding"
+  ],
+  "useCase": [
+    "Moment Retrieval",
+    "Video Grounding",
+    "Temporal Localization"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "moment", "retrieval", "grounding", "language", "didemo"],
+  "tags": [
+    "video",
+    "moment",
+    "retrieval",
+    "grounding",
+    "language",
+    "didemo"
+  ],
   "featured": false,
   "paperReference": "Hendricks et al., ICCV 2017",
   "paperUrl": "https://arxiv.org/abs/1708.01641",

@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Commonsense", "Explainability"],
-  "useCase": ["Commonsense Reasoning", "Explainable AI", "QA"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Commonsense",
+    "Explainability"
+  ],
+  "useCase": [
+    "Commonsense Reasoning",
+    "Explainable AI",
+    "QA"
+  ],
   "complexity": "intermediate",
-  "tags": ["commonsense", "explanation", "qa", "ecqa", "acl2021", "explainability"],
+  "tags": [
+    "commonsense",
+    "explanation",
+    "qa",
+    "ecqa",
+    "acl2021",
+    "explainability"
+  ],
   "featured": false,
   "paperReference": "Aggarwal et al., ACL 2021",
   "paperUrl": "https://aclanthology.org/2021.acl-long.238/",

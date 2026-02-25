@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["likert", "multirate"],
-  "domain": ["NLP", "AI Alignment"],
-  "useCase": ["Reward Modeling", "RLHF", "Response Quality"],
+  "annotationTypes": [
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "Reward Modeling",
+    "RLHF",
+    "Response Quality"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "rlhf", "helpsteer", "multi-attribute", "rating", "reward-model"],
+  "tags": [
+    "preference",
+    "rlhf",
+    "helpsteer",
+    "multi-attribute",
+    "rating",
+    "reward-model"
+  ],
   "featured": false,
   "paperReference": "Wang et al., NAACL 2024",
   "paperUrl": "https://aclanthology.org/2024.naacl-long.185.pdf",

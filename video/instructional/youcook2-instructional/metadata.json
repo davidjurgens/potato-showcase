@@ -10,11 +10,30 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Video-Language", "Instructional Video"],
-  "useCase": ["Dense Video Captioning", "Recipe Understanding", "Procedural Learning"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video-Language",
+    "Instructional Video"
+  ],
+  "useCase": [
+    "Dense Video Captioning",
+    "Recipe Understanding",
+    "Procedural Learning"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "cooking", "recipe", "steps", "instructional", "captioning"],
+  "tags": [
+    "video",
+    "cooking",
+    "recipe",
+    "steps",
+    "instructional",
+    "captioning"
+  ],
   "featured": false,
   "paperReference": "Zhou et al., AAAI 2018",
   "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/12342",

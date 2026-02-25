@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["bbox"],
-  "domain": ["Document AI", "Layout Analysis"],
-  "useCase": ["Document Layout Detection", "Element Classification", "Document Digitization"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Document AI",
+    "Layout Analysis"
+  ],
+  "useCase": [
+    "Document Layout Detection",
+    "Element Classification",
+    "Document Digitization"
+  ],
   "complexity": "intermediate",
-  "tags": ["doclaynet", "document-layout", "bounding-box", "document-ai", "kdd2022", "ibm"],
+  "tags": [
+    "doclaynet",
+    "document-layout",
+    "bounding-box",
+    "document-ai",
+    "kdd2022",
+    "ibm"
+  ],
   "featured": false,
   "paperReference": "Pfitzmann et al., KDD 2022",
   "paperUrl": "https://dl.acm.org/doi/10.1145/3534678.3539043",

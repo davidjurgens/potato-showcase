@@ -2,13 +2,31 @@
   "title": "Image Captioning Evaluation",
   "description": "Rate AI-generated image captions for accuracy, fluency, and detail.",
   "version": "1.0.0",
-  "author": {"name": "Potato Team", "github": "davidjurgens", "affiliation": "University of Michigan"},
+  "author": {
+    "name": "Potato Team",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
   "createdAt": "2025-01-15",
   "updatedAt": "2025-01-15",
-  "annotationTypes": ["likert", "image"],
-  "domain": ["Computer Vision", "NLP"],
-  "useCase": ["Image Captioning", "VLM Evaluation"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "NLP"
+  ],
+  "useCase": [
+    "Image Captioning",
+    "VLM Evaluation"
+  ],
   "complexity": "beginner",
-  "tags": ["captioning", "image", "evaluation", "vlm"],
+  "tags": [
+    "captioning",
+    "image",
+    "evaluation",
+    "vlm"
+  ],
   "featured": false
 }

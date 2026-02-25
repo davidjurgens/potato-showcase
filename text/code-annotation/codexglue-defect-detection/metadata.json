@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "span"],
-  "domain": ["Software Engineering", "Vulnerability Detection", "Security"],
-  "useCase": ["Defect Detection", "Vulnerability Localization", "Code Security Analysis"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Vulnerability Detection",
+    "Security"
+  ],
+  "useCase": [
+    "Defect Detection",
+    "Vulnerability Localization",
+    "Code Security Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["defect-detection", "vulnerability", "code-understanding", "codexglue", "neurips2021", "security"],
+  "tags": [
+    "defect-detection",
+    "vulnerability",
+    "code-understanding",
+    "codexglue",
+    "neurips2021",
+    "security"
+  ],
   "featured": false,
   "paperReference": "Lu et al., NeurIPS 2021",
   "paperUrl": "https://arxiv.org/abs/2102.04664",

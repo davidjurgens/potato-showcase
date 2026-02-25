@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Medical Imaging", "Radiology"],
-  "useCase": ["Chest X-Ray Classification", "Medical Diagnosis", "Clinical AI"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "Medical Imaging",
+    "Radiology"
+  ],
+  "useCase": [
+    "Chest X-Ray Classification",
+    "Medical Diagnosis",
+    "Clinical AI"
+  ],
   "complexity": "advanced",
-  "tags": ["chexpert", "medical", "chest-xray", "radiology", "aaai2019", "healthcare"],
+  "tags": [
+    "chexpert",
+    "medical",
+    "chest-xray",
+    "radiology",
+    "aaai2019",
+    "healthcare"
+  ],
   "featured": true,
   "paperReference": "Irvin et al., AAAI 2019",
   "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/3834",

@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "radio"],
-  "domain": ["NLP", "Argumentation"],
-  "useCase": ["Argument Mining", "Debate Analysis", "Writing Evaluation"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Argumentation"
+  ],
+  "useCase": [
+    "Argument Mining",
+    "Debate Analysis",
+    "Writing Evaluation"
+  ],
   "complexity": "intermediate",
-  "tags": ["argument-quality", "argumentation", "cogency", "rhetoric", "debate", "persuasion"],
+  "tags": [
+    "argument-quality",
+    "argumentation",
+    "cogency",
+    "rhetoric",
+    "debate",
+    "persuasion"
+  ],
   "featured": true,
   "paperReference": "Wachsmuth et al., EACL 2017",
   "paperUrl": "https://aclanthology.org/E17-1017/",

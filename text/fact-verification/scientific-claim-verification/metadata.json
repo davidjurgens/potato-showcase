@@ -10,11 +10,30 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "span"],
-  "domain": ["NLP", "Scientific NLP", "Fact-Checking"],
-  "useCase": ["Fact Verification", "Scientific Literature", "Misinformation Detection"],
+  "annotationTypes": [
+    "likert",
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Scientific NLP",
+    "Fact-Checking"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Scientific Literature",
+    "Misinformation Detection"
+  ],
   "complexity": "advanced",
-  "tags": ["fact-checking", "scientific", "evidence", "scifact", "emnlp2020", "rationale"],
+  "tags": [
+    "fact-checking",
+    "scientific",
+    "evidence",
+    "scifact",
+    "emnlp2020",
+    "rationale"
+  ],
   "featured": true,
   "paperReference": "Wadden et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.609/",

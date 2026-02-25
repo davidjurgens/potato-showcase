@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Video-Language", "Temporal Grounding"],
-  "useCase": ["Temporal Grounding", "Video-Text Alignment", "Moment Retrieval"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video-Language",
+    "Temporal Grounding"
+  ],
+  "useCase": [
+    "Temporal Grounding",
+    "Video-Text Alignment",
+    "Moment Retrieval"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "grounding", "temporal", "language", "localization", "charades"],
+  "tags": [
+    "video",
+    "grounding",
+    "temporal",
+    "language",
+    "localization",
+    "charades"
+  ],
   "featured": false,
   "paperReference": "Gao et al., ICCV 2017",
   "paperUrl": "https://openaccess.thecvf.com/content_ICCV_2017/papers/Gao_TALL_Temporal_Activity_ICCV_2017_paper.pdf",

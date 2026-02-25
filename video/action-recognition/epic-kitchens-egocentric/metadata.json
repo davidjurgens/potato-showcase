@@ -10,11 +10,30 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Egocentric Vision", "Activity Recognition"],
-  "useCase": ["Action Recognition", "Verb-Noun Classification", "Kitchen Activities"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Egocentric Vision",
+    "Activity Recognition"
+  ],
+  "useCase": [
+    "Action Recognition",
+    "Verb-Noun Classification",
+    "Kitchen Activities"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "egocentric", "kitchen", "cooking", "verb-noun", "fine-grained"],
+  "tags": [
+    "video",
+    "egocentric",
+    "kitchen",
+    "cooking",
+    "verb-noun",
+    "fine-grained"
+  ],
   "featured": false,
   "paperReference": "Damen et al., ECCV 2018",
   "paperUrl": "https://openaccess.thecvf.com/content_ECCV_2018/html/Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html",

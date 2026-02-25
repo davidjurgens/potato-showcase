@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "bbox", "polygon"],
-  "domain": ["Computer Vision", "Industrial Inspection"],
-  "useCase": ["Anomaly Detection", "Defect Detection", "Quality Control"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Industrial Inspection"
+  ],
+  "useCase": [
+    "Anomaly Detection",
+    "Defect Detection",
+    "Quality Control"
+  ],
   "complexity": "intermediate",
-  "tags": ["mvtec", "anomaly-detection", "defect", "industrial", "quality-control", "cvpr2019"],
+  "tags": [
+    "mvtec",
+    "anomaly-detection",
+    "defect",
+    "industrial",
+    "quality-control",
+    "cvpr2019"
+  ],
   "featured": true,
   "paperReference": "Bergmann et al., CVPR 2019",
   "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html",

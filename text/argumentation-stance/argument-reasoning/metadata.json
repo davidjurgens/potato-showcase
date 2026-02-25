@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Argumentation", "Reasoning"],
-  "useCase": ["Argument Mining", "Reasoning", "Critical Thinking"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Argumentation",
+    "Reasoning"
+  ],
+  "useCase": [
+    "Argument Mining",
+    "Reasoning",
+    "Critical Thinking"
+  ],
   "complexity": "advanced",
-  "tags": ["argumentation", "warrants", "reasoning", "naacl2018", "semeval", "comprehension"],
+  "tags": [
+    "argumentation",
+    "warrants",
+    "reasoning",
+    "naacl2018",
+    "semeval",
+    "comprehension"
+  ],
   "featured": true,
   "paperReference": "Habernal et al., NAACL 2018",
   "paperUrl": "https://aclanthology.org/N18-1175/",

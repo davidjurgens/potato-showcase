@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["Clinical NLP", "Radiology", "Question Answering"],
-  "useCase": ["Clinical Question Answering", "Radiology Report Comprehension", "Information Extraction"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "Clinical NLP",
+    "Radiology",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Clinical Question Answering",
+    "Radiology Report Comprehension",
+    "Information Extraction"
+  ],
   "complexity": "intermediate",
-  "tags": ["radiology", "clinical-nlp", "question-answering", "radqa", "bionlp2023", "medical"],
+  "tags": [
+    "radiology",
+    "clinical-nlp",
+    "question-answering",
+    "radqa",
+    "bionlp2023",
+    "medical"
+  ],
   "featured": false,
   "paperReference": "Soni et al., ACL BioNLP Workshop 2022",
   "paperUrl": "https://aclanthology.org/2022.louhi-1.6/",

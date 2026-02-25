@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Computer Vision", "Image Classification"],
-  "useCase": ["Image Classification", "Visual Recognition", "Transfer Learning"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Image Classification"
+  ],
+  "useCase": [
+    "Image Classification",
+    "Visual Recognition",
+    "Transfer Learning"
+  ],
   "complexity": "intermediate",
-  "tags": ["imagenet", "classification", "wordnet", "cvpr2009", "large-scale"],
+  "tags": [
+    "imagenet",
+    "classification",
+    "wordnet",
+    "cvpr2009",
+    "large-scale"
+  ],
   "featured": true,
   "paperReference": "Deng et al., CVPR 2009",
   "paperUrl": "https://ieeexplore.ieee.org/document/5206848",

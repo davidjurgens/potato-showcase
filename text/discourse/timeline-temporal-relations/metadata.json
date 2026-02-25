@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking", "radio"],
-  "domain": ["NLP", "Temporal Reasoning"],
-  "useCase": ["Temporal Relation Extraction", "Event Detection", "Timeline Construction"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Temporal Reasoning"
+  ],
+  "useCase": [
+    "Temporal Relation Extraction",
+    "Event Detection",
+    "Timeline Construction"
+  ],
   "complexity": "advanced",
-  "tags": ["temporal-relations", "events", "timeline", "temporal-reasoning", "emnlp2023", "exhaustive-annotation"],
+  "tags": [
+    "temporal-relations",
+    "events",
+    "timeline",
+    "temporal-reasoning",
+    "emnlp2023",
+    "exhaustive-annotation"
+  ],
   "featured": false,
   "paperReference": "Mathur et al., EMNLP 2023",
   "paperUrl": "https://aclanthology.org/2023.emnlp-main.788/",

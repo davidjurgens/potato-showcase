@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Medical Imaging", "Radiology"],
-  "useCase": ["Chest X-Ray Classification", "Radiology AI", "Clinical Documentation"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Medical Imaging",
+    "Radiology"
+  ],
+  "useCase": [
+    "Chest X-Ray Classification",
+    "Radiology AI",
+    "Clinical Documentation"
+  ],
   "complexity": "advanced",
-  "tags": ["mimic", "medical", "chest-xray", "radiology", "physionet", "healthcare"],
+  "tags": [
+    "mimic",
+    "medical",
+    "chest-xray",
+    "radiology",
+    "physionet",
+    "healthcare"
+  ],
   "featured": true,
   "paperReference": "Johnson et al., Scientific Data 2019",
   "paperUrl": "https://www.nature.com/articles/s41597-019-0322-0",

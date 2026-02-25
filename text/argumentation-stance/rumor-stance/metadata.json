@@ -9,11 +9,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Social Media", "Misinformation"],
-  "useCase": ["Rumor Detection", "Fact Checking", "Misinformation Detection"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "Misinformation"
+  ],
+  "useCase": [
+    "Rumor Detection",
+    "Fact Checking",
+    "Misinformation Detection"
+  ],
   "complexity": "intermediate",
-  "tags": ["rumor", "stance", "social-media", "pheme", "misinformation", "twitter"],
+  "tags": [
+    "rumor",
+    "stance",
+    "social-media",
+    "pheme",
+    "misinformation",
+    "twitter"
+  ],
   "featured": false,
   "paperReference": "Zubiaga et al., ACL 2016",
   "paperUrl": "https://aclanthology.org/P16-2061/",

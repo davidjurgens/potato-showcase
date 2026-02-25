@@ -10,11 +10,26 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bbox", "radio"],
-  "domain": ["Computer Vision", "Object Detection"],
-  "useCase": ["Object Detection", "Image Classification"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Object Detection"
+  ],
+  "useCase": [
+    "Object Detection",
+    "Image Classification"
+  ],
   "complexity": "intermediate",
-  "tags": ["pascal-voc", "object-detection", "bounding-box", "ijcv2010", "benchmark"],
+  "tags": [
+    "pascal-voc",
+    "object-detection",
+    "bounding-box",
+    "ijcv2010",
+    "benchmark"
+  ],
   "featured": true,
   "paperReference": "Everingham et al., IJCV 2010",
   "paperUrl": "https://link.springer.com/article/10.1007/s11263-009-0275-4",

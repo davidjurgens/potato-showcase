@@ -2,9 +2,30 @@
   "title": "Fact Verification",
   "description": "Verify claims as supported, refuted, or not enough information based on provided evidence.",
   "category": "text",
-  "annotationType": ["radio", "text"],
-  "domain": ["nlp", "fact-checking"],
-  "useCase": ["fact-checking", "misinformation-detection"],
+  "annotationType": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "nlp",
+    "fact-checking"
+  ],
+  "useCase": [
+    "fact-checking",
+    "misinformation-detection"
+  ],
   "complexity": "intermediate",
-  "tags": ["fact-check", "verification", "claims", "evidence", "nlp"]
+  "tags": [
+    "fact-check",
+    "verification",
+    "claims",
+    "evidence",
+    "nlp"
+  ],
+  "annotationTypes": [
+    "likert",
+    "multiselect",
+    "radio",
+    "text"
+  ]
 }

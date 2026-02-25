@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["pairwise", "likert", "radio"],
-  "domain": ["Natural Language Processing", "AI Alignment"],
-  "useCase": ["RLHF", "Instruction Following", "Preference Learning"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "RLHF",
+    "Instruction Following",
+    "Preference Learning"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "instruction", "helpfulness", "rlhf", "alignment", "gpt"],
+  "tags": [
+    "preference",
+    "instruction",
+    "helpfulness",
+    "rlhf",
+    "alignment",
+    "gpt"
+  ],
   "featured": false,
   "paperReference": "Ouyang et al., NeurIPS 2022",
   "paperUrl": "https://arxiv.org/abs/2203.02155",

@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Computer Vision", "Scene Recognition"],
-  "useCase": ["Scene Classification", "Place Recognition", "Environment Understanding"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Scene Recognition"
+  ],
+  "useCase": [
+    "Scene Classification",
+    "Place Recognition",
+    "Environment Understanding"
+  ],
   "complexity": "intermediate",
-  "tags": ["places", "scene", "classification", "indoor-outdoor", "tpami2017"],
+  "tags": [
+    "places",
+    "scene",
+    "classification",
+    "indoor-outdoor",
+    "tpami2017"
+  ],
   "featured": true,
   "paperReference": "Zhou et al., TPAMI 2017",
   "paperUrl": "https://ieeexplore.ieee.org/document/7968387",

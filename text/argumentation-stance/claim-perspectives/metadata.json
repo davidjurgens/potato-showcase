@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Argumentation", "Fact-Checking"],
-  "useCase": ["Argument Mining", "Perspective Detection", "Fact Checking"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Argumentation",
+    "Fact-Checking"
+  ],
+  "useCase": [
+    "Argument Mining",
+    "Perspective Detection",
+    "Fact Checking"
+  ],
   "complexity": "intermediate",
-  "tags": ["perspectives", "claims", "stance", "argumentation", "naacl2019"],
+  "tags": [
+    "perspectives",
+    "claims",
+    "stance",
+    "argumentation",
+    "naacl2019"
+  ],
   "featured": false,
   "paperReference": "Chen et al., NAACL 2019",
   "paperUrl": "https://aclanthology.org/N19-1053/",

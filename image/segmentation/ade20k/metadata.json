@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["polygon", "multiselect"],
-  "domain": ["Computer Vision", "Scene Parsing"],
-  "useCase": ["Semantic Segmentation", "Scene Understanding", "Part Parsing"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Scene Parsing"
+  ],
+  "useCase": [
+    "Semantic Segmentation",
+    "Scene Understanding",
+    "Part Parsing"
+  ],
   "complexity": "advanced",
-  "tags": ["ade20k", "segmentation", "scene-parsing", "cvpr2017", "mit"],
+  "tags": [
+    "ade20k",
+    "segmentation",
+    "scene-parsing",
+    "cvpr2017",
+    "mit"
+  ],
   "featured": true,
   "paperReference": "Zhou et al., CVPR 2017",
   "paperUrl": "https://arxiv.org/abs/1608.05442",

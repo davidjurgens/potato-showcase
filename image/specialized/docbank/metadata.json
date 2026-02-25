@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bbox", "multiselect"],
-  "domain": ["Document AI", "Layout Analysis"],
-  "useCase": ["Document Understanding", "Layout Detection", "Information Extraction"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Document AI",
+    "Layout Analysis"
+  ],
+  "useCase": [
+    "Document Understanding",
+    "Layout Detection",
+    "Information Extraction"
+  ],
   "complexity": "intermediate",
-  "tags": ["docbank", "document", "layout", "ocr", "coling2020"],
+  "tags": [
+    "docbank",
+    "document",
+    "layout",
+    "ocr",
+    "coling2020"
+  ],
   "featured": true,
   "paperReference": "Li et al., COLING 2020",
   "paperUrl": "https://aclanthology.org/2020.coling-main.476/",

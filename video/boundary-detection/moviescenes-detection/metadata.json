@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Film Studies", "Video Segmentation"],
-  "useCase": ["Scene Detection", "Video Segmentation", "Movie Analysis"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Film Studies",
+    "Video Segmentation"
+  ],
+  "useCase": [
+    "Scene Detection",
+    "Video Segmentation",
+    "Movie Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "movie", "scene", "boundary", "detection", "segmentation"],
+  "tags": [
+    "video",
+    "movie",
+    "scene",
+    "boundary",
+    "detection",
+    "segmentation"
+  ],
   "featured": false,
   "paperReference": "Rao et al., CVPR 2020",
   "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2020/html/Rao_A_Local-to-Global_Approach_to_Multi-Modal_Movie_Scene_Segmentation_CVPR_2020_paper.html",

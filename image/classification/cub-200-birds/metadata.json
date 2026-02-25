@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "bbox"],
-  "domain": ["Computer Vision", "Fine-Grained Classification"],
-  "useCase": ["Bird Species Classification", "Fine-Grained Recognition", "Attribute Annotation"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Fine-Grained Classification"
+  ],
+  "useCase": [
+    "Bird Species Classification",
+    "Fine-Grained Recognition",
+    "Attribute Annotation"
+  ],
   "complexity": "advanced",
-  "tags": ["birds", "fine-grained", "species", "attributes", "caltech", "wildlife"],
+  "tags": [
+    "birds",
+    "fine-grained",
+    "species",
+    "attributes",
+    "caltech",
+    "wildlife"
+  ],
   "featured": true,
   "paperReference": "Wah et al., 2011",
   "paperUrl": "https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf",

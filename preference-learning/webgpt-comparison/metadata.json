@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["pairwise", "radio"],
-  "domain": ["Information Retrieval", "Question Answering"],
-  "useCase": ["Preference Learning", "QA Evaluation", "Retrieval Augmentation"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "Information Retrieval",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Preference Learning",
+    "QA Evaluation",
+    "Retrieval Augmentation"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "comparison", "web", "retrieval", "qa", "sources"],
+  "tags": [
+    "preference",
+    "comparison",
+    "web",
+    "retrieval",
+    "qa",
+    "sources"
+  ],
   "featured": false,
   "paperReference": "Nakano et al., 2021",
   "paperUrl": "https://arxiv.org/abs/2112.09332",

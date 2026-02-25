@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Pragmatics", "Social Analysis"],
-  "useCase": ["Bias Detection", "Media Analysis", "Gender Studies"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Pragmatics",
+    "Social Analysis"
+  ],
+  "useCase": [
+    "Bias Detection",
+    "Media Analysis",
+    "Gender Studies"
+  ],
   "complexity": "intermediate",
-  "tags": ["power", "agency", "connotation", "frames", "emnlp2017", "bias"],
+  "tags": [
+    "power",
+    "agency",
+    "connotation",
+    "frames",
+    "emnlp2017",
+    "bias"
+  ],
   "featured": false,
   "paperReference": "Sap et al., EMNLP 2017",
   "paperUrl": "https://aclanthology.org/D17-1247/",

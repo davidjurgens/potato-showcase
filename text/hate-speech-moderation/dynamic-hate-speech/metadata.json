@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "Content Moderation", "Social Media"],
-  "useCase": ["Hate Speech Detection", "Content Moderation", "Online Safety"],
+  "annotationTypes": [
+    "likert",
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Content Moderation",
+    "Social Media"
+  ],
+  "useCase": [
+    "Hate Speech Detection",
+    "Content Moderation",
+    "Online Safety"
+  ],
   "complexity": "intermediate",
-  "tags": ["hate-speech", "content-moderation", "social-media", "acl2021", "target-groups"],
+  "tags": [
+    "hate-speech",
+    "content-moderation",
+    "social-media",
+    "acl2021",
+    "target-groups"
+  ],
   "featured": true,
   "paperReference": "Vidgen et al., ACL 2021",
   "paperUrl": "https://aclanthology.org/2021.acl-long.132/",

@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Computer Vision", "Art History"],
-  "useCase": ["Art Classification", "Style Recognition", "Cultural Heritage"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Art History"
+  ],
+  "useCase": [
+    "Art Classification",
+    "Style Recognition",
+    "Cultural Heritage"
+  ],
   "complexity": "intermediate",
-  "tags": ["wikiart", "art", "painting", "style", "genre", "artist"],
+  "tags": [
+    "wikiart",
+    "art",
+    "painting",
+    "style",
+    "genre",
+    "artist"
+  ],
   "featured": true,
   "paperReference": "Saleh & Elgammal, 2015",
   "paperUrl": "https://arxiv.org/abs/1505.00855",

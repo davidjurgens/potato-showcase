@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Commonsense", "Knowledge Graphs"],
-  "useCase": ["Commonsense Reasoning", "Knowledge Base Construction", "QA"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Commonsense",
+    "Knowledge Graphs"
+  ],
+  "useCase": [
+    "Commonsense Reasoning",
+    "Knowledge Base Construction",
+    "QA"
+  ],
   "complexity": "intermediate",
-  "tags": ["commonsense", "atomic", "knowledge-graph", "mental-states", "inference", "aaai2021"],
+  "tags": [
+    "commonsense",
+    "atomic",
+    "knowledge-graph",
+    "mental-states",
+    "inference",
+    "aaai2021"
+  ],
   "featured": false,
   "paperReference": "Hwang et al., AAAI 2021",
   "paperUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/16792",

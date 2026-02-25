@@ -10,11 +10,26 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["polygon", "multiselect"],
-  "domain": ["Computer Vision", "Autonomous Driving"],
-  "useCase": ["Semantic Segmentation", "Instance Segmentation", "Urban Scene Understanding"],
+  "annotationTypes": [
+    "multiselect"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Autonomous Driving"
+  ],
+  "useCase": [
+    "Semantic Segmentation",
+    "Instance Segmentation",
+    "Urban Scene Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["cityscapes", "segmentation", "autonomous-driving", "urban", "cvpr2016"],
+  "tags": [
+    "cityscapes",
+    "segmentation",
+    "autonomous-driving",
+    "urban",
+    "cvpr2016"
+  ],
   "featured": true,
   "paperReference": "Cordts et al., CVPR 2016",
   "paperUrl": "https://arxiv.org/abs/1604.01685",

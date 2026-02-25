@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking"],
-  "domain": ["NLP", "Multilingual", "Information Extraction"],
-  "useCase": ["Relation Extraction", "Multilingual NLP", "Knowledge Base Population"],
+  "annotationTypes": [
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Multilingual",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Multilingual NLP",
+    "Knowledge Base Population"
+  ],
   "complexity": "advanced",
-  "tags": ["multilingual", "relation-extraction", "wikidata", "redfm", "acl2023", "knowledge-graph"],
+  "tags": [
+    "multilingual",
+    "relation-extraction",
+    "wikidata",
+    "redfm",
+    "acl2023",
+    "knowledge-graph"
+  ],
   "featured": false,
   "paperReference": "Huguet Cabot et al., ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.acl-long.367/",

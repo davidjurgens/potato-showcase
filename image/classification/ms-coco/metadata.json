@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bbox", "polygon"],
-  "domain": ["Computer Vision", "Object Detection"],
-  "useCase": ["Object Detection", "Instance Segmentation", "Scene Understanding"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Object Detection"
+  ],
+  "useCase": [
+    "Object Detection",
+    "Instance Segmentation",
+    "Scene Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["coco", "object-detection", "segmentation", "bounding-box", "polygon", "eccv2014"],
+  "tags": [
+    "coco",
+    "object-detection",
+    "segmentation",
+    "bounding-box",
+    "polygon",
+    "eccv2014"
+  ],
   "featured": true,
   "paperReference": "Lin et al., ECCV 2014",
   "paperUrl": "https://arxiv.org/abs/1405.0312",

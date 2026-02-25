@@ -10,11 +10,31 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["video_annotation", "bbox"],
-  "domain": ["Computer Vision", "Human Interaction", "3D Understanding"],
-  "useCase": ["Person Tracking", "Interaction Recognition", "Multi-person Understanding"],
+  "annotationTypes": [
+    "multiselect",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Human Interaction",
+    "3D Understanding"
+  ],
+  "useCase": [
+    "Person Tracking",
+    "Interaction Recognition",
+    "Multi-person Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "interaction", "multi-person", "bounding-box", "tracking", "close-range", "3d", "harmony4d"],
+  "tags": [
+    "video",
+    "interaction",
+    "multi-person",
+    "bounding-box",
+    "tracking",
+    "close-range",
+    "3d",
+    "harmony4d"
+  ],
   "featured": false,
   "paperReference": "Jung et al., NeurIPS 2024",
   "paperUrl": "https://proceedings.neurips.cc/paper/2024/hash/harmony4d",

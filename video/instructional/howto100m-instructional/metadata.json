@@ -10,11 +10,30 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Video-Language", "Instructional Video"],
-  "useCase": ["Video-Text Alignment", "Step Recognition", "Procedural Understanding"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video-Language",
+    "Instructional Video"
+  ],
+  "useCase": [
+    "Video-Text Alignment",
+    "Step Recognition",
+    "Procedural Understanding"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "instructional", "howto", "narration", "steps", "grounding"],
+  "tags": [
+    "video",
+    "instructional",
+    "howto",
+    "narration",
+    "steps",
+    "grounding"
+  ],
   "featured": false,
   "paperReference": "Miech et al., ICCV 2019",
   "paperUrl": "https://openaccess.thecvf.com/content_ICCV_2019/html/Miech_HowTo100M_Learning_a_Text-Video_Embedding_by_Watching_Hundred_Million_Narrated_ICCV_2019_paper.html",

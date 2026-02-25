@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation", "likert"],
-  "domain": ["Computer Vision", "Video Understanding"],
-  "useCase": ["Video Summarization", "Highlight Detection"],
+  "annotationTypes": [
+    "likert",
+    "video",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video Understanding"
+  ],
+  "useCase": [
+    "Video Summarization",
+    "Highlight Detection"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "summarization", "importance", "keyframes", "tvsum"],
+  "tags": [
+    "video",
+    "summarization",
+    "importance",
+    "keyframes",
+    "tvsum"
+  ],
   "featured": false,
   "paperReference": "Song et al., CVPR 2015",
   "paperUrl": "https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Song_TVSum_Summarizing_Web_2015_CVPR_paper.pdf",

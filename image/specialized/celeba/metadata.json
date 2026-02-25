@@ -10,11 +10,26 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "bbox"],
-  "domain": ["Computer Vision", "Face Analysis"],
-  "useCase": ["Face Attribute Classification", "Face Detection", "Demographic Analysis"],
+  "annotationTypes": [
+    "multiselect"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Face Analysis"
+  ],
+  "useCase": [
+    "Face Attribute Classification",
+    "Face Detection",
+    "Demographic Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["celeba", "face", "attributes", "celebrity", "iccv2015"],
+  "tags": [
+    "celeba",
+    "face",
+    "attributes",
+    "celebrity",
+    "iccv2015"
+  ],
   "featured": true,
   "paperReference": "Liu et al., ICCV 2015",
   "paperUrl": "https://openaccess.thecvf.com/content_iccv_2015/html/Liu_Deep_Learning_Face_ICCV_2015_paper.html",
