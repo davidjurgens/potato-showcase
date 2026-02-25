@@ -1,0 +1,52 @@
+[
+  {
+    "id": "pretens_001",
+    "text": "The student managed to solve the complex equation after working on it for three hours.",
+    "presupposition_type": "Factive"
+  },
+  {
+    "id": "pretens_002",
+    "text": "The cat stopped flying through the kitchen every morning before breakfast.",
+    "presupposition_type": "Aspectual"
+  },
+  {
+    "id": "pretens_003",
+    "text": "She regretted that her team won the championship last season.",
+    "presupposition_type": "Factive"
+  },
+  {
+    "id": "pretens_004",
+    "text": "The ice cream began to melt under the hot summer sun.",
+    "presupposition_type": "Aspectual"
+  },
+  {
+    "id": "pretens_005",
+    "text": "He returned to his hometown after living abroad for twenty years.",
+    "presupposition_type": "Change-of-state"
+  },
+  {
+    "id": "pretens_006",
+    "text": "The rock continued to breathe heavily after climbing the steep mountain trail.",
+    "presupposition_type": "Aspectual"
+  },
+  {
+    "id": "pretens_007",
+    "text": "She realized that the Earth revolves around the Sun.",
+    "presupposition_type": "Factive"
+  },
+  {
+    "id": "pretens_008",
+    "text": "The bachelor announced that his wife would be attending the ceremony.",
+    "presupposition_type": "Existential"
+  },
+  {
+    "id": "pretens_009",
+    "text": "The company stopped manufacturing typewriters and shifted to computer keyboards.",
+    "presupposition_type": "Aspectual"
+  },
+  {
+    "id": "pretens_010",
+    "text": "The colorless green ideas slept furiously before waking up refreshed.",
+    "presupposition_type": "Change-of-state"
+  }
+]

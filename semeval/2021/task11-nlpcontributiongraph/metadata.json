@@ -1,0 +1,23 @@
+{
+  "title": "NLPContributionGraph - Structured Extraction of NLP Contributions",
+  "description": "Extract structured contribution information from NLP papers by annotating research problem, approach, model, dataset, metric, and result spans and forming contribution triples, based on SemEval-2021 Task 11 (D'Souza et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "D'Souza et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "TIB Leibniz Information Centre for Science and Technology"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "text"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Information Extraction", "Scientific Knowledge Graphs", "Scholarly Document Processing"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2021", "shared-task", "knowledge-graph", "scientific-papers", "information-extraction", "nlp"],
+  "featured": false,
+  "paperReference": "D'Souza et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.44/",
+  "datasetUrl": "https://ncg-task.github.io/",
+  "citation": "@inproceedings{dsouza-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 11: {NLPC}ontribution{G}raph -- {S}tructured {E}xtraction of {NLP} {C}ontributions from {R}esearch {P}apers\",\n    author = \"D'Souza, Jennifer  and Auer, S{\\\"o}ren  and Pedersen, Ted\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.44\"\n}"
+}

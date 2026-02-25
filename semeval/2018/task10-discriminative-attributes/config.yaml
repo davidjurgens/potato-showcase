@@ -1,0 +1,74 @@
+# Capturing Discriminative Attributes
+# Based on Krebs et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1117/
+# Dataset: https://github.com/dpaperno/DiscAtt
+#
+# This task asks annotators to determine whether a given attribute
+# (property or feature) discriminates between two words -- that is,
+# whether it is a characteristic of one word but not the other.
+#
+# Classification Labels:
+# - Discriminative: The attribute distinguishes between the two words
+# - Not Discriminative: The attribute applies equally to both words or neither
+
+annotation_task_name: "Capturing Discriminative Attributes"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: discriminative_judgment
+    description: "Does this attribute discriminate between the two words?"
+    labels:
+      - "Discriminative"
+      - "Not Discriminative"
+    keyboard_shortcuts:
+      "Discriminative": "1"
+      "Not Discriminative": "2"
+    tooltips:
+      "Discriminative": "The attribute is a characteristic of one word but not the other"
+      "Not Discriminative": "The attribute applies to both words equally, or to neither"
+
+annotation_instructions: |
+  You will be shown two words and an attribute. Your task is to determine whether
+  the attribute discriminates between the two words. An attribute is discriminative
+  if it is characteristic of one word but not the other.
+  Example: "has wings" is discriminative for (airplane, car) but "has wheels" is not
+  discriminative for (car, truck).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-bottom: 16px;">
+      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; text-align: center; min-width: 120px;">
+        <span style="color: #64748b; font-size: 13px;">Word 1</span>
+        <p style="font-size: 20px; font-weight: bold; margin: 4px 0;">{{word_1}}</p>
+      </div>
+      <span style="font-size: 24px; color: #94a3b8;">vs</span>
+      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; text-align: center; min-width: 120px;">
+        <span style="color: #64748b; font-size: 13px;">Word 2</span>
+        <p style="font-size: 20px; font-weight: bold; margin: 4px 0;">{{word_2}}</p>
+      </div>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; text-align: center; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Attribute:</strong>
+      <p style="font-size: 18px; font-weight: bold; margin: 4px 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

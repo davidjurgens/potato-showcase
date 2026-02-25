@@ -1,0 +1,23 @@
+{
+  "title": "Persuasive Techniques in Multimodal Content",
+  "description": "Detect and span-annotate persuasive techniques in memes and news articles, based on SemEval-2021 Task 6 (Dimitrov et al.). Annotators identify rhetorical and propaganda techniques such as loaded language, name calling, and appeals to emotion.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dimitrov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Qatar Computing Research Institute"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "span"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Propaganda Detection", "Persuasion Analysis", "Media Literacy"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2021", "shared-task", "persuasion", "propaganda", "multimodal", "rhetoric"],
+  "featured": false,
+  "paperReference": "Dimitrov et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.7/",
+  "datasetUrl": "https://propaganda.qcri.org/semeval2021-task6/",
+  "citation": "@inproceedings{dimitrov-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 6: {D}etection of {P}ersuasion {T}echniques in {T}exts and {I}mages\",\n    author = \"Dimitrov, Dimitar  and Bin Ali, Bishr  and Shaar, Shaden  and Alam, Firoj  and Dalvi, Fabrizio  and Nakov, Preslav\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.7\"\n}"
+}

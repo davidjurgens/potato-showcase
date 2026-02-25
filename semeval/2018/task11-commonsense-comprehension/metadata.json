@@ -1,0 +1,23 @@
+{
+  "title": "Machine Comprehension Using Commonsense Knowledge",
+  "description": "Multiple-choice reading comprehension requiring commonsense reasoning over narrative texts, selecting the best answer and providing reasoning. Based on SemEval-2018 Task 11.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ostermann et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Saarland University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["SemEval", "NLP", "Reading Comprehension", "Commonsense Reasoning"],
+  "useCase": ["Reading Comprehension", "Commonsense Reasoning", "QA"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2018", "shared-task", "commonsense", "reading-comprehension", "multiple-choice", "reasoning"],
+  "featured": false,
+  "paperReference": "Ostermann et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1119/",
+  "datasetUrl": "https://github.com/Heidelberg-NLP/SemEval-2018-Task-11",
+  "citation": "@inproceedings{ostermann-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 11: Machine Comprehension Using Commonsense Knowledge\",\n    author = \"Ostermann, Simon and Roth, Michael and Modi, Ashutosh and Thater, Stefan and Pinkal, Manfred\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1119\"\n}"
+}

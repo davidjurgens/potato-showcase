@@ -1,0 +1,52 @@
+[
+  {
+    "id": "patient_qa_001",
+    "text": "I was recently diagnosed with type 2 diabetes and my doctor put me on metformin. I've been experiencing stomach cramps and diarrhea for the past week. Is this normal? Should I stop taking the medication?",
+    "forum_category": "Diabetes"
+  },
+  {
+    "id": "patient_qa_002",
+    "text": "My mother was just told she has early-stage Alzheimer's. I feel completely overwhelmed and don't know how to cope. Has anyone else gone through this with a parent?",
+    "forum_category": "Caregiving"
+  },
+  {
+    "id": "patient_qa_003",
+    "text": "I've been having persistent lower back pain for about 3 months. I've tried ibuprofen and stretching but nothing seems to help. What kind of specialist should I see?",
+    "forum_category": "Pain Management"
+  },
+  {
+    "id": "patient_qa_004",
+    "text": "Can someone explain the difference between an MRI and a CT scan? My doctor ordered both and I'm confused about why I need two different imaging tests.",
+    "forum_category": "General Health"
+  },
+  {
+    "id": "patient_qa_005",
+    "text": "I just finished my last round of chemotherapy yesterday. I'm cancer-free but I feel so empty and scared. Everyone keeps telling me I should be happy but I just feel lost.",
+    "forum_category": "Cancer Support"
+  },
+  {
+    "id": "patient_qa_006",
+    "text": "My 8-year-old has been complaining of headaches almost every day after school. He doesn't have vision problems according to his last eye exam. What else could be causing this?",
+    "forum_category": "Pediatrics"
+  },
+  {
+    "id": "patient_qa_007",
+    "text": "I've been on 20mg of citalopram for anxiety for about 6 months and I want to stop taking it. Can I just quit cold turkey or do I need to taper off gradually?",
+    "forum_category": "Mental Health"
+  },
+  {
+    "id": "patient_qa_008",
+    "text": "Has anyone had success with physical therapy for frozen shoulder? My orthopedist recommended it but I've heard it can be very painful. What was your experience like?",
+    "forum_category": "Orthopedics"
+  },
+  {
+    "id": "patient_qa_009",
+    "text": "I'm pregnant (12 weeks) and I've been having really bad morning sickness. I can barely keep any food down. At what point should I go to the emergency room?",
+    "forum_category": "Pregnancy"
+  },
+  {
+    "id": "patient_qa_010",
+    "text": "My blood work came back showing elevated liver enzymes (ALT 85, AST 72). My doctor wants to repeat the test in a month. Should I be worried? I don't drink alcohol.",
+    "forum_category": "Gastroenterology"
+  }
+]

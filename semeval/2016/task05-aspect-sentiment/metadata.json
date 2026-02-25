@@ -1,0 +1,23 @@
+{
+  "title": "Aspect-Based Sentiment Analysis",
+  "description": "Identification of aspect terms in review text with sentiment polarity classification for each aspect. Based on SemEval-2016 Task 5 (ABSA).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pontiki et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Institute for Language and Speech Processing"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "NLP", "Sentiment Analysis", "Aspect Extraction"],
+  "useCase": ["Aspect Extraction", "Sentiment Analysis", "Opinion Mining"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2016", "shared-task", "aspect-sentiment", "absa", "opinion-mining", "reviews"],
+  "featured": false,
+  "paperReference": "Pontiki et al., SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1002/",
+  "datasetUrl": "http://alt.qcri.org/semeval2016/task5/",
+  "citation": "@inproceedings{pontiki-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 5: Aspect Based Sentiment Analysis\",\n    author = \"Pontiki, Maria and Galanis, Dimitris and Papageorgiou, Haris and Androutsopoulos, Ion and Manandhar, Suresh and Al-Smadi, Mohammad and Al-Ayyoub, Mahmoud and Zhao, Yanyan and Qin, Bing and De Clercq, Orphee and Hoste, Veronique and Apidianaki, Marianna and Tannier, Xavier and Loukachevitch, Natalia and Kotelnikov, Evgeniy and Bel, Nuria and Jimenez-Zafra, Salud Maria and Eryigit, Gulsen\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1002\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Memotion Analysis - Sentiment and Type Classification of Memes",
+  "description": "Classify the overall sentiment of internet memes and identify their communicative types (sarcastic, humorous, offensive, motivational), based on SemEval-2020 Task 8 (Sharma et al.). Annotators analyze both text and image descriptions of memes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sharma et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "IIIT Delhi"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Meme Analysis", "Sentiment Analysis", "Multimodal Understanding"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2020", "shared-task", "memes", "sentiment", "multimodal", "sarcasm"],
+  "featured": false,
+  "paperReference": "Sharma et al., SemEval 2020",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.99/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/20629",
+  "citation": "@inproceedings{sharma-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 8: {M}emotion {A}nalysis -- the {V}isuo-{L}ingual {M}etaphor!\",\n    author = \"Sharma, Chhavi  and Bhageria, Deepesh  and Scott, William  and Pykl, Srinivas  and Das, Amitava  and Chakraborty, Tanmoy  and Pulabaigari, Viswanath  and Gamback, Bjorn\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.99\"\n}"
+}

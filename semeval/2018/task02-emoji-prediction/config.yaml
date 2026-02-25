@@ -1,0 +1,92 @@
+# Multilingual Emoji Prediction
+# Based on Barbieri et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1003/
+# Dataset: https://competitions.codalab.org/competitions/17344
+#
+# This task asks annotators to predict the most appropriate emoji for a
+# given tweet from a set of 20 most frequent emojis on Twitter.
+#
+# The 20 emoji categories represent the most commonly used emojis,
+# described by their textual names for accessibility.
+
+annotation_task_name: "Multilingual Emoji Prediction"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: emoji_prediction
+    description: "Which emoji best matches this tweet?"
+    labels:
+      - "Heart"
+      - "Face Laughing"
+      - "Heart Eyes"
+      - "Fire"
+      - "Smiling"
+      - "Crying"
+      - "Two Hearts"
+      - "Kiss"
+      - "Folded Hands"
+      - "Clapping"
+      - "OK"
+      - "Sparkles"
+      - "Flexed Biceps"
+      - "Camera"
+      - "Sunglasses"
+      - "Blue Heart"
+      - "Musical Notes"
+      - "Smirking"
+      - "Sun"
+      - "Purple Heart"
+    tooltips:
+      "Heart": "Red heart - love, affection, strong positive emotion"
+      "Face Laughing": "Laughing face with tears - something very funny"
+      "Heart Eyes": "Heart-eyes face - adoration, infatuation"
+      "Fire": "Fire - something hot, trending, excellent"
+      "Smiling": "Smiling face - general happiness or friendliness"
+      "Crying": "Crying face - sadness or being deeply moved"
+      "Two Hearts": "Two hearts - mutual love, romance"
+      "Kiss": "Kiss mark - sending a kiss, affection"
+      "Folded Hands": "Folded hands - please, thank you, prayer"
+      "Clapping": "Clapping hands - applause, congratulations"
+      "OK": "OK hand - approval, agreement"
+      "Sparkles": "Sparkles - something special, magical, or new"
+      "Flexed Biceps": "Flexed biceps - strength, effort, working hard"
+      "Camera": "Camera - photography, capturing moments"
+      "Sunglasses": "Sunglasses face - cool, confident"
+      "Blue Heart": "Blue heart - trust, loyalty, platonic love"
+      "Musical Notes": "Musical notes - music, singing, rhythm"
+      "Smirking": "Smirking face - sly, suggestive, flirty"
+      "Sun": "Sun - sunny day, brightness, warmth"
+      "Purple Heart": "Purple heart - compassion, support, honor"
+
+annotation_instructions: |
+  You will be shown a tweet with the emoji removed. Your task is to predict
+  which of the 20 most common emojis was originally used with this tweet.
+  Consider the tone, topic, and sentiment of the tweet.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

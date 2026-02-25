@@ -1,0 +1,12 @@
+[
+  {"id": "stance_001", "text": "Climate change is the biggest threat to our planet. We need urgent action now before it's too late.", "target": "Climate Change is a Real Concern"},
+  {"id": "stance_002", "text": "The so-called climate crisis is just another excuse for government overreach and higher taxes.", "target": "Climate Change is a Real Concern"},
+  {"id": "stance_003", "text": "Everyone deserves access to quality healthcare regardless of their income level.", "target": "Universal Healthcare"},
+  {"id": "stance_004", "text": "Government-run healthcare would be a disaster. Look at the wait times in other countries!", "target": "Universal Healthcare"},
+  {"id": "stance_005", "text": "Had a great workout at the gym today. Feeling energized and ready for the week!", "target": "Legalization of Abortion"},
+  {"id": "stance_006", "text": "Women should have the right to make decisions about their own bodies. Full stop.", "target": "Legalization of Abortion"},
+  {"id": "stance_007", "text": "Renewable energy is the future. Solar and wind power are becoming cheaper every year.", "target": "Climate Change is a Real Concern"},
+  {"id": "stance_008", "text": "The free market should determine healthcare, not bureaucrats in Washington.", "target": "Universal Healthcare"},
+  {"id": "stance_009", "text": "Just watched the new Marvel movie. The special effects were amazing!", "target": "Climate Change is a Real Concern"},
+  {"id": "stance_010", "text": "Proud to support the movement for equal rights and bodily autonomy for all women.", "target": "Feminist Movement"}
+]

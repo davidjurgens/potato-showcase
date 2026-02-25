@@ -1,0 +1,65 @@
+# Hyperpartisan News Detection
+# Based on Kiesel et al., SemEval 2019
+# Paper: https://aclanthology.org/S19-2145/
+# Dataset: https://zenodo.org/record/1489920
+#
+# This task asks annotators to determine whether a news article exhibits
+# hyperpartisan (extreme one-sided) political bias. Annotators read the
+# article text and the source publication to make their judgment.
+#
+# Classification Labels:
+# - Hyperpartisan: The article shows extreme one-sided political bias
+# - Not Hyperpartisan: The article is balanced or does not show extreme bias
+
+annotation_task_name: "Hyperpartisan News Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: hyperpartisan_judgment
+    description: "Does this news article exhibit hyperpartisan (extreme one-sided) political bias?"
+    labels:
+      - "Hyperpartisan"
+      - "Not Hyperpartisan"
+    keyboard_shortcuts:
+      "Hyperpartisan": "1"
+      "Not Hyperpartisan": "2"
+    tooltips:
+      "Hyperpartisan": "The article shows extreme one-sided political bias, presenting only one perspective"
+      "Not Hyperpartisan": "The article is relatively balanced or does not display extreme partisan bias"
+
+annotation_instructions: |
+  You will be shown a news article along with its source publication. Your task is to
+  determine whether the article is hyperpartisan -- that is, whether it exhibits extreme
+  one-sided political bias. Consider the language, framing, and presentation of facts.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Source:</strong>
+      <span style="font-size: 15px;">{{source}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Article Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

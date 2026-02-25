@@ -1,0 +1,86 @@
+# Emotion Discovery and Reasoning its Flip
+# Based on Kumar et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2024-task10
+#
+# This task asks annotators to identify the emotion expressed in a dialogue
+# turn, and to highlight the trigger spans that cause the emotion as well
+# as any points where the emotion changes (flips) from the previous state.
+
+annotation_task_name: "Emotion Discovery and Reasoning its Flip"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: current_emotion
+    description: "What emotion is expressed in this dialogue turn?"
+    labels:
+      - "Joy"
+      - "Sadness"
+      - "Anger"
+      - "Fear"
+      - "Surprise"
+      - "Disgust"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Joy": "1"
+      "Sadness": "2"
+      "Anger": "3"
+      "Fear": "4"
+      "Surprise": "5"
+      "Disgust": "6"
+      "Neutral": "7"
+    tooltips:
+      "Joy": "Happiness, excitement, delight, or amusement"
+      "Sadness": "Grief, sorrow, disappointment, or loss"
+      "Anger": "Frustration, irritation, rage, or hostility"
+      "Fear": "Anxiety, worry, dread, or apprehension"
+      "Surprise": "Astonishment, shock, or unexpectedness"
+      "Disgust": "Revulsion, contempt, or strong disapproval"
+      "Neutral": "No clear emotional expression"
+
+  - annotation_type: span
+    name: emotion_triggers
+    description: "Highlight the trigger that caused the emotion and the point where it changed."
+    labels:
+      - "Emotion Trigger"
+      - "Emotion Flip Point"
+
+annotation_instructions: |
+  You will be shown a dialogue turn with context about the speaker and their previous emotion. Your task is to:
+  1. Read the dialogue turn and the context carefully.
+  2. Identify the current emotion expressed by the speaker.
+  3. Highlight the span(s) that triggered the emotion.
+  4. If the emotion changed from the previous state, highlight the flip point.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #1e40af;">Speaker:</strong> <span>{{speaker}}</span>
+      &nbsp; | &nbsp;
+      <strong style="color: #1e40af;">Previous Emotion:</strong> <span>{{previous_emotion}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Dialogue Turn:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

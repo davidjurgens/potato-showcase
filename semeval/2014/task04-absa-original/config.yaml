@@ -1,0 +1,95 @@
+# Original ABSA - Aspect-Based Sentiment Analysis
+# Based on Pontiki et al., SemEval 2014
+# Paper: https://aclanthology.org/S14-2004/
+# Dataset: https://alt.qcri.org/semeval2014/task4/
+#
+# This task requires annotators to identify aspect terms in review text
+# and classify the sentiment polarity expressed toward each aspect.
+# The task covers two domains: restaurant reviews and laptop reviews.
+#
+# Aspect terms are specific features or attributes mentioned in the review
+# (e.g., "battery life", "screen", "pasta", "service").
+#
+# Sentiment Labels:
+# - Positive: The opinion toward the aspect is favorable
+# - Negative: The opinion toward the aspect is unfavorable
+# - Neutral: The aspect is mentioned factually without sentiment
+# - Conflict: Both positive and negative sentiments are expressed
+
+annotation_task_name: "Original ABSA - Aspect-Based Sentiment Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: aspect_term_spans
+    description: "Highlight all aspect terms (specific features or attributes) mentioned in the review."
+    labels:
+      - "Aspect Term"
+    tooltips:
+      "Aspect Term": "A specific feature, attribute, or entity being evaluated (e.g., battery life, pasta, service, screen resolution)"
+
+  - annotation_type: radio
+    name: sentiment_polarity
+    description: "What is the overall sentiment polarity of this review toward the identified aspects?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+      - "Conflict"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+      "Conflict": "4"
+    tooltips:
+      "Positive": "The opinion expressed toward the aspect is clearly favorable or positive"
+      "Negative": "The opinion expressed toward the aspect is clearly unfavorable or negative"
+      "Neutral": "The aspect is mentioned factually without expressing positive or negative sentiment"
+      "Conflict": "Both positive and negative sentiments are expressed toward the aspect"
+
+annotation_instructions: |
+  You will be shown review text from the restaurant or laptop domain.
+
+  **Step 1: Aspect Term Identification**
+  Highlight all aspect terms in the text. An aspect term is a specific
+  feature, attribute, or entity being discussed or evaluated. Examples:
+  - Restaurant: food, service, ambiance, price, waiter, pizza, dessert menu
+  - Laptop: battery life, screen, keyboard, trackpad, processor, fan noise
+
+  **Step 2: Sentiment Classification**
+  Classify the overall sentiment polarity:
+  - **Positive**: Favorable opinion (e.g., "excellent sushi", "fast boot time")
+  - **Negative**: Unfavorable opinion (e.g., "slow service", "cheap trackpad")
+  - **Neutral**: Factual mention without sentiment (e.g., "the menu has 10 items")
+  - **Conflict**: Mixed sentiments (e.g., "the food is great but overpriced")
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #1e40af;">Review Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f5f3ff; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+      <strong style="color: #5b21b6;">Domain:</strong>
+      <span style="font-size: 15px; margin-left: 8px; text-transform: capitalize;">{{domain}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

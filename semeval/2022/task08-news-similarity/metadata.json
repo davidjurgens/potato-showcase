@@ -1,0 +1,23 @@
+{
+  "title": "Multilingual News Article Similarity",
+  "description": "Rating the similarity between pairs of news articles on a 5-point scale, assessing whether they cover the same story across multiple languages. Based on SemEval-2022 Task 8 (Chen et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert"],
+  "domain": ["NLP", "Media Analysis", "SemEval"],
+  "useCase": ["Document Similarity", "News Analysis", "Multilingual NLP"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2022", "shared-task", "news-similarity", "multilingual", "document-similarity"],
+  "featured": false,
+  "paperReference": "Chen et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.155/",
+  "datasetUrl": "https://github.com/euagendas/semeval-2022-task8",
+  "citation": "@inproceedings{chen-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 8: Multilingual News Article Similarity\",\n    author = \"Chen, Xi  and Zesch, Torsten  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.155\"\n}"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "causal_med_001",
+    "text": "A randomized controlled trial involving 500 patients with chronic migraine demonstrated that botulinum toxin injections reduced headache frequency by 50% compared to saline placebo injections over a 12-week treatment period."
+  },
+  {
+    "id": "causal_med_002",
+    "text": "Observational data from a cohort of 10,000 postmenopausal women suggest that higher dietary calcium intake is associated with lower rates of hip fracture, though confounding factors such as physical activity levels could not be fully controlled."
+  },
+  {
+    "id": "causal_med_003",
+    "text": "In elderly patients with type 2 diabetes, metformin therapy leads to improved glycemic control when combined with lifestyle modifications, provided that renal function remains within acceptable parameters as defined by eGFR above 30 mL/min."
+  },
+  {
+    "id": "causal_med_004",
+    "text": "The patient information leaflet states that this medication should be taken with food. Common side effects include nausea, dizziness, and headache. Store below 25 degrees Celsius in the original packaging."
+  },
+  {
+    "id": "causal_med_005",
+    "text": "Administration of high-dose vitamin D supplements in children aged 2-5 years with recurrent respiratory infections resulted in a 40% reduction in infection episodes compared to children receiving standard-dose supplementation over 6 months."
+  },
+  {
+    "id": "causal_med_006",
+    "text": "A meta-analysis of 15 studies found that regular consumption of green tea is correlated with reduced risk of cardiovascular disease in Asian populations, with a pooled relative risk of 0.72 (95% CI: 0.61-0.85), although the direction of causality remains uncertain."
+  },
+  {
+    "id": "causal_med_007",
+    "text": "Treatment with the monoclonal antibody trastuzumab significantly improved overall survival in women with HER2-positive breast cancer when administered as adjuvant therapy following surgery, with a hazard ratio of 0.66 (p < 0.001) compared to chemotherapy alone."
+  },
+  {
+    "id": "causal_med_008",
+    "text": "Exposure to particulate matter (PM2.5) in urban environments has been linked to increased asthma exacerbations in school-aged children, particularly during winter months when pollution levels are highest and outdoor physical activity is reduced."
+  },
+  {
+    "id": "causal_med_009",
+    "text": "The double-blind trial showed that adults with moderate depression who received cognitive behavioral therapy in combination with sertraline experienced greater symptom improvement than those treated with sertraline alone, but only if treatment adherence exceeded 80% of scheduled sessions."
+  },
+  {
+    "id": "causal_med_010",
+    "text": "A cross-sectional survey of 3,000 healthcare workers found that those who received influenza vaccination reported fewer sick days during flu season. However, vaccinated workers may also practice better hygiene behaviors, making it difficult to attribute the effect solely to vaccination."
+  }
+]

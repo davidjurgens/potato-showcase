@@ -1,0 +1,87 @@
+# Causal Medical Claim Detection and PICO Extraction
+# Based on Khetan et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.308/
+# Dataset: https://github.com/SemEval2023-Task8/causal-claim-detection
+#
+# This task asks annotators to identify PICO elements (Population, Intervention,
+# Comparator, Outcome) and causal claims in medical text, and to classify the
+# type of causal relationship expressed.
+#
+# PICO Span Labels:
+# - Population: The group of people studied
+# - Intervention: The treatment or exposure being evaluated
+# - Comparator: The control or alternative treatment
+# - Outcome: The measured result or effect
+# - Causal Claim: The text expressing a causal relationship
+#
+# Claim Type Labels:
+# - Causal: Direct cause-and-effect relationship claimed
+# - Correlational: Association without direct causation
+# - Conditional: Causal relationship with conditions
+# - No Claim: No causal claim is made
+
+annotation_task_name: "Causal Medical Claim Detection and PICO Extraction"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: pico_elements
+    description: "Highlight PICO elements and causal claims in the text"
+    labels:
+      - "Population"
+      - "Intervention"
+      - "Comparator"
+      - "Outcome"
+      - "Causal Claim"
+
+  - annotation_type: radio
+    name: claim_type
+    description: "What type of causal claim is made in this text?"
+    labels:
+      - "Causal"
+      - "Correlational"
+      - "Conditional"
+      - "No Claim"
+    keyboard_shortcuts:
+      "Causal": "1"
+      "Correlational": "2"
+      "Conditional": "3"
+      "No Claim": "4"
+    tooltips:
+      "Causal": "A direct cause-and-effect relationship is claimed between variables"
+      "Correlational": "An association or correlation is noted without asserting causation"
+      "Conditional": "A causal relationship is claimed but with specific conditions or caveats"
+      "No Claim": "No causal or correlational claim is made in this text"
+
+annotation_instructions: |
+  You will see a medical text that may contain causal claims about treatments or exposures.
+  1. Read the text carefully.
+  2. Highlight PICO elements: Population, Intervention, Comparator, Outcome, and any Causal Claim spans.
+  3. Classify the overall type of causal claim made in the text.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Medical Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

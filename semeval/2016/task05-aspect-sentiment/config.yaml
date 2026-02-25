@@ -1,0 +1,82 @@
+# Aspect-Based Sentiment Analysis
+# Based on Pontiki et al., SemEval 2016
+# Paper: https://aclanthology.org/S16-1002/
+# Dataset: http://alt.qcri.org/semeval2016/task5/
+#
+# This task asks annotators to identify aspect terms in review text
+# and classify the sentiment polarity expressed toward each aspect.
+#
+# Span Labels:
+# - Aspect Term: A word or phrase representing an aspect being evaluated
+#
+# Sentiment Polarity Labels:
+# - Positive: Favorable opinion toward the aspect
+# - Negative: Unfavorable opinion toward the aspect
+# - Neutral: Neither positive nor negative opinion
+# - Conflict: Both positive and negative opinions about the same aspect
+
+annotation_task_name: "Aspect-Based Sentiment Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: aspect_terms
+    description: "Highlight aspect terms (features or attributes being evaluated) in the review."
+    labels:
+      - "Aspect Term"
+
+  - annotation_type: radio
+    name: sentiment_polarity
+    description: "What is the sentiment expressed toward the identified aspect?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+      - "Conflict"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+      "Conflict": "4"
+    tooltips:
+      "Positive": "The reviewer expresses a favorable opinion about this aspect"
+      "Negative": "The reviewer expresses an unfavorable opinion about this aspect"
+      "Neutral": "The reviewer mentions the aspect without clear positive or negative sentiment"
+      "Conflict": "The reviewer expresses both positive and negative opinions about this aspect"
+
+annotation_instructions: |
+  You will be shown a review text from a specific domain. Your task is to:
+  1. Highlight all aspect terms -- words or phrases referring to features or attributes
+     being evaluated (e.g., "battery life", "service", "taste").
+  2. For the primary aspect, classify the sentiment polarity expressed toward it.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Domain:</strong>
+      <span style="font-size: 15px;">{{domain}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Review:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "Multilingual Emoji Prediction",
+  "description": "Prediction of the most likely emoji for a given tweet, choosing from the 20 most frequent emojis. Based on SemEval-2018 Task 2 (Multilingual Emoji Prediction).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Barbieri et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Universitat Pompeu Fabra"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Social Media", "Emoji Prediction"],
+  "useCase": ["Emoji Prediction", "Social Media Analysis", "Sentiment Analysis"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2018", "shared-task", "emoji", "twitter", "social-media", "prediction"],
+  "featured": false,
+  "paperReference": "Barbieri et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1003/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/17344",
+  "citation": "@inproceedings{barbieri-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 2: Multilingual Emoji Prediction\",\n    author = \"Barbieri, Francesco and Camacho-Collados, Jose and Ronzano, Francesco and Espinosa-Anke, Luis and Ballesteros, Miguel and Basile, Valerio and Patti, Viviana and Saggion, Horacio\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1003\"\n}"
+}

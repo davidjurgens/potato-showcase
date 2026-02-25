@@ -1,0 +1,67 @@
+# HaHackathon - Detecting and Rating Humor and Offense
+# Based on Meaney et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.9/
+# Dataset: https://competitions.codalab.org/competitions/27446
+#
+# Annotators first decide whether a text is funny, then rate how
+# offensive it is on a 5-point scale from "Not Offensive" to "Very Offensive".
+
+annotation_task_name: "HaHackathon - Detecting and Rating Humor and Offense"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: humor_judgment
+    description: "Is this text funny?"
+    labels:
+      - "Funny"
+      - "Not Funny"
+    keyboard_shortcuts:
+      "Funny": "1"
+      "Not Funny": "2"
+    tooltips:
+      "Funny": "The text is intended to be humorous and succeeds in being funny"
+      "Not Funny": "The text is not funny or the humor attempt fails"
+
+  - annotation_type: likert
+    name: offense_rating
+    description: "Rate how offensive this text is."
+    min_label: "Not Offensive"
+    max_label: "Very Offensive"
+    size: 5
+
+annotation_instructions: |
+  You will see a short text that may or may not be humorous. Your task is to:
+  1. Read the text carefully.
+  2. Decide whether the text is funny or not funny.
+  3. Rate how offensive the text is on a scale from "Not Offensive" to "Very Offensive".
+
+  Note that humor and offense are independent dimensions - a text can be funny
+  and offensive, funny and inoffensive, or not funny but still offensive.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

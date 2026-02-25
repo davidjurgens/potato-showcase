@@ -1,0 +1,82 @@
+# LegalEval - Legal Document Analysis
+# Based on Modi et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.310/
+# Dataset: https://sites.google.com/view/legaleval/home
+#
+# This task asks annotators to assess the relevance of legal document passages
+# and identify key legal entities within the text. Entity categories include
+# courts, petitioners, respondents, judges, dates, statutes, and precedents.
+#
+# Relevance Labels:
+# - Relevant: The passage contains substantive legal content
+# - Not Relevant: The passage is procedural boilerplate or irrelevant
+#
+# Entity Categories:
+# - Court, Petitioner, Respondent, Judge, Date, Statute, Precedent
+
+annotation_task_name: "LegalEval - Legal Document Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: relevance
+    description: "Is this passage substantively relevant to the legal case?"
+    labels:
+      - "Relevant"
+      - "Not Relevant"
+    keyboard_shortcuts:
+      "Relevant": "1"
+      "Not Relevant": "2"
+    tooltips:
+      "Relevant": "The passage contains substantive legal arguments, facts, or reasoning"
+      "Not Relevant": "The passage is procedural boilerplate or not relevant to the case outcome"
+
+  - annotation_type: span
+    name: legal_entities
+    description: "Highlight and label all legal entities in the text"
+    labels:
+      - "Court"
+      - "Petitioner"
+      - "Respondent"
+      - "Judge"
+      - "Date"
+      - "Statute"
+      - "Precedent"
+
+annotation_instructions: |
+  You will see a passage from a legal document.
+  1. First, determine whether the passage is substantively relevant to the legal case.
+  2. Then, highlight all legal entities in the text and assign the appropriate label.
+  3. Entity types include: Court names, Petitioners, Respondents, Judge names,
+     Dates, Statute references, and Precedent case citations.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Case Type:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{case_type}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Legal Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

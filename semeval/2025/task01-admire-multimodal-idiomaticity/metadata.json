@@ -1,0 +1,23 @@
+{
+  "title": "ADMIRE - Multimodal Idiomaticity Recognition",
+  "description": "Multimodal idiomaticity detection task requiring annotators to identify whether expressions are used idiomatically or literally, with supporting cue analysis. Based on SemEval-2025 Task 1 (ADMIRE).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tayyar Madabushi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "H-TayyarMadabworked",
+    "affiliation": "University of Bath"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["SemEval", "NLP", "Multimodal", "Idiom Detection"],
+  "useCase": ["Idiomaticity Detection", "Multimodal Understanding", "Figurative Language"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2025", "shared-task", "idiom", "multimodal", "figurative-language"],
+  "featured": false,
+  "paperReference": "Tayyar Madabushi et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/H-TayyarMadabushi/SemEval2025-Task1",
+  "citation": "@inproceedings{tayyarmadabushi-etal-2025-admire,\n    title = \"{ADMIRE}: Multimodal Idiomaticity Recognition\",\n    author = \"Tayyar Madabushi, Harish and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Fine-Grained Sentiment Analysis on Financial Microblogs and News",
+  "description": "Graded sentiment analysis of financial text with topic classification, rating market sentiment from very bearish to very bullish on a 7-point scale. Based on SemEval-2017 Task 5.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cortis et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "National University of Ireland Galway"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "radio"],
+  "domain": ["SemEval", "NLP", "Financial Analysis", "Sentiment Analysis"],
+  "useCase": ["Financial Sentiment", "Market Analysis", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2017", "shared-task", "financial-sentiment", "stock-market", "microblogs", "fine-grained"],
+  "featured": false,
+  "paperReference": "Cortis et al., SemEval 2017",
+  "paperUrl": "https://aclanthology.org/S17-2089/",
+  "datasetUrl": "https://alt.qcri.org/semeval2017/task5/",
+  "citation": "@inproceedings{cortis-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 5: Fine-Grained Sentiment Analysis on Financial Microblogs and News\",\n    author = \"Cortis, Keith and Freitas, Andre and Daudert, Tobias and Huerlimann, Manuela and Zarrouk, Manel and Handschuh, Siegfried and Davis, Brian\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2089\"\n}"
+}

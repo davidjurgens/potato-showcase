@@ -1,0 +1,69 @@
+# AfriSenti - African Language Sentiment
+# Based on Muhammad et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.315/
+# Dataset: https://github.com/afrisenti-semeval/afrisent-semeval-2023
+#
+# This task asks annotators to classify the sentiment of tweets written
+# in African languages. The three-way classification covers positive,
+# negative, and neutral sentiment.
+#
+# Sentiment Labels:
+# - Positive: The tweet expresses positive sentiment, happiness, or approval
+# - Negative: The tweet expresses negative sentiment, sadness, or disapproval
+# - Neutral: The tweet is factual, balanced, or does not express clear sentiment
+
+annotation_task_name: "AfriSenti - African Language Sentiment"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the sentiment expressed in this tweet?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "The tweet expresses positive sentiment, happiness, satisfaction, or approval"
+      "Negative": "The tweet expresses negative sentiment, sadness, frustration, or disapproval"
+      "Neutral": "The tweet is factual, balanced, or does not express clear positive or negative sentiment"
+
+annotation_instructions: |
+  You will see a tweet written in an African language along with the language identifier.
+  Classify the overall sentiment of the tweet as Positive, Negative, or Neutral.
+  Focus on the emotional tone and attitude expressed, not just the topic.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

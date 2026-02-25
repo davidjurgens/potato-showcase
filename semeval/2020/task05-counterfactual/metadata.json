@@ -1,0 +1,23 @@
+{
+  "title": "Counterfactual Detection and Reasoning",
+  "description": "Detect counterfactual statements and annotate their antecedent and consequent spans, based on SemEval-2020 Task 5 (Yang et al.). Annotators identify whether a statement describes a hypothetical situation counter to known facts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Florida"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Counterfactual Detection", "Causal Reasoning", "Discourse Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2020", "shared-task", "counterfactual", "causal-reasoning", "discourse"],
+  "featured": false,
+  "paperReference": "Yang et al., SemEval 2020",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.40/",
+  "datasetUrl": "https://github.com/arielsho/SemEval-2020-Task-5",
+  "citation": "@inproceedings{yang-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 5: {C}ounterfactual {R}ecognition\",\n    author = \"Yang, Xiaoyu  and Obadinma, Stephen  and Zhao, Huasha  and Zhang, Qiong  and Matwin, Stan  and Zhu, Xiaodan\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.40\"\n}"
+}

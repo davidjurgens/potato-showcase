@@ -1,0 +1,12 @@
+[
+  {"id": "emoflip_001", "text": "Wait, are you serious? They actually gave me the lead role? I was sure they would pick someone else! This is unbelievable!", "speaker": "Emma", "previous_emotion": "Neutral"},
+  {"id": "emoflip_002", "text": "I just found out that my flight got cancelled and there are no alternatives until tomorrow. I had promised my daughter I would be there for her recital tonight.", "speaker": "Robert", "previous_emotion": "Joy"},
+  {"id": "emoflip_003", "text": "You knew about this for weeks and you didn't tell me? I had to find out from a stranger at the office. That is completely unacceptable.", "speaker": "Diana", "previous_emotion": "Neutral"},
+  {"id": "emoflip_004", "text": "I keep hearing noises from the basement at night. Last night I went down to check and the door was wide open even though I locked it before bed.", "speaker": "Marcus", "previous_emotion": "Neutral"},
+  {"id": "emoflip_005", "text": "Oh well, I guess the meeting is at 3 PM. Let me check my calendar to confirm the time and the room number.", "speaker": "Sarah", "previous_emotion": "Neutral"},
+  {"id": "emoflip_006", "text": "I cannot believe they served that to us. The meat was clearly spoiled and the waiter just laughed when I pointed it out. Absolutely revolting.", "speaker": "Chen", "previous_emotion": "Joy"},
+  {"id": "emoflip_007", "text": "Actually, now that I think about it, maybe this is a blessing in disguise. Losing that job freed me up to finally pursue what I actually love doing.", "speaker": "Jordan", "previous_emotion": "Sadness"},
+  {"id": "emoflip_008", "text": "I miss her so much. Every time I walk past her favorite coffee shop, I remember how she used to order the same thing every single morning without fail.", "speaker": "Lily", "previous_emotion": "Neutral"},
+  {"id": "emoflip_009", "text": "The kids put together a surprise party for my birthday. When I walked in, everyone yelled surprise and I almost dropped my groceries. Then I saw the cake they made themselves and I just started crying happy tears.", "speaker": "Thomas", "previous_emotion": "Neutral"},
+  {"id": "emoflip_010", "text": "You have got to be kidding me. After all the overtime I put in, they promoted someone who has been here for three months. Three months! I have been here for five years.", "speaker": "Priya", "previous_emotion": "Joy"}
+]

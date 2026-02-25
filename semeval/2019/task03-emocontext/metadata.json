@@ -1,0 +1,23 @@
+{
+  "title": "EmoContext - Contextual Emotion Detection in Text",
+  "description": "Contextual emotion detection in 3-turn conversations, classifying the emotion of the final turn given conversational context. Based on SemEval-2019 Task 3 (EmoContext).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chatterjee et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Microsoft"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Emotion Detection", "Dialogue"],
+  "useCase": ["Emotion Detection", "Conversational AI", "Sentiment Analysis"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2019", "shared-task", "emotion", "conversation", "dialogue", "emocontext"],
+  "featured": false,
+  "paperReference": "Chatterjee et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2005/",
+  "datasetUrl": "https://www.humanizing-ai.com/emocontext.html",
+  "citation": "@inproceedings{chatterjee-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 3: {E}mo{C}ontext Contextual Emotion Detection in Text\",\n    author = \"Chatterjee, Ankush and Narahari, Kedhar Nath and Joshi, Meghana and Agrawal, Puneet\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2005\"\n}"
+}

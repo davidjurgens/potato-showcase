@@ -1,0 +1,12 @@
+[
+  {"id": "lcp_001", "text": "The patient was diagnosed with a severe case of pneumonia after presenting with persistent cough and dyspnea.", "target_word": "dyspnea"},
+  {"id": "lcp_002", "text": "The children were playing in the garden and seemed very happy.", "target_word": "happy"},
+  {"id": "lcp_003", "text": "The committee reached a unanimous decision to postpone the referendum indefinitely.", "target_word": "referendum"},
+  {"id": "lcp_004", "text": "She opened the big red door and walked inside.", "target_word": "door"},
+  {"id": "lcp_005", "text": "The archaeologist discovered an unprecedented trove of Mesopotamian cuneiform tablets.", "target_word": "cuneiform"},
+  {"id": "lcp_006", "text": "He was known for his gregarious personality and ability to charm everyone at social gatherings.", "target_word": "gregarious"},
+  {"id": "lcp_007", "text": "The government implemented new austerity measures to address the budget deficit.", "target_word": "austerity"},
+  {"id": "lcp_008", "text": "The cat sat on the mat near the window.", "target_word": "mat"},
+  {"id": "lcp_009", "text": "The ephemeral beauty of the cherry blossoms attracted thousands of visitors to the park.", "target_word": "ephemeral"},
+  {"id": "lcp_010", "text": "Researchers observed a significant amelioration in patient symptoms following the new treatment protocol.", "target_word": "amelioration"}
+]

@@ -1,0 +1,23 @@
+{
+  "title": "Counting Events and Participants in News",
+  "description": "Counting the number of events or incidents described in news reports and providing event descriptions. Based on SemEval-2018 Task 5 (Counting Events and Participants).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Postma et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Vrije Universiteit Amsterdam"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["number", "text"],
+  "domain": ["SemEval", "NLP", "Event Detection", "Information Extraction"],
+  "useCase": ["Event Counting", "News Analysis", "Information Extraction"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2018", "shared-task", "event-detection", "counting", "news", "information-extraction"],
+  "featured": false,
+  "paperReference": "Postma et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1009/",
+  "datasetUrl": "http://www.newsreader-project.eu/results/data/wikinews/",
+  "citation": "@inproceedings{postma-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 5: Counting Events and Participants in the Long Tail\",\n    author = \"Postma, Marten and Ilievski, Filip and Vossen, Piek\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1009\"\n}"
+}

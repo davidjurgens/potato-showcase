@@ -1,0 +1,83 @@
+# EmoContext - Contextual Emotion Detection in Text
+# Based on Chatterjee et al., SemEval 2019
+# Paper: https://aclanthology.org/S19-2005/
+# Dataset: https://www.humanizing-ai.com/emocontext.html
+#
+# This task asks annotators to classify the emotion expressed in the
+# third turn of a 3-turn conversation. The conversational context
+# (turns 1 and 2) provides important clues for interpretation.
+#
+# Emotion Labels:
+# - Happy: The speaker expresses joy, excitement, or positive emotion
+# - Sad: The speaker expresses sadness, disappointment, or grief
+# - Angry: The speaker expresses anger, frustration, or irritation
+# - Others: No clear emotion or a different emotion not covered above
+#
+# Annotation Guidelines:
+# 1. Read all three turns to understand the conversational context
+# 2. Focus on the emotion expressed in the third (final) turn
+# 3. Consider how the preceding turns influence emotional interpretation
+# 4. Select "Others" when the emotion is neutral or does not fit the three categories
+
+annotation_task_name: "EmoContext - Contextual Emotion Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: emotion
+    description: "What emotion is expressed in the third turn of the conversation?"
+    labels:
+      - "Happy"
+      - "Sad"
+      - "Angry"
+      - "Others"
+    keyboard_shortcuts:
+      "Happy": "1"
+      "Sad": "2"
+      "Angry": "3"
+      "Others": "4"
+    tooltips:
+      "Happy": "The speaker expresses joy, excitement, or positive emotion"
+      "Sad": "The speaker expresses sadness, disappointment, or grief"
+      "Angry": "The speaker expresses anger, frustration, or irritation"
+      "Others": "No clear emotion or a different emotion not covered above"
+
+annotation_instructions: |
+  You will be shown a 3-turn conversation. Your task is to identify the emotion
+  expressed in the third (final) turn, considering the full conversational context.
+  Choose from: Happy, Sad, Angry, or Others (for neutral or other emotions).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #64748b;">Turn 1:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{turn_1}}</p>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #64748b;">Turn 2:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{turn_2}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Turn 3 (classify this):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

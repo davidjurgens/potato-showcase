@@ -1,0 +1,90 @@
+# ReCAM - Reading Comprehension of Abstract Meaning
+# Based on Zheng et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.7/
+# Dataset: https://github.com/boyuanzheng010/SemEval2021-Reading-Comprehension-of-Abstract-Meaning
+#
+# Annotators read a passage with a blank and select the best word from
+# five options to fill the blank. Options are abstract concepts that
+# require understanding beyond surface-level reading.
+
+annotation_task_name: "ReCAM - Reading Comprehension of Abstract Meaning"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: answer_choice
+    description: "Select the best word to fill the blank in the passage."
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+      - "E"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+      "E": "5"
+    tooltips:
+      "A": "Select option A"
+      "B": "Select option B"
+      "C": "Select option C"
+      "D": "Select option D"
+      "E": "Select option E"
+
+annotation_instructions: |
+  You will see a passage with a blank (marked as _____). Your task is to select
+  the best word from five options (A-E) to fill the blank.
+
+  1. Read the entire passage carefully.
+  2. Consider the meaning of each option in the context of the passage.
+  3. Select the option that best completes the passage.
+
+  Note: The correct answers are typically abstract concepts (e.g., emotions, ideas,
+  qualities) rather than concrete nouns. Pay attention to the overall meaning and
+  tone of the passage.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">A:</strong> {{option_a}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">B:</strong> {{option_b}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">C:</strong> {{option_c}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">D:</strong> {{option_d}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">E:</strong> {{option_e}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

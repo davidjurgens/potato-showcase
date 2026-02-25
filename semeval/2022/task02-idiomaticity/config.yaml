@@ -1,0 +1,72 @@
+# Idiomaticity Detection
+# Based on Tayyar Madabushi et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.13/
+# Dataset: https://github.com/H-TayyarMadabushi/SemEval_2022_Task2-idiomaticity
+#
+# This task asks annotators to determine whether a highlighted multi-word
+# expression is used idiomatically (figuratively) or literally in the
+# given sentence context.
+#
+# Classification Labels:
+# - Idiomatic: The expression is used in its figurative, non-compositional sense
+# - Literal: The expression is used in its literal, compositional sense
+
+annotation_task_name: "Idiomaticity Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: idiomaticity
+    description: "Is the target expression used idiomatically or literally?"
+    labels:
+      - "Idiomatic"
+      - "Literal"
+    keyboard_shortcuts:
+      "Idiomatic": "1"
+      "Literal": "2"
+    tooltips:
+      "Idiomatic": "The expression is used in its figurative or non-compositional sense (meaning cannot be derived from individual words)"
+      "Literal": "The expression is used in its literal or compositional sense (meaning is the sum of its parts)"
+
+annotation_instructions: |
+  You will see a sentence containing a target multi-word expression along with the language.
+  Determine whether the expression is used idiomatically (figuratively) or literally.
+  - Idiomatic: The expression has a figurative meaning different from its literal parts.
+  - Literal: The expression means exactly what the individual words suggest.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+      <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong style="color: #065f46;">Language:</strong>
+        <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+      </div>
+      <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong style="color: #92400e;">Target Expression:</strong>
+        <span style="font-size: 15px; font-weight: bold; margin-left: 8px;">{{target_expression}}</span>
+      </div>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,77 @@
+# R2VQ - Recipe Question Answering
+# Based on Jia et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.156/
+# Dataset: https://github.com/recipe-qa/SemEval2022-Task9
+#
+# This task asks annotators to answer questions about recipes and
+# classify the answerability of each question relative to the recipe text.
+#
+# Answerability Labels:
+# - Explicitly Stated: The answer is directly written in the recipe
+# - Inferable: The answer can be inferred from the recipe context
+# - Not Answerable: The recipe does not contain enough information to answer
+
+annotation_task_name: "R2VQ - Recipe Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: answer
+    description: "Write the answer to the question based on the recipe"
+
+  - annotation_type: radio
+    name: answerability
+    description: "How is the answer supported by the recipe text?"
+    labels:
+      - "Explicitly Stated"
+      - "Inferable"
+      - "Not Answerable"
+    keyboard_shortcuts:
+      "Explicitly Stated": "1"
+      "Inferable": "2"
+      "Not Answerable": "3"
+    tooltips:
+      "Explicitly Stated": "The answer is directly and clearly stated in the recipe text"
+      "Inferable": "The answer can be reasonably inferred from the recipe context but is not explicitly stated"
+      "Not Answerable": "The recipe does not contain enough information to answer this question"
+
+annotation_instructions: |
+  You will see a recipe and a question about it.
+  1. Read the recipe text carefully.
+  2. Answer the question based on the recipe.
+  3. Classify whether the answer is explicitly stated in the recipe, can be inferred, or cannot be answered.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #92400e;">Recipe:</strong>
+      <span style="font-size: 15px; font-weight: bold; margin-left: 8px;">{{recipe_title}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Recipe Text:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0; white-space: pre-line;">{{recipe_text}}</p>
+    </div>
+    <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #7e22ce;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

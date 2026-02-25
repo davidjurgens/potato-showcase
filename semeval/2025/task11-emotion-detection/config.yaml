@@ -1,0 +1,90 @@
+# Text-Based Emotion Detection
+# Based on SemEval 2025 Task 11 Organizers, SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2025-task11
+#
+# This task asks annotators to identify the primary emotion expressed
+# in a text and to characterize how the emotion is conveyed (explicitly,
+# implicitly, sarcastically, or as a mixture of emotions).
+
+annotation_task_name: "Text-Based Emotion Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: primary_emotion
+    description: "What is the primary emotion expressed in this text?"
+    labels:
+      - "Joy"
+      - "Sadness"
+      - "Anger"
+      - "Fear"
+      - "Surprise"
+      - "Disgust"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Joy": "1"
+      "Sadness": "2"
+      "Anger": "3"
+      "Fear": "4"
+      "Surprise": "5"
+      "Disgust": "6"
+      "Neutral": "7"
+    tooltips:
+      "Joy": "Happiness, delight, excitement, or positive emotion"
+      "Sadness": "Grief, sorrow, melancholy, or loss"
+      "Anger": "Irritation, frustration, rage, or hostility"
+      "Fear": "Anxiety, worry, dread, or apprehension"
+      "Surprise": "Astonishment, shock, or unexpectedness"
+      "Disgust": "Revulsion, contempt, or strong disapproval"
+      "Neutral": "No clear emotion or purely informational"
+
+  - annotation_type: multiselect
+    name: expression_type
+    description: "How is the emotion expressed? Select all that apply."
+    labels:
+      - "Explicit"
+      - "Implicit"
+      - "Sarcastic"
+      - "Mixed Emotion"
+    tooltips:
+      "Explicit": "The emotion is directly stated using emotion words"
+      "Implicit": "The emotion is conveyed indirectly through context or description"
+      "Sarcastic": "The text uses sarcasm or irony to convey emotion"
+      "Mixed Emotion": "Multiple emotions are present simultaneously"
+
+annotation_instructions: |
+  You will be shown a text passage. Your task is to:
+  1. Read the text carefully.
+  2. Identify the primary emotion expressed in the text.
+  3. Select how the emotion is expressed (explicit, implicit, sarcastic, or mixed).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,12 @@
+[
+  {"id": "mathqa_001", "text": "If 3x + 7 = 22, what is the value of x?", "difficulty": "Easy"},
+  {"id": "mathqa_002", "text": "A triangle has sides of length 5, 12, and 13. What is the area of the triangle?", "difficulty": "Medium"},
+  {"id": "mathqa_003", "text": "What is the greatest common divisor of 84 and 126?", "difficulty": "Easy"},
+  {"id": "mathqa_004", "text": "The mean of five numbers is 20. If four of the numbers are 15, 18, 22, and 25, what is the fifth number?", "difficulty": "Medium"},
+  {"id": "mathqa_005", "text": "Solve for y: 2y^2 - 5y - 3 = 0", "difficulty": "Medium"},
+  {"id": "mathqa_006", "text": "A circle has a circumference of 31.4 cm. What is its radius? (Use pi = 3.14)", "difficulty": "Easy"},
+  {"id": "mathqa_007", "text": "How many prime numbers are there between 50 and 70?", "difficulty": "Medium"},
+  {"id": "mathqa_008", "text": "A bag contains 4 red balls, 3 blue balls, and 5 green balls. What is the probability of drawing a blue ball?", "difficulty": "Easy"},
+  {"id": "mathqa_009", "text": "If f(x) = 2x^3 - 4x + 1, what is f(3)?", "difficulty": "Medium"},
+  {"id": "mathqa_010", "text": "The interior angles of a regular polygon sum to 1440 degrees. How many sides does the polygon have?", "difficulty": "Hard"}
+]

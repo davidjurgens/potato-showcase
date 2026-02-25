@@ -1,0 +1,69 @@
+# Detecting Stance in Tweets
+# Based on Mohammad et al., SemEval 2016
+# Paper: https://aclanthology.org/S16-1003/
+# Dataset: http://alt.qcri.org/semeval2016/task6/
+#
+# This task asks annotators to classify the stance expressed in a tweet
+# toward a given target (topic or entity) as favor, against, or neither.
+#
+# Stance Labels:
+# - Favor: The tweet expresses support for the target
+# - Against: The tweet expresses opposition to the target
+# - Neither: The tweet does not clearly express a stance toward the target
+
+annotation_task_name: "Detecting Stance in Tweets"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: stance
+    description: "What stance does this tweet express toward the target?"
+    labels:
+      - "Favor"
+      - "Against"
+      - "Neither"
+    keyboard_shortcuts:
+      "Favor": "1"
+      "Against": "2"
+      "Neither": "3"
+    tooltips:
+      "Favor": "The tweet expresses support for or positive stance toward the target"
+      "Against": "The tweet expresses opposition to or negative stance toward the target"
+      "Neither": "The tweet does not clearly express a stance, or is unrelated to the target"
+
+annotation_instructions: |
+  You will be shown a tweet and a target topic or entity. Your task is to determine
+  the stance of the tweet author toward the target. Note that stance is about the
+  author's position, not sentiment -- a tweet can be negative in tone but still
+  express favor toward the target.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Target:</strong>
+      <span style="font-size: 15px; font-weight: bold;">{{target}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

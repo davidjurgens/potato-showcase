@@ -1,0 +1,79 @@
+# NumEval - Numeral-Aware Language Understanding
+# Based on Chen et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2024-task7
+#
+# This task asks annotators to predict numerical values from text context,
+# classify the type of numeral, and provide an explanation of how they
+# derived the answer.
+
+annotation_task_name: "NumEval - Numeral-Aware Language Understanding"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: number
+    name: predicted_value
+    description: "Predicted numerical value"
+
+  - annotation_type: radio
+    name: numeral_type
+    description: "What type of numeral is the expected answer?"
+    labels:
+      - "Exact Number"
+      - "Approximate"
+      - "Range"
+      - "Ordinal"
+      - "Other"
+    keyboard_shortcuts:
+      "Exact Number": "1"
+      "Approximate": "2"
+      "Range": "3"
+      "Ordinal": "4"
+      "Other": "5"
+    tooltips:
+      "Exact Number": "A precise numerical value (e.g., 42, 3.14)"
+      "Approximate": "An estimated or rounded value (e.g., about 100, roughly 50%)"
+      "Range": "A range of values (e.g., between 10 and 20)"
+      "Ordinal": "A position or rank (e.g., first, 3rd place)"
+      "Other": "Other numerical expressions not covered above"
+
+  - annotation_type: text
+    name: explanation
+    description: "Explain how you derived the numerical answer from the text."
+
+annotation_instructions: |
+  You will be shown a text that contains or implies a numerical value. Your task is to:
+  1. Read the text carefully and identify the relevant numerical information.
+  2. Enter the predicted numerical value.
+  3. Classify the type of numeral (exact, approximate, range, ordinal, or other).
+  4. Explain your reasoning for arriving at the predicted value.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
+      <strong style="color: #a16207;">Expected Answer:</strong> <span>{{expected_answer}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

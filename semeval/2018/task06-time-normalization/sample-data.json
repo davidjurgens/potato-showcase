@@ -1,0 +1,12 @@
+[
+  {"id": "timenorm_001", "text": "The meeting is scheduled for next Tuesday at 3:30 PM. Please arrive 15 minutes early to set up the conference room.", "document_date": "2018-03-12"},
+  {"id": "timenorm_002", "text": "The company was founded on January 15, 2005, and has been operating for over thirteen years. The annual review will take place in December.", "document_date": "2018-06-20"},
+  {"id": "timenorm_003", "text": "Yesterday afternoon, the patient was admitted to the hospital. Surgery was performed two hours later, lasting approximately 90 minutes.", "document_date": "2018-09-15"},
+  {"id": "timenorm_004", "text": "The quarterly earnings report, covering July through September 2018, will be released on October 25th at 9 AM Eastern Time.", "document_date": "2018-10-10"},
+  {"id": "timenorm_005", "text": "She has been taking the medication twice daily since last Monday. The follow-up appointment is in three weeks.", "document_date": "2018-04-05"},
+  {"id": "timenorm_006", "text": "The festival runs from the first Friday of June to the last Sunday of June every year. This year it begins on June 1st.", "document_date": "2018-05-28"},
+  {"id": "timenorm_007", "text": "Construction began in the spring of 2017 and is expected to be completed by late 2019. The project is currently six months behind schedule.", "document_date": "2018-11-01"},
+  {"id": "timenorm_008", "text": "The witness reported seeing the suspect at approximately 11:45 PM on the night of February 28th. The police arrived within twenty minutes.", "document_date": "2018-03-02"},
+  {"id": "timenorm_009", "text": "The treaty was originally signed in 1945, renewed in 1970, and is up for renegotiation this coming November.", "document_date": "2018-08-14"},
+  {"id": "timenorm_010", "text": "Classes resume on Monday, August 27th. The fall semester runs through mid-December, with final exams during the last two weeks.", "document_date": "2018-08-20"}
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "valueeval_001",
+    "text": "Universal healthcare ensures that every citizen has access to medical treatment regardless of their economic status, reducing inequality and preventing needless suffering.",
+    "topic": "Universal Healthcare",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_002",
+    "text": "Mandatory military service builds discipline and national unity, teaching young people the value of sacrifice and duty to their country.",
+    "topic": "Mandatory Military Service",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_003",
+    "text": "Social media censorship violates the fundamental right to free expression and prevents individuals from sharing their authentic views with the world.",
+    "topic": "Social Media Regulation",
+    "stance": "Against"
+  },
+  {
+    "id": "valueeval_004",
+    "text": "Higher education should be free because it empowers individuals to pursue their passions and unlock their full creative potential without financial barriers.",
+    "topic": "Free Higher Education",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_005",
+    "text": "Stricter immigration controls are necessary to protect our cultural heritage and maintain the traditions that have defined our society for generations.",
+    "topic": "Immigration Policy",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_006",
+    "text": "A carbon tax would devastate small businesses and eliminate thousands of jobs, threatening the economic security of working families across the nation.",
+    "topic": "Carbon Tax",
+    "stance": "Against"
+  },
+  {
+    "id": "valueeval_007",
+    "text": "Legalizing same-sex marriage upholds the principle that all people deserve equal treatment and dignity under the law, regardless of whom they love.",
+    "topic": "Same-Sex Marriage",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_008",
+    "text": "Homeschooling allows parents to tailor education to their children's unique needs and interests, fostering independent thinking and a love of learning.",
+    "topic": "Homeschooling",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_009",
+    "text": "Capital punishment serves as a powerful deterrent and ensures that society is protected from the most dangerous criminals who pose a threat to public safety.",
+    "topic": "Capital Punishment",
+    "stance": "In Favor"
+  },
+  {
+    "id": "valueeval_010",
+    "text": "Volunteering programs should be mandatory for students because they cultivate compassion and a sense of responsibility toward the well-being of others in the community.",
+    "topic": "Mandatory Volunteering",
+    "stance": "In Favor"
+  }
+]

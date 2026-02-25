@@ -1,0 +1,12 @@
+[
+  {"id": "hypernym_001", "text": "The python is one of the largest snakes found in tropical regions of Asia and Africa.", "target_term": "python", "domain": "Biology"},
+  {"id": "hypernym_002", "text": "Researchers used a convolutional neural network to classify satellite images for land use detection.", "target_term": "convolutional neural network", "domain": "Computer Science"},
+  {"id": "hypernym_003", "text": "Shakespeare wrote many of his famous sonnets during the late 16th century in London.", "target_term": "Shakespeare", "domain": "Literature"},
+  {"id": "hypernym_004", "text": "The cello produces a rich, deep tone and is commonly featured in orchestral performances and string quartets.", "target_term": "cello", "domain": "Music"},
+  {"id": "hypernym_005", "text": "Photosynthesis is the process by which plants convert sunlight into chemical energy stored in glucose.", "target_term": "photosynthesis", "domain": "Biology"},
+  {"id": "hypernym_006", "text": "Toyota announced a new line of hybrid vehicles that promise improved fuel efficiency over previous models.", "target_term": "Toyota", "domain": "Business"},
+  {"id": "hypernym_007", "text": "The cardiologist recommended a stress test to evaluate the patient's heart function under exertion.", "target_term": "cardiologist", "domain": "Medicine"},
+  {"id": "hypernym_008", "text": "Mount Everest, standing at 8,849 meters, remains the highest peak in the Himalayan range.", "target_term": "Mount Everest", "domain": "Geography"},
+  {"id": "hypernym_009", "text": "The gradient descent algorithm iteratively adjusts model parameters to minimize the loss function.", "target_term": "gradient descent", "domain": "Machine Learning"},
+  {"id": "hypernym_010", "text": "Aspirin is widely used to reduce pain, fever, and inflammation, and may also lower the risk of heart attacks.", "target_term": "aspirin", "domain": "Pharmacology"}
+]

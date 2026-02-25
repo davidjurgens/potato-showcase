@@ -1,0 +1,23 @@
+{
+  "title": "Hyperpartisan News Detection",
+  "description": "Binary classification of news articles as hyperpartisan or not, detecting extreme one-sided political bias. Based on SemEval-2019 Task 4 (Hyperpartisan News Detection).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kiesel et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Bauhaus-Universitat Weimar"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Media Analysis", "Political Bias"],
+  "useCase": ["Bias Detection", "Media Analysis", "News Classification"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2019", "shared-task", "hyperpartisan", "news", "bias-detection", "media"],
+  "featured": false,
+  "paperReference": "Kiesel et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2145/",
+  "datasetUrl": "https://zenodo.org/record/1489920",
+  "citation": "@inproceedings{kiesel-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 4: Hyperpartisan News Detection\",\n    author = \"Kiesel, Johannes and Mestre, Maria and Shukla, Rishabh and Vincent, Emmanuel and Adineh, Payam and Corney, David and Stein, Benno and Potthast, Martin\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2145\"\n}"
+}

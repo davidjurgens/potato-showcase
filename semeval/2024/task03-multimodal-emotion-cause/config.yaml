@@ -1,0 +1,84 @@
+# Multimodal Emotion Cause Analysis
+# Based on Wang et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2024-task3
+#
+# This task asks annotators to identify emotion expressions and their
+# causal utterances within conversational dialogue. Annotators also
+# classify the primary emotion of the target utterance.
+
+annotation_task_name: "Multimodal Emotion Cause Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: emotion_cause_spans
+    description: "Highlight the emotion expression and the utterance that caused it."
+    labels:
+      - "Emotion Expression"
+      - "Cause Utterance"
+
+  - annotation_type: radio
+    name: emotion_type
+    description: "What is the primary emotion expressed in the target utterance?"
+    labels:
+      - "Happiness"
+      - "Sadness"
+      - "Anger"
+      - "Surprise"
+      - "Disgust"
+      - "Fear"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Happiness": "1"
+      "Sadness": "2"
+      "Anger": "3"
+      "Surprise": "4"
+      "Disgust": "5"
+      "Fear": "6"
+      "Neutral": "7"
+    tooltips:
+      "Happiness": "Joy, delight, satisfaction, or amusement"
+      "Sadness": "Grief, sorrow, disappointment, or melancholy"
+      "Anger": "Frustration, irritation, rage, or hostility"
+      "Surprise": "Astonishment, shock, or unexpectedness"
+      "Disgust": "Revulsion, contempt, or strong disapproval"
+      "Fear": "Anxiety, worry, dread, or apprehension"
+      "Neutral": "No clear emotional expression"
+
+annotation_instructions: |
+  You will be shown a dialogue utterance with its speaker and conversation context. Your task is to:
+  1. Read the utterance and surrounding context.
+  2. Highlight the span that expresses the emotion and the span that caused it.
+  3. Classify the primary emotion in the target utterance.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #1e40af;">Conversation Context:</strong>
+      <p style="font-size: 14px; line-height: 1.6; margin: 8px 0 0 0; color: #475569;">{{conversation_context}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">{{speaker}} says:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

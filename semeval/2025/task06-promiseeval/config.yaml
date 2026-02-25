@@ -1,0 +1,90 @@
+# PromiseEval - Promise Verification in Political Discourse
+# Based on Nakov et al., SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/SemEval2025-Task6
+#
+# This task evaluates whether political promises have been made
+# and subsequently kept or broken. Annotators analyze political
+# statements in context and assess the promise status.
+#
+# Promise Labels:
+# - Promise Made: A clear promise or commitment is present
+# - Promise Kept: The promise was fulfilled
+# - Promise Broken: The promise was not fulfilled
+# - No Promise: No promise or commitment is present
+# - Ambiguous: The statement is unclear about promise status
+
+annotation_task_name: "PromiseEval - Promise Verification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: promise_status
+    description: "What is the status of the promise in this statement?"
+    labels:
+      - "Promise Made"
+      - "Promise Kept"
+      - "Promise Broken"
+      - "No Promise"
+      - "Ambiguous"
+    keyboard_shortcuts:
+      "Promise Made": "1"
+      "Promise Kept": "2"
+      "Promise Broken": "3"
+      "No Promise": "4"
+      "Ambiguous": "5"
+    tooltips:
+      "Promise Made": "A clear promise or commitment is present in the statement"
+      "Promise Kept": "Evidence suggests the promise was fulfilled"
+      "Promise Broken": "Evidence suggests the promise was not fulfilled"
+      "No Promise": "No promise or commitment is present in the statement"
+      "Ambiguous": "Unclear whether a promise was made or its fulfillment status"
+
+  - annotation_type: text
+    name: evidence_reasoning
+    description: "Provide evidence or reasoning for your assessment."
+
+annotation_instructions: |
+  You will be shown a political statement along with context about the speaker and date.
+  Your tasks are:
+  1. Read the statement carefully and determine if a promise was made.
+  2. If a promise exists, assess whether it was kept or broken based on the context.
+  3. Provide your reasoning and any evidence supporting your assessment.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Statement:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">Speaker:</strong> {{speaker}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">Date:</strong> {{date}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">Context:</strong> {{context}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

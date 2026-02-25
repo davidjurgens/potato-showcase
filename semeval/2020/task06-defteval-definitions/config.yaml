@@ -1,0 +1,71 @@
+# DeftEval - Extracting Definitions from Free Text
+# Based on Spala et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.41/
+# Dataset: https://github.com/adobe-research/deft_corpus
+#
+# Annotators identify whether a sentence contains a definition and extract
+# the term being defined, the definition itself, any qualifiers, and
+# alternative names (aliases) for the term.
+
+annotation_task_name: "DeftEval - Extracting Definitions from Free Text"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: definition_spans
+    description: "Highlight the definition components in the text."
+    labels:
+      - "Term"
+      - "Definition"
+      - "Qualifier"
+      - "Alias"
+
+  - annotation_type: radio
+    name: contains_definition
+    description: "Does this sentence contain a definition?"
+    labels:
+      - "Contains Definition"
+      - "No Definition"
+    keyboard_shortcuts:
+      "Contains Definition": "1"
+      "No Definition": "2"
+    tooltips:
+      "Contains Definition": "The sentence provides a definition or explanation of a term or concept"
+      "No Definition": "The sentence does not contain any definitional content"
+
+annotation_instructions: |
+  You will see a sentence from a textbook or reference document. Your task is to:
+  1. Determine whether the sentence contains a definition of a term or concept.
+  2. If it does, highlight the following spans:
+     - Term: The word or phrase being defined
+     - Definition: The explanation or definition text
+     - Qualifier: Any limiting conditions (e.g., "in biology", "typically")
+     - Alias: Any alternative names for the term (e.g., "also known as X")
+  3. Select whether the sentence contains a definition or not.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

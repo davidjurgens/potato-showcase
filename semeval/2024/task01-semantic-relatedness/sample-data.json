@@ -1,0 +1,12 @@
+[
+  {"id": "str_001", "text": "The cat sat on the warm windowsill watching the birds outside.", "sentence_2": "A kitten perched on the window ledge, gazing at the pigeons in the garden.", "language": "English"},
+  {"id": "str_002", "text": "Heavy rainfall caused widespread flooding in the coastal region.", "sentence_2": "Residents were evacuated from their homes due to rising water levels.", "language": "English"},
+  {"id": "str_003", "text": "The new smartphone features an improved camera and longer battery life.", "sentence_2": "Scientists discovered a new species of deep-sea fish near hydrothermal vents.", "language": "English"},
+  {"id": "str_004", "text": "The restaurant received a three-star Michelin rating for its innovative cuisine.", "sentence_2": "The chef trained at a prestigious culinary school in Paris before opening his own bistro.", "language": "English"},
+  {"id": "str_005", "text": "Climate change is accelerating the melting of polar ice caps.", "sentence_2": "Global warming leads to rising sea levels that threaten island nations.", "language": "English"},
+  {"id": "str_006", "text": "The children played happily in the park after school.", "sentence_2": "Stock markets closed higher on Friday following positive employment data.", "language": "English"},
+  {"id": "str_007", "text": "The treaty was signed by representatives from twelve nations.", "sentence_2": "International diplomats gathered to negotiate a peace agreement.", "language": "English"},
+  {"id": "str_008", "text": "She finished reading the novel in a single afternoon.", "sentence_2": "The book was so captivating that she could not put it down.", "language": "English"},
+  {"id": "str_009", "text": "The train departs from platform 3 at 8:45 in the morning.", "sentence_2": "Railway services were disrupted due to maintenance work on the tracks.", "language": "English"},
+  {"id": "str_010", "text": "The painting depicts a rural landscape with rolling hills and a river.", "sentence_2": "Abstract art challenges viewers to find meaning beyond representational forms.", "language": "English"}
+]

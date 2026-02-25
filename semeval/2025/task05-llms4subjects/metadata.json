@@ -1,0 +1,23 @@
+{
+  "title": "LLMs4Subjects - Automated Subject Tagging",
+  "description": "Automated subject classification of academic texts, requiring annotators to assign subject categories and determine whether texts span single or multiple disciplines. Based on SemEval-2025 Task 5.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sinhababu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval 2025 Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "radio"],
+  "domain": ["SemEval", "NLP", "Text Classification", "Academic"],
+  "useCase": ["Subject Tagging", "Document Classification", "Library Science"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2025", "shared-task", "classification", "academic", "subject-tagging"],
+  "featured": false,
+  "paperReference": "Sinhababu et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/SemEval2025-Task5",
+  "citation": "@inproceedings{sinhababu-etal-2025-llms4subjects,\n    title = \"{LLM}s4Subjects: Automated Subject Tagging\",\n    author = \"Sinhababu, Amit and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

@@ -1,0 +1,89 @@
+# Character Identification on Multiparty Dialogues
+# Based on Chen et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1007/
+# Dataset: https://github.com/emorynlp/character-identification
+#
+# This task asks annotators to identify character mentions in TV show
+# dialogue from Friends. Annotators highlight character mention spans
+# and link them to the correct character entity.
+#
+# Span Labels:
+# - Character Mention: A reference to a character (name, pronoun, description)
+#
+# Character Labels:
+# - Monica, Rachel, Ross, Chandler, Joey, Phoebe, Other
+
+annotation_task_name: "Character Identification on Multiparty Dialogues"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: character_mentions
+    description: "Highlight all character mentions (names, pronouns, descriptions referring to characters)."
+    labels:
+      - "Character Mention"
+
+  - annotation_type: radio
+    name: character_identity
+    description: "Which character does the primary mention refer to?"
+    labels:
+      - "Monica"
+      - "Rachel"
+      - "Ross"
+      - "Chandler"
+      - "Joey"
+      - "Phoebe"
+      - "Other"
+    keyboard_shortcuts:
+      "Monica": "1"
+      "Rachel": "2"
+      "Ross": "3"
+      "Chandler": "4"
+      "Joey": "5"
+      "Phoebe": "6"
+      "Other": "7"
+    tooltips:
+      "Monica": "Monica Geller - chef, organized, competitive"
+      "Rachel": "Rachel Green - fashion enthusiast, waitress turned executive"
+      "Ross": "Ross Geller - paleontologist, Monica's brother"
+      "Chandler": "Chandler Bing - statistical analysis, sarcastic humor"
+      "Joey": "Joey Tribbiani - actor, food lover"
+      "Phoebe": "Phoebe Buffay - masseuse, musician, quirky"
+      "Other": "A character not in the main six cast members"
+
+annotation_instructions: |
+  You will be shown a dialogue excerpt from the TV show Friends along with a scene
+  description. Your task is to:
+  1. Highlight all mentions of characters in the dialogue (names, pronouns, descriptions).
+  2. Select which main character the primary mention refers to.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Scene Description:</strong>
+      <p style="font-size: 14px; line-height: 1.5; margin: 6px 0 0 0;">{{scene_description}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Dialogue:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

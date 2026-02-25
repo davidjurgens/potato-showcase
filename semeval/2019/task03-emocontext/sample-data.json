@@ -1,0 +1,12 @@
+[
+  {"id": "emocontext_001", "text": "That's amazing! I'm so thrilled for you!", "turn_1": "Guess what happened today?", "turn_2": "I got the promotion I've been working towards for two years!"},
+  {"id": "emocontext_002", "text": "I can't believe they did that to you. That's really unfair.", "turn_1": "Hey, how was your day?", "turn_2": "Terrible. My boss took credit for my entire project in front of the CEO."},
+  {"id": "emocontext_003", "text": "Yeah, sure, I'll check it out later.", "turn_1": "Have you seen the new restaurant downtown?", "turn_2": "They have great pizza. We should go sometime."},
+  {"id": "emocontext_004", "text": "I miss her so much. The house feels so empty now.", "turn_1": "How are you holding up?", "turn_2": "It's been hard since grandma passed. Every little thing reminds me of her."},
+  {"id": "emocontext_005", "text": "Seriously?! You had ONE job! How could you mess this up?", "turn_1": "Did you submit the report on time?", "turn_2": "Actually, I forgot and the deadline was yesterday."},
+  {"id": "emocontext_006", "text": "OMG yes!! This is the best birthday surprise ever!!", "turn_1": "Close your eyes and don't peek!", "turn_2": "Okay, you can open them now. Happy birthday!"},
+  {"id": "emocontext_007", "text": "I just feel so lost. Nothing seems to matter anymore.", "turn_1": "You've been quiet lately. Everything okay?", "turn_2": "I didn't get into any of the graduate programs I applied to."},
+  {"id": "emocontext_008", "text": "Stop making excuses! You always do this and I'm sick of it!", "turn_1": "Why didn't you come to the dinner last night?", "turn_2": "I'm sorry, something came up at the last minute."},
+  {"id": "emocontext_009", "text": "Okay, sounds good. Let me know when you're free.", "turn_1": "Want to study together for the final?", "turn_2": "Sure, maybe this weekend? I need to check my schedule first."},
+  {"id": "emocontext_010", "text": "Haha that's hilarious! You always know how to make me laugh!", "turn_1": "You look stressed, let me tell you something funny.", "turn_2": "So my cat literally knocked my laptop off the table right before my Zoom meeting started."}
+]

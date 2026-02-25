@@ -1,0 +1,23 @@
+{
+  "title": "PromiseEval - Promise Verification in Political Discourse",
+  "description": "Verification of political promises, requiring annotators to identify whether promises were made, kept, or broken based on political statements and context. Based on SemEval-2025 Task 6.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nakov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Mohamed bin Zayed University of AI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["SemEval", "NLP", "Fact-Checking", "Political Discourse"],
+  "useCase": ["Promise Tracking", "Political Analysis", "Fact Verification"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2025", "shared-task", "promise", "political", "fact-checking", "verification"],
+  "featured": false,
+  "paperReference": "Nakov et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/SemEval2025-Task6",
+  "citation": "@inproceedings{nakov-etal-2025-promiseeval,\n    title = \"{P}romise{E}val: Promise Verification in Political Discourse\",\n    author = \"Nakov, Preslav and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

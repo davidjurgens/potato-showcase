@@ -1,0 +1,89 @@
+# SecureNLP - Malware and Security Entity Recognition
+# Based on Phandi et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1113/
+# Dataset: https://competitions.codalab.org/competitions/17262
+#
+# This task asks annotators to identify cybersecurity-related entities
+# in text and classify the document type.
+#
+# Entity Span Labels:
+# - Malware: Names of malware, viruses, trojans, ransomware
+# - Attack Pattern: Descriptions of attack techniques or methods
+# - Indicator: IoCs such as IP addresses, hashes, domains
+# - Tool: Security or hacking tools mentioned
+# - Vulnerability: CVE identifiers or vulnerability descriptions
+# - Organization: Threat actor groups or affected organizations
+#
+# Document Types:
+# - Threat Report, Advisory, Analysis, News
+
+annotation_task_name: "SecureNLP - Cybersecurity Entity Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: security_entities
+    description: "Highlight all cybersecurity-related entities in the text."
+    labels:
+      - "Malware"
+      - "Attack Pattern"
+      - "Indicator"
+      - "Tool"
+      - "Vulnerability"
+      - "Organization"
+
+  - annotation_type: radio
+    name: document_type
+    description: "What type of cybersecurity document is this?"
+    labels:
+      - "Threat Report"
+      - "Advisory"
+      - "Analysis"
+      - "News"
+    keyboard_shortcuts:
+      "Threat Report": "1"
+      "Advisory": "2"
+      "Analysis": "3"
+      "News": "4"
+    tooltips:
+      "Threat Report": "Detailed report on a specific threat or campaign"
+      "Advisory": "Security advisory or bulletin with recommendations"
+      "Analysis": "Technical analysis of malware, vulnerabilities, or attacks"
+      "News": "News article covering cybersecurity events"
+
+annotation_instructions: |
+  You will be shown a cybersecurity text. Your task is to:
+  1. Highlight all cybersecurity entities (malware names, attack patterns, indicators,
+     tools, vulnerabilities, and organizations).
+  2. Classify the document type (threat report, advisory, analysis, or news).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Source Type:</strong>
+      <span style="font-size: 15px;">{{source_type}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "TimeLine: Cross-Document Event Ordering",
+  "description": "Identify event mentions and temporal expressions in news text and classify temporal relations between events, based on SemEval-2015 Task 4 (Minard et al.). Annotators build timelines by ordering events related to a target entity across documents.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Minard et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Fondazione Bruno Kessler"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "Temporal Processing", "Event Ordering"],
+  "useCase": ["Timeline Construction", "Event Detection", "Temporal Relation Classification"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2015", "shared-task", "temporal", "event-ordering", "timeline", "cross-document", "news"],
+  "featured": false,
+  "paperReference": "Minard et al., SemEval 2015",
+  "paperUrl": "https://aclanthology.org/S15-2132/",
+  "datasetUrl": "https://alt.qcri.org/semeval2015/task4/",
+  "citation": "@inproceedings{minard-etal-2015-semeval,\n    title = \"{S}em{E}val-2015 {T}ask 4: {T}ime{L}ine: {C}ross-{D}ocument {E}vent {O}rdering\",\n    author = \"Minard, Anne-Lyse  and Speranza, Manuela  and Agirre, Eneko  and Aldabe, Itziar  and van Erp, Marieke  and Navigli, Roberto  and de Lacalle, Oier Lopez\",\n    booktitle = \"Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval-2015)\",\n    year = \"2015\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S15-2132\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "SecureNLP - Malware and Security Entity Recognition",
+  "description": "Named entity recognition in cybersecurity text, identifying malware, attack patterns, indicators, tools, vulnerabilities, and organizations, with document-level classification. Based on SemEval-2018 Task 8.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Phandi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Singapore Management University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "NLP", "Cybersecurity", "Named Entity Recognition"],
+  "useCase": ["Cybersecurity NER", "Threat Intelligence", "Information Extraction"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2018", "shared-task", "cybersecurity", "ner", "malware", "threat-intelligence"],
+  "featured": false,
+  "paperReference": "Phandi et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1113/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/17262",
+  "citation": "@inproceedings{phandi-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 8: Semantic Extraction from {C}yber{S}ecurity{RE}ports using Natural Language Processing ({S}ecure{NLP})\",\n    author = \"Phandi, Peter and Silva, Amila and Lu, Wei\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1113\"\n}"
+}

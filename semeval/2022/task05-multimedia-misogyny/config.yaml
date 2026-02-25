@@ -1,0 +1,87 @@
+# MAMI - Multimedia Automatic Misogyny Identification
+# Based on Fersini et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.74/
+# Dataset: https://competitions.codalab.org/competitions/34175
+#
+# This task asks annotators to identify misogynistic content in memes
+# by analyzing both the text overlay and the image description. If
+# misogynistic, annotators classify the specific sub-types present.
+#
+# Binary Classification:
+# - Misogynistic: The meme contains misogynistic content
+# - Not Misogynistic: The meme does not contain misogynistic content
+#
+# Sub-type Labels (select all that apply):
+# - Stereotype: Reinforces gender stereotypes
+# - Shaming: Body-shaming or slut-shaming
+# - Objectification: Treats women as objects
+# - Violence: Promotes or trivializes violence against women
+
+annotation_task_name: "MAMI - Multimedia Automatic Misogyny Identification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: misogyny_label
+    description: "Does this meme contain misogynistic content?"
+    labels:
+      - "Misogynistic"
+      - "Not Misogynistic"
+    keyboard_shortcuts:
+      "Misogynistic": "1"
+      "Not Misogynistic": "2"
+    tooltips:
+      "Misogynistic": "The meme contains content that is hateful, demeaning, or discriminatory toward women"
+      "Not Misogynistic": "The meme does not contain misogynistic content"
+
+  - annotation_type: multiselect
+    name: misogyny_subtypes
+    description: "If misogynistic, select all sub-types that apply"
+    labels:
+      - "Stereotype"
+      - "Shaming"
+      - "Objectification"
+      - "Violence"
+    tooltips:
+      "Stereotype": "The meme reinforces harmful gender stereotypes about women"
+      "Shaming": "The meme involves body-shaming, slut-shaming, or other forms of shaming women"
+      "Objectification": "The meme treats women as objects or reduces them to their physical appearance"
+      "Violence": "The meme promotes, trivializes, or jokes about violence against women"
+
+annotation_instructions: |
+  You will see a meme's text overlay and a description of its image.
+  1. Read both the text and image description carefully.
+  2. Determine whether the meme is misogynistic.
+  3. If misogynistic, select all applicable sub-types (stereotype, shaming, objectification, violence).
+  Note: Consider the combination of text and image, as the misogynistic meaning may emerge from their interaction.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Meme Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Image Description:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{image_description}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

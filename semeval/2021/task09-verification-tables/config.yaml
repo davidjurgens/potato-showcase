@@ -1,0 +1,69 @@
+# Statement Verification and Evidence Finding with Tables
+# Based on Wang et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.27/
+# Dataset: https://sites.google.com/view/sem-tab-facts
+#
+# Annotators verify whether a natural language statement is supported
+# or refuted by data in a table, and mark the key evidence cells
+# that support their judgment.
+
+annotation_task_name: "Statement Verification and Evidence Finding with Tables"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: verification_label
+    description: "Is the statement entailed or refuted by the table?"
+    labels:
+      - "Entailed"
+      - "Refuted"
+    keyboard_shortcuts:
+      "Entailed": "1"
+      "Refuted": "2"
+    tooltips:
+      "Entailed": "The statement is supported by the information in the table"
+      "Refuted": "The statement is contradicted by the information in the table"
+
+  - annotation_type: span
+    name: evidence_cells
+    description: "Highlight the key evidence cells in the table content that support your judgment."
+    labels:
+      - "Key Evidence Cell"
+
+annotation_instructions: |
+  You will see a statement and a table. Your task is to:
+  1. Read the statement carefully.
+  2. Examine the table content to find relevant evidence.
+  3. Decide whether the statement is entailed (supported) or refuted (contradicted) by the table.
+  4. Highlight the key evidence cells in the table content that support your decision.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Statement:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Table Content:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0; white-space: pre-wrap; font-family: monospace;">{{table_content}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

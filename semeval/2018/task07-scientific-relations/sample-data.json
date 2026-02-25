@@ -1,0 +1,12 @@
+[
+  {"id": "scirel_001", "text": "We use a convolutional neural network for text classification, achieving state-of-the-art results on sentiment analysis benchmarks.", "domain": "Natural Language Processing"},
+  {"id": "scirel_002", "text": "The attention mechanism is a key component of the transformer architecture, enabling the model to focus on relevant parts of the input.", "domain": "Deep Learning"},
+  {"id": "scirel_003", "text": "Our experiments show that data augmentation leads to significant improvements in model accuracy on small datasets.", "domain": "Machine Learning"},
+  {"id": "scirel_004", "text": "We compare BERT with GPT-2 on a range of natural language understanding tasks to evaluate their relative strengths.", "domain": "Natural Language Processing"},
+  {"id": "scirel_005", "text": "The embedding layer converts discrete tokens into continuous vector representations used by subsequent layers of the network.", "domain": "Neural Networks"},
+  {"id": "scirel_006", "text": "This paper addresses the problem of machine translation using sequence-to-sequence models with attention.", "domain": "Machine Translation"},
+  {"id": "scirel_007", "text": "The learning rate is a critical hyperparameter of the gradient descent optimizer that controls convergence speed.", "domain": "Optimization"},
+  {"id": "scirel_008", "text": "Our approach produces more coherent summaries compared to previous extractive summarization methods.", "domain": "Text Summarization"},
+  {"id": "scirel_009", "text": "The encoder module processes the input sequence and generates hidden representations for the decoder to attend over.", "domain": "Sequence Modeling"},
+  {"id": "scirel_010", "text": "We evaluate our named entity recognition system against the CoNLL-2003 benchmark, achieving an F1 score of 93.2.", "domain": "Information Extraction"}
+]

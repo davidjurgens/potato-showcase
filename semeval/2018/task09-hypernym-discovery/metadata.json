@@ -1,0 +1,23 @@
+{
+  "title": "Hypernym Discovery",
+  "description": "Discovery of hypernyms (broader terms) for a given target term in context, with classification of the hypernym relationship type. Based on SemEval-2018 Task 9.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Camacho-Collados et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Cardiff University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "radio"],
+  "domain": ["SemEval", "NLP", "Lexical Semantics", "Taxonomy"],
+  "useCase": ["Hypernym Discovery", "Taxonomy Construction", "Lexical Semantics"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2018", "shared-task", "hypernym", "taxonomy", "lexical-semantics", "word-relations"],
+  "featured": false,
+  "paperReference": "Camacho-Collados et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1115/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/17119",
+  "citation": "@inproceedings{camacho-collados-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 9: Hypernym Discovery\",\n    author = \"Camacho-Collados, Jose and Delli Bovi, Claudio and Espinosa-Anke, Luis and Orber, Sergio and Pasini, Tommaso and Santus, Enrico and Shwartz, Vered and Navigli, Roberto and Saggion, Horacio\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1115\"\n}"
+}

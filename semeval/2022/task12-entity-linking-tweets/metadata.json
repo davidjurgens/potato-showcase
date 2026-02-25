@@ -1,0 +1,23 @@
+{
+  "title": "Entity Linking in Tweets",
+  "description": "Named entity recognition and entity linking in tweets, identifying entity mentions and mapping them to knowledge base URIs. Based on SemEval-2022 Task 12 (Agarwal et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Agarwal et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "text"],
+  "domain": ["NLP", "Social Media", "SemEval"],
+  "useCase": ["Entity Linking", "Named Entity Recognition", "Knowledge Base Population"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2022", "shared-task", "entity-linking", "ner", "tweets", "knowledge-base"],
+  "featured": false,
+  "paperReference": "Agarwal et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.196/",
+  "datasetUrl": "https://github.com/Agarwal-SemEval2022-Task12",
+  "citation": "@inproceedings{agarwal-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 12: Symlink -- Linking Mathematical Symbols to their Descriptions\",\n    author = \"Agarwal, Vipul  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.196\"\n}"
+}

@@ -1,0 +1,70 @@
+# Multilingual News Article Similarity
+# Based on Chen et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.155/
+# Dataset: https://github.com/euagendas/semeval-2022-task8
+#
+# This task asks annotators to rate the similarity between two news
+# articles on a 5-point scale, from completely different stories to
+# identical stories. Articles may be in different languages.
+#
+# Scale:
+# 1 - Completely Different: The articles cover unrelated topics
+# 2 - Somewhat Related: Articles share a general topic but cover different events
+# 3 - Related: Articles cover the same general event but with different angles
+# 4 - Very Similar: Articles cover the same event with mostly the same details
+# 5 - Identical Story: Articles are about the exact same event and details
+
+annotation_task_name: "Multilingual News Article Similarity"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: similarity_rating
+    description: "How similar are these two news articles?"
+    min_label: "Completely Different"
+    max_label: "Identical Story"
+    size: 5
+
+annotation_instructions: |
+  You will see two news articles (possibly in different languages) and the language pair.
+  Rate how similar the two articles are on a scale from 1 to 5.
+  1: Completely different topics
+  2: Somewhat related topic but different events
+  3: Same general event but different angles or details
+  4: Very similar coverage of the same event
+  5: Identical story with the same key details
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language Pair:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Article 1:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Article 2:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{article_2}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

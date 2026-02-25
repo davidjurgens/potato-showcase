@@ -1,0 +1,23 @@
+{
+  "title": "Predicting Multilingual and Cross-Lingual Lexical Entailment",
+  "description": "Determine whether the meaning of a word in one context entails, is entailed by, or is unrelated to the meaning of another word, based on SemEval-2020 Task 2 (Glavavs et al.). Supports graded lexical entailment across multiple languages.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Glavavs et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Mannheim"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Lexical Semantics", "Entailment", "Cross-Lingual NLP"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2020", "shared-task", "lexical-entailment", "semantics", "cross-lingual"],
+  "featured": false,
+  "paperReference": "Glavavs et al., SemEval 2020",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.2/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/22192",
+  "citation": "@inproceedings{glavas-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 2: {P}redicting {M}ultilingual and {C}ross-{L}ingual ({G}raded) {L}exical {E}ntailment\",\n    author = \"Glava{\\v{s}}, Goran  and Vulic, Ivan  and Korhonen, Anna\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.2\"\n}"
+}

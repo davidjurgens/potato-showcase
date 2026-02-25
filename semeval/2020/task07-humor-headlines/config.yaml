@@ -1,0 +1,77 @@
+# Assessing Humor in Edited News Headlines
+# Based on Hossain et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.98/
+# Dataset: https://cs.rochester.edu/u/nhossain/humicroedit.html
+#
+# Annotators rate how funny an edited headline is and compare it to the
+# original headline. Headlines have been minimally edited by replacing a
+# single word to create humorous effect.
+
+annotation_task_name: "Assessing Humor in Edited News Headlines"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: funniness_rating
+    description: "Rate how funny the edited headline is."
+    min_label: "Not Funny"
+    max_label: "Very Funny"
+    size: 5
+
+  - annotation_type: radio
+    name: humor_comparison
+    description: "Which version is funnier?"
+    labels:
+      - "Original Funnier"
+      - "Edit Funnier"
+      - "Equally Funny"
+    keyboard_shortcuts:
+      "Original Funnier": "1"
+      "Edit Funnier": "2"
+      "Equally Funny": "3"
+    tooltips:
+      "Original Funnier": "The original headline is more humorous than the edited version"
+      "Edit Funnier": "The edited headline is more humorous than the original"
+      "Equally Funny": "Both versions are equally funny (or equally unfunny)"
+
+annotation_instructions: |
+  You will see an original news headline, an edited version where one word has been
+  replaced, and the word that was substituted. Your task is to:
+  1. Read both the original and edited headlines.
+  2. Rate how funny the edited headline is on a 5-point scale.
+  3. Compare the two versions and decide which is funnier.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Original Headline:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Edited Headline:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edited_headline}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Edit Word:</strong>
+      <span style="font-size: 16px; font-weight: bold; color: #15803d;">{{edit_word}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

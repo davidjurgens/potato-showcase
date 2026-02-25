@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clinical_nli_001",
+    "text": "The treatment group showed statistically significant improvement in blood pressure levels compared to the placebo group.",
+    "evidence": "Primary endpoint: Mean systolic blood pressure reduction was 12.3 mmHg (SD 4.1) in the treatment arm vs. 2.1 mmHg (SD 3.8) in the placebo arm (p < 0.001). The treatment demonstrated clinically meaningful blood pressure reduction at week 12.",
+    "trial_id": "NCT04523817"
+  },
+  {
+    "id": "clinical_nli_002",
+    "text": "No adverse events were reported in the experimental group during the study period.",
+    "evidence": "Safety outcomes: In the experimental group, 23 patients (15.3%) reported at least one adverse event, including headache (8.7%), nausea (4.0%), and fatigue (2.6%). Three serious adverse events were recorded, though none were deemed related to the intervention.",
+    "trial_id": "NCT04198726"
+  },
+  {
+    "id": "clinical_nli_003",
+    "text": "The study enrolled participants aged 18 to 65 years with a confirmed diagnosis of type 2 diabetes.",
+    "evidence": "Inclusion criteria: Adults aged 18-65 years with a confirmed diagnosis of type 2 diabetes mellitus (HbA1c between 7.0% and 10.0%) were eligible for enrollment. Exclusion criteria included pregnancy, severe renal impairment, and history of diabetic ketoacidosis.",
+    "trial_id": "NCT04831294"
+  },
+  {
+    "id": "clinical_nli_004",
+    "text": "The intervention was administered as a single oral dose taken once daily.",
+    "evidence": "Dosing regimen: Participants in the treatment arm received 10 mg of the study drug administered intravenously twice weekly for 12 weeks. Infusions were conducted at the clinical site under medical supervision.",
+    "trial_id": "NCT04672501"
+  },
+  {
+    "id": "clinical_nli_005",
+    "text": "The trial was conducted across multiple countries in a randomized double-blind design.",
+    "evidence": "Study design: This was a multicenter, randomized, double-blind, placebo-controlled Phase III trial conducted across 47 sites in 8 countries (United States, United Kingdom, Germany, France, Spain, Italy, Canada, and Australia) between March 2021 and September 2022.",
+    "trial_id": "NCT04589312"
+  },
+  {
+    "id": "clinical_nli_006",
+    "text": "Patient-reported quality of life scores declined significantly in the treatment group.",
+    "evidence": "Secondary endpoints: Patient-reported outcomes measured by the SF-36 questionnaire showed significant improvement in the treatment group. Mean quality of life scores increased from 42.1 (baseline) to 58.7 (week 24) in the treatment arm vs. 41.8 to 44.2 in the placebo arm (p < 0.01).",
+    "trial_id": "NCT04715243"
+  },
+  {
+    "id": "clinical_nli_007",
+    "text": "The study was terminated early due to lack of efficacy in the interim analysis.",
+    "evidence": "Study completion: The trial completed enrollment as planned and all participants finished the 52-week treatment period. The Data Safety Monitoring Board reviewed interim results at weeks 12 and 26 and recommended continuation of the study both times.",
+    "trial_id": "NCT04392180"
+  },
+  {
+    "id": "clinical_nli_008",
+    "text": "Female participants constituted the majority of the study population.",
+    "evidence": "Baseline characteristics: A total of 340 participants were randomized. Demographics: 58.2% female, 41.8% male; mean age 54.3 years (SD 11.2); mean BMI 28.4 kg/m2. Ethnic distribution: 72% White, 14% Black, 9% Hispanic, 5% Asian.",
+    "trial_id": "NCT04256070"
+  },
+  {
+    "id": "clinical_nli_009",
+    "text": "The primary endpoint was measured at 6 months after randomization.",
+    "evidence": "Primary endpoint assessment: The primary efficacy endpoint, defined as the change in EDSS score from baseline, was assessed at 12 months post-randomization. A pre-specified secondary analysis was conducted at the 6-month time point.",
+    "trial_id": "NCT04483219"
+  },
+  {
+    "id": "clinical_nli_010",
+    "text": "Concomitant use of statins was permitted during the trial.",
+    "evidence": "Concomitant medications: Participants were allowed to continue stable doses of background medications including statins, ACE inhibitors, and beta-blockers. Dose adjustments of concomitant medications were permitted if clinically indicated.",
+    "trial_id": "NCT04618302"
+  }
+]

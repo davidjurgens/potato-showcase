@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ddi_001",
+    "text": "Concomitant administration of ketoconazole with cyclosporine has been reported to increase cyclosporine plasma concentrations, potentially leading to nephrotoxicity. Dosage adjustment of cyclosporine is recommended when ketoconazole therapy is initiated."
+  },
+  {
+    "id": "ddi_002",
+    "text": "Warfarin should be used with caution in patients receiving amiodarone, as amiodarone inhibits the CYP2C9-mediated metabolism of warfarin, resulting in increased anticoagulant effect and risk of bleeding."
+  },
+  {
+    "id": "ddi_003",
+    "text": "Methotrexate clearance is reduced when co-administered with nonsteroidal anti-inflammatory drugs such as ibuprofen. This interaction may result in elevated methotrexate levels and increased toxicity."
+  },
+  {
+    "id": "ddi_004",
+    "text": "The combination of lisinopril and spironolactone may increase the risk of hyperkalemia. Serum potassium levels should be monitored closely in patients receiving both ACE inhibitors and potassium-sparing diuretics."
+  },
+  {
+    "id": "ddi_005",
+    "text": "Fluoxetine is a potent inhibitor of CYP2D6 and may significantly increase plasma concentrations of codeine's active metabolite morphine when administered concurrently, although the clinical significance varies among patients."
+  },
+  {
+    "id": "ddi_006",
+    "text": "Rifampin is a strong inducer of CYP3A4 and may substantially reduce the plasma concentrations of simvastatin. Patients taking Zocor should avoid concomitant use of rifampin due to loss of statin efficacy."
+  },
+  {
+    "id": "ddi_007",
+    "text": "Clarithromycin inhibits the metabolism of digoxin by inactivating P-glycoprotein in the intestinal wall. This interaction can lead to elevated digoxin serum levels and potential digitalis toxicity."
+  },
+  {
+    "id": "ddi_008",
+    "text": "Phenytoin plasma levels may be increased by concurrent administration of omeprazole, as omeprazole inhibits the CYP2C19-mediated oxidation of phenytoin. Monitor phenytoin concentrations during co-therapy."
+  },
+  {
+    "id": "ddi_009",
+    "text": "Clopidogrel is a prodrug that requires CYP2C19 for activation. Co-administration with proton pump inhibitors such as Prilosec may reduce the antiplatelet effect of clopidogrel through competitive CYP2C19 inhibition."
+  },
+  {
+    "id": "ddi_010",
+    "text": "The concurrent use of sildenafil with nitrates such as nitroglycerin is contraindicated due to the risk of severe hypotension. Both agents promote vasodilation through the nitric oxide pathway."
+  }
+]

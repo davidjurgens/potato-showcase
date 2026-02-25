@@ -1,0 +1,23 @@
+{
+  "title": "Suggestion Mining from Online Reviews and Forums",
+  "description": "Binary classification of sentences as suggestions or non-suggestions in online reviews and forum posts. Based on SemEval-2019 Task 9 (Suggestion Mining).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Negi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Insight Centre for Data Analytics"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Opinion Mining", "Text Classification"],
+  "useCase": ["Suggestion Mining", "Review Analysis", "Customer Feedback"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2019", "shared-task", "suggestion-mining", "reviews", "opinion-mining"],
+  "featured": false,
+  "paperReference": "Negi et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2151/",
+  "datasetUrl": "https://github.com/Semeval2019Task9/Subtask-A",
+  "citation": "@inproceedings{negi-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 9: Suggestion Mining from Online Reviews and Forums\",\n    author = \"Negi, Sapna and Dusber, Tobias and Soni, Marek and Buitelaar, Paul\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2151\"\n}"
+}

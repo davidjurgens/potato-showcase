@@ -1,0 +1,12 @@
+[
+  {"id": "discattr_001", "text": "has wings", "word_1": "airplane", "word_2": "car"},
+  {"id": "discattr_002", "text": "is round", "word_1": "ball", "word_2": "globe"},
+  {"id": "discattr_003", "text": "is edible", "word_1": "apple", "word_2": "rock"},
+  {"id": "discattr_004", "text": "has four legs", "word_1": "dog", "word_2": "cat"},
+  {"id": "discattr_005", "text": "is transparent", "word_1": "glass", "word_2": "wood"},
+  {"id": "discattr_006", "text": "produces sound", "word_1": "guitar", "word_2": "painting"},
+  {"id": "discattr_007", "text": "is alive", "word_1": "tree", "word_2": "flower"},
+  {"id": "discattr_008", "text": "can fly", "word_1": "eagle", "word_2": "penguin"},
+  {"id": "discattr_009", "text": "is metallic", "word_1": "knife", "word_2": "spoon"},
+  {"id": "discattr_010", "text": "has a screen", "word_1": "laptop", "word_2": "book"}
+]

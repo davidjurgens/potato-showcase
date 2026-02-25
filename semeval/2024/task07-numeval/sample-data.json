@@ -1,0 +1,12 @@
+[
+  {"id": "numeval_001", "text": "The company reported quarterly revenue of $2.3 billion, representing a 15% increase over the same period last year when revenue was [MASK].", "expected_answer": "2.0 billion"},
+  {"id": "numeval_002", "text": "If a train travels at 120 km/h for 2.5 hours, the total distance covered is [MASK] kilometers.", "expected_answer": "300"},
+  {"id": "numeval_003", "text": "The population of the city grew from 1.2 million in 2010 to 1.8 million in 2020. The growth rate over the decade was approximately [MASK] percent.", "expected_answer": "50"},
+  {"id": "numeval_004", "text": "The athlete finished the marathon in 2 hours and 45 minutes, placing [MASK] out of 500 runners.", "expected_answer": "unclear from context"},
+  {"id": "numeval_005", "text": "A recipe calls for 3 cups of flour to make 24 cookies. To make 60 cookies, you would need [MASK] cups of flour.", "expected_answer": "7.5"},
+  {"id": "numeval_006", "text": "The temperature dropped from 28 degrees Celsius to -5 degrees Celsius overnight, a change of [MASK] degrees.", "expected_answer": "33"},
+  {"id": "numeval_007", "text": "The survey found that roughly three-quarters of respondents supported the new policy, which translates to approximately [MASK] percent.", "expected_answer": "75"},
+  {"id": "numeval_008", "text": "The building has 12 floors with approximately 8 offices per floor. The total number of offices is between [MASK] and [MASK].", "expected_answer": "90-100"},
+  {"id": "numeval_009", "text": "After applying a 20% discount to an item priced at $85, the final price before tax is [MASK].", "expected_answer": "68"},
+  {"id": "numeval_010", "text": "The spacecraft completed its [MASK] orbit around Mars, having begun its mission 18 months ago with orbits occurring approximately every 2 hours.", "expected_answer": "approximately 6,570"}
+]

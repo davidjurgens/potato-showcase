@@ -1,0 +1,23 @@
+{
+  "title": "EA-MT - Entity-Aware Machine Translation",
+  "description": "Entity-aware machine translation evaluation requiring annotators to identify entity spans, classify translation errors, and provide corrected translations. Based on SemEval-2025 Task 2.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Knowles et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio", "text"],
+  "domain": ["SemEval", "NLP", "Machine Translation", "Named Entities"],
+  "useCase": ["Translation Quality", "Entity Recognition", "MT Evaluation"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2025", "shared-task", "machine-translation", "entity", "multilingual"],
+  "featured": false,
+  "paperReference": "Knowles et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/SemEval2025-Task2",
+  "citation": "@inproceedings{knowles-etal-2025-eamt,\n    title = \"{EA-MT}: Entity-Aware Machine Translation\",\n    author = \"Knowles, Rebecca and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

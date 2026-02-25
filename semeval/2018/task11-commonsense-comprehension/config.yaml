@@ -1,0 +1,81 @@
+# Machine Comprehension Using Commonsense Knowledge
+# Based on Ostermann et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1119/
+# Dataset: https://github.com/Heidelberg-NLP/SemEval-2018-Task-11
+#
+# This task asks annotators to read a short narrative, answer a
+# multiple-choice question requiring commonsense reasoning, and
+# provide a brief explanation of their reasoning.
+#
+# Answer Labels:
+# - A: First answer option
+# - B: Second answer option
+#
+# Annotators also provide a text explanation of their reasoning.
+
+annotation_task_name: "Machine Comprehension Using Commonsense Knowledge"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: answer_choice
+    description: "Which answer is correct based on the narrative and commonsense reasoning?"
+    labels:
+      - "A"
+      - "B"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+    tooltips:
+      "A": "Select if option A is the correct or most reasonable answer"
+      "B": "Select if option B is the correct or most reasonable answer"
+
+  - annotation_type: text
+    name: reasoning
+    description: "Briefly explain your reasoning for the chosen answer."
+
+annotation_instructions: |
+  You will be shown a short narrative followed by a question with two answer options.
+  Your task is to:
+  1. Read the narrative carefully.
+  2. Select the answer (A or B) that is correct based on the narrative and commonsense knowledge.
+  3. Provide a brief explanation of your reasoning.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #0369a1;">Narrative:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Question:</strong>
+      <p style="font-size: 15px; margin: 6px 0 0 0;">{{question}}</p>
+    </div>
+    <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong>A:</strong> {{option_a}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong>B:</strong> {{option_b}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

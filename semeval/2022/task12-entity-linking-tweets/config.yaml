@@ -1,0 +1,61 @@
+# Entity Linking in Tweets
+# Based on Agarwal et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.196/
+# Dataset: https://github.com/Agarwal-SemEval2022-Task12
+#
+# This task asks annotators to identify entity mentions in tweets and
+# provide their corresponding knowledge base URIs (e.g., Wikipedia or
+# Wikidata URLs). Entity mentions include persons, organizations,
+# locations, events, and other named entities.
+#
+# Annotation Steps:
+# 1. Highlight all entity mentions in the tweet text
+# 2. For each entity, provide the corresponding knowledge base URI
+
+annotation_task_name: "Entity Linking in Tweets"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: entity_mentions
+    description: "Highlight all named entity mentions in the tweet"
+    labels:
+      - "Entity Mention"
+
+  - annotation_type: text
+    name: entity_uri
+    description: "Provide the knowledge base URI (e.g., Wikipedia URL) for each identified entity"
+
+annotation_instructions: |
+  You will see a tweet that may contain named entities (people, organizations, places, events, etc.).
+  1. Highlight all named entity mentions in the text using the span annotation tool.
+  2. For each entity, provide its corresponding knowledge base URI (Wikipedia or Wikidata URL).
+  3. If multiple entities are present, list all URIs separated by semicolons.
+  Note: Focus on proper nouns and named entities, not common nouns.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

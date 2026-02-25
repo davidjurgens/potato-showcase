@@ -1,0 +1,81 @@
+# Explainable Online Sexism Detection
+# Based on Kirk et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.305/
+# Dataset: https://github.com/rewire-online/edos
+#
+# This task asks annotators to classify online posts for sexist content
+# and highlight the specific expressions that are sexist. The classification
+# follows a fine-grained taxonomy covering different types of sexism.
+#
+# Classification Labels:
+# - Not Sexist: The text does not contain sexist content
+# - Threats: Direct or indirect threats of harm based on gender
+# - Derogation: Derogatory or demeaning language targeting gender
+# - Animosity: Expression of hostility or contempt toward a gender
+# - Prejudiced Discussion: Stereotyping or generalizing about gender
+
+annotation_task_name: "Explainable Online Sexism Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sexism_category
+    description: "Classify the type of sexism present in this text"
+    labels:
+      - "Not Sexist"
+      - "Threats"
+      - "Derogation"
+      - "Animosity"
+      - "Prejudiced Discussion"
+    keyboard_shortcuts:
+      "Not Sexist": "1"
+      "Threats": "2"
+      "Derogation": "3"
+      "Animosity": "4"
+      "Prejudiced Discussion": "5"
+    tooltips:
+      "Not Sexist": "The text does not contain sexist content"
+      "Threats": "Direct or indirect threats of harm, violence, or intimidation based on gender"
+      "Derogation": "Derogatory, demeaning, or belittling language targeting a gender"
+      "Animosity": "Expression of hostility, contempt, or ill-will toward a gender group"
+      "Prejudiced Discussion": "Stereotyping, generalizing, or expressing prejudiced views about gender"
+
+  - annotation_type: span
+    name: sexist_expression
+    description: "Highlight the specific text that contains the sexist expression"
+    labels:
+      - "Sexist Expression"
+
+annotation_instructions: |
+  You will see a social media post. Your task is to:
+  1. Determine whether the post contains sexist content.
+  2. If sexist, classify the type of sexism (threats, derogation, animosity, or prejudiced discussion).
+  3. Highlight the specific text spans that contain the sexist language.
+  Note: Focus on the content, not the speaker's identity. Consider context carefully.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Post:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

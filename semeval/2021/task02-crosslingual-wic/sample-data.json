@@ -1,0 +1,12 @@
+[
+  {"id": "wic_001", "text": "The bank approved my loan application after reviewing my credit history.", "context_2": "We sat on the bank of the river and watched the sunset.", "target_word": "bank", "language": "English"},
+  {"id": "wic_002", "text": "She decided to run for president of the student council.", "context_2": "He went for a run in the park every morning before work.", "target_word": "run", "language": "English"},
+  {"id": "wic_003", "text": "The bright light from the lamp illuminated the entire room.", "context_2": "She is a bright student who always gets top marks in her class.", "target_word": "bright", "language": "English"},
+  {"id": "wic_004", "text": "Please file these documents in the cabinet by the window.", "context_2": "The lawyer decided to file a complaint against the company.", "target_word": "file", "language": "English"},
+  {"id": "wic_005", "text": "The spring flowers bloomed early this year due to the warm weather.", "context_2": "We enjoyed a picnic in the spring sunshine last weekend.", "target_word": "spring", "language": "English"},
+  {"id": "wic_006", "text": "He tried to match the color of the paint to the existing wall.", "context_2": "The tennis match lasted for over four hours in the blazing heat.", "target_word": "match", "language": "English"},
+  {"id": "wic_007", "text": "The doctor asked her to take a deep breath and hold it.", "context_2": "The cold morning air took his breath away as he stepped outside.", "target_word": "breath", "language": "English"},
+  {"id": "wic_008", "text": "The company plans to plant new trees along the highway.", "context_2": "The manufacturing plant employs over 500 workers in the region.", "target_word": "plant", "language": "English"},
+  {"id": "wic_009", "text": "She gave a fair assessment of the proposal during the meeting.", "context_2": "The craft fair attracted thousands of visitors over the weekend.", "target_word": "fair", "language": "English"},
+  {"id": "wic_010", "text": "He ordered a large plate of pasta at the Italian restaurant.", "context_2": "She ordered a plate of spaghetti with marinara sauce for dinner.", "target_word": "plate", "language": "English"}
+]

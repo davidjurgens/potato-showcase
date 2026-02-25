@@ -1,0 +1,23 @@
+{
+  "title": "Clinical Trial NLI",
+  "description": "Natural language inference for clinical trial reports, determining whether a given statement is entailed or contradicted by clinical trial evidence. Based on SemEval-2023 Task 7 (Jullien et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jullien et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Biomedical", "SemEval"],
+  "useCase": ["Clinical NLI", "Evidence Verification", "Medical Text Analysis"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2023", "shared-task", "clinical-trials", "nli", "biomedical", "evidence"],
+  "featured": false,
+  "paperReference": "Jullien et al., SemEval 2023",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.307/",
+  "datasetUrl": "https://github.com/ai-systems/Task-7-SemEval-2023",
+  "citation": "@inproceedings{jullien-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 7: Multi-Evidence Natural Language Inference for Clinical Trial Data\",\n    author = \"Jullien, Ma{\\\"e}l  and Valentino, Marco  and Freitas, Andr{\\'e}\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.307\"\n}"
+}

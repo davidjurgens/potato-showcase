@@ -1,0 +1,23 @@
+{
+  "title": "R2VQ - Recipe Question Answering",
+  "description": "Question answering over recipe texts, where annotators answer questions about recipes and classify whether the answer is explicitly stated, inferable, or not answerable from the recipe. Based on SemEval-2022 Task 9 (Jia et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jia et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "radio"],
+  "domain": ["NLP", "Question Answering", "SemEval"],
+  "useCase": ["Recipe QA", "Reading Comprehension", "Procedural Text"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2022", "shared-task", "recipe-qa", "question-answering", "procedural-text"],
+  "featured": false,
+  "paperReference": "Jia et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.156/",
+  "datasetUrl": "https://github.com/recipe-qa/SemEval2022-Task9",
+  "citation": "@inproceedings{jia-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 9: {R2VQ} -- Competence-Based Multimodal Question Answering\",\n    author = \"Jia, Jingxuan  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.156\"\n}"
+}

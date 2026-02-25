@@ -1,0 +1,91 @@
+# Fine-Grained Sentiment Analysis on Financial Microblogs and News
+# Based on Cortis et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2089/
+# Dataset: https://alt.qcri.org/semeval2017/task5/
+#
+# This task asks annotators to rate the sentiment of financial text on a
+# 7-point scale from very bearish to very bullish, and to classify the
+# topic type of the financial content.
+#
+# Sentiment Scale (Likert 1-7):
+# 1 = Very Bearish (extremely negative market outlook)
+# 4 = Neutral (no clear sentiment direction)
+# 7 = Very Bullish (extremely positive market outlook)
+#
+# Topic Categories:
+# - Stock-Related: About a specific stock or equity
+# - Market-Related: About overall market conditions
+# - Company-Related: About company operations, earnings, management
+# - Economic: About macroeconomic factors (GDP, employment, etc.)
+# - Other: Other financial topics
+
+annotation_task_name: "Fine-Grained Financial Sentiment Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: sentiment_rating
+    description: "Rate the financial sentiment from very bearish to very bullish."
+    min_label: "Very Bearish"
+    max_label: "Very Bullish"
+    size: 7
+
+  - annotation_type: radio
+    name: topic_type
+    description: "What type of financial topic is discussed?"
+    labels:
+      - "Stock-Related"
+      - "Market-Related"
+      - "Company-Related"
+      - "Economic"
+      - "Other"
+    keyboard_shortcuts:
+      "Stock-Related": "1"
+      "Market-Related": "2"
+      "Company-Related": "3"
+      "Economic": "4"
+      "Other": "5"
+    tooltips:
+      "Stock-Related": "Discussion about a specific stock, equity, or share price"
+      "Market-Related": "Discussion about overall market conditions or indices"
+      "Company-Related": "Discussion about company operations, earnings, or management"
+      "Economic": "Discussion about macroeconomic factors like GDP, employment, or interest rates"
+      "Other": "Other financial topics not covered above"
+
+annotation_instructions: |
+  You will be shown a financial text (microblog post or news excerpt) along with
+  the associated cashtag. Your task is to:
+  1. Rate the sentiment on a 7-point scale from Very Bearish to Very Bullish.
+  2. Classify the financial topic type.
+  Consider the tone and implied market direction when rating sentiment.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Cashtag:</strong>
+      <span style="font-size: 15px; font-weight: bold;">{{cashtag}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

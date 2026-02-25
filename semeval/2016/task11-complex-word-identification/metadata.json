@@ -1,0 +1,23 @@
+{
+  "title": "Complex Word Identification",
+  "description": "Binary classification of words as complex or simple for text simplification purposes, identifying words that may be difficult for non-native speakers or people with reading difficulties. Based on SemEval-2016 Task 11.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Paetzold and Specia",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Sheffield"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Text Simplification", "Readability"],
+  "useCase": ["Complex Word Identification", "Text Simplification", "Readability Assessment"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2016", "shared-task", "cwi", "text-simplification", "readability", "lexical-complexity"],
+  "featured": false,
+  "paperReference": "Paetzold and Specia, SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1085/",
+  "datasetUrl": "https://www.cs.york.ac.uk/semeval-2016/task11/",
+  "citation": "@inproceedings{paetzold-specia-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 11: Complex Word Identification\",\n    author = \"Paetzold, Gustavo and Specia, Lucia\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1085\"\n}"
+}

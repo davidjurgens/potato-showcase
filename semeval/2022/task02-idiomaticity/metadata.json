@@ -1,0 +1,23 @@
+{
+  "title": "Idiomaticity Detection",
+  "description": "Binary classification of whether a target multi-word expression is used idiomatically or literally in context, covering English and Portuguese. Based on SemEval-2022 Task 2 (Tayyar Madabushi et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tayyar Madabushi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Lexical Semantics", "SemEval"],
+  "useCase": ["Idiom Detection", "Figurative Language", "Multilingual NLP"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2022", "shared-task", "idiomaticity", "figurative-language", "multi-word-expressions"],
+  "featured": false,
+  "paperReference": "Tayyar Madabushi et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.13/",
+  "datasetUrl": "https://github.com/H-TayyarMadabushi/SemEval_2022_Task2-idiomaticity",
+  "citation": "@inproceedings{tayyarmadabushi-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 2: Multilingual Idiomaticity Detection and Sentence Embedding\",\n    author = \"Tayyar Madabushi, Harish  and Gow-Smith, Edward  and Sherborne, Tom  and Sherborne, Carolina  and Scarton, Carolina  and Sherborne, Marcos  and Sherborne, Aline\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.13\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Multilingual Narrative Extraction",
+  "description": "Multilingual narrative extraction task requiring annotators to identify narrative elements such as events, actors, and causal relations in news texts, and classify the narrative themes. Based on SemEval-2025 Task 10.",
+  "version": "1.0.0",
+  "author": {
+    "name": "SemEval 2025 Task 10 Organizers",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "multiselect"],
+  "domain": ["SemEval", "NLP", "Narrative Analysis", "Multilingual"],
+  "useCase": ["Narrative Extraction", "Event Detection", "Discourse Analysis"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2025", "shared-task", "narrative", "event-extraction", "multilingual"],
+  "featured": false,
+  "paperReference": "SemEval 2025 Task 10 Organizers, SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/semeval-2025-task10",
+  "citation": "@inproceedings{semeval2025-task10,\n    title = \"Multilingual Narrative Extraction\",\n    author = \"SemEval 2025 Task 10 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

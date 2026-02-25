@@ -1,0 +1,12 @@
+[
+  {"id": "suggestion_001", "text": "It would be great if the app had a dark mode option for nighttime use.", "domain": "Software Reviews"},
+  {"id": "suggestion_002", "text": "The battery life on this phone is absolutely terrible. It barely lasts half a day.", "domain": "Electronics Reviews"},
+  {"id": "suggestion_003", "text": "I suggest adding more vegetarian options to the menu, as the current selection is quite limited.", "domain": "Restaurant Reviews"},
+  {"id": "suggestion_004", "text": "The hotel room was clean and the bed was comfortable. We had a pleasant stay overall.", "domain": "Hotel Reviews"},
+  {"id": "suggestion_005", "text": "They should really consider extending their customer service hours to include weekends.", "domain": "Service Reviews"},
+  {"id": "suggestion_006", "text": "I love the design of this product. The build quality feels premium and solid.", "domain": "Electronics Reviews"},
+  {"id": "suggestion_007", "text": "The developers need to fix the login bug that keeps logging users out randomly.", "domain": "Software Reviews"},
+  {"id": "suggestion_008", "text": "Shipping took about 5 business days, which is what was promised on the website.", "domain": "E-commerce Reviews"},
+  {"id": "suggestion_009", "text": "A better approach would be to allow users to customize the notification settings individually.", "domain": "Software Reviews"},
+  {"id": "suggestion_010", "text": "The coffee here is amazing and the atmosphere is cozy. Perfect spot for working remotely.", "domain": "Restaurant Reviews"}
+]

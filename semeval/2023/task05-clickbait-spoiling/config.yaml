@@ -1,0 +1,82 @@
+# Clickbait Spoiling
+# Based on Hagen et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.312/
+# Dataset: https://webis.de/events/clickbait-challenge/
+#
+# This task asks annotators to classify the type of spoiler needed for a
+# clickbait headline and identify the spoiler text within the article excerpt.
+# Spoiler types include phrase (short answer), passage (longer explanation),
+# and multi-part (list of items).
+#
+# Spoiler Type Labels:
+# - Phrase Spoiler: A short phrase or entity answers the clickbait
+# - Passage Spoiler: A longer passage is needed to resolve the clickbait
+# - Multi-Part Spoiler: Multiple distinct pieces of information are needed
+
+annotation_task_name: "Clickbait Spoiling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: spoiler
+    description: "Write the spoiler text that resolves the clickbait headline"
+
+  - annotation_type: radio
+    name: spoiler_type
+    description: "What type of spoiler is needed to resolve this clickbait?"
+    labels:
+      - "Phrase Spoiler"
+      - "Passage Spoiler"
+      - "Multi-Part Spoiler"
+    keyboard_shortcuts:
+      "Phrase Spoiler": "1"
+      "Passage Spoiler": "2"
+      "Multi-Part Spoiler": "3"
+    tooltips:
+      "Phrase Spoiler": "A short phrase or named entity answers the clickbait question"
+      "Passage Spoiler": "A longer passage or explanation is needed to resolve the clickbait"
+      "Multi-Part Spoiler": "Multiple distinct items or facts are needed to answer the clickbait"
+
+  - annotation_type: span
+    name: spoiler_span
+    description: "Highlight the text span(s) in the article that contain the spoiler"
+    labels:
+      - "Spoiler Span"
+
+annotation_instructions: |
+  You will see a clickbait headline and an excerpt from the article it links to.
+  1. Read the headline and the article excerpt carefully.
+  2. Classify what type of spoiler is needed (phrase, passage, or multi-part).
+  3. Write the spoiler text that resolves the clickbait.
+  4. Highlight the span(s) in the article excerpt that contain the spoiler information.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Headline:</strong>
+      <p style="font-size: 18px; font-weight: bold; line-height: 1.5; margin: 8px 0 0 0;">{{headline}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Article Excerpt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "HatEval - Multilingual Detection of Hate Speech Against Immigrants and Women",
+  "description": "Detection and classification of hate speech targeting immigrants and women on Twitter, including fine-grained categorization of hate type. Based on SemEval-2019 Task 5 (HatEval).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Basile et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Turin"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect"],
+  "domain": ["SemEval", "NLP", "Hate Speech Detection", "Social Media"],
+  "useCase": ["Hate Speech Detection", "Content Moderation", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2019", "shared-task", "hate-speech", "twitter", "hateval", "content-moderation"],
+  "featured": false,
+  "paperReference": "Basile et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2007/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/19935",
+  "citation": "@inproceedings{basile-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 5: Multilingual Detection of Hate Speech Against Immigrants and Women in {T}witter\",\n    author = \"Basile, Valerio and Bosco, Cristina and Ferrara, Elisabetta and Ferraro, Danilo and Ferrini, Valerio and Guillen, Antonia and Ferrara, Elisabetta\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2007\"\n}"
+}

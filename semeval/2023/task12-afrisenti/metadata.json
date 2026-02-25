@@ -1,0 +1,23 @@
+{
+  "title": "AfriSenti - African Language Sentiment",
+  "description": "Sentiment analysis for tweets in African languages, classifying text as positive, negative, or neutral. Covers 14 African languages including Amharic, Hausa, Igbo, Yoruba, and Swahili. Based on SemEval-2023 Task 12 (Muhammad et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Muhammad et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Social Media", "SemEval"],
+  "useCase": ["Sentiment Analysis", "Multilingual NLP", "Low-Resource Languages"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2023", "shared-task", "sentiment", "african-languages", "multilingual", "low-resource"],
+  "featured": false,
+  "paperReference": "Muhammad et al., SemEval 2023",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.315/",
+  "datasetUrl": "https://github.com/afrisenti-semeval/afrisent-semeval-2023",
+  "citation": "@inproceedings{muhammad-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 12: Sentiment Analysis for {A}frican Languages ({A}fri{S}enti-{S}em{E}val)\",\n    author = \"Muhammad, Shamsuddeen Hassan  and Abdulmumin, Idris  and Yimam, Seid Muhie  and Ibrahim, Said Ahmad  and Oladipo, Abinew Ali  and others\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.315\"\n}"
+}

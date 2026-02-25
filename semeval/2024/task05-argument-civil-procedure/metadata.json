@@ -1,0 +1,23 @@
+{
+  "title": "Argument Reasoning in Civil Procedure",
+  "description": "Legal argument reasoning task requiring annotators to answer multiple-choice questions about civil procedure by selecting the best answer and providing legal reasoning. Based on SemEval-2024 Task 5.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bongard et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["SemEval", "NLP", "Legal", "Argumentation"],
+  "useCase": ["Legal Reasoning", "Argument Analysis", "Question Answering"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2024", "shared-task", "legal", "civil-procedure", "argumentation", "qa"],
+  "featured": false,
+  "paperReference": "Bongard et al., SemEval 2024",
+  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/semeval-2024-task5",
+  "citation": "@inproceedings{bongard-etal-2024-argument-civil-procedure,\n    title = \"Argument Reasoning in Civil Procedure\",\n    author = \"Bongard, Lena and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}
