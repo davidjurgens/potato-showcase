@@ -1,0 +1,102 @@
+[
+  {
+    "id": "sciqa_001",
+    "text": "Which of these organisms is a producer in the food chain shown in the diagram?",
+    "image_url": "https://example.com/scienceqa/image_001.jpg",
+    "option_a": "Grass",
+    "option_b": "Rabbit",
+    "option_c": "Fox",
+    "option_d": "Eagle",
+    "subject": "Biology"
+  },
+  {
+    "id": "sciqa_002",
+    "text": "Based on the weather map, which city is most likely to experience rain tomorrow?",
+    "image_url": "https://example.com/scienceqa/image_002.jpg",
+    "option_a": "City A, which is under a high-pressure system",
+    "option_b": "City B, which is near a cold front",
+    "option_c": "City C, which is in a clear area",
+    "option_d": "City D, which is far from any weather systems",
+    "subject": "Earth Science"
+  },
+  {
+    "id": "sciqa_003",
+    "text": "Which sentence uses the word 'bark' as a verb?",
+    "image_url": "https://example.com/scienceqa/image_003.jpg",
+    "option_a": "The bark of the oak tree was rough and thick.",
+    "option_b": "The dog began to bark loudly at the mailman.",
+    "option_c": "She collected bark samples for her science project.",
+    "option_d": "The bark protected the tree from insects.",
+    "subject": "Language Arts"
+  },
+  {
+    "id": "sciqa_004",
+    "text": "Look at the diagram of the water cycle. What process is represented by arrow B?",
+    "image_url": "https://example.com/scienceqa/image_004.jpg",
+    "option_a": "Evaporation",
+    "option_b": "Condensation",
+    "option_c": "Precipitation",
+    "option_d": "Infiltration",
+    "subject": "Earth Science"
+  },
+  {
+    "id": "sciqa_005",
+    "text": "Which simple machine is being used in the image to lift the heavy box?",
+    "image_url": "https://example.com/scienceqa/image_005.jpg",
+    "option_a": "Lever",
+    "option_b": "Pulley",
+    "option_c": "Inclined plane",
+    "option_d": "Wheel and axle",
+    "subject": "Physics"
+  },
+  {
+    "id": "sciqa_006",
+    "text": "Which continent is highlighted on the map?",
+    "image_url": "https://example.com/scienceqa/image_006.jpg",
+    "option_a": "Africa",
+    "option_b": "South America",
+    "option_c": "Australia",
+    "option_d": "Antarctica",
+    "subject": "Geography"
+  },
+  {
+    "id": "sciqa_007",
+    "text": "Based on the bar graph, which month had the highest average temperature?",
+    "image_url": "https://example.com/scienceqa/image_007.jpg",
+    "option_a": "March",
+    "option_b": "June",
+    "option_c": "July",
+    "option_d": "September",
+    "subject": "Earth Science"
+  },
+  {
+    "id": "sciqa_008",
+    "text": "Which property of matter is being measured in this image?",
+    "image_url": "https://example.com/scienceqa/image_008.jpg",
+    "option_a": "Mass",
+    "option_b": "Volume",
+    "option_c": "Temperature",
+    "option_d": "Density",
+    "subject": "Chemistry"
+  },
+  {
+    "id": "sciqa_009",
+    "text": "The diagram shows the phases of the moon. What phase comes after a full moon?",
+    "image_url": "https://example.com/scienceqa/image_009.jpg",
+    "option_a": "New moon",
+    "option_b": "First quarter",
+    "option_c": "Waning gibbous",
+    "option_d": "Waxing crescent",
+    "subject": "Astronomy"
+  },
+  {
+    "id": "sciqa_010",
+    "text": "Which adaptation shown in the image helps this animal survive in cold environments?",
+    "image_url": "https://example.com/scienceqa/image_010.jpg",
+    "option_a": "Long legs for running fast",
+    "option_b": "Thick fur for insulation",
+    "option_c": "Sharp claws for climbing trees",
+    "option_d": "Bright coloring for attracting mates",
+    "subject": "Biology"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "Constitutional AI Harmlessness Evaluation",
+  "description": "Evaluate AI assistant responses for harmlessness and helpfulness based on the Constitutional AI framework by Anthropic. Annotators rate responses on a harmfulness scale, assess helpfulness, and provide explanations for their judgments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bai et al.",
+    "email": "jurgens@umich.edu",
+    "github": "anthropics",
+    "affiliation": "Anthropic"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "likert", "text"],
+  "domain": ["AI Safety", "Natural Language Processing"],
+  "useCase": ["Harmlessness Evaluation", "AI Alignment", "RLHF"],
+  "complexity": "intermediate",
+  "tags": ["constitutional-ai", "harmlessness", "helpfulness", "alignment", "safety", "rlhf"],
+  "featured": false,
+  "paperReference": "Bai et al., arXiv 2022",
+  "paperUrl": "https://arxiv.org/abs/2212.08073",
+  "datasetUrl": "https://github.com/anthropics/hh-rlhf",
+  "citation": "@article{bai2022constitutional,\n  title={Constitutional AI: Harmlessness from AI Feedback},\n  author={Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and others},\n  journal={arXiv preprint arXiv:2212.08073},\n  year={2022}\n}"
+}

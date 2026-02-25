@@ -1,0 +1,62 @@
+[
+  {
+    "id": "saycan_001",
+    "text": "Bring me a Coke from the kitchen counter.",
+    "plan_steps": "1. Navigate to the kitchen counter\n2. Pick up the Coke can\n3. Navigate to the user\n4. Place the Coke can on the table near the user",
+    "environment": "Kitchen with counter, dining table, refrigerator, and sink. Objects on counter: Coke can, water bottle, plate. User is seated at the dining table."
+  },
+  {
+    "id": "saycan_002",
+    "text": "Clean up the spilled water on the table.",
+    "plan_steps": "1. Navigate to the supply closet\n2. Open the supply closet\n3. Pick up the sponge\n4. Close the supply closet\n5. Navigate to the table with spilled water\n6. Push the sponge across the wet area",
+    "environment": "Office break room with table, chairs, supply closet, and trash bin. Spilled water on the center table. Supply closet contains sponge, paper towels, and cleaning spray."
+  },
+  {
+    "id": "saycan_003",
+    "text": "Put the apple in the bowl on the shelf.",
+    "plan_steps": "1. Navigate to the counter\n2. Pick up the apple\n3. Navigate to the shelf\n4. Place the apple in the bowl",
+    "environment": "Kitchen with counter, shelf, and table. Objects: apple on counter, empty bowl on shelf, knife on counter, cutting board on table."
+  },
+  {
+    "id": "saycan_004",
+    "text": "Pour me a glass of water from the pitcher.",
+    "plan_steps": "1. Navigate to the counter\n2. Pick up the glass\n3. Navigate to the table where the pitcher is\n4. Pick up the pitcher\n5. Pour water from pitcher into glass\n6. Place the pitcher back on the table\n7. Navigate to the user\n8. Place the glass near the user",
+    "environment": "Living room with coffee table, side table, and kitchen counter. Objects: glass on counter, water pitcher on coffee table (half full), coasters on side table."
+  },
+  {
+    "id": "saycan_005",
+    "text": "Move the books from the desk to the bookshelf.",
+    "plan_steps": "1. Navigate to the desk\n2. Pick up the first book\n3. Navigate to the bookshelf\n4. Place the book on the bookshelf\n5. Navigate to the desk\n6. Pick up the second book\n7. Navigate to the bookshelf\n8. Place the book on the bookshelf",
+    "environment": "Study room with desk, bookshelf, and reading chair. Objects: two books on desk, lamp on desk, three books already on bookshelf. Bookshelf has available space on second shelf."
+  },
+  {
+    "id": "saycan_006",
+    "text": "Open the drawer and get me a fork.",
+    "plan_steps": "1. Navigate to the kitchen cabinet\n2. Open the kitchen cabinet\n3. Pick up the fork\n4. Close the kitchen cabinet\n5. Navigate to the user\n6. Place the fork on the table",
+    "environment": "Kitchen with drawers, cabinet, counter, and dining table. Forks are in the top drawer, not the cabinet. Cabinet contains plates and bowls. User is at the dining table."
+  },
+  {
+    "id": "saycan_007",
+    "text": "Throw away the empty chip bag on the couch.",
+    "plan_steps": "1. Navigate to the couch\n2. Pick up the empty chip bag\n3. Navigate to the trash bin\n4. Place the chip bag in the trash bin",
+    "environment": "Living room with couch, coffee table, TV stand, and trash bin near doorway. Objects: empty chip bag on couch, remote control on coffee table, magazines on coffee table."
+  },
+  {
+    "id": "saycan_008",
+    "text": "Set the table for dinner with plates and glasses.",
+    "plan_steps": "1. Navigate to the cabinet\n2. Open the cabinet\n3. Pick up a plate\n4. Navigate to the dining table\n5. Place the plate on the table\n6. Navigate to the cabinet\n7. Pick up a glass\n8. Navigate to the dining table\n9. Place the glass on the table",
+    "environment": "Dining room with table (seats 4), china cabinet, sideboard. Cabinet contains plates, bowls, and glasses. Two place settings needed. Napkins and cutlery in sideboard drawer."
+  },
+  {
+    "id": "saycan_009",
+    "text": "Close the refrigerator door that was left open.",
+    "plan_steps": "1. Navigate to the refrigerator\n2. Push the refrigerator door\n3. Close the refrigerator",
+    "environment": "Kitchen with open refrigerator, counter, stove, and sink. Refrigerator door is ajar approximately 30 degrees. No obstacles in front of the refrigerator."
+  },
+  {
+    "id": "saycan_010",
+    "text": "Make me a cup of tea by pouring hot water from the kettle.",
+    "plan_steps": "1. Navigate to the counter\n2. Pick up the tea bag\n3. Navigate to the cup\n4. Place the tea bag in the cup\n5. Pick up the kettle\n6. Pour hot water from the kettle into the cup\n7. Place the kettle back on the counter\n8. Pick up the cup\n9. Navigate to the user\n10. Place the cup near the user",
+    "environment": "Kitchen with counter, stove, and table. Objects: electric kettle (hot, recently boiled) on counter, tea bags in open box on counter, empty mug next to kettle, sugar bowl on table. User is seated at table."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "RT-2 - Robotic Action Annotation",
+  "description": "Robotic manipulation task evaluation and action segmentation based on RT-2 (Brohan et al., CoRL 2023). Annotators evaluate task success, describe actions, rate execution quality, and segment video into action phases.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Brohan et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google-deepmind",
+    "affiliation": "Google DeepMind"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "likert", "video_annotation"],
+  "domain": ["Robotics", "Multimodal", "Evaluation"],
+  "useCase": ["Robotic Manipulation", "Action Recognition", "Task Evaluation"],
+  "complexity": "advanced",
+  "tags": ["robotics", "rt2", "manipulation", "action-segmentation", "corl2023", "vision-language"],
+  "featured": false,
+  "paperReference": "Brohan et al., CoRL 2023",
+  "paperUrl": "https://arxiv.org/abs/2307.15818",
+  "datasetUrl": "https://robotics-transformer2.github.io/",
+  "citation": "@inproceedings{brohan2023rt2,\n    title = \"{RT}-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control\",\n    author = \"Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and Chen, Xi and Choromanski, Krzysztof and Ding, Tianli and Driess, Danny and Dubey, Avinava and Finn, Chelsea and others\",\n    booktitle = \"Proceedings of the Conference on Robot Learning (CoRL)\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2307.15818\"\n}"
+}

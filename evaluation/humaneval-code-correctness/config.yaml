@@ -1,0 +1,109 @@
+# HumanEval Code Correctness Evaluation
+# Based on Chen et al., arXiv 2021
+# Paper: https://arxiv.org/abs/2107.03374
+# Dataset: https://github.com/openai/human-eval
+#
+# Evaluation of AI-generated code solutions for correctness and quality.
+# Each item presents a programming task description and a candidate
+# solution. Annotators judge correctness, write review comments, and
+# assign a numeric quality score.
+#
+# Correctness Labels:
+# - Correct: The solution passes all expected test cases
+# - Partially Correct: The solution handles some cases but fails on edge cases
+# - Incorrect: The solution produces wrong output or has logical errors
+# - Runtime Error: The solution would crash or raise an exception
+#
+# Annotation Guidelines:
+# 1. Read the task description carefully, noting input/output requirements
+# 2. Review the code solution for correctness and edge case handling
+# 3. Select the correctness label
+# 4. Write code review comments noting any issues
+# 5. Assign a code quality score from 1 to 10
+
+annotation_task_name: "HumanEval Code Correctness Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Correctness judgment
+  - annotation_type: radio
+    name: correctness
+    description: "Is this code solution correct?"
+    labels:
+      - "Correct"
+      - "Partially Correct"
+      - "Incorrect"
+      - "Runtime Error"
+    keyboard_shortcuts:
+      "Correct": "1"
+      "Partially Correct": "2"
+      "Incorrect": "3"
+      "Runtime Error": "4"
+    tooltips:
+      "Correct": "The solution passes all expected test cases including edge cases"
+      "Partially Correct": "The solution handles some cases but fails on edge cases or special inputs"
+      "Incorrect": "The solution produces wrong output or has fundamental logical errors"
+      "Runtime Error": "The solution would crash, raise an exception, or enter an infinite loop"
+
+  # Step 2: Code review comments
+  - annotation_type: text
+    name: review_comments
+    description: "Provide code review comments noting any issues, bugs, or improvements."
+    textarea: true
+    required: false
+    placeholder: "Describe any issues, bugs, or suggested improvements..."
+
+  # Step 3: Code quality score
+  - annotation_type: number
+    name: quality_score
+    description: "Code quality score (1-10)"
+
+annotation_instructions: |
+  You will evaluate AI-generated code solutions from the HumanEval benchmark.
+
+  For each item:
+  1. Read the task description carefully, noting expected inputs and outputs.
+  2. Review the code solution line by line.
+  3. Judge whether the solution is Correct, Partially Correct, Incorrect, or would cause a Runtime Error.
+  4. Write code review comments noting any bugs, edge case failures, or improvements.
+  5. Assign a quality score from 1 (very poor) to 10 (excellent).
+
+  Consider:
+  - Does the solution handle edge cases (empty input, large values, negative numbers)?
+  - Is the logic correct for all valid inputs?
+  - Would the code actually run without errors?
+  - Is the code readable and well-structured?
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px; margin-bottom: 16px;">
+      <strong>Language:</strong> {{language}}
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Task Description:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #1e1e1e; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #9cdcfe;">Code Solution:</strong>
+      <pre style="color: #d4d4d4; font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 8px 0 0 0; white-space: pre-wrap; overflow-x: auto;">{{code_solution}}</pre>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

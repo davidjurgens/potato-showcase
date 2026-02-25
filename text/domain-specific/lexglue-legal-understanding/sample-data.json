@@ -1,0 +1,52 @@
+[
+  {
+    "id": "lexglue_001",
+    "text": "The plaintiff entered into a lease agreement with the defendant for commercial property. After the defendant failed to make rental payments for three consecutive months, the plaintiff sought to terminate the lease and recover unpaid rent plus damages. The court found that the lease contained a valid termination clause and awarded the plaintiff the outstanding balance.",
+    "jurisdiction": "US Federal"
+  },
+  {
+    "id": "lexglue_002",
+    "text": "The defendant was charged with securities fraud for misleading investors about the financial health of the company. The prosecution presented evidence of falsified earnings reports and insider trading activities. The jury found the defendant guilty on all counts, resulting in a sentence of 15 years imprisonment and restitution of $4.2 million.",
+    "jurisdiction": "US Federal"
+  },
+  {
+    "id": "lexglue_003",
+    "text": "The petitioner challenged the constitutionality of a state law requiring mandatory drug testing for all public school teachers, arguing it violated the Fourth Amendment protection against unreasonable searches. The Supreme Court held that the state had a compelling interest in ensuring a drug-free educational environment but the blanket testing requirement was overly broad.",
+    "jurisdiction": "US Supreme Court"
+  },
+  {
+    "id": "lexglue_004",
+    "text": "The taxpayer disputed an assessment by the Internal Revenue Service regarding the deductibility of home office expenses. The Tax Court examined whether the home office was used exclusively and regularly for business purposes as required under Section 280A of the Internal Revenue Code and ruled in favor of the taxpayer.",
+    "jurisdiction": "US Tax Court"
+  },
+  {
+    "id": "lexglue_005",
+    "text": "A dispute arose between neighboring landowners regarding an easement for a private road. The plaintiff claimed prescriptive easement based on continuous and uninterrupted use for over twenty years. The court applied the statutory period and determined that the plaintiff had established the necessary elements of prescriptive easement.",
+    "jurisdiction": "State Court - California"
+  },
+  {
+    "id": "lexglue_006",
+    "text": "The Environmental Protection Agency issued new regulations limiting carbon emissions from power plants. Several industry groups filed suit challenging the agency's authority to promulgate such rules under the Clean Air Act. The court reviewed whether the EPA had exceeded its statutory mandate and applied Chevron deference to the agency's interpretation.",
+    "jurisdiction": "US Court of Appeals"
+  },
+  {
+    "id": "lexglue_007",
+    "text": "Two companies entered into a merger agreement valued at $2.3 billion. The target company's shareholders filed a class action alleging that the board of directors breached their fiduciary duties by approving the merger at an unfairly low price without adequately shopping the company. The court applied the enhanced scrutiny standard under Revlon.",
+    "jurisdiction": "Delaware Chancery Court"
+  },
+  {
+    "id": "lexglue_008",
+    "text": "The defendant was convicted of first-degree murder after the prosecution established premeditation through evidence of prior threats, purchase of a weapon, and surveillance of the victim. The defense appealed on grounds of ineffective assistance of counsel, arguing that trial counsel failed to investigate and present alibi witnesses.",
+    "jurisdiction": "State Court - New York"
+  },
+  {
+    "id": "lexglue_009",
+    "text": "A multinational corporation challenged the double taxation of its foreign subsidiary's earnings, arguing that the tax treaty between the United States and the foreign jurisdiction should prevent the assessment. The court examined the treaty provisions and determined that the company was entitled to a foreign tax credit under the applicable bilateral agreement.",
+    "jurisdiction": "US Federal"
+  },
+  {
+    "id": "lexglue_010",
+    "text": "The city council enacted a zoning ordinance restricting the construction of buildings exceeding four stories in a residential neighborhood. A property developer challenged the ordinance as an unconstitutional taking without just compensation. The court applied the Penn Central balancing test to determine whether the regulation constituted a regulatory taking.",
+    "jurisdiction": "State Court - Illinois"
+  }
+]

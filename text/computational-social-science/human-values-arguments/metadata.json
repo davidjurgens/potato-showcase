@@ -1,0 +1,23 @@
+{
+  "title": "Human Values in Arguments",
+  "description": "Identification of human values in arguments based on Kiesel et al. (ACL 2022). Annotators classify which Schwartz human values are expressed in arguments on social issues and whether the argument is for or against the stated topic.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kiesel et al.",
+    "email": "jurgens@umich.edu",
+    "github": "touche-webis-de",
+    "affiliation": "Bauhaus-Universitat Weimar"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "radio"],
+  "domain": ["NLP", "Computational Social Science", "Ethics"],
+  "useCase": ["Value Detection", "Argumentation Analysis", "Social Science"],
+  "complexity": "intermediate",
+  "tags": ["human-values", "argumentation", "schwartz-values", "social-issues", "acl2022"],
+  "featured": false,
+  "paperReference": "Kiesel et al., ACL 2022",
+  "paperUrl": "https://aclanthology.org/2022.acl-long.306/",
+  "datasetUrl": "https://zenodo.org/record/6818093",
+  "citation": "@inproceedings{kiesel-etal-2022-identifying,\n    title = \"Identifying the Human Values behind Arguments\",\n    author = \"Kiesel, Johannes and Alshomary, Milad and Handke, Nicolas and Cai, Xiaoni and Wachsmuth, Henning and Stein, Benno\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.306\",\n    pages = \"4459--4471\"\n}"
+}

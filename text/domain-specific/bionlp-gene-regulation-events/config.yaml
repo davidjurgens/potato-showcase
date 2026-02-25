@@ -1,0 +1,81 @@
+# BioNLP 2011 - Gene Regulation Event Extraction
+# Based on Kim et al., ACL Workshop 2011
+# Paper: https://aclanthology.org/W11-1801/
+# Dataset: https://2011.bionlp-st.org/
+#
+# This task involves two annotation layers:
+# 1. Entity annotation: Mark spans of Gene, Protein, and other biological entities
+# 2. Event annotation: Identify regulatory events (expression, transcription, etc.)
+#
+# Event types include:
+# - Gene_expression: Production of a gene product
+# - Transcription: DNA to mRNA conversion
+# - Protein_catabolism: Protein degradation
+# - Localization: Movement of a protein to a cellular location
+# - Binding: Physical interaction between proteins
+# - Positive_regulation: Upregulation of a process
+# - Negative_regulation: Downregulation of a process
+# - Regulation: General regulatory relationship
+
+annotation_task_name: "BioNLP 2011: Gene Regulation Event Extraction"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: entity_types
+    description: "Highlight and label biological entities in the text"
+    labels:
+      - "Gene"
+      - "Protein"
+      - "Cell_type"
+      - "Cell_line"
+      - "DNA_domain"
+      - "RNA"
+    tooltips:
+      "Gene": "A gene name or symbol (e.g., p53, BRCA1)"
+      "Protein": "A protein name or product (e.g., NF-kB, interleukin-2)"
+      "Cell_type": "A type of cell (e.g., T cell, macrophage)"
+      "Cell_line": "A specific cell line (e.g., Jurkat, HeLa)"
+      "DNA_domain": "A DNA region or domain (e.g., promoter, enhancer)"
+      "RNA": "An RNA molecule (e.g., mRNA, miRNA)"
+
+  - annotation_type: event_annotation
+    name: regulation_events
+    description: "Identify gene regulation events and their types in the text"
+
+annotation_instructions: |
+  Annotate biomedical text for gene regulation events:
+  1. First, use the span tool to mark all biological entities (genes, proteins, cell types, etc.).
+  2. Then, use the event annotation tool to identify regulatory events.
+  3. Common event types: gene expression, transcription, binding, positive/negative regulation.
+  4. Each event should have a trigger word and one or more entity arguments.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Biomedical Text:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
+      <p style="font-size: 13px; color: #713f12; margin: 0;"><strong>Instructions:</strong> First mark entity spans (Gene, Protein, etc.), then annotate regulation events.</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

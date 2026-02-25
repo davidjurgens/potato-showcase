@@ -1,0 +1,23 @@
+{
+  "title": "OntoNotes - Coreference Resolution",
+  "description": "Coreference resolution annotation based on the OntoNotes 5.0 corpus (Pradhan et al., CoNLL 2012). Annotators identify coreferent mentions -- expressions that refer to the same real-world entity -- and link them into coreference chains across multi-sentence text.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pradhan et al.",
+    "email": "jurgens@umich.edu",
+    "github": "conll",
+    "affiliation": "University of Colorado Boulder"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["coreference", "span"],
+  "domain": ["NLP", "Linguistics"],
+  "useCase": ["Coreference Resolution", "Entity Linking", "Discourse Analysis"],
+  "complexity": "advanced",
+  "tags": ["ontonotes", "coreference", "mention-detection", "entity-chains", "conll2012"],
+  "featured": false,
+  "paperReference": "Pradhan et al., CoNLL 2012",
+  "paperUrl": "https://aclanthology.org/W12-4501/",
+  "datasetUrl": "https://catalog.ldc.upenn.edu/LDC2013T19",
+  "citation": "@inproceedings{pradhan-etal-2012-conll,\n    title = \"{C}o{NLL}-2012 Shared Task: Modeling Multilingual Unrestricted Coreference in {O}nto{N}otes\",\n    author = \"Pradhan, Sameer and Moschitti, Alessandro and Xue, Nianwen and Uryupina, Olga and Zhang, Yuchen\",\n    booktitle = \"Joint Conference on EMNLP and CoNLL - Shared Task\",\n    month = jul,\n    year = \"2012\",\n    address = \"Jeju Island, Korea\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/W12-4501\",\n    pages = \"1--40\"\n}"
+}

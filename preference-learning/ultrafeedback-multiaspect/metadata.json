@@ -1,0 +1,23 @@
+{
+  "title": "UltraFeedback Multi-Aspect Rating",
+  "description": "Multi-aspect quality rating of AI model responses based on the UltraFeedback dataset (Cui et al., ICML 2024). Annotators rate responses on helpfulness, honesty, instruction following, and truthfulness, then provide a Likert agreement rating and overall feedback.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cui et al.",
+    "email": "jurgens@umich.edu",
+    "github": "OpenBMB",
+    "affiliation": "Tsinghua University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multirate", "likert", "text"],
+  "domain": ["NLP", "AI Alignment"],
+  "useCase": ["Preference Learning", "Multi-Aspect Evaluation", "Reward Model Training"],
+  "complexity": "intermediate",
+  "tags": ["ultrafeedback", "multirate", "multi-aspect", "quality-rating", "icml2024"],
+  "featured": false,
+  "paperReference": "Cui et al., ICML 2024",
+  "paperUrl": "https://arxiv.org/abs/2310.01377",
+  "datasetUrl": "https://huggingface.co/datasets/openbmb/UltraFeedback",
+  "citation": "@inproceedings{cui2024ultrafeedback,\n    title = \"UltraFeedback: Boosting Language Models with Scaled AI Feedback\",\n    author = \"Cui, Ganqu and Yuan, Lifan and Ding, Ning and Yao, Guanming and Zhu, Wei and Ni, Yuan and Xie, Guotong and Liu, Zhiyuan and Sun, Maosong\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2310.01377\"\n}"
+}

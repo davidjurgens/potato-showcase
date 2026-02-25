@@ -1,0 +1,23 @@
+{
+  "title": "Automated Essay Scoring",
+  "description": "Holistic and analytic scoring of student essays using a deep-neural approach to automated essay scoring (Uto, arXiv 2022). Annotators provide overall quality ratings, holistic scores on a 1-6 scale, and detailed feedback comments for educational assessment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Uto",
+    "email": "jurgens@umich.edu",
+    "github": "uto-aes",
+    "affiliation": "The University of Electro-Communications"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "slider", "text"],
+  "domain": ["NLP", "Education"],
+  "useCase": ["Essay Scoring", "Writing Assessment", "Educational NLP"],
+  "complexity": "beginner",
+  "tags": ["essay-scoring", "education", "writing", "assessment", "deep-learning", "aes"],
+  "featured": false,
+  "paperReference": "Uto, arXiv 2022",
+  "paperUrl": "https://arxiv.org/abs/2012.13422",
+  "datasetUrl": "https://www.kaggle.com/c/asap-aes",
+  "citation": "@article{uto2022review,\n    title = \"A Review of Deep-Neural Automated Essay Scoring Models\",\n    author = \"Uto, Masaki\",\n    journal = \"arXiv preprint arXiv:2012.13422\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2012.13422\"\n}"
+}

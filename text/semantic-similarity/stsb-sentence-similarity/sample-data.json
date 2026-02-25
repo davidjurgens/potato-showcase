@@ -1,0 +1,52 @@
+[
+  {
+    "id": "stsb_001",
+    "text": "A plane is taking off.",
+    "sentence_2": "An air plane is taking off."
+  },
+  {
+    "id": "stsb_002",
+    "text": "A man is playing a large flute.",
+    "sentence_2": "A man is playing a flute."
+  },
+  {
+    "id": "stsb_003",
+    "text": "A woman is cooking dinner.",
+    "sentence_2": "A man is driving a car."
+  },
+  {
+    "id": "stsb_004",
+    "text": "The dog chased the cat across the yard.",
+    "sentence_2": "A cat was being pursued by a dog in the garden."
+  },
+  {
+    "id": "stsb_005",
+    "text": "Heavy rain is expected in the northeast region tomorrow.",
+    "sentence_2": "The weather forecast predicts significant rainfall in the northeastern area."
+  },
+  {
+    "id": "stsb_006",
+    "text": "The stock market fell sharply today.",
+    "sentence_2": "Children are playing in the park."
+  },
+  {
+    "id": "stsb_007",
+    "text": "A young girl is playing the violin on stage.",
+    "sentence_2": "A girl performs a violin piece during a concert."
+  },
+  {
+    "id": "stsb_008",
+    "text": "The president signed the new trade agreement.",
+    "sentence_2": "A new trade deal was signed by the president."
+  },
+  {
+    "id": "stsb_009",
+    "text": "Two teams are competing in a soccer match.",
+    "sentence_2": "A soccer game is being played between two teams."
+  },
+  {
+    "id": "stsb_010",
+    "text": "The researcher published a paper on climate change.",
+    "sentence_2": "A scientist wrote about environmental issues in a journal."
+  }
+]

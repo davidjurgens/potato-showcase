@@ -1,0 +1,42 @@
+[
+  {
+    "id": "chemprot_001",
+    "text": "Imatinib is a potent and selective inhibitor of the BCR-ABL tyrosine kinase that has revolutionized the treatment of chronic myeloid leukemia. In vitro studies demonstrate that imatinib blocks the ATP-binding site of the BCR-ABL fusion protein, preventing downstream signaling through the RAS-MAPK and PI3K-AKT pathways."
+  },
+  {
+    "id": "chemprot_002",
+    "text": "Metformin activates AMP-activated protein kinase (AMPK) in hepatocytes, leading to reduced hepatic glucose production. This activation occurs through an indirect mechanism involving inhibition of mitochondrial respiratory chain complex I, resulting in increased cellular AMP:ATP ratios that allosterically activate AMPK."
+  },
+  {
+    "id": "chemprot_003",
+    "text": "Tamoxifen acts as a selective estrogen receptor modulator (SERM), functioning as an antagonist in breast tissue by competitively binding to the estrogen receptor alpha (ERa). In contrast, tamoxifen exhibits partial agonist activity in bone and endometrial tissue, which accounts for both its therapeutic benefits and certain side effects."
+  },
+  {
+    "id": "chemprot_004",
+    "text": "Cyclooxygenase-2 (COX-2) catalyzes the conversion of arachidonic acid to prostaglandin H2, which is subsequently converted to various prostaglandins by tissue-specific synthases. Celecoxib selectively inhibits COX-2 without significantly affecting COX-1 activity at therapeutic doses, reducing inflammation while preserving gastroprotective prostaglandin production."
+  },
+  {
+    "id": "chemprot_005",
+    "text": "The angiotensin-converting enzyme (ACE) cleaves angiotensin I to produce the potent vasoconstrictor angiotensin II. Lisinopril is a competitive inhibitor of ACE that blocks this conversion, thereby reducing blood pressure through decreased angiotensin II levels and reduced aldosterone secretion from the adrenal cortex."
+  },
+  {
+    "id": "chemprot_006",
+    "text": "Serotonin is synthesized from the amino acid tryptophan by the enzyme tryptophan hydroxylase and subsequently acts on 5-HT receptors throughout the central nervous system. Fluoxetine selectively inhibits the serotonin reuptake transporter (SERT), increasing synaptic serotonin concentrations and enhancing serotonergic neurotransmission."
+  },
+  {
+    "id": "chemprot_007",
+    "text": "Erlotinib is a reversible inhibitor of the epidermal growth factor receptor (EGFR) tyrosine kinase domain. Clinical trials have shown that erlotinib is particularly effective in non-small cell lung cancer patients harboring activating EGFR mutations such as exon 19 deletions and L858R point mutations."
+  },
+  {
+    "id": "chemprot_008",
+    "text": "Dopamine serves as both a neurotransmitter and a substrate for monoamine oxidase B (MAO-B), which catalyzes its oxidative deamination. Selegiline, an irreversible MAO-B inhibitor, blocks the degradation of dopamine in the striatum and is used as adjunctive therapy in Parkinson disease to prolong the action of levodopa."
+  },
+  {
+    "id": "chemprot_009",
+    "text": "Allopurinol is a substrate analog of hypoxanthine that inhibits xanthine oxidase, the enzyme responsible for converting hypoxanthine to xanthine and xanthine to uric acid. By blocking uric acid production, allopurinol is used therapeutically to prevent gout flares and urate nephropathy in patients with hyperuricemia."
+  },
+  {
+    "id": "chemprot_010",
+    "text": "Dexamethasone binds to the glucocorticoid receptor (GR) in the cytoplasm, causing the receptor to translocate to the nucleus where it acts as a transcription factor. This activation of GR leads to upregulation of anti-inflammatory genes including annexin A1 and MAPK phosphatase 1, and suppression of pro-inflammatory cytokines such as TNF-alpha and IL-6."
+  }
+]

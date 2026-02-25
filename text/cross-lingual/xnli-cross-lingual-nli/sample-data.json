@@ -1,0 +1,12 @@
+[
+  {"id": "xnli_001", "text": "A woman is walking through a busy marketplace carrying bags of vegetables.", "hypothesis": "A woman is shopping for food.", "language": "English"},
+  {"id": "xnli_002", "text": "The children played soccer in the park until it started raining.", "hypothesis": "The children were indoors the entire day.", "language": "English"},
+  {"id": "xnli_003", "text": "The company reported a 15% increase in quarterly revenue compared to last year.", "hypothesis": "The company is performing better financially than before.", "language": "English"},
+  {"id": "xnli_004", "text": "Two men are sitting at a table in a restaurant, looking at menus.", "hypothesis": "The men are deciding what to order for dinner.", "language": "English"},
+  {"id": "xnli_005", "text": "The train departed from the station at exactly 9:00 AM.", "hypothesis": "The train was delayed and left after 10:00 AM.", "language": "English"},
+  {"id": "xnli_006", "text": "A group of students gathered in the library to study for their final exams.", "hypothesis": "Students are preparing for an academic assessment.", "language": "English"},
+  {"id": "xnli_007", "text": "The doctor recommended that the patient rest for two weeks after the surgery.", "hypothesis": "The patient had a medical procedure.", "language": "English"},
+  {"id": "xnli_008", "text": "The museum is closed on Mondays and open from 10 AM to 6 PM on other days.", "hypothesis": "You can visit the museum any day of the week.", "language": "English"},
+  {"id": "xnli_009", "text": "The old bridge was built in 1890 and has been renovated three times since.", "hypothesis": "The bridge is a relatively new construction.", "language": "English"},
+  {"id": "xnli_010", "text": "She speaks fluent French and Spanish but has never traveled to Europe.", "hypothesis": "She has visited Paris multiple times.", "language": "English"}
+]

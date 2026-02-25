@@ -1,0 +1,101 @@
+# GPQA - Graduate-Level Expert QA Evaluation
+# Based on Rein et al., ICLR 2024
+# Paper: https://arxiv.org/abs/2311.12022
+# Dataset: https://github.com/idavidrein/gpqa
+#
+# This task evaluates graduate-level science questions from the GPQA benchmark.
+# Annotators review a question with four answer options and select the correct
+# answer, provide a confidence score, and write an explanation for their choice.
+#
+# Answer Options:
+# - A, B, C, D: Four possible answers; exactly one is correct
+#
+# Annotation Guidelines:
+# 1. Read the question carefully
+# 2. Review all four answer options
+# 3. Select the best answer
+# 4. Rate your confidence (0-100)
+# 5. Provide a brief explanation for your choice
+
+annotation_task_name: "GPQA - Graduate-Level Expert QA Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: answer_choice
+    description: "Select the correct answer from the four options"
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+    tooltips:
+      "A": "Select option A as the correct answer"
+      "B": "Select option B as the correct answer"
+      "C": "Select option C as the correct answer"
+      "D": "Select option D as the correct answer"
+
+  - annotation_type: number
+    name: confidence_score
+    description: "Confidence score (0-100)"
+
+  - annotation_type: text
+    name: explanation
+    description: "Provide a brief explanation for your answer choice"
+
+annotation_instructions: |
+  You will be shown a graduate-level science question with four answer options.
+  1. Read the question and all four options carefully.
+  2. Select the correct answer (A, B, C, or D).
+  3. Enter your confidence score from 0 (pure guess) to 100 (completely certain).
+  4. Write a brief explanation justifying your answer choice.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
+      <span style="font-weight: bold; color: #92400e;">Subject:</span>
+      <span style="color: #78350f;">{{subject}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">A:</strong> {{option_a}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">B:</strong> {{option_b}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">C:</strong> {{option_c}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">D:</strong> {{option_d}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

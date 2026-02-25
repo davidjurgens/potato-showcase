@@ -1,0 +1,23 @@
+{
+  "title": "GPQA - Graduate-Level Expert QA Evaluation",
+  "description": "Expert-level question answering evaluation on graduate-level science questions from the GPQA benchmark (Rein et al., ICLR 2024). Questions span physics, chemistry, and biology, designed to be answerable only by domain experts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rein et al.",
+    "email": "jurgens@umich.edu",
+    "github": "idavidrein",
+    "affiliation": "New York University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["number", "radio", "text"],
+  "domain": ["NLP", "Science", "Evaluation"],
+  "useCase": ["Expert QA", "Model Evaluation", "Science Assessment"],
+  "complexity": "intermediate",
+  "tags": ["gpqa", "expert-qa", "science", "graduate-level", "multiple-choice", "iclr2024"],
+  "featured": false,
+  "paperReference": "Rein et al., ICLR 2024",
+  "paperUrl": "https://arxiv.org/abs/2311.12022",
+  "datasetUrl": "https://github.com/idavidrein/gpqa",
+  "citation": "@inproceedings{rein2024gpqa,\n    title = \"{GPQA}: A Graduate-Level Google-Proof Q\\&A Benchmark\",\n    author = \"Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R.\",\n    booktitle = \"Proceedings of the International Conference on Learning Representations\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2311.12022\"\n}"
+}

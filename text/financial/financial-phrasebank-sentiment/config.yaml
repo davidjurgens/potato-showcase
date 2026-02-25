@@ -1,0 +1,88 @@
+# Financial PhraseBank - Sentiment Classification
+# Based on Malo et al., JASIST 2014
+# Paper: https://arxiv.org/abs/1307.5336
+# Dataset: https://huggingface.co/datasets/financial_phrasebank
+#
+# This task classifies the sentiment of financial news sentences.
+# Annotators assign both a fine-grained sentiment level (5-point scale)
+# and a coarse-grained sentiment label (positive, negative, neutral)
+# to each sentence from financial news articles.
+#
+# Fine-Grained Sentiment:
+# - Strong Positive: Clear positive impact on company/market
+# - Moderate Positive: Mild positive implications
+# - Neutral: No sentiment or balanced positive/negative
+# - Moderate Negative: Mild negative implications
+# - Strong Negative: Clear negative impact on company/market
+#
+# Annotation Guidelines:
+# 1. Read the sentence carefully in its financial context
+# 2. Select the fine-grained sentiment level
+# 3. Select the coarse-grained overall sentiment
+# 4. Focus on investor/market perspective, not general sentiment
+
+annotation_task_name: "Financial PhraseBank - Sentiment Classification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: select
+    name: fine_grained_sentiment
+    description: "Select the fine-grained sentiment level of this financial sentence"
+    labels:
+      - "Strong Positive"
+      - "Moderate Positive"
+      - "Neutral"
+      - "Moderate Negative"
+      - "Strong Negative"
+
+  - annotation_type: radio
+    name: overall_sentiment
+    description: "What is the overall sentiment of this financial sentence?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "The sentence conveys positive financial news or outlook"
+      "Negative": "The sentence conveys negative financial news or outlook"
+      "Neutral": "The sentence is neutral or purely factual without sentiment"
+
+annotation_instructions: |
+  You will be shown a sentence from a financial news article. Your task is to:
+  1. Determine the fine-grained sentiment (Strong Positive to Strong Negative).
+  2. Assign the overall sentiment label (Positive, Negative, or Neutral).
+
+  Important: Judge sentiment from an investor or market perspective, not general sentiment.
+  For example, "layoffs" might be negative generally but could be positive for investors
+  if it signals cost-cutting measures.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Financial News Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

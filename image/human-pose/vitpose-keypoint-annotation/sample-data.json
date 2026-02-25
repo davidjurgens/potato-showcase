@@ -1,0 +1,52 @@
+[
+  {
+    "id": "vitpose_001",
+    "text": "A jogger running along a park path in the early morning. The person is mid-stride with arms swinging naturally. Trees and a bench are visible in the background.",
+    "image_url": "https://example.com/images/vitpose/jogger_park.jpg"
+  },
+  {
+    "id": "vitpose_002",
+    "text": "A woman sitting at an outdoor cafe table, holding a coffee cup in her right hand. She is leaning slightly forward with her legs crossed under the table.",
+    "image_url": "https://example.com/images/vitpose/cafe_sitting.jpg"
+  },
+  {
+    "id": "vitpose_003",
+    "text": "Two people standing at a bus stop. The person on the left is looking at their phone with both hands. The person on the right is standing with hands in pockets.",
+    "image_url": "https://example.com/images/vitpose/bus_stop.jpg"
+  },
+  {
+    "id": "vitpose_004",
+    "text": "A child lying on the grass in a park, looking up at the sky. Arms are spread out to the sides and legs are slightly bent at the knees.",
+    "image_url": "https://example.com/images/vitpose/child_grass.jpg"
+  },
+  {
+    "id": "vitpose_005",
+    "text": "A basketball player in mid-jump shot, arms extended above the head. The player's body is fully extended with feet off the ground.",
+    "image_url": "https://example.com/images/vitpose/basketball_jump.jpg"
+  },
+  {
+    "id": "vitpose_006",
+    "text": "A person partially visible behind a store counter, with only the upper body visible. They are reaching up to a shelf with their right arm while their left arm rests on the counter.",
+    "image_url": "https://example.com/images/vitpose/store_counter.jpg"
+  },
+  {
+    "id": "vitpose_007",
+    "text": "A yoga practitioner holding a warrior pose on a mat outdoors. The front leg is bent at 90 degrees, back leg is straight, and both arms are extended horizontally.",
+    "image_url": "https://example.com/images/vitpose/yoga_warrior.jpg"
+  },
+  {
+    "id": "vitpose_008",
+    "text": "An office worker seated at a desk, typing on a keyboard. The person is slightly hunched forward with elbows bent at approximately 90 degrees.",
+    "image_url": "https://example.com/images/vitpose/office_desk.jpg"
+  },
+  {
+    "id": "vitpose_009",
+    "text": "A cyclist riding a bicycle on a city street. The person is leaning forward with hands gripping the handlebars, pedaling with legs in alternating extension.",
+    "image_url": "https://example.com/images/vitpose/cyclist_street.jpg"
+  },
+  {
+    "id": "vitpose_010",
+    "text": "A person standing on a train platform, carrying a backpack and holding a suitcase. They are standing upright with weight shifted slightly to the left leg.",
+    "image_url": "https://example.com/images/vitpose/train_platform.jpg"
+  }
+]

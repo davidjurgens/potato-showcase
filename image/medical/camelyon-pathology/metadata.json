@@ -1,0 +1,23 @@
+{
+  "title": "Camelyon17 - Breast Cancer Metastasis Detection in Pathology",
+  "description": "Pathology slide annotation for breast cancer metastasis detection. Based on the Camelyon17 challenge (Bejnordi et al., JAMA 2017), annotators delineate tumor regions in whole-slide histopathology images and classify slides as positive or negative for metastasis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bejnordi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "camelyon17",
+    "affiliation": "Radboud University Medical Center"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["image_annotation", "radio"],
+  "domain": ["Medical Imaging", "Pathology"],
+  "useCase": ["Cancer Detection", "Histopathology Analysis", "Medical Diagnosis"],
+  "complexity": "advanced",
+  "tags": ["camelyon", "pathology", "cancer", "metastasis", "whole-slide", "histology", "jama2017", "medical"],
+  "featured": false,
+  "paperReference": "Bejnordi et al., JAMA 2017",
+  "paperUrl": "https://jamanetwork.com/journals/jama/fullarticle/2665774",
+  "datasetUrl": "https://camelyon17.grand-challenge.org/",
+  "citation": "@article{bejnordi2017camelyon,\n    title = \"Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer\",\n    author = \"Bejnordi, Babak Ehteshami and Veta, Mitko and van Diest, Paul Johannes and van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and van der Laak, Jeroen A.W.M. and the CAMELYON16 Consortium\",\n    journal = \"JAMA\",\n    volume = \"318\",\n    number = \"22\",\n    pages = \"2199--2210\",\n    year = \"2017\",\n    url = \"https://jamanetwork.com/journals/jama/fullarticle/2665774\"\n}"
+}

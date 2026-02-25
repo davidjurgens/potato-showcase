@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vcgpt_001",
+    "text": "What is the person doing in the kitchen at the beginning of the video?",
+    "video_url": "videos/sample_001.mp4",
+    "model_response": "The person is chopping vegetables on a cutting board. They appear to be preparing ingredients for cooking, using a large chef's knife to slice carrots and celery into small pieces."
+  },
+  {
+    "id": "vcgpt_002",
+    "text": "How many people are present in the outdoor scene and what are they doing?",
+    "video_url": "videos/sample_002.mp4",
+    "model_response": "There are three people in the outdoor scene. Two of them are playing frisbee on a grassy field while the third person is sitting on a bench watching them. The weather appears to be sunny."
+  },
+  {
+    "id": "vcgpt_003",
+    "text": "Describe the sequence of events that occur during the sports highlight.",
+    "video_url": "videos/sample_003.mp4",
+    "model_response": "The basketball player receives a pass near the three-point line, fakes left to shake off the defender, drives to the basket, and finishes with a reverse layup. The crowd reacts enthusiastically to the play."
+  },
+  {
+    "id": "vcgpt_004",
+    "text": "What changes in the scene from the start to the end of the video?",
+    "video_url": "videos/sample_004.mp4",
+    "model_response": "At the start, the room is messy with clothes scattered on the floor and dishes on the table. By the end, the room has been cleaned and organized, with everything put away neatly."
+  },
+  {
+    "id": "vcgpt_005",
+    "text": "What animal appears in the video and what is its behavior?",
+    "video_url": "videos/sample_005.mp4",
+    "model_response": "A golden retriever appears in the video. It starts by lying on a couch, then gets excited when it hears a doorbell, jumps off the couch, and runs to the front door wagging its tail energetically."
+  },
+  {
+    "id": "vcgpt_006",
+    "text": "Describe the weather conditions shown throughout the timelapse video.",
+    "video_url": "videos/sample_006.mp4",
+    "model_response": "The timelapse shows a transition from clear skies in the morning to partly cloudy conditions by midday, followed by darkening storm clouds in the afternoon, and finally clearing up near sunset with dramatic orange and pink hues."
+  },
+  {
+    "id": "vcgpt_007",
+    "text": "What steps does the person follow to assemble the piece of furniture?",
+    "video_url": "videos/sample_007.mp4",
+    "model_response": "The person first sorts all the parts and hardware, then attaches the side panels to the bottom board using screws, adds the shelves at marked positions, and finally attaches the back panel and secures everything with a drill."
+  },
+  {
+    "id": "vcgpt_008",
+    "text": "What musical instruments are being played in this concert clip?",
+    "video_url": "videos/sample_008.mp4",
+    "model_response": "The concert features a jazz quartet with a saxophone player in front, a pianist to the left, a double bass player in the back, and a drummer on the right side of the stage. The saxophone player appears to be performing a solo."
+  },
+  {
+    "id": "vcgpt_009",
+    "text": "How does the presenter explain the scientific concept in the video?",
+    "video_url": "videos/sample_009.mp4",
+    "model_response": "The presenter uses a whiteboard to draw diagrams showing how photosynthesis works. They first explain the light reactions, then the Calvin cycle, using colored markers to highlight different molecules and pathways. They also use a plant model for demonstration."
+  },
+  {
+    "id": "vcgpt_010",
+    "text": "What safety precautions does the worker take before starting the task?",
+    "video_url": "videos/sample_010.mp4",
+    "model_response": "The worker puts on safety goggles, ear protection, and thick work gloves. They also check the power tool's safety guard, inspect the blade, and secure the workpiece in a clamp before turning on the machine."
+  }
+]

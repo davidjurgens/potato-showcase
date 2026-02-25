@@ -1,0 +1,95 @@
+# Video-ChatGPT - Video QA Display and Evaluation
+# Based on Maaz et al., ACL 2024
+# Paper: https://arxiv.org/abs/2306.05424
+# Dataset: https://github.com/mbzuai-oryx/Video-ChatGPT
+#
+# This task presents a video along with a question and a model-generated
+# response. Annotators evaluate the correctness of the response and rate
+# the overall quality of the model's answer.
+#
+# Correctness Labels:
+# - Correct: The response accurately answers the question
+# - Partially Correct: The response contains some correct and some incorrect information
+# - Incorrect: The response does not accurately answer the question
+#
+# Annotation Guidelines:
+# 1. Watch the video carefully
+# 2. Read the question
+# 3. Review the model's response
+# 4. Judge the correctness of the response based on the video content
+# 5. Rate the overall response quality
+
+annotation_task_name: "Video-ChatGPT - Video QA Display and Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: video
+    name: video_display
+    description: "Video display for evaluation"
+
+  - annotation_type: radio
+    name: correctness
+    description: "How correct is the model's response based on the video content?"
+    labels:
+      - "Correct"
+      - "Partially Correct"
+      - "Incorrect"
+    keyboard_shortcuts:
+      "Correct": "1"
+      "Partially Correct": "2"
+      "Incorrect": "3"
+    tooltips:
+      "Correct": "The response accurately and fully answers the question based on the video"
+      "Partially Correct": "The response contains some correct elements but is incomplete or partially wrong"
+      "Incorrect": "The response does not accurately answer the question based on the video"
+
+  - annotation_type: likert
+    name: response_quality
+    description: "Rate the overall quality of the model's response"
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+annotation_instructions: |
+  You will be shown a video, a question about the video, and a model-generated response.
+  1. Watch the video carefully (you may replay it as needed).
+  2. Read the question and the model's response.
+  3. Judge the correctness: Correct, Partially Correct, or Incorrect.
+  4. Rate the overall response quality on a 5-point scale.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #1e293b; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <video controls style="max-width: 100%; border-radius: 4px;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+      <strong style="color: #0369a1;">Model Response:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{model_response}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

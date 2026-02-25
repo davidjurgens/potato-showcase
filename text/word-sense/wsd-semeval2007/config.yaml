@@ -1,0 +1,97 @@
+# SemEval-2007 - Word Sense Disambiguation
+# Based on Pradhan et al., SemEval 2007
+# Paper: https://aclanthology.org/S07-1003/
+# Dataset: https://web.eecs.umich.edu/~mihalcea/downloads.html
+#
+# This task presents a sentence with a highlighted target word and asks
+# annotators to select the correct sense from a list of definitions.
+# Annotators also judge the clarity of the sense distinction.
+#
+# Sense Options:
+# - Sense 1-4: Predefined sense definitions for the target word
+# - None of the above: For cases where no provided sense fits
+#
+# Context Clarity:
+# - Clear Sense: The context unambiguously indicates one sense
+# - Ambiguous: The context could support multiple senses
+# - Insufficient Context: Not enough context to determine the sense
+#
+# Annotation Guidelines:
+# 1. Read the full sentence and identify the target word
+# 2. Review all sense definitions provided
+# 3. Select the sense that best fits the usage in context
+# 4. Judge whether the context makes the sense clear or ambiguous
+
+annotation_task_name: "SemEval-2007 - Word Sense Disambiguation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: select
+    name: word_sense
+    description: "Select the correct sense of the target word in this context"
+    labels:
+      - "Sense 1"
+      - "Sense 2"
+      - "Sense 3"
+      - "Sense 4"
+      - "None of the above"
+
+  - annotation_type: radio
+    name: context_clarity
+    description: "How clear is the word sense from the given context?"
+    labels:
+      - "Clear Sense"
+      - "Ambiguous"
+      - "Insufficient Context"
+    keyboard_shortcuts:
+      "Clear Sense": "1"
+      "Ambiguous": "2"
+      "Insufficient Context": "3"
+    tooltips:
+      "Clear Sense": "The context clearly indicates one specific sense of the target word"
+      "Ambiguous": "The context could support multiple senses of the target word"
+      "Insufficient Context": "There is not enough context to reliably determine the sense"
+
+annotation_instructions: |
+  You will see a sentence with a target word highlighted. Below the sentence,
+  you will find definitions for different senses of the target word.
+  1. Read the sentence carefully, paying attention to the context around the target word.
+  2. Review all the sense definitions provided.
+  3. Select the sense that best matches how the word is used in this sentence.
+  4. If none of the provided senses fit, select "None of the above."
+  5. Judge whether the context makes the sense clear, ambiguous, or insufficient.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 16px; display: inline-block;">
+      <strong style="color: #92400e;">Target Word:</strong>
+      <span style="font-size: 16px; font-weight: bold; color: #78350f;">{{target_word}}</span>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #475569;">Sense Definitions:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-line;">{{sense_definitions}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

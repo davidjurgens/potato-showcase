@@ -1,0 +1,62 @@
+[
+  {
+    "id": "camelyon_001",
+    "text": "Sentinel lymph node section from left axilla, H&E stained, 20x magnification. Dense cellular region visible in the subcapsular sinus area with irregular nuclear morphology.",
+    "image_url": "https://example.com/camelyon/slide_001.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_002",
+    "text": "Lymph node tissue section showing predominantly normal germinal centers with reactive follicular hyperplasia. No obvious atypical cells at scanning magnification.",
+    "image_url": "https://example.com/camelyon/slide_002.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_003",
+    "text": "Section from axillary lymph node with a small cluster of atypical cells in the peripheral sinus. Cells show high nuclear-to-cytoplasmic ratio and pleomorphic nuclei.",
+    "image_url": "https://example.com/camelyon/slide_003.png",
+    "tissue_type": "Axillary Lymph Node"
+  },
+  {
+    "id": "camelyon_004",
+    "text": "Whole-slide image of sentinel lymph node with extensive tissue folding artifact in the upper-right quadrant. Remaining tissue appears unremarkable with intact cortex and medulla.",
+    "image_url": "https://example.com/camelyon/slide_004.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_005",
+    "text": "Lymph node section showing a large area of macrometastasis replacing approximately 40% of the nodal architecture. Tumor cells arranged in glandular patterns consistent with ductal carcinoma.",
+    "image_url": "https://example.com/camelyon/slide_005.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_006",
+    "text": "High-power field of subcapsular sinus showing isolated tumor cells (ITC) scattered among macrophages and lymphocytes. Immunohistochemistry recommended for confirmation.",
+    "image_url": "https://example.com/camelyon/slide_006.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_007",
+    "text": "Unremarkable lymph node with normal cortical and paracortical architecture. Sinusoidal histiocytosis present but no evidence of metastatic disease.",
+    "image_url": "https://example.com/camelyon/slide_007.png",
+    "tissue_type": "Axillary Lymph Node"
+  },
+  {
+    "id": "camelyon_008",
+    "text": "Lymph node section with micrometastasis measuring approximately 1.5 mm in the subcapsular region. Tumor cells show moderate nuclear atypia with occasional mitotic figures.",
+    "image_url": "https://example.com/camelyon/slide_008.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_009",
+    "text": "Section showing poor fixation artifact with tissue retraction and variable staining intensity. Focal areas of crush artifact near the capsule complicate interpretation.",
+    "image_url": "https://example.com/camelyon/slide_009.png",
+    "tissue_type": "Sentinel Lymph Node"
+  },
+  {
+    "id": "camelyon_010",
+    "text": "Sentinel lymph node with multiple foci of metastatic carcinoma involving both subcapsular and parenchymal regions. Extranodal extension noted at the hilum.",
+    "image_url": "https://example.com/camelyon/slide_010.png",
+    "tissue_type": "Sentinel Lymph Node"
+  }
+]

@@ -1,0 +1,110 @@
+# Camelyon17 - Breast Cancer Metastasis Detection in Pathology
+# Based on Bejnordi et al., JAMA 2017
+# Paper: https://jamanetwork.com/journals/jama/fullarticle/2665774
+# Dataset: https://camelyon17.grand-challenge.org/
+#
+# Pathology whole-slide image annotation for detecting breast cancer metastases
+# in sentinel lymph node tissue. Annotators outline tumor regions using polygon
+# and bounding box tools, then classify the overall slide-level diagnosis.
+#
+# Region Labels:
+# - Tumor Region: Areas containing metastatic cancer cells
+# - Normal Tissue: Healthy lymph node tissue
+# - Artifact: Tissue folding, bubbles, or staining artifacts
+# - Background: Non-tissue areas (glass, mounting medium)
+#
+# Annotation Guidelines:
+# 1. Examine the histopathology image at available magnification
+# 2. Use polygon tool for precise tumor boundary delineation
+# 3. Use bounding box for quick region-of-interest marking
+# 4. Classify the slide as positive, negative, or uncertain for metastasis
+# 5. Tumor cells appear as dense, darkly stained clusters with irregular nuclei
+
+annotation_task_name: "Camelyon17 - Pathology Metastasis Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Annotate regions in the pathology image
+  - annotation_type: image_annotation
+    name: tissue_regions
+    description: "Delineate tissue regions in the pathology slide. Use polygon for precise boundaries, bounding box for quick marking."
+    tools:
+      - polygon
+      - bbox
+    labels:
+      - "Tumor Region"
+      - "Normal Tissue"
+      - "Artifact"
+      - "Background"
+
+  # Step 2: Slide-level classification
+  - annotation_type: radio
+    name: slide_diagnosis
+    description: "What is the overall slide-level diagnosis for metastasis?"
+    labels:
+      - "Positive (Metastasis Present)"
+      - "Negative (No Metastasis)"
+      - "Uncertain"
+    keyboard_shortcuts:
+      "Positive (Metastasis Present)": "1"
+      "Negative (No Metastasis)": "2"
+      "Uncertain": "3"
+    tooltips:
+      "Positive (Metastasis Present)": "One or more tumor regions are clearly identifiable in the slide"
+      "Negative (No Metastasis)": "No tumor cells are visible; the tissue appears entirely normal"
+      "Uncertain": "Suspicious regions are present but a definitive diagnosis cannot be made"
+
+annotation_instructions: |
+  You will annotate histopathology images of sentinel lymph node tissue sections
+  for the presence of breast cancer metastases.
+
+  For each slide:
+  1. Examine the tissue section carefully at available magnification.
+  2. Use the polygon tool to precisely outline any tumor regions you identify.
+     - Tumor cells typically appear as dense clusters with large, irregular,
+       darkly stained nuclei.
+     - Metastases may appear as isolated tumor cells (ITC), micrometastases,
+       or macrometastases.
+  3. Use the bounding box tool for quick marking of suspicious areas.
+  4. Label non-tumor regions as Normal Tissue, Artifact, or Background.
+  5. Provide an overall slide-level diagnosis.
+
+  Important:
+  - Artifacts (tissue folds, air bubbles, poor staining) should not be confused with tumor.
+  - When uncertain, mark as Uncertain and outline the suspicious region.
+  - This task requires familiarity with histopathology.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+      <div style="background: #fce4ec; padding: 7px 14px; border-radius: 8px;">
+        <strong>Tissue Type:</strong> {{tissue_type}}
+      </div>
+    </div>
+    <div style="text-align: center; margin-bottom: 16px; background: #212121; padding: 12px; border-radius: 8px;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 600px; border-radius: 4px;" alt="Histopathology slide" />
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Slide Description:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

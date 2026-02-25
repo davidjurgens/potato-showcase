@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bionlp_001",
+    "text": "Activation of NF-kappa B by IL-2 is mediated through the phosphorylation of I kappa B-alpha in human T lymphocytes. The transcription factor NF-kappa B plays a critical role in the regulation of gene expression in these cells."
+  },
+  {
+    "id": "bionlp_002",
+    "text": "The expression of interleukin-2 receptor alpha chain (IL-2R alpha) is rapidly induced on T cells following antigenic stimulation. This upregulation is controlled by the transcription factors NFAT and AP-1 binding to the IL-2R alpha promoter."
+  },
+  {
+    "id": "bionlp_003",
+    "text": "Glucocorticoid receptor activation leads to the suppression of TNF-alpha transcription in macrophages. This negative regulation involves direct protein-protein interaction between the glucocorticoid receptor and NF-kappa B p65 subunit."
+  },
+  {
+    "id": "bionlp_004",
+    "text": "The BRCA1 protein is localized to the nucleus where it participates in DNA damage repair. BRCA1 expression is positively regulated by estrogen receptor signaling in breast epithelial cells through binding to estrogen response elements in the BRCA1 promoter region."
+  },
+  {
+    "id": "bionlp_005",
+    "text": "Interferon-gamma induces the expression of STAT1 in monocytes, which in turn activates transcription of IRF-1. This cascade leads to positive regulation of MHC class II gene expression on the cell surface."
+  },
+  {
+    "id": "bionlp_006",
+    "text": "The binding of p53 to the MDM2 promoter activates MDM2 transcription, while MDM2 protein promotes the ubiquitin-dependent catabolism of p53 protein. This autoregulatory feedback loop is critical for maintaining cellular homeostasis."
+  },
+  {
+    "id": "bionlp_007",
+    "text": "Transforming growth factor beta (TGF-beta) signaling through SMAD3 and SMAD4 leads to negative regulation of c-MYC gene expression in epithelial cells. The SMAD complex binds directly to the c-MYC promoter to repress transcription."
+  },
+  {
+    "id": "bionlp_008",
+    "text": "In Jurkat T cells, T cell receptor engagement triggers the nuclear translocation of NFAT, which subsequently activates IL-4 gene expression. Cyclosporin A inhibits this process by blocking the calcineurin-mediated dephosphorylation of NFAT."
+  },
+  {
+    "id": "bionlp_009",
+    "text": "The Wnt signaling pathway stabilizes beta-catenin protein by inhibiting its proteasomal degradation. Accumulated beta-catenin translocates to the nucleus and activates transcription of target genes including cyclin D1 and c-MYC in HeLa cells."
+  },
+  {
+    "id": "bionlp_010",
+    "text": "Erythropoietin binding to its receptor on erythroid progenitor cells activates JAK2 kinase, leading to phosphorylation of STAT5. Phosphorylated STAT5 dimerizes and translocates to the nucleus where it induces expression of anti-apoptotic genes including BCL-XL."
+  }
+]

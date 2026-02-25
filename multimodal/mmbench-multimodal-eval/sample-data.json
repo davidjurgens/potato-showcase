@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mmb_001",
+    "text": "How many red apples are visible on the table?",
+    "image_url": "https://example.com/mmbench/image_001.jpg",
+    "option_a": "Two",
+    "option_b": "Three",
+    "option_c": "Four",
+    "option_d": "Five"
+  },
+  {
+    "id": "mmb_002",
+    "text": "What is the person in the image doing?",
+    "image_url": "https://example.com/mmbench/image_002.jpg",
+    "option_a": "Reading a book",
+    "option_b": "Cooking a meal",
+    "option_c": "Playing a guitar",
+    "option_d": "Writing on a whiteboard"
+  },
+  {
+    "id": "mmb_003",
+    "text": "Which object is closest to the camera?",
+    "image_url": "https://example.com/mmbench/image_003.jpg",
+    "option_a": "The coffee mug",
+    "option_b": "The laptop",
+    "option_c": "The notebook",
+    "option_d": "The plant"
+  },
+  {
+    "id": "mmb_004",
+    "text": "What text is written on the sign in the image?",
+    "image_url": "https://example.com/mmbench/image_004.jpg",
+    "option_a": "Open 24 Hours",
+    "option_b": "No Entry",
+    "option_c": "Welcome Home",
+    "option_d": "For Sale"
+  },
+  {
+    "id": "mmb_005",
+    "text": "What season does this outdoor scene most likely depict?",
+    "image_url": "https://example.com/mmbench/image_005.jpg",
+    "option_a": "Spring",
+    "option_b": "Summer",
+    "option_c": "Autumn",
+    "option_d": "Winter"
+  },
+  {
+    "id": "mmb_006",
+    "text": "Which animal is shown in the image?",
+    "image_url": "https://example.com/mmbench/image_006.jpg",
+    "option_a": "A golden retriever",
+    "option_b": "A Siamese cat",
+    "option_c": "A tabby cat",
+    "option_d": "A border collie"
+  },
+  {
+    "id": "mmb_007",
+    "text": "What is the approximate time shown on the clock in the image?",
+    "image_url": "https://example.com/mmbench/image_007.jpg",
+    "option_a": "3:15",
+    "option_b": "6:30",
+    "option_c": "9:45",
+    "option_d": "12:00"
+  },
+  {
+    "id": "mmb_008",
+    "text": "Based on the chart shown, which category has the highest value?",
+    "image_url": "https://example.com/mmbench/image_008.jpg",
+    "option_a": "Category A",
+    "option_b": "Category B",
+    "option_c": "Category C",
+    "option_d": "Category D"
+  },
+  {
+    "id": "mmb_009",
+    "text": "What is the spatial relationship between the blue ball and the red box?",
+    "image_url": "https://example.com/mmbench/image_009.jpg",
+    "option_a": "The ball is inside the box",
+    "option_b": "The ball is on top of the box",
+    "option_c": "The ball is behind the box",
+    "option_d": "The ball is next to the box"
+  },
+  {
+    "id": "mmb_010",
+    "text": "What type of building is shown in the background of this image?",
+    "image_url": "https://example.com/mmbench/image_010.jpg",
+    "option_a": "A church",
+    "option_b": "A hospital",
+    "option_c": "A school",
+    "option_d": "A train station"
+  }
+]

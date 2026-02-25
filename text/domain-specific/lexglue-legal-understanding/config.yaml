@@ -1,0 +1,100 @@
+# LexGLUE - Legal Document Understanding
+# Based on Chalkidis et al., ACL 2022
+# Paper: https://aclanthology.org/2022.acl-long.297/
+# Dataset: https://huggingface.co/datasets/lex_glue
+#
+# This task evaluates legal document understanding by asking annotators to
+# assess relevance, classify areas of law, and provide legal reasoning
+# for case summaries from the LexGLUE benchmark.
+#
+# Relevance Assessment:
+# - Relevant: The case summary is relevant to the stated legal question
+# - Not Relevant: The case summary is not relevant to the stated question
+#
+# Areas of Law:
+# - Contract Law, Criminal Law, Constitutional Law, Tax Law,
+#   Property Law, Administrative Law
+#
+# Annotation Guidelines:
+# 1. Read the legal case summary carefully
+# 2. Note the jurisdiction for context
+# 3. Determine if the case is relevant to the legal question
+# 4. Select all applicable areas of law
+# 5. Provide brief legal reasoning for your classifications
+
+annotation_task_name: "LexGLUE - Legal Document Understanding"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: relevance
+    description: "Is this legal case summary relevant to the query?"
+    labels:
+      - "Relevant"
+      - "Not Relevant"
+    keyboard_shortcuts:
+      "Relevant": "1"
+      "Not Relevant": "2"
+    tooltips:
+      "Relevant": "The case summary addresses or is pertinent to the stated legal question"
+      "Not Relevant": "The case summary does not address the stated legal question"
+
+  - annotation_type: multiselect
+    name: areas_of_law
+    description: "Which areas of law does this case involve?"
+    labels:
+      - "Contract Law"
+      - "Criminal Law"
+      - "Constitutional Law"
+      - "Tax Law"
+      - "Property Law"
+      - "Administrative Law"
+    tooltips:
+      "Contract Law": "Disputes involving agreements, obligations, and breach of contract"
+      "Criminal Law": "Cases involving criminal offenses, prosecution, and sentencing"
+      "Constitutional Law": "Cases involving constitutional rights, powers, and interpretation"
+      "Tax Law": "Disputes involving taxation, tax liability, and tax regulations"
+      "Property Law": "Cases involving ownership, transfer, and use of property"
+      "Administrative Law": "Cases involving government agency actions and regulations"
+
+  - annotation_type: text
+    name: legal_reasoning
+    description: "Provide brief legal reasoning for your classifications"
+
+annotation_instructions: |
+  You will be shown a legal case summary with its jurisdiction.
+  1. Read the case summary carefully.
+  2. Determine if the case is relevant to the legal context.
+  3. Select all areas of law that apply to this case.
+  4. Write a brief explanation of your legal reasoning.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
+      <strong style="color: #92400e;">Jurisdiction:</strong>
+      <span style="color: #78350f;">{{jurisdiction}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Case Summary:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

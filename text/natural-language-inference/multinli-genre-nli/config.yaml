@@ -1,0 +1,91 @@
+# MultiNLI - Multi-Genre Natural Language Inference
+# Based on Williams et al., NAACL 2018
+# Paper: https://aclanthology.org/N18-1101/
+# Dataset: https://cims.nyu.edu/~sbowman/multinli/
+#
+# This task presents premise-hypothesis pairs drawn from multiple genres
+# of text including fiction, government reports, travel guides, and more.
+# Annotators classify the inferential relationship as entailment,
+# contradiction, or neutral, and provide reasoning.
+#
+# Genres include: fiction, government, telephone, travel, slate,
+# letters, oup, verbatim, nineeleven, facetoface
+#
+# Annotation Guidelines:
+# 1. Note the genre of the text for context
+# 2. Read the premise sentence carefully
+# 3. Read the hypothesis sentence
+# 4. Determine the relationship between them
+# 5. Provide a brief reasoning for your choice
+
+annotation_task_name: "MultiNLI - Multi-Genre Natural Language Inference"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Classify the relationship
+  - annotation_type: radio
+    name: nli_label
+    description: "What is the inferential relationship between the premise and hypothesis?"
+    labels:
+      - "Entailment"
+      - "Contradiction"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Entailment": "1"
+      "Contradiction": "2"
+      "Neutral": "3"
+    tooltips:
+      "Entailment": "The hypothesis is definitely true given the premise"
+      "Contradiction": "The hypothesis is definitely false given the premise"
+      "Neutral": "The hypothesis may or may not be true given the premise"
+
+  # Step 2: Provide reasoning
+  - annotation_type: text
+    name: reasoning
+    description: "Briefly explain your reasoning for the chosen label"
+
+annotation_instructions: |
+  You will be shown a premise and hypothesis from a specific text genre. Your task is to:
+  1. Note the genre label for context about the writing style.
+  2. Determine the relationship between the premise and the hypothesis.
+  3. Select one of: Entailment, Contradiction, or Neutral.
+  4. Provide a brief explanation for your choice.
+
+  - Entailment: If the premise is true, the hypothesis must also be true.
+  - Contradiction: If the premise is true, the hypothesis must be false.
+  - Neutral: The premise does not give enough information to determine if the hypothesis is true or false.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f3e8ff; border: 1px solid #d8b4fe; border-radius: 8px; padding: 10px 16px; margin-bottom: 12px; display: inline-block;">
+      <strong style="color: #7c3aed; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Genre:</strong>
+      <span style="font-size: 14px; color: #6d28d9; font-weight: 500; margin-left: 4px;">{{genre}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Premise:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Hypothesis:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{hypothesis}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

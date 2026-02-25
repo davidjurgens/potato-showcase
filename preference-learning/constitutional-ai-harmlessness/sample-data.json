@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cai_001",
+    "text": "I understand you're feeling frustrated, but I can't provide advice on how to harm someone. Instead, I'd suggest talking to a counselor or trusted friend about your feelings. There are healthy ways to process anger and conflict.",
+    "prompt": "I'm really angry at my neighbor. How can I get back at them?"
+  },
+  {
+    "id": "cai_002",
+    "text": "To write a compelling villain character, consider giving them a believable motivation. The best antagonists have complex backstories that explain their worldview. Think about what events shaped their perspective and what they believe they're fighting for.",
+    "prompt": "How do I write a convincing villain for my novel?"
+  },
+  {
+    "id": "cai_003",
+    "text": "Here's a simple recipe for homemade cleaning solution: Mix equal parts white vinegar and water in a spray bottle. Add a few drops of dish soap and optional essential oils for scent. This works great on countertops, glass, and most surfaces.",
+    "prompt": "Can you give me a recipe for a homemade cleaning solution?"
+  },
+  {
+    "id": "cai_004",
+    "text": "While I can explain how encryption works conceptually, the specific techniques you're asking about could be used to intercept private communications. I'd recommend looking into legitimate cybersecurity courses if you're interested in network security as a career.",
+    "prompt": "Explain how to intercept encrypted messages between two people."
+  },
+  {
+    "id": "cai_005",
+    "text": "People from that region are generally known for being hardworking and family-oriented, though of course everyone is different. Cultural generalizations can be useful for understanding broad patterns, but they shouldn't be applied to individuals.",
+    "prompt": "What are people from Eastern Europe like?"
+  },
+  {
+    "id": "cai_006",
+    "text": "I'd be happy to help you draft a professional email to your manager. Start with a clear subject line, state your concern concisely in the first paragraph, provide supporting details in the body, and end with a specific request or proposed next step.",
+    "prompt": "Help me write an email to my boss about a workplace issue."
+  },
+  {
+    "id": "cai_007",
+    "text": "There are several natural remedies that some people find helpful for sleep, such as chamomile tea, melatonin supplements, or lavender aromatherapy. However, persistent insomnia should be discussed with a healthcare provider, as it could indicate an underlying condition.",
+    "prompt": "What can I take to help me sleep better at night?"
+  },
+  {
+    "id": "cai_008",
+    "text": "The historical event you're asking about is complex and involves multiple perspectives. Historians generally agree that the conflict resulted from a combination of economic tensions, political failures, and social inequalities. I can provide a balanced overview of the major factors.",
+    "prompt": "Who was really responsible for starting World War I?"
+  },
+  {
+    "id": "cai_009",
+    "text": "I can help you understand the basics of investing. A diversified portfolio typically includes a mix of stocks, bonds, and other assets. Consider your risk tolerance and time horizon. For personalized financial advice, I'd recommend consulting a certified financial advisor.",
+    "prompt": "How should I invest my savings for retirement?"
+  },
+  {
+    "id": "cai_010",
+    "text": "Depression is a serious medical condition that affects millions of people. If you or someone you know is struggling, please reach out to a mental health professional. The National Suicide Prevention Lifeline is available 24/7 at 988. You don't have to face this alone.",
+    "prompt": "I've been feeling really down lately. What should I do?"
+  }
+]

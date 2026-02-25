@@ -1,0 +1,133 @@
+# ScienceQA Multimodal Reasoning
+# Based on Lu et al., NeurIPS 2022
+# Paper: https://arxiv.org/abs/2209.09513
+# Dataset: https://scienceqa.github.io/
+#
+# Multimodal science question answering with chain-of-thought reasoning.
+# Questions span natural science, social science, and language science,
+# and may include images (diagrams, charts, photos). Annotators select
+# the correct answer, provide a chain-of-thought explanation, and
+# categorize the science domain.
+#
+# Answer Options:
+# - A, B, C, D: Four possible answers; exactly one is correct
+#
+# Science Domains:
+# - Natural Science: Biology, physics, chemistry, earth science
+# - Social Science: History, geography, economics, civics
+# - Language Science: Grammar, vocabulary, reading comprehension
+#
+# Annotation Guidelines:
+# 1. Examine any image provided carefully
+# 2. Read the question and all four options
+# 3. Select the correct answer
+# 4. Write a step-by-step chain-of-thought explanation
+# 5. Categorize the question into its science domain(s)
+
+annotation_task_name: "ScienceQA Multimodal Reasoning"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Select the correct answer
+  - annotation_type: radio
+    name: answer
+    description: "Select the correct answer to the science question."
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+    tooltips:
+      "A": "Select option A"
+      "B": "Select option B"
+      "C": "Select option C"
+      "D": "Select option D"
+
+  # Step 2: Chain-of-thought explanation
+  - annotation_type: text
+    name: chain_of_thought
+    description: "Provide a step-by-step chain-of-thought explanation for your answer."
+    textarea: true
+    required: false
+    placeholder: "Step 1: ... Step 2: ... Therefore, the answer is ..."
+
+  # Step 3: Science domain categorization
+  - annotation_type: multiselect
+    name: science_domain
+    description: "Which science domain(s) does this question belong to? Select all that apply."
+    labels:
+      - "Natural Science"
+      - "Social Science"
+      - "Language Science"
+    tooltips:
+      "Natural Science": "Biology, physics, chemistry, earth science, astronomy"
+      "Social Science": "History, geography, economics, civics, sociology"
+      "Language Science": "Grammar, vocabulary, reading comprehension, linguistics"
+
+annotation_instructions: |
+  You will answer science questions from the ScienceQA benchmark. Questions may include images.
+
+  For each item:
+  1. If an image is provided, examine it carefully.
+  2. Read the question and all four answer options (A-D).
+  3. Select the single correct answer.
+  4. Write a chain-of-thought explanation showing your reasoning step by step.
+  5. Categorize the question into its science domain(s).
+
+  Chain-of-Thought Tips:
+  - Break your reasoning into clear, numbered steps.
+  - Reference specific information from the image or question.
+  - Explain why incorrect options are wrong when helpful.
+  - Conclude with "Therefore, the answer is [letter]."
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px; margin-bottom: 16px;">
+      <strong>Subject:</strong> {{subject}}
+    </div>
+    <div style="text-align: center; margin-bottom: 16px;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 400px; border: 1px solid #ddd; border-radius: 8px;" />
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">A:</strong> {{option_a}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">B:</strong> {{option_b}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">C:</strong> {{option_c}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">D:</strong> {{option_d}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

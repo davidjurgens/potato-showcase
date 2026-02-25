@@ -1,0 +1,23 @@
+{
+  "title": "SQuAD - Extractive Question Answering",
+  "description": "Extractive question answering over Wikipedia passages, based on the Stanford Question Answering Dataset (Rajpurkar et al., EMNLP 2016). Annotators highlight answer spans in context paragraphs and judge answerability.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rajpurkar et al.",
+    "email": "jurgens@umich.edu",
+    "github": "rajpurkar",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "text", "radio"],
+  "domain": ["NLP", "Question Answering"],
+  "useCase": ["Reading Comprehension", "Information Extraction", "Question Answering"],
+  "complexity": "beginner",
+  "tags": ["squad", "extractive-qa", "reading-comprehension", "wikipedia", "emnlp2016"],
+  "featured": false,
+  "paperReference": "Rajpurkar et al., EMNLP 2016",
+  "paperUrl": "https://aclanthology.org/D16-1264/",
+  "datasetUrl": "https://rajpurkar.github.io/SQuAD-explorer/",
+  "citation": "@inproceedings{rajpurkar-etal-2016-squad,\n    title = \"{SQ}u{AD}: 100,000+ Questions for Machine Comprehension of Text\",\n    author = \"Rajpurkar, Pranav  and Zhang, Jian  and Lopyrev, Konstantin  and Liang, Percy\",\n    booktitle = \"Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2016\",\n    address = \"Austin, Texas\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D16-1264\",\n    pages = \"2383--2392\"\n}"
+}

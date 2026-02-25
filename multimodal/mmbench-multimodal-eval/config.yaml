@@ -1,0 +1,137 @@
+# MMBench Multimodal Evaluation
+# Based on Liu et al., ECCV 2024
+# Paper: https://arxiv.org/abs/2307.06281
+# Dataset: https://github.com/open-compass/MMBench
+#
+# Multimodal evaluation benchmark combining image understanding with
+# multiple-choice questions. Tests a variety of visual perception and
+# reasoning abilities. Annotators view an image, answer a multiple-choice
+# question, explain their reasoning, and tag which skills are required.
+#
+# Answer Options:
+# - A, B, C, D: Four possible answers; exactly one is correct
+#
+# Skill Tags (select all that apply):
+# - Visual Perception: Identifying objects, colors, shapes
+# - Spatial Reasoning: Understanding spatial relationships and layouts
+# - OCR: Reading text in images
+# - Object Recognition: Identifying specific objects or entities
+# - Scene Understanding: Comprehending the overall scene or context
+# - Knowledge: Requiring external knowledge beyond what's visible
+#
+# Annotation Guidelines:
+# 1. Examine the image carefully
+# 2. Read the question and all four options
+# 3. Select the correct answer
+# 4. Explain your reasoning
+# 5. Tag which visual/reasoning skills are needed
+
+annotation_task_name: "MMBench Multimodal Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Select the correct answer
+  - annotation_type: radio
+    name: answer
+    description: "Based on the image, select the correct answer."
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+    tooltips:
+      "A": "Select option A"
+      "B": "Select option B"
+      "C": "Select option C"
+      "D": "Select option D"
+
+  # Step 2: Explanation
+  - annotation_type: text
+    name: explanation
+    description: "Briefly explain your reasoning for the selected answer."
+    textarea: true
+    required: false
+    placeholder: "Why did you choose this answer?"
+
+  # Step 3: Required skills
+  - annotation_type: multiselect
+    name: required_skills
+    description: "Which visual or reasoning skills are needed to answer this question? Select all that apply."
+    labels:
+      - "Visual Perception"
+      - "Spatial Reasoning"
+      - "OCR"
+      - "Object Recognition"
+      - "Scene Understanding"
+      - "Knowledge"
+    tooltips:
+      "Visual Perception": "Identifying basic visual attributes like colors, shapes, sizes"
+      "Spatial Reasoning": "Understanding spatial relationships, positions, and layouts"
+      "OCR": "Reading or recognizing text visible in the image"
+      "Object Recognition": "Identifying specific objects, animals, or entities"
+      "Scene Understanding": "Comprehending the overall scene, context, or activity"
+      "Knowledge": "Requiring external knowledge beyond what is visible in the image"
+
+annotation_instructions: |
+  You will evaluate multimodal questions from the MMBench benchmark.
+
+  For each item:
+  1. Examine the image carefully before reading the question.
+  2. Read the question and all four answer options (A, B, C, D).
+  3. Select the single correct answer based on the image.
+  4. Briefly explain your reasoning.
+  5. Tag which skills are required to answer this question.
+
+  Tips:
+  - Pay close attention to details in the image.
+  - Some questions require reading text in the image (OCR).
+  - Some questions require world knowledge beyond what's visible.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="text-align: center; margin-bottom: 16px;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border: 1px solid #ddd; border-radius: 8px;" />
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">A:</strong> {{option_a}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">B:</strong> {{option_b}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">C:</strong> {{option_c}}
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
+        <strong style="color: #475569;">D:</strong> {{option_d}}
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

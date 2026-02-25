@@ -1,0 +1,88 @@
+# Universal Dependencies - Dependency Parsing Annotation
+# Based on Nivre et al., LREC 2020
+# Paper: https://aclanthology.org/2020.lrec-1.497/
+# Dataset: https://universaldependencies.org/
+#
+# This task asks annotators to build dependency trees and tag parts of speech
+# for English sentences following the Universal Dependencies v2 guidelines.
+# The tree_annotation scheme is used for dependency structure, while the
+# span scheme labels parts of speech.
+#
+# POS Tags (Universal POS):
+# - NOUN: Common nouns
+# - VERB: Main verbs
+# - ADJ: Adjectives
+# - ADV: Adverbs
+# - DET: Determiners
+# - ADP: Adpositions (prepositions, postpositions)
+# - PRON: Pronouns
+# - CONJ: Conjunctions
+# - PUNCT: Punctuation marks
+# - NUM: Numerals
+#
+# Annotation Guidelines:
+# 1. Read the entire sentence before beginning annotation
+# 2. Identify the root verb of the main clause
+# 3. Build the dependency tree top-down from the root
+# 4. Tag each token with its Universal POS tag
+# 5. Use the span annotation to highlight and tag each word
+
+annotation_task_name: "Universal Dependencies - Dependency Parsing Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: tree_annotation
+    name: dependency_tree
+    description: "Build the syntactic dependency tree for this sentence"
+
+  - annotation_type: span
+    name: pos_tags
+    description: "Tag each word with its Universal POS tag"
+    labels:
+      - "NOUN"
+      - "VERB"
+      - "ADJ"
+      - "ADV"
+      - "DET"
+      - "ADP"
+      - "PRON"
+      - "CONJ"
+      - "PUNCT"
+      - "NUM"
+
+annotation_instructions: |
+  You will be shown an English sentence. Your task is to:
+  1. Build a dependency tree by identifying the syntactic head of each word.
+     - Start by finding the root (usually the main verb).
+     - For each other word, identify which word it depends on.
+  2. Tag each word with its Universal POS tag using span annotation.
+
+  Follow the Universal Dependencies v2 guidelines for both dependency relations
+  and part-of-speech tags.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 18px; line-height: 2.0; margin: 8px 0 0 0; font-family: monospace;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

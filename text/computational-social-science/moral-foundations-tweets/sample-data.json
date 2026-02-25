@@ -1,0 +1,12 @@
+[
+  {"id": "moral_001", "text": "We have a moral obligation to protect the most vulnerable members of our society. Cutting healthcare for children is simply cruel.", "topic": "healthcare"},
+  {"id": "moral_002", "text": "The new infrastructure bill passed the Senate today with bipartisan support. It allocates $50B to transportation.", "topic": "infrastructure"},
+  {"id": "moral_003", "text": "It's disgusting that corporations can pollute our water and get away with it while ordinary families suffer the consequences.", "topic": "environment"},
+  {"id": "moral_004", "text": "True patriots stand by their country no matter what. Those who protest the flag are betraying everything we stand for.", "topic": "patriotism"},
+  {"id": "moral_005", "text": "Everyone deserves equal pay for equal work regardless of gender. The wage gap is an injustice we must address now.", "topic": "gender equality"},
+  {"id": "moral_006", "text": "The government has no right to tell people what they can or cannot do in their own homes. Freedom means freedom for all.", "topic": "civil liberties"},
+  {"id": "moral_007", "text": "Respect for our elders and institutions is what holds society together. Young people today have lost that sense of duty.", "topic": "social values"},
+  {"id": "moral_008", "text": "Meeting at city hall is at 7pm tonight to discuss the proposed zoning changes on Oak Street. Parking available behind the building.", "topic": "local government"},
+  {"id": "moral_009", "text": "These immigrants are corrupting our culture and bringing in practices that go against everything decent. We need to preserve our way of life.", "topic": "immigration"},
+  {"id": "moral_010", "text": "Children are suffering at the border while politicians argue about budgets. We cannot look away from their pain and still call ourselves compassionate.", "topic": "immigration"}
+]

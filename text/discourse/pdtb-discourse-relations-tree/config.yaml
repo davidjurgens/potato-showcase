@@ -1,0 +1,80 @@
+# PDTB 2.0 - Discourse Relations Tree Annotation
+# Based on Prasad et al., LREC 2008
+# Paper: https://aclanthology.org/L08-1093/
+# Dataset: https://catalog.ldc.upenn.edu/LDC2008T05
+#
+# This task involves two complementary annotation layers:
+# 1. Span annotation: Mark discourse connectives and their argument spans
+#    - Connective: The explicit discourse connective (e.g., "because", "however")
+#    - Arg1: The first argument of the discourse relation
+#    - Arg2: The second argument (syntactically bound to the connective)
+#
+# 2. Tree annotation: Build hierarchical discourse structure showing
+#    how text segments relate to each other through:
+#    - Temporal: before, after, simultaneous
+#    - Contingency: cause, condition
+#    - Comparison: contrast, concession
+#    - Expansion: conjunction, restatement, alternative
+#
+# Guidelines:
+# - Arg2 is always the argument syntactically bound to the connective
+# - Arg1 is the other argument in the relation
+# - Implicit relations exist between adjacent sentences without connectives
+
+annotation_task_name: "PDTB 2.0: Discourse Relations Tree Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: discourse_spans
+    description: "Mark discourse connectives and their argument spans (Arg1, Arg2)"
+    labels:
+      - "Connective"
+      - "Arg1"
+      - "Arg2"
+    tooltips:
+      "Connective": "The explicit discourse connective word or phrase (e.g., because, however, although)"
+      "Arg1": "The first argument of the discourse relation"
+      "Arg2": "The second argument, syntactically bound to the connective"
+
+  - annotation_type: tree_annotation
+    name: discourse_tree
+    description: "Build a hierarchical discourse tree showing how text segments relate through temporal, causal, comparative, and expansive relations"
+
+annotation_instructions: |
+  Annotate discourse relations in the text:
+  1. Identify explicit discourse connectives (e.g., "because", "however", "although", "and").
+  2. Mark the connective span, then mark Arg1 and Arg2 for each relation.
+  3. Arg2 is always the argument syntactically bound to the connective.
+  4. Build the discourse tree to show hierarchical relations between segments.
+  5. Relation types: Temporal, Contingency, Comparison, Expansion.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #7c3aed;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.9; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
+      <p style="font-size: 13px; color: #713f12; margin: 0;"><strong>Instructions:</strong> Highlight connectives and argument spans, then build the discourse tree structure.</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

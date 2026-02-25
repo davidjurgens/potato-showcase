@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clotho_001",
+    "text": "Birds chirping in a forest with rustling leaves and a distant stream",
+    "audio_url": "https://example.com/clotho/audio_001.wav",
+    "duration": "15 seconds"
+  },
+  {
+    "id": "clotho_002",
+    "text": "Busy city intersection with car horns, engine noise, and pedestrian chatter",
+    "audio_url": "https://example.com/clotho/audio_002.wav",
+    "duration": "20 seconds"
+  },
+  {
+    "id": "clotho_003",
+    "text": "Kitchen sounds with sizzling oil, chopping on a cutting board, and running water",
+    "audio_url": "https://example.com/clotho/audio_003.wav",
+    "duration": "18 seconds"
+  },
+  {
+    "id": "clotho_004",
+    "text": "Rain falling on a tin roof with occasional thunder in the distance",
+    "audio_url": "https://example.com/clotho/audio_004.wav",
+    "duration": "25 seconds"
+  },
+  {
+    "id": "clotho_005",
+    "text": "Children playing in a playground with laughter, swings creaking, and balls bouncing",
+    "audio_url": "https://example.com/clotho/audio_005.wav",
+    "duration": "22 seconds"
+  },
+  {
+    "id": "clotho_006",
+    "text": "A dog barking repeatedly followed by a door opening and closing",
+    "audio_url": "https://example.com/clotho/audio_006.wav",
+    "duration": "12 seconds"
+  },
+  {
+    "id": "clotho_007",
+    "text": "Waves crashing on a beach with seagulls calling overhead",
+    "audio_url": "https://example.com/clotho/audio_007.wav",
+    "duration": "30 seconds"
+  },
+  {
+    "id": "clotho_008",
+    "text": "An acoustic guitar being strummed slowly with occasional finger picking",
+    "audio_url": "https://example.com/clotho/audio_008.wav",
+    "duration": "20 seconds"
+  },
+  {
+    "id": "clotho_009",
+    "text": "Office environment with keyboard typing, phone ringing, and muffled conversation",
+    "audio_url": "https://example.com/clotho/audio_009.wav",
+    "duration": "15 seconds"
+  },
+  {
+    "id": "clotho_010",
+    "text": "A train approaching and passing through a station with braking sounds and announcements",
+    "audio_url": "https://example.com/clotho/audio_010.wav",
+    "duration": "28 seconds"
+  }
+]

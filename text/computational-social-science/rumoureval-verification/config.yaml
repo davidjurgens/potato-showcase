@@ -1,0 +1,99 @@
+# RumourEval Stance and Verification
+# Based on Gorrell et al., SemEval 2019
+# Paper: https://aclanthology.org/S19-2147/
+# Dataset: https://figshare.com/articles/dataset/RumourEval_2019_data/8845580
+#
+# Annotate social media posts for rumour stance classification and thread
+# structure. Each item shows a source claim and a reply post. Annotators
+# classify the stance of the reply toward the source claim and annotate
+# the discussion thread structure.
+#
+# Stance Categories:
+# - Support: The reply agrees with or supports the claim
+# - Deny: The reply disputes or contradicts the claim
+# - Query: The reply asks for more information or evidence
+# - Comment: The reply is neutral or does not take a stance
+#
+# Annotation Guidelines:
+# 1. Read the source claim to understand the rumour
+# 2. Read the reply post in context
+# 3. Classify the stance of the reply toward the source claim
+# 4. Annotate the thread structure of the discussion
+# 5. Consider implicit stances (sarcasm, rhetorical questions)
+
+annotation_task_name: "RumourEval Stance and Verification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: stance
+    description: "What is the stance of this reply toward the source claim?"
+    labels:
+      - "Support"
+      - "Deny"
+      - "Query"
+      - "Comment"
+    keyboard_shortcuts:
+      "Support": "1"
+      "Deny": "2"
+      "Query": "3"
+      "Comment": "4"
+    tooltips:
+      "Support": "The reply agrees with, endorses, or supports the claim"
+      "Deny": "The reply disputes, contradicts, or refutes the claim"
+      "Query": "The reply asks for more information, evidence, or clarification"
+      "Comment": "The reply is neutral, off-topic, or does not take a clear stance"
+
+  - annotation_type: tree_annotation
+    name: thread_structure
+    description: "Thread structure of rumour discussion"
+
+annotation_instructions: |
+  You will classify the stance of social media replies toward rumour claims from the RumourEval dataset.
+
+  For each item:
+  1. Read the source claim (the rumour being discussed).
+  2. Read the reply post carefully, noting the platform context.
+  3. Classify the stance of the reply:
+     - **Support**: The reply agrees with or endorses the claim.
+     - **Deny**: The reply disputes, contradicts, or debunks the claim.
+     - **Query**: The reply asks for evidence, clarification, or more details.
+     - **Comment**: The reply is neutral, makes a joke, or does not address veracity.
+  4. Annotate the thread structure to map the discussion flow.
+
+  Watch for:
+  - Sarcasm or irony that may invert the literal meaning.
+  - Rhetorical questions that may actually express denial.
+  - Implicit stances conveyed through tone or word choice.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #991b1b;">Source Claim:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0; font-style: italic;">{{source_claim}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #0369a1;">Reply Post:</strong>
+      <span style="font-size: 12px; color: #64748b; margin-left: 8px;">[{{platform}}]</span>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

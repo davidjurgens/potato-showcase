@@ -1,0 +1,76 @@
+# MS MARCO - Passage Relevance Ranking
+# Based on Nguyen et al., NeurIPS 2016 Workshop
+# Paper: https://arxiv.org/abs/1611.09268
+# Dataset: https://microsoft.github.io/msmarco/
+#
+# Assess the relevance of a candidate passage to a given search query.
+# Use the graded relevance scale to indicate how well the passage
+# answers the query, from perfectly relevant to completely off-topic.
+
+annotation_task_name: "MS MARCO: Passage Relevance Ranking"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: select
+    name: relevance_grade
+    description: "How relevant is this passage to the query?"
+    labels:
+      - "Perfectly Relevant"
+      - "Partially Relevant"
+      - "Not Relevant"
+      - "Off-Topic"
+    tooltips:
+      "Perfectly Relevant": "The passage directly and completely answers the query"
+      "Partially Relevant": "The passage contains some relevant information but does not fully answer the query"
+      "Not Relevant": "The passage is on a related topic but does not answer the query"
+      "Off-Topic": "The passage has no relation to the query whatsoever"
+
+  - annotation_type: radio
+    name: passage_quality
+    description: "Is the passage well-written and informative?"
+    labels:
+      - "High Quality"
+      - "Acceptable"
+      - "Low Quality"
+    keyboard_shortcuts:
+      "High Quality": "1"
+      "Acceptable": "2"
+      "Low Quality": "3"
+
+annotation_instructions: |
+  You will be shown a search query and a candidate passage. Your task is to:
+  1. Read the query carefully to understand the user's information need.
+  2. Read the passage and assess how well it answers the query.
+  3. Select the appropriate relevance grade from the dropdown.
+  4. Rate the overall quality of the passage.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Query:</strong>
+      <p style="font-size: 18px; font-weight: 600; line-height: 1.6; margin: 8px 0 0 0;">{{query}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

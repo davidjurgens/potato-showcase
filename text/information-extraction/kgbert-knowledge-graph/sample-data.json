@@ -1,0 +1,72 @@
+[
+  {
+    "id": "kg_001",
+    "text": "Paris is located in France.",
+    "head_entity": "Paris",
+    "relation": "located_in",
+    "tail_entity": "France"
+  },
+  {
+    "id": "kg_002",
+    "text": "A wheel is part of a bicycle.",
+    "head_entity": "Wheel",
+    "relation": "part_of",
+    "tail_entity": "Bicycle"
+  },
+  {
+    "id": "kg_003",
+    "text": "Dog is a hypernym of mammal.",
+    "head_entity": "Dog",
+    "relation": "hypernym_of",
+    "tail_entity": "Mammal"
+  },
+  {
+    "id": "kg_004",
+    "text": "The Eiffel Tower is an instance of a landmark.",
+    "head_entity": "Eiffel Tower",
+    "relation": "instance_of",
+    "tail_entity": "Landmark"
+  },
+  {
+    "id": "kg_005",
+    "text": "A telescope is used for astronomical observation.",
+    "head_entity": "Telescope",
+    "relation": "used_for",
+    "tail_entity": "Astronomical Observation"
+  },
+  {
+    "id": "kg_006",
+    "text": "Deforestation is a cause of habitat loss.",
+    "head_entity": "Deforestation",
+    "relation": "cause_of",
+    "tail_entity": "Habitat Loss"
+  },
+  {
+    "id": "kg_007",
+    "text": "Albert Einstein is a member of the German Physical Society.",
+    "head_entity": "Albert Einstein",
+    "relation": "member_of",
+    "tail_entity": "German Physical Society"
+  },
+  {
+    "id": "kg_008",
+    "text": "Diamond has the property of extreme hardness.",
+    "head_entity": "Diamond",
+    "relation": "has_property",
+    "tail_entity": "Extreme Hardness"
+  },
+  {
+    "id": "kg_009",
+    "text": "The Amazon River is located in Antarctica.",
+    "head_entity": "Amazon River",
+    "relation": "located_in",
+    "tail_entity": "Antarctica"
+  },
+  {
+    "id": "kg_010",
+    "text": "Photosynthesis is a cause of oxygen production in plants.",
+    "head_entity": "Photosynthesis",
+    "relation": "cause_of",
+    "tail_entity": "Oxygen Production"
+  }
+]

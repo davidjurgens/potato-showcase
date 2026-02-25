@@ -1,0 +1,42 @@
+[
+  {
+    "id": "i2b2_001",
+    "text": "ASSESSMENT: 67-year-old male with history of type 2 diabetes mellitus and hypertension, presenting with acute onset chest pain radiating to the left arm. ECG shows ST elevation in leads II, III, and aVF. Troponin I elevated at 2.4 ng/mL. Started on aspirin 325 mg, heparin drip, and nitroglycerin sublingual. Cardiology consulted for emergent cardiac catheterization."
+  },
+  {
+    "id": "i2b2_002",
+    "text": "HISTORY OF PRESENT ILLNESS: Patient is a 54-year-old female who presents with a 3-day history of productive cough and fever up to 101.8F. She denies chest pain, shortness of breath, or hemoptysis. Chest X-ray reveals right lower lobe infiltrate consistent with community-acquired pneumonia. Started on azithromycin 500 mg day 1 then 250 mg daily for 4 days."
+  },
+  {
+    "id": "i2b2_003",
+    "text": "MEDICATIONS ON ADMISSION: Metformin 1000 mg twice daily, lisinopril 20 mg daily, atorvastatin 40 mg at bedtime, metoprolol 50 mg twice daily. Patient reports compliance with all medications. Last HbA1c was 7.2% approximately 3 months ago. No known drug allergies."
+  },
+  {
+    "id": "i2b2_004",
+    "text": "DISCHARGE SUMMARY: Patient underwent laparoscopic cholecystectomy for acute cholecystitis on hospital day 2. Procedure was uncomplicated. Postoperatively, patient tolerated clear liquid diet and was advanced to regular diet by postop day 1. Pain managed with acetaminophen 650 mg every 6 hours PRN. Discharged home in stable condition with follow-up in 2 weeks."
+  },
+  {
+    "id": "i2b2_005",
+    "text": "FAMILY HISTORY: Mother had breast cancer diagnosed at age 58, currently in remission after mastectomy and chemotherapy. Father died of myocardial infarction at age 62. One sibling with type 2 diabetes. Patient denies personal history of cancer. BRCA testing recommended given family history."
+  },
+  {
+    "id": "i2b2_006",
+    "text": "PROGRESS NOTE: Day 3 of admission for COPD exacerbation. Patient continues on prednisone 40 mg daily, albuterol nebulizer every 4 hours, and supplemental oxygen at 2L via nasal cannula. Oxygen saturation improved from 88% to 94% on current regimen. Sputum culture pending. No fever. Bilateral wheezing decreased compared to admission."
+  },
+  {
+    "id": "i2b2_007",
+    "text": "EMERGENCY DEPARTMENT NOTE: 42-year-old male brought in by ambulance after witnessed seizure lasting approximately 2 minutes. CT head negative for acute intracranial pathology. No prior history of seizures. Serum glucose 85 mg/dL, electrolytes within normal limits. Loaded with levetiracetam 1000 mg IV. EEG ordered. Neurology consulted. Patient currently postictal but responsive."
+  },
+  {
+    "id": "i2b2_008",
+    "text": "OPERATIVE NOTE: Procedure - Right total knee arthroplasty. Indication - Severe osteoarthritis right knee with failed conservative management including physical therapy for 6 months and intra-articular corticosteroid injections. Estimated blood loss 150 mL. Patient received spinal anesthesia. Postoperative plan includes enoxaparin 40 mg subcutaneous daily for DVT prophylaxis and physical therapy starting postop day 1."
+  },
+  {
+    "id": "i2b2_009",
+    "text": "CONSULTATION NOTE: Endocrinology consulted for management of new-onset hyperglycemia in a 71-year-old female admitted for urinary tract infection. Blood glucose readings ranging from 180 to 320 mg/dL over past 48 hours. HbA1c returns at 9.1%, suggesting undiagnosed diabetes mellitus. Recommend starting insulin glargine 10 units at bedtime with sliding scale insulin aspart for correction doses. Diabetes education prior to discharge."
+  },
+  {
+    "id": "i2b2_010",
+    "text": "RADIOLOGY REPORT: MRI Brain without contrast. FINDINGS: No evidence of acute infarction or intracranial hemorrhage. Small vessel ischemic changes in periventricular white matter, age-appropriate. No mass effect or midline shift. Ventricles are normal in size. Possible small meningioma at right frontal convexity measuring 8 mm, recommend follow-up MRI in 6 months."
+  }
+]

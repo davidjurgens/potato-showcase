@@ -1,0 +1,23 @@
+{
+  "title": "SemEval-2007 - Word Sense Disambiguation",
+  "description": "Word sense disambiguation task based on the SemEval-2007 English lexical sample (Pradhan et al.). Annotators identify the correct sense of a target word in context from a provided list of sense definitions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pradhan et al.",
+    "email": "jurgens@umich.edu",
+    "github": "nlpdata",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["select", "radio"],
+  "domain": ["NLP", "Lexical Semantics"],
+  "useCase": ["Word Sense Disambiguation", "Lexical Analysis", "Semantic Processing"],
+  "complexity": "intermediate",
+  "tags": ["wsd", "semeval", "word-sense", "disambiguation", "lexical-semantics", "semeval2007"],
+  "featured": false,
+  "paperReference": "Pradhan et al., SemEval 2007",
+  "paperUrl": "https://aclanthology.org/S07-1003/",
+  "datasetUrl": "https://web.eecs.umich.edu/~miMDalMDhal/downloads.html",
+  "citation": "@inproceedings{pradhan-etal-2007-semeval,\n    title = \"{S}em{E}val-2007 Task-17: {E}nglish Lexical Sample, {SRL} and All Words\",\n    author = \"Pradhan, Sameer and Loper, Edward and Dligach, Dmitriy and Palmer, Martha\",\n    booktitle = \"Proceedings of the Fourth International Workshop on Semantic Evaluations (SemEval-2007)\",\n    year = \"2007\",\n    url = \"https://aclanthology.org/S07-1003\",\n    pages = \"87--92\"\n}"
+}

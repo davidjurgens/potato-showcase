@@ -1,0 +1,124 @@
+# MathDial - Tutoring Dialogue Quality Annotation
+# Based on Macina et al., Findings ACL 2023
+# Paper: https://aclanthology.org/2023.findings-acl.507/
+# Dataset: https://github.com/eth-nlped/mathdial
+#
+# Annotate math tutoring dialogue turns for correctness of guidance,
+# tutoring strategies employed, and key spans (math concepts, errors, strategies).
+#
+# Guidance Quality:
+# - Correct Guidance: The tutor provides mathematically correct help
+# - Incorrect Guidance: The tutor makes a mathematical error
+# - Partially Correct: Some correct elements but also errors or omissions
+# - Off-topic: The tutor's response does not address the math problem
+#
+# Tutoring Strategies:
+# - Scaffolding: Breaking the problem into smaller, manageable steps
+# - Direct Instruction: Explicitly telling the student the answer or method
+# - Questioning: Asking questions to guide the student's thinking
+# - Encouragement: Positive reinforcement and motivational support
+# - Error Correction: Identifying and correcting student mistakes
+#
+# Guidelines:
+# 1. Read the math problem and student level first
+# 2. Read the dialogue turn carefully
+# 3. Evaluate the mathematical correctness of the tutor's guidance
+# 4. Identify all tutoring strategies used in this turn
+# 5. Highlight key spans for math concepts, student errors, and tutor strategies
+
+annotation_task_name: "MathDial: Tutoring Dialogue Quality Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: guidance_quality
+    description: "How correct is the tutor's mathematical guidance in this dialogue turn?"
+    labels:
+      - "Correct Guidance"
+      - "Incorrect Guidance"
+      - "Partially Correct"
+      - "Off-topic"
+    keyboard_shortcuts:
+      "Correct Guidance": "1"
+      "Incorrect Guidance": "2"
+      "Partially Correct": "3"
+      "Off-topic": "4"
+    tooltips:
+      "Correct Guidance": "The tutor provides mathematically correct and helpful guidance"
+      "Incorrect Guidance": "The tutor makes a mathematical error or provides wrong information"
+      "Partially Correct": "Some elements are correct but there are errors or important omissions"
+      "Off-topic": "The tutor's response does not address the math problem at hand"
+
+  - annotation_type: multiselect
+    name: tutoring_strategies
+    description: "Which tutoring strategies are used in this dialogue turn? Select all that apply."
+    labels:
+      - "Scaffolding"
+      - "Direct Instruction"
+      - "Questioning"
+      - "Encouragement"
+      - "Error Correction"
+    tooltips:
+      "Scaffolding": "Breaking the problem into smaller steps to guide the student gradually"
+      "Direct Instruction": "Explicitly telling the student the answer, method, or formula"
+      "Questioning": "Asking questions to prompt the student to think and reason"
+      "Encouragement": "Providing positive reinforcement, praise, or motivational support"
+      "Error Correction": "Identifying a student mistake and correcting it with explanation"
+
+  - annotation_type: span
+    name: key_spans
+    description: "Highlight key spans in the dialogue turn"
+    labels:
+      - "Math Concept"
+      - "Student Error"
+      - "Tutor Strategy"
+    tooltips:
+      "Math Concept": "A mathematical concept, formula, term, or operation mentioned"
+      "Student Error": "A mistake or misconception expressed by the student"
+      "Tutor Strategy": "A phrase where the tutor applies a specific pedagogical strategy"
+
+annotation_instructions: |
+  You will annotate math tutoring dialogue turns from the MathDial dataset.
+
+  For each item:
+  1. Read the math problem and student level context.
+  2. Read the dialogue turn carefully.
+  3. Rate the correctness of the tutor's guidance.
+  4. Select all tutoring strategies present in the turn.
+  5. Highlight relevant spans for math concepts, student errors, and tutor strategies.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+      <div style="background: #e8eaf6; padding: 7px 14px; border-radius: 8px;">
+        <strong>Student Level:</strong> {{student_level}}
+      </div>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Math Problem:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{math_problem}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+      <strong style="color: #0369a1;">Dialogue Turn:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

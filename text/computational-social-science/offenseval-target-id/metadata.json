@@ -1,0 +1,23 @@
+{
+  "title": "OffensEval - Offensive Language Target Identification",
+  "description": "Multi-step offensive language annotation combining offensiveness detection, target type classification, and offensive span identification, based on the SemEval 2020 OffensEval shared task (Zampieri et al., SemEval 2020).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zampieri et al.",
+    "email": "jurgens@umich.edu",
+    "github": "idontbow",
+    "affiliation": "Rochester Institute of Technology"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "span"],
+  "domain": ["NLP", "Social Media"],
+  "useCase": ["Offensive Language Detection", "Target Identification", "Content Moderation"],
+  "complexity": "intermediate",
+  "tags": ["offensive-language", "hate-speech", "target-identification", "span-annotation", "semeval2020"],
+  "featured": false,
+  "paperReference": "Zampieri et al., SemEval 2020",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.188/",
+  "datasetUrl": "https://sites.google.com/site/offaborita/olid",
+  "citation": "@inproceedings{zampieri-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 Task 12: Multilingual Offensive Language Identification in Social Media ({O}ffens{E}val 2020)\",\n    author = \"Zampieri, Marcos  and Nakov, Preslav  and Rosenthal, Sara  and Atanasova, Pepa  and Karadzhov, Georgi  and Mubarak, Hamdy  and Derczynski, Leon  and Pitenis, Zeses  and {\\c{C}}{\\\"o}ltekin, {\\c{C}}a{\\u{g}}r{\\i}\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.188\",\n    pages = \"1425--1447\"\n}"
+}

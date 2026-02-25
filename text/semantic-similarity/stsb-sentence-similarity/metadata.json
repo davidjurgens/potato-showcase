@@ -1,0 +1,23 @@
+{
+  "title": "STS Benchmark - Semantic Textual Similarity",
+  "description": "Semantic textual similarity scoring for sentence pairs on a continuous 0-5 scale, based on the STS Benchmark (Cer et al., SemEval 2017). Annotators rate how semantically similar two sentences are using both a slider and a Likert scale.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cer et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google",
+    "affiliation": "Google Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["slider", "likert"],
+  "domain": ["NLP", "Semantic Similarity"],
+  "useCase": ["Sentence Similarity", "Semantic Relatedness", "Paraphrase Detection"],
+  "complexity": "beginner",
+  "tags": ["sts", "semantic-similarity", "sentence-pairs", "semeval2017", "benchmark"],
+  "featured": false,
+  "paperReference": "Cer et al., SemEval 2017",
+  "paperUrl": "https://aclanthology.org/S17-2001/",
+  "datasetUrl": "https://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark",
+  "citation": "@inproceedings{cer-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 1: Semantic Textual Similarity Multilingual and Crosslingual Focused Evaluation\",\n    author = \"Cer, Daniel  and Diab, Mona  and Agirre, Eneko  and Lopez-Gazpio, Inigo  and Specia, Lucia\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)\",\n    month = aug,\n    year = \"2017\",\n    address = \"Vancouver, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2001\",\n    pages = \"1--14\"\n}"
+}

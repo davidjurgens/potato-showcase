@@ -1,0 +1,111 @@
+# Clotho Audio Captioning
+# Based on Drossos et al., ICASSP 2020
+# Paper: https://arxiv.org/abs/1910.09387
+# Dataset: https://zenodo.org/record/3490684
+#
+# Audio captioning task where annotators write natural language descriptions
+# of audio content. Based on the Clotho dataset, which contains audio clips
+# from Freesound with crowd-sourced captions. Annotators write a caption,
+# rate the clarity of the audio, and classify the environment type.
+#
+# Environment Types:
+# - Indoor: Sounds from inside buildings (kitchen, office, factory)
+# - Outdoor: Sounds from outside (street, park, forest)
+# - Mixed: Combination of indoor and outdoor sounds
+# - Unclear: Cannot determine the environment
+#
+# Annotation Guidelines:
+# 1. Listen to the full audio clip at least once before writing
+# 2. Write a descriptive caption covering all notable sounds
+# 3. Rate how clearly the audio content can be identified
+# 4. Classify the environment type
+
+annotation_task_name: "Clotho Audio Captioning"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Write a caption
+  - annotation_type: text
+    name: caption
+    description: "Write a natural language caption describing the audio content. Include all notable sounds and events."
+    textarea: true
+    min_length: 10
+    max_length: 500
+    placeholder: "Describe what you hear in this audio clip..."
+
+  # Step 2: Accuracy/clarity rating
+  - annotation_type: likert
+    name: audio_clarity
+    description: "How clearly can the audio content be identified?"
+    min_label: "Very Inaccurate"
+    max_label: "Perfectly Accurate"
+    size: 5
+
+  # Step 3: Environment classification
+  - annotation_type: radio
+    name: environment
+    description: "What type of environment does this audio clip come from?"
+    labels:
+      - "Indoor"
+      - "Outdoor"
+      - "Mixed"
+      - "Unclear"
+    keyboard_shortcuts:
+      "Indoor": "1"
+      "Outdoor": "2"
+      "Mixed": "3"
+      "Unclear": "4"
+    tooltips:
+      "Indoor": "Sounds from inside buildings (kitchen, office, factory, etc.)"
+      "Outdoor": "Sounds from outside (street, park, forest, beach, etc.)"
+      "Mixed": "Combination of indoor and outdoor sounds"
+      "Unclear": "Cannot determine the environment from the audio"
+
+annotation_instructions: |
+  You will write captions for audio clips from the Clotho dataset.
+
+  For each item:
+  1. Listen to the full audio clip at least once.
+  2. Write a descriptive caption (10-500 characters) covering all notable sounds, events, and ambience.
+  3. Rate how clearly the audio content can be identified (1 = very unclear, 5 = perfectly clear).
+  4. Classify the environment type.
+
+  Caption Tips:
+  - Be specific: "A dog barks twice, then a door slams" is better than "Animal and door sounds"
+  - Include temporal information when relevant (e.g., "first... then...")
+  - Describe both foreground events and background ambience
+  - Use natural, descriptive language
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Audio Description:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #1e1e1e; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <p style="color: #9ca3af; margin: 8px 0 0 0;">Duration: {{duration}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 5
+allow_skip: true
+skip_reason_required: false

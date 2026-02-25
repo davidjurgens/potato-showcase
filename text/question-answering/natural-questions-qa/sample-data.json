@@ -1,0 +1,52 @@
+[
+  {
+    "id": "nq_001",
+    "text": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887 to 1889, it was initially criticized by some of France's leading artists and intellectuals, but it has become a global cultural icon of France and one of the most recognizable structures in the world. The tower is 330 metres tall and was the tallest man-made structure in the world until the Chrysler Building was completed in 1930.",
+    "question": "How tall is the Eiffel Tower?"
+  },
+  {
+    "id": "nq_002",
+    "text": "Photosynthesis is a process used by plants and other organisms to convert light energy into chemical energy that can be stored and later released to fuel the organism's activities. This process involves the absorption of carbon dioxide and water, using sunlight as an energy source, to produce glucose and oxygen. The overall equation for photosynthesis is: 6CO2 + 6H2O + light energy = C6H12O6 + 6O2.",
+    "question": "What are the products of photosynthesis?"
+  },
+  {
+    "id": "nq_003",
+    "text": "William Shakespeare was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language. He was born in Stratford-upon-Avon in 1564 and died there in 1616. His works consist of approximately 39 plays, 154 sonnets, three long narrative poems, and a few other verses. His plays have been translated into every major living language and are performed more often than those of any other playwright.",
+    "question": "Where was Shakespeare born?"
+  },
+  {
+    "id": "nq_004",
+    "text": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. Mars carries the name of the Roman god of war. The planet has a thin atmosphere composed primarily of carbon dioxide. Mars has two small natural satellites, Phobos and Deimos, which are thought to be captured asteroids.",
+    "question": "What are the names of the moons of Mars?"
+  },
+  {
+    "id": "nq_005",
+    "text": "The mitochondrion is a double-membrane-bound organelle found in most eukaryotic organisms. Mitochondria generate most of the cell's supply of adenosine triphosphate (ATP), used as a source of chemical energy. They were first discovered by Albert von Kolliker in 1857 and the term mitochondrion was coined by Carl Benda in 1898.",
+    "question": "What is the primary function of mitochondria?"
+  },
+  {
+    "id": "nq_006",
+    "text": "The Industrial Revolution, which took place from approximately 1760 to 1840, was a period of great change in manufacturing and technology. It began in Great Britain and subsequently spread to other parts of Europe and North America. Key inventions included the spinning jenny, the water frame, and the steam engine. The revolution fundamentally changed the nature of work, society, and daily life.",
+    "question": "When did the Industrial Revolution begin?"
+  },
+  {
+    "id": "nq_007",
+    "text": "The Pacific Ocean is the largest and deepest of Earth's five oceanic divisions. It extends from the Arctic Ocean in the north to the Southern Ocean in the south. The Mariana Trench, located in the western Pacific, is the deepest known part of the world's oceans, reaching a depth of about 11,034 meters at the Challenger Deep.",
+    "question": "What is the deepest part of the Pacific Ocean?"
+  },
+  {
+    "id": "nq_008",
+    "text": "DNA, or deoxyribonucleic acid, is a molecule composed of two polynucleotide chains that coil around each other to form a double helix. The structure of DNA was first described by James Watson and Francis Crick in 1953, based on X-ray diffraction data produced by Rosalind Franklin and Maurice Wilkins. This discovery is considered one of the most important scientific achievements of the 20th century.",
+    "question": "Who discovered the structure of DNA?"
+  },
+  {
+    "id": "nq_009",
+    "text": "The United Nations is an intergovernmental organization that aims to maintain international peace and security. It was established on 24 October 1945, after World War II, replacing the ineffective League of Nations. The UN has six principal organs: the General Assembly, Security Council, Economic and Social Council, Trusteeship Council, International Court of Justice, and the Secretariat.",
+    "question": "How many principal organs does the United Nations have?"
+  },
+  {
+    "id": "nq_010",
+    "text": "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. Coffee plants are cultivated in over 70 countries, primarily in the equatorial regions of the Americas, Southeast Asia, the Indian subcontinent, and Africa. The two most commonly grown coffee species are Coffea arabica and Coffea robusta.",
+    "question": "What is the capital of Australia?"
+  }
+]

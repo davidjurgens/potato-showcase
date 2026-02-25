@@ -1,0 +1,92 @@
+[
+  {
+    "id": "gpqa_001",
+    "text": "Consider a quantum system with two spin-1/2 particles in a singlet state. If a measurement of spin along the z-axis is performed on the first particle and yields spin-up, what is the probability of measuring spin-down along an axis tilted 60 degrees from z on the second particle?",
+    "option_a": "1/4",
+    "option_b": "3/4",
+    "option_c": "1/2",
+    "option_d": "cos^2(30) = 3/4",
+    "subject": "Physics"
+  },
+  {
+    "id": "gpqa_002",
+    "text": "In the context of organic chemistry, which of the following best describes the stereochemical outcome of an E2 elimination reaction on a meso compound with two leaving groups?",
+    "option_a": "A racemic mixture of enantiomers",
+    "option_b": "A single achiral alkene product",
+    "option_c": "A pair of diastereomeric alkenes",
+    "option_d": "No reaction occurs due to symmetry constraints",
+    "subject": "Chemistry"
+  },
+  {
+    "id": "gpqa_003",
+    "text": "A population of organisms exhibits heterozygote advantage at a single locus with two alleles (A and a). If the fitness of AA is 0.8, Aa is 1.0, and aa is 0.6, what is the equilibrium frequency of allele A?",
+    "option_a": "0.33",
+    "option_b": "0.50",
+    "option_c": "0.67",
+    "option_d": "0.75",
+    "subject": "Biology"
+  },
+  {
+    "id": "gpqa_004",
+    "text": "In statistical mechanics, consider a system of N non-interacting bosons in a 3D harmonic trap. Below the critical temperature, which quantity scales as T^3?",
+    "option_a": "The total energy of the system",
+    "option_b": "The number of particles in excited states",
+    "option_c": "The heat capacity at constant volume",
+    "option_d": "The chemical potential",
+    "subject": "Physics"
+  },
+  {
+    "id": "gpqa_005",
+    "text": "Which of the following statements about the enzyme ribonuclease A is correct regarding its catalytic mechanism?",
+    "option_a": "It uses a metal ion cofactor for catalysis",
+    "option_b": "It employs a general acid-base mechanism involving His12 and His119",
+    "option_c": "It requires ATP hydrolysis for activity",
+    "option_d": "It forms a covalent intermediate with the substrate through a serine residue",
+    "subject": "Biology"
+  },
+  {
+    "id": "gpqa_006",
+    "text": "Consider the reaction of benzaldehyde with acetone in the presence of NaOH. What is the major product when a 2:1 molar ratio of benzaldehyde to acetone is used?",
+    "option_a": "Dibenzalacetone (1,5-diphenyl-1,4-pentadien-3-one)",
+    "option_b": "Benzalacetone (4-phenyl-3-buten-2-one)",
+    "option_c": "4-Hydroxy-4-phenyl-2-butanone",
+    "option_d": "A polymeric aldol product",
+    "subject": "Chemistry"
+  },
+  {
+    "id": "gpqa_007",
+    "text": "In general relativity, what is the leading-order correction to the Newtonian gravitational potential in the post-Newtonian expansion for a spherically symmetric mass distribution?",
+    "option_a": "A term proportional to 1/r^2",
+    "option_b": "A term proportional to v^2/c^2 times the Newtonian potential",
+    "option_c": "A cosmological constant term",
+    "option_d": "A term proportional to the angular momentum of the source",
+    "subject": "Physics"
+  },
+  {
+    "id": "gpqa_008",
+    "text": "In molecular biology, which of the following best describes the function of the Dicer enzyme in the RNA interference pathway?",
+    "option_a": "It unwinds double-stranded RNA into single strands",
+    "option_b": "It cleaves long double-stranded RNA into 21-23 nucleotide siRNA duplexes",
+    "option_c": "It loads the guide strand into the RISC complex",
+    "option_d": "It catalyzes the degradation of target mRNA",
+    "subject": "Biology"
+  },
+  {
+    "id": "gpqa_009",
+    "text": "For a galvanic cell constructed with Zn/Zn2+ (0.01 M) and Cu/Cu2+ (1.0 M) half-cells at 25 degrees C, what is the approximate cell potential? (E_standard for Zn2+/Zn = -0.76 V, Cu2+/Cu = +0.34 V)",
+    "option_a": "1.10 V",
+    "option_b": "1.16 V",
+    "option_c": "1.04 V",
+    "option_d": "0.50 V",
+    "subject": "Chemistry"
+  },
+  {
+    "id": "gpqa_010",
+    "text": "In the context of quantum field theory, which theorem guarantees that the S-matrix is unitary given the assumptions of locality and Lorentz invariance?",
+    "option_a": "Noether's theorem",
+    "option_b": "The CPT theorem",
+    "option_c": "The optical theorem",
+    "option_d": "The Cutkosky cutting rules as a consequence of the largest-time equation",
+    "subject": "Physics"
+  }
+]

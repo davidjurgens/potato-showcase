@@ -1,0 +1,23 @@
+{
+  "title": "SPIN Self-Play Preference Annotation",
+  "description": "Human vs. AI response discrimination for Self-Play Fine-Tuning, based on Chen et al., ICML 2024. Annotators identify which of two responses was written by a human versus an AI model, and rate the fluency of both responses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "uclaml",
+    "affiliation": "UCLA"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["pairwise", "radio"],
+  "domain": ["NLP", "AI Alignment"],
+  "useCase": ["Preference Learning", "Self-Play", "LLM Training"],
+  "complexity": "intermediate",
+  "tags": ["spin", "self-play", "preference", "human-ai-distinction", "icml2024"],
+  "featured": false,
+  "paperReference": "Chen et al., ICML 2024",
+  "paperUrl": "https://arxiv.org/abs/2401.01335",
+  "datasetUrl": "https://huggingface.co/datasets/UCLA-AGI/SPIN_iter0",
+  "citation": "@inproceedings{chen2024self,\n    title = \"Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models\",\n    author = \"Chen, Zixiang and Deng, Yihe and Yuan, Huizhuo and Ji, Kaixuan and Gu, Quanquan\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2401.01335\"\n}"
+}

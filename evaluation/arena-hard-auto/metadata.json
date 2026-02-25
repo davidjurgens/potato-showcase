@@ -1,0 +1,23 @@
+{
+  "title": "Arena Hard Auto - LLM Pairwise Evaluation",
+  "description": "Pairwise evaluation of LLM responses on challenging prompts from the Arena Hard benchmark (Li et al., arXiv 2024). Annotators compare two responses on a continuous scale and rate question difficulty.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Li et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lm-sys",
+    "affiliation": "UC Berkeley"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["pairwise", "likert"],
+  "domain": ["NLP", "AI Evaluation"],
+  "useCase": ["LLM Evaluation", "Preference Learning", "Benchmark Annotation"],
+  "complexity": "intermediate",
+  "tags": ["arena-hard", "pairwise", "scale", "llm-evaluation", "benchmark", "arxiv2024"],
+  "featured": false,
+  "paperReference": "Li et al., arXiv 2024",
+  "paperUrl": "https://arxiv.org/abs/2406.11939",
+  "datasetUrl": "https://github.com/lm-sys/arena-hard-auto",
+  "citation": "@article{li2024crowdsourced,\n    title = \"From Crowdsourced Data to High-Quality Benchmarks: Arena Hard and BenchBuilder Pipeline\",\n    author = \"Li, Tianle and Chiang, Wei-Lin and Frick, Evan and Dunlap, Lisa and Wu, Tianhao and Zhu, Banghua and Gonzalez, Joseph E and Stoica, Ion\",\n    journal = \"arXiv preprint arXiv:2406.11939\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.11939\"\n}"
+}

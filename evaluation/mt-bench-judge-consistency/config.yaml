@@ -1,0 +1,143 @@
+# MT-Bench Judge Consistency Evaluation
+# Based on Zheng et al., NeurIPS 2023
+# Paper: https://arxiv.org/abs/2306.05685
+# Dataset: https://huggingface.co/datasets/lmsys/mt_bench_human_judgments
+#
+# Multi-turn conversation evaluation for measuring LLM judge consistency.
+# Annotators compare two assistant responses via pairwise preference, rate
+# overall quality on a 1-10 scale, and classify the conversation category.
+# This data helps calibrate automated LLM judges against human judgments.
+#
+# Pairwise Labels:
+# - Assistant A: Response A is better
+# - Assistant B: Response B is better
+# - Tie: Both responses are equally good
+#
+# Categories (MT-Bench taxonomy):
+# - Writing, Roleplay, Reasoning, Math, Coding, Extraction, STEM, Humanities
+#
+# Annotation Guidelines:
+# 1. Read the conversation context carefully
+# 2. Compare both assistant responses
+# 3. Select your preference or indicate a tie
+# 4. Rate the overall quality of the conversation on a 1-10 scale
+# 5. Classify the conversation category
+
+annotation_task_name: "MT-Bench Judge Consistency Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Pairwise preference
+  - annotation_type: pairwise
+    name: preference
+    description: "Which assistant response is better?"
+    mode: "binary"
+    labels:
+      - "Assistant A"
+      - "Assistant B"
+      - "Tie"
+    keyboard_shortcuts:
+      "Assistant A": "a"
+      "Assistant B": "b"
+      "Tie": "t"
+    tooltips:
+      "Assistant A": "Response A is clearly better overall"
+      "Assistant B": "Response B is clearly better overall"
+      "Tie": "Both responses are of comparable quality"
+
+  # Step 2: Quality rating on 1-10 scale
+  - annotation_type: likert
+    name: quality_rating
+    description: "Rate the overall quality of the responses on a 1-10 scale."
+    min_label: "1"
+    max_label: "10"
+    size: 10
+
+  # Step 3: Category classification
+  - annotation_type: radio
+    name: category
+    description: "What category does this conversation belong to?"
+    labels:
+      - "Writing"
+      - "Roleplay"
+      - "Reasoning"
+      - "Math"
+      - "Coding"
+      - "Extraction"
+      - "STEM"
+      - "Humanities"
+    keyboard_shortcuts:
+      "Writing": "1"
+      "Roleplay": "2"
+      "Reasoning": "3"
+      "Math": "4"
+      "Coding": "5"
+      "Extraction": "6"
+      "STEM": "7"
+      "Humanities": "8"
+    tooltips:
+      "Writing": "Creative writing, editing, summarization"
+      "Roleplay": "Role-playing scenarios, character simulation"
+      "Reasoning": "Logical and analytical reasoning tasks"
+      "Math": "Mathematical problems and calculations"
+      "Coding": "Programming and software development tasks"
+      "Extraction": "Information extraction and data parsing"
+      "STEM": "Science, technology, engineering topics"
+      "Humanities": "History, philosophy, social sciences, arts"
+
+annotation_instructions: |
+  You will evaluate pairs of LLM assistant responses from the MT-Bench benchmark.
+
+  For each item:
+  1. Read the conversation context carefully.
+  2. Compare Response A and Response B thoroughly.
+  3. Select which assistant is better, or indicate a Tie.
+  4. Rate the overall conversation quality on a 1-10 scale.
+  5. Classify the conversation category.
+
+  Rating Scale (1-10):
+  - 1-2: Very poor, fails to address the query
+  - 3-4: Below average, significant issues
+  - 5-6: Average, adequate but room for improvement
+  - 7-8: Good, addresses the query well with minor issues
+  - 9-10: Excellent, comprehensive and high-quality response
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px; margin-bottom: 16px;">
+      <strong>Category:</strong> {{category}}
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Conversation:</strong>
+      <div style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</div>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
+      </div>
+      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

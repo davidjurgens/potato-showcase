@@ -1,0 +1,98 @@
+# Triage Quick Annotation Template
+# A reusable template for quick triage annotation workflows.
+#
+# This template provides a two-step annotation process:
+# 1. Triage: Flag whether each item needs detailed annotation
+# 2. Priority: Assign a priority level for further review
+#
+# Use Cases:
+# - Pre-filtering large datasets before detailed annotation
+# - Identifying high-priority items for urgent review
+# - Quick quality assessment of incoming data
+# - Sorting items by annotation difficulty or importance
+#
+# Customization:
+# - Modify the priority labels to match your workflow
+# - Add additional annotation schemes after triage
+# - Adjust the html_layout for your data format
+# - Change instances_per_annotator based on throughput needs
+#
+# Annotation Guidelines:
+# 1. Read the text quickly
+# 2. Use the triage tool to flag whether it needs detailed annotation
+# 3. Assign a priority level for follow-up review
+
+annotation_task_name: "Triage Quick Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Triage flag
+  - annotation_type: triage
+    name: needs_annotation
+    description: "Quick triage: flag whether this item needs detailed annotation"
+
+  # Step 2: Priority level
+  - annotation_type: radio
+    name: priority
+    description: "Assign a priority level for this item."
+    labels:
+      - "High Priority"
+      - "Medium Priority"
+      - "Low Priority"
+      - "Skip"
+    keyboard_shortcuts:
+      "High Priority": "1"
+      "Medium Priority": "2"
+      "Low Priority": "3"
+      "Skip": "4"
+    tooltips:
+      "High Priority": "Requires immediate detailed annotation or review"
+      "Medium Priority": "Should be annotated but not urgent"
+      "Low Priority": "Can be annotated later if time permits"
+      "Skip": "Does not require annotation; can be excluded"
+
+annotation_instructions: |
+  This is a quick triage annotation task. Your goal is to rapidly assess items
+  and determine which ones need detailed annotation.
+
+  For each item:
+  1. Read the text quickly (aim for 10-15 seconds per item).
+  2. Use the triage tool to flag whether it needs detailed annotation.
+  3. Assign a priority level:
+     - High Priority: Important, complex, or ambiguous items needing expert attention
+     - Medium Priority: Standard items that should be annotated in the next pass
+     - Low Priority: Simple or clear-cut items that can wait
+     - Skip: Items that are irrelevant, duplicates, or not worth annotating
+
+  Tips for fast triage:
+  - Trust your first impression
+  - Don't overthink; this is a quick pass
+  - Use keyboard shortcuts (1-4) for speed
+  - Flag anything uncertain as Medium or High Priority
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 500
+annotation_per_instance: 1
+allow_skip: true
+skip_reason_required: false

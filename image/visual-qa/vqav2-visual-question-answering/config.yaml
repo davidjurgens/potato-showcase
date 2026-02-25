@@ -1,0 +1,86 @@
+# VQA v2.0 - Visual Question Answering
+# Based on Goyal et al., CVPR 2017
+# Paper: https://arxiv.org/abs/1612.00837
+# Dataset: https://visualqa.org/
+#
+# This task presents an image and a natural language question about it.
+# Annotators provide a free-form answer and, for yes/no questions,
+# also select from a radio button group.
+#
+# Question Types:
+# - yes/no: Questions that can be answered with yes or no
+# - number: Questions asking about counts or quantities
+# - other: Open-ended questions requiring descriptive answers
+#
+# Annotation Guidelines:
+# 1. Look at the image carefully
+# 2. Read the question
+# 3. Provide a concise, accurate answer in the text field
+# 4. For yes/no questions, also select the appropriate radio button
+# 5. Answer based only on what you can see in the image
+
+annotation_task_name: "VQA v2.0 - Visual Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Free-form answer
+  - annotation_type: text
+    name: answer
+    description: "Provide a concise answer to the question about the image"
+
+  # Step 2: Yes/No/NA for applicable questions
+  - annotation_type: radio
+    name: yes_no_answer
+    description: "For yes/no questions, select the appropriate answer. For other question types, select Not Applicable."
+    labels:
+      - "Yes"
+      - "No"
+      - "Not Applicable"
+    keyboard_shortcuts:
+      "Yes": "1"
+      "No": "2"
+      "Not Applicable": "3"
+    tooltips:
+      "Yes": "The answer to the yes/no question is yes"
+      "No": "The answer to the yes/no question is no"
+      "Not Applicable": "The question is not a yes/no question"
+
+annotation_instructions: |
+  You will be shown an image and a question about it. Your task is to:
+  1. Study the image carefully.
+  2. Read the question.
+  3. Type a concise answer in the text field (1-3 words preferred).
+  4. If the question is a yes/no question, also select Yes or No. Otherwise, select Not Applicable.
+
+  Answer based only on what you can see in the image. Keep answers brief and specific.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border-radius: 4px;" alt="Image for question answering" />
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207; font-size: 18px;">Question:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0; font-weight: 500;">{{text}}</p>
+      <p style="font-size: 13px; color: #6b7280; margin: 8px 0 0 0;">Question type: {{question_type}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

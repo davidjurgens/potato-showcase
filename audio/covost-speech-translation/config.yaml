@@ -1,0 +1,123 @@
+# CoVoST 2 - Speech Translation Evaluation
+# Based on Wang et al., arXiv 2020
+# Paper: https://arxiv.org/abs/2007.10310
+# Dataset: https://github.com/facebookresearch/covost
+#
+# This task evaluates speech translation quality. Annotators listen to audio
+# in the source language, review the source transcript, provide or correct
+# a translation, assess accuracy, label audio segments, and rate quality.
+#
+# Translation Accuracy:
+# - Accurate: Translation correctly conveys the meaning of the source
+# - Minor Errors: Small mistakes that do not significantly affect meaning
+# - Major Errors: Significant mistakes that change or obscure the meaning
+# - Incomprehensible: Translation does not convey the source meaning at all
+#
+# Audio Segment Labels:
+# - Speech: Portions containing spoken language
+# - Noise: Background noise or interference
+# - Silence: Periods of no audio content
+# - Music: Musical content in the background
+#
+# Annotation Guidelines:
+# 1. Listen to the source audio
+# 2. Review the source transcript
+# 3. Provide or correct the translation
+# 4. Assess the translation accuracy
+# 5. Label audio segments
+# 6. Rate the overall translation quality
+
+annotation_task_name: "CoVoST 2 - Speech Translation Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: translation
+    description: "Provide or correct the translation of the source audio"
+
+  - annotation_type: radio
+    name: translation_accuracy
+    description: "How accurate is the existing translation?"
+    labels:
+      - "Accurate"
+      - "Minor Errors"
+      - "Major Errors"
+      - "Incomprehensible"
+    keyboard_shortcuts:
+      "Accurate": "1"
+      "Minor Errors": "2"
+      "Major Errors": "3"
+      "Incomprehensible": "4"
+    tooltips:
+      "Accurate": "Translation correctly conveys the meaning of the source"
+      "Minor Errors": "Small mistakes that do not significantly affect meaning"
+      "Major Errors": "Significant mistakes that change or obscure the meaning"
+      "Incomprehensible": "Translation does not convey the source meaning at all"
+
+  - annotation_type: audio_annotation
+    name: audio_segments
+    description: "Label segments of the audio by content type"
+    mode: "label"
+    labels:
+      - "Speech"
+      - "Noise"
+      - "Silence"
+      - "Music"
+
+  - annotation_type: likert
+    name: overall_quality
+    description: "Rate the overall quality of the translation"
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+annotation_instructions: |
+  You will be shown an audio clip in a source language along with its transcript
+  and language information. Your task is to:
+  1. Listen to the source audio clip.
+  2. Review the source transcript provided.
+  3. Provide or correct the translation into the target language.
+  4. Assess the accuracy of the translation.
+  5. Label audio segments (Speech, Noise, Silence, Music).
+  6. Rate the overall translation quality on a 5-point scale.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+      <div style="background: #dbeafe; border-radius: 8px; padding: 8px 12px;">
+        <strong style="color: #1e40af;">Source:</strong> {{source_language}}
+      </div>
+      <div style="background: #dcfce7; border-radius: 8px; padding: 8px 12px;">
+        <strong style="color: #166534;">Target:</strong> {{target_language}}
+      </div>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #475569;">Source Transcript:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

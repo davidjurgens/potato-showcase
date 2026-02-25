@@ -1,0 +1,23 @@
+{
+  "title": "Clotho Audio Captioning",
+  "description": "Audio captioning and quality assessment based on the Clotho dataset (Drossos et al., ICASSP 2020). Annotators write natural language captions for audio clips, rate caption accuracy on a Likert scale, and classify the audio environment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Drossos et al.",
+    "email": "jurgens@umich.edu",
+    "github": "audio-captioning",
+    "affiliation": "Tampere University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "likert", "radio"],
+  "domain": ["Audio", "NLP"],
+  "useCase": ["Audio Captioning", "Sound Description", "Audio Understanding"],
+  "complexity": "beginner",
+  "tags": ["clotho", "audio-captioning", "sound-description", "icassp2020"],
+  "featured": false,
+  "paperReference": "Drossos et al., ICASSP 2020",
+  "paperUrl": "https://arxiv.org/abs/1910.09387",
+  "datasetUrl": "https://zenodo.org/record/3490684",
+  "citation": "@inproceedings{drossos2020clotho,\n    title = \"Clotho: An Audio Captioning Dataset\",\n    author = \"Drossos, Konstantinos and Lipping, Samuel and Virtanen, Tuomas\",\n    booktitle = \"IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/1910.09387\"\n}"
+}

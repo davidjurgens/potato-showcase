@@ -1,0 +1,23 @@
+{
+  "title": "BioNLP 2011 - Gene Regulation Event Extraction",
+  "description": "Biomedical event extraction for gene regulation, based on the BioNLP 2011 Shared Task (Kim et al., ACL Workshop 2011). Annotators identify biological entities and mark regulatory events such as gene expression, transcription, and protein catabolism in scientific abstracts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kim et al.",
+    "email": "jurgens@umich.edu",
+    "github": "bionlp-st",
+    "affiliation": "University of Tokyo"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["event_annotation", "span"],
+  "domain": ["NLP", "Biomedical"],
+  "useCase": ["Event Extraction", "Named Entity Recognition", "Biomedical Text Mining"],
+  "complexity": "advanced",
+  "tags": ["bionlp", "gene-regulation", "biomedical", "event-extraction", "ner", "acl2011"],
+  "featured": false,
+  "paperReference": "Kim et al., ACL Workshop 2011",
+  "paperUrl": "https://aclanthology.org/W11-1801/",
+  "datasetUrl": "https://2011.bionlp-st.org/",
+  "citation": "@inproceedings{kim-etal-2011-overview,\n    title = \"Overview of {B}io{NLP} Shared Task 2011\",\n    author = \"Kim, Jin-Dong and Pyysalo, Sampo and Ohta, Tomoko and Bossy, Robert and Nguyen, Ngan and Tsujii, Jun'ichi\",\n    booktitle = \"Proceedings of BioNLP Shared Task 2011 Workshop\",\n    month = jun,\n    year = \"2011\",\n    address = \"Portland, Oregon, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/W11-1801\",\n    pages = \"1--6\"\n}"
+}

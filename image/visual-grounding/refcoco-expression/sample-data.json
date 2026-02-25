@@ -1,0 +1,52 @@
+[
+  {
+    "id": "refcoco_001",
+    "text": "the woman in the red dress standing near the fountain",
+    "image_url": "https://example.com/refcoco/park_scene_001.jpg"
+  },
+  {
+    "id": "refcoco_002",
+    "text": "the small brown dog on the left side of the bench",
+    "image_url": "https://example.com/refcoco/bench_dogs_002.jpg"
+  },
+  {
+    "id": "refcoco_003",
+    "text": "the blue car parked behind the white truck",
+    "image_url": "https://example.com/refcoco/parking_lot_003.jpg"
+  },
+  {
+    "id": "refcoco_004",
+    "text": "the tallest person in the group photo",
+    "image_url": "https://example.com/refcoco/group_photo_004.jpg"
+  },
+  {
+    "id": "refcoco_005",
+    "text": "the half-eaten pizza on the table closest to the camera",
+    "image_url": "https://example.com/refcoco/restaurant_005.jpg"
+  },
+  {
+    "id": "refcoco_006",
+    "text": "the cat sitting on top of the refrigerator",
+    "image_url": "https://example.com/refcoco/kitchen_006.jpg"
+  },
+  {
+    "id": "refcoco_007",
+    "text": "the yellow umbrella in the middle of the crowd",
+    "image_url": "https://example.com/refcoco/street_crowd_007.jpg"
+  },
+  {
+    "id": "refcoco_008",
+    "text": "the child wearing a striped shirt who is pointing at the giraffe",
+    "image_url": "https://example.com/refcoco/zoo_008.jpg"
+  },
+  {
+    "id": "refcoco_009",
+    "text": "the laptop on the desk next to the coffee mug",
+    "image_url": "https://example.com/refcoco/office_009.jpg"
+  },
+  {
+    "id": "refcoco_010",
+    "text": "the bicycle leaning against the brick wall on the right",
+    "image_url": "https://example.com/refcoco/alley_010.jpg"
+  }
+]

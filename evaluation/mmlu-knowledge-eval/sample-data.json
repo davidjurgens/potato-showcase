@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mmlu_001",
+    "text": "What is the primary function of mitochondria in eukaryotic cells?",
+    "option_a": "Protein synthesis",
+    "option_b": "ATP production through cellular respiration",
+    "option_c": "DNA replication",
+    "option_d": "Lipid storage",
+    "subject": "Biology"
+  },
+  {
+    "id": "mmlu_002",
+    "text": "In economics, what does GDP stand for?",
+    "option_a": "General Domestic Product",
+    "option_b": "Gross Domestic Product",
+    "option_c": "Global Development Program",
+    "option_d": "Gross Development Percentage",
+    "subject": "Economics"
+  },
+  {
+    "id": "mmlu_003",
+    "text": "Which philosopher is most closely associated with the concept of the 'categorical imperative'?",
+    "option_a": "John Stuart Mill",
+    "option_b": "Aristotle",
+    "option_c": "Immanuel Kant",
+    "option_d": "Friedrich Nietzsche",
+    "subject": "Philosophy"
+  },
+  {
+    "id": "mmlu_004",
+    "text": "What is the time complexity of binary search on a sorted array of n elements?",
+    "option_a": "O(n)",
+    "option_b": "O(n log n)",
+    "option_c": "O(log n)",
+    "option_d": "O(1)",
+    "subject": "Computer Science"
+  },
+  {
+    "id": "mmlu_005",
+    "text": "The Treaty of Westphalia (1648) is most significant for establishing which principle in international relations?",
+    "option_a": "The right of conquest",
+    "option_b": "State sovereignty and non-interference",
+    "option_c": "Universal human rights",
+    "option_d": "Free trade between nations",
+    "subject": "History"
+  },
+  {
+    "id": "mmlu_006",
+    "text": "In statistics, what does a p-value of 0.03 indicate when using a significance level of 0.05?",
+    "option_a": "The null hypothesis is proven true",
+    "option_b": "The result is statistically significant and we reject the null hypothesis",
+    "option_c": "The result is not statistically significant",
+    "option_d": "The experiment needs to be repeated",
+    "subject": "Statistics"
+  },
+  {
+    "id": "mmlu_007",
+    "text": "Which of the following elements has the highest electronegativity?",
+    "option_a": "Oxygen",
+    "option_b": "Chlorine",
+    "option_c": "Fluorine",
+    "option_d": "Nitrogen",
+    "subject": "Chemistry"
+  },
+  {
+    "id": "mmlu_008",
+    "text": "In contract law, what is 'consideration'?",
+    "option_a": "The act of thinking carefully before signing a contract",
+    "option_b": "Something of value exchanged between parties to form a binding agreement",
+    "option_c": "A mandatory waiting period before a contract takes effect",
+    "option_d": "The process of negotiating contract terms",
+    "subject": "Law"
+  },
+  {
+    "id": "mmlu_009",
+    "text": "What is the Heisenberg Uncertainty Principle?",
+    "option_a": "Energy cannot be created or destroyed",
+    "option_b": "The position and momentum of a particle cannot both be precisely determined simultaneously",
+    "option_c": "The speed of light is constant in all reference frames",
+    "option_d": "Electrons orbit the nucleus in fixed circular paths",
+    "subject": "Physics"
+  },
+  {
+    "id": "mmlu_010",
+    "text": "Which cognitive bias describes the tendency to favor information that confirms one's existing beliefs?",
+    "option_a": "Anchoring bias",
+    "option_b": "Availability heuristic",
+    "option_c": "Confirmation bias",
+    "option_d": "Dunning-Kruger effect",
+    "subject": "Psychology"
+  }
+]

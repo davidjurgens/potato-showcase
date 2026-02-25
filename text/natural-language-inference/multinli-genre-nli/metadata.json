@@ -1,0 +1,23 @@
+{
+  "title": "MultiNLI - Multi-Genre Natural Language Inference",
+  "description": "Natural language inference across multiple genres of text, based on the Multi-Genre NLI corpus (Williams et al., NAACL 2018). Annotators classify premise-hypothesis relationships with genre-diverse examples from fiction, government, travel, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Williams et al.",
+    "email": "jurgens@umich.edu",
+    "github": "nyu-mll",
+    "affiliation": "New York University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Natural Language Inference"],
+  "useCase": ["Textual Entailment", "Multi-Genre NLI", "Semantic Reasoning"],
+  "complexity": "beginner",
+  "tags": ["multinli", "nli", "entailment", "multi-genre", "sentence-pairs", "naacl2018"],
+  "featured": false,
+  "paperReference": "Williams et al., NAACL 2018",
+  "paperUrl": "https://aclanthology.org/N18-1101/",
+  "datasetUrl": "https://cims.nyu.edu/~sbowman/multinli/",
+  "citation": "@inproceedings{williams-etal-2018-broad,\n    title = \"A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference\",\n    author = \"Williams, Adina  and Nangia, Nikita  and Bowman, Samuel\",\n    booktitle = \"Proceedings of the 2018 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N18-1101\",\n    pages = \"1112--1122\"\n}"
+}

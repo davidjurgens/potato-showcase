@@ -1,0 +1,86 @@
+# SQuAD - Extractive Question Answering
+# Based on Rajpurkar et al., EMNLP 2016
+# Paper: https://aclanthology.org/D16-1264/
+# Dataset: https://rajpurkar.github.io/SQuAD-explorer/
+#
+# This task presents a Wikipedia passage and a question. Annotators
+# highlight the answer span in the passage, provide a typed answer,
+# and indicate whether the question is answerable from the passage.
+#
+# Annotation Guidelines:
+# 1. Read the question carefully before reading the passage
+# 2. Read the passage and identify the answer span
+# 3. Highlight the minimal span that answers the question
+# 4. Type the answer in the text field
+# 5. Indicate whether the question is answerable from the passage
+
+annotation_task_name: "SQuAD - Extractive Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Highlight the answer span in the passage
+  - annotation_type: span
+    name: answer_span
+    description: "Highlight the span in the passage that answers the question"
+    labels:
+      - "Answer Span"
+    label_colors:
+      "Answer Span": "#3b82f6"
+
+  # Step 2: Type the answer
+  - annotation_type: text
+    name: typed_answer
+    description: "Type the answer to the question"
+
+  # Step 3: Answerability judgment
+  - annotation_type: radio
+    name: answerability
+    description: "Is the question answerable from the given passage?"
+    labels:
+      - "Answerable"
+      - "Unanswerable"
+    keyboard_shortcuts:
+      "Answerable": "1"
+      "Unanswerable": "2"
+    tooltips:
+      "Answerable": "The passage contains sufficient information to answer the question"
+      "Unanswerable": "The passage does not contain enough information to answer the question"
+
+annotation_instructions: |
+  You will be shown a passage from Wikipedia and a question about it. Your task is to:
+  1. Highlight the exact span in the passage that answers the question.
+  2. Type the answer text in the text field.
+  3. Indicate whether the question is answerable from the passage.
+
+  If the question cannot be answered from the passage, select "Unanswerable" and leave the span and text empty.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207; font-size: 18px;">Question:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0; font-weight: 500;">{{question}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

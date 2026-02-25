@@ -1,0 +1,62 @@
+[
+  {
+    "id": "mathdial_001",
+    "text": "Student: I got 15 as the answer for 3 times 6, is that right?\nTutor: Hmm, not quite! Let's think about it step by step. What does 3 times 6 mean? It means you're adding 6 three times. Can you try adding 6 + 6 + 6?",
+    "math_problem": "Calculate 3 x 6",
+    "student_level": "Grade 3"
+  },
+  {
+    "id": "mathdial_002",
+    "text": "Student: I don't understand how to find the area of a triangle.\nTutor: Great question! The area of a triangle is base times height divided by 2. So if the base is 8 cm and the height is 5 cm, you multiply 8 times 5 to get 40, then divide by 2 to get 20 square centimeters.",
+    "math_problem": "Find the area of a triangle with base 8 cm and height 5 cm",
+    "student_level": "Grade 5"
+  },
+  {
+    "id": "mathdial_003",
+    "text": "Student: For the equation 2x + 5 = 13, I subtracted 5 from both sides and got 2x = 8. Then I divided by 2 and got x = 4.\nTutor: That's exactly right! You followed the correct steps perfectly. First isolating the variable term and then solving for x. Well done!",
+    "math_problem": "Solve for x: 2x + 5 = 13",
+    "student_level": "Grade 7"
+  },
+  {
+    "id": "mathdial_004",
+    "text": "Student: I think the fraction 3/4 is bigger than 5/6 because 4 is less than 6.\nTutor: I see your thinking, but we need to be careful here. To compare fractions with different denominators, we need to find a common denominator. What number can both 4 and 6 divide into evenly?",
+    "math_problem": "Compare the fractions 3/4 and 5/6. Which is larger?",
+    "student_level": "Grade 4"
+  },
+  {
+    "id": "mathdial_005",
+    "text": "Student: I used the quadratic formula and got x = (-3 plus or minus square root of 9 minus 16) divided by 2. So the square root of -7... does that mean there's no solution?\nTutor: You're absolutely on the right track! When the discriminant (the part under the square root) is negative, there are no real solutions. The equation has complex solutions instead. Does your problem ask for real or complex solutions?",
+    "math_problem": "Solve x^2 + 3x + 4 = 0 using the quadratic formula",
+    "student_level": "Grade 10"
+  },
+  {
+    "id": "mathdial_006",
+    "text": "Student: To find 25% of 80, I divided 80 by 25 and got 3.2.\nTutor: Hmm, let's reconsider that approach. When we find a percentage of a number, we multiply, not divide. 25% means 25 out of 100, or 0.25. So what is 0.25 times 80?",
+    "math_problem": "Find 25% of 80",
+    "student_level": "Grade 6"
+  },
+  {
+    "id": "mathdial_007",
+    "text": "Student: I don't know how to start this word problem at all.\nTutor: Don't worry, let's break it down together! First, what information does the problem give us? It says the train travels at 60 miles per hour. And what are we trying to find? How far it goes in 2.5 hours. So what operation connects speed, time, and distance?",
+    "math_problem": "A train travels at 60 miles per hour. How far will it travel in 2.5 hours?",
+    "student_level": "Grade 5"
+  },
+  {
+    "id": "mathdial_008",
+    "text": "Student: The derivative of x^3 is x^2, right?\nTutor: Almost! You have the right idea about bringing the exponent down, but remember the power rule: the derivative of x^n is n times x^(n-1). So for x^3, what would n be, and what would n-1 be?",
+    "math_problem": "Find the derivative of f(x) = x^3",
+    "student_level": "Grade 11"
+  },
+  {
+    "id": "mathdial_009",
+    "text": "Student: For the mean of 4, 7, 9, 12, and 8, I added them up and got 40, then divided by 5 and got 8.\nTutor: Excellent work! You correctly added all five numbers to get the sum and then divided by the count of numbers. The mean is indeed 8. You're really getting the hang of this!",
+    "math_problem": "Find the mean of the numbers: 4, 7, 9, 12, 8",
+    "student_level": "Grade 6"
+  },
+  {
+    "id": "mathdial_010",
+    "text": "Student: I got confused with the negative signs. Is -3 minus -5 equal to -8?\nTutor: That's a tricky one! When you subtract a negative number, it actually becomes addition. Think of it this way: subtracting -5 is the same as adding 5. So -3 minus -5 becomes -3 plus 5. What do you get now?",
+    "math_problem": "Calculate -3 - (-5)",
+    "student_level": "Grade 7"
+  }
+]

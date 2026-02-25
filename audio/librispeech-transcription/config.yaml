@@ -1,0 +1,80 @@
+# LibriSpeech - Audio Transcription and Quality Rating
+# Based on Panayotov et al., ICASSP 2015
+# Paper: https://ieeexplore.ieee.org/document/7178964
+# Dataset: https://www.openslr.org/12
+#
+# LibriSpeech is a corpus of approximately 1000 hours of English
+# read speech derived from public domain audiobooks. This task
+# involves two annotation components:
+#
+# 1. Audio quality rating (slider): Rate the recording quality on
+#    a scale from 0 (very poor) to 10 (excellent)
+#
+# 2. Audio content classification: Label what type of audio content
+#    is present in the segment
+#
+# Quality considerations:
+# - Background noise level
+# - Speaker clarity and articulation
+# - Recording volume and consistency
+# - Presence of artifacts or distortion
+
+annotation_task_name: "LibriSpeech: Audio Transcription and Quality Rating"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: slider
+    name: audio_quality
+    description: "Rate the overall audio quality (0 = very poor, 10 = excellent)"
+    min_value: 0
+    max_value: 10
+    starting_value: 5
+
+  - annotation_type: audio_annotation
+    name: content_type
+    description: "Classify the type of audio content in this segment"
+    mode: "label"
+    labels:
+      - "Clean Speech"
+      - "Noisy Speech"
+      - "Music"
+      - "Silence"
+      - "Other"
+
+annotation_instructions: |
+  You will evaluate audio segments from the LibriSpeech corpus:
+  1. Listen to the audio clip and read the provided transcript.
+  2. Use the slider to rate the audio quality from 0 (very poor) to 10 (excellent).
+  3. Classify the audio content type (clean speech, noisy speech, music, silence, or other).
+  4. Consider background noise, speaker clarity, and recording quality in your rating.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Audio Sample:</strong>
+      <p style="margin: 8px 0 0 0;"><audio controls src="{{audio_url}}" style="width: 100%;"></audio></p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Reference Transcript:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; font-style: italic;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,119 @@
+# i2b2 Clinical Named Entity Recognition
+# Based on Stubbs et al., JAMIA 2015
+# Paper: https://academic.oup.com/jamia/article/22/6/1220/2357822
+# Dataset: https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
+#
+# Annotate de-identified clinical notes for medical entities and assertion status.
+# This follows the i2b2/VA 2010 shared task framework for concept extraction
+# and assertion classification in clinical text.
+#
+# Entity Types:
+# - Problem: Medical conditions, diagnoses, symptoms (e.g., pneumonia, chest pain)
+# - Treatment: Procedures, therapies, interventions (e.g., appendectomy, chemotherapy)
+# - Test: Diagnostic tests and examinations (e.g., CBC, chest X-ray, MRI)
+# - Medication: Drug names (e.g., metformin, lisinopril)
+# - Dosage: Drug dosage amounts (e.g., 500 mg, 10 mg/day)
+# - Duration: Time spans for treatments (e.g., 7 days, 3 weeks)
+# - Frequency: How often something occurs (e.g., twice daily, q6h)
+#
+# Assertion Status:
+# - Present: The entity is currently present or active
+# - Absent: The entity is explicitly negated or denied
+# - Possible: The entity is uncertain or suspected
+# - Conditional: The entity depends on a condition
+# - Associated with Patient: The entity pertains to the patient directly
+# - Associated with Other: The entity pertains to a family member or other person
+#
+# Guidelines:
+# 1. Mark all clinical entity spans precisely
+# 2. Classify the assertion status of the primary clinical finding
+# 3. Use clinical context to determine assertion (e.g., "no fever" = Absent)
+
+annotation_task_name: "i2b2 Clinical Named Entity Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: clinical_entities
+    description: "Highlight and label clinical entities in the text"
+    labels:
+      - "Problem"
+      - "Treatment"
+      - "Test"
+      - "Medication"
+      - "Dosage"
+      - "Duration"
+      - "Frequency"
+    tooltips:
+      "Problem": "Medical condition, diagnosis, or symptom (e.g., pneumonia, chest pain, diabetes)"
+      "Treatment": "Procedure, therapy, or intervention (e.g., appendectomy, physical therapy)"
+      "Test": "Diagnostic test or examination (e.g., CBC, chest X-ray, blood glucose)"
+      "Medication": "Drug or medication name (e.g., metformin, lisinopril, aspirin)"
+      "Dosage": "Drug dosage amount (e.g., 500 mg, 10 mg/day, 2 tablets)"
+      "Duration": "Time span for a treatment or condition (e.g., 7 days, 3 weeks, since 2020)"
+      "Frequency": "How often something is administered or occurs (e.g., twice daily, q6h, PRN)"
+
+  - annotation_type: radio
+    name: assertion_status
+    description: "What is the assertion status of the primary clinical finding in this note?"
+    labels:
+      - "Present"
+      - "Absent"
+      - "Possible"
+      - "Conditional"
+      - "Associated with Patient"
+      - "Associated with Other"
+    keyboard_shortcuts:
+      "Present": "1"
+      "Absent": "2"
+      "Possible": "3"
+      "Conditional": "4"
+      "Associated with Patient": "5"
+      "Associated with Other": "6"
+    tooltips:
+      "Present": "The clinical finding is currently present and active"
+      "Absent": "The finding is explicitly negated or denied (e.g., 'no fever', 'denies pain')"
+      "Possible": "The finding is uncertain or suspected (e.g., 'possible pneumonia', 'rule out MI')"
+      "Conditional": "The finding depends on a condition (e.g., 'chest pain if exerting')"
+      "Associated with Patient": "The finding directly pertains to the patient"
+      "Associated with Other": "The finding pertains to a family member or other individual"
+
+annotation_instructions: |
+  Annotate de-identified clinical notes for medical entities and assertion status.
+
+  For each clinical note:
+  1. Read the entire note to understand the clinical context.
+  2. Use the span tool to highlight and label all clinical entities.
+  3. Classify the assertion status of the primary clinical finding.
+
+  Important notes:
+  - Mark spans precisely (e.g., "chest pain" not "complains of chest pain")
+  - Pay attention to negation cues (no, denies, without, negative for)
+  - Distinguish between patient conditions and family history mentions
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #166534;">Clinical Note:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

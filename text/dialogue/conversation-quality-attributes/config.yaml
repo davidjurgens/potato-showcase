@@ -1,0 +1,115 @@
+# Conversation Quality Attributes
+# Based on See et al., NAACL 2019
+# Paper: https://aclanthology.org/N19-1170/
+# Dataset: https://parl.ai/projects/controllable_dialogue/
+#
+# This task evaluates the quality of dialogue turns by assessing engagement,
+# overall quality, and specific conversation attributes. Based on research
+# into controllable dialogue generation and what makes conversations engaging.
+#
+# Engagement Labels:
+# - Engaging: The conversation holds attention and invites further interaction
+# - Boring: The conversation is dull, repetitive, or uninteresting
+# - Confusing: The conversation is difficult to follow or understand
+# - Offensive: The conversation contains inappropriate or harmful content
+#
+# Conversation Attributes:
+# - Interesting: Contains novel or intriguing content
+# - Repetitive: Repeats the same ideas or phrases
+# - Coherent: Logically connected and easy to follow
+# - Informative: Provides useful information or knowledge
+# - Empathetic: Shows understanding of emotions and feelings
+# - Generic: Uses vague, non-specific, or boilerplate responses
+#
+# Annotation Guidelines:
+# 1. Read the dialogue turn carefully
+# 2. Note the speaker context
+# 3. Classify the engagement level
+# 4. Rate overall conversation quality
+# 5. Select all applicable conversation attributes
+
+annotation_task_name: "Conversation Quality Attributes"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: engagement
+    description: "How engaging is this conversation turn?"
+    labels:
+      - "Engaging"
+      - "Boring"
+      - "Confusing"
+      - "Offensive"
+    keyboard_shortcuts:
+      "Engaging": "1"
+      "Boring": "2"
+      "Confusing": "3"
+      "Offensive": "4"
+    tooltips:
+      "Engaging": "The conversation holds attention and invites further interaction"
+      "Boring": "The conversation is dull, repetitive, or uninteresting"
+      "Confusing": "The conversation is difficult to follow or understand"
+      "Offensive": "The conversation contains inappropriate or harmful content"
+
+  - annotation_type: likert
+    name: overall_quality
+    description: "Rate the overall quality of this conversation turn"
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+  - annotation_type: multiselect
+    name: conversation_attributes
+    description: "Which attributes describe this conversation turn?"
+    labels:
+      - "Interesting"
+      - "Repetitive"
+      - "Coherent"
+      - "Informative"
+      - "Empathetic"
+      - "Generic"
+    tooltips:
+      "Interesting": "Contains novel, intriguing, or thought-provoking content"
+      "Repetitive": "Repeats the same ideas, phrases, or patterns"
+      "Coherent": "Logically connected and easy to follow in the conversation context"
+      "Informative": "Provides useful information, facts, or knowledge"
+      "Empathetic": "Shows understanding of or sensitivity to emotions and feelings"
+      "Generic": "Uses vague, non-specific, or boilerplate responses"
+
+annotation_instructions: |
+  You will be shown a dialogue turn from a conversation, along with the speaker.
+  1. Read the dialogue turn carefully.
+  2. Classify the engagement level: Engaging, Boring, Confusing, or Offensive.
+  3. Rate the overall quality on a 5-point scale from Very Poor to Excellent.
+  4. Select all attributes that describe this conversation turn.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
+      <strong style="color: #92400e;">Speaker:</strong>
+      <span style="color: #78350f;">{{speaker}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Dialogue:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-line;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

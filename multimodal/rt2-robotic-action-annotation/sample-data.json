@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rt2_001",
+    "text": "Pick up the red apple from the table and place it in the bowl.",
+    "video_url": "videos/robot_episode_001.mp4"
+  },
+  {
+    "id": "rt2_002",
+    "text": "Move the blue cup to the left side of the counter.",
+    "video_url": "videos/robot_episode_002.mp4"
+  },
+  {
+    "id": "rt2_003",
+    "text": "Stack the green block on top of the yellow block.",
+    "video_url": "videos/robot_episode_003.mp4"
+  },
+  {
+    "id": "rt2_004",
+    "text": "Open the drawer and retrieve the spoon from inside.",
+    "video_url": "videos/robot_episode_004.mp4"
+  },
+  {
+    "id": "rt2_005",
+    "text": "Push the can toward the edge of the table without knocking it off.",
+    "video_url": "videos/robot_episode_005.mp4"
+  },
+  {
+    "id": "rt2_006",
+    "text": "Pick up the water bottle and pour its contents into the glass.",
+    "video_url": "videos/robot_episode_006.mp4"
+  },
+  {
+    "id": "rt2_007",
+    "text": "Sort the colored balls by placing each one in the matching colored bin.",
+    "video_url": "videos/robot_episode_007.mp4"
+  },
+  {
+    "id": "rt2_008",
+    "text": "Wipe the surface of the table with the cloth from left to right.",
+    "video_url": "videos/robot_episode_008.mp4"
+  },
+  {
+    "id": "rt2_009",
+    "text": "Close the laptop lid gently without pressing any keys.",
+    "video_url": "videos/robot_episode_009.mp4"
+  },
+  {
+    "id": "rt2_010",
+    "text": "Pick up the banana and place it next to the orange on the plate.",
+    "video_url": "videos/robot_episode_010.mp4"
+  }
+]

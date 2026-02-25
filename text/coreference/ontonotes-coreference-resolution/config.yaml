@@ -1,0 +1,74 @@
+# OntoNotes - Coreference Resolution
+# Based on Pradhan et al., CoNLL 2012
+# Paper: https://aclanthology.org/W12-4501/
+# Dataset: https://catalog.ldc.upenn.edu/LDC2013T19
+#
+# Coreference resolution involves identifying all expressions (mentions)
+# in a text that refer to the same entity and grouping them into chains.
+#
+# Mention types:
+# - Proper nouns: "Barack Obama", "Microsoft"
+# - Common noun phrases: "the president", "the company"
+# - Pronouns: "he", "she", "it", "they"
+# - Demonstratives: "this", "that"
+#
+# Guidelines:
+# - Mark all mentions of each entity, including pronouns
+# - Link mentions that refer to the same real-world entity
+# - Include nested mentions when appropriate (e.g., "his" in "his company")
+# - Appositives should be linked (e.g., "Obama, the president")
+# - Generic mentions (e.g., "people" in general) are typically not linked
+
+annotation_task_name: "OntoNotes: Coreference Resolution"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: mention_spans
+    description: "Highlight all entity mentions (noun phrases and pronouns) in the text"
+    labels:
+      - "Mention"
+    tooltips:
+      "Mention": "Any expression referring to an entity: proper nouns, common nouns, pronouns, or demonstratives"
+
+  - annotation_type: coreference
+    name: coreference_chains
+    description: "Link mentions that refer to the same real-world entity into coreference chains"
+
+annotation_instructions: |
+  Annotate coreference relations in the text:
+  1. First, highlight all entity mentions using the span tool (nouns, pronouns, noun phrases).
+  2. Then, use the coreference tool to link mentions that refer to the same entity.
+  3. Include pronouns (he, she, it, they) and demonstratives (this, that) as mentions.
+  4. An entity may have many mentions across multiple sentences.
+  5. Do not link generic references (e.g., "people" used generically).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 2.0; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
+      <p style="font-size: 13px; color: #713f12; margin: 0;"><strong>Instructions:</strong> Mark all entity mentions, then link those that refer to the same entity into coreference chains.</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

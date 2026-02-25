@@ -1,0 +1,109 @@
+# ChemProt - Chemical-Protein Interaction Annotation
+# Based on Krallinger et al., BioCreative VI 2017
+# Paper: https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/
+# Dataset: https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/
+#
+# Annotate biomedical abstracts to identify chemical and gene/protein entities,
+# then classify the type of interaction between them. This supports automated
+# mining of drug-target interactions from scientific literature.
+#
+# Entity Types:
+# - Chemical: Drug names, small molecules, compounds (e.g., ibuprofen, methotrexate)
+# - Gene/Protein: Gene or protein names (e.g., EGFR, p53, cyclooxygenase-2)
+#
+# Relation Types (between chemical and gene/protein):
+# - Inhibitor: Chemical inhibits the protein/gene activity
+# - Substrate: Chemical is a substrate for the protein/enzyme
+# - Agonist: Chemical activates or enhances the protein receptor
+# - Antagonist: Chemical blocks or reduces the protein receptor activity
+# - Product: Chemical is a product of the protein/enzyme reaction
+# - Activator: Chemical increases the protein/gene expression or activity
+# - No Relation: Entities co-occur but have no direct interaction
+#
+# Guidelines:
+# 1. Mark all chemical and gene/protein entities in the text
+# 2. Select the primary relation type between the key entities
+# 3. If multiple entity pairs exist, classify the most prominent interaction
+
+annotation_task_name: "ChemProt: Chemical-Protein Interaction Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: biomedical_entities
+    description: "Highlight and label chemical and gene/protein entities in the text"
+    labels:
+      - "Chemical"
+      - "Gene/Protein"
+    tooltips:
+      "Chemical": "Drug name, small molecule, or chemical compound (e.g., aspirin, methotrexate, glucose)"
+      "Gene/Protein": "Gene name, protein name, or enzyme (e.g., EGFR, p53, COX-2, insulin receptor)"
+
+  - annotation_type: radio
+    name: relation_type
+    description: "What is the primary type of interaction between the chemical and protein/gene?"
+    labels:
+      - "Inhibitor"
+      - "Substrate"
+      - "Agonist"
+      - "Antagonist"
+      - "Product"
+      - "Activator"
+      - "No Relation"
+    keyboard_shortcuts:
+      "Inhibitor": "1"
+      "Substrate": "2"
+      "Agonist": "3"
+      "Antagonist": "4"
+      "Product": "5"
+      "Activator": "6"
+      "No Relation": "7"
+    tooltips:
+      "Inhibitor": "The chemical inhibits or blocks the activity of the protein/gene"
+      "Substrate": "The chemical serves as a substrate for the enzyme/protein"
+      "Agonist": "The chemical activates or stimulates the receptor/protein"
+      "Antagonist": "The chemical blocks or reduces the receptor/protein activity"
+      "Product": "The chemical is produced as a result of the protein/enzyme reaction"
+      "Activator": "The chemical increases the expression or activity of the protein/gene"
+      "No Relation": "The chemical and protein co-occur but have no direct interaction described"
+
+annotation_instructions: |
+  Annotate biomedical abstracts for chemical-protein interactions.
+
+  For each abstract:
+  1. Read the text carefully to identify all chemicals and gene/protein entities.
+  2. Use the span tool to highlight each entity and assign the correct type.
+  3. Determine the primary relation type between the key chemical-protein pair.
+
+  Tips:
+  - Chemicals include drugs, small molecules, and compounds
+  - Gene/Protein includes gene names, protein names, enzymes, and receptors
+  - Focus on the most prominent chemical-protein pair if multiple exist
+  - Select "No Relation" if entities co-occur without described interaction
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px;">
+      <strong style="color: #6b21a8;">Biomedical Abstract:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

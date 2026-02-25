@@ -1,0 +1,23 @@
+{
+  "title": "Media Frames Analysis",
+  "description": "Annotation of media framing in news articles covering policy issues, based on the Media Frames Corpus (Card et al., ACL 2015). Annotators identify framing dimensions, stance, and provide justifications for their frame selections.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Card et al.",
+    "email": "jurgens@umich.edu",
+    "github": "dallascard",
+    "affiliation": "Carnegie Mellon University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "radio", "text"],
+  "domain": ["NLP", "Computational Social Science", "Media Studies"],
+  "useCase": ["Media Framing", "Political Communication", "Discourse Analysis"],
+  "complexity": "intermediate",
+  "tags": ["media-frames", "framing", "news-analysis", "policy", "acl2015"],
+  "featured": false,
+  "paperReference": "Card et al., ACL 2015",
+  "paperUrl": "https://aclanthology.org/P15-1061/",
+  "datasetUrl": "https://github.com/dallascard/media_frames_corpus",
+  "citation": "@inproceedings{card-etal-2015-media,\n    title = \"The Media Frames Corpus: Annotations of Frames Across Issues\",\n    author = \"Card, Dallas  and Boydstun, Amber E.  and Gross, Justin H.  and Resnik, Philip  and Smith, Noah A.\",\n    booktitle = \"Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)\",\n    month = jul,\n    year = \"2015\",\n    address = \"Beijing, China\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P15-1061\",\n    pages = \"438--444\"\n}"
+}

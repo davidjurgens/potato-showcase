@@ -1,0 +1,23 @@
+{
+  "title": "XNLI - Cross-Lingual Natural Language Inference",
+  "description": "Natural language inference annotation for cross-lingual evaluation, based on the XNLI benchmark (Conneau et al., EMNLP 2018). Annotators classify the relationship between a premise and hypothesis as entailment, neutral, or contradiction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Conneau et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Facebook AI Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Cross-Lingual"],
+  "useCase": ["Natural Language Inference", "Cross-Lingual Evaluation", "Textual Entailment"],
+  "complexity": "beginner",
+  "tags": ["nli", "cross-lingual", "entailment", "xnli", "emnlp2018"],
+  "featured": false,
+  "paperReference": "Conneau et al., EMNLP 2018",
+  "paperUrl": "https://aclanthology.org/D18-1269/",
+  "datasetUrl": "https://github.com/facebookresearch/XNLI",
+  "citation": "@inproceedings{conneau-etal-2018-xnli,\n    title = \"{XNLI}: Evaluating Cross-lingual Sentence Representations\",\n    author = \"Conneau, Alexis  and Rinott, Ruber  and Lample, Guillaume  and Williams, Adina  and Bowman, Samuel  and Schwenk, Holger  and Stoyanov, Veselin\",\n    booktitle = \"Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing\",\n    month = oct # \"-\" # nov,\n    year = \"2018\",\n    address = \"Brussels, Belgium\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D18-1269\",\n    pages = \"1112--1122\"\n}"
+}

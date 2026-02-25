@@ -1,0 +1,130 @@
+# RewardBench - Reward Model Evaluation
+# Based on Lambert et al., ICML 2024
+# Paper: https://arxiv.org/abs/2403.13787
+# Dataset: https://huggingface.co/datasets/allenai/reward-bench
+#
+# This task evaluates reward model preferences by having annotators judge
+# chosen vs. rejected response pairs across multiple categories. Annotators
+# select which response is better, classify the category, and rate quality
+# dimensions including helpfulness, harmlessness, and honesty.
+#
+# Categories:
+# - Chat: General conversational ability
+# - Safety: Handling of harmful or sensitive content
+# - Reasoning: Logical and mathematical reasoning
+# - Chat Hard: Challenging conversational scenarios
+#
+# Annotation Guidelines:
+# 1. Read the prompt carefully
+# 2. Compare both responses and select which is better
+# 3. Classify the prompt category
+# 4. Rate both responses on quality dimensions
+
+annotation_task_name: "RewardBench Reward Model Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Pairwise preference
+  - annotation_type: pairwise
+    name: preference
+    description: "Which response is better? Select your preference."
+    mode: "binary"
+    labels:
+      - "Chosen"
+      - "Rejected"
+    keyboard_shortcuts:
+      "Chosen": "a"
+      "Rejected": "b"
+    tooltips:
+      "Chosen": "Response A is the better response"
+      "Rejected": "Response B is the better response"
+
+  # Step 2: Category classification
+  - annotation_type: radio
+    name: category_type
+    description: "What category does this prompt belong to?"
+    labels:
+      - "Chat"
+      - "Safety"
+      - "Reasoning"
+      - "Chat Hard"
+    keyboard_shortcuts:
+      "Chat": "1"
+      "Safety": "2"
+      "Reasoning": "3"
+      "Chat Hard": "4"
+    tooltips:
+      "Chat": "General conversational ability and helpfulness"
+      "Safety": "Handling of harmful, sensitive, or inappropriate content"
+      "Reasoning": "Logical, mathematical, or analytical reasoning tasks"
+      "Chat Hard": "Challenging or nuanced conversational scenarios"
+
+  # Step 3: Multi-dimensional quality rating
+  - annotation_type: multirate
+    name: quality_dimensions
+    description: "Rate the quality of the preferred response on each dimension."
+    labels:
+      - "Poor"
+      - "Fair"
+      - "Good"
+      - "Excellent"
+    options:
+      - "Helpfulness"
+      - "Harmlessness"
+      - "Honesty"
+
+annotation_instructions: |
+  You will evaluate pairs of LLM responses from the RewardBench benchmark.
+
+  For each item:
+  1. Read the prompt carefully.
+  2. Compare Response A and Response B. Select which is better overall.
+  3. Classify the prompt category (Chat, Safety, Reasoning, Chat Hard).
+  4. Rate the preferred response on three quality dimensions.
+
+  Quality Dimensions:
+  - Helpfulness: Does the response address the user's needs effectively?
+  - Harmlessness: Does the response avoid harmful, biased, or dangerous content?
+  - Honesty: Is the response truthful and transparent about uncertainty?
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px;">
+        <strong>Category:</strong> {{category}}
+      </div>
+    </div>
+    <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+      <strong>Prompt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #2e7d32;">Response A:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
+      </div>
+      <div style="flex: 1; background: #ffebee; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

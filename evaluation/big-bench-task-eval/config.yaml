@@ -1,0 +1,95 @@
+# BIG-Bench Task Evaluation
+# Based on Srivastava et al., TMLR 2023
+# Paper: https://arxiv.org/abs/2206.04615
+# Dataset: https://github.com/google/BIG-bench
+#
+# Evaluate language model responses on diverse reasoning tasks from the
+# BIG-Bench benchmark. Annotators assess correctness of model outputs,
+# provide reasoning explanations, and rate their confidence.
+#
+# Correctness Levels:
+# - Correct: The model response is fully accurate
+# - Partially Correct: Some aspects are right but incomplete or imprecise
+# - Incorrect: The model response is wrong
+#
+# Annotation Guidelines:
+# 1. Read the task prompt and understand what is being asked
+# 2. Review the model response carefully
+# 3. Assess correctness based on the task requirements
+# 4. Explain your reasoning for the correctness judgment
+# 5. Rate your confidence in the assessment (0-100)
+
+annotation_task_name: "BIG-Bench Task Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: correctness
+    description: "Is the model response correct for this task?"
+    labels:
+      - "Correct"
+      - "Partially Correct"
+      - "Incorrect"
+    keyboard_shortcuts:
+      "Correct": "1"
+      "Partially Correct": "2"
+      "Incorrect": "3"
+    tooltips:
+      "Correct": "The model response is fully accurate and complete"
+      "Partially Correct": "Some aspects are right but the response is incomplete or contains minor errors"
+      "Incorrect": "The model response is wrong or fundamentally flawed"
+
+  - annotation_type: text
+    name: reasoning
+    description: "Explain your reasoning for the correctness judgment. What did the model get right or wrong?"
+
+  - annotation_type: number
+    name: confidence
+    description: "Confidence score (0-100)"
+
+annotation_instructions: |
+  You will evaluate language model responses on diverse reasoning tasks from the BIG-Bench benchmark.
+
+  For each item:
+  1. Read the task prompt carefully to understand what is being asked.
+  2. Note the task category for context on expected reasoning.
+  3. Review the model response and assess its correctness.
+  4. Explain your reasoning -- what did the model get right or wrong?
+  5. Rate your confidence in your assessment from 0 (no confidence) to 100 (completely certain).
+
+  Task categories include logical reasoning, language understanding, mathematics, common sense, and more.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f5f3ff; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #6d28d9;">Task Category:</strong>
+      <span style="font-size: 14px; background: #ede9fe; padding: 2px 8px; border-radius: 4px;">{{task_category}}</span>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Task Prompt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Model Response:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{model_response}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

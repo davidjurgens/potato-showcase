@@ -1,0 +1,23 @@
+{
+  "title": "ScienceQA Multimodal Reasoning",
+  "description": "Multimodal science question answering with chain-of-thought reasoning, based on ScienceQA (Lu et al., NeurIPS 2022). Annotators answer multiple-choice science questions that may include images, provide chain-of-thought explanations, and categorize the science domain.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lupantech",
+    "affiliation": "UCLA"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "multiselect"],
+  "domain": ["Multimodal", "Education"],
+  "useCase": ["Science QA", "Chain-of-Thought Reasoning", "Multimodal Understanding"],
+  "complexity": "intermediate",
+  "tags": ["scienceqa", "multimodal", "science", "chain-of-thought", "education", "neurips2022"],
+  "featured": false,
+  "paperReference": "Lu et al., NeurIPS 2022",
+  "paperUrl": "https://arxiv.org/abs/2209.09513",
+  "datasetUrl": "https://scienceqa.github.io/",
+  "citation": "@inproceedings{lu2022learn,\n    title = \"Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering\",\n    author = \"Lu, Pan and Mishra, Swaroop and Xia, Tony and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Kalyan, Ashwin\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2209.09513\"\n}"
+}

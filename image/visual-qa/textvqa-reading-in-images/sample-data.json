@@ -1,0 +1,62 @@
+[
+  {
+    "id": "textvqa_001",
+    "text": "What is the name of the street shown on the green street sign?",
+    "image_url": "https://example.com/textvqa/street_sign_001.jpg",
+    "image_description": "A green street sign at an intersection in a suburban neighborhood"
+  },
+  {
+    "id": "textvqa_002",
+    "text": "What time does the store close according to the hours posted on the door?",
+    "image_url": "https://example.com/textvqa/store_hours_002.jpg",
+    "image_description": "Glass door of a retail store with posted business hours"
+  },
+  {
+    "id": "textvqa_003",
+    "text": "What is the price of the large coffee shown on the menu board?",
+    "image_url": "https://example.com/textvqa/menu_board_003.jpg",
+    "image_description": "A chalkboard menu at a coffee shop with handwritten prices"
+  },
+  {
+    "id": "textvqa_004",
+    "text": "What is the title of the book the person is holding?",
+    "image_url": "https://example.com/textvqa/book_cover_004.jpg",
+    "image_description": "A person holding a hardcover book with the cover facing the camera"
+  },
+  {
+    "id": "textvqa_005",
+    "text": "What brand name is printed on the laptop visible in the image?",
+    "image_url": "https://example.com/textvqa/laptop_005.jpg",
+    "image_description": "An open laptop on a desk with the brand logo visible on the back of the screen"
+  },
+  {
+    "id": "textvqa_006",
+    "text": "What is the jersey number of the player who is about to kick the ball?",
+    "image_url": "https://example.com/textvqa/soccer_006.jpg",
+    "image_description": "A soccer player in a red jersey preparing to kick the ball during a match"
+  },
+  {
+    "id": "textvqa_007",
+    "text": "What year is printed on the license plate of the parked car?",
+    "image_url": "https://example.com/textvqa/license_plate_007.jpg",
+    "image_description": "Rear view of a parked car showing its license plate and registration sticker"
+  },
+  {
+    "id": "textvqa_008",
+    "text": "What does the warning label on the bottle say?",
+    "image_url": "https://example.com/textvqa/bottle_label_008.jpg",
+    "image_description": "A close-up of a chemical bottle with a yellow warning label"
+  },
+  {
+    "id": "textvqa_009",
+    "text": "What destination is shown on the front of the bus?",
+    "image_url": "https://example.com/textvqa/bus_009.jpg",
+    "image_description": "Front view of a city bus at a transit stop with a digital destination display"
+  },
+  {
+    "id": "textvqa_010",
+    "text": "What is the name of the restaurant shown on the neon sign?",
+    "image_url": "https://example.com/textvqa/neon_sign_010.jpg",
+    "image_description": "A nighttime photo of a restaurant storefront with a glowing neon sign"
+  }
+]
