@@ -1,0 +1,23 @@
+{
+  "title": "MT-Bench Judge Consistency Evaluation",
+  "description": "Multi-turn conversation evaluation for LLM judge consistency, based on MT-Bench (Zheng et al., NeurIPS 2023). Annotators compare two assistant responses in a pairwise setting, rate overall quality on a 1-10 Likert scale, and classify the conversation category.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zheng et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lm-sys",
+    "affiliation": "UC Berkeley"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["pairwise", "likert", "radio"],
+  "domain": ["NLP", "AI Evaluation"],
+  "useCase": ["LLM Evaluation", "Judge Consistency", "Multi-Turn Dialogue"],
+  "complexity": "intermediate",
+  "tags": ["mt-bench", "pairwise", "judge-consistency", "llm-evaluation", "neurips2023"],
+  "featured": false,
+  "paperReference": "Zheng et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2306.05685",
+  "datasetUrl": "https://huggingface.co/datasets/lmsys/mt_bench_human_judgments",
+  "citation": "@inproceedings{zheng2023judging,\n    title = \"Judging {LLM}-as-a-Judge with {MT}-Bench and Chatbot Arena\",\n    author = \"Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric and Zhang, Hao and Gonzalez, Joseph E and Stoica, Ion\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2306.05685\"\n}"
+}

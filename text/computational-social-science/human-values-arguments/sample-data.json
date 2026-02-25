@@ -1,0 +1,52 @@
+[
+  {
+    "id": "values_001",
+    "text": "Everyone should have the right to choose their own career path without government interference. When individuals are free to pursue their passions, innovation flourishes and society as a whole benefits from the diversity of ideas and contributions.",
+    "topic": "Freedom of career choice"
+  },
+  {
+    "id": "values_002",
+    "text": "Universal healthcare should be implemented because no one should suffer or die simply because they cannot afford medical treatment. A compassionate society takes care of its most vulnerable members.",
+    "topic": "Universal healthcare"
+  },
+  {
+    "id": "values_003",
+    "text": "Stricter gun control laws are necessary to protect our children and communities. The safety of innocent people must take priority over the desire to own firearms without restrictions.",
+    "topic": "Gun control"
+  },
+  {
+    "id": "values_004",
+    "text": "Traditional family structures should be preserved because they have been the foundation of stable societies for thousands of years. Changing these time-tested institutions risks undermining the social fabric that holds communities together.",
+    "topic": "Traditional family values"
+  },
+  {
+    "id": "values_005",
+    "text": "A strong military is essential for national defense. Without adequate military spending, our country becomes vulnerable to external threats, and our citizens lose the safety and stability they depend on.",
+    "topic": "Military spending"
+  },
+  {
+    "id": "values_006",
+    "text": "Climate action is an urgent moral imperative. We have a responsibility to protect the planet for future generations and to ensure that all people, regardless of where they live, have access to clean air and water.",
+    "topic": "Climate change action"
+  },
+  {
+    "id": "values_007",
+    "text": "Immigration restrictions are counterproductive because they stifle the economic growth that comes from attracting talented individuals who want to build better lives. Countries that welcome immigrants gain a competitive advantage in the global economy.",
+    "topic": "Immigration policy"
+  },
+  {
+    "id": "values_008",
+    "text": "Mandatory vaccination should be required because individual choices about vaccination affect the health of the entire community. We must follow scientific evidence and social norms to protect those who cannot be vaccinated, such as infants and immunocompromised individuals.",
+    "topic": "Mandatory vaccination"
+  },
+  {
+    "id": "values_009",
+    "text": "Free speech should have no limits because the moment we allow censorship, we open the door to authoritarian control over what people can think and say. A truly democratic society thrives on the open exchange of all ideas, even uncomfortable ones.",
+    "topic": "Freedom of speech"
+  },
+  {
+    "id": "values_010",
+    "text": "We need to invest more in public education because every child deserves an equal opportunity to succeed, regardless of their family's income. Education is the great equalizer that can break cycles of poverty and create a more just society.",
+    "topic": "Public education funding"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "SNLI - Textual Entailment",
+  "description": "Natural language inference over sentence pairs from the Stanford Natural Language Inference corpus (Bowman et al., EMNLP 2015). Annotators classify the relationship between a premise and hypothesis as entailment, contradiction, or neutral.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bowman et al.",
+    "email": "jurgens@umich.edu",
+    "github": "sleepinyourhat",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "Natural Language Inference"],
+  "useCase": ["Textual Entailment", "Semantic Reasoning", "Sentence Pair Classification"],
+  "complexity": "beginner",
+  "tags": ["snli", "nli", "entailment", "contradiction", "sentence-pairs", "emnlp2015"],
+  "featured": false,
+  "paperReference": "Bowman et al., EMNLP 2015",
+  "paperUrl": "https://aclanthology.org/D15-1075/",
+  "datasetUrl": "https://nlp.stanford.edu/projects/snli/",
+  "citation": "@inproceedings{bowman-etal-2015-large,\n    title = \"A large annotated corpus for learning natural language inference\",\n    author = \"Bowman, Samuel R.  and Angeli, Gabor  and Potts, Christopher  and Manning, Christopher D.\",\n    booktitle = \"Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing\",\n    month = sep,\n    year = \"2015\",\n    address = \"Lisbon, Portugal\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D15-1075\",\n    pages = \"632--642\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Chatbot Arena - Pairwise Comparison with Best-Worst Scaling",
+  "description": "Pairwise comparison and best-worst scaling of chatbot responses, based on the Chatbot Arena framework (Zheng et al., ICML 2024). Annotators compare pairs of LLM-generated responses and rank sets of responses using best-worst scaling methodology.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zheng et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lm-sys",
+    "affiliation": "UC Berkeley"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["bws", "pairwise"],
+  "domain": ["NLP", "AI Evaluation"],
+  "useCase": ["LLM Evaluation", "Preference Learning", "Chatbot Comparison"],
+  "complexity": "intermediate",
+  "tags": ["chatbot-arena", "pairwise", "bws", "llm-evaluation", "rlhf", "icml2024"],
+  "featured": false,
+  "paperReference": "Zheng et al., ICML 2024",
+  "paperUrl": "https://arxiv.org/abs/2403.04132",
+  "datasetUrl": "https://huggingface.co/datasets/lmsys/chatbot_arena_conversations",
+  "citation": "@inproceedings{zheng2024judging,\n    title = \"Judging {LLM}-as-a-Judge with {MT}-Bench and Chatbot Arena\",\n    author = \"Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric and Zhang, Hao and Gonzalez, Joseph E and Stoica, Ion\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2403.04132\"\n}"
+}

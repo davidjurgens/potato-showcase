@@ -1,0 +1,12 @@
+[
+  {"id": "sentiment_001", "text": "The critics praised the director's bold vision, calling the film a masterpiece of modern cinema."},
+  {"id": "sentiment_002", "text": "Customers have complained that the new software update is slow and buggy, making it nearly impossible to complete basic tasks."},
+  {"id": "sentiment_003", "text": "While the restaurant's ambiance is delightful, several reviewers noted that the food quality has declined significantly over the past year."},
+  {"id": "sentiment_004", "text": "The CEO expressed confidence in the company's growth strategy, but investors remain skeptical about the projected revenue targets."},
+  {"id": "sentiment_005", "text": "The professor found the student's research methodology to be rigorous and well-designed, though the conclusions were somewhat overstated."},
+  {"id": "sentiment_006", "text": "Local residents are outraged by the proposed construction project, which they say will destroy the neighborhood's historic character."},
+  {"id": "sentiment_007", "text": "The reviewer described the novel as deeply moving and beautifully written, a rare achievement in contemporary fiction."},
+  {"id": "sentiment_008", "text": "Analysts believe the merger will create a dominant market player, though consumer advocacy groups fear it will lead to higher prices."},
+  {"id": "sentiment_009", "text": "The committee acknowledged the report's thorough analysis but criticized its failure to address the environmental impact of the proposed policy."},
+  {"id": "sentiment_010", "text": "Travel bloggers have consistently ranked this hotel as one of the worst in the city, citing rude staff and unclean rooms."}
+]

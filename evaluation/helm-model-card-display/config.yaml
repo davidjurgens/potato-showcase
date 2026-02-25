@@ -1,0 +1,66 @@
+# HELM - Model Card Display and Evaluation
+# Based on Liang et al., TMLR 2023
+# Paper: https://arxiv.org/abs/2211.09110
+# Dataset: https://crfm.stanford.edu/helm/
+#
+# This task displays model performance summaries from the HELM benchmark
+# and asks annotators to rate the overall quality of each model based on
+# the presented metrics. The pure_display scheme shows the model card,
+# while the likert scheme collects quality ratings.
+#
+# Annotation Guidelines:
+# 1. Review the model description and performance summary carefully
+# 2. Consider accuracy, robustness, fairness, and efficiency metrics
+# 3. Rate the overall model quality on a 5-point scale
+
+annotation_task_name: "HELM - Model Card Display and Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: pure_display
+    name: model_card_display
+    description: "Model performance summary display"
+
+  - annotation_type: likert
+    name: overall_quality
+    description: "Rate the overall quality of this model based on the displayed metrics"
+    min_label: "Poor"
+    max_label: "Excellent"
+    size: 5
+
+annotation_instructions: |
+  You will be shown a model card summarizing an AI model's performance across
+  various HELM benchmark metrics. Your task is to:
+  1. Review the model name, description, and metrics summary.
+  2. Rate the overall quality of the model on a 5-point scale from Poor to Excellent.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <h3 style="margin: 0 0 8px 0; color: #1e40af;">{{model_name}}</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #374151; margin: 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #166534;">Metrics Summary:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0; color: #374151;">{{metrics_summary}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

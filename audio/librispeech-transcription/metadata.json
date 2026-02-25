@@ -1,0 +1,23 @@
+{
+  "title": "LibriSpeech - Audio Transcription and Quality Rating",
+  "description": "Audio transcription quality assessment based on the LibriSpeech corpus (Panayotov et al., ICASSP 2015). Annotators rate audio quality using a slider and classify audio segments by content type, supporting speech recognition research and dataset curation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Panayotov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "kaldi-asr",
+    "affiliation": "Johns Hopkins University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["slider", "audio_annotation"],
+  "domain": ["Speech", "Audio"],
+  "useCase": ["Speech Recognition", "Audio Quality Assessment", "Transcription"],
+  "complexity": "beginner",
+  "tags": ["librispeech", "transcription", "audio", "speech-recognition", "quality-rating", "icassp2015"],
+  "featured": false,
+  "paperReference": "Panayotov et al., ICASSP 2015",
+  "paperUrl": "https://ieeexplore.ieee.org/document/7178964",
+  "datasetUrl": "https://www.openslr.org/12",
+  "citation": "@inproceedings{panayotov2015librispeech,\n    title = \"Librispeech: An {ASR} Corpus Based on Public Domain Audio Books\",\n    author = \"Panayotov, Vassil and Chen, Guoguo and Povey, Daniel and Khudanpur, Sanjeev\",\n    booktitle = \"2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)\",\n    year = \"2015\",\n    pages = \"5206--5210\",\n    url = \"https://ieeexplore.ieee.org/document/7178964\"\n}"
+}

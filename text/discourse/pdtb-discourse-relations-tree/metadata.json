@@ -1,0 +1,23 @@
+{
+  "title": "PDTB 2.0 - Discourse Relations Tree Annotation",
+  "description": "Discourse relation annotation with tree structure, based on the Penn Discourse TreeBank 2.0 (Prasad et al., LREC 2008). Annotators identify discourse connectives, mark argument spans, and build hierarchical discourse trees representing how text segments relate to each other.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Prasad et al.",
+    "email": "jurgens@umich.edu",
+    "github": "linguistics-penn",
+    "affiliation": "University of Pennsylvania"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["tree_annotation", "span"],
+  "domain": ["NLP", "Linguistics"],
+  "useCase": ["Discourse Analysis", "Coherence", "Text Structure"],
+  "complexity": "advanced",
+  "tags": ["pdtb", "discourse", "tree-structure", "connectives", "coherence", "lrec2008"],
+  "featured": false,
+  "paperReference": "Prasad et al., LREC 2008",
+  "paperUrl": "https://aclanthology.org/L08-1093/",
+  "datasetUrl": "https://catalog.ldc.upenn.edu/LDC2008T05",
+  "citation": "@inproceedings{prasad-etal-2008-penn,\n    title = \"The {P}enn {D}iscourse {T}ree{B}ank 2.0\",\n    author = \"Prasad, Rashmi and Dinesh, Nikhil and Lee, Alan and Miltsakaki, Eleni and Robaldo, Livio and Joshi, Aravind and Webber, Bonnie\",\n    booktitle = \"Proceedings of the Sixth International Conference on Language Resources and Evaluation ({LREC}'08)\",\n    month = may,\n    year = \"2008\",\n    address = \"Marrakech, Morocco\",\n    publisher = \"European Language Resources Association (ELRA)\",\n    url = \"https://aclanthology.org/L08-1093\"\n}"
+}

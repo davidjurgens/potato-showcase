@@ -1,0 +1,99 @@
+# Moral Foundations in Tweets
+# Based on Johnson & Goldwasser, ACL 2018
+# Paper: https://aclanthology.org/P18-1067/
+# Dataset: https://aclanthology.org/P18-1067/
+#
+# This task asks annotators to identify moral foundations expressed in tweets
+# about social and political issues. Moral Foundations Theory (Haidt, 2012)
+# posits six foundational moral dimensions that shape political and social
+# reasoning. Annotators classify which foundations are present and whether
+# the tweet contains moral content at all.
+#
+# Moral Foundations:
+# - Care/Harm: Concerns about suffering, nurturing, protection
+# - Fairness/Cheating: Concerns about justice, rights, reciprocity
+# - Loyalty/Betrayal: Concerns about group cohesion, patriotism, self-sacrifice
+# - Authority/Subversion: Concerns about hierarchy, respect, tradition
+# - Purity/Degradation: Concerns about sanctity, disgust, contamination
+# - Liberty/Oppression: Concerns about freedom, autonomy, coercion
+#
+# Annotation Guidelines:
+# 1. Read the tweet and its associated topic
+# 2. Determine if the tweet expresses moral sentiment
+# 3. If moral, select all applicable moral foundations
+# 4. Multiple foundations can co-occur in a single tweet
+
+annotation_task_name: "Moral Foundations in Tweets"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Is this tweet moral or non-moral?
+  - annotation_type: radio
+    name: moral_sentiment
+    description: "Does this tweet express moral sentiment?"
+    labels:
+      - "Moral"
+      - "Non-Moral"
+    keyboard_shortcuts:
+      "Moral": "1"
+      "Non-Moral": "2"
+    tooltips:
+      "Moral": "The tweet expresses judgments about right/wrong, good/bad, or moral values"
+      "Non-Moral": "The tweet is factual, neutral, or does not invoke moral reasoning"
+
+  # Step 2: Which moral foundations are present?
+  - annotation_type: multiselect
+    name: moral_foundations
+    description: "Which moral foundations are expressed in this tweet? (select all that apply)"
+    labels:
+      - "Care/Harm"
+      - "Fairness/Cheating"
+      - "Loyalty/Betrayal"
+      - "Authority/Subversion"
+      - "Purity/Degradation"
+      - "Liberty/Oppression"
+    tooltips:
+      "Care/Harm": "Concerns about suffering, compassion, cruelty, or protection of the vulnerable"
+      "Fairness/Cheating": "Concerns about justice, equal treatment, rights, or proportionality"
+      "Loyalty/Betrayal": "Concerns about in-group loyalty, patriotism, or betrayal of the group"
+      "Authority/Subversion": "Concerns about respect for authority, tradition, hierarchy, or rebellion"
+      "Purity/Degradation": "Concerns about sanctity, purity, contamination, or disgust"
+      "Liberty/Oppression": "Concerns about individual freedom, tyranny, coercion, or autonomy"
+
+annotation_instructions: |
+  You will be shown tweets about social and political topics. Your task is to:
+  1. Determine whether the tweet expresses moral sentiment (moral judgments, values, or ethical reasoning).
+  2. If the tweet is moral, identify which moral foundations are present. You may select multiple foundations.
+
+  A tweet is "moral" if it makes judgments about right/wrong, expresses values, or frames issues in moral terms.
+  A tweet is "non-moral" if it is purely factual, descriptive, or does not invoke moral reasoning.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <strong style="color: #7e22ce;">Tweet:</strong>
+        <span style="background: #f3e8ff; color: #7e22ce; padding: 2px 10px; border-radius: 12px; font-size: 13px;">Topic: {{topic}}</span>
+      </div>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

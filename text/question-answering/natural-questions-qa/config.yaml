@@ -1,0 +1,96 @@
+# Natural Questions - Open-Domain Question Answering
+# Based on Kwiatkowski et al., TACL 2019
+# Paper: https://aclanthology.org/Q19-1026/
+# Dataset: https://ai.google.com/research/NaturalQuestions
+#
+# This task presents a real user question from Google Search along with
+# a Wikipedia passage. Annotators identify short and long answer spans
+# and determine whether the passage contains an answer.
+#
+# Answer Types:
+# - Short Answer: The minimal span that directly answers the question
+# - Long Answer: A paragraph or section containing the answer context
+#
+# Annotation Guidelines:
+# 1. Read the question carefully
+# 2. Read the Wikipedia passage
+# 3. Determine if the passage answers the question
+# 4. If yes, highlight the long answer span (paragraph-level)
+# 5. Within that, highlight the short answer span (phrase-level)
+# 6. Type the short answer text
+# 7. If the passage does not contain the answer, select "No Answer"
+
+annotation_task_name: "Natural Questions - Open-Domain Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Highlight answer spans
+  - annotation_type: span
+    name: answer_spans
+    description: "Highlight the short answer span (exact answer) and the long answer span (surrounding context)"
+    labels:
+      - "Short Answer"
+      - "Long Answer"
+    label_colors:
+      "Short Answer": "#3b82f6"
+      "Long Answer": "#22c55e"
+
+  # Step 2: Answerability judgment
+  - annotation_type: radio
+    name: answerability
+    description: "Does this passage contain the answer to the question?"
+    labels:
+      - "Has Answer"
+      - "No Answer"
+    keyboard_shortcuts:
+      "Has Answer": "1"
+      "No Answer": "2"
+    tooltips:
+      "Has Answer": "The passage contains enough information to answer the question"
+      "No Answer": "The passage does not contain the answer to the question"
+
+  # Step 3: Type the short answer
+  - annotation_type: text
+    name: short_answer_text
+    description: "Type the short answer to the question (if answerable)"
+
+annotation_instructions: |
+  You will be shown a question and a Wikipedia passage. Your task is to:
+  1. Determine if the passage contains the answer to the question.
+  2. If answerable, highlight the Long Answer (the relevant paragraph) and the Short Answer (the specific phrase or entity).
+  3. Type the short answer in the text field.
+  4. If the passage does not answer the question, select "No Answer."
+
+  Short answers are typically entities, dates, numbers, or short phrases.
+  Long answers are the paragraphs or sections that provide context for the short answer.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207; font-size: 18px;">Question:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0; font-weight: 500;">{{question}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Wikipedia Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

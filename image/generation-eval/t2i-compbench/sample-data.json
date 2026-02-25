@@ -1,0 +1,62 @@
+[
+  {
+    "id": "t2i_001",
+    "text": "A red apple on a blue plate next to a green cup",
+    "image_a_url": "https://example.com/t2i/image_001a.jpg",
+    "image_b_url": "https://example.com/t2i/image_001b.jpg"
+  },
+  {
+    "id": "t2i_002",
+    "text": "Three cats sitting on a wooden fence at sunset",
+    "image_a_url": "https://example.com/t2i/image_002a.jpg",
+    "image_b_url": "https://example.com/t2i/image_002b.jpg"
+  },
+  {
+    "id": "t2i_003",
+    "text": "A dog jumping over a small hedge in a garden",
+    "image_a_url": "https://example.com/t2i/image_003a.jpg",
+    "image_b_url": "https://example.com/t2i/image_003b.jpg"
+  },
+  {
+    "id": "t2i_004",
+    "text": "A large yellow sunflower growing behind a small white daisy",
+    "image_a_url": "https://example.com/t2i/image_004a.jpg",
+    "image_b_url": "https://example.com/t2i/image_004b.jpg"
+  },
+  {
+    "id": "t2i_005",
+    "text": "Five red balloons floating above a birthday cake with blue candles",
+    "image_a_url": "https://example.com/t2i/image_005a.jpg",
+    "image_b_url": "https://example.com/t2i/image_005b.jpg"
+  },
+  {
+    "id": "t2i_006",
+    "text": "A striped orange cat sleeping on a fluffy white pillow on a leather couch",
+    "image_a_url": "https://example.com/t2i/image_006a.jpg",
+    "image_b_url": "https://example.com/t2i/image_006b.jpg"
+  },
+  {
+    "id": "t2i_007",
+    "text": "A person riding a bicycle through a field of purple lavender",
+    "image_a_url": "https://example.com/t2i/image_007a.jpg",
+    "image_b_url": "https://example.com/t2i/image_007b.jpg"
+  },
+  {
+    "id": "t2i_008",
+    "text": "Two brown horses standing to the left of a red barn",
+    "image_a_url": "https://example.com/t2i/image_008a.jpg",
+    "image_b_url": "https://example.com/t2i/image_008b.jpg"
+  },
+  {
+    "id": "t2i_009",
+    "text": "A glass of orange juice on a table with a newspaper and reading glasses",
+    "image_a_url": "https://example.com/t2i/image_009a.jpg",
+    "image_b_url": "https://example.com/t2i/image_009b.jpg"
+  },
+  {
+    "id": "t2i_010",
+    "text": "A metallic robot holding a red rose in a futuristic garden under a purple sky",
+    "image_a_url": "https://example.com/t2i/image_010a.jpg",
+    "image_b_url": "https://example.com/t2i/image_010b.jpg"
+  }
+]

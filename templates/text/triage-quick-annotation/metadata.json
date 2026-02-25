@@ -1,0 +1,21 @@
+{
+  "title": "Triage Quick Annotation Template",
+  "description": "A reusable template for quick triage annotation. Annotators flag whether each item needs detailed annotation and assign a priority level. Designed to be copied and customized for any text annotation workflow that benefits from a triage pre-filtering step.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["triage", "radio"],
+  "domain": ["NLP"],
+  "useCase": ["Text Triage", "Data Filtering", "Annotation Workflow"],
+  "complexity": "beginner",
+  "tags": ["triage", "template", "quick-annotation", "priority", "filtering"],
+  "featured": false,
+  "paperReference": "N/A (Template)",
+  "datasetUrl": ""
+}

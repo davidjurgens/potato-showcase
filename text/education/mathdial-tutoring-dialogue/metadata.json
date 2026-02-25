@@ -1,0 +1,23 @@
+{
+  "title": "MathDial - Tutoring Dialogue Quality Annotation",
+  "description": "Annotate math tutoring dialogues for guidance correctness, tutoring strategies, and key concepts, based on the MathDial dataset (Macina et al., Findings ACL 2023). Supports evaluation of AI-generated tutoring interactions for K-12 math problems.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Macina et al.",
+    "email": "jurgens@umich.edu",
+    "github": "eth-nlped",
+    "affiliation": "ETH Zurich"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "span"],
+  "domain": ["NLP", "Education"],
+  "useCase": ["Tutoring Evaluation", "Dialogue Analysis", "Math Education"],
+  "complexity": "intermediate",
+  "tags": ["tutoring", "dialogue", "math", "education", "strategies", "acl2023"],
+  "featured": false,
+  "paperReference": "Macina et al., Findings ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.findings-acl.507/",
+  "datasetUrl": "https://github.com/eth-nlped/mathdial",
+  "citation": "@inproceedings{macina-etal-2023-mathdial,\n    title = \"{M}ath{D}ial: A Dialogue Tutoring Dataset with Rich Pedagogical Properties Grounded in Math Reasoning Problems\",\n    author = \"Macina, Jakub and Daheim, Nico and Chowdhury, Sankalan Pal and Sinha, Tanmay and Kapur, Manu and Gurevych, Iryna and Sachan, Mrinmaya\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2023\",\n    year = \"2023\",\n    url = \"https://aclanthology.org/2023.findings-acl.507\",\n    pages = \"8013--8038\"\n}"
+}

@@ -1,0 +1,112 @@
+# WNUT-2017 - Emerging and Rare Entity Recognition
+# Based on Derczynski et al., W-NUT@EMNLP 2017
+# Paper: https://aclanthology.org/W17-4418/
+# Dataset: https://noisy-text.github.io/2017/emerging-rare-entities.html
+#
+# This task presents social media text (tweets, Reddit posts) for
+# named entity recognition with a focus on emerging and rare entities.
+# Annotators highlight entity spans and classify the overall entity
+# composition of the text.
+#
+# Entity Types:
+# - Person: Names of people
+# - Location: Places, geographic locations
+# - Corporation: Companies and organizations
+# - Product: Commercial products, software, services
+# - Creative Work: Movies, books, songs, games, etc.
+# - Group: Sports teams, bands, political organizations
+#
+# Annotation Guidelines:
+# 1. Read the social media text carefully
+# 2. Highlight all entity mentions using the appropriate entity type
+# 3. Include the full entity name (e.g., "New York City" not just "New York")
+# 4. Classify whether the text contains novel, standard, or no entities
+
+annotation_task_name: "WNUT-2017 - Emerging and Rare Entity Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Highlight entity spans
+  - annotation_type: span
+    name: entity_spans
+    description: "Highlight all named entities in the text"
+    labels:
+      - "Person"
+      - "Location"
+      - "Corporation"
+      - "Product"
+      - "Creative Work"
+      - "Group"
+    label_colors:
+      "Person": "#3b82f6"
+      "Location": "#ef4444"
+      "Corporation": "#22c55e"
+      "Product": "#f59e0b"
+      "Creative Work": "#8b5cf6"
+      "Group": "#06b6d4"
+    keyboard_shortcuts:
+      "Person": "1"
+      "Location": "2"
+      "Corporation": "3"
+      "Product": "4"
+      "Creative Work": "5"
+      "Group": "6"
+
+  # Step 2: Entity composition classification
+  - annotation_type: radio
+    name: entity_composition
+    description: "What type of entities does this text contain?"
+    labels:
+      - "Contains Novel Entities"
+      - "Standard Entities Only"
+      - "No Entities"
+    keyboard_shortcuts:
+      "Contains Novel Entities": "7"
+      "Standard Entities Only": "8"
+      "No Entities": "9"
+    tooltips:
+      "Contains Novel Entities": "Text mentions emerging, recently created, or rarely seen entities"
+      "Standard Entities Only": "Text mentions only well-known, established entities"
+      "No Entities": "Text contains no named entities"
+
+annotation_instructions: |
+  You will be shown a social media post (from Twitter or Reddit). Your task is to:
+  1. Highlight all named entity mentions in the text using the appropriate category.
+  2. Classify whether the text contains novel/emerging entities, standard entities, or no entities.
+
+  Entity categories:
+  - Person: Names of individuals
+  - Location: Geographic places, cities, countries
+  - Corporation: Companies, organizations, institutions
+  - Product: Software, devices, commercial products
+  - Creative Work: Movies, books, songs, TV shows, games
+  - Group: Sports teams, bands, political groups
+
+  Pay special attention to emerging or novel entities that may not be well-known.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Social Media Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

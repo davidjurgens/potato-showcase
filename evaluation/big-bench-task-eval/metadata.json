@@ -1,0 +1,23 @@
+{
+  "title": "BIG-Bench Task Evaluation",
+  "description": "Evaluate language model responses on diverse reasoning tasks from the BIG-Bench benchmark. Annotators assess correctness, provide reasoning explanations, and rate confidence for model outputs across multiple task categories.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Srivastava et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google",
+    "affiliation": "Google Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "number"],
+  "domain": ["NLP", "AI Evaluation"],
+  "useCase": ["Model Evaluation", "Reasoning Assessment", "Benchmark Annotation"],
+  "complexity": "intermediate",
+  "tags": ["big-bench", "reasoning", "evaluation", "language-model", "benchmark", "tmlr2023"],
+  "featured": false,
+  "paperReference": "Srivastava et al., TMLR 2023",
+  "paperUrl": "https://arxiv.org/abs/2206.04615",
+  "datasetUrl": "https://github.com/google/BIG-bench",
+  "citation": "@article{srivastava2023beyond,\n  title={Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models},\n  author={Srivastava, Aarohi and Rastogi, Abhinav and Rao, Abhishek and Shoeb, Abu Awal Md and Abid, Abubakar and Fisch, Adam and Brown, Adam R and Santoro, Adam and Gupta, Aditya and Garriga-Alonso, Adri{\\`a} and others},\n  journal={Transactions on Machine Learning Research},\n  year={2023}\n}"
+}

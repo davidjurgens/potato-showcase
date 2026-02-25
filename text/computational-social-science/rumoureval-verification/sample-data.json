@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rumour_001",
+    "text": "This has been confirmed by multiple news sources. The report is accurate.",
+    "source_claim": "Breaking: Major earthquake reported near the coast, tsunami warning issued for several regions.",
+    "platform": "Twitter"
+  },
+  {
+    "id": "rumour_002",
+    "text": "This is completely false. I live in the area and nothing happened. Stop spreading panic.",
+    "source_claim": "Reports of a chemical spill at the local factory causing evacuations in the surrounding neighborhoods.",
+    "platform": "Twitter"
+  },
+  {
+    "id": "rumour_003",
+    "text": "Does anyone have a link to the official statement? I can't find any confirmation from authorities.",
+    "source_claim": "The city mayor has resigned effective immediately amid corruption allegations.",
+    "platform": "Reddit"
+  },
+  {
+    "id": "rumour_004",
+    "text": "Honestly these things happen every year around this time. Not sure why everyone is so worked up.",
+    "source_claim": "Unprecedented flooding has displaced thousands of families in the southern districts.",
+    "platform": "Twitter"
+  },
+  {
+    "id": "rumour_005",
+    "text": "My cousin works at the hospital and they said it's true. They've been overwhelmed all week.",
+    "source_claim": "Local hospitals are turning away patients due to severe overcrowding from the flu outbreak.",
+    "platform": "Reddit"
+  },
+  {
+    "id": "rumour_006",
+    "text": "The photo in the original post is from 2018, not this week. Reverse image search confirms it.",
+    "source_claim": "Shocking photo shows massive wildfire approaching residential areas near the national park.",
+    "platform": "Twitter"
+  },
+  {
+    "id": "rumour_007",
+    "text": "Has the airline issued any statement about this? What about the aviation authority?",
+    "source_claim": "Flight 447 made an emergency landing after engine failure over the Atlantic Ocean.",
+    "platform": "Reddit"
+  },
+  {
+    "id": "rumour_008",
+    "text": "Just saw this on the news too. They showed footage of the building. Really sad situation.",
+    "source_claim": "A historic landmark building has collapsed in the downtown area, trapping several people inside.",
+    "platform": "Twitter"
+  },
+  {
+    "id": "rumour_009",
+    "text": "lol okay sure. Next you'll tell me the moon landing was fake too.",
+    "source_claim": "Scientists have discovered a new species of large mammal living in the remote mountain region.",
+    "platform": "Reddit"
+  },
+  {
+    "id": "rumour_010",
+    "text": "I think we should wait for more information before jumping to conclusions. The situation is still developing.",
+    "source_claim": "A prominent tech company is reportedly planning to lay off 30% of its workforce next month.",
+    "platform": "Twitter"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wsd_001",
+    "text": "The bank approved the loan application after reviewing the applicant's credit history.",
+    "target_word": "bank",
+    "sense_definitions": "Sense 1: A financial institution that accepts deposits and channels the money into lending activities.\nSense 2: The land alongside or sloping down to a river or lake.\nSense 3: A long pile or heap of something.\nSense 4: A set of similar things arranged in a row."
+  },
+  {
+    "id": "wsd_002",
+    "text": "She decided to run for the local council seat in the upcoming election.",
+    "target_word": "run",
+    "sense_definitions": "Sense 1: To move at a speed faster than a walk, with both feet off the ground.\nSense 2: To compete as a candidate in a political election.\nSense 3: To operate or manage a business or organization.\nSense 4: To flow or extend in a particular direction."
+  },
+  {
+    "id": "wsd_003",
+    "text": "The bright light from the lamp cast long shadows across the room.",
+    "target_word": "light",
+    "sense_definitions": "Sense 1: The natural agent that stimulates sight and makes things visible.\nSense 2: Having little weight; not heavy.\nSense 3: Not dense or dark in color; pale.\nSense 4: To set on fire; to ignite."
+  },
+  {
+    "id": "wsd_004",
+    "text": "The company had to address several critical issues before the product launch.",
+    "target_word": "address",
+    "sense_definitions": "Sense 1: The details of where a person lives or an organization is located.\nSense 2: To deal with or give attention to a matter or problem.\nSense 3: A formal speech delivered to an audience.\nSense 4: To write the name and location of the intended recipient on an envelope."
+  },
+  {
+    "id": "wsd_005",
+    "text": "The stem of the plant had grown several inches since last week.",
+    "target_word": "stem",
+    "sense_definitions": "Sense 1: The main body or stalk of a plant.\nSense 2: To originate or be caused by something.\nSense 3: To stop or restrict the flow of something.\nSense 4: The main part of a word to which affixes are added."
+  },
+  {
+    "id": "wsd_006",
+    "text": "The pitcher threw a sharp curve that completely fooled the batter.",
+    "target_word": "pitcher",
+    "sense_definitions": "Sense 1: A container with a handle and spout used for holding and pouring liquids.\nSense 2: The player who throws the ball to the batter in baseball.\nSense 3: A large stone used in paving.\nSense 4: A person who pitches goods or ideas."
+  },
+  {
+    "id": "wsd_007",
+    "text": "The interest rate on savings accounts has remained stable throughout the quarter.",
+    "target_word": "interest",
+    "sense_definitions": "Sense 1: A feeling of curiosity or concern about something.\nSense 2: Money paid regularly for the use of money lent or for delaying repayment.\nSense 3: A stake or share in an undertaking or business.\nSense 4: The advantage or benefit of a person or group."
+  },
+  {
+    "id": "wsd_008",
+    "text": "She had to spring over the puddle to avoid getting her shoes wet.",
+    "target_word": "spring",
+    "sense_definitions": "Sense 1: The season after winter and before summer.\nSense 2: To jump or leap suddenly.\nSense 3: A natural flow of water from the ground.\nSense 4: A resilient device that returns to its original shape after compression."
+  },
+  {
+    "id": "wsd_009",
+    "text": "The court ruled in favor of the defendant, dismissing all charges due to insufficient evidence.",
+    "target_word": "court",
+    "sense_definitions": "Sense 1: A tribunal presided over by a judge for administering justice.\nSense 2: An area marked out for playing sports such as tennis or basketball.\nSense 3: The residence or establishment of a sovereign.\nSense 4: To try to win the favor or affection of someone."
+  },
+  {
+    "id": "wsd_010",
+    "text": "The organ played a beautiful melody during the church service on Sunday morning.",
+    "target_word": "organ",
+    "sense_definitions": "Sense 1: A part of the body that performs a specific function, such as the heart or liver.\nSense 2: A large musical instrument with pipes, played using keyboards and pedals.\nSense 3: A newspaper or periodical serving a particular cause or organization.\nSense 4: An institution or establishment regarded as serving a particular purpose."
+  }
+]

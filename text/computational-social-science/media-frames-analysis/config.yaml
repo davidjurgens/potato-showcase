@@ -1,0 +1,131 @@
+# Media Frames Analysis
+# Based on Card et al., ACL 2015
+# Paper: https://aclanthology.org/P15-1061/
+# Dataset: https://github.com/dallascard/media_frames_corpus
+#
+# This task asks annotators to identify how news articles frame policy
+# issues. Media framing refers to the way information is presented to
+# influence how audiences interpret issues. The frame taxonomy covers
+# 14 dimensions commonly used in political communication research.
+#
+# Frame Dimensions:
+# - Economic: Costs, benefits, financial impact
+# - Capacity and Resources: Availability of resources, infrastructure
+# - Morality: Religious, ethical, or moral perspective
+# - Fairness and Equality: Equal treatment, discrimination, rights
+# - Legality: Legal aspects, constitutionality, court rulings
+# - Policy: Specific policies, regulations, legislative proposals
+# - Crime and Punishment: Criminal activity, enforcement, penalties
+# - Security: National security, public safety, threats
+# - Health: Public health, medical, wellness perspectives
+# - Quality of Life: Well-being, lifestyle, community impact
+# - Cultural Identity: Cultural values, heritage, national identity
+# - Public Opinion: Polls, public sentiment, popularity
+# - Political: Political strategy, partisanship, elections
+# - External Regulation: International bodies, foreign policy, treaties
+#
+# Annotation Guidelines:
+# 1. Read the news paragraph and note the topic and source
+# 2. Select all applicable framing dimensions
+# 3. Classify the overall stance toward the issue
+# 4. Provide a brief justification for your frame selections
+
+annotation_task_name: "Media Frames Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Select applicable framing dimensions
+  - annotation_type: multiselect
+    name: frame_dimensions
+    description: "Which framing dimensions are present in this text? (select all that apply)"
+    labels:
+      - "Economic"
+      - "Capacity and Resources"
+      - "Morality"
+      - "Fairness and Equality"
+      - "Legality"
+      - "Policy"
+      - "Crime and Punishment"
+      - "Security"
+      - "Health"
+      - "Quality of Life"
+      - "Cultural Identity"
+      - "Public Opinion"
+      - "Political"
+      - "External Regulation"
+    tooltips:
+      "Economic": "Discusses costs, benefits, economic impact, or financial considerations"
+      "Capacity and Resources": "Focuses on availability of resources, infrastructure, or logistical capacity"
+      "Morality": "Frames the issue in religious, ethical, or moral terms"
+      "Fairness and Equality": "Discusses equal treatment, discrimination, rights, or justice"
+      "Legality": "Addresses legal aspects, constitutionality, court decisions, or law enforcement"
+      "Policy": "Discusses specific policies, regulations, or legislative proposals"
+      "Crime and Punishment": "Frames the issue around criminal activity, enforcement, or penalties"
+      "Security": "Focuses on national security, public safety, or threats"
+      "Health": "Discusses public health, medical impact, or wellness"
+      "Quality of Life": "Addresses well-being, lifestyle, or community impact"
+      "Cultural Identity": "Discusses cultural values, heritage, or national identity"
+      "Public Opinion": "References polls, public sentiment, or popular support"
+      "Political": "Focuses on political strategy, partisanship, or electoral implications"
+      "External Regulation": "Discusses international bodies, foreign policy, or treaties"
+
+  # Step 2: Classify the stance
+  - annotation_type: radio
+    name: stance
+    description: "What is the overall stance of this text toward the issue?"
+    labels:
+      - "Pro-Issue"
+      - "Anti-Issue"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Pro-Issue": "1"
+      "Anti-Issue": "2"
+      "Neutral": "3"
+    tooltips:
+      "Pro-Issue": "The text supports or advocates for the issue, policy, or position being discussed"
+      "Anti-Issue": "The text opposes or argues against the issue, policy, or position being discussed"
+      "Neutral": "The text presents the issue without clear advocacy for or against"
+
+  # Step 3: Provide frame justification
+  - annotation_type: text
+    name: frame_justification
+    description: "Briefly explain why you selected the frame dimensions above"
+
+annotation_instructions: |
+  You will be shown paragraphs from news articles about policy issues. Your task is to:
+  1. Identify which framing dimensions are present. Multiple frames can co-occur.
+  2. Classify whether the text is pro-issue, anti-issue, or neutral.
+  3. Provide a brief justification for your frame selections.
+
+  Media frames shape how readers interpret issues. Look for the underlying perspective
+  or emphasis the article uses, not just the topic itself.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+      <span style="background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Topic: {{topic}}</span>
+      <span style="background: #f3e8ff; color: #7e22ce; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Source: {{source}}</span>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <p style="font-size: 16px; line-height: 1.7; margin: 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

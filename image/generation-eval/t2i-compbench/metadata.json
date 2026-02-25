@@ -1,0 +1,23 @@
+{
+  "title": "T2I-CompBench Text-to-Image Evaluation",
+  "description": "Compositional text-to-image generation evaluation based on T2I-CompBench (Huang et al., NeurIPS 2023). Annotators rate image quality on a Likert scale, classify the compositional challenge type, and compare pairs of generated images via pairwise preference.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Huang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "Karine-Huang",
+    "affiliation": "Nanyang Technological University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "radio", "pairwise"],
+  "domain": ["Computer Vision", "Generative AI"],
+  "useCase": ["Image Generation Evaluation", "Text-to-Image Alignment", "Compositional Reasoning"],
+  "complexity": "intermediate",
+  "tags": ["t2i-compbench", "text-to-image", "generation-eval", "compositional", "neurips2023"],
+  "featured": false,
+  "paperReference": "Huang et al., NeurIPS 2023",
+  "paperUrl": "https://arxiv.org/abs/2307.06350",
+  "datasetUrl": "https://github.com/Karine-Huang/T2I-CompBench",
+  "citation": "@inproceedings{huang2023t2icompbench,\n    title = \"{T2I}-{C}omp{B}ench: A Comprehensive Benchmark for Open-world Compositional Text-to-Image Generation\",\n    author = \"Huang, Kaiyi and Sun, Kaiyue and Xie, Enze and Li, Zhenguo and Liu, Xihui\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2307.06350\"\n}"
+}

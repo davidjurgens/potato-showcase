@@ -1,0 +1,110 @@
+# UltraFeedback Multi-Aspect Rating
+# Based on Cui et al., ICML 2024
+# Paper: https://arxiv.org/abs/2310.01377
+# Dataset: https://huggingface.co/datasets/openbmb/UltraFeedback
+#
+# Multi-aspect quality rating of AI model responses. Annotators evaluate
+# each response on four key quality dimensions using a 5-point scale,
+# provide an agreement rating on overall quality, and write free-text
+# feedback. This data is used to train reward models for RLHF.
+#
+# Quality Dimensions (rated 1-5 each):
+# - Helpfulness: Does the response help the user accomplish their goal?
+# - Honesty: Is the response truthful and transparent about uncertainty?
+# - Instruction Following: Does the response follow the given instructions?
+# - Truthfulness: Is the factual content accurate and verifiable?
+#
+# Annotation Guidelines:
+# 1. Read the instruction carefully
+# 2. Read the response thoroughly
+# 3. Rate each quality dimension independently on the 5-point scale
+# 4. Indicate your overall agreement with response quality
+# 5. Provide any additional feedback
+
+annotation_task_name: "UltraFeedback Multi-Aspect Rating"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Multi-aspect quality rating
+  - annotation_type: multirate
+    name: quality_dimensions
+    description: "Rate the response on each quality dimension."
+    labels:
+      - "1 - Very Poor"
+      - "2 - Poor"
+      - "3 - Average"
+      - "4 - Good"
+      - "5 - Excellent"
+    options:
+      - "Helpfulness"
+      - "Honesty"
+      - "Instruction Following"
+      - "Truthfulness"
+
+  # Step 2: Overall agreement
+  - annotation_type: likert
+    name: overall_quality
+    description: "Overall, this response is of high quality."
+    min_label: "Strongly Disagree"
+    max_label: "Strongly Agree"
+    size: 5
+
+  # Step 3: Free-text feedback
+  - annotation_type: text
+    name: feedback
+    description: "Provide any additional feedback on the response quality."
+    textarea: true
+    required: false
+    placeholder: "What are the strengths and weaknesses of this response?"
+
+annotation_instructions: |
+  You will evaluate AI model responses to user instructions on multiple quality dimensions.
+
+  For each item:
+  1. Read the user instruction carefully.
+  2. Read the AI response thoroughly.
+  3. Rate the response on each of the four quality dimensions (1-5 scale):
+     - Helpfulness: Does it help the user accomplish their goal?
+     - Honesty: Is it truthful and transparent about limitations?
+     - Instruction Following: Does it follow the given instructions precisely?
+     - Truthfulness: Is the factual content accurate?
+  4. Indicate your overall agreement that the response is high quality.
+  5. Optionally provide free-text feedback.
+
+  Rating Scale:
+  - 1 (Very Poor): Fails completely on this dimension
+  - 2 (Poor): Significant deficiencies
+  - 3 (Average): Acceptable but with notable room for improvement
+  - 4 (Good): Strong performance with minor issues
+  - 5 (Excellent): Outstanding performance on this dimension
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Instruction:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Response:</strong>
+      <div style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-wrap;">{{response}}</div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

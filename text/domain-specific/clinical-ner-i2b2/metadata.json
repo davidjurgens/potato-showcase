@@ -1,0 +1,23 @@
+{
+  "title": "i2b2 Clinical Named Entity Recognition",
+  "description": "Named entity recognition and assertion classification for clinical notes, based on the i2b2/VA 2010 challenge (Stubbs et al., JAMIA 2015). Annotators identify clinical entities such as problems, treatments, tests, medications, and their assertion status in de-identified medical text.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Stubbs et al.",
+    "email": "jurgens@umich.edu",
+    "github": "dbmi-pitt",
+    "affiliation": "Harvard Medical School / i2b2"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Healthcare"],
+  "useCase": ["Clinical NER", "Medical NLP", "Assertion Detection"],
+  "complexity": "intermediate",
+  "tags": ["clinical", "ner", "medical", "i2b2", "healthcare", "assertion"],
+  "featured": false,
+  "paperReference": "Stubbs et al., JAMIA 2015",
+  "paperUrl": "https://academic.oup.com/jamia/article/22/6/1220/2357822",
+  "datasetUrl": "https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/",
+  "citation": "@article{stubbs2015annotating,\n    title = \"Annotating longitudinal clinical narratives for de-identification: The 2014 i2b2/UTHealth corpus\",\n    author = \"Stubbs, Amber and Kotfila, Christopher and Uzuner, Ozlem\",\n    journal = \"Journal of Biomedical Informatics\",\n    volume = \"58\",\n    pages = \"S20--S29\",\n    year = \"2015\",\n    publisher = \"Elsevier\",\n    url = \"https://academic.oup.com/jamia/article/22/6/1220/2357822\"\n}"
+}

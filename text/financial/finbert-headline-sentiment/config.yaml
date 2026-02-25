@@ -1,0 +1,94 @@
+# FinBERT - Financial Headline Sentiment Analysis
+# Based on Araci, arXiv 2019
+# Paper: https://arxiv.org/abs/1908.10063
+# Dataset: https://huggingface.co/datasets/financial_phrasebank
+#
+# Classify financial news headlines by sentiment and rate market outlook.
+# Headlines may discuss earnings, market movements, corporate actions,
+# economic indicators, or regulatory changes.
+#
+# Sentiment Categories:
+# - Positive: Good news for the company/market (growth, profits, expansion)
+# - Negative: Bad news (losses, layoffs, downgrades, regulatory issues)
+# - Neutral: Factual reporting without clear positive or negative signal
+#
+# Market Outlook Scale (1-5):
+# 1 = Very Bearish (strong negative market signal)
+# 2 = Bearish
+# 3 = Neutral
+# 4 = Bullish
+# 5 = Very Bullish (strong positive market signal)
+#
+# Guidelines:
+# - Focus on the financial implications, not general emotional tone
+# - Consider how the headline would affect investor decisions
+# - Provide brief reasoning for your sentiment classification
+
+annotation_task_name: "FinBERT: Financial Headline Sentiment Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the financial sentiment of this headline?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "Good news for the company or market (growth, profits, upgrades, expansion)"
+      "Negative": "Bad news (losses, layoffs, downgrades, regulatory problems, declining sales)"
+      "Neutral": "Factual reporting without clear positive or negative financial signal"
+
+  - annotation_type: text
+    name: reasoning
+    description: "Briefly explain your reasoning for the sentiment classification."
+
+  - annotation_type: likert
+    name: market_outlook
+    description: "Rate the market outlook implied by this headline (1 = Very Bearish, 5 = Very Bullish)"
+    size: 5
+    min_label: "Very Bearish"
+    max_label: "Very Bullish"
+
+annotation_instructions: |
+  You will classify the sentiment of financial news headlines.
+
+  For each headline:
+  1. Read the headline carefully, considering its financial implications.
+  2. Classify the sentiment as Positive, Negative, or Neutral.
+  3. Write a brief explanation of your reasoning.
+  4. Rate the implied market outlook from Very Bearish (1) to Very Bullish (5).
+
+  Focus on the financial signal, not general emotional tone.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 20px;">
+      <strong style="color: #0369a1;">Financial Headline:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 10px 0 0 0; font-weight: 500;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

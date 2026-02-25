@@ -1,0 +1,23 @@
+{
+  "title": "VQA v2.0 - Visual Question Answering",
+  "description": "Visual question answering requiring annotators to answer natural language questions about images, based on the VQA v2.0 dataset (Goyal et al., CVPR 2017). Supports both open-ended and yes/no question types.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Goyal et al.",
+    "email": "jurgens@umich.edu",
+    "github": "GT-Vision-Lab",
+    "affiliation": "Georgia Institute of Technology"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "radio"],
+  "domain": ["Computer Vision", "Visual Question Answering"],
+  "useCase": ["Visual QA", "Image Understanding", "Multimodal Reasoning"],
+  "complexity": "intermediate",
+  "tags": ["vqa", "visual-qa", "image-understanding", "multimodal", "cvpr2017"],
+  "featured": false,
+  "paperReference": "Goyal et al., CVPR 2017",
+  "paperUrl": "https://arxiv.org/abs/1612.00837",
+  "datasetUrl": "https://visualqa.org/",
+  "citation": "@inproceedings{goyal2017making,\n    title = \"Making the {V} in {VQA} Matter: Elevating the Role of Image Understanding in Visual Question Answering\",\n    author = \"Goyal, Yash  and Khot, Tejas  and Summers-Stay, Douglas  and Batra, Dhruv  and Parikh, Devi\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    year = \"2017\",\n    pages = \"6904--6913\"\n}"
+}

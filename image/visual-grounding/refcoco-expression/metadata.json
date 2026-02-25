@@ -1,0 +1,23 @@
+{
+  "title": "RefCOCO - Referring Expression Grounding",
+  "description": "Visual grounding task where annotators draw bounding boxes around objects referred to by natural language expressions. Based on the RefCOCO dataset (Yu et al., ECCV 2016), this task links referring expressions to spatial regions in images.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "lichengunc",
+    "affiliation": "UNC Chapel Hill"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["image_annotation", "text"],
+  "domain": ["Computer Vision", "NLP"],
+  "useCase": ["Visual Grounding", "Referring Expression Comprehension", "Object Localization"],
+  "complexity": "intermediate",
+  "tags": ["refcoco", "visual-grounding", "referring-expression", "bounding-box", "eccv2016", "multimodal"],
+  "featured": false,
+  "paperReference": "Yu et al., ECCV 2016",
+  "paperUrl": "https://arxiv.org/abs/1608.00272",
+  "datasetUrl": "https://github.com/lichengunc/refer",
+  "citation": "@inproceedings{yu2016refcoco,\n    title = \"Modeling Context in Referring Expressions\",\n    author = \"Yu, Licheng and Poirson, Patrick and Yang, Shan and Berg, Alexander C. and Berg, Tamara L.\",\n    booktitle = \"European Conference on Computer Vision (ECCV)\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1608.00272\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "RewardBench - Reward Model Evaluation",
+  "description": "Evaluation of reward model preferences via pairwise comparison of chosen and rejected responses. Annotators judge which response is better across chat, safety, reasoning, and coding categories, and rate response quality on multiple dimensions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lambert et al.",
+    "email": "jurgens@umich.edu",
+    "github": "allenai",
+    "affiliation": "Allen Institute for AI"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["pairwise", "radio", "multirate"],
+  "domain": ["NLP", "LLM Evaluation"],
+  "useCase": ["Reward Model Evaluation", "RLHF", "Model Alignment"],
+  "complexity": "intermediate",
+  "tags": ["reward-model", "rewardbench", "pairwise", "rlhf", "alignment", "icml2024"],
+  "featured": false,
+  "paperReference": "Lambert et al., ICML 2024",
+  "paperUrl": "https://arxiv.org/abs/2403.13787",
+  "datasetUrl": "https://huggingface.co/datasets/allenai/reward-bench",
+  "citation": "@inproceedings{lambert2024rewardbench,\n    title = \"{R}eward{B}ench: Evaluating Reward Models for Language Modeling\",\n    author = \"Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and Lin, Bill Yuchen and Chandu, Khyathi and Dziri, Nouha and Kumar, Sachin and Zick, Tom and Choi, Yejin and Smith, Noah A. and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning (ICML)\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2403.13787\"\n}"
+}

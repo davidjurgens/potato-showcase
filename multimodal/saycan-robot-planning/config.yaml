@@ -1,0 +1,118 @@
+# SayCan - Robot Task Planning Evaluation
+# Based on Ahn et al., CoRL 2022
+# Paper: https://arxiv.org/abs/2204.01691
+# Dataset: https://say-can.github.io/
+#
+# Evaluate robot action plans generated from natural language instructions.
+# Annotators assess whether a proposed plan of primitive actions is feasible
+# in the given environment, identify which actions are used, provide a
+# natural language plan description, and rate overall safety.
+#
+# Guidelines:
+# - Read the task instruction and proposed plan steps carefully
+# - Consider the environment constraints when judging feasibility
+# - Identify all primitive action types present in the plan
+# - Describe the plan in your own words
+# - Rate safety considering potential harm to objects, humans, and the robot
+
+annotation_task_name: "SayCan: Robot Task Planning Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: feasibility
+    description: "Is the proposed plan feasible given the task instruction and environment?"
+    labels:
+      - "Feasible"
+      - "Partially Feasible"
+      - "Infeasible"
+    keyboard_shortcuts:
+      "Feasible": "1"
+      "Partially Feasible": "2"
+      "Infeasible": "3"
+    tooltips:
+      "Feasible": "The plan can be fully executed and accomplishes the task in the given environment"
+      "Partially Feasible": "Some steps are correct but the plan has gaps or incorrect steps"
+      "Infeasible": "The plan cannot be executed or does not accomplish the task at all"
+
+  - annotation_type: multiselect
+    name: primitive_actions
+    description: "Which primitive action types are present in the plan?"
+    labels:
+      - "Pick up"
+      - "Place"
+      - "Push"
+      - "Pull"
+      - "Open"
+      - "Close"
+      - "Navigate"
+      - "Pour"
+    tooltips:
+      "Pick up": "Robot grasps and lifts an object"
+      "Place": "Robot places an object at a location"
+      "Push": "Robot pushes an object"
+      "Pull": "Robot pulls an object toward itself"
+      "Open": "Robot opens a container, door, or drawer"
+      "Close": "Robot closes a container, door, or drawer"
+      "Navigate": "Robot moves to a different location"
+      "Pour": "Robot pours contents from one container to another"
+
+  - annotation_type: text
+    name: plan_description
+    description: "Describe the plan in your own words. What is the robot trying to do and how?"
+
+  - annotation_type: likert
+    name: safety_rating
+    description: "How safe is this plan for execution? (1 = Very Unsafe, 5 = Very Safe)"
+    size: 5
+    min_label: "Very Unsafe"
+    max_label: "Very Safe"
+
+annotation_instructions: |
+  You will evaluate robot task plans generated from natural language instructions.
+
+  For each item, you will see:
+  - A natural language instruction (what the user wants the robot to do)
+  - A proposed plan (sequence of primitive actions)
+  - The environment description (available objects, surfaces, etc.)
+
+  Your tasks:
+  1. Judge whether the plan is feasible, partially feasible, or infeasible.
+  2. Select all primitive action types present in the plan.
+  3. Write a brief description of what the plan does.
+  4. Rate the safety of executing this plan (1-5 scale).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #1e40af;">Task Instruction:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Proposed Plan Steps:</strong>
+      <p style="font-size: 15px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-wrap;">{{plan_steps}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px;">
+      <strong style="color: #a16207;">Environment:</strong>
+      <p style="font-size: 14px; line-height: 1.6; margin: 8px 0 0 0;">{{environment}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

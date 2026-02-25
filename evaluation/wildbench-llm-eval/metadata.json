@@ -1,0 +1,23 @@
+{
+  "title": "WildBench - LLM Evaluation on Real-World Tasks",
+  "description": "Evaluation of LLM outputs on challenging real-world user queries from WildBench. Annotators compare two model responses via pairwise preference, rate overall quality on a Likert scale, and provide reasoning for their judgments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lin et al.",
+    "email": "jurgens@umich.edu",
+    "github": "allenai",
+    "affiliation": "Allen Institute for AI"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["pairwise", "likert", "text"],
+  "domain": ["NLP", "LLM Evaluation"],
+  "useCase": ["LLM Benchmarking", "Model Comparison", "Quality Assessment"],
+  "complexity": "intermediate",
+  "tags": ["llm-evaluation", "wildbench", "pairwise", "real-world", "model-comparison", "colm2024"],
+  "featured": false,
+  "paperReference": "Lin et al., COLM 2024",
+  "paperUrl": "https://arxiv.org/abs/2406.04770",
+  "datasetUrl": "https://huggingface.co/datasets/allenai/WildBench",
+  "citation": "@inproceedings{lin2024wildbench,\n    title = \"{W}ild{B}ench: Benchmarking {LLM}s with Challenging Tasks from Real Users in the Wild\",\n    author = \"Lin, Bill Yuchen and Deng, Yuntian and Chandu, Khyathi and Brahman, Faeze and Ravichander, Abhilasha and Pyatkin, Valentina and Dziri, Nouha and Le Bras, Ronan and Choi, Yejin\",\n    booktitle = \"Conference on Language Modeling (COLM)\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.04770\"\n}"
+}

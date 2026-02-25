@@ -1,0 +1,83 @@
+# Chatbot Arena - Pairwise Comparison with Best-Worst Scaling
+# Based on Zheng et al., ICML 2024
+# Paper: https://arxiv.org/abs/2403.04132
+# Dataset: https://huggingface.co/datasets/lmsys/chatbot_arena_conversations
+#
+# This task combines two complementary evaluation approaches:
+# 1. Pairwise comparison: Directly compare two chatbot responses
+# 2. Best-Worst Scaling: Rank responses from a tuple of 4 items
+#
+# Evaluation criteria:
+# - Helpfulness: Does the response address the user's request?
+# - Accuracy: Is the information factually correct?
+# - Coherence: Is the response well-organized and fluent?
+# - Safety: Does the response avoid harmful content?
+
+annotation_task_name: "Chatbot Arena: Pairwise Comparison with BWS"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: pairwise
+    name: response_preference
+    description: "Which response better addresses the user prompt?"
+    mode: "binary"
+    labels:
+      - "Response A"
+      - "Response B"
+      - "Tie"
+
+  - annotation_type: bws
+    name: response_quality_ranking
+    description: "Best-worst scaling: From a set of responses, select the best and worst. This enables efficient ranking of multiple LLM outputs."
+    tuple_size: 4
+
+annotation_instructions: |
+  You will evaluate chatbot responses to user prompts.
+
+  For pairwise comparison:
+  1. Read the user prompt carefully.
+  2. Read both Response A and Response B.
+  3. Select which response is better, or "Tie" if they are equally good.
+  4. Consider helpfulness, accuracy, coherence, and safety.
+
+  For best-worst scaling:
+  1. You will see a set of 4 responses.
+  2. Select the BEST and WORST response from the set.
+  3. Focus on overall quality and helpfulness.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">User Prompt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px;">
+        <strong style="color: #a16207;">Response A:</strong>
+        <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{response_a}}</p>
+      </div>
+      <div style="background: #e0f2fe; border: 1px solid #7dd3fc; border-radius: 8px; padding: 16px;">
+        <strong style="color: #0369a1;">Response B:</strong>
+        <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{response_b}}</p>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

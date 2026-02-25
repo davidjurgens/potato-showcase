@@ -1,0 +1,135 @@
+# T2I-CompBench Text-to-Image Evaluation
+# Based on Huang et al., NeurIPS 2023
+# Paper: https://arxiv.org/abs/2307.06350
+# Dataset: https://github.com/Karine-Huang/T2I-CompBench
+#
+# Evaluation of compositional text-to-image generation. Annotators assess
+# how well generated images match text prompts across compositional
+# dimensions: attribute binding, spatial relationships, action depiction,
+# counting accuracy, and complex compositions.
+#
+# Quality Rating (Likert 1-5):
+# - 1 (Very Poor): Image does not match the prompt at all
+# - 3 (Average): Some elements match but with notable errors
+# - 5 (Perfect): Image perfectly matches all aspects of the prompt
+#
+# Compositional Challenge Types:
+# - Attribute: Correct binding of attributes (color, shape, texture) to objects
+# - Spatial: Correct spatial relationships between objects
+# - Action: Correct depiction of actions or activities
+# - Counting: Correct number of objects
+# - Complex: Multiple compositional challenges combined
+#
+# Annotation Guidelines:
+# 1. Read the text prompt carefully
+# 2. Examine both generated images
+# 3. Rate the overall quality of prompt-image alignment
+# 4. Classify the type of compositional challenge
+# 5. Compare the two images in a pairwise preference judgment
+
+annotation_task_name: "T2I-CompBench Text-to-Image Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Quality rating
+  - annotation_type: likert
+    name: quality_rating
+    description: "How well do the generated images match the text prompt?"
+    min_label: "Very Poor"
+    max_label: "Perfect"
+    size: 5
+
+  # Step 2: Challenge type classification
+  - annotation_type: radio
+    name: challenge_type
+    description: "What type of compositional challenge does this prompt test?"
+    labels:
+      - "Attribute"
+      - "Spatial"
+      - "Action"
+      - "Counting"
+      - "Complex"
+    keyboard_shortcuts:
+      "Attribute": "1"
+      "Spatial": "2"
+      "Action": "3"
+      "Counting": "4"
+      "Complex": "5"
+    tooltips:
+      "Attribute": "Tests correct binding of attributes (color, shape, texture) to objects"
+      "Spatial": "Tests correct spatial relationships (above, below, next to, etc.)"
+      "Action": "Tests correct depiction of actions or activities"
+      "Counting": "Tests correct number of objects"
+      "Complex": "Tests multiple compositional challenges combined"
+
+  # Step 3: Pairwise image comparison
+  - annotation_type: pairwise
+    name: image_preference
+    description: "Which image better matches the text prompt?"
+    mode: "binary"
+    labels:
+      - "Image A Better"
+      - "Image B Better"
+      - "Equal"
+    keyboard_shortcuts:
+      "Image A Better": "a"
+      "Image B Better": "b"
+      "Equal": "e"
+    tooltips:
+      "Image A Better": "Image A more accurately represents the text prompt"
+      "Image B Better": "Image B more accurately represents the text prompt"
+      "Equal": "Both images are equally accurate (or equally inaccurate)"
+
+annotation_instructions: |
+  You will evaluate text-to-image generation quality from the T2I-CompBench benchmark.
+
+  For each item:
+  1. Read the text prompt carefully - note all objects, attributes, relationships, and actions described.
+  2. Examine both Image A and Image B.
+  3. Rate the overall quality of prompt-image alignment on a 1-5 scale.
+  4. Classify what type of compositional challenge the prompt tests.
+  5. Compare the two images and select which better matches the prompt.
+
+  Key Evaluation Criteria:
+  - Are all mentioned objects present?
+  - Are attributes (colors, shapes) correctly assigned to the right objects?
+  - Are spatial relationships correct?
+  - Are the correct number of objects shown?
+  - Are actions depicted accurately?
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text Prompt:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; text-align: center;">
+        <h4 style="color: #1976d2;">Image A</h4>
+        <img src="{{image_a_url}}" style="max-width: 100%; max-height: 400px; border: 2px solid #1976d2; border-radius: 8px;" />
+      </div>
+      <div style="flex: 1; text-align: center;">
+        <h4 style="color: #c62828;">Image B</h4>
+        <img src="{{image_b_url}}" style="max-width: 100%; max-height: 400px; border: 2px solid #c62828; border-radius: 8px;" />
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

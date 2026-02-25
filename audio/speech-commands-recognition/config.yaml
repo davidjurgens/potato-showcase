@@ -1,0 +1,106 @@
+# Speech Commands - Keyword Recognition
+# Based on Warden, arXiv 2018
+# Paper: https://arxiv.org/abs/1804.03209
+# Dataset: https://www.tensorflow.org/datasets/catalog/speech_commands
+#
+# This task asks annotators to listen to short audio clips of spoken commands
+# and identify the keyword being spoken. They also assess the audio quality
+# to help filter training data.
+#
+# Command Keywords:
+# - Yes, No, Up, Down, Left, Right, On, Off, Stop, Go
+# - Unknown: Not one of the target keywords
+# - Silence: No speech detected
+#
+# Audio Quality:
+# - Clear: Audio is clean with clearly audible speech
+# - Noisy: Background noise present but speech is still identifiable
+# - Ambiguous: Speech is unclear or could be multiple words
+#
+# Annotation Guidelines:
+# 1. Listen to the audio clip (replay as needed)
+# 2. Label the audio with the spoken command keyword
+# 3. Assess the audio quality (Clear, Noisy, or Ambiguous)
+# 4. Compare with the expected command shown for reference
+
+annotation_task_name: "Speech Commands - Keyword Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: audio_quality
+    description: "Assess the quality of the audio clip"
+    labels:
+      - "Clear"
+      - "Noisy"
+      - "Ambiguous"
+    keyboard_shortcuts:
+      "Clear": "1"
+      "Noisy": "2"
+      "Ambiguous": "3"
+    tooltips:
+      "Clear": "Audio is clean with clearly audible speech"
+      "Noisy": "Background noise is present but speech is still identifiable"
+      "Ambiguous": "Speech is unclear or could be interpreted as multiple different words"
+
+  - annotation_type: audio_annotation
+    name: command_label
+    description: "Label the spoken command in the audio clip"
+    mode: "label"
+    labels:
+      - "Yes"
+      - "No"
+      - "Up"
+      - "Down"
+      - "Left"
+      - "Right"
+      - "On"
+      - "Off"
+      - "Stop"
+      - "Go"
+      - "Unknown"
+      - "Silence"
+
+annotation_instructions: |
+  You will be shown an audio clip containing a short spoken command.
+  1. Listen to the audio clip (you may replay it as needed).
+  2. Label the audio with the command keyword you hear.
+     Use "Unknown" if the word is not one of the target keywords.
+     Use "Silence" if no speech is detected.
+  3. Assess the audio quality: Clear, Noisy, or Ambiguous.
+
+  The expected command is shown for reference, but your label should
+  reflect what you actually hear in the audio.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <audio controls style="width: 100%;">
+        <source src="{{audio_url}}" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
+      <strong style="color: #92400e;">Expected Command:</strong>
+      <span style="font-size: 16px; color: #78350f;">{{text}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "MMLU Knowledge Evaluation",
+  "description": "Multiple-choice knowledge evaluation across diverse academic subjects, based on the Massive Multitask Language Understanding benchmark (Hendrycks et al., ICLR 2021). Annotators select the correct answer from four options and provide an explanation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hendrycks et al.",
+    "email": "jurgens@umich.edu",
+    "github": "hendrycks",
+    "affiliation": "UC Berkeley"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["NLP", "AI Evaluation"],
+  "useCase": ["Knowledge Evaluation", "LLM Benchmarking", "Question Answering"],
+  "complexity": "beginner",
+  "tags": ["mmlu", "multiple-choice", "knowledge", "benchmark", "iclr2021"],
+  "featured": false,
+  "paperReference": "Hendrycks et al., ICLR 2021",
+  "paperUrl": "https://arxiv.org/abs/2009.03300",
+  "datasetUrl": "https://huggingface.co/datasets/cais/mmlu",
+  "citation": "@inproceedings{hendrycks2021measuring,\n    title = \"Measuring Massive Multitask Language Understanding\",\n    author = \"Hendrycks, Dan and Burns, Collin and Basart, Steven and Zou, Andy and Mazeika, Mantas and Song, Dawn and Steinhardt, Jacob\",\n    booktitle = \"International Conference on Learning Representations\",\n    year = \"2021\",\n    url = \"https://arxiv.org/abs/2009.03300\"\n}"
+}

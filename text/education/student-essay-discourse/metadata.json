@@ -1,0 +1,23 @@
+{
+  "title": "Student Essay Discourse Element Classification",
+  "description": "Discourse element annotation of student essays based on Song et al. (COLING 2020). Annotators identify argumentative discourse units, classify essay types, and tag rhetorical strategies used in student writing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Song et al.",
+    "email": "jurgens@umich.edu",
+    "github": "nlpdata",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio", "multiselect"],
+  "domain": ["NLP", "Education"],
+  "useCase": ["Discourse Analysis", "Argumentation Mining", "Essay Scoring"],
+  "complexity": "intermediate",
+  "tags": ["education", "essay", "discourse", "argumentation", "rhetoric", "coling2020"],
+  "featured": false,
+  "paperReference": "Song et al., COLING 2020",
+  "paperUrl": "https://aclanthology.org/2020.coling-main.240/",
+  "datasetUrl": "https://github.com/wietsedv/ASAP-AES",
+  "citation": "@inproceedings{song-etal-2020-discourse,\n    title = \"Is this the Era of Persuasion? Identifying Persuasive Techniques in Student Essays\",\n    author = \"Song, Wei and Fu, Ruiji and Liu, Lizhen and Liu, Ting\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    year = \"2020\",\n    url = \"https://aclanthology.org/2020.coling-main.240\",\n    pages = \"2721--2731\"\n}"
+}

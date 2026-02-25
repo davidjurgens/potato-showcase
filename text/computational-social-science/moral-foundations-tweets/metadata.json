@@ -1,0 +1,23 @@
+{
+  "title": "Moral Foundations in Tweets",
+  "description": "Classification of moral foundations in social media discourse, based on Moral Foundations Theory (Johnson & Goldwasser, ACL 2018). Annotators identify which moral dimensions are expressed and whether the tweet conveys moral sentiment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Johnson & Goldwasser",
+    "email": "jurgens@umich.edu",
+    "github": "GT-SALT",
+    "affiliation": "Purdue University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "radio"],
+  "domain": ["NLP", "Social Media", "Computational Social Science"],
+  "useCase": ["Moral Foundations", "Political Discourse", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["moral-foundations", "political-discourse", "tweets", "social-media", "acl2018"],
+  "featured": false,
+  "paperReference": "Johnson & Goldwasser, ACL 2018",
+  "paperUrl": "https://aclanthology.org/P18-1067/",
+  "datasetUrl": "https://aclanthology.org/P18-1067/",
+  "citation": "@inproceedings{johnson-goldwasser-2018-classification,\n    title = \"Classification of Moral Foundations in Microblog Political Discourse\",\n    author = \"Johnson, Kristen  and Goldwasser, Dan\",\n    booktitle = \"Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2018\",\n    address = \"Melbourne, Australia\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P18-1067\",\n    pages = \"720--730\"\n}"
+}

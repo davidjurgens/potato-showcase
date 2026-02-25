@@ -1,0 +1,23 @@
+{
+  "title": "MMLU-Pro - Tiered Multi-Subject Evaluation",
+  "description": "Tiered evaluation for multi-subject question answering, based on MMLU-Pro (Wang et al., NeurIPS 2024). Annotators verify answers to challenging 10-option multiple choice questions across STEM and humanities subjects, using a tiered annotation scheme for topic and subtopic categorization.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "tiger-ai-lab",
+    "affiliation": "University of Waterloo"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["tiered_annotation", "radio"],
+  "domain": ["NLP", "Education"],
+  "useCase": ["Question Answering", "Benchmark Evaluation", "Multi-Subject Assessment"],
+  "complexity": "intermediate",
+  "tags": ["mmlu-pro", "multiple-choice", "tiered", "evaluation", "stem", "humanities", "neurips2024"],
+  "featured": false,
+  "paperReference": "Wang et al., NeurIPS 2024",
+  "paperUrl": "https://arxiv.org/abs/2406.01574",
+  "datasetUrl": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+  "citation": "@inproceedings{wang2024mmlu,\n    title = \"{MMLU}-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark\",\n    author = \"Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yunze and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Huang, Xiang and Chen, Wenhu\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.01574\"\n}"
+}

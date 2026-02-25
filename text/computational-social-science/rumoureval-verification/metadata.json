@@ -1,0 +1,23 @@
+{
+  "title": "RumourEval Stance and Verification",
+  "description": "Annotate social media posts for rumour stance classification and thread structure analysis based on the RumourEval 2019 shared task. Annotators classify responses as supporting, denying, querying, or commenting on rumour claims.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gorrell et al.",
+    "email": "jurgens@umich.edu",
+    "github": "rumoureval",
+    "affiliation": "University of Sheffield"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "tree_annotation"],
+  "domain": ["NLP", "Computational Social Science", "Misinformation"],
+  "useCase": ["Rumour Detection", "Stance Classification", "Fact Checking"],
+  "complexity": "intermediate",
+  "tags": ["rumour", "stance", "verification", "social-media", "misinformation", "semeval2019"],
+  "featured": false,
+  "paperReference": "Gorrell et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2147/",
+  "datasetUrl": "https://figshare.com/articles/dataset/RumourEval_2019_data/8845580",
+  "citation": "@inproceedings{gorrell-etal-2019-semeval,\n  title = \"{S}em{E}val-2019 Task 7: {R}umour{E}val, Determining Rumour Veracity and Support for Rumours\",\n  author = \"Gorrell, Genevieve and Kochkina, Elena and Liakata, Maria and Aker, Ahmet and Zubiaga, Arkaitz and Bontcheva, Kalina and Derczynski, Leon\",\n  booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n  month = jun,\n  year = \"2019\",\n  address = \"Minneapolis, Minnesota, USA\",\n  publisher = \"Association for Computational Linguistics\",\n  url = \"https://aclanthology.org/S19-2147\",\n  pages = \"845--854\"\n}"
+}

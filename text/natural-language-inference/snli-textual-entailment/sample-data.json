@@ -1,0 +1,52 @@
+[
+  {
+    "id": "snli_001",
+    "text": "A man wearing a hard hat is dancing on a street corner.",
+    "hypothesis": "A man is outdoors."
+  },
+  {
+    "id": "snli_002",
+    "text": "Two women are embracing while holding to-go packages.",
+    "hypothesis": "The women are fighting each other."
+  },
+  {
+    "id": "snli_003",
+    "text": "A boy is jumping on a skateboard in the middle of a red bridge.",
+    "hypothesis": "The boy does a skateboarding trick."
+  },
+  {
+    "id": "snli_004",
+    "text": "A group of children are playing soccer in a grassy field.",
+    "hypothesis": "The children are sleeping in their beds."
+  },
+  {
+    "id": "snli_005",
+    "text": "A woman in a green jacket is reading a book at a coffee shop.",
+    "hypothesis": "A woman is at a restaurant."
+  },
+  {
+    "id": "snli_006",
+    "text": "Two dogs are running through a snowy forest.",
+    "hypothesis": "Animals are moving through a winter landscape."
+  },
+  {
+    "id": "snli_007",
+    "text": "An elderly man is sitting alone on a park bench feeding pigeons.",
+    "hypothesis": "A young couple is walking in the park."
+  },
+  {
+    "id": "snli_008",
+    "text": "A chef in a white uniform is preparing food in a commercial kitchen.",
+    "hypothesis": "Someone is cooking."
+  },
+  {
+    "id": "snli_009",
+    "text": "Three musicians are performing on a stage in front of a large audience.",
+    "hypothesis": "The musicians are practicing alone in a studio."
+  },
+  {
+    "id": "snli_010",
+    "text": "A girl is riding a horse through a shallow stream in a meadow.",
+    "hypothesis": "A person is near water."
+  }
+]

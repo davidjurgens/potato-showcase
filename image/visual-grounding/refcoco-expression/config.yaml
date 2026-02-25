@@ -1,0 +1,82 @@
+# RefCOCO - Referring Expression Grounding
+# Based on Yu et al., ECCV 2016
+# Paper: https://arxiv.org/abs/1608.00272
+# Dataset: https://github.com/lichengunc/refer
+#
+# Visual grounding task: given an image and a referring expression, annotators
+# draw a bounding box around the object described by the expression. This tests
+# the ability to link natural language to spatial image regions.
+#
+# Annotation Guidelines:
+# 1. Read the referring expression carefully
+# 2. Examine the image and identify the object being described
+# 3. Draw a tight bounding box around the referred object
+# 4. If the expression is ambiguous, optionally write a clarification
+# 5. The bounding box should be as tight as possible around the object
+
+annotation_task_name: "RefCOCO - Referring Expression Grounding"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Draw bounding box around the referred object
+  - annotation_type: image_annotation
+    name: referred_object
+    description: "Draw a bounding box around the object described by the referring expression."
+    tools:
+      - bbox
+    labels:
+      - "Referred Object"
+
+  # Step 2: Optionally provide a clarifying expression
+  - annotation_type: text
+    name: clarification
+    description: "If the original expression is ambiguous, write a more precise referring expression."
+    textarea: false
+    required: false
+    placeholder: "Optional: write a clearer referring expression..."
+
+annotation_instructions: |
+  You will see an image and a referring expression that describes one specific object in the image.
+
+  For each item:
+  1. Read the referring expression below the image.
+  2. Identify which object in the image is being described.
+  3. Use the bounding box tool to draw a tight box around that object.
+  4. If the expression is ambiguous or could refer to multiple objects,
+     draw the box around the most likely referent and optionally write
+     a clearer expression in the text field.
+
+  Tips:
+  - Draw the box as tightly as possible around the entire object.
+  - Referring expressions often use spatial relationships (e.g., "the dog on the left").
+  - Consider attributes like color, size, and position to disambiguate.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="text-align: center; margin-bottom: 16px; background: #1a1a1a; padding: 12px; border-radius: 8px;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border-radius: 4px;" alt="Image for grounding" />
+    </div>
+    <div style="background: #fef3c7; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Referring Expression:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0; font-style: italic;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

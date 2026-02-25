@@ -1,0 +1,23 @@
+{
+  "title": "FinBERT - Financial Headline Sentiment Analysis",
+  "description": "Classify sentiment of financial news headlines as positive, negative, or neutral, based on the FinBERT model (Araci, arXiv 2019). Annotators also rate market outlook on a bearish-to-bullish scale and provide reasoning for their sentiment judgment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Araci",
+    "email": "jurgens@umich.edu",
+    "github": "ProsusAI",
+    "affiliation": "Prosus AI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "likert"],
+  "domain": ["NLP", "Finance"],
+  "useCase": ["Sentiment Analysis", "Financial NLP", "Market Analysis"],
+  "complexity": "beginner",
+  "tags": ["finance", "sentiment", "headlines", "finbert", "market", "news"],
+  "featured": false,
+  "paperReference": "Araci, arXiv 2019",
+  "paperUrl": "https://arxiv.org/abs/1908.10063",
+  "datasetUrl": "https://huggingface.co/datasets/financial_phrasebank",
+  "citation": "@article{araci2019finbert,\n    title = \"FinBERT: Financial Sentiment Analysis with Pre-Trained Language Models\",\n    author = \"Araci, Dogu\",\n    journal = \"arXiv preprint arXiv:1908.10063\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1908.10063\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "TriviaQA - Reading Comprehension",
+  "description": "Trivia question answering with evidence passages, based on the TriviaQA dataset (Joshi et al., ACL 2017). Annotators answer trivia questions using provided evidence documents and assess whether the context is sufficient.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joshi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "mandarjoshi90",
+    "affiliation": "University of Washington"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "radio"],
+  "domain": ["NLP", "Question Answering"],
+  "useCase": ["Reading Comprehension", "Trivia QA", "Evidence-Based QA"],
+  "complexity": "beginner",
+  "tags": ["triviaqa", "trivia", "reading-comprehension", "evidence-based", "acl2017"],
+  "featured": false,
+  "paperReference": "Joshi et al., ACL 2017",
+  "paperUrl": "https://aclanthology.org/P17-1147/",
+  "datasetUrl": "http://nlp.cs.washington.edu/triviaqa/",
+  "citation": "@inproceedings{joshi-etal-2017-triviaqa,\n    title = \"{T}rivia{QA}: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension\",\n    author = \"Joshi, Mandar  and Choi, Eunsol  and Weld, Daniel  and Zettlemoyer, Luke\",\n    booktitle = \"Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2017\",\n    address = \"Vancouver, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P17-1147\",\n    pages = \"1601--1611\"\n}"
+}

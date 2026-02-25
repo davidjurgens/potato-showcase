@@ -1,0 +1,23 @@
+{
+  "title": "HELM - Model Card Display and Evaluation",
+  "description": "Model performance summary display and evaluation based on the HELM benchmark (Liang et al., TMLR 2023). Annotators review model cards summarizing performance across multiple metrics and rate overall model quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Liang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "stanford-crfm",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["pure_display", "likert"],
+  "domain": ["NLP", "Evaluation", "Benchmarking"],
+  "useCase": ["Model Evaluation", "Benchmark Analysis", "Model Comparison"],
+  "complexity": "beginner",
+  "tags": ["helm", "model-evaluation", "benchmarking", "language-models", "tmlr2023"],
+  "featured": false,
+  "paperReference": "Liang et al., TMLR 2023",
+  "paperUrl": "https://arxiv.org/abs/2211.09110",
+  "datasetUrl": "https://crfm.stanford.edu/helm/",
+  "citation": "@article{liang2023holistic,\n    title = \"Holistic Evaluation of Language Models\",\n    author = \"Liang, Percy and Bommasani, Rishi and Lee, Tony and Tsipras, Dimitris and Soylu, Dilara and Yasunaga, Michihiro and Zhang, Yian and Narayanan, Deepak and Wu, Yuhuai and Kumar, Ananya and others\",\n    journal = \"Transactions on Machine Learning Research\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2211.09110\"\n}"
+}

@@ -1,0 +1,96 @@
+# MMLU-Pro - Tiered Multi-Subject Evaluation
+# Based on Wang et al., NeurIPS 2024
+# Paper: https://arxiv.org/abs/2406.01574
+# Dataset: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
+#
+# MMLU-Pro extends MMLU with 10 answer options (A-J) instead of 4,
+# making it significantly more challenging. This task uses a tiered
+# annotation scheme to categorize questions by topic and subtopic,
+# alongside answer selection.
+#
+# The tiered annotation allows organizing questions hierarchically:
+# - Topic: The broad subject area (e.g., Biology, Physics, History)
+# - Subtopic: A more specific area within the topic
+#
+# Answer options: A through J (10 choices per question)
+
+annotation_task_name: "MMLU-Pro: Tiered Multi-Subject Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: tiered_annotation
+    name: subject_classification
+    description: "Classify the question by topic and subtopic using the tiered hierarchy"
+    source_field: "audio_url"
+    media_type: "audio"
+    tiers:
+      - name: "topic"
+        tier_type: "independent"
+      - name: "subtopic"
+        tier_type: "dependent"
+        parent_tier: "topic"
+        constraint_type: "symbolic_association"
+
+  - annotation_type: radio
+    name: correct_answer
+    description: "Select the correct answer from the 10 options (A-J)"
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+      - "E"
+      - "F"
+      - "G"
+      - "H"
+      - "I"
+      - "J"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+      "E": "5"
+      "F": "6"
+      "G": "7"
+      "H": "8"
+      "I": "9"
+      "J": "0"
+
+annotation_instructions: |
+  You will evaluate challenging multiple-choice questions from MMLU-Pro.
+  1. Read the question and all 10 answer options carefully.
+  2. Classify the question by topic and subtopic using the tiered scheme.
+  3. Select the single correct answer (A through J).
+  4. These questions are intentionally difficult and may require expert knowledge.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <span style="display: inline-block; background: #0369a1; color: white; padding: 2px 10px; border-radius: 12px; font-size: 13px; margin-bottom: 8px;">{{subject}}</span>
+      <p style="font-size: 16px; font-weight: 600; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #475569;">Answer Options:</strong>
+      <p style="font-size: 15px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-line;">{{options}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

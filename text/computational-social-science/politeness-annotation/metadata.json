@@ -1,0 +1,23 @@
+{
+  "title": "Politeness Transfer Annotation",
+  "description": "Annotate text for politeness level, speech act type, and optional rewrite suggestions based on the Politeness Transfer framework. Annotators rate the politeness of workplace and email text on a 5-point scale and classify the communicative intent.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Madaan et al.",
+    "email": "jurgens@umich.edu",
+    "github": "tag-and-generate",
+    "affiliation": "Carnegie Mellon University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "radio", "text"],
+  "domain": ["NLP", "Computational Social Science", "Pragmatics"],
+  "useCase": ["Politeness Detection", "Style Transfer", "Workplace Communication"],
+  "complexity": "beginner",
+  "tags": ["politeness", "style-transfer", "pragmatics", "workplace", "email", "acl2020"],
+  "featured": false,
+  "paperReference": "Madaan et al., ACL 2020",
+  "paperUrl": "https://aclanthology.org/2020.acl-main.169/",
+  "datasetUrl": "https://github.com/tag-and-generate/politeness-dataset",
+  "citation": "@inproceedings{madaan-etal-2020-politeness,\n  title = \"Politeness Transfer: A Tag and Generate Approach\",\n  author = \"Madaan, Aman and Setlur, Amrith and Paez, Tanmay and Goldblum, Barnabas and Prabhumoye, Shrimai and Langford, Jordan and Ritter, Alan and Daume III, Hal\",\n  booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n  month = jul,\n  year = \"2020\",\n  address = \"Online\",\n  publisher = \"Association for Computational Linguistics\",\n  url = \"https://aclanthology.org/2020.acl-main.169\",\n  pages = \"1869--1881\"\n}"
+}

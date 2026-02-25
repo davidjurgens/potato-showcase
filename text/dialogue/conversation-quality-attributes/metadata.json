@@ -1,0 +1,23 @@
+{
+  "title": "Conversation Quality Attributes",
+  "description": "Dialogue quality assessment based on controllable dialogue generation research (See et al., NAACL 2019). Annotators evaluate conversation turns for engagement quality, rate overall conversation quality, and identify specific dialogue attributes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "See et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Stanford University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "likert", "multiselect"],
+  "domain": ["NLP", "Dialogue"],
+  "useCase": ["Dialogue Evaluation", "Chatbot Assessment", "Conversational AI"],
+  "complexity": "intermediate",
+  "tags": ["dialogue", "conversation", "quality", "engagement", "controllable", "naacl2019"],
+  "featured": false,
+  "paperReference": "See et al., NAACL 2019",
+  "paperUrl": "https://aclanthology.org/N19-1170/",
+  "datasetUrl": "https://parl.ai/projects/controllable_dialogue/",
+  "citation": "@inproceedings{see-etal-2019-makes,\n    title = \"What makes a good conversation? How controllable attributes affect human judgments\",\n    author = \"See, Abigail and Roller, Stephen and Kiela, Douwe and Weston, Jason\",\n    booktitle = \"Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies\",\n    year = \"2019\",\n    url = \"https://aclanthology.org/N19-1170\",\n    pages = \"1702--1723\"\n}"
+}

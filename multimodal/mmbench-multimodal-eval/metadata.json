@@ -1,0 +1,23 @@
+{
+  "title": "MMBench Multimodal Evaluation",
+  "description": "Multimodal evaluation benchmark combining image understanding with multiple-choice questions, based on MMBench (Liu et al., ECCV 2024). Annotators answer image-based questions, provide explanations, and tag the required perception or reasoning skills.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Liu et al.",
+    "email": "jurgens@umich.edu",
+    "github": "open-compass",
+    "affiliation": "Shanghai AI Laboratory"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "multiselect"],
+  "domain": ["Multimodal", "Computer Vision"],
+  "useCase": ["Multimodal Evaluation", "Visual Question Answering", "VLM Benchmarking"],
+  "complexity": "intermediate",
+  "tags": ["mmbench", "multimodal", "visual-qa", "multiple-choice", "eccv2024"],
+  "featured": false,
+  "paperReference": "Liu et al., ECCV 2024",
+  "paperUrl": "https://arxiv.org/abs/2307.06281",
+  "datasetUrl": "https://github.com/open-compass/MMBench",
+  "citation": "@inproceedings{liu2024mmbench,\n    title = \"{MMB}ench: Is Your Multi-modal Model an All-around Player?\",\n    author = \"Liu, Yuan and Duan, Haodong and Zhang, Yuanhan and Li, Bo and Zhang, Songyang and Zhao, Wangbo and Yuan, Yike and Wang, Jiaqi and He, Conghui and Liu, Ziwei and Chen, Kai and Lin, Dahua\",\n    booktitle = \"European Conference on Computer Vision\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2307.06281\"\n}"
+}

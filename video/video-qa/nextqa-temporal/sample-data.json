@@ -1,0 +1,102 @@
+[
+  {
+    "id": "nextqa_001",
+    "text": "Why did the woman pick up the toy from the floor?",
+    "video_url": "https://example.com/nextqa/video_001.mp4",
+    "option_a": "The baby threw it off the table",
+    "option_b": "She wanted to clean the room",
+    "option_c": "The dog brought it inside",
+    "option_d": "She was going to give it to the child",
+    "option_e": "It fell from the shelf by itself"
+  },
+  {
+    "id": "nextqa_002",
+    "text": "What happened right after the man finished stirring the pot?",
+    "video_url": "https://example.com/nextqa/video_002.mp4",
+    "option_a": "He turned off the stove",
+    "option_b": "He added more seasoning",
+    "option_c": "He tasted the food with a spoon",
+    "option_d": "He served the food onto plates",
+    "option_e": "He left the kitchen"
+  },
+  {
+    "id": "nextqa_003",
+    "text": "Why did the dog start barking at the door?",
+    "video_url": "https://example.com/nextqa/video_003.mp4",
+    "option_a": "Someone rang the doorbell",
+    "option_b": "It heard another dog outside",
+    "option_c": "The owner told it to guard the door",
+    "option_d": "It wanted to go outside for a walk",
+    "option_e": "A cat appeared on the porch"
+  },
+  {
+    "id": "nextqa_004",
+    "text": "What did the children do before they started playing in the pool?",
+    "video_url": "https://example.com/nextqa/video_004.mp4",
+    "option_a": "They put on sunscreen",
+    "option_b": "They changed into swimsuits",
+    "option_c": "They ate lunch at the picnic table",
+    "option_d": "They inflated pool floats",
+    "option_e": "They ran around the yard"
+  },
+  {
+    "id": "nextqa_005",
+    "text": "How many times did the skateboarder attempt the trick before landing it?",
+    "video_url": "https://example.com/nextqa/video_005.mp4",
+    "option_a": "One",
+    "option_b": "Two",
+    "option_c": "Three",
+    "option_d": "Four",
+    "option_e": "Five or more"
+  },
+  {
+    "id": "nextqa_006",
+    "text": "Why did the presenter pause in the middle of the speech?",
+    "video_url": "https://example.com/nextqa/video_006.mp4",
+    "option_a": "The microphone stopped working",
+    "option_b": "The audience started applauding",
+    "option_c": "Someone entered the room",
+    "option_d": "The slide projector malfunctioned",
+    "option_e": "The presenter lost their place in the notes"
+  },
+  {
+    "id": "nextqa_007",
+    "text": "What caused the glass to fall off the counter?",
+    "video_url": "https://example.com/nextqa/video_007.mp4",
+    "option_a": "The cat pushed it with its paw",
+    "option_b": "Someone bumped the counter while walking by",
+    "option_c": "It was placed too close to the edge",
+    "option_d": "A gust of wind from the open window",
+    "option_e": "The child reached for it and knocked it over"
+  },
+  {
+    "id": "nextqa_008",
+    "text": "What did the woman do immediately after she opened the gift box?",
+    "video_url": "https://example.com/nextqa/video_008.mp4",
+    "option_a": "She hugged the person who gave it to her",
+    "option_b": "She showed the gift to everyone in the room",
+    "option_c": "She covered her mouth in surprise",
+    "option_d": "She started reading the card inside",
+    "option_e": "She put the gift back in the box"
+  },
+  {
+    "id": "nextqa_009",
+    "text": "How did the bird escape from the cage?",
+    "video_url": "https://example.com/nextqa/video_009.mp4",
+    "option_a": "The door was left open accidentally",
+    "option_b": "It squeezed through the bars",
+    "option_c": "The child opened the cage on purpose",
+    "option_d": "The cage fell and broke open",
+    "option_e": "Another person unlocked the cage"
+  },
+  {
+    "id": "nextqa_010",
+    "text": "What was the man doing before he noticed the fire alarm going off?",
+    "video_url": "https://example.com/nextqa/video_010.mp4",
+    "option_a": "Cooking on the stove",
+    "option_b": "Watching television on the couch",
+    "option_c": "Working at his desk on a computer",
+    "option_d": "Taking a nap on the sofa",
+    "option_e": "Talking on the phone"
+  }
+]

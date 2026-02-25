@@ -1,0 +1,23 @@
+{
+  "title": "Video-ChatGPT - Video QA Display and Evaluation",
+  "description": "Video question answering evaluation based on the Video-ChatGPT benchmark (Maaz et al., ACL 2024). Annotators watch a video, review a model-generated response to a question, and evaluate correctness and quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Maaz et al.",
+    "email": "jurgens@umich.edu",
+    "github": "mbzuai-oryx",
+    "affiliation": "MBZUAI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["video", "radio", "likert"],
+  "domain": ["Video Understanding", "Evaluation", "Multimodal"],
+  "useCase": ["Video QA", "Model Evaluation", "Visual Understanding"],
+  "complexity": "intermediate",
+  "tags": ["video-qa", "video-chatgpt", "multimodal", "evaluation", "acl2024"],
+  "featured": false,
+  "paperReference": "Maaz et al., ACL 2024",
+  "paperUrl": "https://arxiv.org/abs/2306.05424",
+  "datasetUrl": "https://github.com/mbzuai-oryx/Video-ChatGPT",
+  "citation": "@inproceedings{maaz2024videochatgpt,\n    title = \"Video-{C}hat{GPT}: Towards Detailed Video Understanding via Large Vision and Language Models\",\n    author = \"Maaz, Muhammad and Rasheed, Hanoona and Khan, Salman and Khan, Fahad Shahbaz\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2306.05424\"\n}"
+}

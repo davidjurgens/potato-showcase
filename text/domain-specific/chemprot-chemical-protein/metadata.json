@@ -1,0 +1,23 @@
+{
+  "title": "ChemProt - Chemical-Protein Interaction Annotation",
+  "description": "Identify chemical and gene/protein entities and classify their interaction types in biomedical text, based on the ChemProt corpus from BioCreative VI (Krallinger et al., 2017). Supports relation extraction for drug-target interaction mining from literature.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Krallinger et al.",
+    "email": "jurgens@umich.edu",
+    "github": "biocreative",
+    "affiliation": "Barcelona Supercomputing Center"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Biomedical"],
+  "useCase": ["Relation Extraction", "Biomedical NER", "Drug-Target Interaction"],
+  "complexity": "intermediate",
+  "tags": ["chemprot", "biomedical", "chemical", "protein", "relation-extraction", "drug-target"],
+  "featured": false,
+  "paperReference": "Krallinger et al., BioCreative VI 2017",
+  "paperUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/",
+  "datasetUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/",
+  "citation": "@inproceedings{krallinger2017biocreative,\n    title = \"Overview of the BioCreative VI chemical-protein interaction Track\",\n    author = \"Krallinger, Martin and Rabal, Obdulia and Akhondi, Saber A. and others\",\n    booktitle = \"Proceedings of the BioCreative VI Workshop\",\n    year = \"2017\",\n    url = \"https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/\"\n}"
+}

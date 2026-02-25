@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mmlu_pro_001",
+    "text": "Which of the following best describes the role of topoisomerase II in DNA replication?",
+    "options": "A. It unwinds the double helix ahead of the replication fork\nB. It synthesizes RNA primers for Okazaki fragments\nC. It relieves positive supercoiling by making transient double-strand breaks\nD. It joins Okazaki fragments on the lagging strand\nE. It proofreads newly synthesized DNA\nF. It degrades RNA primers after replication\nG. It adds telomeric sequences to chromosome ends\nH. It methylates newly synthesized DNA strands\nI. It prevents re-replication by licensing origins\nJ. It stabilizes single-stranded DNA at the replication fork",
+    "subject": "Biology",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_002",
+    "text": "A projectile is launched at an angle of 60 degrees above the horizontal with an initial speed of 50 m/s. Ignoring air resistance, what is the maximum height reached by the projectile?",
+    "options": "A. 45.9 m\nB. 55.7 m\nC. 63.8 m\nD. 76.5 m\nE. 85.3 m\nF. 95.7 m\nG. 102.4 m\nH. 110.2 m\nI. 127.6 m\nJ. 143.1 m",
+    "subject": "Physics",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_003",
+    "text": "In the context of the French Revolution, what was the primary significance of the Tennis Court Oath of June 20, 1789?",
+    "options": "A. It established France as a constitutional monarchy\nB. It declared war on Austria and Prussia\nC. It abolished feudal privileges of the nobility\nD. It represented the Third Estate's assertion of popular sovereignty\nE. It formally deposed King Louis XVI\nF. It created the Committee of Public Safety\nG. It instituted the metric system across France\nH. It dissolved the Estates-General permanently\nI. It granted voting rights to all male citizens\nJ. It nationalized Church property throughout France",
+    "subject": "History",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_004",
+    "text": "Which of the following sorting algorithms has the best average-case time complexity for sorting n elements?",
+    "options": "A. Bubble sort: O(n^2)\nB. Selection sort: O(n^2)\nC. Insertion sort: O(n^2)\nD. Merge sort: O(n log n)\nE. Quick sort: O(n log n)\nF. Heap sort: O(n log n)\nG. Radix sort: O(nk) where k is the number of digits\nH. Counting sort: O(n + k) where k is the range\nI. Bucket sort: O(n + k)\nJ. Shell sort: O(n^(3/2))",
+    "subject": "Computer Science",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_005",
+    "text": "A patient presents with fatigue, weight gain, cold intolerance, and constipation. Laboratory tests reveal elevated TSH and low free T4 levels. Which of the following is the most likely diagnosis?",
+    "options": "A. Graves' disease\nB. Hashimoto's thyroiditis\nC. Subacute thyroiditis\nD. Thyroid carcinoma\nE. Pituitary adenoma secreting TSH\nF. Iodine deficiency\nG. Sick euthyroid syndrome\nH. Thyroid hormone resistance\nI. Drug-induced hypothyroidism\nJ. Secondary hypothyroidism",
+    "subject": "Medicine",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_006",
+    "text": "According to Kant's deontological ethics, which of the following statements best captures the categorical imperative?",
+    "options": "A. An action is moral if it produces the greatest happiness for the greatest number\nB. An action is moral if a perfectly rational agent would choose it behind a veil of ignorance\nC. Act only according to that maxim whereby you can at the same time will that it should become a universal law\nD. An action is moral if it aligns with natural human virtues and excellences\nE. Moral principles are derived from social contracts between rational agents\nF. An action is moral if it maximizes expected utility across all possible outcomes\nG. Morality is determined by cultural norms and social conventions\nH. An action is moral if it expresses care and maintains relationships\nI. Moral truths are objective facts discoverable through rational intuition alone\nJ. An action is moral if it would be chosen by an impartial spectator",
+    "subject": "Philosophy",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_007",
+    "text": "In organic chemistry, what is the major product when 2-butanol is treated with concentrated sulfuric acid at 140 degrees Celsius?",
+    "options": "A. 1-Butene\nB. 2-Butene (trans)\nC. 2-Butene (cis)\nD. Diethyl ether\nE. Di-sec-butyl ether\nF. 1,3-Butadiene\nG. Butanal\nH. 2-Butanone\nI. Butanoic acid\nJ. A mixture of 1-butene and 2-butene",
+    "subject": "Chemistry",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_008",
+    "text": "Which of the following correctly describes the Nash equilibrium in a two-player simultaneous game?",
+    "options": "A. The outcome that maximizes total social welfare\nB. The strategy profile where each player's strategy is a best response to the other's strategy\nC. The outcome where both players achieve their maximum possible payoff\nD. The dominant strategy for the player who moves first\nE. The strategy that minimizes the maximum possible loss\nF. The Pareto optimal outcome of the game\nG. The mixed strategy that equalizes expected payoffs across all actions\nH. The cooperative outcome achieved through binding agreements\nI. The strategy profile that emerges after iterated elimination of dominated strategies\nJ. The equilibrium reached when players can communicate before choosing",
+    "subject": "Economics",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_009",
+    "text": "In linear algebra, which of the following properties is NOT necessarily true for an orthogonal matrix Q?",
+    "options": "A. Q^T Q = I\nB. det(Q) = 1 or -1\nC. The columns of Q form an orthonormal basis\nD. Q preserves the length of vectors\nE. Q is always symmetric\nF. Q^(-1) = Q^T\nG. The eigenvalues of Q have absolute value 1\nH. Q preserves the angle between vectors\nI. The rows of Q form an orthonormal basis\nJ. Q is always invertible",
+    "subject": "Mathematics",
+    "audio_url": ""
+  },
+  {
+    "id": "mmlu_pro_010",
+    "text": "Under the Fourth Amendment to the U.S. Constitution, which of the following scenarios would most likely constitute an unreasonable search?",
+    "options": "A. A search of a car during a lawful traffic stop with probable cause\nB. A search of a home with a valid warrant signed by a magistrate\nC. A pat-down of a suspect based on reasonable suspicion during a Terry stop\nD. A warrantless thermal imaging scan of a home from a public street\nE. A search incident to a lawful arrest within the arrestee's wingspan\nF. An inventory search of an impounded vehicle following department policy\nG. A search of open fields beyond the curtilage of a home\nH. A consent search where the homeowner voluntarily agrees\nI. A search of a student's belongings by school officials based on reasonable suspicion\nJ. A search at an international border checkpoint without individualized suspicion",
+    "subject": "Law",
+    "audio_url": ""
+  }
+]

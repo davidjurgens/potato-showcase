@@ -1,0 +1,110 @@
+# FLORES - Machine Translation Quality Estimation
+# Based on Goyal et al., TACL 2022
+# Paper: https://aclanthology.org/2022.tacl-1.21/
+# Dataset: https://github.com/facebookresearch/flores
+#
+# This task evaluates machine translation quality by presenting source
+# text alongside its translation. Annotators rate overall quality on
+# a 5-point Likert scale, identify the primary error category, and
+# provide detailed notes about specific errors found.
+#
+# Quality Scale:
+# 1 - Incomprehensible: Translation is unreadable or completely wrong
+# 2 - Poor: Major errors that significantly impair understanding
+# 3 - Acceptable: Some errors but the meaning is mostly conveyed
+# 4 - Good: Minor errors that do not affect understanding
+# 5 - Perfect: Flawless translation with natural fluency
+#
+# Error Categories:
+# - Accuracy: Mistranslation, omission, or addition of meaning
+# - Fluency: Unnatural phrasing, grammar, or word choice
+# - Terminology: Incorrect domain-specific terms
+# - Style: Inappropriate register, tone, or formality level
+# - No Error: Translation is correct and natural
+#
+# Annotation Guidelines:
+# 1. Read the source text carefully
+# 2. Read the translation and compare it to the source
+# 3. Rate overall quality on the 1-5 scale
+# 4. Select the most prominent error category
+# 5. Provide specific notes about errors found
+
+annotation_task_name: "FLORES - Machine Translation Quality Estimation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Rate overall translation quality
+  - annotation_type: likert
+    name: translation_quality
+    description: "Rate the overall quality of this translation"
+    min_label: "Incomprehensible"
+    max_label: "Perfect"
+    size: 5
+
+  # Step 2: Identify the primary error category
+  - annotation_type: select
+    name: error_category
+    description: "What is the primary error category in this translation?"
+    labels:
+      - "Accuracy"
+      - "Fluency"
+      - "Terminology"
+      - "Style"
+      - "No Error"
+    tooltips:
+      "Accuracy": "Mistranslation, omission, or addition of meaning not present in the source"
+      "Fluency": "Unnatural phrasing, grammatical errors, or awkward word choice in the target"
+      "Terminology": "Incorrect or inconsistent use of domain-specific terms"
+      "Style": "Inappropriate register, tone, or formality level for the context"
+      "No Error": "The translation is correct and reads naturally"
+
+  # Step 3: Provide error notes
+  - annotation_type: text
+    name: error_notes
+    description: "Describe specific errors you found in the translation (if any)"
+
+annotation_instructions: |
+  You will be shown a source text and its machine translation. Your task is to:
+  1. Read the source text carefully.
+  2. Read the translation and compare it to the source.
+  3. Rate the overall translation quality on a 1 (Incomprehensible) to 5 (Perfect) scale.
+  4. Select the most prominent error category (or "No Error" if the translation is correct).
+  5. Provide specific notes about any errors you identified.
+
+  Focus on whether the translation accurately conveys the meaning, reads naturally in the
+  target language, and uses appropriate terminology and style.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+      <span style="background: #dbeafe; color: #1e40af; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Source: {{source_lang}}</span>
+      <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Target: {{target_lang}}</span>
+    </div>
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #1d4ed8;">Source Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #166534;">Translation:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{translation}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

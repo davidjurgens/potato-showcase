@@ -1,0 +1,128 @@
+# DPO Preference Data Collection
+# Based on Rafailov et al., NeurIPS 2023
+# Paper: https://arxiv.org/abs/2305.18290
+#
+# Pairwise preference annotation for Direct Preference Optimization (DPO).
+# Annotators compare two model responses to a user prompt, select which
+# response is preferred (or indicate a tie/both bad), rate alignment
+# dimensions, and provide a brief reasoning for their preference.
+#
+# Preference Labels:
+# - Response A Preferred: Response A is clearly better overall
+# - Response B Preferred: Response B is clearly better overall
+# - Equally Good: Both responses are of comparable quality
+# - Both Bad: Neither response adequately addresses the prompt
+#
+# Alignment Dimensions:
+# - Helpful: The preferred response is helpful and addresses the user's needs
+# - Harmless: The preferred response avoids harmful or unsafe content
+# - Honest: The preferred response is truthful and transparent
+#
+# Annotation Guidelines:
+# 1. Read the prompt carefully to understand the user's intent
+# 2. Read both responses thoroughly before making a judgment
+# 3. Select your pairwise preference
+# 4. Indicate which alignment dimension best characterizes the difference
+# 5. Write a brief reasoning explaining your preference
+
+annotation_task_name: "DPO Preference Data Collection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Pairwise preference
+  - annotation_type: pairwise
+    name: preference
+    description: "Which response do you prefer? Consider helpfulness, harmlessness, and honesty."
+    mode: "binary"
+    labels:
+      - "Response A Preferred"
+      - "Response B Preferred"
+      - "Equally Good"
+      - "Both Bad"
+    keyboard_shortcuts:
+      "Response A Preferred": "a"
+      "Response B Preferred": "b"
+      "Equally Good": "e"
+      "Both Bad": "x"
+    tooltips:
+      "Response A Preferred": "Response A is clearly better overall"
+      "Response B Preferred": "Response B is clearly better overall"
+      "Equally Good": "Both responses are of comparable quality"
+      "Both Bad": "Neither response adequately addresses the prompt"
+
+  # Step 2: Alignment dimension
+  - annotation_type: radio
+    name: alignment_dimension
+    description: "Which alignment dimension best characterizes the difference between the responses?"
+    labels:
+      - "Helpful"
+      - "Harmless"
+      - "Honest"
+    keyboard_shortcuts:
+      "Helpful": "1"
+      "Harmless": "2"
+      "Honest": "3"
+    tooltips:
+      "Helpful": "The key differentiator is how helpful each response is"
+      "Harmless": "The key differentiator is safety and avoidance of harm"
+      "Honest": "The key differentiator is truthfulness and transparency"
+
+  # Step 3: Preference reasoning
+  - annotation_type: text
+    name: reasoning
+    description: "Briefly explain why you preferred one response over the other."
+    textarea: true
+    required: false
+    placeholder: "What factors influenced your preference?"
+
+annotation_instructions: |
+  You will evaluate pairs of AI model responses for Direct Preference Optimization (DPO).
+
+  For each item:
+  1. Read the user prompt carefully.
+  2. Read both Response A and Response B thoroughly.
+  3. Select your preference: which response is better, or are they tied/both bad?
+  4. Indicate which alignment dimension (Helpful, Harmless, Honest) best captures the difference.
+  5. Write a brief explanation of your reasoning.
+
+  Key Principles:
+  - A safe but less helpful response may still be preferred over a helpful but unsafe one.
+  - Honest responses that acknowledge limitations are valued over confident but wrong answers.
+  - Consider the overall quality, not just one dimension.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Prompt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
+      </div>
+      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

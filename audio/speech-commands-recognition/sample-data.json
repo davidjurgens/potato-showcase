@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cmd_001",
+    "text": "Yes",
+    "audio_url": "audio/cmd_001.wav"
+  },
+  {
+    "id": "cmd_002",
+    "text": "No",
+    "audio_url": "audio/cmd_002.wav"
+  },
+  {
+    "id": "cmd_003",
+    "text": "Up",
+    "audio_url": "audio/cmd_003.wav"
+  },
+  {
+    "id": "cmd_004",
+    "text": "Down",
+    "audio_url": "audio/cmd_004.wav"
+  },
+  {
+    "id": "cmd_005",
+    "text": "Left",
+    "audio_url": "audio/cmd_005.wav"
+  },
+  {
+    "id": "cmd_006",
+    "text": "Right",
+    "audio_url": "audio/cmd_006.wav"
+  },
+  {
+    "id": "cmd_007",
+    "text": "Stop",
+    "audio_url": "audio/cmd_007.wav"
+  },
+  {
+    "id": "cmd_008",
+    "text": "Go",
+    "audio_url": "audio/cmd_008.wav"
+  },
+  {
+    "id": "cmd_009",
+    "text": "On",
+    "audio_url": "audio/cmd_009.wav"
+  },
+  {
+    "id": "cmd_010",
+    "text": "Off",
+    "audio_url": "audio/cmd_010.wav"
+  }
+]

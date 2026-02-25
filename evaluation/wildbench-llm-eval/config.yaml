@@ -1,0 +1,108 @@
+# WildBench - LLM Evaluation on Real-World Tasks
+# Based on Lin et al., COLM 2024
+# Paper: https://arxiv.org/abs/2406.04770
+# Dataset: https://huggingface.co/datasets/allenai/WildBench
+#
+# This task evaluates LLM outputs on challenging real-world user queries.
+# Annotators compare two model responses via pairwise preference, rate
+# overall quality on a Likert scale, and provide written reasoning.
+#
+# Evaluation Criteria:
+# - Helpfulness: Does the response address the user's needs?
+# - Accuracy: Is the information correct and reliable?
+# - Depth: Does the response provide sufficient detail?
+# - Clarity: Is the response well-organized and easy to follow?
+#
+# Annotation Guidelines:
+# 1. Read the user query carefully to understand the intent
+# 2. Read both model responses thoroughly
+# 3. Select which response is better overall, or mark as tie
+# 4. Rate the overall quality of the better response on a 1-5 scale
+# 5. Provide a brief explanation of your reasoning
+
+annotation_task_name: "WildBench LLM Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Pairwise comparison
+  - annotation_type: pairwise
+    name: preference
+    description: "Which model response better addresses the user query?"
+    mode: "binary"
+    labels:
+      - "Model A Better"
+      - "Model B Better"
+      - "Tie"
+    keyboard_shortcuts:
+      "Model A Better": "a"
+      "Model B Better": "b"
+      "Tie": "t"
+    tooltips:
+      "Model A Better": "Response A is clearly superior in addressing the query"
+      "Model B Better": "Response B is clearly superior in addressing the query"
+      "Tie": "Both responses are roughly equal in quality"
+
+  # Step 2: Overall quality rating
+  - annotation_type: likert
+    name: overall_quality
+    description: "Rate the overall quality of the responses on a 1-5 scale."
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+  # Step 3: Written reasoning
+  - annotation_type: text
+    name: reasoning
+    description: "Briefly explain why you preferred one response over the other."
+    textarea: true
+    required: false
+    placeholder: "What factors influenced your preference judgment?"
+
+annotation_instructions: |
+  You will evaluate pairs of LLM responses to real-world user queries from WildBench.
+
+  For each item:
+  1. Read the user query carefully.
+  2. Read both model responses (A and B) thoroughly.
+  3. Select which response is better, or mark as Tie.
+  4. Rate the overall quality on a 1-5 scale.
+  5. Explain your reasoning briefly.
+
+  Consider: helpfulness, accuracy, depth, clarity, and relevance to the query.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">User Query:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
+      </div>
+      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
+        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

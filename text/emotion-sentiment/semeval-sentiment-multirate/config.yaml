@@ -1,0 +1,91 @@
+# SemEval-2017 Task 4 - Sentiment Multi-Rating
+# Based on Rosenthal et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2088/
+# Dataset: http://alt.qcri.org/semeval2017/task4/
+#
+# This task asks annotators to rate tweets on multiple sentiment dimensions
+# using a multi-rate scheme, and to assign an overall sentiment label.
+# The multirate scheme allows rating the same text on sentiment intensity,
+# subjectivity, and emotion strength simultaneously.
+#
+# Sentiment Labels:
+# - Very Negative, Negative, Neutral, Positive, Very Positive
+#
+# Rating Dimensions:
+# - Sentiment Intensity: How strong is the sentiment expressed?
+# - Subjectivity: How subjective vs objective is the text?
+# - Emotion Strength: How emotionally charged is the text?
+#
+# Annotation Guidelines:
+# 1. Read the tweet carefully
+# 2. Rate each dimension using the 5-point scale
+# 3. Select the overall sentiment label
+
+annotation_task_name: "SemEval-2017 Task 4 - Sentiment Multi-Rating"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: multirate
+    name: sentiment_dimensions
+    description: "Rate the tweet on multiple sentiment dimensions"
+    labels:
+      - "Very Negative"
+      - "Negative"
+      - "Neutral"
+      - "Positive"
+      - "Very Positive"
+    options:
+      - "Sentiment Intensity"
+      - "Subjectivity"
+      - "Emotion Strength"
+
+  - annotation_type: radio
+    name: overall_sentiment
+    description: "What is the overall sentiment of this tweet?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "The tweet expresses a positive opinion or emotion"
+      "Negative": "The tweet expresses a negative opinion or emotion"
+      "Neutral": "The tweet is neutral, factual, or does not express clear sentiment"
+
+annotation_instructions: |
+  You will be shown a tweet. Your task is to:
+  1. Rate the tweet on three dimensions using the 5-point scale:
+     - Sentiment Intensity: How strongly positive or negative is the sentiment?
+     - Subjectivity: How subjective (opinion-based) vs. objective (fact-based) is the text?
+     - Emotion Strength: How emotionally charged is the language used?
+  2. Select the overall sentiment label: Positive, Negative, or Neutral.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

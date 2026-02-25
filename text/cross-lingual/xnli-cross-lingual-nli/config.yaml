@@ -1,0 +1,92 @@
+# XNLI - Cross-Lingual Natural Language Inference
+# Based on Conneau et al., EMNLP 2018
+# Paper: https://aclanthology.org/D18-1269/
+# Dataset: https://github.com/facebookresearch/XNLI
+#
+# This task presents a premise and hypothesis pair for natural language
+# inference classification. The XNLI benchmark extends MultiNLI to 15
+# languages for cross-lingual evaluation. This configuration uses
+# English sentence pairs representative of the benchmark.
+#
+# Labels:
+# - Entailment: The hypothesis is definitely true given the premise
+# - Neutral: The hypothesis might be true given the premise
+# - Contradiction: The hypothesis is definitely false given the premise
+#
+# Annotation Guidelines:
+# 1. Read the premise carefully
+# 2. Read the hypothesis and determine its relationship to the premise
+# 3. Select the appropriate label
+# 4. Optionally provide reasoning or notes about your decision
+# 5. Base your judgment only on the information in the premise
+
+annotation_task_name: "XNLI - Cross-Lingual Natural Language Inference"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Classify the relationship
+  - annotation_type: radio
+    name: nli_label
+    description: "What is the relationship between the premise and hypothesis?"
+    labels:
+      - "Entailment"
+      - "Neutral"
+      - "Contradiction"
+    keyboard_shortcuts:
+      "Entailment": "1"
+      "Neutral": "2"
+      "Contradiction": "3"
+    tooltips:
+      "Entailment": "The hypothesis is definitely true given the premise"
+      "Neutral": "The hypothesis might or might not be true given the premise"
+      "Contradiction": "The hypothesis is definitely false given the premise"
+
+  # Step 2: Optional reasoning notes
+  - annotation_type: text
+    name: reasoning_notes
+    description: "Optionally explain your reasoning for the chosen label"
+
+annotation_instructions: |
+  You will be shown a premise sentence and a hypothesis sentence. Your task is to determine
+  the relationship between them:
+
+  - **Entailment**: If the premise is true, the hypothesis must also be true.
+  - **Neutral**: The hypothesis could be true or false given the premise; there is not enough information.
+  - **Contradiction**: If the premise is true, the hypothesis must be false.
+
+  Base your judgment only on the premise. Do not use outside knowledge. Optionally, you may
+  add a note explaining your reasoning.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #1d4ed8;">Premise:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Hypothesis:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{hypothesis}}</p>
+    </div>
+    <div style="text-align: right; font-size: 13px; color: #6b7280;">
+      Language: {{language}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

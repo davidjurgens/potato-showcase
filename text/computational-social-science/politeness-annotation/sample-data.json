@@ -1,0 +1,42 @@
+[
+  {
+    "id": "polite_001",
+    "text": "Hi Sarah, I hope you're doing well. Would you mind reviewing the budget proposal when you have a moment? There's no rush -- whenever is convenient for you. Thank you so much!"
+  },
+  {
+    "id": "polite_002",
+    "text": "Send me the report by end of day. I needed it yesterday."
+  },
+  {
+    "id": "polite_003",
+    "text": "Hey team, just a heads up that the meeting has been moved to 3 PM tomorrow. Let me know if that works for everyone."
+  },
+  {
+    "id": "polite_004",
+    "text": "I don't understand why this wasn't done already. This was supposed to be finished last week. What's the holdup?"
+  },
+  {
+    "id": "polite_005",
+    "text": "Could you please clarify the requirements for the Q3 deliverables? I want to make sure I'm on the right track. I'd really appreciate your guidance on this."
+  },
+  {
+    "id": "polite_006",
+    "text": "The presentation slides need major revisions. Fix the formatting and redo the charts. This is not acceptable quality."
+  },
+  {
+    "id": "polite_007",
+    "text": "I was wondering if it might be possible to adjust the project timeline slightly. I think we could produce a much stronger result with an extra week. What do you think?"
+  },
+  {
+    "id": "polite_008",
+    "text": "Please find attached the meeting minutes from today's session. Feel free to reach out if anything needs correction."
+  },
+  {
+    "id": "polite_009",
+    "text": "Why wasn't I CC'd on this email chain? I should have been included from the start. Don't let this happen again."
+  },
+  {
+    "id": "polite_010",
+    "text": "Thank you for bringing this issue to my attention. I'll look into it right away and get back to you with an update by Thursday. I appreciate your patience."
+  }
+]

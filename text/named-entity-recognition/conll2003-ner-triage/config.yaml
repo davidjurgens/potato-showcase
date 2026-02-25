@@ -1,0 +1,80 @@
+# CoNLL-2003 NER with Triage
+# Based on Tjong Kim Sang & De Meulder, CoNLL 2003
+# Paper: https://aclanthology.org/W03-0419/
+# Dataset: https://www.clips.uantwerpen.be/conll2003/ner/
+#
+# Two-stage annotation process:
+# 1. Triage: Quickly flag whether the text contains named entities
+# 2. Span annotation: Mark entity boundaries and assign types
+#
+# Entity types (CoNLL-2003 standard):
+# - PER: Person names (e.g., "John Smith", "Dr. Johnson")
+# - ORG: Organization names (e.g., "Microsoft", "United Nations")
+# - LOC: Location names (e.g., "Paris", "Mount Everest")
+# - MISC: Miscellaneous entities (e.g., nationalities, events, works of art)
+#
+# Guidelines:
+# - Mark the full extent of the entity mention
+# - Include titles only if they are part of the name
+# - Nested entities: annotate the outermost entity
+
+annotation_task_name: "CoNLL-2003 NER with Triage"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: triage
+    name: entity_triage
+    description: "Flag whether this text contains named entities worth annotating"
+
+  - annotation_type: span
+    name: named_entities
+    description: "Highlight and label all named entities in the text"
+    labels:
+      - "PER"
+      - "ORG"
+      - "LOC"
+      - "MISC"
+    keyboard_shortcuts:
+      "PER": "1"
+      "ORG": "2"
+      "LOC": "3"
+      "MISC": "4"
+    tooltips:
+      "PER": "Person names including first, last, or full names"
+      "ORG": "Organization names: companies, agencies, institutions"
+      "LOC": "Location names: cities, countries, geographic features"
+      "MISC": "Miscellaneous: nationalities, events, languages, works of art"
+
+annotation_instructions: |
+  Annotate named entities in news text:
+  1. First, use the triage tool to indicate whether the text contains entities.
+  2. If entities are present, highlight each entity span and assign a type.
+  3. Entity types: PER (person), ORG (organization), LOC (location), MISC (other).
+  4. Mark the full span of each entity mention.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 200
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

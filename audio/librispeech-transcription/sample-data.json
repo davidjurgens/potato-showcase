@@ -1,0 +1,52 @@
+[
+  {
+    "id": "libri_001",
+    "text": "He had never seen such a beautiful sunrise over the mountains, and he stood there for a long time watching the colors change from deep purple to gold.",
+    "audio_url": "audio/sample_001.wav"
+  },
+  {
+    "id": "libri_002",
+    "text": "The old professor adjusted his spectacles and began to read aloud from the yellowed pages of the ancient manuscript that had been discovered in the library's basement.",
+    "audio_url": "audio/sample_002.wav"
+  },
+  {
+    "id": "libri_003",
+    "text": "She walked briskly through the crowded marketplace, past vendors selling spices and silks, looking for the small bookshop her grandmother had told her about.",
+    "audio_url": "audio/sample_003.wav"
+  },
+  {
+    "id": "libri_004",
+    "text": "It was a truth universally acknowledged that a single man in possession of a good fortune must be in want of a wife.",
+    "audio_url": "audio/sample_004.wav"
+  },
+  {
+    "id": "libri_005",
+    "text": "The laboratory was silent except for the gentle hum of the centrifuge and the occasional beep of the monitoring equipment on the far bench.",
+    "audio_url": "audio/sample_005.wav"
+  },
+  {
+    "id": "libri_006",
+    "text": "After three days of continuous rain, the river had risen dangerously close to the top of the levee, and the townspeople gathered sandbags along the bank.",
+    "audio_url": "audio/sample_006.wav"
+  },
+  {
+    "id": "libri_007",
+    "text": "The children gathered around the fire, their faces glowing in the warm light, as their grandfather began to tell the story of the great voyage across the sea.",
+    "audio_url": "audio/sample_007.wav"
+  },
+  {
+    "id": "libri_008",
+    "text": "In the distance, the cathedral bells rang out across the sleeping city, marking the hour with their deep resonant tones that seemed to vibrate in the cold night air.",
+    "audio_url": "audio/sample_008.wav"
+  },
+  {
+    "id": "libri_009",
+    "text": "The detective examined the scene carefully, noting the position of the overturned chair, the open window, and the faint muddy footprints leading toward the garden door.",
+    "audio_url": "audio/sample_009.wav"
+  },
+  {
+    "id": "libri_010",
+    "text": "Philosophy begins in wonder, and at the end when philosophic thought has done its best the wonder remains. There have been added however some grasp of the immensity of things.",
+    "audio_url": "audio/sample_010.wav"
+  }
+]

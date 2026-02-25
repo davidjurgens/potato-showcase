@@ -1,0 +1,62 @@
+[
+  {
+    "id": "bb_001",
+    "text": "If all roses are flowers and some flowers fade quickly, can we conclude that some roses fade quickly?",
+    "model_response": "Yes, we can conclude that some roses fade quickly because all roses are flowers and some flowers fade quickly.",
+    "task_category": "logical_reasoning"
+  },
+  {
+    "id": "bb_002",
+    "text": "What is the next number in the sequence: 2, 6, 12, 20, 30, ?",
+    "model_response": "The next number is 42. The differences between consecutive terms are 4, 6, 8, 10, so the next difference is 12, giving 30 + 12 = 42.",
+    "task_category": "mathematical_reasoning"
+  },
+  {
+    "id": "bb_003",
+    "text": "Translate the following sentence into formal logic: 'Every student who studies hard passes the exam.'",
+    "model_response": "For all x, (Student(x) AND StudiesHard(x)) -> PassesExam(x)",
+    "task_category": "formal_logic"
+  },
+  {
+    "id": "bb_004",
+    "text": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "model_response": "The ball costs $0.10. Since the bat costs $1.00 more, the bat costs $1.10, and together they cost $1.20.",
+    "task_category": "mathematical_reasoning"
+  },
+  {
+    "id": "bb_005",
+    "text": "Which word does not belong in the following group: Apple, Banana, Carrot, Grape, Orange?",
+    "model_response": "Carrot does not belong because it is a vegetable, while all the others are fruits.",
+    "task_category": "common_sense"
+  },
+  {
+    "id": "bb_006",
+    "text": "Read the passage: 'The Industrial Revolution began in Britain in the late 18th century. It brought about major changes in agriculture, manufacturing, and transportation.' Based on this, when did the Industrial Revolution start in France?",
+    "model_response": "The Industrial Revolution started in France in the early 19th century, shortly after it began in Britain.",
+    "task_category": "reading_comprehension"
+  },
+  {
+    "id": "bb_007",
+    "text": "Complete the analogy: Hot is to Cold as Light is to ___.",
+    "model_response": "Dark. Hot and cold are opposites, so the opposite of light is dark.",
+    "task_category": "analogical_reasoning"
+  },
+  {
+    "id": "bb_008",
+    "text": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+    "model_response": "It would take 5 minutes. Each machine makes one widget in 5 minutes, so 100 machines can make 100 widgets in the same 5 minutes.",
+    "task_category": "mathematical_reasoning"
+  },
+  {
+    "id": "bb_009",
+    "text": "Identify the logical fallacy in the following argument: 'We should not listen to Dr. Smith's opinion on climate change because she was once fined for speeding.'",
+    "model_response": "This is an ad hominem fallacy. The argument attacks Dr. Smith's character (a speeding fine) rather than addressing the substance of her claims about climate change.",
+    "task_category": "logical_reasoning"
+  },
+  {
+    "id": "bb_010",
+    "text": "What is the sentiment of the following review: 'The movie started well but completely fell apart in the second half. The acting was decent but the plot was nonsensical.'",
+    "model_response": "The sentiment is negative. While there are some positive aspects mentioned (good start, decent acting), the overall tone is critical due to complaints about the plot and second half.",
+    "task_category": "language_understanding"
+  }
+]

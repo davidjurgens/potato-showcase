@@ -1,0 +1,52 @@
+[
+  {
+    "id": "squad_001",
+    "text": "The Normans were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia.",
+    "question": "In what country is Normandy located?"
+  },
+  {
+    "id": "squad_002",
+    "text": "The Amazon rainforest produces more than 20% of the world's oxygen. It covers 5.5 million square kilometers and spans nine countries in South America, with Brazil containing about 60% of the forest.",
+    "question": "What percentage of the world's oxygen does the Amazon rainforest produce?"
+  },
+  {
+    "id": "squad_003",
+    "text": "Super Bowl 50 was an American football game to determine the champion of the National Football League for the 2015 season. The American Football Conference champion Denver Broncos defeated the National Football Conference champion Carolina Panthers 24-10.",
+    "question": "Which team won Super Bowl 50?"
+  },
+  {
+    "id": "squad_004",
+    "text": "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of the chalcogen group on the periodic table and is a highly reactive nonmetal. By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium.",
+    "question": "What is the atomic number of oxygen?"
+  },
+  {
+    "id": "squad_005",
+    "text": "The University of Notre Dame du Lac is a private Catholic research university in Notre Dame, Indiana. Founded in 1842 by Father Edward Sorin and members of the Congregation of Holy Cross, the school was established as an all-male institution.",
+    "question": "When was the University of Notre Dame founded?"
+  },
+  {
+    "id": "squad_006",
+    "text": "Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist. He is best known for his contributions to the design of the modern alternating current electricity supply system. Tesla conducted a range of experiments with mechanical oscillators, electrical discharge tubes, and early X-ray imaging.",
+    "question": "What nationality was Nikola Tesla?"
+  },
+  {
+    "id": "squad_007",
+    "text": "The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, and other materials, built along the historical northern borders of China to protect against various nomadic groups. Several walls were being built as early as the 7th century BC.",
+    "question": "What materials were used to build the Great Wall of China?"
+  },
+  {
+    "id": "squad_008",
+    "text": "Antibiotics, also known as antibacterials, are medications that destroy or slow down the growth of bacteria. They include a range of powerful drugs and are used to treat diseases caused by bacteria. Alexander Fleming discovered penicillin, the first true antibiotic, in 1928.",
+    "question": "Who discovered penicillin?"
+  },
+  {
+    "id": "squad_009",
+    "text": "The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. This theorem has been known since antiquity and is named after the ancient Greek mathematician Pythagoras.",
+    "question": "What does the Pythagorean theorem describe?"
+  },
+  {
+    "id": "squad_010",
+    "text": "Victoria is the capital city of the Canadian province of British Columbia, on the southern tip of Vancouver Island. The city has a population of approximately 92,000 and a metropolitan area population of about 397,000, making it the 15th most populous Canadian metropolitan area.",
+    "question": "What is the approximate population of Victoria?"
+  }
+]

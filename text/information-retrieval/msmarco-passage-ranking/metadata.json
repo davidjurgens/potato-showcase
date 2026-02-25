@@ -1,0 +1,23 @@
+{
+  "title": "MS MARCO - Passage Relevance Ranking",
+  "description": "Passage relevance ranking based on the MS MARCO dataset (Nguyen et al., NeurIPS 2016 Workshop). Annotators assess the relevance of a candidate passage to a given search query using a graded relevance scale.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nguyen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "microsoft",
+    "affiliation": "Microsoft"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["select", "radio"],
+  "domain": ["NLP", "Information Retrieval"],
+  "useCase": ["Passage Ranking", "Search Relevance", "Question Answering"],
+  "complexity": "beginner",
+  "tags": ["msmarco", "passage-ranking", "relevance", "search", "information-retrieval", "neurips2016"],
+  "featured": false,
+  "paperReference": "Nguyen et al., NeurIPS 2016 Workshop",
+  "paperUrl": "https://arxiv.org/abs/1611.09268",
+  "datasetUrl": "https://microsoft.github.io/msmarco/",
+  "citation": "@inproceedings{nguyen2016msmarco,\n    title = \"{MS MARCO}: A Human Generated {MA}chine Reading {CO}mprehension Dataset\",\n    author = \"Nguyen, Tri and Rosenberg, Markus and Song, Xia and Gao, Jianfeng and Tiwary, Saurabh and Majumder, Rangan and Deng, Li\",\n    booktitle = \"Proceedings of the Workshop on Cognitive Computation: Integrating Neural and Symbolic Approaches (NeurIPS 2016)\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1611.09268\"\n}"
+}

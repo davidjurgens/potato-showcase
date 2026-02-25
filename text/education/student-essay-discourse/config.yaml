@@ -1,0 +1,114 @@
+# Student Essay Discourse Element Classification
+# Based on Song et al., COLING 2020
+# Paper: https://aclanthology.org/2020.coling-main.240/
+# Dataset: https://github.com/wietsedv/ASAP-AES
+#
+# This task asks annotators to identify discourse elements in student essays,
+# classify the essay type, and tag rhetorical strategies. The span annotation
+# marks argumentative components, while radio and multiselect capture essay
+# characteristics and persuasive techniques.
+#
+# Discourse Elements (Span):
+# - Claim: A debatable assertion or thesis statement
+# - Evidence: Facts, data, or examples supporting a claim
+# - Reasoning: Logical connections between evidence and claims
+# - Rebuttal: Acknowledgment and counter to opposing views
+# - Conclusion: Summary or final statement
+#
+# Essay Types:
+# - Argumentative: Presents arguments for/against a position
+# - Narrative: Tells a story or recounts experiences
+# - Expository: Explains or informs about a topic
+# - Mixed: Combines multiple essay types
+#
+# Rhetorical Strategies:
+# - Logos: Appeals to logic and reason
+# - Pathos: Appeals to emotion
+# - Ethos: Appeals to credibility or authority
+# - Kairos: Appeals to timeliness or urgency
+#
+# Annotation Guidelines:
+# 1. Read the essay paragraph carefully
+# 2. Highlight and label discourse elements using span annotation
+# 3. Select the overall essay type
+# 4. Identify all rhetorical strategies present
+
+annotation_task_name: "Student Essay Discourse Element Classification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: discourse_elements
+    description: "Highlight and label discourse elements in the essay"
+    labels:
+      - "Claim"
+      - "Evidence"
+      - "Reasoning"
+      - "Rebuttal"
+      - "Conclusion"
+
+  - annotation_type: radio
+    name: essay_type
+    description: "What type of essay is this paragraph from?"
+    labels:
+      - "Argumentative"
+      - "Narrative"
+      - "Expository"
+      - "Mixed"
+    keyboard_shortcuts:
+      "Argumentative": "1"
+      "Narrative": "2"
+      "Expository": "3"
+      "Mixed": "4"
+    tooltips:
+      "Argumentative": "The paragraph presents arguments for or against a position"
+      "Narrative": "The paragraph tells a story or recounts an experience"
+      "Expository": "The paragraph explains or informs about a topic objectively"
+      "Mixed": "The paragraph combines multiple essay types"
+
+  - annotation_type: multiselect
+    name: rhetorical_strategies
+    description: "Which rhetorical strategies are used in this paragraph?"
+    labels:
+      - "Logos"
+      - "Pathos"
+      - "Ethos"
+      - "Kairos"
+    tooltips:
+      "Logos": "Appeals to logic, data, facts, or rational argument"
+      "Pathos": "Appeals to emotion, feelings, or personal experience"
+      "Ethos": "Appeals to authority, credibility, or expert opinion"
+      "Kairos": "Appeals to timeliness, urgency, or the right moment for action"
+
+annotation_instructions: |
+  You will be shown a paragraph from a student essay. Your task is to:
+  1. Use span annotation to highlight discourse elements (Claim, Evidence, Reasoning, Rebuttal, Conclusion).
+  2. Classify the overall essay type.
+  3. Select all rhetorical strategies present in the paragraph.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Student Essay Paragraph:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

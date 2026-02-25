@@ -1,0 +1,95 @@
+# OffensEval - Offensive Language Target Identification
+# Based on Zampieri et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.188/
+# Dataset: https://sites.google.com/site/offaborita/olid
+#
+# This task implements a multi-step offensive language annotation pipeline.
+# Annotators first determine whether a social media post is offensive,
+# then classify the target type (individual, group, other, or untargeted),
+# and finally highlight the specific offensive spans and target mentions.
+#
+# Annotation Guidelines:
+# 1. Read the post carefully and determine if it contains offensive language
+# 2. If offensive, classify whether the offense targets an individual, group, or other entity
+# 3. Use span annotation to highlight offensive expressions and target mentions
+# 4. A post can be offensive without targeting anyone specific (untargeted)
+
+annotation_task_name: "OffensEval - Offensive Language Target Identification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Is the post offensive?
+  - annotation_type: radio
+    name: offensiveness
+    description: "Is this post offensive?"
+    labels:
+      - "Offensive"
+      - "Not Offensive"
+    keyboard_shortcuts:
+      "Offensive": "1"
+      "Not Offensive": "2"
+    tooltips:
+      "Offensive": "The post contains any form of offensive language, insult, or profanity"
+      "Not Offensive": "The post does not contain offensive language"
+
+  # Step 2: What type of target?
+  - annotation_type: multiselect
+    name: target_type
+    description: "If offensive, what type of target is addressed? (select all that apply)"
+    labels:
+      - "Individual"
+      - "Group"
+      - "Other"
+      - "Untargeted"
+    tooltips:
+      "Individual": "The offense targets a specific named or unnamed individual"
+      "Group": "The offense targets a group of people based on identity, affiliation, or characteristics"
+      "Other": "The offense targets an organization, event, or abstract entity"
+      "Untargeted": "The post is offensive but does not target any specific entity"
+
+  # Step 3: Highlight offensive spans and target mentions
+  - annotation_type: span
+    name: offensive_spans
+    description: "Highlight the offensive expressions and target mentions in the text"
+    labels:
+      - "Offensive Span"
+      - "Target Mention"
+    tooltips:
+      "Offensive Span": "A word or phrase that constitutes the offensive expression"
+      "Target Mention": "A word or phrase that refers to the target of the offense"
+
+annotation_instructions: |
+  You will be shown social media posts. Your task is to:
+  1. Determine whether the post contains offensive language.
+  2. If offensive, classify the target type (individual, group, other, or untargeted). You may select multiple types.
+  3. Highlight specific offensive expressions and target mentions using span annotation.
+
+  Offensive language includes insults, threats, profanity directed at someone, and derogatory language.
+  A post can be offensive without targeting anyone specifically (e.g., general profanity or vulgarity).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Post:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

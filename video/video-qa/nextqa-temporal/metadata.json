@@ -1,0 +1,23 @@
+{
+  "title": "NExT-QA - Temporal and Causal Video Question Answering",
+  "description": "Temporal and causal video question answering requiring reasoning about actions, events, and their relationships over time. Based on the NExT-QA dataset (Xiao et al., CVPR 2021), annotators answer multiple-choice questions about video content with an emphasis on temporal and causal understanding.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Xiao et al.",
+    "email": "jurgens@umich.edu",
+    "github": "doc-doc",
+    "affiliation": "National University of Singapore"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["radio", "text", "video_annotation"],
+  "domain": ["Video Understanding", "NLP"],
+  "useCase": ["Video Question Answering", "Temporal Reasoning", "Causal Reasoning"],
+  "complexity": "intermediate",
+  "tags": ["nextqa", "video-qa", "temporal", "causal", "reasoning", "cvpr2021", "multiple-choice"],
+  "featured": false,
+  "paperReference": "Xiao et al., CVPR 2021",
+  "paperUrl": "https://arxiv.org/abs/2105.08276",
+  "datasetUrl": "https://github.com/doc-doc/NExT-QA",
+  "citation": "@inproceedings{xiao2021nextqa,\n    title = \"{NExT-QA}: Next Phase of Question-Answering to Explaining Temporal Actions\",\n    author = \"Xiao, Junbin and Shang, Xindi and Yao, Angela and Chua, Tat-Seng\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    year = \"2021\",\n    url = \"https://arxiv.org/abs/2105.08276\"\n}"
+}

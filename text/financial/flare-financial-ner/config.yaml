@@ -1,0 +1,116 @@
+# FLARE - Financial Named Entity Recognition
+# Based on Xie et al., arXiv 2024
+# Paper: https://arxiv.org/abs/2311.00640
+# Dataset: https://huggingface.co/TheFinAI
+#
+# Annotate financial text for named entities and classify document types.
+# Entity types include companies, persons, currencies, monetary amounts,
+# dates, percentages, and stock ticker symbols.
+#
+# Entity Types:
+# - Company: Corporate entity names (e.g., Apple Inc., Goldman Sachs)
+# - Person: Individual names (e.g., CEO names, analysts)
+# - Currency: Currency names or codes (e.g., USD, Euro, Japanese yen)
+# - Amount: Monetary values (e.g., $5.2 billion, 150 million)
+# - Date: Temporal expressions (e.g., Q3 2024, fiscal year 2023)
+# - Percentage: Percentage values (e.g., 12%, 3.5 percent)
+# - Stock Ticker: Exchange symbols (e.g., AAPL, MSFT, GOOGL)
+#
+# Document Types:
+# - Earnings Report: Quarterly or annual financial results
+# - Market Analysis: Commentary on market trends and outlook
+# - Regulatory Filing: SEC filings, compliance documents
+# - Merger/Acquisition: M&A announcements and deal coverage
+# - Other: General financial news or other document types
+#
+# Guidelines:
+# 1. Mark all entity spans precisely (do not include surrounding punctuation)
+# 2. Label each span with the appropriate entity type
+# 3. Classify the overall document type based on content
+
+annotation_task_name: "FLARE: Financial Named Entity Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: financial_entities
+    description: "Highlight and label financial entities in the text"
+    labels:
+      - "Company"
+      - "Person"
+      - "Currency"
+      - "Amount"
+      - "Date"
+      - "Percentage"
+      - "Stock Ticker"
+    tooltips:
+      "Company": "Corporate entity name (e.g., Apple Inc., Goldman Sachs Group)"
+      "Person": "Individual name, typically executives, analysts, or public figures"
+      "Currency": "Currency name or code (e.g., USD, Euro, British pound)"
+      "Amount": "Monetary value with or without currency symbol (e.g., $5.2 billion)"
+      "Date": "Temporal expression including quarters, years, and specific dates"
+      "Percentage": "Percentage value (e.g., 12%, 3.5 percent)"
+      "Stock Ticker": "Stock exchange ticker symbol (e.g., AAPL, MSFT)"
+
+  - annotation_type: radio
+    name: document_type
+    description: "What type of financial document is this text from?"
+    labels:
+      - "Earnings Report"
+      - "Market Analysis"
+      - "Regulatory Filing"
+      - "Merger/Acquisition"
+      - "Other"
+    keyboard_shortcuts:
+      "Earnings Report": "1"
+      "Market Analysis": "2"
+      "Regulatory Filing": "3"
+      "Merger/Acquisition": "4"
+      "Other": "5"
+    tooltips:
+      "Earnings Report": "Quarterly or annual financial results and performance discussion"
+      "Market Analysis": "Commentary on market trends, forecasts, and economic outlook"
+      "Regulatory Filing": "SEC filings, compliance documents, legal/regulatory matters"
+      "Merger/Acquisition": "M&A announcements, deal terms, acquisition coverage"
+      "Other": "General financial news, press releases, or other document types"
+
+annotation_instructions: |
+  Annotate financial text for named entities and classify the document type.
+
+  For each item:
+  1. Read the financial text carefully.
+  2. Use the span tool to highlight all financial entities and assign the correct label.
+  3. Classify the overall document type.
+
+  Entity annotation tips:
+  - Mark entity spans precisely (e.g., "Apple Inc." not "Apple Inc. reported")
+  - Include full company names but not surrounding text
+  - Mark all instances of each entity, even if repeated
+  - Stock tickers should include just the symbol (e.g., "AAPL")
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+      <strong style="color: #0369a1;">Financial Text:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

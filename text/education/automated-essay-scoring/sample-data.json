@@ -1,0 +1,52 @@
+[
+  {
+    "id": "essay_001",
+    "text": "Computers have changed the way we live in many ways. First, we can communicate with people all over the world through email and social media. Second, computers help us learn new things by providing access to information on the internet. We can research any topic and find answers quickly. Third, computers are used in businesses to keep track of important data and make work easier. However, some people think computers are bad because we spend too much time on them. I think the benefits outweigh the negatives because computers help us in education, work, and staying connected.",
+    "prompt_topic": "Write an essay explaining how computers have changed the way people live. Use specific details and examples to support your response."
+  },
+  {
+    "id": "essay_002",
+    "text": "I think that patience is really important and here is why. When your patient you dont get mad at little things. Like when your in traffic and everybody is honking there horns, a patient person just waits calmly. Also in school when you dont understand something, being patient helps you keep trying until you get it right. My grandma always says patience is a virtue and I think shes right because everything good takes time.",
+    "prompt_topic": "Write about patience. Being patient means that you are understanding and tolerant. Describe a situation in which patience is important."
+  },
+  {
+    "id": "essay_003",
+    "text": "The Industrial Revolution fundamentally transformed Western civilization, ushering in an era of unprecedented technological advancement and social upheaval. Beginning in late 18th-century Britain, mechanized manufacturing replaced cottage industries, catalyzing mass urbanization as workers migrated to factory towns. While proponents celebrated increased productivity and rising living standards, the revolution also spawned child labor, hazardous working conditions, and stark economic inequality. The emergence of labor movements and regulatory legislation in the 19th century represented society's response to these injustices. Ultimately, the Industrial Revolution established the template for modern economic development, demonstrating both the promise and peril of rapid technological change.",
+    "prompt_topic": "Describe an important historical event and explain its lasting impact on society. Support your discussion with specific details."
+  },
+  {
+    "id": "essay_004",
+    "text": "dogs are the best pets ever. they are loyal and fun and they love you no matter what. my dog sparky is always happy to see me when I come home from school. he wags his tail and jumps up. dogs are better than cats because cats dont care about you. thats why dogs are the best.",
+    "prompt_topic": "Write a persuasive essay arguing for your favorite type of pet. Use reasons and examples to convince your reader."
+  },
+  {
+    "id": "essay_005",
+    "text": "Technology in the classroom presents a nuanced challenge for modern educators. On one hand, digital tools such as interactive whiteboards, educational software, and online research databases can enhance student engagement and provide access to diverse learning resources. Studies have shown that when integrated thoughtfully, technology can support differentiated instruction, allowing teachers to meet students at their individual skill levels. On the other hand, excessive screen time, digital distractions, and the widening digital divide between affluent and underserved communities raise legitimate concerns. The key lies not in whether to use technology, but in how to implement it strategically. Effective technology integration requires teacher training, clear pedagogical goals, and equitable access. When these conditions are met, technology can serve as a powerful catalyst for learning rather than a hindrance.",
+    "prompt_topic": "Should technology be used more in the classroom? Write an essay presenting your position with supporting arguments."
+  },
+  {
+    "id": "essay_006",
+    "text": "Community service is good because it helps people. When you volunteer you can help at food banks or clean up parks. It makes the community a better place. Also it looks good on college applications. Some schools require community service hours which I think is a good idea because it teaches students to care about others. My friend and I volunteered at the animal shelter last summer and it was fun. We helped walk the dogs and feed the cats. I think everyone should do community service at least once.",
+    "prompt_topic": "Explain the importance of community service. How does volunteering benefit both the community and the individual?"
+  },
+  {
+    "id": "essay_007",
+    "text": "Climate change is arguably the defining challenge of the twenty-first century, demanding a multifaceted response from governments, industries, and individuals alike. The scientific consensus, supported by decades of empirical research and corroborated by organizations such as the IPCC, establishes that anthropogenic greenhouse gas emissions are driving global temperature increases at an alarming rate. The consequences are manifold: rising sea levels threaten coastal communities, shifting precipitation patterns disrupt agricultural systems, and intensifying extreme weather events impose escalating economic costs. Addressing this crisis requires a coordinated transition to renewable energy sources, investment in carbon capture technologies, and the implementation of robust international agreements that hold nations accountable for emissions reduction targets. Moreover, climate justice demands that developed nations, which have historically contributed the most to emissions, bear a proportional share of the mitigation burden. While the scale of the problem may seem overwhelming, the convergence of technological innovation and growing public awareness provides grounds for cautious optimism.",
+    "prompt_topic": "What do you think is the most important issue facing the world today? Explain why and propose potential solutions."
+  },
+  {
+    "id": "essay_008",
+    "text": "summer is the best season. you can go swimming and play outside all day. no school is the best part. you can sleep late and hang out with friends. winter is cold and boring. spring has too much rain. fall is ok but summer is still the best because of all the fun stuff you can do.",
+    "prompt_topic": "Write about your favorite season. Explain why it is your favorite and use specific details to support your choice."
+  },
+  {
+    "id": "essay_009",
+    "text": "Learning a second language offers cognitive, cultural, and professional benefits that extend far beyond simple communication. Research in neurolinguistics demonstrates that bilingual individuals exhibit enhanced executive function, improved memory retention, and greater cognitive flexibility compared to their monolingual counterparts. Furthermore, language acquisition opens a window into different cultural perspectives, fostering empathy and cross-cultural understanding. In an increasingly globalized economy, multilingual competence provides a significant competitive advantage in the job market. While the process of acquiring a new language requires sustained effort and dedication, the long-term rewards justify the investment. Educational institutions should prioritize early language instruction, as younger learners demonstrate a pronounced aptitude for phonological acquisition and grammatical pattern recognition.",
+    "prompt_topic": "Should all students be required to learn a second language? Write an essay presenting your argument with supporting evidence."
+  },
+  {
+    "id": "essay_010",
+    "text": "Exercising is important for staying healthy. You should exercise every day or at least a few times a week. There are many types of exercise like running, swimming, playing sports, and going to the gym. Exercise helps your heart stay strong and helps you maintain a healthy weight. It also helps with stress and can make you feel happier. Some people dont like exercise because its hard but once you start doing it regularly it gets easier. I think schools should have more gym class so students can be more active during the day.",
+    "prompt_topic": "Write an essay about the importance of physical exercise. Include specific reasons why exercise is beneficial."
+  }
+]

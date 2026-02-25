@@ -1,0 +1,52 @@
+[
+  {
+    "id": "msmarco_001",
+    "text": "The Great Wall of China is approximately 13,171 miles (21,196 kilometers) long, according to a comprehensive archaeological survey completed in 2012 by China's State Administration of Cultural Heritage. This measurement includes all sections built over various dynasties, not just the well-known Ming Dynasty portions.",
+    "query": "how long is the great wall of china"
+  },
+  {
+    "id": "msmarco_002",
+    "text": "Photosynthesis is the process by which green plants and certain other organisms transform light energy into chemical energy. During photosynthesis, plants capture light energy from the sun and use it to convert water and carbon dioxide into oxygen and glucose. The overall equation is: 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2.",
+    "query": "what is the process of photosynthesis"
+  },
+  {
+    "id": "msmarco_003",
+    "text": "The Mediterranean diet emphasizes consuming fruits, vegetables, whole grains, legumes, nuts, and olive oil. Fish and poultry are preferred over red meat. Several large-scale studies have shown it reduces the risk of heart disease by up to 30%, making it one of the most recommended dietary patterns by cardiologists.",
+    "query": "benefits of mediterranean diet for heart health"
+  },
+  {
+    "id": "msmarco_004",
+    "text": "The Eiffel Tower was originally built as the entrance arch for the 1889 World's Fair in Paris. It was designed by Gustave Eiffel's engineering company. The tower is 330 meters tall and was the tallest man-made structure in the world until the Chrysler Building was completed in New York in 1930.",
+    "query": "how to get a visa for france"
+  },
+  {
+    "id": "msmarco_005",
+    "text": "To change a flat tire, first ensure your vehicle is on a flat, stable surface and turn on your hazard lights. Loosen the lug nuts slightly before raising the car with the jack. Once the tire is off the ground, remove the lug nuts completely, replace the flat tire with the spare, and hand-tighten the lug nuts before lowering the vehicle.",
+    "query": "how to change a flat tire step by step"
+  },
+  {
+    "id": "msmarco_006",
+    "text": "Python is a high-level, interpreted programming language known for its simple syntax and readability. Created by Guido van Rossum and first released in 1991, Python supports multiple programming paradigms including procedural, object-oriented, and functional programming.",
+    "query": "what causes python snakes to be aggressive"
+  },
+  {
+    "id": "msmarco_007",
+    "text": "The average human body contains about 60% water, though this varies by age, sex, and body composition. Infants have the highest percentage at about 75%, while elderly adults may have as little as 50%. Staying properly hydrated is essential for temperature regulation, nutrient transport, and waste elimination.",
+    "query": "how much water is in the human body"
+  },
+  {
+    "id": "msmarco_008",
+    "text": "Mount Everest, located in the Himalayas on the border between Nepal and Tibet, stands at 8,848.86 meters (29,031.7 feet) above sea level. It was first successfully summited on May 29, 1953, by Sir Edmund Hillary of New Zealand and Tenzing Norgay, a Sherpa of Nepal.",
+    "query": "what is the tallest mountain in the world"
+  },
+  {
+    "id": "msmarco_009",
+    "text": "The James Webb Space Telescope uses a primary mirror composed of 18 hexagonal gold-plated beryllium segments. While it observes primarily in the infrared spectrum, the telescope's instruments can also detect some visible light. Its orbit around the L2 Lagrange point keeps it about 1.5 million kilometers from Earth.",
+    "query": "how does the stock market work"
+  },
+  {
+    "id": "msmarco_010",
+    "text": "Cognitive behavioral therapy (CBT) is a structured form of psychotherapy that helps patients identify and change negative thought patterns. Research has consistently shown CBT to be effective for treating depression, anxiety disorders, PTSD, and eating disorders. A typical course of CBT involves 12-20 weekly sessions with a trained therapist.",
+    "query": "what is cognitive behavioral therapy used for"
+  }
+]

@@ -1,0 +1,103 @@
+# Politeness Transfer Annotation
+# Based on Madaan et al., ACL 2020
+# Paper: https://aclanthology.org/2020.acl-main.169/
+# Dataset: https://github.com/tag-and-generate/politeness-dataset
+#
+# Annotate text for politeness level, speech act type, and optional
+# rewrite suggestions. The task uses workplace and email text to study
+# how politeness can be measured and transferred between styles.
+#
+# Politeness Scale:
+# 1 - Very Impolite: Rude, hostile, or dismissive language
+# 2 - Somewhat Impolite: Blunt or inconsiderate phrasing
+# 3 - Neutral: Neither polite nor impolite
+# 4 - Somewhat Polite: Courteous and considerate language
+# 5 - Very Polite: Exceptionally courteous and respectful
+#
+# Speech Act Types:
+# - Request: Asking someone to do something
+# - Statement: Providing information or expressing an opinion
+# - Question: Seeking information
+# - Suggestion: Proposing an action or idea
+#
+# Annotation Guidelines:
+# 1. Read the text and assess overall politeness
+# 2. Identify the primary speech act
+# 3. If the text is impolite, suggest a more polite rewrite
+
+annotation_task_name: "Politeness Transfer Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: politeness_rating
+    description: "How polite is this text?"
+    min_label: "Very Impolite"
+    max_label: "Very Polite"
+    size: 5
+
+  - annotation_type: radio
+    name: speech_act
+    description: "What is the primary speech act of this text?"
+    labels:
+      - "Request"
+      - "Statement"
+      - "Question"
+      - "Suggestion"
+    keyboard_shortcuts:
+      "Request": "1"
+      "Statement": "2"
+      "Question": "3"
+      "Suggestion": "4"
+    tooltips:
+      "Request": "Asking someone to perform an action or provide something"
+      "Statement": "Providing information, expressing an opinion, or making a declaration"
+      "Question": "Seeking information or clarification"
+      "Suggestion": "Proposing an action, idea, or course of action"
+
+  - annotation_type: text
+    name: polite_rewrite
+    description: "If the text is impolite (rating 1-2), suggest a more polite version. Leave blank if already polite."
+
+annotation_instructions: |
+  You will annotate workplace and email text for politeness level and speech act type.
+
+  For each text:
+  1. Read the text carefully, considering tone and word choice.
+  2. Rate the politeness on a 5-point scale from Very Impolite to Very Polite.
+  3. Identify the primary speech act (Request, Statement, Question, or Suggestion).
+  4. If the text is impolite (rated 1 or 2), provide a rewrite that conveys the same message more politely.
+
+  Consider these politeness markers:
+  - Hedging ("perhaps", "maybe", "I think")
+  - Indirect requests ("Would you mind...?", "Could you...?")
+  - Gratitude expressions ("Thank you", "I appreciate...")
+  - Apologies ("Sorry to bother you", "Excuse me")
+  - Directness without softening can be perceived as impolite.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

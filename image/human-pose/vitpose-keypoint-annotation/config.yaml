@@ -1,0 +1,121 @@
+# ViTPose Human Keypoint Annotation
+# Based on Xu et al., NeurIPS 2022
+# Paper: https://arxiv.org/abs/2204.12484
+# Dataset: https://github.com/ViTAE-Transformer/ViTPose
+#
+# Annotate human body keypoints and pose categories in images.
+# Annotators mark anatomical landmarks using the landmark tool,
+# draw bounding boxes around detected people, and classify
+# the overall body pose type.
+#
+# Keypoints follow the COCO 13-point body model:
+# Head, Shoulders (L/R), Elbows (L/R), Wrists (L/R),
+# Hips (L/R), Knees (L/R), Ankles (L/R)
+#
+# Pose Categories:
+# - Standing: Person is upright on their feet
+# - Sitting: Person is seated on a surface
+# - Lying Down: Person is horizontal or reclined
+# - In Motion: Person is actively moving (walking, running, etc.)
+# - Partially Occluded: Person is partially hidden by objects
+#
+# Annotation Guidelines:
+# 1. Place landmarks on visible body keypoints
+# 2. Draw a bounding box around each person
+# 3. Classify the primary pose of the person
+# 4. For occluded keypoints, estimate position if possible
+
+annotation_task_name: "ViTPose Human Keypoint Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: image_annotation
+    name: pose_keypoints
+    description: "Mark body keypoints using landmarks and draw bounding boxes around people"
+    tools:
+      - landmark
+      - bbox
+    labels:
+      - "Head"
+      - "Shoulder_L"
+      - "Shoulder_R"
+      - "Elbow_L"
+      - "Elbow_R"
+      - "Wrist_L"
+      - "Wrist_R"
+      - "Hip_L"
+      - "Hip_R"
+      - "Knee_L"
+      - "Knee_R"
+      - "Ankle_L"
+      - "Ankle_R"
+
+  - annotation_type: radio
+    name: pose_category
+    description: "What is the primary pose of the person in this image?"
+    labels:
+      - "Standing"
+      - "Sitting"
+      - "Lying Down"
+      - "In Motion"
+      - "Partially Occluded"
+    keyboard_shortcuts:
+      "Standing": "1"
+      "Sitting": "2"
+      "Lying Down": "3"
+      "In Motion": "4"
+      "Partially Occluded": "5"
+    tooltips:
+      "Standing": "Person is upright on their feet, stationary"
+      "Sitting": "Person is seated on a chair, bench, ground, or other surface"
+      "Lying Down": "Person is horizontal, reclined, or lying on a surface"
+      "In Motion": "Person is actively moving -- walking, running, jumping, etc."
+      "Partially Occluded": "Person is partially hidden behind objects or other people"
+
+annotation_instructions: |
+  You will annotate human body keypoints and classify poses in images.
+
+  For each image:
+  1. Use the **landmark** tool to place markers on visible body keypoints.
+  2. Use the **bbox** tool to draw a bounding box around each person.
+  3. Select the primary pose category for the person.
+
+  Keypoint placement:
+  - Place landmarks as precisely as possible on the center of each joint.
+  - If a keypoint is occluded but its position can be estimated, mark the estimated location.
+  - Skip keypoints that are completely invisible and cannot be estimated.
+  - Left/Right refer to the person's left and right (not the viewer's).
+
+  Pose classification:
+  - Choose the dominant pose if the person is transitioning between poses.
+  - Use "Partially Occluded" only when occlusion prevents reliable pose classification.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Scene Description:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="text-align: center; margin-bottom: 16px;">
+      <img src="{{image_url}}" style="max-width: 100%; max-height: 600px; border-radius: 8px; border: 1px solid #e2e8f0;" />
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

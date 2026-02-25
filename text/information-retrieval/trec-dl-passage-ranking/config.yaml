@@ -1,0 +1,93 @@
+# TREC Deep Learning Passage Ranking
+# Based on Craswell et al., TREC/SIGIR 2019
+# Paper: https://arxiv.org/abs/2003.07820
+# Dataset: https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019
+#
+# Annotate query-passage relevance for information retrieval evaluation.
+# Each item presents a search query and a candidate passage. Annotators
+# assess how relevant the passage is to the query using both a categorical
+# relevance label and a fine-grained likert scale.
+#
+# Relevance Levels:
+# - Perfectly Relevant: Passage fully answers the query
+# - Highly Relevant: Passage contains most of the answer
+# - Related: Passage is topically related but does not answer the query
+# - Irrelevant: Passage has no connection to the query
+#
+# Annotation Guidelines:
+# 1. Read the query to understand the user information need
+# 2. Read the passage carefully
+# 3. Assess relevance based on how well the passage satisfies the query
+# 4. Consider both topical relevance and answer quality
+# 5. Rate on both the categorical and fine-grained scales
+
+annotation_task_name: "TREC Deep Learning Passage Ranking"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: select
+    name: relevance_category
+    description: "How relevant is this passage to the query?"
+    labels:
+      - "Perfectly Relevant"
+      - "Highly Relevant"
+      - "Related"
+      - "Irrelevant"
+    tooltips:
+      "Perfectly Relevant": "The passage fully and directly answers the query"
+      "Highly Relevant": "The passage contains most of the answer or key information"
+      "Related": "The passage is topically related but does not directly answer the query"
+      "Irrelevant": "The passage has no meaningful connection to the query"
+
+  - annotation_type: likert
+    name: relevance_score
+    description: "Rate the passage relevance on a fine-grained scale"
+    min_label: "Not Relevant"
+    max_label: "Perfectly Relevant"
+    size: 4
+
+annotation_instructions: |
+  You will assess the relevance of passages to search queries from the TREC Deep Learning Track.
+
+  For each item:
+  1. Read the search query to understand what information the user is looking for.
+  2. Read the candidate passage carefully.
+  3. Select the most appropriate relevance category.
+  4. Rate the relevance on the fine-grained scale.
+
+  Key considerations:
+  - A passage can be topically related without answering the query.
+  - Consider whether the passage would satisfy the user's information need.
+  - Partial answers should be rated as Highly Relevant, not Perfectly Relevant.
+  - Passages that mention query terms but are off-topic should be rated as Irrelevant.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Search Query:</strong>
+      <p style="font-size: 18px; font-weight: 600; line-height: 1.5; margin: 8px 0 0 0;">{{query}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Candidate Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

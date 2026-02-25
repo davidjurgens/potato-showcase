@@ -1,0 +1,23 @@
+{
+  "title": "CoVoST 2 - Speech Translation Evaluation",
+  "description": "Speech translation quality evaluation based on the CoVoST 2 dataset (Wang et al., arXiv 2020). Annotators listen to source audio, review translations, label audio segments, and rate overall translation quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Meta AI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["text", "radio", "audio_annotation", "likert"],
+  "domain": ["Audio", "NLP", "Translation"],
+  "useCase": ["Speech Translation", "Translation Quality", "Cross-lingual"],
+  "complexity": "intermediate",
+  "tags": ["covost", "speech-translation", "multilingual", "audio", "translation-quality"],
+  "featured": false,
+  "paperReference": "Wang et al., arXiv 2020",
+  "paperUrl": "https://arxiv.org/abs/2007.10310",
+  "datasetUrl": "https://github.com/facebookresearch/covost",
+  "citation": "@article{wang2020covost2,\n    title = \"{C}o{V}o{ST} 2 and Massively Multilingual Speech-to-Text Translation\",\n    author = \"Wang, Changhan and Wu, Anne and Pino, Juan\",\n    journal = \"arXiv preprint arXiv:2007.10310\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/2007.10310\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "KG-BERT Knowledge Graph Triple Validation",
+  "description": "Validate knowledge graph triples for correctness and annotate relation types based on the KG-BERT framework. Annotators assess whether entity-relation-entity triples are valid, classify the relation type, and provide entity descriptions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yao et al.",
+    "email": "jurgens@umich.edu",
+    "github": "yao8839836",
+    "affiliation": "Illinois Institute of Technology"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "select", "text"],
+  "domain": ["NLP", "Knowledge Graphs"],
+  "useCase": ["Knowledge Graph Completion", "Triple Validation", "Relation Classification"],
+  "complexity": "intermediate",
+  "tags": ["knowledge-graph", "triple-validation", "relation-extraction", "kg-bert", "aaai2020"],
+  "featured": false,
+  "paperReference": "Yao et al., AAAI 2020",
+  "paperUrl": "https://arxiv.org/abs/1909.03193",
+  "datasetUrl": "https://github.com/yao8839836/kg-bert",
+  "citation": "@inproceedings{yao2019kg,\n  title={KG-BERT: BERT for Knowledge Graph Completion},\n  author={Yao, Liang and Mao, Chengsheng and Luo, Yuan},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  year={2020}\n}"
+}

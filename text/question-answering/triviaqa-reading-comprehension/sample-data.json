@@ -1,0 +1,52 @@
+[
+  {
+    "id": "triviaqa_001",
+    "text": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres. It is located in the Coral Sea, off the coast of Queensland, Australia. The reef was selected as a World Heritage Site in 1981.",
+    "question": "In which country is the Great Barrier Reef located?"
+  },
+  {
+    "id": "triviaqa_002",
+    "text": "Ludwig van Beethoven was a German composer and pianist who was a crucial figure in the transition between the Classical and Romantic eras. His best-known compositions include nine symphonies, five piano concertos, and numerous chamber music pieces. Despite losing his hearing later in life, he continued to compose some of his most admired works.",
+    "question": "How many symphonies did Beethoven compose?"
+  },
+  {
+    "id": "triviaqa_003",
+    "text": "Mount Everest, known in Nepali as Sagarmatha and in Tibetan as Chomolungma, is Earth's highest mountain above sea level. It is located in the Mahalangur Himal sub-range of the Himalayas. The international border between Nepal and China runs across its summit point. On 29 May 1953, Edmund Hillary and Tenzing Norgay became the first climbers confirmed to have reached the summit.",
+    "question": "Who were the first two people to reach the summit of Mount Everest?"
+  },
+  {
+    "id": "triviaqa_004",
+    "text": "The periodic table of elements is a tabular display of chemical elements organized by atomic number, electron configuration, and recurring chemical properties. Dmitri Mendeleev published the first widely recognized periodic table in 1869, in which he arranged elements by atomic weight and predicted several unknown elements.",
+    "question": "Who created the periodic table?"
+  },
+  {
+    "id": "triviaqa_005",
+    "text": "The Amazon River is the largest river by discharge volume of water in the world. It flows through South America, primarily through Brazil, Peru, and Colombia. The river has a length of approximately 6,400 km, making it one of the longest rivers in the world. The Amazon basin covers roughly 7 million square kilometers.",
+    "question": "What is the longest river in Asia?"
+  },
+  {
+    "id": "triviaqa_006",
+    "text": "Marie Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person to win a Nobel Prize twice, and the only person to win a Nobel Prize in two scientific fields: Physics in 1903 and Chemistry in 1911.",
+    "question": "In which two fields did Marie Curie win Nobel Prizes?"
+  },
+  {
+    "id": "triviaqa_007",
+    "text": "The Colosseum, also known as the Flavian Amphitheatre, is an oval amphitheatre in the centre of the city of Rome, Italy. It is the largest ancient amphitheatre ever built, and could hold an estimated 50,000 to 80,000 spectators. Construction began under Emperor Vespasian around 70-72 AD and was completed in 80 AD under his successor Titus.",
+    "question": "Under which Roman emperor was construction of the Colosseum begun?"
+  },
+  {
+    "id": "triviaqa_008",
+    "text": "The human body contains 206 bones in the adult skeleton, though at birth a baby has approximately 270 bones. Some of these fuse together during growth. The longest bone in the human body is the femur (thigh bone), while the smallest is the stapes bone in the middle ear, measuring approximately 3mm.",
+    "question": "What is the smallest bone in the human body?"
+  },
+  {
+    "id": "triviaqa_009",
+    "text": "Charlie Chaplin was an English comic actor, filmmaker, and composer who rose to fame in the era of silent film. He became a worldwide icon through his screen persona, The Tramp, and is considered one of the most important figures in the history of the film industry. His career spanned over 75 years.",
+    "question": "What was the name of Charlie Chaplin's famous character?"
+  },
+  {
+    "id": "triviaqa_010",
+    "text": "The speed of light in vacuum is exactly 299,792,458 metres per second. This value was established as a defined constant in 1983 when the metre was redefined. Light travels approximately 9.46 trillion kilometres in one year, a distance known as a light-year, commonly used to express astronomical distances.",
+    "question": "What is the speed of light in a vacuum?"
+  }
+]

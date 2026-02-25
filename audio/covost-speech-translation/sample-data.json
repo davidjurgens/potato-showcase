@@ -1,0 +1,72 @@
+[
+  {
+    "id": "covost_001",
+    "text": "Le temps est magnifique aujourd'hui, nous devrions aller nous promener dans le parc.",
+    "audio_url": "audio/covost_fr_001.wav",
+    "source_language": "French",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_002",
+    "text": "Die Wissenschaftler haben eine neue Methode zur Behandlung von Krebs entdeckt.",
+    "audio_url": "audio/covost_de_002.wav",
+    "source_language": "German",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_003",
+    "text": "El gobierno anuncio nuevas medidas para combatir el cambio climatico.",
+    "audio_url": "audio/covost_es_003.wav",
+    "source_language": "Spanish",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_004",
+    "text": "I treni ad alta velocita collegano le principali citta italiane in poche ore.",
+    "audio_url": "audio/covost_it_004.wav",
+    "source_language": "Italian",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_005",
+    "text": "A educacao e a base fundamental para o desenvolvimento de qualquer nacao.",
+    "audio_url": "audio/covost_pt_005.wav",
+    "source_language": "Portuguese",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_006",
+    "text": "Les chercheurs ont publie leurs resultats dans une revue scientifique internationale.",
+    "audio_url": "audio/covost_fr_006.wav",
+    "source_language": "French",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_007",
+    "text": "Der neue Flughafen wird voraussichtlich im nachsten Jahr eroeffnet.",
+    "audio_url": "audio/covost_de_007.wav",
+    "source_language": "German",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_008",
+    "text": "La conferencia internacional sobre inteligencia artificial reunio a expertos de todo el mundo.",
+    "audio_url": "audio/covost_es_008.wav",
+    "source_language": "Spanish",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_009",
+    "text": "Il museo ha organizzato una mostra dedicata all'arte rinascimentale italiana.",
+    "audio_url": "audio/covost_it_009.wav",
+    "source_language": "Italian",
+    "target_language": "English"
+  },
+  {
+    "id": "covost_010",
+    "text": "Os resultados da pesquisa mostraram uma melhoria significativa na qualidade de vida dos participantes.",
+    "audio_url": "audio/covost_pt_010.wav",
+    "source_language": "Portuguese",
+    "target_language": "English"
+  }
+]

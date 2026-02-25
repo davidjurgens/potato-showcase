@@ -1,0 +1,83 @@
+# IndicNLP Suite - Multilingual Sentiment Analysis
+# Based on Kakwani et al., Findings of EMNLP 2020
+# Paper: https://aclanthology.org/2020.findings-emnlp.445/
+# Dataset: https://indicnlp.ai4bharat.org/
+#
+# This task classifies the sentiment of product reviews written in various
+# Indic languages. Annotators assign a sentiment label and may provide
+# optional notes about the text.
+#
+# Sentiment Labels:
+# - Positive: The review expresses satisfaction or recommendation
+# - Negative: The review expresses dissatisfaction or criticism
+# - Neutral: The review is balanced or purely descriptive
+#
+# Annotation Guidelines:
+# 1. Read the product review in the given language
+# 2. Note the language identifier for context
+# 3. Assign a sentiment label (Positive, Negative, or Neutral)
+# 4. Optionally add notes about any difficulties or observations
+
+annotation_task_name: "IndicNLP Suite - Multilingual Sentiment Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the sentiment of this product review?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "The review expresses satisfaction, praise, or recommendation"
+      "Negative": "The review expresses dissatisfaction, criticism, or complaint"
+      "Neutral": "The review is balanced, factual, or does not express clear sentiment"
+
+  - annotation_type: text
+    name: notes
+    description: "Optional notes about the review or annotation"
+
+annotation_instructions: |
+  You will be shown a product review written in an Indic language.
+  The language of the review is indicated above the text.
+  1. Read the product review carefully.
+  2. Assign a sentiment label: Positive, Negative, or Neutral.
+  3. Optionally, add any notes about the review or your annotation.
+
+  Note: You should be proficient in the indicated language to annotate accurately.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #dbeafe; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
+      <strong style="color: #1e40af;">Language:</strong>
+      <span style="color: #1e3a5f;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Product Review:</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

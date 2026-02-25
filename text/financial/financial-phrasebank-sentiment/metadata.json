@@ -1,0 +1,23 @@
+{
+  "title": "Financial PhraseBank - Sentiment Classification",
+  "description": "Sentiment classification of financial news sentences based on the Financial PhraseBank dataset (Malo et al., JASIST 2014). Annotators classify sentences from financial news articles into fine-grained and coarse sentiment categories.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Malo et al.",
+    "email": "jurgens@umich.edu",
+    "github": "ProsusAI",
+    "affiliation": "Aalto University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["select", "radio"],
+  "domain": ["NLP", "Finance"],
+  "useCase": ["Sentiment Analysis", "Financial NLP", "Market Analysis"],
+  "complexity": "beginner",
+  "tags": ["financial", "sentiment", "phrasebank", "news", "market", "finbert"],
+  "featured": false,
+  "paperReference": "Malo et al., JASIST 2014",
+  "paperUrl": "https://arxiv.org/abs/1307.5336",
+  "datasetUrl": "https://huggingface.co/datasets/financial_phrasebank",
+  "citation": "@article{malo2014good,\n    title = \"Good debt or bad debt: Detecting semantic orientations in economic texts\",\n    author = \"Malo, Pekka and Sinha, Ankur and Korhonen, Pekka and Wallenius, Jyrki and Takala, Pyry\",\n    journal = \"Journal of the Association for Information Science and Technology\",\n    volume = \"65\",\n    number = \"4\",\n    pages = \"782--796\",\n    year = \"2014\",\n    url = \"https://arxiv.org/abs/1307.5336\"\n}"
+}

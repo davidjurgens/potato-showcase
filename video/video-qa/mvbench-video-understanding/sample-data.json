@@ -1,0 +1,102 @@
+[
+  {
+    "id": "mvb_001",
+    "text": "What action does the person perform first in the video?",
+    "video_url": "https://example.com/mvbench/video_001.mp4",
+    "option_a": "Picks up a cup from the table",
+    "option_b": "Opens the refrigerator door",
+    "option_c": "Turns on the faucet",
+    "option_d": "Sits down on a chair",
+    "task_type": "Action Sequence"
+  },
+  {
+    "id": "mvb_002",
+    "text": "What will the dog most likely do next based on its behavior in the video?",
+    "video_url": "https://example.com/mvbench/video_002.mp4",
+    "option_a": "Chase the ball",
+    "option_b": "Lie down and sleep",
+    "option_c": "Bark at the stranger",
+    "option_d": "Jump into the water",
+    "task_type": "Action Prediction"
+  },
+  {
+    "id": "mvb_003",
+    "text": "How does the state of the door change during the video?",
+    "video_url": "https://example.com/mvbench/video_003.mp4",
+    "option_a": "It goes from closed to open",
+    "option_b": "It goes from open to closed",
+    "option_c": "It remains open throughout",
+    "option_d": "It opens and then closes again",
+    "task_type": "State Change"
+  },
+  {
+    "id": "mvb_004",
+    "text": "How many people enter the room during the entire video?",
+    "video_url": "https://example.com/mvbench/video_004.mp4",
+    "option_a": "One",
+    "option_b": "Two",
+    "option_c": "Three",
+    "option_d": "Four",
+    "task_type": "Counting"
+  },
+  {
+    "id": "mvb_005",
+    "text": "Which action is the opposite of what the person does in the video?",
+    "video_url": "https://example.com/mvbench/video_005.mp4",
+    "option_a": "Putting the book on the shelf",
+    "option_b": "Closing the window",
+    "option_c": "Standing up from the chair",
+    "option_d": "Turning off the light",
+    "task_type": "Action Antonym"
+  },
+  {
+    "id": "mvb_006",
+    "text": "Does the red ball appear in the second half of the video?",
+    "video_url": "https://example.com/mvbench/video_006.mp4",
+    "option_a": "Yes, it appears on the floor",
+    "option_b": "Yes, it appears on the table",
+    "option_c": "No, it only appears in the first half",
+    "option_d": "No, there is no red ball in the video",
+    "task_type": "Object Existence"
+  },
+  {
+    "id": "mvb_007",
+    "text": "How many times does the scene change location in the video?",
+    "video_url": "https://example.com/mvbench/video_007.mp4",
+    "option_a": "No scene changes",
+    "option_b": "One time",
+    "option_c": "Two times",
+    "option_d": "Three or more times",
+    "task_type": "Scene Transition"
+  },
+  {
+    "id": "mvb_008",
+    "text": "In what order does the chef prepare the ingredients?",
+    "video_url": "https://example.com/mvbench/video_008.mp4",
+    "option_a": "Chops onions, then dices tomatoes, then minces garlic",
+    "option_b": "Minces garlic, then chops onions, then dices tomatoes",
+    "option_c": "Dices tomatoes, then minces garlic, then chops onions",
+    "option_d": "Chops onions, then minces garlic, then dices tomatoes",
+    "task_type": "Action Sequence"
+  },
+  {
+    "id": "mvb_009",
+    "text": "What change occurs to the liquid in the beaker during the experiment?",
+    "video_url": "https://example.com/mvbench/video_009.mp4",
+    "option_a": "It changes from clear to blue",
+    "option_b": "It changes from blue to clear",
+    "option_c": "It changes from clear to red",
+    "option_d": "It remains the same color throughout",
+    "task_type": "State Change"
+  },
+  {
+    "id": "mvb_010",
+    "text": "Based on the athlete's movements, what will they most likely do next?",
+    "video_url": "https://example.com/mvbench/video_010.mp4",
+    "option_a": "Perform a layup shot",
+    "option_b": "Pass the ball to a teammate",
+    "option_c": "Dribble past the defender",
+    "option_d": "Attempt a three-point shot",
+    "task_type": "Action Prediction"
+  }
+]

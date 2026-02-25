@@ -1,0 +1,23 @@
+{
+  "title": "Speech Commands - Keyword Recognition",
+  "description": "Speech command keyword recognition and quality assessment based on the Speech Commands dataset (Warden, arXiv 2018). Annotators listen to audio clips, classify the spoken command word, and assess the audio quality.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Warden",
+    "email": "jurgens@umich.edu",
+    "github": "google",
+    "affiliation": "Google"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "audio_annotation"],
+  "domain": ["Audio", "Speech"],
+  "useCase": ["Keyword Spotting", "Speech Recognition", "Audio Classification"],
+  "complexity": "beginner",
+  "tags": ["speech-commands", "keyword-recognition", "audio", "voice", "speech"],
+  "featured": false,
+  "paperReference": "Warden, arXiv 2018",
+  "paperUrl": "https://arxiv.org/abs/1804.03209",
+  "datasetUrl": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+  "citation": "@article{warden2018speech,\n    title = \"Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition\",\n    author = \"Warden, Pete\",\n    journal = \"arXiv preprint arXiv:1804.03209\",\n    year = \"2018\",\n    url = \"https://arxiv.org/abs/1804.03209\"\n}"
+}

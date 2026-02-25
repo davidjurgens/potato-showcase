@@ -1,0 +1,62 @@
+[
+  {
+    "id": "helm_001",
+    "text": "A 175B parameter autoregressive language model trained on a diverse web corpus. Demonstrates strong few-shot learning across a range of NLP tasks with competitive performance on question answering and text generation benchmarks.",
+    "model_name": "GPT-3 (175B)",
+    "metrics_summary": "Accuracy: 78.2% | Calibration: 0.72 | Robustness: 65.4% | Fairness: 0.81 | Efficiency: 3.2 tokens/sec | Toxicity: 0.12"
+  },
+  {
+    "id": "helm_002",
+    "text": "An instruction-tuned 7B parameter model fine-tuned with RLHF on human preference data. Excels at following complex instructions while maintaining safety alignment, though limited by its smaller parameter count.",
+    "model_name": "LLaMA-2-Chat (7B)",
+    "metrics_summary": "Accuracy: 64.8% | Calibration: 0.68 | Robustness: 58.1% | Fairness: 0.85 | Efficiency: 45.6 tokens/sec | Toxicity: 0.05"
+  },
+  {
+    "id": "helm_003",
+    "text": "A mixture-of-experts model with 8x7B parameters, using sparse activation to achieve strong performance with efficient inference. Performs competitively with much larger dense models across diverse benchmarks.",
+    "model_name": "Mixtral (8x7B)",
+    "metrics_summary": "Accuracy: 74.5% | Calibration: 0.75 | Robustness: 62.3% | Fairness: 0.79 | Efficiency: 28.1 tokens/sec | Toxicity: 0.09"
+  },
+  {
+    "id": "helm_004",
+    "text": "A 540B parameter model trained with chain-of-thought capabilities, showing particular strength in reasoning-intensive tasks. Achieves state-of-the-art results on math and science benchmarks with appropriate prompting.",
+    "model_name": "PaLM 2 (540B)",
+    "metrics_summary": "Accuracy: 82.1% | Calibration: 0.78 | Robustness: 70.2% | Fairness: 0.77 | Efficiency: 1.8 tokens/sec | Toxicity: 0.10"
+  },
+  {
+    "id": "helm_005",
+    "text": "A 13B parameter open-source model trained on a curated high-quality dataset. Balances performance and accessibility, demonstrating that careful data curation can compensate for smaller model size.",
+    "model_name": "Pythia (13B)",
+    "metrics_summary": "Accuracy: 58.3% | Calibration: 0.61 | Robustness: 51.7% | Fairness: 0.73 | Efficiency: 38.4 tokens/sec | Toxicity: 0.15"
+  },
+  {
+    "id": "helm_006",
+    "text": "An encoder-decoder model with 11B parameters specialized for text-to-text tasks. Strong performance on summarization, translation, and question answering, with the encoder-decoder architecture providing advantages for conditional generation.",
+    "model_name": "T5 (11B)",
+    "metrics_summary": "Accuracy: 71.6% | Calibration: 0.70 | Robustness: 60.8% | Fairness: 0.82 | Efficiency: 22.3 tokens/sec | Toxicity: 0.07"
+  },
+  {
+    "id": "helm_007",
+    "text": "A 70B parameter model with extended context window up to 32K tokens. Shows strong long-document understanding and multi-turn conversation abilities. Competitive with larger closed-source models.",
+    "model_name": "LLaMA-2 (70B)",
+    "metrics_summary": "Accuracy: 76.9% | Calibration: 0.74 | Robustness: 66.5% | Fairness: 0.83 | Efficiency: 8.7 tokens/sec | Toxicity: 0.08"
+  },
+  {
+    "id": "helm_008",
+    "text": "A 20B parameter model trained with a focus on code generation and mathematical reasoning. Outperforms larger general-purpose models on coding benchmarks while maintaining reasonable NLU performance.",
+    "model_name": "CodeGen (20B)",
+    "metrics_summary": "Accuracy: 62.4% | Calibration: 0.64 | Robustness: 53.9% | Fairness: 0.76 | Efficiency: 18.9 tokens/sec | Toxicity: 0.11"
+  },
+  {
+    "id": "helm_009",
+    "text": "A lightweight 3B parameter model designed for edge deployment and resource-constrained environments. Surprisingly competitive on common sense reasoning despite its small size, though limited on complex reasoning tasks.",
+    "model_name": "Phi-2 (3B)",
+    "metrics_summary": "Accuracy: 55.1% | Calibration: 0.59 | Robustness: 48.3% | Fairness: 0.80 | Efficiency: 92.5 tokens/sec | Toxicity: 0.06"
+  },
+  {
+    "id": "helm_010",
+    "text": "A 65B parameter model fine-tuned with constitutional AI methods for improved safety and helpfulness. Demonstrates strong alignment properties with minimal toxicity generation while maintaining competitive task performance.",
+    "model_name": "Claude (65B)",
+    "metrics_summary": "Accuracy: 79.8% | Calibration: 0.76 | Robustness: 68.1% | Fairness: 0.88 | Efficiency: 5.4 tokens/sec | Toxicity: 0.03"
+  }
+]

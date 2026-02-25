@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vqa_001",
+    "text": "What color is the fire hydrant?",
+    "image_url": "images/vqa_001.jpg",
+    "question_type": "other"
+  },
+  {
+    "id": "vqa_002",
+    "text": "Is the person wearing a hat?",
+    "image_url": "images/vqa_002.jpg",
+    "question_type": "yes/no"
+  },
+  {
+    "id": "vqa_003",
+    "text": "How many people are in the image?",
+    "image_url": "images/vqa_003.jpg",
+    "question_type": "number"
+  },
+  {
+    "id": "vqa_004",
+    "text": "What sport is being played?",
+    "image_url": "images/vqa_004.jpg",
+    "question_type": "other"
+  },
+  {
+    "id": "vqa_005",
+    "text": "Is it raining in this scene?",
+    "image_url": "images/vqa_005.jpg",
+    "question_type": "yes/no"
+  },
+  {
+    "id": "vqa_006",
+    "text": "What animal is shown in the image?",
+    "image_url": "images/vqa_006.jpg",
+    "question_type": "other"
+  },
+  {
+    "id": "vqa_007",
+    "text": "How many cars are parked on the street?",
+    "image_url": "images/vqa_007.jpg",
+    "question_type": "number"
+  },
+  {
+    "id": "vqa_008",
+    "text": "What is the person holding in their right hand?",
+    "image_url": "images/vqa_008.jpg",
+    "question_type": "other"
+  },
+  {
+    "id": "vqa_009",
+    "text": "Are there any trees visible in the background?",
+    "image_url": "images/vqa_009.jpg",
+    "question_type": "yes/no"
+  },
+  {
+    "id": "vqa_010",
+    "text": "What type of food is on the plate?",
+    "image_url": "images/vqa_010.jpg",
+    "question_type": "other"
+  }
+]

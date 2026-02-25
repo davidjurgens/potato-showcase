@@ -1,0 +1,23 @@
+{
+  "title": "LexGLUE - Legal Document Understanding",
+  "description": "Legal document understanding and classification based on the LexGLUE benchmark (Chalkidis et al., ACL 2022). Annotators assess the relevance of legal case summaries, classify applicable areas of law, and provide legal reasoning.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chalkidis et al.",
+    "email": "jurgens@umich.edu",
+    "github": "coastalcph",
+    "affiliation": "University of Copenhagen"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["NLP", "Legal"],
+  "useCase": ["Legal Classification", "Document Understanding", "Legal NLP"],
+  "complexity": "intermediate",
+  "tags": ["lexglue", "legal", "law", "document-classification", "acl2022"],
+  "featured": false,
+  "paperReference": "Chalkidis et al., ACL 2022",
+  "paperUrl": "https://aclanthology.org/2022.acl-long.297/",
+  "datasetUrl": "https://huggingface.co/datasets/lex_glue",
+  "citation": "@inproceedings{chalkidis-etal-2022-lexglue,\n    title = \"{L}ex{GLUE}: A Benchmark Dataset for Legal Language Understanding in {E}nglish\",\n    author = \"Chalkidis, Ilias and Jana, Abhik and Hartung, Dirk and Bommarito, Michael and Androutsopoulos, Ion and Katz, Daniel and Aletras, Nikolaos\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.297\",\n    pages = \"4310--4330\"\n}"
+}

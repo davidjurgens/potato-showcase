@@ -1,0 +1,23 @@
+{
+  "title": "TextVQA - Reading Text in Images",
+  "description": "Visual question answering that requires reading and reasoning about text present in images. Based on the TextVQA dataset (Singh et al., CVPR 2019), annotators answer questions about images where understanding scene text (signs, labels, menus, etc.) is essential.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Singh et al.",
+    "email": "jurgens@umich.edu",
+    "github": "facebookresearch",
+    "affiliation": "Facebook AI Research"
+  },
+  "createdAt": "2026-02-24",
+  "updatedAt": "2026-02-24",
+  "annotationTypes": ["text", "radio"],
+  "domain": ["Computer Vision", "NLP"],
+  "useCase": ["Visual Question Answering", "Scene Text Understanding", "OCR"],
+  "complexity": "intermediate",
+  "tags": ["textvqa", "vqa", "ocr", "scene-text", "reading", "cvpr2019", "multimodal"],
+  "featured": false,
+  "paperReference": "Singh et al., CVPR 2019",
+  "paperUrl": "https://arxiv.org/abs/1904.08920",
+  "datasetUrl": "https://textvqa.org/",
+  "citation": "@inproceedings{singh2019textvqa,\n    title = \"Towards {VQA} Models That Can Read\",\n    author = \"Singh, Amanpreet and Natarajan, Vivek and Shah, Meet and Jiang, Yu and Chen, Xinlei and Batra, Dhruv and Parikh, Devi and Rohrbach, Marcus\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1904.08920\"\n}"
+}

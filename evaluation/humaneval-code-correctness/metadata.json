@@ -1,0 +1,23 @@
+{
+  "title": "HumanEval Code Correctness Evaluation",
+  "description": "Evaluation of code generation correctness based on the HumanEval benchmark (Chen et al., arXiv 2021). Annotators assess whether AI-generated code solutions are correct, provide code review comments, and rate code quality on a numeric scale.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "openai",
+    "affiliation": "OpenAI"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "text", "number"],
+  "domain": ["NLP", "Code"],
+  "useCase": ["Code Evaluation", "LLM Benchmarking", "Code Quality Assessment"],
+  "complexity": "intermediate",
+  "tags": ["humaneval", "code", "correctness", "code-generation", "benchmark", "arxiv2021"],
+  "featured": false,
+  "paperReference": "Chen et al., arXiv 2021",
+  "paperUrl": "https://arxiv.org/abs/2107.03374",
+  "datasetUrl": "https://github.com/openai/human-eval",
+  "citation": "@article{chen2021evaluating,\n    title = \"Evaluating Large Language Models Trained on Code\",\n    author = \"Chen, Mark and Tworek, Jerry and Jun, Heewoo and Yuan, Qiming and Pinto, Henrique Ponde de Oliveira and Kaplan, Jared and Edwards, Harri and Burda, Yuri and Joseph, Nicholas and Brockman, Greg and others\",\n    journal = \"arXiv preprint arXiv:2107.03374\",\n    year = \"2021\",\n    url = \"https://arxiv.org/abs/2107.03374\"\n}"
+}

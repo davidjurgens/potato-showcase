@@ -1,0 +1,113 @@
+# RT-2 - Robotic Action Annotation
+# Based on Brohan et al., CoRL 2023
+# Paper: https://arxiv.org/abs/2307.15818
+# Dataset: https://robotics-transformer2.github.io/
+#
+# This task evaluates robotic manipulation episodes from the RT-2 benchmark.
+# Annotators watch a video of a robot performing a task, evaluate the success
+# of the execution, describe the actions taken, rate overall quality, and
+# segment the video into distinct action phases.
+#
+# Task Success:
+# - Success: The robot completed the task as instructed
+# - Partial Success: The robot made progress but did not fully complete the task
+# - Failure: The robot failed to make meaningful progress on the task
+#
+# Action Phases (Video Annotation):
+# - Reaching: Robot arm moving toward the target object
+# - Grasping: Robot closing gripper on the object
+# - Placing: Robot positioning the object at the target location
+# - Moving: Robot transporting the object through space
+# - Idle: Robot stationary or resetting
+#
+# Annotation Guidelines:
+# 1. Read the task instruction
+# 2. Watch the video carefully
+# 3. Evaluate task success
+# 4. Describe the actions taken by the robot
+# 5. Rate the execution quality
+# 6. Segment the video into action phases
+
+annotation_task_name: "RT-2 - Robotic Action Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: task_success
+    description: "Did the robot successfully complete the instructed task?"
+    labels:
+      - "Success"
+      - "Partial Success"
+      - "Failure"
+    keyboard_shortcuts:
+      "Success": "1"
+      "Partial Success": "2"
+      "Failure": "3"
+    tooltips:
+      "Success": "The robot fully completed the task as described in the instruction"
+      "Partial Success": "The robot made progress but did not fully complete the task"
+      "Failure": "The robot failed to make meaningful progress on the task"
+
+  - annotation_type: text
+    name: action_description
+    description: "Describe the sequence of actions the robot performed"
+
+  - annotation_type: likert
+    name: execution_quality
+    description: "Rate the overall quality of the robot's execution"
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+  - annotation_type: video_annotation
+    name: action_phases
+    description: "Segment the video into distinct action phases"
+    mode: "segment"
+    labels:
+      - "Reaching"
+      - "Grasping"
+      - "Placing"
+      - "Moving"
+      - "Idle"
+
+annotation_instructions: |
+  You will be shown a task instruction and a video of a robot attempting to complete it.
+  1. Read the task instruction carefully.
+  2. Watch the full video of the robot's execution.
+  3. Judge whether the task was a Success, Partial Success, or Failure.
+  4. Describe the sequence of actions the robot performed.
+  5. Rate the overall execution quality on a 5-point scale.
+  6. Segment the video into action phases: Reaching, Grasping, Placing, Moving, or Idle.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Task Instruction:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #1e293b; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+      <video controls style="max-width: 100%; border-radius: 4px;">
+        <source src="{{video_url}}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "WNUT-2017 - Emerging and Rare Entity Recognition",
+  "description": "Named entity recognition for emerging and rare entities in noisy user-generated text, based on the W-NUT 2017 shared task (Derczynski et al., W-NUT@EMNLP 2017). Covers novel entity types in social media text from Twitter and Reddit.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Derczynski et al.",
+    "email": "jurgens@umich.edu",
+    "github": "noisy-text",
+    "affiliation": "University of Sheffield"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["NLP", "Social Media"],
+  "useCase": ["Named Entity Recognition", "Information Extraction", "Social Media Analysis"],
+  "complexity": "intermediate",
+  "tags": ["ner", "emerging-entities", "social-media", "twitter", "reddit", "wnut2017"],
+  "featured": false,
+  "paperReference": "Derczynski et al., W-NUT@EMNLP 2017",
+  "paperUrl": "https://aclanthology.org/W17-4418/",
+  "datasetUrl": "https://noisy-text.github.io/2017/emerging-rare-entities.html",
+  "citation": "@inproceedings{derczynski-etal-2017-results,\n    title = \"Results of the {WNUT}2017 Shared Task on Novel and Emerging Entity Recognition\",\n    author = \"Derczynski, Leon  and Nichols, Eric  and van Erp, Marieke  and Limsopatham, Nut\",\n    booktitle = \"Proceedings of the 3rd Workshop on Noisy User-generated Text\",\n    month = sep,\n    year = \"2017\",\n    address = \"Copenhagen, Denmark\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/W17-4418\",\n    pages = \"140--147\"\n}"
+}

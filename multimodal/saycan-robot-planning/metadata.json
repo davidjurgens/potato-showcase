@@ -1,0 +1,23 @@
+{
+  "title": "SayCan - Robot Task Planning Evaluation",
+  "description": "Evaluate robot action plans generated from natural language instructions, based on the SayCan framework (Ahn et al., CoRL 2022). Annotators assess feasibility, identify primitive actions, describe plans, and rate safety of grounded language-conditioned robot manipulation tasks.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ahn et al.",
+    "email": "jurgens@umich.edu",
+    "github": "google-research",
+    "affiliation": "Google Research / Everyday Robots"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "multiselect", "text", "likert"],
+  "domain": ["Robotics", "Multimodal", "NLP"],
+  "useCase": ["Robot Planning", "Task Grounding", "Action Evaluation"],
+  "complexity": "advanced",
+  "tags": ["robotics", "task-planning", "grounding", "saycan", "manipulation", "corl2022"],
+  "featured": false,
+  "paperReference": "Ahn et al., CoRL 2022",
+  "paperUrl": "https://arxiv.org/abs/2204.01691",
+  "datasetUrl": "https://say-can.github.io/",
+  "citation": "@inproceedings{ahn2022saycan,\n    title = \"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances\",\n    author = \"Ahn, Michael and Brohan, Anthony and Brown, Noah and Chebotar, Yevgen and Cortes, Omar and David, Byron and Finn, Chelsea and Fu, Chuyuan and Gober, Keerthana and Hausman, Karol and others\",\n    booktitle = \"Conference on Robot Learning (CoRL)\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2204.01691\"\n}"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "multinli_001",
+    "text": "The old man turned the corner and disappeared into the fog, his coat flapping behind him like the wings of a wounded bird.",
+    "hypothesis": "A man walked away.",
+    "genre": "fiction"
+  },
+  {
+    "id": "multinli_002",
+    "text": "The Commission's final report recommended sweeping changes to the existing regulatory framework, including increased oversight of financial institutions.",
+    "hypothesis": "The Commission suggested keeping everything the same.",
+    "genre": "government"
+  },
+  {
+    "id": "multinli_003",
+    "text": "Yeah I mean we used to go camping every summer up in the mountains, the whole family would pack up the car and drive for about six hours.",
+    "hypothesis": "The family took road trips together.",
+    "genre": "telephone"
+  },
+  {
+    "id": "multinli_004",
+    "text": "The island offers pristine beaches, crystal-clear waters, and a vibrant nightlife scene that attracts tourists from around the world.",
+    "hypothesis": "The island is a popular tourist destination.",
+    "genre": "travel"
+  },
+  {
+    "id": "multinli_005",
+    "text": "The new policy, whatever its merits in theory, has been a disaster in practice, leading to widespread confusion and a dramatic increase in administrative costs.",
+    "hypothesis": "The policy worked perfectly as intended.",
+    "genre": "slate"
+  },
+  {
+    "id": "multinli_006",
+    "text": "Dear Senator, I am writing to express my deep concern about the proposed legislation that would significantly reduce funding for public education in our state.",
+    "hypothesis": "Someone wrote a letter about education funding.",
+    "genre": "letters"
+  },
+  {
+    "id": "multinli_007",
+    "text": "The empirical evidence suggests that early intervention programs for at-risk youth can reduce recidivism rates by as much as 40 percent over a five-year period.",
+    "hypothesis": "Early intervention has no effect on youth recidivism.",
+    "genre": "government"
+  },
+  {
+    "id": "multinli_008",
+    "text": "She set down her cup of tea and stared out the window at the rain, wondering if he would ever come back, knowing in her heart that he would not.",
+    "hypothesis": "A woman is drinking coffee.",
+    "genre": "fiction"
+  },
+  {
+    "id": "multinli_009",
+    "text": "The museum houses an impressive collection of Renaissance art, including several works attributed to Leonardo da Vinci and his students.",
+    "hypothesis": "The museum has artwork from the Renaissance period.",
+    "genre": "travel"
+  },
+  {
+    "id": "multinli_010",
+    "text": "Well so I told her that if she really wanted to make it work, she was going to have to put in the effort, you know, not just expect everything to fall into place.",
+    "hypothesis": "The speaker gave advice about effort and expectations.",
+    "genre": "telephone"
+  }
+]

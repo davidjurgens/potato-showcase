@@ -1,0 +1,91 @@
+# STS Benchmark - Semantic Textual Similarity
+# Based on Cer et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2001/
+# Dataset: https://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark
+#
+# This task presents two sentences and asks annotators to rate their
+# semantic similarity on a 0-5 scale using both a slider and Likert scale.
+#
+# Similarity Scale:
+# 0 - Completely different: No semantic overlap
+# 1 - Not equivalent but on the same topic
+# 2 - Not equivalent but share some details
+# 3 - Roughly equivalent with some important differences
+# 4 - Mostly equivalent with minor differences
+# 5 - Perfectly equivalent: Same meaning
+#
+# Annotation Guidelines:
+# 1. Read both sentences carefully
+# 2. Assess how similar they are in meaning (not surface form)
+# 3. Use the slider for a fine-grained score
+# 4. Use the Likert scale for a categorical judgment
+# 5. Focus on meaning, not wording
+
+annotation_task_name: "STS Benchmark - Semantic Textual Similarity"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Fine-grained similarity slider
+  - annotation_type: slider
+    name: similarity_score
+    description: "Rate the semantic similarity between the two sentences (0 = completely different, 5 = perfectly equivalent)"
+    min_value: 0
+    max_value: 5
+    starting_value: 2.5
+
+  # Step 2: Categorical similarity judgment
+  - annotation_type: likert
+    name: similarity_category
+    description: "How semantically similar are these two sentences?"
+    min_label: "Completely Different"
+    max_label: "Perfectly Equivalent"
+    size: 6
+
+annotation_instructions: |
+  You will be shown two sentences. Your task is to rate how semantically similar they are.
+
+  Use the slider for a fine-grained score from 0 to 5:
+  - 0: The sentences are completely unrelated in meaning.
+  - 1: The sentences are on the same topic but say different things.
+  - 2: The sentences share some details but are not equivalent.
+  - 3: The sentences are roughly equivalent with some important differences.
+  - 4: The sentences are mostly equivalent with minor differences.
+  - 5: The sentences mean exactly the same thing.
+
+  Also provide a categorical rating using the Likert scale.
+
+  Focus on the meaning of the sentences, not their surface form. Two sentences
+  can be highly similar even if they use very different words.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+        <strong style="color: #0369a1; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Sentence 1:</strong>
+        <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+      </div>
+      <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px;">
+        <strong style="color: #a16207; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Sentence 2:</strong>
+        <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{sentence_2}}</p>
+      </div>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false
