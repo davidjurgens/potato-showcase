@@ -1,0 +1,85 @@
+# Detecting Persuasion Techniques in News
+# Based on Piskorski et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.317/
+# Dataset: https://propaganda.qcri.org/semeval2023-task3/
+#
+# This task asks annotators to identify persuasion and propaganda techniques
+# used in news paragraphs. Annotators both classify which techniques are
+# present (multi-label) and highlight the specific text spans where each
+# technique occurs.
+#
+# Annotation Guidelines:
+# 1. Read the entire news paragraph carefully
+# 2. Select all persuasion techniques present in the text
+# 3. Highlight specific text spans that contain persuasive language
+# 4. A single paragraph may contain multiple techniques
+# 5. Some techniques may overlap in the same text span
+
+annotation_task_name: "Detecting Persuasion Techniques in News"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: multiselect
+    name: persuasion_techniques
+    description: "Select all persuasion techniques present in this text"
+    labels:
+      - "Loaded Language"
+      - "Name Calling"
+      - "Repetition"
+      - "Exaggeration"
+      - "Appeal to Fear"
+      - "Flag Waving"
+      - "Causal Oversimplification"
+      - "Appeal to Authority"
+      - "Black and White Fallacy"
+      - "Bandwagon"
+    tooltips:
+      "Loaded Language": "Using words with strong emotional connotations to influence the audience"
+      "Name Calling": "Labeling the target with negative terms to discredit them"
+      "Repetition": "Repeating the same message or phrase to reinforce it"
+      "Exaggeration": "Overstating claims or magnifying events beyond reality"
+      "Appeal to Fear": "Building support by instilling fear or anxiety in the audience"
+      "Flag Waving": "Appealing to patriotic or group identity feelings"
+      "Causal Oversimplification": "Assuming a single cause for a complex situation"
+      "Appeal to Authority": "Citing an authority figure to support a claim without evidence"
+      "Black and White Fallacy": "Presenting only two options when more exist"
+      "Bandwagon": "Suggesting everyone is doing it so the reader should too"
+
+  - annotation_type: span
+    name: persuasion_span
+    description: "Highlight the specific text spans that contain persuasive language"
+    labels:
+      - "Persuasion Span"
+
+annotation_instructions: |
+  You will see a news paragraph that may contain persuasion or propaganda techniques.
+  1. Read the text carefully and select ALL persuasion techniques you identify.
+  2. Then highlight the specific text spans where persuasive language occurs.
+  A paragraph may contain multiple techniques, and techniques may overlap in the same span.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">News Paragraph:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

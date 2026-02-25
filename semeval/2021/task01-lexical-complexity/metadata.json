@@ -1,0 +1,23 @@
+{
+  "title": "Lexical Complexity Prediction",
+  "description": "Predict the complexity of words in context using both Likert scale and continuous slider ratings, based on SemEval-2021 Task 1 (Shardlow et al.). Annotators assess how difficult a target word is for a non-native English speaker to understand.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Shardlow et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Lancaster University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert", "slider"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Lexical Complexity", "Readability Assessment"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2021", "shared-task", "lexical-complexity", "readability", "vocabulary"],
+  "featured": false,
+  "paperReference": "Shardlow et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.1/",
+  "datasetUrl": "https://sites.google.com/view/lcpsharedtask2021",
+  "citation": "@inproceedings{shardlow-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 1: {L}exical {C}omplexity {P}rediction\",\n    author = \"Shardlow, Matthew  and Evans, Richard  and Paetzold, Gustavo Henrique  and Zampieri, Marcos\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.1\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Community Question Answering",
+  "description": "Answer quality classification for community forum question-answer pairs, based on SemEval-2017 Task 3. Annotators judge whether a given answer is good, potentially useful, or bad with respect to the original question.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nakov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "SemEval", "Question Answering"],
+  "useCase": ["Answer Quality", "Community QA", "Forum Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2017", "shared-task", "question-answering", "community-qa", "answer-quality"],
+  "featured": false,
+  "paperReference": "Nakov et al., SemEval 2017",
+  "paperUrl": "https://aclanthology.org/S17-2003/",
+  "datasetUrl": "http://alt.qcri.org/semeval2017/task3/",
+  "citation": "@inproceedings{nakov-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 3: Community Question Answering\",\n    author = \"Nakov, Preslav  and Hoogeveen, Doris  and M{\\`a}rquez, Llu{\\'\\i}s  and Moschitti, Alessandro  and Mubarak, Hamdy  and Baldwin, Timothy  and Verspoor, Karin\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2003\"\n}"
+}

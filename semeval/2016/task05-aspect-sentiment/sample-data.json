@@ -1,0 +1,12 @@
+[
+  {"id": "absa_001", "text": "The battery life on this phone is incredible, lasting a full two days with heavy usage.", "domain": "Electronics"},
+  {"id": "absa_002", "text": "The food was delicious but the service was extremely slow and the waiter was rude.", "domain": "Restaurants"},
+  {"id": "absa_003", "text": "Great picture quality on this TV, but the sound system is disappointing for the price.", "domain": "Electronics"},
+  {"id": "absa_004", "text": "The hotel room was spacious and clean, with a beautiful view of the ocean.", "domain": "Hotels"},
+  {"id": "absa_005", "text": "The laptop is lightweight and portable, though the keyboard feels a bit cramped.", "domain": "Electronics"},
+  {"id": "absa_006", "text": "Amazing pasta dishes and the wine selection is top notch. Will definitely come back.", "domain": "Restaurants"},
+  {"id": "absa_007", "text": "The camera takes sharp photos in daylight but struggles significantly in low light conditions.", "domain": "Electronics"},
+  {"id": "absa_008", "text": "Check-in was smooth and the staff was friendly, but the WiFi connection was unreliable throughout our stay.", "domain": "Hotels"},
+  {"id": "absa_009", "text": "The software interface is intuitive and easy to navigate even for beginners.", "domain": "Software"},
+  {"id": "absa_010", "text": "The appetizers were mediocre, but the main course and desserts made up for it. The ambiance is lovely.", "domain": "Restaurants"}
+]

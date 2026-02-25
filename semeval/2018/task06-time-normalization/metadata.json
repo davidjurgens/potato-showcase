@@ -1,0 +1,23 @@
+{
+  "title": "Parsing Time Normalizations",
+  "description": "Identification and normalization of time expressions in text, combining span annotation for time mentions with ISO-format temporal normalization. Based on SemEval-2018 Task 6.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Laparra et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Arizona"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "text"],
+  "domain": ["SemEval", "NLP", "Temporal Processing", "Information Extraction"],
+  "useCase": ["Time Normalization", "Temporal Extraction", "Information Extraction"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2018", "shared-task", "time-normalization", "temporal", "parsing", "information-extraction"],
+  "featured": false,
+  "paperReference": "Laparra et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1011/",
+  "datasetUrl": "https://github.com/bethard/anafora-annotations",
+  "citation": "@inproceedings{laparra-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 6: Parsing Time Normalizations\",\n    author = \"Laparra, Egoitz and Xu, Dongfang and Elsayed, Ahmed S. and Bethard, Steven and Palmer, Martha\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1011\"\n}"
+}

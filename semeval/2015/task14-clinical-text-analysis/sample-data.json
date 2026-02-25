@@ -1,0 +1,52 @@
+[
+  {
+    "id": "clinical_001",
+    "text": "DISCHARGE SUMMARY: The patient is a 67-year-old male admitted with acute exacerbation of congestive heart failure. He presented with progressive dyspnea on exertion and bilateral lower extremity edema over the past two weeks. Chest X-ray revealed bilateral pleural effusions. He was treated with IV furosemide with significant improvement in symptoms.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_002",
+    "text": "HOSPITAL COURSE: Patient is a 54-year-old female with a history of type 2 diabetes mellitus and chronic kidney disease stage III. She was admitted for evaluation of worsening renal function. Creatinine on admission was 3.2 mg/dL, up from baseline of 1.8 mg/dL. Renal ultrasound showed no hydronephrosis. Nephrology was consulted.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_003",
+    "text": "ASSESSMENT: The patient is a 72-year-old woman with known rheumatoid arthritis who presents with severe pain and swelling in the right knee. Physical examination reveals warmth, erythema, and significant effusion of the right knee joint. Septic arthritis must be ruled out. She denies any fever or chills.",
+    "note_type": "progress_note"
+  },
+  {
+    "id": "clinical_004",
+    "text": "DISCHARGE DIAGNOSIS: 1. Community-acquired pneumonia, right lower lobe. 2. Moderate persistent asthma. 3. Hypertension, well controlled. The patient was admitted with productive cough, fever to 101.4F, and right-sided pleuritic chest pain. Sputum cultures grew Streptococcus pneumoniae. She was treated with ceftriaxone and azithromycin.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_005",
+    "text": "CLINICAL NOTE: This 45-year-old male was evaluated for possible multiple sclerosis. MRI of the brain revealed multiple periventricular white matter lesions consistent with demyelination. The patient reports intermittent numbness in the left upper extremity and episodes of blurred vision over the past six months. No spinal cord lesions identified.",
+    "note_type": "progress_note"
+  },
+  {
+    "id": "clinical_006",
+    "text": "HISTORY OF PRESENT ILLNESS: The patient is a 58-year-old male with a past medical history significant for cirrhosis secondary to hepatitis C, presenting with hematemesis and melena. Upper endoscopy revealed grade II esophageal varices with active bleeding. Band ligation was performed. The patient denied any abdominal pain or recent alcohol use.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_007",
+    "text": "HOSPITAL COURSE: A 63-year-old female with a history of atrial fibrillation and prior stroke was admitted after a witnessed fall with brief loss of consciousness. CT head was negative for acute intracranial hemorrhage. Telemetry monitoring showed intermittent rapid ventricular response. Her warfarin was held and bridging with heparin was initiated.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_008",
+    "text": "DISCHARGE SUMMARY: Patient is a 41-year-old female with systemic lupus erythematosus who presented with pleuritic chest pain and shortness of breath. CT angiography was negative for pulmonary embolism but demonstrated bilateral pleural effusions and mild pericardial effusion. Echocardiogram showed preserved ejection fraction with no tamponade physiology.",
+    "note_type": "discharge_summary"
+  },
+  {
+    "id": "clinical_009",
+    "text": "ASSESSMENT AND PLAN: The patient is a 76-year-old male admitted for elective right total knee arthroplasty for severe osteoarthritis. Past medical history is notable for well-controlled hypertension and hyperlipidemia. Preoperative evaluation was unremarkable. The procedure was completed without complications. Physical therapy was initiated on postoperative day one.",
+    "note_type": "progress_note"
+  },
+  {
+    "id": "clinical_010",
+    "text": "CLINICAL NOTE: This 50-year-old female presents with a three-month history of progressive fatigue, unintentional weight loss of 15 pounds, and night sweats. Laboratory studies revealed pancytopenia with WBC 2.1, hemoglobin 9.8, and platelets 95. Peripheral smear showed circulating blasts. Bone marrow biopsy is pending to evaluate for possible acute leukemia.",
+    "note_type": "progress_note"
+  }
+]

@@ -1,0 +1,65 @@
+# Suggestion Mining from Online Reviews and Forums
+# Based on Negi et al., SemEval 2019
+# Paper: https://aclanthology.org/S19-2151/
+# Dataset: https://github.com/Semeval2019Task9/Subtask-A
+#
+# This task asks annotators to classify sentences from online reviews
+# and forums as either containing a suggestion or not.
+#
+# Classification Labels:
+# - Suggestion: The sentence contains an explicit or implicit suggestion
+# - Non-Suggestion: The sentence does not contain a suggestion
+
+annotation_task_name: "Suggestion Mining from Online Reviews"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: suggestion_classification
+    description: "Does this sentence contain a suggestion?"
+    labels:
+      - "Suggestion"
+      - "Non-Suggestion"
+    keyboard_shortcuts:
+      "Suggestion": "1"
+      "Non-Suggestion": "2"
+    tooltips:
+      "Suggestion": "The sentence contains an explicit or implicit suggestion for improvement or action"
+      "Non-Suggestion": "The sentence is a statement, opinion, or complaint without a suggestion"
+
+annotation_instructions: |
+  You will be shown a sentence from an online review or forum along with its domain.
+  Your task is to determine whether the sentence contains a suggestion -- an explicit
+  or implicit recommendation for improvement or action. Suggestions may use language
+  like "should", "would be nice if", "I recommend", or imply a desired change.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Domain:</strong>
+      <span style="font-size: 15px;">{{domain}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "V-WSD - Visual Word Sense Disambiguation",
+  "description": "Visual word sense disambiguation task where annotators select the most appropriate image for a target word given its textual context. Based on SemEval-2023 Task 1 (Raganato et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Raganato et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Multimodal", "SemEval"],
+  "useCase": ["Word Sense Disambiguation", "Visual Grounding"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2023", "shared-task", "wsd", "visual-grounding", "multimodal"],
+  "featured": false,
+  "paperReference": "Raganato et al., SemEval 2023",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.1/",
+  "datasetUrl": "https://raganato.github.io/vwsd/",
+  "citation": "@inproceedings{raganato-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 1: Visual Word Sense Disambiguation\",\n    author = \"Raganato, Alessandro  and Calixto, Iacer  and Ushio, Asahi  and Camacho-Collados, Jose  and Pilehvar, Mohammad Taher\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.1\"\n}"
+}

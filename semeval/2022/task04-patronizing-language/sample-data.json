@@ -1,0 +1,52 @@
+[
+  {
+    "id": "patron_001",
+    "text": "The poor homeless people, bless their hearts, just need someone to show them how to get back on their feet. With a little guidance from those of us who know better, they can learn to be productive members of society again.",
+    "target_community": "People experiencing homelessness"
+  },
+  {
+    "id": "patron_002",
+    "text": "The city's housing-first program has provided permanent supportive housing to 450 formerly homeless individuals, with 89% maintaining stable housing after two years and many securing employment.",
+    "target_community": "People experiencing homelessness"
+  },
+  {
+    "id": "patron_003",
+    "text": "Despite their limited understanding of modern technology, elderly citizens are trying their best to adapt to the digital world. It's quite adorable to watch them fumble with smartphones and social media.",
+    "target_community": "Elderly citizens"
+  },
+  {
+    "id": "patron_004",
+    "text": "Refugees who arrived in the country five years ago have established successful businesses, with over 200 new enterprises contributing an estimated $50 million annually to the local economy.",
+    "target_community": "Refugees"
+  },
+  {
+    "id": "patron_005",
+    "text": "These brave little fighters in the children's cancer ward show such courage despite not really understanding what's happening to them. We should all be inspired by their innocent resilience.",
+    "target_community": "Children with cancer"
+  },
+  {
+    "id": "patron_006",
+    "text": "The disability rights organization successfully lobbied for improved accessibility standards in public transportation, resulting in new guidelines that will be implemented across 30 metropolitan areas.",
+    "target_community": "People with disabilities"
+  },
+  {
+    "id": "patron_007",
+    "text": "Single mothers, who sadly lack the proper family structure, somehow manage to raise their children despite the overwhelming odds stacked against them. Society should pity their difficult situation.",
+    "target_community": "Single mothers"
+  },
+  {
+    "id": "patron_008",
+    "text": "Indigenous communities have been leading conservation efforts in the Amazon basin, applying traditional ecological knowledge that has proven more effective than many Western scientific approaches.",
+    "target_community": "Indigenous communities"
+  },
+  {
+    "id": "patron_009",
+    "text": "It's heartwarming to see immigrants trying to integrate into our culture. They may not speak the language perfectly, but at least they're making an effort, which is more than we can expect from most of them.",
+    "target_community": "Immigrants"
+  },
+  {
+    "id": "patron_010",
+    "text": "The veteran retraining program has placed 1,200 former service members in skilled technology positions over the past three years, with participants reporting high job satisfaction and competitive salaries.",
+    "target_community": "Military veterans"
+  }
+]

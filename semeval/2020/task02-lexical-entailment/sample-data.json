@@ -1,0 +1,12 @@
+[
+  {"id": "le_001", "text": "The sparrow perched on the fence and began to sing at dawn.", "word_2": "bird", "language": "English"},
+  {"id": "le_002", "text": "She drove her sedan to the office every morning through heavy traffic.", "word_2": "vehicle", "language": "English"},
+  {"id": "le_003", "text": "The oak in the backyard has been growing for over a hundred years.", "word_2": "tree", "language": "English"},
+  {"id": "le_004", "text": "He picked up the hammer and began repairing the broken shelf.", "word_2": "screwdriver", "language": "English"},
+  {"id": "le_005", "text": "The surgeon performed a delicate operation on the patient's heart valve.", "word_2": "doctor", "language": "English"},
+  {"id": "le_006", "text": "She bought a bouquet of tulips from the flower market downtown.", "word_2": "flower", "language": "English"},
+  {"id": "le_007", "text": "The novel won several prestigious literary awards last year.", "word_2": "book", "language": "English"},
+  {"id": "le_008", "text": "They served an excellent risotto at the Italian restaurant on Main Street.", "word_2": "beverage", "language": "English"},
+  {"id": "le_009", "text": "The puppy chased its tail in circles around the living room.", "word_2": "animal", "language": "English"},
+  {"id": "le_010", "text": "Mercury is the closest planet to the Sun in our solar system.", "word_2": "celestial body", "language": "English"}
+]

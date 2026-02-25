@@ -1,0 +1,73 @@
+# QA over Tabular Data
+# Based on SemEval 2025 Task 8 Organizers, SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2025-task8
+#
+# This task asks annotators to answer questions based on tabular data,
+# and to classify whether the question is answerable from the table alone,
+# requires external knowledge, is ambiguous, or is unanswerable.
+
+annotation_task_name: "QA over Tabular Data"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: answer
+    description: "Provide the answer to the question based on the table."
+
+  - annotation_type: radio
+    name: answerability
+    description: "Can the question be answered from the table alone?"
+    labels:
+      - "Answerable from Table"
+      - "Requires External Knowledge"
+      - "Ambiguous"
+      - "Unanswerable"
+    keyboard_shortcuts:
+      "Answerable from Table": "1"
+      "Requires External Knowledge": "2"
+      "Ambiguous": "3"
+      "Unanswerable": "4"
+    tooltips:
+      "Answerable from Table": "The answer can be found directly in the table"
+      "Requires External Knowledge": "Answering requires knowledge not in the table"
+      "Ambiguous": "The question is unclear or could have multiple interpretations"
+      "Unanswerable": "The question cannot be answered even with external knowledge"
+
+annotation_instructions: |
+  You will be shown a question and a table. Your task is to:
+  1. Read the question carefully.
+  2. Examine the table content provided.
+  3. Provide an answer if possible.
+  4. Classify whether the question is answerable from the table alone.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Table: {{table_title}}</strong>
+      <pre style="font-size: 14px; line-height: 1.5; margin: 8px 0 0 0; white-space: pre-wrap;">{{table_content}}</pre>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

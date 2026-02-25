@@ -1,0 +1,12 @@
+[
+  {"id": "clintemp_001", "text": "The patient underwent a cholecystectomy on March 15, 2016. Post-operative recovery was uneventful. Follow-up appointment scheduled for April 1."},
+  {"id": "clintemp_002", "text": "Patient has been taking metformin 500mg twice daily since January 2015. Blood glucose levels have improved significantly over the past 6 months."},
+  {"id": "clintemp_003", "text": "Chest X-ray performed on 2016-02-20 revealed bilateral infiltrates. Antibiotics were initiated the same day. Repeat imaging was ordered for one week later."},
+  {"id": "clintemp_004", "text": "The patient presented to the emergency department at 3:45 AM with acute chest pain. An ECG was performed immediately and showed ST-segment elevation."},
+  {"id": "clintemp_005", "text": "History of hypertension diagnosed in 2010. Currently managed with lisinopril 10mg daily. Blood pressure has been well controlled since starting the medication."},
+  {"id": "clintemp_006", "text": "MRI of the lumbar spine performed yesterday showed a herniated disc at L4-L5. Physical therapy was recommended before considering surgical intervention."},
+  {"id": "clintemp_007", "text": "Patient completed a 10-day course of amoxicillin for strep throat. Symptoms resolved after 72 hours of treatment. No adverse reactions were reported."},
+  {"id": "clintemp_008", "text": "Colonoscopy scheduled for next Tuesday. Patient instructed to begin bowel preparation 24 hours prior. Last colonoscopy was performed in 2013."},
+  {"id": "clintemp_009", "text": "The patient was admitted on February 5 with pneumonia. IV antibiotics were started upon admission and continued for 5 days. Discharged on February 10 in stable condition."},
+  {"id": "clintemp_010", "text": "Insulin therapy was initiated during the hospitalization in December 2015. The patient has been monitoring blood glucose at home three times daily since discharge."}
+]

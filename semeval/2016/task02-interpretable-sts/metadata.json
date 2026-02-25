@@ -1,0 +1,23 @@
+{
+  "title": "Interpretable Semantic Textual Similarity",
+  "description": "Fine-grained semantic similarity assessment between sentence pairs with span alignment, combining chunk-level annotation with graded similarity scoring. Based on SemEval-2016 Task 2.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Agirre et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of the Basque Country"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "likert"],
+  "domain": ["SemEval", "NLP", "Semantic Similarity", "Text Alignment"],
+  "useCase": ["Semantic Similarity", "Text Alignment", "Paraphrase Detection"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2016", "shared-task", "semantic-similarity", "interpretable", "alignment", "sts"],
+  "featured": false,
+  "paperReference": "Agirre et al., SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1082/",
+  "datasetUrl": "http://ixa2.si.ehu.eus/stswiki/",
+  "citation": "@inproceedings{agirre-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 2: Interpretable Semantic Textual Similarity\",\n    author = \"Agirre, Eneko and Banea, Carmen and Cer, Daniel and Diab, Mona and Gonzalez-Agirre, Aitor and Mihalcea, Rada and Rigau, German and Wiebe, Janyce\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1082\"\n}"
+}

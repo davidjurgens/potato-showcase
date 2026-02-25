@@ -1,0 +1,62 @@
+[
+  {
+    "id": "idiom_001",
+    "text": "After losing his job and his apartment in the same week, Tom felt like he was really at the end of his rope.",
+    "target_expression": "at the end of his rope",
+    "language": "English"
+  },
+  {
+    "id": "idiom_002",
+    "text": "The mountain climber was literally at the end of his rope, dangling fifty feet above the rocky ledge below.",
+    "target_expression": "at the end of his rope",
+    "language": "English"
+  },
+  {
+    "id": "idiom_003",
+    "text": "The politician tried to break the ice at the beginning of the town hall meeting with a humorous anecdote about his childhood.",
+    "target_expression": "break the ice",
+    "language": "English"
+  },
+  {
+    "id": "idiom_004",
+    "text": "The ship's crew had to break the ice that had formed around the hull overnight before they could navigate through the frozen harbor.",
+    "target_expression": "break the ice",
+    "language": "English"
+  },
+  {
+    "id": "idiom_005",
+    "text": "Ela estava com a pulga atras da orelha desde que viu o marido sair escondido de madrugada.",
+    "target_expression": "pulga atras da orelha",
+    "language": "Portuguese"
+  },
+  {
+    "id": "idiom_006",
+    "text": "The new evidence shed light on the mysterious disappearance that had puzzled investigators for over a decade.",
+    "target_expression": "shed light on",
+    "language": "English"
+  },
+  {
+    "id": "idiom_007",
+    "text": "The lamp shed light on the dusty pages of the ancient manuscript lying open on the scholar's desk.",
+    "target_expression": "shed light on",
+    "language": "English"
+  },
+  {
+    "id": "idiom_008",
+    "text": "Ele engoliu sapos durante toda a reuniao enquanto o chefe criticava seu trabalho na frente dos colegas.",
+    "target_expression": "engoliu sapos",
+    "language": "Portuguese"
+  },
+  {
+    "id": "idiom_009",
+    "text": "The company decided to pull the plug on the failing project after three consecutive quarters of losses and no signs of recovery.",
+    "target_expression": "pull the plug",
+    "language": "English"
+  },
+  {
+    "id": "idiom_010",
+    "text": "The nurse carefully pulled the plug from the wall socket to disconnect the monitoring equipment before moving the patient to the new room.",
+    "target_expression": "pull the plug",
+    "language": "English"
+  }
+]

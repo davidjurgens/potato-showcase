@@ -1,0 +1,23 @@
+{
+  "title": "Semantic Relation Extraction and Classification in Scientific Papers",
+  "description": "Extraction and classification of semantic relations between entities in scientific abstracts, covering six relation types. Based on SemEval-2018 Task 7.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gabor et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Universite Paris-Saclay"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "NLP", "Relation Extraction", "Scientific Text"],
+  "useCase": ["Relation Extraction", "Scientific Text Mining", "Knowledge Extraction"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2018", "shared-task", "relation-extraction", "scientific-text", "knowledge-extraction"],
+  "featured": false,
+  "paperReference": "Gabor et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1027/",
+  "datasetUrl": "https://lipn.univ-paris13.fr/~gabor/semeval2018task7/",
+  "citation": "@inproceedings{gabor-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 7: Semantic Relation Extraction and Classification in Scientific Papers\",\n    author = \"G{\\'a}bor, Kata and Buscaldi, Davide and Schumann, Anne-Kathrin and QasemiZadeh, Behrang and Zargayouna, Ha{\\\"\\i}fa and Charnois, Thierry\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1027\"\n}"
+}

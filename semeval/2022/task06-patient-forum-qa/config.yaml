@@ -1,0 +1,80 @@
+# Patient Forum Question Answering
+# Based on Akhtar et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.75/
+# Dataset: https://github.com/Akhtar-SemEval2022-Task6
+#
+# This task asks annotators to answer patient forum questions and classify
+# the type of response that would be most appropriate. The categories
+# reflect different communicative functions in health forums.
+#
+# Response Type Labels:
+# - Medical Advice: Specific medical guidance or treatment suggestions
+# - Experience Sharing: Personal experiences with similar conditions
+# - Information Request: Asking for more details or clarification
+# - Emotional Support: Empathetic support and encouragement
+
+annotation_task_name: "Patient Forum Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: answer
+    description: "Write an appropriate answer to this patient forum question"
+
+  - annotation_type: radio
+    name: response_type
+    description: "What type of response is most appropriate for this question?"
+    labels:
+      - "Medical Advice"
+      - "Experience Sharing"
+      - "Information Request"
+      - "Emotional Support"
+    keyboard_shortcuts:
+      "Medical Advice": "1"
+      "Experience Sharing": "2"
+      "Information Request": "3"
+      "Emotional Support": "4"
+    tooltips:
+      "Medical Advice": "The question calls for specific medical guidance or treatment suggestions"
+      "Experience Sharing": "The question would benefit from hearing personal experiences with similar conditions"
+      "Information Request": "More details are needed before a meaningful response can be given"
+      "Emotional Support": "The poster primarily needs empathetic support and encouragement"
+
+annotation_instructions: |
+  You will see a question posted on a patient health forum along with the forum category.
+  1. Read the question carefully.
+  2. Write an appropriate response to the question.
+  3. Classify what type of response is most appropriate (medical advice, experience sharing,
+     information request, or emotional support).
+  Note: Do not provide actual medical diagnoses. Focus on the communicative function.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Forum Category:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{forum_category}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Patient Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

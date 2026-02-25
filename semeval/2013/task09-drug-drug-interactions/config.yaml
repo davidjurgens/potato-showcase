@@ -1,0 +1,108 @@
+# DDI Extraction from Biomedical Texts
+# Based on Segura-Bedmar et al., SemEval 2013
+# Paper: https://aclanthology.org/S13-2056/
+# Dataset: https://github.com/isegura/DDICorpus
+#
+# This task requires annotators to identify drug entities in biomedical text
+# and classify the type of interaction between drug pairs. Drug entities
+# are categorized as Drug (generic), Brand (trade name), Group (drug class),
+# or Drug_n (active substances not approved for human use). Interaction
+# types include Mechanism, Effect, Advice, Int, and No Interaction.
+#
+# Entity Types:
+# - Drug: Generic drug names (e.g., warfarin, methotrexate)
+# - Brand: Trade/brand names (e.g., Zocor, Prilosec)
+# - Group: Drug classes or families (e.g., NSAIDs, ACE inhibitors)
+# - Drug_n: Active substances not approved for human use
+#
+# Interaction Types:
+# - Mechanism: The interaction is described at a pharmacokinetic level
+# - Effect: The interaction produces a pharmacodynamic effect
+# - Advice: A recommendation or warning about the drug combination
+# - Int: An interaction is stated without further detail
+# - No Interaction: No interaction exists between the drug pair
+
+annotation_task_name: "DDI Extraction from Biomedical Texts"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: drug_entity_spans
+    description: "Highlight all drug entities in the text and classify their type."
+    labels:
+      - "Drug"
+      - "Brand"
+      - "Group"
+      - "Drug_n"
+    tooltips:
+      "Drug": "Generic drug name (e.g., warfarin, cyclosporine, methotrexate)"
+      "Brand": "Trade or brand name of a drug (e.g., Zocor, Prilosec)"
+      "Group": "Drug class or family name (e.g., NSAIDs, ACE inhibitors, statins)"
+      "Drug_n": "Active substance not approved for human use or experimental compound"
+
+  - annotation_type: radio
+    name: interaction_type
+    description: "What type of drug-drug interaction is described in this text?"
+    labels:
+      - "Mechanism"
+      - "Effect"
+      - "Advice"
+      - "Int"
+      - "No Interaction"
+    keyboard_shortcuts:
+      "Mechanism": "1"
+      "Effect": "2"
+      "Advice": "3"
+      "Int": "4"
+      "No Interaction": "5"
+    tooltips:
+      "Mechanism": "The interaction is described at the pharmacokinetic level (e.g., inhibits metabolism, reduces clearance)"
+      "Effect": "The interaction produces a specific pharmacodynamic effect (e.g., increased bleeding risk)"
+      "Advice": "A recommendation or warning about the drug combination (e.g., avoid concomitant use)"
+      "Int": "An interaction is mentioned without specifying mechanism or effect"
+      "No Interaction": "The text describes drugs but no interaction between them"
+
+annotation_instructions: |
+  You will be shown biomedical text that may describe drug-drug interactions.
+
+  **Step 1: Entity Annotation**
+  Highlight all drug mentions in the text and classify each as:
+  - **Drug**: Generic drug names (e.g., warfarin, cyclosporine)
+  - **Brand**: Trade names (e.g., Zocor, Prilosec)
+  - **Group**: Drug classes (e.g., NSAIDs, ACE inhibitors)
+  - **Drug_n**: Substances not approved for human use
+
+  **Step 2: Interaction Classification**
+  Classify the type of interaction described:
+  - **Mechanism**: Pharmacokinetic interaction (metabolism, clearance, etc.)
+  - **Effect**: Pharmacodynamic effect of the interaction
+  - **Advice**: Recommendation or warning about the combination
+  - **Int**: Interaction stated without specific details
+  - **No Interaction**: No interaction between the mentioned drugs
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Biomedical Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

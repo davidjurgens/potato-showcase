@@ -1,0 +1,52 @@
+[
+  {
+    "id": "absa_001",
+    "text": "The sushi was excellent but the service was incredibly slow, and we had to wait over 30 minutes for our appetizers to arrive.",
+    "domain": "restaurant"
+  },
+  {
+    "id": "absa_002",
+    "text": "The battery life on this laptop is outstanding, easily lasting 10 hours on a single charge, but the trackpad feels cheap and unresponsive.",
+    "domain": "laptop"
+  },
+  {
+    "id": "absa_003",
+    "text": "Great pizza and the pasta was cooked perfectly al dente. The ambiance is cozy and romantic, ideal for a date night.",
+    "domain": "restaurant"
+  },
+  {
+    "id": "absa_004",
+    "text": "The screen resolution is impressive for the price point, though the speakers produce tinny audio that makes watching movies unpleasant.",
+    "domain": "laptop"
+  },
+  {
+    "id": "absa_005",
+    "text": "The waiter was friendly and attentive but the dessert menu was very limited. The tiramisu, however, was the best I have ever had.",
+    "domain": "restaurant"
+  },
+  {
+    "id": "absa_006",
+    "text": "The keyboard has a nice tactile feel and good key travel, but the fan noise becomes annoying during heavy workloads like video editing.",
+    "domain": "laptop"
+  },
+  {
+    "id": "absa_007",
+    "text": "Portions are generous and the prices are very reasonable for downtown. The noise level was too high to hold a normal conversation though.",
+    "domain": "restaurant"
+  },
+  {
+    "id": "absa_008",
+    "text": "Boot time is impressively fast thanks to the SSD, and the build quality feels solid and premium. The webcam, unfortunately, is grainy even in good lighting.",
+    "domain": "laptop"
+  },
+  {
+    "id": "absa_009",
+    "text": "The grilled salmon was overcooked and bland, but the wine selection was superb. Our server recommended an excellent Pinot Noir.",
+    "domain": "restaurant"
+  },
+  {
+    "id": "absa_010",
+    "text": "The processor handles multitasking well with no noticeable lag, but the weight makes it impractical for travel and daily commuting.",
+    "domain": "laptop"
+  }
+]

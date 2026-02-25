@@ -1,0 +1,23 @@
+{
+  "title": "Capturing Discriminative Attributes",
+  "description": "Binary classification of whether a semantic attribute discriminates between two words, testing understanding of fine-grained word meaning differences. Based on SemEval-2018 Task 10.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Krebs et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Saarland University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Lexical Semantics", "Word Attributes"],
+  "useCase": ["Attribute Classification", "Lexical Semantics", "Word Discrimination"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2018", "shared-task", "discriminative-attributes", "lexical-semantics", "word-meaning"],
+  "featured": false,
+  "paperReference": "Krebs et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1117/",
+  "datasetUrl": "https://github.com/dpaperno/DiscAtt",
+  "citation": "@inproceedings{krebs-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 10: Capturing Discriminative Attributes\",\n    author = \"Krebs, Alicia and Paperno, Denis\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1117\"\n}"
+}

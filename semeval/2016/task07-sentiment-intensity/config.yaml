@@ -1,0 +1,58 @@
+# Determining Sentiment Intensity of English and Arabic Phrases
+# Based on Kiritchenko et al., SemEval 2016
+# Paper: https://aclanthology.org/S16-1004/
+# Dataset: http://saifmohammad.com/WebPages/BestWorst.html
+#
+# This task asks annotators to rate the sentiment intensity of a phrase
+# or sentence on an 11-point scale from most negative to most positive.
+#
+# Sentiment Intensity Scale (Likert 0-10):
+# 0 = Most Negative (extremely negative sentiment)
+# 5 = Neutral (no sentiment)
+# 10 = Most Positive (extremely positive sentiment)
+
+annotation_task_name: "Sentiment Intensity Scoring"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: sentiment_intensity
+    description: "Rate the sentiment intensity of this text from most negative to most positive."
+    min_label: "Most Negative"
+    max_label: "Most Positive"
+    size: 11
+
+annotation_instructions: |
+  You will be shown a phrase or sentence. Your task is to rate the sentiment intensity
+  on an 11-point scale. Use the full range of the scale:
+  - 0: Extremely negative
+  - 5: Neutral (no positive or negative sentiment)
+  - 10: Extremely positive
+  Focus on the emotional valence and intensity of the text.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0; text-align: center;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

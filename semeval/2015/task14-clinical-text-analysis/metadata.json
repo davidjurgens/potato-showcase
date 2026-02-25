@@ -1,0 +1,23 @@
+{
+  "title": "Analysis of Clinical Text: Disorder Identification and Normalization",
+  "description": "Identify disorder mentions and their attributes in clinical discharge summaries, based on SemEval-2015 Task 14 (Elhadad et al.). Annotators mark disorder spans, body locations, severity indicators, and classify the assertion status of each disorder.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Elhadad et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Columbia University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "Clinical NLP", "Biomedical", "NER"],
+  "useCase": ["Disorder Identification", "Clinical Text Mining", "Medical NER"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2015", "shared-task", "clinical", "biomedical", "disorder", "ner", "normalization"],
+  "featured": false,
+  "paperReference": "Elhadad et al., SemEval 2015",
+  "paperUrl": "https://aclanthology.org/S15-2070/",
+  "datasetUrl": "https://alt.qcri.org/semeval2015/task14/",
+  "citation": "@inproceedings{elhadad-etal-2015-semeval,\n    title = \"{S}em{E}val-2015 {T}ask 14: {A}nalysis of {C}linical {T}ext\",\n    author = \"Elhadad, No{\\'e}mie  and Pradhan, Sameer  and Gorber, Sharon Lipsky  and Spackman, Suresh  and Chapman, Wendy  and Guergana, Savova\",\n    booktitle = \"Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval-2015)\",\n    year = \"2015\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S15-2070\"\n}"
+}

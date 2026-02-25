@@ -1,0 +1,80 @@
+# Multilingual Narrative Extraction
+# Based on SemEval 2025 Task 10 Organizers, SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2025-task10
+#
+# This task asks annotators to extract narrative elements from multilingual
+# news texts, including events, actors, locations, temporal markers, and
+# causal relations. Annotators also classify the thematic domains of each
+# narrative.
+
+annotation_task_name: "Multilingual Narrative Extraction"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: narrative_elements
+    description: "Highlight narrative elements in the text."
+    labels:
+      - "Event"
+      - "Actor"
+      - "Location"
+      - "Time"
+      - "Cause"
+      - "Effect"
+
+  - annotation_type: multiselect
+    name: narrative_themes
+    description: "Select all thematic domains that apply to this narrative."
+    labels:
+      - "Political"
+      - "Economic"
+      - "Social"
+      - "Environmental"
+      - "Cultural"
+      - "Conflict"
+    tooltips:
+      "Political": "Related to government, policy, elections, or political actors"
+      "Economic": "Related to markets, trade, employment, or financial systems"
+      "Social": "Related to communities, demographics, health, or education"
+      "Environmental": "Related to climate, ecology, natural disasters, or sustainability"
+      "Cultural": "Related to arts, traditions, identity, or cultural practices"
+      "Conflict": "Related to war, disputes, protests, or violence"
+
+annotation_instructions: |
+  You will be shown a news text passage. Your task is to:
+  1. Read the passage carefully.
+  2. Highlight narrative elements: events, actors, locations, temporal markers, causes, and effects.
+  3. Select all thematic domains that apply to the narrative.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">News Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 8px;">
+      <strong style="color: #166534;">Source:</strong> <span>{{source}}</span>
+      &nbsp; | &nbsp;
+      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,23 @@
+{
+  "title": "Sentiment Analysis for Code-Mixed Social Media Text",
+  "description": "Classify the sentiment of code-mixed social media posts where two languages are interleaved within a single utterance, based on SemEval-2020 Task 9 (Patwa et al.). Supports Hindi-English and Spanish-English language pairs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Patwa et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "IIIT Hyderabad"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Sentiment Analysis", "Code-Mixing", "Multilingual NLP"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2020", "shared-task", "code-mixing", "sentiment", "multilingual", "social-media"],
+  "featured": false,
+  "paperReference": "Patwa et al., SemEval 2020",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.100/",
+  "datasetUrl": "https://ritual-uh.github.io/sentimix2020/",
+  "citation": "@inproceedings{patwa-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 9: {S}entiment {A}nalysis for {C}ode-{M}ixed {S}ocial {M}edia {T}ext\",\n    author = \"Patwa, Parth  and Aguilar, Gustavo  and Kar, Sudipta  and Pandey, Suraj  and PYKL, Srinivas  and Gamback, Bjorn  and Chakraborty, Tanmoy  and Solorio, Thamar  and Das, Amitava\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.100\"\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Irony Detection in English Tweets",
+  "description": "Fine-grained irony detection in tweets, distinguishing between verbal irony by polarity clash, situational irony, other verbal irony, and non-ironic content. Based on SemEval-2018 Task 3.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Van Hee et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Ghent University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Irony Detection", "Social Media"],
+  "useCase": ["Irony Detection", "Figurative Language", "Sentiment Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2018", "shared-task", "irony", "sarcasm", "twitter", "figurative-language"],
+  "featured": false,
+  "paperReference": "Van Hee et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1005/",
+  "datasetUrl": "https://github.com/Cyvhee/SemEval2018-Task3",
+  "citation": "@inproceedings{van-hee-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 3: Irony Detection in {E}nglish Tweets\",\n    author = \"Van Hee, Cynthia and Lefever, Els and Hoste, V{\\'e}ronique\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1005\"\n}"
+}

@@ -1,0 +1,12 @@
+[
+  {"id": "srl_001", "text": "The researcher published the results of the experiment in a prestigious journal last month.", "language": "English"},
+  {"id": "srl_002", "text": "The bridge was constructed by a team of engineers using reinforced concrete.", "language": "English"},
+  {"id": "srl_003", "text": "Maria gave her brother a birthday present at the family gathering on Saturday.", "language": "English"},
+  {"id": "srl_004", "text": "The window shattered during the storm without anyone touching it.", "language": "English"},
+  {"id": "srl_005", "text": "The chef prepared an elaborate five-course dinner for the visiting diplomats in the hotel kitchen.", "language": "English"},
+  {"id": "srl_006", "text": "Several ancient artifacts were discovered beneath the temple by the archaeological team.", "language": "English"},
+  {"id": "srl_007", "text": "The students organized a protest march through the city center demanding educational reform.", "language": "English"},
+  {"id": "srl_008", "text": "The medication was administered to the patient intravenously by the attending nurse.", "language": "English"},
+  {"id": "srl_009", "text": "The ice melted rapidly under the intense afternoon sun.", "language": "English"},
+  {"id": "srl_010", "text": "The company hired three new developers to build the mobile application using agile methodology.", "language": "English"}
+]

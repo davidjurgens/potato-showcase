@@ -1,0 +1,23 @@
+{
+  "title": "Drug-Drug Interaction Extraction from Biomedical Texts",
+  "description": "Extract drug entities and classify drug-drug interactions from biomedical texts, based on SemEval-2013 Task 9 (Segura-Bedmar et al.). Annotators identify drug mentions by type and classify interaction relationships between drug pairs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Segura-Bedmar et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Universidad Carlos III de Madrid"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "Biomedical", "NER", "Relation Extraction"],
+  "useCase": ["Drug Interaction Detection", "Biomedical NER", "Pharmacovigilance"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2013", "shared-task", "drug-interaction", "biomedical", "ner", "relation-extraction", "pharmacology"],
+  "featured": false,
+  "paperReference": "Segura-Bedmar et al., SemEval 2013",
+  "paperUrl": "https://aclanthology.org/S13-2056/",
+  "datasetUrl": "https://www.cs.york.ac.uk/semeval-2013/task9/",
+  "citation": "@inproceedings{segura-bedmar-etal-2013-semeval,\n    title = \"{S}em{E}val-2013 {T}ask 9: {E}xtraction of {D}rug-{D}rug {I}nteractions from {B}iomedical {T}exts ({DDI}Extraction 2013)\",\n    author = \"Segura-Bedmar, Isabel  and Mart{\\'{\\i}}nez, Paloma  and Herrero-Zazo, Mar{\\'{\\i}}a\",\n    booktitle = \"Proceedings of the 7th International Workshop on Semantic Evaluation (SemEval-2013)\",\n    year = \"2013\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S13-2056\"\n}"
+}

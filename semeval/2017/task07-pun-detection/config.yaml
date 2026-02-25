@@ -1,0 +1,70 @@
+# Detection and Interpretation of English Puns
+# Based on Miller et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2005/
+# Dataset: https://alt.qcri.org/semeval2017/task7/
+#
+# This task asks annotators to determine whether a sentence contains a
+# pun, and if so, to highlight the specific word that creates the pun.
+#
+# Pun Detection Labels:
+# - Contains Pun: The sentence contains wordplay or a pun
+# - No Pun: The sentence does not contain a pun
+#
+# Span Label:
+# - Pun Word: The specific word that creates the pun
+
+annotation_task_name: "Detection and Interpretation of English Puns"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: pun_detection
+    description: "Does this sentence contain a pun?"
+    labels:
+      - "Contains Pun"
+      - "No Pun"
+    keyboard_shortcuts:
+      "Contains Pun": "1"
+      "No Pun": "2"
+    tooltips:
+      "Contains Pun": "The sentence contains wordplay exploiting multiple meanings of a word"
+      "No Pun": "The sentence is straightforward with no wordplay"
+
+  - annotation_type: span
+    name: pun_word
+    description: "If a pun is present, highlight the specific word that creates the pun."
+    labels:
+      - "Pun Word"
+
+annotation_instructions: |
+  You will be shown a sentence. Your task is to:
+  1. Determine whether the sentence contains a pun (wordplay that exploits multiple
+     meanings or similar-sounding words for humorous effect).
+  2. If a pun is present, highlight the specific word that creates the pun.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

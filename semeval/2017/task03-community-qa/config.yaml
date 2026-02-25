@@ -1,0 +1,84 @@
+# Community Question Answering
+# Based on Nakov et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2003/
+# Dataset: http://alt.qcri.org/semeval2017/task3/
+#
+# Annotators judge the quality of an answer relative to a community forum
+# question. The task evaluates whether a candidate answer addresses the
+# question and provides useful information.
+#
+# Answer Quality Labels:
+# - Good: The answer directly and fully addresses the question
+# - Potentially Useful: The answer contains relevant info but is incomplete
+# - Bad: The answer does not address the question or is irrelevant
+#
+# Annotation Guidelines:
+# 1. Read the question carefully, noting the forum category
+# 2. Read the candidate answer thoroughly
+# 3. Judge whether the answer addresses the question
+# 4. Consider completeness, relevance, and accuracy
+# 5. An answer can be "Good" even if not perfect, as long as it helps
+
+annotation_task_name: "Community Question Answering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: answer_quality
+    description: "How well does this answer address the question?"
+    labels:
+      - "Good"
+      - "Potentially Useful"
+      - "Bad"
+    keyboard_shortcuts:
+      "Good": "1"
+      "Potentially Useful": "2"
+      "Bad": "3"
+    tooltips:
+      "Good": "The answer directly and fully addresses the question with useful information"
+      "Potentially Useful": "The answer contains some relevant information but is incomplete or indirect"
+      "Bad": "The answer does not address the question, is irrelevant, or is spam"
+
+annotation_instructions: |
+  You will see a question posted on a community forum along with a candidate answer.
+  Your task is to judge the quality of the answer relative to the question.
+
+  - Good: The answer directly addresses the question and provides helpful information.
+  - Potentially Useful: The answer has some relevant content but may be incomplete or only partially helpful.
+  - Bad: The answer is irrelevant, off-topic, or does not help answer the question.
+
+  Consider the forum category for context. Focus on whether the answer would help the person who asked the question.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <strong style="color: #92400e;">Question:</strong>
+        <span style="background: #d97706; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">{{forum_category}}</span>
+      </div>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0;">{{question}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Answer:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

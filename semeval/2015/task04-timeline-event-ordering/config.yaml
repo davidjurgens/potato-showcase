@@ -1,0 +1,112 @@
+# TimeLine - Cross-Document Event Ordering
+# Based on Minard et al., SemEval 2015
+# Paper: https://aclanthology.org/S15-2132/
+# Dataset: https://alt.qcri.org/semeval2015/task4/
+#
+# This task requires annotators to identify event mentions, time expressions,
+# and entity references in news text, then classify temporal relations
+# between pairs of events. The goal is to build ordered timelines of events
+# related to a target entity across multiple documents.
+#
+# Span Types:
+# - Event Mention: Actions, occurrences, or states (e.g., launched, elected, died)
+# - Time Expression: Temporal references (e.g., January 2007, March 11, 2011)
+# - Entity: Named entities relevant to the timeline (e.g., persons, organizations)
+#
+# Temporal Relation Types:
+# - Before: Event A occurs before Event B
+# - After: Event A occurs after Event B
+# - Simultaneous: Events occur at the same time
+# - Includes: Event A temporally includes Event B
+# - Is Included: Event A is temporally included in Event B
+# - Vague: The temporal relation cannot be determined
+
+annotation_task_name: "TimeLine - Cross-Document Event Ordering"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: timeline_entity_spans
+    description: "Highlight event mentions, time expressions, and entities in the text."
+    labels:
+      - "Event Mention"
+      - "Time Expression"
+      - "Entity"
+    tooltips:
+      "Event Mention": "An action, occurrence, or state described in the text (e.g., launched, elected, exploded, declared)"
+      "Time Expression": "A temporal reference such as a date, duration, or relative time (e.g., January 2007, after three days)"
+      "Entity": "A named entity relevant to the timeline being constructed (e.g., person, organization, location)"
+
+  - annotation_type: radio
+    name: temporal_relation
+    description: "What is the primary temporal relation between the key events in this passage?"
+    labels:
+      - "Before"
+      - "After"
+      - "Simultaneous"
+      - "Includes"
+      - "Is Included"
+      - "Vague"
+    keyboard_shortcuts:
+      "Before": "1"
+      "After": "2"
+      "Simultaneous": "3"
+      "Includes": "4"
+      "Is Included": "5"
+      "Vague": "6"
+    tooltips:
+      "Before": "The first mentioned event occurs before the second event in time"
+      "After": "The first mentioned event occurs after the second event in time"
+      "Simultaneous": "The events occur at approximately the same time"
+      "Includes": "The first event temporally includes or encompasses the second event"
+      "Is Included": "The first event is temporally included within the second event"
+      "Vague": "The temporal relation between events cannot be clearly determined"
+
+annotation_instructions: |
+  You will be shown news text related to a target entity. Your task is to:
+
+  **Step 1: Span Annotation**
+  Highlight and classify the following spans in the text:
+  - **Event Mention**: Actions, occurrences, or states (e.g., "launched", "was elected", "exploded")
+  - **Time Expression**: Dates, durations, or temporal references (e.g., "January 2007", "after three days")
+  - **Entity**: Named entities relevant to the timeline (e.g., "Steve Jobs", "NASA")
+
+  **Step 2: Temporal Relation Classification**
+  Classify the primary temporal relation between the key events described:
+  - **Before/After**: One event clearly precedes or follows the other
+  - **Simultaneous**: Events happen at the same time
+  - **Includes/Is Included**: One event temporally contains the other
+  - **Vague**: The temporal ordering is ambiguous or unclear
+
+  The target entity for timeline construction is shown above the text.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Target Entity:</strong>
+      <span style="font-size: 16px; font-weight: 600; margin-left: 8px;">{{target_entity}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,68 @@
+# Semantic Textual Relatedness
+# Based on Abdalla et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/semantic-textual-relatedness/Semantic_Relatedness_SemEval2024
+#
+# This task asks annotators to rate how semantically related two sentences
+# are, using both a discrete Likert scale and a continuous slider for
+# fine-grained judgments.
+
+annotation_task_name: "Semantic Textual Relatedness"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: relatedness_likert
+    description: "Rate the semantic relatedness of the two sentences."
+    min_label: "Completely Unrelated"
+    max_label: "Maximally Related"
+    size: 5
+
+  - annotation_type: slider
+    name: relatedness_slider
+    description: "Provide a fine-grained relatedness score."
+    min_value: 0
+    max_value: 1
+    starting_value: 0.5
+
+annotation_instructions: |
+  You will be shown two sentences. Your task is to:
+  1. Read both sentences carefully.
+  2. Rate how semantically related the two sentences are on a 5-point Likert scale.
+  3. Use the slider to provide a fine-grained relatedness score between 0 and 1.
+  Note: Relatedness is broader than similarity. Two sentences can be related without
+  being similar (e.g., cause and effect, or part and whole).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence 1:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Sentence 2:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{sentence_2}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,72 @@
+# Predicting Multilingual and Cross-Lingual Lexical Entailment
+# Based on Glavavs et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.2/
+# Dataset: https://competitions.codalab.org/competitions/22192
+#
+# Annotators judge whether the meaning of one word in context entails,
+# is entailed by, or does not entail another word. This captures graded
+# lexical semantic relations across and within languages.
+
+annotation_task_name: "Predicting Multilingual and Cross-Lingual Lexical Entailment"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: entailment_judgment
+    description: "Does the meaning of word 1 in this context entail the meaning of word 2?"
+    labels:
+      - "Entails"
+      - "Does Not Entail"
+      - "Reverse Entailment"
+    keyboard_shortcuts:
+      "Entails": "1"
+      "Does Not Entail": "2"
+      "Reverse Entailment": "3"
+    tooltips:
+      "Entails": "Word 1 in this context entails the meaning of word 2 (word 1 is more specific)"
+      "Does Not Entail": "There is no entailment relation between the two words in these contexts"
+      "Reverse Entailment": "Word 2 entails word 1 (word 2 is more specific)"
+
+annotation_instructions: |
+  You will see a sentence containing a word in context, along with a second word
+  and its language. Your task is to:
+  1. Read the sentence and understand the meaning of word 1 in that context.
+  2. Consider whether the meaning of word 1 entails (implies) the meaning of word 2.
+  3. Select "Entails" if word 1 is more specific (e.g., "dog" entails "animal").
+  4. Select "Reverse Entailment" if word 2 is more specific.
+  5. Select "Does Not Entail" if there is no clear entailment relationship.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Word 1 in Context:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Word 2:</strong>
+      <span style="font-size: 18px; font-weight: bold; color: #b45309;">{{word_2}}</span>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Language:</strong>
+      <span style="font-size: 14px;">{{language}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

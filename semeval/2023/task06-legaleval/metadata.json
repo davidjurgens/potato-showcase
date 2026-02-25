@@ -1,0 +1,23 @@
+{
+  "title": "LegalEval - Legal Document Analysis",
+  "description": "Relevance classification and named entity recognition for legal documents, identifying key entities such as courts, petitioners, respondents, judges, dates, statutes, and precedents. Based on SemEval-2023 Task 6 (Modi et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Modi et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Legal", "SemEval"],
+  "useCase": ["Legal NER", "Document Classification", "Legal Text Analysis"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2023", "shared-task", "legal", "ner", "document-classification"],
+  "featured": false,
+  "paperReference": "Modi et al., SemEval 2023",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.310/",
+  "datasetUrl": "https://sites.google.com/view/legaleval/home",
+  "citation": "@inproceedings{modi-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 6: {L}egal{E}val: Understanding Legal Texts\",\n    author = \"Modi, Ashutosh  and Kalamkar, Prathamesh  and Karn, Saurabh\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.310\"\n}"
+}

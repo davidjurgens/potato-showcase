@@ -1,0 +1,23 @@
+{
+  "title": "Detecting Stance in Tweets",
+  "description": "Classification of stance expressed in tweets toward specific targets as favor, against, or neither. Based on SemEval-2016 Task 6 (Stance Detection).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mohammad et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["SemEval", "NLP", "Stance Detection", "Social Media"],
+  "useCase": ["Stance Detection", "Opinion Mining", "Social Media Analysis"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2016", "shared-task", "stance-detection", "twitter", "opinion", "target-stance"],
+  "featured": false,
+  "paperReference": "Mohammad et al., SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1003/",
+  "datasetUrl": "http://alt.qcri.org/semeval2016/task6/",
+  "citation": "@inproceedings{mohammad-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 6: Detecting Stance in Tweets\",\n    author = \"Mohammad, Saif and Kiritchenko, Svetlana and Sobhani, Parinaz and Zhu, Xiaodan and Cherry, Colin\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1003\"\n}"
+}

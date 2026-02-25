@@ -1,0 +1,101 @@
+# ValueEval - Human Values behind Arguments
+# Based on Kiesel et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.313/
+# Dataset: https://touche.webis.de/semeval23/touche23-web/
+#
+# This task asks annotators to identify which human values (based on
+# Schwartz's theory of basic values) are expressed in a given argument,
+# and whether the argument attains or constrains those values.
+#
+# Annotation Guidelines:
+# 1. Read the argument and note its topic and stance
+# 2. Select all human values the argument appeals to
+# 3. Determine whether the argument attains or constrains the selected values
+# 4. An argument may appeal to multiple values simultaneously
+# 5. Consider the implicit as well as explicit value appeals
+
+annotation_task_name: "ValueEval - Human Values behind Arguments"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: multiselect
+    name: human_values
+    description: "Select all human values this argument appeals to"
+    labels:
+      - "Self-direction"
+      - "Stimulation"
+      - "Hedonism"
+      - "Achievement"
+      - "Power"
+      - "Security"
+      - "Conformity"
+      - "Tradition"
+      - "Benevolence"
+      - "Universalism"
+    tooltips:
+      "Self-direction": "Independent thought and action, freedom, creativity, curiosity"
+      "Stimulation": "Excitement, novelty, challenge in life"
+      "Hedonism": "Pleasure, sensuous gratification, enjoyment of life"
+      "Achievement": "Personal success through demonstrating competence"
+      "Power": "Social status, prestige, control over people and resources"
+      "Security": "Safety, harmony, stability of society, relationships, and self"
+      "Conformity": "Restraint of actions that might harm others or violate norms"
+      "Tradition": "Respect for customs and ideas from culture or religion"
+      "Benevolence": "Preserving and enhancing welfare of close others"
+      "Universalism": "Understanding, tolerance, and protection of all people and nature"
+
+  - annotation_type: radio
+    name: value_stance
+    description: "Does the argument attain or constrain the selected values?"
+    labels:
+      - "Attains Value"
+      - "Constrains Value"
+    keyboard_shortcuts:
+      "Attains Value": "1"
+      "Constrains Value": "2"
+    tooltips:
+      "Attains Value": "The argument promotes or supports the realization of the value"
+      "Constrains Value": "The argument limits or restricts the realization of the value"
+
+annotation_instructions: |
+  You will see an argument related to a specific topic and stance. Your task is to:
+  1. Identify which human values the argument appeals to (select all that apply).
+  2. Determine whether the argument attains (promotes) or constrains (limits) those values.
+  An argument may appeal to multiple values -- select all relevant ones.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #ede9fe; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong style="color: #6d28d9;">Topic:</strong>
+        <span style="font-size: 15px;">{{topic}}</span>
+      </div>
+      <div style="background: #fce7f3; border: 1px solid #f9a8d4; border-radius: 8px; padding: 12px; flex: 1;">
+        <strong style="color: #be185d;">Stance:</strong>
+        <span style="font-size: 15px;">{{stance}}</span>
+      </div>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+      <strong style="color: #0369a1;">Argument:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "codwoe_001",
+    "text": "The architect presented her vision for a sustainable bridge that would connect the two neighborhoods across the river.",
+    "target_word": "bridge",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_002",
+    "text": "After years of conflict, the treaty served as a bridge between the two nations, fostering mutual understanding and cooperation.",
+    "target_word": "bridge",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_003",
+    "text": "Le professeur a explique que la lumiere se propage en ligne droite dans un milieu homogene.",
+    "target_word": "lumiere",
+    "language": "French"
+  },
+  {
+    "id": "codwoe_004",
+    "text": "The bank approved her loan application after reviewing her credit history and income statements.",
+    "target_word": "bank",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_005",
+    "text": "Children sat along the bank of the stream, tossing pebbles into the clear water and watching the ripples spread.",
+    "target_word": "bank",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_006",
+    "text": "Die Stimmung im Stadion war unglaublich, als die Mannschaft das entscheidende Tor erzielte.",
+    "target_word": "Stimmung",
+    "language": "German"
+  },
+  {
+    "id": "codwoe_007",
+    "text": "Her sharp wit and dry humor made her the life of every dinner party she attended.",
+    "target_word": "sharp",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_008",
+    "text": "The surgeon used a sharp scalpel to make a precise incision along the patient's abdomen.",
+    "target_word": "sharp",
+    "language": "English"
+  },
+  {
+    "id": "codwoe_009",
+    "text": "El concepto de libertad ha evolucionado significativamente a lo largo de la historia de la filosofia occidental.",
+    "target_word": "libertad",
+    "language": "Spanish"
+  },
+  {
+    "id": "codwoe_010",
+    "text": "The foundation of the building was laid using reinforced concrete to withstand seismic activity in the region.",
+    "target_word": "foundation",
+    "language": "English"
+  }
+]

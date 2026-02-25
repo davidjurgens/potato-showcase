@@ -1,0 +1,23 @@
+{
+  "title": "Food Hazard Detection",
+  "description": "Food safety hazard detection task requiring annotators to identify hazards, products, and risk levels in food incident reports, and classify the type of contamination. Based on SemEval-2025 Task 9.",
+  "version": "1.0.0",
+  "author": {
+    "name": "SemEval 2025 Task 9 Organizers",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio", "multiselect"],
+  "domain": ["SemEval", "NLP", "Food Safety", "Information Extraction"],
+  "useCase": ["Hazard Detection", "Food Safety Monitoring", "Risk Assessment"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2025", "shared-task", "food-safety", "hazard-detection", "span-annotation"],
+  "featured": false,
+  "paperReference": "SemEval 2025 Task 9 Organizers, SemEval 2025",
+  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/semeval-2025-task9",
+  "citation": "@inproceedings{semeval2025-task9,\n    title = \"Food Hazard Detection\",\n    author = \"SemEval 2025 Task 9 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

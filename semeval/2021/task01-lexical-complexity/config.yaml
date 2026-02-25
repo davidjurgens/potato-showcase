@@ -1,0 +1,68 @@
+# Lexical Complexity Prediction
+# Based on Shardlow et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.1/
+# Dataset: https://sites.google.com/view/lcpsharedtask2021
+#
+# Annotators rate how complex a target word is within its sentence context.
+# Complexity is assessed on a 5-point Likert scale and a continuous slider
+# from 0 (very simple) to 1 (very complex), targeting non-native speakers.
+
+annotation_task_name: "Lexical Complexity Prediction"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: complexity_likert
+    description: "Rate the complexity of the highlighted target word on a 5-point scale."
+    min_label: "Very Simple"
+    max_label: "Very Complex"
+    size: 5
+
+  - annotation_type: slider
+    name: complexity_slider
+    description: "Rate the complexity of the target word on a continuous scale from 0 (simplest) to 1 (most complex)."
+    min_value: 0
+    max_value: 1
+    starting_value: 0.5
+
+annotation_instructions: |
+  You will see a sentence with a highlighted target word. Your task is to rate how
+  complex the target word is for a non-native English speaker.
+
+  1. Read the sentence and identify the target word shown in bold.
+  2. Rate the word's complexity on the 5-point Likert scale (Very Simple to Very Complex).
+  3. Also provide a continuous complexity rating using the slider (0 = simplest, 1 = most complex).
+
+  Consider factors like word frequency, number of syllables, and whether the word
+  has a simpler synonym that could replace it.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Target Word:</strong>
+      <span style="font-size: 18px; font-weight: bold; color: #b45309;">{{target_word}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

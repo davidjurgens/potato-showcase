@@ -1,0 +1,69 @@
+# Irony Detection in English Tweets
+# Based on Van Hee et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1005/
+# Dataset: https://github.com/Cyvhee/SemEval2018-Task3
+#
+# This task asks annotators to classify tweets into four categories
+# based on the type of irony present (or absence thereof).
+#
+# Irony Labels:
+# - Verbal Irony by Polarity Clash: Positive words used to express negative meaning or vice versa
+# - Situational Irony: The described situation is contrary to expectations
+# - Other Verbal Irony: Irony that does not involve a clear polarity clash
+# - Non-Ironic: The tweet is not ironic
+
+annotation_task_name: "Irony Detection in English Tweets"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: irony_type
+    description: "What type of irony, if any, is present in this tweet?"
+    labels:
+      - "Verbal Irony by Polarity Clash"
+      - "Situational Irony"
+      - "Other Verbal Irony"
+      - "Non-Ironic"
+    keyboard_shortcuts:
+      "Verbal Irony by Polarity Clash": "1"
+      "Situational Irony": "2"
+      "Other Verbal Irony": "3"
+      "Non-Ironic": "4"
+    tooltips:
+      "Verbal Irony by Polarity Clash": "Positive words express negative meaning, or negative words express positive meaning"
+      "Situational Irony": "The situation described is contrary to what one would expect"
+      "Other Verbal Irony": "Ironic expression that does not involve a clear polarity clash"
+      "Non-Ironic": "The tweet is straightforward and not ironic"
+
+annotation_instructions: |
+  You will be shown a tweet. Your task is to classify the type of irony present.
+  Consider whether the author means the opposite of what they say (verbal irony),
+  whether the situation is contrary to expectations (situational irony), or whether
+  the tweet is straightforward (non-ironic).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

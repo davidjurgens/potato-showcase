@@ -1,0 +1,23 @@
+{
+  "title": "Character Identification on Multiparty Dialogues",
+  "description": "Identification and linking of character mentions in TV show dialogue, combining span annotation with entity resolution for the main cast of Friends. Based on SemEval-2018 Task 4.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Emory University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "NLP", "Entity Resolution", "Dialogue"],
+  "useCase": ["Character Identification", "Coreference Resolution", "Entity Linking"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2018", "shared-task", "character-identification", "dialogue", "entity-resolution", "friends"],
+  "featured": false,
+  "paperReference": "Chen et al., SemEval 2018",
+  "paperUrl": "https://aclanthology.org/S18-1007/",
+  "datasetUrl": "https://github.com/emorynlp/character-identification",
+  "citation": "@inproceedings{chen-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 4: Character Identification on Multiparty Dialogues\",\n    author = \"Chen, Henry Y. and Choi, Jinho D.\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1007\"\n}"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "recipe_qa_001",
+    "text": "What temperature should the oven be preheated to?",
+    "recipe_text": "Preheat oven to 375F. Mix flour, sugar, and baking powder in a large bowl. Cut in cold butter until mixture resembles coarse crumbs. Add milk and stir until just combined. Drop spoonfuls onto a baking sheet and bake for 12-15 minutes until golden brown.",
+    "recipe_title": "Classic Buttermilk Biscuits"
+  },
+  {
+    "id": "recipe_qa_002",
+    "text": "Can this recipe be made gluten-free?",
+    "recipe_text": "Cook spaghetti according to package directions until al dente. In a skillet, cook pancetta until crispy. Whisk together eggs, Parmesan cheese, and black pepper. Drain pasta, reserving 1 cup cooking water. Toss hot pasta with pancetta, then quickly stir in egg mixture. Add pasta water as needed for a creamy sauce.",
+    "recipe_title": "Spaghetti Carbonara"
+  },
+  {
+    "id": "recipe_qa_003",
+    "text": "How long should the chicken marinate?",
+    "recipe_text": "Combine yogurt, lemon juice, garlic, cumin, paprika, and salt in a bowl. Add chicken pieces and toss to coat. Cover and refrigerate for at least 4 hours, preferably overnight. Thread chicken onto skewers and grill over medium-high heat for 6-8 minutes per side.",
+    "recipe_title": "Grilled Chicken Kebabs"
+  },
+  {
+    "id": "recipe_qa_004",
+    "text": "What can be used as a substitute for heavy cream?",
+    "recipe_text": "Melt butter in a saucepan over medium heat. Add minced garlic and cook for 30 seconds. Pour in heavy cream and bring to a gentle simmer. Stir in grated Parmesan cheese and season with salt, pepper, and nutmeg. Cook for 3-4 minutes until sauce thickens.",
+    "recipe_title": "Alfredo Sauce"
+  },
+  {
+    "id": "recipe_qa_005",
+    "text": "How many servings does this recipe make?",
+    "recipe_text": "Dice onion, carrots, and celery into small pieces. Heat olive oil in a large pot and saute vegetables for 5 minutes. Add canned tomatoes, chicken broth, and dried basil. Bring to a boil, then reduce heat and simmer for 20 minutes. Blend until smooth with an immersion blender.",
+    "recipe_title": "Tomato Basil Soup"
+  },
+  {
+    "id": "recipe_qa_006",
+    "text": "What type of pan should be used for this recipe?",
+    "recipe_text": "Whisk together flour, cocoa powder, sugar, baking soda, and salt. In another bowl, combine eggs, buttermilk, vegetable oil, and vanilla extract. Pour wet ingredients into dry and mix until just combined. Pour batter into a greased 9x13 inch baking pan. Bake at 350F for 30-35 minutes.",
+    "recipe_title": "Chocolate Sheet Cake"
+  },
+  {
+    "id": "recipe_qa_007",
+    "text": "Should the onions be caramelized before adding the broth?",
+    "recipe_text": "Slice 4 large onions thinly. Melt butter in a Dutch oven over medium-low heat. Add onions and cook, stirring occasionally, for 45 minutes until deeply golden and caramelized. Add thyme and cook for 1 minute. Pour in beef broth and white wine. Simmer for 20 minutes. Ladle into bowls, top with bread and Gruyere cheese, then broil until bubbly.",
+    "recipe_title": "French Onion Soup"
+  },
+  {
+    "id": "recipe_qa_008",
+    "text": "What is the resting time after cooking the steak?",
+    "recipe_text": "Season the ribeye generously with salt and pepper. Heat a cast-iron skillet over high heat until smoking. Add oil, then sear steak for 4 minutes per side for medium-rare. Add butter, garlic, and fresh thyme to the pan and baste the steak for 1 minute. Transfer to a cutting board and let rest for 10 minutes before slicing.",
+    "recipe_title": "Pan-Seared Ribeye Steak"
+  },
+  {
+    "id": "recipe_qa_009",
+    "text": "What kind of rice works best for this dish?",
+    "recipe_text": "Toast arborio rice in olive oil for 2 minutes. Add white wine and stir until absorbed. Ladle in warm chicken stock one cup at a time, stirring constantly and waiting until each addition is absorbed before adding more. After about 18 minutes, stir in butter and Parmesan. Season with salt and pepper.",
+    "recipe_title": "Classic Mushroom Risotto"
+  },
+  {
+    "id": "recipe_qa_010",
+    "text": "How should the dough be shaped before baking?",
+    "recipe_text": "Dissolve yeast in warm water with a pinch of sugar. Let sit for 5 minutes until foamy. Mix flour, salt, and olive oil, then add yeast mixture. Knead for 8 minutes until smooth and elastic. Let rise in a covered bowl for 1 hour. Punch down and stretch dough onto a greased baking sheet. Top with sauce, mozzarella, and desired toppings. Bake at 450F for 12-15 minutes.",
+    "recipe_title": "Homemade Pizza"
+  }
+]

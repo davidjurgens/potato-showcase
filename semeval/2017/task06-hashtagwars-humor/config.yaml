@@ -1,0 +1,68 @@
+# #HashtagWars - Learning a Sense of Humor
+# Based on Potash et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2004/
+# Dataset: https://github.com/pppotash/SemEval-2017-Task-6
+#
+# This task asks annotators to rate the funniness of tweets submitted
+# to Comedy Central's @midnight #HashtagWars segments.
+#
+# Humor Labels:
+# - Funny (Winner): The tweet is genuinely funny and could win the competition
+# - Somewhat Funny: The tweet has some humor but is not top-tier
+# - Not Funny: The tweet is not funny or misses the mark
+
+annotation_task_name: "#HashtagWars - Humor Rating"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: humor_rating
+    description: "How funny is this tweet in response to the hashtag prompt?"
+    labels:
+      - "Funny (Winner)"
+      - "Somewhat Funny"
+      - "Not Funny"
+    keyboard_shortcuts:
+      "Funny (Winner)": "1"
+      "Somewhat Funny": "2"
+      "Not Funny": "3"
+    tooltips:
+      "Funny (Winner)": "The tweet is genuinely funny and stands out as a potential winner"
+      "Somewhat Funny": "The tweet has some humor but is not exceptional"
+      "Not Funny": "The tweet is not funny, too obvious, or misses the mark"
+
+annotation_instructions: |
+  You will be shown a tweet that was submitted in response to a #HashtagWars prompt
+  from Comedy Central's @midnight show. Your task is to rate how funny the tweet is.
+  Consider creativity, wit, and comedic timing in your judgment.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Hashtag Prompt:</strong>
+      <span style="font-size: 15px; font-weight: bold;">{{hashtag_prompt}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

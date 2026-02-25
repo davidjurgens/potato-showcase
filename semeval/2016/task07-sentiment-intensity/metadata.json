@@ -1,0 +1,23 @@
+{
+  "title": "Determining Sentiment Intensity of English and Arabic Phrases",
+  "description": "Fine-grained sentiment intensity scoring of text phrases on an 11-point scale from most negative to most positive. Based on SemEval-2016 Task 7.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kiritchenko et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["likert"],
+  "domain": ["SemEval", "NLP", "Sentiment Analysis", "Intensity"],
+  "useCase": ["Sentiment Intensity", "Fine-Grained Sentiment", "Lexicon Building"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2016", "shared-task", "sentiment-intensity", "fine-grained", "scoring"],
+  "featured": false,
+  "paperReference": "Kiritchenko et al., SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1004/",
+  "datasetUrl": "http://saifmohammad.com/WebPages/BestWorst.html",
+  "citation": "@inproceedings{kiritchenko-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 7: Determining Sentiment Intensity of {E}nglish and {A}rabic Phrases\",\n    author = \"Kiritchenko, Svetlana and Mohammad, Saif and Salameh, Mohammad\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1004\"\n}"
+}

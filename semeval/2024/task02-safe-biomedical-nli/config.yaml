@@ -1,0 +1,71 @@
+# Safe Biomedical NLI
+# Based on Jullien et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2024-task2
+#
+# This task asks annotators to determine the entailment relationship
+# between a clinical premise and hypothesis, focusing on safety-critical
+# biomedical reasoning. Annotators must also provide their reasoning.
+
+annotation_task_name: "Safe Biomedical NLI"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: nli_judgment
+    description: "Does the premise entail or contradict the hypothesis?"
+    labels:
+      - "Entailment"
+      - "Contradiction"
+    keyboard_shortcuts:
+      "Entailment": "1"
+      "Contradiction": "2"
+    tooltips:
+      "Entailment": "The premise supports or implies the hypothesis is true"
+      "Contradiction": "The premise contradicts or implies the hypothesis is false"
+
+  - annotation_type: text
+    name: reasoning
+    description: "Explain your reasoning for the entailment judgment."
+
+annotation_instructions: |
+  You will be shown a clinical premise and a hypothesis. Your task is to:
+  1. Read the premise carefully, noting medical facts and conditions.
+  2. Read the hypothesis.
+  3. Determine whether the premise entails (supports) or contradicts the hypothesis.
+  4. Provide a brief explanation of your reasoning.
+  Note: Focus on the logical relationship, not your personal medical knowledge.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Premise:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Hypothesis:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{hypothesis}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+      <strong style="color: #166534;">Clinical Domain:</strong> <span>{{clinical_domain}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

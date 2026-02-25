@@ -1,0 +1,23 @@
+{
+  "title": "Statement Verification and Evidence Finding with Tables",
+  "description": "Verify whether a natural language statement is entailed or refuted by tabular data and identify key evidence cells, based on SemEval-2021 Task 9 (Wang et al.). Annotators assess factual claims against structured table content.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wang et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "IBM Research"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Fact Verification", "Table Understanding", "Evidence Finding"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2021", "shared-task", "fact-verification", "tables", "evidence", "entailment"],
+  "featured": false,
+  "paperReference": "Wang et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.27/",
+  "datasetUrl": "https://sites.google.com/view/sem-tab-facts",
+  "citation": "@inproceedings{wang-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 9: {S}tatement {V}erification and {E}vidence {F}inding with {T}ables\",\n    author = \"Wang, Nancy Xin Ru  and Mahajan, Diwakar  and Danilevsky, Marina  and Rosenthal, Sara\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.27\"\n}"
+}

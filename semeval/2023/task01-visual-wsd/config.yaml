@@ -1,0 +1,97 @@
+# V-WSD - Visual Word Sense Disambiguation
+# Based on Raganato et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.1/
+# Dataset: https://raganato.github.io/vwsd/
+#
+# Given a target word and a context sentence, annotators select the image
+# (from a set of 10 candidates) that best represents the intended meaning
+# of the target word in that context. This tests visual grounding of
+# word senses across modalities.
+#
+# Annotation Guidelines:
+# 1. Read the context sentence and identify the target word
+# 2. Consider the meaning of the target word in the given context
+# 3. Review the descriptions of all 10 candidate images
+# 4. Select the image that best matches the intended word sense
+# 5. If multiple images seem relevant, choose the most specific match
+
+annotation_task_name: "V-WSD - Visual Word Sense Disambiguation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: image_selection
+    description: "Which image best represents the meaning of the target word in the given context?"
+    labels:
+      - "Image 1"
+      - "Image 2"
+      - "Image 3"
+      - "Image 4"
+      - "Image 5"
+      - "Image 6"
+      - "Image 7"
+      - "Image 8"
+      - "Image 9"
+      - "Image 10"
+    keyboard_shortcuts:
+      "Image 1": "1"
+      "Image 2": "2"
+      "Image 3": "3"
+      "Image 4": "4"
+      "Image 5": "5"
+      "Image 6": "6"
+      "Image 7": "7"
+      "Image 8": "8"
+      "Image 9": "9"
+      "Image 10": "0"
+    tooltips:
+      "Image 1": "Select if Image 1 best represents the target word meaning"
+      "Image 2": "Select if Image 2 best represents the target word meaning"
+      "Image 3": "Select if Image 3 best represents the target word meaning"
+      "Image 4": "Select if Image 4 best represents the target word meaning"
+      "Image 5": "Select if Image 5 best represents the target word meaning"
+      "Image 6": "Select if Image 6 best represents the target word meaning"
+      "Image 7": "Select if Image 7 best represents the target word meaning"
+      "Image 8": "Select if Image 8 best represents the target word meaning"
+      "Image 9": "Select if Image 9 best represents the target word meaning"
+      "Image 10": "Select if Image 10 best represents the target word meaning"
+
+annotation_instructions: |
+  You will see a context sentence with a highlighted target word, along with descriptions of 10 candidate images.
+  Your task is to select the image that best represents the meaning of the target word as used in the given context.
+  Pay attention to the specific sense of the word -- many words have multiple meanings, and the context determines which sense is intended.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Target Word:</strong>
+      <span style="font-size: 18px; font-weight: bold; color: #854d0e;">{{target_word}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Context Sentence:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #475569;">Candidate Image Descriptions:</strong>
+      <p style="font-size: 14px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-line;">{{image_descriptions}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

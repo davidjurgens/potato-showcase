@@ -1,0 +1,66 @@
+# Plausible Clarifications of Implicit and Underspecified Instructions
+# Based on Roth and Anthonio, SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.133/
+# Dataset: https://github.com/Anthonio/SemEval2022-Task7
+#
+# This task asks annotators to judge whether a proposed clarification
+# of an underspecified instruction is plausible or implausible. The
+# clarification fills in implicit information that was left unstated
+# in the original instruction.
+#
+# Plausibility Labels:
+# - Plausible: The clarification is a reasonable interpretation of the instruction
+# - Implausible: The clarification is unreasonable or contradicts the instruction
+
+annotation_task_name: "Plausible Clarifications of Instructions"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: plausibility
+    description: "Is this clarification a plausible interpretation of the instruction?"
+    labels:
+      - "Plausible"
+      - "Implausible"
+    keyboard_shortcuts:
+      "Plausible": "1"
+      "Implausible": "2"
+    tooltips:
+      "Plausible": "The clarification is a reasonable, sensible interpretation of what the instruction means"
+      "Implausible": "The clarification is unreasonable, contradictory, or does not make sense in context"
+
+annotation_instructions: |
+  You will see an instruction and a proposed clarification of that instruction.
+  The clarification attempts to make explicit something that was left implicit or underspecified.
+  Judge whether the clarification is plausible (reasonable) or implausible (unreasonable).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Instruction:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Proposed Clarification:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{clarification}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

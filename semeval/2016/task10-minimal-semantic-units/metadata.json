@@ -1,0 +1,23 @@
+{
+  "title": "Detecting Minimal Semantic Units and Their Meanings (DiMSUM)",
+  "description": "Identification of multiword expression components in text through span annotation, detecting minimal semantic units that function as single meaning-bearing elements. Based on SemEval-2016 Task 10.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Schneider et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Georgetown University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span"],
+  "domain": ["SemEval", "NLP", "Multiword Expressions", "Lexical Semantics"],
+  "useCase": ["MWE Detection", "Compositional Semantics", "Lexical Analysis"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2016", "shared-task", "mwe", "multiword-expressions", "dimsum", "semantic-units"],
+  "featured": false,
+  "paperReference": "Schneider et al., SemEval 2016",
+  "paperUrl": "https://aclanthology.org/S16-1084/",
+  "datasetUrl": "https://dimsum16.github.io/",
+  "citation": "@inproceedings{schneider-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 10: Detecting Minimal Semantic Units and their Meanings ({D}i{MSUM})\",\n    author = \"Schneider, Nathan and Hovy, Dirk and Johannsen, Anders and Carpuat, Marine\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1084\"\n}"
+}

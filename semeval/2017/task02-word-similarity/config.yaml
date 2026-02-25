@@ -1,0 +1,87 @@
+# Multilingual Semantic Word Similarity
+# Based on Camacho-Collados et al., SemEval 2017
+# Paper: https://aclanthology.org/S17-2002/
+# Dataset: http://alt.qcri.org/semeval2017/task2/
+#
+# Annotators judge the degree of semantic similarity between two words
+# on a graded scale. This task supports multilingual and cross-lingual
+# word pair evaluation for distributional semantic models.
+#
+# Similarity Scale (Likert):
+# 1 = Completely Different (no semantic overlap)
+# 2 = Slightly Similar (vague topical connection)
+# 3 = Moderately Similar (share some meaning)
+# 4 = Very Similar (closely related meaning)
+# 5 = Identical Meaning (perfect synonyms in context)
+#
+# Annotation Guidelines:
+# 1. Read both words carefully
+# 2. Consider the most common sense of each word
+# 3. Rate how semantically similar the two words are
+# 4. Use the full range of the scale
+# 5. Note the language of the word pair
+
+annotation_task_name: "Multilingual Semantic Word Similarity"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: similarity_rating
+    description: "How semantically similar are these two words?"
+    min_label: "Completely Different"
+    max_label: "Identical Meaning"
+    size: 5
+
+  - annotation_type: slider
+    name: similarity_slider
+    description: "Rate the semantic similarity using the slider (0 = unrelated, 4 = identical)"
+    min_value: 0
+    max_value: 4
+    starting_value: 2
+
+annotation_instructions: |
+  You will be shown two words, possibly from different languages. Your task is to judge
+  how semantically similar these two words are.
+
+  Use the Likert scale for a quick categorical judgment (1-5) and the slider for a
+  fine-grained continuous rating (0-4).
+
+  Consider the most common meaning of each word. Two words are semantically similar
+  if they refer to the same or closely related concepts.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+        <div style="text-align: center;">
+          <span style="color: #64748b; font-size: 13px;">Word 1</span>
+          <p style="font-size: 22px; font-weight: bold; margin: 4px 0;">{{text}}</p>
+        </div>
+        <span style="font-size: 24px; color: #94a3b8;">~</span>
+        <div style="text-align: center;">
+          <span style="color: #64748b; font-size: 13px;">Word 2</span>
+          <p style="font-size: 22px; font-weight: bold; margin: 4px 0;">{{word_2}}</p>
+        </div>
+      </div>
+      <p style="text-align: center; color: #64748b; margin-top: 8px;">Language: <strong>{{language}}</strong></p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,12 @@
+[
+  {"id": "humor_001", "text": "My diet starts Monday. Just like it has every Monday since 2003.", "hashtag_prompt": "#MyDietIn5Words"},
+  {"id": "humor_002", "text": "Please stop talking about crossfit.", "hashtag_prompt": "#ThingsYouSayAtThanksgiving"},
+  {"id": "humor_003", "text": "Netflix asked if I was still watching. Even Netflix is judging me now.", "hashtag_prompt": "#SignsYouNeedALife"},
+  {"id": "humor_004", "text": "The weather is nice outside today.", "hashtag_prompt": "#BoringTweets"},
+  {"id": "humor_005", "text": "My cat has a better social life than me. He gets invited to all the neighborhood fights.", "hashtag_prompt": "#SadButTrue"},
+  {"id": "humor_006", "text": "I went to the gym once. They asked me to leave because I was just sitting in the parking lot.", "hashtag_prompt": "#FitnessGoals"},
+  {"id": "humor_007", "text": "Autocorrect changed 'I'm on my way' to 'I'm on my waffle' and honestly that's more accurate.", "hashtag_prompt": "#AutocorrectFails"},
+  {"id": "humor_008", "text": "I like to exercise in the morning. Just kidding, I hit snooze seven times.", "hashtag_prompt": "#MorningRoutine"},
+  {"id": "humor_009", "text": "Ate a salad for lunch today.", "hashtag_prompt": "#LiesThatSoundTrue"},
+  {"id": "humor_010", "text": "My bank account and I have something in common: we both have no interest.", "hashtag_prompt": "#FinanceJokes"}
+]

@@ -1,0 +1,23 @@
+{
+  "title": "Detection and Interpretation of English Puns",
+  "description": "Detection of puns in text with identification of the specific pun word, combining binary classification with span annotation. Based on SemEval-2017 Task 7.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Miller et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Trento"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["SemEval", "NLP", "Humor Detection", "Figurative Language"],
+  "useCase": ["Pun Detection", "Wordplay Analysis", "Figurative Language"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2017", "shared-task", "pun-detection", "wordplay", "humor", "figurative-language"],
+  "featured": false,
+  "paperReference": "Miller et al., SemEval 2017",
+  "paperUrl": "https://aclanthology.org/S17-2005/",
+  "datasetUrl": "https://alt.qcri.org/semeval2017/task7/",
+  "citation": "@inproceedings{miller-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 7: Detection and Interpretation of {E}nglish Puns\",\n    author = \"Miller, Tristan and Hempelmann, Christian and Gurevych, Iryna\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2005\"\n}"
+}

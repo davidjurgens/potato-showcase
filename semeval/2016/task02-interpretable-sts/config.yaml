@@ -1,0 +1,69 @@
+# Interpretable Semantic Textual Similarity
+# Based on Agirre et al., SemEval 2016
+# Paper: https://aclanthology.org/S16-1082/
+# Dataset: http://ixa2.si.ehu.eus/stswiki/
+#
+# This task asks annotators to assess semantic similarity between
+# sentence pairs at a fine-grained level. Annotators highlight aligned
+# chunks and rate the overall similarity on a 6-point scale.
+#
+# Span Labels:
+# - Aligned Chunk: A text chunk that corresponds to content in the other sentence
+#
+# Similarity Scale (Likert 1-6):
+# 1 = Completely Different (no semantic overlap)
+# 6 = Identical Meaning (same meaning, possibly different wording)
+
+annotation_task_name: "Interpretable Semantic Textual Similarity"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: aligned_chunks
+    description: "Highlight chunks in Sentence 1 that align with content in Sentence 2."
+    labels:
+      - "Aligned Chunk"
+
+  - annotation_type: likert
+    name: similarity_score
+    description: "How semantically similar are the two sentences?"
+    min_label: "Completely Different"
+    max_label: "Identical Meaning"
+    size: 6
+
+annotation_instructions: |
+  You will be shown two sentences. Your task is to:
+  1. Highlight chunks in Sentence 1 that correspond to content in Sentence 2.
+  2. Rate the overall semantic similarity between the two sentences on a 1-6 scale.
+  Consider both the meaning and the information conveyed by each sentence.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #0369a1;">Sentence 1:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #15803d;">Sentence 2:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{sentence_2}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

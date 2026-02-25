@@ -1,0 +1,57 @@
+# Emphasis Selection for Written Text
+# Based on Shirani et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.186/
+# Dataset: https://github.com/RiTUAL-UH/SemEval2020_Task10
+#
+# Annotators select which words or phrases in a short text should be
+# emphasized (e.g., bolded, highlighted) to best convey the intended
+# meaning when displayed in visual media like posters or advertisements.
+
+annotation_task_name: "Emphasis Selection for Written Text"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: emphasis_spans
+    description: "Highlight the words or phrases that should be emphasized to best convey the intended meaning."
+    labels:
+      - "Emphasis"
+
+annotation_instructions: |
+  You will see a short text that could appear on a poster, advertisement, or
+  social media graphic. Your task is to:
+  1. Read the text carefully and understand its intended message.
+  2. Select the words or phrases that should be visually emphasized (bolded,
+     highlighted, or made larger) to most effectively communicate the message.
+  3. Choose words that carry the most meaning and would draw the reader's
+     attention to the key point.
+
+  Typically, 1-4 words per sentence should be emphasized. Focus on the most
+  impactful words rather than selecting entire phrases.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 18px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,12 @@
+[
+  {"id": "wordsim_001", "text": "car", "word_2": "automobile", "language": "English"},
+  {"id": "wordsim_002", "text": "bank", "word_2": "river", "language": "English"},
+  {"id": "wordsim_003", "text": "doctor", "word_2": "nurse", "language": "English"},
+  {"id": "wordsim_004", "text": "king", "word_2": "queen", "language": "English"},
+  {"id": "wordsim_005", "text": "happy", "word_2": "joyful", "language": "English"},
+  {"id": "wordsim_006", "text": "computer", "word_2": "keyboard", "language": "English"},
+  {"id": "wordsim_007", "text": "Katze", "word_2": "cat", "language": "German-English"},
+  {"id": "wordsim_008", "text": "libro", "word_2": "book", "language": "Spanish-English"},
+  {"id": "wordsim_009", "text": "planet", "word_2": "galaxy", "language": "English"},
+  {"id": "wordsim_010", "text": "maison", "word_2": "house", "language": "French-English"}
+]

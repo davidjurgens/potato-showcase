@@ -1,0 +1,12 @@
+[
+  {"id": "factcheck_001", "text": "The Great Wall of China is visible from space with the naked eye. It's the only man-made structure you can see from orbit.", "question": "Can you see the Great Wall of China from space?", "forum": "Travel & Geography"},
+  {"id": "factcheck_002", "text": "Vitamin C can help reduce the duration of a cold by about a day, but it won't prevent you from catching one in the first place.", "question": "Does vitamin C cure the common cold?", "forum": "Health & Wellness"},
+  {"id": "factcheck_003", "text": "Qatar is in Asia, specifically on the Arabian Peninsula in the Middle East. Its capital is Doha.", "question": "Is Qatar in Africa or Asia?", "forum": "Geography"},
+  {"id": "factcheck_004", "text": "Lightning never strikes the same place twice. That's why lightning rods don't really work - they can only protect once.", "question": "Can lightning hit the same spot twice?", "forum": "Science"},
+  {"id": "factcheck_005", "text": "The human body has 206 bones in adulthood. Babies are born with about 270 bones, which fuse together as they grow.", "question": "How many bones does the human body have?", "forum": "Biology & Anatomy"},
+  {"id": "factcheck_006", "text": "You need to drink exactly 8 glasses of water per day. This is a well-established medical fact backed by decades of research.", "question": "How much water should you drink daily?", "forum": "Health & Wellness"},
+  {"id": "factcheck_007", "text": "The Sahara Desert is the largest desert in the world. It covers most of North Africa and spans about 9.2 million square kilometers.", "question": "What is the largest desert on Earth?", "forum": "Geography"},
+  {"id": "factcheck_008", "text": "Antibiotics are effective against both bacterial and viral infections. You should take them whenever you feel sick to recover faster.", "question": "Should I take antibiotics for the flu?", "forum": "Health & Medicine"},
+  {"id": "factcheck_009", "text": "The speed of light in a vacuum is approximately 299,792 kilometers per second, which is the fastest speed possible according to Einstein's theory of relativity.", "question": "What is the speed of light?", "forum": "Physics"},
+  {"id": "factcheck_010", "text": "Goldfish have a memory span of about 3 seconds. They forget everything almost instantly, which is why they seem content in small bowls.", "question": "How long is a goldfish's memory?", "forum": "Animals & Pets"}
+]

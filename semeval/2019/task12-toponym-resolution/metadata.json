@@ -1,0 +1,23 @@
+{
+  "title": "Toponym Resolution in Scientific Papers",
+  "description": "Identification and resolution of place names (toponyms) in scientific text, combining span annotation with geocoding. Based on SemEval-2019 Task 12 (Toponym Resolution).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Weissenbacher et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Arizona State University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "text"],
+  "domain": ["SemEval", "NLP", "Geoparsing", "Named Entity Recognition"],
+  "useCase": ["Toponym Resolution", "Geoparsing", "NER", "Geocoding"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2019", "shared-task", "toponym", "geoparsing", "ner", "scientific-text"],
+  "featured": false,
+  "paperReference": "Weissenbacher et al., SemEval 2019",
+  "paperUrl": "https://aclanthology.org/S19-2229/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/19948",
+  "citation": "@inproceedings{weissenbacher-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 12: Toponym Resolution in Scientific Papers\",\n    author = \"Weissenbacher, Davy and Magge, Arjun and O'Connor, Karen and Scotch, Matthew and Gonzalez-Hernandez, Graciela\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2229\"\n}"
+}

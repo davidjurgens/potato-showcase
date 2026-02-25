@@ -1,0 +1,86 @@
+# Food Hazard Detection
+# Based on SemEval 2025 Task 9 Organizers, SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2025-task9
+#
+# This task asks annotators to identify food safety hazards in incident reports.
+# Annotators highlight hazard mentions, affected products, and risk levels,
+# classify the required action, and select applicable hazard categories.
+
+annotation_task_name: "Food Hazard Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: hazard_spans
+    description: "Highlight hazards, products, and risk levels in the text."
+    labels:
+      - "Hazard"
+      - "Product"
+      - "Risk Level"
+
+  - annotation_type: radio
+    name: action_required
+    description: "What action is required for this food safety incident?"
+    labels:
+      - "Recall Required"
+      - "Warning Issued"
+      - "No Action Needed"
+    keyboard_shortcuts:
+      "Recall Required": "1"
+      "Warning Issued": "2"
+      "No Action Needed": "3"
+    tooltips:
+      "Recall Required": "The product must be recalled from the market"
+      "Warning Issued": "A public health warning should be issued"
+      "No Action Needed": "The incident does not require public action"
+
+  - annotation_type: multiselect
+    name: hazard_categories
+    description: "Select all hazard categories that apply."
+    labels:
+      - "Biological"
+      - "Chemical"
+      - "Physical"
+      - "Allergen"
+      - "Other"
+    tooltips:
+      "Biological": "Microbial contamination such as bacteria, viruses, or parasites"
+      "Chemical": "Chemical contamination including pesticides, heavy metals, or toxins"
+      "Physical": "Physical contaminants such as glass, metal, or plastic"
+      "Allergen": "Undeclared allergens that could cause allergic reactions"
+      "Other": "Other types of hazards not covered above"
+
+annotation_instructions: |
+  You will be shown a food safety incident report. Your task is to:
+  1. Read the report carefully.
+  2. Highlight spans indicating the hazard, affected product, and risk level.
+  3. Classify the required action (recall, warning, or no action).
+  4. Select all applicable hazard categories.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Food Safety Incident Report:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

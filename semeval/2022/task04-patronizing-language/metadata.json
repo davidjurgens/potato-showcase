@@ -1,0 +1,23 @@
+{
+  "title": "Patronizing and Condescending Language Detection",
+  "description": "Detection and span-level identification of patronizing and condescending language directed toward vulnerable communities in news media. Based on SemEval-2022 Task 4 (Perez-Almendros et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Perez-Almendros et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "span"],
+  "domain": ["NLP", "Media Analysis", "SemEval"],
+  "useCase": ["Patronizing Language Detection", "Bias Detection", "Media Literacy"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2022", "shared-task", "patronizing-language", "condescension", "bias", "media"],
+  "featured": false,
+  "paperReference": "Perez-Almendros et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.43/",
+  "datasetUrl": "https://github.com/Perez-AlmendrosC/dontpatronizeme",
+  "citation": "@inproceedings{perez-almendros-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 4: Patronizing and Condescending Language Detection\",\n    author = \"Perez-Almendros, Carla  and Espinosa-Anke, Luis  and Schockaert, Steven\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.43\"\n}"
+}

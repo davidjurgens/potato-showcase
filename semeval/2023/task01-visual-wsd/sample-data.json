@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vwsd_001",
+    "text": "The bank was eroding rapidly due to the heavy rains last spring.",
+    "target_word": "bank",
+    "image_descriptions": "Image 1: A large commercial bank building with glass windows\nImage 2: A muddy riverbank with exposed tree roots and flowing water\nImage 3: A piggy bank sitting on a wooden table\nImage 4: A row of ATM machines outside a building\nImage 5: An eroded hillside near a river with sediment flowing downstream\nImage 6: A bank vault with a heavy steel door\nImage 7: A sandy beach along a lakeshore\nImage 8: A person depositing money at a bank counter\nImage 9: A steep cliff along a stream with visible erosion marks\nImage 10: An online banking application on a smartphone screen"
+  },
+  {
+    "id": "vwsd_002",
+    "text": "She played a beautiful piece on the organ at the church service.",
+    "target_word": "organ",
+    "image_descriptions": "Image 1: A detailed anatomical diagram of a human heart\nImage 2: A large pipe organ inside a Gothic cathedral\nImage 3: A kidney shown in a medical textbook illustration\nImage 4: A small electronic keyboard on a stand\nImage 5: A church interior with wooden pews and stained glass\nImage 6: A grand pipe organ with ornate gold pipes in a concert hall\nImage 7: A diagram of the human digestive system\nImage 8: A musician playing a Hammond organ on stage\nImage 9: An organ donor card next to a stethoscope\nImage 10: A street musician with a barrel organ"
+  },
+  {
+    "id": "vwsd_003",
+    "text": "The crane lifted the steel beam to the top floor of the construction site.",
+    "target_word": "crane",
+    "image_descriptions": "Image 1: A tall yellow construction crane towering over a building site\nImage 2: A graceful white crane bird standing in a marsh\nImage 3: A paper origami crane made from colorful paper\nImage 4: A mobile crane truck on a highway\nImage 5: A flock of sandhill cranes flying in V-formation\nImage 6: A tower crane with a heavy steel beam suspended from cables\nImage 7: A blue heron wading in shallow water\nImage 8: A person craning their neck to look upward\nImage 9: A small desktop crane toy\nImage 10: A red-crowned crane in a Japanese garden"
+  },
+  {
+    "id": "vwsd_004",
+    "text": "The bass guitar provided a deep rhythmic foundation for the jazz ensemble.",
+    "target_word": "bass",
+    "image_descriptions": "Image 1: A largemouth bass fish jumping out of a lake\nImage 2: A four-string electric bass guitar in sunburst finish\nImage 3: A bass drum in a marching band formation\nImage 4: A person fishing from a boat on a calm lake\nImage 5: An upright double bass leaning against a wall in a jazz club\nImage 6: A striped bass lying on ice at a fish market\nImage 7: A bass amplifier with dials and knobs\nImage 8: A bass clef symbol on sheet music\nImage 9: A mounted bass fish trophy on a wooden plaque\nImage 10: A musician playing a five-string bass guitar on stage"
+  },
+  {
+    "id": "vwsd_005",
+    "text": "The pitcher threw a fastball straight down the middle of the plate.",
+    "target_word": "pitcher",
+    "image_descriptions": "Image 1: A ceramic water pitcher on a kitchen counter\nImage 2: A baseball pitcher in mid-windup on the mound\nImage 3: A glass pitcher filled with lemonade and ice\nImage 4: A bronze pitcher from an ancient Roman exhibit\nImage 5: A right-handed pitcher delivering a pitch in a stadium\nImage 6: A decorative porcelain pitcher with floral patterns\nImage 7: A milk pitcher next to an espresso machine\nImage 8: A minor league pitcher warming up in the bullpen\nImage 9: A silver serving pitcher at a formal dinner table\nImage 10: A vintage beer pitcher at a pub"
+  },
+  {
+    "id": "vwsd_006",
+    "text": "The mouse scurried across the kitchen floor and disappeared behind the refrigerator.",
+    "target_word": "mouse",
+    "image_descriptions": "Image 1: A wireless computer mouse on a desk pad\nImage 2: A small brown house mouse sitting on a piece of bread\nImage 3: A gaming mouse with RGB lighting\nImage 4: A cartoon mouse character from an animated film\nImage 5: A field mouse hiding in tall grass\nImage 6: An ergonomic vertical mouse next to a laptop\nImage 7: A tiny gray mouse running along a baseboard in a kitchen\nImage 8: A mouse trap with cheese on it\nImage 9: A white laboratory mouse in a cage\nImage 10: A computer mouse with a scroll wheel"
+  },
+  {
+    "id": "vwsd_007",
+    "text": "The spring in the mattress broke through the fabric after years of use.",
+    "target_word": "spring",
+    "image_descriptions": "Image 1: A metal coil spring from a mechanical device\nImage 2: Cherry blossoms blooming in a spring garden\nImage 3: A natural water spring bubbling up from rocks\nImage 4: A rusty mattress spring poking through torn fabric\nImage 5: A child jumping on a spring-loaded pogo stick\nImage 6: Flowers blooming in a meadow during springtime\nImage 7: A broken box spring mattress on a curb\nImage 8: A hot spring with steam rising in a national park\nImage 9: A spring-loaded door hinge mechanism\nImage 10: A clock with visible internal spring mechanism"
+  },
+  {
+    "id": "vwsd_008",
+    "text": "The bark of the old oak tree was deeply furrowed and covered in moss.",
+    "target_word": "bark",
+    "image_descriptions": "Image 1: A dog barking loudly at a fence\nImage 2: Rough textured bark of an ancient oak tree covered in green moss\nImage 3: A birch tree with distinctive white peeling bark\nImage 4: A seal barking on a rocky shore\nImage 5: A bark canoe displayed in a museum\nImage 6: Close-up of deeply ridged dark brown tree bark\nImage 7: A small dog barking at a mailman\nImage 8: Cork bark being harvested from a cork oak\nImage 9: A pile of mulch made from shredded bark\nImage 10: A fox barking in a forest at night"
+  },
+  {
+    "id": "vwsd_009",
+    "text": "The club held its annual meeting to elect new officers and discuss membership dues.",
+    "target_word": "club",
+    "image_descriptions": "Image 1: A wooden golf club resting on a golf bag\nImage 2: A nightclub with colorful lights and a dance floor\nImage 3: People sitting around a table at a community club meeting\nImage 4: A playing card showing the club suit symbol\nImage 5: A caveman-style wooden club as a weapon\nImage 6: A formal members-only club building with a sign\nImage 7: A sandwich club with three layers of bread\nImage 8: A group of people in matching club t-shirts at a meeting room\nImage 9: A baseball bat-like club from medieval times\nImage 10: A book club gathering in a living room"
+  },
+  {
+    "id": "vwsd_010",
+    "text": "The seal balanced the ball on its nose during the aquarium show.",
+    "target_word": "seal",
+    "image_descriptions": "Image 1: A red wax seal stamped on an envelope\nImage 2: A harbor seal balancing a colorful ball on its nose\nImage 3: A rubber gasket seal for plumbing\nImage 4: The presidential seal of the United States\nImage 5: A group of elephant seals resting on a beach\nImage 6: A trained seal performing tricks at an aquarium\nImage 7: A sealed envelope with an official stamp\nImage 8: A Navy SEAL in tactical gear\nImage 9: A vacuum seal food storage bag\nImage 10: A baby harp seal with white fur on ice"
+  }
+]

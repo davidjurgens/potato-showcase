@@ -1,0 +1,61 @@
+# Counting Events and Participants in News
+# Based on Postma et al., SemEval 2018
+# Paper: https://aclanthology.org/S18-1009/
+# Dataset: http://www.newsreader-project.eu/results/data/wikinews/
+#
+# This task asks annotators to count the number of distinct events or
+# incidents described in a news article and provide a brief description
+# of each event.
+#
+# Annotators enter a number for the event count and provide a textual
+# description summarizing the distinct events found.
+
+annotation_task_name: "Counting Events and Participants in News"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: number
+    name: event_count
+    description: "How many distinct events or incidents are described in this text?"
+
+  - annotation_type: text
+    name: event_description
+    description: "Briefly describe each distinct event mentioned in the text."
+
+annotation_instructions: |
+  You will be shown a news article along with its event type category.
+  Your task is to:
+  1. Count the number of distinct events or incidents described in the text.
+  2. Provide a brief description of each event identified.
+  Note: Related follow-up actions count as separate events if they are distinct incidents.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #a16207;">Event Type:</strong>
+      <span style="font-size: 15px;">{{event_type}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">News Article:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

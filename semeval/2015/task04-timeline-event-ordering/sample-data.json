@@ -1,0 +1,52 @@
+[
+  {
+    "id": "timeline_001",
+    "text": "Apple CEO Steve Jobs unveiled the first iPhone at Macworld in January 2007. The device went on sale in the United States on June 29, 2007. Jobs had previously introduced the iPod in October 2001, which transformed the music industry.",
+    "target_entity": "Steve Jobs"
+  },
+  {
+    "id": "timeline_002",
+    "text": "NASA's Curiosity rover landed on Mars on August 6, 2012, after launching from Cape Canaveral on November 26, 2011. The rover began its surface mission immediately after touchdown, transmitting its first images within hours of landing.",
+    "target_entity": "Curiosity rover"
+  },
+  {
+    "id": "timeline_003",
+    "text": "Angela Merkel became Chancellor of Germany in November 2005. She was re-elected in 2009, 2013, and 2017 before announcing in October 2018 that she would not seek a fifth term. Merkel stepped down in December 2021.",
+    "target_entity": "Angela Merkel"
+  },
+  {
+    "id": "timeline_004",
+    "text": "The European Central Bank was established on June 1, 1998. Mario Draghi was appointed president in November 2011, succeeding Jean-Claude Trichet. In July 2012, Draghi declared the ECB would do whatever it takes to preserve the euro.",
+    "target_entity": "European Central Bank"
+  },
+  {
+    "id": "timeline_005",
+    "text": "SpaceX successfully launched the Falcon Heavy rocket for the first time on February 6, 2018. The company had been founded by Elon Musk in 2002. The Falcon 9 rocket completed its first flight in June 2010.",
+    "target_entity": "SpaceX"
+  },
+  {
+    "id": "timeline_006",
+    "text": "Nelson Mandela was released from prison on February 11, 1990, after serving 27 years. He was elected president of South Africa in April 1994 and served until June 1999. Mandela died on December 5, 2013.",
+    "target_entity": "Nelson Mandela"
+  },
+  {
+    "id": "timeline_007",
+    "text": "The Deepwater Horizon oil rig exploded on April 20, 2010, killing 11 workers. Oil continued to leak into the Gulf of Mexico for 87 days until the well was capped on July 15, 2010. BP agreed to a settlement in 2012.",
+    "target_entity": "Deepwater Horizon"
+  },
+  {
+    "id": "timeline_008",
+    "text": "The World Health Organization declared COVID-19 a pandemic on March 11, 2020. The first confirmed case had been reported in Wuhan, China in December 2019. Emergency use authorization for the first vaccine was granted in December 2020.",
+    "target_entity": "COVID-19"
+  },
+  {
+    "id": "timeline_009",
+    "text": "Boeing announced the 787 Dreamliner program in 2004, with first delivery originally planned for 2008. The aircraft completed its maiden flight on December 15, 2009. All Nippon Airways received the first delivery in September 2011.",
+    "target_entity": "787 Dreamliner"
+  },
+  {
+    "id": "timeline_010",
+    "text": "The Fukushima Daiichi nuclear disaster began on March 11, 2011, following a massive earthquake and tsunami. Reactors 1 through 3 experienced meltdowns within the first three days. The Japanese government established an exclusion zone on March 12.",
+    "target_entity": "Fukushima Daiichi"
+  }
+]

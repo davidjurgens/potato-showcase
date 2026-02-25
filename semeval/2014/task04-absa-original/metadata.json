@@ -1,0 +1,23 @@
+{
+  "title": "Aspect-Based Sentiment Analysis (Original ABSA)",
+  "description": "Identify aspect terms in review text and classify their sentiment polarity, based on SemEval-2014 Task 4 (Pontiki et al.). Annotators highlight aspect terms and assign sentiment labels across restaurant and laptop review domains.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pontiki et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Institute for Language and Speech Processing"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio"],
+  "domain": ["SemEval", "Sentiment Analysis", "Aspect-Based"],
+  "useCase": ["Aspect Extraction", "Sentiment Classification", "Opinion Mining"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2014", "shared-task", "absa", "aspect-based", "sentiment", "opinion-mining", "reviews"],
+  "featured": false,
+  "paperReference": "Pontiki et al., SemEval 2014",
+  "paperUrl": "https://aclanthology.org/S14-2004/",
+  "datasetUrl": "https://alt.qcri.org/semeval2014/task4/",
+  "citation": "@inproceedings{pontiki-etal-2014-semeval,\n    title = \"{S}em{E}val-2014 {T}ask 4: {A}spect {B}ased {S}entiment {A}nalysis\",\n    author = \"Pontiki, Maria  and Galanis, Dimitris  and Pavlopoulos, John  and Papageorgiou, Harris  and Androutsopoulos, Ion  and Manandhar, Suresh\",\n    booktitle = \"Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval-2014)\",\n    year = \"2014\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S14-2004\"\n}"
+}

@@ -1,0 +1,12 @@
+[
+  {"id": "cwi_001", "text": "The exacerbation of symptoms was noted during the follow-up examination.", "target_word": "exacerbation"},
+  {"id": "cwi_002", "text": "The dog ran quickly across the green field.", "target_word": "quickly"},
+  {"id": "cwi_003", "text": "The juxtaposition of the two paintings created an interesting visual contrast.", "target_word": "juxtaposition"},
+  {"id": "cwi_004", "text": "She went to the store to buy some bread and milk.", "target_word": "store"},
+  {"id": "cwi_005", "text": "The archipelago consists of over seven thousand islands spread across the Pacific.", "target_word": "archipelago"},
+  {"id": "cwi_006", "text": "He gave a big smile when he saw his friends at the party.", "target_word": "smile"},
+  {"id": "cwi_007", "text": "The government's austerity measures led to widespread public dissatisfaction.", "target_word": "austerity"},
+  {"id": "cwi_008", "text": "The children played happily in the park after school.", "target_word": "played"},
+  {"id": "cwi_009", "text": "The perfunctory inspection failed to identify the structural deficiencies in the building.", "target_word": "perfunctory"},
+  {"id": "cwi_010", "text": "The new law was designed to ameliorate the conditions for factory workers.", "target_word": "ameliorate"}
+]

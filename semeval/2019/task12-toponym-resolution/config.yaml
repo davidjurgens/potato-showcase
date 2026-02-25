@@ -1,0 +1,64 @@
+# Toponym Resolution in Scientific Papers
+# Based on Weissenbacher et al., SemEval 2019
+# Paper: https://aclanthology.org/S19-2229/
+# Dataset: https://competitions.codalab.org/competitions/19948
+#
+# This task asks annotators to identify place name mentions (toponyms)
+# in scientific text and provide the resolved geographic location.
+# Annotators first highlight toponym spans, then specify the resolved
+# location (e.g., coordinates, canonical name).
+#
+# Span Labels:
+# - Toponym: A mention of a geographic location or place name
+#
+# Annotation Guidelines:
+# 1. Highlight all geographic references in the text
+# 2. Include both specific (cities, countries) and relative locations
+# 3. Provide the resolved canonical location name
+
+annotation_task_name: "Toponym Resolution in Scientific Papers"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: toponym_spans
+    description: "Highlight all place name mentions (toponyms) in the text."
+    labels:
+      - "Toponym"
+
+  - annotation_type: text
+    name: resolved_location
+    description: "Provide the resolved canonical location for the highlighted toponyms."
+
+annotation_instructions: |
+  You will be shown a passage from a scientific paper. Your task is to:
+  1. Highlight all mentions of geographic locations (toponyms) in the text.
+  2. In the text field, provide the resolved location(s) with canonical names.
+  Toponyms include country names, city names, regions, rivers, mountains, etc.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Scientific Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

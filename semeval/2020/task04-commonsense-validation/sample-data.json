@@ -1,0 +1,12 @@
+[
+  {"id": "csv_001", "text": "He put a turkey into the oven to cook for Thanksgiving dinner.", "sentence_2": "He put a turkey into the washing machine to cook for Thanksgiving dinner."},
+  {"id": "csv_002", "text": "She wore sunglasses to protect her eyes from the bright sunshine.", "sentence_2": "She wore sunglasses to protect her ears from the bright sunshine."},
+  {"id": "csv_003", "text": "The students used pencils to write their answers on the exam paper.", "sentence_2": "The students used bananas to write their answers on the exam paper."},
+  {"id": "csv_004", "text": "He drank a glass of water because he was very thirsty after the run.", "sentence_2": "He drank a glass of lava because he was very thirsty after the run."},
+  {"id": "csv_005", "text": "The baby cried when she was hungry and wanted to be fed.", "sentence_2": "The rock cried when it was hungry and wanted to be fed."},
+  {"id": "csv_006", "text": "She took an umbrella because the forecast predicted rain this afternoon.", "sentence_2": "She took an umbrella because the forecast predicted sunshine this afternoon."},
+  {"id": "csv_007", "text": "He rode his bicycle to school along the designated bike path.", "sentence_2": "He rode his bicycle to school along the bottom of the ocean."},
+  {"id": "csv_008", "text": "The farmer planted seeds in the soil and watered them regularly.", "sentence_2": "The farmer planted seeds in the concrete and watered them regularly."},
+  {"id": "csv_009", "text": "She used a key to unlock the front door of her apartment.", "sentence_2": "She used a feather to unlock the front door of her apartment."},
+  {"id": "csv_010", "text": "The mechanic used a wrench to tighten the bolts on the engine.", "sentence_2": "The mechanic used a pillow to tighten the bolts on the engine."}
+]

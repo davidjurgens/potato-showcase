@@ -1,0 +1,23 @@
+{
+  "title": "Persuasion Techniques in Memes",
+  "description": "Detection and classification of persuasion techniques in memes, requiring annotators to identify rhetorical and propaganda techniques in meme text and highlight persuasive spans. Based on SemEval-2024 Task 4.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dimitrov et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["multiselect", "span"],
+  "domain": ["SemEval", "NLP", "Persuasion Detection", "Multimodal"],
+  "useCase": ["Propaganda Detection", "Persuasion Analysis", "Media Literacy"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2024", "shared-task", "persuasion", "memes", "propaganda", "multimodal"],
+  "featured": false,
+  "paperReference": "Dimitrov et al., SemEval 2024",
+  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/semeval-2024-task4",
+  "citation": "@inproceedings{dimitrov-etal-2024-persuasion-memes,\n    title = \"Multilingual Detection of Persuasion Techniques in Memes\",\n    author = \"Dimitrov, Dimitar and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

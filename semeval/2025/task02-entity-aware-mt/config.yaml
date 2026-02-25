@@ -1,0 +1,93 @@
+# EA-MT - Entity-Aware Machine Translation
+# Based on Knowles et al., SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/SemEval/SemEval2025-Task2
+#
+# This task evaluates machine translation quality with a focus on
+# named entities. Annotators mark entity spans in the translation,
+# classify overall translation quality, and provide corrections when
+# entity errors are found.
+#
+# Span Labels:
+# - Entity: A correctly translated named entity
+# - Mistranslated Entity: An entity that was incorrectly translated
+# - Correct Entity: An entity that was correctly preserved/translated
+#
+# Quality Labels:
+# - Correct Translation: The translation is accurate overall
+# - Entity Error: The translation has entity-specific errors
+# - Other Error: The translation has non-entity errors
+# - Multiple Errors: The translation has multiple types of errors
+
+annotation_task_name: "EA-MT - Entity-Aware Machine Translation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: entity_spans
+    description: "Highlight entity spans in the translation text and label them."
+    labels:
+      - "Entity"
+      - "Mistranslated Entity"
+      - "Correct Entity"
+
+  - annotation_type: radio
+    name: translation_quality
+    description: "What is the overall quality of this translation with respect to entities?"
+    labels:
+      - "Correct Translation"
+      - "Entity Error"
+      - "Other Error"
+      - "Multiple Errors"
+    keyboard_shortcuts:
+      "Correct Translation": "1"
+      "Entity Error": "2"
+      "Other Error": "3"
+      "Multiple Errors": "4"
+    tooltips:
+      "Correct Translation": "The translation is accurate and entities are correctly handled"
+      "Entity Error": "The translation contains errors specifically in entity translation"
+      "Other Error": "The translation has errors unrelated to entities"
+      "Multiple Errors": "The translation contains both entity and non-entity errors"
+
+  - annotation_type: text
+    name: corrected_translation
+    description: "If there are entity errors, provide the corrected translation."
+
+annotation_instructions: |
+  You will be shown a source sentence and its machine translation. Your tasks are:
+  1. Identify and highlight entity spans in the translation (names, places, organizations, etc.).
+  2. Label each span as correctly or incorrectly translated.
+  3. Assess the overall translation quality with respect to entities.
+  4. If entity errors exist, provide a corrected translation.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #166534;">Source ({{source_lang}}):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Translation ({{target_lang}}):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{translation}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

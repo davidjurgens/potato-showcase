@@ -1,0 +1,23 @@
+{
+  "title": "PreTENS - Presuppositional Acceptability",
+  "description": "Binary acceptability judgment for sentences involving presupposition triggers, determining whether a sentence is semantically acceptable or unacceptable. Based on SemEval-2022 Task 3 (Jeretic et al.).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeretic et al.",
+    "email": "jurgens@umich.edu",
+    "github": "semeval",
+    "affiliation": "SemEval"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio"],
+  "domain": ["NLP", "Semantics", "SemEval"],
+  "useCase": ["Acceptability Judgment", "Presupposition Analysis", "Linguistic Evaluation"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2022", "shared-task", "presupposition", "acceptability", "semantics", "pragmatics"],
+  "featured": false,
+  "paperReference": "Jeretic et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.14/",
+  "datasetUrl": "https://github.com/Ukraine-NLU/pretens",
+  "citation": "@inproceedings{jeretic-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 3: Presuppositional Knowledge Evaluation ({P}re{TENS})\",\n    author = \"Jeretic, Paloma  and Warstadt, Alex  and Bhatt, Rajesh  and Bosnjak, Adina Williams\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.14\"\n}"
+}

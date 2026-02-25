@@ -1,0 +1,66 @@
+# Tweet Intimacy Analysis
+# Based on Pei et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.309/
+# Dataset: https://github.com/LittleYUYU/MINT
+#
+# This task asks annotators to rate the level of intimacy expressed in
+# tweets on a 5-point Likert scale. Intimacy refers to how personal,
+# private, or emotionally close the content of the tweet is.
+#
+# Scale:
+# 1 - Not Intimate: Public, impersonal content (news, facts)
+# 2 - Slightly Intimate: Mildly personal opinions or preferences
+# 3 - Moderately Intimate: Personal experiences or feelings shared broadly
+# 4 - Intimate: Private feelings, personal relationships, or vulnerabilities
+# 5 - Very Intimate: Deeply personal disclosures, confessions, or private matters
+
+annotation_task_name: "Tweet Intimacy Analysis"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: intimacy_rating
+    description: "How intimate is the content of this tweet?"
+    min_label: "Not Intimate"
+    max_label: "Very Intimate"
+    size: 5
+
+annotation_instructions: |
+  You will see a tweet and its language. Rate the level of intimacy expressed in the tweet
+  on a scale from 1 (Not Intimate) to 5 (Very Intimate).
+  - 1: Public, impersonal content (news headlines, factual statements)
+  - 2: Slightly personal opinions or general preferences
+  - 3: Moderately personal experiences or feelings shared broadly
+  - 4: Private feelings, personal relationships, or vulnerabilities
+  - 5: Deeply personal disclosures, confessions, or private matters
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #7e22ce;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Tweet:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

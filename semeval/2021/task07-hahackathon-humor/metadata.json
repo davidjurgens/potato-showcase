@@ -1,0 +1,23 @@
+{
+  "title": "HaHackathon - Detecting and Rating Humor and Offense",
+  "description": "Classify whether a text is humorous and rate its offensiveness on a Likert scale, based on SemEval-2021 Task 7 (Meaney et al.). The task combines binary humor detection with graded offense rating to study the relationship between humor and offensiveness.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Meaney et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "University of Sheffield"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["radio", "likert"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Humor Detection", "Offense Detection", "Content Moderation"],
+  "complexity": "beginner",
+  "tags": ["semeval", "semeval-2021", "shared-task", "humor", "offense", "classification"],
+  "featured": false,
+  "paperReference": "Meaney et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.9/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/27446",
+  "citation": "@inproceedings{meaney-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 7: {H}a{H}ackathon, {D}etecting and {R}ating {H}umor and {O}ffense\",\n    author = \"Meaney, J. A.  and Wilson, Steven  and Chiruzzo, Luis  and Lopez, Adam  and Magdy, Walid\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.9\"\n}"
+}

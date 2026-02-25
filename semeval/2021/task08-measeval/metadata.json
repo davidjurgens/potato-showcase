@@ -1,0 +1,23 @@
+{
+  "title": "MeasEval - Counts and Measurements",
+  "description": "Extract and classify measurements, quantities, units, and measured entities from scientific text, based on SemEval-2021 Task 8 (Harper et al.). Annotators span-annotate measurement components and classify quantity types with normalized values.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Harper et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "Georgetown University"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["span", "radio", "text"],
+  "domain": ["NLP", "SemEval"],
+  "useCase": ["Information Extraction", "Measurement Extraction", "Scientific Text Mining"],
+  "complexity": "advanced",
+  "tags": ["semeval", "semeval-2021", "shared-task", "measurement", "extraction", "scientific-text", "quantities"],
+  "featured": false,
+  "paperReference": "Harper et al., SemEval 2021",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.38/",
+  "datasetUrl": "https://github.com/harperco/MeasEval",
+  "citation": "@inproceedings{harper-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 8: {M}eas{E}val -- {E}xtracting {C}ounts and {M}easurements and their {R}elated {C}ontexts\",\n    author = \"Harper, Corey  and Cox, Jessica  and Kohler, Curt  and Scuba, Antoinette  and Rick, JoEllen  and Shriberg, Edith\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.38\"\n}"
+}

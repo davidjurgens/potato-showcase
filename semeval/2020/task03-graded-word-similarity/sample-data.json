@@ -1,0 +1,12 @@
+[
+  {"id": "gws_001", "text": "The bank of the river was covered in wildflowers during spring.", "context_2": "She deposited her savings at the bank downtown.", "word_1": "bank", "word_2": "bank"},
+  {"id": "gws_002", "text": "The bright star was visible in the night sky even from the city center.", "context_2": "The movie star arrived at the premiere in a luxury limousine.", "word_1": "star", "word_2": "star"},
+  {"id": "gws_003", "text": "He used a bat to hit the ball over the fence during the game.", "context_2": "A bat flew out of the cave at dusk and circled overhead.", "word_1": "bat", "word_2": "bat"},
+  {"id": "gws_004", "text": "The doctor examined the patient carefully before making a diagnosis.", "context_2": "The physician prescribed antibiotics for the infection.", "word_1": "doctor", "word_2": "physician"},
+  {"id": "gws_005", "text": "The child was running quickly through the park to catch the bus.", "context_2": "Water was running from the tap in the kitchen all morning.", "word_1": "running", "word_2": "running"},
+  {"id": "gws_006", "text": "She felt a deep sense of joy when she heard the good news.", "context_2": "The celebration brought great happiness to the entire family.", "word_1": "joy", "word_2": "happiness"},
+  {"id": "gws_007", "text": "The crane lifted the heavy steel beams onto the construction site.", "context_2": "A crane stood gracefully in the shallow water of the marsh.", "word_1": "crane", "word_2": "crane"},
+  {"id": "gws_008", "text": "The car was traveling at a high speed on the highway.", "context_2": "The train was moving very fast along the tracks to the station.", "word_1": "speed", "word_2": "fast"},
+  {"id": "gws_009", "text": "The leaves on the tree began to change color in autumn.", "context_2": "Please leave the documents on my desk before you go.", "word_1": "leaves", "word_2": "leave"},
+  {"id": "gws_010", "text": "The concert was a brilliant performance by the entire orchestra.", "context_2": "The show received standing ovations from the audience every night.", "word_1": "performance", "word_2": "show"}
+]

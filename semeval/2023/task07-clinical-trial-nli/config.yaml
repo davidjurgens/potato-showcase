@@ -1,0 +1,76 @@
+# Clinical Trial NLI
+# Based on Jullien et al., SemEval 2023
+# Paper: https://aclanthology.org/2023.semeval-1.307/
+# Dataset: https://github.com/ai-systems/Task-7-SemEval-2023
+#
+# This task asks annotators to determine whether a statement about a clinical
+# trial is entailed or contradicted by the provided evidence from the trial
+# report. Annotators also provide an explanation of the evidence supporting
+# their judgment.
+#
+# NLI Labels:
+# - Entailment: The statement is supported by the clinical trial evidence
+# - Contradiction: The statement is contradicted by the clinical trial evidence
+
+annotation_task_name: "Clinical Trial NLI"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: nli_judgment
+    description: "Is the statement entailed or contradicted by the clinical trial evidence?"
+    labels:
+      - "Entailment"
+      - "Contradiction"
+    keyboard_shortcuts:
+      "Entailment": "1"
+      "Contradiction": "2"
+    tooltips:
+      "Entailment": "The statement is supported by or can be inferred from the trial evidence"
+      "Contradiction": "The statement conflicts with or is negated by the trial evidence"
+
+  - annotation_type: text
+    name: evidence_explanation
+    description: "Explain which part of the evidence supports your judgment"
+
+annotation_instructions: |
+  You will see a statement about a clinical trial and the corresponding trial evidence.
+  1. Read the statement carefully.
+  2. Read the clinical trial evidence provided.
+  3. Determine whether the statement is entailed (supported) or contradicted by the evidence.
+  4. Write a brief explanation of which evidence supports your judgment.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #1e40af;">Trial ID:</strong>
+      <span style="font-size: 14px; margin-left: 8px; font-family: monospace;">{{trial_id}}</span>
+    </div>
+    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #92400e;">Statement:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Trial Evidence:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{evidence}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

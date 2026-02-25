@@ -1,0 +1,64 @@
+# NLPContributionGraph - Structured Extraction of NLP Contributions
+# Based on D'Souza et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.44/
+# Dataset: https://ncg-task.github.io/
+#
+# Annotators extract structured scientific contribution information from
+# NLP paper excerpts by marking spans for research problems, approaches,
+# models, datasets, metrics, and results, then forming contribution triples.
+
+annotation_task_name: "NLPContributionGraph - Structured Extraction of NLP Contributions"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: contribution_spans
+    description: "Highlight the key contribution elements in the text."
+    labels:
+      - "Research Problem"
+      - "Approach"
+      - "Model"
+      - "Dataset"
+      - "Metric"
+      - "Result"
+
+  - annotation_type: text
+    name: contribution_triple
+    description: "Write a contribution triple in the format: (subject, predicate, object). For example: (BERT, achieves, 92.3 F1 on CoNLL-2003)."
+
+annotation_instructions: |
+  You will see an excerpt from an NLP research paper. Your task is to:
+  1. Read the text and identify key contribution elements.
+  2. Highlight spans corresponding to: Research Problem, Approach, Model,
+     Dataset, Metric, and Result.
+  3. Write a contribution triple summarizing the main finding in the format:
+     (subject, predicate, object).
+
+  Example triple: (BERT-large, achieves state-of-the-art, 92.3 F1 on CoNLL-2003 NER)
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Paper Excerpt:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

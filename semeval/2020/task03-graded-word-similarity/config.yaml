@@ -1,0 +1,68 @@
+# Graded Word Similarity in Context
+# Based on Armendariz et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.3/
+# Dataset: https://competitions.codalab.org/competitions/20905
+#
+# Annotators rate how similar the meanings of two target words are,
+# given their respective sentence contexts. The task captures the
+# graded, context-dependent nature of word similarity.
+
+annotation_task_name: "Graded Word Similarity in Context"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: similarity_likert
+    description: "Rate how similar the meanings of the two target words are in their respective contexts."
+    min_label: "Completely Different"
+    max_label: "Identical"
+    size: 5
+
+  - annotation_type: slider
+    name: similarity_slider
+    description: "Provide a fine-grained similarity rating on a continuous scale."
+    min_value: 0
+    max_value: 4
+    starting_value: 2
+
+annotation_instructions: |
+  You will see two sentences, each containing a target word. Your task is to:
+  1. Read both sentences carefully and pay attention to the highlighted target words.
+  2. Consider how similar the meanings of the two words are IN THEIR GIVEN CONTEXTS.
+  3. Rate the similarity on the Likert scale (Completely Different to Identical).
+  4. Provide a fine-grained continuous rating using the slider (0 = completely different,
+     4 = identical meaning).
+
+  Important: Focus on the meaning of the words as used in these specific contexts,
+  not their general dictionary definitions.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Context 1 (Target: <em>{{word_1}}</em>):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Context 2 (Target: <em>{{word_2}}</em>):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{context_2}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

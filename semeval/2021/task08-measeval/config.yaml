@@ -1,0 +1,81 @@
+# MeasEval - Counts and Measurements
+# Based on Harper et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.38/
+# Dataset: https://github.com/harperco/MeasEval
+#
+# Annotators extract and classify measurement-related spans from scientific
+# text, including quantities, units, measured entities, properties, and
+# qualifiers. They also classify the quantity type and provide normalized values.
+
+annotation_task_name: "MeasEval - Counts and Measurements"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: measurement_spans
+    description: "Highlight measurement components in the text."
+    labels:
+      - "Quantity"
+      - "Unit"
+      - "Measured Entity"
+      - "Measured Property"
+      - "Qualifier"
+
+  - annotation_type: radio
+    name: quantity_type
+    description: "Classify the type of the primary quantity in this text."
+    labels:
+      - "Count"
+      - "Measurement"
+      - "Approximate"
+      - "Range"
+    keyboard_shortcuts:
+      "Count": "1"
+      "Measurement": "2"
+      "Approximate": "3"
+      "Range": "4"
+    tooltips:
+      "Count": "A discrete count of items or occurrences"
+      "Measurement": "A precise measurement with a specific value and unit"
+      "Approximate": "An approximate or estimated value"
+      "Range": "A range of values (e.g., 10-20, between X and Y)"
+
+  - annotation_type: text
+    name: normalized_value
+    description: "Provide the normalized numeric value of the primary quantity (e.g., '2.5' for 'two and a half')."
+
+annotation_instructions: |
+  You will see a passage from a scientific text containing measurements, counts,
+  or quantities. Your task is to:
+  1. Highlight the relevant spans: quantities, units, measured entities, measured
+     properties, and any qualifiers (e.g., "approximately", "more than").
+  2. Classify the type of the primary quantity as Count, Measurement, Approximate,
+     or Range.
+  3. Provide a normalized numeric value for the primary quantity.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Scientific Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

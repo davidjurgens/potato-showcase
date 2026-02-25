@@ -1,0 +1,81 @@
+# Memotion Analysis - Sentiment and Type Classification of Memes
+# Based on Sharma et al., SemEval 2020
+# Paper: https://aclanthology.org/2020.semeval-1.99/
+# Dataset: https://competitions.codalab.org/competitions/20629
+#
+# Annotators classify the overall sentiment of internet memes and identify
+# their communicative types. The task combines sentiment polarity with
+# fine-grained meme type classification.
+
+annotation_task_name: "Memotion Analysis - Sentiment and Type Classification of Memes"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the overall sentiment of this meme?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "The meme conveys a positive, uplifting, or encouraging message"
+      "Negative": "The meme conveys a negative, critical, or hostile message"
+      "Neutral": "The meme does not convey a clearly positive or negative sentiment"
+
+  - annotation_type: multiselect
+    name: meme_types
+    description: "Select all communicative types that apply to this meme."
+    labels:
+      - "Sarcastic"
+      - "Humorous"
+      - "Offensive"
+      - "Motivational"
+    tooltips:
+      "Sarcastic": "The meme uses irony or sarcasm to make a point"
+      "Humorous": "The meme is intended to be funny or amusing"
+      "Offensive": "The meme contains content that could be considered offensive or hurtful"
+      "Motivational": "The meme is intended to inspire, motivate, or encourage"
+
+annotation_instructions: |
+  You will see the text from a meme along with a description of its image. Your task is to:
+  1. Read the meme text and image description together to understand the full message.
+  2. Classify the overall sentiment as Positive, Negative, or Neutral.
+  3. Select all applicable communicative types (a meme can be multiple types).
+
+  Consider both the text and image description when making your judgments.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Meme Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Image Description:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{image_description}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

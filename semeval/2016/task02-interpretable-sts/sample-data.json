@@ -1,0 +1,12 @@
+[
+  {"id": "ists_001", "text": "A man is playing a guitar on stage.", "sentence_2": "A musician performs with a guitar in front of an audience."},
+  {"id": "ists_002", "text": "The cat sat on the mat near the fireplace.", "sentence_2": "A dog was sleeping in the garden outside."},
+  {"id": "ists_003", "text": "Two children are playing soccer in the park.", "sentence_2": "Two kids kick a ball around in a grassy field."},
+  {"id": "ists_004", "text": "The stock market closed higher today after positive earnings reports.", "sentence_2": "Markets ended the day with gains following strong corporate results."},
+  {"id": "ists_005", "text": "A woman is cooking dinner in her kitchen.", "sentence_2": "She prepares an evening meal at home."},
+  {"id": "ists_006", "text": "The president signed the new trade agreement yesterday.", "sentence_2": "A heavy snowstorm is expected to hit the East Coast this weekend."},
+  {"id": "ists_007", "text": "Scientists discovered a new species of frog in the Amazon rainforest.", "sentence_2": "Researchers found a previously unknown frog species in the Amazon jungle."},
+  {"id": "ists_008", "text": "The airplane departed from New York at 8 AM.", "sentence_2": "The flight left New York in the early morning."},
+  {"id": "ists_009", "text": "The old building was demolished to make way for a new shopping center.", "sentence_2": "An aging structure was torn down for commercial development."},
+  {"id": "ists_010", "text": "The university announced a 5% increase in tuition fees for next year.", "sentence_2": "College tuition will rise by five percent starting in the fall semester."}
+]

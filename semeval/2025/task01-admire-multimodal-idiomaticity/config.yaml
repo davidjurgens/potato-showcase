@@ -1,0 +1,97 @@
+# ADMIRE - Multimodal Idiomaticity Recognition
+# Based on Tayyar Madabushi et al., SemEval 2025
+# Paper: https://aclanthology.org/volumes/2025.semeval-1/
+# Dataset: https://github.com/H-TayyarMadabushi/SemEval2025-Task1
+#
+# This task asks annotators to determine whether an expression in context
+# is used idiomatically or literally, and to identify the cues that
+# support the interpretation. Multimodal idiomaticity involves both
+# textual and visual context.
+#
+# Interpretation Labels:
+# - Idiomatic: The expression is used in its figurative/idiomatic sense
+# - Literal: The expression is used in its literal/compositional sense
+# - Both: The expression can be read both ways in this context
+# - Neither: The expression does not clearly fit either interpretation
+#
+# Cue Categories:
+# - Visual Cue: Image or visual context supports the interpretation
+# - Textual Cue: Surrounding text supports the interpretation
+# - Cultural Reference: Cultural knowledge needed for interpretation
+# - Metaphorical: The expression involves metaphorical mapping
+
+annotation_task_name: "ADMIRE - Multimodal Idiomaticity Recognition"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: idiomaticity_judgment
+    description: "Is the highlighted expression used idiomatically or literally?"
+    labels:
+      - "Idiomatic"
+      - "Literal"
+      - "Both"
+      - "Neither"
+    keyboard_shortcuts:
+      "Idiomatic": "1"
+      "Literal": "2"
+      "Both": "3"
+      "Neither": "4"
+    tooltips:
+      "Idiomatic": "The expression is used in its figurative or idiomatic sense"
+      "Literal": "The expression is used in its literal, compositional sense"
+      "Both": "The expression can be interpreted both idiomatically and literally"
+      "Neither": "The expression does not clearly fit either interpretation"
+
+  - annotation_type: multiselect
+    name: interpretation_cues
+    description: "What cues support your interpretation? Select all that apply."
+    labels:
+      - "Visual Cue"
+      - "Textual Cue"
+      - "Cultural Reference"
+      - "Metaphorical"
+    tooltips:
+      "Visual Cue": "Image or visual context provides evidence for the interpretation"
+      "Textual Cue": "Surrounding text provides evidence for the interpretation"
+      "Cultural Reference": "Cultural background knowledge is needed to interpret the expression"
+      "Metaphorical": "The expression involves a metaphorical or figurative mapping"
+
+annotation_instructions: |
+  You will be shown a text containing a potentially idiomatic expression along with a
+  description of an accompanying image. Your task is to:
+  1. Read the text carefully, paying attention to the highlighted expression.
+  2. Consider the image description as additional context.
+  3. Decide whether the expression is used idiomatically (figuratively) or literally.
+  4. Select all cues that support your interpretation.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Image Description:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{image_description}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,82 @@
+# Persuasion Techniques in Memes
+# Based on Dimitrov et al., SemEval 2024
+# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Dataset: https://github.com/SemEval/semeval-2024-task4
+#
+# This task asks annotators to identify persuasion and propaganda techniques
+# used in meme text, and to highlight the specific text spans where
+# persuasive techniques are employed.
+
+annotation_task_name: "Persuasion Techniques in Memes"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: multiselect
+    name: persuasion_techniques
+    description: "Select all persuasion techniques present in the meme."
+    labels:
+      - "Name Calling"
+      - "Loaded Language"
+      - "Appeal to Fear"
+      - "Bandwagon"
+      - "Exaggeration"
+      - "Black and White"
+      - "Thought-Terminating Cliche"
+      - "Smears"
+      - "Appeal to Authority"
+    tooltips:
+      "Name Calling": "Labeling the target with a negative term to discredit without evidence"
+      "Loaded Language": "Using emotionally charged words to influence the audience"
+      "Appeal to Fear": "Creating fear to persuade the audience to accept a conclusion"
+      "Bandwagon": "Suggesting everyone is doing it so you should too"
+      "Exaggeration": "Overstating or amplifying claims beyond reason"
+      "Black and White": "Presenting only two options when more exist"
+      "Thought-Terminating Cliche": "Using a common phrase to end critical thinking"
+      "Smears": "Attacking a person's character rather than their argument"
+      "Appeal to Authority": "Using an authority figure to support a claim without evidence"
+
+  - annotation_type: span
+    name: persuasion_spans
+    description: "Highlight the text spans that contain persuasion techniques."
+    labels:
+      - "Persuasion Span"
+
+annotation_instructions: |
+  You will be shown the text from a meme along with a description of the image. Your task is to:
+  1. Read the meme text and image description carefully.
+  2. Identify all persuasion or propaganda techniques used.
+  3. Highlight the specific text spans where techniques are applied.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Meme Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #a16207;">Image Description:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{image_description}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

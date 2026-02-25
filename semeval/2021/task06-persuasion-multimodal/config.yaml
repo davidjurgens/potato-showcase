@@ -1,0 +1,83 @@
+# Persuasive Techniques in Multimodal Content
+# Based on Dimitrov et al., SemEval 2021
+# Paper: https://aclanthology.org/2021.semeval-1.7/
+# Dataset: https://propaganda.qcri.org/semeval2021-task6/
+#
+# Annotators identify persuasive techniques used in memes and news articles.
+# The task involves both selecting which techniques are present and marking
+# the text spans where each technique is employed.
+
+annotation_task_name: "Persuasive Techniques in Multimodal Content"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: multiselect
+    name: persuasion_techniques
+    description: "Select all persuasive techniques present in the text."
+    labels:
+      - "Loaded Language"
+      - "Name Calling"
+      - "Bandwagon"
+      - "Appeal to Fear"
+      - "Exaggeration"
+      - "Flag Waving"
+      - "Black and White"
+      - "Thought-Terminating Cliche"
+      - "Appeal to Authority"
+      - "Slogans"
+    tooltips:
+      "Loaded Language": "Using words or phrases with strong emotional implications to influence the audience"
+      "Name Calling": "Labeling the object of the campaign as something the audience fears or loathes"
+      "Bandwagon": "Attempting to persuade by claiming that many people support the idea"
+      "Appeal to Fear": "Building support by instilling fear or anxiety in the audience"
+      "Exaggeration": "Representing something in an excessive manner beyond what the facts warrant"
+      "Flag Waving": "Playing on strong national or group feelings to justify an action"
+      "Black and White": "Presenting only two choices when more options exist"
+      "Thought-Terminating Cliche": "Using a commonly used phrase to quell cognitive dissonance"
+      "Appeal to Authority": "Citing an authority figure to support a claim without relevant evidence"
+      "Slogans": "Using a brief, striking phrase to provoke desired responses"
+
+  - annotation_type: span
+    name: technique_span
+    description: "Highlight the text span where a persuasive technique is employed."
+    labels:
+      - "Technique Span"
+
+annotation_instructions: |
+  You will see a text excerpt from a meme or news article. Your task is to:
+  1. Read the text carefully and identify any persuasive or propaganda techniques.
+  2. Select all techniques that appear in the text from the checklist.
+  3. Highlight the specific text span where each technique is used.
+
+  A single text may contain multiple techniques, and techniques may overlap in spans.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #991b1b;">Source Type:</strong>
+      <span style="font-size: 14px; background: #fee2e2; padding: 2px 8px; border-radius: 4px;">{{source_type}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

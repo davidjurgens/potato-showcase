@@ -1,0 +1,23 @@
+{
+  "title": "NumEval - Numeral-Aware Language Understanding",
+  "description": "Numeral-aware language understanding task requiring annotators to predict numerical values from text, classify numeral types, and provide explanations. Based on SemEval-2024 Task 7 (NumEval).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chen et al.",
+    "email": "jurgens@umich.edu",
+    "github": "SemEval",
+    "affiliation": "SemEval Organizers"
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2025-01-16",
+  "annotationTypes": ["number", "radio", "text"],
+  "domain": ["SemEval", "NLP", "Numeracy", "Language Understanding"],
+  "useCase": ["Numerical Reasoning", "Numeral Understanding", "Quantitative NLP"],
+  "complexity": "intermediate",
+  "tags": ["semeval", "semeval-2024", "shared-task", "numeracy", "numeval", "numerical-reasoning"],
+  "featured": false,
+  "paperReference": "Chen et al., SemEval 2024",
+  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
+  "datasetUrl": "https://github.com/SemEval/semeval-2024-task7",
+  "citation": "@inproceedings{chen-etal-2024-numeval,\n    title = \"{N}um{E}val: Numeral-Aware Language Understanding\",\n    author = \"Chen, Chung-Chi and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+}

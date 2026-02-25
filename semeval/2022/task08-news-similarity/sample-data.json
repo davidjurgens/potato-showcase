@@ -1,0 +1,62 @@
+[
+  {
+    "id": "news_sim_001",
+    "text": "The European Central Bank raised interest rates by 0.5 percentage points on Thursday, marking the largest increase in over a decade as the institution battles soaring inflation across the eurozone.",
+    "article_2": "La Banque centrale europeenne a releve ses taux d'interet de 0,5 point de pourcentage jeudi, soit la plus forte hausse depuis plus de dix ans, dans un effort pour lutter contre l'inflation galopante dans la zone euro.",
+    "language": "English-French"
+  },
+  {
+    "id": "news_sim_002",
+    "text": "A powerful 7.2 magnitude earthquake struck southern Haiti early Saturday morning, causing widespread destruction and leaving thousands without shelter in the impoverished Caribbean nation.",
+    "article_2": "Rescuers pulled survivors from the rubble of a collapsed factory in Bangladesh after a structural failure caused the six-story building to pancake during morning work hours.",
+    "language": "English-English"
+  },
+  {
+    "id": "news_sim_003",
+    "text": "NASA's James Webb Space Telescope captured its first full-color images of distant galaxies, revealing unprecedented detail of the early universe in a landmark achievement for modern astronomy.",
+    "article_2": "Das James-Webb-Weltraumteleskop der NASA hat seine ersten Vollfarbbilder von fernen Galaxien aufgenommen und damit beispiellose Details des fruehen Universums enthuellt, was einen Meilenstein fuer die moderne Astronomie darstellt.",
+    "language": "English-German"
+  },
+  {
+    "id": "news_sim_004",
+    "text": "Global wheat prices surged to record highs following the disruption of grain exports from the Black Sea region, raising concerns about food security in developing nations that depend on imported cereals.",
+    "article_2": "Los precios mundiales del trigo se dispararon a maximos historicos tras la interrupcion de las exportaciones de cereales de la region del Mar Negro, lo que genero preocupaciones sobre la seguridad alimentaria en las naciones en desarrollo.",
+    "language": "English-Spanish"
+  },
+  {
+    "id": "news_sim_005",
+    "text": "The World Health Organization declared monkeypox a global health emergency on Saturday after the virus spread to more than 70 countries, with over 16,000 confirmed cases reported worldwide.",
+    "article_2": "Local health authorities in Melbourne reported an outbreak of Legionnaires' disease linked to a contaminated cooling tower at a commercial building, with 15 cases confirmed so far.",
+    "language": "English-English"
+  },
+  {
+    "id": "news_sim_006",
+    "text": "Tesla reported quarterly revenue of $16.9 billion, beating Wall Street expectations despite ongoing supply chain challenges and factory shutdowns in Shanghai during COVID lockdowns.",
+    "article_2": "Electric vehicle maker Tesla posted better-than-expected quarterly earnings, with revenue reaching $16.9 billion as the company navigated supply chain issues and production disruptions at its Shanghai facility.",
+    "language": "English-English"
+  },
+  {
+    "id": "news_sim_007",
+    "text": "Climate activists blocked major roads in central London during morning rush hour on Monday, demanding that the government take immediate action to reduce carbon emissions and invest in renewable energy.",
+    "article_2": "Il primo ministro britannico ha annunciato un nuovo piano per raggiungere le zero emissioni nette entro il 2050, con investimenti significativi nell'energia eolica offshore e nei veicoli elettrici.",
+    "language": "English-Italian"
+  },
+  {
+    "id": "news_sim_008",
+    "text": "The 2022 FIFA World Cup kicked off in Qatar with a colorful opening ceremony at Al Bayt Stadium, followed by the host nation's match against Ecuador in front of 60,000 spectators.",
+    "article_2": "Qatar inaugurou a Copa do Mundo FIFA 2022 com uma cerimonia de abertura colorida no Estadio Al Bayt, seguida pela partida da nacao anfitria contra o Equador diante de 60.000 espectadores.",
+    "language": "English-Portuguese"
+  },
+  {
+    "id": "news_sim_009",
+    "text": "Researchers at Oxford University published findings showing that a new malaria vaccine demonstrated 77% efficacy in clinical trials involving children in Burkina Faso.",
+    "article_2": "A pharmaceutical company announced positive results from Phase 3 clinical trials of its experimental Alzheimer's drug, showing a 27% reduction in cognitive decline among participants.",
+    "language": "English-English"
+  },
+  {
+    "id": "news_sim_010",
+    "text": "Apple unveiled the iPhone 14 lineup at its annual September event, featuring satellite emergency SOS connectivity and an always-on display for the Pro models.",
+    "article_2": "Apple ha presentado la linea iPhone 14 en su evento anual de septiembre, con conectividad de emergencia por satelite y una pantalla siempre activa para los modelos Pro.",
+    "language": "English-Spanish"
+  }
+]
