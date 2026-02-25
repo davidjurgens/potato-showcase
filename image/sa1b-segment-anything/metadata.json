@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["polygon", "bbox"],
-  "domain": ["Computer Vision", "Segmentation"],
-  "useCase": ["Instance Segmentation", "Object Detection", "Interactive Annotation"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Segmentation"
+  ],
+  "useCase": [
+    "Instance Segmentation",
+    "Object Detection",
+    "Interactive Annotation"
+  ],
   "complexity": "intermediate",
-  "tags": ["segment-anything", "sam", "segmentation", "bounding-box", "polygon", "iccv2023", "meta"],
+  "tags": [
+    "segment-anything",
+    "sam",
+    "segmentation",
+    "bounding-box",
+    "polygon",
+    "iccv2023",
+    "meta"
+  ],
   "featured": false,
   "paperReference": "Kirillov et al., ICCV 2023",
   "paperUrl": "https://openaccess.thecvf.com/content/ICCV2023/papers/Kirillov_Segment_Anything_ICCV_2023_paper.pdf",

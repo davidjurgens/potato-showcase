@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Sports Analytics", "Activity Recognition"],
-  "useCase": ["Action Segmentation", "Hierarchical Classification", "Sports Analysis"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Sports Analytics",
+    "Activity Recognition"
+  ],
+  "useCase": [
+    "Action Segmentation",
+    "Hierarchical Classification",
+    "Sports Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "gymnastics", "sports", "fine-grained", "hierarchical", "segments"],
+  "tags": [
+    "video",
+    "gymnastics",
+    "sports",
+    "fine-grained",
+    "hierarchical",
+    "segments"
+  ],
   "featured": false,
   "paperReference": "Shao et al., CVPR 2020",
   "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shao_FineGym_A_Hierarchical_Video_Dataset_for_Fine-Grained_Action_Understanding_CVPR_2020_paper.html",

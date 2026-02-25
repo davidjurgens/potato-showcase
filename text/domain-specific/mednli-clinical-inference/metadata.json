@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio"],
-  "domain": ["Clinical NLP", "Natural Language Inference", "Medical Text"],
-  "useCase": ["Natural Language Inference", "Clinical Text Understanding", "Medical Reasoning"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Clinical NLP",
+    "Natural Language Inference",
+    "Medical Text"
+  ],
+  "useCase": [
+    "Natural Language Inference",
+    "Clinical Text Understanding",
+    "Medical Reasoning"
+  ],
   "complexity": "beginner",
-  "tags": ["clinical-nlp", "natural-language-inference", "mednli", "medical", "emnlp2018", "nli"],
+  "tags": [
+    "clinical-nlp",
+    "natural-language-inference",
+    "mednli",
+    "medical",
+    "emnlp2018",
+    "nli"
+  ],
   "featured": false,
   "paperReference": "Romanov & Shivade, EMNLP 2018",
   "paperUrl": "https://aclanthology.org/D18-1187/",

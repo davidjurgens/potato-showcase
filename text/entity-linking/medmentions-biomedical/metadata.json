@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "text"],
-  "domain": ["Biomedical NLP", "Entity Linking", "Clinical Text Mining"],
-  "useCase": ["Entity Linking", "Concept Normalization", "Biomedical Knowledge Base Construction"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "Biomedical NLP",
+    "Entity Linking",
+    "Clinical Text Mining"
+  ],
+  "useCase": [
+    "Entity Linking",
+    "Concept Normalization",
+    "Biomedical Knowledge Base Construction"
+  ],
   "complexity": "advanced",
-  "tags": ["entity-linking", "biomedical", "umls", "medmentions", "akbc2019", "concept-normalization"],
+  "tags": [
+    "entity-linking",
+    "biomedical",
+    "umls",
+    "medmentions",
+    "akbc2019",
+    "concept-normalization"
+  ],
   "featured": false,
   "paperReference": "Mohan & Li, AKBC 2019",
   "paperUrl": "https://arxiv.org/abs/1902.09476",

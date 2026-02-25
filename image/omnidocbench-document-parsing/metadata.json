@@ -10,11 +10,32 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["bbox", "text"],
-  "domain": ["Document AI", "PDF Parsing"],
-  "useCase": ["Document Parsing", "Layout Detection", "OCR", "Table Recognition", "Formula Recognition"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Document AI",
+    "PDF Parsing"
+  ],
+  "useCase": [
+    "Document Parsing",
+    "Layout Detection",
+    "OCR",
+    "Table Recognition",
+    "Formula Recognition"
+  ],
   "complexity": "advanced",
-  "tags": ["omnidocbench", "document-parsing", "pdf", "ocr", "table-structure", "formula", "cvpr2025"],
+  "tags": [
+    "omnidocbench",
+    "document-parsing",
+    "pdf",
+    "ocr",
+    "table-structure",
+    "formula",
+    "cvpr2025"
+  ],
   "featured": false,
   "paperReference": "Chen et al., CVPR 2025",
   "paperUrl": "https://arxiv.org/abs/2412.07626",

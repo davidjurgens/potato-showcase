@@ -10,11 +10,31 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Remote Sensing", "Land Use Classification", "Computer Vision"],
-  "useCase": ["Land Use Classification", "Land Cover Mapping", "Urban Planning"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Remote Sensing",
+    "Land Use Classification",
+    "Computer Vision"
+  ],
+  "useCase": [
+    "Land Use Classification",
+    "Land Cover Mapping",
+    "Urban Planning"
+  ],
   "complexity": "intermediate",
-  "tags": ["aerial-imagery", "land-use", "land-cover", "flair", "neurips2023", "geospatial", "france"],
+  "tags": [
+    "aerial-imagery",
+    "land-use",
+    "land-cover",
+    "flair",
+    "neurips2023",
+    "geospatial",
+    "france"
+  ],
   "featured": false,
   "paperReference": "Garioud et al., NeurIPS 2023",
   "paperUrl": "https://arxiv.org/abs/2310.13336",

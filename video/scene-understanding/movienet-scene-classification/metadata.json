@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation", "multiselect"],
-  "domain": ["Computer Vision", "Film Studies"],
-  "useCase": ["Scene Classification", "Movie Understanding", "Content Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Film Studies"
+  ],
+  "useCase": [
+    "Scene Classification",
+    "Movie Understanding",
+    "Content Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "movie", "scene", "classification", "movienet", "cinematic"],
+  "tags": [
+    "video",
+    "movie",
+    "scene",
+    "classification",
+    "movienet",
+    "cinematic"
+  ],
   "featured": false,
   "paperReference": "Qian et al., ECCV 2020",
   "paperUrl": "https://arxiv.org/abs/2007.10937",

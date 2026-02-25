@@ -2,9 +2,30 @@
   "title": "Intent Classification",
   "description": "Classify user utterances into intents for chatbot and virtual assistant training.",
   "category": "text",
-  "annotationType": ["radio", "multiselect"],
-  "domain": ["nlp", "conversational-ai"],
-  "useCase": ["intent-detection", "chatbot-training"],
+  "annotationType": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "nlp",
+    "conversational-ai"
+  ],
+  "useCase": [
+    "intent-detection",
+    "chatbot-training"
+  ],
   "complexity": "beginner",
-  "tags": ["intent", "chatbot", "nlu", "virtual-assistant", "classification"]
+  "tags": [
+    "intent",
+    "chatbot",
+    "nlu",
+    "virtual-assistant",
+    "classification"
+  ],
+  "annotationTypes": [
+    "likert",
+    "multiselect",
+    "radio",
+    "text"
+  ]
 }

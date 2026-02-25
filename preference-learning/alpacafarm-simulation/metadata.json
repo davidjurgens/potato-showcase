@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["pairwise", "radio", "likert"],
-  "domain": ["Natural Language Processing", "AI Alignment"],
-  "useCase": ["RLHF", "Preference Learning", "Model Evaluation"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "RLHF",
+    "Preference Learning",
+    "Model Evaluation"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "simulation", "instruction", "alpaca", "rlhf", "llm"],
+  "tags": [
+    "preference",
+    "simulation",
+    "instruction",
+    "alpaca",
+    "rlhf",
+    "llm"
+  ],
   "featured": false,
   "paperReference": "Dubois et al., NeurIPS 2023",
   "paperUrl": "https://arxiv.org/abs/2305.14387",

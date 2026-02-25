@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bbox", "multiselect"],
-  "domain": ["Remote Sensing", "Aerial Imagery"],
-  "useCase": ["Object Detection", "Oriented Detection", "Aerial Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Remote Sensing",
+    "Aerial Imagery"
+  ],
+  "useCase": [
+    "Object Detection",
+    "Oriented Detection",
+    "Aerial Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["dota", "aerial", "oriented-bbox", "remote-sensing", "cvpr2018"],
+  "tags": [
+    "dota",
+    "aerial",
+    "oriented-bbox",
+    "remote-sensing",
+    "cvpr2018"
+  ],
   "featured": true,
   "paperReference": "Xia et al., CVPR 2018",
   "paperUrl": "https://arxiv.org/abs/1711.10398",

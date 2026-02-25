@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["pairwise", "multiselect", "radio"],
-  "domain": ["AI Safety", "Natural Language Processing"],
-  "useCase": ["Safety Evaluation", "Harm Classification", "RLHF"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "AI Safety",
+    "Natural Language Processing"
+  ],
+  "useCase": [
+    "Safety Evaluation",
+    "Harm Classification",
+    "RLHF"
+  ],
   "complexity": "advanced",
-  "tags": ["safety", "preference", "harm", "classification", "rlhf", "alignment"],
+  "tags": [
+    "safety",
+    "preference",
+    "harm",
+    "classification",
+    "rlhf",
+    "alignment"
+  ],
   "featured": false,
   "paperReference": "Ji et al., NeurIPS 2023",
   "paperUrl": "https://arxiv.org/abs/2307.04657",

@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Ethics", "Commonsense"],
-  "useCase": ["Moral Reasoning", "Ethics AI", "Value Alignment"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Ethics",
+    "Commonsense"
+  ],
+  "useCase": [
+    "Moral Reasoning",
+    "Ethics AI",
+    "Value Alignment"
+  ],
   "complexity": "intermediate",
-  "tags": ["moral", "ethics", "norms", "emnlp2021", "commonsense", "values"],
+  "tags": [
+    "moral",
+    "ethics",
+    "norms",
+    "emnlp2021",
+    "commonsense",
+    "values"
+  ],
   "featured": true,
   "paperReference": "Emelin et al., EMNLP 2021",
   "paperUrl": "https://aclanthology.org/2021.emnlp-main.54/",

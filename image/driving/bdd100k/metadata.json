@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bbox", "polygon", "multiselect"],
-  "domain": ["Computer Vision", "Autonomous Driving"],
-  "useCase": ["Object Detection", "Lane Detection", "Drivable Area Segmentation"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Autonomous Driving"
+  ],
+  "useCase": [
+    "Object Detection",
+    "Lane Detection",
+    "Drivable Area Segmentation"
+  ],
   "complexity": "advanced",
-  "tags": ["bdd100k", "driving", "autonomous-vehicle", "segmentation", "cvpr2020"],
+  "tags": [
+    "bdd100k",
+    "driving",
+    "autonomous-vehicle",
+    "segmentation",
+    "cvpr2020"
+  ],
   "featured": true,
   "paperReference": "Yu et al., CVPR 2020",
   "paperUrl": "https://arxiv.org/abs/1805.04687",

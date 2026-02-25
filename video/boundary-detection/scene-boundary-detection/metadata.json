@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Video Understanding"],
-  "useCase": ["Scene Detection", "Video Segmentation", "Content Analysis"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video Understanding"
+  ],
+  "useCase": [
+    "Scene Detection",
+    "Video Segmentation",
+    "Content Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "scene", "boundary", "segmentation", "documentary"],
+  "tags": [
+    "video",
+    "scene",
+    "boundary",
+    "segmentation",
+    "documentary"
+  ],
   "featured": false,
   "paperReference": "Sidiropoulos et al., ACM MM 2011",
   "paperUrl": "https://ieeexplore.ieee.org/document/6095496",

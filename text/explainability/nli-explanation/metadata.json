@@ -10,11 +10,30 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Explainability", "Reasoning"],
-  "useCase": ["Natural Language Inference", "Explainable AI", "Reasoning"],
+  "annotationTypes": [
+    "likert",
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Explainability",
+    "Reasoning"
+  ],
+  "useCase": [
+    "Natural Language Inference",
+    "Explainable AI",
+    "Reasoning"
+  ],
   "complexity": "intermediate",
-  "tags": ["nli", "explanation", "entailment", "esnli", "neurips2018", "explainability"],
+  "tags": [
+    "nli",
+    "explanation",
+    "entailment",
+    "esnli",
+    "neurips2018",
+    "explainability"
+  ],
   "featured": false,
   "paperReference": "Camburu et al., NeurIPS 2018",
   "paperUrl": "https://proceedings.neurips.cc/paper/2018/hash/4c7a167bb329bd92800a858552f2e32a-Abstract.html",

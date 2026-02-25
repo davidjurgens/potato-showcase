@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "bbox"],
-  "domain": ["Computer Vision", "Fashion"],
-  "useCase": ["Fashion Classification", "Attribute Prediction", "Visual Search"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Fashion"
+  ],
+  "useCase": [
+    "Fashion Classification",
+    "Attribute Prediction",
+    "Visual Search"
+  ],
   "complexity": "intermediate",
-  "tags": ["deepfashion", "fashion", "clothing", "attributes", "cvpr2016"],
+  "tags": [
+    "deepfashion",
+    "fashion",
+    "clothing",
+    "attributes",
+    "cvpr2016"
+  ],
   "featured": true,
   "paperReference": "Liu et al., CVPR 2016",
   "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2016/html/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.html",

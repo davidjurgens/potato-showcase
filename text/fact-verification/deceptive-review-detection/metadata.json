@@ -9,11 +9,30 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "Misinformation", "E-commerce"],
-  "useCase": ["Fake Review Detection", "Content Moderation", "Trust & Safety"],
+  "annotationTypes": [
+    "likert",
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Misinformation",
+    "E-commerce"
+  ],
+  "useCase": [
+    "Fake Review Detection",
+    "Content Moderation",
+    "Trust & Safety"
+  ],
   "complexity": "intermediate",
-  "tags": ["deception", "fake-reviews", "opinion-spam", "misinformation", "e-commerce", "acl2011"],
+  "tags": [
+    "deception",
+    "fake-reviews",
+    "opinion-spam",
+    "misinformation",
+    "e-commerce",
+    "acl2011"
+  ],
   "featured": false,
   "paperReference": "Ott et al., ACL 2011",
   "paperUrl": "https://aclanthology.org/P11-1032/",

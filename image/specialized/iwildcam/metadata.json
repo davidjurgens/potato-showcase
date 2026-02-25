@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "bbox"],
-  "domain": ["Computer Vision", "Wildlife Conservation"],
-  "useCase": ["Wildlife Detection", "Species Classification", "Camera Trap Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Wildlife Conservation"
+  ],
+  "useCase": [
+    "Wildlife Detection",
+    "Species Classification",
+    "Camera Trap Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["iwildcam", "wildlife", "camera-trap", "conservation", "ecology", "cvpr2019"],
+  "tags": [
+    "iwildcam",
+    "wildlife",
+    "camera-trap",
+    "conservation",
+    "ecology",
+    "cvpr2019"
+  ],
   "featured": true,
   "paperReference": "Beery et al., CVPR 2019",
   "paperUrl": "https://arxiv.org/abs/1904.05986",

@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Film Studies"],
-  "useCase": ["Keyframe Selection", "Video Summarization", "Movie Description"],
+  "annotationTypes": [
+    "radio",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Film Studies"
+  ],
+  "useCase": [
+    "Keyframe Selection",
+    "Video Summarization",
+    "Movie Description"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "keyframe", "movie", "description", "lsmdc", "representative"],
+  "tags": [
+    "video",
+    "keyframe",
+    "movie",
+    "description",
+    "lsmdc",
+    "representative"
+  ],
   "featured": false,
   "paperReference": "Rohrbach et al., IJCV 2017",
   "paperUrl": "https://link.springer.com/article/10.1007/s11263-016-0987-1",

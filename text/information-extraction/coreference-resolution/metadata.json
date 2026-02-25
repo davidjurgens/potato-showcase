@@ -9,11 +9,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Linguistics"],
-  "useCase": ["Coreference Resolution", "Entity Linking", "Discourse Analysis"],
+  "annotationTypes": [
+    "likert",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Coreference Resolution",
+    "Entity Linking",
+    "Discourse Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["coreference", "pronouns", "entities", "linking", "ontonotes", "conll"],
+  "tags": [
+    "coreference",
+    "pronouns",
+    "entities",
+    "linking",
+    "ontonotes",
+    "conll"
+  ],
   "featured": false,
   "paperReference": "Pradhan et al., CoNLL 2012",
   "paperUrl": "https://aclanthology.org/W12-4501/",

@@ -9,11 +9,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Social Media", "Opinion Mining"],
-  "useCase": ["Stance Detection", "Opinion Mining", "Social Media Analysis"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "Opinion Mining"
+  ],
+  "useCase": [
+    "Stance Detection",
+    "Opinion Mining",
+    "Social Media Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["stance", "opinion", "social-media", "vast", "emnlp2020", "zero-shot"],
+  "tags": [
+    "stance",
+    "opinion",
+    "social-media",
+    "vast",
+    "emnlp2020",
+    "zero-shot"
+  ],
   "featured": true,
   "paperReference": "Allaway & McKeown, EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.197/",

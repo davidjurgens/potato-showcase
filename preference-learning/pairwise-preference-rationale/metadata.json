@@ -10,11 +10,29 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "AI Alignment"],
-  "useCase": ["Reward Modeling", "RLHF", "Preference Learning"],
+  "annotationTypes": [
+    "multiselect",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "Reward Modeling",
+    "RLHF",
+    "Preference Learning"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "rlhf", "pairwise", "comparison", "rationale", "justification"],
+  "tags": [
+    "preference",
+    "rlhf",
+    "pairwise",
+    "comparison",
+    "rationale",
+    "justification"
+  ],
   "featured": false,
   "paperReference": "Wang et al., 2024",
   "paperUrl": "https://arxiv.org/abs/2410.01257",

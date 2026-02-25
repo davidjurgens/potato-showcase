@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "text"],
-  "domain": ["NLP", "Entity Disambiguation", "Knowledge Graphs"],
-  "useCase": ["Entity Linking", "Entity Disambiguation", "Knowledge Base Population"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Entity Disambiguation",
+    "Knowledge Graphs"
+  ],
+  "useCase": [
+    "Entity Linking",
+    "Entity Disambiguation",
+    "Knowledge Base Population"
+  ],
   "complexity": "intermediate",
-  "tags": ["entity-linking", "entity-disambiguation", "wikidata", "aida", "conll", "emnlp2011"],
+  "tags": [
+    "entity-linking",
+    "entity-disambiguation",
+    "wikidata",
+    "aida",
+    "conll",
+    "emnlp2011"
+  ],
   "featured": false,
   "paperReference": "Hoffart et al., EMNLP 2011",
   "paperUrl": "https://aclanthology.org/D11-1072/",

@@ -9,11 +9,29 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "Social Media", "Misinformation"],
-  "useCase": ["Content Moderation", "Media Quality", "Misinformation Detection"],
+  "annotationTypes": [
+    "likert",
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "Misinformation"
+  ],
+  "useCase": [
+    "Content Moderation",
+    "Media Quality",
+    "Misinformation Detection"
+  ],
   "complexity": "beginner",
-  "tags": ["clickbait", "headlines", "social-media", "content-quality", "misinformation"],
+  "tags": [
+    "clickbait",
+    "headlines",
+    "social-media",
+    "content-quality",
+    "misinformation"
+  ],
   "featured": false,
   "paperReference": "Potthast et al., ECIR 2016",
   "paperUrl": "https://webis.de/publications.html#potthast_2016",

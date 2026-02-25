@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking"],
-  "domain": ["NLP", "Medical/Clinical", "Radiology"],
-  "useCase": ["Relation Extraction", "Clinical NLP", "Radiology Report Understanding"],
+  "annotationTypes": [
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Medical/Clinical",
+    "Radiology"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Clinical NLP",
+    "Radiology Report Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["radiology", "relation-extraction", "clinical", "medical", "radgraph", "acl2024", "healthcare"],
+  "tags": [
+    "radiology",
+    "relation-extraction",
+    "clinical",
+    "medical",
+    "radgraph",
+    "acl2024",
+    "healthcare"
+  ],
   "featured": false,
   "paperReference": "Khanna et al., Findings ACL 2024",
   "paperUrl": "https://aclanthology.org/2024.findings-acl.765/",

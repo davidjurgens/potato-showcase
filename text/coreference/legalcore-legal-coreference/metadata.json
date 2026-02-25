@@ -10,11 +10,28 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking"],
-  "domain": ["NLP", "Legal"],
-  "useCase": ["Event Coreference", "Legal Document Analysis", "Legal Information Extraction"],
+  "annotationTypes": [
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Legal"
+  ],
+  "useCase": [
+    "Event Coreference",
+    "Legal Document Analysis",
+    "Legal Information Extraction"
+  ],
   "complexity": "advanced",
-  "tags": ["event-coreference", "legal", "court-opinions", "contracts", "legal-nlp", "acl2025"],
+  "tags": [
+    "event-coreference",
+    "legal",
+    "court-opinions",
+    "contracts",
+    "legal-nlp",
+    "acl2025"
+  ],
   "featured": false,
   "paperReference": "Semo et al., Findings ACL 2025",
   "paperUrl": "https://arxiv.org/abs/2501.00000",

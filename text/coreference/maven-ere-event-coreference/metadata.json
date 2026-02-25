@@ -10,11 +10,30 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "span_linking"],
-  "domain": ["NLP", "Event Understanding"],
-  "useCase": ["Event Coreference", "Temporal Relation Extraction", "Causal Relation Extraction", "Subevent Detection"],
+  "annotationTypes": [
+    "span",
+    "span_link"
+  ],
+  "domain": [
+    "NLP",
+    "Event Understanding"
+  ],
+  "useCase": [
+    "Event Coreference",
+    "Temporal Relation Extraction",
+    "Causal Relation Extraction",
+    "Subevent Detection"
+  ],
   "complexity": "advanced",
-  "tags": ["event-coreference", "temporal-relations", "causal-relations", "subevent", "maven", "event-relations", "emnlp2022"],
+  "tags": [
+    "event-coreference",
+    "temporal-relations",
+    "causal-relations",
+    "subevent",
+    "maven",
+    "event-relations",
+    "emnlp2022"
+  ],
   "featured": false,
   "paperReference": "Wang et al., EMNLP 2022",
   "paperUrl": "https://aclanthology.org/2022.emnlp-main.60/",

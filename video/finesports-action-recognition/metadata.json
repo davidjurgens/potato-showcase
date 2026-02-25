@@ -10,11 +10,29 @@
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["video_annotation", "bbox"],
-  "domain": ["Computer Vision", "Sports Analytics"],
-  "useCase": ["Action Recognition", "Person Tracking", "Fine-grained Classification"],
+  "annotationTypes": [
+    "multiselect",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Sports Analytics"
+  ],
+  "useCase": [
+    "Action Recognition",
+    "Person Tracking",
+    "Fine-grained Classification"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "sports", "fine-grained", "action-recognition", "bounding-box", "hierarchical", "finesports"],
+  "tags": [
+    "video",
+    "sports",
+    "fine-grained",
+    "action-recognition",
+    "bounding-box",
+    "hierarchical",
+    "finesports"
+  ],
   "featured": false,
   "paperReference": "Xu et al., CVPR 2024",
   "paperUrl": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_FineSports_CVPR_2024_paper.pdf",

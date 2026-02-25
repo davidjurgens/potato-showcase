@@ -10,11 +10,27 @@
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["polygon", "multiselect"],
-  "domain": ["Computer Vision", "Human Analysis"],
-  "useCase": ["Human Parsing", "Body Part Segmentation", "Fashion Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Human Analysis"
+  ],
+  "useCase": [
+    "Human Parsing",
+    "Body Part Segmentation",
+    "Fashion Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["lip", "human-parsing", "body-parts", "segmentation", "cvpr2017"],
+  "tags": [
+    "lip",
+    "human-parsing",
+    "body-parts",
+    "segmentation",
+    "cvpr2017"
+  ],
   "featured": true,
   "paperReference": "Gong et al., CVPR 2017",
   "paperUrl": "https://arxiv.org/abs/1703.05446",

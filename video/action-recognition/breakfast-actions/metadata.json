@@ -10,11 +10,28 @@
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Activity Recognition"],
-  "useCase": ["Action Segmentation", "Cooking Recognition", "Procedure Learning"],
+  "annotationTypes": [
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Activity Recognition"
+  ],
+  "useCase": [
+    "Action Segmentation",
+    "Cooking Recognition",
+    "Procedure Learning"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "action", "segmentation", "cooking", "breakfast", "fine-grained"],
+  "tags": [
+    "video",
+    "action",
+    "segmentation",
+    "cooking",
+    "breakfast",
+    "fine-grained"
+  ],
   "featured": false,
   "paperReference": "Kuehne et al., IJCV 2014",
   "paperUrl": "https://link.springer.com/article/10.1007/s11263-014-0765-4",
