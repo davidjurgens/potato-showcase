@@ -1,0 +1,58 @@
+[
+  {
+    "id": "swe-prm-001",
+    "text": "QuerySet.defer() doesn't clear deferred fields when chaining with .only(). Calling Model.objects.defer('field_a').only('field_b') should load only 'field_b', but it loads both 'field_a' and 'field_b'.",
+    "repo_name": "django/django",
+    "steps": "Step 1: [Search] grep -r 'def defer' django/db/models/query.py\n  Found: def defer(self, *fields) at line 1142\n\nStep 2: [Read] Open django/db/models/query.py lines 1142-1175\n  - defer() adds fields to deferred_loading set\n  - only() sets deferred_loading to all fields minus the specified ones\n\nStep 3: [Edit] Modify django/db/models/query.py line 1158\n- old: existing.update(fields)\n+ new: if self.query.deferred_loading[1]:\n+          existing = set(fields)\n+      else:\n+          existing.update(fields)\n\nStep 4: [Edit] Modify django/db/models/query.py line 1170 — update only() to clear prior defer() fields\n- old: self.query.deferred_loading = (frozenset(fields), True)\n+ new: self.query.deferred_loading = (frozenset(), False)\n+      self.query.add_deferred_loading(fields)",
+    "test_results": "$ python -m pytest tests/defer/tests.py -x\nRan 24 tests in 0.45s\nFAILED (failures=2)\ntest_defer_only_chaining ... FAIL\ntest_only_defer_chaining ... FAIL"
+  },
+  {
+    "id": "swe-prm-002",
+    "text": "Flask app.url_for() raises BuildError when using SERVER_NAME with subdomains. Setting SERVER_NAME='example.com' and requesting url_for('api.get_users') fails even though the blueprint is registered correctly.",
+    "repo_name": "pallets/flask",
+    "steps": "Step 1: [Search] grep -r 'def url_for' src/flask/helpers.py\n  Found: def url_for(endpoint, **values) at line 187\n\nStep 2: [Read] Open src/flask/helpers.py lines 187-245\n  - url_for calls adapter.build(), which delegates to werkzeug's MapAdapter\n\nStep 3: [Search] grep -r 'SERVER_NAME' src/flask/app.py\n  Found references at lines 312, 567, 891\n\nStep 4: [Read] Open src/flask/app.py lines 560-580\n  - SERVER_NAME is used to set server_name on the Map object\n  - Subdomain matching compares request host vs server_name\n\nStep 5: [Edit] Modify src/flask/helpers.py line 221\n- old: rv = appctx.url_adapter.build(endpoint, values)\n+ new: rv = appctx.url_adapter.build(endpoint, values, force_external=False)",
+    "test_results": "$ python -m pytest tests/test_helpers.py::test_url_for_with_subdomain -v\ntest_url_for_with_subdomain PASSED\ntest_url_for_external PASSED\ntest_url_for_basic PASSED\nRan 3 tests in 0.12s\nOK"
+  },
+  {
+    "id": "swe-prm-003",
+    "text": "requests.Session does not merge environment proxy settings with session-level proxies. When both OS environment variables and session.proxies are set, only session.proxies are used, ignoring NO_PROXY.",
+    "repo_name": "psf/requests",
+    "steps": "Step 1: [Search] grep -r 'def merge_environment_settings' src/requests/sessions.py\n  Found at line 706\n\nStep 2: [Read] Open src/requests/sessions.py lines 706-735\n  - merge_environment_settings builds env_proxies from urllib.request.getproxies()\n  - Then merges with self.proxies via merge_setting()\n\nStep 3: [Edit] Modify src/requests/models.py line 448\n- old: self.proxies = proxies or {}\n+ new: self.proxies = merge_setting(proxies, {})\n\nStep 4: [Read] Open src/requests/utils.py to find should_bypass_proxies()\n  Found at line 698 — checks NO_PROXY against the URL\n\nStep 5: [Edit] Modify src/requests/sessions.py line 722\n- old: proxies = merge_setting(self.proxies, env_proxies)\n+ new: no_proxy = os.environ.get('NO_PROXY', os.environ.get('no_proxy', ''))\n+      proxies = merge_setting(self.proxies, env_proxies)\n+      if should_bypass_proxies(url, no_proxy=no_proxy):\n+          proxies = {}",
+    "test_results": "$ python -m pytest tests/test_requests.py::TestSessionProxies -v\ntest_session_proxies_merge ... PASSED\ntest_no_proxy_env_override ... PASSED\ntest_session_proxy_precedence ... PASSED\nRan 3 tests in 0.08s\nOK"
+  },
+  {
+    "id": "swe-prm-004",
+    "text": "numpy.percentile returns incorrect results for arrays with NaN values when interpolation='linear'. Expected behavior: NaN should propagate, but instead a numeric result is returned.",
+    "repo_name": "numpy/numpy",
+    "steps": "Step 1: [Search] grep -r 'def percentile' numpy/lib/function_base.py\n  Found at line 3812\n\nStep 2: [Read] Open numpy/lib/function_base.py lines 3812-3900\n  - percentile delegates to _quantile_unchecked after input validation\n  - NaN handling depends on _nan_helper functions\n\nStep 3: [Edit] Modify numpy/lib/function_base.py line 3845\n- old: a = np.asarray(a)\n+ new: a = np.asarray(a, dtype=np.float64)\n\nStep 4: [Search] grep -r '_quantile_unchecked' numpy/lib/function_base.py\n  Found at line 3920\n\nStep 5: [Read] Open numpy/lib/function_base.py lines 3920-3980\n  - _quantile_unchecked calls np.partition and does linear interpolation\n  - Missing: no check for NaN before interpolation\n\nStep 6: [Edit] Modify numpy/lib/function_base.py line 3955\n- old: result = lerp(a_low, a_high, weights)\n+ new: if np.any(np.isnan(a)):\n+          result = np.full_like(a_low, np.nan)\n+      else:\n+          result = lerp(a_low, a_high, weights)",
+    "test_results": "$ python -m pytest numpy/lib/tests/test_function_base.py::TestPercentile -v\ntest_percentile_basic ... PASSED\ntest_percentile_nan_propagation ... PASSED\ntest_percentile_interpolation ... PASSED\ntest_percentile_axis ... FAILED\n  AssertionError: NaN propagation broke axis-wise computation\nRan 4 tests in 0.31s\nFAILED (failures=1)"
+  },
+  {
+    "id": "swe-prm-005",
+    "text": "Django admin search_fields with ForeignKey lookup causes N+1 queries. Using search_fields = ['related_model__name'] generates a separate query for each result instead of using a JOIN.",
+    "repo_name": "django/django",
+    "steps": "Step 1: [Search] grep -r 'def get_search_results' django/contrib/admin/options.py\n  Found at line 992\n\nStep 2: [Read] Open django/contrib/admin/options.py lines 992-1045\n  - get_search_results iterates over search_fields and builds Q objects\n  - Uses queryset.filter(reduce(operator.or_, or_queries))\n\nStep 3: [Edit] Modify django/contrib/admin/options.py line 1012\n- old: queryset = queryset.filter(reduce(operator.or_, or_queries))\n+ new: related_fields = [f for f in self.search_fields if '__' in f]\n+      if related_fields:\n+          queryset = queryset.select_related(*[f.rsplit('__', 1)[0] for f in related_fields])\n+      queryset = queryset.filter(reduce(operator.or_, or_queries))\n\nStep 4: [Test] Run admin search tests\n  python -m pytest tests/admin_views/tests.py::AdminSearchTest -v",
+    "test_results": "$ python -m pytest tests/admin_views/tests.py::AdminSearchTest -v\ntest_search_basic ... PASSED\ntest_search_foreign_key ... PASSED\ntest_search_query_count ... PASSED\nRan 3 tests in 0.67s\nOK"
+  },
+  {
+    "id": "swe-prm-006",
+    "text": "Flask-RESTful returns 500 instead of 404 when a route with a type converter receives an invalid value. GET /users/abc should return 404 but raises an unhandled ValueError.",
+    "repo_name": "pallets/flask",
+    "steps": "Step 1: [Search] grep -r 'class IntegerConverter' src/werkzeug/routing/converters.py\n  Found at line 89\n\nStep 2: [Read] Open src/werkzeug/routing/converters.py lines 89-110\n  - IntegerConverter.to_python raises ValueError for non-integer input\n  - Router catches this in normal Flask, but not through flask-restful dispatch\n\nStep 3: [Edit] Modify src/flask/app.py line 1456\n- old: return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)\n+ new: try:\n+          return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)\n+      except ValueError:\n+          abort(404)\n\nStep 4: [Search] grep -r 'def handle_exception' src/flask/app.py\n  Found at line 1501 — this already handles HTTPException\n\nStep 5: [Edit] Modify src/flask/app.py line 1501\n  No changes needed — ValueError is already handled upstream after Step 3 edit",
+    "test_results": "$ python -m pytest tests/test_basic.py::test_type_converter_404 -v\ntest_type_converter_404 PASSED\ntest_type_converter_valid PASSED\nRan 2 tests in 0.05s\nOK"
+  },
+  {
+    "id": "swe-prm-007",
+    "text": "requests.get() with stream=True doesn't close the connection when the response object is garbage collected without calling close(). This causes resource leaks in long-running applications.",
+    "repo_name": "psf/requests",
+    "steps": "Step 1: [Search] grep -r 'class Response' src/requests/models.py\n  Found at line 568\n\nStep 2: [Read] Open src/requests/models.py lines 568-620\n  - Response has a close() method that calls self.raw.release_conn()\n  - No __del__ method defined\n\nStep 3: [Edit] Modify src/requests/adapters.py line 412\n- old: resp.connection = self\n+ new: resp.connection = self\n+      resp._pool = conn\n\nStep 4: [Edit] Modify src/requests/models.py line 619 — add __del__ to Response\n+ def __del__(self):\n+     if hasattr(self, '_content') and self._content is False:\n+         self.close()\n\nStep 5: [Edit] Modify src/requests/models.py line 568 — add context manager\n+ def __enter__(self):\n+     return self\n+ def __exit__(self, *args):\n+     self.close()",
+    "test_results": "$ python -m pytest tests/test_requests.py::TestResponse -v\ntest_response_close ... PASSED\ntest_response_context_manager ... PASSED\ntest_response_gc_cleanup ... PASSED\ntest_response_stream ... PASSED\nRan 4 tests in 0.15s\nOK"
+  },
+  {
+    "id": "swe-prm-008",
+    "text": "numpy.ma.median returns wrong result when the masked array has an even number of unmasked elements. The median should be the average of the two middle values, but it returns only the lower middle value.",
+    "repo_name": "numpy/numpy",
+    "steps": "Step 1: [Search] grep -r 'def median' numpy/ma/extras.py\n  Found at line 567\n\nStep 2: [Read] Open numpy/ma/extras.py lines 567-620\n  - median compresses the masked array, sorts, and indexes the middle\n\nStep 3: [Edit] Modify numpy/ma/extras.py line 601\n- old: ind = count // 2\n-      if count % 2 == 0:\n-          return asorted[ind]\n+ new: ind = count // 2\n+      if count % 2 == 0:\n+          return (asorted[ind - 1] + asorted[ind]) / 2.0\n\nStep 4: [Test] Run masked array median tests",
+    "test_results": "$ python -m pytest numpy/ma/tests/test_extras.py::TestMedian -v\ntest_median_basic ... PASSED\ntest_median_even_count ... PASSED\ntest_median_all_masked ... PASSED\ntest_median_axis ... PASSED\nRan 4 tests in 0.09s\nOK"
+  }
+]

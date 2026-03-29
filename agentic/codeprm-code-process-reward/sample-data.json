@@ -1,0 +1,50 @@
+[
+  {
+    "id": "codeprm-001",
+    "text": "Write a function `merge_sorted(a, b)` that merges two sorted lists into one sorted list without using built-in sort functions.",
+    "steps": "Step 1: Define the function signature and initialize pointers.\n  def merge_sorted(a, b):\n      result = []\n      i, j = 0, 0\n\nStep 2: Add the main merge loop comparing elements from both lists.\n      while i < len(a) and j < len(b):\n          if a[i] <= b[j]:\n              result.append(a[i])\n              i += 1\n          else:\n              result.append(b[j])\n              j += 1\n\nStep 3: Append remaining elements from both lists.\n      result.extend(a[i:])\n      result.extend(b[j:])\n      return result",
+    "test_output": "test_merge_empty_lists .............. PASS\ntest_merge_single_elements .......... PASS\ntest_merge_different_lengths ........ PASS\ntest_merge_duplicates ............... PASS\n\n4 passed, 0 failed"
+  },
+  {
+    "id": "codeprm-002",
+    "text": "Implement a function `is_balanced(s)` that checks whether a string of brackets '()[]{}' is balanced.",
+    "steps": "Step 1: Define the function and the bracket mappings.\n  def is_balanced(s):\n      stack = []\n      mapping = {')': '(', ']': '[', '}': '{'}\n\nStep 2: Iterate through each character and push opening brackets.\n      for char in s:\n          if char in mapping.values():\n              stack.append(char)\n\nStep 3: For closing brackets, check the stack.\n          elif char in mapping:\n              if not stack or stack.pop() != mapping[char]:\n                  return False\n\nStep 4: Return whether the stack is empty.\n      return len(stack) == 0",
+    "test_output": "test_empty_string ................... PASS\ntest_simple_balanced ................ PASS\ntest_nested_balanced ................ PASS\ntest_unbalanced_open ................ PASS\ntest_unbalanced_close ............... PASS\ntest_mixed_balanced ................. PASS\n\n6 passed, 0 failed"
+  },
+  {
+    "id": "codeprm-003",
+    "text": "Write a function `flatten(nested)` that flattens a deeply nested list into a single flat list. Example: flatten([1, [2, [3, 4], 5]]) returns [1, 2, 3, 4, 5].",
+    "steps": "Step 1: Define the function with an iterative approach using a stack.\n  def flatten(nested):\n      result = []\n      stack = [nested]\n\nStep 2: Process the stack, expanding lists and collecting values.\n      while stack:\n          current = stack.pop()\n          if isinstance(current, list):\n              stack.extend(current)\n          else:\n              result.append(current)\n\nStep 3: Return the result.\n      return result",
+    "test_output": "test_flat_list ...................... PASS\ntest_single_nesting ................. PASS\ntest_deep_nesting ................... FAIL\n  Expected: [1, 2, 3, 4, 5]\n  Got:      [5, 4, 3, 2, 1]\ntest_empty_list ..................... PASS\n\n3 passed, 1 failed"
+  },
+  {
+    "id": "codeprm-004",
+    "text": "Implement a class `LRUCache(capacity)` with `get(key)` and `put(key, value)` methods. Both operations should run in O(1) time.",
+    "steps": "Step 1: Import OrderedDict and define the class with constructor.\n  from collections import OrderedDict\n\n  class LRUCache:\n      def __init__(self, capacity):\n          self.capacity = capacity\n          self.cache = OrderedDict()\n\nStep 2: Implement the get method.\n      def get(self, key):\n          if key not in self.cache:\n              return -1\n          self.cache.move_to_end(key)\n          return self.cache[key]\n\nStep 3: Implement the put method.\n      def put(self, key, value):\n          if key in self.cache:\n              self.cache.move_to_end(key)\n          self.cache[key] = value\n          if len(self.cache) > self.capacity:\n              self.cache.popitem(last=False)",
+    "test_output": "test_basic_put_get .................. PASS\ntest_eviction ....................... PASS\ntest_update_existing ................ PASS\ntest_access_order ................... PASS\ntest_capacity_one ................... PASS\n\n5 passed, 0 failed"
+  },
+  {
+    "id": "codeprm-005",
+    "text": "Write a function `read_csv_stats(filepath)` that reads a CSV file and returns a dictionary with the mean, median, and standard deviation of each numeric column.",
+    "steps": "Step 1: Import required modules and define the function.\n  import csv\n  import statistics\n\n  def read_csv_stats(filepath):\n      with open(filepath, 'r') as f:\n          reader = csv.DictReader(f)\n          rows = list(reader)\n\nStep 2: Extract numeric columns by attempting float conversion.\n      columns = {}\n      for header in rows[0].keys():\n          try:\n              values = [float(row[header]) for row in rows]\n              columns[header] = values\n          except ValueError:\n              continue\n\nStep 3: Compute statistics for each numeric column.\n      result = {}\n      for col, values in columns.items():\n          result[col] = {\n              'mean': statistics.mean(values),\n              'median': statistics.median(values),\n              'stdev': statistics.stdev(values)\n          }\n      return result",
+    "test_output": "test_basic_csv ...................... PASS\ntest_mixed_columns .................. PASS\ntest_single_row ..................... FAIL\n  statistics.StatisticsError: variance requires at least two data points\ntest_empty_csv ...................... FAIL\n  IndexError: list index out of range\n\n2 passed, 2 failed"
+  },
+  {
+    "id": "codeprm-006",
+    "text": "Implement a function `trie_search(words, prefix)` that builds a trie from a list of words and returns all words matching the given prefix.",
+    "steps": "Step 1: Define the TrieNode class.\n  class TrieNode:\n      def __init__(self):\n          self.children = {}\n          self.is_end = False\n\nStep 2: Build the trie by inserting each word.\n  def trie_search(words, prefix):\n      root = TrieNode()\n      for word in words:\n          node = root\n          for ch in word:\n              if ch not in node.children:\n                  node.children[ch] = TrieNode()\n              node = node.children[ch]\n          node.is_end = True\n\nStep 3: Navigate to the prefix node.\n      node = root\n      for ch in prefix:\n          if ch not in node.children:\n              return []\n          node = node.children[ch]\n\nStep 4: Collect all words under the prefix node using DFS.\n      results = []\n      def dfs(node, path):\n          if node.is_end:\n              results.append(prefix + path)\n          for c, child in node.children.items():\n              dfs(child, path + c)\n      dfs(node, '')\n      return results",
+    "test_output": "test_exact_match .................... PASS\ntest_prefix_multiple ................ PASS\ntest_no_match ....................... PASS\ntest_empty_prefix ................... PASS\ntest_single_char_words .............. PASS\n\n5 passed, 0 failed"
+  },
+  {
+    "id": "codeprm-007",
+    "text": "Write a function `json_api_fetch(url)` that makes an HTTP GET request to a JSON API endpoint, handles errors gracefully, and returns the parsed response with retry logic (up to 3 attempts).",
+    "steps": "Step 1: Import modules and define the function with retry logic.\n  import requests\n  import time\n\n  def json_api_fetch(url, max_retries=3):\n      for attempt in range(max_retries):\n\nStep 2: Make the request inside a try block.\n          try:\n              response = requests.get(url, timeout=10)\n              response.raise_for_status()\n              return response.json()\n\nStep 3: Handle specific exceptions with exponential backoff.\n          except requests.exceptions.HTTPError as e:\n              if response.status_code == 429:\n                  time.sleep(2 ** attempt)\n                  continue\n              raise\n          except requests.exceptions.ConnectionError:\n              time.sleep(2 ** attempt)\n              continue\n\nStep 4: Handle timeout and return None after all retries fail.\n          except requests.exceptions.Timeout:\n              time.sleep(2 ** attempt)\n              continue\n      return None",
+    "test_output": "test_successful_fetch ............... PASS\ntest_404_raises ..................... PASS\ntest_retry_on_429 ................... PASS\ntest_retry_on_connection_error ...... PASS\ntest_timeout_returns_none ........... PASS\n\n5 passed, 0 failed"
+  },
+  {
+    "id": "codeprm-008",
+    "text": "Implement a function `binary_search(arr, target)` that returns the index of the target in a sorted array, or -1 if not found. Handle edge cases including empty arrays and duplicate values (return the first occurrence).",
+    "steps": "Step 1: Define the function with boundary initialization.\n  def binary_search(arr, target):\n      if not arr:\n          return -1\n      left, right = 0, len(arr) - 1\n\nStep 2: Implement the search loop.\n      while left <= right:\n          mid = (left + right) // 2\n          if arr[mid] == target:\n              return mid\n          elif arr[mid] < target:\n              left = mid + 1\n          else:\n              right = mid - 1\n\nStep 3: Return -1 if not found.\n      return -1",
+    "test_output": "test_found_single ................... PASS\ntest_not_found ...................... PASS\ntest_empty_array .................... PASS\ntest_first_occurrence ............... FAIL\n  Expected: 2 (first index of 5)\n  Got:      4 (middle index of 5)\ntest_single_element ................. PASS\n\n4 passed, 1 failed"
+  }
+]

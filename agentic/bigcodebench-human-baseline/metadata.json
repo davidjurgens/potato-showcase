@@ -1,0 +1,23 @@
+{
+  "title": "BigCodeBench Human Baseline Evaluation",
+  "description": "Evaluate agent-generated code solutions for BigCodeBench tasks. Annotators assess correctness against test suites, rate task complexity, evaluate code quality, and provide notes on the solution approach.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "likert", "text"],
+  "domain": ["Software Engineering", "Code Generation"],
+  "useCase": ["Code Evaluation", "Benchmark Baseline"],
+  "complexity": "advanced",
+  "tags": ["bigcodebench", "code-generation", "function-calls", "benchmark", "agentic-coding"],
+  "featured": false,
+  "paperReference": "Zhuo et al., ICLR 2025",
+  "paperUrl": "https://arxiv.org/abs/2406.15877",
+  "datasetUrl": "https://bigcode-bench.github.io/",
+  "citation": "@inproceedings{zhuo2025bigcodebench, title={BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions}, author={Terry Yue Zhuo and Minh Chien Vu and Jenny Chim and others}, booktitle={International Conference on Learning Representations (ICLR)}, year={2025}}"
+}

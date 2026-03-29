@@ -1,0 +1,61 @@
+# SWE-PRM Coding Process Reward
+# Based on "When Agents go Astray: Course-Correcting SWE Agents with PRMs" (Gandhi et al., arXiv 2025)
+
+annotation_task_name: "SWE-PRM Coding Process Reward"
+task_dir: "."
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="max-width: 850px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif;">
+    <div style="background: #e6f9e6; border: 1px solid #a3d9a3; border-radius: 8px; padding: 18px 22px; margin-bottom: 18px;">
+      <h3 style="margin: 0 0 6px 0; color: #1a6b1a; font-size: 15px;">GitHub Issue — <span style="font-weight: normal; color: #555;">{{repo_name}}</span></h3>
+      <div style="font-size: 14px; color: #2c3e50; line-height: 1.6;">{{text}}</div>
+    </div>
+    <div style="margin-bottom: 18px;">
+      <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px;">Agent Steps</h3>
+      <div style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 14px 18px; font-family: 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; line-height: 1.6;">{{steps}}</div>
+    </div>
+    <div style="background: #1e1e1e; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 8px 0; color: #8bc34a; font-size: 14px; font-family: 'Courier New', monospace;">Test Results</h3>
+      <div style="font-family: 'Courier New', monospace; font-size: 13px; color: #4ec94e; white-space: pre-wrap; line-height: 1.5;">{{test_results}}</div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "step_correctness"
+    annotation_type: radio
+    description: "Rate each coding agent step. Identify the first step where the agent goes astray."
+    labels:
+      - "Correct — this action is appropriate"
+      - "Neutral — action doesn't help or hurt"
+      - "Incorrect — this action is wrong or counterproductive"
+    keyboard_shortcuts:
+      "Correct — this action is appropriate": "1"
+      "Neutral — action doesn't help or hurt": "2"
+      "Incorrect — this action is wrong or counterproductive": "3"
+
+  - name: "error_type"
+    annotation_type: multiselect
+    description: "Select all error types that apply to the agent trace."
+    labels:
+      - "Logic Error"
+      - "API Misuse"
+      - "Wrong File Targeted"
+      - "Incomplete Edit"
+      - "Redundant Action"
+      - "Test Error"
+      - "Correct — No Error"
+
+  - name: "error_explanation"
+    annotation_type: text
+    description: "Explain where and why the agent went astray."
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ab-001",
+    "text": "Purchase a red cotton t-shirt in size Medium from an online clothing store, applying any available discount code.",
+    "environment": "Web Shopping",
+    "milestones": "1. Navigate to clothing store\n2. Search for red cotton t-shirt\n3. Select size Medium\n4. Apply discount code\n5. Complete checkout",
+    "trajectory": "Turn 1: Navigate to shop.example.com\nTurn 2: Search 'red cotton t-shirt'\nTurn 3: Filter by color: Red, material: Cotton\nTurn 4: Select first result 'Classic Cotton Tee - Red' ($24.99)\nTurn 5: Choose size: Medium\nTurn 6: Add to cart\nTurn 7: Go to checkout\nTurn 8: Look for discount code field\nTurn 9: Try code 'SAVE10' - Invalid\nTurn 10: Try code 'WELCOME' - 15% off applied\nTurn 11: Confirm order details\nTurn 12: Click 'Place Order'",
+    "final_state": "Order confirmed. Red cotton t-shirt (M) purchased for $21.24 after 15% discount. Order #SH-90234."
+  },
+  {
+    "id": "ab-002",
+    "text": "Use the Wikipedia API to find the population of the 5 largest cities in Japan and calculate their total population.",
+    "environment": "Tool Use",
+    "milestones": "1. Identify the 5 largest cities in Japan\n2. Query population for each city\n3. Retrieve correct population figures\n4. Calculate total population\n5. Present results clearly",
+    "trajectory": "Turn 1: Call wikipedia_search('largest cities in Japan')\nTurn 2: Parse results - identified Tokyo, Yokohama, Osaka, Nagoya, Sapporo\nTurn 3: Call wikipedia_page('Tokyo') - Population: 13,960,000\nTurn 4: Call wikipedia_page('Yokohama') - Population: 3,749,000\nTurn 5: Call wikipedia_page('Osaka') - Population: 2,753,000\nTurn 6: Call wikipedia_page('Nagoya') - Population: 2,296,000\nTurn 7: Call wikipedia_page('Sapporo') - Population: 1,973,000\nTurn 8: Calculate total: 24,731,000",
+    "final_state": "Total population of 5 largest Japanese cities: 24,731,000. All data retrieved successfully from Wikipedia API."
+  },
+  {
+    "id": "ab-003",
+    "text": "Navigate through the dungeon in TextWorld, collect the golden key, unlock the treasure room, and retrieve the ancient scroll.",
+    "environment": "Game",
+    "milestones": "1. Explore dungeon rooms\n2. Find the golden key\n3. Navigate to treasure room door\n4. Unlock the door with golden key\n5. Retrieve the ancient scroll",
+    "trajectory": "Turn 1: > look - You are in a dark corridor. Exits: north, east.\nTurn 2: > go north - You enter a guard room. There is a wooden chest here.\nTurn 3: > open chest - The chest is locked.\nTurn 4: > go south - Back in corridor.\nTurn 5: > go east - You enter an armory. A golden key glints on the shelf.\nTurn 6: > take golden key - Taken.\nTurn 7: > go west - Back in corridor.\nTurn 8: > go north - Guard room.\nTurn 9: > open chest with golden key - Wrong key for this chest.\nTurn 10: > go south - Corridor.\nTurn 11: > examine walls - You notice a hidden passage to the south.\nTurn 12: > go south - Treasure room door. It is locked.\nTurn 13: > unlock door with golden key - The door clicks open.\nTurn 14: > go south - The treasure room! An ancient scroll rests on a pedestal.\nTurn 15: > take ancient scroll - Taken. Quest complete!",
+    "final_state": "Quest completed. Ancient scroll retrieved from treasure room. Inventory: golden key, ancient scroll. Score: 100/100."
+  },
+  {
+    "id": "ab-004",
+    "text": "Search for recent papers about 'multimodal reasoning' on the academic search engine, find the most cited one from 2024, and summarize its abstract.",
+    "environment": "Web Browsing",
+    "milestones": "1. Navigate to academic search engine\n2. Search for 'multimodal reasoning'\n3. Filter results to 2024\n4. Sort by citation count\n5. Summarize the top paper's abstract",
+    "trajectory": "Turn 1: Navigate to scholar.example.com\nTurn 2: Type 'multimodal reasoning' in search bar\nTurn 3: Click Search\nTurn 4: Click 'Custom range' and set 2024-2024\nTurn 5: Results loaded (423 papers)\nTurn 6: Click 'Sort by: Cited by'\nTurn 7: Top result: 'Unified Multimodal Reasoning via Chain-of-Thought' (187 citations)\nTurn 8: Click on paper title\nTurn 9: Read abstract\nTurn 10: Summarize: The paper proposes a unified framework for multimodal reasoning...",
+    "final_state": "Found top 2024 paper on multimodal reasoning with 187 citations. Summary generated from abstract. Task partially complete - summary could be more detailed."
+  },
+  {
+    "id": "ab-005",
+    "text": "Move the robot to the kitchen, pick up the red apple from the counter, and place it in the refrigerator on the second shelf.",
+    "environment": "Embodied",
+    "milestones": "1. Navigate to the kitchen\n2. Locate the red apple on the counter\n3. Pick up the red apple\n4. Open the refrigerator\n5. Place apple on second shelf",
+    "trajectory": "Turn 1: > look around - Living room. Kitchen is to the north.\nTurn 2: > move north - Entering kitchen.\nTurn 3: > scan counter - Objects: red apple, banana, cutting board, knife\nTurn 4: > pick up red apple - Grasping red apple... Success.\nTurn 5: > locate refrigerator - Refrigerator is 2 meters to the right.\nTurn 6: > move to refrigerator - At refrigerator.\nTurn 7: > open refrigerator - Door opened.\nTurn 8: > identify shelves - Shelf 1 (top): milk, eggs. Shelf 2: cheese, yogurt. Shelf 3 (bottom): vegetables.\nTurn 9: > place red apple on shelf 2 - Placed. Apple is on second shelf next to cheese.",
+    "final_state": "Red apple successfully placed on second shelf of refrigerator. All milestones completed. Robot returned to idle position."
+  },
+  {
+    "id": "ab-006",
+    "text": "Solve the following logic puzzle: Three friends (Alice, Bob, Carol) each have a different pet (cat, dog, fish). Alice does not have a cat. Bob does not have a dog. Who has which pet?",
+    "environment": "Reasoning",
+    "milestones": "1. Identify constraints from the puzzle\n2. Apply elimination logic\n3. Determine Alice's pet\n4. Determine Bob's pet\n5. Determine Carol's pet",
+    "trajectory": "Turn 1: Parse constraints: Alice != cat, Bob != dog\nTurn 2: Create possibility matrix:\n  Alice: [dog, fish], Bob: [cat, fish], Carol: [cat, dog, fish]\nTurn 3: If Alice has dog, then Bob must have cat or fish. Since Bob != dog, Bob can have cat or fish.\nTurn 4: If Alice=dog, Bob=cat, then Carol=fish. Check: Alice!=cat (yes), Bob!=dog (yes). Valid!\nTurn 5: If Alice=dog, Bob=fish, then Carol=cat. Check: Alice!=cat (yes), Bob!=dog (yes). Also valid.\nTurn 6: If Alice=fish, Bob=cat, Carol=dog. Check: Alice!=cat (yes), Bob!=dog (yes). Also valid.\nTurn 7: Multiple solutions found. The puzzle is underdetermined with given constraints.",
+    "final_state": "Agent identified 3 valid solutions. The puzzle as stated has multiple valid answers. Reasoning logic was sound but agent did not select a single answer. Milestones 1-2 achieved, 3-5 partially achieved."
+  },
+  {
+    "id": "ab-007",
+    "text": "Use the weather API and calendar API to check tomorrow's weather and reschedule any outdoor meetings to indoor rooms if rain is expected.",
+    "environment": "Tool Use",
+    "milestones": "1. Query weather API for tomorrow's forecast\n2. Determine if rain is expected\n3. Retrieve calendar events for tomorrow\n4. Identify outdoor meetings\n5. Reschedule outdoor meetings to indoor rooms",
+    "trajectory": "Turn 1: Call weather_api.forecast(date='tomorrow', location='office')\nTurn 2: Result: {temp: 58F, conditions: 'rain', precipitation: 85%}\nTurn 3: Rain expected. Call calendar_api.get_events(date='tomorrow')\nTurn 4: Events: [9am: 'Team standup' (Room 301), 11am: 'Client demo' (Patio), 2pm: 'Design review' (Garden Terrace), 4pm: 'Sprint planning' (Room 205)]\nTurn 5: Outdoor meetings identified: 'Client demo' (Patio), 'Design review' (Garden Terrace)\nTurn 6: Call rooms_api.find_available(date='tomorrow', time='11am', duration='1h')\nTurn 7: Available: Room 102, Room 308\nTurn 8: Call calendar_api.update_event('Client demo', location='Room 102')\nTurn 9: Updated successfully.\nTurn 10: Call rooms_api.find_available(date='tomorrow', time='2pm', duration='1h')\nTurn 11: Available: Room 102, Room 205\nTurn 12: Call calendar_api.update_event('Design review', location='Room 102')\nTurn 13: Updated successfully.",
+    "final_state": "Both outdoor meetings rescheduled to indoor rooms. Client demo moved to Room 102, Design review moved to Room 102. Notifications sent to attendees. All milestones completed."
+  },
+  {
+    "id": "ab-008",
+    "text": "Find a pair of running shoes under $80 with good arch support reviews, compare at least 3 options, and add the best-reviewed one to the wishlist.",
+    "environment": "Web Shopping",
+    "milestones": "1. Search for running shoes under $80\n2. Filter for arch support mentions in reviews\n3. Compare at least 3 options\n4. Identify the best-reviewed option\n5. Add to wishlist",
+    "trajectory": "Turn 1: Navigate to shop.example.com\nTurn 2: Search 'running shoes arch support'\nTurn 3: Set price filter: $0 - $80\nTurn 4: Sort by 'Top Reviewed'\nTurn 5: Click on 'StrideFlex 400' ($69.99, 4.6 stars) - Reviews mention great arch support\nTurn 6: Note details. Go back to results.\nTurn 7: Click on 'RunLite Comfort Pro' ($74.99, 4.4 stars) - Mixed reviews on arch support\nTurn 8: Note details. Go back to results.\nTurn 9: Click on 'PaceMaker Arch+' ($59.99, 4.7 stars) - Excellent arch support reviews\nTurn 10: Compare: PaceMaker Arch+ has highest rating and lowest price\nTurn 11: Click 'Add to Wishlist' on PaceMaker Arch+\nTurn 12: Wishlist confirmation shown",
+    "final_state": "PaceMaker Arch+ ($59.99, 4.7 stars) added to wishlist. Compared 3 shoes. Best value with excellent arch support reviews. All milestones completed."
+  }
+]

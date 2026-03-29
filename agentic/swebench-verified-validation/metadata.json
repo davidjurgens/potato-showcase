@@ -1,0 +1,23 @@
+{
+  "title": "SWE-bench Verified Issue Validation",
+  "description": "Manually validate GitHub issues from SWE-bench to ensure they are well-specified, have adequate test patches, and are solvable. Annotators review the issue description, test patch, and gold patch to determine quality of each benchmark instance.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Software Engineering", "Code Generation"],
+  "useCase": ["Benchmark Validation", "Issue Triage"],
+  "complexity": "advanced",
+  "tags": ["swe-bench", "github-issues", "code-diff", "benchmark", "agentic-coding"],
+  "featured": false,
+  "paperReference": "Chowdhury et al., OpenAI Technical Report 2024",
+  "paperUrl": "https://openai.com/index/introducing-swe-bench-verified/",
+  "datasetUrl": "https://www.swebench.com/",
+  "citation": "@article{chowdhury2024swebenchverified, title={SWE-bench Verified: A Manually Validated Subset of SWE-bench}, author={Neil Chowdhury and James Aung and Chan Jun Shern and others}, journal={OpenAI Technical Report}, year={2024}}"
+}

@@ -1,0 +1,59 @@
+# PRM800K Step-by-Step Verification
+# Based on "Let's Verify Step by Step" (Lightman et al., ICLR 2024)
+
+annotation_task_name: "PRM800K Step-by-Step Verification"
+task_dir: "."
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="max-width: 800px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif;">
+    <div style="background: #e8f4fd; border: 1px solid #b3d9f2; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+      <h3 style="margin: 0 0 10px 0; color: #1a5276; font-size: 16px;">Math Problem</h3>
+      <div style="font-size: 15px; color: #2c3e50; line-height: 1.6;">{{text}}</div>
+    </div>
+    <div style="margin-bottom: 20px;">
+      <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px;">Reasoning Steps</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.7;">{{steps}}</div>
+    </div>
+    <div style="background: #fef9e7; border: 2px solid #f9e79f; border-radius: 8px; padding: 14px 20px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 6px 0; color: #7d6608; font-size: 15px;">Final Answer</h3>
+      <div style="font-size: 16px; font-weight: 600; color: #1a5276;">{{final_answer}}</div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "step_correctness"
+    annotation_type: radio
+    description: "Rate each reasoning step. Stop and mark 'Incorrect' at the first error you find."
+    labels:
+      - "Correct — this step is logically valid"
+      - "Neutral — this step doesn't clearly advance or harm"
+      - "Incorrect — this step contains an error"
+    keyboard_shortcuts:
+      "Correct — this step is logically valid": "1"
+      "Neutral — this step doesn't clearly advance or harm": "2"
+      "Incorrect — this step contains an error": "3"
+
+  - name: "solution_correctness"
+    annotation_type: radio
+    description: "Is the final answer correct?"
+    labels:
+      - "Correct — final answer is right"
+      - "Incorrect — final answer is wrong"
+    keyboard_shortcuts:
+      "Correct — final answer is right": "4"
+      "Incorrect — final answer is wrong": "5"
+
+  - name: "error_explanation"
+    annotation_type: text
+    description: "If you found an error, explain what went wrong in that step."
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

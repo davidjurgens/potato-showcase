@@ -1,0 +1,105 @@
+# AndroidWorld: Mobile Agent Task Evaluation
+# Based on "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents" (Rawles et al., ICLR 2025)
+# Task: Evaluate agent performance on Android mobile tasks across diverse apps
+
+annotation_task_name: "AndroidWorld Mobile Agent Evaluation"
+task_dir: "."
+
+# Data configuration
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+# Output
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+# Display layout with mobile screenshots and touch gesture trajectory
+html_layout: |
+  <div class="android-container" style="max-width: 900px; margin: 0 auto;">
+    <div class="task-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #388e3c;">
+      <h3 style="margin-top: 0; color: #388e3c;">Task Instruction</h3>
+      <div style="font-size: 16px; font-weight: bold;">{{text}}</div>
+    </div>
+    <div class="device-info" style="display: flex; gap: 15px; margin-bottom: 15px;">
+      <div style="background: #e3f2fd; padding: 10px 15px; border-radius: 8px; flex: 1;">
+        <strong>App:</strong> {{app_name}}
+      </div>
+      <div style="background: #fff3e0; padding: 10px 15px; border-radius: 8px; flex: 1;">
+        <strong>Android Version:</strong> {{android_version}}
+      </div>
+    </div>
+    <div class="screenshot-gallery" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #78909c;">
+      <h3 style="margin-top: 0; color: #37474f;">Mobile Screen Sequence</h3>
+      <div style="white-space: pre-wrap; font-size: 13px; line-height: 1.8; font-family: monospace; background: #fff; padding: 12px; border-radius: 6px;">{{screenshots}}</div>
+    </div>
+    <div class="trajectory-section" style="background: #fce4ec; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #c62828;">
+      <h3 style="margin-top: 0; color: #c62828;">Agent Trajectory (with Touch Gestures)</h3>
+      <div style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.6;">{{trajectory}}</div>
+    </div>
+    <div class="final-state-section" style="background: #e8eaf6; padding: 15px; border-radius: 8px; border: 2px solid #3f51b5;">
+      <h3 style="margin-top: 0; color: #3f51b5;">Final Screen State</h3>
+      <div style="white-space: pre-wrap; font-size: 14px;">{{final_state}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Task completion assessment
+  - name: "task_completion"
+    description: "Did the agent successfully complete the mobile task?"
+    annotation_type: radio
+    labels:
+      - "Complete — task fully achieved"
+      - "Partial — some steps done"
+      - "Failed — task not completed"
+    keyboard_shortcuts:
+      "Complete — task fully achieved": "1"
+      "Partial — some steps done": "2"
+      "Failed — task not completed": "3"
+
+  # Interaction types used
+  - name: "interaction_types"
+    description: "Which interaction types did the agent use during the trajectory?"
+    annotation_type: multiselect
+    labels:
+      - "Tap"
+      - "Long Press"
+      - "Swipe"
+      - "Scroll"
+      - "Type Text"
+      - "Back Button"
+      - "Home Button"
+      - "App Switch"
+      - "Notification Interaction"
+
+  # UI understanding assessment
+  - name: "ui_understanding"
+    description: "Did the agent correctly understand and navigate the mobile UI?"
+    annotation_type: radio
+    labels:
+      - "Yes — correctly understood mobile UI"
+      - "Mostly — minor UI misunderstandings"
+      - "Partially — several UI errors"
+      - "No — fundamental UI confusion"
+    keyboard_shortcuts:
+      "Yes — correctly understood mobile UI": "q"
+      "Mostly — minor UI misunderstandings": "w"
+      "Partially — several UI errors": "e"
+      "No — fundamental UI confusion": "r"
+
+  # Mobile-specific issues
+  - name: "mobile_issues"
+    description: "Describe any mobile-specific issues encountered by the agent."
+    annotation_type: text
+    required: false
+    placeholder: "Describe mobile-specific issues: gesture failures, small tap targets, orientation problems, notification handling errors..."
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2

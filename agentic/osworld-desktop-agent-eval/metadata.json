@@ -1,0 +1,23 @@
+{
+  "title": "OSWorld: Desktop Agent Task Evaluation",
+  "description": "Evaluation of multimodal agents performing open-ended tasks in real desktop environments. Annotators assess task success, identify OS-level actions, rate efficiency, and analyze failures across Ubuntu, Windows, and macOS environments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "multiselect", "likert", "text"],
+  "domain": ["Desktop Agents", "OS Automation", "GUI Agents"],
+  "useCase": ["Agent Evaluation", "Desktop Task Assessment", "Multi-Application Analysis"],
+  "complexity": "advanced",
+  "tags": ["desktop-agent", "osworld", "multimodal", "gui-agent", "os-automation", "multi-app", "trajectory"],
+  "featured": false,
+  "paperReference": "Xie et al., NeurIPS 2024",
+  "paperUrl": "https://arxiv.org/abs/2404.07972",
+  "datasetUrl": "https://os-world.github.io/",
+  "citation": "@inproceedings{xie2024osworld,\n  title={OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments},\n  author={Xie, Tianbao and Zhang, Danyang and Chen, Jixuan and Li, Xiaochuan and Zhao, Siheng and Cao, Ruisheng and others},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2024}\n}"
+}

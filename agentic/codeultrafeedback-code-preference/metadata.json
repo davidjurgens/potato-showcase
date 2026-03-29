@@ -1,0 +1,23 @@
+{
+  "title": "CodeUltraFeedback: Code Preference Evaluation",
+  "description": "Pairwise comparison of code responses with multi-dimensional quality rating. Annotators compare two code solutions to a programming task, select which is better, rate both on correctness, efficiency, readability, completeness, and instruction following, then justify their preference.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["pairwise", "multirate", "text"],
+  "domain": ["Code Generation", "Software Engineering"],
+  "useCase": ["RLHF", "Code Quality Assessment"],
+  "complexity": "advanced",
+  "tags": ["code", "pairwise-comparison", "preference-learning", "llm-alignment", "software-engineering"],
+  "featured": false,
+  "paperReference": "Weyssow et al., arXiv 2024",
+  "paperUrl": "https://arxiv.org/abs/2403.09032",
+  "datasetUrl": "https://huggingface.co/datasets/coseal/CodeUltraFeedback",
+  "citation": "@article{weyssow2024codeultrafeedback, title={CodeUltraFeedback: An LLM-as-a-Judge Dataset for Aligning Large Language Models to Coding Preferences}, author={Weyssow, Martin and Kamanda, Aton and Zhou, Xin and Sahraoui, Houari}, journal={arXiv preprint arXiv:2403.09032}, year={2024}}"
+}

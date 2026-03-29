@@ -1,0 +1,23 @@
+{
+  "title": "PRM800K Step-by-Step Verification",
+  "description": "Step-by-step verification of math reasoning chains based on OpenAI's PRM800K dataset. Annotators mark each reasoning step as Correct, Neutral, or Incorrect, stopping at the first error found, then judge the final answer correctness and explain any errors.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "text"],
+  "domain": ["Mathematics", "Reasoning"],
+  "useCase": ["Process Reward Models", "RLHF", "Math Verification"],
+  "complexity": "advanced",
+  "tags": ["process-reward-model", "math-reasoning", "step-verification", "PRM", "RLHF"],
+  "featured": true,
+  "paperReference": "Lightman et al., ICLR 2024",
+  "paperUrl": "https://arxiv.org/abs/2305.20050",
+  "datasetUrl": "https://github.com/openai/prm800k",
+  "citation": "@inproceedings{lightman2024lets, title={Let's Verify Step by Step}, author={Lightman, Hunter and Kosaraju, Vineet and Burda, Yura and Edwards, Harri and Baker, Bowen and Lee, Teddy and Leike, Jan and Schulman, John and Sutskever, Ilya and Cobbe, Karl}, booktitle={International Conference on Learning Representations (ICLR)}, year={2024}}"
+}

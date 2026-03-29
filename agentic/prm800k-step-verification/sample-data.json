@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prm800k-001",
+    "text": "Find the sum of all positive integers n such that n^2 + 12n - 2007 is a perfect square.",
+    "steps": "Step 1: We need n^2 + 12n - 2007 = k^2 for some non-negative integer k.\nStep 2: Complete the square on the left: (n + 6)^2 - 36 - 2007 = k^2, so (n + 6)^2 - 2043 = k^2.\nStep 3: Rearrange to get (n + 6)^2 - k^2 = 2043, which factors as (n + 6 - k)(n + 6 + k) = 2043.\nStep 4: Factor 2043 = 3 × 681 = 3 × 3 × 227. So 2043 = 1 × 2043 = 3 × 681 = 9 × 227.\nStep 5: For each factorization 2043 = a × b with a ≤ b and a, b same parity, we get n + 6 - k = a and n + 6 + k = b, so n = (a + b)/2 - 6.\nStep 6: From (1, 2043): n = (1 + 2043)/2 - 6 = 1022 - 6 = 1016. From (3, 681): n = (3 + 681)/2 - 6 = 342 - 6 = 336. From (9, 227): n = (9 + 227)/2 - 6 = 118 - 6 = 112.",
+    "final_answer": "The sum is 1016 + 336 + 112 = 1464."
+  },
+  {
+    "id": "prm800k-002",
+    "text": "A bag contains 4 red balls and 6 blue balls. Two balls are drawn without replacement. What is the probability that both balls are red?",
+    "steps": "Step 1: The total number of balls is 4 + 6 = 10.\nStep 2: The probability of drawing a red ball first is 4/10 = 2/5.\nStep 3: After drawing one red ball, there are 3 red balls and 6 blue balls left, for 9 total.\nStep 4: The probability of drawing a second red ball is 3/9 = 1/3.\nStep 5: The probability of both events is (2/5) × (1/3) = 2/15.",
+    "final_answer": "The probability is 2/15."
+  },
+  {
+    "id": "prm800k-003",
+    "text": "Solve for x: 3^(2x+1) = 27^(x-1).",
+    "steps": "Step 1: Rewrite 27 as 3^3, so the equation becomes 3^(2x+1) = (3^3)^(x-1).\nStep 2: Simplify the right side: 3^(2x+1) = 3^(3x-3).\nStep 3: Since the bases are equal, set exponents equal: 2x + 1 = 3x - 3.\nStep 4: Subtract 2x from both sides: 1 = x - 3.\nStep 5: Add 3 to both sides: x = 4.",
+    "final_answer": "x = 4"
+  },
+  {
+    "id": "prm800k-004",
+    "text": "In triangle ABC, angle A = 60°, b = 5, and c = 8. Find the length of side a.",
+    "steps": "Step 1: Use the Law of Cosines: a^2 = b^2 + c^2 - 2bc·cos(A).\nStep 2: Substitute the known values: a^2 = 25 + 64 - 2(5)(8)·cos(60°).\nStep 3: Since cos(60°) = 1/2, we get a^2 = 89 - 80 × (1/2) = 89 - 40 = 49.\nStep 4: Therefore a = √49 = 7.",
+    "final_answer": "a = 7"
+  },
+  {
+    "id": "prm800k-005",
+    "text": "How many ways can 8 people be seated around a circular table if two specific people (Alice and Bob) must sit next to each other?",
+    "steps": "Step 1: Treat Alice and Bob as a single unit. This gives us 7 units to arrange around the circular table.\nStep 2: The number of circular arrangements of 7 units is (7-1)! = 6! = 720.\nStep 3: Alice and Bob can switch places within their unit, giving 2 arrangements.\nStep 4: Total arrangements = 720 × 2 = 1440.",
+    "final_answer": "There are 1440 arrangements."
+  },
+  {
+    "id": "prm800k-006",
+    "text": "Find the remainder when 2^100 is divided by 7.",
+    "steps": "Step 1: Compute powers of 2 mod 7: 2^1 ≡ 2, 2^2 ≡ 4, 2^3 ≡ 8 ≡ 1 (mod 7).\nStep 2: Since 2^3 ≡ 1 (mod 7), the pattern repeats every 3.\nStep 3: Divide 100 by 3: 100 = 33 × 3 + 1.\nStep 4: So 2^100 = (2^3)^33 × 2^1 ≡ 1^33 × 2 ≡ 2 (mod 7).",
+    "final_answer": "The remainder is 2."
+  },
+  {
+    "id": "prm800k-007",
+    "text": "A sequence is defined by a_1 = 2 and a_(n+1) = 3a_n - 4. Find a_5.",
+    "steps": "Step 1: a_1 = 2.\nStep 2: a_2 = 3(2) - 4 = 6 - 4 = 2.\nStep 3: a_3 = 3(2) - 4 = 2.\nStep 4: Since the sequence is constant at 2, a_4 = 2 and a_5 = 2.",
+    "final_answer": "a_5 = 2"
+  },
+  {
+    "id": "prm800k-008",
+    "text": "Let f(x) = x^3 - 6x^2 + 11x - 6. Find all real roots of f(x) = 0.",
+    "steps": "Step 1: Try x = 1: f(1) = 1 - 6 + 11 - 6 = 0. So x = 1 is a root.\nStep 2: Factor out (x - 1): f(x) = (x - 1)(x^2 - 5x + 6).\nStep 3: Factor the quadratic: x^2 - 5x + 6 = (x - 2)(x - 3).\nStep 4: The roots are x = 1, x = 2, and x = 3.",
+    "final_answer": "The roots are 1, 2, and 3."
+  }
+]

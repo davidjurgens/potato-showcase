@@ -1,0 +1,86 @@
+# RefactorBench Multi-File Evaluation
+# Based on "RefactorBench: Evaluating Stateful Reasoning in Language Agents Through Code" (Gautam et al., ICLR 2025)
+# Task: Evaluate multi-file refactoring operations for correctness, type, and quality improvement
+
+annotation_task_name: "RefactorBench Multi-File Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 1500px; margin: 0 auto;">
+    <div style="background: #24292f; color: #ffffff; padding: 10px 16px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: 600;">{{repo_name}}</span>
+      <span style="font-size: 12px; color: #8b949e;">Changed files: {{file_list}}</span>
+    </div>
+    <div style="border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin: 8px 0; background: #f6f8fa;">
+      <h3 style="margin-top: 0; color: #24292f;">Refactoring Task</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: #1f2328;">{{text}}</div>
+    </div>
+    <div style="display: flex; gap: 12px; margin-top: 8px;">
+      <div style="flex: 0 0 200px; border: 1px solid #d0d7de; border-radius: 6px; overflow: hidden;">
+        <div style="background: #2d333b; color: #adbac7; padding: 8px 12px; font-weight: 600; font-size: 13px;">Changed Files</div>
+        <div style="padding: 8px 12px; background: #22272e; font-family: monospace; font-size: 12px; line-height: 2;">
+          {{file_list}}
+        </div>
+      </div>
+      <div style="flex: 1; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+        <div style="background: #161b22; color: #c9d1d9; padding: 8px 16px; font-weight: 600; font-size: 13px;">Multi-File Diff</div>
+        <pre style="margin: 0; padding: 12px 16px; background: #0d1117; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{file_diffs}}</pre>
+      </div>
+    </div>
+    <div style="margin-top: 8px; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+      <div style="background: #0d1117; color: #3fb950; padding: 8px 12px; font-weight: 600; font-size: 13px;">Test Results</div>
+      <pre style="margin: 0; padding: 12px; background: #161b22; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 12px; line-height: 1.5; white-space: pre;">{{test_results}}</pre>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "refactoring_success"
+    description: "Does the refactoring correctly preserve the original behavior?"
+    annotation_type: radio
+    labels:
+      - "Correct — refactoring preserves behavior"
+      - "Partially Correct — some files correct"
+      - "Incorrect — breaks functionality"
+      - "Regression — introduces new bugs"
+    keyboard_shortcuts:
+      "Correct — refactoring preserves behavior": "1"
+      "Partially Correct — some files correct": "2"
+      "Incorrect — breaks functionality": "3"
+      "Regression — introduces new bugs": "4"
+
+  - name: "refactoring_types"
+    description: "Select all refactoring types applied in this change"
+    annotation_type: multiselect
+    labels:
+      - "Extract Method"
+      - "Rename Symbol"
+      - "Move Class/Function"
+      - "Inline Variable"
+      - "Change Signature"
+      - "Extract Interface"
+      - "Simplify Conditional"
+      - "Other"
+
+  - name: "code_improvement"
+    description: "Overall, did the refactoring improve the code?"
+    annotation_type: likert
+    min_label: "Much Worse"
+    max_label: "Much Better"
+    size: 5
+
+  - name: "review_comments"
+    description: "Code review comments referencing specific files and changes"
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

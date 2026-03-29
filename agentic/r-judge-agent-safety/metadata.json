@@ -1,0 +1,23 @@
+{
+  "title": "R-Judge: Agent Safety Risk Evaluation",
+  "description": "Safety risk evaluation of LLM agent interactions across diverse risk scenarios. Annotators assess whether agent actions are safe or harmful, identify risk categories, evaluate intent vs. outcome alignment, and provide justifications for their safety assessments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["AI Safety", "Agent Evaluation"],
+  "useCase": ["Safety Auditing", "Risk Assessment"],
+  "complexity": "advanced",
+  "tags": ["agents", "safety", "risk-awareness", "llm-evaluation", "emnlp2024"],
+  "featured": false,
+  "paperReference": "Yuan et al., EMNLP Findings 2024",
+  "paperUrl": "https://arxiv.org/abs/2401.10019",
+  "datasetUrl": "https://github.com/Lordog/R-Judge",
+  "citation": "@inproceedings{yuan2024rjudge, title={R-Judge: Benchmarking Safety Risk Awareness for LLM Agents}, author={Yuan, Tongxin and He, Zhiwei and Dong, Lingzhong and Wang, Yiming and Zhao, Ruijie and Xia, Tian and Xu, Lizhen and Zhou, Binglin and Li, Fangqi and Zhang, Zhuosheng and Wang, Rui and Liu, Gongshen}, booktitle={Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)}, year={2024}}"
+}

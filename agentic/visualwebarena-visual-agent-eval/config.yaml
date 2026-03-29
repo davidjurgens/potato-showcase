@@ -1,0 +1,95 @@
+# VisualWebArena: Visual Web Agent Evaluation
+# Based on "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks" (Koh et al., ACL 2024)
+# Task: Evaluate multimodal agent performance on visually grounded web tasks
+
+annotation_task_name: "VisualWebArena Visual Agent Evaluation"
+task_dir: "."
+
+# Data configuration
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+# Output
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+# Display layout with screenshot gallery and agent trajectory
+html_layout: |
+  <div class="vwa-container" style="max-width: 900px; margin: 0 auto;">
+    <div class="task-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #1565c0;">
+      <h3 style="margin-top: 0; color: #1565c0;">Task Instruction</h3>
+      <div style="font-size: 16px; font-weight: bold;">{{text}}</div>
+      <div style="margin-top: 8px; color: #555;"><strong>Website:</strong> {{website}}</div>
+    </div>
+    <div class="screenshot-gallery" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #90a4ae;">
+      <h3 style="margin-top: 0; color: #37474f;">Screenshot Sequence</h3>
+      <div style="white-space: pre-wrap; font-size: 13px; line-height: 1.8; font-family: monospace; background: #fff; padding: 12px; border-radius: 6px;">{{screenshots}}</div>
+    </div>
+    <div class="trajectory-section" style="background: #fff8e1; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f9a825;">
+      <h3 style="margin-top: 0; color: #f57f17;">Agent Trajectory</h3>
+      <div style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.6;">{{trajectory}}</div>
+    </div>
+    <div class="final-state-section" style="background: #f3e5f5; padding: 15px; border-radius: 8px; border: 2px solid #7b1fa2;">
+      <h3 style="margin-top: 0; color: #7b1fa2;">Final State</h3>
+      <div style="white-space: pre-wrap; font-size: 14px;">{{final_state}}</div>
+    </div>
+  </div>
+
+# Annotation schemes
+annotation_schemes:
+  # Task completion assessment
+  - name: "task_completion"
+    description: "Did the agent successfully complete the visual web task?"
+    annotation_type: radio
+    labels:
+      - "Complete — task fully achieved"
+      - "Partial — some subtasks done"
+      - "Failed — task not completed"
+      - "Wrong Task — completed different task"
+    keyboard_shortcuts:
+      "Complete — task fully achieved": "1"
+      "Partial — some subtasks done": "2"
+      "Failed — task not completed": "3"
+      "Wrong Task — completed different task": "4"
+
+  # Visual grounding assessment
+  - name: "visual_grounding"
+    description: "What visual grounding issues (if any) did the agent exhibit?"
+    annotation_type: multiselect
+    labels:
+      - "Wrong Element Clicked"
+      - "Missed Visual Cue"
+      - "Incorrect Text Reading"
+      - "Wrong Image Interpretation"
+      - "Incorrect Layout Understanding"
+      - "Correct Visual Grounding"
+
+  # Visual reasoning assessment
+  - name: "visual_reasoning"
+    description: "Did the agent correctly reason about visual content on the page?"
+    annotation_type: radio
+    labels:
+      - "Yes — correctly interpreted visual content"
+      - "Partially — some visual understanding errors"
+      - "No — fundamental visual misunderstanding"
+    keyboard_shortcuts:
+      "Yes — correctly interpreted visual content": "q"
+      "Partially — some visual understanding errors": "w"
+      "No — fundamental visual misunderstanding": "e"
+
+  # Failure notes
+  - name: "failure_notes"
+    description: "Describe any visual grounding failures or issues observed."
+    annotation_type: text
+    required: false
+    placeholder: "Describe visual grounding failures: which elements were misidentified, what visual cues were missed..."
+
+# User configuration
+allow_all_users: true
+
+# Task assignment
+instances_per_annotator: 50
+annotation_per_instance: 2

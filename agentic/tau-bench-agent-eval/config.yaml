@@ -1,0 +1,72 @@
+# tau-bench Agent Evaluation
+# Based on "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains" (Yao et al., ICLR 2025)
+# Task: Evaluate tool-agent-user interactions in customer service domains
+
+annotation_task_name: "tau-bench Agent Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto;">
+    <div style="display: flex; gap: 12px; margin-bottom: 14px;">
+      <span style="background: #2c3e50; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 13px;">{{domain}}</span>
+    </div>
+    <div style="background: #e8f4fd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
+      <h3 style="margin: 0 0 8px 0; color: #1a5276;">Task Specification</h3>
+      <p style="margin: 0; font-size: 15px;">{{text}}</p>
+    </div>
+    <div style="background: #fafafa; border: 1px solid #ddd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
+      <h3 style="margin: 0 0 10px 0; color: #2c3e50;">Conversation</h3>
+      <div style="font-size: 14px; line-height: 1.8; white-space: pre-wrap;">{{conversation}}</div>
+    </div>
+    <div style="background: #f0f0f0; border: 1px solid #999; padding: 14px; border-radius: 8px;">
+      <h4 style="margin: 0 0 8px 0; color: #333;">Final Outcome</h4>
+      <p style="margin: 0; font-size: 14px;">{{final_outcome}}</p>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: task_success
+    description: "Did the agent successfully complete the customer's request?"
+    annotation_type: radio
+    labels:
+      - "Success"
+      - "Partial Success"
+      - "Failure"
+    keyboard_shortcuts:
+      "Success": "1"
+      "Partial Success": "2"
+      "Failure": "3"
+
+  - name: conversation_quality
+    description: "Rate the overall quality of the agent's conversation with the user."
+    annotation_type: likert
+    min_label: "Very Poor"
+    max_label: "Excellent"
+    size: 5
+
+  - name: tool_use_issues
+    description: "Select all tool use issues observed in the conversation."
+    annotation_type: multiselect
+    labels:
+      - "Tool Call Error"
+      - "Wrong Arguments"
+      - "Missing Tool Call"
+      - "Redundant Tool Call"
+      - "Correct Tool Use"
+
+  - name: eval_rationale
+    description: "Explain your evaluation: what did the agent do well or poorly?"
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

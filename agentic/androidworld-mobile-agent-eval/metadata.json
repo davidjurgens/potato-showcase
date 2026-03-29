@@ -1,0 +1,23 @@
+{
+  "title": "AndroidWorld: Mobile Agent Task Evaluation",
+  "description": "Evaluation of autonomous agents performing tasks in dynamic Android environments. Annotators assess task completion, identify interaction types and touch gestures, evaluate UI understanding, and describe mobile-specific issues across diverse Android apps.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["Mobile Agents", "Android Automation", "GUI Agents"],
+  "useCase": ["Agent Evaluation", "Mobile Task Assessment", "Touch Interaction Analysis"],
+  "complexity": "advanced",
+  "tags": ["mobile-agent", "android", "gui-agent", "touch-gesture", "app-automation", "dynamic-benchmark", "trajectory"],
+  "featured": false,
+  "paperReference": "Rawles et al., ICLR 2025",
+  "paperUrl": "https://arxiv.org/abs/2405.14573",
+  "datasetUrl": "https://github.com/google-research/android_world",
+  "citation": "@inproceedings{rawles2025androidworld,\n  title={AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents},\n  author={Rawles, Christopher and Clinckemaillie, Sarah and Chang, Yifan and Waltz, Jonathan and Lau, Gabrielle and Fair, Marybeth and Li, Alice and Bishop, William and Li, Wei and others},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2025}\n}"
+}

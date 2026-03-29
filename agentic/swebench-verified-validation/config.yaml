@@ -1,0 +1,83 @@
+# SWE-bench Verified Issue Validation
+# Based on "SWE-bench Verified" (Neil Chowdhury, James Aung, Chan Jun Shern et al., OpenAI Technical Report 2024)
+# Task: Validate GitHub issues from SWE-bench for specification quality, test adequacy, and solvability
+
+annotation_task_name: "SWE-bench Verified Issue Validation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 1400px; margin: 0 auto;">
+    <div style="background: #0d1117; color: #c9d1d9; padding: 10px 16px; border-radius: 6px 6px 0 0; font-size: 14px; font-weight: 600;">
+      <span style="color: #58a6ff;">{{repo_name}}</span>
+    </div>
+    <div style="display: flex; gap: 16px; margin-top: 4px;">
+      <div style="flex: 1; border: 1px solid #30363d; border-radius: 6px; padding: 16px; background: #f6f8fa;">
+        <h3 style="margin-top: 0; color: #24292f; border-bottom: 1px solid #d0d7de; padding-bottom: 8px;">Issue Description</h3>
+        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: #1f2328;">{{text}}</div>
+      </div>
+      <div style="flex: 1; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+        <div style="background: #161b22; color: #c9d1d9; padding: 8px 16px; font-weight: 600; font-size: 13px;">Test Patch</div>
+        <pre style="margin: 0; padding: 12px 16px; background: #0d1117; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{test_patch}}</pre>
+      </div>
+    </div>
+    <div style="margin-top: 12px; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+      <div style="background: #161b22; color: #c9d1d9; padding: 8px 16px; font-weight: 600; font-size: 13px;">Gold Patch (Reference Fix)</div>
+      <pre style="margin: 0; padding: 12px 16px; background: #0d1117; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{gold_patch}}</pre>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "issue_valid"
+    description: "Is the issue well-specified with a clear, reproducible problem?"
+    annotation_type: radio
+    labels:
+      - "Well-specified — clear problem with reproducible steps"
+      - "Ambiguous — issue unclear or underspecified"
+      - "Invalid — not a real bug or feature request"
+    keyboard_shortcuts:
+      "Well-specified — clear problem with reproducible steps": "1"
+      "Ambiguous — issue unclear or underspecified": "2"
+      "Invalid — not a real bug or feature request": "3"
+
+  - name: "test_adequate"
+    description: "Do the tests adequately verify the fix?"
+    annotation_type: radio
+    labels:
+      - "Sufficient — tests verify the fix completely"
+      - "Partial — tests cover some aspects"
+      - "Insufficient — tests don't adequately verify"
+    keyboard_shortcuts:
+      "Sufficient — tests verify the fix completely": "4"
+      "Partial — tests cover some aspects": "5"
+      "Insufficient — tests don't adequately verify": "6"
+
+  - name: "solution_exists"
+    description: "Is a solution feasible within the existing codebase?"
+    annotation_type: radio
+    labels:
+      - "Solvable — clear fix exists in codebase"
+      - "Likely solvable — fix probable but complex"
+      - "Unlikely — may require architectural changes"
+      - "Unsolvable — impossible given constraints"
+    keyboard_shortcuts:
+      "Solvable — clear fix exists in codebase": "7"
+      "Likely solvable — fix probable but complex": "8"
+      "Unlikely — may require architectural changes": "9"
+      "Unsolvable — impossible given constraints": "0"
+
+  - name: "validation_notes"
+    description: "Explain your validation reasoning"
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

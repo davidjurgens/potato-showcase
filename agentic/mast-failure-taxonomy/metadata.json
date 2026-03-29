@@ -1,0 +1,23 @@
+{
+  "title": "MAST Failure Taxonomy",
+  "description": "Annotate multi-agent system traces to identify failure modes from the MAST taxonomy, rate severity, pinpoint the first failure step, and describe the failure mechanism.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["multiselect", "radio", "text"],
+  "domain": ["Agentic AI", "Multi-Agent Systems", "Failure Analysis"],
+  "useCase": ["Failure Classification", "System Debugging"],
+  "complexity": "advanced",
+  "tags": ["multi-agent", "failure-modes", "taxonomy", "debugging", "llm-systems"],
+  "featured": false,
+  "paperReference": "Cemri et al., arXiv 2025",
+  "paperUrl": "https://arxiv.org/abs/2503.13657",
+  "datasetUrl": "https://github.com/multi-agent-systems-failure-taxonomy/MAST",
+  "citation": "@article{cemri2025mast,\n  title={Why Do Multi-Agent LLM Systems Fail?},\n  author={Cemri, Mert and Pan, Melissa Z. and Yang, Shuyi and Agrawal, Lakshya A. and Chopra, Bhavya and Tiwari, Rishabh and Keutzer, Kurt and Parameswaran, Aditya and Klein, Dan and Ramchandran, Kannan and Zaharia, Matei and Gonzalez, Joseph E. and Stoica, Ion},\n  journal={arXiv preprint arXiv:2503.13657},\n  year={2025}\n}"
+}

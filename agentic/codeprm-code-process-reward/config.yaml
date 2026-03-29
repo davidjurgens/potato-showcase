@@ -1,0 +1,61 @@
+# CodePRM Code Process Reward
+# Based on "CodePRM: Execution Feedback-enhanced Process Reward Model for Code Generation" (Li et al., ACL 2025 Findings)
+
+annotation_task_name: "CodePRM Code Process Reward"
+task_dir: "."
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="max-width: 850px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif;">
+    <div style="background: #f0f4ff; border: 1px solid #b0c4de; border-radius: 8px; padding: 18px 22px; margin-bottom: 18px;">
+      <h3 style="margin: 0 0 10px 0; color: #2c3e6b; font-size: 16px;">Problem Description</h3>
+      <div style="font-size: 14px; color: #2c3e50; line-height: 1.6;">{{text}}</div>
+    </div>
+    <div style="margin-bottom: 18px;">
+      <h3 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px;">Incremental Code Steps</h3>
+      <div style="background: #fafafa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 14px 18px; font-family: 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; line-height: 1.6;">{{steps}}</div>
+    </div>
+    <div style="background: #1a1a2e; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 8px 0; color: #00e676; font-size: 14px; font-family: 'Courier New', monospace;">$ python run_tests.py</h3>
+      <div style="font-family: 'Courier New', monospace; font-size: 13px; color: #00e676; white-space: pre-wrap; line-height: 1.5;">{{test_output}}</div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "step_correctness"
+    annotation_type: radio
+    description: "Verify each code generation step against the problem requirements."
+    labels:
+      - "Correct — code step is valid"
+      - "Neutral — step doesn't affect outcome"
+      - "Incorrect — step introduces a bug"
+    keyboard_shortcuts:
+      "Correct — code step is valid": "1"
+      "Neutral — step doesn't affect outcome": "2"
+      "Incorrect — step introduces a bug": "3"
+
+  - name: "code_compiles"
+    annotation_type: radio
+    description: "Is the code in this step syntactically valid?"
+    labels:
+      - "Yes — code is syntactically valid"
+      - "No — syntax error present"
+      - "N/A — not a code step"
+    keyboard_shortcuts:
+      "Yes — code is syntactically valid": "4"
+      "No — syntax error present": "5"
+      "N/A — not a code step": "6"
+
+  - name: "step_feedback"
+    annotation_type: text
+    description: "Provide feedback on the current step."
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

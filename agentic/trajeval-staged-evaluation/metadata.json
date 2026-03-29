@@ -1,0 +1,23 @@
+{
+  "title": "TrajEval Staged Evaluation",
+  "description": "Evaluate code agent trajectories decomposed into search, edit, and verification stages, rating quality of each stage and determining overall pass/fail verdict.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["multirate", "radio", "text"],
+  "domain": ["Agentic AI", "Code Generation", "Software Engineering"],
+  "useCase": ["Agent Evaluation", "Code Review"],
+  "complexity": "advanced",
+  "tags": ["code-agents", "trajectory-evaluation", "staged-analysis", "swe-bench", "software-engineering"],
+  "featured": false,
+  "paperReference": "Kim et al., arXiv 2026",
+  "paperUrl": "https://arxiv.org/abs/2603.24631",
+  "datasetUrl": "",
+  "citation": "@article{kim2026trajeval,\n  title={TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis},\n  author={Kim, Myeongsoo and Wang, Dingmin and Cui, Siwei and Farmahinifarahani, Farima and Garg, Shweta and Ray, Baishakhi and Zhuo, Terry Yue and Mukherjee, Rajdeep and Kumar, Varun},\n  journal={arXiv preprint arXiv:2603.24631},\n  year={2026}\n}"
+}
