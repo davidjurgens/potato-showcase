@@ -1,0 +1,75 @@
+# AgentRewardBench Trajectory Scoring
+# Based on "AgentRewardBench: Evaluating Automatic Evaluations of Web Agent Trajectories" (Lù et al., arXiv 2025)
+# Task: Rate web agent trajectory steps, judge overall success, and identify evaluator disagreements
+
+annotation_task_name: "AgentRewardBench Trajectory Scoring"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: Arial, sans-serif; max-width: 1100px; margin: 0 auto;">
+    <div style="display: flex; gap: 20px;">
+      <div style="flex: 2;">
+        <div style="background: #e8f4fd; padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <h3 style="margin: 0 0 8px 0; color: #1a5276;">Task Description</h3>
+          <p style="margin: 0; font-size: 15px;">{{text}}</p>
+          <p style="margin: 8px 0 0 0; font-size: 13px; color: #555;"><strong>Website:</strong> {{website}}</p>
+        </div>
+        <div style="background: #fafafa; border: 1px solid #ddd; padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <h3 style="margin: 0 0 10px 0; color: #2c3e50;">Agent Trajectory</h3>
+          <div style="font-size: 14px; line-height: 1.7; white-space: pre-wrap;">{{trajectory}}</div>
+        </div>
+      </div>
+      <div style="flex: 1; min-width: 260px;">
+        <div style="background: #fff3cd; border: 1px solid #ffc107; padding: 14px; border-radius: 8px; position: sticky; top: 10px;">
+          <h4 style="margin: 0 0 10px 0; color: #856404;">Automatic Evaluator Scores</h4>
+          <div style="font-size: 13px; line-height: 1.8; white-space: pre-wrap;">{{auto_scores}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - annotation_type: multirate
+    name: step_scores
+    description: "Rate each dimension of the agent trajectory on a 5-point scale."
+    labels:
+      - "1 - Very Poor"
+      - "2 - Poor"
+      - "3 - Average"
+      - "4 - Good"
+      - "5 - Excellent"
+    options:
+      - "Step Correctness"
+      - "Efficiency"
+      - "Goal Alignment"
+      - "Recovery Quality"
+      - "Final Success"
+
+  - name: overall_success
+    description: "Judge the overall success of the agent in completing the task."
+    annotation_type: radio
+    labels:
+      - "Success"
+      - "Partial Success"
+      - "Failure"
+    keyboard_shortcuts:
+      "Success": "1"
+      "Partial Success": "2"
+      "Failure": "3"
+
+  - name: evaluator_disagreement
+    description: "Where do automatic evaluators disagree with your judgment? Explain any differences."
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

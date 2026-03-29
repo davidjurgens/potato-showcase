@@ -1,0 +1,23 @@
+{
+  "title": "DevBench Repository Evaluation",
+  "description": "Evaluate AI-generated repositories across the full software development lifecycle. Annotators rate architecture design, code quality, test coverage, documentation, and dependency management for generated projects.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["multirate", "radio", "text"],
+  "domain": ["Software Engineering", "Code Generation"],
+  "useCase": ["Repository Evaluation", "Code Review"],
+  "complexity": "advanced",
+  "tags": ["devbench", "repository-evaluation", "code-quality", "software-lifecycle", "agentic-coding"],
+  "featured": false,
+  "paperReference": "Li et al., arXiv 2024",
+  "paperUrl": "https://arxiv.org/abs/2403.08604",
+  "datasetUrl": "https://github.com/open-compass/DevBench",
+  "citation": "@article{li2024devbench, title={Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study}, author={Bowen Li and Wenhan Wu and Ziwei Tang and Lin Shi and John Yang and others}, journal={arXiv preprint arXiv:2403.08604}, year={2024}}"
+}

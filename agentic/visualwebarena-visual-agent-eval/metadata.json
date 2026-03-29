@@ -1,0 +1,23 @@
+{
+  "title": "VisualWebArena: Visual Web Agent Evaluation",
+  "description": "Evaluation of multimodal web agents on visually grounded web tasks. Annotators assess task completion, visual grounding accuracy, and visual reasoning capabilities by reviewing screenshot sequences and agent trajectories.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "multiselect", "text"],
+  "domain": ["Visual Web Agents", "Multimodal Agents", "GUI Agents"],
+  "useCase": ["Agent Evaluation", "Visual Grounding Assessment", "Task Completion Analysis"],
+  "complexity": "advanced",
+  "tags": ["visual-agent", "web-agent", "multimodal", "visual-grounding", "screenshot", "trajectory", "gui-agent"],
+  "featured": false,
+  "paperReference": "Koh et al., ACL 2024",
+  "paperUrl": "https://arxiv.org/abs/2401.13649",
+  "datasetUrl": "https://jykoh.com/vwa",
+  "citation": "@inproceedings{koh2024visualwebarena,\n  title={VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks},\n  author={Koh, Jing Yu and Lo, Robert and Jang, Lawrence and Duvvur, Vikram and Lim, Ming Chong and Huang, Po-Yu and Neubig, Graham and Zhou, Shuyan and Salakhutdinov, Ruslan and Fried, Daniel},\n  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2024}\n}"
+}

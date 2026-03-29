@@ -1,0 +1,80 @@
+# SWE-Bench+ Patch Screening
+# Based on "SWE-Bench+: Enhanced Coding Benchmark for LLMs" (Aleithan et al., arXiv 2024)
+# Task: Screen model-generated patches against gold patches for correctness and quality
+
+annotation_task_name: "SWE-Bench+ Patch Screening"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 1500px; margin: 0 auto;">
+    <div style="background: #0d1117; color: #c9d1d9; padding: 10px 16px; border-radius: 6px 6px 0 0; font-size: 14px;">
+      <span style="font-weight: 600; color: #58a6ff;">{{repo_name}}</span>
+      <span style="margin-left: 12px; color: #8b949e;">Test Results: {{test_results}}</span>
+    </div>
+    <div style="border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin: 8px 0; background: #f6f8fa;">
+      <h3 style="margin-top: 0; color: #24292f;">Issue Description</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: #1f2328;">{{text}}</div>
+    </div>
+    <div style="display: flex; gap: 12px; margin-top: 8px;">
+      <div style="flex: 1; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+        <div style="background: #1a2233; color: #58a6ff; padding: 8px 16px; font-weight: 600; font-size: 13px;">Model Patch</div>
+        <pre style="margin: 0; padding: 12px 16px; background: #0d1117; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{model_patch}}</pre>
+      </div>
+      <div style="flex: 1; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
+        <div style="background: #1a2d1a; color: #3fb950; padding: 8px 16px; font-weight: 600; font-size: 13px;">Gold Patch</div>
+        <pre style="margin: 0; padding: 12px 16px; background: #0d1117; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{gold_patch}}</pre>
+      </div>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: "patch_correctness"
+    description: "Does the model patch correctly fix the issue?"
+    annotation_type: radio
+    labels:
+      - "Correct — properly fixes the issue"
+      - "Partially Correct — fixes some but not all aspects"
+      - "Incorrect — does not fix the issue"
+      - "Overfitting — passes tests but wrong approach"
+    keyboard_shortcuts:
+      "Correct — properly fixes the issue": "1"
+      "Partially Correct — fixes some but not all aspects": "2"
+      "Incorrect — does not fix the issue": "3"
+      "Overfitting — passes tests but wrong approach": "4"
+
+  - name: "patch_issues"
+    description: "Select all issues present in the model patch"
+    annotation_type: multiselect
+    labels:
+      - "Missing Edge Case"
+      - "Incorrect Logic"
+      - "Style Violation"
+      - "Unnecessary Changes"
+      - "Incomplete Fix"
+      - "Test Overfitting"
+      - "No Issues"
+
+  - name: "patch_preference"
+    description: "Which patch is better overall?"
+    annotation_type: pairwise
+    labels:
+      - "Model Patch"
+      - "Gold Patch"
+      - "Equivalent"
+
+  - name: "screening_notes"
+    description: "Detailed screening observations"
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

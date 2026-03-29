@@ -1,0 +1,23 @@
+{
+  "title": "tau-bench Agent Evaluation",
+  "description": "Evaluate tool-agent-user interactions in customer service domains by judging task success, conversation quality, tool use correctness, and providing evaluation rationale.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "likert", "multiselect", "text"],
+  "domain": ["Agentic AI", "Customer Service", "Tool Use"],
+  "useCase": ["Agent Evaluation", "Conversation Quality"],
+  "complexity": "advanced",
+  "tags": ["tool-use", "customer-service", "user-interaction", "retail", "airline"],
+  "featured": false,
+  "paperReference": "Yao et al., ICLR 2025",
+  "paperUrl": "https://arxiv.org/abs/2406.12045",
+  "datasetUrl": "https://github.com/sierra-research/tau-bench",
+  "citation": "@inproceedings{yao2025taubench,\n  title={$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains},\n  author={Yao, Shunyu and Shinn, Noah and Razavi, Pedram and Narasimhan, Karthik},\n  booktitle={International Conference on Learning Representations},\n  year={2025}\n}"
+}

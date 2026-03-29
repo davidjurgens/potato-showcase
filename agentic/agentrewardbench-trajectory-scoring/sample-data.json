@@ -1,0 +1,58 @@
+[
+  {
+    "id": "arb-001",
+    "text": "Find the cheapest wireless noise-cancelling headphones with at least 4-star rating and add them to cart.",
+    "website": "shopping.example.com",
+    "trajectory": "Step 1: Navigate to shopping.example.com\nStep 2: Click on 'Electronics' category\nStep 3: Type 'wireless noise-cancelling headphones' in search bar\nStep 4: Click 'Sort by Price: Low to High'\nStep 5: Scroll down and check ratings filter >= 4 stars\nStep 6: Click on 'SoundMax Pro NC-200' ($49.99, 4.3 stars)\nStep 7: Click 'Add to Cart'\nStep 8: Verify item appears in cart with correct price",
+    "auto_scores": "GPT-4-Judge: Success (0.95)\nClaude-Judge: Success (0.91)\nRule-Based: Partial (0.60)\nReward Model v2: Success (0.88)"
+  },
+  {
+    "id": "arb-002",
+    "text": "Post a reply to the thread about Python async best practices in the programming forum.",
+    "website": "forum.devtalk.example.org",
+    "trajectory": "Step 1: Navigate to forum.devtalk.example.org\nStep 2: Click 'Programming Languages' section\nStep 3: Click 'Python' subsection\nStep 4: Search for 'async best practices'\nStep 5: Click on thread 'Best practices for asyncio in production?'\nStep 6: Scroll to bottom of thread\nStep 7: Click 'Reply' button\nStep 8: Type response about using asyncio.gather for concurrent tasks\nStep 9: Click 'Submit Reply'\nStep 10: Verify reply appears in thread",
+    "auto_scores": "GPT-4-Judge: Success (0.92)\nClaude-Judge: Success (0.89)\nRule-Based: Success (0.85)\nReward Model v2: Success (0.90)"
+  },
+  {
+    "id": "arb-003",
+    "text": "Create a new repository named 'ml-pipeline' with a Python .gitignore and MIT license on the code hosting platform.",
+    "website": "git.example.dev",
+    "trajectory": "Step 1: Navigate to git.example.dev\nStep 2: Click '+' icon in top-right corner\nStep 3: Select 'New Repository'\nStep 4: Type 'ml-pipeline' as repository name\nStep 5: Add description 'Machine learning pipeline framework'\nStep 6: Select 'Public' visibility\nStep 7: Check 'Add .gitignore' and select 'Python' template\nStep 8: Check 'Choose a license' and select 'MIT License'\nStep 9: Click 'Create Repository'\nStep 10: ERROR: Name 'ml-pipeline' already taken\nStep 11: Change name to 'ml-pipeline-v2'\nStep 12: Click 'Create Repository'\nStep 13: Repository created successfully",
+    "auto_scores": "GPT-4-Judge: Partial (0.55)\nClaude-Judge: Failure (0.30)\nRule-Based: Failure (0.10)\nReward Model v2: Partial (0.45)"
+  },
+  {
+    "id": "arb-004",
+    "text": "Book a one-way flight from San Francisco to New York for next Friday, economy class, for 1 adult.",
+    "website": "flights.travelbook.example.com",
+    "trajectory": "Step 1: Navigate to flights.travelbook.example.com\nStep 2: Select 'One-way' trip type\nStep 3: Type 'San Francisco (SFO)' in departure field\nStep 4: Type 'New York' in destination field\nStep 5: Select 'JFK - John F. Kennedy' from dropdown\nStep 6: Click date picker and select next Friday\nStep 7: Set passengers to 1 Adult\nStep 8: Select 'Economy' class\nStep 9: Click 'Search Flights'\nStep 10: Page loads with 12 results\nStep 11: Click 'Sort by Price'\nStep 12: Select cheapest flight ($189, United Airlines, 5h 20m)\nStep 13: Click 'Book Now'\nStep 14: Reached passenger details page",
+    "auto_scores": "GPT-4-Judge: Partial (0.70)\nClaude-Judge: Partial (0.65)\nRule-Based: Partial (0.50)\nReward Model v2: Success (0.82)"
+  },
+  {
+    "id": "arb-005",
+    "text": "Find and compare the specifications of iPhone 15 Pro and Samsung Galaxy S24 Ultra on the electronics review site.",
+    "website": "techreview.example.com",
+    "trajectory": "Step 1: Navigate to techreview.example.com\nStep 2: Search for 'iPhone 15 Pro'\nStep 3: Click on iPhone 15 Pro review page\nStep 4: Click 'Add to Compare'\nStep 5: Search for 'Samsung Galaxy S24 Ultra'\nStep 6: Click on Galaxy S24 Ultra review page\nStep 7: Click 'Add to Compare'\nStep 8: Click 'View Comparison' (2 items)\nStep 9: Comparison table displayed with specs side-by-side",
+    "auto_scores": "GPT-4-Judge: Success (0.97)\nClaude-Judge: Success (0.95)\nRule-Based: Success (0.90)\nReward Model v2: Success (0.93)"
+  },
+  {
+    "id": "arb-006",
+    "text": "Change the shipping address on order #ORD-8842 to 742 Evergreen Terrace, Springfield, IL 62704.",
+    "website": "shopping.example.com",
+    "trajectory": "Step 1: Navigate to shopping.example.com\nStep 2: Click 'My Account'\nStep 3: Click 'Order History'\nStep 4: Search for order #ORD-8842\nStep 5: Click on order #ORD-8842\nStep 6: Click 'Edit Shipping Address'\nStep 7: ERROR: 'This order has already been shipped'\nStep 8: Click 'Contact Support'\nStep 9: Type request to change address in chat window\nStep 10: Support agent responds: address change not possible for shipped orders",
+    "auto_scores": "GPT-4-Judge: Failure (0.20)\nClaude-Judge: Partial (0.40)\nRule-Based: Failure (0.05)\nReward Model v2: Failure (0.15)"
+  },
+  {
+    "id": "arb-007",
+    "text": "Star the top 3 trending Python repositories this week on the code hosting platform.",
+    "website": "git.example.dev",
+    "trajectory": "Step 1: Navigate to git.example.dev\nStep 2: Click 'Explore' in navigation bar\nStep 3: Click 'Trending' tab\nStep 4: Select language filter 'Python'\nStep 5: Select time range 'This week'\nStep 6: Click star icon on first repo 'fastllm/inference-engine'\nStep 7: Star confirmed\nStep 8: Click star icon on second repo 'datacraft/polars-utils'\nStep 9: Star confirmed\nStep 10: Click star icon on third repo 'mlops-team/deploy-kit'\nStep 11: Star confirmed",
+    "auto_scores": "GPT-4-Judge: Success (0.98)\nClaude-Judge: Success (0.96)\nRule-Based: Success (0.92)\nReward Model v2: Success (0.95)"
+  },
+  {
+    "id": "arb-008",
+    "text": "Submit a bug report for the login page timeout issue on the project management tool, including browser console error logs.",
+    "website": "projects.teamwork.example.io",
+    "trajectory": "Step 1: Navigate to projects.teamwork.example.io\nStep 2: Click 'Help & Support' in footer\nStep 3: Click 'Report a Bug'\nStep 4: Fill in title: 'Login page times out after 30 seconds'\nStep 5: Select severity: 'High'\nStep 6: Select category: 'Authentication'\nStep 7: Type description of timeout behavior\nStep 8: Click 'Attach Files'\nStep 9: Attempt to paste console logs\nStep 10: ERROR: Paste not supported, must upload file\nStep 11: Click 'Upload' and select console_log.txt\nStep 12: File uploaded successfully\nStep 13: Click 'Submit Bug Report'\nStep 14: Bug report #BUG-4421 created successfully",
+    "auto_scores": "GPT-4-Judge: Success (0.88)\nClaude-Judge: Success (0.85)\nRule-Based: Partial (0.65)\nReward Model v2: Success (0.80)"
+  }
+]

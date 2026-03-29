@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mast-001",
+    "text": "Write a Python web scraper that extracts product prices from three e-commerce sites and saves results to a CSV file.",
+    "agent_type": "CrewAI",
+    "trajectory": "[Planner Agent] Step 1: Decompose task into subtasks: (1) build scraper for site A, (2) build scraper for site B, (3) build scraper for site C, (4) merge results into CSV.\n\n[Coder Agent A] Step 2: Writing scraper for site A using BeautifulSoup... Code generated. Extracts prices from div.price-tag elements.\n\n[Coder Agent B] Step 3: Writing scraper for site B using Selenium... Code generated. Extracts prices from span.cost elements.\n\n[Coder Agent C] Step 4: Writing scraper for site C using BeautifulSoup... Code generated. Extracts prices from div.price-tag elements. (Note: Copied structure from Agent A but site C uses span.product-price)\n\n[Merger Agent] Step 5: Combining outputs into CSV... Agent A output: 45 prices. Agent B output: 38 prices. Agent C output: 0 prices (empty list).\n\n[Merger Agent] Step 6: CSV generated with data from sites A and B only. Reports task as complete.",
+    "outcome": "PARTIAL FAILURE: CSV file created but missing all data from site C. Agent C copied incorrect selectors from Agent A without adapting to site C's HTML structure. Merger Agent did not flag the empty results."
+  },
+  {
+    "id": "mast-002",
+    "text": "Collaboratively write a research literature review on transformer architectures, covering attention mechanisms, efficiency improvements, and applications.",
+    "agent_type": "AutoGen",
+    "trajectory": "[Coordinator] Step 1: Assigning sections - Writer A: attention mechanisms, Writer B: efficiency improvements, Writer C: applications.\n\n[Writer A] Step 2: Drafting attention section... Covers self-attention, multi-head attention, cross-attention. 800 words generated.\n\n[Writer B] Step 3: Drafting efficiency section... Covers sparse attention, linear attention, FlashAttention. Also includes a paragraph on self-attention basics (duplicating Writer A's content).\n\n[Writer C] Step 4: Drafting applications section... Covers NLP, vision, and speech. References 'the efficient attention methods discussed above' but Writer B's section will appear after Writer C's in final document.\n\n[Editor Agent] Step 5: Merging sections in order: A, C, B. Does not notice the ordering creates a forward reference issue in section C.\n\n[Coordinator] Step 6: Final review - approves document. Total: 2,400 words.",
+    "outcome": "FAILURE: Document has duplicated content between sections A and B, and section C references content that appears later in the document. Editor did not catch structural issues."
+  },
+  {
+    "id": "mast-003",
+    "text": "Debug a failing unit test in a Python Flask application. The test_login endpoint returns 500 instead of 200.",
+    "agent_type": "LangGraph",
+    "trajectory": "[Analyzer Agent] Step 1: Reading test file test_auth.py... Test calls POST /login with {'username': 'admin', 'password': 'test123'}. Expected: 200. Got: 500.\n\n[Analyzer Agent] Step 2: Reading auth/routes.py... Login endpoint calls db.query(User).filter_by(username=username). Error traceback shows: sqlalchemy.exc.OperationalError: no such table: users.\n\n[Fixer Agent] Step 3: The database table is missing. Creating migration: alembic revision --autogenerate -m 'create users table'.\n\n[Fixer Agent] Step 4: Running migration: alembic upgrade head. Table 'users' created.\n\n[Tester Agent] Step 5: Re-running test... Still fails with 500. New error: 'NoneType has no attribute check_password' - no admin user exists in fresh database.\n\n[Fixer Agent] Step 6: Adding test fixture to create admin user before test. Re-running... Test passes with 200.",
+    "outcome": "SUCCESS: Bug fixed in two iterations. Root cause was missing database table and missing test fixture. All agents contributed correctly to diagnosis and fix."
+  },
+  {
+    "id": "mast-004",
+    "text": "Plan a 3-day trip to Tokyo including flights, hotels, and daily itineraries with restaurant recommendations.",
+    "agent_type": "CrewAI",
+    "trajectory": "[Travel Planner] Step 1: Searching flights from SFO to NRT... Found: United $890 RT, ANA $950 RT, JAL $920 RT. Selecting United $890.\n\n[Hotel Agent] Step 2: Searching hotels in Shibuya area... Found: Hotel Granbell ($120/night), Cerulean Tower ($280/night), Shibuya Stream ($195/night). Selecting Cerulean Tower for all 3 nights.\n\n[Itinerary Agent] Step 3: Day 1 plan: Meiji Shrine, Harajuku, Shibuya Crossing. Dinner at 'Sushi Saito' (3-star Michelin, $300/person).\n\n[Budget Agent] Step 4: Total budget check - Flights: $890, Hotel: $840, Restaurants: $900+ ... Total exceeds $3000. No budget constraint was specified by the user, proceeding.\n\n[Itinerary Agent] Step 5: Day 2 plan: Tsukiji Outer Market, Asakusa, Akihabara. Day 3: TeamLab Borderless, Ginza shopping.\n\n[Travel Planner] Step 6: Compiling final itinerary document. All recommendations finalized.",
+    "outcome": "PARTIAL FAILURE: Itinerary created but no budget was established upfront. Restaurant recommendations are extremely expensive without alternatives. Hotel selection defaulted to most expensive option without justification. The specification was ambiguous about budget constraints."
+  },
+  {
+    "id": "mast-005",
+    "text": "Solve the math problem: Find all integer solutions to x^3 + y^3 = z^3 where 0 < x < y < z < 1000.",
+    "agent_type": "AutoGen",
+    "trajectory": "[Math Agent A] Step 1: This is related to Fermat's Last Theorem. For n=3, there are no positive integer solutions. The answer is: no solutions exist.\n\n[Math Agent B] Step 2: Let me verify by brute force search. Writing Python code to check all triples...\n\n[Math Agent B] Step 3: Running code... Iterating through x=1..999, y=x+1..999, checking if x^3+y^3 is a perfect cube less than 1000^3.\n\n[Math Agent A] Step 4: While Agent B runs the code, I'll note that Fermat's Last Theorem was proven by Andrew Wiles in 1995. No computation needed.\n\n[Math Agent B] Step 5: Code finished. Confirmed: 0 solutions found. Runtime: 45 seconds.\n\n[Coordinator] Step 6: Both agents agree. Final answer: No integer solutions exist. This follows from Fermat's Last Theorem (proven by Wiles, 1995).",
+    "outcome": "SUCCESS: Correct answer reached. Both theoretical reasoning and computational verification agree. Minor inefficiency in running brute force when theoretical proof suffices, but no failure occurred."
+  },
+  {
+    "id": "mast-006",
+    "text": "Refactor a monolithic Node.js Express application into microservices: separate the user service, product service, and order service.",
+    "agent_type": "LangGraph",
+    "trajectory": "[Architect Agent] Step 1: Analyzing monolith structure. Identified 3 domains: users (auth, profiles), products (catalog, search), orders (cart, checkout, history). Plan: create 3 separate Express apps with shared database.\n\n[User Service Agent] Step 2: Extracting user routes and models... Created user-service/ with routes, controllers, models. Connected to shared PostgreSQL database.\n\n[Product Service Agent] Step 3: Extracting product routes... Created product-service/. Also moved the order-related product lookup into product-service (should stay with order service).\n\n[Order Service Agent] Step 4: Extracting order routes... Cannot find product lookup function. It was moved to product-service. Adding HTTP call to product-service for product details.\n\n[Order Service Agent] Step 5: HTTP call to product-service fails because product-service is not running on expected port. Hard-coded localhost:3002 but product-service runs on 3001.\n\n[Architect Agent] Step 6: Attempting to fix port configuration... Updates order-service to call port 3001. But now user-service and product-service both try to bind port 3001. Deadlock.",
+    "outcome": "FAILURE: Microservice separation failed due to incorrect domain boundary decisions (product lookup moved to wrong service), hard-coded ports causing conflicts, and no service discovery mechanism. Multiple cascading errors from initial decomposition mistake."
+  },
+  {
+    "id": "mast-007",
+    "text": "Generate a comprehensive data analysis report from a sales CSV file including visualizations, statistical summaries, and trend forecasts.",
+    "agent_type": "CrewAI",
+    "trajectory": "[Data Loader Agent] Step 1: Loading sales_data.csv... 12,450 rows, columns: date, product, region, quantity, revenue. Parsed successfully.\n\n[Stats Agent] Step 2: Computing summaries... Mean revenue: $245.30, Median: $189.00, Std: $312.50. Top product: 'Widget Pro' (23% of revenue). Top region: Northeast (31% of revenue).\n\n[Visualization Agent] Step 3: Creating charts... Monthly revenue trend (line chart), product breakdown (pie chart), regional heatmap. Saved as PNG files.\n\n[Forecast Agent] Step 4: Building ARIMA forecast model... Using last 24 months of data. Forecast: 8% revenue growth next quarter. Confidence interval: 3-13%.\n\n[Report Agent] Step 5: Compiling report... Inserted statistics, embedded chart images, added forecast section. Generated 12-page PDF.\n\n[Report Agent] Step 6: Final review pass. All sections present, charts render correctly, numbers cross-referenced with raw data. Report complete.",
+    "outcome": "SUCCESS: Comprehensive report generated with accurate statistics, clear visualizations, and reasonable forecast. All agents completed their subtasks without errors."
+  },
+  {
+    "id": "mast-008",
+    "text": "Create an automated email campaign: draft 3 variations of a product launch email, A/B test subject lines, and schedule sends for optimal times across time zones.",
+    "agent_type": "AutoGen",
+    "trajectory": "[Copywriter Agent] Step 1: Drafting email variation A: Professional tone, feature-focused. Subject: 'Introducing ProductX: The Future of Workflow Automation'\n\n[Copywriter Agent] Step 2: Drafting variation B: Casual tone, benefit-focused. Subject: 'Say goodbye to manual workflows forever'\n\n[Copywriter Agent] Step 3: Drafting variation C: Urgency tone, launch-focused. Subject: 'ProductX launches today - Early bird pricing ends Friday'\n\n[A/B Test Agent] Step 4: Setting up A/B test with 3 subject lines. Allocating 10% of list to each variant for initial test. Will select winner after 4 hours.\n\n[Scheduler Agent] Step 5: Calculating optimal send times... US East: 10am ET, US West: 10am PT, Europe: 10am CET, Asia: 10am JST. Scheduling 4 batches.\n\n[Scheduler Agent] Step 6: ERROR: Email platform API rejects schedule - cannot schedule more than 2 batches within 24 hours on free tier. Agent proceeds to schedule only US East and US West, silently dropping Europe and Asia batches without notification.",
+    "outcome": "PARTIAL FAILURE: Email campaign created but only 2 of 4 regional batches scheduled due to API limitation. Scheduler Agent failed to report the dropped batches or propose alternatives. Europe and Asia segments will not receive the campaign."
+  }
+]

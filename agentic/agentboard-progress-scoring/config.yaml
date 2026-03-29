@@ -1,0 +1,80 @@
+# AgentBoard Progress Scoring
+# Based on "AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents" (Ma et al., NeurIPS 2024)
+# Task: Evaluate multi-turn agent progress through milestone tracking and progress scoring
+
+annotation_task_name: "AgentBoard Progress Scoring"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+html_layout: |
+  <div class="container" style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto;">
+    <div style="background: #e8f4fd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
+      <h3 style="margin: 0 0 8px 0; color: #1a5276;">Task Description</h3>
+      <p style="margin: 0; font-size: 15px;">{{text}}</p>
+      <span style="display: inline-block; margin-top: 8px; background: #2c3e50; color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 12px;">{{environment}}</span>
+    </div>
+    <div style="background: #eafaf1; border: 1px solid #27ae60; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
+      <h4 style="margin: 0 0 8px 0; color: #1e8449;">Milestones Checklist</h4>
+      <p style="margin: 0; font-size: 14px; line-height: 1.8; white-space: pre-wrap;">{{milestones}}</p>
+    </div>
+    <details style="margin-bottom: 14px;" open>
+      <summary style="cursor: pointer; font-weight: bold; font-size: 15px; padding: 8px; background: #f5f5f5; border-radius: 6px;">Agent Trajectory</summary>
+      <div style="padding: 12px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 6px 6px; font-size: 14px; line-height: 1.7; white-space: pre-wrap;">{{trajectory}}</div>
+    </details>
+    <div style="background: #fdf2e9; border: 1px solid #e67e22; padding: 14px; border-radius: 8px;">
+      <h4 style="margin: 0 0 8px 0; color: #a04000;">Final State</h4>
+      <p style="margin: 0; font-size: 14px; white-space: pre-wrap;">{{final_state}}</p>
+    </div>
+  </div>
+
+annotation_schemes:
+  - name: milestones_reached
+    description: "Select all subtask milestones that the agent successfully achieved."
+    annotation_type: multiselect
+    labels:
+      - "Milestone 1"
+      - "Milestone 2"
+      - "Milestone 3"
+      - "Milestone 4"
+      - "Milestone 5"
+
+  - name: progress_score
+    description: "Rate the overall progress of the agent toward completing the task."
+    annotation_type: likert
+    min_label: "1 - No Progress"
+    max_label: "5 - Complete"
+    size: 5
+
+  - name: agent_category
+    description: "Which environment category does this agent task belong to?"
+    annotation_type: radio
+    labels:
+      - "Web Shopping"
+      - "Web Browsing"
+      - "Tool Use"
+      - "Game"
+      - "Embodied"
+      - "Reasoning"
+    keyboard_shortcuts:
+      "Web Shopping": "1"
+      "Web Browsing": "2"
+      "Tool Use": "3"
+      "Game": "4"
+      "Embodied": "5"
+      "Reasoning": "6"
+
+  - name: progress_notes
+    description: "Notes on partial progress, missed milestones, or interesting agent behavior."
+    annotation_type: text
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2

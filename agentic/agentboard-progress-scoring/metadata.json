@@ -1,0 +1,23 @@
+{
+  "title": "AgentBoard Progress Scoring",
+  "description": "Assess multi-turn LLM agent progress by identifying achieved milestones, scoring overall progress, categorizing the agent environment, and noting partial progress observations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["multiselect", "likert", "radio", "text"],
+  "domain": ["Agentic AI", "LLM Agents", "Benchmarking"],
+  "useCase": ["Agent Evaluation", "Progress Assessment"],
+  "complexity": "advanced",
+  "tags": ["multi-turn-agents", "progress-scoring", "milestones", "llm-benchmarking"],
+  "featured": false,
+  "paperReference": "Ma et al., NeurIPS 2024",
+  "paperUrl": "https://arxiv.org/abs/2401.13178",
+  "datasetUrl": "",
+  "citation": "@inproceedings{ma2024agentboard,\n  title={AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents},\n  author={Ma, Chang and Zhang, Junlei and Zhu, Zhihao and Yang, Cheng and Yang, Yujiu and Jin, Yaohui and Lan, Zhenzhong and Kong, Lingpeng and He, Junxian},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
+}

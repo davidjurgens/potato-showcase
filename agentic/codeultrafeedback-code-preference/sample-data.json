@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cuf-001",
+    "text": "Write a Python function that implements binary search on a sorted list. The function should return the index of the target element, or -1 if not found.",
+    "language": "python",
+    "response_a": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "response_b": "def binary_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1"
+  },
+  {
+    "id": "cuf-002",
+    "text": "Create a JavaScript function that debounces another function, ensuring it only executes after a specified delay since the last call.",
+    "language": "javascript",
+    "response_a": "function debounce(fn, delay) {\n    let timer;\n    return function(...args) {\n        clearTimeout(timer);\n        timer = setTimeout(() => fn.apply(this, args), delay);\n    };\n}",
+    "response_b": "function debounce(func, wait) {\n    let timeoutId = null;\n    let lastArgs = null;\n\n    function debounced(...args) {\n        lastArgs = args;\n        if (timeoutId !== null) {\n            clearTimeout(timeoutId);\n        }\n        timeoutId = setTimeout(() => {\n            func.apply(this, lastArgs);\n            timeoutId = null;\n            lastArgs = null;\n        }, wait);\n    }\n\n    debounced.cancel = function() {\n        if (timeoutId !== null) {\n            clearTimeout(timeoutId);\n            timeoutId = null;\n            lastArgs = null;\n        }\n    };\n\n    debounced.flush = function() {\n        if (timeoutId !== null) {\n            clearTimeout(timeoutId);\n            func.apply(this, lastArgs);\n            timeoutId = null;\n            lastArgs = null;\n        }\n    };\n\n    return debounced;\n}"
+  },
+  {
+    "id": "cuf-003",
+    "text": "Write a Python class that implements a basic LRU (Least Recently Used) cache with get and put operations. Both operations should run in O(1) time.",
+    "language": "python",
+    "response_a": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.cache = OrderedDict()\n        self.capacity = capacity\n\n    def get(self, key):\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key, value):\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "response_b": "class LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.order = []\n\n    def get(self, key):\n        if key in self.cache:\n            self.order.remove(key)\n            self.order.append(key)\n            return self.cache[key]\n        return -1\n\n    def put(self, key, value):\n        if key in self.cache:\n            self.order.remove(key)\n        elif len(self.cache) >= self.capacity:\n            oldest = self.order.pop(0)\n            del self.cache[oldest]\n        self.cache[key] = value\n        self.order.append(key)"
+  },
+  {
+    "id": "cuf-004",
+    "text": "Write a JavaScript function that deep clones an object, handling nested objects, arrays, dates, and regular expressions.",
+    "language": "javascript",
+    "response_a": "function deepClone(obj) {\n    return JSON.parse(JSON.stringify(obj));\n}",
+    "response_b": "function deepClone(obj, seen = new WeakMap()) {\n    if (obj === null || typeof obj !== 'object') return obj;\n    if (seen.has(obj)) return seen.get(obj);\n    if (obj instanceof Date) return new Date(obj.getTime());\n    if (obj instanceof RegExp) return new RegExp(obj.source, obj.flags);\n    if (obj instanceof Map) {\n        const mapClone = new Map();\n        seen.set(obj, mapClone);\n        obj.forEach((val, key) => mapClone.set(deepClone(key, seen), deepClone(val, seen)));\n        return mapClone;\n    }\n    if (obj instanceof Set) {\n        const setClone = new Set();\n        seen.set(obj, setClone);\n        obj.forEach(val => setClone.add(deepClone(val, seen)));\n        return setClone;\n    }\n    const clone = Array.isArray(obj) ? [] : {};\n    seen.set(obj, clone);\n    for (const key of Reflect.ownKeys(obj)) {\n        clone[key] = deepClone(obj[key], seen);\n    }\n    return clone;\n}"
+  },
+  {
+    "id": "cuf-005",
+    "text": "Write a Python function that flattens a nested dictionary into a single-level dictionary with dot-separated keys. For example, {'a': {'b': 1, 'c': {'d': 2}}} becomes {'a.b': 1, 'a.c.d': 2}.",
+    "language": "python",
+    "response_a": "def flatten_dict(d, parent_key='', sep='.'):\n    items = []\n    for k, v in d.items():\n        new_key = f\"{parent_key}{sep}{k}\" if parent_key else k\n        if isinstance(v, dict):\n            items.extend(flatten_dict(v, new_key, sep=sep).items())\n        else:\n            items.append((new_key, v))\n    return dict(items)",
+    "response_b": "def flatten_dict(nested_dict):\n    result = {}\n    stack = [(nested_dict, '')]\n    while stack:\n        current, prefix = stack.pop()\n        for key, value in current.items():\n            full_key = f\"{prefix}.{key}\" if prefix else key\n            if isinstance(value, dict) and value:\n                stack.append((value, full_key))\n            else:\n                result[full_key] = value\n    return result"
+  },
+  {
+    "id": "cuf-006",
+    "text": "Create a Python async HTTP client class that supports GET and POST requests with retry logic, timeout handling, and response caching.",
+    "language": "python",
+    "response_a": "import aiohttp\nimport asyncio\nfrom functools import lru_cache\n\nclass AsyncHTTPClient:\n    def __init__(self, timeout=30, retries=3):\n        self.timeout = aiohttp.ClientTimeout(total=timeout)\n        self.retries = retries\n\n    async def get(self, url):\n        async with aiohttp.ClientSession(timeout=self.timeout) as session:\n            async with session.get(url) as resp:\n                return await resp.json()\n\n    async def post(self, url, data):\n        async with aiohttp.ClientSession(timeout=self.timeout) as session:\n            async with session.post(url, json=data) as resp:\n                return await resp.json()",
+    "response_b": "import aiohttp\nimport asyncio\nfrom collections import OrderedDict\nimport time\nimport hashlib\nimport json\n\nclass AsyncHTTPClient:\n    def __init__(self, timeout=30, max_retries=3, cache_ttl=300, cache_size=100):\n        self.timeout = aiohttp.ClientTimeout(total=timeout)\n        self.max_retries = max_retries\n        self.cache_ttl = cache_ttl\n        self.cache_size = cache_size\n        self._cache = OrderedDict()\n        self._session = None\n\n    async def _get_session(self):\n        if self._session is None or self._session.closed:\n            self._session = aiohttp.ClientSession(timeout=self.timeout)\n        return self._session\n\n    def _cache_key(self, method, url, data=None):\n        raw = f\"{method}:{url}:{json.dumps(data, sort_keys=True) if data else ''}\"\n        return hashlib.md5(raw.encode()).hexdigest()\n\n    def _get_cached(self, key):\n        if key in self._cache:\n            entry = self._cache[key]\n            if time.time() - entry['time'] < self.cache_ttl:\n                self._cache.move_to_end(key)\n                return entry['data']\n            del self._cache[key]\n        return None\n\n    def _set_cached(self, key, data):\n        self._cache[key] = {'data': data, 'time': time.time()}\n        if len(self._cache) > self.cache_size:\n            self._cache.popitem(last=False)\n\n    async def _request(self, method, url, data=None, use_cache=True):\n        cache_key = self._cache_key(method, url, data)\n        if use_cache:\n            cached = self._get_cached(cache_key)\n            if cached is not None:\n                return cached\n        session = await self._get_session()\n        last_error = None\n        for attempt in range(self.max_retries):\n            try:\n                kwargs = {'json': data} if data else {}\n                async with session.request(method, url, **kwargs) as resp:\n                    resp.raise_for_status()\n                    result = await resp.json()\n                    if use_cache:\n                        self._set_cached(cache_key, result)\n                    return result\n            except (aiohttp.ClientError, asyncio.TimeoutError) as e:\n                last_error = e\n                if attempt < self.max_retries - 1:\n                    await asyncio.sleep(2 ** attempt)\n        raise last_error\n\n    async def get(self, url, use_cache=True):\n        return await self._request('GET', url, use_cache=use_cache)\n\n    async def post(self, url, data, use_cache=False):\n        return await self._request('POST', url, data=data, use_cache=use_cache)\n\n    async def close(self):\n        if self._session and not self._session.closed:\n            await self._session.close()"
+  },
+  {
+    "id": "cuf-007",
+    "text": "Write a JavaScript function that converts a Roman numeral string to an integer. Handle values from 1 to 3999.",
+    "language": "javascript",
+    "response_a": "function romanToInt(s) {\n    const map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };\n    let result = 0;\n    for (let i = 0; i < s.length; i++) {\n        const curr = map[s[i]];\n        const next = map[s[i + 1]];\n        if (next && curr < next) {\n            result -= curr;\n        } else {\n            result += curr;\n        }\n    }\n    return result;\n}",
+    "response_b": "function romanToInt(s) {\n    const romans = [\n        ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],\n        ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],\n        ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]\n    ];\n    let result = 0;\n    let remaining = s;\n    for (const [numeral, value] of romans) {\n        while (remaining.startsWith(numeral)) {\n            result += value;\n            remaining = remaining.slice(numeral.length);\n        }\n    }\n    if (remaining.length > 0) {\n        throw new Error(`Invalid Roman numeral: ${s}`);\n    }\n    return result;\n}"
+  },
+  {
+    "id": "cuf-008",
+    "text": "Write a Python function that finds all permutations of a given string. Return a list of unique permutations sorted alphabetically.",
+    "language": "python",
+    "response_a": "from itertools import permutations\n\ndef string_permutations(s):\n    return sorted(set(''.join(p) for p in permutations(s)))",
+    "response_b": "def string_permutations(s):\n    if len(s) <= 1:\n        return [s]\n    result = []\n    seen = set()\n    for i, char in enumerate(s):\n        if char in seen:\n            continue\n        seen.add(char)\n        remaining = s[:i] + s[i+1:]\n        for perm in string_permutations(remaining):\n            result.append(char + perm)\n    result.sort()\n    return result"
+  }
+]

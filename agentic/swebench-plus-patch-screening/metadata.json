@@ -1,0 +1,23 @@
+{
+  "title": "SWE-Bench+ Patch Screening",
+  "description": "Screen and compare model-generated patches against gold patches for SWE-Bench+ instances. Annotators evaluate correctness, identify specific issues, and compare model vs. gold solutions side-by-side.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "jurgens@umich.edu",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "annotationTypes": ["radio", "multiselect", "pairwise", "text"],
+  "domain": ["Software Engineering", "Code Generation"],
+  "useCase": ["Patch Evaluation", "Code Review"],
+  "complexity": "advanced",
+  "tags": ["swe-bench", "patch-screening", "code-diff", "benchmark", "agentic-coding"],
+  "featured": false,
+  "paperReference": "Aleithan et al., arXiv 2024",
+  "paperUrl": "https://arxiv.org/abs/2410.06992",
+  "datasetUrl": "https://github.com/patchscreening/SWE-Bench-Plus",
+  "citation": "@article{aleithan2024swebenchplus, title={SWE-Bench+: Enhanced Coding Benchmark for LLMs}, author={Reem Aleithan and Haoran Xue and Mohammad Mahdi Mohajer and Elijah Nnorom and Gias Uddin and Song Wang}, journal={arXiv preprint arXiv:2410.06992}, year={2024}}"
+}
