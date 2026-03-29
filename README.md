@@ -1,6 +1,6 @@
 # Potato Annotation Showcase
 
-A curated collection of **361** example annotation task configurations for [Potato](https://github.com/davidjurgens/potato), the lightweight annotation tool for NLP research. Covers all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, CVPR, and more.
+A curated collection of **379** example annotation task configurations for [Potato](https://github.com/davidjurgens/potato), the lightweight annotation tool for NLP research. Covers all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, CVPR, and more.
 
 ## Categories
 
@@ -13,7 +13,7 @@ A curated collection of **361** example annotation task configurations for [Pota
 | [**evaluation/**](./evaluation/) | AI output evaluation (LLM judging, code, benchmarks) | 23 |
 | [**preference-learning/**](./preference-learning/) | RLHF, DPO, and preference annotation tasks | 18 |
 | [**multimodal/**](./multimodal/) | Cross-modal tasks (robotics, chart analysis, science QA) | 9 |
-| [**agentic/**](./agentic/) | Agent evaluation tasks (web agents, code agents) | 3 |
+| [**agentic/**](./agentic/) | Agent evaluation (traces, coding agents, PRM, safety) | 21 |
 | [**semeval/**](./semeval/) | SemEval shared tasks (2013-2025, 90 tasks) | 90 |
 | [**templates/**](./templates/) | Generic reusable annotation templates | 20 |
 
@@ -132,6 +132,21 @@ A curated collection of **361** example annotation task configurations for [Pota
 | [constitutional-ai-harmlessness](./preference-learning/constitutional-ai-harmlessness) | Constitutional AI (2022) | radio, likert, text |
 | [mmlu-pro-tiered-eval](./preference-learning/mmlu-pro-tiered-eval) | MMLU-Pro (NeurIPS 2024) | tiered_annotation, radio |
 | + 13 more | HH-RLHF, SafeRLHF, BeaverTails, WebGPT, etc. |
+
+---
+
+## Agentic Evaluation (21 tasks)
+
+Tasks showcasing Potato's agent trace and coding agent annotation features. See the [Potato agent trace docs](https://github.com/davidjurgens/potato/blob/master/docs/agent_traces.md) and [coding agent docs](https://github.com/davidjurgens/potato/blob/master/docs/coding_agent_annotation.md).
+
+| Subcategory | Tasks | Examples |
+|-------------|-------|----------|
+| Agent Trace Evaluation | 5 | AgentRewardBench, AgentBoard, MAST failure taxonomy, τ-bench, TRAJEVAL |
+| Coding Agent Evaluation | 6 | SWE-bench, SWE-bench Verified, SWE-bench+, DevBench, RefactorBench, BigCodeBench |
+| Visual/GUI Agent Eval | 4 | WebArena, VisualWebArena, OSWorld, AndroidWorld |
+| Process Reward Models | 3 | PRM800K step verification, SWE-PRM, CodePRM |
+| Safety & Preference | 2 | R-Judge agent safety, CodeUltraFeedback |
+| Web Agent Annotation | 1 | Mind2Web |
 
 ---
 
