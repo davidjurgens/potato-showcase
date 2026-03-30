@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Damen et al., ECCV 2018",
-  "paperUrl": "https://openaccess.thecvf.com/content_ECCV_2018/html/Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html",
+  "paperUrl": "https://arxiv.org/abs/1804.02748",
   "datasetUrl": "https://epic-kitchens.github.io/",
   "citation": "@inproceedings{damen2018scaling,\n  title={Scaling egocentric vision: The EPIC-KITCHENS dataset},\n  author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria and Fidler, Sanja and Furnari, Antonino and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan and Perrett, Toby and Price, Will and Wray, Michael},\n  booktitle={European Conference on Computer Vision},\n  pages={720--736},\n  year={2018}\n}"
 }

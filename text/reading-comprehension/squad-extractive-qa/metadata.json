@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Rajpurkar et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "rajpurkar",
     "affiliation": "Stanford University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "text", "radio"],
-  "domain": ["NLP", "Question Answering"],
-  "useCase": ["Reading Comprehension", "Information Extraction", "Question Answering"],
+  "annotationTypes": [
+    "span",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Reading Comprehension",
+    "Information Extraction",
+    "Question Answering"
+  ],
   "complexity": "beginner",
-  "tags": ["squad", "extractive-qa", "reading-comprehension", "wikipedia", "emnlp2016"],
+  "tags": [
+    "squad",
+    "extractive-qa",
+    "reading-comprehension",
+    "wikipedia",
+    "emnlp2016"
+  ],
   "featured": false,
   "paperReference": "Rajpurkar et al., EMNLP 2016",
   "paperUrl": "https://aclanthology.org/D16-1264/",

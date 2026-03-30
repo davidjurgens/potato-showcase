@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Jia et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["NLP", "Question Answering", "SemEval"],
-  "useCase": ["Recipe QA", "Reading Comprehension", "Procedural Text"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Question Answering",
+    "SemEval"
+  ],
+  "useCase": [
+    "Recipe QA",
+    "Reading Comprehension",
+    "Procedural Text"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2022", "shared-task", "recipe-qa", "question-answering", "procedural-text"],
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "recipe-qa",
+    "question-answering",
+    "procedural-text"
+  ],
   "featured": false,
   "paperReference": "Jia et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.156/",

@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Liang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "stanford-crfm",
     "affiliation": "Stanford University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["pure_display", "likert"],
-  "domain": ["NLP", "Evaluation", "Benchmarking"],
-  "useCase": ["Model Evaluation", "Benchmark Analysis", "Model Comparison"],
+  "annotationTypes": [
+    "pure_display",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Evaluation",
+    "Benchmarking"
+  ],
+  "useCase": [
+    "Model Evaluation",
+    "Benchmark Analysis",
+    "Model Comparison"
+  ],
   "complexity": "beginner",
-  "tags": ["helm", "model-evaluation", "benchmarking", "language-models", "tmlr2023"],
+  "tags": [
+    "helm",
+    "model-evaluation",
+    "benchmarking",
+    "language-models",
+    "tmlr2023"
+  ],
   "featured": false,
   "paperReference": "Liang et al., TMLR 2023",
   "paperUrl": "https://arxiv.org/abs/2211.09110",

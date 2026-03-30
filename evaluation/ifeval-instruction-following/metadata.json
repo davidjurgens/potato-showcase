@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "multiselect", "text"],
-  "domain": ["AI Evaluation", "Instruction Following", "LLM Assessment"],
-  "useCase": ["Instruction-Following Evaluation", "LLM Benchmarking", "Constraint Verification"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "AI Evaluation",
+    "Instruction Following",
+    "LLM Assessment"
+  ],
+  "useCase": [
+    "Instruction-Following Evaluation",
+    "LLM Benchmarking",
+    "Constraint Verification"
+  ],
   "complexity": "intermediate",
-  "tags": ["instruction-following", "ifeval", "llm-evaluation", "constraints", "google-research"],
+  "tags": [
+    "instruction-following",
+    "ifeval",
+    "llm-evaluation",
+    "constraints",
+    "google-research"
+  ],
   "featured": false,
   "paperReference": "Zhou et al., arXiv 2023",
   "paperUrl": "https://arxiv.org/abs/2311.07911",

@@ -4,20 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Roth and Anthonio",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Pragmatics", "SemEval"],
-  "useCase": ["Plausibility Judgment", "Instruction Understanding", "Pragmatic Inference"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Pragmatics",
+    "SemEval"
+  ],
+  "useCase": [
+    "Plausibility Judgment",
+    "Instruction Understanding",
+    "Pragmatic Inference"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2022", "shared-task", "plausibility", "clarification", "instructions", "pragmatics"],
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "plausibility",
+    "clarification",
+    "instructions",
+    "pragmatics"
+  ],
   "featured": false,
   "paperReference": "Roth and Anthonio, SemEval 2022",
-  "paperUrl": "https://aclanthology.org/2022.semeval-1.133/",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.146/",
   "datasetUrl": "https://github.com/Anthonio/SemEval2022-Task7",
-  "citation": "@inproceedings{roth-anthonio-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 7: Identifying Plausible Clarifications of Implicit and Underspecified Language in Instructional Texts\",\n    author = \"Roth, Michael  and Anthonio, Talita\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.133\"\n}"
+  "citation": "@inproceedings{roth-anthonio-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 7: Identifying Plausible Clarifications of Implicit and Underspecified Language in Instructional Texts\",\n    author = \"Roth, Michael  and Anthonio, Talita\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.146\"\n}"
 }

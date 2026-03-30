@@ -4,20 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Goyal et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "facebookresearch",
     "affiliation": "Meta AI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "text", "select"],
-  "domain": ["NLP", "Machine Translation", "Cross-Lingual"],
-  "useCase": ["Translation Quality", "Quality Estimation", "Machine Translation Evaluation"],
+  "annotationTypes": [
+    "likert",
+    "text",
+    "select"
+  ],
+  "domain": [
+    "NLP",
+    "Machine Translation",
+    "Cross-Lingual"
+  ],
+  "useCase": [
+    "Translation Quality",
+    "Quality Estimation",
+    "Machine Translation Evaluation"
+  ],
   "complexity": "intermediate",
-  "tags": ["machine-translation", "quality-estimation", "flores", "multilingual", "tacl2022"],
+  "tags": [
+    "machine-translation",
+    "quality-estimation",
+    "flores",
+    "multilingual",
+    "tacl2022"
+  ],
   "featured": false,
   "paperReference": "Goyal et al., TACL 2022",
-  "paperUrl": "https://aclanthology.org/2022.tacl-1.21/",
+  "paperUrl": "https://aclanthology.org/2022.tacl-1.30/",
   "datasetUrl": "https://github.com/facebookresearch/flores",
-  "citation": "@article{goyal-etal-2022-flores,\n    title = \"The {FLORES}-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation\",\n    author = \"Goyal, Naman  and Gao, Cynthia  and Chaudhary, Vishrav  and Chen, Peng-Jen  and Wenzek, Guillaume  and Ju, Da  and Krishnan, Sanjana  and Ranzato, Marc'Aurelio  and Guzm{\\'a}n, Francisco  and Fan, Angela\",\n    journal = \"Transactions of the Association for Computational Linguistics\",\n    volume = \"10\",\n    year = \"2022\",\n    publisher = \"MIT Press\",\n    url = \"https://aclanthology.org/2022.tacl-1.21\",\n    pages = \"264--286\"\n}"
+  "citation": "@article{goyal-etal-2022-flores,\n    title = \"The {FLORES}-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation\",\n    author = \"Goyal, Naman  and Gao, Cynthia  and Chaudhary, Vishrav  and Chen, Peng-Jen  and Wenzek, Guillaume  and Ju, Da  and Krishnan, Sanjana  and Ranzato, Marc'Aurelio  and Guzm{\\'a}n, Francisco  and Fan, Angela\",\n    journal = \"Transactions of the Association for Computational Linguistics\",\n    volume = \"10\",\n    year = \"2022\",\n    publisher = \"MIT Press\",\n    url = \"https://aclanthology.org/2022.tacl-1.30\",\n    pages = \"264--286\"\n}"
 }

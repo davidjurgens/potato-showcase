@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["pairwise", "likert"],
-  "domain": ["NLP", "LLM Evaluation"],
-  "useCase": ["LLM Benchmarking", "Model Comparison", "Quality Assessment"],
+  "annotationTypes": [
+    "pairwise",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "LLM Evaluation"
+  ],
+  "useCase": [
+    "LLM Benchmarking",
+    "Model Comparison",
+    "Quality Assessment"
+  ],
   "complexity": "intermediate",
-  "tags": ["llm-evaluation", "mt-bench", "pairwise", "chatbot-arena", "response-quality", "multi-turn"],
+  "tags": [
+    "llm-evaluation",
+    "mt-bench",
+    "pairwise",
+    "chatbot-arena",
+    "response-quality",
+    "multi-turn"
+  ],
   "featured": false,
   "paperReference": "Zheng et al., NeurIPS 2023",
   "paperUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html",

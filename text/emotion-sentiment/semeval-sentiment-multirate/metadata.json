@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Rosenthal et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "sebastianruder",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multirate", "radio"],
-  "domain": ["NLP", "Social Media"],
-  "useCase": ["Sentiment Analysis", "Opinion Mining", "Social Media Analysis"],
+  "annotationTypes": [
+    "multirate",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Opinion Mining",
+    "Social Media Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["sentiment", "semeval", "twitter", "multirate", "opinion-mining", "semeval2017"],
+  "tags": [
+    "sentiment",
+    "semeval",
+    "twitter",
+    "multirate",
+    "opinion-mining",
+    "semeval2017"
+  ],
   "featured": false,
   "paperReference": "Rosenthal et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2088/",

@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Hendrycks et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "hendrycks",
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "AI Evaluation"],
-  "useCase": ["Knowledge Evaluation", "LLM Benchmarking", "Question Answering"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "AI Evaluation"
+  ],
+  "useCase": [
+    "Knowledge Evaluation",
+    "LLM Benchmarking",
+    "Question Answering"
+  ],
   "complexity": "beginner",
-  "tags": ["mmlu", "multiple-choice", "knowledge", "benchmark", "iclr2021"],
+  "tags": [
+    "mmlu",
+    "multiple-choice",
+    "knowledge",
+    "benchmark",
+    "iclr2021"
+  ],
   "featured": false,
   "paperReference": "Hendrycks et al., ICLR 2021",
   "paperUrl": "https://arxiv.org/abs/2009.03300",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Sermpezis et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "sermpezis",
     "affiliation": "Aristotle University of Thessaloniki"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "span"],
-  "domain": ["Political Science", "Social Media"],
-  "useCase": ["Political Analysis", "Sentiment Analysis", "Discourse Analysis"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "span"
+  ],
+  "domain": [
+    "Political Science",
+    "Social Media"
+  ],
+  "useCase": [
+    "Political Analysis",
+    "Sentiment Analysis",
+    "Discourse Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["political", "polarization", "populism", "sentiment", "discourse", "multi-task"],
+  "tags": [
+    "political",
+    "polarization",
+    "populism",
+    "sentiment",
+    "discourse",
+    "multi-task"
+  ],
   "featured": true,
   "paperReference": "Sermpezis et al., arXiv 2025",
   "paperUrl": "https://arxiv.org/abs/2501.06265",

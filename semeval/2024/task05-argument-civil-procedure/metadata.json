@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Bongard et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["SemEval", "NLP", "Legal", "Argumentation"],
-  "useCase": ["Legal Reasoning", "Argument Analysis", "Question Answering"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Legal",
+    "Argumentation"
+  ],
+  "useCase": [
+    "Legal Reasoning",
+    "Argument Analysis",
+    "Question Answering"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2024", "shared-task", "legal", "civil-procedure", "argumentation", "qa"],
+  "tags": [
+    "semeval",
+    "semeval-2024",
+    "shared-task",
+    "legal",
+    "civil-procedure",
+    "argumentation",
+    "qa"
+  ],
   "featured": false,
   "paperReference": "Bongard et al., SemEval 2024",
   "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",

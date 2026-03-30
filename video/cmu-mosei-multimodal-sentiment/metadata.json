@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio", "text"],
-  "domain": ["Multimodal Analysis", "Sentiment Analysis", "Emotion Recognition"],
-  "useCase": ["Sentiment Detection", "Emotion Classification", "Multimodal Fusion"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Multimodal Analysis",
+    "Sentiment Analysis",
+    "Emotion Recognition"
+  ],
+  "useCase": [
+    "Sentiment Detection",
+    "Emotion Classification",
+    "Multimodal Fusion"
+  ],
   "complexity": "advanced",
-  "tags": ["multimodal", "sentiment", "emotion", "multi-tier", "elan-style", "acl2018", "cmu-mosei"],
+  "tags": [
+    "multimodal",
+    "sentiment",
+    "emotion",
+    "multi-tier",
+    "elan-style",
+    "acl2018",
+    "cmu-mosei"
+  ],
   "featured": false,
   "paperReference": "Zadeh et al., ACL 2018",
   "paperUrl": "https://aclanthology.org/P18-1208/",

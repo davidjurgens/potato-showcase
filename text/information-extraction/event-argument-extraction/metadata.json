@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "THU-KEG",
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Information Extraction"],
-  "useCase": ["Event Extraction", "Information Extraction", "Knowledge Graphs"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Event Extraction",
+    "Information Extraction",
+    "Knowledge Graphs"
+  ],
   "complexity": "advanced",
-  "tags": ["event-extraction", "argument-extraction", "eae", "maven", "acl2024", "document-level"],
+  "tags": [
+    "event-extraction",
+    "argument-extraction",
+    "eae",
+    "maven",
+    "acl2024",
+    "document-level"
+  ],
   "featured": true,
   "paperReference": "Wang et al., ACL 2024",
   "paperUrl": "https://aclanthology.org/2024.acl-long.224/",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Lu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "lupantech",
     "affiliation": "UCLA"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "multiselect"],
-  "domain": ["Multimodal", "Education"],
-  "useCase": ["Science QA", "Chain-of-Thought Reasoning", "Multimodal Understanding"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "multiselect"
+  ],
+  "domain": [
+    "Multimodal",
+    "Education"
+  ],
+  "useCase": [
+    "Science QA",
+    "Chain-of-Thought Reasoning",
+    "Multimodal Understanding"
+  ],
   "complexity": "intermediate",
-  "tags": ["scienceqa", "multimodal", "science", "chain-of-thought", "education", "neurips2022"],
+  "tags": [
+    "scienceqa",
+    "multimodal",
+    "science",
+    "chain-of-thought",
+    "education",
+    "neurips2022"
+  ],
   "featured": false,
   "paperReference": "Lu et al., NeurIPS 2022",
   "paperUrl": "https://arxiv.org/abs/2209.09513",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Araci",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "ProsusAI",
     "affiliation": "Prosus AI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "likert"],
-  "domain": ["NLP", "Finance"],
-  "useCase": ["Sentiment Analysis", "Financial NLP", "Market Analysis"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Finance"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Financial NLP",
+    "Market Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["finance", "sentiment", "headlines", "finbert", "market", "news"],
+  "tags": [
+    "finance",
+    "sentiment",
+    "headlines",
+    "finbert",
+    "market",
+    "news"
+  ],
   "featured": false,
   "paperReference": "Araci, arXiv 2019",
   "paperUrl": "https://arxiv.org/abs/1908.10063",

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Sinhababu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval 2025 Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "radio"],
-  "domain": ["SemEval", "NLP", "Text Classification", "Academic"],
-  "useCase": ["Subject Tagging", "Document Classification", "Library Science"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Text Classification",
+    "Academic"
+  ],
+  "useCase": [
+    "Subject Tagging",
+    "Document Classification",
+    "Library Science"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2025", "shared-task", "classification", "academic", "subject-tagging"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "classification",
+    "academic",
+    "subject-tagging"
+  ],
   "featured": false,
   "paperReference": "Sinhababu et al., SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

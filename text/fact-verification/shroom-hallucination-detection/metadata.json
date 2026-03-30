@@ -4,20 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Mickus et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "Helsinki-NLP",
     "affiliation": "University of Helsinki"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "likert"],
-  "domain": ["NLP", "Hallucination Detection"],
-  "useCase": ["Hallucination Detection", "NLG Evaluation", "Quality Assessment"],
+  "annotationTypes": [
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Hallucination Detection"
+  ],
+  "useCase": [
+    "Hallucination Detection",
+    "NLG Evaluation",
+    "Quality Assessment"
+  ],
   "complexity": "beginner",
-  "tags": ["hallucination", "overgeneration", "nlg", "machine-translation", "paraphrase", "semeval2024", "shroom"],
+  "tags": [
+    "hallucination",
+    "overgeneration",
+    "nlg",
+    "machine-translation",
+    "paraphrase",
+    "semeval2024",
+    "shroom"
+  ],
   "featured": false,
   "paperReference": "Mickus et al., SemEval@NAACL 2024",
-  "paperUrl": "https://aclanthology.org/2024.semeval-1.289/",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.273/",
   "datasetUrl": "https://github.com/Helsinki-NLP/shroom",
-  "citation": "@inproceedings{mickus-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 6: {SHROOM}, a Shared-task on Hallucinations and Related Observable Overgeneration Mistakes\",\n    author = \"Mickus, Timothee  and Repo, Elaine  and Paperno, Denis  and Creutz, Mathias  and Leinonen, Juha  and Vayrynen, Jaakko\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.semeval-1.289\",\n    pages = \"2031--2054\"\n}"
+  "citation": "@inproceedings{mickus-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 6: {SHROOM}, a Shared-task on Hallucinations and Related Observable Overgeneration Mistakes\",\n    author = \"Mickus, Timothee  and Repo, Elaine  and Paperno, Denis  and Creutz, Mathias  and Leinonen, Juha  and Vayrynen, Jaakko\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.semeval-1.273\",\n    pages = \"2031--2054\"\n}"
 }

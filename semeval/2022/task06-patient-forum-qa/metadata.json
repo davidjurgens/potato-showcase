@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Akhtar et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["NLP", "Biomedical", "SemEval"],
-  "useCase": ["Question Answering", "Health Forum Analysis", "Patient Support"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Biomedical",
+    "SemEval"
+  ],
+  "useCase": [
+    "Question Answering",
+    "Health Forum Analysis",
+    "Patient Support"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2022", "shared-task", "patient-forum", "qa", "health", "medical"],
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "patient-forum",
+    "qa",
+    "health",
+    "medical"
+  ],
   "featured": false,
   "paperReference": "Akhtar et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.75/",

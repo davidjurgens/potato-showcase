@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Braud et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "disrpt",
     "affiliation": "Universite Paris Cite"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Discourse Analysis"],
-  "useCase": ["Discourse Segmentation", "Discourse Relation Classification", "Rhetorical Structure Analysis"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Discourse Analysis"
+  ],
+  "useCase": [
+    "Discourse Segmentation",
+    "Discourse Relation Classification",
+    "Rhetorical Structure Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["discourse", "edu-segmentation", "rhetorical-relations", "rst", "discourse-parsing", "disrpt", "acl2023"],
+  "tags": [
+    "discourse",
+    "edu-segmentation",
+    "rhetorical-relations",
+    "rst",
+    "discourse-parsing",
+    "disrpt",
+    "acl2023"
+  ],
   "featured": false,
   "paperReference": "Braud et al., DISRPT@ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.disrpt-1.1/",

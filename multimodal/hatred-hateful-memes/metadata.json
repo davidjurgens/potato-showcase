@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Bhandari et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "HatReD-dataset",
     "affiliation": "Singapore Management University"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Multimodal", "Content Moderation", "Hate Speech"],
-  "useCase": ["Hateful Meme Detection", "Content Moderation", "Multimodal Classification"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Multimodal",
+    "Content Moderation",
+    "Hate Speech"
+  ],
+  "useCase": [
+    "Hateful Meme Detection",
+    "Content Moderation",
+    "Multimodal Classification"
+  ],
   "complexity": "intermediate",
-  "tags": ["hatred", "hateful-memes", "multimodal", "content-moderation", "hate-speech", "ijcai2023", "memes"],
+  "tags": [
+    "hatred",
+    "hateful-memes",
+    "multimodal",
+    "content-moderation",
+    "hate-speech",
+    "ijcai2023",
+    "memes"
+  ],
   "featured": false,
   "paperReference": "Bhandari et al., IJCAI 2023",
   "paperUrl": "https://www.ijcai.org/proceedings/2023/0109.pdf",

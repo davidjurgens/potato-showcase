@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Zampieri et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "idontbow",
     "affiliation": "Rochester Institute of Technology"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "span"],
-  "domain": ["NLP", "Social Media"],
-  "useCase": ["Offensive Language Detection", "Target Identification", "Content Moderation"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media"
+  ],
+  "useCase": [
+    "Offensive Language Detection",
+    "Target Identification",
+    "Content Moderation"
+  ],
   "complexity": "intermediate",
-  "tags": ["offensive-language", "hate-speech", "target-identification", "span-annotation", "semeval2020"],
+  "tags": [
+    "offensive-language",
+    "hate-speech",
+    "target-identification",
+    "span-annotation",
+    "semeval2020"
+  ],
   "featured": false,
   "paperReference": "Zampieri et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.188/",

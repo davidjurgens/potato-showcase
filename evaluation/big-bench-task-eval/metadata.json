@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Srivastava et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google",
     "affiliation": "Google Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "number"],
-  "domain": ["NLP", "AI Evaluation"],
-  "useCase": ["Model Evaluation", "Reasoning Assessment", "Benchmark Annotation"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "number"
+  ],
+  "domain": [
+    "NLP",
+    "AI Evaluation"
+  ],
+  "useCase": [
+    "Model Evaluation",
+    "Reasoning Assessment",
+    "Benchmark Annotation"
+  ],
   "complexity": "intermediate",
-  "tags": ["big-bench", "reasoning", "evaluation", "language-model", "benchmark", "tmlr2023"],
+  "tags": [
+    "big-bench",
+    "reasoning",
+    "evaluation",
+    "language-model",
+    "benchmark",
+    "tmlr2023"
+  ],
   "featured": false,
   "paperReference": "Srivastava et al., TMLR 2023",
   "paperUrl": "https://arxiv.org/abs/2206.04615",

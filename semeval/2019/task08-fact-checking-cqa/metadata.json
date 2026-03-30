@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Mihaylova et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Qatar Computing Research Institute"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Fact Verification", "Question Answering"],
-  "useCase": ["Fact-Checking", "Misinformation Detection", "QA Evaluation"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Fact Verification",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Fact-Checking",
+    "Misinformation Detection",
+    "QA Evaluation"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2019", "shared-task", "fact-checking", "cqa", "verification", "misinformation"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "fact-checking",
+    "cqa",
+    "verification",
+    "misinformation"
+  ],
   "featured": false,
   "paperReference": "Mihaylova et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2149/",

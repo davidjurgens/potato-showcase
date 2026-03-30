@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Madaan et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "tag-and-generate",
     "affiliation": "Carnegie Mellon University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "radio", "text"],
-  "domain": ["NLP", "Computational Social Science", "Pragmatics"],
-  "useCase": ["Politeness Detection", "Style Transfer", "Workplace Communication"],
+  "annotationTypes": [
+    "likert",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "Pragmatics"
+  ],
+  "useCase": [
+    "Politeness Detection",
+    "Style Transfer",
+    "Workplace Communication"
+  ],
   "complexity": "beginner",
-  "tags": ["politeness", "style-transfer", "pragmatics", "workplace", "email", "acl2020"],
+  "tags": [
+    "politeness",
+    "style-transfer",
+    "pragmatics",
+    "workplace",
+    "email",
+    "acl2020"
+  ],
   "featured": false,
   "paperReference": "Madaan et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.169/",

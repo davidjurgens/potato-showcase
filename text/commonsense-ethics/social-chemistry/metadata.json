@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Forbes et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "mbforbes",
     "affiliation": "University of Washington"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "likert"],
-  "domain": ["NLP", "Ethics", "Commonsense"],
-  "useCase": ["Social Norms", "Moral Reasoning", "Commonsense AI"],
+  "annotationTypes": [
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Ethics",
+    "Commonsense"
+  ],
+  "useCase": [
+    "Social Norms",
+    "Moral Reasoning",
+    "Commonsense AI"
+  ],
   "complexity": "advanced",
-  "tags": ["social-norms", "ethics", "rules-of-thumb", "emnlp2020", "moral-foundations"],
+  "tags": [
+    "social-norms",
+    "ethics",
+    "rules-of-thumb",
+    "emnlp2020",
+    "moral-foundations"
+  ],
   "featured": true,
   "paperReference": "Forbes et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.48/",

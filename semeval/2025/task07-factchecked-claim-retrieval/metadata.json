@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Nakov et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["SemEval", "NLP", "Fact-Checking", "Multilingual"],
-  "useCase": ["Claim Verification", "Information Retrieval", "Misinformation Detection"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Fact-Checking",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Claim Verification",
+    "Information Retrieval",
+    "Misinformation Detection"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2025", "shared-task", "fact-checking", "claim-retrieval", "multilingual"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "fact-checking",
+    "claim-retrieval",
+    "multilingual"
+  ],
   "featured": false,
   "paperReference": "Nakov et al., SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

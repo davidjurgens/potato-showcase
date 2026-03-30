@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "SemEval 2025 Task 9 Organizers",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio", "multiselect"],
-  "domain": ["SemEval", "NLP", "Food Safety", "Information Extraction"],
-  "useCase": ["Hazard Detection", "Food Safety Monitoring", "Risk Assessment"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Food Safety",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Hazard Detection",
+    "Food Safety Monitoring",
+    "Risk Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2025", "shared-task", "food-safety", "hazard-detection", "span-annotation"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "food-safety",
+    "hazard-detection",
+    "span-annotation"
+  ],
   "featured": false,
   "paperReference": "SemEval 2025 Task 9 Organizers, SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

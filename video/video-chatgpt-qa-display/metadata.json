@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Maaz et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "mbzuai-oryx",
     "affiliation": "MBZUAI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["video", "radio", "likert"],
-  "domain": ["Video Understanding", "Evaluation", "Multimodal"],
-  "useCase": ["Video QA", "Model Evaluation", "Visual Understanding"],
+  "annotationTypes": [
+    "video",
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "Video Understanding",
+    "Evaluation",
+    "Multimodal"
+  ],
+  "useCase": [
+    "Video QA",
+    "Model Evaluation",
+    "Visual Understanding"
+  ],
   "complexity": "intermediate",
-  "tags": ["video-qa", "video-chatgpt", "multimodal", "evaluation", "acl2024"],
+  "tags": [
+    "video-qa",
+    "video-chatgpt",
+    "multimodal",
+    "evaluation",
+    "acl2024"
+  ],
   "featured": false,
   "paperReference": "Maaz et al., ACL 2024",
   "paperUrl": "https://arxiv.org/abs/2306.05424",

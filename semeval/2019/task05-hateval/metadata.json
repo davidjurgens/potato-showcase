@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Basile et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Turin"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["SemEval", "NLP", "Hate Speech Detection", "Social Media"],
-  "useCase": ["Hate Speech Detection", "Content Moderation", "Social Media Analysis"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Hate Speech Detection",
+    "Social Media"
+  ],
+  "useCase": [
+    "Hate Speech Detection",
+    "Content Moderation",
+    "Social Media Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2019", "shared-task", "hate-speech", "twitter", "hateval", "content-moderation"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "hate-speech",
+    "twitter",
+    "hateval",
+    "content-moderation"
+  ],
   "featured": false,
   "paperReference": "Basile et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2007/",

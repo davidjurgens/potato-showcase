@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "AI Safety", "Evaluation"],
-  "useCase": ["Safety Evaluation", "LLM Assessment", "Content Moderation"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "AI Safety",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Safety Evaluation",
+    "LLM Assessment",
+    "Content Moderation"
+  ],
   "complexity": "intermediate",
-  "tags": ["safety", "llm-evaluation", "harmful-content", "refusal", "risk-assessment", "moderation"],
+  "tags": [
+    "safety",
+    "llm-evaluation",
+    "harmful-content",
+    "refusal",
+    "risk-assessment",
+    "moderation"
+  ],
   "featured": false,
   "paperReference": "Wang et al., Findings EACL 2024",
   "paperUrl": "https://aclanthology.org/2024.findings-eacl.61/",

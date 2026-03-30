@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Spala et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Adobe Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Definition Extraction", "Information Extraction", "Terminology"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Definition Extraction",
+    "Information Extraction",
+    "Terminology"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2020", "shared-task", "definition-extraction", "terminology", "information-extraction"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "definition-extraction",
+    "terminology",
+    "information-extraction"
+  ],
   "featured": false,
   "paperReference": "Spala et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.41/",

@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Camacho-Collados et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Cardiff University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["SemEval", "NLP", "Lexical Semantics", "Taxonomy"],
-  "useCase": ["Hypernym Discovery", "Taxonomy Construction", "Lexical Semantics"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Lexical Semantics",
+    "Taxonomy"
+  ],
+  "useCase": [
+    "Hypernym Discovery",
+    "Taxonomy Construction",
+    "Lexical Semantics"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2018", "shared-task", "hypernym", "taxonomy", "lexical-semantics", "word-relations"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "hypernym",
+    "taxonomy",
+    "lexical-semantics",
+    "word-relations"
+  ],
   "featured": false,
   "paperReference": "Camacho-Collados et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1115/",

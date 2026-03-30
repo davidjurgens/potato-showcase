@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "multiselect", "likert", "text"],
-  "domain": ["Software Engineering", "Code Refactoring"],
-  "useCase": ["Refactoring Evaluation", "Code Review"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Code Refactoring"
+  ],
+  "useCase": [
+    "Refactoring Evaluation",
+    "Code Review"
+  ],
   "complexity": "advanced",
-  "tags": ["refactoring", "multi-file", "code-quality", "benchmark", "agentic-coding"],
+  "tags": [
+    "refactoring",
+    "multi-file",
+    "code-quality",
+    "benchmark",
+    "agentic-coding"
+  ],
   "featured": false,
   "paperReference": "Gautam et al., ICLR 2025",
   "paperUrl": "https://arxiv.org/abs/2503.07832",

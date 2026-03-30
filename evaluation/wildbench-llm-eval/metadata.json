@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Lin et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "allenai",
     "affiliation": "Allen Institute for AI"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["pairwise", "likert", "text"],
-  "domain": ["NLP", "LLM Evaluation"],
-  "useCase": ["LLM Benchmarking", "Model Comparison", "Quality Assessment"],
+  "annotationTypes": [
+    "pairwise",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "LLM Evaluation"
+  ],
+  "useCase": [
+    "LLM Benchmarking",
+    "Model Comparison",
+    "Quality Assessment"
+  ],
   "complexity": "intermediate",
-  "tags": ["llm-evaluation", "wildbench", "pairwise", "real-world", "model-comparison", "colm2024"],
+  "tags": [
+    "llm-evaluation",
+    "wildbench",
+    "pairwise",
+    "real-world",
+    "model-comparison",
+    "colm2024"
+  ],
   "featured": false,
   "paperReference": "Lin et al., COLM 2024",
   "paperUrl": "https://arxiv.org/abs/2406.04770",

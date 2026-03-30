@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Sports Analytics"],
-  "useCase": ["Action Recognition", "Temporal Localization", "Sports Video Analysis"],
+  "annotationTypes": [
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Sports Analytics"
+  ],
+  "useCase": [
+    "Action Recognition",
+    "Temporal Localization",
+    "Sports Video Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "sports", "action", "temporal", "thumos", "localization"],
+  "tags": [
+    "video",
+    "sports",
+    "action",
+    "temporal",
+    "thumos",
+    "localization"
+  ],
   "featured": false,
   "paperReference": "Jiang et al., ECCV 2014 Workshop",
   "paperUrl": "http://crcv.ucf.edu/THUMOS14/papers/THUMOS14_Paper.pdf",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Chen et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "openai",
     "affiliation": "OpenAI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "number"],
-  "domain": ["NLP", "Code"],
-  "useCase": ["Code Evaluation", "LLM Benchmarking", "Code Quality Assessment"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "number"
+  ],
+  "domain": [
+    "NLP",
+    "Code"
+  ],
+  "useCase": [
+    "Code Evaluation",
+    "LLM Benchmarking",
+    "Code Quality Assessment"
+  ],
   "complexity": "intermediate",
-  "tags": ["humaneval", "code", "correctness", "code-generation", "benchmark", "arxiv2021"],
+  "tags": [
+    "humaneval",
+    "code",
+    "correctness",
+    "code-generation",
+    "benchmark",
+    "arxiv2021"
+  ],
   "featured": false,
   "paperReference": "Chen et al., arXiv 2021",
   "paperUrl": "https://arxiv.org/abs/2107.03374",

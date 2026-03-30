@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Luan et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "Alab-NII",
     "affiliation": "National Institute of Informatics"
   },
@@ -34,7 +34,7 @@
   ],
   "featured": false,
   "paperReference": "Luan et al., EMNLP 2024",
-  "paperUrl": "https://aclanthology.org/2024.emnlp-main.59/",
+  "paperUrl": "https://aclanthology.org/2024.emnlp-main.726/",
   "datasetUrl": "https://github.com/Alab-NII/SciER",
-  "citation": "@inproceedings{luan-etal-2024-scier,\n    title = \"{SciER}: Entity and Relation Extraction for Scientific Documents\",\n    author = \"Luan, Yi  and Wadden, David  and He, Luheng  and Shah, Amy  and Ostendorf, Mari  and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2024\",\n    address = \"Miami, Florida\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.59\"\n}"
+  "citation": "@inproceedings{luan-etal-2024-scier,\n    title = \"{SciER}: Entity and Relation Extraction for Scientific Documents\",\n    author = \"Luan, Yi  and Wadden, David  and He, Luheng  and Shah, Amy  and Ostendorf, Mari  and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2024\",\n    address = \"Miami, Florida\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.726\"\n}"
 }

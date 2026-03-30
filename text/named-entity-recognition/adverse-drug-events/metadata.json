@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Karimi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "CSIRO",
     "affiliation": "CSIRO"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["Biomedical NLP", "Healthcare"],
-  "useCase": ["Pharmacovigilance", "Adverse Event Detection", "Drug Safety"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "Biomedical NLP",
+    "Healthcare"
+  ],
+  "useCase": [
+    "Pharmacovigilance",
+    "Adverse Event Detection",
+    "Drug Safety"
+  ],
   "complexity": "intermediate",
-  "tags": ["adverse-drug-events", "pharmacovigilance", "biomedical", "ner", "patient-reports", "cadec"],
+  "tags": [
+    "adverse-drug-events",
+    "pharmacovigilance",
+    "biomedical",
+    "ner",
+    "patient-reports",
+    "cadec"
+  ],
   "featured": true,
   "paperReference": "Karimi et al., J Biomed Inform 2015",
   "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/25817970/",

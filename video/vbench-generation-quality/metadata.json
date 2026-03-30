@@ -4,20 +4,41 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["likert", "pairwise", "video_annotation"],
-  "domain": ["Computer Vision", "Video Generation", "Evaluation"],
-  "useCase": ["Quality Assessment", "Video Generation Evaluation", "Model Benchmarking"],
+  "annotationTypes": [
+    "likert",
+    "pairwise",
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video Generation",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Quality Assessment",
+    "Video Generation Evaluation",
+    "Model Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "generation", "quality", "evaluation", "pairwise", "likert", "vbench", "ai-generated"],
+  "tags": [
+    "video",
+    "generation",
+    "quality",
+    "evaluation",
+    "pairwise",
+    "likert",
+    "vbench",
+    "ai-generated"
+  ],
   "featured": false,
   "paperReference": "Huang et al., CVPR 2024",
-  "paperUrl": "https://openaccess.thecvf.com/content/CVPR2024/papers/Huang_VBench_CVPR_2024_paper.pdf",
+  "paperUrl": "https://arxiv.org/abs/2311.17982",
   "datasetUrl": "https://github.com/Vchitect/VBench",
   "citation": "@inproceedings{huang2024vbench,\n  title={VBench: Comprehensive Benchmark Suite for Video Generative Models},\n  author={Huang, Ziqi and He, Yinan and Yu, Jiashuo and Zhang, Fan and Si, Chenyang and Jiang, Yuming and Zhang, Yuanhan and Wu, Tianxing and Jin, Qingyang and Chanpaisit, Nattapol and others},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  year={2024}\n}"
 }

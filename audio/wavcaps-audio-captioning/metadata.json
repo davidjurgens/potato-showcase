@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Mei et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "XinhaoMei",
     "affiliation": "University of Surrey"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["text"],
-  "domain": ["Audio Understanding", "Captioning"],
-  "useCase": ["Audio Captioning", "Sound Event Description", "Audio-Language Research"],
+  "annotationTypes": [
+    "text"
+  ],
+  "domain": [
+    "Audio Understanding",
+    "Captioning"
+  ],
+  "useCase": [
+    "Audio Captioning",
+    "Sound Event Description",
+    "Audio-Language Research"
+  ],
   "complexity": "beginner",
-  "tags": ["audio", "captioning", "sound-events", "audio-language", "environmental-audio", "taslp2024"],
+  "tags": [
+    "audio",
+    "captioning",
+    "sound-events",
+    "audio-language",
+    "environmental-audio",
+    "taslp2024"
+  ],
   "featured": false,
   "paperReference": "Mei et al., IEEE TASLP 2024",
   "paperUrl": "https://ieeexplore.ieee.org/document/10637816",

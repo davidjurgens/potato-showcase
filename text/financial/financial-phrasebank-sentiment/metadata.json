@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Malo et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "ProsusAI",
     "affiliation": "Aalto University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["select", "radio"],
-  "domain": ["NLP", "Finance"],
-  "useCase": ["Sentiment Analysis", "Financial NLP", "Market Analysis"],
+  "annotationTypes": [
+    "select",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Finance"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Financial NLP",
+    "Market Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["financial", "sentiment", "phrasebank", "news", "market", "finbert"],
+  "tags": [
+    "financial",
+    "sentiment",
+    "phrasebank",
+    "news",
+    "market",
+    "finbert"
+  ],
   "featured": false,
   "paperReference": "Malo et al., JASIST 2014",
   "paperUrl": "https://arxiv.org/abs/1307.5336",

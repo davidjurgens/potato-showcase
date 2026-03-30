@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["likert", "text"],
-  "domain": ["NLP", "LLM Evaluation", "Rubric-based Assessment"],
-  "useCase": ["Rubric Evaluation", "LLM Scoring", "Quality Feedback"],
+  "annotationTypes": [
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "LLM Evaluation",
+    "Rubric-based Assessment"
+  ],
+  "useCase": [
+    "Rubric Evaluation",
+    "LLM Scoring",
+    "Quality Feedback"
+  ],
   "complexity": "advanced",
-  "tags": ["rubric", "prometheus", "llm-evaluation", "fine-grained", "feedback", "scoring"],
+  "tags": [
+    "rubric",
+    "prometheus",
+    "llm-evaluation",
+    "fine-grained",
+    "feedback",
+    "scoring"
+  ],
   "featured": false,
   "paperReference": "Kim et al., ICLR 2024",
   "paperUrl": "https://openreview.net/forum?id=prometheus2024",

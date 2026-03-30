@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Parrish et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "nyu-mll",
     "affiliation": "New York University"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Bias Detection", "Question Answering", "Fairness"],
-  "useCase": ["Bias Detection", "Fairness Evaluation", "QA Benchmarking"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Bias Detection",
+    "Question Answering",
+    "Fairness"
+  ],
+  "useCase": [
+    "Bias Detection",
+    "Fairness Evaluation",
+    "QA Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["bias", "fairness", "question-answering", "bbq", "acl2022", "stereotypes", "social-bias"],
+  "tags": [
+    "bias",
+    "fairness",
+    "question-answering",
+    "bbq",
+    "acl2022",
+    "stereotypes",
+    "social-bias"
+  ],
   "featured": false,
   "paperReference": "Parrish et al., Findings of ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.findings-acl.165/",

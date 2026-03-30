@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "posuer",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "span", "text"],
-  "domain": ["NLP", "Fact-Checking", "Public Health"],
-  "useCase": ["Fact Verification", "Misinformation Detection", "COVID-19 Research"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Fact-Checking",
+    "Public Health"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Misinformation Detection",
+    "COVID-19 Research"
+  ],
   "complexity": "intermediate",
-  "tags": ["fact-checking", "covid-19", "misinformation", "public-health", "evidence", "acl2023"],
+  "tags": [
+    "fact-checking",
+    "covid-19",
+    "misinformation",
+    "public-health",
+    "evidence",
+    "acl2023"
+  ],
   "featured": false,
   "paperReference": "Wang et al., Findings ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.findings-acl.888/",

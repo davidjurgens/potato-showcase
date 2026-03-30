@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["video_annotation", "text", "radio"],
-  "domain": ["Computer Vision", "Video Understanding", "Dialogue"],
-  "useCase": ["Video QA", "Dialogue Generation", "Temporal Grounding"],
+  "annotationTypes": [
+    "video_annotation",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video Understanding",
+    "Dialogue"
+  ],
+  "useCase": [
+    "Video QA",
+    "Dialogue Generation",
+    "Temporal Grounding"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "dialogue", "grounding", "question-answering", "temporal", "situated-understanding", "vstar"],
+  "tags": [
+    "video",
+    "dialogue",
+    "grounding",
+    "question-answering",
+    "temporal",
+    "situated-understanding",
+    "vstar"
+  ],
   "featured": false,
   "paperReference": "Wang et al., ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.acl-long.276/",

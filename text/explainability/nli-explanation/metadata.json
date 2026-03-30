@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Camburu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "OanaMariaCamburu",
     "affiliation": "University of Oxford"
   },
@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Camburu et al., NeurIPS 2018",
-  "paperUrl": "https://proceedings.neurips.cc/paper/2018/hash/4c7a167bb329bd92800a858552f2e32a-Abstract.html",
+  "paperUrl": "https://arxiv.org/abs/1812.01193",
   "datasetUrl": "https://github.com/OanaMariaCamburu/e-SNLI",
-  "citation": "@inproceedings{camburu2018snli,\n    title = \"e-{SNLI}: Natural Language Inference with Natural Language Explanations\",\n    author = \"Camburu, Oana-Maria  and Rockt{\\\"a}schel, Tim  and Lukasiewicz, Thomas  and Blunsom, Phil\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    volume = \"31\",\n    year = \"2018\",\n    publisher = \"Curran Associates, Inc.\",\n    url = \"https://proceedings.neurips.cc/paper/2018/hash/4c7a167bb329bd92800a858552f2e32a-Abstract.html\"\n}"
+  "citation": "@inproceedings{camburu2018snli,\n    title = \"e-{SNLI}: Natural Language Inference with Natural Language Explanations\",\n    author = \"Camburu, Oana-Maria  and Rockt{\\\"a}schel, Tim  and Lukasiewicz, Thomas  and Blunsom, Phil\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    volume = \"31\",\n    year = \"2018\",\n    publisher = \"Curran Associates, Inc.\",\n    url = \"https://arxiv.org/abs/1812.01193\"\n}"
 }

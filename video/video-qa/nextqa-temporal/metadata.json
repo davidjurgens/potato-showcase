@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Xiao et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "doc-doc",
     "affiliation": "National University of Singapore"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text", "video_annotation"],
-  "domain": ["Video Understanding", "NLP"],
-  "useCase": ["Video Question Answering", "Temporal Reasoning", "Causal Reasoning"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Video Understanding",
+    "NLP"
+  ],
+  "useCase": [
+    "Video Question Answering",
+    "Temporal Reasoning",
+    "Causal Reasoning"
+  ],
   "complexity": "intermediate",
-  "tags": ["nextqa", "video-qa", "temporal", "causal", "reasoning", "cvpr2021", "multiple-choice"],
+  "tags": [
+    "nextqa",
+    "video-qa",
+    "temporal",
+    "causal",
+    "reasoning",
+    "cvpr2021",
+    "multiple-choice"
+  ],
   "featured": false,
   "paperReference": "Xiao et al., CVPR 2021",
   "paperUrl": "https://arxiv.org/abs/2105.08276",

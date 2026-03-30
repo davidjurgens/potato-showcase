@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kiesel et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "touche-webis-de",
     "affiliation": "Bauhaus-Universitat Weimar"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "radio"],
-  "domain": ["NLP", "Computational Social Science", "Ethics"],
-  "useCase": ["Value Detection", "Argumentation Analysis", "Social Science"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "Ethics"
+  ],
+  "useCase": [
+    "Value Detection",
+    "Argumentation Analysis",
+    "Social Science"
+  ],
   "complexity": "intermediate",
-  "tags": ["human-values", "argumentation", "schwartz-values", "social-issues", "acl2022"],
+  "tags": [
+    "human-values",
+    "argumentation",
+    "schwartz-values",
+    "social-issues",
+    "acl2022"
+  ],
   "featured": false,
   "paperReference": "Kiesel et al., ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.acl-long.306/",

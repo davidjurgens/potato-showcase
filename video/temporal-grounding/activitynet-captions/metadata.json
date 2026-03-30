@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation", "text"],
-  "domain": ["Computer Vision", "Video Understanding", "NLP"],
-  "useCase": ["Dense Captioning", "Video Description", "Temporal Grounding"],
+  "annotationTypes": [
+    "video_annotation",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Video Understanding",
+    "NLP"
+  ],
+  "useCase": [
+    "Dense Captioning",
+    "Video Description",
+    "Temporal Grounding"
+  ],
   "complexity": "advanced",
-  "tags": ["video", "captions", "dense", "temporal", "activitynet", "description"],
+  "tags": [
+    "video",
+    "captions",
+    "dense",
+    "temporal",
+    "activitynet",
+    "description"
+  ],
   "featured": false,
   "paperReference": "Krishna et al., ICCV 2017",
   "paperUrl": "https://arxiv.org/abs/1705.00754",

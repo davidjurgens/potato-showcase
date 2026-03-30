@@ -4,20 +4,39 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio", "text"],
-  "domain": ["Gesture Studies", "Multimodal Communication", "Linguistics"],
-  "useCase": ["Gesture Analysis", "Speech-Gesture Alignment", "Multimodal Interaction"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Gesture Studies",
+    "Multimodal Communication",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Gesture Analysis",
+    "Speech-Gesture Alignment",
+    "Multimodal Interaction"
+  ],
   "complexity": "advanced",
-  "tags": ["gesture", "speech", "multi-tier", "elan-style", "multimodal-communication", "gesture2013"],
+  "tags": [
+    "gesture",
+    "speech",
+    "multi-tier",
+    "elan-style",
+    "multimodal-communication",
+    "gesture2013"
+  ],
   "featured": false,
   "paperReference": "Luecking et al., Gesture 2013",
-  "paperUrl": "https://doi.org/10.1075/gest.13.2.07luc",
+  "paperUrl": "https://doi.org/10.1007/s12193-012-0106-8",
   "datasetUrl": "https://doi.org/10.4119/unibi/2917731",
   "citation": "@article{lucking2013saga,\n  title={Data-based Analysis of Speech and Gesture: The Bielefeld Speech and Gesture Alignment Corpus (SaGA) and Its Applications},\n  author={L{\\\"u}cking, Andy and Bergmann, Kirsten and Hahn, Florian and Kopp, Stefan and Rieser, Hannes},\n  journal={Journal on Multimodal User Interfaces},\n  volume={7},\n  number={1--2},\n  pages={5--18},\n  year={2013},\n  publisher={Springer}\n}"
 }

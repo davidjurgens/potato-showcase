@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Knowles et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "National Research Council Canada"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["SemEval", "NLP", "Machine Translation", "Named Entities"],
-  "useCase": ["Translation Quality", "Entity Recognition", "MT Evaluation"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Machine Translation",
+    "Named Entities"
+  ],
+  "useCase": [
+    "Translation Quality",
+    "Entity Recognition",
+    "MT Evaluation"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2025", "shared-task", "machine-translation", "entity", "multilingual"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "machine-translation",
+    "entity",
+    "multilingual"
+  ],
   "featured": false,
   "paperReference": "Knowles et al., SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

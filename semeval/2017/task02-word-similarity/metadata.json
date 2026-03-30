@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Camacho-Collados et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "slider"],
-  "domain": ["NLP", "SemEval", "Semantics"],
-  "useCase": ["Word Similarity", "Lexical Semantics", "Cross-Lingual NLP"],
+  "annotationTypes": [
+    "likert",
+    "slider"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval",
+    "Semantics"
+  ],
+  "useCase": [
+    "Word Similarity",
+    "Lexical Semantics",
+    "Cross-Lingual NLP"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2017", "shared-task", "word-similarity", "multilingual", "lexical-semantics"],
+  "tags": [
+    "semeval",
+    "semeval-2017",
+    "shared-task",
+    "word-similarity",
+    "multilingual",
+    "lexical-semantics"
+  ],
   "featured": false,
   "paperReference": "Camacho-Collados et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2002/",

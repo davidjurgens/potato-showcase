@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Xu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "ViTAE-Transformer",
     "affiliation": "University of Sydney"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["image_annotation", "radio"],
-  "domain": ["Computer Vision", "Human Pose Estimation"],
-  "useCase": ["Pose Estimation", "Keypoint Detection", "Activity Recognition"],
+  "annotationTypes": [
+    "image_annotation",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Human Pose Estimation"
+  ],
+  "useCase": [
+    "Pose Estimation",
+    "Keypoint Detection",
+    "Activity Recognition"
+  ],
   "complexity": "intermediate",
-  "tags": ["pose-estimation", "keypoint", "vitpose", "body-landmark", "neurips2022", "vision-transformer"],
+  "tags": [
+    "pose-estimation",
+    "keypoint",
+    "vitpose",
+    "body-landmark",
+    "neurips2022",
+    "vision-transformer"
+  ],
   "featured": false,
   "paperReference": "Xu et al., NeurIPS 2022",
   "paperUrl": "https://arxiv.org/abs/2204.12484",

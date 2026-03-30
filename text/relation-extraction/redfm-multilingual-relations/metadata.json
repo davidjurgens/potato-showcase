@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Huguet Cabot et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "DFKI-SLT",
     "affiliation": "DFKI / Sapienza University of Rome"
   },
@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Huguet Cabot et al., ACL 2023",
-  "paperUrl": "https://aclanthology.org/2023.acl-long.367/",
+  "paperUrl": "https://aclanthology.org/2023.acl-long.237/",
   "datasetUrl": "https://huggingface.co/datasets/DFKI-SLT/REDFM",
-  "citation": "@inproceedings{huguet-cabot-etal-2023-redfm,\n    title = \"{REDFM}: A Filtered and Multilingual Relation Extraction Dataset\",\n    author = \"Huguet Cabot, Pere-Llu{\\'{i}}s  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.367\"\n}"
+  "citation": "@inproceedings{huguet-cabot-etal-2023-redfm,\n    title = \"{REDFM}: A Filtered and Multilingual Relation Extraction Dataset\",\n    author = \"Huguet Cabot, Pere-Llu{\\'{i}}s  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.237\"\n}"
 }

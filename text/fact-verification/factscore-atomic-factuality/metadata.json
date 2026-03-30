@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Min et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "shmsw25",
     "affiliation": "University of Washington"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Factuality", "Evaluation"],
-  "useCase": ["Factuality Evaluation", "LLM Output Assessment", "Atomic Fact Verification"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Factuality",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Factuality Evaluation",
+    "LLM Output Assessment",
+    "Atomic Fact Verification"
+  ],
   "complexity": "intermediate",
-  "tags": ["factuality", "atomic-facts", "llm-evaluation", "factscore", "text-generation", "emnlp2023"],
+  "tags": [
+    "factuality",
+    "atomic-facts",
+    "llm-evaluation",
+    "factscore",
+    "text-generation",
+    "emnlp2023"
+  ],
   "featured": false,
   "paperReference": "Min et al., EMNLP 2023",
   "paperUrl": "https://aclanthology.org/2023.emnlp-main.741/",

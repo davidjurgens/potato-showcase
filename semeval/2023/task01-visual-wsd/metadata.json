@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Raganato et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Multimodal", "SemEval"],
-  "useCase": ["Word Sense Disambiguation", "Visual Grounding"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Multimodal",
+    "SemEval"
+  ],
+  "useCase": [
+    "Word Sense Disambiguation",
+    "Visual Grounding"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2023", "shared-task", "wsd", "visual-grounding", "multimodal"],
+  "tags": [
+    "semeval",
+    "semeval-2023",
+    "shared-task",
+    "wsd",
+    "visual-grounding",
+    "multimodal"
+  ],
   "featured": false,
   "paperReference": "Raganato et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.1/",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Dimitrov et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Qatar Computing Research Institute"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "span"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Propaganda Detection", "Persuasion Analysis", "Media Literacy"],
+  "annotationTypes": [
+    "multiselect",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Propaganda Detection",
+    "Persuasion Analysis",
+    "Media Literacy"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2021", "shared-task", "persuasion", "propaganda", "multimodal", "rhetoric"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "persuasion",
+    "propaganda",
+    "multimodal",
+    "rhetoric"
+  ],
   "featured": false,
   "paperReference": "Dimitrov et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.7/",

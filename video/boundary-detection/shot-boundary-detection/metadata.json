@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Broadcast Media"],
-  "useCase": ["Shot Detection", "Video Editing", "Content Indexing"],
+  "annotationTypes": [
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Broadcast Media"
+  ],
+  "useCase": [
+    "Shot Detection",
+    "Video Editing",
+    "Content Indexing"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "shot", "boundary", "transition", "trecvid", "broadcast"],
+  "tags": [
+    "video",
+    "shot",
+    "boundary",
+    "transition",
+    "trecvid",
+    "broadcast"
+  ],
   "featured": false,
   "paperReference": "Over et al., TRECVID Overview",
   "paperUrl": "https://trecvid.nist.gov",

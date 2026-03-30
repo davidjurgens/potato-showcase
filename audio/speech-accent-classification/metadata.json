@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Speech Processing", "Accent Classification", "Sociolinguistics"],
-  "useCase": ["Accent Identification", "Speech Quality Assessment", "Transcription Correction"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Speech Processing",
+    "Accent Classification",
+    "Sociolinguistics"
+  ],
+  "useCase": [
+    "Accent Identification",
+    "Speech Quality Assessment",
+    "Transcription Correction"
+  ],
   "complexity": "beginner",
-  "tags": ["speech", "accent", "commonvoice", "lrec2020", "multilingual", "mozilla", "classification"],
+  "tags": [
+    "speech",
+    "accent",
+    "commonvoice",
+    "lrec2020",
+    "multilingual",
+    "mozilla",
+    "classification"
+  ],
   "featured": false,
   "paperReference": "Ardila et al., LREC 2020",
   "paperUrl": "https://aclanthology.org/2020.lrec-1.520/",

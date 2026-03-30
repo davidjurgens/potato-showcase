@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Stubbs et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "dbmi-pitt",
     "affiliation": "Harvard Medical School / i2b2"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Healthcare"],
-  "useCase": ["Clinical NER", "Medical NLP", "Assertion Detection"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Healthcare"
+  ],
+  "useCase": [
+    "Clinical NER",
+    "Medical NLP",
+    "Assertion Detection"
+  ],
   "complexity": "intermediate",
-  "tags": ["clinical", "ner", "medical", "i2b2", "healthcare", "assertion"],
+  "tags": [
+    "clinical",
+    "ner",
+    "medical",
+    "i2b2",
+    "healthcare",
+    "assertion"
+  ],
   "featured": false,
   "paperReference": "Stubbs et al., JAMIA 2015",
   "paperUrl": "https://academic.oup.com/jamia/article/22/6/1220/2357822",

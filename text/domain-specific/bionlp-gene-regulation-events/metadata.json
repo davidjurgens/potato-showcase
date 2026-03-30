@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kim et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "bionlp-st",
     "affiliation": "University of Tokyo"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["event_annotation", "span"],
-  "domain": ["NLP", "Biomedical"],
-  "useCase": ["Event Extraction", "Named Entity Recognition", "Biomedical Text Mining"],
+  "annotationTypes": [
+    "event_annotation",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Biomedical"
+  ],
+  "useCase": [
+    "Event Extraction",
+    "Named Entity Recognition",
+    "Biomedical Text Mining"
+  ],
   "complexity": "advanced",
-  "tags": ["bionlp", "gene-regulation", "biomedical", "event-extraction", "ner", "acl2011"],
+  "tags": [
+    "bionlp",
+    "gene-regulation",
+    "biomedical",
+    "event-extraction",
+    "ner",
+    "acl2011"
+  ],
   "featured": false,
   "paperReference": "Kim et al., ACL Workshop 2011",
   "paperUrl": "https://aclanthology.org/W11-1801/",

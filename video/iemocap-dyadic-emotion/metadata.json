@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio"],
-  "domain": ["Emotion Recognition", "Affective Computing", "Multimodal Analysis"],
-  "useCase": ["Emotion Detection", "Affective Dimension Rating", "Dyadic Interaction Analysis"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio"
+  ],
+  "domain": [
+    "Emotion Recognition",
+    "Affective Computing",
+    "Multimodal Analysis"
+  ],
+  "useCase": [
+    "Emotion Detection",
+    "Affective Dimension Rating",
+    "Dyadic Interaction Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["emotion", "dyadic", "multi-tier", "elan-style", "affective-computing", "motion-capture", "iemocap"],
+  "tags": [
+    "emotion",
+    "dyadic",
+    "multi-tier",
+    "elan-style",
+    "affective-computing",
+    "motion-capture",
+    "iemocap"
+  ],
   "featured": false,
   "paperReference": "Busso et al., Language Resources and Evaluation 2008",
   "paperUrl": "https://doi.org/10.1007/s10579-008-9076-6",

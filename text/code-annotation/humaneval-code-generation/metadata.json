@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Code Generation", "Program Synthesis", "AI Evaluation"],
-  "useCase": ["LLM Evaluation", "Code Correctness Assessment", "Code Quality Rating"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Code Generation",
+    "Program Synthesis",
+    "AI Evaluation"
+  ],
+  "useCase": [
+    "LLM Evaluation",
+    "Code Correctness Assessment",
+    "Code Quality Rating"
+  ],
   "complexity": "intermediate",
-  "tags": ["code-generation", "humaneval", "program-synthesis", "llm-evaluation", "openai"],
+  "tags": [
+    "code-generation",
+    "humaneval",
+    "program-synthesis",
+    "llm-evaluation",
+    "openai"
+  ],
   "featured": false,
   "paperReference": "Chen et al., arXiv 2021",
   "paperUrl": "https://arxiv.org/abs/2107.03374",

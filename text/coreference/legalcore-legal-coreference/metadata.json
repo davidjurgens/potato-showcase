@@ -3,8 +3,8 @@
   "description": "Event coreference resolution in legal documents including court opinions, contracts, and statutes. Annotators identify legal event mentions such as actions, states, obligations, and violations, then link coreferent events that refer to the same real-world event. Based on the LegalCore dataset for domain-specific event coreference in the legal domain.",
   "version": "1.0.0",
   "author": {
-    "name": "Semo et al.",
-    "email": "jurgens@umich.edu",
+    "name": "Wei et al.",
+    "email": "",
     "github": "legal-nlp",
     "affiliation": "Bar-Ilan University"
   },
@@ -33,8 +33,8 @@
     "acl2025"
   ],
   "featured": false,
-  "paperReference": "Semo et al., Findings ACL 2025",
-  "paperUrl": "https://arxiv.org/abs/2501.00000",
-  "datasetUrl": "https://github.com/legal-nlp/LegalCore",
-  "citation": "@inproceedings{semo-etal-2025-legalcore,\n    title = \"{L}egal{C}ore: Event Coreference in Legal Documents\",\n    author = \"Semo, Alon  and Cattan, Arie  and Goldberg, Yoav\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n    month = jul,\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2501.00000\"\n}"
+  "paperReference": "Wei et al., Findings ACL 2025",
+  "paperUrl": "https://arxiv.org/abs/2502.12509",
+  "datasetUrl": "https://github.com/WeiKangda/LegalCore",
+  "citation": "@inproceedings{wei-etal-2025-legalcore,\n    title = \"{L}egal{C}ore: A Dataset for Event Coreference Resolution in Legal Documents\",\n    author = \"Wei, Kangda and others\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2502.12509\"\n}"
 }

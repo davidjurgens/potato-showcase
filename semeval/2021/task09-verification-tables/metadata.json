@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "IBM Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "span"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Fact Verification", "Table Understanding", "Evidence Finding"],
+  "annotationTypes": [
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Table Understanding",
+    "Evidence Finding"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2021", "shared-task", "fact-verification", "tables", "evidence", "entailment"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "fact-verification",
+    "tables",
+    "evidence",
+    "entailment"
+  ],
   "featured": false,
   "paperReference": "Wang et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.27/",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Bai et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "anthropics",
     "affiliation": "Anthropic"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "likert", "text"],
-  "domain": ["AI Safety", "Natural Language Processing"],
-  "useCase": ["Harmlessness Evaluation", "AI Alignment", "RLHF"],
+  "annotationTypes": [
+    "radio",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "AI Safety",
+    "Natural Language Processing"
+  ],
+  "useCase": [
+    "Harmlessness Evaluation",
+    "AI Alignment",
+    "RLHF"
+  ],
   "complexity": "intermediate",
-  "tags": ["constitutional-ai", "harmlessness", "helpfulness", "alignment", "safety", "rlhf"],
+  "tags": [
+    "constitutional-ai",
+    "harmlessness",
+    "helpfulness",
+    "alignment",
+    "safety",
+    "rlhf"
+  ],
   "featured": false,
   "paperReference": "Bai et al., arXiv 2022",
   "paperUrl": "https://arxiv.org/abs/2212.08073",

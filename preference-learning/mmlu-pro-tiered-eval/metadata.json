@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "tiger-ai-lab",
     "affiliation": "University of Waterloo"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["tiered_annotation", "radio"],
-  "domain": ["NLP", "Education"],
-  "useCase": ["Question Answering", "Benchmark Evaluation", "Multi-Subject Assessment"],
+  "annotationTypes": [
+    "tiered_annotation",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Education"
+  ],
+  "useCase": [
+    "Question Answering",
+    "Benchmark Evaluation",
+    "Multi-Subject Assessment"
+  ],
   "complexity": "intermediate",
-  "tags": ["mmlu-pro", "multiple-choice", "tiered", "evaluation", "stem", "humanities", "neurips2024"],
+  "tags": [
+    "mmlu-pro",
+    "multiple-choice",
+    "tiered",
+    "evaluation",
+    "stem",
+    "humanities",
+    "neurips2024"
+  ],
   "featured": false,
   "paperReference": "Wang et al., NeurIPS 2024",
   "paperUrl": "https://arxiv.org/abs/2406.01574",

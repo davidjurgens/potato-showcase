@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Mathur et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "timeline-nlp",
     "affiliation": "University of Rochester"
   },
@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Mathur et al., EMNLP 2023",
-  "paperUrl": "https://aclanthology.org/2023.emnlp-main.788/",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.1016/",
   "datasetUrl": "https://github.com/timeline-nlp/timeline",
-  "citation": "@inproceedings{mathur-etal-2023-timeline,\n    title = \"{TIMELINE}: Exhaustive Annotation of Temporal Relations\",\n    author = \"Mathur, Puneet  and Jain, Rajiv  and Dernoncourt, Franck  and Morariu, Vlad  and Tran, Quan Hung  and Manocha, Dinesh\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.788\",\n    pages = \"12798--12814\"\n}"
+  "citation": "@inproceedings{mathur-etal-2023-timeline,\n    title = \"{TIMELINE}: Exhaustive Annotation of Temporal Relations\",\n    author = \"Mathur, Puneet  and Jain, Rajiv  and Dernoncourt, Franck  and Morariu, Vlad  and Tran, Quan Hung  and Manocha, Dinesh\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1016\",\n    pages = \"12798--12814\"\n}"
 }

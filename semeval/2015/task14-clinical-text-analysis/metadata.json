@@ -4,17 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Elhadad et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Columbia University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "Clinical NLP", "Biomedical", "NER"],
-  "useCase": ["Disorder Identification", "Clinical Text Mining", "Medical NER"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "Clinical NLP",
+    "Biomedical",
+    "NER"
+  ],
+  "useCase": [
+    "Disorder Identification",
+    "Clinical Text Mining",
+    "Medical NER"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2015", "shared-task", "clinical", "biomedical", "disorder", "ner", "normalization"],
+  "tags": [
+    "semeval",
+    "semeval-2015",
+    "shared-task",
+    "clinical",
+    "biomedical",
+    "disorder",
+    "ner",
+    "normalization"
+  ],
   "featured": false,
   "paperReference": "Elhadad et al., SemEval 2015",
   "paperUrl": "https://aclanthology.org/S15-2070/",

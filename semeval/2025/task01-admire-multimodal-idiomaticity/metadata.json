@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Tayyar Madabushi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "H-TayyarMadabworked",
     "affiliation": "University of Bath"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["SemEval", "NLP", "Multimodal", "Idiom Detection"],
-  "useCase": ["Idiomaticity Detection", "Multimodal Understanding", "Figurative Language"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Multimodal",
+    "Idiom Detection"
+  ],
+  "useCase": [
+    "Idiomaticity Detection",
+    "Multimodal Understanding",
+    "Figurative Language"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2025", "shared-task", "idiom", "multimodal", "figurative-language"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "idiom",
+    "multimodal",
+    "figurative-language"
+  ],
   "featured": false,
   "paperReference": "Tayyar Madabushi et al., SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

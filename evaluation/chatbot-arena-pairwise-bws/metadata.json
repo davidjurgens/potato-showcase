@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Zheng et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "lm-sys",
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["bws", "pairwise"],
-  "domain": ["NLP", "AI Evaluation"],
-  "useCase": ["LLM Evaluation", "Preference Learning", "Chatbot Comparison"],
+  "annotationTypes": [
+    "bws",
+    "pairwise"
+  ],
+  "domain": [
+    "NLP",
+    "AI Evaluation"
+  ],
+  "useCase": [
+    "LLM Evaluation",
+    "Preference Learning",
+    "Chatbot Comparison"
+  ],
   "complexity": "intermediate",
-  "tags": ["chatbot-arena", "pairwise", "bws", "llm-evaluation", "rlhf", "icml2024"],
+  "tags": [
+    "chatbot-arena",
+    "pairwise",
+    "bws",
+    "llm-evaluation",
+    "rlhf",
+    "icml2024"
+  ],
   "featured": false,
   "paperReference": "Zheng et al., ICML 2024",
   "paperUrl": "https://arxiv.org/abs/2403.04132",

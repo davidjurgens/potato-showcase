@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Xie et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "The-FinAI",
     "affiliation": "The FinAI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Finance"],
-  "useCase": ["Named Entity Recognition", "Financial NLP", "Document Classification"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Finance"
+  ],
+  "useCase": [
+    "Named Entity Recognition",
+    "Financial NLP",
+    "Document Classification"
+  ],
   "complexity": "intermediate",
-  "tags": ["ner", "finance", "entities", "flare", "financial-text", "document-classification"],
+  "tags": [
+    "ner",
+    "finance",
+    "entities",
+    "flare",
+    "financial-text",
+    "document-classification"
+  ],
   "featured": false,
   "paperReference": "Xie et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2311.00640",

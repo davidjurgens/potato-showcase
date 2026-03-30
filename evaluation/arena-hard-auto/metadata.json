@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Li et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "lm-sys",
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["pairwise", "likert"],
-  "domain": ["NLP", "AI Evaluation"],
-  "useCase": ["LLM Evaluation", "Preference Learning", "Benchmark Annotation"],
+  "annotationTypes": [
+    "pairwise",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "AI Evaluation"
+  ],
+  "useCase": [
+    "LLM Evaluation",
+    "Preference Learning",
+    "Benchmark Annotation"
+  ],
   "complexity": "intermediate",
-  "tags": ["arena-hard", "pairwise", "scale", "llm-evaluation", "benchmark", "arxiv2024"],
+  "tags": [
+    "arena-hard",
+    "pairwise",
+    "scale",
+    "llm-evaluation",
+    "benchmark",
+    "arxiv2024"
+  ],
   "featured": false,
   "paperReference": "Li et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2406.11939",

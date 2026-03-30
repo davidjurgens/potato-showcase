@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Prasad et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "linguistics-penn",
     "affiliation": "University of Pennsylvania"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["tree_annotation", "span"],
-  "domain": ["NLP", "Linguistics"],
-  "useCase": ["Discourse Analysis", "Coherence", "Text Structure"],
+  "annotationTypes": [
+    "tree_annotation",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Discourse Analysis",
+    "Coherence",
+    "Text Structure"
+  ],
   "complexity": "advanced",
-  "tags": ["pdtb", "discourse", "tree-structure", "connectives", "coherence", "lrec2008"],
+  "tags": [
+    "pdtb",
+    "discourse",
+    "tree-structure",
+    "connectives",
+    "coherence",
+    "lrec2008"
+  ],
   "featured": false,
   "paperReference": "Prasad et al., LREC 2008",
   "paperUrl": "https://aclanthology.org/L08-1093/",

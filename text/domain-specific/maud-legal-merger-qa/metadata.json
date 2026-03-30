@@ -4,20 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "TheAtticusProject",
     "affiliation": "NYU / Atticus Project"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Legal"],
-  "useCase": ["Legal Document Understanding", "Clause Identification", "Question Answering"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Legal"
+  ],
+  "useCase": [
+    "Legal Document Understanding",
+    "Clause Identification",
+    "Question Answering"
+  ],
   "complexity": "advanced",
-  "tags": ["legal", "merger-agreement", "clause-extraction", "maud", "emnlp2023", "contract-analysis"],
+  "tags": [
+    "legal",
+    "merger-agreement",
+    "clause-extraction",
+    "maud",
+    "emnlp2023",
+    "contract-analysis"
+  ],
   "featured": false,
   "paperReference": "Wang et al., EMNLP 2023",
-  "paperUrl": "https://aclanthology.org/2023.emnlp-main.1009/",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.1019/",
   "datasetUrl": "https://github.com/TheAtticusProject/maud",
-  "citation": "@inproceedings{wang-etal-2023-maud,\n    title = \"{MAUD}: An Expert-Annotated Legal {NLP} Dataset for Merger Agreement Understanding\",\n    author = \"Wang, Steven H.  and Scardigli, Antoine  and Tang, Leonard  and Chen, Wei  and Levitt, Dimitry  and Chen, Anya  and Spencer, Jillian  and Goldber, Michael  and Rattner, Daniel  and Nishi, Celine  and Potts, Chris  and Ho, Daniel E.\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1009\",\n    pages = \"16226--16250\"\n}"
+  "citation": "@inproceedings{wang-etal-2023-maud,\n    title = \"{MAUD}: An Expert-Annotated Legal {NLP} Dataset for Merger Agreement Understanding\",\n    author = \"Wang, Steven H.  and Scardigli, Antoine  and Tang, Leonard  and Chen, Wei  and Levitt, Dimitry  and Chen, Anya  and Spencer, Jillian  and Goldber, Michael  and Rattner, Daniel  and Nishi, Celine  and Potts, Chris  and Ho, Daniel E.\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1019\",\n    pages = \"16226--16250\"\n}"
 }

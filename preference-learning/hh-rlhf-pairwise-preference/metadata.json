@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "AI Alignment"],
-  "useCase": ["RLHF", "Reward Modeling", "Preference Learning"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "RLHF",
+    "Reward Modeling",
+    "Preference Learning"
+  ],
   "complexity": "beginner",
-  "tags": ["preference", "rlhf", "anthropic", "helpfulness", "harmlessness", "pairwise"],
+  "tags": [
+    "preference",
+    "rlhf",
+    "anthropic",
+    "helpfulness",
+    "harmlessness",
+    "pairwise"
+  ],
   "featured": true,
   "paperReference": "Bai et al., 2022",
   "paperUrl": "https://arxiv.org/abs/2204.05862",

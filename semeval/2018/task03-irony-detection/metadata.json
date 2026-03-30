@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Van Hee et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Ghent University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Irony Detection", "Social Media"],
-  "useCase": ["Irony Detection", "Figurative Language", "Sentiment Analysis"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Irony Detection",
+    "Social Media"
+  ],
+  "useCase": [
+    "Irony Detection",
+    "Figurative Language",
+    "Sentiment Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2018", "shared-task", "irony", "sarcasm", "twitter", "figurative-language"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "irony",
+    "sarcasm",
+    "twitter",
+    "figurative-language"
+  ],
   "featured": false,
   "paperReference": "Van Hee et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1005/",

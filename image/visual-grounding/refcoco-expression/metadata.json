@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Yu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "lichengunc",
     "affiliation": "UNC Chapel Hill"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["image_annotation", "text"],
-  "domain": ["Computer Vision", "NLP"],
-  "useCase": ["Visual Grounding", "Referring Expression Comprehension", "Object Localization"],
+  "annotationTypes": [
+    "image_annotation",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "NLP"
+  ],
+  "useCase": [
+    "Visual Grounding",
+    "Referring Expression Comprehension",
+    "Object Localization"
+  ],
   "complexity": "intermediate",
-  "tags": ["refcoco", "visual-grounding", "referring-expression", "bounding-box", "eccv2016", "multimodal"],
+  "tags": [
+    "refcoco",
+    "visual-grounding",
+    "referring-expression",
+    "bounding-box",
+    "eccv2016",
+    "multimodal"
+  ],
   "featured": false,
   "paperReference": "Yu et al., ECCV 2016",
   "paperUrl": "https://arxiv.org/abs/1608.00272",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Software Engineering", "Code Agents", "Evaluation"],
-  "useCase": ["Code Review", "Agent Evaluation", "Patch Assessment"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Code Agents",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Code Review",
+    "Agent Evaluation",
+    "Patch Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["swe-bench", "code-agent", "github-issues", "patch-review", "software-engineering", "evaluation"],
+  "tags": [
+    "swe-bench",
+    "code-agent",
+    "github-issues",
+    "patch-review",
+    "software-engineering",
+    "evaluation"
+  ],
   "featured": false,
   "paperReference": "Jimenez et al., ICLR 2024",
   "paperUrl": "https://openreview.net/forum?id=VTF8yNQM66",

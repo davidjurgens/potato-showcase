@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Panayotov et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "kaldi-asr",
     "affiliation": "Johns Hopkins University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["slider", "audio_annotation"],
-  "domain": ["Speech", "Audio"],
-  "useCase": ["Speech Recognition", "Audio Quality Assessment", "Transcription"],
+  "annotationTypes": [
+    "slider",
+    "audio_annotation"
+  ],
+  "domain": [
+    "Speech",
+    "Audio"
+  ],
+  "useCase": [
+    "Speech Recognition",
+    "Audio Quality Assessment",
+    "Transcription"
+  ],
   "complexity": "beginner",
-  "tags": ["librispeech", "transcription", "audio", "speech-recognition", "quality-rating", "icassp2015"],
+  "tags": [
+    "librispeech",
+    "transcription",
+    "audio",
+    "speech-recognition",
+    "quality-rating",
+    "icassp2015"
+  ],
   "featured": false,
   "paperReference": "Panayotov et al., ICASSP 2015",
   "paperUrl": "https://ieeexplore.ieee.org/document/7178964",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Nivre et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "UniversalDependencies",
     "affiliation": "Uppsala University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["tree_annotation", "span"],
-  "domain": ["NLP", "Syntax", "Linguistics"],
-  "useCase": ["Dependency Parsing", "POS Tagging", "Syntactic Analysis"],
+  "annotationTypes": [
+    "tree_annotation",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Syntax",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Dependency Parsing",
+    "POS Tagging",
+    "Syntactic Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["universal-dependencies", "parsing", "pos-tagging", "syntax", "treebank", "lrec2020"],
+  "tags": [
+    "universal-dependencies",
+    "parsing",
+    "pos-tagging",
+    "syntax",
+    "treebank",
+    "lrec2020"
+  ],
   "featured": false,
   "paperReference": "Nivre et al., LREC 2020",
   "paperUrl": "https://aclanthology.org/2020.lrec-1.497/",

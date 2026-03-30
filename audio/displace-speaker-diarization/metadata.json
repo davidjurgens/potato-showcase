@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kundu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "displace2024",
     "affiliation": "Multiple Institutions"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "span"],
-  "domain": ["Speech Processing", "Speaker Diarization"],
-  "useCase": ["Speaker Identification", "Language Identification", "Conversation Analysis"],
+  "annotationTypes": [
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "Speech Processing",
+    "Speaker Diarization"
+  ],
+  "useCase": [
+    "Speaker Identification",
+    "Language Identification",
+    "Conversation Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["audio", "diarization", "speaker", "language-identification", "multilingual", "interspeech2024"],
+  "tags": [
+    "audio",
+    "diarization",
+    "speaker",
+    "language-identification",
+    "multilingual",
+    "interspeech2024"
+  ],
   "featured": false,
   "paperReference": "Kundu et al., INTERSPEECH 2024",
   "paperUrl": "https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html",

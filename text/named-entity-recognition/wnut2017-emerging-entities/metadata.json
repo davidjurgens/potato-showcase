@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Derczynski et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "noisy-text",
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Social Media"],
-  "useCase": ["Named Entity Recognition", "Information Extraction", "Social Media Analysis"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media"
+  ],
+  "useCase": [
+    "Named Entity Recognition",
+    "Information Extraction",
+    "Social Media Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["ner", "emerging-entities", "social-media", "twitter", "reddit", "wnut2017"],
+  "tags": [
+    "ner",
+    "emerging-entities",
+    "social-media",
+    "twitter",
+    "reddit",
+    "wnut2017"
+  ],
   "featured": false,
   "paperReference": "Derczynski et al., W-NUT@EMNLP 2017",
   "paperUrl": "https://aclanthology.org/W17-4418/",

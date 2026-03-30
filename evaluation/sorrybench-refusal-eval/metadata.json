@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "AI Safety", "Evaluation"],
-  "useCase": ["Safety Refusal Evaluation", "LLM Benchmarking", "Red Teaming"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "AI Safety",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Safety Refusal Evaluation",
+    "LLM Benchmarking",
+    "Red Teaming"
+  ],
   "complexity": "advanced",
-  "tags": ["safety", "refusal", "sorry-bench", "llm-evaluation", "red-teaming", "compliance"],
+  "tags": [
+    "safety",
+    "refusal",
+    "sorry-bench",
+    "llm-evaluation",
+    "red-teaming",
+    "compliance"
+  ],
   "featured": false,
   "paperReference": "Xie et al., ICLR 2025",
   "paperUrl": "https://openreview.net/forum?id=sorrybench2025",

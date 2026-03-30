@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Lambert et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "allenai",
     "affiliation": "Allen Institute for AI"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["pairwise", "radio", "multirate"],
-  "domain": ["NLP", "LLM Evaluation"],
-  "useCase": ["Reward Model Evaluation", "RLHF", "Model Alignment"],
+  "annotationTypes": [
+    "pairwise",
+    "radio",
+    "multirate"
+  ],
+  "domain": [
+    "NLP",
+    "LLM Evaluation"
+  ],
+  "useCase": [
+    "Reward Model Evaluation",
+    "RLHF",
+    "Model Alignment"
+  ],
   "complexity": "intermediate",
-  "tags": ["reward-model", "rewardbench", "pairwise", "rlhf", "alignment", "icml2024"],
+  "tags": [
+    "reward-model",
+    "rewardbench",
+    "pairwise",
+    "rlhf",
+    "alignment",
+    "icml2024"
+  ],
   "featured": false,
   "paperReference": "Lambert et al., ICML 2024",
   "paperUrl": "https://arxiv.org/abs/2403.13787",

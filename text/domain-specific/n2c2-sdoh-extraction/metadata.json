@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Lybarger et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "Lybarger",
     "affiliation": "University of Washington"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Clinical NLP", "Social Determinants of Health"],
-  "useCase": ["Entity Extraction", "Clinical Documentation", "Public Health Surveillance"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Clinical NLP",
+    "Social Determinants of Health"
+  ],
+  "useCase": [
+    "Entity Extraction",
+    "Clinical Documentation",
+    "Public Health Surveillance"
+  ],
   "complexity": "advanced",
-  "tags": ["sdoh", "clinical-nlp", "n2c2", "social-determinants", "entity-extraction", "jamia2023"],
+  "tags": [
+    "sdoh",
+    "clinical-nlp",
+    "n2c2",
+    "social-determinants",
+    "entity-extraction",
+    "jamia2023"
+  ],
   "featured": false,
   "paperReference": "Lybarger et al., JAMIA 2023",
   "paperUrl": "https://academic.oup.com/jamia/article/30/8/1382/7184752",

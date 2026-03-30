@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Demszky et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google-research",
     "affiliation": "Google Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "radio"],
-  "domain": ["NLP", "Social Media"],
-  "useCase": ["Emotion Detection", "Sentiment Analysis", "Social Media Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media"
+  ],
+  "useCase": [
+    "Emotion Detection",
+    "Sentiment Analysis",
+    "Social Media Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["emotion", "multi-label", "reddit", "fine-grained", "goemotions", "acl2020"],
+  "tags": [
+    "emotion",
+    "multi-label",
+    "reddit",
+    "fine-grained",
+    "goemotions",
+    "acl2020"
+  ],
   "featured": true,
   "paperReference": "Demszky et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.372/",

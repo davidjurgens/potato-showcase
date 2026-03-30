@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["Software Engineering", "Code Review", "NLP"],
-  "useCase": ["Code Review Automation", "Defect Detection", "Code Quality Assessment"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Code Review",
+    "NLP"
+  ],
+  "useCase": [
+    "Code Review Automation",
+    "Defect Detection",
+    "Code Quality Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["code-review", "software-engineering", "code-quality", "fse2022", "codereviewer"],
+  "tags": [
+    "code-review",
+    "software-engineering",
+    "code-quality",
+    "fse2022",
+    "codereviewer"
+  ],
   "featured": false,
   "paperReference": "Li et al., FSE 2022",
   "paperUrl": "https://doi.org/10.1145/3540250.3549081",

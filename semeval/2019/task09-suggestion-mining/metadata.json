@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Negi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Insight Centre for Data Analytics"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Opinion Mining", "Text Classification"],
-  "useCase": ["Suggestion Mining", "Review Analysis", "Customer Feedback"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Opinion Mining",
+    "Text Classification"
+  ],
+  "useCase": [
+    "Suggestion Mining",
+    "Review Analysis",
+    "Customer Feedback"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2019", "shared-task", "suggestion-mining", "reviews", "opinion-mining"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "suggestion-mining",
+    "reviews",
+    "opinion-mining"
+  ],
   "featured": false,
   "paperReference": "Negi et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2151/",

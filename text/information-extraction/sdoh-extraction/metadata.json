@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Lybarger et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "Lybarger",
     "affiliation": "University of Washington"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio", "multiselect"],
-  "domain": ["Clinical NLP", "Healthcare"],
-  "useCase": ["Information Extraction", "Clinical Documentation", "Public Health"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "Clinical NLP",
+    "Healthcare"
+  ],
+  "useCase": [
+    "Information Extraction",
+    "Clinical Documentation",
+    "Public Health"
+  ],
   "complexity": "advanced",
-  "tags": ["sdoh", "clinical", "social-determinants", "n2c2", "event-extraction", "healthcare"],
+  "tags": [
+    "sdoh",
+    "clinical",
+    "social-determinants",
+    "n2c2",
+    "event-extraction",
+    "healthcare"
+  ],
   "featured": true,
   "paperReference": "Lybarger et al., JAMIA 2023",
   "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/36795066/",

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Kiesel et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Bauhaus-Universitat Weimar"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Media Analysis", "Political Bias"],
-  "useCase": ["Bias Detection", "Media Analysis", "News Classification"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Media Analysis",
+    "Political Bias"
+  ],
+  "useCase": [
+    "Bias Detection",
+    "Media Analysis",
+    "News Classification"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2019", "shared-task", "hyperpartisan", "news", "bias-detection", "media"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "hyperpartisan",
+    "news",
+    "bias-detection",
+    "media"
+  ],
   "featured": false,
   "paperReference": "Kiesel et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2145/",

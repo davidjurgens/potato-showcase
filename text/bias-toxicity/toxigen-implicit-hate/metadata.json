@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Hartvigsen et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "microsoft",
     "affiliation": "MIT / Microsoft"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Hate Speech Detection", "Content Safety"],
-  "useCase": ["Hate Speech Detection", "Content Moderation", "Bias Analysis"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Hate Speech Detection",
+    "Content Safety"
+  ],
+  "useCase": [
+    "Hate Speech Detection",
+    "Content Moderation",
+    "Bias Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["hate-speech", "implicit-toxicity", "toxigen", "acl2022", "content-safety", "bias-detection"],
+  "tags": [
+    "hate-speech",
+    "implicit-toxicity",
+    "toxigen",
+    "acl2022",
+    "content-safety",
+    "bias-detection"
+  ],
   "featured": false,
   "paperReference": "Hartvigsen et al., ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.acl-long.234/",

@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio", "text"],
-  "domain": ["Sign Language", "Computer Vision", "Accessibility"],
-  "useCase": ["Sign Language Recognition", "Gloss Annotation", "Translation"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Sign Language",
+    "Computer Vision",
+    "Accessibility"
+  ],
+  "useCase": [
+    "Sign Language Recognition",
+    "Gloss Annotation",
+    "Translation"
+  ],
   "complexity": "advanced",
-  "tags": ["sign-language", "asl", "multi-tier", "elan-style", "gloss", "translation", "cvpr2021"],
+  "tags": [
+    "sign-language",
+    "asl",
+    "multi-tier",
+    "elan-style",
+    "gloss",
+    "translation",
+    "cvpr2021"
+  ],
   "featured": false,
   "paperReference": "Duarte et al., CVPR 2021",
   "paperUrl": "https://openaccess.thecvf.com/content/CVPR2021/papers/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.pdf",

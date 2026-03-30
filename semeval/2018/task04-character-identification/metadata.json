@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Chen et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Emory University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "NLP", "Entity Resolution", "Dialogue"],
-  "useCase": ["Character Identification", "Coreference Resolution", "Entity Linking"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Entity Resolution",
+    "Dialogue"
+  ],
+  "useCase": [
+    "Character Identification",
+    "Coreference Resolution",
+    "Entity Linking"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2018", "shared-task", "character-identification", "dialogue", "entity-resolution", "friends"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "character-identification",
+    "dialogue",
+    "entity-resolution",
+    "friends"
+  ],
   "featured": false,
   "paperReference": "Chen et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1007/",

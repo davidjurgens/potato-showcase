@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kwiatkowski et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google-research-datasets",
     "affiliation": "Google Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["NLP", "Question Answering"],
-  "useCase": ["Open-Domain QA", "Information Retrieval", "Reading Comprehension"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Open-Domain QA",
+    "Information Retrieval",
+    "Reading Comprehension"
+  ],
   "complexity": "intermediate",
-  "tags": ["natural-questions", "open-domain-qa", "wikipedia", "google", "tacl2019"],
+  "tags": [
+    "natural-questions",
+    "open-domain-qa",
+    "wikipedia",
+    "google",
+    "tacl2019"
+  ],
   "featured": false,
   "paperReference": "Kwiatkowski et al., TACL 2019",
   "paperUrl": "https://aclanthology.org/Q19-1026/",

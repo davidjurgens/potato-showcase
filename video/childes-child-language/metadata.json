@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "text", "radio"],
-  "domain": ["Child Language Acquisition", "Developmental Psychology", "Linguistics"],
-  "useCase": ["Language Development Tracking", "Error Analysis", "Child-Adult Interaction"],
+  "annotationTypes": [
+    "video_annotation",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Child Language Acquisition",
+    "Developmental Psychology",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Language Development Tracking",
+    "Error Analysis",
+    "Child-Adult Interaction"
+  ],
   "complexity": "intermediate",
-  "tags": ["child-language", "developmental", "multi-tier", "elan-style", "childes", "talkbank", "language-acquisition"],
+  "tags": [
+    "child-language",
+    "developmental",
+    "multi-tier",
+    "elan-style",
+    "childes",
+    "talkbank",
+    "language-acquisition"
+  ],
   "featured": false,
   "paperReference": "MacWhinney, Journal of Child Language 2000",
   "paperUrl": "https://doi.org/10.1017/S0305000900003581",

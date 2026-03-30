@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Johnson & Goldwasser",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "GT-SALT",
     "affiliation": "Purdue University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "radio"],
-  "domain": ["NLP", "Social Media", "Computational Social Science"],
-  "useCase": ["Moral Foundations", "Political Discourse", "Social Media Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "Computational Social Science"
+  ],
+  "useCase": [
+    "Moral Foundations",
+    "Political Discourse",
+    "Social Media Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["moral-foundations", "political-discourse", "tweets", "social-media", "acl2018"],
+  "tags": [
+    "moral-foundations",
+    "political-discourse",
+    "tweets",
+    "social-media",
+    "acl2018"
+  ],
   "featured": false,
   "paperReference": "Johnson & Goldwasser, ACL 2018",
   "paperUrl": "https://aclanthology.org/P18-1067/",

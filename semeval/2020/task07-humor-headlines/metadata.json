@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Hossain et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Rochester"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "radio"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Humor Detection", "Text Editing", "Creativity Assessment"],
+  "annotationTypes": [
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Humor Detection",
+    "Text Editing",
+    "Creativity Assessment"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2020", "shared-task", "humor", "headlines", "editing", "creativity"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "humor",
+    "headlines",
+    "editing",
+    "creativity"
+  ],
   "featured": false,
   "paperReference": "Hossain et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.98/",

@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Ahn et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google-research",
     "affiliation": "Google Research / Everyday Robots"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "text", "likert"],
-  "domain": ["Robotics", "Multimodal", "NLP"],
-  "useCase": ["Robot Planning", "Task Grounding", "Action Evaluation"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text",
+    "likert"
+  ],
+  "domain": [
+    "Robotics",
+    "Multimodal",
+    "NLP"
+  ],
+  "useCase": [
+    "Robot Planning",
+    "Task Grounding",
+    "Action Evaluation"
+  ],
   "complexity": "advanced",
-  "tags": ["robotics", "task-planning", "grounding", "saycan", "manipulation", "corl2022"],
+  "tags": [
+    "robotics",
+    "task-planning",
+    "grounding",
+    "saycan",
+    "manipulation",
+    "corl2022"
+  ],
   "featured": false,
   "paperReference": "Ahn et al., CoRL 2022",
   "paperUrl": "https://arxiv.org/abs/2204.01691",

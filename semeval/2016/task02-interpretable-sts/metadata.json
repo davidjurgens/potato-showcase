@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Agirre et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of the Basque Country"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "likert"],
-  "domain": ["SemEval", "NLP", "Semantic Similarity", "Text Alignment"],
-  "useCase": ["Semantic Similarity", "Text Alignment", "Paraphrase Detection"],
+  "annotationTypes": [
+    "span",
+    "likert"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Semantic Similarity",
+    "Text Alignment"
+  ],
+  "useCase": [
+    "Semantic Similarity",
+    "Text Alignment",
+    "Paraphrase Detection"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2016", "shared-task", "semantic-similarity", "interpretable", "alignment", "sts"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "semantic-similarity",
+    "interpretable",
+    "alignment",
+    "sts"
+  ],
   "featured": false,
   "paperReference": "Agirre et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1082/",
