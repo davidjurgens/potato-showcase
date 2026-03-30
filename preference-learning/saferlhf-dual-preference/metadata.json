@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["radio", "multiselect", "likert"],
-  "domain": ["NLP", "AI Safety", "AI Alignment"],
-  "useCase": ["Safe RLHF", "Harmlessness Evaluation", "Content Moderation"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "AI Safety",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "Safe RLHF",
+    "Harmlessness Evaluation",
+    "Content Moderation"
+  ],
   "complexity": "advanced",
-  "tags": ["preference", "rlhf", "safety", "harmlessness", "helpfulness", "dual-objective"],
+  "tags": [
+    "preference",
+    "rlhf",
+    "safety",
+    "harmlessness",
+    "helpfulness",
+    "dual-objective"
+  ],
   "featured": false,
   "paperReference": "Ji et al., 2024 / Dai et al., ICLR 2024",
   "paperUrl": "https://arxiv.org/abs/2406.15513",

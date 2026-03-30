@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["multiselect", "likert", "radio", "text"],
-  "domain": ["Agentic AI", "LLM Agents", "Benchmarking"],
-  "useCase": ["Agent Evaluation", "Progress Assessment"],
+  "annotationTypes": [
+    "multiselect",
+    "likert",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Agentic AI",
+    "LLM Agents",
+    "Benchmarking"
+  ],
+  "useCase": [
+    "Agent Evaluation",
+    "Progress Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["multi-turn-agents", "progress-scoring", "milestones", "llm-benchmarking"],
+  "tags": [
+    "multi-turn-agents",
+    "progress-scoring",
+    "milestones",
+    "llm-benchmarking"
+  ],
   "featured": false,
   "paperReference": "Ma et al., NeurIPS 2024",
   "paperUrl": "https://arxiv.org/abs/2401.13178",

@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Chalkidis et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "coastalcph",
     "affiliation": "University of Copenhagen"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect", "text"],
-  "domain": ["NLP", "Legal"],
-  "useCase": ["Legal Classification", "Document Understanding", "Legal NLP"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Legal"
+  ],
+  "useCase": [
+    "Legal Classification",
+    "Document Understanding",
+    "Legal NLP"
+  ],
   "complexity": "intermediate",
-  "tags": ["lexglue", "legal", "law", "document-classification", "acl2022"],
+  "tags": [
+    "lexglue",
+    "legal",
+    "law",
+    "document-classification",
+    "acl2022"
+  ],
   "featured": false,
   "paperReference": "Chalkidis et al., ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.acl-long.297/",

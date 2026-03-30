@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Meaney et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "likert"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Humor Detection", "Offense Detection", "Content Moderation"],
+  "annotationTypes": [
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Humor Detection",
+    "Offense Detection",
+    "Content Moderation"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2021", "shared-task", "humor", "offense", "classification"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "humor",
+    "offense",
+    "classification"
+  ],
   "featured": false,
   "paperReference": "Meaney et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.9/",

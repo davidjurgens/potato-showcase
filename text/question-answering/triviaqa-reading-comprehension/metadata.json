@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Joshi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "mandarjoshi90",
     "affiliation": "University of Washington"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["NLP", "Question Answering"],
-  "useCase": ["Reading Comprehension", "Trivia QA", "Evidence-Based QA"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Reading Comprehension",
+    "Trivia QA",
+    "Evidence-Based QA"
+  ],
   "complexity": "beginner",
-  "tags": ["triviaqa", "trivia", "reading-comprehension", "evidence-based", "acl2017"],
+  "tags": [
+    "triviaqa",
+    "trivia",
+    "reading-comprehension",
+    "evidence-based",
+    "acl2017"
+  ],
   "featured": false,
   "paperReference": "Joshi et al., ACL 2017",
   "paperUrl": "https://aclanthology.org/P17-1147/",

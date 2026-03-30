@@ -4,20 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Blloshmi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Sapienza University of Rome"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Semantic Role Labeling", "Cross-lingual NLP"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Semantic Role Labeling",
+    "Cross-lingual NLP"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2021", "shared-task", "semantic-roles", "srl", "multilingual"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "semantic-roles",
+    "srl",
+    "multilingual"
+  ],
   "featured": false,
   "paperReference": "Blloshmi et al., SemEval 2021",
-  "paperUrl": "https://aclanthology.org/2021.semeval-1.4/",
+  "paperUrl": "https://aclanthology.org/2021.findings-emnlp.197/",
   "datasetUrl": "https://github.com/SapienzaNLP/xl-amr",
-  "citation": "@inproceedings{blloshmi-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 3: {S}pan- and {D}ependency-{B}ased {M}ultilingual and {C}ross-{L}ingual {S}emantic {R}ole {L}abeling\",\n    author = \"Blloshmi, Rexhina  and Conia, Simone  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.4\"\n}"
+  "citation": "@inproceedings{blloshmi-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 3: {S}pan- and {D}ependency-{B}ased {M}ultilingual and {C}ross-{L}ingual {S}emantic {R}ole {L}abeling\",\n    author = \"Blloshmi, Rexhina  and Conia, Simone  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.findings-emnlp.197\"\n}"
 }

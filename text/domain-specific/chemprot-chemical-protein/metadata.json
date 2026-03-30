@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Krallinger et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "biocreative",
     "affiliation": "Barcelona Supercomputing Center"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Biomedical"],
-  "useCase": ["Relation Extraction", "Biomedical NER", "Drug-Target Interaction"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Biomedical"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Biomedical NER",
+    "Drug-Target Interaction"
+  ],
   "complexity": "intermediate",
-  "tags": ["chemprot", "biomedical", "chemical", "protein", "relation-extraction", "drug-target"],
+  "tags": [
+    "chemprot",
+    "biomedical",
+    "chemical",
+    "protein",
+    "relation-extraction",
+    "drug-target"
+  ],
   "featured": false,
   "paperReference": "Krallinger et al., BioCreative VI 2017",
   "paperUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/",

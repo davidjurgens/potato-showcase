@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Piskorski et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect", "span"],
-  "domain": ["NLP", "Media Analysis", "SemEval"],
-  "useCase": ["Propaganda Detection", "Media Literacy", "Persuasion Analysis"],
+  "annotationTypes": [
+    "multiselect",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Media Analysis",
+    "SemEval"
+  ],
+  "useCase": [
+    "Propaganda Detection",
+    "Media Literacy",
+    "Persuasion Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2023", "shared-task", "persuasion", "propaganda", "news", "media-analysis"],
+  "tags": [
+    "semeval",
+    "semeval-2023",
+    "shared-task",
+    "persuasion",
+    "propaganda",
+    "news",
+    "media-analysis"
+  ],
   "featured": false,
   "paperReference": "Piskorski et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.317/",

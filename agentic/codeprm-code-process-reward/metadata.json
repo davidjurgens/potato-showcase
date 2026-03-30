@@ -4,17 +4,32 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Code Generation", "Programming"],
-  "useCase": ["Process Reward Models", "Code Verification", "RLHF"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Code Generation",
+    "Programming"
+  ],
+  "useCase": [
+    "Process Reward Models",
+    "Code Verification",
+    "RLHF"
+  ],
   "complexity": "advanced",
-  "tags": ["process-reward-model", "code-generation", "execution-feedback", "programming"],
+  "tags": [
+    "process-reward-model",
+    "code-generation",
+    "execution-feedback",
+    "programming"
+  ],
   "featured": false,
   "paperReference": "Li et al., ACL 2025 Findings",
   "paperUrl": "https://aclanthology.org/2025.findings-acl.428/",

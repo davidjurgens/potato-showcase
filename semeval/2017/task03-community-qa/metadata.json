@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Nakov et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "SemEval", "Question Answering"],
-  "useCase": ["Answer Quality", "Community QA", "Forum Analysis"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Answer Quality",
+    "Community QA",
+    "Forum Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2017", "shared-task", "question-answering", "community-qa", "answer-quality"],
+  "tags": [
+    "semeval",
+    "semeval-2017",
+    "shared-task",
+    "question-answering",
+    "community-qa",
+    "answer-quality"
+  ],
   "featured": false,
   "paperReference": "Nakov et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2003/",

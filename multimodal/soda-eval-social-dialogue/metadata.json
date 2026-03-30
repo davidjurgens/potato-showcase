@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Dialogue Systems", "Social Commonsense", "NLP"],
-  "useCase": ["Dialogue Evaluation", "Social Commonsense Assessment", "Conversation Quality"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Dialogue Systems",
+    "Social Commonsense",
+    "NLP"
+  ],
+  "useCase": [
+    "Dialogue Evaluation",
+    "Social Commonsense Assessment",
+    "Conversation Quality"
+  ],
   "complexity": "intermediate",
-  "tags": ["dialogue", "social-commonsense", "soda", "emnlp2023", "conversation-quality", "evaluation"],
+  "tags": [
+    "dialogue",
+    "social-commonsense",
+    "soda",
+    "emnlp2023",
+    "conversation-quality",
+    "evaluation"
+  ],
   "featured": false,
   "paperReference": "Kim et al., EMNLP 2023",
   "paperUrl": "https://aclanthology.org/2023.emnlp-main.799/",

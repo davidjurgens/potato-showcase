@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "SemEval 2025 Task 11 Organizers",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["SemEval", "NLP", "Emotion Detection", "Multilingual"],
-  "useCase": ["Emotion Classification", "Sentiment Analysis", "Affective Computing"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Emotion Detection",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Emotion Classification",
+    "Sentiment Analysis",
+    "Affective Computing"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2025", "shared-task", "emotion", "detection", "multilingual"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "emotion",
+    "detection",
+    "multilingual"
+  ],
   "featured": false,
   "paperReference": "SemEval 2025 Task 11 Organizers, SemEval 2025",
   "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",

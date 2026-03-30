@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Williams et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "nyu-mll",
     "affiliation": "New York University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Natural Language Inference"],
-  "useCase": ["Textual Entailment", "Multi-Genre NLI", "Semantic Reasoning"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Natural Language Inference"
+  ],
+  "useCase": [
+    "Textual Entailment",
+    "Multi-Genre NLI",
+    "Semantic Reasoning"
+  ],
   "complexity": "beginner",
-  "tags": ["multinli", "nli", "entailment", "multi-genre", "sentence-pairs", "naacl2018"],
+  "tags": [
+    "multinli",
+    "nli",
+    "entailment",
+    "multi-genre",
+    "sentence-pairs",
+    "naacl2018"
+  ],
   "featured": false,
   "paperReference": "Williams et al., NAACL 2018",
   "paperUrl": "https://aclanthology.org/N18-1101/",

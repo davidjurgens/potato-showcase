@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Phandi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Singapore Management University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "NLP", "Cybersecurity", "Named Entity Recognition"],
-  "useCase": ["Cybersecurity NER", "Threat Intelligence", "Information Extraction"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Cybersecurity",
+    "Named Entity Recognition"
+  ],
+  "useCase": [
+    "Cybersecurity NER",
+    "Threat Intelligence",
+    "Information Extraction"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2018", "shared-task", "cybersecurity", "ner", "malware", "threat-intelligence"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "cybersecurity",
+    "ner",
+    "malware",
+    "threat-intelligence"
+  ],
   "featured": false,
   "paperReference": "Phandi et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1113/",

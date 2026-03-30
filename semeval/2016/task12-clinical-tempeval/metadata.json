@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Bethard et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Arizona"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "NLP", "Clinical NLP", "Temporal Processing"],
-  "useCase": ["Clinical NLP", "Temporal Extraction", "Medical Text Mining"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Clinical NLP",
+    "Temporal Processing"
+  ],
+  "useCase": [
+    "Clinical NLP",
+    "Temporal Extraction",
+    "Medical Text Mining"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2016", "shared-task", "clinical-tempeval", "temporal", "clinical-nlp", "medical"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "clinical-tempeval",
+    "temporal",
+    "clinical-nlp",
+    "medical"
+  ],
   "featured": false,
   "paperReference": "Bethard et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1165/",

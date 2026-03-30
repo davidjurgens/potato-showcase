@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Hopkins et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Educational Testing Service"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["SemEval", "NLP", "Mathematics", "Question Answering"],
-  "useCase": ["Math QA", "Problem Classification", "Educational Assessment"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Mathematics",
+    "Question Answering"
+  ],
+  "useCase": [
+    "Math QA",
+    "Problem Classification",
+    "Educational Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2019", "shared-task", "math", "question-answering", "education"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "math",
+    "question-answering",
+    "education"
+  ],
   "featured": false,
   "paperReference": "Hopkins et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2153/",

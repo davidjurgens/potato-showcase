@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Li et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "OpenGVLab",
     "affiliation": "Shanghai AI Laboratory"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "video_annotation"],
-  "domain": ["Video Understanding", "Multimodal"],
-  "useCase": ["Video QA", "Temporal Reasoning", "VLM Benchmarking"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "video_annotation"
+  ],
+  "domain": [
+    "Video Understanding",
+    "Multimodal"
+  ],
+  "useCase": [
+    "Video QA",
+    "Temporal Reasoning",
+    "VLM Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["mvbench", "video-qa", "temporal-reasoning", "video-understanding", "arxiv2023"],
+  "tags": [
+    "mvbench",
+    "video-qa",
+    "temporal-reasoning",
+    "video-understanding",
+    "arxiv2023"
+  ],
   "featured": false,
   "paperReference": "Li et al., arXiv 2023",
   "paperUrl": "https://arxiv.org/abs/2311.17005",

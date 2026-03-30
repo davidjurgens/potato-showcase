@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Pradhan et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "nlpdata",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["select", "radio"],
-  "domain": ["NLP", "Lexical Semantics"],
-  "useCase": ["Word Sense Disambiguation", "Lexical Analysis", "Semantic Processing"],
+  "annotationTypes": [
+    "select",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Lexical Semantics"
+  ],
+  "useCase": [
+    "Word Sense Disambiguation",
+    "Lexical Analysis",
+    "Semantic Processing"
+  ],
   "complexity": "intermediate",
-  "tags": ["wsd", "semeval", "word-sense", "disambiguation", "lexical-semantics", "semeval2007"],
+  "tags": [
+    "wsd",
+    "semeval",
+    "word-sense",
+    "disambiguation",
+    "lexical-semantics",
+    "semeval2007"
+  ],
   "featured": false,
   "paperReference": "Pradhan et al., SemEval 2007",
   "paperUrl": "https://aclanthology.org/S07-1003/",

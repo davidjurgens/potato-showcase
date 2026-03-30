@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Barnes et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "jerbarnes",
     "affiliation": "University of Oslo"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Sentiment Analysis"],
-  "useCase": ["Structured Sentiment", "Opinion Mining", "Aspect-Based Sentiment"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Sentiment Analysis"
+  ],
+  "useCase": [
+    "Structured Sentiment",
+    "Opinion Mining",
+    "Aspect-Based Sentiment"
+  ],
   "complexity": "advanced",
-  "tags": ["structured-sentiment", "opinion-mining", "span-annotation", "sentiment", "semeval2022"],
+  "tags": [
+    "structured-sentiment",
+    "opinion-mining",
+    "span-annotation",
+    "sentiment",
+    "semeval2022"
+  ],
   "featured": false,
   "paperReference": "Barnes et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.180/",

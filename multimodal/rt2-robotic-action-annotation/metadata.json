@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Brohan et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google-deepmind",
     "affiliation": "Google DeepMind"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "likert", "video_annotation"],
-  "domain": ["Robotics", "Multimodal", "Evaluation"],
-  "useCase": ["Robotic Manipulation", "Action Recognition", "Task Evaluation"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "likert",
+    "video_annotation"
+  ],
+  "domain": [
+    "Robotics",
+    "Multimodal",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Robotic Manipulation",
+    "Action Recognition",
+    "Task Evaluation"
+  ],
   "complexity": "advanced",
-  "tags": ["robotics", "rt2", "manipulation", "action-segmentation", "corl2023", "vision-language"],
+  "tags": [
+    "robotics",
+    "rt2",
+    "manipulation",
+    "action-segmentation",
+    "corl2023",
+    "vision-language"
+  ],
   "featured": false,
   "paperReference": "Brohan et al., CoRL 2023",
   "paperUrl": "https://arxiv.org/abs/2307.15818",

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Wu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "uccollab",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "multiselect", "likert"],
-  "domain": ["NLP", "Mental Health", "Counselling"],
-  "useCase": ["Motivational Interviewing Analysis", "Therapist Training", "Counselling Quality Assessment"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Mental Health",
+    "Counselling"
+  ],
+  "useCase": [
+    "Motivational Interviewing Analysis",
+    "Therapist Training",
+    "Counselling Quality Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["counselling", "motivational-interviewing", "mental-health", "dialogue", "change-talk", "therapy"],
+  "tags": [
+    "counselling",
+    "motivational-interviewing",
+    "mental-health",
+    "dialogue",
+    "change-talk",
+    "therapy"
+  ],
   "featured": false,
   "paperReference": "Wu et al., ICASSP 2022",
   "paperUrl": "https://ieeexplore.ieee.org/document/9746035",

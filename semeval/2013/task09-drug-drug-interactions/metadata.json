@@ -4,17 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Segura-Bedmar et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Universidad Carlos III de Madrid"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "Biomedical", "NER", "Relation Extraction"],
-  "useCase": ["Drug Interaction Detection", "Biomedical NER", "Pharmacovigilance"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "Biomedical",
+    "NER",
+    "Relation Extraction"
+  ],
+  "useCase": [
+    "Drug Interaction Detection",
+    "Biomedical NER",
+    "Pharmacovigilance"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2013", "shared-task", "drug-interaction", "biomedical", "ner", "relation-extraction", "pharmacology"],
+  "tags": [
+    "semeval",
+    "semeval-2013",
+    "shared-task",
+    "drug-interaction",
+    "biomedical",
+    "ner",
+    "relation-extraction",
+    "pharmacology"
+  ],
   "featured": false,
   "paperReference": "Segura-Bedmar et al., SemEval 2013",
   "paperUrl": "https://aclanthology.org/S13-2056/",

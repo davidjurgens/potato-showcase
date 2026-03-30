@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Yao et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "Mocheg-SIGIR23",
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "text", "span"],
-  "domain": ["Multimodal", "Fact-Checking"],
-  "useCase": ["Fact Verification", "Multimodal Reasoning", "Evidence Extraction"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "span"
+  ],
+  "domain": [
+    "Multimodal",
+    "Fact-Checking"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Multimodal Reasoning",
+    "Evidence Extraction"
+  ],
   "complexity": "advanced",
-  "tags": ["mocheg", "fact-checking", "multimodal", "multi-hop", "evidence", "sigir2023", "misinformation", "explanation"],
+  "tags": [
+    "mocheg",
+    "fact-checking",
+    "multimodal",
+    "multi-hop",
+    "evidence",
+    "sigir2023",
+    "misinformation",
+    "explanation"
+  ],
   "featured": false,
   "paperReference": "Yao et al., SIGIR 2023",
   "paperUrl": "https://dl.acm.org/doi/10.1145/3539618.3591766",

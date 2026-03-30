@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "multiselect", "pairwise", "text"],
-  "domain": ["Software Engineering", "Code Generation"],
-  "useCase": ["Patch Evaluation", "Code Review"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "pairwise",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Code Generation"
+  ],
+  "useCase": [
+    "Patch Evaluation",
+    "Code Review"
+  ],
   "complexity": "advanced",
-  "tags": ["swe-bench", "patch-screening", "code-diff", "benchmark", "agentic-coding"],
+  "tags": [
+    "swe-bench",
+    "patch-screening",
+    "code-diff",
+    "benchmark",
+    "agentic-coding"
+  ],
   "featured": false,
   "paperReference": "Aleithan et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2410.06992",

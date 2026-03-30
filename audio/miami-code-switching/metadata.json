@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["Bilingualism", "Code-switching", "Sociolinguistics"],
-  "useCase": ["Language Identification", "Code-switch Detection", "Bilingual Speech Analysis"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Bilingualism",
+    "Code-switching",
+    "Sociolinguistics"
+  ],
+  "useCase": [
+    "Language Identification",
+    "Code-switch Detection",
+    "Bilingual Speech Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["code-switching", "bilingual", "spanish-english", "multi-tier", "elan-style", "sociolinguistics", "miami-corpus"],
+  "tags": [
+    "code-switching",
+    "bilingual",
+    "spanish-english",
+    "multi-tier",
+    "elan-style",
+    "sociolinguistics",
+    "miami-corpus"
+  ],
   "featured": false,
   "paperReference": "Deuchar et al., International Journal of Bilingualism 2014",
   "paperUrl": "https://doi.org/10.1177/1367006913487303",

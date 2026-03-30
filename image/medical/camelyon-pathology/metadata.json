@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Bejnordi et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "camelyon17",
     "affiliation": "Radboud University Medical Center"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["image_annotation", "radio"],
-  "domain": ["Medical Imaging", "Pathology"],
-  "useCase": ["Cancer Detection", "Histopathology Analysis", "Medical Diagnosis"],
+  "annotationTypes": [
+    "image_annotation",
+    "radio"
+  ],
+  "domain": [
+    "Medical Imaging",
+    "Pathology"
+  ],
+  "useCase": [
+    "Cancer Detection",
+    "Histopathology Analysis",
+    "Medical Diagnosis"
+  ],
   "complexity": "advanced",
-  "tags": ["camelyon", "pathology", "cancer", "metastasis", "whole-slide", "histology", "jama2017", "medical"],
+  "tags": [
+    "camelyon",
+    "pathology",
+    "cancer",
+    "metastasis",
+    "whole-slide",
+    "histology",
+    "jama2017",
+    "medical"
+  ],
   "featured": false,
   "paperReference": "Bejnordi et al., JAMA 2017",
   "paperUrl": "https://jamanetwork.com/journals/jama/fullarticle/2665774",

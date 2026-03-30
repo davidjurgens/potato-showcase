@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Gabor et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Universite Paris-Saclay"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "NLP", "Relation Extraction", "Scientific Text"],
-  "useCase": ["Relation Extraction", "Scientific Text Mining", "Knowledge Extraction"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Relation Extraction",
+    "Scientific Text"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Scientific Text Mining",
+    "Knowledge Extraction"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2018", "shared-task", "relation-extraction", "scientific-text", "knowledge-extraction"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "relation-extraction",
+    "scientific-text",
+    "knowledge-extraction"
+  ],
   "featured": false,
   "paperReference": "Gabor et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1027/",

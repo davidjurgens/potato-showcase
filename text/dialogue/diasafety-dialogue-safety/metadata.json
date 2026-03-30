@@ -4,20 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Sun et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "thu-coai",
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "Dialogue Systems", "AI Safety"],
-  "useCase": ["Dialogue Safety Evaluation", "Chatbot Moderation", "AI Safety Taxonomy"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Dialogue Systems",
+    "AI Safety"
+  ],
+  "useCase": [
+    "Dialogue Safety Evaluation",
+    "Chatbot Moderation",
+    "AI Safety Taxonomy"
+  ],
   "complexity": "intermediate",
-  "tags": ["dialogue", "safety", "toxicity", "bias", "chatbot", "moderation"],
+  "tags": [
+    "dialogue",
+    "safety",
+    "toxicity",
+    "bias",
+    "chatbot",
+    "moderation"
+  ],
   "featured": false,
   "paperReference": "Sun et al., Findings ACL 2022",
-  "paperUrl": "https://aclanthology.org/2022.findings-acl.246/",
+  "paperUrl": "https://aclanthology.org/2022.findings-acl.308/",
   "datasetUrl": "https://github.com/thu-coai/DiaSafety",
-  "citation": "@inproceedings{sun2022diasafety,\n    title = \"{D}ia{S}afety: A Safety Framework for Dialogue Systems\",\n    author = \"Sun, Hao  and Zhang, Guangxuan  and Dong, Jiawen  and Zhang, Zhexin  and Gong, Jian  and Huang, Minlie\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.246/\"\n}"
+  "citation": "@inproceedings{sun2022diasafety,\n    title = \"{D}ia{S}afety: A Safety Framework for Dialogue Systems\",\n    author = \"Sun, Hao  and Zhang, Guangxuan  and Dong, Jiawen  and Zhang, Zhexin  and Gong, Jian  and Huang, Minlie\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.308/\"\n}"
 }

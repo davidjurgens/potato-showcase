@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Schneider et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Georgetown University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span"],
-  "domain": ["SemEval", "NLP", "Multiword Expressions", "Lexical Semantics"],
-  "useCase": ["MWE Detection", "Compositional Semantics", "Lexical Analysis"],
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Multiword Expressions",
+    "Lexical Semantics"
+  ],
+  "useCase": [
+    "MWE Detection",
+    "Compositional Semantics",
+    "Lexical Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2016", "shared-task", "mwe", "multiword-expressions", "dimsum", "semantic-units"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "mwe",
+    "multiword-expressions",
+    "dimsum",
+    "semantic-units"
+  ],
   "featured": false,
   "paperReference": "Schneider et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1084/",

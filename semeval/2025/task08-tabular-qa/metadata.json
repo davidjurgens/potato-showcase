@@ -4,20 +4,39 @@
   "version": "1.0.0",
   "author": {
     "name": "SemEval 2025 Task 8 Organizers",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["SemEval", "NLP", "Question Answering", "Tabular Data"],
-  "useCase": ["Table Understanding", "Question Answering", "Data Comprehension"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Question Answering",
+    "Tabular Data"
+  ],
+  "useCase": [
+    "Table Understanding",
+    "Question Answering",
+    "Data Comprehension"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2025", "shared-task", "tabular-qa", "question-answering", "tables"],
+  "tags": [
+    "semeval",
+    "semeval-2025",
+    "shared-task",
+    "tabular-qa",
+    "question-answering",
+    "tables"
+  ],
   "featured": false,
   "paperReference": "SemEval 2025 Task 8 Organizers, SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.324/",
   "datasetUrl": "https://github.com/SemEval/semeval-2025-task8",
   "citation": "@inproceedings{semeval2025-task8,\n    title = \"{QA} over Tabular Data\",\n    author = \"SemEval 2025 Task 8 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
 }

@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "multiselect", "text"],
-  "domain": ["Visual Web Agents", "Multimodal Agents", "GUI Agents"],
-  "useCase": ["Agent Evaluation", "Visual Grounding Assessment", "Task Completion Analysis"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "Visual Web Agents",
+    "Multimodal Agents",
+    "GUI Agents"
+  ],
+  "useCase": [
+    "Agent Evaluation",
+    "Visual Grounding Assessment",
+    "Task Completion Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["visual-agent", "web-agent", "multimodal", "visual-grounding", "screenshot", "trajectory", "gui-agent"],
+  "tags": [
+    "visual-agent",
+    "web-agent",
+    "multimodal",
+    "visual-grounding",
+    "screenshot",
+    "trajectory",
+    "gui-agent"
+  ],
   "featured": false,
   "paperReference": "Koh et al., ACL 2024",
   "paperUrl": "https://arxiv.org/abs/2401.13649",

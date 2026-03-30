@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Drossos et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "audio-captioning",
     "affiliation": "Tampere University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "likert", "radio"],
-  "domain": ["Audio", "NLP"],
-  "useCase": ["Audio Captioning", "Sound Description", "Audio Understanding"],
+  "annotationTypes": [
+    "text",
+    "likert",
+    "radio"
+  ],
+  "domain": [
+    "Audio",
+    "NLP"
+  ],
+  "useCase": [
+    "Audio Captioning",
+    "Sound Description",
+    "Audio Understanding"
+  ],
   "complexity": "beginner",
-  "tags": ["clotho", "audio-captioning", "sound-description", "icassp2020"],
+  "tags": [
+    "clotho",
+    "audio-captioning",
+    "sound-description",
+    "icassp2020"
+  ],
   "featured": false,
   "paperReference": "Drossos et al., ICASSP 2020",
   "paperUrl": "https://arxiv.org/abs/1910.09387",

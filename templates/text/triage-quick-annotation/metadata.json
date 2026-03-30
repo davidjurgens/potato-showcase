@@ -4,17 +4,32 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["triage", "radio"],
-  "domain": ["NLP"],
-  "useCase": ["Text Triage", "Data Filtering", "Annotation Workflow"],
+  "annotationTypes": [
+    "triage",
+    "radio"
+  ],
+  "domain": [
+    "NLP"
+  ],
+  "useCase": [
+    "Text Triage",
+    "Data Filtering",
+    "Annotation Workflow"
+  ],
   "complexity": "beginner",
-  "tags": ["triage", "template", "quick-annotation", "priority", "filtering"],
+  "tags": [
+    "triage",
+    "template",
+    "quick-annotation",
+    "priority",
+    "filtering"
+  ],
   "featured": false,
   "paperReference": "N/A (Template)",
   "datasetUrl": ""

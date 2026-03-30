@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "National University of Singapore"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Commonsense Reasoning", "Natural Language Understanding", "Explanation Generation"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Commonsense Reasoning",
+    "Natural Language Understanding",
+    "Explanation Generation"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2020", "shared-task", "commonsense", "validation", "explanation", "reasoning"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "commonsense",
+    "validation",
+    "explanation",
+    "reasoning"
+  ],
   "featured": false,
   "paperReference": "Wang et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.39/",

@@ -4,20 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Guo et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "audio-hate",
     "affiliation": "Multiple Institutions"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["Speech Processing", "Content Moderation"],
-  "useCase": ["Hate Speech Detection", "Content Moderation", "Audio Analysis"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "Speech Processing",
+    "Content Moderation"
+  ],
+  "useCase": [
+    "Hate Speech Detection",
+    "Content Moderation",
+    "Audio Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["audio", "hate-speech", "content-moderation", "explainability", "sigdial2024"],
+  "tags": [
+    "audio",
+    "hate-speech",
+    "content-moderation",
+    "explainability",
+    "sigdial2024"
+  ],
   "featured": false,
   "paperReference": "Guo et al., SIGDIAL 2024",
-  "paperUrl": "https://aclanthology.org/2024.sigdial-1.35/",
+  "paperUrl": "https://aclanthology.org/2024.sigdial-1.45/",
   "datasetUrl": "https://github.com/audio-hate/AudioHateXplain",
-  "citation": "@inproceedings{guo-etal-2024-towards-explainable,\n    title = \"Towards Explainable Audio Hate Speech Detection\",\n    author = \"Guo, Jinmyeong and others\",\n    booktitle = \"Proceedings of the 25th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.sigdial-1.35/\"\n}"
+  "citation": "@inproceedings{guo-etal-2024-towards-explainable,\n    title = \"Towards Explainable Audio Hate Speech Detection\",\n    author = \"Guo, Jinmyeong and others\",\n    booktitle = \"Proceedings of the 25th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.sigdial-1.45/\"\n}"
 }

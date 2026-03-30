@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Laparra et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Arizona"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "text"],
-  "domain": ["SemEval", "NLP", "Temporal Processing", "Information Extraction"],
-  "useCase": ["Time Normalization", "Temporal Extraction", "Information Extraction"],
+  "annotationTypes": [
+    "span",
+    "text"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Temporal Processing",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Time Normalization",
+    "Temporal Extraction",
+    "Information Extraction"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2018", "shared-task", "time-normalization", "temporal", "parsing", "information-extraction"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "time-normalization",
+    "temporal",
+    "parsing",
+    "information-extraction"
+  ],
   "featured": false,
   "paperReference": "Laparra et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1011/",

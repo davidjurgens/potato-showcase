@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio", "likert"],
-  "domain": ["NLP", "Summarization", "Evaluation"],
-  "useCase": ["Faithfulness Evaluation", "Summarization Quality", "Hallucination Detection"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Summarization",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Faithfulness Evaluation",
+    "Summarization Quality",
+    "Hallucination Detection"
+  ],
   "complexity": "advanced",
-  "tags": ["summarization", "faithfulness", "long-form", "content-units", "hallucination", "evaluation"],
+  "tags": [
+    "summarization",
+    "faithfulness",
+    "long-form",
+    "content-units",
+    "hallucination",
+    "evaluation"
+  ],
   "featured": false,
   "paperReference": "Krishna et al., EACL 2023",
   "paperUrl": "https://aclanthology.org/2023.eacl-main.121/",

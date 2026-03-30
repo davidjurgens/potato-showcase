@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Barbieri et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Universitat Pompeu Fabra"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Social Media", "Emoji Prediction"],
-  "useCase": ["Emoji Prediction", "Social Media Analysis", "Sentiment Analysis"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Social Media",
+    "Emoji Prediction"
+  ],
+  "useCase": [
+    "Emoji Prediction",
+    "Social Media Analysis",
+    "Sentiment Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2018", "shared-task", "emoji", "twitter", "social-media", "prediction"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "emoji",
+    "twitter",
+    "social-media",
+    "prediction"
+  ],
   "featured": false,
   "paperReference": "Barbieri et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1003/",

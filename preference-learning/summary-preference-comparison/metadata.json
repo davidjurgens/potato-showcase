@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["radio", "likert"],
-  "domain": ["NLP", "Summarization"],
-  "useCase": ["Summary Evaluation", "RLHF", "Text Quality"],
+  "annotationTypes": [
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Summarization"
+  ],
+  "useCase": [
+    "Summary Evaluation",
+    "RLHF",
+    "Text Quality"
+  ],
   "complexity": "intermediate",
-  "tags": ["preference", "rlhf", "summarization", "comparison", "quality-rating"],
+  "tags": [
+    "preference",
+    "rlhf",
+    "summarization",
+    "comparison",
+    "quality-rating"
+  ],
   "featured": false,
   "paperReference": "Stiennon et al., NeurIPS 2020",
   "paperUrl": "https://arxiv.org/abs/2009.01325",

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Abdalla et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "slider"],
-  "domain": ["SemEval", "NLP", "Semantic Similarity", "Multilingual"],
-  "useCase": ["Semantic Relatedness", "Sentence Similarity", "Cross-Lingual NLP"],
+  "annotationTypes": [
+    "likert",
+    "slider"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Semantic Similarity",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Semantic Relatedness",
+    "Sentence Similarity",
+    "Cross-Lingual NLP"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2024", "shared-task", "semantic-relatedness", "sentence-pairs", "multilingual"],
+  "tags": [
+    "semeval",
+    "semeval-2024",
+    "shared-task",
+    "semantic-relatedness",
+    "sentence-pairs",
+    "multilingual"
+  ],
   "featured": false,
   "paperReference": "Abdalla et al., SemEval 2024",
   "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",

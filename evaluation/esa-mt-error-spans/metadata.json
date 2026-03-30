@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio", "likert"],
-  "domain": ["NLP", "Machine Translation", "Evaluation"],
-  "useCase": ["MT Evaluation", "Error Analysis", "Translation Quality"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Machine Translation",
+    "Evaluation"
+  ],
+  "useCase": [
+    "MT Evaluation",
+    "Error Analysis",
+    "Translation Quality"
+  ],
   "complexity": "advanced",
-  "tags": ["machine-translation", "error-spans", "wmt", "evaluation", "translation-quality", "mqm"],
+  "tags": [
+    "machine-translation",
+    "error-spans",
+    "wmt",
+    "evaluation",
+    "translation-quality",
+    "mqm"
+  ],
   "featured": false,
   "paperReference": "Kocmi et al., WMT@EMNLP 2024",
   "paperUrl": "https://aclanthology.org/2024.wmt-1.124/",

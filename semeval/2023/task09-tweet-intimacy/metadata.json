@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Pei et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert"],
-  "domain": ["NLP", "Social Media", "SemEval"],
-  "useCase": ["Intimacy Detection", "Social Media Analysis", "Multilingual NLP"],
+  "annotationTypes": [
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "SemEval"
+  ],
+  "useCase": [
+    "Intimacy Detection",
+    "Social Media Analysis",
+    "Multilingual NLP"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2023", "shared-task", "intimacy", "tweets", "multilingual", "social-media"],
+  "tags": [
+    "semeval",
+    "semeval-2023",
+    "shared-task",
+    "intimacy",
+    "tweets",
+    "multilingual",
+    "social-media"
+  ],
   "featured": false,
   "paperReference": "Pei et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.309/",

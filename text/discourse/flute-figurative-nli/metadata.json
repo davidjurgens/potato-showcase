@@ -4,17 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Chakrabarty et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "google",
     "affiliation": "Columbia University"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "text", "multiselect"],
-  "domain": ["NLP", "Figurative Language", "NLI"],
-  "useCase": ["Figurative Language Understanding", "Natural Language Inference", "Explanation Generation"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Figurative Language",
+    "NLI"
+  ],
+  "useCase": [
+    "Figurative Language Understanding",
+    "Natural Language Inference",
+    "Explanation Generation"
+  ],
   "complexity": "intermediate",
-  "tags": ["figurative-language", "sarcasm", "metaphor", "simile", "idiom", "nli", "emnlp2022", "explanation"],
+  "tags": [
+    "figurative-language",
+    "sarcasm",
+    "metaphor",
+    "simile",
+    "idiom",
+    "nli",
+    "emnlp2022",
+    "explanation"
+  ],
   "featured": false,
   "paperReference": "Chakrabarty et al., EMNLP 2022",
   "paperUrl": "https://aclanthology.org/2022.emnlp-main.481/",

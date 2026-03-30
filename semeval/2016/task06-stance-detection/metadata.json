@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Mohammad et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "National Research Council Canada"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Stance Detection", "Social Media"],
-  "useCase": ["Stance Detection", "Opinion Mining", "Social Media Analysis"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Stance Detection",
+    "Social Media"
+  ],
+  "useCase": [
+    "Stance Detection",
+    "Opinion Mining",
+    "Social Media Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2016", "shared-task", "stance-detection", "twitter", "opinion", "target-stance"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "stance-detection",
+    "twitter",
+    "opinion",
+    "target-stance"
+  ],
   "featured": false,
   "paperReference": "Mohammad et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1003/",

@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Ma et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "emo-box",
     "affiliation": "Multiple Institutions"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["radio", "likert"],
-  "domain": ["Speech Processing", "Affective Computing"],
-  "useCase": ["Emotion Detection", "Multilingual Speech Analysis"],
+  "annotationTypes": [
+    "radio",
+    "likert"
+  ],
+  "domain": [
+    "Speech Processing",
+    "Affective Computing"
+  ],
+  "useCase": [
+    "Emotion Detection",
+    "Multilingual Speech Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["audio", "emotion", "speech", "multilingual", "affective-computing", "interspeech2024"],
+  "tags": [
+    "audio",
+    "emotion",
+    "speech",
+    "multilingual",
+    "affective-computing",
+    "interspeech2024"
+  ],
   "featured": false,
   "paperReference": "Ma et al., INTERSPEECH 2024",
   "paperUrl": "https://www.isca-archive.org/interspeech_2024/ma24_interspeech.html",

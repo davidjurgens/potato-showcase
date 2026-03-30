@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Minard et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Fondazione Bruno Kessler"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "Temporal Processing", "Event Ordering"],
-  "useCase": ["Timeline Construction", "Event Detection", "Temporal Relation Classification"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "Temporal Processing",
+    "Event Ordering"
+  ],
+  "useCase": [
+    "Timeline Construction",
+    "Event Detection",
+    "Temporal Relation Classification"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2015", "shared-task", "temporal", "event-ordering", "timeline", "cross-document", "news"],
+  "tags": [
+    "semeval",
+    "semeval-2015",
+    "shared-task",
+    "temporal",
+    "event-ordering",
+    "timeline",
+    "cross-document",
+    "news"
+  ],
   "featured": false,
   "paperReference": "Minard et al., SemEval 2015",
   "paperUrl": "https://aclanthology.org/S15-2132/",

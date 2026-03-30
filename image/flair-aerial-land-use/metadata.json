@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Garioud et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "IGNF",
     "affiliation": "IGN / Universite Gustave Eiffel"
   },
@@ -39,5 +39,5 @@
   "paperReference": "Garioud et al., NeurIPS 2023",
   "paperUrl": "https://arxiv.org/abs/2310.13336",
   "datasetUrl": "https://ignf.github.io/FLAIR/",
-  "citation": "@inproceedings{garioud2023flair,\n    title = \"{FLAIR}: {F}rench Land cover from {A}erospace {I}mage{R}y\",\n    author = \"Garioud, Anatol and Peillet, Stéphane and Bookjans, Eva and Giordano, Sébastien and Wattrelos, Boris\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2310.13336\"\n}"
+  "citation": "@inproceedings{garioud2023flair,\n    title = \"{FLAIR}: {F}rench Land cover from {A}erospace {I}mage{R}y\",\n    author = \"Garioud, Anatol and Peillet, St\u00e9phane and Bookjans, Eva and Giordano, S\u00e9bastien and Wattrelos, Boris\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2310.13336\"\n}"
 }

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Rein et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "idavidrein",
     "affiliation": "New York University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["number", "radio", "text"],
-  "domain": ["NLP", "Science", "Evaluation"],
-  "useCase": ["Expert QA", "Model Evaluation", "Science Assessment"],
+  "annotationTypes": [
+    "number",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Science",
+    "Evaluation"
+  ],
+  "useCase": [
+    "Expert QA",
+    "Model Evaluation",
+    "Science Assessment"
+  ],
   "complexity": "intermediate",
-  "tags": ["gpqa", "expert-qa", "science", "graduate-level", "multiple-choice", "iclr2024"],
+  "tags": [
+    "gpqa",
+    "expert-qa",
+    "science",
+    "graduate-level",
+    "multiple-choice",
+    "iclr2024"
+  ],
   "featured": false,
   "paperReference": "Rein et al., ICLR 2024",
   "paperUrl": "https://arxiv.org/abs/2311.12022",

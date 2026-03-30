@@ -4,16 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Yu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "affiliation": "Tencent AI Lab"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Dialogue", "Information Extraction"],
-  "useCase": ["Relation Extraction", "Knowledge Base Construction", "Dialogue Understanding"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Dialogue",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Knowledge Base Construction",
+    "Dialogue Understanding"
+  ],
   "complexity": "advanced",
-  "tags": ["dialogue", "relation-extraction", "dialogre", "acl2020", "conversation"],
+  "tags": [
+    "dialogue",
+    "relation-extraction",
+    "dialogre",
+    "acl2020",
+    "conversation"
+  ],
   "featured": true,
   "paperReference": "Yu et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.444/",

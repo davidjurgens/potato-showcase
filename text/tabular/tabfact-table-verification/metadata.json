@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Chen et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "wenhuchen",
     "affiliation": "University of California, Santa Barbara"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "span", "text"],
-  "domain": ["NLP", "Fact Verification", "Table Understanding"],
-  "useCase": ["Fact Verification", "Structured Data Reasoning", "Table QA"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Fact Verification",
+    "Table Understanding"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Structured Data Reasoning",
+    "Table QA"
+  ],
   "complexity": "intermediate",
-  "tags": ["fact-verification", "table-understanding", "tabfact", "iclr2020", "structured-data"],
+  "tags": [
+    "fact-verification",
+    "table-understanding",
+    "tabfact",
+    "iclr2020",
+    "structured-data"
+  ],
   "featured": false,
   "paperReference": "Chen et al., ICLR 2020",
   "paperUrl": "https://arxiv.org/abs/1909.02164",

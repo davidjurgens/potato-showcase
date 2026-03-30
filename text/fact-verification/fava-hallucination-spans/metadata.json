@@ -4,20 +4,39 @@
   "version": "1.0.0",
   "author": {
     "name": "Mishra et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "fava-nlp",
     "affiliation": "University of Massachusetts Amherst"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["NLP", "Hallucination Detection", "Faithfulness"],
-  "useCase": ["Hallucination Detection", "Faithfulness Evaluation", "LLM Output Assessment"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Hallucination Detection",
+    "Faithfulness"
+  ],
+  "useCase": [
+    "Hallucination Detection",
+    "Faithfulness Evaluation",
+    "LLM Output Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["hallucination", "faithfulness", "fine-grained", "span-annotation", "fava", "acl2024", "llm-evaluation"],
+  "tags": [
+    "hallucination",
+    "faithfulness",
+    "fine-grained",
+    "span-annotation",
+    "fava",
+    "acl2024",
+    "llm-evaluation"
+  ],
   "featured": false,
   "paperReference": "Mishra et al., ACL 2024",
-  "paperUrl": "https://aclanthology.org/2024.acl-long.664/",
+  "paperUrl": "https://arxiv.org/abs/2401.06855/",
   "datasetUrl": "https://github.com/fava-nlp/fava",
-  "citation": "@inproceedings{mishra-etal-2024-fava,\n    title = \"{FAVA}: Fine-grained Hallucination Annotations for Faithful Generation\",\n    author = \"Mishra, Abhika  and Celikyilmaz, Asli  and Thickstun, John  and Hashimoto, Tatsunori  and Iyer, Shankar\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.acl-long.664\",\n    pages = \"12318--12349\"\n}"
+  "citation": "@inproceedings{mishra-etal-2024-fava,\n    title = \"{FAVA}: Fine-grained Hallucination Annotations for Faithful Generation\",\n    author = \"Mishra, Abhika  and Celikyilmaz, Asli  and Thickstun, John  and Hashimoto, Tatsunori  and Iyer, Shankar\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2401.06855\",\n    pages = \"12318--12349\"\n}"
 }

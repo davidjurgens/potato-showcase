@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Mathematics", "Reasoning"],
-  "useCase": ["Process Reward Models", "RLHF", "Math Verification"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Mathematics",
+    "Reasoning"
+  ],
+  "useCase": [
+    "Process Reward Models",
+    "RLHF",
+    "Math Verification"
+  ],
   "complexity": "advanced",
-  "tags": ["process-reward-model", "math-reasoning", "step-verification", "PRM", "RLHF"],
+  "tags": [
+    "process-reward-model",
+    "math-reasoning",
+    "step-verification",
+    "PRM",
+    "RLHF"
+  ],
   "featured": true,
   "paperReference": "Lightman et al., ICLR 2024",
   "paperUrl": "https://arxiv.org/abs/2305.20050",

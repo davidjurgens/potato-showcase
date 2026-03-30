@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Harper et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Georgetown University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Information Extraction", "Measurement Extraction", "Scientific Text Mining"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Information Extraction",
+    "Measurement Extraction",
+    "Scientific Text Mining"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2021", "shared-task", "measurement", "extraction", "scientific-text", "quantities"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "measurement",
+    "extraction",
+    "scientific-text",
+    "quantities"
+  ],
   "featured": false,
   "paperReference": "Harper et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.38/",

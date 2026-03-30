@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "multiselect", "text"],
-  "domain": ["Mobile Agents", "Android Automation", "GUI Agents"],
-  "useCase": ["Agent Evaluation", "Mobile Task Assessment", "Touch Interaction Analysis"],
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "Mobile Agents",
+    "Android Automation",
+    "GUI Agents"
+  ],
+  "useCase": [
+    "Agent Evaluation",
+    "Mobile Task Assessment",
+    "Touch Interaction Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["mobile-agent", "android", "gui-agent", "touch-gesture", "app-automation", "dynamic-benchmark", "trajectory"],
+  "tags": [
+    "mobile-agent",
+    "android",
+    "gui-agent",
+    "touch-gesture",
+    "app-automation",
+    "dynamic-benchmark",
+    "trajectory"
+  ],
   "featured": false,
   "paperReference": "Rawles et al., ICLR 2025",
   "paperUrl": "https://arxiv.org/abs/2405.14573",

@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Armendariz et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Cardiff University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "slider"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Word Similarity", "Lexical Semantics", "Contextualized Meaning"],
+  "annotationTypes": [
+    "likert",
+    "slider"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Word Similarity",
+    "Lexical Semantics",
+    "Contextualized Meaning"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2020", "shared-task", "word-similarity", "graded", "contextualized", "semantics"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "word-similarity",
+    "graded",
+    "contextualized",
+    "semantics"
+  ],
   "featured": false,
   "paperReference": "Armendariz et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.3/",

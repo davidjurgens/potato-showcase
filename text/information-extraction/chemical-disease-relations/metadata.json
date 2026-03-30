@@ -4,16 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Li et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "affiliation": "NCBI/NIH"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["Biomedical", "Pharmacovigilance", "Healthcare"],
-  "useCase": ["Relation Extraction", "Drug Safety", "Biomedical Text Mining"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "Biomedical",
+    "Pharmacovigilance",
+    "Healthcare"
+  ],
+  "useCase": [
+    "Relation Extraction",
+    "Drug Safety",
+    "Biomedical Text Mining"
+  ],
   "complexity": "advanced",
-  "tags": ["biomedical", "relation-extraction", "chemicals", "diseases", "bc5cdr", "pharmacovigilance"],
+  "tags": [
+    "biomedical",
+    "relation-extraction",
+    "chemicals",
+    "diseases",
+    "bc5cdr",
+    "pharmacovigilance"
+  ],
   "featured": false,
   "paperReference": "Li et al., Database 2016",
   "paperUrl": "https://academic.oup.com/database/article/doi/10.1093/database/baw068/2630414",

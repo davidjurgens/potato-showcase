@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Wah et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "caltech-vision",
     "affiliation": "Caltech"
   },
@@ -35,7 +35,7 @@
   ],
   "featured": true,
   "paperReference": "Wah et al., 2011",
-  "paperUrl": "https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf",
+  "paperUrl": "https://authors.library.caltech.edu/records/cvm3y-5hh21",
   "datasetUrl": "https://www.vision.caltech.edu/datasets/cub_200_2011",
-  "citation": "@techreport{wah2011caltech,\n    title = \"The {Caltech-UCSD} Birds-200-2011 Dataset\",\n    author = \"Wah, Catherine  and Branson, Steve  and Welinder, Peter  and Perona, Pietro  and Belongie, Serge\",\n    institution = \"California Institute of Technology\",\n    number = \"CNS-TR-2011-001\",\n    year = \"2011\",\n    url = \"https://authors.library.caltech.edu/27482/1/CUB_200_2011.pdf\"\n}"
+  "citation": "@techreport{wah2011caltech,\n    title = \"The {Caltech-UCSD} Birds-200-2011 Dataset\",\n    author = \"Wah, Catherine  and Branson, Steve  and Welinder, Peter  and Perona, Pietro  and Belongie, Serge\",\n    institution = \"California Institute of Technology\",\n    number = \"CNS-TR-2011-001\",\n    year = \"2011\",\n    url = \"https://authors.library.caltech.edu/records/cvm3y-5hh21\"\n}"
 }

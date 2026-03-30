@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Yang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Florida"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "span"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Counterfactual Detection", "Causal Reasoning", "Discourse Analysis"],
+  "annotationTypes": [
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Counterfactual Detection",
+    "Causal Reasoning",
+    "Discourse Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2020", "shared-task", "counterfactual", "causal-reasoning", "discourse"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "counterfactual",
+    "causal-reasoning",
+    "discourse"
+  ],
   "featured": false,
   "paperReference": "Yang et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.40/",

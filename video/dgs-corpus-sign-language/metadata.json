@@ -4,20 +4,40 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio", "text"],
-  "domain": ["Sign Language", "Linguistics", "Corpus Linguistics"],
-  "useCase": ["Corpus Annotation", "Sign Language Analysis", "Non-Manual Signal Detection"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Sign Language",
+    "Linguistics",
+    "Corpus Linguistics"
+  ],
+  "useCase": [
+    "Corpus Annotation",
+    "Sign Language Analysis",
+    "Non-Manual Signal Detection"
+  ],
   "complexity": "advanced",
-  "tags": ["sign-language", "dgs", "german", "multi-tier", "elan-style", "corpus-linguistics", "lrec2020"],
+  "tags": [
+    "sign-language",
+    "dgs",
+    "german",
+    "multi-tier",
+    "elan-style",
+    "corpus-linguistics",
+    "lrec2020"
+  ],
   "featured": false,
   "paperReference": "Hanke et al., LREC 2020",
-  "paperUrl": "https://aclanthology.org/2020.lrec-1.720/",
+  "paperUrl": "https://aclanthology.org/2020.signlang-1.12/",
   "datasetUrl": "https://www.sign-lang.uni-hamburg.de/meinedgs/ling/start-name_en.html",
   "citation": "@inproceedings{hanke2020public,\n  title={The Public DGS Corpus: A Large, Annotated, Multi-modal Corpus of German Sign Language},\n  author={Hanke, Thomas and Schulder, Marc and Konrad, Reiner and Jahn, Elena},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={5830--5838},\n  year={2020},\n  publisher={European Language Resources Association}\n}"
 }

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Chatterjee et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Microsoft"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Emotion Detection", "Dialogue"],
-  "useCase": ["Emotion Detection", "Conversational AI", "Sentiment Analysis"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Emotion Detection",
+    "Dialogue"
+  ],
+  "useCase": [
+    "Emotion Detection",
+    "Conversational AI",
+    "Sentiment Analysis"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2019", "shared-task", "emotion", "conversation", "dialogue", "emocontext"],
+  "tags": [
+    "semeval",
+    "semeval-2019",
+    "shared-task",
+    "emotion",
+    "conversation",
+    "dialogue",
+    "emocontext"
+  ],
   "featured": false,
   "paperReference": "Chatterjee et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2005/",

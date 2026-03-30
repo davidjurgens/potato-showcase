@@ -4,20 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Shirani et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Houston"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Emphasis Selection", "Typography", "Text Presentation"],
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Emphasis Selection",
+    "Typography",
+    "Text Presentation"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2020", "shared-task", "emphasis", "typography", "text-design"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "emphasis",
+    "typography",
+    "text-design"
+  ],
   "featured": false,
   "paperReference": "Shirani et al., SemEval 2020",
-  "paperUrl": "https://aclanthology.org/2020.semeval-1.186/",
+  "paperUrl": "https://aclanthology.org/2020.semeval-1.184/",
   "datasetUrl": "https://github.com/RiTUAL-UH/SemEval2020_Task10",
-  "citation": "@inproceedings{shirani-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 10: {E}mphasis {S}election for {W}ritten {T}ext in {V}isual {M}edia\",\n    author = \"Shirani, Amirreza  and Dernoncourt, Franck  and Asber, Paul  and Lipka, Nedim  and Kim, Seokhwan  and Echevarria, Jose  and Solorio, Thamar\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.186\"\n}"
+  "citation": "@inproceedings{shirani-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 10: {E}mphasis {S}election for {W}ritten {T}ext in {V}isual {M}edia\",\n    author = \"Shirani, Amirreza  and Dernoncourt, Franck  and Asber, Paul  and Lipka, Nedim  and Kim, Seokhwan  and Echevarria, Jose  and Solorio, Thamar\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.184\"\n}"
 }

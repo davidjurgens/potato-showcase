@@ -4,17 +4,32 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Software Engineering", "Code Generation"],
-  "useCase": ["Benchmark Validation", "Issue Triage"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Software Engineering",
+    "Code Generation"
+  ],
+  "useCase": [
+    "Benchmark Validation",
+    "Issue Triage"
+  ],
   "complexity": "advanced",
-  "tags": ["swe-bench", "github-issues", "code-diff", "benchmark", "agentic-coding"],
+  "tags": [
+    "swe-bench",
+    "github-issues",
+    "code-diff",
+    "benchmark",
+    "agentic-coding"
+  ],
   "featured": false,
   "paperReference": "Chowdhury et al., OpenAI Technical Report 2024",
   "paperUrl": "https://openai.com/index/introducing-swe-bench-verified/",

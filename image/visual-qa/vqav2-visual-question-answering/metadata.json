@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Goyal et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "GT-Vision-Lab",
     "affiliation": "Georgia Institute of Technology"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["Computer Vision", "Visual Question Answering"],
-  "useCase": ["Visual QA", "Image Understanding", "Multimodal Reasoning"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Visual Question Answering"
+  ],
+  "useCase": [
+    "Visual QA",
+    "Image Understanding",
+    "Multimodal Reasoning"
+  ],
   "complexity": "intermediate",
-  "tags": ["vqa", "visual-qa", "image-understanding", "multimodal", "cvpr2017"],
+  "tags": [
+    "vqa",
+    "visual-qa",
+    "image-understanding",
+    "multimodal",
+    "cvpr2017"
+  ],
   "featured": false,
   "paperReference": "Goyal et al., CVPR 2017",
   "paperUrl": "https://arxiv.org/abs/1612.00837",

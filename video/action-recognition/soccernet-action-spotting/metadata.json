@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
   "updatedAt": "2025-02-02",
-  "annotationTypes": ["video_annotation"],
-  "domain": ["Computer Vision", "Sports Analytics"],
-  "useCase": ["Action Spotting", "Event Detection", "Sports Video Analysis"],
+  "annotationTypes": [
+    "video_annotation"
+  ],
+  "domain": [
+    "Computer Vision",
+    "Sports Analytics"
+  ],
+  "useCase": [
+    "Action Spotting",
+    "Event Detection",
+    "Sports Video Analysis"
+  ],
   "complexity": "intermediate",
-  "tags": ["video", "soccer", "sports", "action-spotting", "events", "soccernet"],
+  "tags": [
+    "video",
+    "soccer",
+    "sports",
+    "action-spotting",
+    "events",
+    "soccernet"
+  ],
   "featured": false,
   "paperReference": "Giancola et al., CVPR 2018",
   "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w34/Giancola_SoccerNet_A_Scalable_CVPR_2018_paper.pdf",

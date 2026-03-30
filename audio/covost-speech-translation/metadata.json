@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "facebookresearch",
     "affiliation": "Meta AI"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["text", "radio", "audio_annotation", "likert"],
-  "domain": ["Audio", "NLP", "Translation"],
-  "useCase": ["Speech Translation", "Translation Quality", "Cross-lingual"],
+  "annotationTypes": [
+    "text",
+    "radio",
+    "audio_annotation",
+    "likert"
+  ],
+  "domain": [
+    "Audio",
+    "NLP",
+    "Translation"
+  ],
+  "useCase": [
+    "Speech Translation",
+    "Translation Quality",
+    "Cross-lingual"
+  ],
   "complexity": "intermediate",
-  "tags": ["covost", "speech-translation", "multilingual", "audio", "translation-quality"],
+  "tags": [
+    "covost",
+    "speech-translation",
+    "multilingual",
+    "audio",
+    "translation-quality"
+  ],
   "featured": false,
   "paperReference": "Wang et al., arXiv 2020",
   "paperUrl": "https://arxiv.org/abs/2007.10310",

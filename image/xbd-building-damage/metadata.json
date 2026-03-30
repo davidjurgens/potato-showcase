@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Gupta et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "DIUx-xView",
     "affiliation": "Carnegie Mellon University / Defense Innovation Unit"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["Remote Sensing", "Disaster Response", "Computer Vision"],
-  "useCase": ["Building Damage Assessment", "Disaster Response", "Infrastructure Monitoring"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Remote Sensing",
+    "Disaster Response",
+    "Computer Vision"
+  ],
+  "useCase": [
+    "Building Damage Assessment",
+    "Disaster Response",
+    "Infrastructure Monitoring"
+  ],
   "complexity": "advanced",
-  "tags": ["satellite-imagery", "building-damage", "disaster-response", "xbd", "xview2", "cvpr2019", "geospatial"],
+  "tags": [
+    "satellite-imagery",
+    "building-damage",
+    "disaster-response",
+    "xbd",
+    "xview2",
+    "cvpr2019",
+    "geospatial"
+  ],
   "featured": false,
   "paperReference": "Gupta et al., CVPR Workshops 2019",
   "paperUrl": "https://arxiv.org/abs/1911.09296",

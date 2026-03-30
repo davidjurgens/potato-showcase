@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Postma et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Vrije Universiteit Amsterdam"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["number", "text"],
-  "domain": ["SemEval", "NLP", "Event Detection", "Information Extraction"],
-  "useCase": ["Event Counting", "News Analysis", "Information Extraction"],
+  "annotationTypes": [
+    "number",
+    "text"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Event Detection",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Event Counting",
+    "News Analysis",
+    "Information Extraction"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2018", "shared-task", "event-detection", "counting", "news", "information-extraction"],
+  "tags": [
+    "semeval",
+    "semeval-2018",
+    "shared-task",
+    "event-detection",
+    "counting",
+    "news",
+    "information-extraction"
+  ],
   "featured": false,
   "paperReference": "Postma et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1009/",

@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kakwani et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "ai4bharat",
     "affiliation": "AI4Bharat / IIT Madras"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text"],
-  "domain": ["NLP", "Cross-lingual", "Sentiment"],
-  "useCase": ["Sentiment Analysis", "Multilingual NLP", "Indic Languages"],
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Cross-lingual",
+    "Sentiment"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Multilingual NLP",
+    "Indic Languages"
+  ],
   "complexity": "beginner",
-  "tags": ["indicnlp", "multilingual", "sentiment", "indic-languages", "emnlp2020"],
+  "tags": [
+    "indicnlp",
+    "multilingual",
+    "sentiment",
+    "indic-languages",
+    "emnlp2020"
+  ],
   "featured": false,
   "paperReference": "Kakwani et al., Findings of EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.findings-emnlp.445/",

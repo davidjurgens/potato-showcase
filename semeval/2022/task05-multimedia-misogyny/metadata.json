@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Fersini et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "multiselect"],
-  "domain": ["NLP", "Multimodal", "SemEval"],
-  "useCase": ["Misogyny Detection", "Meme Analysis", "Content Moderation"],
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Multimodal",
+    "SemEval"
+  ],
+  "useCase": [
+    "Misogyny Detection",
+    "Meme Analysis",
+    "Content Moderation"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2022", "shared-task", "misogyny", "memes", "multimodal", "hate-speech"],
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "misogyny",
+    "memes",
+    "multimodal",
+    "hate-speech"
+  ],
   "featured": false,
   "paperReference": "Fersini et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.74/",

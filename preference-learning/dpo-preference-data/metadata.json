@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Rafailov et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "eric-mitchell",
     "affiliation": "Stanford University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["pairwise", "radio", "text"],
-  "domain": ["NLP", "AI Alignment"],
-  "useCase": ["Preference Learning", "RLHF", "LLM Training"],
+  "annotationTypes": [
+    "pairwise",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "Preference Learning",
+    "RLHF",
+    "LLM Training"
+  ],
   "complexity": "intermediate",
-  "tags": ["dpo", "preference", "pairwise", "rlhf", "alignment", "neurips2023"],
+  "tags": [
+    "dpo",
+    "preference",
+    "pairwise",
+    "rlhf",
+    "alignment",
+    "neurips2023"
+  ],
   "featured": false,
   "paperReference": "Rafailov et al., NeurIPS 2023",
   "paperUrl": "https://arxiv.org/abs/2305.18290",

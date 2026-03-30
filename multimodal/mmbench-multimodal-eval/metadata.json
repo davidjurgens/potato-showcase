@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Liu et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "open-compass",
     "affiliation": "Shanghai AI Laboratory"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "text", "multiselect"],
-  "domain": ["Multimodal", "Computer Vision"],
-  "useCase": ["Multimodal Evaluation", "Visual Question Answering", "VLM Benchmarking"],
+  "annotationTypes": [
+    "radio",
+    "text",
+    "multiselect"
+  ],
+  "domain": [
+    "Multimodal",
+    "Computer Vision"
+  ],
+  "useCase": [
+    "Multimodal Evaluation",
+    "Visual Question Answering",
+    "VLM Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["mmbench", "multimodal", "visual-qa", "multiple-choice", "eccv2024"],
+  "tags": [
+    "mmbench",
+    "multimodal",
+    "visual-qa",
+    "multiple-choice",
+    "eccv2024"
+  ],
   "featured": false,
   "paperReference": "Liu et al., ECCV 2024",
   "paperUrl": "https://arxiv.org/abs/2307.06281",

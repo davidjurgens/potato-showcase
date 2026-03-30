@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Cui et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "OpenBMB",
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multirate", "likert", "text"],
-  "domain": ["NLP", "AI Alignment"],
-  "useCase": ["Preference Learning", "Multi-Aspect Evaluation", "Reward Model Training"],
+  "annotationTypes": [
+    "multirate",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "AI Alignment"
+  ],
+  "useCase": [
+    "Preference Learning",
+    "Multi-Aspect Evaluation",
+    "Reward Model Training"
+  ],
   "complexity": "intermediate",
-  "tags": ["ultrafeedback", "multirate", "multi-aspect", "quality-rating", "icml2024"],
+  "tags": [
+    "ultrafeedback",
+    "multirate",
+    "multi-aspect",
+    "quality-rating",
+    "icml2024"
+  ],
   "featured": false,
   "paperReference": "Cui et al., ICML 2024",
   "paperUrl": "https://arxiv.org/abs/2310.01377",

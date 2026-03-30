@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Soni et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "krobertslab",
     "affiliation": "University of Pittsburgh"
   },
@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Soni et al., ACL BioNLP Workshop 2022",
-  "paperUrl": "https://aclanthology.org/2022.louhi-1.6/",
+  "paperUrl": "https://aclanthology.org/2022.lrec-1.672/",
   "datasetUrl": "https://physionet.org/content/radqa/1.0.0/",
-  "citation": "@inproceedings{soni-etal-2022-radqa,\n    title = \"{RadQA}: A Question Answering Dataset to Improve Comprehension of Radiology Reports\",\n    author = \"Soni, Sarvesh and Gudala, Meghana and Pajouhi, Atieh and Roberts, Kirk\",\n    booktitle = \"Proceedings of the 13th International Workshop on Health Text Mining and Information Analysis (LOUHI)\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.louhi-1.6\",\n    pages = \"47--56\"\n}"
+  "citation": "@inproceedings{soni-etal-2022-radqa,\n    title = \"{RadQA}: A Question Answering Dataset to Improve Comprehension of Radiology Reports\",\n    author = \"Soni, Sarvesh and Gudala, Meghana and Pajouhi, Atieh and Roberts, Kirk\",\n    booktitle = \"Proceedings of the 13th International Workshop on Health Text Mining and Information Analysis (LOUHI)\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.lrec-1.672\",\n    pages = \"47--56\"\n}"
 }

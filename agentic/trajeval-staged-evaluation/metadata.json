@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["multirate", "radio", "text"],
-  "domain": ["Agentic AI", "Code Generation", "Software Engineering"],
-  "useCase": ["Agent Evaluation", "Code Review"],
+  "annotationTypes": [
+    "multirate",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Agentic AI",
+    "Code Generation",
+    "Software Engineering"
+  ],
+  "useCase": [
+    "Agent Evaluation",
+    "Code Review"
+  ],
   "complexity": "advanced",
-  "tags": ["code-agents", "trajectory-evaluation", "staged-analysis", "swe-bench", "software-engineering"],
+  "tags": [
+    "code-agents",
+    "trajectory-evaluation",
+    "staged-analysis",
+    "swe-bench",
+    "software-engineering"
+  ],
   "featured": false,
   "paperReference": "Kim et al., arXiv 2026",
   "paperUrl": "https://arxiv.org/abs/2603.24631",

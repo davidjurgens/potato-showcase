@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Paetzold and Specia",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["SemEval", "NLP", "Text Simplification", "Readability"],
-  "useCase": ["Complex Word Identification", "Text Simplification", "Readability Assessment"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Text Simplification",
+    "Readability"
+  ],
+  "useCase": [
+    "Complex Word Identification",
+    "Text Simplification",
+    "Readability Assessment"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2016", "shared-task", "cwi", "text-simplification", "readability", "lexical-complexity"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "cwi",
+    "text-simplification",
+    "readability",
+    "lexical-complexity"
+  ],
   "featured": false,
   "paperReference": "Paetzold and Specia, SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1085/",

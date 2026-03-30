@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Yao et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "yao8839836",
     "affiliation": "Illinois Institute of Technology"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio", "select", "text"],
-  "domain": ["NLP", "Knowledge Graphs"],
-  "useCase": ["Knowledge Graph Completion", "Triple Validation", "Relation Classification"],
+  "annotationTypes": [
+    "radio",
+    "select",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Knowledge Graphs"
+  ],
+  "useCase": [
+    "Knowledge Graph Completion",
+    "Triple Validation",
+    "Relation Classification"
+  ],
   "complexity": "intermediate",
-  "tags": ["knowledge-graph", "triple-validation", "relation-extraction", "kg-bert", "aaai2020"],
+  "tags": [
+    "knowledge-graph",
+    "triple-validation",
+    "relation-extraction",
+    "kg-bert",
+    "aaai2020"
+  ],
   "featured": false,
   "paperReference": "Yao et al., AAAI 2020",
   "paperUrl": "https://arxiv.org/abs/1909.03193",

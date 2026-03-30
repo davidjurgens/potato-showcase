@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Aly et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "fever-ai",
     "affiliation": "University of Cambridge"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio", "span", "text"],
-  "domain": ["NLP", "Fact Verification", "Information Extraction"],
-  "useCase": ["Fact Verification", "Evidence Extraction", "Multi-modal Reasoning"],
+  "annotationTypes": [
+    "radio",
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Fact Verification",
+    "Information Extraction"
+  ],
+  "useCase": [
+    "Fact Verification",
+    "Evidence Extraction",
+    "Multi-modal Reasoning"
+  ],
   "complexity": "advanced",
-  "tags": ["fact-verification", "feverous", "structured-unstructured", "neurips2021", "wikipedia", "evidence-extraction"],
+  "tags": [
+    "fact-verification",
+    "feverous",
+    "structured-unstructured",
+    "neurips2021",
+    "wikipedia",
+    "evidence-extraction"
+  ],
   "featured": false,
   "paperReference": "Aly et al., NeurIPS 2021",
   "paperUrl": "https://arxiv.org/abs/2106.05707",

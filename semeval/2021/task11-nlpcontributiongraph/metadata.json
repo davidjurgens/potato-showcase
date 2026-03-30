@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "D'Souza et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "TIB Leibniz Information Centre for Science and Technology"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "text"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Information Extraction", "Scientific Knowledge Graphs", "Scholarly Document Processing"],
+  "annotationTypes": [
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Information Extraction",
+    "Scientific Knowledge Graphs",
+    "Scholarly Document Processing"
+  ],
   "complexity": "advanced",
-  "tags": ["semeval", "semeval-2021", "shared-task", "knowledge-graph", "scientific-papers", "information-extraction", "nlp"],
+  "tags": [
+    "semeval",
+    "semeval-2021",
+    "shared-task",
+    "knowledge-graph",
+    "scientific-papers",
+    "information-extraction",
+    "nlp"
+  ],
   "featured": false,
   "paperReference": "D'Souza et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.44/",

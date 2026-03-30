@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Ponti et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "cambridgeltl",
     "affiliation": "University of Cambridge"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Commonsense Reasoning", "Cross-lingual Transfer"],
-  "useCase": ["Commonsense Reasoning", "Causal Reasoning", "Cross-lingual Evaluation"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Commonsense Reasoning",
+    "Cross-lingual Transfer"
+  ],
+  "useCase": [
+    "Commonsense Reasoning",
+    "Causal Reasoning",
+    "Cross-lingual Evaluation"
+  ],
   "complexity": "beginner",
-  "tags": ["cross-lingual", "causal-reasoning", "commonsense", "xcopa", "emnlp2020", "copa"],
+  "tags": [
+    "cross-lingual",
+    "causal-reasoning",
+    "commonsense",
+    "xcopa",
+    "emnlp2020",
+    "copa"
+  ],
   "featured": false,
   "paperReference": "Ponti et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.185/",

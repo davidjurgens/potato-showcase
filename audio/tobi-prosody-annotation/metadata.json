@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "radio", "text"],
-  "domain": ["Prosody", "Phonology", "Speech Science"],
-  "useCase": ["Prosodic Labeling", "Intonation Analysis", "Speech Synthesis"],
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "Prosody",
+    "Phonology",
+    "Speech Science"
+  ],
+  "useCase": [
+    "Prosodic Labeling",
+    "Intonation Analysis",
+    "Speech Synthesis"
+  ],
   "complexity": "advanced",
-  "tags": ["prosody", "tobi", "intonation", "multi-tier", "elan-style", "pitch-accent", "break-index"],
+  "tags": [
+    "prosody",
+    "tobi",
+    "intonation",
+    "multi-tier",
+    "elan-style",
+    "pitch-accent",
+    "break-index"
+  ],
   "featured": false,
   "paperReference": "Silverman et al., Speech Communication 1992",
   "paperUrl": "https://doi.org/10.1016/0167-6393(92)90016-Z",

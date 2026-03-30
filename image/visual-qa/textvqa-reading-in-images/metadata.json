@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Singh et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "facebookresearch",
     "affiliation": "Facebook AI Research"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["text", "radio"],
-  "domain": ["Computer Vision", "NLP"],
-  "useCase": ["Visual Question Answering", "Scene Text Understanding", "OCR"],
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Computer Vision",
+    "NLP"
+  ],
+  "useCase": [
+    "Visual Question Answering",
+    "Scene Text Understanding",
+    "OCR"
+  ],
   "complexity": "intermediate",
-  "tags": ["textvqa", "vqa", "ocr", "scene-text", "reading", "cvpr2019", "multimodal"],
+  "tags": [
+    "textvqa",
+    "vqa",
+    "ocr",
+    "scene-text",
+    "reading",
+    "cvpr2019",
+    "multimodal"
+  ],
   "featured": false,
   "paperReference": "Singh et al., CVPR 2019",
   "paperUrl": "https://arxiv.org/abs/1904.08920",

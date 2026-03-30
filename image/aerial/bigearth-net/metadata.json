@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Sumbul et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "BigEarthNet",
     "affiliation": "TU Berlin"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["multiselect"],
-  "domain": ["Remote Sensing", "Earth Observation"],
-  "useCase": ["Land Cover Classification", "Satellite Image Analysis", "Environmental Monitoring"],
+  "annotationTypes": [
+    "multiselect"
+  ],
+  "domain": [
+    "Remote Sensing",
+    "Earth Observation"
+  ],
+  "useCase": [
+    "Land Cover Classification",
+    "Satellite Image Analysis",
+    "Environmental Monitoring"
+  ],
   "complexity": "intermediate",
-  "tags": ["bigearth", "satellite", "sentinel-2", "land-cover", "remote-sensing", "igarss2019"],
+  "tags": [
+    "bigearth",
+    "satellite",
+    "sentinel-2",
+    "land-cover",
+    "remote-sensing",
+    "igarss2019"
+  ],
   "featured": true,
   "paperReference": "Sumbul et al., IGARSS 2019",
   "paperUrl": "https://ieeexplore.ieee.org/document/8900532",

@@ -4,20 +4,40 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["span", "text", "radio"],
-  "domain": ["Language Documentation", "Field Linguistics", "Corpus Linguistics"],
-  "useCase": ["Morphological Analysis", "Interlinear Glossing", "Endangered Language Documentation"],
+  "annotationTypes": [
+    "span",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Language Documentation",
+    "Field Linguistics",
+    "Corpus Linguistics"
+  ],
+  "useCase": [
+    "Morphological Analysis",
+    "Interlinear Glossing",
+    "Endangered Language Documentation"
+  ],
   "complexity": "advanced",
-  "tags": ["language-documentation", "doreco", "field-linguistics", "multi-tier", "elan-style", "morpheme", "interlinear-gloss"],
+  "tags": [
+    "language-documentation",
+    "doreco",
+    "field-linguistics",
+    "multi-tier",
+    "elan-style",
+    "morpheme",
+    "interlinear-gloss"
+  ],
   "featured": false,
   "paperReference": "Paschen et al., Scientific Data 2022",
-  "paperUrl": "https://doi.org/10.1038/s41597-022-01694-4",
+  "paperUrl": "https://aclanthology.org/2020.lrec-1.324/",
   "datasetUrl": "https://doreco.huma-num.fr/",
-  "citation": "@article{paschen2022doreco,\n    title = \"{DoReCo}: A New Resource for Exploiting Cross-linguistic Linguistic Data\",\n    author = \"Paschen, Ludger and Delafontaine, Fran{\\c{c}}ois and Drude, Sebastian and Fuchs, Susanne and Stoll, Matthew and Seifart, Frank\",\n    journal = \"Scientific Data\",\n    volume = \"9\",\n    number = \"1\",\n    pages = \"703\",\n    year = \"2022\",\n    publisher = \"Nature Publishing Group\",\n    doi = \"10.1038/s41597-022-01694-4\"\n}"
+  "citation": "@article{paschen2022doreco,\n    title = \"{DoReCo}: A New Resource for Exploiting Cross-linguistic Linguistic Data\",\n    author = \"Paschen, Ludger and Delafontaine, Fran{\\c{c}}ois and Drude, Sebastian and Fuchs, Susanne and Stoll, Matthew and Seifart, Frank\",\n    journal = \"Scientific Data\",\n    volume = \"9\",\n    number = \"1\",\n    pages = \"703\",\n    year = \"2022\",\n    publisher = \"Nature Publishing Group\",\n    url = \"https://aclanthology.org/2020.lrec-1.324/\"\n}"
 }

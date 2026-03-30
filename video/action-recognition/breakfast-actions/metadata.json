@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
@@ -34,7 +34,7 @@
   ],
   "featured": false,
   "paperReference": "Kuehne et al., IJCV 2014",
-  "paperUrl": "https://link.springer.com/article/10.1007/s11263-014-0765-4",
+  "paperUrl": "https://arxiv.org/abs/1508.06073",
   "datasetUrl": "https://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/",
   "citation": "@article{kuehne2014language,\n  title={The language of actions: Recovering the syntax and semantics of goal-directed human activities},\n  author={Kuehne, Hilde and Arslan, Ali and Serre, Thomas},\n  journal={International Journal of Computer Vision},\n  volume={116},\n  number={3},\n  pages={259--276},\n  year={2014}\n}"
 }

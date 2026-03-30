@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["pairwise", "radio", "text"],
-  "domain": ["AI Evaluation", "Preference Annotation", "LLM Comparison"],
-  "useCase": ["Preference Evaluation", "Pairwise Comparison", "Model Benchmarking"],
+  "annotationTypes": [
+    "pairwise",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "AI Evaluation",
+    "Preference Annotation",
+    "LLM Comparison"
+  ],
+  "useCase": [
+    "Preference Evaluation",
+    "Pairwise Comparison",
+    "Model Benchmarking"
+  ],
   "complexity": "intermediate",
-  "tags": ["alpacaeval", "preference-evaluation", "pairwise-comparison", "instruction-following", "llm-comparison"],
+  "tags": [
+    "alpacaeval",
+    "preference-evaluation",
+    "pairwise-comparison",
+    "instruction-following",
+    "llm-comparison"
+  ],
   "featured": false,
   "paperReference": "Li et al., arXiv 2023",
   "paperUrl": "https://arxiv.org/abs/2404.04475",

@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Pradhan et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "conll",
     "affiliation": "University of Colorado Boulder"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["coreference", "span"],
-  "domain": ["NLP", "Linguistics"],
-  "useCase": ["Coreference Resolution", "Entity Linking", "Discourse Analysis"],
+  "annotationTypes": [
+    "coreference",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Linguistics"
+  ],
+  "useCase": [
+    "Coreference Resolution",
+    "Entity Linking",
+    "Discourse Analysis"
+  ],
   "complexity": "advanced",
-  "tags": ["ontonotes", "coreference", "mention-detection", "entity-chains", "conll2012"],
+  "tags": [
+    "ontonotes",
+    "coreference",
+    "mention-detection",
+    "entity-chains",
+    "conll2012"
+  ],
   "featured": false,
   "paperReference": "Pradhan et al., CoNLL 2012",
   "paperUrl": "https://aclanthology.org/W12-4501/",

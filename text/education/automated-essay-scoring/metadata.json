@@ -4,20 +4,38 @@
   "version": "1.0.0",
   "author": {
     "name": "Uto",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "uto-aes",
     "affiliation": "The University of Electro-Communications"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert", "slider", "text"],
-  "domain": ["NLP", "Education"],
-  "useCase": ["Essay Scoring", "Writing Assessment", "Educational NLP"],
+  "annotationTypes": [
+    "likert",
+    "slider",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Education"
+  ],
+  "useCase": [
+    "Essay Scoring",
+    "Writing Assessment",
+    "Educational NLP"
+  ],
   "complexity": "beginner",
-  "tags": ["essay-scoring", "education", "writing", "assessment", "deep-learning", "aes"],
+  "tags": [
+    "essay-scoring",
+    "education",
+    "writing",
+    "assessment",
+    "deep-learning",
+    "aes"
+  ],
   "featured": false,
-  "paperReference": "Uto, arXiv 2022",
-  "paperUrl": "https://arxiv.org/abs/2012.13422",
+  "paperReference": "Uto, Behaviormetrika 2021",
+  "paperUrl": "https://link.springer.com/article/10.1007/s41237-021-00142-y",
   "datasetUrl": "https://www.kaggle.com/c/asap-aes",
-  "citation": "@article{uto2022review,\n    title = \"A Review of Deep-Neural Automated Essay Scoring Models\",\n    author = \"Uto, Masaki\",\n    journal = \"arXiv preprint arXiv:2012.13422\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2012.13422\"\n}"
+  "citation": "@article{uto2021review,\n    title = \"A Review of Deep-Neural Automated Essay Scoring Models\",\n    author = \"Uto, Masaki\",\n    journal = \"Behaviormetrika\",\n    volume = \"48\",\n    number = \"2\",\n    pages = \"459--484\",\n    year = \"2021\",\n    doi = \"10.1007/s41237-021-00142-y\"\n}"
 }

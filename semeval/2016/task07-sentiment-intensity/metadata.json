@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Kiritchenko et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "National Research Council Canada"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["likert"],
-  "domain": ["SemEval", "NLP", "Sentiment Analysis", "Intensity"],
-  "useCase": ["Sentiment Intensity", "Fine-Grained Sentiment", "Lexicon Building"],
+  "annotationTypes": [
+    "likert"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Sentiment Analysis",
+    "Intensity"
+  ],
+  "useCase": [
+    "Sentiment Intensity",
+    "Fine-Grained Sentiment",
+    "Lexicon Building"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2016", "shared-task", "sentiment-intensity", "fine-grained", "scoring"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "sentiment-intensity",
+    "fine-grained",
+    "scoring"
+  ],
   "featured": false,
   "paperReference": "Kiritchenko et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1004/",

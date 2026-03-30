@@ -4,17 +4,35 @@
   "version": "1.0.0",
   "author": {
     "name": "Muhammad et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "Social Media", "SemEval"],
-  "useCase": ["Sentiment Analysis", "Multilingual NLP", "Low-Resource Languages"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "SemEval"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Multilingual NLP",
+    "Low-Resource Languages"
+  ],
   "complexity": "beginner",
-  "tags": ["semeval", "semeval-2023", "shared-task", "sentiment", "african-languages", "multilingual", "low-resource"],
+  "tags": [
+    "semeval",
+    "semeval-2023",
+    "shared-task",
+    "sentiment",
+    "african-languages",
+    "multilingual",
+    "low-resource"
+  ],
   "featured": false,
   "paperReference": "Muhammad et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.315/",

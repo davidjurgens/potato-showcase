@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "text", "radio"],
-  "domain": ["Egocentric Vision", "Episodic Memory", "Video Understanding"],
-  "useCase": ["Activity Recognition", "Temporal Segmentation", "Video Narration"],
+  "annotationTypes": [
+    "video_annotation",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Egocentric Vision",
+    "Episodic Memory",
+    "Video Understanding"
+  ],
+  "useCase": [
+    "Activity Recognition",
+    "Temporal Segmentation",
+    "Video Narration"
+  ],
   "complexity": "advanced",
-  "tags": ["egocentric", "episodic-memory", "ego4d", "cvpr2022", "first-person-video", "temporal-grounding"],
+  "tags": [
+    "egocentric",
+    "episodic-memory",
+    "ego4d",
+    "cvpr2022",
+    "first-person-video",
+    "temporal-grounding"
+  ],
   "featured": false,
   "paperReference": "Grauman et al., CVPR 2022",
   "paperUrl": "https://arxiv.org/abs/2110.07058",

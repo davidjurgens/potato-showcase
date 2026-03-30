@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
   "updatedAt": "2026-03-29",
-  "annotationTypes": ["pairwise", "multirate", "text"],
-  "domain": ["Code Generation", "Software Engineering"],
-  "useCase": ["RLHF", "Code Quality Assessment"],
+  "annotationTypes": [
+    "pairwise",
+    "multirate",
+    "text"
+  ],
+  "domain": [
+    "Code Generation",
+    "Software Engineering"
+  ],
+  "useCase": [
+    "RLHF",
+    "Code Quality Assessment"
+  ],
   "complexity": "advanced",
-  "tags": ["code", "pairwise-comparison", "preference-learning", "llm-alignment", "software-engineering"],
+  "tags": [
+    "code",
+    "pairwise-comparison",
+    "preference-learning",
+    "llm-alignment",
+    "software-engineering"
+  ],
   "featured": false,
   "paperReference": "Weyssow et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2403.09032",

@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
   "updatedAt": "2026-02-24",
-  "annotationTypes": ["video_annotation", "radio"],
-  "domain": ["Discourse Analysis", "Meeting Understanding", "HCI"],
-  "useCase": ["Meeting Summarization", "Dialogue Act Classification", "Focus of Attention Tracking"],
+  "annotationTypes": [
+    "video_annotation",
+    "radio"
+  ],
+  "domain": [
+    "Discourse Analysis",
+    "Meeting Understanding",
+    "HCI"
+  ],
+  "useCase": [
+    "Meeting Summarization",
+    "Dialogue Act Classification",
+    "Focus of Attention Tracking"
+  ],
   "complexity": "advanced",
-  "tags": ["meeting", "dialogue", "multi-tier", "elan-style", "discourse", "focus-attention", "mlmi2005"],
+  "tags": [
+    "meeting",
+    "dialogue",
+    "multi-tier",
+    "elan-style",
+    "discourse",
+    "focus-attention",
+    "mlmi2005"
+  ],
   "featured": false,
   "paperReference": "Carletta et al., MLMI 2005",
   "paperUrl": "https://link.springer.com/chapter/10.1007/11677482_3",

@@ -4,16 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Kim et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "affiliation": "KAIST"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span"],
-  "domain": ["Biomedical", "Clinical NLP", "Healthcare"],
-  "useCase": ["Named Entity Recognition", "Information Extraction", "Clinical Text Mining"],
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "Biomedical",
+    "Clinical NLP",
+    "Healthcare"
+  ],
+  "useCase": [
+    "Named Entity Recognition",
+    "Information Extraction",
+    "Clinical Text Mining"
+  ],
   "complexity": "advanced",
-  "tags": ["biomedical", "ner", "clinical", "healthcare", "entities", "jnlpba", "bionlp"],
+  "tags": [
+    "biomedical",
+    "ner",
+    "clinical",
+    "healthcare",
+    "entities",
+    "jnlpba",
+    "bionlp"
+  ],
   "featured": true,
   "paperReference": "Kim et al., BioNLP 2004",
   "paperUrl": "https://aclanthology.org/W04-1213/",

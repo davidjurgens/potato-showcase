@@ -4,17 +4,37 @@
   "version": "1.0.0",
   "author": {
     "name": "Pontiki et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "Institute for Language and Speech Processing"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["span", "radio"],
-  "domain": ["SemEval", "NLP", "Sentiment Analysis", "Aspect Extraction"],
-  "useCase": ["Aspect Extraction", "Sentiment Analysis", "Opinion Mining"],
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "SemEval",
+    "NLP",
+    "Sentiment Analysis",
+    "Aspect Extraction"
+  ],
+  "useCase": [
+    "Aspect Extraction",
+    "Sentiment Analysis",
+    "Opinion Mining"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2016", "shared-task", "aspect-sentiment", "absa", "opinion-mining", "reviews"],
+  "tags": [
+    "semeval",
+    "semeval-2016",
+    "shared-task",
+    "aspect-sentiment",
+    "absa",
+    "opinion-mining",
+    "reviews"
+  ],
   "featured": false,
   "paperReference": "Pontiki et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1002/",

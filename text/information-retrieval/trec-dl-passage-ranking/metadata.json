@@ -4,17 +4,34 @@
   "version": "1.0.0",
   "author": {
     "name": "Craswell et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "microsoft",
     "affiliation": "Microsoft Research"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["select", "likert"],
-  "domain": ["NLP", "Information Retrieval"],
-  "useCase": ["Passage Ranking", "Relevance Annotation", "Search Evaluation"],
+  "annotationTypes": [
+    "select",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Information Retrieval"
+  ],
+  "useCase": [
+    "Passage Ranking",
+    "Relevance Annotation",
+    "Search Evaluation"
+  ],
   "complexity": "intermediate",
-  "tags": ["trec", "passage-ranking", "relevance", "information-retrieval", "deep-learning", "search"],
+  "tags": [
+    "trec",
+    "passage-ranking",
+    "relevance",
+    "information-retrieval",
+    "deep-learning",
+    "search"
+  ],
   "featured": false,
   "paperReference": "Craswell et al., TREC/SIGIR 2019",
   "paperUrl": "https://arxiv.org/abs/2003.07820",

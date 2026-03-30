@@ -4,17 +4,36 @@
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "davidjurgens",
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
-  "annotationTypes": ["span", "text", "radio"],
-  "domain": ["Web Agents", "HCI", "Automation"],
-  "useCase": ["Web Navigation", "Task Grounding", "Agent Training"],
+  "annotationTypes": [
+    "span",
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "Web Agents",
+    "HCI",
+    "Automation"
+  ],
+  "useCase": [
+    "Web Navigation",
+    "Task Grounding",
+    "Agent Training"
+  ],
   "complexity": "advanced",
-  "tags": ["web-agent", "mind2web", "html", "action-annotation", "grounding", "navigation"],
+  "tags": [
+    "web-agent",
+    "mind2web",
+    "html",
+    "action-annotation",
+    "grounding",
+    "navigation"
+  ],
   "featured": false,
   "paperReference": "Deng et al., NeurIPS 2023",
   "paperUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5950bf290a1570ea401bf98882128160-Abstract-Datasets_and_Benchmarks.html",

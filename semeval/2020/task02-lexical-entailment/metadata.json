@@ -4,17 +4,33 @@
   "version": "1.0.0",
   "author": {
     "name": "Glavavs et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "SemEval",
     "affiliation": "University of Mannheim"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
-  "annotationTypes": ["radio"],
-  "domain": ["NLP", "SemEval"],
-  "useCase": ["Lexical Semantics", "Entailment", "Cross-Lingual NLP"],
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "SemEval"
+  ],
+  "useCase": [
+    "Lexical Semantics",
+    "Entailment",
+    "Cross-Lingual NLP"
+  ],
   "complexity": "intermediate",
-  "tags": ["semeval", "semeval-2020", "shared-task", "lexical-entailment", "semantics", "cross-lingual"],
+  "tags": [
+    "semeval",
+    "semeval-2020",
+    "shared-task",
+    "lexical-entailment",
+    "semantics",
+    "cross-lingual"
+  ],
   "featured": false,
   "paperReference": "Glavavs et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.2/",

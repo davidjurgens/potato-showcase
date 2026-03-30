@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": {
     "name": "Li et al.",
-    "email": "jurgens@umich.edu",
+    "email": "",
     "github": "doc-analysis",
     "affiliation": "Microsoft Research Asia"
   },
@@ -34,7 +34,7 @@
   ],
   "featured": true,
   "paperReference": "Li et al., COLING 2020",
-  "paperUrl": "https://aclanthology.org/2020.coling-main.476/",
+  "paperUrl": "https://aclanthology.org/2020.coling-main.82/",
   "datasetUrl": "https://github.com/doc-analysis/DocBank",
-  "citation": "@inproceedings{li2020docbank,\n    title = \"{DocBank}: A Benchmark Dataset for Document Layout Analysis\",\n    author = \"Li, Minghao  and Xu, Yiheng  and Cui, Lei  and Huang, Shaohan  and Wei, Furu  and Li, Zhoujun  and Zhou, Ming\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    pages = \"5371--5381\",\n    year = \"2020\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.coling-main.476/\"\n}"
+  "citation": "@inproceedings{li2020docbank,\n    title = \"{DocBank}: A Benchmark Dataset for Document Layout Analysis\",\n    author = \"Li, Minghao  and Xu, Yiheng  and Cui, Lei  and Huang, Shaohan  and Wei, Furu  and Li, Zhoujun  and Zhou, Ming\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    pages = \"5371--5381\",\n    year = \"2020\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.coling-main.82/\"\n}"
 }
