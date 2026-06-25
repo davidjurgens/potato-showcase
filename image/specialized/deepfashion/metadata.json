@@ -1,6 +1,20 @@
 {
-  "title": "DeepFashion Fine-Grained Fashion Classification",
-  "description": "Large-scale fashion dataset with attribute prediction, consumer-to-shop matching, and landmark detection (Liu et al., CVPR 2016). Annotate clothing with 1000 categories and 50 attributes.",
+  "title": "DeepFashion: Large-Scale Clothing Attributes Dataset",
+  "description": "DeepFashion is a clothes recognition and retrieval dataset of 800,000+ images labeled with 50 categories, 1,000 attributes, and landmarks (Liu et al., CVPR 2016). This Potato config reproduces its category and attribute task.",
+  "overview": [
+    "DeepFashion is a large-scale clothes dataset built by Ziwei Liu, Ping Luo, Shi Qiu, Xiaogang Wang, and Xiaoou Tang at the Multimedia Laboratory, Chinese University of Hong Kong. It was published at CVPR 2016 to support robust clothes recognition and retrieval.",
+    "The dataset holds over 800,000 fashion images taken across store, street snapshot, and consumer settings, including more than 300,000 cross-pose and cross-domain image pairs. Each image is labeled with 50 clothing categories, 1,000 descriptive attributes, bounding boxes, and clothing landmarks.",
+    "The 1,000 attributes split into five groups: texture, fabric, part, shape, and style. Four benchmarks share the data: Category and Attribute Prediction, In-Shop Clothes Retrieval, Consumer-to-Shop Clothes Retrieval, and Fashion Landmark Detection. The Category and Attribute Prediction benchmark alone covers 289,222 images with 46 categories, 1,000 attributes, and 8 landmarks per image.",
+    "The Potato config below reproduces the category and attribute annotation task: an annotator picks one clothing category with a radio scheme and tags applicable attributes with a multiselect scheme."
+  ],
+  "datasetStats": [
+    { "label": "Total images", "value": "800,000+" },
+    { "label": "Clothing categories", "value": "50" },
+    { "label": "Descriptive attributes", "value": "1,000" },
+    { "label": "Cross-pose/cross-domain pairs", "value": "300,000+" },
+    { "label": "Benchmarks", "value": "4" },
+    { "label": "Category & Attribute benchmark", "value": "289,222 images, 8 landmarks" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Liu et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Chinese University of Hong Kong"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "radio"

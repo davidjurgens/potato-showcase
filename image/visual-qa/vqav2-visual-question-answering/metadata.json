@@ -1,6 +1,20 @@
 {
-  "title": "VQA v2.0 - Visual Question Answering",
-  "description": "Visual question answering requiring annotators to answer natural language questions about images, based on the VQA v2.0 dataset (Goyal et al., CVPR 2017). Supports both open-ended and yes/no question types.",
+  "title": "VQA v2.0: Visual Question Answering Dataset",
+  "description": "VQA v2.0 is a balanced visual question answering benchmark of open-ended questions over COCO images, with ~1.1M questions and 10 answers each (Goyal et al., CVPR 2017). This Potato config reproduces the answering task.",
+  "overview": [
+    "VQA v2.0 is an open-ended visual question answering benchmark introduced by Yash Goyal, Tejas Khot, Douglas Summers-Stay, Dhruv Batra, and Devi Parikh at CVPR 2017. Annotators read a natural language question about a real photo and write a free-form answer.",
+    "The questions are grounded in COCO images: 82,783 training, 40,504 validation, and 81,434 test images, roughly 204,000 photos in total. Across the splits there are about 1.1 million questions (443,757 train, 214,354 val, 447,793 test), and each question carries 10 ground-truth answers collected from independent workers.",
+    "The defining feature is its balanced complementary-pairs design. Every question is tied to a pair of similar images that yield two different answers, so a model cannot guess from language priors alone and must look at the image. With roughly twice the image-question pairs of VQA v1.0, it is widely used to train and evaluate multimodal models and to study language bias.",
+    "The Potato config below reproduces the VQA answering task: each item shows an image and its question, with a text field for the open-ended answer and a radio scheme for the yes/no and other question types."
+  ],
+  "datasetStats": [
+    { "label": "Questions", "value": "~1.1M across splits" },
+    { "label": "Answers per question", "value": "10 ground-truth" },
+    { "label": "COCO images", "value": "~204,000" },
+    { "label": "Train", "value": "443,757 questions / 82,783 images" },
+    { "label": "Validation", "value": "214,354 questions / 40,504 images" },
+    { "label": "Venue", "value": "CVPR 2017 (Goyal et al.)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Goyal et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Georgia Institute of Technology"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "text",
     "radio"

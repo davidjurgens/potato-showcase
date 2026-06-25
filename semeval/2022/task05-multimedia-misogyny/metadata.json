@@ -1,6 +1,20 @@
 {
-  "title": "MAMI - Multimedia Automatic Misogyny Identification",
-  "description": "Detection and fine-grained classification of misogynistic content in memes, combining text and image description analysis. Sub-types include stereotyping, shaming, objectification, and violence. Based on SemEval-2022 Task 5 (Fersini et al.).",
+  "title": "SemEval-2022 Task 5: Multimedia Misogyny (MAMI)",
+  "description": "MAMI is the SemEval-2022 Task 5 benchmark for detecting misogynous memes from text and image content (Fersini et al.). This Potato config reproduces both subtasks: the binary misogyny label and the four-way misogyny type.",
+  "overview": [
+    "Multimedia Automatic Misogyny Identification (MAMI) was SemEval-2022 Task 5, organized by Elisabetta Fersini, Francesca Gasparini, Giulia Rizzi, Aurora Saibene, Berta Chulvi, Paolo Rosso, Alyssa Lees, and Jeffrey Sorensen. It was presented at SemEval-2022, the 16th International Workshop on Semantic Evaluation, held in Seattle in July 2022 and published by the Association for Computational Linguistics.",
+    "The dataset covers memes that pair an image with overlaid text. The shared task released 10,000 memes for training and 1,000 for the test set, each labeled for misogyny from both visual and textual cues.",
+    "Subtask A asks whether a meme is misogynous or not, a binary judgment. Subtask B applies only to misogynous memes and identifies the type among four overlapping categories: stereotype, shaming, objectification, and violence. A single meme can carry one or several of these labels, so Subtask B is multi-label. The data supports research on multimodal hate detection and content moderation.",
+    "The Potato config below reproduces both subtasks: a radio scheme for the binary misogyny label and a multiselect scheme for the four Subtask B types, with the meme text shown to the annotator."
+  ],
+  "datasetStats": [
+    { "label": "Venue", "value": "SemEval-2022 Task 5 (Seattle, July 2022)" },
+    { "label": "Training memes", "value": "10,000" },
+    { "label": "Test memes", "value": "1,000" },
+    { "label": "Subtasks", "value": "A: misogynous yes/no; B: type (multi-label)" },
+    { "label": "Subtask B categories", "value": "stereotype, shaming, objectification, violence" },
+    { "label": "Participation", "value": "400+ participants, 65 teams in A, 41 in B, 13 countries" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Fersini et al.",
@@ -9,7 +23,7 @@
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect"

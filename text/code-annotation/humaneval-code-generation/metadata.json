@@ -1,6 +1,20 @@
 {
-  "title": "Code Generation Evaluation (HumanEval)",
-  "description": "Evaluation of LLM-generated code based on the HumanEval benchmark. Annotators assess functional correctness, code quality, and efficiency of generated Python functions, and provide explanations of errors and improvement suggestions, supporting research in code generation and LLM evaluation.",
+  "title": "HumanEval: Python Code Generation Benchmark",
+  "description": "HumanEval is OpenAI's set of 164 hand-written Python problems that test whether generated code runs and passes unit tests. This Potato config has annotators rate functional correctness and quality of model-written functions.",
+  "overview": [
+    "HumanEval was released by OpenAI in the 2021 paper \"Evaluating Large Language Models Trained on Code\" by Mark Chen and colleagues, the work that introduced Codex. It became a standard test for whether a language model can turn a docstring into working Python.",
+    "The benchmark holds 164 hand-written programming problems. Each problem gives a function signature, a docstring describing the task, a reference solution, and a set of hidden unit tests, with an average of 7.7 tests per problem. The problems were written by hand to avoid overlap with code scraped from public repositories.",
+    "Scoring uses the pass@k metric. A model generates k candidate completions for each problem, and the problem counts as solved if any candidate passes every unit test. This rewards functional correctness, the code running and returning right answers, rather than surface similarity to a reference. In the original paper Codex reached 28.8% pass@1 on the set.",
+    "The Potato config below reproduces a human-in-the-loop version of this evaluation: annotators read each prompt and a generated function, judge whether it is correct, rate code quality, and write explanations of errors and suggested fixes."
+  ],
+  "datasetStats": [
+    { "label": "Problems", "value": "164 hand-written" },
+    { "label": "Language", "value": "Python" },
+    { "label": "Avg unit tests per problem", "value": "7.7" },
+    { "label": "Per problem", "value": "Signature, docstring, solution, tests" },
+    { "label": "Metric", "value": "pass@k functional correctness" },
+    { "label": "Released", "value": "2021 (OpenAI, Codex paper)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text"
