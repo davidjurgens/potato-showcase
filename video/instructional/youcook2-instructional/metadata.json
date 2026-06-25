@@ -1,6 +1,20 @@
 {
-  "title": "YouCook2 Recipe Step Annotation",
-  "description": "Annotate cooking videos with recipe step boundaries and descriptions. Segment instructional cooking content into distinct procedural steps.",
+  "title": "YouCook2 Dataset: Cooking Video Recipe-Step Annotation",
+  "description": "YouCook2 contains 2,000 cooking videos across 89 recipes (176 hours), each segmented into recipe steps with temporal boundaries and imperative captions (AAAI 2018). Dataset and paper links plus a Potato config for procedural video annotation.",
+  "overview": [
+    "YouCook2 is one of the largest task-oriented instructional video datasets, introduced by Zhou, Xu, and Corso at AAAI 2018. It collects unconstrained cooking videos from YouTube and annotates the procedural structure of each recipe.",
+    "The dataset has 2,000 videos spanning 89 distinct recipes and 176 total hours, with an average length of 5.26 minutes. Each video is segmented into recipe steps (7.7 on average) marked with start and end timestamps, and every step carries an imperative English description such as \"add olive oil to the heated pan.\"",
+    "Because it pairs temporal boundaries with natural-language descriptions, YouCook2 is a standard benchmark for procedure segmentation, dense video captioning, and video-language grounding. Each video was labeled by two annotators, one for the main pass and one for verification.",
+    "The Potato config below reproduces the recipe-step annotation task: segment-mode video annotation for step boundaries, a free-text field for the step description, and radio schemes for step type, ingredient visibility, and difficulty. Use it to re-annotate cooking videos or to build a similar procedural dataset in another domain."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "AAAI 2018" },
+    { "label": "Videos", "value": "2,000 cooking videos" },
+    { "label": "Recipes", "value": "89 distinct recipes" },
+    { "label": "Total length", "value": "176 hours (avg 5.26 min/video)" },
+    { "label": "Steps per video", "value": "7.7 on average" },
+    { "label": "Per-step labels", "value": "Temporal boundary + imperative caption" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text",

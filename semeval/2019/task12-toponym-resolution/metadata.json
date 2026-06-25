@@ -1,6 +1,20 @@
 {
-  "title": "Toponym Resolution in Scientific Papers",
-  "description": "Identification and resolution of place names (toponyms) in scientific text, combining span annotation with geocoding. Based on SemEval-2019 Task 12 (Toponym Resolution).",
+  "title": "SemEval-2019 Task 12: Toponym Resolution in Scientific Papers",
+  "description": "SemEval-2019 Task 12 covers toponym detection and resolution in scientific text: finding place-name mentions and linking them to GeoNames locations. Task overview, paper and dataset links, and a Potato span-annotation config to replicate it.",
+  "overview": [
+    "SemEval-2019 Task 12 was a shared task on toponym resolution in scientific papers, organized by Weissenbacher and colleagues. A toponym is any mention of a place: a country, city, region, river, or other geographic location. The task measures how well systems can find and ground these mentions in real scientific text.",
+    "It is split into three subtasks: toponym detection (locating the place-name spans), toponym disambiguation (choosing the correct location for an already-detected mention), and end-to-end toponym resolution (detection plus disambiguation together). Mentions are linked to entries in the GeoNames geographic database, which fixes each to a canonical name and coordinates.",
+    "The corpus is drawn from full-text scientific journal articles, where place names matter for tasks like tracking disease outbreaks and reconstructing study locations. Systems are scored with strict and overlapping precision, recall, and F1 for detection, and with resolution accuracy for disambiguation.",
+    "The Potato config below reproduces the annotation step that produces this kind of data: a span scheme for highlighting every toponym in a passage, plus a text field for recording the resolved GeoNames location. Use it to build geoparsing training data or to run a toponym-resolution annotation study of your own."
+  ],
+  "datasetStats": [
+    { "label": "Shared task", "value": "SemEval-2019, Task 12" },
+    { "label": "Goal", "value": "Toponym detection + resolution" },
+    { "label": "Subtasks", "value": "Detection, disambiguation, end-to-end resolution" },
+    { "label": "Text", "value": "Full-text scientific journal articles" },
+    { "label": "Grounding", "value": "Linked to GeoNames (name + coordinates)" },
+    { "label": "Metrics", "value": "Strict/overlap F1; resolution accuracy" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Weissenbacher et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Arizona State University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "span",
     "text"
