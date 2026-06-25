@@ -1,6 +1,15 @@
 {
-  "title": "Chatbot Arena - Pairwise Comparison with Best-Worst Scaling",
-  "description": "Pairwise comparison and best-worst scaling of chatbot responses, based on the Chatbot Arena framework (Zheng et al., ICML 2024). Annotators compare pairs of LLM-generated responses and rank sets of responses using best-worst scaling methodology.",
+  "title": "Chatbot Arena: Pairwise LLM Preference Evaluation",
+  "description": "Chatbot Arena collects human pairwise preference votes between anonymous LLM responses to rank models with a Bradley-Terry leaderboard. This Potato config reproduces the pairwise and best-worst scaling judgment task.",
+  "overview": "Chatbot Arena is a crowdsourced platform for evaluating large language models through head-to-head human preference votes. It was created by LMSYS (the Large Model Systems Organization), and the methodology was published by Zheng et al. as \"Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena\" at ICML 2024. Users chat with two anonymous models side by side and vote for the better response.\n\nThe paired companion release, chatbot_arena_conversations, contains 33,000 conversations gathered from 13,383 unique users between April and June 2023, covering 20 models and 96 languages. Each record stores the two model names, the full conversation, and the user vote. The live Arena aggregates these pairwise votes into ratings using the Bradley-Terry model, the maximum-likelihood form behind the published Elo-style leaderboard.\n\nIn a pairwise judgment, an annotator sees two responses to the same prompt and picks the one they prefer, or marks a tie. Best-worst scaling (BWS) extends this to a set of responses by asking the annotator to select the single best and single worst item, which yields ranking information more efficiently than scoring each item alone. Both methods convert subjective quality into comparison counts that downstream models turn into scores.\n\nThe Potato config below reproduces the pairwise and best-worst scaling judgment task so you can collect the same human preference signals on your own model outputs.",
+  "datasetStats": [
+    { "label": "Conversations (released set)", "value": "33,000" },
+    { "label": "Unique users", "value": "13,383" },
+    { "label": "Models compared", "value": "20" },
+    { "label": "Languages", "value": "96" },
+    { "label": "Collection period", "value": "Apr-Jun 2023" },
+    { "label": "Ratings method", "value": "Pairwise votes -> Bradley-Terry" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Zheng et al.",

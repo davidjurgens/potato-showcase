@@ -1,6 +1,15 @@
 {
-  "title": "STS Benchmark - Semantic Textual Similarity",
-  "description": "Semantic textual similarity scoring for sentence pairs on a continuous 0-5 scale, based on the STS Benchmark (Cer et al., SemEval 2017). Annotators rate how semantically similar two sentences are using both a slider and a Likert scale.",
+  "title": "STS-B: Semantic Textual Similarity Benchmark",
+  "description": "The STS Benchmark scores 8,628 English sentence pairs for semantic similarity on a 0-5 scale, drawn from SemEval STS tasks and part of GLUE. This Potato config reproduces the rating task with a slider and Likert scale.",
+  "overview": "The Semantic Textual Similarity Benchmark (STS-B) measures how close two sentences are in meaning. It was assembled by Cer, Diab, Agirre, Lopez-Gazpio, and Specia and released with SemEval-2017 Task 1, and it later became one of the tasks in the GLUE benchmark.\n\nThe benchmark holds 8,628 English sentence pairs split into 5,749 train, 1,500 development, and 1,379 test examples. Each pair carries a human similarity score from 0 to 5, where 0 means the sentences share no meaning and 5 means they are fully equivalent. The pairs come from three genres selected from SemEval STS tasks run between 2012 and 2017: news headlines, image and video captions, and user forum posts.\n\nSTS-B is treated as a regression task. A system predicts a continuous score for each pair, and quality is reported as Pearson and Spearman correlation between predicted and human scores; the GLUE leaderboard averages the two. The dataset is widely used to evaluate sentence embeddings and similarity models.\n\nThe Potato config below reproduces the rating task, presenting two sentences side by side and collecting a 0-5 similarity judgment through a fine-grained slider and a 6-point Likert scale.",
+  "datasetStats": [
+    { "label": "Total sentence pairs", "value": "8,628" },
+    { "label": "Splits", "value": "5,749 train / 1,500 dev / 1,379 test" },
+    { "label": "Similarity scale", "value": "0 (no overlap) -> 5 (equivalent)" },
+    { "label": "Source genres", "value": "News headlines, captions, forum posts" },
+    { "label": "Evaluation metric", "value": "Pearson and Spearman correlation" },
+    { "label": "Origin", "value": "SemEval STS 2012-2017; part of GLUE" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Cer et al.",
@@ -9,7 +18,7 @@
     "affiliation": "Google Research"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "slider",
     "likert"
