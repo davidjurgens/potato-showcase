@@ -1,6 +1,21 @@
 {
-  "title": "HaHackathon - Detecting and Rating Humor and Offense",
-  "description": "Classify whether a text is humorous and rate its offensiveness on a Likert scale, based on SemEval-2021 Task 7 (Meaney et al.). The task combines binary humor detection with graded offense rating to study the relationship between humor and offensiveness.",
+  "title": "SemEval-2021 Task 7: HaHackathon Humor Detection",
+  "description": "SemEval-2021 Task 7 (HaHackathon) detects whether a text is humorous and rates how offensive it is, using 10,000 tweets and short jokes. This Potato config reproduces the humor and offense annotation interface.",
+  "overview": [
+    "HaHackathon was Task 7 at SemEval-2021, the 15th International Workshop on Semantic Evaluation. It was organized by J. A. Meaney, Steven Wilson, Luis Chiruzzo, Adam Lopez, and Walid Magdy, and was the first shared task to combine humor detection and offense detection in one dataset.",
+    "The dataset contains 10,000 texts drawn from Twitter and the Kaggle Short Jokes dataset. Each text was annotated by 20 people aged 18 to 70, and the data was split into 8,000 training, 1,000 development, and 1,000 test instances.",
+    "The task had four subtasks. Subtask 1a is binary humor detection (funny or not). Subtask 1b is humor rating as a regression value. Subtask 1c predicts whether a text is controversial based on the variance in its humor ratings. Subtask 2a rates how offensive a text is on a scale from 1 to 5. Across the subtasks the organizers received 36 to 58 submissions.",
+    "The Potato config below reproduces the core annotation flow: a binary radio choice for whether the text is funny, followed by a 5-point Likert scale rating how offensive it is, treating humor and offense as independent dimensions."
+  ],
+  "datasetStats": [
+    { "label": "Total texts", "value": "10,000" },
+    { "label": "Train / Dev / Test", "value": "8,000 / 1,000 / 1,000" },
+    { "label": "Annotators per text", "value": "20 (aged 18-70)" },
+    { "label": "Offense rating scale", "value": "1 to 5" },
+    { "label": "Source", "value": "Twitter + Kaggle Short Jokes" },
+    { "label": "Venue", "value": "SemEval-2021, Task 7" }
+  ],
+  "updatedAt": "2026-06-25",
   "version": "1.0.0",
   "author": {
     "name": "Meaney et al.",
@@ -9,7 +24,6 @@
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
   "annotationTypes": [
     "radio",
     "likert"
