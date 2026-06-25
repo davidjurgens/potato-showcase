@@ -1,6 +1,20 @@
 {
-  "title": "T2I-CompBench Text-to-Image Evaluation",
-  "description": "Compositional text-to-image generation evaluation based on T2I-CompBench (Huang et al., NeurIPS 2023). Annotators rate image quality on a Likert scale, classify the compositional challenge type, and compare pairs of generated images via pairwise preference.",
+  "title": "T2I-CompBench: Compositional Text-to-Image Benchmark",
+  "description": "T2I-CompBench is a 6,000-prompt benchmark for compositional text-to-image generation (Huang et al., NeurIPS 2023). This Potato config reproduces its human eval: Likert ratings, challenge-type tagging, and pairwise comparison.",
+  "overview": [
+    "T2I-CompBench is a benchmark for open-world compositional text-to-image generation, built by Kaiyi Huang, Kaiyue Sun, Enze Xie, Zhenguo Li, and Xihui Liu (University of Hong Kong and Huawei Noah's Ark Lab) and published at NeurIPS 2023.",
+    "The benchmark contains 6,000 compositional text prompts organized into 3 categories and 6 sub-categories: attribute binding (color, shape, texture), object relationships (spatial, non-spatial), and complex compositions. Each sub-category holds 1,000 prompts, split into 700 for training and 300 for testing.",
+    "Each sub-category uses a tailored automatic metric: Disentangled BLIP-VQA scores attribute binding, a UniDet-based metric scores spatial relationships, CLIPScore handles non-spatial relationships, and a 3-in-1 metric (averaging CLIPScore, Disentangled BLIP-VQA, and UniDet) scores complex compositions. These automatic scores are validated against human judgments of text-image alignment.",
+    "The Potato config below reproduces the human evaluation side of this benchmark: annotators rate generated-image quality on a Likert scale, classify which compositional challenge type a prompt targets, and compare pairs of generated images through pairwise preference."
+  ],
+  "datasetStats": [
+    { "label": "Total prompts", "value": "6,000" },
+    { "label": "Categories", "value": "3 (attribute binding, object relationships, complex compositions)" },
+    { "label": "Sub-categories", "value": "6 (color, shape, texture, spatial, non-spatial, complex)" },
+    { "label": "Prompts per sub-category", "value": "1,000 (700 train / 300 test)" },
+    { "label": "Evaluation metrics", "value": "BLIP-VQA, UniDet, CLIPScore, 3-in-1" },
+    { "label": "Venue", "value": "NeurIPS 2023" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Huang et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Nanyang Technological University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "likert",
     "radio",
