@@ -7,7 +7,7 @@ task_dir: "."
 
 # Data configuration
 data_files:
-  - data.json
+  - sample-data.json
 item_properties:
   id_key: "id"
   text_key: "video_url"
@@ -21,53 +21,69 @@ annotation_schemes:
   - name: "soccer_events"
     description: |
       Mark key events in the soccer match. Click at the exact moment each event occurs.
-      Use keyboard shortcuts for faster annotation.
+      Use keyboard shortcuts for faster annotation. These are the 17 action classes
+      defined by SoccerNet-v2 (Deliège et al., 2021).
     annotation_type: "video_annotation"
     mode: "keyframe"
     labels:
-      # Scoring events
-      - name: "goal"
+      # Scoring & shots
+      - name: "Goal"
         color: "#22C55E"
         key_value: "g"
-      - name: "penalty"
+      - name: "Penalty"
         color: "#EAB308"
         key_value: "p"
-      - name: "own_goal"
-        color: "#DC2626"
-        key_value: "o"
+      - name: "Shots on target"
+        color: "#16A34A"
+        key_value: "s"
+      - name: "Shots off target"
+        color: "#84CC16"
+        key_value: "h"
 
-      # Card events
-      - name: "yellow_card"
+      # Cards
+      - name: "Yellow card"
         color: "#FACC15"
         key_value: "y"
-      - name: "red_card"
+      - name: "Red card"
         color: "#EF4444"
         key_value: "r"
-      - name: "second_yellow"
+      - name: "Yellow->red card"
         color: "#F97316"
         key_value: "2"
 
-      # Game flow events
-      - name: "substitution"
-        color: "#3B82F6"
-        key_value: "s"
-      - name: "kick_off"
-        color: "#8B5CF6"
-        key_value: "k"
-      - name: "foul"
-        color: "#EC4899"
-        key_value: "f"
-
-      # Set pieces
-      - name: "corner"
+      # Set pieces & restarts
+      - name: "Corner"
         color: "#06B6D4"
         key_value: "c"
-      - name: "free_kick"
+      - name: "Direct free-kick"
         color: "#14B8A6"
-        key_value: "1"
-      - name: "offside"
+        key_value: "d"
+      - name: "Indirect free-kick"
+        color: "#2DD4BF"
+        key_value: "i"
+      - name: "Throw-in"
+        color: "#0EA5E9"
+        key_value: "t"
+      - name: "Kick-off"
+        color: "#8B5CF6"
+        key_value: "k"
+      - name: "Offside"
         color: "#6366F1"
-        key_value: "3"
+        key_value: "o"
+
+      # Game flow
+      - name: "Foul"
+        color: "#EC4899"
+        key_value: "f"
+      - name: "Substitution"
+        color: "#3B82F6"
+        key_value: "u"
+      - name: "Clearance"
+        color: "#A855F7"
+        key_value: "l"
+      - name: "Ball out of play"
+        color: "#94A3B8"
+        key_value: "b"
 
     frame_stepping: true
     show_timecode: true
@@ -86,29 +102,35 @@ annotation_per_instance: 2
 annotation_instructions: |
   ## Soccer Action Spotting Task
 
-  Your goal is to identify and timestamp key events in soccer match footage.
+  Your goal is to identify and timestamp the 17 SoccerNet-v2 action classes in
+  soccer match footage.
 
-  ### Event Types to Annotate:
+  ### The 17 Action Classes:
 
-  **Scoring Events:**
-  - **Goal (g)**: When the ball crosses the goal line
-  - **Penalty (p)**: When a penalty kick is awarded or taken
-  - **Own Goal (o)**: When a player scores against their own team
+  **Scoring & shots:**
+  - **Goal (g)**: The ball fully crosses the goal line
+  - **Penalty (p)**: A penalty kick is taken
+  - **Shots on target (s)**: A shot that would enter the goal if not saved/blocked
+  - **Shots off target (h)**: A shot that misses the goal
 
-  **Card Events:**
-  - **Yellow Card (y)**: When referee shows yellow card
-  - **Red Card (r)**: When referee shows red card
-  - **Second Yellow (2)**: Second yellow card leading to red
+  **Cards:**
+  - **Yellow card (y)**: Referee shows a yellow card
+  - **Red card (r)**: Referee shows a straight red card
+  - **Yellow->red card (2)**: A second yellow resulting in a red
 
-  **Game Flow:**
-  - **Substitution (s)**: Player substitution
-  - **Kick-off (k)**: Start/restart of play
-  - **Foul (f)**: When referee calls a foul
+  **Set pieces & restarts:**
+  - **Corner (c)**: A corner kick is taken
+  - **Direct free-kick (d)**: A direct free-kick is taken
+  - **Indirect free-kick (i)**: An indirect free-kick is taken
+  - **Throw-in (t)**: A throw-in is taken
+  - **Kick-off (k)**: Play starts or restarts from the center
+  - **Offside (o)**: Offside is called
 
-  **Set Pieces:**
-  - **Corner (c)**: Corner kick awarded
-  - **Free Kick (1)**: Free kick awarded
-  - **Offside (3)**: Offside called
+  **Game flow:**
+  - **Foul (f)**: Referee calls a foul
+  - **Substitution (u)**: A player substitution is made
+  - **Clearance (l)**: A defensive clearance
+  - **Ball out of play (b)**: The ball leaves the field of play
 
   ### Instructions:
   1. Watch the video carefully

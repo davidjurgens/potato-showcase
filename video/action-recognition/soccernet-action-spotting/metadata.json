@@ -1,6 +1,20 @@
 {
-  "title": "SoccerNet Action Spotting",
-  "description": "Temporal action spotting in soccer broadcast videos. Annotators identify and timestamp key match events including goals, cards, substitutions, and fouls.",
+  "title": "SoccerNet Action Spotting: The 17 Soccer Action Classes",
+  "description": "SoccerNet-v2 defines 17 action spotting classes (goal, corner, card, foul, substitution, and more) with 110,458 labeled events across 500 broadcast games. Full class list, dataset and paper links, and a Potato config to reproduce the task.",
+  "overview": [
+    "SoccerNet is the standard benchmark for action spotting in broadcast soccer video: locating the exact moment an event happens inside long, untrimmed match footage. It was introduced by Giancola et al. (CVPR 2018 workshops) and substantially expanded by Deliege et al. in SoccerNet-v2 (2021).",
+    "SoccerNet-v2 defines 17 action classes and provides 110,458 manually spotted actions across 500 complete broadcast games (764 hours) from six major European leagues, with each timestamp annotated to one-frame precision.",
+    "The 17 action spotting classes are: Goal, Penalty, Shots on target, Shots off target, Yellow card, Red card, Yellow-to-red card, Corner, Direct free-kick, Indirect free-kick, Throw-in, Kick-off, Offside, Foul, Substitution, Clearance, and Ball out of play.",
+    "The Potato config below reproduces the action spotting task with keyframe-mode video annotation: an annotator scrubs to the exact frame of an event and tags it with a one-key shortcut. All 17 classes are pre-configured, so you can replicate SoccerNet labeling or adapt the scheme to another sport."
+  ],
+  "datasetStats": [
+    { "label": "Action classes", "value": "17" },
+    { "label": "Annotations", "value": "110,458 spotted actions" },
+    { "label": "Games", "value": "500 broadcast matches" },
+    { "label": "Video", "value": "764 hours, 6 European leagues" },
+    { "label": "Precision", "value": "One-frame timestamps" },
+    { "label": "Papers", "value": "Giancola et al. 2018; Deliege et al. 2021 (v2)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "video_annotation"
   ],
@@ -32,7 +46,7 @@
     "soccernet"
   ],
   "featured": false,
-  "paperReference": "Giancola et al., CVPR 2018",
+  "paperReference": "Giancola et al., CVPR 2018; Deliege et al. 2021 (SoccerNet-v2)",
   "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w34/Giancola_SoccerNet_A_Scalable_CVPR_2018_paper.pdf",
   "datasetUrl": "https://www.soccer-net.org",
   "citation": "@inproceedings{giancola2018soccernet,\n  title={SoccerNet: A Scalable Dataset for Action Spotting in Soccer Videos},\n  author={Giancola, Silvio and Amine, Mohieddine and Dghaily, Tarek and Ghanem, Bernard},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},\n  pages={1711--1721},\n  year={2018}\n}"

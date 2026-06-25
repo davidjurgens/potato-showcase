@@ -1,6 +1,20 @@
 {
-  "title": "FineGym Action Segmentation",
-  "description": "Annotate fine-grained gymnastic actions with hierarchical labels. Identify specific elements, sub-actions, and routines in competition videos.",
+  "title": "FineGym Dataset: Fine-Grained Gymnastics Action Recognition",
+  "description": "FineGym is a hierarchical video dataset (CVPR 2020) for fine-grained gymnastics action recognition: events, sets, and 99-530 element classes annotated with millisecond-level temporal boundaries. See the label taxonomy and a runnable Potato config to annotate or extend it.",
+  "overview": [
+    "FineGym is a hierarchical video dataset for fine-grained action understanding, introduced by Shao, Zhao, Dai, and Lin at CVPR 2020 (oral). It targets gymnastics, where actions look nearly identical and differ only in subtle motion, to push action recognition past coarse activity labels.",
+    "Annotations use a three-level semantic hierarchy: events (the apparatus, such as balance beam or floor exercise), sets (groups of related sub-actions like leaps, turns, or dismounts), and elements (individual gymnastic skills). Boundaries are marked at both the action and sub-action level with millisecond precision.",
+    "Two evaluation subsets are standard: Gym99 (99 element classes, roughly balanced) and Gym288 (288 classes, long-tailed); the full element label space is referred to as Gym530. The women's artistic gymnastics events covered are Balance Beam (BB), Floor Exercise (FX), Uneven Bars (UB), and Vault (VT).",
+    "The Potato config below reproduces the element-segmentation task: segment-mode video annotation for marking element boundaries, plus radio schemes for event, element group, difficulty, and execution quality. Use it to re-annotate FineGym clips, extend the taxonomy, or build a similar fine-grained sports dataset."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "CVPR 2020 (oral)" },
+    { "label": "Domain", "value": "Women's artistic gymnastics" },
+    { "label": "Hierarchy", "value": "Events -> Sets -> Elements" },
+    { "label": "Element classes", "value": "99 / 288 / 530 (Gym99 / Gym288 / Gym530)" },
+    { "label": "Events", "value": "Balance Beam, Floor, Uneven Bars, Vault" },
+    { "label": "Temporal precision", "value": "Millisecond-level boundaries" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "video_annotation"
