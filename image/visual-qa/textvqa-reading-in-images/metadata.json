@@ -1,6 +1,21 @@
 {
-  "title": "TextVQA - Reading Text in Images",
-  "description": "Visual question answering that requires reading and reasoning about text present in images. Based on the TextVQA dataset (Singh et al., CVPR 2019), annotators answer questions about images where understanding scene text (signs, labels, menus, etc.) is essential.",
+  "title": "TextVQA: Reading Text in Images for VQA",
+  "description": "TextVQA is a visual question answering dataset where reading scene text in the image is needed to answer. This Potato config reproduces the task: show an image and question, then collect a free-text answer.",
+  "overview": [
+    "TextVQA was introduced by Singh et al. in \"Towards VQA Models That Can Read\" at CVPR 2019. The authors at Facebook AI Research built it to test whether VQA models can read text in a scene, a skill standard VQA datasets largely ignored even though visually impaired users often ask questions that hinge on reading signs, labels, and packaging.",
+    "The dataset has 45,336 questions over 28,408 images. Images are sampled from OpenImages, favoring categories likely to contain text such as billboards, traffic signs, and consumer goods. Each question carries 10 human answers, and accuracy is scored by soft voting against those 10 references.",
+    "Answering a question requires reading scene text with OCR and then reasoning about it together with the question and the rest of the image. The paper pairs the dataset with the LoRRA (Look, Read, Reason & Answer) model, which can copy answer strings detected in the image. The benchmark is widely used to evaluate text-reading VQA and multimodal OCR models.",
+    "The Potato config below reproduces the annotation task: it presents an image with its question, collects a free-text answer, and adds a radio control for whether reading text in the image was necessary, mirroring how TextVQA examples are gathered and verified."
+  ],
+  "datasetStats": [
+    { "label": "Questions", "value": "45,336" },
+    { "label": "Images", "value": "28,408" },
+    { "label": "Image source", "value": "OpenImages" },
+    { "label": "Answers per question", "value": "10" },
+    { "label": "Venue", "value": "CVPR 2019" },
+    { "label": "Metric", "value": "Soft-voting VQA accuracy" }
+  ],
+  "updatedAt": "2026-06-25",
   "version": "1.0.0",
   "author": {
     "name": "Singh et al.",
@@ -9,7 +24,6 @@
     "affiliation": "Facebook AI Research"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
   "annotationTypes": [
     "text",
     "radio"

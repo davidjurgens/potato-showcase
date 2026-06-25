@@ -1,6 +1,20 @@
 {
-  "title": "Prometheus: Rubric-based LLM Evaluation",
-  "description": "Fine-grained rubric-based evaluation of LLM outputs. Annotators score responses against detailed rubrics (1-5 scale) with specific criteria for each score level, and provide written feedback.",
+  "title": "Prometheus: Rubric-Based LLM Evaluation",
+  "description": "Prometheus is an open-source evaluator LM that scores a response against a user-defined rubric on a 1-5 scale and writes feedback. This Potato config reproduces that rubric scoring and feedback task for human annotators.",
+  "overview": [
+    "Prometheus is an open-source evaluator language model for fine-grained assessment of generated text, built by Seungone Kim and collaborators at KAIST, NAVER, and partner institutions. The first version was published at ICLR 2024; Prometheus 2 followed at EMNLP 2024.",
+    "Prometheus is fine-tuned from Llama-2-Chat (7B and 13B) on the Feedback Collection, a dataset of 1,000 score rubrics, 20,000 instructions (20 per rubric), and 100,000 response-and-feedback pairs covering scores 1 through 5. Each instance pairs an instruction, a response, a reference answer, and a custom rubric with a written rationale and a numerical score.",
+    "At evaluation time the model reads an instruction, a response, and a rubric that defines what each score level means, then returns feedback explaining its judgment followed by a score on a 1-5 Likert scale. It is meant as a cheaper, reproducible alternative to GPT-4 and human evaluation for rubric-grounded scoring.",
+    "The Potato config below reproduces this task for human annotators: it shows the instruction, the response, and the score rubric, collects a 1-5 score, and captures written feedback that justifies the score."
+  ],
+  "datasetStats": [
+    { "label": "Score rubrics", "value": "1,000" },
+    { "label": "Instructions", "value": "20,000 (20 per rubric)" },
+    { "label": "Responses + feedback", "value": "100,000" },
+    { "label": "Score scale", "value": "1-5 Likert" },
+    { "label": "Base model", "value": "Llama-2-Chat 7B / 13B" },
+    { "label": "Venues", "value": "ICLR 2024 / EMNLP 2024 (v2)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "likert",
     "text"

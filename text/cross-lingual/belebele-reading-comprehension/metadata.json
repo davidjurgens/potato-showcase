@@ -1,6 +1,20 @@
 {
-  "title": "Multilingual Reading Comprehension (Belebele)",
-  "description": "Answer multiple-choice reading comprehension questions in a parallel multilingual benchmark spanning 122 languages. Based on Belebele (Bandarkar et al., ACL 2024). Annotators select the correct answer from four options, rate difficulty, and identify the type of reasoning required.",
+  "title": "Belebele Multilingual Reading Comprehension Benchmark",
+  "description": "Belebele is a parallel multiple-choice reading comprehension benchmark covering 122 language variants, with 900 questions per language built on FLORES-200 passages. Reproduce and annotate it in Potato.",
+  "overview": [
+    "Belebele is a machine reading comprehension benchmark released by Bandarkar et al. at Meta AI and published at ACL 2024. Every question is fully parallel across all languages, so the same passage and question set is translated into each variant for direct cross-lingual comparison.",
+    "The dataset contains 122 language variants spanning 115 distinct languages, 27 language families, and 29 scripts. Each variant has 900 questions for 109,800 questions in total. The questions draw on 488 distinct passages from FLORES-200, with one or two questions per passage. Passages average 79.1 words and 4.1 sentences.",
+    "Each question presents four answer options, exactly one of which is correct, recorded as a one-indexed correct_answer_num. The task evaluates passage-grounded reading comprehension across high-, medium-, and low-resource languages, and the English subset alone is hard enough to challenge strong language models.",
+    "The Potato config below reproduces the Belebele multiple-choice task as a radio-button annotation interface. Annotators read a passage, answer a four-option question, and add metadata such as difficulty and reasoning type."
+  ],
+  "datasetStats": [
+    { "label": "Language variants", "value": "122" },
+    { "label": "Distinct languages", "value": "115" },
+    { "label": "Questions per language", "value": "900" },
+    { "label": "Total questions", "value": "109,800" },
+    { "label": "Distinct passages", "value": "488 (from FLORES-200)" },
+    { "label": "Answer options", "value": "4 (1 correct)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Bandarkar et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Meta AI"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio"
   ],

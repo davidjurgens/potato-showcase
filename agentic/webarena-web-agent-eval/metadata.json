@@ -1,6 +1,20 @@
 {
-  "title": "WebArena: Web Agent Task Completion Evaluation",
-  "description": "Evaluation of autonomous web agent task completions. Annotators verify whether an agent's sequence of web actions correctly completes a given task, assess partial completion, and identify failure modes.",
+  "title": "WebArena: Realistic Web Agent Evaluation Benchmark",
+  "description": "WebArena is a reproducible, self-hosted web environment with 812 tasks for testing autonomous language agents. This Potato config has annotators score whether an agent's actions completed each task.",
+  "overview": [
+    "WebArena is a standalone, self-hosted web environment for building and evaluating autonomous agents that operate browsers from natural-language instructions. It was created by Shuyan Zhou, Frank F. Xu, and collaborators at Carnegie Mellon University and presented at ICLR 2024.",
+    "The benchmark contains 812 tasks instantiated from 241 intent templates. Tasks run across five fully functional websites that mirror common categories: online shopping (OneStopShop), an e-commerce content management system, a social forum (Reddit), collaborative software development (GitLab), and a map (OpenStreetMap), plus supporting tools such as Wikipedia, a calculator, and a scratchpad.",
+    "Because the sites are self-hosted and sandboxed, runs are reproducible. WebArena measures success by functional correctness: each task ships a programmatic reward function that checks the resulting environment state or returned answer rather than matching an action sequence. In the original paper the best GPT-4 agent reached an end-to-end success rate of 14.41%, against 78.24% for humans.",
+    "The Potato config below reproduces this evaluation as a human annotation task. Reviewers read an agent's trajectory and target task, mark whether it succeeded, fully or partially, and record the failure mode in free text."
+  ],
+  "datasetStats": [
+    { "label": "Tasks", "value": "812" },
+    { "label": "Intent templates", "value": "241" },
+    { "label": "Website environments", "value": "5 (shopping, CMS, Reddit, GitLab, map)" },
+    { "label": "Success metric", "value": "Functional correctness (programmatic reward)" },
+    { "label": "GPT-4 agent success", "value": "14.41%" },
+    { "label": "Human success", "value": "78.24%" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text"

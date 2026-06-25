@@ -1,6 +1,20 @@
 {
-  "title": "LexGLUE - Legal Document Understanding",
-  "description": "Legal document understanding and classification based on the LexGLUE benchmark (Chalkidis et al., ACL 2022). Annotators assess the relevance of legal case summaries, classify applicable areas of law, and provide legal reasoning.",
+  "title": "LexGLUE: Legal Language Understanding Benchmark",
+  "description": "LexGLUE is a benchmark of 7 legal NLP datasets in English (Chalkidis et al., ACL 2022) covering EU and US law. This Potato config reproduces its classification tasks for annotation.",
+  "overview": [
+    "LexGLUE (Legal General Language Understanding Evaluation) is a benchmark for legal language understanding in English, introduced by Ilias Chalkidis and colleagues at ACL 2022. It bundles existing legal NLP datasets into a single suite so models can be compared on legal text across courts, statutes, and contracts.",
+    "The benchmark holds 7 tasks drawn from European and US sources: ECtHR Task A and Task B (European Court of Human Rights violations), SCOTUS (US Supreme Court issue areas), EUR-LEX (EU law tagged with EuroVoc concepts), LEDGAR (contract provision topics), UNFAIR-ToS (unfair terms of service clauses), and CaseHOLD (multiple-choice holdings of US court cases).",
+    "Task formats span multi-class classification, multi-label classification, and multiple-choice question answering. Label spaces range from a handful of categories (UNFAIR-ToS) to 100 (EUR-LEX EuroVoc concepts, LEDGAR provision types). The suite is used to test whether models pretrained on legal corpora generalize across legal domains better than generic models.",
+    "The Potato config below reproduces LexGLUE-style annotation: a radio scheme for single-label tasks like SCOTUS issue areas, a multiselect scheme for multi-label tasks like ECtHR violated articles, and a free-text field for legal reasoning behind each label."
+  ],
+  "datasetStats": [
+    { "label": "Tasks", "value": "7 legal NLP datasets" },
+    { "label": "Total examples", "value": "139,532" },
+    { "label": "Jurisdictions", "value": "EU and US law" },
+    { "label": "SCOTUS classes", "value": "14 issue areas" },
+    { "label": "EUR-LEX / LEDGAR labels", "value": "100 each" },
+    { "label": "Venue", "value": "ACL 2022 (long paper)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Chalkidis et al.",
@@ -9,7 +23,7 @@
     "affiliation": "University of Copenhagen"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect",
