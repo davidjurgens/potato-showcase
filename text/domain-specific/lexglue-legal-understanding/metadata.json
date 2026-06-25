@@ -49,6 +49,6 @@
   "featured": false,
   "paperReference": "Chalkidis et al., ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.acl-long.297/",
-  "datasetUrl": "https://huggingface.co/datasets/lex_glue",
+  "datasetUrl": "https://huggingface.co/datasets/coastalcph/lex_glue",
   "citation": "@inproceedings{chalkidis-etal-2022-lexglue,\n    title = \"{L}ex{GLUE}: A Benchmark Dataset for Legal Language Understanding in {E}nglish\",\n    author = \"Chalkidis, Ilias and Jana, Abhik and Hartung, Dirk and Bommarito, Michael and Androutsopoulos, Ion and Katz, Daniel and Aletras, Nikolaos\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.297\",\n    pages = \"4310--4330\"\n}"
 }
