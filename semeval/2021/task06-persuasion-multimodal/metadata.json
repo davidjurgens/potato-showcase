@@ -1,6 +1,20 @@
 {
-  "title": "Persuasive Techniques in Multimodal Content",
-  "description": "Detect and span-annotate persuasive techniques in memes and news articles, based on SemEval-2021 Task 6 (Dimitrov et al.). Annotators identify rhetorical and propaganda techniques such as loaded language, name calling, and appeals to emotion.",
+  "title": "SemEval-2021 Task 6: Persuasion Techniques in Memes",
+  "description": "SemEval-2021 Task 6 labels persuasion techniques in 950 English memes across text, spans, and the full image. This Potato config reproduces the multiselect technique labeling and span marking.",
+  "overview": [
+    "SemEval-2021 Task 6, \"Detection of Persuasion Techniques in Texts and Images\", was organized by Dimitrov, Bin Ali, Shaar, Alam, Dalvi, and Nakov at the 15th International Workshop on Semantic Evaluation (SemEval-2021), held with ACL. It targets the rhetorical and propaganda techniques used in internet memes.",
+    "The shared task released a corpus of 950 English memes split into 687 for training, 63 for development, and 200 for testing. The memes were collected during 2020 from 26 public Facebook groups covering politics, COVID-19, vaccines, and gender equality. The task drew 71 registrations and 22 teams that submitted official runs on the test set.",
+    "There are three subtasks: detecting techniques in the text, marking the text spans where each technique appears, and detecting techniques across the whole meme (text plus image). Subtask 1 uses an inventory of 20 techniques such as Loaded Language, Name Calling, Appeal to fear/prejudice, Flag-Waving, and Black-and-White Fallacy. Subtask 3 adds two image-only techniques for a total of 22.",
+    "The Potato config below reproduces the text-side annotation: a multiselect scheme lets annotators tag which persuasion techniques are present, and a span scheme lets them highlight the exact text where each technique is employed."
+  ],
+  "datasetStats": [
+    { "label": "Total memes", "value": "950" },
+    { "label": "Train / dev / test", "value": "687 / 63 / 200" },
+    { "label": "Techniques (text)", "value": "20" },
+    { "label": "Techniques (full meme)", "value": "22" },
+    { "label": "Subtasks", "value": "3" },
+    { "label": "Teams submitting", "value": "22" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Dimitrov et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Qatar Computing Research Institute"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "span"

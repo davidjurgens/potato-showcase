@@ -1,6 +1,20 @@
 {
-  "title": "MovieNet Scene Classification",
-  "description": "Classify movie scenes by type, place, and cinematic attributes. Annotators label scenes with location, time of day, weather, and narrative function.",
+  "title": "MovieNet: Holistic Movie Understanding Dataset",
+  "description": "MovieNet is a 1,100-movie dataset from Huang et al. (ECCV 2020) with scene, place, action, and cinematic-style annotations. This Potato config reproduces its scene classification labeling task.",
+  "overview": [
+    "MovieNet is a multi-modal dataset for holistic movie understanding, built by Qingqiu Huang, Yu Xiong, Anyi Rao, Jiaze Wang, and Dahua Lin from CUHK and SenseTime and published at the European Conference on Computer Vision (ECCV) 2020.",
+    "The dataset covers 1,100 movies along with their trailers, photos, and plot descriptions. Its annotation layers include 1.1M character bounding boxes with identities, 42K scene boundaries, 2.5K aligned description sentences, 65K place and action tags, and 92K cinematic style tags.",
+    "Scene-level annotation drives the place and action layers: each scene segment receives multiple place tags drawn from 90 place classes, and sub-clips receive multiple action tags from 80 action classes, both filtered to a minimum frequency of 25. Cinematic style tags cover view scale and camera movement. These layers support tasks such as scene segmentation, place recognition, and action analysis.",
+    "The Potato config below reproduces the scene classification task: annotators view a scene and assign place tags, time of day, and cinematic attributes using multiselect and radio schemes, mirroring the multi-label place and style annotation in MovieNet."
+  ],
+  "datasetStats": [
+    { "label": "Movies", "value": "1,100" },
+    { "label": "Scene boundaries", "value": "42,000" },
+    { "label": "Place + action tags", "value": "65,000" },
+    { "label": "Cinematic style tags", "value": "92,000" },
+    { "label": "Character boxes + identities", "value": "1.1M" },
+    { "label": "Place / action classes", "value": "90 / 80" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "radio"

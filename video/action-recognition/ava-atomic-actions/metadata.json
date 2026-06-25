@@ -1,6 +1,20 @@
 {
-  "title": "AVA Atomic Visual Actions",
-  "description": "Spatio-temporal action annotation in movie clips. Annotators localize people with bounding boxes and label their atomic actions (pose, person-object, person-person interactions) in 1-second intervals.",
+  "title": "AVA: Atomic Visual Actions Dataset",
+  "description": "AVA spatio-temporally localizes 80 atomic actions on people in movie clips, labeled at 1 Hz keyframes. This Potato config reproduces the box-and-action labeling task for video clips.",
+  "overview": [
+    "AVA (Atomic Visual Actions) is a video action dataset built by Chunhui Gu, Chen Sun, David Ross, Carl Vondrick, Caroline Pantofaru, and colleagues at Google, published at CVPR 2018.",
+    "The dataset covers 430 15-minute movie clips. Keyframes are annotated at a sampling frequency of 1 Hz, which yields close to 900 keyframes per movie, and the released annotations total roughly 1.62M action labels.",
+    "AVA defines 80 atomic visual actions rather than composite activities. Each person in a keyframe is localized with a bounding box and labeled with one pose action (such as standing, sitting, or walking) plus optional person-object and person-person interaction labels, so a single actor can carry multiple labels. People are linked across consecutive segments to give spatio-temporal localization for action detection.",
+    "The Potato config below reproduces this labeling task: an annotator views a video clip, marks the person of interest, and selects the atomic actions that person performs from the pose, object-interaction, and person-interaction groups."
+  ],
+  "datasetStats": [
+    {"label": "Atomic actions", "value": "80 classes"},
+    {"label": "Movie clips", "value": "430 clips, 15 min each"},
+    {"label": "Keyframe rate", "value": "1 Hz (~900 keyframes/movie)"},
+    {"label": "Action labels", "value": "~1.62M"},
+    {"label": "Label structure", "value": "pose + object + person interactions"},
+    {"label": "Venue", "value": "CVPR 2018"}
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "video_annotation"
