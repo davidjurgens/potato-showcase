@@ -1,6 +1,20 @@
 {
-  "title": "ActivityNet Temporal Localization",
-  "description": "Temporal activity localization in untrimmed videos. Annotators identify activity instances by marking precise start and end timestamps across 200 activity classes.",
+  "title": "ActivityNet: Temporal Action Localization Benchmark",
+  "description": "ActivityNet is a large-scale video benchmark for human activity understanding, with untrimmed YouTube videos labeled across 200 daily activities. This Potato config reproduces its temporal localization annotation: marking start and end times of activity instances.",
+  "overview": [
+    "ActivityNet was introduced by Fabian Caba Heilbron, Victor Escorcia, Bernard Ghanem, and Juan Carlos Niebles at CVPR 2015 as a large-scale benchmark for human activity understanding in untrimmed video. The widely used release 1.3 is the standard dataset for the temporal action localization and detection task.",
+    "ActivityNet v1.3 covers 200 daily activity classes such as walking the dog, long jump, and vacuuming floor, drawn from YouTube. It holds 19,994 videos totaling around 648 hours, split roughly 50/25/25 across training (10,024), validation (4,926), and testing (5,044).",
+    "The temporal localization task asks annotators to find each activity instance in an untrimmed video and mark its precise start and end timestamps, then assign one of the 200 class labels. Videos average about 1.5 activity instances each, so most contain background segments alongside the labeled activity.",
+    "The Potato config below reproduces the temporal localization workflow: an annotator watches an untrimmed video, marks the boundaries of each activity instance, and labels it with one of the 200 activity classes."
+  ],
+  "datasetStats": [
+    { "label": "Activity classes", "value": "200" },
+    { "label": "Videos", "value": "19,994" },
+    { "label": "Total video", "value": "~648 hours" },
+    { "label": "Train / val / test", "value": "10,024 / 4,926 / 5,044" },
+    { "label": "Avg instances per video", "value": "~1.5" },
+    { "label": "Source", "value": "YouTube (untrimmed)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "video_annotation"
   ],

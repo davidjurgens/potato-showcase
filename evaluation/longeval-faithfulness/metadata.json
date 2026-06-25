@@ -1,6 +1,20 @@
 {
-  "title": "LongEval: Faithfulness Evaluation for Long-form Summarization",
-  "description": "Faithfulness evaluation of long-form summaries. Annotators identify atomic content units in summaries, check each against source documents for faithfulness, and rate overall summary quality.",
+  "title": "LongEval: Faithfulness Evaluation for Long-Form Summarization",
+  "description": "LongEval is the EACL 2023 protocol for human evaluation of faithfulness in long-form summaries (Krishna et al.). This Potato config reproduces its fine-grained, clause-level faithfulness judgments against source documents.",
+  "overview": [
+    "LongEval is a set of guidelines for human evaluation of faithfulness in long-form summarization, introduced by Kalpesh Krishna, Erin Bransom, Bailey Kuehl, Mohit Iyyer, Pradeep Dasigi, Arman Cohan, and Kyle Lo at EACL 2023, where it received an Outstanding Paper award. The authors surveyed 162 long-form summarization papers and found that most reported no human evaluation of model summaries at all.",
+    "The protocol asks annotators to judge faithfulness at a fine granularity rather than scoring a whole summary at once. Each summary is broken into smaller content units (clause-level spans), and an annotator checks each unit against the source document to decide whether it is supported. The paper shows this finer granularity cuts inter-annotator variance, lowering the standard deviation of faithfulness scores from 18.5 at the summary level to 6.8 at the clause level.",
+    "LongEval was applied to two long-form datasets from different domains: SQuALITY, built on literary works and books, and PubMed scientific articles. To keep annotation tractable on long documents, the protocol supports partial annotation, where scoring only a subset of fine-grained units still tracks the full workload closely (0.89 Kendall's tau using 50 percent of judgments). The released materials include human judgments, annotation templates, and a Python library.",
+    "The Potato config below reproduces the LongEval faithfulness task: annotators mark atomic content units in a summary as spans, check each unit against the source for faithfulness with a radio choice, and rate overall summary quality on a Likert scale."
+  ],
+  "datasetStats": [
+    { "label": "Venue", "value": "EACL 2023 (Outstanding Paper)" },
+    { "label": "Papers surveyed", "value": "162 long-form summarization papers" },
+    { "label": "Domains", "value": "Books (SQuALITY) and PubMed science" },
+    { "label": "Judgment unit", "value": "Clause-level content units" },
+    { "label": "Variance reduction", "value": "Score std-dev 18.5 -> 6.8" },
+    { "label": "Partial annotation", "value": "0.89 Kendall's tau at 50% of units" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "span",
     "radio",

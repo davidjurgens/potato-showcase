@@ -1,6 +1,20 @@
 {
-  "title": "SWE-PRM Coding Process Reward",
-  "description": "Process reward annotation for software engineering agent traces. Annotators verify each coding action step taken by an SWE agent when resolving GitHub issues, identifying the first step where the agent goes astray and classifying the error type.",
+  "title": "SWE-PRM Process Reward Labels for Coding Agents",
+  "description": "Step-level process reward dataset for coding agents from the SWE-PRM paper (Gandhi et al., 2025). The Potato config reproduces per-step correctness rating, error typing, and explanation over SWE-bench Verified traces.",
+  "overview": [
+    "SWE-PRM comes from \"When Agents go Astray: Course-Correcting SWE Agents with PRMs\" by Shubham Gandhi, Jason Tsay, Jatin Ganhotra, Kiran Kate, and Yara Rizk (arXiv:2509.02360, 2025). The work trains a process reward model (PRM) that scores an agent's actions as it resolves GitHub issues, rather than judging only the final patch.",
+    "The data is built on SWE-bench Verified, the 500-task human-validated subset of SWE-bench. Each item is a full agent trajectory: the GitHub issue, the ordered sequence of agent actions (file edits, shell commands, test runs), and the test outcome. Steps are labeled individually so reward signal is available before a task finishes.",
+    "The labeling task is step-level process reward. Annotators read each action in a trajectory, mark where the agent first goes astray, and tag the inefficiency. The paper organizes feedback around a taxonomy of common inefficiencies such as redundant exploration, looping, and failing to terminate after the fix is complete. Using the PRM for mid-run course correction raised resolution on SWE-bench Verified from 40.0 percent to 50.6 percent.",
+    "The Potato config below reproduces this annotation workflow. It shows the issue, the agent step trace, and the test results, then collects a per-step correctness radio rating, a multiselect of error types (logic error, API misuse, wrong file targeted, incomplete edit, redundant action, test error), and a free-text explanation of where the agent went wrong."
+  ],
+  "datasetStats": [
+    { "label": "Source paper", "value": "Gandhi et al., arXiv:2509.02360 (2025)" },
+    { "label": "Benchmark", "value": "SWE-bench Verified" },
+    { "label": "Tasks in SWE-bench Verified", "value": "500 human-validated" },
+    { "label": "Annotation unit", "value": "Per-step agent action" },
+    { "label": "Resolution gain with PRM", "value": "40.0% -> 50.6%" },
+    { "label": "Inference cost", "value": "as low as $0.2 per task" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
-  "updatedAt": "2026-03-29",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect",

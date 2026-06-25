@@ -1,6 +1,20 @@
 {
-  "title": "Media Frames Analysis",
-  "description": "Annotation of media framing in news articles covering policy issues, based on the Media Frames Corpus (Card et al., ACL 2015). Annotators identify framing dimensions, stance, and provide justifications for their frame selections.",
+  "title": "Media Frames Corpus: News Framing Annotation",
+  "description": "The Media Frames Corpus (Card et al., ACL 2015) labels U.S. news articles on immigration, smoking, and same-sex marriage with 15 general framing dimensions. This Potato config reproduces that frame-coding task.",
+  "overview": [
+    "The Media Frames Corpus was built by Dallas Card, Amber E. Boydstun, Justin H. Gross, Philip Resnik, and Noah A. Smith, and published at ACL-IJCNLP 2015. It pairs news framing theory from political science with computational annotation so frames can be compared across unrelated policy debates.",
+    "Version 1 of the corpus covers three policy issues chosen for their range of framing: immigration, smoking, and same-sex marriage. The articles were drawn from 13 national U.S. newspapers via Lexis-Nexis, mostly published between 1990 and 2012, and Table 1 of the paper reports 20,037 annotated articles across the three issues.",
+    "Annotators worked from 15 general framing dimensions defined by Boydstun et al. (2014): Economic; Capacity and resources; Morality; Fairness and equality; Legality, constitutionality and jurisprudence; Policy prescription and evaluation; Crime and punishment; Security and defense; Health and safety; Quality of life; Cultural identity; Public opinion; Political; External regulation and reputation; and Other. For each article they marked which dimensions appeared, highlighted the text spans that cued them, and chose a primary frame for the headline and the whole article. Annotators identified between 2.0 and 3.7 frames per article on average.",
+    "The Potato config below reproduces the per-article task: a multiselect for the framing dimensions present, a radio for the primary frame, and a text field for span-level justification, matching the multi-frame coding workflow from the original study."
+  ],
+  "datasetStats": [
+    { "label": "Framing dimensions", "value": "15 general-purpose" },
+    { "label": "Policy issues", "value": "Immigration, smoking, same-sex marriage" },
+    { "label": "Annotated articles", "value": "20,037" },
+    { "label": "Newspapers", "value": "13 national U.S." },
+    { "label": "Annotators", "value": "19 undergraduates" },
+    { "label": "Venue", "value": "ACL-IJCNLP 2015" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Card et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Carnegie Mellon University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "radio",

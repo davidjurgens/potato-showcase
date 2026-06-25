@@ -1,6 +1,20 @@
 {
-  "title": "NExT-QA - Temporal and Causal Video Question Answering",
-  "description": "Temporal and causal video question answering requiring reasoning about actions, events, and their relationships over time. Based on the NExT-QA dataset (Xiao et al., CVPR 2021), annotators answer multiple-choice questions about video content with an emphasis on temporal and causal understanding.",
+  "title": "NExT-QA: Causal and Temporal Video QA Benchmark",
+  "description": "NExT-QA (Xiao et al., CVPR 2021) is a video QA benchmark for causal and temporal action reasoning over 5,440 videos and ~52K questions. This Potato config reproduces its multiple-choice answer task.",
+  "overview": [
+    "NExT-QA is a video question answering benchmark built by Junbin Xiao, Xindi Shang, Angela Yao, and Tat-Seng Chua at the National University of Singapore, published at CVPR 2021. It moves video QA beyond recognizing what is happening toward explaining why and how events unfold.",
+    "The dataset covers 5,440 videos with an average length of 44 seconds, drawn from daily activities rich in multi-object interactions. It pairs them with about 52,000 manually annotated question-answer pairs, with roughly 10 questions per video.",
+    "Questions split into three types: causal (48%), such as why a toddler is crying; temporal (29%), such as how a person reacted after an event; and descriptive (23%), covering scene and object facts. NExT-QA supports both a multiple-choice setting with five candidate answers and an open-ended setting (NExT-OE).",
+    "The Potato config below reproduces the multiple-choice setting: it shows a video, a question, and five candidate answers as radio options, with an optional free-text field for the open-ended variant."
+  ],
+  "datasetStats": [
+    { "label": "Videos", "value": "5,440" },
+    { "label": "Avg video length", "value": "44 seconds" },
+    { "label": "QA pairs", "value": "~52,000" },
+    { "label": "Question types", "value": "Causal 48%, Temporal 29%, Descriptive 23%" },
+    { "label": "Settings", "value": "Multiple-choice (5 options) and open-ended" },
+    { "label": "Video splits", "value": "Train 3,870 / Val 570 / Test 1,000" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Xiao et al.",
@@ -9,7 +23,7 @@
     "affiliation": "National University of Singapore"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text",

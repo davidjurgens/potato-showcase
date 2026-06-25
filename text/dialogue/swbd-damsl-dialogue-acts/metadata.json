@@ -1,6 +1,20 @@
 {
-  "title": "SWBD-DAMSL Dialogue Acts",
-  "description": "Dialogue act annotation following the Switchboard DAMSL tagset (Jurafsky et al., 1997). Covers statements, questions, backchannels, agreements, and more for conversational speech analysis. Achieved 0.80 inter-rater Kappa on 1,155 conversations.",
+  "title": "Switchboard DAMSL Dialogue Act Corpus (SwDA)",
+  "description": "The Switchboard Dialog Act Corpus tags telephone conversations with the SWBD-DAMSL tagset (Jurafsky, Shriberg, Biasca, 1997). This Potato config reproduces the 42-tag dialogue act labeling task on conversational turns.",
+  "overview": [
+    "The Switchboard Dialog Act Corpus (SwDA) extends the Switchboard-1 Telephone Speech Corpus by adding dialogue act tags to each conversational turn. The annotation project was carried out at the University of Colorado, Boulder, with the SWBD-DAMSL coding manual released by Daniel Jurafsky, Elizabeth Shriberg, and Debra Biasca in 1997.",
+    "The corpus covers 1,155 five-minute telephone conversations from 441 speakers of American English. Annotators labeled roughly 221,000 utterance segments, drawing on the SWBD-DAMSL tagset adapted from the Dialog Act Markup in Several Layers (DAMSL) scheme.",
+    "The full SWBD-DAMSL inventory holds about 220 tag combinations, which most later work collapses into 42 dialogue act labels to raise per-class frequency and inter-annotator agreement. The 42 labels include statement-non-opinion (sd), acknowledge or backchannel (b), statement-opinion (sv), agree or accept (aa), and yes-no questions (qy). Researchers use the data to train and evaluate dialogue act classifiers for conversational speech.",
+    "The Potato config below reproduces the dialogue act labeling task: each turn is shown in conversational context and an annotator assigns one tag from the 42-label SWBD-DAMSL set, matching the original coding scheme."
+  ],
+  "datasetStats": [
+    { "label": "Conversations", "value": "1,155" },
+    { "label": "Speakers", "value": "441 (American English)" },
+    { "label": "Tagged utterances", "value": "~221,000" },
+    { "label": "Dialogue act tags", "value": "42 (collapsed set)" },
+    { "label": "Tagset", "value": "SWBD-DAMSL" },
+    { "label": "Released", "value": "1997, UC Boulder" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Jurafsky et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Stanford / UC Boulder"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect"
