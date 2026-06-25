@@ -1,6 +1,20 @@
 {
-  "title": "VBench Video Generation Quality Assessment",
-  "description": "Quality assessment of AI-generated videos. Annotators rate generated videos on multiple dimensions (temporal consistency, motion smoothness, aesthetic quality) and compare pairs of generated videos.",
+  "title": "VBench: Video Generation Quality Benchmark",
+  "description": "VBench (CVPR 2024) breaks text-to-video quality into 16 evaluation dimensions, from temporal flickering to text alignment. This Potato config reproduces the human preference ratings VBench uses to validate those dimensions.",
+  "overview": [
+    "VBench is a benchmark suite for text-to-video generative models, built by Ziqi Huang and colleagues at the Shanghai AI Laboratory and Nanyang Technological University and published as a CVPR 2024 Highlight paper.",
+    "Rather than scoring a video with a single number, VBench splits quality into 16 dimensions. Seven feed a Quality Score (subject consistency, background consistency, temporal flickering, motion smoothness, dynamic degree, aesthetic quality, imaging quality) and nine feed a Semantic Score that measures whether the video matches the prompt (object class, multiple objects, human action, color, spatial relationship, scene, appearance style, temporal style, overall consistency). Each dimension has roughly 100 tailored prompts and its own automatic evaluation method.",
+    "To check that the automatic metrics track what people actually perceive, the authors collected a dataset of human preference annotations for each dimension. They report that VBench scores align with these human judgments, which is what lets the benchmark stand in for direct human evaluation when ranking models.",
+    "The Potato config below reproduces the human annotation side of VBench: Likert scales for temporal consistency, motion smoothness, aesthetic quality, and text-to-video alignment, plus pairwise comparison of two generated videos. Collecting these ratings gives the same per-dimension human preference signal VBench uses to validate its dimensions."
+  ],
+  "datasetStats": [
+    { "label": "Venue", "value": "CVPR 2024 (Highlight)" },
+    { "label": "Evaluation dimensions", "value": "16" },
+    { "label": "Dimension groups", "value": "Quality Score + Semantic Score" },
+    { "label": "Prompts per dimension", "value": "~100" },
+    { "label": "Content categories", "value": "8" },
+    { "label": "Human validation", "value": "Per-dimension preference annotations" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "likert",
     "pairwise",

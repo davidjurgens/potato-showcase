@@ -1,6 +1,20 @@
 {
-  "title": "ActivityNet Captions Dense Annotation",
-  "description": "Dense temporal annotation with natural language descriptions. Annotators segment videos into events and write descriptive captions for each temporal segment.",
+  "title": "ActivityNet Captions: Dense Video Captioning Dataset",
+  "description": "ActivityNet Captions pairs 20k untrimmed videos with 100k temporally localized sentence descriptions for dense-captioning research. This Potato config reproduces the segment-and-describe workflow.",
+  "overview": [
+    "ActivityNet Captions is a dense video captioning dataset introduced by Ranjay Krishna, Kenji Hata, Frederic Ren, Li Fei-Fei, and Juan Carlos Niebles at ICCV 2017. It extends the ActivityNet video collection with natural-language descriptions tied to specific moments in each clip.",
+    "The dataset covers about 20k untrimmed YouTube videos totaling 849 video hours, paired with 100k sentence descriptions. Each video carries 3.65 sentences on average, and each sentence runs about 13.48 words.",
+    "The dense-captioning task asks an annotator to split a video into events and write a description for each one, with a start and end time attached. On average a sentence describes 36 seconds, or 31 percent of its video, and the marked segments overlap, so a single moment can belong to several captions.",
+    "The Potato config below reproduces this segment-and-describe workflow: an annotator watches a video, marks temporal start and end times for each event, and writes a free-text caption for the marked span."
+  ],
+  "datasetStats": [
+    { "label": "Videos", "value": "~20,000 untrimmed" },
+    { "label": "Sentence descriptions", "value": "~100,000" },
+    { "label": "Total video hours", "value": "849" },
+    { "label": "Sentences per video", "value": "3.65 average" },
+    { "label": "Words per sentence", "value": "13.48 average" },
+    { "label": "Coverage per sentence", "value": "~36s / 31% of video" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "video_annotation",
     "text"

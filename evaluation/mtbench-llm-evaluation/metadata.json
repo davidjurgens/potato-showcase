@@ -1,6 +1,20 @@
 {
-  "title": "MT-Bench: LLM Response Quality Evaluation",
-  "description": "LLM response quality evaluation using pairwise comparison and absolute scoring. Annotators compare pairs of LLM responses and rate individual responses on a 1-10 scale across multiple turns.",
+  "title": "MT-Bench: Multi-Turn LLM Evaluation Benchmark",
+  "description": "MT-Bench is an 80-question multi-turn benchmark for rating LLM chat assistants with an LLM judge, from Zheng et al. (NeurIPS 2023). This Potato config reproduces its 1-10 single-answer grading.",
+  "overview": [
+    "MT-Bench is a benchmark for evaluating the conversation and instruction-following ability of LLM chat assistants. It was introduced by Lianmin Zheng and collaborators in \"Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena,\" published at NeurIPS 2023.",
+    "The benchmark contains 80 high-quality questions spread across 8 categories: writing, roleplay, extraction, reasoning, math, coding, knowledge I (STEM), and knowledge II (humanities/social science). Each category has 10 questions, and every question is a 2-turn exchange, so a model produces a first-turn and a follow-up answer.",
+    "MT-Bench popularized the LLM-as-a-judge approach. A strong model such as GPT-4 scores each turn on a scale of 1 to 10 using a fixed prompt template, and a model's final score is averaged over all 160 turns (80 questions x 2 turns). The authors found GPT-4 judgments agree with human preferences over 80 percent of the time, matching the agreement rate between humans.",
+    "The Potato config below reproduces MT-Bench single-answer grading: an annotator reads a question and a model's two-turn response, then assigns a 1-10 quality score per turn, the same rating task GPT-4 performs as a judge."
+  ],
+  "datasetStats": [
+    { "label": "Questions", "value": "80" },
+    { "label": "Categories", "value": "8" },
+    { "label": "Questions per category", "value": "10" },
+    { "label": "Turns per question", "value": "2" },
+    { "label": "Judge score scale", "value": "1 to 10" },
+    { "label": "GPT-4 vs. human agreement", "value": "Over 80%" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "pairwise",
     "likert"
