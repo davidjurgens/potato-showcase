@@ -1,6 +1,20 @@
 {
-  "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision",
-  "description": "Atomic fact evaluation in LLM-generated text. Annotators decompose generated text into atomic facts and verify each fact as supported, not-supported, or irrelevant against a reference source. Based on the FActScore framework for evaluating factual precision in long-form text generation.",
+  "title": "FActScore: Atomic Factual Precision Evaluation for LLMs",
+  "description": "FActScore breaks LLM-generated text into atomic facts and scores the percentage supported by Wikipedia, labeling each as supported, not-supported, or irrelevant. Includes dataset and paper links plus a Potato config to reproduce the annotation task.",
+  "overview": [
+    "FActScore is a factual-precision metric and human-annotated dataset for long-form text generation, introduced by Min et al. at EMNLP 2023 and developed at the University of Washington, the Allen Institute for AI, and Meta AI.",
+    "The human study covered 183 people entities drawn from Wikidata, prompting three systems (InstructGPT, ChatGPT, and PerplexityAI) for biographies. Annotators split each generation into atomic facts (about 26 to 41 per response depending on the model) and judged each against the English Wikipedia dump from 2023/04/01, using the labels Supported, Not-supported, and Irrelevant. The companion automated evaluation scored 6,500 generations from 13 language models.",
+    "FActScore is the percentage of a generation's atomic facts that are supported by the knowledge source, optionally with a length penalty for short or abstaining responses. The annotation task is a per-fact verification: decompose text into atomic claims, then label each Supported, Not-supported, or Irrelevant.",
+    "The Potato config below reproduces the atomic-fact verification task. Use it to label model outputs as supported or not-supported against a reference, compute FActScore on your own generations, or adapt the protocol to other long-form factuality checks."
+  ],
+  "datasetStats": [
+    { "label": "Venue", "value": "EMNLP 2023" },
+    { "label": "Entities", "value": "183 people from Wikidata" },
+    { "label": "Generators annotated", "value": "InstructGPT, ChatGPT, PerplexityAI" },
+    { "label": "Atomic facts per response", "value": "~26 to 41" },
+    { "label": "Labels", "value": "Supported, Not-supported, Irrelevant" },
+    { "label": "Knowledge source", "value": "Wikipedia dump 2023/04/01" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Min et al.",
@@ -9,7 +23,7 @@
     "affiliation": "University of Washington"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text"

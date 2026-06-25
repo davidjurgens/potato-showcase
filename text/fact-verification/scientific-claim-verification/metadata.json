@@ -1,6 +1,15 @@
 {
-  "title": "Scientific Claim Verification (SciFact)",
-  "description": "Verify scientific claims against evidence from research abstracts. Based on SciFact (Wadden et al., EMNLP 2020). Classify claims as supported, refuted, or having insufficient evidence, and identify rationale sentences.",
+  "title": "SciFact: Scientific Claim Verification Dataset",
+  "description": "SciFact pairs 1,409 expert-written scientific claims with 5,183 research abstracts labeled SUPPORTS, REFUTES, or NOINFO plus rationale sentences. The Potato config below reproduces the annotation task.",
+  "overview": "SciFact is a dataset for verifying scientific claims against evidence in research abstracts. It was built by Wadden, Lin, Lo, Wang, van Zuylen, Cohan, and Hajishirzi at the Allen Institute for AI and introduced in \"Fact or Fiction: Verifying Scientific Claims\" at EMNLP 2020.\n\nThe dataset has 1,409 scientific claims paired with a corpus of 5,183 abstracts from biomedical and other journals. Expert annotators wrote claims from citation sentences in scientific papers and introduced negations to make some claims refutable. About 809 claims form the training set; the rest are split across development and test, with the test set balanced across the three labels.\n\nFor each claim-abstract pair an annotator assigns a label of SUPPORTS, REFUTES, or NOINFO, then marks the rationale sentences in the abstract that justify a SUPPORTS or REFUTES decision. The task combines a label decision with span-level evidence identification, and it has been used to train and evaluate retrieval-plus-verification systems and COVID-19 fact-checking tools.\n\nThe Potato config below reproduces the SciFact annotation task: it shows a claim with its candidate abstract, collects the SUPPORTS/REFUTES/NOINFO label, and lets annotators select the rationale sentences that support the decision.",
+  "datasetStats": [
+    {"label": "Claims", "value": "1,409"},
+    {"label": "Abstract corpus", "value": "5,183"},
+    {"label": "Labels", "value": "SUPPORTS, REFUTES, NOINFO"},
+    {"label": "Training claims", "value": "809"},
+    {"label": "Evidence", "value": "Annotated rationale sentences"},
+    {"label": "Venue", "value": "EMNLP 2020"}
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wadden et al.",
@@ -9,7 +18,7 @@
     "affiliation": "Allen Institute for AI"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "likert",
     "radio",

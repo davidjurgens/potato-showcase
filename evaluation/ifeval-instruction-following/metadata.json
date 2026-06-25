@@ -1,6 +1,20 @@
 {
-  "title": "IFEval: Instruction-Following Evaluation for LLMs",
-  "description": "Evaluate how well large language models follow verifiable instructions with specific constraints such as word count limits, formatting requirements, keyword inclusion, and structural rules. Annotators assess pass/fail per constraint and overall response quality.",
+  "title": "IFEval: Instruction-Following Evaluation Benchmark for LLMs",
+  "description": "IFEval is the instruction-following benchmark from Google Research with 541 prompts built around 25 verifiable instruction types (word counts, formatting, keywords, structure). Scored by prompt-level and instruction-level accuracy, strict and loose. Reproduce the labeling in Potato.",
+  "overview": [
+    "IFEval (Instruction-Following Eval) is a benchmark that tests whether large language models obey explicit, machine-checkable instructions. It was introduced by Zhou et al. (Google Research) in arXiv 2023.",
+    "The dataset has 541 prompts drawn from 25 types of verifiable instructions. Each prompt carries one or more constraints, for example 'write more than 400 words' or 'mention the keyword AI at least 3 times', so compliance can be checked by a program rather than a human rater.",
+    "Scoring uses four numbers: prompt-level and instruction-level accuracy, each in a strict and a loose variant. Prompt-level counts a response correct only when every constraint is met; instruction-level counts the fraction of individual constraints satisfied. The loose variant tolerates minor formatting differences.",
+    "The Potato config below reproduces the IFEval judging task: a constraint checklist with pass/fail per instruction plus an overall verdict. Use it to collect human verification of model outputs or to adapt the constraint scheme to your own instruction set."
+  ],
+  "datasetStats": [
+    {"label": "Released", "value": "2023 (Google Research)"},
+    {"label": "Prompts", "value": "541"},
+    {"label": "Instruction types", "value": "25 verifiable"},
+    {"label": "Metrics", "value": "Prompt-level and instruction-level, strict and loose"},
+    {"label": "Task", "value": "Verifiable instruction following"},
+    {"label": "Paper", "value": "Zhou et al. 2023 (arXiv 2311.07911)"}
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect",

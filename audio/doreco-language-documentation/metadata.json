@@ -1,6 +1,15 @@
 {
-  "title": "DoReCo Language Documentation Annotation",
-  "description": "Multi-tier language documentation annotation following ELAN conventions used in the DoReCo project. Annotators segment audio into words and morphemes, provide Leipzig-style interlinear glosses, free translations, and clause-type labels across parallel tiers aligned to the same audio timeline (Paschen et al., Scientific Data 2022).",
+  "title": "DoReCo: Language Documentation Reference Corpus",
+  "description": "DoReCo is a cross-linguistic corpus of 53 spoken languages with over 100 hours of narrative speech transcribed and time-aligned at the word and phone levels. This Potato config reproduces its multi-tier ELAN annotation workflow.",
+  "overview": "DoReCo (Language Documentation Reference Corpus) is a cross-linguistic spoken corpus assembled from fieldwork recordings of endangered and under-described languages. It was built by Ludger Paschen, Francois Delafontaine, Christoph Draxler, Susanne Fuchs, Matthew Stave, and Frank Seifart, first presented at LREC 2020 and described in Scientific Data in 2022.\n\nThe corpus covers 53 languages from 33 top-level language families, spanning all inhabited continents. It holds over 100 hours of mostly narrative audio with almost half a million transcribed words. Transcriptions are time-aligned at the word and phone levels, and the collection totals 934 core texts, about 17 per language on average.\n\nDoReCo organizes its data in parallel time-aligned tiers following ELAN conventions. Every language has phone-aligned transcriptions and free translations, and 39 of the 53 languages add time-aligned interlinear morpheme glosses in the Leipzig style. These layers support phonetic, morphological, and typological research across a diverse language sample.\n\nThe Potato config below reproduces the DoReCo multi-tier annotation task: word and morpheme segmentation spans, Leipzig-style interlinear glosses, free translations, and clause-type labels, all aligned to a shared audio timeline.",
+  "datasetStats": [
+    { "label": "Languages", "value": "53" },
+    { "label": "Language families", "value": "33 top-level" },
+    { "label": "Audio", "value": "Over 100 hours of narrative speech" },
+    { "label": "Transcribed words", "value": "Almost 500,000" },
+    { "label": "Time alignment", "value": "Word and phone level" },
+    { "label": "Morpheme-glossed languages", "value": "39 of 53" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +18,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "span",
     "text",
