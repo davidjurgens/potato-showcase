@@ -1,6 +1,20 @@
 {
-  "title": "RadQA: Radiology Report Question Answering",
-  "description": "Extractive question answering on radiology reports. Annotators read clinical radiology reports and highlight answer spans that address given clinical questions, classify answerability, and identify the type of information conveyed by the answer. Based on the RadQA dataset for improving comprehension of radiology reports.",
+  "title": "RadQA: Radiology Report Question Answering Dataset",
+  "description": "RadQA is an extractive QA dataset of physician questions answered by spans in MIMIC-III radiology reports, including unanswerable questions. This Potato config reproduces the span-marking and answerability task.",
+  "overview": [
+    "RadQA is a question answering dataset for radiology reports, built by Sarvesh Soni, Meghana Gudala, Atieh Pajouhi, and Kirk Roberts at the University of Texas Health Science Center at Houston. It was published at the LOUHI workshop (13th International Workshop on Health Text Mining and Information Analysis) in 2022.",
+    "The reports come from MIMIC-III, a public critical-care database. The authors selected 1,009 radiology reports from 100 patients and had physicians write 3,074 questions, annotated for a total of 6,148 question-answer evidence pairs. Splits are made at the patient level in an 8:1:1 ratio.",
+    "The task is extractive: each question is answered by marking the shortest span within the Findings and Impression sections of the report. Questions are written from the clinical referral section without seeing the answer context, which produces 1,754 unanswerable questions. This setup tests whether a model can both locate evidence and abstain when the report lacks an answer.",
+    "The Potato config below reproduces the RadQA annotation workflow: annotators read a clinical question and a radiology report, highlight answer or partial-answer spans, classify answerability, and record the answer type and extracted text."
+  ],
+  "datasetStats": [
+    { "label": "Questions", "value": "3,074" },
+    { "label": "QA evidence pairs", "value": "6,148" },
+    { "label": "Unanswerable questions", "value": "1,754" },
+    { "label": "Radiology reports", "value": "1,009" },
+    { "label": "Patients", "value": "100" },
+    { "label": "Source corpus", "value": "MIMIC-III" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Soni et al.",
@@ -9,7 +23,7 @@
     "affiliation": "University of Pittsburgh"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "span",

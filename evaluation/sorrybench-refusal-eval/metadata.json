@@ -1,6 +1,20 @@
 {
-  "title": "SORRY-Bench: Systematic LLM Safety Refusal Evaluation",
-  "description": "Systematic evaluation of LLM safety refusal behaviors. Annotators judge whether LLM responses appropriately handle unsafe requests across 45 safety categories with nuanced refusal assessment.",
+  "title": "SORRY-Bench: LLM Safety Refusal Evaluation",
+  "description": "SORRY-Bench is a benchmark of 440 unsafe instructions across 44 fine-grained risk categories for judging whether LLMs refuse harmful requests. This Potato config reproduces its fulfill-vs-refuse rating task.",
+  "overview": [
+    "SORRY-Bench is a benchmark for systematically evaluating how large language models refuse unsafe user instructions. It was introduced by Tinghao Xie, Xiangyu Qi, Peter Henderson, Prateek Mittal, and collaborators from Princeton, Virginia Tech, Stanford, and UC Berkeley, and published at ICLR 2025.",
+    "The benchmark uses a class-balanced taxonomy of 44 fine-grained potentially unsafe topics, with 10 instructions per topic for 440 base unsafe instructions. To probe how phrasing affects refusal, the authors apply 20 linguistic mutations (different writing styles, encodings, languages, and persuasion techniques) on top of the base set, adding roughly 8.8K mutated prompts.",
+    "Each model response is rated on a binary scale: fulfillment (the response provides substantive content resolving the unsafe intent) versus refusal. The authors collected over 7K human annotations to ground this judgment and to meta-evaluate LLM-as-a-judge designs across 50+ proprietary and open-weight models.",
+    "The Potato config below reproduces the SORRY-Bench rating task. Annotators read a prompt and model response, mark whether the response fulfills or refuses the unsafe instruction, and tag the relevant safety category from the taxonomy."
+  ],
+  "datasetStats": [
+    { "label": "Base unsafe instructions", "value": "440" },
+    { "label": "Safety categories", "value": "44 fine-grained topics" },
+    { "label": "Instructions per category", "value": "10" },
+    { "label": "Linguistic mutations", "value": "20 styles" },
+    { "label": "Human annotations", "value": "7,000+" },
+    { "label": "Venue", "value": "ICLR 2025" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect"

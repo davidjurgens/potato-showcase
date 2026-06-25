@@ -1,6 +1,20 @@
 {
-  "title": "SNLI - Textual Entailment",
-  "description": "Natural language inference over sentence pairs from the Stanford Natural Language Inference corpus (Bowman et al., EMNLP 2015). Annotators classify the relationship between a premise and hypothesis as entailment, contradiction, or neutral.",
+  "title": "SNLI: Stanford Natural Language Inference Corpus",
+  "description": "SNLI is a corpus of 570k human-written English sentence pairs labeled entailment, contradiction, or neutral (Bowman et al., EMNLP 2015). This Potato config reproduces the premise-hypothesis judgment task.",
+  "overview": [
+    "The Stanford Natural Language Inference (SNLI) corpus was released by Samuel R. Bowman, Gabor Angeli, Christopher Potts, and Christopher D. Manning at EMNLP 2015. It became a standard benchmark for training and evaluating sentence-pair reasoning models.",
+    "The corpus holds 570,000 human-written English sentence pairs. Each premise is an image caption drawn from the Flickr30k corpus, and crowd workers wrote a hypothesis for each of the three target labels given that premise.",
+    "Annotators read a premise and a hypothesis, then pick one of three relations: entailment (the hypothesis follows from the premise), contradiction (the hypothesis conflicts with it), or neutral (neither follows nor conflicts). Each pair was validated by five workers, with the gold label set by a majority of at least three.",
+    "The Potato config below reproduces this judgment task: it shows a premise and hypothesis, asks the annotator to select entailment, contradiction, or neutral, and collects an optional free-text justification."
+  ],
+  "datasetStats": [
+    {"label": "Sentence pairs", "value": "570,000"},
+    {"label": "Labels", "value": "entailment, contradiction, neutral"},
+    {"label": "Premise source", "value": "Flickr30k image captions"},
+    {"label": "Validation per pair", "value": "5 workers, majority of 3"},
+    {"label": "Published", "value": "Bowman et al., EMNLP 2015"},
+    {"label": "Language", "value": "English"}
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Bowman et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Stanford University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text"

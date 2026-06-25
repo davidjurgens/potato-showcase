@@ -1,6 +1,20 @@
 {
-  "title": "UltraFeedback Multi-Aspect Rating",
-  "description": "Multi-aspect quality rating of AI model responses based on the UltraFeedback dataset (Cui et al., ICML 2024). Annotators rate responses on helpfulness, honesty, instruction following, and truthfulness, then provide a Likert agreement rating and overall feedback.",
+  "title": "UltraFeedback: Fine-Grained AI Preference Dataset",
+  "description": "UltraFeedback is a 64k-prompt preference dataset where GPT-4 rates model responses on four aspects (Cui et al., ICML 2024). This Potato config reproduces the multi-aspect 1-5 rating workflow.",
+  "overview": [
+    "UltraFeedback is a large-scale, fine-grained preference dataset built by Cui et al. and released by OpenBMB (Tsinghua University). It was published at ICML 2024 and is widely used to train reward models and align language models with RLHF and DPO.",
+    "The dataset pairs 64k prompts (drawn from UltraChat, ShareGPT, Evol-Instruct, TruthfulQA, FalseQA, and FLAN) with responses from 4 out of 17 diverse LLMs per prompt, yielding 256k responses and 380k fine-grained annotations.",
+    "GPT-4 rates each response on a 1-5 scale across four aspects: instruction-following, truthfulness, honesty, and helpfulness. Every rating is paired with a textual rationale, and the per-aspect scores support reward modeling, critic training, and best-of-n response selection.",
+    "The Potato config below reproduces the multi-aspect rating task: each model response is scored on the four UltraFeedback aspects using a 1-5 Likert scale, with an agreement rating and a free-text feedback box for the rationale."
+  ],
+  "datasetStats": [
+    { "label": "Prompts", "value": "64k" },
+    { "label": "Responses", "value": "256k (4 per prompt)" },
+    { "label": "Model pool", "value": "17 LLMs" },
+    { "label": "Fine-grained annotations", "value": "380k" },
+    { "label": "Rating aspects", "value": "4 (instruction-following, truthfulness, honesty, helpfulness)" },
+    { "label": "Score scale", "value": "1-5 (rated by GPT-4)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Cui et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multirate",
     "likert",

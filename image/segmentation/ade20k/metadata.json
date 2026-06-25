@@ -1,6 +1,21 @@
 {
-  "title": "ADE20K Semantic Segmentation",
-  "description": "Comprehensive scene parsing with 150 semantic categories (Zhou et al., CVPR 2017). Annotate indoor and outdoor scenes with pixel-level labels covering objects, parts, and stuff classes.",
+  "title": "ADE20K: Scene Parsing and Semantic Segmentation Dataset",
+  "description": "ADE20K is a scene parsing dataset from MIT CSAIL (Zhou et al., CVPR 2017) with dense pixel labels for objects, stuff, and parts. This Potato config reproduces its 150-class segmentation annotation workflow.",
+  "overview": [
+    "ADE20K is a scene parsing and semantic segmentation dataset built by Bolei Zhou and colleagues at MIT CSAIL and presented at CVPR 2017. Every image is densely labeled at the pixel level, covering objects, background stuff, and the parts that make up each object.",
+    "The full dataset contains 25,210 images: 20,210 for training, 2,000 for validation, and 3,000 for testing. Across these images annotators marked 434,826 object instances and 175,961 part instances, with an average of 19.5 instances and 10.5 object classes per image.",
+    "The annotations span 2,693 object and stuff classes plus 476 part classes, with parts attached to a large share of object instances. The widely used SceneParse150 benchmark narrows this to 150 frequent classes (115 objects and 35 stuff categories), which cover 92.75% of all annotated pixels and serve as the standard semantic segmentation evaluation set.",
+    "The Potato config below reproduces this labeling task. Annotators select which of the 150 scene categories appear in an image and assign a primary scene label, mirroring the object-plus-stuff taxonomy that drives ADE20K's pixel-level segmentation."
+  ],
+  "datasetStats": [
+    { "label": "Total images", "value": "25,210" },
+    { "label": "Train / val split", "value": "20,210 / 2,000" },
+    { "label": "Object + stuff classes", "value": "2,693" },
+    { "label": "Part classes", "value": "476" },
+    { "label": "SceneParse150 benchmark", "value": "150 classes" },
+    { "label": "Object instances", "value": "434,826" }
+  ],
+  "updatedAt": "2026-06-25",
   "version": "1.0.0",
   "author": {
     "name": "Zhou et al.",
@@ -9,7 +24,6 @@
     "affiliation": "MIT CSAIL"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
   "annotationTypes": [
     "multiselect",
     "radio"
