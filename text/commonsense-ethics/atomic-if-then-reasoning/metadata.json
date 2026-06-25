@@ -1,0 +1,55 @@
+{
+  "title": "ATOMIC: If-Then Commonsense Reasoning (PersonX / PersonY)",
+  "description": "ATOMIC is the AAAI 2019 knowledge graph of 877k if-then commonsense inferences over 24,313 PersonX/PersonY base events (Sap et al.). This Potato config reproduces its 9-dimension free-text annotation task: xIntent, xNeed, xAttr, xEffect, xReact, xWant, oReact, oWant, oEffect.",
+  "overview": [
+    "ATOMIC (An Atlas of Machine Commonsense) is a knowledge graph of everyday if-then reasoning, introduced by Maarten Sap, Ronan LeBras, Emily Allaway, Chandra Bhagavatula, Nicholas Lourie, Hannah Rashkin, Brendan Roof, Noah A. Smith, and Yejin Choi at AAAI 2019. Rather than encoding taxonomic facts like a traditional knowledge base, ATOMIC organizes inferential knowledge: given an event, what is likely to happen before and after, and what are the mental states of the people involved.",
+    "The graph holds 877,108 if-then triples over 24,313 base events. Each base event is written with PersonX, PersonY, and PersonZ placeholders (for example, 'PersonX pays PersonY a compliment'), so the inferences generalize across actors. Events are connected to inferences through nine typed relations grouped into three families: If-Event-Then-Mental-State (xIntent, xReact, oReact), If-Event-Then-Event (xNeed, xWant, xEffect, oWant, oEffect), and If-Event-Then-Persona (xAttr).",
+    "ATOMIC was built by crowdsourcing free-text inferences on Amazon Mechanical Turk. For each base event and dimension, workers wrote short natural-language phrases (up to four answers per dimension) or marked the dimension 'none' when no inference applied. The 'x' relations describe PersonX, the subject of the event, while the 'o' relations describe others such as PersonY. This free-text design is what makes ATOMIC a generation target: COMET and later commonsense models are trained to produce these inferences.",
+    "The Potato config below reproduces the ATOMIC annotation task. Each base event is shown with nine free-text boxes, one per dimension, each prompting the annotator to complete a templated phrase (for example, xIntent -> 'PersonX wanted ...', oReact -> 'Others feel ...'). Pooling several annotators per event with annotation_per_instance recovers the many-answers-per-event structure of the original dataset."
+  ],
+  "datasetStats": [
+    { "label": "Base events", "value": "24,313 (PersonX/PersonY templates)" },
+    { "label": "If-then triples", "value": "877,108" },
+    { "label": "Inference dimensions", "value": "9 (xIntent, xNeed, xAttr, xEffect, xReact, xWant, oReact, oWant, oEffect)" },
+    { "label": "Relation families", "value": "3 (mental-state, event, persona)" },
+    { "label": "Annotation", "value": "Free-text on Amazon Mechanical Turk" },
+    { "label": "Venue", "value": "AAAI 2019" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Sap et al.",
+    "email": "",
+    "github": "maartensap",
+    "affiliation": "University of Washington / Allen Institute for AI"
+  },
+  "createdAt": "2026-06-25",
+  "updatedAt": "2026-06-25",
+  "annotationTypes": [
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Commonsense",
+    "Knowledge Graph"
+  ],
+  "useCase": [
+    "Commonsense Reasoning",
+    "If-Then Inference",
+    "Knowledge Graph Construction"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "atomic",
+    "commonsense",
+    "if-then-reasoning",
+    "personx-persony",
+    "knowledge-graph",
+    "free-text",
+    "aaai2019"
+  ],
+  "featured": false,
+  "paperReference": "Sap et al., AAAI 2019",
+  "paperUrl": "https://arxiv.org/abs/1811.00146",
+  "datasetUrl": "https://homes.cs.washington.edu/~msap/atomic/",
+  "citation": "@inproceedings{sap2019atomic,\n  title={ATOMIC: An Atlas of Machine Commonsense for If-Then Reasoning},\n  author={Sap, Maarten and Le Bras, Ronan and Allaway, Emily and Bhagavatula, Chandra and Lourie, Nicholas and Rashkin, Hannah and Roof, Brendan and Smith, Noah A. and Choi, Yejin},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={33},\n  number={01},\n  pages={3027--3035},\n  year={2019},\n  url={https://arxiv.org/abs/1811.00146}\n}"
+}

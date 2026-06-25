@@ -1,0 +1,14 @@
+[
+  { "id": "atomic_001", "event": "PersonX pays PersonY a compliment" },
+  { "id": "atomic_002", "event": "PersonX makes PersonY's coffee" },
+  { "id": "atomic_003", "event": "PersonX studies all night for the exam" },
+  { "id": "atomic_004", "event": "PersonX moves to a new city" },
+  { "id": "atomic_005", "event": "PersonX adopts a dog from the shelter" },
+  { "id": "atomic_006", "event": "PersonX forgets PersonY's birthday" },
+  { "id": "atomic_007", "event": "PersonX gives PersonY a gift" },
+  { "id": "atomic_008", "event": "PersonX loses their job" },
+  { "id": "atomic_009", "event": "PersonX asks PersonY for help" },
+  { "id": "atomic_010", "event": "PersonX wins the race" },
+  { "id": "atomic_011", "event": "PersonX spills coffee on PersonY" },
+  { "id": "atomic_012", "event": "PersonX returns PersonY's lost wallet" }
+]
