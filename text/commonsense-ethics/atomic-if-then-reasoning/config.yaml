@@ -1,0 +1,119 @@
+# ATOMIC: An Atlas of Machine Commonsense for If-Then Reasoning
+# Based on Sap et al., AAAI 2019
+# Paper:  https://arxiv.org/abs/1811.00146
+# Data:   https://homes.cs.washington.edu/~msap/atomic/
+#
+# ATOMIC is a knowledge graph of 877k if-then commonsense inferences over
+# 24,313 everyday base events written with PersonX / PersonY / PersonZ
+# placeholders (e.g. "PersonX pays PersonY a compliment"). Crowdworkers on
+# Amazon Mechanical Turk wrote free-text inferences for each event across
+# nine dimensions, grouped into three families:
+#
+#   If-Event-Then-Mental-State
+#     xIntent  - why PersonX does this (intent)
+#     xReact   - how PersonX feels afterward
+#     oReact   - how others (PersonY) feel afterward
+#
+#   If-Event-Then-Event
+#     xNeed    - what PersonX needs to do before
+#     xWant    - what PersonX wants to do afterward (voluntary)
+#     xEffect  - what happens to PersonX afterward (involuntary)
+#     oWant    - what others want to do afterward (voluntary)
+#     oEffect  - what happens to others afterward (involuntary)
+#
+#   If-Event-Then-Persona
+#     xAttr    - how PersonX is described / perceived
+#
+# Reproduction notes:
+# - Each box accepts a short free-text phrase that completes the prompt.
+#   In the original HIT, workers gave up to four answers per dimension and
+#   could mark a dimension "none" when no inference applied. Here we elicit
+#   one phrase per dimension per annotator; pool multiple annotators with
+#   annotation_per_instance to recover the original many-answers-per-event set.
+# - Keep PersonX/PersonY/PersonZ verbatim in answers (do not substitute names),
+#   matching ATOMIC's templated convention.
+# - Write "none" if a dimension does not apply to the event.
+
+annotation_task_name: "ATOMIC - If-Then Commonsense Inference"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+item_properties:
+  id_key: "id"
+  text_key: "event"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # ---- If-Event-Then-Mental-State -------------------------------------
+  - name: "xIntent"
+    description: |
+      Why does PersonX do this? Complete: "PersonX wanted ..."
+      (the likely intent behind the event)
+    annotation_type: text
+    textarea: false
+
+  - name: "xReact"
+    description: |
+      How does PersonX feel afterward? Complete: "PersonX feels ..."
+      (the subject's emotional reaction)
+    annotation_type: text
+    textarea: false
+
+  - name: "oReact"
+    description: |
+      How do others (PersonY) feel afterward? Complete: "Others feel ..."
+      (others' emotional reaction; write "none" if no one else is involved)
+    annotation_type: text
+    textarea: false
+
+  # ---- If-Event-Then-Event --------------------------------------------
+  - name: "xNeed"
+    description: |
+      What does PersonX need to do before this event?
+      Complete: "Before, PersonX needed ..."
+    annotation_type: text
+    textarea: false
+
+  - name: "xWant"
+    description: |
+      What does PersonX want to do afterward (voluntary)?
+      Complete: "Afterward, PersonX wants ..."
+    annotation_type: text
+    textarea: false
+
+  - name: "xEffect"
+    description: |
+      What happens to PersonX afterward (involuntary)?
+      Complete: "PersonX then ..."
+    annotation_type: text
+    textarea: false
+
+  - name: "oWant"
+    description: |
+      What do others (PersonY) want to do afterward (voluntary)?
+      Complete: "Afterward, others want ..." (write "none" if not applicable)
+    annotation_type: text
+    textarea: false
+
+  - name: "oEffect"
+    description: |
+      What happens to others (PersonY) afterward (involuntary)?
+      Complete: "Others then ..." (write "none" if not applicable)
+    annotation_type: text
+    textarea: false
+
+  # ---- If-Event-Then-Persona ------------------------------------------
+  - name: "xAttr"
+    description: |
+      How is PersonX described or perceived because of this event?
+      Complete: "PersonX is seen as ..."
+    annotation_type: text
+    textarea: false
+
+# Pool several annotators per event to recover ATOMIC's many-answers-per-event set.
+per_annotator_quota:
+  default: 25
+min_annotators_per_instance: 4
