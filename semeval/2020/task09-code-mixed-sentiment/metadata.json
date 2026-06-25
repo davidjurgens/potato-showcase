@@ -1,6 +1,20 @@
 {
-  "title": "Sentiment Analysis for Code-Mixed Social Media Text",
-  "description": "Classify the sentiment of code-mixed social media posts where two languages are interleaved within a single utterance, based on SemEval-2020 Task 9 (Patwa et al.). Supports Hindi-English and Spanish-English language pairs.",
+  "title": "SemEval-2020 Task 9: Code-Mixed Sentiment (SentiMix)",
+  "description": "SentiMix is the SemEval-2020 Task 9 benchmark for sentence-level sentiment on code-mixed tweets, covering Hindi-English and Spanish-English. This Potato config reproduces its positive/negative/neutral labeling.",
+  "overview": [
+    "SemEval-2020 Task 9, known as SentiMix, was a shared task on sentiment analysis of code-mixed social media text run by Patwa, Aguilar, Kar, Pandey, PYKL, Gamback, Chakraborty, Solorio, and Das. It appeared at the Fourteenth Workshop on Semantic Evaluation (SemEval-2020), held online alongside COLING in December 2020.",
+    "The task ships two corpora of tweets. The Hinglish (Hindi-English) set has 20,000 tweets split into 14,000 train, 3,000 validation, and 3,000 test. The Spanglish (Spanish-English) set has 12,002 train, 2,998 validation, and 3,788 test tweets, roughly 19,000 in total. Across both language pairs, 89 submissions were received: 61 teams on Hinglish and 28 on Spanglish.",
+    "Each tweet carries one sentence-level sentiment label out of positive, negative, or neutral. Tweets also include word-level language identification tags so annotators and models can see which tokens come from which language. The Hinglish tags mark tokens as English, Hindi, or other (mentions, hashtags, symbols), and the Spanglish set adds named entities, in-word mixes, and ambiguous or foreign words.",
+    "The Potato config below reproduces the sentence-level task as a single radio-button choice over positive, negative, and neutral, applied to one code-mixed tweet at a time."
+  ],
+  "datasetStats": [
+    { "label": "Language pairs", "value": "Hindi-English, Spanish-English" },
+    { "label": "Hinglish tweets", "value": "20,000 (14K/3K/3K)" },
+    { "label": "Spanglish tweets", "value": "~19K (12,002/2,998/3,788)" },
+    { "label": "Sentiment labels", "value": "Positive, Negative, Neutral" },
+    { "label": "Submissions", "value": "89 (61 Hinglish, 28 Spanglish)" },
+    { "label": "Venue", "value": "SemEval-2020, December 2020" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Patwa et al.",
@@ -9,7 +23,7 @@
     "affiliation": "IIIT Hyderabad"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio"
   ],

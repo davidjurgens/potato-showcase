@@ -1,6 +1,21 @@
 {
-  "title": "BDD100K Autonomous Driving Segmentation",
-  "description": "Large-scale diverse driving video dataset (Yu et al., CVPR 2020). Annotate driving scenes with bounding boxes, lane markings, drivable areas, and full-frame instance segmentation.",
+  "title": "BDD100K: Diverse Driving Dataset for Autonomous Driving",
+  "description": "BDD100K is a 100,000-video driving dataset from UC Berkeley (Yu et al., CVPR 2020) spanning detection, segmentation, lane marking, and tracking. This Potato config reproduces its driving-scene labeling tasks.",
+  "overview": [
+    "BDD100K is a large-scale, diverse driving dataset released by Fisher Yu and colleagues at UC Berkeley and presented at CVPR 2020. It was built to support heterogeneous multitask learning for autonomous driving perception, covering many cities, weather conditions, and times of day.",
+    "The dataset contains 100,000 driving videos, each about 40 seconds long, recorded at 720p (1280x720) and 30 fps. One frame near the 10th second of each video yields 100,000 still images used for image-level labeling, and a separate set of 10,000 images carries pixel-level segmentation labels.",
+    "Annotations span ten tasks: image tagging, object detection, lane marking, drivable-area segmentation, semantic segmentation, instance segmentation, panoptic segmentation, multi-object tracking (MOT), multi-object segmentation tracking (MOTS), plus domain adaptation and imitation learning. Detection uses 10 object categories and segmentation covers 40 classes.",
+    "The Potato config below reproduces the driving-scene labeling workflow with multiselect and radio schemes, letting annotators tag objects, lane markings, drivable areas, and scene attributes on individual frames."
+  ],
+  "datasetStats": [
+    { "label": "Driving videos", "value": "100,000 (~40s each)" },
+    { "label": "Labeled images", "value": "100,000 frames" },
+    { "label": "Segmentation images", "value": "10,000 (pixel-level)" },
+    { "label": "Detection categories", "value": "10 object classes" },
+    { "label": "Segmentation classes", "value": "40 classes" },
+    { "label": "Resolution / rate", "value": "720p at 30 fps" }
+  ],
+  "updatedAt": "2026-06-25",
   "version": "1.0.0",
   "author": {
     "name": "Yu et al.",
@@ -9,7 +24,6 @@
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
   "annotationTypes": [
     "multiselect",
     "radio"

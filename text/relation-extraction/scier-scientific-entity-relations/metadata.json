@@ -1,6 +1,20 @@
 {
-  "title": "SciER: Scientific Entity and Relation Extraction",
-  "description": "Entity and relation extraction for scientific papers. Annotators identify scientific entities (Method, Task, Material, Metric, Generic) and link them with typed relations (Used-for, Feature-of, Hyponym-of, Part-of, Compare, Conjunction, Evaluate-for).",
+  "title": "SciER Scientific Entity and Relation Extraction Dataset",
+  "description": "SciER labels Dataset, Method, and Task entities and 9 relation types across 106 full-text scientific papers (24k+ entities, 12k+ relations). The Potato config reproduces this span and relation task.",
+  "overview": [
+    "SciER is an entity and relation extraction dataset for scientific documents, built by Qi Zhang, Zhijia Chen, Huitong Pan, Cornelia Caragea, Longin Jan Latecki, and Eduard Dragut and published at EMNLP 2024 in Miami.",
+    "It covers 106 manually annotated full-text publications drawn from Papers with Code, with over 24,000 entities and over 12,000 relations. Entities fall into three types (Dataset, Method, Task), and relations use 9 fine-grained types including USED-FOR, EVALUATED-WITH, BENCHMARK-FOR, TRAINED-WITH, COMPARE-WITH, SUBCLASS-OF, SUBTASK-OF, PART-OF, and SYNONYM-OF.",
+    "Unlike earlier datasets that annotate only abstracts, SciER labels entities and relations across full paper text, which captures mentions and interactions that appear outside the abstract. The 106 documents are split into 80 train, 10 dev, 10 in-distribution test, and 6 out-of-distribution test papers.",
+    "The Potato config below reproduces SciER as a two-stage task: annotators mark Dataset, Method, and Task spans, then connect those spans with one of the 9 typed relations using span links."
+  ],
+  "datasetStats": [
+    { "label": "Documents", "value": "106 full-text papers" },
+    { "label": "Entities", "value": "24,000+" },
+    { "label": "Relations", "value": "12,000+" },
+    { "label": "Entity types", "value": "3 (Dataset, Method, Task)" },
+    { "label": "Relation types", "value": "9" },
+    { "label": "Venue", "value": "EMNLP 2024" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Luan et al.",
@@ -9,7 +23,7 @@
     "affiliation": "National Institute of Informatics"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "span",
     "span_link"

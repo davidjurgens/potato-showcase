@@ -1,6 +1,20 @@
 {
-  "title": "FineSports Fine-grained Action Recognition",
-  "description": "Fine-grained sports action annotation with hierarchical labels and person tracking. Annotators draw bounding boxes around athletes and label fine-grained actions within a sports action hierarchy.",
+  "title": "FineSports: Fine-Grained Basketball Action Dataset",
+  "description": "FineSports is a CVPR 2024 dataset of 10,000 NBA videos labeled with 52 fine-grained action types under 12 ball-handler categories. This Potato config reproduces its bounding-box and hierarchical action labeling task.",
+  "overview": [
+    "FineSports is a multi-person hierarchical sports video dataset for fine-grained action understanding, introduced by Xu et al. at CVPR 2024 (Peking University and collaborators). It targets basketball, where fast movement and player confrontations cause heavy occlusion that breaks generic action recognition.",
+    "The dataset annotates 10,000 NBA game videos with 16,000 action instances and 123,000 spatial-temporal bounding boxes. Labels follow a two-level hierarchy: 12 coarse ball-handler action categories spanning 52 fine-grained sub-action types, each tied to the player handling the ball.",
+    "Annotators track the ball handler across frames with bounding boxes and assign the matching fine-grained action within the hierarchy. The result supports spatial-temporal action localization and fine-grained recognition in crowded, multi-person scenes.",
+    "The Potato config below reproduces this task: annotators draw bounding boxes around the active player and select a fine-grained action from the FineSports taxonomy, organized by the 12 coarse categories."
+  ],
+  "datasetStats": [
+    { "label": "NBA game videos", "value": "10,000" },
+    { "label": "Fine-grained action types", "value": "52" },
+    { "label": "Coarse ball-handler categories", "value": "12" },
+    { "label": "Action instances", "value": "16,000" },
+    { "label": "Spatial-temporal bounding boxes", "value": "123,000" },
+    { "label": "Venue", "value": "CVPR 2024" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "video_annotation"

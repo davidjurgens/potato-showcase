@@ -1,6 +1,20 @@
 {
-  "title": "CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation",
-  "description": "Multi-tier ELAN-style annotation of multimodal sentiment and emotion in YouTube opinion videos. Annotators segment visual behaviors and acoustic events on parallel timeline tiers, classify emotions and sentiment polarity, and transcribe speech for the CMU-MOSEI dataset.",
+  "title": "CMU-MOSEI: Multimodal Sentiment and Emotion Dataset",
+  "description": "CMU-MOSEI is the largest multimodal dataset for sentiment and emotion analysis, with 23,453 annotated YouTube clips spanning text, audio, and video. This Potato config reproduces its multi-tier timeline annotation.",
+  "overview": [
+    "CMU-MOSEI (CMU Multimodal Opinion Sentiment and Emotion Intensity) was introduced by Zadeh, Liang, Poria, Cambria, and Morency at ACL 2018. It remains the largest dataset for multimodal sentiment analysis and emotion recognition, pairing transcribed speech with synchronized acoustic and visual signals from real opinion videos.",
+    "The dataset draws 23,453 annotated utterance segments from 3,228 YouTube videos, contributed by 1,000 distinct speakers across 250 topics. It contains more than 65 hours of annotated video and is gender balanced. All videos are in English.",
+    "Each segment carries a sentiment intensity score on a continuous scale from -3 (strongly negative) to +3 (strongly positive), plus intensity labels for six emotions: happy, sad, angry, scared, disgusted, and surprised. Annotations align with three modalities at once: text, audio, and video.",
+    "The Potato config below reproduces this workflow as a multi-tier ELAN-style task. Annotators segment visual and acoustic events on parallel timeline tiers, transcribe speech, classify the six emotions, and assign sentiment polarity for each clip."
+  ],
+  "datasetStats": [
+    { "label": "Utterance segments", "value": "23,453" },
+    { "label": "Source videos", "value": "3,228 YouTube videos" },
+    { "label": "Speakers", "value": "1,000 (gender balanced)" },
+    { "label": "Topics", "value": "250" },
+    { "label": "Annotated video", "value": "65+ hours" },
+    { "label": "Sentiment scale", "value": "-3 to +3, plus 6 emotions" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "video_annotation",
     "radio",
