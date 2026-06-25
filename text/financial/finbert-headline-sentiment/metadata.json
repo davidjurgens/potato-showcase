@@ -36,6 +36,6 @@
   "featured": false,
   "paperReference": "Araci, arXiv 2019",
   "paperUrl": "https://arxiv.org/abs/1908.10063",
-  "datasetUrl": "https://huggingface.co/datasets/financial_phrasebank",
+  "datasetUrl": "https://huggingface.co/datasets/takala/financial_phrasebank",
   "citation": "@article{araci2019finbert,\n    title = \"FinBERT: Financial Sentiment Analysis with Pre-Trained Language Models\",\n    author = \"Araci, Dogu\",\n    journal = \"arXiv preprint arXiv:1908.10063\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1908.10063\"\n}"
 }

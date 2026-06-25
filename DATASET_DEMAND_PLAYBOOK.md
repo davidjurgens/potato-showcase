@@ -203,5 +203,12 @@ Ordered by demand × feasibility. ATOMIC (425 impr) is done as the template.
 | Tweet intimacy, suggestion mining | — | buried | Other numeric SemEval slugs hiding named datasets. |
 | ATOMIC-2020, SocialIQA, GLUCOSE | — | gap | ATOMIC siblings; one cluster, lifts the commonsense-KG entity set. |
 
+See **`CANDIDATE_DATASETS.md`** for the full build-next backlog — led by the
+"datasets re-annotated in other languages" angle (SQuAD ports, multilingual NER,
+Universal Dependencies, localized GLUE suites), where each localization is a fresh
+searched proper-noun and the searcher is about to reproduce the labeling in their
+language. See **`LINK_CLEANUP_TODO.md`** for the dead/fabricated `datasetUrl`s to
+repair in a cleanup batch.
+
 When the next batch runs, re-pull `Queries.csv`/`Pages.csv` first — the demand
 shifts, and newly-shipped pages move from "gap" to "thin/enrich."

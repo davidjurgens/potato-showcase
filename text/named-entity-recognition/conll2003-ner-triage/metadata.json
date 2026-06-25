@@ -34,6 +34,6 @@
   "featured": false,
   "paperReference": "Tjong Kim Sang & De Meulder, CoNLL 2003",
   "paperUrl": "https://aclanthology.org/W03-0419/",
-  "datasetUrl": "https://www.clips.uantwerpen.be/conll2003/ner/",
+  "datasetUrl": "https://huggingface.co/datasets/eriktks/conll2003",
   "citation": "@inproceedings{tjong-kim-sang-de-meulder-2003-introduction,\n    title = \"Introduction to the {C}o{NLL}-2003 Shared Task: Language-Independent Named Entity Recognition\",\n    author = \"Tjong Kim Sang, Erik F. and De Meulder, Fien\",\n    booktitle = \"Proceedings of the Seventh Conference on Natural Language Learning at {HLT}-{NAACL} 2003\",\n    year = \"2003\",\n    url = \"https://aclanthology.org/W03-0419\",\n    pages = \"142--147\"\n}"
 }

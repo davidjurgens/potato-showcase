@@ -49,6 +49,6 @@
   "featured": false,
   "paperReference": "Malo et al., JASIST 2014",
   "paperUrl": "https://arxiv.org/abs/1307.5336",
-  "datasetUrl": "https://huggingface.co/datasets/financial_phrasebank",
+  "datasetUrl": "https://huggingface.co/datasets/takala/financial_phrasebank",
   "citation": "@article{malo2014good,\n    title = \"Good debt or bad debt: Detecting semantic orientations in economic texts\",\n    author = \"Malo, Pekka and Sinha, Ankur and Korhonen, Pekka and Wallenius, Jyrki and Takala, Pyry\",\n    journal = \"Journal of the Association for Information Science and Technology\",\n    volume = \"65\",\n    number = \"4\",\n    pages = \"782--796\",\n    year = \"2014\",\n    url = \"https://arxiv.org/abs/1307.5336\"\n}"
 }
