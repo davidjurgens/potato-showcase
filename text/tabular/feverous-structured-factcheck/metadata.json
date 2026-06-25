@@ -1,6 +1,20 @@
 {
-  "title": "Structured Fact Verification (FEVEROUS)",
-  "description": "Verify claims against Wikipedia pages containing both unstructured text and structured data (tables, lists, infoboxes). Based on FEVEROUS (Aly et al., NeurIPS 2021). Annotators assess verdict, identify evidence across different modalities, evaluate evidence sufficiency, and provide justification.",
+  "title": "FEVEROUS Structured Fact Verification Annotation",
+  "description": "FEVEROUS is a fact-checking dataset of 87,026 Wikipedia claims with evidence drawn from both sentences and table cells. This Potato config reproduces the verdict, evidence, and justification task.",
+  "overview": [
+    "FEVEROUS (Fact Extraction and VERification Over Unstructured and Structured information) was built by Rami Aly and colleagues at the University of Cambridge and Amazon, and published at the NeurIPS 2021 Datasets and Benchmarks Track. It also ran as the shared task at the FEVER workshop, EMNLP 2021.",
+    "The dataset holds 87,026 claims, each annotated with evidence and a verdict. Evidence is drawn from English Wikipedia (December 2020 dump) and spans both unstructured sentences and structured table cells, headers, captions, and list items. A claim takes 1.4 sentences and 3.3 cells on average to verify, and the corpus is roughly even across text-only, table-only, and combined evidence.",
+    "Each claim gets one of three labels: SUPPORTED (56%), REFUTED (39%), or NOT ENOUGH INFO (5%). The task asks an annotator to read a claim, locate evidence across both modalities, and assign the verdict, which makes it a benchmark for retrieval and reasoning over mixed text and tables. Inter-annotator agreement reached a kappa of 0.65.",
+    "The Potato config below reproduces this task: a radio scheme for the SUPPORTED/REFUTED/NOT ENOUGH INFO verdict, span selection for marking text and table-cell evidence, and a free-text box for the annotator's justification."
+  ],
+  "datasetStats": [
+    { "label": "Verified claims", "value": "87,026" },
+    { "label": "Verdict labels", "value": "SUPPORTED / REFUTED / NOT ENOUGH INFO" },
+    { "label": "Label split", "value": "56% / 39% / 5%" },
+    { "label": "Evidence per claim", "value": "1.4 sentences, 3.3 table cells" },
+    { "label": "Wikipedia source", "value": "December 2020 English dump" },
+    { "label": "Inter-annotator kappa", "value": "0.65" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Aly et al.",
@@ -9,7 +23,7 @@
     "affiliation": "University of Cambridge"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "span",

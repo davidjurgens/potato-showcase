@@ -1,6 +1,20 @@
 {
-  "title": "SayCan - Robot Task Planning Evaluation",
-  "description": "Evaluate robot action plans generated from natural language instructions, based on the SayCan framework (Ahn et al., CoRL 2022). Annotators assess feasibility, identify primitive actions, describe plans, and rate safety of grounded language-conditioned robot manipulation tasks.",
+  "title": "SayCan: Grounding Language in Robotic Affordances",
+  "description": "SayCan grounds a large language model in learned robot skills so a robot can carry out long-horizon natural-language instructions. This Potato config reproduces the human evaluation of its generated action plans.",
+  "overview": [
+    "SayCan (\"Do As I Can, Not As I Say\") is a robot-planning method from Ahn et al. at Google Research and Everyday Robots, released in 2022 and presented at the Conference on Robot Learning (CoRL). It lets a robot follow free-form spoken or written instructions by turning them into sequences of skills the robot already knows how to do.",
+    "The method scores each candidate skill two ways. A language model (540B PaLM) rates how useful a skill is for the instruction, and a value function trained with TD reinforcement learning rates how likely the skill is to succeed from the robot's current state. Multiplying the two picks the next skill, and the loop repeats until the plan reaches a stop step. The value functions act as affordances that keep the plan grounded in what the robot can physically do.",
+    "The robot is a mobile manipulator with 551 learned skills spanning 7 skill families and 17 objects, covering picking, placing, opening and closing drawers, and navigating an office kitchen. The authors test 101 instructions from 7 instruction families, including chains of up to 16 steps, reaching 84 percent plan-success and 74 percent execution-success across the evaluated tasks.",
+    "The Potato config below reproduces the human evaluation of these plans: annotators judge whether a generated plan is feasible, mark the primitive skills it uses, describe the plan in words, and rate its safety."
+  ],
+  "datasetStats": [
+    { "label": "Instructions evaluated", "value": "101" },
+    { "label": "Instruction families", "value": "7" },
+    { "label": "Robot skills", "value": "551" },
+    { "label": "Skill families / objects", "value": "7 / 17" },
+    { "label": "Plan success", "value": "84%" },
+    { "label": "Execution success", "value": "74%" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Ahn et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Google Research / Everyday Robots"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect",
