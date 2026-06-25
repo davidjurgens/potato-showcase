@@ -1,6 +1,19 @@
 {
-  "title": "MathDial - Tutoring Dialogue Quality Annotation",
-  "description": "Annotate math tutoring dialogues for guidance correctness, tutoring strategies, and key concepts, based on the MathDial dataset (Macina et al., Findings ACL 2023). Supports evaluation of AI-generated tutoring interactions for K-12 math problems.",
+  "title": "MathDial: Math Tutoring Dialogue Dataset",
+  "description": "MathDial is a dataset of 2,861 one-to-one math tutoring dialogues grounded in GSM8K word problems, annotated with a four-category teacher-move taxonomy. This Potato config reproduces those teacher-move labels.",
+  "overview": [
+    "MathDial is a dialogue tutoring dataset introduced by Macina, Daheim, Chowdhury, Sinha, Kapur, Gurevych, and Sachan from ETH Zurich and TU Darmstadt, published in Findings of the Association for Computational Linguistics: ACL 2023.",
+    "The dataset contains 2,861 one-to-one teacher-student tutoring dialogues. Each conversation is grounded in a multi-step math word problem drawn from GSM8K and a specific student confusion, with 91 teachers role-playing the tutor while a language model simulated the student.",
+    "Teacher utterances are labeled with a taxonomy of four pedagogical moves: Focus, Probing, Telling, and Generic. The taxonomy supports research on scaffolding strategies and evaluation of AI-generated tutoring responses for grade-school math.",
+    "The Potato config below reproduces the teacher-move annotation task: annotators read a tutoring turn, classify it under the four-category taxonomy, and mark the student confusion and key concepts in the dialogue."
+  ],
+  "datasetStats": [
+    { "label": "Dialogues", "value": "2,861" },
+    { "label": "Grounding problems", "value": "GSM8K word problems" },
+    { "label": "Teacher moves", "value": "Focus, Probing, Telling, Generic" },
+    { "label": "Teachers", "value": "91" },
+    { "label": "Venue", "value": "Findings of ACL 2023" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Macina et al.",
@@ -9,7 +22,7 @@
     "affiliation": "ETH Zurich"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "multiselect",

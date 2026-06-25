@@ -1,6 +1,20 @@
 {
-  "title": "MMBench Multimodal Evaluation",
-  "description": "Multimodal evaluation benchmark combining image understanding with multiple-choice questions, based on MMBench (Liu et al., ECCV 2024). Annotators answer image-based questions, provide explanations, and tag the required perception or reasoning skills.",
+  "title": "MMBench: Multimodal Vision-Language Benchmark",
+  "description": "MMBench is a multiple-choice benchmark of about 2,974 questions testing vision-language models across 20 ability dimensions (Liu et al., ECCV 2024). This Potato config reproduces image-question answering with skill tagging.",
+  "overview": [
+    "MMBench is a multimodal benchmark for evaluating vision-language models, built by Yuan Liu, Haodong Duan, and collaborators at Shanghai AI Laboratory and partner labs. It was published at ECCV 2024 (originally released in 2023) to test whether a model is an all-around player across many perception and reasoning skills.",
+    "The benchmark contains about 2,974 single-choice questions organized into a three-level ability taxonomy. The two L-1 dimensions are Perception and Reasoning, which split into 6 L-2 dimensions (coarse perception, fine-grained single-instance perception, fine-grained cross-instance perception, attribute reasoning, relation reasoning, and logic reasoning) and 20 L-3 leaf abilities.",
+    "Each item pairs an image with a question and multiple choices. MMBench scores models with CircularEval: a question with N choices is presented N times with the choices circularly shifted, and the model is counted correct only if it answers correctly on every pass. This penalizes guessing and position bias and gives a stricter accuracy than a single pass.",
+    "The Potato config below reproduces the MMBench task. Annotators view an image, pick the answer from a multiple-choice radio scheme, write a short explanation, and tag the perception or reasoning skills the question requires."
+  ],
+  "datasetStats": [
+    { "label": "Questions", "value": "~2,974 single-choice" },
+    { "label": "L-1 dimensions", "value": "2 (Perception, Reasoning)" },
+    { "label": "L-2 dimensions", "value": "6" },
+    { "label": "L-3 leaf abilities", "value": "20" },
+    { "label": "Scoring", "value": "CircularEval (N passes per N-choice item)" },
+    { "label": "Venue", "value": "ECCV 2024" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Liu et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Shanghai AI Laboratory"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "text",

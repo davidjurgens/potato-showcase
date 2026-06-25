@@ -1,6 +1,20 @@
 {
-  "title": "MS MARCO - Passage Relevance Ranking",
-  "description": "Passage relevance ranking based on the MS MARCO dataset (Nguyen et al., NeurIPS 2016 Workshop). Annotators assess the relevance of a candidate passage to a given search query using a graded relevance scale.",
+  "title": "MS MARCO: Passage Ranking Benchmark",
+  "description": "MS MARCO is a large-scale information retrieval benchmark of 8.8M passages and real Bing queries with relevance judgments. This Potato task reproduces graded passage-relevance annotation.",
+  "overview": [
+    "MS MARCO (Microsoft Machine Reading Comprehension) was released by Nguyen et al. at Microsoft and presented at the NeurIPS 2016 workshop on cognitive computation. The passage ranking benchmark was built on top of it, sampling questions from anonymized real Bing search logs.",
+    "The passage collection holds about 8.8 million passages. The training set covers roughly 808K queries with 532,761 relevance judgments (qrels), and the small development set used for the public leaderboard has 6,980 queries.",
+    "The benchmark defines two tasks: passage re-ranking (re-order a BM25-retrieved top-1000 list per query) and full ranking (retrieve and rank from the full 8.8M collection). Systems are scored with MRR@10, the official metric for the development set.",
+    "The Potato config below reproduces the relevance-judgment step: an annotator reads a query and a candidate passage, then assigns a graded relevance label on a radio scale, the human signal that produces the qrels behind ranking evaluation."
+  ],
+  "datasetStats": [
+    { "label": "Passage collection", "value": "~8.8M passages" },
+    { "label": "Training queries", "value": "~808K" },
+    { "label": "Training qrels", "value": "532,761" },
+    { "label": "Dev queries (leaderboard)", "value": "6,980" },
+    { "label": "Official metric", "value": "MRR@10" },
+    { "label": "Query source", "value": "Real Bing search logs" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Nguyen et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Microsoft"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "select",
     "radio"

@@ -1,6 +1,20 @@
 {
-  "title": "WNUT-2017 - Emerging and Rare Entity Recognition",
-  "description": "Named entity recognition for emerging and rare entities in noisy user-generated text, based on the W-NUT 2017 shared task (Derczynski et al., W-NUT@EMNLP 2017). Covers novel entity types in social media text from Twitter and Reddit.",
+  "title": "WNUT-2017: Emerging and Rare Entity Recognition",
+  "description": "WNUT-2017 is a named entity recognition benchmark for novel and rare entities in noisy social media text, organized at W-NUT@EMNLP 2017. This Potato config reproduces its 6-type span annotation task.",
+  "overview": [
+    "WNUT-2017 was the shared task on Novel and Emerging Entity Recognition, organized by Leon Derczynski, Eric Nichols, Marieke van Erp, and Nut Limsopatham at the 3rd Workshop on Noisy User-generated Text (W-NUT@EMNLP 2017) in Copenhagen. It targets entities that are rare or unseen at training time, the hardest case for NER systems trained on standard newswire.",
+    "The corpus draws each split from a different platform to force generalization: training from Twitter (3,395 posts, 62,729 tokens), development from YouTube comments (1,009 posts, 15,733 tokens), and test from Reddit and StackExchange (1,287 posts, 23,394 tokens). Named-entity tokens make up roughly 5 to 8 percent of each split.",
+    "Annotators mark spans in one of six types: person, location, corporation, product, creative-work, and group. Systems are scored on two F1 measures: a standard entity-level F1 over all mentions, plus a surface-form F1 computed over unique entity strings, which rewards recognizing a diverse range of entities rather than only frequent ones. The best system reached 41.86 entity F1 and 40.24 surface-form F1.",
+    "The Potato config below reproduces the task with a span scheme over the six entity types and a follow-up radio question on entity composition, so annotators highlight each mention and label the text in noisy social media data."
+  ],
+  "datasetStats": [
+    { "label": "Entity types", "value": "6 (person, location, corporation, product, creative-work, group)" },
+    { "label": "Training set", "value": "3,395 Twitter posts, 62,729 tokens" },
+    { "label": "Dev set", "value": "1,009 YouTube comment posts, 15,733 tokens" },
+    { "label": "Test set", "value": "1,287 Reddit + StackExchange posts, 23,394 tokens" },
+    { "label": "Metrics", "value": "Entity F1 and surface-form F1" },
+    { "label": "Best system", "value": "41.86 entity F1, 40.24 surface-form F1" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Derczynski et al.",
@@ -9,7 +23,7 @@
     "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "span",
     "radio"
