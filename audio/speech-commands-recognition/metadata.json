@@ -1,6 +1,20 @@
 {
-  "title": "Speech Commands - Keyword Recognition",
-  "description": "Speech command keyword recognition and quality assessment based on the Speech Commands dataset (Warden, arXiv 2018). Annotators listen to audio clips, classify the spoken command word, and assess the audio quality.",
+  "title": "Google Speech Commands: Keyword Spotting Dataset",
+  "description": "Google Speech Commands is a corpus of one-second spoken-word audio clips for training keyword spotting models (Warden, 2018). This Potato config reproduces the task: annotators play each clip, label the spoken word, and rate audio quality.",
+  "overview": [
+    "Google Speech Commands is an open audio dataset of short spoken words, released by Pete Warden at Google in 2018 (arXiv:1804.03209). It was built to train and evaluate keyword spotting systems, the small always-listening models that detect single trigger words on phones and embedded devices.",
+    "The dataset was crowdsourced through a web app and ships in two versions. Version 1 holds about 65,000 utterances across 30 word labels from 1,881 speakers. Version 2 expands this to 105,829 utterances across 35 word labels from 2,618 speakers. Every clip is one second long and recorded at a 16 kHz sample rate.",
+    "Keyword spotting treats each clip as a single-label classification problem. The 35 words include 20 core commands (the digits zero through nine plus yes, no, up, down, left, right, on, off, stop, go) and auxiliary words such as bed, bird, cat, and marvin that populate an 'unknown' class. Models learn to map one second of audio to one of these labels or to silence.",
+    "The Potato config below reproduces this task as a listen-and-label workflow. Each item plays a one-second clip, a radio scheme captures the spoken command word, and a second scheme records an audio-quality judgment for filtering noisy recordings."
+  ],
+  "datasetStats": [
+    { "label": "Utterances (v2)", "value": "105,829" },
+    { "label": "Utterances (v1)", "value": "~65,000" },
+    { "label": "Distinct words", "value": "35 (v2) / 30 (v1)" },
+    { "label": "Core command words", "value": "20" },
+    { "label": "Clip format", "value": "1 second, 16 kHz" },
+    { "label": "Speakers", "value": "2,618 (v2) / 1,881 (v1)" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Warden",
@@ -9,7 +23,7 @@
     "affiliation": "Google"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "audio_annotation"

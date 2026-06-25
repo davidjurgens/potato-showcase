@@ -1,6 +1,20 @@
 {
-  "title": "CUB-200-2011 Fine-Grained Bird Classification",
-  "description": "Fine-grained visual categorization of 200 bird species (Wah et al., 2011). Annotate bird images with species labels, part locations, and attribute annotations.",
+  "title": "CUB-200-2011: Fine-Grained Bird Species Dataset",
+  "description": "CUB-200-2011 is a fine-grained bird image dataset of 11,788 photos across 200 species, each labeled with parts, attributes, and a bounding box (Wah et al., 2011). This Potato config reproduces the labeling task.",
+  "overview": [
+    "CUB-200-2011 (Caltech-UCSD Birds-200-2011) is a fine-grained image classification dataset built by Catherine Wah, Steve Branson, Peter Welinder, Pietro Perona, and Serge Belongie at Caltech and UCSD. It was released in 2011 as Caltech technical report CNS-TR-2011-001 and remains a standard benchmark for fine-grained visual categorization.",
+    "The dataset holds 11,788 bird photographs spread over 200 species, split into 5,994 training images and 5,794 test images. Each image carries detailed annotations collected and filtered through Amazon Mechanical Turk.",
+    "Every image is labeled with one species category, 15 part locations (such as bill, crown, and tail), 312 binary visual attributes (for example bill shape, wing pattern, and breast color), and one bounding box around the bird. The fine-grained nature of the task comes from telling apart visually similar species that differ only in small details.",
+    "The Potato config below reproduces this labeling task: a radio scheme for the bird family, a multiselect scheme for visible visual attributes drawn from the CUB attribute set, a radio scheme for visibility/occlusion, and a free-text field for notes."
+  ],
+  "datasetStats": [
+    { "label": "Images", "value": "11,788" },
+    { "label": "Species categories", "value": "200" },
+    { "label": "Train / test split", "value": "5,994 / 5,794" },
+    { "label": "Part locations per image", "value": "15" },
+    { "label": "Binary attributes per image", "value": "312" },
+    { "label": "Bounding boxes per image", "value": "1" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wah et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Caltech"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "multiselect",
     "radio",

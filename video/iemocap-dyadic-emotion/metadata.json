@@ -1,6 +1,20 @@
 {
-  "title": "IEMOCAP Dyadic Emotion Multi-Tier Annotation",
-  "description": "Multi-tier ELAN-style annotation of emotional dyadic interactions. Annotators segment per-speaker behavior on parallel timeline tiers, classify discrete emotion categories, and rate dimensional affect (valence, activation, dominance) on Likert-style scales. Based on the IEMOCAP motion capture database.",
+  "title": "IEMOCAP: Dyadic Emotion Recognition Dataset",
+  "description": "IEMOCAP is a 12-hour audiovisual corpus of two-actor emotional conversations with categorical and dimensional emotion labels. This Potato config reproduces its per-speaker tagging on parallel timeline tiers.",
+  "overview": [
+    "IEMOCAP (Interactive Emotional Dyadic Motion Capture database) is a multimodal corpus of acted emotional conversations recorded by the Speech Analysis and Interpretation Laboratory (SAIL) at the University of Southern California. It was released by Busso et al. in Language Resources and Evaluation in 2008.",
+    "The corpus holds roughly 12 hours of audiovisual data from ten actors (five male, five female) recorded across five dyadic sessions. Each session pairs two actors of opposite gender in scripted plays and improvised scenarios. Markers on the face, head, and hands captured facial expression and hand motion alongside the speech and video.",
+    "Two to four annotators labeled each segment two ways: categorical emotions (anger, happiness, sadness, neutrality, frustration, excitement, and others) and dimensional affect, rating valence, activation, and dominance on a 5-point Likert scale. Both label sets are widely used to train and benchmark speech and multimodal emotion recognition models.",
+    "The Potato config below reproduces this multi-tier annotation: annotators segment per-speaker behavior on parallel timeline tiers, assign a discrete emotion category, and rate valence, activation, and dominance on Likert-style scales."
+  ],
+  "datasetStats": [
+    { "label": "Duration", "value": "~12 hours" },
+    { "label": "Actors", "value": "10 (5 male, 5 female)" },
+    { "label": "Sessions", "value": "5 dyadic" },
+    { "label": "Session types", "value": "Scripted + improvised" },
+    { "label": "Dimensional labels", "value": "Valence, activation, dominance (1-5)" },
+    { "label": "Annotators per segment", "value": "2 to 4" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +23,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "video_annotation",
     "radio"
