@@ -1,6 +1,21 @@
 {
-  "title": "Financial PhraseBank - Sentiment Classification",
-  "description": "Sentiment classification of financial news sentences based on the Financial PhraseBank dataset (Malo et al., JASIST 2014). Annotators classify sentences from financial news articles into fine-grained and coarse sentiment categories.",
+  "title": "Financial PhraseBank: Financial News Sentiment Dataset",
+  "description": "Financial PhraseBank labels English financial news sentences as positive, negative, or neutral by their likely effect on the company's stock price. This Potato config reproduces the annotation task.",
+  "overview": [
+    "Financial PhraseBank is a sentiment-labeled corpus of English financial news sentences built by Malo, Sinha, Korhonen, Wallenius, and Takala at Aalto University School of Business. The work appeared in the Journal of the Association for Information Science and Technology in 2014.",
+    "The sentences were drawn from financial news on companies listed on OMX Helsinki, retrieved through LexisNexis. A team of 16 annotators with finance backgrounds judged each sentence, with 5 to 8 annotations per sentence. The dataset ships in four agreement-based subsets: 4,846 sentences at >=50% agreement, 4,217 at >=66%, 3,453 at >=75%, and 2,264 with full agreement.",
+    "Each sentence carries one of three labels: positive, negative, or neutral. Annotators rated sentiment from the investor's view, asking how the information would likely move the mentioned company's stock price rather than judging general tone. The dataset is a standard benchmark for financial sentiment models, including FinBERT.",
+    "The Potato config below reproduces the task with a radio scheme for the coarse positive/negative/neutral label and a select scheme for a five-point fine-grained scale, so annotators can record both the overall sentiment and its strength."
+  ],
+  "datasetStats": [
+    { "label": "Sentences (>=50% agree)", "value": "4,846" },
+    { "label": "Full-agreement subset", "value": "2,264" },
+    { "label": "Sentiment labels", "value": "Positive, Negative, Neutral" },
+    { "label": "Annotators", "value": "16 (5-8 per sentence)" },
+    { "label": "Source", "value": "OMX Helsinki news via LexisNexis" },
+    { "label": "Reference", "value": "Malo et al., JASIST 2014" }
+  ],
+  "updatedAt": "2026-06-25",
   "version": "1.0.0",
   "author": {
     "name": "Malo et al.",
@@ -9,7 +24,6 @@
     "affiliation": "Aalto University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
   "annotationTypes": [
     "select",
     "radio"

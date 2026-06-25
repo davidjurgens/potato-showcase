@@ -1,6 +1,20 @@
 {
-  "title": "MultiTACRED: Multilingual TAC Relation Extraction",
-  "description": "Multilingual version of the TACRED relation extraction dataset in 12 languages. Annotators identify subject/object entities and classify relations from 41 TAC relation types, with additional translation quality assessment.",
+  "title": "MultiTACRED Multilingual Relation Extraction Dataset",
+  "description": "MultiTACRED machine-translates the TACRED relation extraction dataset into 12 languages, keeping 41 TAC relation types plus no_relation. This Potato config reproduces the entity-pair relation task.",
+  "overview": [
+    "MultiTACRED was built by Leonhard Hennig, Philippe Thomas, and Sebastian Moller at DFKI Berlin and published at ACL 2023. It machine-translates the original TACRED relation extraction corpus and projects the entity annotations onto each translation, then evaluates mono- and multilingual language models in transfer settings.",
+    "The dataset covers 12 typologically diverse languages from different language families: Arabic, Chinese, Finnish, French, German, Hindi, Hungarian, Japanese, Polish, Russian, Spanish, and Turkish. Each language mirrors the English TACRED splits of 68,124 train, 22,631 dev, and 15,509 test instances, though some examples are dropped per language when entity markup cannot be preserved after translation.",
+    "Each instance pairs a subject entity and an object entity in a sentence, and the task is to classify the relation between them. The label set has 41 TAC relation types (such as org:founded_by and per:title) plus a no_relation class, which covers about 80 percent of the data. Native speaker review judged more than 83 percent of translated instances linguistically and semantically acceptable.",
+    "The Potato config below reproduces the MultiTACRED relation extraction task: it marks the subject and object spans in a translated sentence and presents the 41 relation types plus no_relation as a single-choice radio scheme."
+  ],
+  "datasetStats": [
+    { "label": "Languages", "value": "12" },
+    { "label": "Relation types", "value": "41 + no_relation" },
+    { "label": "Train instances (per language)", "value": "68,124" },
+    { "label": "Dev instances", "value": "22,631" },
+    { "label": "Test instances", "value": "15,509" },
+    { "label": "no_relation share", "value": "~80%" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Hennig et al.",
@@ -9,7 +23,7 @@
     "affiliation": "DFKI Berlin"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-06-25",
   "annotationTypes": [
     "radio",
     "span",
