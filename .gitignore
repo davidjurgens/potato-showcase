@@ -18,6 +18,10 @@ Thumbs.db
 # Internal working docs — never commit (see CLAUDE.md)
 CLAUDE.md
 .paper-search-strategy.md
+SEMEVAL.md
+CANDIDATE_DATASETS.md
+LINK_CLEANUP_TODO.md
+DATASET_DEMAND_PLAYBOOK.md
 
 # Python
 __pycache__/

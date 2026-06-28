@@ -152,7 +152,7 @@ Tasks showcasing Potato's agent trace and coding agent annotation features. See 
 
 ## SemEval Shared Tasks (90 tasks)
 
-Comprehensive coverage of SemEval shared tasks from 2013-2025. See [SEMEVAL.md](./SEMEVAL.md) for details.
+Comprehensive coverage of SemEval shared tasks from 2013-2025. Browse by year below or under [`semeval/`](./semeval/).
 
 | Year | Tasks | Highlights |
 |------|-------|------------|
