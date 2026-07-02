@@ -2,6 +2,8 @@
 
 This category contains annotation task designs for text-based NLP research, including sentiment analysis, named entity recognition, information extraction, and more.
 
+> Run these designs in [Potato](https://potatoannotator.com), the open-source annotation tool. See the docs for [radio & multiselect schemes](https://potatoannotator.com/docs/annotation-types/radio-multiselect) and [span annotation](https://potatoannotator.com/docs/annotation-types/span-annotation) to configure text tasks.
+
 ## Subcategories
 
 ### [Emotion & Sentiment](./emotion-sentiment/)

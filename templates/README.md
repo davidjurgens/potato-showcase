@@ -2,6 +2,8 @@
 
 This category contains generic annotation templates without specific paper references. These templates provide starting points for common annotation patterns that can be customized for your specific needs.
 
+> Copy any template and run it in [Potato](https://potatoannotator.com). New to the tool? Start with the [quick-start guide](https://potatoannotator.com/docs/getting-started/quick-start).
+
 ## Subcategories
 
 ### [Text Annotation](./text/)

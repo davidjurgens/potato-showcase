@@ -2,6 +2,8 @@
 
 This category contains annotation task designs for computer vision research, including image classification, object detection, semantic segmentation, and domain-specific applications.
 
+> Run these designs in [Potato](https://potatoannotator.com). See the [image annotation documentation](https://potatoannotator.com/docs/annotation-types/image-annotation) to configure bounding boxes, keypoints, and classification.
+
 ## Subcategories
 
 ### [Classification](./classification/)

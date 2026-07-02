@@ -1,6 +1,8 @@
 # Potato Annotation Showcase
 
-A curated collection of **379** example annotation task configurations for [Potato](https://github.com/davidjurgens/potato), the lightweight annotation tool for NLP research. Covers all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, CVPR, and more.
+A curated collection of **379** example annotation task configurations for [Potato](https://potatoannotator.com), the lightweight [text and multimodal annotation tool](https://potatoannotator.com/why-potato) for NLP research. Covers all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, CVPR, and more.
+
+> **New to Potato?** Start with the [quick-start guide](https://potatoannotator.com/docs/getting-started/quick-start), read the [documentation](https://potatoannotator.com/docs), or explore these designs running live in the [official Potato showcase](https://potatoannotator.com/showcase). You can [submit your own design](https://potatoannotator.com/showcase/submit) too.
 
 ## Categories
 
@@ -137,7 +139,7 @@ A curated collection of **379** example annotation task configurations for [Pota
 
 ## Agentic Evaluation (21 tasks)
 
-Tasks showcasing Potato's agent trace and coding agent annotation features. See the [Potato agent trace docs](https://github.com/davidjurgens/potato/blob/master/docs/agent_traces.md) and [coding agent docs](https://github.com/davidjurgens/potato/blob/master/docs/coding_agent_annotation.md).
+Tasks showcasing Potato's [agentic annotation](https://potatoannotator.com/docs/features/agentic-annotation) features. See the docs for [live agent evaluation](https://potatoannotator.com/docs/features/live-agent-evaluation) and [coding agent annotation](https://potatoannotator.com/docs/features/coding-agent-annotation).
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
@@ -210,6 +212,8 @@ Each task folder contains:
 
 ## Quick Start
 
+First, [install Potato](https://potatoannotator.com/docs/getting-started/installation), then:
+
 ```bash
 # Clone this repository
 git clone https://github.com/davidjurgens/potato-showcase.git
@@ -236,6 +240,17 @@ We welcome contributions! To add a new task:
 2. Add required files (`metadata.json`, `config.yaml`, `sample-data.json`)
 3. Include paper reference and BibTeX citation if based on published work
 4. Submit a pull request
+
+## Learn More About Potato
+
+- 🥔 [Potato annotation tool](https://potatoannotator.com) — the official website
+- 📖 [Documentation](https://potatoannotator.com/docs) — configuration reference and guides
+- 🚀 [Quick start](https://potatoannotator.com/docs/getting-started/quick-start) — set up your first annotation project
+- 🧩 [Annotation types](https://potatoannotator.com/docs/annotation-types/radio-multiselect) — radio, span, image, audio, video, and more
+- 🤖 [Agentic annotation](https://potatoannotator.com/docs/features/agentic-annotation) — evaluate LLM agents and coding agents
+- 🖼️ [Showcase](https://potatoannotator.com/showcase) — browse and run these designs live
+- 💬 [Community](https://potatoannotator.com/community) — get help and share your work
+- ⭐ [Source code on GitHub](https://github.com/davidjurgens/potato)
 
 ## License
 

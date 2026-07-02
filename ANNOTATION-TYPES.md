@@ -1,6 +1,6 @@
 # Annotation Type Reference
 
-A guide to all **22** annotation types supported by [Potato](https://github.com/davidjurgens/potato), with example configurations from this showcase.
+A guide to all **22** annotation types supported by [Potato](https://potatoannotator.com), with example configurations from this showcase. For the full reference, see the [annotation types documentation](https://potatoannotator.com/docs/annotation-types/radio-multiselect).
 
 ---
 

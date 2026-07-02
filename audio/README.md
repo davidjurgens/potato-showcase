@@ -2,6 +2,8 @@
 
 This category contains annotation task designs for audio and speech processing research, including transcription, speaker identification, and audio classification.
 
+> Run these designs in [Potato](https://potatoannotator.com). See the [audio annotation documentation](https://potatoannotator.com/docs/features/audio-annotation) to configure waveform playback and transcription tasks.
+
 ## Tasks
 
 | Design | Description | Reference |

@@ -2,6 +2,8 @@
 
 This category contains annotation task designs for reinforcement learning from human feedback (RLHF), preference learning, and AI alignment research.
 
+> Run these designs in [Potato](https://potatoannotator.com). See the [annotation types](https://potatoannotator.com/docs/annotation-types/radio-multiselect) and [quality control](https://potatoannotator.com/docs/features/quality-control) docs to build reliable preference-annotation tasks.
+
 ## Tasks
 
 | Design | Description | Reference |
