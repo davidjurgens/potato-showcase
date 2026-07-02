@@ -1,8 +1,12 @@
 # Potato Annotation Showcase
 
-A curated collection of **379** example annotation task configurations for [Potato](https://potatoannotator.com), the lightweight [text and multimodal annotation tool](https://potatoannotator.com/why-potato) for NLP research. Covers all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, CVPR, and more.
+**379** ready-to-run annotation task configurations for [Potato](https://potatoannotator.com), the open-source [text and multimodal annotation tool](https://potatoannotator.com/why-potato) for NLP research. Between them they cover all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
-> **New to Potato?** Start with the [quick-start guide](https://potatoannotator.com/docs/getting-started/quick-start), read the [documentation](https://potatoannotator.com/docs), or explore these designs running live in the [official Potato showcase](https://potatoannotator.com/showcase). You can [submit your own design](https://potatoannotator.com/showcase/submit) too.
+The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most of these are built from a real dataset or paper, so each one shows how a published annotation scheme actually turns into a working Potato setup.
+
+The collection keeps growing. We add tasks as new datasets and SemEval tracks come out, and as Potato itself gains annotation types (agent-trace and coding-agent evaluation are the most recent). It's maintained by the Potato development team alongside the tool, so the examples stay in step with what Potato can currently do. If a task you need isn't here, [open a pull request](#contributing) or [submit a design](https://potatoannotator.com/showcase/submit).
+
+If you're new to Potato, the [quick-start guide](https://potatoannotator.com/docs/getting-started/quick-start) and [documentation](https://potatoannotator.com/docs) cover the basics, and you can try many of these designs live in the [Potato showcase](https://potatoannotator.com/showcase).
 
 ## Categories
 
@@ -235,22 +239,22 @@ potato start config.yaml
 
 ## Contributing
 
-We welcome contributions! To add a new task:
-1. Create a folder in the appropriate category
-2. Add required files (`metadata.json`, `config.yaml`, `sample-data.json`)
-3. Include paper reference and BibTeX citation if based on published work
-4. Submit a pull request
+New tasks are welcome. To add one:
+1. Create a folder in the matching category
+2. Add the three files (`metadata.json`, `config.yaml`, `sample-data.json`)
+3. Include the paper reference and BibTeX citation if it's based on published work
+4. Open a pull request
+
+The Potato development team reviews submissions and keeps the collection current as the tool evolves.
 
 ## Learn More About Potato
 
-- 🥔 [Potato annotation tool](https://potatoannotator.com) — the official website
-- 📖 [Documentation](https://potatoannotator.com/docs) — configuration reference and guides
-- 🚀 [Quick start](https://potatoannotator.com/docs/getting-started/quick-start) — set up your first annotation project
-- 🧩 [Annotation types](https://potatoannotator.com/docs/annotation-types/radio-multiselect) — radio, span, image, audio, video, and more
-- 🤖 [Agentic annotation](https://potatoannotator.com/docs/features/agentic-annotation) — evaluate LLM agents and coding agents
-- 🖼️ [Showcase](https://potatoannotator.com/showcase) — browse and run these designs live
-- 💬 [Community](https://potatoannotator.com/community) — get help and share your work
-- ⭐ [Source code on GitHub](https://github.com/davidjurgens/potato)
+- [Potato website](https://potatoannotator.com) and [why Potato](https://potatoannotator.com/why-potato)
+- [Documentation](https://potatoannotator.com/docs) and the [quick-start guide](https://potatoannotator.com/docs/getting-started/quick-start)
+- [Annotation types](https://potatoannotator.com/docs/annotation-types/radio-multiselect), covering radio, span, image, audio, and video
+- [Agentic annotation](https://potatoannotator.com/docs/features/agentic-annotation) for evaluating LLM and coding agents
+- [Showcase](https://potatoannotator.com/showcase) and [community](https://potatoannotator.com/community)
+- [Potato source code](https://github.com/davidjurgens/potato) on GitHub
 
 ## License
 
