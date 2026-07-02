@@ -1,0 +1,23 @@
+title: Potato Annotation Showcase
+description: >-
+  379 example annotation task configurations for Potato, the open-source
+  text and multimodal annotation tool for NLP research. Covers all 22 Potato
+  annotation types, SemEval shared tasks, and benchmarks from ACL, EMNLP,
+  NeurIPS, ICML, ICLR, and CVPR.
+theme: jekyll-theme-cayman
+
+# Project site lives at https://davidjurgens.github.io/potato-showcase/
+url: https://davidjurgens.github.io
+baseurl: /potato-showcase
+
+# SEO: generate <title>, meta description, canonical, Open Graph tags, and a sitemap.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Don't publish repo scaffolding as pages.
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - LICENSE
