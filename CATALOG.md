@@ -1,6 +1,6 @@
 # Complete Task Catalog
 
-A flat catalog of all **361** annotation task configurations in the Potato Showcase, sorted alphabetically by title. Every design runs in [Potato](https://potatoannotator.com) — see the [documentation](https://potatoannotator.com/docs) to get started.
+A flat catalog of all **361** annotation task configurations in the Potato Showcase, sorted alphabetically by title. Every design runs in [Potato](https://www.potatoannotator.com) — see the [documentation](https://www.potatoannotator.com/docs) to get started.
 
 ## Quick Stats
 

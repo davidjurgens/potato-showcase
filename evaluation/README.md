@@ -2,7 +2,7 @@
 
 This category contains annotation task designs for evaluating AI-generated content, including text summaries, translations, question answers, and image captions.
 
-> Run these designs in [Potato](https://potatoannotator.com). See the [AI support](https://potatoannotator.com/docs/features/ai-support) and [live agent evaluation](https://potatoannotator.com/docs/features/live-agent-evaluation) docs for evaluating model outputs.
+> Run these designs in [Potato](https://www.potatoannotator.com). See the [AI support](https://www.potatoannotator.com/docs/features/ai-support) and [live agent evaluation](https://www.potatoannotator.com/docs/features/live-agent-evaluation) docs for evaluating model outputs.
 
 ## Tasks
 

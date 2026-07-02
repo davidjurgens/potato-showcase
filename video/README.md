@@ -2,7 +2,7 @@
 
 This category contains annotation task designs for video understanding research, including action recognition, temporal localization, video summarization, and scene understanding.
 
-> Run these designs in [Potato](https://potatoannotator.com). See the [Potato documentation](https://potatoannotator.com/docs) to configure temporal and frame-level video annotation.
+> Run these designs in [Potato](https://www.potatoannotator.com). See the [Potato documentation](https://www.potatoannotator.com/docs) to configure temporal and frame-level video annotation.
 
 ## Subcategories
 
