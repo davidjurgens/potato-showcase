@@ -1,6 +1,19 @@
-# Potato Annotation Showcase
+<div align="center">
 
-**379** ready-to-run annotation task configurations for [Potato](https://potatoannotator.com), the open-source [text and multimodal annotation tool](https://potatoannotator.com/why-potato) for NLP research. Between them they cover all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
+# 🥔 Potato Annotation Showcase
+
+**A library of real-world annotation task designs for [Potato](https://potatoannotator.com), the open-source annotation tool for NLP.**
+
+[Website](https://potatoannotator.com) · [Docs](https://potatoannotator.com/docs) · [Quick Start](https://potatoannotator.com/docs/getting-started/quick-start) · [Showcase](https://potatoannotator.com/showcase) · [Blog](https://potatoannotator.com/blog) · [Community](https://potatoannotator.com/community)
+
+![Designs](https://img.shields.io/badge/designs-379-ff6b35?style=flat-square)
+![Annotation types](https://img.shields.io/badge/annotation_types-22-555?style=flat-square)
+![SemEval tasks](https://img.shields.io/badge/SemEval_tasks-90-555?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-4c9a2a?style=flat-square)
+
+</div>
+
+These **379** [text and multimodal annotation](https://potatoannotator.com/why-potato) designs cover all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
 The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most of these are built from a real dataset or paper, so each one shows how a published annotation scheme actually turns into a working Potato setup.
 
@@ -26,6 +39,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 ---
 
 ## Text Annotation (111 tasks)
+
+*Guides: [Creating a sentiment task](https://potatoannotator.com/blog/sentiment-analysis-tutorial) · [Building an NER task](https://potatoannotator.com/blog/building-ner-task) · [Content moderation setup](https://potatoannotator.com/blog/content-moderation-annotation) · [Finding hallucinations with span annotation](https://potatoannotator.com/blog/finding-hallucinations-with-span-annotation)*
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
@@ -63,6 +78,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 
 ## Image Annotation (33 tasks)
 
+*Guides: [Image classification](https://potatoannotator.com/blog/image-classification-tutorial) · [Bounding boxes for object detection](https://potatoannotator.com/blog/bounding-box-annotation) · [Polygon annotation for segmentation](https://potatoannotator.com/blog/polygon-annotation-guide) · [Medical image annotation](https://potatoannotator.com/blog/medical-imaging-annotation)*
+
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
 | [Classification](./image/classification/) | 6 | MS-COCO, ImageNet, Places365, CUB-200 |
@@ -81,6 +98,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 
 ## Video Annotation (37 tasks)
 
+*Guides: [Frame-by-frame video annotation](https://potatoannotator.com/blog/video-frame-annotation) · [Multi-object tracking](https://potatoannotator.com/blog/multi-object-tracking)*
+
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
 | [Action Recognition](./video/action-recognition/) | 8 | AVA, Charades, THUMOS14, EPIC-KITCHENS |
@@ -95,6 +114,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 ---
 
 ## Audio Annotation (17 tasks)
+
+*Guides: [Audio transcription review](https://potatoannotator.com/blog/audio-transcription-task) · [Speaker diarization](https://potatoannotator.com/blog/speaker-diarization-annotation) · [Speech emotion classification](https://potatoannotator.com/blog/audio-emotion-classification) · [Music genre classification](https://potatoannotator.com/blog/music-genre-classification)*
 
 | Task | Description |
 |------|-------------|
@@ -111,6 +132,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 ---
 
 ## Evaluation Tasks (23 tasks)
+
+*Guides: [Calibrating LLM-as-judge against humans](https://potatoannotator.com/blog/trust-your-llm-judge-calibration) · [MT-Bench-style rubric evaluation](https://potatoannotator.com/blog/rubric-evaluation-mt-bench-style) · [Evaluating RAG systems](https://potatoannotator.com/blog/rag-evaluation-with-human-annotation)*
 
 | Task | Paper | Types |
 |------|-------|-------|
@@ -130,6 +153,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 
 ## Preference Learning & RLHF (18 tasks)
 
+*Guides: [Pairwise comparison modes](https://potatoannotator.com/blog/pairwise-agent-comparison-guide) · [Trajectory editing for SFT & DPO](https://potatoannotator.com/blog/trajectory-editing-sft-dpo-training-data) · [Collecting process-reward data](https://potatoannotator.com/blog/process-reward-models-annotation-guide)*
+
 | Task | Paper | Types |
 |------|-------|-------|
 | [dpo-preference-data](./preference-learning/dpo-preference-data) | DPO (NeurIPS 2023) | pairwise, radio, text |
@@ -144,6 +169,8 @@ If you're new to Potato, the [quick-start guide](https://potatoannotator.com/doc
 ## Agentic Evaluation (21 tasks)
 
 Tasks showcasing Potato's [agentic annotation](https://potatoannotator.com/docs/features/agentic-annotation) features. See the docs for [live agent evaluation](https://potatoannotator.com/docs/features/live-agent-evaluation) and [coding agent annotation](https://potatoannotator.com/docs/features/coding-agent-annotation).
+
+*Guides: [Human evaluation of agent traces](https://potatoannotator.com/blog/evaluating-ai-agents-with-potato) · [Coding agent annotation](https://potatoannotator.com/blog/coding-agent-annotation-with-potato) · [Web agent annotation](https://potatoannotator.com/blog/web-agent-annotation-guide) · [Computer-use agent evaluation](https://potatoannotator.com/blog/computer-use-agent-evaluation)*
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
