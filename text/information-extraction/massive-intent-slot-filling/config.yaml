@@ -1,0 +1,144 @@
+# MASSIVE - Multilingual Intent Classification and Slot Filling
+# Based on FitzGerald et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.235/
+# Dataset: https://github.com/alexa/massive
+#
+# MASSIVE is a 1M-example, 51-language parallel dataset for virtual-assistant
+# natural language understanding (NLU), created by localizing the English
+# SLURP dataset. Each spoken command is annotated with:
+#   - a DOMAIN (18 scenarios) and INTENT (60 intents), and
+#   - SLOTS: the spans carrying the information the assistant must act on.
+#
+# This showcase uses a representative subset of intents (the real task has 60)
+# and a compact slot inventory. An English gloss is provided for reference.
+#
+# Annotation workflow:
+#   1. Pick the DOMAIN (broad scenario) of the command.
+#   2. Pick the INTENT (specific action requested).
+#   3. Highlight each SLOT span and label what kind of value it holds.
+
+annotation_task_name: "MASSIVE - Intent Classification & Slot Filling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "utterance"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: domain / scenario
+  - annotation_type: radio
+    name: domain
+    description: "Which domain (broad scenario) does this command belong to?"
+    labels:
+      - "alarm"
+      - "calendar"
+      - "cooking"
+      - "datetime"
+      - "email"
+      - "general"
+      - "iot"
+      - "lists"
+      - "music"
+      - "news"
+      - "play"
+      - "qa"
+      - "recommendation"
+      - "social"
+      - "transport"
+      - "weather"
+
+  # Step 2: intent (representative subset of the 60 MASSIVE intents)
+  - annotation_type: radio
+    name: intent
+    description: "What specific action is the user requesting?"
+    labels:
+      - "alarm_set"
+      - "calendar_set"
+      - "calendar_query"
+      - "cooking_recipe"
+      - "datetime_query"
+      - "email_sendemail"
+      - "email_query"
+      - "iot_hue_lightchange"
+      - "iot_cleaning"
+      - "lists_createoradd"
+      - "play_music"
+      - "news_query"
+      - "qa_factoid"
+      - "recommendation_events"
+      - "social_post"
+      - "transport_query"
+      - "weather_query"
+      - "general_quirky"
+
+  # Step 3: slot filling
+  - annotation_type: span
+    name: slots
+    description: "Highlight each slot and label the type of value it holds"
+    labels:
+      - "time"
+      - "date"
+      - "location"
+      - "person"
+      - "device_type"
+      - "media_type"
+      - "app_name"
+      - "food_type"
+      - "weather_descriptor"
+      - "number"
+      - "event_name"
+      - "other"
+    label_colors:
+      "time": "#3b82f6"
+      "date": "#0ea5e9"
+      "location": "#ef4444"
+      "person": "#ec4899"
+      "device_type": "#a855f7"
+      "media_type": "#8b5cf6"
+      "app_name": "#14b8a6"
+      "food_type": "#f97316"
+      "weather_descriptor": "#eab308"
+      "number": "#22c55e"
+      "event_name": "#f59e0b"
+      "other": "#6b7280"
+
+annotation_instructions: |
+  You will see a short command spoken to a virtual assistant, with its
+  language identifier and (for this showcase) an English gloss.
+    1. Choose the DOMAIN: the broad scenario (weather, music, alarm, ...).
+    2. Choose the INTENT: the specific action requested (weather_query,
+       play_music, alarm_set, ...).
+    3. Highlight every SLOT - the words carrying the information the assistant
+       must extract - and label each with its value type (time, date,
+       location, person, device_type, ...).
+  Not every command has slots; some (e.g. "tell me a joke") are intent-only.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">Command:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0;">{{utterance}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

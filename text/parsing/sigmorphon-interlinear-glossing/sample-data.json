@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gloss_001",
+    "language": "Swahili (swa)",
+    "word": "anacheza",
+    "reference_gloss": "a-na-chez-a  (3SG-PRS-play-FV)",
+    "reference_translation": "s/he is playing"
+  },
+  {
+    "id": "gloss_002",
+    "language": "Swahili (swa)",
+    "word": "ninakupenda",
+    "reference_gloss": "ni-na-ku-pend-a  (1SG-PRS-2SG.OBJ-love-FV)",
+    "reference_translation": "I love you"
+  },
+  {
+    "id": "gloss_003",
+    "language": "Swahili (swa)",
+    "word": "watoto",
+    "reference_gloss": "wa-toto  (CL2-child)",
+    "reference_translation": "children"
+  },
+  {
+    "id": "gloss_004",
+    "language": "Swahili (swa)",
+    "word": "nitakupa",
+    "reference_gloss": "ni-ta-ku-p-a  (1SG-FUT-2SG.OBJ-give-FV)",
+    "reference_translation": "I will give you"
+  },
+  {
+    "id": "gloss_005",
+    "language": "Swahili (swa)",
+    "word": "hawakusoma",
+    "reference_gloss": "ha-wa-ku-som-a  (NEG-3PL-PST.NEG-read-FV)",
+    "reference_translation": "they did not read"
+  },
+  {
+    "id": "gloss_006",
+    "language": "Turkish (tur)",
+    "word": "evlerimizden",
+    "reference_gloss": "ev-ler-imiz-den  (house-PL-1PL.POSS-ABL)",
+    "reference_translation": "from our houses"
+  },
+  {
+    "id": "gloss_007",
+    "language": "Turkish (tur)",
+    "word": "gidiyorum",
+    "reference_gloss": "gid-iyor-um  (go-PROG-1SG)",
+    "reference_translation": "I am going"
+  },
+  {
+    "id": "gloss_008",
+    "language": "Turkish (tur)",
+    "word": "yapabilirim",
+    "reference_gloss": "yap-abil-ir-im  (do-ABIL-AOR-1SG)",
+    "reference_translation": "I can do (it)"
+  },
+  {
+    "id": "gloss_009",
+    "language": "Turkish (tur)",
+    "word": "kitaplar",
+    "reference_gloss": "kitap-lar  (book-PL)",
+    "reference_translation": "books"
+  },
+  {
+    "id": "gloss_010",
+    "language": "Turkish (tur)",
+    "word": "gelmedin",
+    "reference_gloss": "gel-me-di-n  (come-NEG-PST-2SG)",
+    "reference_translation": "you did not come"
+  }
+]

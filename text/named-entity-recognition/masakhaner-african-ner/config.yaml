@@ -1,0 +1,108 @@
+# MasakhaNER 2.0 - Named Entity Recognition for African Languages
+# Based on Adelani et al., EMNLP 2022
+# Paper: https://aclanthology.org/2022.emnlp-main.298/
+# Dataset: https://github.com/masakhane-io/masakhane-ner
+#
+# MasakhaNER 2.0 is the largest human-annotated NER dataset for African
+# languages, covering 20 languages. It was built by the Masakhane community:
+# native-speaker volunteers, trained on the MUC-6 named-entity guidelines,
+# annotated four entity types in short news sentences.
+#
+# Entity Types (MUC-6 style):
+# - PER (Person): names of people, including honorifics attached to the name
+# - ORG (Organization): companies, institutions, teams, agencies, parties
+# - LOC (Location): countries, cities, regions, and other place names
+# - DATE (Date & Time): absolute or relative dates and times
+#
+# Annotation Guidelines:
+# 1. Read the sentence in the source language (an English gloss is provided
+#    only for reference in this showcase; real annotators are native speakers).
+# 2. Highlight every entity mention with the correct type, selecting the
+#    full span (e.g. "Chuo Kikuu cha Nairobi", not just "Nairobi").
+# 3. Nested or overlapping entities take the most specific reading; a place
+#    name inside an organization name is part of the ORG span.
+# 4. Then record whether the sentence contains any entities at all.
+
+annotation_task_name: "MasakhaNER 2.0 - African Language NER"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: highlight entity spans
+  - annotation_type: span
+    name: entity_spans
+    description: "Highlight all named entities and label each with its type"
+    labels:
+      - "PER (Person)"
+      - "ORG (Organization)"
+      - "LOC (Location)"
+      - "DATE (Date & Time)"
+    label_colors:
+      "PER (Person)": "#3b82f6"
+      "ORG (Organization)": "#22c55e"
+      "LOC (Location)": "#ef4444"
+      "DATE (Date & Time)": "#f59e0b"
+    keyboard_shortcuts:
+      "PER (Person)": "1"
+      "ORG (Organization)": "2"
+      "LOC (Location)": "3"
+      "DATE (Date & Time)": "4"
+
+  # Step 2: overall entity composition (also an attention check)
+  - annotation_type: radio
+    name: entity_presence
+    description: "Does this sentence contain any named entities?"
+    labels:
+      - "Contains entities"
+      - "No entities"
+    keyboard_shortcuts:
+      "Contains entities": "5"
+      "No entities": "6"
+    tooltips:
+      "Contains entities": "The sentence mentions at least one PER, ORG, LOC, or DATE"
+      "No entities": "The sentence mentions none of the four entity types"
+
+annotation_instructions: |
+  You will see a short sentence written in an African language, with its
+  language identifier and (for this showcase only) an English gloss.
+
+  1. Highlight every named entity and assign one of four types:
+     - PER: names of people
+     - ORG: companies, institutions, teams, agencies, political parties
+     - LOC: countries, cities, regions, and other place names
+     - DATE: absolute or relative dates and times
+  2. Select the FULL entity span, including multi-word names.
+  3. Then indicate whether the sentence contains any entities at all.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

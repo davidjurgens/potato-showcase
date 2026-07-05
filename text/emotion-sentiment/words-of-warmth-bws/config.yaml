@@ -1,0 +1,129 @@
+# Words of Warmth: Social-Perception Norms via Best-Worst Scaling
+# Based on Mohammad (ACL 2025), "Words of Warmth: Trust and Sociability
+# Norms for over 26k English Words."
+#
+# Words of Warmth extends affect lexicons (valence/arousal/dominance,
+# emotion intensity, anxiety) to the SOCIAL-PERCEPTION space studied in
+# social psychology's Stereotype Content Model. Two primary dimensions
+# organize how we perceive people and groups:
+#   - Warmth:     is this entity friendly / well-intentioned / trustworthy?
+#   - Competence: is this entity capable / skilled / effective?
+# Warmth is further decomposed into two facets:
+#   - Sociability: friendliness, likability, being pleasant to be around.
+#   - Trust:       honesty, morality, dependability.
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Annotators are shown a set (tuple) of four words.
+#   - For each dimension they pick the ONE word that is highest and the ONE
+#     word that is lowest on that dimension.
+#   - Each word appears in many different 4-tuples across the study.
+#   - A real-valued score in [0, 1] per word is later computed as the
+#     proportion of times chosen best minus the proportion chosen worst.
+#     BWS yields far more reliable scores than absolute numeric ratings.
+#
+# Annotation guidelines:
+#   1. Judge the word's typical, out-of-context social association - the
+#      impression it evokes about a person or group described by it.
+#   2. Answer each dimension independently. A word can be high on one and
+#      low on another (e.g., "ruthless" is low warmth but high competence;
+#      "clumsy" is high warmth-ish but low competence).
+#   3. The best and worst word may differ across the four dimensions.
+#   4. If a word is unfamiliar, use the Skip button rather than guessing.
+
+annotation_task_name: "Words of Warmth Best-Worst Scaling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # ---- Warmth (overall) ----
+  - annotation_type: radio
+    name: warmth_best
+    description: "WARMTH - which word conveys the MOST warmth (friendly, well-intentioned)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: warmth_worst
+    description: "WARMTH - which word conveys the LEAST warmth (cold, ill-intentioned)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  # ---- Competence ----
+  - annotation_type: radio
+    name: competence_best
+    description: "COMPETENCE - which word conveys the MOST capability / skill?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: competence_worst
+    description: "COMPETENCE - which word conveys the LEAST capability / skill?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  # ---- Sociability (facet of warmth) ----
+  - annotation_type: radio
+    name: sociability_best
+    description: "SOCIABILITY - which word is MOST likable / pleasant to be around?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: sociability_worst
+    description: "SOCIABILITY - which word is LEAST likable / pleasant to be around?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  # ---- Trust / morality (facet of warmth) ----
+  - annotation_type: radio
+    name: trust_best
+    description: "TRUST - which word conveys the MOST honesty / dependability?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: trust_worst
+    description: "TRUST - which word conveys the LEAST honesty / dependability?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

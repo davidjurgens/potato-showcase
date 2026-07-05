@@ -1,0 +1,105 @@
+# NRC-VAD: Valence, Arousal & Dominance via Best-Worst Scaling
+# Based on Mohammad (ACL 2018), "Obtaining Reliable Human Ratings of
+# Valence, Arousal, and Dominance for 20,000 English Words."
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Annotators are shown a set (tuple) of four words.
+#   - For each affective dimension they pick the ONE word that is highest
+#     and the ONE word that is lowest on that dimension.
+#   - Each word appears in many different 4-tuples across the study.
+#   - A real-valued score in [0, 1] for each word is later computed as the
+#     proportion of times it was chosen best minus the proportion of times
+#     it was chosen worst. BWS yields far more reliable, consistent scores
+#     than asking annotators for absolute ratings on a numeric scale.
+#
+# The three dimensions (Osgood's semantic differential / Russell's model):
+#   - Valence:   pleasure - displeasure (happy vs. sad / positive vs. negative)
+#   - Arousal:   active - passive (excited/alert vs. calm/sluggish)
+#   - Dominance: dominant - submissive (in control vs. being controlled)
+#
+# Annotation guidelines:
+#   1. Judge the word's typical, out-of-context affective association.
+#   2. Answer all three dimensions independently - a word can be high on
+#      one dimension and low on another (e.g., "terrorist" is low valence
+#      but high arousal and high dominance).
+#   3. The best and worst word may differ across the three dimensions.
+#   4. If a word is unfamiliar, use the Skip button rather than guessing.
+
+annotation_task_name: "NRC-VAD Best-Worst Scaling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # ---- Valence ----
+  - annotation_type: radio
+    name: valence_best
+    description: "VALENCE - which word is the MOST positive / pleasant?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: valence_worst
+    description: "VALENCE - which word is the MOST negative / unpleasant?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  # ---- Arousal ----
+  - annotation_type: radio
+    name: arousal_best
+    description: "AROUSAL - which word is the MOST active / excited / alert?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: arousal_worst
+    description: "AROUSAL - which word is the MOST calm / passive / sluggish?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  # ---- Dominance ----
+  - annotation_type: radio
+    name: dominance_best
+    description: "DOMINANCE - which word conveys the MOST control / power?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: dominance_worst
+    description: "DOMINANCE - which word conveys the LEAST control (most controlled / weak)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,47 @@
+{
+  "title": "Interlinear Glossing of Endangered Languages",
+  "description": "Morpheme-level interlinear glossing, the annotation design behind the SIGMORPHON 2023 Shared Task on Interlinear Glossing (Ginn et al., 2023), which covers endangered and Indigenous languages including Arapaho, Gitksan, Lezgi, Natugu, Tsez and Uspanteko. For each word the annotator segments it into morphemes, labels each morpheme's position (root vs. affix/clitic), writes the Leipzig-style gloss line, and provides a free translation - the core workflow of language documentation. The showcase sample items use pedagogically reliable, fully verifiable stand-in languages (Swahili and Turkish) so the target gloss is correct; the real shared task uses the endangered languages named above.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ginn et al. (SIGMORPHON)",
+    "email": "",
+    "affiliation": "SIGMORPHON / ACL SIG on Computational Morphology and Phonology"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Morphology",
+    "Language Documentation",
+    "Low-Resource Languages"
+  ],
+  "useCase": [
+    "Interlinear Glossing",
+    "Morphological Segmentation",
+    "Language Documentation",
+    "Endangered Language NLP"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "interlinear-glossing",
+    "igt",
+    "morphology",
+    "morphological-segmentation",
+    "leipzig-glossing",
+    "language-documentation",
+    "endangered-languages",
+    "indigenous-languages",
+    "low-resource",
+    "sigmorphon",
+    "sigmorphon2023"
+  ],
+  "featured": false,
+  "paperReference": "Ginn et al., SIGMORPHON 2023",
+  "paperUrl": "https://aclanthology.org/2023.sigmorphon-1.20/",
+  "datasetUrl": "https://github.com/sigmorphon/2023glossingST",
+  "citation": "@inproceedings{ginn-etal-2023-findings,\n    title = \"Findings of the {SIGMORPHON} 2023 Shared Task on Interlinear Glossing\",\n    author = \"Ginn, Michael  and Marecek, David  and others\",\n    booktitle = \"Proceedings of the 20th SIGMORPHON workshop on Computational Research in Phonetics, Phonology, and Morphology\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.sigmorphon-1.20\"\n}"
+}

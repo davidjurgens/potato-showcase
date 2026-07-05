@@ -1,0 +1,113 @@
+# Interlinear Glossing of Endangered Languages
+# Based on Ginn et al., SIGMORPHON 2023 Shared Task on Interlinear Glossing
+# Paper: https://aclanthology.org/2023.sigmorphon-1.20/
+# Dataset: https://github.com/sigmorphon/2023glossingST
+#
+# Interlinear Glossed Text (IGT) is the backbone of language documentation.
+# For each word, a linguist produces four aligned lines:
+#   1. the surface word,
+#   2. a segmentation into morphemes,
+#   3. a gloss for each morpheme (Leipzig Glossing Rules), and
+#   4. a free translation.
+# The SIGMORPHON 2023 shared task targets endangered and Indigenous languages
+# (Arapaho, Gitksan, Lezgi, Natugu, Tsez, Uspanteko).
+#
+# NOTE ON THE SAMPLE DATA: to keep the target glosses fully verifiable, the
+# showcase items use Swahili and Turkish - agglutinative languages that are
+# standard glossing teaching examples - rather than fabricating morphology in
+# languages the author cannot verify. The annotation DESIGN is identical to
+# the endangered-language task.
+#
+# Annotation workflow (three schemes):
+#   1. Segment & label morphemes: highlight each morpheme and mark whether it
+#      is the ROOT/STEM or an AFFIX (prefix/suffix/infix) or a CLITIC.
+#   2. Gloss line: type the aligned Leipzig gloss, hyphen-separated, using
+#      lowercase for lexical glosses and SMALL-CAPS-style UPPERCASE for
+#      grammatical categories (e.g. "1SG-PRS-play-FV").
+#   3. Free translation: type an idiomatic English translation.
+#
+# Leipzig conventions reminder: separate morphemes with "-", use "." to join
+# a single morpheme's multiple category labels (e.g. "1SG"), and glosses of
+# grammatical morphemes are UPPERCASE (PST, PL, LOC, ABL, PROG, AOR, FV...).
+
+annotation_task_name: "Interlinear Glossing"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "word"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: segment the word and label each morpheme's role
+  - annotation_type: span
+    name: morphemes
+    description: "Highlight each morpheme and label its role"
+    labels:
+      - "Root / Stem"
+      - "Prefix"
+      - "Suffix"
+      - "Infix"
+      - "Clitic"
+    label_colors:
+      "Root / Stem": "#22c55e"
+      "Prefix": "#3b82f6"
+      "Suffix": "#f59e0b"
+      "Infix": "#8b5cf6"
+      "Clitic": "#ef4444"
+    keyboard_shortcuts:
+      "Root / Stem": "1"
+      "Prefix": "2"
+      "Suffix": "3"
+      "Infix": "4"
+      "Clitic": "5"
+
+  # Step 2: the gloss line
+  - annotation_type: text
+    name: gloss_line
+    description: "Type the aligned Leipzig gloss (hyphen-separated, e.g. 1SG-PRS-play-FV)"
+
+  # Step 3: free translation
+  - annotation_type: text
+    name: free_translation
+    description: "Type an idiomatic English translation of the word/phrase"
+
+annotation_instructions: |
+  You will see a single word from a morphologically rich language, with its
+  language identifier and (for this showcase) a reference gloss and
+  translation. Produce an interlinear gloss in three steps:
+    1. Highlight each morpheme in the word and label it Root/Stem, Prefix,
+       Suffix, Infix, or Clitic.
+    2. Write the gloss line: one gloss per morpheme, hyphen-separated, in the
+       same order as the morphemes. Use lowercase for lexical meanings and
+       UPPERCASE for grammatical categories (PST, PL, 1SG, LOC, PROG, ...).
+    3. Write an idiomatic English translation.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">Word:</strong>
+      <p style="font-size: 22px; letter-spacing: 1px; line-height: 1.6; margin: 8px 0 0 0;">{{word}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      Reference gloss (showcase only): {{reference_gloss}} &nbsp;|&nbsp; Translation: {{reference_translation}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

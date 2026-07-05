@@ -1,0 +1,44 @@
+{
+  "title": "Sentiment Composition of Phrases (SCL) via Best-Worst Scaling",
+  "description": "Rate the sentiment of short phrases using Best-Worst Scaling to study how sentiment composes. Each 4-tuple mixes single words with phrases built from negators, modals, and degree adverbs (e.g. 'good', 'not good', 'very good', 'hardly good'); annotators pick the most positive and most negative phrase, yielding real-valued scores that reveal how modifiers shift sentiment. This is the design behind the NRC Sentiment Composition Lexicons - SCL-OPP (opposing-polarity phrases) and SCL-NMA (negators, modals, adverbs) - by Kiritchenko & Mohammad, with an Arabic Twitter variant from SemEval-2016 Task 7.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Svetlana Kiritchenko, Saif M. Mohammad",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Sentiment Analysis",
+    "Lexicon Building",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Sentiment Intensity",
+    "Sentiment Composition",
+    "Best-Worst Scaling"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "best-worst-scaling",
+    "maxdiff",
+    "sentiment-composition",
+    "scl-opp",
+    "scl-nma",
+    "negation",
+    "modals",
+    "adverbs",
+    "arabic",
+    "mohammad"
+  ],
+  "featured": false,
+  "paperReference": "Kiritchenko & Mohammad, NAACL 2016",
+  "paperUrl": "https://aclanthology.org/N16-1128/",
+  "datasetUrl": "https://saifmohammad.com/WebPages/SCL.html",
+  "citation": "@inproceedings{kiritchenko-mohammad-2016-sentiment,\n    title = \"Sentiment Composition of Words with Opposing Polarities\",\n    author = \"Kiritchenko, Svetlana and Mohammad, Saif\",\n    booktitle = \"Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies\",\n    month = jun,\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N16-1128\",\n    pages = \"1102--1108\"\n}"
+}

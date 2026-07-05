@@ -1,0 +1,43 @@
+{
+  "title": "WorryWords: Word-Anxiety Association via Best-Worst Scaling",
+  "description": "Rate individual English words on the calmness-anxiety dimension using Best-Worst Scaling. Annotators see a 4-tuple of words and pick the one that most induces anxiety and the one that is most calming; real-valued anxiety-association scores are derived from best-minus-worst counts. This is the annotation design behind WorryWords, the first large-scale word-anxiety association lexicon (44,000+ words, Mohammad, EMNLP 2024), released with translations to 100+ languages.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saif M. Mohammad",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Affective Computing",
+    "Mental Health",
+    "Lexicon Building"
+  ],
+  "useCase": [
+    "Anxiety Detection",
+    "Lexicon Building",
+    "Best-Worst Scaling"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "best-worst-scaling",
+    "maxdiff",
+    "anxiety",
+    "worrywords",
+    "calmness-anxiety",
+    "word-level",
+    "mental-health",
+    "mohammad",
+    "emnlp2024"
+  ],
+  "featured": false,
+  "paperReference": "Mohammad, EMNLP 2024",
+  "paperUrl": "https://aclanthology.org/2024.emnlp-main.910/",
+  "datasetUrl": "https://saifmohammad.com/worrywords.html",
+  "citation": "@inproceedings{mohammad-2024-worrywords,\n    title = \"{W}orry{W}ords: Norms of Anxiety Association for over 44k {E}nglish Words\",\n    author = \"Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2024\",\n    address = \"Miami, Florida, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.910\",\n    pages = \"16261--16278\"\n}"
+}

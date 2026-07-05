@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ww_001",
+    "prompt": "Word 1: biopsy | Word 2: hammock | Word 3: stapler | Word 4: deadline",
+    "options": ["biopsy", "hammock", "stapler", "deadline"]
+  },
+  {
+    "id": "ww_002",
+    "prompt": "Word 1: meadow | Word 2: audit | Word 3: turbulence | Word 4: notebook",
+    "options": ["meadow", "audit", "turbulence", "notebook"]
+  },
+  {
+    "id": "ww_003",
+    "prompt": "Word 1: eviction | Word 2: lullaby | Word 3: sidewalk | Word 4: layoffs",
+    "options": ["eviction", "lullaby", "sidewalk", "layoffs"]
+  },
+  {
+    "id": "ww_004",
+    "prompt": "Word 1: spa | Word 2: interrogation | Word 3: bookshelf | Word 4: quarantine",
+    "options": ["spa", "interrogation", "bookshelf", "quarantine"]
+  },
+  {
+    "id": "ww_005",
+    "prompt": "Word 1: diagnosis | Word 2: sunrise | Word 3: paperwork | Word 4: blackout",
+    "options": ["diagnosis", "sunrise", "paperwork", "blackout"]
+  },
+  {
+    "id": "ww_006",
+    "prompt": "Word 1: cradle | Word 2: bankruptcy | Word 3: pebble | Word 4: turbulator",
+    "options": ["cradle", "bankruptcy", "pebble", "turbulator"]
+  },
+  {
+    "id": "ww_007",
+    "prompt": "Word 1: garden | Word 2: subpoena | Word 3: teacup | Word 4: relapse",
+    "options": ["garden", "subpoena", "teacup", "relapse"]
+  },
+  {
+    "id": "ww_008",
+    "prompt": "Word 1: overdraft | Word 2: blanket | Word 3: symptom | Word 4: pasture",
+    "options": ["overdraft", "blanket", "symptom", "pasture"]
+  },
+  {
+    "id": "ww_009",
+    "prompt": "Word 1: meditation | Word 2: foreclosure | Word 3: elevator | Word 4: verdict",
+    "options": ["meditation", "foreclosure", "elevator", "verdict"]
+  },
+  {
+    "id": "ww_010",
+    "prompt": "Word 1: picnic | Word 2: ultimatum | Word 3: cushion | Word 4: malignant",
+    "options": ["picnic", "ultimatum", "cushion", "malignant"]
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "title": "Aya Red-Teaming - Multilingual Global and Local Harm Annotation",
+  "description": "Multilingual safety red-teaming annotation, following the Aya Red-Teaming dataset from 'The Multilingual Alignment Prism' (Aakanksha et al., EMNLP 2024): the first human-annotated collection of harmful prompts across eight languages (English, Hindi, French, Spanish, Russian, Arabic, Serbian, Filipino). Native-speaker annotators judge whether a prompt is harmful, assign harm categories, and - the paper's key contribution - mark whether the harm is GLOBAL (universally recognized) or LOCAL (specific to a language or culture). Sample items are mild, constructed, non-operational illustrations only; they contain no actionable or graphic harmful content.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aakanksha et al. (Cohere For AI)",
+    "email": "",
+    "affiliation": "Cohere For AI"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "AI Safety",
+    "Content Moderation",
+    "Multilingual NLP"
+  ],
+  "useCase": [
+    "Red-Teaming",
+    "Harm Categorization",
+    "Multilingual Safety",
+    "LLM Alignment"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "red-teaming",
+    "safety",
+    "harm-categorization",
+    "global-local-harm",
+    "alignment",
+    "multilingual",
+    "low-resource",
+    "aya",
+    "cohere",
+    "emnlp2024"
+  ],
+  "featured": false,
+  "paperReference": "Aakanksha et al., EMNLP 2024",
+  "paperUrl": "https://aclanthology.org/2024.emnlp-main.671/",
+  "datasetUrl": "https://huggingface.co/datasets/CohereForAI/aya_redteaming",
+  "citation": "@inproceedings{aakanksha-etal-2024-multilingual,\n    title = \"The Multilingual Alignment Prism: Aligning Global and Local Preferences to Reduce Harm\",\n    author = \"Aakanksha  and Ahmadian, Arash  and Ermis, Beyza  and Fadaee, Marzieh  and Hooker, Sara  and others\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.671\"\n}"
+}

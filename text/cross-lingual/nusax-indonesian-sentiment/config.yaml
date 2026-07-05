@@ -1,0 +1,82 @@
+# NusaX - Sentiment Analysis for Indonesian Local Languages
+# Based on Winata et al., EACL 2023 (Outstanding Paper)
+# Paper: https://aclanthology.org/2023.eacl-main.57/
+# Dataset: https://github.com/IndoNLP/nusax
+#
+# NusaX is the first high-quality, human-annotated parallel sentiment corpus
+# for 10 low-resource Indonesian local languages (Acehnese, Balinese,
+# Banjarese, Buginese, Javanese, Madurese, Minangkabau, Ngaju, Sundanese,
+# Toba Batak), alongside Indonesian and English. It was created by the
+# IndoNLP community and demonstrates the same participatory, native-speaker
+# annotation model as Masakhane (Africa) and AfriSenti.
+#
+# Sentiment Labels:
+# - Positive: expresses approval, satisfaction, happiness, or praise
+# - Negative: expresses disapproval, dissatisfaction, sadness, or criticism
+# - Neutral: factual or balanced, with no clear positive or negative stance
+#
+# Annotation Guidelines:
+# 1. Read the text in the source language (an English gloss is provided for
+#    reference in this showcase only).
+# 2. Judge the overall sentiment expressed by the author.
+# 3. Focus on attitude and tone, not merely the topic.
+
+annotation_task_name: "NusaX - Indonesian Local Language Sentiment"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: sentiment
+    description: "What is the overall sentiment of this text?"
+    labels:
+      - "Positive"
+      - "Negative"
+      - "Neutral"
+    keyboard_shortcuts:
+      "Positive": "1"
+      "Negative": "2"
+      "Neutral": "3"
+    tooltips:
+      "Positive": "Expresses approval, satisfaction, happiness, or praise"
+      "Negative": "Expresses disapproval, dissatisfaction, sadness, or criticism"
+      "Neutral": "Factual or balanced, with no clear positive or negative stance"
+
+annotation_instructions: |
+  You will see a short text written in an Indonesian local language, with its
+  language identifier and (for this showcase only) an English gloss. Classify
+  the overall sentiment as Positive, Negative, or Neutral, based on the
+  author's attitude and tone rather than the topic alone.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">Text:</strong>
+      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

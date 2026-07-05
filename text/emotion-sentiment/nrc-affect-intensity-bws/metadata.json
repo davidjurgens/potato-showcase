@@ -1,0 +1,42 @@
+{
+  "title": "NRC Affect Intensity: Word Emotion Intensity via Best-Worst Scaling",
+  "description": "Rate individual English words for the INTENSITY of a basic emotion (anger, fear, joy, or sadness) using Best-Worst Scaling. Within an emotion, annotators see a 4-tuple of words all associated with that emotion and pick the word conveying the most and the least of it; real-valued intensity scores in [0,1] are derived from best-minus-worst counts. This is the annotation design behind the NRC Affect Intensity Lexicon of ~6,000 word-emotion intensity scores (Mohammad, LREC 2018). It complements the NRC-VAD (dimensional) and tweet-level emotion-intensity designs with word-level categorical-emotion intensity.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saif M. Mohammad",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Affective Computing",
+    "Lexicon Building"
+  ],
+  "useCase": [
+    "Emotion Intensity",
+    "Lexicon Building",
+    "Best-Worst Scaling"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "best-worst-scaling",
+    "maxdiff",
+    "emotion-intensity",
+    "affect-intensity",
+    "nrc-affect-intensity",
+    "anger-fear-joy-sadness",
+    "word-level",
+    "mohammad",
+    "lrec2018"
+  ],
+  "featured": false,
+  "paperReference": "Mohammad, LREC 2018",
+  "paperUrl": "https://aclanthology.org/L18-1027/",
+  "datasetUrl": "https://saifmohammad.com/WebPages/AffectIntensity.htm",
+  "citation": "@inproceedings{mohammad-2018-word,\n    title = \"Word Affect Intensities\",\n    author = \"Mohammad, Saif\",\n    booktitle = \"Proceedings of the Eleventh International Conference on Language Resources and Evaluation ({LREC} 2018)\",\n    month = may,\n    year = \"2018\",\n    address = \"Miyazaki, Japan\",\n    publisher = \"European Language Resources Association (ELRA)\",\n    url = \"https://aclanthology.org/L18-1027\"\n}"
+}

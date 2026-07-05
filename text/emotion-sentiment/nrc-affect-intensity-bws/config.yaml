@@ -1,0 +1,68 @@
+# NRC Affect Intensity: Word Emotion Intensity via Best-Worst Scaling
+# Based on Mohammad (LREC 2018), "Word Affect Intensities."
+#
+# This design measures HOW MUCH of a basic emotion a word conveys - the
+# emotion INTENSITY (or degree) - rather than which emotion it evokes.
+# Four basic emotions are scored on separate scales in [0, 1]:
+#   anger, fear, joy, sadness.
+# For example, for anger: "annoyed" < "angry" < "furious" < "enraged".
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Each item targets ONE emotion (shown at the top of the prompt).
+#   - The item is a 4-tuple of words that are all associated with that
+#     emotion to varying degrees.
+#   - The annotator picks the word conveying the MOST of the emotion and
+#     the word conveying the LEAST of it.
+#   - Every word appears in several different 4-tuples for its emotion. A
+#     real-valued intensity score is later computed as (proportion chosen
+#     most) - (proportion chosen least). BWS gives more reliable scores
+#     than asking annotators for an absolute number.
+#
+# Annotation guidelines:
+#   1. First read the TARGET EMOTION named in the prompt; judge intensity
+#      for that emotion only.
+#   2. All four words are related to the target emotion - your job is to
+#      rank their DEGREE, not whether they belong.
+#   3. The "most" and "least" picks must be different words.
+#   4. Judge the word's typical, out-of-context association.
+#   5. Use Skip for unfamiliar words rather than guessing.
+
+annotation_task_name: "NRC Affect Intensity Best-Worst Scaling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  - annotation_type: radio
+    name: most_intense
+    description: "Which word conveys the MOST of the target emotion (highest intensity)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: least_intense
+    description: "Which word conveys the LEAST of the target emotion (lowest intensity)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "wc_001",
+    "prompt": "Target word: DANGER\n\nWhich phrase is closest in meaning?\nChoice 1: a serious risk or hazard\nChoice 2: a quiet celebration\nChoice 3: a type of pastry\nChoice 4: a musical instrument",
+    "choices": ["a serious risk or hazard", "a quiet celebration", "a type of pastry", "a musical instrument"]
+  },
+  {
+    "id": "wc_002",
+    "prompt": "Target word: ENVY\n\nWhich phrase is closest in meaning?\nChoice 1: resentful longing for what another has\nChoice 2: a gentle breeze\nChoice 3: a unit of distance\nChoice 4: a formal apology",
+    "choices": ["resentful longing for what another has", "a gentle breeze", "a unit of distance", "a formal apology"]
+  },
+  {
+    "id": "wc_003",
+    "prompt": "Target word: PURITY\n\nWhich phrase is closest in meaning?\nChoice 1: freedom from contamination or corruption\nChoice 2: a loud argument\nChoice 3: a heavy metal\nChoice 4: a winter sport",
+    "choices": ["freedom from contamination or corruption", "a loud argument", "a heavy metal", "a winter sport"]
+  },
+  {
+    "id": "wc_004",
+    "prompt": "Target word: ROYALTY\n\nWhich phrase is closest in meaning?\nChoice 1: members of a king or queen's family\nChoice 2: a kind of soup\nChoice 3: a computer error\nChoice 4: a farming tool",
+    "choices": ["members of a king or queen's family", "a kind of soup", "a computer error", "a farming tool"]
+  },
+  {
+    "id": "wc_005",
+    "prompt": "Target word: GROWTH\n\nWhich phrase is closest in meaning?\nChoice 1: the process of developing or increasing\nChoice 2: a sudden loud noise\nChoice 3: a written contract\nChoice 4: a small boat",
+    "choices": ["the process of developing or increasing", "a sudden loud noise", "a written contract", "a small boat"]
+  },
+  {
+    "id": "wc_006",
+    "prompt": "Target word: MOURNING\n\nWhich phrase is closest in meaning?\nChoice 1: grief over someone's death\nChoice 2: the first meal of the day\nChoice 3: a type of dance\nChoice 4: a card game",
+    "choices": ["grief over someone's death", "the first meal of the day", "a type of dance", "a card game"]
+  },
+  {
+    "id": "wc_007",
+    "prompt": "Target word: CAUTION\n\nWhich phrase is closest in meaning?\nChoice 1: careful attention to avoid danger\nChoice 2: a joyful outburst\nChoice 3: a kind of fabric\nChoice 4: a garden vegetable",
+    "choices": ["careful attention to avoid danger", "a joyful outburst", "a kind of fabric", "a garden vegetable"]
+  },
+  {
+    "id": "wc_008",
+    "prompt": "Target word: SUNSHINE\n\nWhich phrase is closest in meaning?\nChoice 1: direct light and warmth from the sun\nChoice 2: a deep underground cave\nChoice 3: a legal document\nChoice 4: a type of engine",
+    "choices": ["direct light and warmth from the sun", "a deep underground cave", "a legal document", "a type of engine"]
+  },
+  {
+    "id": "wc_009",
+    "prompt": "Target word: CALM\n\nWhich phrase is closest in meaning?\nChoice 1: free from agitation; peaceful\nChoice 2: extremely fast\nChoice 3: covered in dirt\nChoice 4: very expensive",
+    "choices": ["free from agitation; peaceful", "extremely fast", "covered in dirt", "very expensive"]
+  },
+  {
+    "id": "wc_010",
+    "prompt": "Target word: DECAY\n\nWhich phrase is closest in meaning?\nChoice 1: gradual rotting or decline\nChoice 2: a burst of energy\nChoice 3: a public holiday\nChoice 4: a stringed instrument",
+    "choices": ["gradual rotting or decline", "a burst of energy", "a public holiday", "a stringed instrument"]
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "title": "Words of Warmth: Social-Perception Norms via Best-Worst Scaling",
+  "description": "Rate individual English words on four social-perception dimensions - warmth, competence, sociability, and trust - using Best-Worst Scaling. Annotators see a 4-tuple of words and pick the highest and lowest word for each dimension; real-valued scores are derived from best-minus-worst counts. This is the annotation design behind Words of Warmth, a lexicon of 26,000+ words (and multiword expressions) that complements affect lexicons like NRC-VAD and WorryWords by capturing the warmth/competence axes from the social psychology Stereotype Content Model (Mohammad, ACL 2025).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saif M. Mohammad",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Affective Computing",
+    "Social Psychology",
+    "Lexicon Building"
+  ],
+  "useCase": [
+    "Warmth-Competence",
+    "Bias and Stereotype Analysis",
+    "Lexicon Building",
+    "Best-Worst Scaling"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "best-worst-scaling",
+    "maxdiff",
+    "warmth",
+    "competence",
+    "sociability",
+    "trust",
+    "stereotype-content-model",
+    "word-level",
+    "mohammad",
+    "acl2025"
+  ],
+  "featured": false,
+  "paperReference": "Mohammad, ACL 2025",
+  "paperUrl": "https://aclanthology.org/2025.acl-long.922/",
+  "datasetUrl": "https://saifmohammad.com/warmth.html",
+  "citation": "@inproceedings{mohammad-2025-words,\n    title = \"Words of Warmth: Trust and Sociability Norms for over 26k {E}nglish Words\",\n    author = \"Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.acl-long.922\"\n}"
+}

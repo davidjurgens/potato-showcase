@@ -1,0 +1,52 @@
+[
+  {
+    "id": "vad_001",
+    "prompt": "Word 1: love | Word 2: coffin | Word 3: chair | Word 4: riot",
+    "options": ["love", "coffin", "chair", "riot"]
+  },
+  {
+    "id": "vad_002",
+    "prompt": "Word 1: serene | Word 2: panic | Word 3: cardboard | Word 4: victory",
+    "options": ["serene", "panic", "cardboard", "victory"]
+  },
+  {
+    "id": "vad_003",
+    "prompt": "Word 1: king | Word 2: hostage | Word 3: puppy | Word 4: taxes",
+    "options": ["king", "hostage", "puppy", "taxes"]
+  },
+  {
+    "id": "vad_004",
+    "prompt": "Word 1: explosion | Word 2: meadow | Word 3: funeral | Word 4: promotion",
+    "options": ["explosion", "meadow", "funeral", "promotion"]
+  },
+  {
+    "id": "vad_005",
+    "prompt": "Word 1: commander | Word 2: victim | Word 3: sunset | Word 4: cockroach",
+    "options": ["commander", "victim", "sunset", "cockroach"]
+  },
+  {
+    "id": "vad_006",
+    "prompt": "Word 1: lullaby | Word 2: earthquake | Word 3: paperwork | Word 4: triumph",
+    "options": ["lullaby", "earthquake", "paperwork", "triumph"]
+  },
+  {
+    "id": "vad_007",
+    "prompt": "Word 1: freedom | Word 2: prison | Word 3: elevator | Word 4: ambush",
+    "options": ["freedom", "prison", "elevator", "ambush"]
+  },
+  {
+    "id": "vad_008",
+    "prompt": "Word 1: champion | Word 2: beggar | Word 3: pillow | Word 4: alarm",
+    "options": ["champion", "beggar", "pillow", "alarm"]
+  },
+  {
+    "id": "vad_009",
+    "prompt": "Word 1: celebration | Word 2: cemetery | Word 3: spreadsheet | Word 4: stampede",
+    "options": ["celebration", "cemetery", "spreadsheet", "stampede"]
+  },
+  {
+    "id": "vad_010",
+    "prompt": "Word 1: sovereign | Word 2: prisoner | Word 3: garden | Word 4: siren",
+    "options": ["sovereign", "prisoner", "garden", "siren"]
+  }
+]

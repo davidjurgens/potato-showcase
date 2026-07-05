@@ -1,0 +1,99 @@
+# MasakhaNEWS - News Topic Classification for African Languages
+# Based on Adelani et al., IJCNLP-AACL 2023
+# Paper: https://aclanthology.org/2023.ijcnlp-main.10/
+# Dataset: https://github.com/masakhane-io/masakhane-news
+#
+# MasakhaNEWS is the largest news topic classification benchmark for African
+# languages, covering 16 languages. Masakhane community volunteers labelled
+# news articles into eight topics. Each article receives exactly one label.
+#
+# Topic Labels:
+# - Business: economy, markets, trade, companies, finance
+# - Entertainment: music, film, celebrities, arts, culture, lifestyle
+# - Health: medicine, disease, public health, wellbeing
+# - Politics: government, elections, policy, diplomacy, governance
+# - Religion: faith, worship, religious events and institutions
+# - Sports: matches, athletes, tournaments, teams
+# - Technology: science, computing, internet, innovation
+# - Uncategorized: does not clearly fit any category above
+#
+# Annotation Guidelines:
+# 1. Read the headline and article snippet in the source language (an English
+#    gloss is provided for reference in this showcase only).
+# 2. Choose the SINGLE topic that best describes the article's main subject.
+# 3. Use "Uncategorized" only when no other topic clearly applies.
+
+annotation_task_name: "MasakhaNEWS - African News Topic Classification"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: news_topic
+    description: "What is the main topic of this news article?"
+    labels:
+      - "Business"
+      - "Entertainment"
+      - "Health"
+      - "Politics"
+      - "Religion"
+      - "Sports"
+      - "Technology"
+      - "Uncategorized"
+    keyboard_shortcuts:
+      "Business": "1"
+      "Entertainment": "2"
+      "Health": "3"
+      "Politics": "4"
+      "Religion": "5"
+      "Sports": "6"
+      "Technology": "7"
+      "Uncategorized": "8"
+    tooltips:
+      "Business": "Economy, markets, trade, companies, finance"
+      "Entertainment": "Music, film, celebrities, arts, culture, lifestyle"
+      "Health": "Medicine, disease, public health, wellbeing"
+      "Politics": "Government, elections, policy, diplomacy, governance"
+      "Religion": "Faith, worship, religious events and institutions"
+      "Sports": "Matches, athletes, tournaments, teams"
+      "Technology": "Science, computing, internet, innovation"
+      "Uncategorized": "Does not clearly fit any of the other topics"
+
+annotation_instructions: |
+  You will see a news headline and a short snippet written in an African
+  language, with its language identifier and (for this showcase only) an
+  English gloss. Choose the single topic that best describes what the article
+  is mainly about. Pick "Uncategorized" only if no other topic clearly fits.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">News article:</strong>
+      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

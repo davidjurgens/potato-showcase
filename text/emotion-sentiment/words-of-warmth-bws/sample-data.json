@@ -1,0 +1,52 @@
+[
+  {
+    "id": "wow_001",
+    "prompt": "Word 1: friendly | Word 2: ruthless | Word 3: brilliant | Word 4: clumsy",
+    "options": ["friendly", "ruthless", "brilliant", "clumsy"]
+  },
+  {
+    "id": "wow_002",
+    "prompt": "Word 1: generous | Word 2: cruel | Word 3: skilled | Word 4: incompetent",
+    "options": ["generous", "cruel", "skilled", "incompetent"]
+  },
+  {
+    "id": "wow_003",
+    "prompt": "Word 1: honest | Word 2: deceitful | Word 3: capable | Word 4: foolish",
+    "options": ["honest", "deceitful", "capable", "foolish"]
+  },
+  {
+    "id": "wow_004",
+    "prompt": "Word 1: warmhearted | Word 2: cold | Word 3: efficient | Word 4: sloppy",
+    "options": ["warmhearted", "cold", "efficient", "sloppy"]
+  },
+  {
+    "id": "wow_005",
+    "prompt": "Word 1: trustworthy | Word 2: manipulative | Word 3: talented | Word 4: bumbling",
+    "options": ["trustworthy", "manipulative", "talented", "bumbling"]
+  },
+  {
+    "id": "wow_006",
+    "prompt": "Word 1: sociable | Word 2: hostile | Word 3: resourceful | Word 4: hapless",
+    "options": ["sociable", "hostile", "resourceful", "hapless"]
+  },
+  {
+    "id": "wow_007",
+    "prompt": "Word 1: kind | Word 2: selfish | Word 3: accomplished | Word 4: inept",
+    "options": ["kind", "selfish", "accomplished", "inept"]
+  },
+  {
+    "id": "wow_008",
+    "prompt": "Word 1: loyal | Word 2: treacherous | Word 3: expert | Word 4: incapable",
+    "options": ["loyal", "treacherous", "expert", "incapable"]
+  },
+  {
+    "id": "wow_009",
+    "prompt": "Word 1: welcoming | Word 2: aloof | Word 3: masterful | Word 4: helpless",
+    "options": ["welcoming", "aloof", "masterful", "helpless"]
+  },
+  {
+    "id": "wow_010",
+    "prompt": "Word 1: good-natured (MWE) | Word 2: two-faced (MWE) | Word 3: quick-witted (MWE) | Word 4: all-thumbs (MWE)",
+    "options": ["good-natured", "two-faced", "quick-witted", "all-thumbs"]
+  }
+]

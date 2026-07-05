@@ -1,0 +1,45 @@
+{
+  "title": "AfriHate - Hate and Abusive Language for African Languages",
+  "description": "Multilingual content-moderation annotation following the AfriHate scheme (Muhammad et al., NAACL 2025), a collection of hate speech and abusive language datasets for 15 African languages including Amharic, Hausa, Igbo, Yoruba, Swahili, Somali and isiZulu. Native speakers familiar with the regional culture assign each tweet a three-way label - hate, abusive, or neutral - and, when the tweet is hateful, mark the targeted attribute (e.g. ethnicity, religion, politics, gender). Sample items are mild, constructed illustrations that avoid real slurs or targeting of real groups; an English gloss is provided for reference only.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Muhammad et al. (Masakhane / AfriHate)",
+    "email": "",
+    "affiliation": "Masakhane NLP"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Content Moderation",
+    "Social Media",
+    "Multilingual NLP"
+  ],
+  "useCase": [
+    "Hate Speech Detection",
+    "Abusive Language Detection",
+    "Content Moderation",
+    "African Language NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "hate-speech",
+    "abusive-language",
+    "content-moderation",
+    "african-languages",
+    "multilingual",
+    "low-resource",
+    "masakhane",
+    "afrihate",
+    "naacl2025"
+  ],
+  "featured": false,
+  "paperReference": "Muhammad et al., NAACL 2025",
+  "paperUrl": "https://aclanthology.org/2025.naacl-long.92/",
+  "datasetUrl": "https://github.com/AfriHate/AfriHate",
+  "citation": "@inproceedings{muhammad-etal-2025-afrihate,\n    title = \"{A}fri{H}ate: A Multilingual Collection of Hate Speech and Abusive Language Datasets for {A}frican Languages\",\n    author = \"Muhammad, Shamsuddeen Hassan  and Abdulmumin, Idris  and Ayele, Abinew Ali  and Adelani, David Ifeoluwa  and Yimam, Seid Muhie  and others\",\n    booktitle = \"Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)\",\n    month = apr,\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.naacl-long.92\"\n}"
+}

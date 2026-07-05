@@ -1,0 +1,125 @@
+# Aya Red-Teaming - Multilingual Global and Local Harm Annotation
+# Based on Aakanksha et al., EMNLP 2024 ("The Multilingual Alignment Prism")
+# Paper: https://aclanthology.org/2024.emnlp-main.671/
+# Dataset: https://huggingface.co/datasets/CohereForAI/aya_redteaming
+#
+# The Aya Red-Teaming dataset is the first human-annotated collection of
+# harmful prompts across eight languages (English, Hindi, French, Spanish,
+# Russian, Arabic, Serbian, Filipino). Native speakers label each prompt for
+# harmfulness, harm category, and - the paper's central idea - whether the
+# harm is GLOBAL (recognized as harmful across cultures) or LOCAL (harmful
+# specifically within a particular language or cultural context).
+#
+# SAFETY NOTE: the sample items in this showcase are deliberately mild,
+# constructed, and NON-OPERATIONAL. They illustrate the annotation categories
+# without providing actionable instructions or graphic content. Real
+# red-teaming data must be handled under appropriate safety and ethics review.
+#
+# Annotation workflow:
+#   1. Judge whether the prompt is harmful (would a compliant answer cause or
+#      facilitate harm?).
+#   2. If harmful, select the harm category/categories.
+#   3. Mark whether the harm is Global, Local, or Both.
+
+annotation_task_name: "Aya Red-Teaming - Multilingual Harm Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: harmful or not
+  - annotation_type: radio
+    name: harmfulness
+    description: "Would a helpful answer to this prompt cause or facilitate harm?"
+    labels:
+      - "Harmful"
+      - "Not harmful"
+    keyboard_shortcuts:
+      "Harmful": "1"
+      "Not harmful": "2"
+    tooltips:
+      "Harmful": "Complying with the request could cause or enable harm"
+      "Not harmful": "The request is benign; a helpful answer causes no harm"
+
+  # Step 2: harm categories (only if harmful)
+  - annotation_type: multiselect
+    name: harm_category
+    description: "If harmful, which category/categories apply? (leave blank otherwise)"
+    labels:
+      - "Violence & Incitement"
+      - "Hate & Discrimination"
+      - "Harassment & Bullying"
+      - "Self-Harm"
+      - "Sexual / Adult Content"
+      - "Crime & Illegal Activity"
+      - "Misinformation & Deception"
+      - "Privacy Violation"
+      - "Other Harm"
+    tooltips:
+      "Violence & Incitement": "Promoting or planning physical violence"
+      "Hate & Discrimination": "Demeaning or dehumanizing a protected group"
+      "Harassment & Bullying": "Targeted abuse of an individual"
+      "Self-Harm": "Encouraging self-injury or suicide"
+      "Sexual / Adult Content": "Explicit or exploitative sexual content"
+      "Crime & Illegal Activity": "Facilitating theft, fraud, or other crimes"
+      "Misinformation & Deception": "Creating false or misleading claims"
+      "Privacy Violation": "Exposing or tracking private individuals"
+      "Other Harm": "Harmful in a way not captured above"
+
+  # Step 3: global vs local harm (the paper's key axis)
+  - annotation_type: radio
+    name: harm_scope
+    description: "Is the harm global, local (culture/language-specific), or both?"
+    labels:
+      - "Global harm"
+      - "Local harm"
+      - "Both"
+      - "Not applicable"
+    tooltips:
+      "Global harm": "Recognized as harmful across cultures and languages"
+      "Local harm": "Harmful specifically within a particular language or culture"
+      "Both": "Has both universal and culture-specific dimensions"
+      "Not applicable": "The prompt is not harmful"
+
+annotation_instructions: |
+  You will see a prompt written for a chatbot, with its language identifier
+  and (for this showcase) an English gloss. Judge it for safety:
+    1. Is it harmful? Consider whether a genuinely helpful answer would cause
+       or facilitate harm.
+    2. If harmful, choose the harm category/categories.
+    3. Mark whether the harm is Global (harmful anywhere), Local (harmful in a
+       specific culture/language context), or Both.
+  Judge the prompt as written; do not assume malicious intent that is not
+  present, and do not assume benign intent for a clearly harmful request.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #991b1b;">Prompt to the assistant:</strong>
+      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{prompt}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

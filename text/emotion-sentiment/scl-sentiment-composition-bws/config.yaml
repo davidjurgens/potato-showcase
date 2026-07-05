@@ -1,0 +1,72 @@
+# Sentiment Composition of Phrases (SCL) via Best-Worst Scaling
+# Based on the NRC Sentiment Composition Lexicons:
+#   - Kiritchenko & Mohammad (NAACL 2016), "Sentiment Composition of Words
+#     with Opposing Polarities" (SCL-OPP)
+#   - Kiritchenko & Mohammad (WASSA 2016), "The Effect of Negators, Modals,
+#     and Degree Adverbs on Sentiment Composition" (SCL-NMA)
+#   - Arabic Twitter terms from SemEval-2016 Task 7 (Kiritchenko, Mohammad,
+#     Salameh).
+#
+# Goal: measure how sentiment COMPOSES - how a negator ("not"), a modal
+# ("might"), or a degree adverb ("very", "hardly") changes the sentiment of
+# a word or phrase. Studying single words and their modified forms in the
+# same annotation shows, for example, that "not good" is less positive than
+# "good" but usually not as negative as "bad".
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Each item is a tuple of FOUR phrases (words and/or modified phrases).
+#   - The annotator picks the MOST POSITIVE phrase and the MOST NEGATIVE
+#     phrase in the tuple.
+#   - Every phrase appears in several 4-tuples; a real-valued sentiment
+#     score in [-1, +1] is later computed as (proportion chosen most
+#     positive) - (proportion chosen most negative).
+#
+# Multilingual note: sample data includes English tuples and an Arabic
+# Twitter tuple. Judge sentiment within the language of the tuple.
+#
+# Annotation guidelines:
+#   1. Judge the phrase as a whole, accounting for negators/modifiers.
+#   2. "Most positive" and "most negative" must be two DIFFERENT phrases.
+#   3. If all four seem neutral, still pick the relatively most positive and
+#      most negative.
+#   4. Use Skip only if you cannot read the language of the tuple.
+
+annotation_task_name: "Sentiment Composition (BWS)"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  - annotation_type: radio
+    name: most_positive
+    description: "Which phrase is the MOST POSITIVE?"
+    labels:
+      - "Phrase 1"
+      - "Phrase 2"
+      - "Phrase 3"
+      - "Phrase 4"
+
+  - annotation_type: radio
+    name: most_negative
+    description: "Which phrase is the MOST NEGATIVE?"
+    labels:
+      - "Phrase 1"
+      - "Phrase 2"
+      - "Phrase 3"
+      - "Phrase 4"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

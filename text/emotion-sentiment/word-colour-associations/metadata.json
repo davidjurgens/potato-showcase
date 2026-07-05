@@ -1,0 +1,44 @@
+{
+  "title": "Word-Colour Associations: Crowdsourcing a Colour Lexicon",
+  "description": "Annotate the colour that a word evokes. For each word, annotators first answer a word-choice question (pick the phrase closest in meaning) that disambiguates the intended word sense and serves as a quality check, then select the basic colour most associated with the word and how strong that association is. Even abstract concepts and emotions (danger, envy, purity) carry strong, consistent colour associations. This is the annotation design behind Mohammad's Word-Colour Association Lexicon (ACL 2011 CMCL workshop), a design that also underlies his colour-emotion analyses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saif M. Mohammad",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Psycholinguistics",
+    "Affective Computing",
+    "Lexicon Building"
+  ],
+  "useCase": [
+    "Word-Colour Association",
+    "Information Visualization",
+    "Lexicon Building",
+    "Sense Disambiguation"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "word-colour",
+    "word-color",
+    "colour-associations",
+    "basic-colour-terms",
+    "sense-disambiguation",
+    "crowdsourcing",
+    "word-level",
+    "mohammad",
+    "acl2011"
+  ],
+  "featured": false,
+  "paperReference": "Mohammad, ACL 2011 (CMCL Workshop)",
+  "paperUrl": "https://aclanthology.org/W11-0611/",
+  "datasetUrl": "https://saifmohammad.com/WebPages/lexicons.html",
+  "citation": "@inproceedings{mohammad-2011-colourful,\n    title = \"Colourful Language: Measuring Word-Colour Associations\",\n    author = \"Mohammad, Saif\",\n    booktitle = \"Proceedings of the 2nd Workshop on Cognitive Modeling and Computational Linguistics\",\n    month = jun,\n    year = \"2011\",\n    address = \"Portland, Oregon, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"97--106\",\n    url = \"https://aclanthology.org/W11-0611\"\n}"
+}

@@ -1,0 +1,63 @@
+# WorryWords: Word-Anxiety Association via Best-Worst Scaling
+# Based on Mohammad (EMNLP 2024), "WorryWords: Norms of Anxiety Association
+# for over 44k English Words."
+#
+# WorryWords places words on a single bipolar dimension:
+#   high anxiety (anxiety-inducing) <---> neutral <---> calmness (calming)
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Each item is a tuple of FOUR words.
+#   - The annotator picks the word that MOST induces anxiety and the word
+#     that is MOST calming (least anxiety-inducing).
+#   - Every word appears in several 4-tuples. A real-valued anxiety score is
+#     later computed as (proportion chosen most anxiety-inducing) -
+#     (proportion chosen most calming), giving fine-grained, reliable norms.
+#
+# Annotation guidelines:
+#   1. Judge the word's typical association with anxiety, out of context.
+#   2. "Most anxiety-inducing" = the word that most evokes worry, dread, or
+#      unease. "Most calming" = the word that most evokes calm or safety.
+#   3. The two picks must be different words.
+#   4. Many words are emotionally neutral - within a tuple still choose the
+#      relatively most anxiety-inducing and most calming.
+#   5. Use Skip for unfamiliar words rather than guessing.
+
+annotation_task_name: "WorryWords Anxiety Association (BWS)"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  - annotation_type: radio
+    name: most_anxiety
+    description: "Which word MOST induces anxiety (worry, dread, unease)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+  - annotation_type: radio
+    name: most_calming
+    description: "Which word is MOST calming (least anxiety-inducing)?"
+    labels:
+      - "Word 1"
+      - "Word 2"
+      - "Word 3"
+      - "Word 4"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

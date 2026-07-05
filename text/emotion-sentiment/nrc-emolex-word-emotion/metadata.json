@@ -1,0 +1,41 @@
+{
+  "title": "NRC Emotion Lexicon (EmoLex): Word-Emotion Association",
+  "description": "Crowdsourced annotation of a word's associations with eight basic emotions (anger, anticipation, disgust, fear, joy, sadness, surprise, trust) and two polarities (positive, negative). Each word first goes through a word-choice question that both disambiguates the intended sense and screens inattentive workers, then annotators rate how strongly the word is associated with each emotion. This is the annotation design behind the NRC Word-Emotion Association Lexicon (EmoLex; Mohammad & Turney, 2013), available in 100+ languages.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Saif M. Mohammad, Peter D. Turney",
+    "email": "",
+    "affiliation": "National Research Council Canada"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Affective Computing",
+    "Lexicon Building"
+  ],
+  "useCase": [
+    "Emotion Detection",
+    "Lexicon Building",
+    "Word-Emotion Association"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "emolex",
+    "nrc-emotion-lexicon",
+    "word-emotion-association",
+    "plutchik",
+    "crowdsourcing",
+    "word-sense",
+    "multilingual",
+    "mohammad"
+  ],
+  "featured": true,
+  "paperReference": "Mohammad & Turney, Computational Intelligence 2013",
+  "paperUrl": "https://arxiv.org/abs/1308.6297",
+  "datasetUrl": "https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm",
+  "citation": "@article{mohammad2013crowdsourcing,\n    title = {Crowdsourcing a Word-Emotion Association Lexicon},\n    author = {Mohammad, Saif M. and Turney, Peter D.},\n    journal = {Computational Intelligence},\n    volume = {29},\n    number = {3},\n    pages = {436--465},\n    year = {2013},\n    publisher = {Wiley Online Library}\n}"
+}

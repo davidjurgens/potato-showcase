@@ -1,0 +1,62 @@
+[
+  {
+    "id": "emolex_001",
+    "word": "startle",
+    "prompt": "TARGET WORD: startle\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: surprise\nCandidate 2: schedule\nCandidate 3: polish\nCandidate 4: measure",
+    "choices": ["surprise", "schedule", "polish", "measure"]
+  },
+  {
+    "id": "emolex_002",
+    "word": "betrayal",
+    "prompt": "TARGET WORD: betrayal\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: harvest\nCandidate 2: treachery\nCandidate 3: ceiling\nCandidate 4: applause",
+    "choices": ["harvest", "treachery", "ceiling", "applause"]
+  },
+  {
+    "id": "emolex_003",
+    "word": "sunshine",
+    "prompt": "TARGET WORD: sunshine\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: sunlight\nCandidate 2: invoice\nCandidate 3: rubble\nCandidate 4: quarrel",
+    "choices": ["sunlight", "invoice", "rubble", "quarrel"]
+  },
+  {
+    "id": "emolex_004",
+    "word": "vomit",
+    "prompt": "TARGET WORD: vomit\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: parade\nCandidate 2: lantern\nCandidate 3: puke\nCandidate 4: melody",
+    "choices": ["parade", "lantern", "puke", "melody"]
+  },
+  {
+    "id": "emolex_005",
+    "word": "wedding",
+    "prompt": "TARGET WORD: wedding\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: audit\nCandidate 2: marriage\nCandidate 3: gravel\nCandidate 4: engine",
+    "choices": ["audit", "marriage", "gravel", "engine"]
+  },
+  {
+    "id": "emolex_006",
+    "word": "spider",
+    "prompt": "TARGET WORD: spider\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: arachnid\nCandidate 2: bakery\nCandidate 3: anthem\nCandidate 4: ledger",
+    "choices": ["arachnid", "bakery", "anthem", "ledger"]
+  },
+  {
+    "id": "emolex_007",
+    "word": "reliable",
+    "prompt": "TARGET WORD: reliable\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: dependable\nCandidate 2: circular\nCandidate 3: fragrant\nCandidate 4: hollow",
+    "choices": ["dependable", "circular", "fragrant", "hollow"]
+  },
+  {
+    "id": "emolex_008",
+    "word": "table",
+    "prompt": "TARGET WORD: table (a neutral word - most emotions should be 'Not at all')\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: desk\nCandidate 2: thunder\nCandidate 3: victory\nCandidate 4: plague",
+    "choices": ["desk", "thunder", "victory", "plague"]
+  },
+  {
+    "id": "emolex_009",
+    "word": "funeral",
+    "prompt": "TARGET WORD: funeral\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: festival\nCandidate 2: burial\nCandidate 3: bargain\nCandidate 4: sunrise",
+    "choices": ["festival", "burial", "bargain", "sunrise"]
+  },
+  {
+    "id": "emolex_010_es",
+    "word": "regalo (Spanish: 'gift')",
+    "prompt": "TARGET WORD: regalo  [Spanish - EmoLex is distributed in 100+ languages]\n\nWord-choice question - which candidate is closest in meaning?\nCandidate 1: obsequio (gift)\nCandidate 2: castigo (punishment)\nCandidate 3: retraso (delay)\nCandidate 4: factura (invoice)",
+    "choices": ["obsequio (gift)", "castigo (punishment)", "retraso (delay)", "factura (invoice)"]
+  }
+]

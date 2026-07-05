@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ai_anger_001",
+    "prompt": "TARGET EMOTION: ANGER\n\nWord 1: annoyed | Word 2: furious | Word 3: irritated | Word 4: enraged",
+    "options": ["annoyed", "furious", "irritated", "enraged"]
+  },
+  {
+    "id": "ai_anger_002",
+    "prompt": "TARGET EMOTION: ANGER\n\nWord 1: displeased | Word 2: livid | Word 3: cross | Word 4: seething",
+    "options": ["displeased", "livid", "cross", "seething"]
+  },
+  {
+    "id": "ai_fear_001",
+    "prompt": "TARGET EMOTION: FEAR\n\nWord 1: nervous | Word 2: terrified | Word 3: uneasy | Word 4: panicked",
+    "options": ["nervous", "terrified", "uneasy", "panicked"]
+  },
+  {
+    "id": "ai_fear_002",
+    "prompt": "TARGET EMOTION: FEAR\n\nWord 1: wary | Word 2: horrified | Word 3: apprehensive | Word 4: petrified",
+    "options": ["wary", "horrified", "apprehensive", "petrified"]
+  },
+  {
+    "id": "ai_joy_001",
+    "prompt": "TARGET EMOTION: JOY\n\nWord 1: content | Word 2: ecstatic | Word 3: pleased | Word 4: thrilled",
+    "options": ["content", "ecstatic", "pleased", "thrilled"]
+  },
+  {
+    "id": "ai_joy_002",
+    "prompt": "TARGET EMOTION: JOY\n\nWord 1: glad | Word 2: elated | Word 3: cheerful | Word 4: overjoyed",
+    "options": ["glad", "elated", "cheerful", "overjoyed"]
+  },
+  {
+    "id": "ai_sadness_001",
+    "prompt": "TARGET EMOTION: SADNESS\n\nWord 1: glum | Word 2: devastated | Word 3: disappointed | Word 4: heartbroken",
+    "options": ["glum", "devastated", "disappointed", "heartbroken"]
+  },
+  {
+    "id": "ai_sadness_002",
+    "prompt": "TARGET EMOTION: SADNESS\n\nWord 1: down | Word 2: grief-stricken | Word 3: dejected | Word 4: inconsolable",
+    "options": ["down", "grief-stricken", "dejected", "inconsolable"]
+  },
+  {
+    "id": "ai_anger_003",
+    "prompt": "TARGET EMOTION: ANGER\n\nWord 1: bothered | Word 2: outraged | Word 3: aggravated | Word 4: incensed",
+    "options": ["bothered", "outraged", "aggravated", "incensed"]
+  },
+  {
+    "id": "ai_joy_003",
+    "prompt": "TARGET EMOTION: JOY\n\nWord 1: satisfied | Word 2: jubilant | Word 3: happy | Word 4: euphoric",
+    "options": ["satisfied", "jubilant", "happy", "euphoric"]
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "title": "NusaX - Sentiment Analysis for Indonesian Local Languages",
+  "description": "Three-way sentiment annotation for low-resource Indonesian languages, following the NusaX scheme (Winata et al., EACL 2023, Outstanding Paper): the first high-quality human-annotated parallel sentiment corpus for 10 Indonesian local languages - Acehnese, Balinese, Banjarese, Buginese, Javanese, Madurese, Minangkabau, Ngaju, Sundanese and Toba Batak - plus Indonesian and English. Built by the IndoNLP community, it mirrors AfriSenti and IndicNLP-SA for a different, underrepresented language region. Annotators label each text as positive, negative, or neutral; sample items include an English gloss for reference only.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Winata et al. (IndoNLP)",
+    "email": "",
+    "affiliation": "IndoNLP"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Sentiment Analysis",
+    "Multilingual NLP",
+    "Low-Resource Languages"
+  ],
+  "useCase": [
+    "Sentiment Analysis",
+    "Multilingual NLP",
+    "Low-Resource Languages",
+    "Indonesian Local Languages"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "sentiment",
+    "sentiment-analysis",
+    "indonesian-languages",
+    "javanese",
+    "sundanese",
+    "multilingual",
+    "low-resource",
+    "nusax",
+    "indonlp",
+    "eacl2023"
+  ],
+  "featured": false,
+  "paperReference": "Winata et al., EACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.eacl-main.57/",
+  "datasetUrl": "https://github.com/IndoNLP/nusax",
+  "citation": "@inproceedings{winata-etal-2023-nusax,\n    title = \"{N}usa{X}: Multilingual Parallel Sentiment Dataset for 10 {I}ndonesian Local Languages\",\n    author = \"Winata, Genta Indra  and Aji, Alham Fikri  and Cahyawijaya, Samuel  and Mahendra, Rahmad  and Koto, Fajri  and others\",\n    booktitle = \"Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics\",\n    month = may,\n    year = \"2023\",\n    address = \"Dubrovnik, Croatia\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"815--834\",\n    url = \"https://aclanthology.org/2023.eacl-main.57\"\n}"
+}

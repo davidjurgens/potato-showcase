@@ -1,0 +1,77 @@
+# Tweet Emotion Intensity via Best-Worst Scaling (multilingual)
+# Based on Mohammad & Bravo-Marquez, "WASSA-2017 Shared Task on Emotion
+# Intensity" (EmoInt), extended to Arabic and Spanish in SemEval-2018 Task 1
+# ("Affect in Tweets", Mohammad, Bravo-Marquez, Salameh & Kiritchenko).
+#
+# Best-Worst Scaling (BWS / MaxDiff) annotation design:
+#   - Each item is a tuple of FOUR tweets that all express the SAME emotion.
+#   - The target emotion (anger, fear, joy, or sadness) is stated per item.
+#   - The annotator selects the tweet with the HIGHEST degree of that emotion
+#     and the tweet with the LOWEST degree of it.
+#   - Every tweet appears in several different 4-tuples. A real-valued
+#     intensity score in [0, 1] is later computed per tweet as
+#     (proportion chosen most) - (proportion chosen least). BWS produces
+#     more reliable intensity scores than direct 0-100 rating scales.
+#
+# Multilingual note: the same design was applied to English, Arabic, and
+# Spanish tweets. Judge intensity in the language of the tuple; do not
+# compare across languages within a single item (each tuple is one language).
+#
+# Annotation guidelines:
+#   1. Read all four tweets before deciding.
+#   2. Judge the intensity of the STATED emotion only, not overall sentiment.
+#   3. "Most" = the author most strongly feels/expresses the emotion;
+#      "Least" = the emotion is present but weakest of the four.
+#   4. Consider emotion words, intensifiers, emphasis, emoji, and hashtags.
+#   5. Use Skip if you cannot read the language of the tuple.
+
+annotation_task_name: "Tweet Emotion Intensity (BWS)"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "options"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  - annotation_type: radio
+    name: most_intense
+    description: "Which tweet expresses the MOST of the stated emotion?"
+    labels:
+      - "Tweet 1"
+      - "Tweet 2"
+      - "Tweet 3"
+      - "Tweet 4"
+
+  - annotation_type: radio
+    name: least_intense
+    description: "Which tweet expresses the LEAST of the stated emotion?"
+    labels:
+      - "Tweet 1"
+      - "Tweet 2"
+      - "Tweet 3"
+      - "Tweet 4"
+
+  - annotation_type: radio
+    name: confidence
+    description: "How confident are you in these two choices?"
+    labels:
+      - name: "High"
+        tooltip: "Clear difference in intensity between the tweets"
+      - name: "Medium"
+        tooltip: "Some judgment required"
+      - name: "Low"
+        tooltip: "Tweets are very close in intensity"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,46 @@
+{
+  "title": "MasakhaPOS - Part-of-Speech Tagging for African Languages",
+  "description": "Token-level part-of-speech tagging for typologically diverse African languages, following the MasakhaPOS scheme (Dione et al., ACL 2023), which provides Universal Dependencies (UD) POS annotations for 20 African languages such as Bambara, Ewe, Hausa, Igbo, Chichewa, Yoruba, Swahili and isiZulu. Annotators highlight each token and assign one of the 17 universal POS tags. Illustrative sample items include an English gloss for reference only; real annotation is done by native speakers following the UD guidelines.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dione et al. (Masakhane)",
+    "email": "",
+    "affiliation": "Masakhane NLP"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Syntax",
+    "Multilingual NLP",
+    "Low-Resource Languages"
+  ],
+  "useCase": [
+    "Part-of-Speech Tagging",
+    "Universal Dependencies",
+    "African Language NLP",
+    "Low-Resource Languages"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "pos-tagging",
+    "part-of-speech",
+    "universal-dependencies",
+    "ud",
+    "span",
+    "african-languages",
+    "multilingual",
+    "low-resource",
+    "masakhane",
+    "masakhapos",
+    "acl2023"
+  ],
+  "featured": false,
+  "paperReference": "Dione et al., ACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.acl-long.609/",
+  "datasetUrl": "https://github.com/masakhane-io/masakhane-pos",
+  "citation": "@inproceedings{dione-etal-2023-masakhapos,\n    title = \"{M}asakha{POS}: Part-of-Speech Tagging for Typologically Diverse {A}frican languages\",\n    author = \"Dione, Cheikh M. Bamba  and Adelani, David Ifeoluwa  and Nabende, Peter  and Alabi, Jesujoba  and Sindane, Thapelo  and others\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"10883--10900\",\n    url = \"https://aclanthology.org/2023.acl-long.609\"\n}"
+}

@@ -1,0 +1,113 @@
+# MasakhaPOS - Part-of-Speech Tagging for African Languages
+# Based on Dione et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.609/
+# Dataset: https://github.com/masakhane-io/masakhane-pos
+#
+# MasakhaPOS provides Universal Dependencies (UD) part-of-speech annotations
+# for 20 typologically diverse African languages. Annotators tag every token
+# with one of the 17 universal POS tags, following the UD guidelines.
+#
+# The 17 Universal POS tags:
+#   ADJ  adjective        ADP  adposition       ADV  adverb
+#   AUX  auxiliary        CCONJ coordinating conj DET  determiner
+#   INTJ interjection     NOUN noun             NUM  numeral
+#   PART particle         PRON pronoun          PROPN proper noun
+#   PUNCT punctuation     SCONJ subordinating conj SYM symbol
+#   VERB verb             X    other
+#
+# Annotation Guidelines:
+# 1. Read the sentence in the source language (an English gloss is provided
+#    for reference in this showcase only).
+# 2. Highlight EACH token in turn and assign exactly one universal POS tag.
+# 3. Tag words by their function in THIS sentence, not their dictionary
+#    default (e.g. the same form may be a NOUN or a VERB in context).
+# 4. Multiword tokens follow the UD tokenization for the language.
+
+annotation_task_name: "MasakhaPOS - African POS Tagging"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: pos_tags
+    description: "Highlight each token and assign its Universal POS tag"
+    labels:
+      - "ADJ"
+      - "ADP"
+      - "ADV"
+      - "AUX"
+      - "CCONJ"
+      - "DET"
+      - "INTJ"
+      - "NOUN"
+      - "NUM"
+      - "PART"
+      - "PRON"
+      - "PROPN"
+      - "PUNCT"
+      - "SCONJ"
+      - "SYM"
+      - "VERB"
+      - "X"
+    label_colors:
+      "ADJ": "#3b82f6"
+      "ADP": "#64748b"
+      "ADV": "#0ea5e9"
+      "AUX": "#a855f7"
+      "CCONJ": "#f97316"
+      "DET": "#14b8a6"
+      "INTJ": "#eab308"
+      "NOUN": "#22c55e"
+      "NUM": "#ef4444"
+      "PART": "#94a3b8"
+      "PRON": "#ec4899"
+      "PROPN": "#16a34a"
+      "PUNCT": "#9ca3af"
+      "SCONJ": "#fb923c"
+      "SYM": "#6b7280"
+      "VERB": "#dc2626"
+      "X": "#78716c"
+
+annotation_instructions: |
+  You will see a sentence written in an African language, with its language
+  identifier and (for this showcase only) an English gloss.
+
+  Highlight each token in the sentence and label it with one of the 17
+  Universal Dependencies part-of-speech tags. Tag each word by the role it
+  plays in this particular sentence, not by its most common usage. Content
+  words are NOUN, PROPN, VERB, ADJ, ADV, NUM, INTJ; function words are ADP,
+  AUX, CCONJ, SCONJ, DET, PRON, PART; and there are PUNCT, SYM, and X for
+  punctuation, symbols, and anything that fits none of the above.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+      <strong style="color: #065f46;">Language:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #0369a1;">Sentence:</strong>
+      <p style="font-size: 18px; line-height: 1.9; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
+      English gloss (reference only): {{gloss}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

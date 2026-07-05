@@ -1,0 +1,42 @@
+[
+  {
+    "id": "scl_001",
+    "prompt": "Which phrase is most positive vs. most negative?\n\nPhrase 1: good\nPhrase 2: not good\nPhrase 3: very good\nPhrase 4: bad",
+    "options": ["good", "not good", "very good", "bad"]
+  },
+  {
+    "id": "scl_002",
+    "prompt": "Which phrase is most positive vs. most negative?\n\nPhrase 1: happy\nPhrase 2: hardly happy\nPhrase 3: extremely happy\nPhrase 4: not happy at all",
+    "options": ["happy", "hardly happy", "extremely happy", "not happy at all"]
+  },
+  {
+    "id": "scl_003",
+    "prompt": "Which phrase is most positive vs. most negative? (opposing-polarity phrases)\n\nPhrase 1: brilliant mistake\nPhrase 2: painful relief\nPhrase 3: happy accident\nPhrase 4: cruel kindness",
+    "options": ["brilliant mistake", "painful relief", "happy accident", "cruel kindness"]
+  },
+  {
+    "id": "scl_004",
+    "prompt": "Which phrase is most positive vs. most negative?\n\nPhrase 1: might succeed\nPhrase 2: will definitely fail\nPhrase 3: could improve\nPhrase 4: never works",
+    "options": ["might succeed", "will definitely fail", "could improve", "never works"]
+  },
+  {
+    "id": "scl_005",
+    "prompt": "Which phrase is most positive vs. most negative? (degree adverbs)\n\nPhrase 1: slightly disappointing\nPhrase 2: absolutely wonderful\nPhrase 3: fairly decent\nPhrase 4: deeply disappointing",
+    "options": ["slightly disappointing", "absolutely wonderful", "fairly decent", "deeply disappointing"]
+  },
+  {
+    "id": "scl_006",
+    "prompt": "Which phrase is most positive vs. most negative?\n\nPhrase 1: not bad\nPhrase 2: not great\nPhrase 3: really terrible\nPhrase 4: quite lovely",
+    "options": ["not bad", "not great", "really terrible", "quite lovely"]
+  },
+  {
+    "id": "scl_007",
+    "prompt": "Which phrase is most positive vs. most negative?\n\nPhrase 1: a stunning victory\nPhrase 2: a narrow defeat\nPhrase 3: a crushing defeat\nPhrase 4: a modest win",
+    "options": ["a stunning victory", "a narrow defeat", "a crushing defeat", "a modest win"]
+  },
+  {
+    "id": "scl_008_ar",
+    "prompt": "Which phrase is most positive vs. most negative?  [Arabic Twitter terms - SemEval-2016 Task 7]\n\nPhrase 1: جيد جداً (very good)\nPhrase 2: ليس جيداً (not good)\nPhrase 3: سيء للغاية (extremely bad)\nPhrase 4: مقبول (acceptable)",
+    "options": ["جيد جداً (very good)", "ليس جيداً (not good)", "سيء للغاية (extremely bad)", "مقبول (acceptable)"]
+  }
+]

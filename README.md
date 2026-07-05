@@ -6,14 +6,14 @@
 
 [Website](https://www.potatoannotator.com) · [Docs](https://www.potatoannotator.com/docs) · [Quick Start](https://www.potatoannotator.com/docs/getting-started/quick-start) · [Showcase](https://www.potatoannotator.com/showcase) · [Blog](https://www.potatoannotator.com/blog) · [Community](https://www.potatoannotator.com/community)
 
-![Designs](https://img.shields.io/badge/designs-379-ff6b35?style=flat-square)
+![Designs](https://img.shields.io/badge/designs-395-ff6b35?style=flat-square)
 ![Annotation types](https://img.shields.io/badge/annotation_types-22-555?style=flat-square)
 ![SemEval tasks](https://img.shields.io/badge/SemEval_tasks-90-555?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-4c9a2a?style=flat-square)
 
 </div>
 
-These **379** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
+These **395** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover all 22 Potato annotation types, 90 SemEval shared tasks (2013-2025), 21 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
 The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most of these are built from a real dataset or paper, so each one shows how a published annotation scheme actually turns into a working Potato setup.
 
@@ -25,7 +25,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Category | Description | Tasks |
 |----------|-------------|-------|
-| [**text/**](./text/) | Text-based NLP tasks (emotion, NER, IE, QA, parsing, etc.) | 111 |
+| [**text/**](./text/) | Text-based NLP tasks (emotion, NER, IE, QA, parsing, etc.) | 127 |
 | [**image/**](./image/) | Image annotation (classification, VQA, grounding, medical) | 33 |
 | [**video/**](./video/) | Video annotation (action recognition, QA, summarization) | 37 |
 | [**audio/**](./audio/) | Audio annotation (transcription, commands, captioning) | 17 |
@@ -38,16 +38,16 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 ---
 
-## Text Annotation (111 tasks)
+## Text Annotation (127 tasks)
 
 *Guides: [Creating a sentiment task](https://www.potatoannotator.com/blog/sentiment-analysis-tutorial) · [Building an NER task](https://www.potatoannotator.com/blog/building-ner-task) · [Content moderation setup](https://www.potatoannotator.com/blog/content-moderation-annotation) · [Finding hallucinations with span annotation](https://www.potatoannotator.com/blog/finding-hallucinations-with-span-annotation)*
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
-| [Emotion & Sentiment](./text/emotion-sentiment/) | 8 | GoEmotions, SemEval Sentiment, Multirate Sentiment |
-| [Hate Speech & Moderation](./text/hate-speech-moderation/) | 6 | HateXplain, Implicit Hate, Social Bias Frames, Toxic Spans |
-| [Named Entity Recognition](./text/named-entity-recognition/) | 5 | CoNLL-2003, WNUT-2017, Biomedical NER, Complex NER |
-| [Information Extraction](./text/information-extraction/) | 7 | KG-BERT, Event Arguments, Dialogue Relations |
+| [Emotion & Sentiment](./text/emotion-sentiment/) | 15 | GoEmotions, NRC-VAD & Affect Intensity (Best-Worst Scaling), Words of Warmth, WorryWords, Word-Colour |
+| [Hate Speech & Moderation](./text/hate-speech-moderation/) | 7 | HateXplain, Implicit Hate, Social Bias Frames, Toxic Spans, AfriHate |
+| [Named Entity Recognition](./text/named-entity-recognition/) | 6 | CoNLL-2003, WNUT-2017, Biomedical NER, Complex NER, MasakhaNER 2.0 |
+| [Information Extraction](./text/information-extraction/) | 8 | KG-BERT, Event Arguments, Dialogue Relations, MASSIVE (intent + slot filling) |
 | [Argumentation & Stance](./text/argumentation-stance/) | 5 | Argument Quality, Stance Detection, Rumor Stance |
 | [Fact Verification](./text/fact-verification/) | 8 | FActScore, FAVA, Scientific Claims, Propaganda |
 | [Commonsense & Ethics](./text/commonsense-ethics/) | 5 | Social Chemistry, Moral Stories, Commonsense Inference |
@@ -56,7 +56,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 | [Political & Media](./text/political-media/) | 1 | Political Discourse |
 | [Discourse](./text/discourse/) | 3 | PDTB Discourse Trees, DISRPT, Timeline Relations |
 | [Coreference](./text/coreference/) | 4 | OntoNotes, CorefUD, MAVEN-ERE, Legal Coreference |
-| [Cross-lingual](./text/cross-lingual/) | 5 | XNLI, Belebele, FLORES MT Quality, IndicNLP |
+| [Cross-lingual](./text/cross-lingual/) | 7 | XNLI, Belebele, FLORES MT Quality, IndicNLP, MasakhaNEWS, NusaX |
 | [Domain-specific](./text/domain-specific/) | 8 | BioNLP, ChemProt, Clinical NER, Legal, Medical |
 | [Computational Social Science](./text/computational-social-science/) | 7 | OffensEval, Moral Foundations, Politeness, Media Frames |
 | [Relation Extraction](./text/relation-extraction/) | 6 | MultiTACRED, CrossRE, RadGraph, SciER |
@@ -69,7 +69,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 | [Information Retrieval](./text/information-retrieval/) | 2 | MS MARCO, TREC-DL |
 | [Semantic Similarity](./text/semantic-similarity/) | 1 | STS Benchmark |
 | [Word Sense](./text/word-sense/) | 1 | SemEval-2007 WSD |
-| [Parsing](./text/parsing/) | 1 | Universal Dependencies |
+| [Parsing](./text/parsing/) | 3 | Universal Dependencies, MasakhaPOS, Interlinear Glossing |
 | [Education](./text/education/) | 3 | Essay Scoring, MathDial Tutoring, Student Essay Discourse |
 | [Financial](./text/financial/) | 3 | FinBERT, FLARE NER, Financial PhraseBank |
 | [Bias & Toxicity](./text/bias-toxicity/) | — | See subcategories |

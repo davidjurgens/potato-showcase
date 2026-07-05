@@ -1,0 +1,89 @@
+# Word-Colour Associations: Crowdsourcing a Colour Lexicon
+# Based on Mohammad (ACL 2011, CMCL Workshop), "Colourful Language:
+# Measuring Word-Colour Associations."
+#
+# Goal: build a lexicon of the colours that words evoke. Many concepts have
+# strong colour associations (danger->red, growth->green, royalty->purple),
+# and - crucially - even ABSTRACT concepts and emotions carry consistent
+# colour associations. Such a lexicon supports information visualization,
+# text-to-image, product/marketing design, and colour-emotion research.
+#
+# Annotation design (two parts per word):
+#   1) A word-choice QUALITY-CONTROL / SENSE question. The annotator picks
+#      the phrase closest in meaning to the target word. This (a) pins down
+#      the intended word SENSE before the colour judgment, and (b) filters
+#      out inattentive or unqualified annotators - responses that miss this
+#      question are discarded. (This is the same guard used in Mohammad &
+#      Turney's NRC Emotion Lexicon crowdsourcing.)
+#   2) The COLOUR judgment. The annotator picks the single basic colour
+#      most associated with the word (from the 11 Berlin & Kay basic colour
+#      terms, plus "no colour association"), and rates how strong the
+#      association is. Aggregating across annotators yields the word's
+#      dominant colour and association strength.
+#
+# Annotation guidelines:
+#   1. Answer the meaning question first, for the sense it disambiguates.
+#   2. Choose the ONE colour you most associate with the word in that sense.
+#      Go with your first instinct; there is no single "correct" colour.
+#   3. If the word truly evokes no colour, choose "No colour association"
+#      and set strength to "None".
+#   4. Use Skip for unfamiliar words rather than guessing.
+
+annotation_task_name: "Word-Colour Associations"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "choices"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # ---- Part 1: sense / quality-control word-choice question ----
+  - annotation_type: radio
+    name: closest_meaning
+    description: "Which phrase is CLOSEST in meaning to the target word? (sense & attention check)"
+    labels:
+      - "Choice 1"
+      - "Choice 2"
+      - "Choice 3"
+      - "Choice 4"
+
+  # ---- Part 2: the colour judgment ----
+  - annotation_type: radio
+    name: associated_colour
+    description: "Which colour do you MOST associate with this word?"
+    labels:
+      - "Black"
+      - "White"
+      - "Red"
+      - "Green"
+      - "Yellow"
+      - "Blue"
+      - "Brown"
+      - "Pink"
+      - "Orange"
+      - "Purple"
+      - "Grey"
+      - "No colour association"
+
+  - annotation_type: radio
+    name: association_strength
+    description: "How strongly do you associate this word with that colour?"
+    labels:
+      - "Strong"
+      - "Moderate"
+      - "Weak"
+      - "None"
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 4
+allow_skip: true
+skip_reason_required: false

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "msv_001",
+    "language": "English (en)",
+    "utterance": "wake me up at seven a m tomorrow",
+    "gloss": "wake me up at 7 a.m. tomorrow"
+  },
+  {
+    "id": "msv_002",
+    "language": "Spanish (es)",
+    "utterance": "¿qué tiempo hará mañana en madrid?",
+    "gloss": "what will the weather be like tomorrow in Madrid?"
+  },
+  {
+    "id": "msv_003",
+    "language": "German (de)",
+    "utterance": "spiele das nächste lied von den beatles",
+    "gloss": "play the next song by the Beatles"
+  },
+  {
+    "id": "msv_004",
+    "language": "French (fr)",
+    "utterance": "envoie un email à jean pour confirmer la réunion",
+    "gloss": "send an email to Jean to confirm the meeting"
+  },
+  {
+    "id": "msv_005",
+    "language": "Hindi (hi)",
+    "utterance": "मुझे कल शाम छह बजे की मीटिंग याद दिलाओ",
+    "gloss": "remind me about the meeting tomorrow evening at six o'clock"
+  },
+  {
+    "id": "msv_006",
+    "language": "Swahili (swa)",
+    "utterance": "washa taa za sebuleni",
+    "gloss": "turn on the living-room lights"
+  },
+  {
+    "id": "msv_007",
+    "language": "English (en)",
+    "utterance": "add milk and eggs to my shopping list",
+    "gloss": "add milk and eggs to my shopping list"
+  },
+  {
+    "id": "msv_008",
+    "language": "Indonesian (id)",
+    "utterance": "berikan resep untuk membuat nasi goreng",
+    "gloss": "give me a recipe for making fried rice"
+  },
+  {
+    "id": "msv_009",
+    "language": "Spanish (es)",
+    "utterance": "cuéntame las últimas noticias de deportes",
+    "gloss": "tell me the latest sports news"
+  },
+  {
+    "id": "msv_010",
+    "language": "English (en)",
+    "utterance": "tell me a fun fact about the ocean",
+    "gloss": "tell me a fun fact about the ocean"
+  }
+]

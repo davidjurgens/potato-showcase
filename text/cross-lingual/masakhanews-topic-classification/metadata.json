@@ -1,0 +1,44 @@
+{
+  "title": "MasakhaNEWS - News Topic Classification for African Languages",
+  "description": "Single-label news topic classification for African-language news articles, following the MasakhaNEWS scheme (Adelani et al., IJCNLP-AACL 2023), the largest news topic benchmark for African languages, covering 16 languages such as Amharic, Hausa, Yoruba, Swahili, Somali, Lingala and isiXhosa. Masakhane community annotators label each headline/article into one of eight topics: business, entertainment, health, politics, religion, sports, technology, or uncategorized. Illustrative sample items include an English gloss for reference only.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adelani et al. (Masakhane)",
+    "email": "",
+    "affiliation": "Masakhane NLP"
+  },
+  "createdAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Text Classification",
+    "Multilingual NLP",
+    "Low-Resource Languages"
+  ],
+  "useCase": [
+    "News Topic Classification",
+    "Text Categorization",
+    "African Language NLP",
+    "Low-Resource Languages"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "text-classification",
+    "topic-classification",
+    "news",
+    "african-languages",
+    "multilingual",
+    "low-resource",
+    "masakhane",
+    "masakhanews",
+    "aacl2023"
+  ],
+  "featured": false,
+  "paperReference": "Adelani et al., IJCNLP-AACL 2023",
+  "paperUrl": "https://aclanthology.org/2023.ijcnlp-main.10/",
+  "datasetUrl": "https://github.com/masakhane-io/masakhane-news",
+  "citation": "@inproceedings{adelani-etal-2023-masakhanews,\n    title = \"{M}asakha{NEWS}: News Topic Classification for {A}frican languages\",\n    author = \"Adelani, David Ifeoluwa  and Masiak, Marek  and Azime, Israel Abebe  and Alabi, Jesujoba  and Tonja, Atnafu Lambebo  and others\",\n    booktitle = \"Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = nov,\n    year = \"2023\",\n    address = \"Nusa Dua, Bali\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"144--159\",\n    url = \"https://aclanthology.org/2023.ijcnlp-main.10\"\n}"
+}

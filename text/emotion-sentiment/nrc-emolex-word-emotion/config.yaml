@@ -1,0 +1,114 @@
+# NRC Emotion Lexicon (EmoLex): Word-Emotion Association
+# Based on Mohammad & Turney (2013), "Crowdsourcing a Word-Emotion
+# Association Lexicon," Computational Intelligence 29(3).
+#
+# Annotation design (per target word):
+#   1. WORD-CHOICE / SENSE question: the annotator is shown the target word
+#      and four candidate words, and picks the one closest in meaning. This
+#      serves two purposes at once - it gently disambiguates the intended
+#      sense of the target word, and it screens out inattentive annotators
+#      (the "gold" near-synonym is known in advance).
+#   2. POLARITY: how positive and how negative the word is.
+#   3. EIGHT EMOTIONS (Plutchik's basic emotions): for each, how strongly
+#      the word is associated with that emotion.
+#
+# Association strength scale (used for polarity and every emotion):
+#   Not at all  -  Weakly  -  Moderately  -  Strongly
+#
+# This is Mohammad's rating-scale (NON Best-Worst-Scaling) design; his later
+# lexicons (NRC-VAD, Affect Intensity, WorryWords) moved to Best-Worst
+# Scaling for finer, more reliable real-valued scores.
+#
+# Annotation guidelines:
+#   1. Answer the word-choice question first; it fixes the sense you should
+#      judge for the rest of the item.
+#   2. Judge the word's general association with each emotion, not whether
+#      it literally names the emotion.
+#   3. A word can be associated with several emotions at once (e.g., "gift"
+#      -> joy, surprise, trust, positive) or none.
+#   4. "Not at all" is a valid and common answer - most words evoke only a
+#      few emotions.
+
+annotation_task_name: "NRC EmoLex Word-Emotion Association"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "prompt"
+  text_display_key: "prompt"
+  list_display_key: "choices"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # Step 1 - sense disambiguation / attention check
+  - annotation_type: radio
+    name: closest_meaning
+    description: "Which of the four candidate words is CLOSEST in meaning to the target word?"
+    labels:
+      - "Candidate 1"
+      - "Candidate 2"
+      - "Candidate 3"
+      - "Candidate 4"
+
+  # Step 2 - polarity
+  - annotation_type: radio
+    name: positive
+    description: "How POSITIVE (good, favorable) is the target word?"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: negative
+    description: "How NEGATIVE (bad, unfavorable) is the target word?"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  # Step 3 - eight basic emotions
+  - annotation_type: radio
+    name: anger
+    description: "Association with ANGER"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: anticipation
+    description: "Association with ANTICIPATION"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: disgust
+    description: "Association with DISGUST"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: fear
+    description: "Association with FEAR"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: joy
+    description: "Association with JOY"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: sadness
+    description: "Association with SADNESS"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: surprise
+    description: "Association with SURPRISE"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+  - annotation_type: radio
+    name: trust
+    description: "Association with TRUST"
+    labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
+
+allow_all_users: true
+instances_per_annotator: 100
+annotation_per_instance: 5
+allow_skip: true
+skip_reason_required: false

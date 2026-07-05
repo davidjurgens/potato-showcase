@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ei_en_anger_001",
+    "emotion": "anger",
+    "language": "English",
+    "prompt": "TARGET EMOTION: ANGER (English). Which tweet expresses the most vs. least anger?\n\nTweet 1: This is mildly annoying, wish the bus were on time.\nTweet 2: Absolutely LIVID. They cancelled my flight AGAIN with zero notice. #furious\nTweet 3: Not thrilled about the parking ticket but whatever.\nTweet 4: I am so done with this company, worst service of my life, never again!!!",
+    "options": [
+      "This is mildly annoying, wish the bus were on time.",
+      "Absolutely LIVID. They cancelled my flight AGAIN with zero notice. #furious",
+      "Not thrilled about the parking ticket but whatever.",
+      "I am so done with this company, worst service of my life, never again!!!"
+    ]
+  },
+  {
+    "id": "ei_en_joy_002",
+    "emotion": "joy",
+    "language": "English",
+    "prompt": "TARGET EMOTION: JOY (English). Which tweet expresses the most vs. least joy?\n\nTweet 1: Nice day out, the weather is pleasant.\nTweet 2: BEST DAY OF MY LIFE!!! We got engaged!!! I can't stop crying happy tears 😭❤️\nTweet 3: Coffee was decent this morning, small win.\nTweet 4: So happy my sister is visiting this weekend, been looking forward to it!",
+    "options": [
+      "Nice day out, the weather is pleasant.",
+      "BEST DAY OF MY LIFE!!! We got engaged!!! I can't stop crying happy tears 😭❤️",
+      "Coffee was decent this morning, small win.",
+      "So happy my sister is visiting this weekend, been looking forward to it!"
+    ]
+  },
+  {
+    "id": "ei_en_fear_003",
+    "emotion": "fear",
+    "language": "English",
+    "prompt": "TARGET EMOTION: FEAR (English). Which tweet expresses the most vs. least fear?\n\nTweet 1: A little nervous about my dentist appointment tomorrow.\nTweet 2: Someone is trying the door handle. I'm alone. I'm terrified. Calling the police NOW.\nTweet 3: Kind of anxious about the exam results coming out.\nTweet 4: The turbulence has me gripping the seat, please let this flight land safely 😰",
+    "options": [
+      "A little nervous about my dentist appointment tomorrow.",
+      "Someone is trying the door handle. I'm alone. I'm terrified. Calling the police NOW.",
+      "Kind of anxious about the exam results coming out.",
+      "The turbulence has me gripping the seat, please let this flight land safely 😰"
+    ]
+  },
+  {
+    "id": "ei_en_sadness_004",
+    "emotion": "sadness",
+    "language": "English",
+    "prompt": "TARGET EMOTION: SADNESS (English). Which tweet expresses the most vs. least sadness?\n\nTweet 1: Bit of a gloomy Monday, feeling meh.\nTweet 2: We had to say goodbye to our dog of 15 years today. The house is unbearably quiet.\nTweet 3: Sad that the show ended, will miss the characters.\nTweet 4: Missed the sunset, kind of bummed about it.",
+    "options": [
+      "Bit of a gloomy Monday, feeling meh.",
+      "We had to say goodbye to our dog of 15 years today. The house is unbearably quiet.",
+      "Sad that the show ended, will miss the characters.",
+      "Missed the sunset, kind of bummed about it."
+    ]
+  },
+  {
+    "id": "ei_ar_anger_005",
+    "emotion": "anger",
+    "language": "Arabic",
+    "prompt": "TARGET EMOTION: ANGER (Arabic). Which tweet expresses the most vs. least anger?\n\nTweet 1: منزعج قليلاً من الازدحام اليوم.\nTweet 2: غاضب جداً!! ألغوا طلبي دون أي سبب ولن أسكت هذه المرة!\nTweet 3: لست سعيداً بالخدمة لكنها مقبولة.\nTweet 4: أسوأ معاملة في حياتي، لن أتعامل معهم أبداً!!",
+    "options": [
+      "منزعج قليلاً من الازدحام اليوم.",
+      "غاضب جداً!! ألغوا طلبي دون أي سبب ولن أسكت هذه المرة!",
+      "لست سعيداً بالخدمة لكنها مقبولة.",
+      "أسوأ معاملة في حياتي، لن أتعامل معهم أبداً!!"
+    ]
+  },
+  {
+    "id": "ei_ar_joy_006",
+    "emotion": "joy",
+    "language": "Arabic",
+    "prompt": "TARGET EMOTION: JOY (Arabic). Which tweet expresses the most vs. least joy?\n\nTweet 1: الجو لطيف اليوم، يوم جميل.\nTweet 2: أسعد يوم في حياتي!! نجحت وتخرجت أخيراً 🎓❤️ لا أصدق!\nTweet 3: القهوة كانت لذيذة، بداية جيدة.\nTweet 4: سعيد جداً لزيارة أختي هذا الأسبوع!",
+    "options": [
+      "الجو لطيف اليوم، يوم جميل.",
+      "أسعد يوم في حياتي!! نجحت وتخرجت أخيراً 🎓❤️ لا أصدق!",
+      "القهوة كانت لذيذة، بداية جيدة.",
+      "سعيد جداً لزيارة أختي هذا الأسبوع!"
+    ]
+  },
+  {
+    "id": "ei_es_fear_007",
+    "emotion": "fear",
+    "language": "Spanish",
+    "prompt": "TARGET EMOTION: FEAR (Spanish). Which tweet expresses the most vs. least fear?\n\nTweet 1: Un poco nervioso por la cita con el dentista de mañana.\nTweet 2: Alguien está intentando abrir la puerta. Estoy sola. Tengo pánico, llamando a la policía YA.\nTweet 3: Algo ansiosa por los resultados del examen.\nTweet 4: La turbulencia es tan fuerte que no puedo soltar el asiento, que aterrice bien por favor 😰",
+    "options": [
+      "Un poco nervioso por la cita con el dentista de mañana.",
+      "Alguien está intentando abrir la puerta. Estoy sola. Tengo pánico, llamando a la policía YA.",
+      "Algo ansiosa por los resultados del examen.",
+      "La turbulencia es tan fuerte que no puedo soltar el asiento, que aterrice bien por favor 😰"
+    ]
+  },
+  {
+    "id": "ei_es_sadness_008",
+    "emotion": "sadness",
+    "language": "Spanish",
+    "prompt": "TARGET EMOTION: SADNESS (Spanish). Which tweet expresses the most vs. least sadness?\n\nTweet 1: Lunes gris, me siento un poco desanimado.\nTweet 2: Hoy tuvimos que despedirnos de nuestro perro de 15 años. La casa está en un silencio insoportable.\nTweet 3: Triste de que la serie haya terminado, extrañaré a los personajes.\nTweet 4: Me perdí el atardecer, qué lástima.",
+    "options": [
+      "Lunes gris, me siento un poco desanimado.",
+      "Hoy tuvimos que despedirnos de nuestro perro de 15 años. La casa está en un silencio insoportable.",
+      "Triste de que la serie haya terminado, extrañaré a los personajes.",
+      "Me perdí el atardecer, qué lástima."
+    ]
+  }
+]
