@@ -1,0 +1,56 @@
+{
+  "title": "GermanQuAD: German Extractive Question Answering",
+  "description": "GermanQuAD is deepset's German machine reading comprehension dataset (MRQA 2021). Trained annotators read a German Wikipedia passage, write a self-sufficient question reformulated to reduce lexical overlap, and mark the answer span. 13,722 answerable QA pairs, with a runnable Potato config to reproduce or extend it.",
+  "overview": [
+    "GermanQuAD is a German extractive question answering dataset created by Möller, Risch, and Pietsch at deepset, published at the MRQA 2021 workshop. It provides a native (non-translated) German counterpart to SQuAD so that German QA and retrieval models can be trained and evaluated properly.",
+    "The passages come from German Wikipedia — the German equivalents of the articles used in English SQuAD — split into paragraphs. Rather than anonymous crowdworkers, the dataset used annotators familiar with machine learning who were given detailed guidelines, continuous monitoring, and expert review; one expert annotator alone produced more than 20,000 annotations.",
+    "The key protocol choice is fighting the lexical-overlap shortcut: annotators reformulate each question with synonyms and altered syntax, keep questions self-sufficient (answerable from the passage alone), and are encouraged to write complex questions whose answers span multiple sentences. The training set is one-way annotated; the test set carries three answers per question. GermanQuAD 1.0 has no unanswerable questions, and the release totals 13,722 QA pairs (train 11,518 / test 2,204).",
+    "The Potato config below reproduces this task: it shows a German Wikipedia passage, collects a self-sufficient written question, and captures the answer span. Use it to extend GermanQuAD, build a domain-specific German QA set, or run the low-overlap protocol in another language."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "MRQA 2021 (deepset)" },
+    { "label": "Language", "value": "German" },
+    { "label": "Source corpus", "value": "German Wikipedia" },
+    { "label": "QA pairs", "value": "13,722 (train 11,518 / test 2,204)" },
+    { "label": "Test answers", "value": "3-way annotated (6,536 answers)" },
+    { "label": "Unanswerable questions", "value": "None (SQuAD 1.1 style)" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": [
+    "text",
+    "span"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "Question Answering",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Reading Comprehension",
+    "Extractive QA",
+    "German NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "germanquad",
+    "german",
+    "question-answering",
+    "reading-comprehension",
+    "squad",
+    "extractive-qa",
+    "deepset"
+  ],
+  "featured": false,
+  "paperReference": "Möller et al., MRQA 2021",
+  "paperUrl": "https://aclanthology.org/2021.mrqa-1.4/",
+  "datasetUrl": "https://huggingface.co/datasets/deepset/germanquad",
+  "citation": "@inproceedings{moller-etal-2021-germanquad,\n    title = \"{G}erman{Q}u{AD} and {G}erman{DPR}: Improving Non-{E}nglish Question Answering and Passage Retrieval\",\n    author = \"M{\\\"o}ller, Timo and Risch, Julian and Pietsch, Malte\",\n    booktitle = \"Proceedings of the 3rd Workshop on Machine Reading for Question Answering\",\n    month = nov,\n    year = \"2021\",\n    address = \"Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"42--50\",\n    url = \"https://aclanthology.org/2021.mrqa-1.4/\"\n}"
+}

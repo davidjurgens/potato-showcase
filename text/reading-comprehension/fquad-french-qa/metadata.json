@@ -1,0 +1,56 @@
+{
+  "title": "FQuAD: French Question Answering Dataset",
+  "description": "FQuAD is the French extractive QA dataset from Illuin Technology, built on the SQuAD 1.1 protocol. University students read a French Wikipedia paragraph, write a question, and select the smallest answer span. Over 60,000 answerable QA pairs, with a runnable Potato config to reproduce or extend it.",
+  "overview": [
+    "FQuAD is a French extractive question answering dataset introduced by d'Hoffschmidt and colleagues at Illuin Technology in 2020. It gives French a native reading-comprehension benchmark rather than a machine-translated SQuAD, so French QA models can be trained and compared on the same span-selection task.",
+    "The paragraphs are drawn from French Wikipedia 'quality articles' (Articles de qualité). The team sampled articles, split them into paragraphs of at least 500 characters, and — importantly — split train, development, and test at the article level to avoid leakage between them.",
+    "Annotation reused the SQuAD 1.1 guidelines and was carried out by university students on a custom platform. For each paragraph a student wrote three to five questions whose answers are spans of text, and selected the smallest span containing each answer; for development and test questions, two additional answers were collected to capture acceptable span variants. FQuAD 1.0/1.1 contain no unanswerable questions. FQuAD 1.1 totals 62,003 questions (the initial FQuAD 1.0 had 26,108).",
+    "The Potato config below reproduces this task: it shows a French Wikipedia paragraph, collects a written question, and captures the smallest answer span. Use it to extend FQuAD, build a domain-specific French QA set, or run the SQuAD-style protocol in another language."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "2020 (arXiv, Illuin Technology)" },
+    { "label": "Language", "value": "French" },
+    { "label": "Source corpus", "value": "French Wikipedia quality articles" },
+    { "label": "QA pairs", "value": "62,003 (FQuAD 1.1); 26,108 (FQuAD 1.0)" },
+    { "label": "Answer format", "value": "Smallest extractive span" },
+    { "label": "Unanswerable questions", "value": "None (SQuAD 1.1 style)" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": [
+    "text",
+    "span"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "Question Answering",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Reading Comprehension",
+    "Extractive QA",
+    "French NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "fquad",
+    "french",
+    "question-answering",
+    "reading-comprehension",
+    "squad",
+    "extractive-qa",
+    "illuin"
+  ],
+  "featured": false,
+  "paperReference": "d'Hoffschmidt et al., arXiv 2020",
+  "paperUrl": "https://arxiv.org/abs/2002.06071",
+  "datasetUrl": "https://fquad.illuin.tech/",
+  "citation": "@article{dhoffschmidt2020fquad,\n    title = \"{FQ}u{AD}: {F}rench Question Answering Dataset\",\n    author = \"d'Hoffschmidt, Martin and Belblidia, Wacim and Brendl{\\'e}, Tom and Heinrich, Quentin and Vidal, Maxime\",\n    journal = \"arXiv preprint arXiv:2002.06071\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/2002.06071\"\n}"
+}

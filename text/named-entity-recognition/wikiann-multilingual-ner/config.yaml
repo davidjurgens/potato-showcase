@@ -1,0 +1,104 @@
+# WikiANN / PAN-X - Multilingual Named Entity Recognition
+# Based on Pan et al., ACL 2017 (original) and Rahimi et al., ACL 2019 (balanced splits)
+# Papers: https://aclanthology.org/P17-1178/  |  https://aclanthology.org/P19-1015/
+# Dataset: https://huggingface.co/datasets/unimelb-nlp/wikiann
+#
+# IMPORTANT — how WikiANN was made: WikiANN (a.k.a. PAN-X) is a SILVER-standard,
+# automatically generated resource. Pan et al. (2017) projected entity labels
+# from Wikipedia anchor-link markup and knowledge-base types (DBpedia, YAGO,
+# Freebase) across 282 languages. There were no human annotators and no
+# annotation guideline — so the labels carry known noise. The widely used
+# distribution is Rahimi et al.'s (2019) balanced re-split of 176 languages,
+# which uses three tags — PER, ORG, LOC — in IOB2 format.
+#
+# This Potato config lets you produce GOLD labels in the same PER/ORG/LOC scheme
+# — either annotating fresh Wikipedia sentences in any language, or correcting
+# silver WikiANN labels. It is not a reconstruction of an original human protocol
+# (there wasn't one); it is the human-in-the-loop task WikiANN's noise motivates.
+#
+# Tag set (Rahimi et al. 2019 balanced splits):
+# - PER (Person): names of people
+# - ORG (Organization): companies, institutions, agencies, teams
+# - LOC (Location): countries, cities, regions, and other place names
+#   (the original paper's GPE type is folded into LOC in the standard splits)
+
+annotation_task_name: "WikiANN - Multilingual NER"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Highlight entity spans and label each with its type
+  - annotation_type: span
+    name: entity_spans
+    description: "Highlight every named entity and label it PER, ORG, or LOC"
+    labels:
+      - "PER (Person)"
+      - "ORG (Organization)"
+      - "LOC (Location)"
+    label_colors:
+      "PER (Person)": "#3b82f6"
+      "ORG (Organization)": "#22c55e"
+      "LOC (Location)": "#ef4444"
+    keyboard_shortcuts:
+      "PER (Person)": "1"
+      "ORG (Organization)": "2"
+      "LOC (Location)": "3"
+
+  # Whether the auto-projected silver labels (if any) were correct
+  - annotation_type: radio
+    name: silver_label_check
+    description: "If this sentence came with silver WikiANN labels, were they correct?"
+    labels:
+      - "Correct"
+      - "Needs fixing"
+      - "No silver labels"
+    keyboard_shortcuts:
+      "Correct": "4"
+      "Needs fixing": "5"
+      "No silver labels": "6"
+    tooltips:
+      "Correct": "The pre-existing WikiANN labels matched your annotation"
+      "Needs fixing": "The pre-existing WikiANN labels were wrong or incomplete"
+      "No silver labels": "This sentence was annotated from scratch"
+
+annotation_instructions: |
+  You will see a short sentence, typically from Wikipedia, in one of many
+  languages. Using the WikiANN / PAN-X tag set (PER, ORG, LOC):
+
+  1. Highlight every named-entity mention and label it with the correct type.
+     Select the full span (e.g. "United Nations", not just "United").
+  2. A place name inside an organization name is part of the ORG span (e.g. in
+     "University of Nairobi", the whole phrase is ORG).
+  3. If the sentence arrived with silver WikiANN labels, record whether those
+     labels were correct or needed fixing.
+
+  Note: WikiANN labels are generated automatically from Wikipedia links, so they
+  are noisy. Your job is to produce clean, gold-standard PER/ORG/LOC labels.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; color: #4338ca;">
+      Language: {{lang}}
+    </div>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
+      <p style="font-size: 18px; line-height: 1.8; margin: 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

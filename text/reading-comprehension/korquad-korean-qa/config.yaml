@@ -1,0 +1,77 @@
+# KorQuAD 1.0 - Korean Extractive Question Answering
+# Based on Lim et al., arXiv 2019 (KorQuAD1.0)
+# Paper: https://arxiv.org/abs/1909.07005
+# Dataset: https://korquad.github.io
+#
+# KorQuAD 1.0 is the Korean counterpart of SQuAD 1.0: crowdworkers read a
+# passage from Korean Wikipedia, write a question in natural language, and
+# select the minimal answer span in the passage. All questions are answerable
+# (there are no SQuAD-2.0-style unanswerable questions in KorQuAD 1.0).
+#
+# Annotation workflow (as described in the paper, sections 3.1-3.2):
+# 1. Read the given Korean Wikipedia passage.
+# 2. Write a question in your own words that is answerable from the passage.
+#    Vary the question form (both casual and respectful register are welcome).
+# 3. Highlight the minimal span in the passage that answers the question.
+
+annotation_task_name: "KorQuAD - Korean Extractive QA"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Write a question in Korean answerable from the passage
+  - annotation_type: text
+    name: question
+    description: "이 문단을 읽고 답을 찾을 수 있는 질문을 한국어로 작성하세요 (Write a Korean question answerable from the passage)"
+
+  # Step 2: Highlight the minimal answer span in the passage
+  - annotation_type: span
+    name: answer_span
+    description: "질문의 답이 되는 최소한의 구간을 표시하세요 (Highlight the minimal span that answers the question)"
+    labels:
+      - "정답 (Answer)"
+    label_colors:
+      "정답 (Answer)": "#3b82f6"
+
+annotation_instructions: |
+  You will be shown a passage from Korean Wikipedia. Following the KorQuAD 1.0
+  data-collection protocol (Lim et al., 2019):
+
+  1. Read the passage carefully.
+  2. Write a question in Korean, in your own words, that can be answered from the
+     passage. You are encouraged to vary the question form — Korean allows both
+     casual and respectful (존댓말) phrasings — and to write questions that require
+     some reasoning rather than simple word matching. Avoid questions that are
+     answerable only by translation.
+  3. Highlight the minimal span in the passage that answers your question. Keep the
+     span as short as possible (KorQuAD answers are minimal spans at the morpheme
+     level).
+
+  Every question must be answerable from the passage — KorQuAD 1.0 contains no
+  unanswerable questions.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">문단 (Passage):</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
+skip_reason_required: false

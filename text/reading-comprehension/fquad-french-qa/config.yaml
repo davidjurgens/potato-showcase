@@ -1,0 +1,74 @@
+# FQuAD - French Question Answering Dataset
+# Based on d'Hoffschmidt et al., arXiv 2020
+# Paper: https://arxiv.org/abs/2002.06071
+# Dataset: https://fquad.illuin.tech/
+#
+# FQuAD is the French extractive QA dataset from Illuin Technology, built on
+# the SQuAD 1.1 protocol. University students read a paragraph from a French
+# Wikipedia quality article, write a question whose answer is a span of text,
+# and select the smallest span that answers it. FQuAD 1.0/1.1 contain no
+# SQuAD-2.0-style unanswerable questions.
+#
+# Annotation workflow (paper section 3.2):
+# 1. Read the French Wikipedia paragraph.
+# 2. Write a question whose answer is a span within the paragraph.
+# 3. Select the smallest span that contains the answer.
+# 4. Repeat until 3-5 questions have been written for the paragraph.
+
+annotation_task_name: "FQuAD - French Extractive QA"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  # Step 1: Write a French question answerable by a span
+  - annotation_type: text
+    name: question
+    description: "Rédigez une question dont la réponse est un passage du texte (Write a question whose answer is a span in the passage)"
+
+  # Step 2: Select the smallest answer span
+  - annotation_type: span
+    name: answer_span
+    description: "Sélectionnez le plus petit passage qui contient la réponse (Select the smallest span containing the answer)"
+    labels:
+      - "Réponse (Answer)"
+    label_colors:
+      "Réponse (Answer)": "#3b82f6"
+
+annotation_instructions: |
+  You will be shown a paragraph from a French Wikipedia quality article. Following
+  the FQuAD data-collection protocol (d'Hoffschmidt et al., 2020), which reuses the
+  SQuAD 1.1 guidelines:
+
+  1. Read the paragraph carefully.
+  2. Write a question in French whose answer is a span of text within the
+     paragraph. Aim for difficult questions rather than trivial word-matching.
+  3. Select the smallest span in the paragraph that contains the answer.
+
+  Repeat for several questions per paragraph. Every question must be answerable
+  from the paragraph — FQuAD 1.0/1.1 contain no unanswerable questions.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Paragraphe (Passage):</strong>
+      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

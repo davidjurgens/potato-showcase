@@ -1,0 +1,56 @@
+{
+  "title": "WikiANN (PAN-X): Multilingual Named Entity Recognition",
+  "description": "WikiANN / PAN-X is the multilingual NER dataset covering 282 languages, generated automatically from Wikipedia links and knowledge-base types. This page explains how it was built (silver-standard, not hand-annotated) and gives a runnable Potato config to produce gold PER/ORG/LOC labels or correct the silver ones.",
+  "overview": [
+    "WikiANN, also called PAN-X, is a multilingual named entity recognition dataset introduced by Pan and colleagues at ACL 2017. Its scale is the draw: name tagging and linking across 282 languages, far beyond what hand annotation could cover.",
+    "That scale is possible because WikiANN is silver-standard, not hand-annotated. The authors extracted entity mentions from Wikipedia anchor-link markup, assigned types using knowledge bases (DBpedia, YAGO, Freebase), and propagated those types across languages through Wikipedia's redirect and cross-lingual links. There were no annotators and no annotation guideline, so the labels carry known noise. The version most people load today is Rahimi, Li, and Cohn's (2019) balanced re-split of 176 languages, which uses three tags — PER, ORG, LOC — in IOB2 format.",
+    "Because it is automatic, WikiANN is a natural fit for a human-in-the-loop annotation task rather than a re-run of an original protocol. The Potato config below asks an annotator to mark PER/ORG/LOC spans in a Wikipedia sentence in any language and, when silver labels are present, to record whether they were correct or needed fixing.",
+    "Use it to build gold evaluation data for a language WikiANN only covers with silver labels, to clean noisy spans before training, or as a template for cross-lingual NER in the PER/ORG/LOC scheme. For a fully human-annotated, guideline-based NER dataset, see the related MasakhaNER 2.0 design."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "ACL 2017 (Pan et al.)" },
+    { "label": "Languages", "value": "282 original / 176 in the standard balanced splits" },
+    { "label": "Source", "value": "Wikipedia (anchor links + DBpedia/YAGO/Freebase types)" },
+    { "label": "Label quality", "value": "Silver / automatic — no human guideline" },
+    { "label": "Tag set", "value": "PER, ORG, LOC (IOB2)" },
+    { "label": "Standard splits", "value": "Rahimi et al., ACL 2019" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "Named Entity Recognition",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Named Entity Recognition",
+    "Cross-lingual NER",
+    "Label Correction"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "wikiann",
+    "pan-x",
+    "named-entity-recognition",
+    "multilingual",
+    "cross-lingual",
+    "wikipedia",
+    "silver-standard"
+  ],
+  "featured": false,
+  "paperReference": "Pan et al., ACL 2017; Rahimi et al., ACL 2019",
+  "paperUrl": "https://aclanthology.org/P17-1178/",
+  "datasetUrl": "https://huggingface.co/datasets/unimelb-nlp/wikiann",
+  "citation": "@inproceedings{pan-etal-2017-cross,\n    title = \"Cross-lingual Name Tagging and Linking for 282 Languages\",\n    author = \"Pan, Xiaoman and Zhang, Boliang and May, Jonathan and Nothman, Joel and Knight, Kevin and Ji, Heng\",\n    booktitle = \"Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2017\",\n    address = \"Vancouver, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1946--1958\",\n    url = \"https://aclanthology.org/P17-1178/\"\n}\n\n@inproceedings{rahimi-etal-2019-massively,\n    title = \"Massively Multilingual Transfer for {NER}\",\n    author = \"Rahimi, Afshin and Li, Yuan and Cohn, Trevor\",\n    booktitle = \"Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2019\",\n    address = \"Florence, Italy\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"151--164\",\n    url = \"https://aclanthology.org/P19-1015/\"\n}"
+}

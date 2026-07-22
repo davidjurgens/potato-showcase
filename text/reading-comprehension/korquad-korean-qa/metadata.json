@@ -1,0 +1,56 @@
+{
+  "title": "KorQuAD: Korean Extractive Question Answering",
+  "description": "KorQuAD 1.0 is the Korean machine reading comprehension dataset built on the SQuAD 1.0 protocol: crowdworkers read a Korean Wikipedia passage, write a question, and mark the minimal answer span. 70,079 answerable QA pairs. Includes a runnable Potato config to reproduce or extend the annotation.",
+  "overview": [
+    "KorQuAD 1.0 is a Korean machine reading comprehension dataset introduced by Lim, Kim, and Lee (LG CNS) in 2019. It follows the SQuAD 1.0 protocol so that Korean QA systems can be trained and compared on the same extractive task English models use.",
+    "The data was collected from Korean Wikipedia. The authors selected 1,647 articles — including Wikipedia's featured ('알찬 글') and good ('좋은 글') articles plus a random sample — and extracted paragraphs after removing images, tables, and very short passages. Crowdworkers then read each passage and wrote questions in natural Korean.",
+    "For every question a worker selected the minimal answer span in the passage, at the morpheme level. Workers were told to write questions in their own words, to vary the register (both casual and respectful Korean forms), to favor questions requiring reasoning, and to avoid questions answerable by simple translation. KorQuAD 1.0 is fully answerable — it has no SQuAD-2.0-style unanswerable questions. The release contains 70,079 QA pairs (train 60,407 / dev 5,774 / test 3,898).",
+    "The Potato config below reproduces this data-collection task: it shows a Korean Wikipedia passage, collects a written question, and captures the minimal answer span. Use it to grow KorQuAD, build a domain-specific Korean QA set, or run the same SQuAD-style protocol in another language."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "2019 (arXiv, LG CNS)" },
+    { "label": "Language", "value": "Korean" },
+    { "label": "Source corpus", "value": "Korean Wikipedia (1,647 articles)" },
+    { "label": "QA pairs", "value": "70,079 (train 60,407 / dev 5,774 / test 3,898)" },
+    { "label": "Answer format", "value": "Minimal extractive span (morpheme-level)" },
+    { "label": "Unanswerable questions", "value": "None (SQuAD 1.0 style)" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": [
+    "text",
+    "span"
+  ],
+  "domain": [
+    "Natural Language Processing",
+    "Question Answering",
+    "Multilingual"
+  ],
+  "useCase": [
+    "Reading Comprehension",
+    "Extractive QA",
+    "Korean NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "korquad",
+    "korean",
+    "question-answering",
+    "reading-comprehension",
+    "squad",
+    "extractive-qa",
+    "wikipedia"
+  ],
+  "featured": false,
+  "paperReference": "Lim et al., arXiv 2019",
+  "paperUrl": "https://arxiv.org/abs/1909.07005",
+  "datasetUrl": "https://korquad.github.io",
+  "citation": "@article{lim2019korquad,\n    title = \"{K}or{Q}u{AD}1.0: {K}orean {QA} Dataset for Machine Reading Comprehension\",\n    author = \"Lim, Seungyoung and Kim, Myungji and Lee, Jooyoul\",\n    journal = \"arXiv preprint arXiv:1909.07005\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1909.07005\"\n}"
+}

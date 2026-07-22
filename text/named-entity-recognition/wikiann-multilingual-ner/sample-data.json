@@ -1,0 +1,22 @@
+[
+  {
+    "id": "wikiann_en_001",
+    "lang": "English (en)",
+    "text": "Barack Obama served as the president of the United States and was born in Honolulu."
+  },
+  {
+    "id": "wikiann_fr_001",
+    "lang": "French (fr)",
+    "text": "Le siège de l'Organisation des Nations unies se trouve à New York."
+  },
+  {
+    "id": "wikiann_es_001",
+    "lang": "Spanish (es)",
+    "text": "Lionel Messi jugó en el FC Barcelona antes de mudarse a París."
+  },
+  {
+    "id": "wikiann_de_001",
+    "lang": "German (de)",
+    "text": "Die Universität Heidelberg befindet sich in Deutschland und wurde von der Kurpfalz gegründet."
+  }
+]
