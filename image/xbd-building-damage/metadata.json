@@ -1,6 +1,20 @@
 {
   "title": "xBD: Building Damage Assessment from Satellite Imagery",
-  "description": "Building damage assessment from pre- and post-disaster satellite imagery. Annotators compare side-by-side satellite images to classify damage severity using the Joint Damage Scale, identify building types, and note specific damage features visible in the imagery. Based on the xBD dataset for disaster response and recovery.",
+  "description": "Building damage assessment from pre- and post-disaster satellite imagery. Annotators compare side-by-side satellite images to rate damage on the four-level Joint Damage Scale, identify building types, and note specific damage features. Based on the xBD dataset (CVPR Workshops 2019) behind the xView2 challenge.",
+  "overview": [
+    "xBD is a large-scale dataset for building damage assessment from satellite imagery, introduced by Gupta and colleagues at the CVPR 2019 Workshops. It pairs pre- and post-disaster high-resolution imagery from the Maxar/DigitalGlobe Open Data Program so that both models and human annotators can localize buildings and rate how badly each structure was damaged.",
+    "Damage is rated on the Joint Damage Scale, a four-level ordinal scheme the authors designed with structural engineers to hold across disaster types: no damage (0), minor damage (1), major damage (2), and destroyed (3). An annotator looks at the same building before and after the event and assigns one level per structure.",
+    "The release covers 19 disaster events — hurricanes, tornadoes, earthquakes, tsunamis, volcanic eruptions, wildfires, and floods — spanning 22,068 images and 45,362 km² of imagery, with 850,736 building polygons annotated. It is the data behind the xView2 challenge (xview2.org) for automated damage assessment in disaster response.",
+    "The Potato config below reproduces the human-assessment task: a side-by-side pre/post image layout, a radio scheme for the Joint Damage Scale, radios for building type and disaster type, and a free-text field for damage notes. Use it to re-label xBD tiles, build gold data for a new disaster, or adapt the damage scale to your own imagery."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "CVPR Workshops 2019" },
+    { "label": "Building annotations", "value": "850,736" },
+    { "label": "Imagery", "value": "45,362 km² across 22,068 images" },
+    { "label": "Disaster events", "value": "19 (hurricane, earthquake, tsunami, wildfire, flood, volcanic)" },
+    { "label": "Damage scale", "value": "4-level Joint Damage Scale (no damage → destroyed)" },
+    { "label": "Imagery source", "value": "Maxar / DigitalGlobe Open Data Program" }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Gupta et al.",
@@ -9,7 +23,7 @@
     "affiliation": "Carnegie Mellon University / Defense Innovation Unit"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"
@@ -38,5 +52,5 @@
   "paperReference": "Gupta et al., CVPR Workshops 2019",
   "paperUrl": "https://arxiv.org/abs/1911.09296",
   "datasetUrl": "https://xview2.org/",
-  "citation": "@inproceedings{gupta2019xbd,\n    title = \"xBD: A Dataset for Assessing Building Damage from Satellite Imagery\",\n    author = \"Gupta, Ritwik and Hosfelt, Richard and Saber, Sandra and Mittal, Nirav and Yarber, Robert and Kumber, Jocelyn and Liu, Matthew\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1911.09296\"\n}"
+  "citation": "@inproceedings{gupta2019xbd,\n    title = \"xBD: A Dataset for Assessing Building Damage from Satellite Imagery\",\n    author = \"Gupta, Ritwik and Hosfelt, Richard and Sajeev, Sandra and Patel, Nirav and Goodman, Bryce and Doshi, Jigar and Heim, Eric and Choset, Howie and Gaston, Matthew\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1911.09296\"\n}"
 }

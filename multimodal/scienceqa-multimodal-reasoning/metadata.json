@@ -1,6 +1,38 @@
 {
   "title": "ScienceQA Multimodal Reasoning",
   "description": "Multimodal science question answering with chain-of-thought reasoning, based on ScienceQA (Lu et al., NeurIPS 2022). Annotators answer multiple-choice science questions that may include images, provide chain-of-thought explanations, and categorize the science domain.",
+  "overview": [
+    "ScienceQA is a multimodal science question answering benchmark from Lu and colleagues at NeurIPS 2022. Its distinguishing feature is that most questions come with a grounding lecture and a written explanation, supporting chain-of-thought reasoning rather than answer-only prediction.",
+    "The questions are multiple-choice items drawn from elementary and high-school science curricula. Many pair a question with an image such as a diagram, map, or photo, so answering can require reading both text and a visual.",
+    "The dataset has 21,208 questions spanning 3 subjects, 26 topics, and 127 categories; 48.7% include an image, 83.9% include a lecture, and 90.5% include an explanation. Annotating the reasoning, not just the answer, is what makes it useful for studying explanations.",
+    "The Potato config below reproduces the task with a radio for the answer choice, a text field for the explanation, and a multiselect for the reasoning skills involved. Use it to extend ScienceQA or to collect explained answers for your own questions."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "NeurIPS 2022"
+    },
+    {
+      "label": "Questions",
+      "value": "21,208 (multiple choice)"
+    },
+    {
+      "label": "With image context",
+      "value": "10,332 (48.7%)"
+    },
+    {
+      "label": "Coverage",
+      "value": "3 subjects, 26 topics, 127 categories"
+    },
+    {
+      "label": "With lectures",
+      "value": "83.9%"
+    },
+    {
+      "label": "With explanations",
+      "value": "90.5% (chain-of-thought)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Lu et al.",
@@ -9,7 +41,7 @@
     "affiliation": "UCLA"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text",

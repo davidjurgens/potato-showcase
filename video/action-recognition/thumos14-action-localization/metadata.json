@@ -1,6 +1,38 @@
 {
   "title": "THUMOS14 Action Localization",
   "description": "Temporal action localization in untrimmed sports videos. Annotators identify precise start and end times of 20 sports action classes in YouTube videos.",
+  "overview": [
+    "THUMOS'14 is a benchmark for recognizing and temporally localizing human actions in untrimmed video. It came out of the THUMOS Challenge 2014 (Jiang and colleagues) and remains a standard testbed for temporal action detection.",
+    "Unlike trimmed clip classification, the localization task uses untrimmed videos where an action occupies only part of the timeline. Annotators mark the start and end time of each action instance, along with its class.",
+    "The dataset spans 101 action classes, but temporal boundaries are annotated for a 20-class subset in 1,010 validation and 1,574 test untrimmed videos; training uses 13,320 trimmed videos from UCF101. Systems are scored on how well predicted intervals overlap the annotated ones.",
+    "The Potato config below reproduces the task with a video-annotation scheme for marking action segments on the timeline, so you can localize actions and label their class. Use it to extend THUMOS-style data or to annotate actions in your own footage."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "THUMOS Challenge 2014"
+    },
+    {
+      "label": "Total action classes",
+      "value": "101"
+    },
+    {
+      "label": "Temporally annotated classes",
+      "value": "20"
+    },
+    {
+      "label": "Untrimmed videos",
+      "value": "1,010 validation / 1,574 test"
+    },
+    {
+      "label": "Training clips",
+      "value": "13,320 trimmed (UCF101)"
+    },
+    {
+      "label": "Task",
+      "value": "Temporal action localization (start–end + class)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "video_annotation"
   ],

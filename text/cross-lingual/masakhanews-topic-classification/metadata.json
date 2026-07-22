@@ -1,6 +1,38 @@
 {
   "title": "MasakhaNEWS - News Topic Classification for African Languages",
   "description": "Single-label news topic classification for African-language news articles, following the MasakhaNEWS scheme (Adelani et al., IJCNLP-AACL 2023), the largest news topic benchmark for African languages, covering 16 languages such as Amharic, Hausa, Yoruba, Swahili, Somali, Lingala and isiXhosa. Masakhane community annotators label each headline/article into one of eight topics: business, entertainment, health, politics, religion, sports, technology, or uncategorized. Illustrative sample items include an English gloss for reference only.",
+  "overview": [
+    "MasakhaNEWS is a news topic classification dataset for African languages, again from the Masakhane community (Adelani and colleagues, IJCNLP-AACL 2023). It covers 16 languages, several of which had little labeled text data before.",
+    "The task is document-level: read a news article and assign it a single topic. The label set has seven categories — business, entertainment, health, politics, religion, sports, and technology.",
+    "Articles were collected from local news sources and labeled by Masakhane community volunteers who are native or fluent speakers. Because it is topic classification rather than token labeling, it is a good entry point for building text-classification data in a new language.",
+    "The Potato config below reproduces the task with a single radio scheme over the seven topics. Use it to extend MasakhaNEWS or to bootstrap news classification in a language it does not yet cover."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "IJCNLP-AACL 2023"
+    },
+    {
+      "label": "Languages",
+      "value": "16 African languages"
+    },
+    {
+      "label": "Task",
+      "value": "News topic classification (document-level)"
+    },
+    {
+      "label": "Categories",
+      "value": "7 (business, entertainment, health, politics, religion, sports, technology)"
+    },
+    {
+      "label": "Label type",
+      "value": "Single-label"
+    },
+    {
+      "label": "Source",
+      "value": "Local news outlets"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Adelani et al. (Masakhane)",
@@ -8,7 +40,7 @@
     "affiliation": "Masakhane NLP"
   },
   "createdAt": "2026-07-04",
-  "updatedAt": "2026-07-04",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio"
   ],

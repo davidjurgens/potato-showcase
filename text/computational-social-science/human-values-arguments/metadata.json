@@ -1,6 +1,38 @@
 {
   "title": "Human Values in Arguments",
   "description": "Identification of human values in arguments based on Kiesel et al. (ACL 2022). Annotators classify which Schwartz human values are expressed in arguments on social issues and whether the argument is for or against the stated topic.",
+  "overview": [
+    "This dataset, Webis-ArgValues-22, asks which human values sit behind an argument. Kiesel and colleagues introduced it at ACL 2022, building on Schwartz's theory of basic human values from social psychology.",
+    "Each item is an argument made of a conclusion, a stance, and a premise. Annotators judged, for every value category, whether the argument appeals to that value — a set of binary decisions rather than a single label.",
+    "The value taxonomy has 54 fine-grained values aggregated into 20 categories that serve as the classification labels, such as self-direction, security, and benevolence. The 5,270 arguments were drawn from four geographical cultures so the values are not tied to one region.",
+    "The Potato config below reproduces the labeling with a multiselect scheme over the value categories plus a radio for the argument's stance, so you can tag which values an argument draws on. Use it to extend the dataset or to score values in your own argument corpus."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "ACL 2022"
+    },
+    {
+      "label": "Task",
+      "value": "Human values behind arguments"
+    },
+    {
+      "label": "Arguments",
+      "value": "5,270"
+    },
+    {
+      "label": "Values",
+      "value": "54 fine-grained → 20 categories (labels)"
+    },
+    {
+      "label": "Theory base",
+      "value": "Schwartz basic human values"
+    },
+    {
+      "label": "Label type",
+      "value": "Binary per value category (multi-label)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Kiesel et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Bauhaus-Universitat Weimar"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"

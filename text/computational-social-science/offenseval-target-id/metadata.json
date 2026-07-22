@@ -1,6 +1,38 @@
 {
   "title": "OffensEval - Offensive Language Target Identification",
   "description": "Multi-step offensive language annotation combining offensiveness detection, target type classification, and offensive span identification, based on the SemEval 2020 OffensEval shared task (Zampieri et al., SemEval 2020).",
+  "overview": [
+    "This design reproduces the target-identification layer of OLID, the Offensive Language Identification Dataset. The three-way target labels come from Zampieri and colleagues' NAACL 2019 paper, which SemEval-2020 Task 12 (OffensEval) later reused.",
+    "OLID labels tweets with a three-level hierarchy: whether a post is offensive, whether the offense is targeted, and — the focus here — who the target is. Target types are individual, group, or other.",
+    "The dataset has 14,100 English tweets (13,240 train and 860 test), labeled through crowdsourcing with two annotators per tweet and a third to break disagreements. Target identification only applies to posts that are both offensive and targeted.",
+    "The Potato config below reproduces the full hierarchy: a radio for offensiveness, a follow-up for whether it is targeted, and the individual/group/other target choice, plus a span for the offensive text. Use it to extend OLID or to label offense targets in your own data."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "OLID — NAACL 2019 (reused in OffensEval 2020)"
+    },
+    {
+      "label": "Tweets",
+      "value": "14,100 English (13,240 train / 860 test)"
+    },
+    {
+      "label": "Level A",
+      "value": "Offensive vs Not Offensive"
+    },
+    {
+      "label": "Level B",
+      "value": "Targeted vs Untargeted"
+    },
+    {
+      "label": "Level C targets",
+      "value": "Individual, Group, Other"
+    },
+    {
+      "label": "Annotation",
+      "value": "Crowdsourced, 2–3 annotators/tweet"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Zampieri et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Rochester Institute of Technology"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "multiselect",
@@ -33,8 +65,8 @@
     "semeval2020"
   ],
   "featured": false,
-  "paperReference": "Zampieri et al., SemEval 2020",
-  "paperUrl": "https://aclanthology.org/2020.semeval-1.188/",
+  "paperReference": "Zampieri et al., NAACL 2019 (OLID)",
+  "paperUrl": "https://aclanthology.org/N19-1144/",
   "datasetUrl": "https://sites.google.com/site/offaborita/olid",
-  "citation": "@inproceedings{zampieri-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 Task 12: Multilingual Offensive Language Identification in Social Media ({O}ffens{E}val 2020)\",\n    author = \"Zampieri, Marcos  and Nakov, Preslav  and Rosenthal, Sara  and Atanasova, Pepa  and Karadzhov, Georgi  and Mubarak, Hamdy  and Derczynski, Leon  and Pitenis, Zeses  and {\\c{C}}{\\\"o}ltekin, {\\c{C}}a{\\u{g}}r{\\i}\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.188\",\n    pages = \"1425--1447\"\n}"
+  "citation": "@inproceedings{zampieri-etal-2019-predicting,\n    title = \"Predicting the Type and Target of Offensive Posts in Social Media\",\n    author = \"Zampieri, Marcos and Malmasi, Shervin and Nakov, Preslav and Rosenthal, Sara and Farra, Noura and Kumar, Ritesh\",\n    booktitle = \"Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1415--1420\",\n    url = \"https://aclanthology.org/N19-1144/\"\n}"
 }

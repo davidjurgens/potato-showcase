@@ -1,6 +1,38 @@
 {
   "title": "Empathetic Dialogue Annotation",
   "description": "Annotate emotional situations and empathetic responses in conversations. Based on EmpatheticDialogues (Rashkin et al., ACL 2019). Classify the emotional context and evaluate response empathy.",
+  "overview": [
+    "EmpatheticDialogues is a conversation dataset built to train and evaluate models that respond with empathy. Rashkin and colleagues introduced it at ACL 2019.",
+    "Each conversation is grounded in a specific feeling. A crowdworker 'speaker' was given one of 32 emotion labels, wrote a short personal situation about feeling that way, then chatted about it with a 'listener' who responded.",
+    "The dataset has about 25,000 such conversations, spread evenly across the 32 emotions from proud and grateful to anxious and devastated. The grounding in a named emotion and a real situation is what separates it from generic chit-chat data.",
+    "The Potato config below reproduces the annotation with a radio for the grounding emotion, a Likert scale for how empathetic a response is, and a radio for response strategy. Use it to label emotional support in your own dialogues or to extend the emotion set."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "ACL 2019"
+    },
+    {
+      "label": "Conversations",
+      "value": "~25,000"
+    },
+    {
+      "label": "Emotion labels",
+      "value": "32 (evenly distributed)"
+    },
+    {
+      "label": "Grounding",
+      "value": "one emotion + a self-written situation"
+    },
+    {
+      "label": "Roles",
+      "value": "speaker + empathetic listener"
+    },
+    {
+      "label": "Domain",
+      "value": "open-domain, multi-turn"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Rashkin et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Facebook AI Research"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "likert"

@@ -1,6 +1,38 @@
 {
   "title": "PRM800K Step-by-Step Verification",
   "description": "Step-by-step verification of math reasoning chains based on OpenAI's PRM800K dataset. Annotators mark each reasoning step as Correct, Neutral, or Incorrect, stopping at the first error found, then judge the final answer correctness and explain any errors.",
+  "overview": [
+    "PRM800K is the human-feedback dataset behind 'Let's Verify Step by Step' by Lightman and colleagues at OpenAI. It supports process supervision: judging a model's reasoning one step at a time instead of only checking the final answer.",
+    "The solutions come from problems in the MATH dataset. A labeler reads a model-generated solution and rates each individual step — positive when the step is correct and reasonable, neutral when it is unclear, negative when it contains a mistake.",
+    "The release contains about 800,000 step-level labels. They were used to train a process reward model that scores reasoning steps, which the paper shows outperforms an outcome-only reward model at selecting correct solutions.",
+    "The Potato config below reproduces the labeling with radios for step correctness plus a text field for the rationale, so annotators can grade a solution step by step. Use it to build process-supervision data for math, code, or agent traces."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2023 (arXiv:2305.20050); ICLR 2024"
+    },
+    {
+      "label": "Task",
+      "value": "Step-level process supervision"
+    },
+    {
+      "label": "Step labels",
+      "value": "~800,000"
+    },
+    {
+      "label": "Label per step",
+      "value": "positive / neutral / negative"
+    },
+    {
+      "label": "Base problems",
+      "value": "MATH dataset"
+    },
+    {
+      "label": "Use",
+      "value": "Training process reward models"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-03-29",
-  "updatedAt": "2026-03-29",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"

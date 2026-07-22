@@ -1,6 +1,38 @@
 {
   "title": "MT-Bench Judge Consistency Evaluation",
   "description": "Multi-turn conversation evaluation for LLM judge consistency, based on MT-Bench (Zheng et al., NeurIPS 2023). Annotators compare two assistant responses in a pairwise setting, rate overall quality on a 1-10 Likert scale, and classify the conversation category.",
+  "overview": [
+    "MT-Bench is a set of challenging multi-turn questions used to study whether a strong language model can stand in for human judges. Zheng and colleagues introduced it at NeurIPS 2023 alongside the Chatbot Arena data.",
+    "The benchmark has 80 questions across 8 categories — writing, roleplay, extraction, reasoning, math, coding, STEM, and humanities — each asked over two turns. Human experts then compared model answers to check how often an LLM judge agrees with people.",
+    "The released human-judgment data includes roughly 3,000 expert pairwise votes on which of two answers is better, complementing about 30,000 crowd preference conversations. Judges also score single answers on a 1–10 scale.",
+    "The Potato config below reproduces the judging task with a pairwise scheme for A/B preference, a Likert scale for answer quality, and a radio for ties, so you can measure judge consistency. Use it to validate an LLM judge or to collect human preferences on your own model outputs."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "NeurIPS 2023 (Datasets & Benchmarks)"
+    },
+    {
+      "label": "Questions",
+      "value": "80 multi-turn (2 turns each)"
+    },
+    {
+      "label": "Categories",
+      "value": "8"
+    },
+    {
+      "label": "Expert pairwise votes",
+      "value": "~3,000"
+    },
+    {
+      "label": "Crowd preference conversations",
+      "value": "~30,000"
+    },
+    {
+      "label": "Judge scale",
+      "value": "1–10 and pairwise"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Zheng et al.",
@@ -9,7 +41,7 @@
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "pairwise",
     "likert",

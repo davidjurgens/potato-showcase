@@ -1,6 +1,38 @@
 {
   "title": "Adverse Drug Event Extraction (CADEC)",
   "description": "Named entity recognition for adverse drug events from patient-reported experiences, based on the CADEC corpus (Karimi et al., 2015). Annotates drugs, adverse effects, symptoms, diseases, and findings from colloquial health forum posts with mapping to medical vocabularies (SNOMED-CT, MedDRA).",
+  "overview": [
+    "CADEC, the CSIRO Adverse Drug Event Corpus, is a set of patient-written medication reviews annotated for drug-safety information. Karimi and colleagues released it in the Journal of Biomedical Informatics in 2015.",
+    "The 1,250 posts come from AskaPatient, an online forum where people describe their experience with a medication. The corpus focuses on two drug groups, Diclofenac and Lipitor, whose reviews often mention side effects in everyday language rather than clinical terms.",
+    "Annotators marked spans of five types — adverse drug reaction (ADR), Drug, Disease, Symptom, and Finding — and normalized them to SNOMED CT, with ADR spans additionally mapped to MedDRA. The result is roughly 6,754 annotated entities, most of them ADR mentions.",
+    "The Potato config below reproduces the task with a span scheme for the five entity types plus radios for the review's drug and rating, so you can extract adverse events from patient text. Use it to extend CADEC or to mine side effects from your own forum or survey data."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "J. Biomedical Informatics, 2015"
+    },
+    {
+      "label": "Source",
+      "value": "AskaPatient forum posts"
+    },
+    {
+      "label": "Posts",
+      "value": "1,250"
+    },
+    {
+      "label": "Drugs",
+      "value": "Diclofenac and Lipitor"
+    },
+    {
+      "label": "Entity types",
+      "value": "ADR, Drug, Disease, Symptom, Finding"
+    },
+    {
+      "label": "Normalized to",
+      "value": "SNOMED CT (ADRs also MedDRA)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Karimi et al.",
@@ -9,7 +41,7 @@
     "affiliation": "CSIRO"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"

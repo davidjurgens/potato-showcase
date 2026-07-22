@@ -1,6 +1,38 @@
 {
   "title": "PDTB 2.0 - Discourse Relations Tree Annotation",
   "description": "Discourse relation annotation with tree structure, based on the Penn Discourse TreeBank 2.0 (Prasad et al., LREC 2008). Annotators identify discourse connectives, mark argument spans, and build hierarchical discourse trees representing how text segments relate to each other.",
+  "overview": [
+    "The Penn Discourse Treebank (PDTB) 2.0 annotates how clauses and sentences connect — the discourse relations that hold a text together. Prasad and colleagues released it at LREC 2008 over the Wall Street Journal portion of the Penn Treebank.",
+    "Each relation links two arguments, usually through a connective such as 'because', 'but', or 'then'. Annotators identified the connective, marked its two argument spans, and assigned a sense from a three-level hierarchy of class, type, and subtype.",
+    "The corpus covers about 40,600 relations across a one-million-word corpus. Relations are typed as Explicit, Implicit, AltLex, EntRel, or NoRel, and the four top-level senses are Temporal, Contingency, Comparison, and Expansion. Attribution — who a relation is attributed to — is also marked.",
+    "The Potato config below reproduces the task with a span scheme for the arguments plus a tree scheme for the sense hierarchy, so you can annotate discourse relations and their senses. Use it to extend PDTB-style annotation to a new genre or language."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "LREC 2008"
+    },
+    {
+      "label": "Corpus",
+      "value": "WSJ / Penn Treebank (~1M words)"
+    },
+    {
+      "label": "Relations",
+      "value": "~40,600"
+    },
+    {
+      "label": "Relation types",
+      "value": "Explicit, Implicit, AltLex, EntRel, NoRel"
+    },
+    {
+      "label": "Top-level senses",
+      "value": "Temporal, Contingency, Comparison, Expansion"
+    },
+    {
+      "label": "Sense hierarchy",
+      "value": "3 levels (class → type → subtype)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Prasad et al.",
@@ -9,7 +41,7 @@
     "affiliation": "University of Pennsylvania"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "tree_annotation",
     "span"

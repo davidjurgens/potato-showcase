@@ -1,6 +1,38 @@
 {
   "title": "MasakhaPOS - Part-of-Speech Tagging for African Languages",
   "description": "Token-level part-of-speech tagging for typologically diverse African languages, following the MasakhaPOS scheme (Dione et al., ACL 2023), which provides Universal Dependencies (UD) POS annotations for 20 African languages such as Bambara, Ewe, Hausa, Igbo, Chichewa, Yoruba, Swahili and isiZulu. Annotators highlight each token and assign one of the 17 universal POS tags. Illustrative sample items include an English gloss for reference only; real annotation is done by native speakers following the UD guidelines.",
+  "overview": [
+    "MasakhaPOS is a part-of-speech tagging dataset for typologically diverse African languages, covering 20 of them. Dione and colleagues published it at ACL 2023; it is the POS side of the Masakhane community's African-language annotation effort.",
+    "Every token in a sentence gets a part-of-speech tag from the Universal Dependencies (UD) tagset — categories like noun, verb, adposition, and determiner that are shared across languages so tagging stays comparable.",
+    "The languages are typologically varied, which makes UD tagging genuinely hard: word order, morphology, and function-word behavior differ a lot across the set. Native-speaker annotators followed the UD guidelines to keep labels consistent.",
+    "The Potato config below reproduces the task with a span scheme for tagging tokens by part of speech. Use it to extend MasakhaPOS or to build UD-style POS data for a new language."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "ACL 2023"
+    },
+    {
+      "label": "Languages",
+      "value": "20 African languages"
+    },
+    {
+      "label": "Task",
+      "value": "Part-of-speech tagging (token-level)"
+    },
+    {
+      "label": "Tagset",
+      "value": "Universal Dependencies (UD) POS tags"
+    },
+    {
+      "label": "Guidelines",
+      "value": "Universal Dependencies"
+    },
+    {
+      "label": "Community",
+      "value": "Masakhane"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Dione et al. (Masakhane)",
@@ -8,7 +40,7 @@
     "affiliation": "Masakhane NLP"
   },
   "createdAt": "2026-07-04",
-  "updatedAt": "2026-07-04",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span"
   ],

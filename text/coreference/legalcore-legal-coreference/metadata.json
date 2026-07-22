@@ -1,6 +1,38 @@
 {
   "title": "Legal Event Coreference (LegalCore)",
   "description": "Event coreference resolution in legal documents including court opinions, contracts, and statutes. Annotators identify legal event mentions such as actions, states, obligations, and violations, then link coreferent events that refer to the same real-world event. Based on the LegalCore dataset for domain-specific event coreference in the legal domain.",
+  "overview": [
+    "LegalCore is a dataset for event coreference resolution in legal documents, introduced by Wei and colleagues in the Findings of ACL 2025. It targets a hard setting for coreference: long, dense commercial contracts where the same event is referenced repeatedly, sometimes many paragraphs apart.",
+    "The documents come from CUAD, the Contract Understanding Atticus Dataset. Annotators read each contract, marked every event mention (the trigger word for an event such as a payment, termination, or delivery), and grouped mentions that refer to the same event into coreference clusters.",
+    "The release covers 100 contracts with 23,183 annotated event mentions and 853 non-singleton coreference clusters — 653 local and 200 that link mentions across long distances. Documents run to roughly 2,500 tokens each, and models are evaluated with five-fold cross-validation rather than a fixed split.",
+    "The Potato config below reproduces the task with a span scheme for event triggers and a span-link scheme for coreference edges, so you can mark event mentions and connect the ones that co-refer. Use it to extend LegalCore or to annotate event coreference in your own contracts."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "Findings of ACL 2025"
+    },
+    {
+      "label": "Domain",
+      "value": "Legal contracts (CUAD)"
+    },
+    {
+      "label": "Documents",
+      "value": "100 contracts (~249,523 tokens)"
+    },
+    {
+      "label": "Event mentions",
+      "value": "23,183"
+    },
+    {
+      "label": "Coreference clusters",
+      "value": "853 non-singleton (653 local / 200 non-local)"
+    },
+    {
+      "label": "Evaluation",
+      "value": "5-fold cross-validation"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wei et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Bar-Ilan University"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "span_link"
@@ -33,8 +65,8 @@
     "acl2025"
   ],
   "featured": false,
-  "paperReference": "Wei et al., Findings ACL 2025",
-  "paperUrl": "https://arxiv.org/abs/2502.12509",
+  "paperReference": "Wei et al., Findings of ACL 2025",
+  "paperUrl": "https://aclanthology.org/2025.findings-acl.1284/",
   "datasetUrl": "https://github.com/WeiKangda/LegalCore",
-  "citation": "@inproceedings{wei-etal-2025-legalcore,\n    title = \"{L}egal{C}ore: A Dataset for Event Coreference Resolution in Legal Documents\",\n    author = \"Wei, Kangda and others\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2502.12509\"\n}"
+  "citation": "@inproceedings{wei-etal-2025-legalcore,\n    title = \"{L}egal{C}ore: A Dataset for Event Coreference Resolution in Legal Documents\",\n    author = \"Wei, Kangda and Shi, Xi and Tong, Jonathan and Reddy, Sai Ramana and Natarajan, Anandhavelu and Jain, Rajiv and Garimella, Aparna and Huang, Ruihong\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2025\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.findings-acl.1284/\"\n}"
 }

@@ -1,6 +1,38 @@
 {
   "title": "MasakhaNER 2.0 - Named Entity Recognition for African Languages",
   "description": "Span-level named entity recognition for African-language text, following the MasakhaNER 2.0 annotation scheme (Adelani et al., EMNLP 2022): the largest human-annotated NER dataset for African languages, covering 20 languages such as Swahili, Hausa, Yoruba, Igbo, Nigerian-Pidgin and isiZulu. Native-speaker annotators, trained on the MUC-6 guidelines, highlight four entity types - Person (PER), Organization (ORG), Location (LOC) and Date & Time (DATE) - then confirm the overall entity composition of the sentence. Illustrative sample items include an English gloss for reference only; real annotation is done by native speakers without glosses.",
+  "overview": [
+    "MasakhaNER 2.0 is the largest human-annotated named entity recognition dataset for African languages, covering 20 of them. Adelani and colleagues built it through the Masakhane community and published it at EMNLP 2022.",
+    "The text is mostly local news, with some sentences from the MAFAND-MT translation corpus. Native speakers annotated four entity types — person (PER), location (LOC), organization (ORG), and date and time (DATE) — following the MUC-6 named-entity guidelines. The DATE type replaces CoNLL's MISC, which the authors found caused disagreement.",
+    "Each language was annotated by three native speakers with a language coordinator who trained them and adjudicated disagreements; annotators were paid, and agreement was measured with Fleiss' kappa. Data is split 70/10/20 into train, development, and test.",
+    "The Potato config below reproduces the task with a span scheme for the four entity types plus a check for whether a sentence contains entities. Use it to extend MasakhaNER to a new language or to annotate NER in low-resource text."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "EMNLP 2022"
+    },
+    {
+      "label": "Languages",
+      "value": "20 African languages"
+    },
+    {
+      "label": "Domain",
+      "value": "Local news (+ MAFAND-MT)"
+    },
+    {
+      "label": "Entity types",
+      "value": "PER, LOC, ORG, DATE (MUC-6)"
+    },
+    {
+      "label": "Annotators",
+      "value": "3 native speakers + coordinator per language"
+    },
+    {
+      "label": "Splits",
+      "value": "70 / 10 / 20"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Adelani et al. (Masakhane)",
@@ -8,7 +40,7 @@
     "affiliation": "Masakhane NLP"
   },
   "createdAt": "2026-07-04",
-  "updatedAt": "2026-07-04",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"
