@@ -3,13 +3,13 @@
   "description": "Chart and infographic analysis with structured extraction. Annotators identify chart elements (axes, legends, data points, titles) with bounding boxes, classify chart types, and extract data values. Supports structured understanding of visual data representations.",
   "version": "1.0.0",
   "author": {
-    "name": "Davila et al.",
+    "name": "Potato Team",
     "email": "",
-    "github": "chartinfo",
-    "affiliation": "University at Buffalo"
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "image_annotation",
     "radio",
@@ -36,8 +36,5 @@
     "visualization"
   ],
   "featured": false,
-  "paperReference": "Davila et al., ICPR 2024",
-  "paperUrl": "https://link.springer.com/chapter/10.1007/978-3-031-78312-8_5",
-  "datasetUrl": "https://chartinfo.github.io/",
-  "citation": "@inproceedings{davila2024chartinfo,\n    title = \"{CHART-Infographics}: Chart and Infographic Analysis Recognition and Understanding\",\n    author = \"Davila, Kenny  and Kota, Bhargava Urala  and Setlur, Vidya  and Gotz, David  and Roysam, Badrinath\",\n    booktitle = \"Proceedings of the 27th International Conference on Pattern Recognition (ICPR)\",\n    year = \"2024\",\n    publisher = \"Springer\",\n    url = \"https://link.springer.com/chapter/10.1007/978-3-031-78312-8_5\"\n}"
+  "datasetUrl": "https://chartinfo.github.io/"
 }

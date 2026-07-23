@@ -8,20 +8,38 @@
     "The Potato config below reproduces the core annotation flow: a binary radio choice for whether the text is funny, followed by a 5-point Likert scale rating how offensive it is, treating humor and offense as independent dimensions."
   ],
   "datasetStats": [
-    { "label": "Total texts", "value": "10,000" },
-    { "label": "Train / Dev / Test", "value": "8,000 / 1,000 / 1,000" },
-    { "label": "Annotators per text", "value": "20 (aged 18-70)" },
-    { "label": "Offense rating scale", "value": "1 to 5" },
-    { "label": "Source", "value": "Twitter + Kaggle Short Jokes" },
-    { "label": "Venue", "value": "SemEval-2021, Task 7" }
+    {
+      "label": "Total texts",
+      "value": "10,000"
+    },
+    {
+      "label": "Train / Dev / Test",
+      "value": "8,000 / 1,000 / 1,000"
+    },
+    {
+      "label": "Annotators per text",
+      "value": "20 (aged 18-70)"
+    },
+    {
+      "label": "Offense rating scale",
+      "value": "1 to 5"
+    },
+    {
+      "label": "Source",
+      "value": "Twitter + Kaggle Short Jokes"
+    },
+    {
+      "label": "Venue",
+      "value": "SemEval-2021, Task 7"
+    }
   ],
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "version": "1.0.0",
   "author": {
     "name": "Meaney et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "University of Sheffield"
+    "affiliation": "University of Edinburgh"
   },
   "createdAt": "2025-01-16",
   "annotationTypes": [
@@ -50,5 +68,5 @@
   "paperReference": "Meaney et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.9/",
   "datasetUrl": "https://competitions.codalab.org/competitions/27446",
-  "citation": "@inproceedings{meaney-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 7: {H}a{H}ackathon, {D}etecting and {R}ating {H}umor and {O}ffense\",\n    author = \"Meaney, J. A.  and Wilson, Steven  and Chiruzzo, Luis  and Lopez, Adam  and Magdy, Walid\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.9\"\n}"
+  "citation": "@inproceedings{meaney-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 7: {H}a{H}ackathon, Detecting and Rating Humor and Offense\",\n    author = \"Meaney, J. A. and Wilson, Steven and Chiruzzo, Luis and Lopez, Adam and Magdy, Walid\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    pages = \"105--119\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.9\"\n}"
 }

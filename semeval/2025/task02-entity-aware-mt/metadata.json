@@ -3,13 +3,13 @@
   "description": "Entity-aware machine translation evaluation requiring annotators to identify entity spans, classify translation errors, and provide corrected translations. Based on SemEval-2025 Task 2.",
   "version": "1.0.0",
   "author": {
-    "name": "Knowles et al.",
+    "name": "Conia et al.",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "National Research Council Canada"
+    "github": "sapienzanlp",
+    "affiliation": "Sapienza University of Rome / Apple"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio",
@@ -36,8 +36,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "Knowles et al., SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/SemEval2025-Task2",
-  "citation": "@inproceedings{knowles-etal-2025-eamt,\n    title = \"{EA-MT}: Entity-Aware Machine Translation\",\n    author = \"Knowles, Rebecca and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Conia et al., SemEval-2025 Task 2",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.326/",
+  "datasetUrl": "https://github.com/sapienzanlp/ea-mt",
+  "citation": "@inproceedings{conia-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 2: Entity-Aware Machine Translation\",\n    author = \"Conia, Simone and Li, Min and Navigli, Roberto and Potdar, Saloni\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.semeval-1.326/\",\n    pages = \"2535--2557\"\n}"
 }

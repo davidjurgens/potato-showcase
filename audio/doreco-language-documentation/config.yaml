@@ -1,6 +1,6 @@
 # DoReCo Language Documentation Annotation
-# Based on Paschen et al., Scientific Data 2022
-# Paper: https://doi.org/10.1038/s41597-022-01694-4
+# Based on Paschen et al., LREC 2020
+# Paper: https://aclanthology.org/2020.lrec-1.324/
 # Dataset: https://doreco.huma-num.fr/
 #
 # Task: Multi-tier language documentation annotation following ELAN conventions.

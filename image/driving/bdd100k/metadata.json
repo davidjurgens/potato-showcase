@@ -8,14 +8,32 @@
     "The Potato config below reproduces the driving-scene labeling workflow with multiselect and radio schemes, letting annotators tag objects, lane markings, drivable areas, and scene attributes on individual frames."
   ],
   "datasetStats": [
-    { "label": "Driving videos", "value": "100,000 (~40s each)" },
-    { "label": "Labeled images", "value": "100,000 frames" },
-    { "label": "Segmentation images", "value": "10,000 (pixel-level)" },
-    { "label": "Detection categories", "value": "10 object classes" },
-    { "label": "Segmentation classes", "value": "40 classes" },
-    { "label": "Resolution / rate", "value": "720p at 30 fps" }
+    {
+      "label": "Driving videos",
+      "value": "100,000 (~40s each)"
+    },
+    {
+      "label": "Labeled images",
+      "value": "100,000 frames"
+    },
+    {
+      "label": "Segmentation images",
+      "value": "10,000 (pixel-level)"
+    },
+    {
+      "label": "Detection categories",
+      "value": "10 object classes"
+    },
+    {
+      "label": "Segmentation classes",
+      "value": "40 classes"
+    },
+    {
+      "label": "Resolution / rate",
+      "value": "720p at 30 fps"
+    }
   ],
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "version": "1.0.0",
   "author": {
     "name": "Yu et al.",
@@ -49,5 +67,5 @@
   "paperReference": "Yu et al., CVPR 2020",
   "paperUrl": "https://arxiv.org/abs/1805.04687",
   "datasetUrl": "https://bdd-data.berkeley.edu",
-  "citation": "@inproceedings{yu2020bdd100k,\n    title = \"{BDD100K}: A Diverse Driving Dataset for Heterogeneous Multitask Learning\",\n    author = \"Yu, Fisher  and Chen, Haofeng  and Wang, Xin  and Xian, Wenqi  and Chen, Yingying  and Liu, Fangchen  and Madhavan, Vashisht  and Darrell, Trevor\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    pages = \"2636--2645\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/1805.04687\"\n}"
+  "citation": "@inproceedings{yu2020bdd100k,\n    title = \"{BDD100K}: A Diverse Driving Dataset for Heterogeneous Multitask Learning\",\n    author = \"Yu, Fisher and Chen, Haofeng and Wang, Xin and Xian, Wenqi and Chen, Yingying and Liu, Fangchen and Madhavan, Vashisht and Darrell, Trevor\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    pages = \"2633--2642\",\n    year = \"2020\",\n    url = \"https://arxiv.org/abs/1805.04687\"\n}"
 }

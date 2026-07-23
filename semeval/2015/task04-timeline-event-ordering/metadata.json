@@ -9,7 +9,7 @@
     "affiliation": "Fondazione Bruno Kessler"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"
@@ -36,8 +36,8 @@
     "news"
   ],
   "featured": false,
-  "paperReference": "Minard et al., SemEval 2015",
+  "paperReference": "Minard et al., SemEval-2015 Task 4",
   "paperUrl": "https://aclanthology.org/S15-2132/",
   "datasetUrl": "https://alt.qcri.org/semeval2015/task4/",
-  "citation": "@inproceedings{minard-etal-2015-semeval,\n    title = \"{S}em{E}val-2015 {T}ask 4: {T}ime{L}ine: {C}ross-{D}ocument {E}vent {O}rdering\",\n    author = \"Minard, Anne-Lyse  and Speranza, Manuela  and Agirre, Eneko  and Aldabe, Itziar  and van Erp, Marieke  and Navigli, Roberto  and de Lacalle, Oier Lopez\",\n    booktitle = \"Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval-2015)\",\n    year = \"2015\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S15-2132\"\n}"
+  "citation": "@inproceedings{minard-etal-2015-semeval,\n    title = \"{S}em{E}val-2015 Task 4: TimeLine: Cross-Document Event Ordering\",\n    author = \"Minard, Anne-Lyse and Speranza, Manuela and Agirre, Eneko and Aldabe, Itziar and van Erp, Marieke and Magnini, Bernardo and Rigau, German and Urizar, Rub{\\'e}n\",\n    booktitle = \"Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval 2015)\",\n    month = jun,\n    year = \"2015\",\n    address = \"Denver, Colorado\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S15-2132/\",\n    pages = \"778--786\",\n    doi = \"10.18653/v1/S15-2132\"\n}"
 }
