@@ -9,7 +9,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "likert",
     "text"
@@ -33,8 +33,8 @@
     "rationale"
   ],
   "featured": false,
-  "paperReference": "OpenBMB, 2023",
-  "paperUrl": "https://github.com/OpenBMB/UltraFeedback",
+  "paperReference": "Cui et al., ICML 2024",
+  "paperUrl": "https://arxiv.org/abs/2310.01377",
   "datasetUrl": "https://huggingface.co/datasets/openbmb/UltraFeedback",
-  "citation": "@misc{ultrafeedback2023,\n  title={UltraFeedback: A Large-Scale, Fine-Grained, Diverse Preference Dataset},\n  author={OpenBMB},\n  year={2023},\n  url={https://github.com/OpenBMB/UltraFeedback}\n}"
+  "citation": "@inproceedings{cui2024ultrafeedback,\n    title = {{UltraFeedback}: Boosting Language Models with Scaled {AI} Feedback},\n    author = {Cui, Ganqu and Yuan, Lifan and Ding, Ning and Yao, Guanming and He, Bingxiang and Zhu, Wei and Ni, Yuan and Xie, Guotong and Xie, Ruobing and Lin, Yankai and Liu, Zhiyuan and Sun, Maosong},\n    booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},\n    year = {2024},\n    url = {https://arxiv.org/abs/2310.01377}\n}"
 }

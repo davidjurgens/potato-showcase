@@ -6,10 +6,10 @@
     "name": "Deng et al.",
     "email": "",
     "github": "imagenet",
-    "affiliation": "Stanford University"
+    "affiliation": "Princeton University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"

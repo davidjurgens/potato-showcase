@@ -9,7 +9,7 @@
     "affiliation": "National University of Ireland Galway"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "likert",
     "radio"
@@ -39,5 +39,5 @@
   "paperReference": "Cortis et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2089/",
   "datasetUrl": "https://alt.qcri.org/semeval2017/task5/",
-  "citation": "@inproceedings{cortis-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 5: Fine-Grained Sentiment Analysis on Financial Microblogs and News\",\n    author = \"Cortis, Keith and Freitas, Andre and Daudert, Tobias and Huerlimann, Manuela and Zarrouk, Manel and Handschuh, Siegfried and Davis, Brian\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2089\"\n}"
+  "citation": "@inproceedings{cortis-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 5: Fine-Grained Sentiment Analysis on Financial Microblogs and News\",\n    author = \"Cortis, Keith and Freitas, Andr{\\'e} and Daudert, Tobias and Huerlimann, Manuela and Zarrouk, Manel and Handschuh, Siegfried and Davis, Brian\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation ({S}em{E}val-2017)\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"519--535\",\n    doi = \"10.18653/v1/S17-2089\",\n    url = \"https://aclanthology.org/S17-2089\"\n}"
 }
