@@ -4,21 +4,21 @@
 # Dataset: https://github.com/Karine-Huang/T2I-CompBench
 #
 # Evaluation of compositional text-to-image generation. Annotators assess
-# how well generated images match text prompts across compositional
-# dimensions: attribute binding, spatial relationships, action depiction,
-# counting accuracy, and complex compositions.
+# how well generated images match text prompts across the benchmark's
+# compositional dimensions: attribute binding (color, shape, texture),
+# spatial relationships, non-spatial relationships, and complex compositions.
 #
 # Quality Rating (Likert 1-5):
 # - 1 (Very Poor): Image does not match the prompt at all
 # - 3 (Average): Some elements match but with notable errors
 # - 5 (Perfect): Image perfectly matches all aspects of the prompt
 #
-# Compositional Challenge Types:
-# - Attribute: Correct binding of attributes (color, shape, texture) to objects
+# Compositional Challenge Types (T2I-CompBench, NeurIPS 2023):
+# - Attribute binding: Correct binding of color, shape, texture to objects
 # - Spatial: Correct spatial relationships between objects
-# - Action: Correct depiction of actions or activities
-# - Counting: Correct number of objects
+# - Non-spatial: Non-spatial relationships such as actions or interactions
 # - Complex: Multiple compositional challenges combined
+# (Counting/numeracy was added only in the later T2I-CompBench++.)
 #
 # Annotation Guidelines:
 # 1. Read the text prompt carefully
@@ -57,22 +57,19 @@ annotation_schemes:
     name: challenge_type
     description: "What type of compositional challenge does this prompt test?"
     labels:
-      - "Attribute"
+      - "Attribute binding"
       - "Spatial"
-      - "Action"
-      - "Counting"
+      - "Non-spatial"
       - "Complex"
     keyboard_shortcuts:
-      "Attribute": "1"
+      "Attribute binding": "1"
       "Spatial": "2"
-      "Action": "3"
-      "Counting": "4"
-      "Complex": "5"
+      "Non-spatial": "3"
+      "Complex": "4"
     tooltips:
-      "Attribute": "Tests correct binding of attributes (color, shape, texture) to objects"
+      "Attribute binding": "Tests correct binding of color, shape, or texture to objects"
       "Spatial": "Tests correct spatial relationships (above, below, next to, etc.)"
-      "Action": "Tests correct depiction of actions or activities"
-      "Counting": "Tests correct number of objects"
+      "Non-spatial": "Tests non-spatial relationships such as actions or interactions"
       "Complex": "Tests multiple compositional challenges combined"
 
   # Step 3: Pairwise image comparison

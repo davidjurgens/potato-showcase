@@ -1,12 +1,12 @@
 # Media Frames Analysis
 # Based on Card et al., ACL 2015
-# Paper: https://aclanthology.org/P15-1061/
+# Paper: https://aclanthology.org/P15-2072/
 # Dataset: https://github.com/dallascard/media_frames_corpus
 #
 # This task asks annotators to identify how news articles frame policy
 # issues. Media framing refers to the way information is presented to
 # influence how audiences interpret issues. The frame taxonomy covers
-# 14 dimensions commonly used in political communication research.
+# 15 dimensions from Boydstun et al. (2014).
 #
 # Frame Dimensions:
 # - Economic: Costs, benefits, financial impact
@@ -23,11 +23,12 @@
 # - Public Opinion: Polls, public sentiment, popularity
 # - Political: Political strategy, partisanship, elections
 # - External Regulation: International bodies, foreign policy, treaties
+# - Other: Any coherent group of frames not covered by the categories above
 #
 # Annotation Guidelines:
 # 1. Read the news paragraph and note the topic and source
 # 2. Select all applicable framing dimensions
-# 3. Classify the overall stance toward the issue
+# 3. Choose the single primary (dominant) frame for the article
 # 4. Provide a brief justification for your frame selections
 
 annotation_task_name: "Media Frames Analysis"
@@ -66,6 +67,7 @@ annotation_schemes:
       - "Public Opinion"
       - "Political"
       - "External Regulation"
+      - "Other"
     tooltips:
       "Economic": "Discusses costs, benefits, economic impact, or financial considerations"
       "Capacity and Resources": "Focuses on availability of resources, infrastructure, or logistical capacity"
@@ -81,23 +83,28 @@ annotation_schemes:
       "Public Opinion": "References polls, public sentiment, or popular support"
       "Political": "Focuses on political strategy, partisanship, or electoral implications"
       "External Regulation": "Discusses international bodies, foreign policy, or treaties"
+      "Other": "Any coherent group of frames not covered by the other categories"
 
-  # Step 2: Classify the stance
+  # Step 2: Select the primary (dominant) frame
   - annotation_type: radio
-    name: stance
-    description: "What is the overall stance of this text toward the issue?"
+    name: primary_frame
+    description: "Which single framing dimension is the primary (dominant) frame of the article?"
     labels:
-      - "Pro-Issue"
-      - "Anti-Issue"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Pro-Issue": "1"
-      "Anti-Issue": "2"
-      "Neutral": "3"
-    tooltips:
-      "Pro-Issue": "The text supports or advocates for the issue, policy, or position being discussed"
-      "Anti-Issue": "The text opposes or argues against the issue, policy, or position being discussed"
-      "Neutral": "The text presents the issue without clear advocacy for or against"
+      - "Economic"
+      - "Capacity and Resources"
+      - "Morality"
+      - "Fairness and Equality"
+      - "Legality"
+      - "Policy"
+      - "Crime and Punishment"
+      - "Security"
+      - "Health"
+      - "Quality of Life"
+      - "Cultural Identity"
+      - "Public Opinion"
+      - "Political"
+      - "External Regulation"
+      - "Other"
 
   # Step 3: Provide frame justification
   - annotation_type: text
@@ -107,7 +114,7 @@ annotation_schemes:
 annotation_instructions: |
   You will be shown paragraphs from news articles about policy issues. Your task is to:
   1. Identify which framing dimensions are present. Multiple frames can co-occur.
-  2. Classify whether the text is pro-issue, anti-issue, or neutral.
+  2. Select the single primary (dominant) frame for the article.
   3. Provide a brief justification for your frame selections.
 
   Media frames shape how readers interpret issues. Look for the underlying perspective

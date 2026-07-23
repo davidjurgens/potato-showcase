@@ -8,12 +8,30 @@
     "The Potato config below reproduces the sentence-level task as a single radio-button choice over positive, negative, and neutral, applied to one code-mixed tweet at a time."
   ],
   "datasetStats": [
-    { "label": "Language pairs", "value": "Hindi-English, Spanish-English" },
-    { "label": "Hinglish tweets", "value": "20,000 (14K/3K/3K)" },
-    { "label": "Spanglish tweets", "value": "~19K (12,002/2,998/3,788)" },
-    { "label": "Sentiment labels", "value": "Positive, Negative, Neutral" },
-    { "label": "Submissions", "value": "89 (61 Hinglish, 28 Spanglish)" },
-    { "label": "Venue", "value": "SemEval-2020, December 2020" }
+    {
+      "label": "Language pairs",
+      "value": "Hindi-English, Spanish-English"
+    },
+    {
+      "label": "Hinglish tweets",
+      "value": "20,000 (14K/3K/3K)"
+    },
+    {
+      "label": "Spanglish tweets",
+      "value": "~19K (12,002/2,998/3,788)"
+    },
+    {
+      "label": "Sentiment labels",
+      "value": "Positive, Negative, Neutral"
+    },
+    {
+      "label": "Submissions",
+      "value": "89 (61 Hinglish, 28 Spanglish)"
+    },
+    {
+      "label": "Venue",
+      "value": "SemEval-2020, December 2020"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "IIIT Hyderabad"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio"
   ],
@@ -49,6 +67,6 @@
   "featured": false,
   "paperReference": "Patwa et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.100/",
-  "datasetUrl": "https://ritual-uh.github.io/sentimix2020/",
-  "citation": "@inproceedings{patwa-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 9: {S}entiment {A}nalysis for {C}ode-{M}ixed {S}ocial {M}edia {T}ext\",\n    author = \"Patwa, Parth  and Aguilar, Gustavo  and Kar, Sudipta  and Pandey, Suraj  and PYKL, Srinivas  and Gamback, Bjorn  and Chakraborty, Tanmoy  and Solorio, Thamar  and Das, Amitava\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.100\"\n}"
+  "datasetUrl": "https://competitions.codalab.org/competitions/20654",
+  "citation": "@inproceedings{patwa-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 9: {O}verview of {S}entiment {A}nalysis of {C}ode-{M}ixed {T}weets\",\n    author = \"Patwa, Parth and Aguilar, Gustavo and Kar, Sudipta and Pandey, Suraj and PYKL, Srinivas and Gamb{\\\"a}ck, Bj{\\\"o}rn and Chakraborty, Tanmoy and Solorio, Thamar and Das, Amitava\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.100\",\n    pages = \"774--790\"\n}"
 }

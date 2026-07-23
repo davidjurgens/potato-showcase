@@ -8,12 +8,30 @@
     "The Potato config below reproduces this task for human annotators: it shows the instruction, the response, and the score rubric, collects a 1-5 score, and captures written feedback that justifies the score."
   ],
   "datasetStats": [
-    { "label": "Score rubrics", "value": "1,000" },
-    { "label": "Instructions", "value": "20,000 (20 per rubric)" },
-    { "label": "Responses + feedback", "value": "100,000" },
-    { "label": "Score scale", "value": "1-5 Likert" },
-    { "label": "Base model", "value": "Llama-2-Chat 7B / 13B" },
-    { "label": "Venues", "value": "ICLR 2024 / EMNLP 2024 (v2)" }
+    {
+      "label": "Score rubrics",
+      "value": "1,000"
+    },
+    {
+      "label": "Instructions",
+      "value": "20,000 (20 per rubric)"
+    },
+    {
+      "label": "Responses + feedback",
+      "value": "100,000"
+    },
+    {
+      "label": "Score scale",
+      "value": "1-5 Likert"
+    },
+    {
+      "label": "Base model",
+      "value": "Llama-2-Chat 7B / 13B"
+    },
+    {
+      "label": "Venues",
+      "value": "ICLR 2024 / EMNLP 2024 (v2)"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "likert",
     "text"
@@ -49,7 +67,7 @@
   ],
   "featured": false,
   "paperReference": "Kim et al., ICLR 2024",
-  "paperUrl": "https://openreview.net/forum?id=prometheus2024",
-  "datasetUrl": "https://github.com/kaistAI/Prometheus",
-  "citation": "@inproceedings{kim2024prometheus,\n  title={Prometheus: Inducing Fine-grained Evaluation Capability in Language Models},\n  author={Kim, Seungone and Shin, Jamin and Cho, Yejin and Jang, Joel and Longpre, Shayne and Lee, Hwaran and Yun, Sangdoo and Shin, Seongjin and Kim, Sungdong and Thorne, James and others},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
+  "paperUrl": "https://openreview.net/forum?id=8euJaTveKw",
+  "datasetUrl": "https://github.com/prometheus-eval/prometheus",
+  "citation": "@inproceedings{kim2024prometheus,\n    title={Prometheus: Inducing Fine-grained Evaluation Capability in Language Models},\n    author={Kim, Seungone and Shin, Jamin and Cho, Yejin and Jang, Joel and Longpre, Shayne and Lee, Hwaran and Yun, Sangdoo and Shin, Seongjin and Kim, Sungdong and Thorne, James and Seo, Minjoon},\n    booktitle={The Twelfth International Conference on Learning Representations (ICLR)},\n    year={2024},\n    url={https://openreview.net/forum?id=8euJaTveKw}\n}"
 }

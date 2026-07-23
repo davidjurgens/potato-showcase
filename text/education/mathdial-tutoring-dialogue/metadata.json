@@ -1,6 +1,6 @@
 {
   "title": "MathDial: Math Tutoring Dialogue Dataset",
-  "description": "MathDial is a dataset of 2,861 one-to-one math tutoring dialogues grounded in GSM8K word problems, annotated with a four-category teacher-move taxonomy. This Potato config reproduces those teacher-move labels.",
+  "description": "MathDial is a dataset of 2,861 one-to-one math tutoring dialogues grounded in GSM8K word problems, annotated with a four-category teacher-move taxonomy (Focus, Probing, Telling, Generic). This Potato config reproduces that teacher-move labeling task.",
   "overview": [
     "MathDial is a dialogue tutoring dataset introduced by Macina, Daheim, Chowdhury, Sinha, Kapur, Gurevych, and Sachan from ETH Zurich and TU Darmstadt, published in Findings of the Association for Computational Linguistics: ACL 2023.",
     "The dataset contains 2,861 one-to-one teacher-student tutoring dialogues. Each conversation is grounded in a multi-step math word problem drawn from GSM8K and a specific student confusion, with 91 teachers role-playing the tutor while a language model simulated the student.",
@@ -8,11 +8,26 @@
     "The Potato config below reproduces the teacher-move annotation task: annotators read a tutoring turn, classify it under the four-category taxonomy, and mark the student confusion and key concepts in the dialogue."
   ],
   "datasetStats": [
-    { "label": "Dialogues", "value": "2,861" },
-    { "label": "Grounding problems", "value": "GSM8K word problems" },
-    { "label": "Teacher moves", "value": "Focus, Probing, Telling, Generic" },
-    { "label": "Teachers", "value": "91" },
-    { "label": "Venue", "value": "Findings of ACL 2023" }
+    {
+      "label": "Dialogues",
+      "value": "2,861"
+    },
+    {
+      "label": "Grounding problems",
+      "value": "GSM8K word problems"
+    },
+    {
+      "label": "Teacher moves",
+      "value": "Focus, Probing, Telling, Generic"
+    },
+    {
+      "label": "Teachers",
+      "value": "91"
+    },
+    {
+      "label": "Venue",
+      "value": "Findings of ACL 2023"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -22,7 +37,7 @@
     "affiliation": "ETH Zurich"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "multiselect",
@@ -47,8 +62,8 @@
     "acl2023"
   ],
   "featured": false,
-  "paperReference": "Macina et al., Findings ACL 2023",
+  "paperReference": "Macina et al., Findings of EMNLP 2023",
   "paperUrl": "https://aclanthology.org/2023.findings-emnlp.372/",
   "datasetUrl": "https://github.com/eth-nlped/mathdial",
-  "citation": "@inproceedings{macina-etal-2023-mathdial,\n    title = \"{M}ath{D}ial: A Dialogue Tutoring Dataset with Rich Pedagogical Properties Grounded in Math Reasoning Problems\",\n    author = \"Macina, Jakub and Daheim, Nico and Chowdhury, Sankalan Pal and Sinha, Tanmay and Kapur, Manu and Gurevych, Iryna and Sachan, Mrinmaya\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2023\",\n    year = \"2023\",\n    url = \"https://aclanthology.org/2023.findings-emnlp.372\",\n    pages = \"8013--8038\"\n}"
+  "citation": "@inproceedings{macina-etal-2023-mathdial,\n    title = \"{M}ath{D}ial: A Dialogue Tutoring Dataset with Rich Pedagogical Properties Grounded in Math Reasoning Problems\",\n    author = \"Macina, Jakub and Daheim, Nico and Chowdhury, Sankalan and Sinha, Tanmay and Kapur, Manu and Gurevych, Iryna and Sachan, Mrinmaya\",\n    booktitle = \"Findings of the Association for Computational Linguistics: EMNLP 2023\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.findings-emnlp.372/\",\n    doi = \"10.18653/v1/2023.findings-emnlp.372\",\n    pages = \"5602--5621\"\n}"
 }

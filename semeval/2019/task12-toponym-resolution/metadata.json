@@ -8,12 +8,30 @@
     "The Potato config below reproduces the annotation step that produces this kind of data: a span scheme for highlighting every toponym in a passage, plus a text field for recording the resolved GeoNames location. Use it to build geoparsing training data or to run a toponym-resolution annotation study of your own."
   ],
   "datasetStats": [
-    { "label": "Shared task", "value": "SemEval-2019, Task 12" },
-    { "label": "Goal", "value": "Toponym detection + resolution" },
-    { "label": "Subtasks", "value": "Detection, disambiguation, end-to-end resolution" },
-    { "label": "Text", "value": "Full-text scientific journal articles" },
-    { "label": "Grounding", "value": "Linked to GeoNames (name + coordinates)" },
-    { "label": "Metrics", "value": "Strict/overlap F1; resolution accuracy" }
+    {
+      "label": "Shared task",
+      "value": "SemEval-2019, Task 12"
+    },
+    {
+      "label": "Goal",
+      "value": "Toponym detection + resolution"
+    },
+    {
+      "label": "Subtasks",
+      "value": "Detection, disambiguation, end-to-end resolution"
+    },
+    {
+      "label": "Text",
+      "value": "Full-text scientific journal articles"
+    },
+    {
+      "label": "Grounding",
+      "value": "Linked to GeoNames (name + coordinates)"
+    },
+    {
+      "label": "Metrics",
+      "value": "Strict/overlap F1; resolution accuracy"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "Arizona State University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "text"
@@ -52,7 +70,7 @@
   ],
   "featured": false,
   "paperReference": "Weissenbacher et al., SemEval 2019",
-  "paperUrl": "https://aclanthology.org/S19-2229/",
+  "paperUrl": "https://aclanthology.org/S19-2155/",
   "datasetUrl": "https://competitions.codalab.org/competitions/19948",
-  "citation": "@inproceedings{weissenbacher-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 12: Toponym Resolution in Scientific Papers\",\n    author = \"Weissenbacher, Davy and Magge, Arjun and O'Connor, Karen and Scotch, Matthew and Gonzalez-Hernandez, Graciela\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2229\"\n}"
+  "citation": "@inproceedings{weissenbacher-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 12: Toponym Resolution in Scientific Papers\",\n    author = \"Weissenbacher, Davy and Magge, Arjun and O{'}Connor, Karen and Scotch, Matthew and Gonzalez-Hernandez, Graciela\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2155/\",\n    doi = \"10.18653/v1/S19-2155\",\n    pages = \"907--916\"\n}"
 }

@@ -31,24 +31,21 @@ annotation_schemes:
       - "Positive"
       - "Negative"
       - "Neutral"
-      - "Mixed"
     keyboard_shortcuts:
       "Positive": "1"
       "Negative": "2"
       "Neutral": "3"
-      "Mixed": "4"
     tooltips:
       "Positive": "The text expresses a positive emotion or opinion"
       "Negative": "The text expresses a negative emotion or opinion"
       "Neutral": "The text does not express a clear positive or negative sentiment"
-      "Mixed": "The text expresses both positive and negative sentiments"
 
 annotation_instructions: |
   You will see a social media post written in code-mixed text (switching between
   two languages). Your task is to:
   1. Read the text carefully, considering both languages used.
   2. Determine the overall sentiment expressed in the post.
-  3. Select Positive, Negative, Neutral, or Mixed.
+  3. Select Positive, Negative, or Neutral.
 
   Note: Even if you don't understand every word, try to infer sentiment from
   the words you do recognize, emoticons, and overall tone.

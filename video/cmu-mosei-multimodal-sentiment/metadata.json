@@ -8,12 +8,30 @@
     "The Potato config below reproduces this workflow as a multi-tier ELAN-style task. Annotators segment visual and acoustic events on parallel timeline tiers, transcribe speech, classify the six emotions, and assign sentiment polarity for each clip."
   ],
   "datasetStats": [
-    { "label": "Utterance segments", "value": "23,453" },
-    { "label": "Source videos", "value": "3,228 YouTube videos" },
-    { "label": "Speakers", "value": "1,000 (gender balanced)" },
-    { "label": "Topics", "value": "250" },
-    { "label": "Annotated video", "value": "65+ hours" },
-    { "label": "Sentiment scale", "value": "-3 to +3, plus 6 emotions" }
+    {
+      "label": "Utterance segments",
+      "value": "23,453"
+    },
+    {
+      "label": "Source videos",
+      "value": "3,228 YouTube videos"
+    },
+    {
+      "label": "Speakers",
+      "value": "1,000 (gender balanced)"
+    },
+    {
+      "label": "Topics",
+      "value": "250"
+    },
+    {
+      "label": "Annotated video",
+      "value": "65+ hours"
+    },
+    {
+      "label": "Sentiment scale",
+      "value": "-3 to +3, plus 6 emotions"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "video_annotation",
     "radio",
@@ -52,6 +70,6 @@
   "featured": false,
   "paperReference": "Zadeh et al., ACL 2018",
   "paperUrl": "https://aclanthology.org/P18-1208/",
-  "datasetUrl": "http://multicomp.cs.cmu.edu/resources/cmu-mosei-dataset/",
+  "datasetUrl": "https://github.com/CMU-MultiComp-Lab/CMU-MultimodalSDK",
   "citation": "@inproceedings{zadeh2018multimodal,\n  title={Multimodal Language Analysis in the Wild: CMU-MOSEI Dataset and Interpretable Dynamic Fusion Graph},\n  author={Zadeh, AmirAli Bagher and Liang, Paul Pu and Poria, Soujanya and Cambria, Erik and Morency, Louis-Philippe},\n  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics},\n  pages={2236--2246},\n  year={2018},\n  publisher={Association for Computational Linguistics}\n}"
 }

@@ -8,12 +8,30 @@
     "The Potato config below reproduces the Belebele multiple-choice task as a radio-button annotation interface. Annotators read a passage, answer a four-option question, and add metadata such as difficulty and reasoning type."
   ],
   "datasetStats": [
-    { "label": "Language variants", "value": "122" },
-    { "label": "Distinct languages", "value": "115" },
-    { "label": "Questions per language", "value": "900" },
-    { "label": "Total questions", "value": "109,800" },
-    { "label": "Distinct passages", "value": "488 (from FLORES-200)" },
-    { "label": "Answer options", "value": "4 (1 correct)" }
+    {
+      "label": "Language variants",
+      "value": "122"
+    },
+    {
+      "label": "Distinct languages",
+      "value": "115"
+    },
+    {
+      "label": "Questions per language",
+      "value": "900"
+    },
+    {
+      "label": "Total questions",
+      "value": "109,800"
+    },
+    {
+      "label": "Distinct passages",
+      "value": "488 (from FLORES-200)"
+    },
+    {
+      "label": "Answer options",
+      "value": "4 (1 correct)"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "Meta AI"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio"
   ],
@@ -50,5 +68,5 @@
   "paperReference": "Bandarkar et al., ACL 2024",
   "paperUrl": "https://arxiv.org/abs/2308.16884",
   "datasetUrl": "https://github.com/facebookresearch/belebele",
-  "citation": "@inproceedings{bandarkar-etal-2024-belebele,\n    title = \"The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Languages\",\n    author = \"Bandarkar, Lucas  and Liang, Davis  and Muller, Benjamin  and Artetxe, Mikel  and Shukla, Satya Narayan  and Husa, Donald  and Gober, Naman  and Sez de Ocari{\\~n}a, Amir  and Ber, Alon  and Sagot, Beno{\\^\\i}t  and Conneau, Alexis\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2308.16884\"\n}"
+  "citation": "@inproceedings{bandarkar-etal-2024-belebele,\n    title = \"The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants\",\n    author = \"Bandarkar, Lucas and Liang, Davis and Muller, Benjamin and Artetxe, Mikel and Shukla, Satya Narayan and Husa, Donald and Goyal, Naman and Krishnan, Abhinandan and Zettlemoyer, Luke and Khabsa, Madian\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.acl-long.44/\",\n    pages = \"749--775\"\n}"
 }
