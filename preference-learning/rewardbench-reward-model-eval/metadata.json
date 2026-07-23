@@ -1,6 +1,6 @@
 {
   "title": "RewardBench: Reward Model Evaluation via Pairwise Preference",
-  "description": "Reward model evaluation through pairwise preference annotation. Annotators choose between a 'chosen' (better) and 'rejected' (worse) response across diverse categories (chat, safety, reasoning, coding).",
+  "description": "Reward model evaluation through pairwise preference annotation. Annotators choose between a 'chosen' (better) and 'rejected' (worse) response across RewardBench's four categories (chat, chat hard, safety, reasoning).",
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +9,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "pairwise",
     "radio"

@@ -8,12 +8,30 @@
     "The Potato config below reproduces the element-segmentation task: segment-mode video annotation for marking element boundaries, plus radio schemes for event, element group, difficulty, and execution quality. Use it to re-annotate FineGym clips, extend the taxonomy, or build a similar fine-grained sports dataset."
   ],
   "datasetStats": [
-    { "label": "Released", "value": "CVPR 2020 (oral)" },
-    { "label": "Domain", "value": "Women's artistic gymnastics" },
-    { "label": "Hierarchy", "value": "Events -> Sets -> Elements" },
-    { "label": "Element classes", "value": "99 / 288 / 530 (Gym99 / Gym288 / Gym530)" },
-    { "label": "Events", "value": "Balance Beam, Floor, Uneven Bars, Vault" },
-    { "label": "Temporal precision", "value": "Millisecond-level boundaries" }
+    {
+      "label": "Released",
+      "value": "CVPR 2020 (oral)"
+    },
+    {
+      "label": "Domain",
+      "value": "Women's artistic gymnastics"
+    },
+    {
+      "label": "Hierarchy",
+      "value": "Events -> Sets -> Elements"
+    },
+    {
+      "label": "Element classes",
+      "value": "99 / 288 / 530 (Gym99 / Gym288 / Gym530)"
+    },
+    {
+      "label": "Events",
+      "value": "Balance Beam, Floor, Uneven Bars, Vault"
+    },
+    {
+      "label": "Temporal precision",
+      "value": "Millisecond-level boundaries"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "video_annotation"
@@ -51,5 +69,5 @@
   "paperReference": "Shao et al., CVPR 2020",
   "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shao_FineGym_A_Hierarchical_Video_Dataset_for_Fine-Grained_Action_Understanding_CVPR_2020_paper.html",
   "datasetUrl": "https://sdolivia.github.io/FineGym/",
-  "citation": "@inproceedings{shao2020finegym,\n  title={FineGym: A hierarchical video dataset for fine-grained action understanding},\n  author={Shao, Dian and Zhao, Yue and Dai, Bo and Lin, Dahua},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={2616--2625},\n  year={2020}\n}"
+  "citation": "@inproceedings{shao2020finegym,\n    title={FineGym: A Hierarchical Video Dataset for Fine-Grained Action Understanding},\n    author={Shao, Dian and Zhao, Yue and Dai, Bo and Lin, Dahua},\n    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages={2613--2622},\n    year={2020}\n}"
 }

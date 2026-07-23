@@ -1,15 +1,15 @@
 {
   "title": "ViTPose Human Keypoint Annotation",
-  "description": "Annotate human body keypoints and pose categories in images based on the ViTPose framework. Annotators mark anatomical landmarks, draw bounding boxes around people, and classify the overall pose type.",
+  "description": "Annotate human body keypoints and classify pose categories in images. Annotators place landmarks on visible anatomical joints using a simplified 13-point body model, draw bounding boxes around each person, and select the overall pose type. This is a generic keypoint-annotation template, not tied to a single published dataset.",
   "version": "1.0.0",
   "author": {
-    "name": "Xu et al.",
+    "name": "Potato Team",
     "email": "",
-    "github": "ViTAE-Transformer",
-    "affiliation": "University of Sydney"
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "image_annotation",
     "radio"
@@ -32,9 +32,5 @@
     "neurips2022",
     "vision-transformer"
   ],
-  "featured": false,
-  "paperReference": "Xu et al., NeurIPS 2022",
-  "paperUrl": "https://arxiv.org/abs/2204.12484",
-  "datasetUrl": "https://github.com/ViTAE-Transformer/ViTPose",
-  "citation": "@inproceedings{xu2022vitpose,\n  title={ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation},\n  author={Xu, Yufei and Zhang, Jing and Zhang, Qiming and Tao, Dacheng},\n  booktitle={Advances in Neural Information Processing Systems},\n  volume={35},\n  year={2022}\n}"
+  "featured": false
 }

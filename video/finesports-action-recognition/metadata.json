@@ -8,12 +8,30 @@
     "The Potato config below reproduces this task: annotators draw bounding boxes around the active player and select a fine-grained action from the FineSports taxonomy, organized by the 12 coarse categories."
   ],
   "datasetStats": [
-    { "label": "NBA game videos", "value": "10,000" },
-    { "label": "Fine-grained action types", "value": "52" },
-    { "label": "Coarse ball-handler categories", "value": "12" },
-    { "label": "Action instances", "value": "16,000" },
-    { "label": "Spatial-temporal bounding boxes", "value": "123,000" },
-    { "label": "Venue", "value": "CVPR 2024" }
+    {
+      "label": "NBA game videos",
+      "value": "10,000"
+    },
+    {
+      "label": "Fine-grained action types",
+      "value": "52"
+    },
+    {
+      "label": "Coarse ball-handler categories",
+      "value": "12"
+    },
+    {
+      "label": "Action instances",
+      "value": "16,000"
+    },
+    {
+      "label": "Spatial-temporal bounding boxes",
+      "value": "123,000"
+    },
+    {
+      "label": "Venue",
+      "value": "CVPR 2024"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "video_annotation"
@@ -51,5 +69,5 @@
   "paperReference": "Xu et al., CVPR 2024",
   "paperUrl": "https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_FineSports_A_Multi-person_Hierarchical_Sports_Video_Dataset_for_Fine-grained_Action_CVPR_2024_paper.pdf",
   "datasetUrl": "https://github.com/PKU-ICST-MIPL/FineSports_CVPR2024",
-  "citation": "@inproceedings{xu2024finesports,\n  title={FineSports: A Multi-person Hierarchical Sports Video Dataset for Fine-grained Action Understanding},\n  author={Xu, Jinglin and Zeng, Sibo and Liu, Yuxin and Gao, Lianli and Song, Jingkuan and Shen, Heng Tao},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  year={2024}\n}"
+  "citation": "@inproceedings{xu2024finesports,\n    title={FineSports: A Multi-Person Hierarchical Sports Video Dataset for Fine-Grained Action Understanding},\n    author={Xu, Jinglin and Zhao, Guohao and Yin, Sibo and Zhou, Wenhao and Peng, Yuxin},\n    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages={21773--21782},\n    year={2024}\n}"
 }

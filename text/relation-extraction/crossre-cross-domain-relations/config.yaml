@@ -7,27 +7,32 @@
 # news, politics, natural science, music, literature, and AI.
 # This enables studying how relation extraction models transfer across domains.
 #
-# Entity Types:
-# - Person, Organization, Location, Event, Date, Number, Other
+# Entity Types (simplified):
+# CrossRE reuses CrossNER's fine-grained, per-domain named-entity types.
+# This template uses a generic set (Person, Organization, Location, Event,
+# Date, Number, Other) as a simplification.
 #
-# 17 Relation Types:
-# - physical: Physical proximity or containment
-# - personal-social: Personal or social relationships
-# - part-whole: Component or membership
-# - org-affiliation: Organizational affiliation
-# - gen-affiliation: General affiliation
-# - usage: One entity uses another
-# - topic: Entity is about a topic
-# - compare: Comparison between entities
-# - origin: Entity originates from another
-# - named: Entity is named after another
-# - role: Entity has a role
-# - temporal: Temporal relationship
-# - win-defeat: Competitive outcome
-# - located-in: Spatial containment
-# - cause-effect: Causal relationship
-# - member: Membership in a group
-# - no-relation: No meaningful relation
+# 17 Relation Types (CrossRE):
+# - artifact: something produced/created by an entity (written_by, made_by)
+# - cause-effect: one entity causes or leads to another
+# - compare: comparison between entities
+# - general-affiliation: general affiliation
+# - named: entity is named after another
+# - opposite: opposition or antonymy between entities
+# - origin: entity originates from another
+# - part-of: one entity is part of another
+# - physical: physical or spatial relationship
+# - related-to: general relatedness not covered above
+# - role: business-related role (member_of, founder, citizen_of)
+# - social: non-business personal/social relationship
+# - temporal: temporal relationship
+# - topic: entity is about a topic
+# - type-of: one entity is a type of another
+# - usage: one entity makes use of another
+# - win-defeat: outcome of a competition, award, or war
+#
+# Note: CrossRE has no "no-relation" label; unrelated pairs are left
+# unlinked, and a pair may carry more than one relation label.
 #
 # Annotation Guidelines:
 # 1. Read the sentence and note the domain
@@ -91,41 +96,41 @@ annotation_schemes:
     name: relations
     description: "Draw relations between entity pairs"
     labels:
-      - "physical"
-      - "personal-social"
-      - "part-whole"
-      - "org-affiliation"
-      - "gen-affiliation"
-      - "usage"
-      - "topic"
-      - "compare"
-      - "origin"
-      - "named"
-      - "role"
-      - "temporal"
-      - "win-defeat"
-      - "located-in"
+      - "artifact"
       - "cause-effect"
-      - "member"
-      - "no-relation"
+      - "compare"
+      - "general-affiliation"
+      - "named"
+      - "opposite"
+      - "origin"
+      - "part-of"
+      - "physical"
+      - "related-to"
+      - "role"
+      - "social"
+      - "temporal"
+      - "topic"
+      - "type-of"
+      - "usage"
+      - "win-defeat"
     tooltips:
-      "physical": "Physical proximity, containment, or spatial relationship"
-      "personal-social": "Personal or social relationship between people"
-      "part-whole": "Entity A is a part or component of entity B"
-      "org-affiliation": "Person or entity is affiliated with an organization"
-      "gen-affiliation": "General affiliation not covered by org-affiliation"
-      "usage": "Entity A uses or employs entity B"
-      "topic": "Entity A is about or concerns entity B"
-      "compare": "Entity A is compared with entity B"
-      "origin": "Entity A originates from or is derived from entity B"
-      "named": "Entity A is named after entity B"
-      "role": "Entity A has a role or function related to entity B"
+      "artifact": "Something produced or created by an entity (written_by, made_by)"
+      "cause-effect": "One entity causes or leads to another"
+      "compare": "Comparison between entities"
+      "general-affiliation": "General affiliation between entities"
+      "named": "Entity is named after another"
+      "opposite": "Opposition or antonymy between entities"
+      "origin": "Entity originates from or is derived from another"
+      "part-of": "One entity is part or component of another"
+      "physical": "Physical or spatial relationship (Where?)"
+      "related-to": "General relatedness not covered by other labels"
+      "role": "Business-related role (member_of, founder, citizen_of)"
+      "social": "Non-business personal or social relationship"
       "temporal": "Temporal relationship between entities"
-      "win-defeat": "Competitive outcome between entities"
-      "located-in": "Entity A is located within entity B"
-      "cause-effect": "Entity A causes or leads to entity B"
-      "member": "Entity A is a member of entity B"
-      "no-relation": "No meaningful relation between the entities"
+      "topic": "Entity is about a topic"
+      "type-of": "One entity is a type of another"
+      "usage": "One entity makes use of another (agent/instrument)"
+      "win-defeat": "Outcome of a competition, award, or war"
 
   # Step 3: Optional annotator notes
   - annotation_type: text

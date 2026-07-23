@@ -4,15 +4,15 @@
 # Dataset: https://rajpurkar.github.io/SQuAD-explorer/
 #
 # This task presents a Wikipedia passage and a question. Annotators
-# highlight the answer span in the passage, provide a typed answer,
-# and indicate whether the question is answerable from the passage.
+# highlight the answer span in the passage and provide a typed answer.
+# SQuAD v1.1 questions are all answerable from the passage by
+# construction; unanswerable questions were introduced only in SQuAD 2.0.
 #
 # Annotation Guidelines:
 # 1. Read the question carefully before reading the passage
 # 2. Read the passage and identify the answer span
 # 3. Highlight the minimal span that answers the question
 # 4. Type the answer in the text field
-# 5. Indicate whether the question is answerable from the passage
 
 annotation_task_name: "SQuAD - Extractive Question Answering"
 task_dir: "."
@@ -45,27 +45,12 @@ annotation_schemes:
     name: typed_answer
     description: "Type the answer to the question"
 
-  # Step 3: Answerability judgment
-  - annotation_type: radio
-    name: answerability
-    description: "Is the question answerable from the given passage?"
-    labels:
-      - "Answerable"
-      - "Unanswerable"
-    keyboard_shortcuts:
-      "Answerable": "1"
-      "Unanswerable": "2"
-    tooltips:
-      "Answerable": "The passage contains sufficient information to answer the question"
-      "Unanswerable": "The passage does not contain enough information to answer the question"
-
 annotation_instructions: |
   You will be shown a passage from Wikipedia and a question about it. Your task is to:
   1. Highlight the exact span in the passage that answers the question.
   2. Type the answer text in the text field.
-  3. Indicate whether the question is answerable from the passage.
 
-  If the question cannot be answered from the passage, select "Unanswerable" and leave the span and text empty.
+  Every question is answerable from the passage; highlight the minimal span that answers it.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

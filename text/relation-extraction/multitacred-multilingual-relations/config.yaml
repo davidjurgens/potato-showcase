@@ -3,12 +3,15 @@
 # Paper: https://aclanthology.org/2023.acl-long.210/
 # Dataset: https://github.com/DFKI-NLP/MultiTACRED
 #
-# MultiTACRED extends the TACRED relation extraction dataset to 12 languages
-# via professional translation. It covers 41 TAC relation types between
-# subject and object entities.
+# MultiTACRED extends the English TACRED relation extraction dataset to 12
+# languages by machine-translating each instance (DeepL / Google Translate)
+# and projecting the subject/object entity annotations; a sample of
+# translations was validated by native speakers. It covers 41 TAC relation
+# types between subject and object entities.
 #
-# Languages: English, German, French, Spanish, Finnish, Hungarian,
-# Japanese, Korean, Polish, Russian, Turkish, Arabic
+# Translation-target languages (12): Arabic, Chinese, Finnish, French,
+# German, Hindi, Hungarian, Japanese, Polish, Russian, Spanish, Turkish
+# (English is the original TACRED source, not a translation target.)
 #
 # Subject Entity Types:
 # - PERSON: Named person

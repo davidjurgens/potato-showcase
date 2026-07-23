@@ -1,6 +1,6 @@
 {
   "title": "RewardBench - Reward Model Evaluation",
-  "description": "Evaluation of reward model preferences via pairwise comparison of chosen and rejected responses. Annotators judge which response is better across chat, safety, reasoning, and coding categories, and rate response quality on multiple dimensions.",
+  "description": "Evaluation of reward model preferences via pairwise comparison of chosen and rejected responses. Annotators judge which response is better across chat, chat hard, safety, and reasoning categories, and rate response quality on multiple dimensions.",
   "version": "1.0.0",
   "author": {
     "name": "Lambert et al.",
@@ -9,7 +9,7 @@
     "affiliation": "Allen Institute for AI"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "pairwise",
     "radio",
@@ -34,8 +34,8 @@
     "icml2024"
   ],
   "featured": false,
-  "paperReference": "Lambert et al., ICML 2024",
+  "paperReference": "Lambert et al., Findings of NAACL 2025",
   "paperUrl": "https://arxiv.org/abs/2403.13787",
   "datasetUrl": "https://huggingface.co/datasets/allenai/reward-bench",
-  "citation": "@inproceedings{lambert2024rewardbench,\n    title = \"{R}eward{B}ench: Evaluating Reward Models for Language Modeling\",\n    author = \"Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and Lin, Bill Yuchen and Chandu, Khyathi and Dziri, Nouha and Kumar, Sachin and Zick, Tom and Choi, Yejin and Smith, Noah A. and Hajishirzi, Hannaneh\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning (ICML)\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2403.13787\"\n}"
+  "citation": "@inproceedings{lambert2025rewardbench,\n    title = \"{R}eward{B}ench: Evaluating Reward Models for Language Modeling\",\n    author = \"Lambert, Nathan and Pyatkin, Valentina and Morrison, Jacob and Miranda, LJ and Lin, Bill Yuchen and Chandu, Khyathi and Dziri, Nouha and Kumar, Sachin and Zick, Tom and Choi, Yejin and Smith, Noah A. and Hajishirzi, Hannaneh\",\n    booktitle = \"Findings of the Association for Computational Linguistics: NAACL 2025\",\n    year = \"2025\",\n    pages = \"1755--1797\",\n    publisher = \"Association for Computational Linguistics\",\n    address = \"Albuquerque, New Mexico\",\n    url = \"https://aclanthology.org/2025.findings-naacl.96/\"\n}"
 }

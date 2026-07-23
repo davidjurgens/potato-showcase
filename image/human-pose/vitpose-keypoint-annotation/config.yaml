@@ -1,14 +1,17 @@
-# ViTPose Human Keypoint Annotation
-# Based on Xu et al., NeurIPS 2022
-# Paper: https://arxiv.org/abs/2204.12484
-# Dataset: https://github.com/ViTAE-Transformer/ViTPose
+# Human Keypoint Annotation (generic template)
+#
+# This is a generic human-pose keypoint annotation template; it is not tied
+# to a specific published dataset. (ViTPose, Xu et al. NeurIPS 2022, is a
+# pose-estimation model, not an annotation scheme.) For a standard gold
+# keypoint benchmark see COCO keypoints (Lin et al., ECCV 2014), which
+# defines 17 keypoints including facial points.
 #
 # Annotate human body keypoints and pose categories in images.
 # Annotators mark anatomical landmarks using the landmark tool,
 # draw bounding boxes around detected people, and classify
 # the overall body pose type.
 #
-# Keypoints follow the COCO 13-point body model:
+# Keypoints use a simplified 13-point body model:
 # Head, Shoulders (L/R), Elbows (L/R), Wrists (L/R),
 # Hips (L/R), Knees (L/R), Ankles (L/R)
 #
@@ -25,7 +28,7 @@
 # 3. Classify the primary pose of the person
 # 4. For occluded keypoints, estimate position if possible
 
-annotation_task_name: "ViTPose Human Keypoint Annotation"
+annotation_task_name: "Human Keypoint Annotation"
 task_dir: "."
 
 data_files:

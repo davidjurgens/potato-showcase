@@ -36,15 +36,12 @@ annotation_schemes:
   - name: "event_type"
     description: "What gymnastic EVENT is this?"
     annotation_type: radio
+    # FineGym covers women's artistic gymnastics only (4 events).
     labels:
       - "Floor Exercise (FX)"
       - "Vault (VT)"
       - "Uneven Bars (UB)"
       - "Balance Beam (BB)"
-      - "Pommel Horse (PH)"
-      - "Still Rings (SR)"
-      - "Parallel Bars (PB)"
-      - "Horizontal Bar (HB)"
 
   - name: "element_group"
     description: "What GROUP does the current element belong to?"

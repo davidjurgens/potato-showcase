@@ -9,7 +9,7 @@
     "affiliation": "IBM Research"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "span"
@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Wang et al., SemEval 2021",
-  "paperUrl": "https://aclanthology.org/2021.semeval-1.27/",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.39/",
   "datasetUrl": "https://sites.google.com/view/sem-tab-facts",
-  "citation": "@inproceedings{wang-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 9: {S}tatement {V}erification and {E}vidence {F}inding with {T}ables\",\n    author = \"Wang, Nancy Xin Ru  and Mahajan, Diwakar  and Danilevsky, Marina  and Rosenthal, Sara\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.27\"\n}"
+  "citation": "@inproceedings{wang-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 Task 9: Fact Verification and Evidence Finding for Tabular Data in Scientific Documents ({SEM}-{TAB}-{FACTS})\",\n    author = \"Wang, Nancy X. R. and Mahajan, Diwakar and Danilevsky, Marina and Rosenthal, Sara\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.39/\",\n    doi = \"10.18653/v1/2021.semeval-1.39\",\n    pages = \"317--326\"\n}"
 }

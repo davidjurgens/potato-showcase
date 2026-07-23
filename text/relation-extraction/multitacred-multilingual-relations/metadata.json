@@ -8,12 +8,30 @@
     "The Potato config below reproduces the MultiTACRED relation extraction task: it marks the subject and object spans in a translated sentence and presents the 41 relation types plus no_relation as a single-choice radio scheme."
   ],
   "datasetStats": [
-    { "label": "Languages", "value": "12" },
-    { "label": "Relation types", "value": "41 + no_relation" },
-    { "label": "Train instances (per language)", "value": "68,124" },
-    { "label": "Dev instances", "value": "22,631" },
-    { "label": "Test instances", "value": "15,509" },
-    { "label": "no_relation share", "value": "~80%" }
+    {
+      "label": "Languages",
+      "value": "12"
+    },
+    {
+      "label": "Relation types",
+      "value": "41 + no_relation"
+    },
+    {
+      "label": "Train instances (per language)",
+      "value": "68,124"
+    },
+    {
+      "label": "Dev instances",
+      "value": "22,631"
+    },
+    {
+      "label": "Test instances",
+      "value": "15,509"
+    },
+    {
+      "label": "no_relation share",
+      "value": "~80%"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "DFKI Berlin"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "span",
@@ -52,5 +70,5 @@
   "paperReference": "Hennig et al., ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.acl-long.210/",
   "datasetUrl": "https://github.com/DFKI-NLP/MultiTACRED",
-  "citation": "@inproceedings{hennig-etal-2023-multitacred,\n    title = \"{MultiTACRED}: A Multilingual Version of the {TAC} Relation Extraction Dataset\",\n    author = \"Hennig, Leonhard  and Thirumal, Phani  and Reimers, Nils  and Ostendorff, Malte  and Remus, Steffen  and Rehm, Georg\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.210\"\n}"
+  "citation": "@inproceedings{hennig-etal-2023-multitacred,\n    title = \"{MultiTACRED}: A Multilingual Version of the {TAC} Relation Extraction Dataset\",\n    author = \"Hennig, Leonhard and Thomas, Philippe and M{\\\"o}ller, Sebastian\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.210\",\n    doi = \"10.18653/v1/2023.acl-long.210\",\n    pages = \"3785--3801\"\n}"
 }
