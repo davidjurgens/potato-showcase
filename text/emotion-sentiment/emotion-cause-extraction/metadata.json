@@ -1,6 +1,6 @@
 {
   "title": "Emotion Cause Extraction (RECCON)",
-  "description": "Extract emotion causes from conversational text based on RECCON (Poria et al., EMNLP 2020). Identify which utterances and specific spans caused an emotion expressed in dialogue.",
+  "description": "Extract emotion causes from conversational text based on RECCON (Poria et al., Cognitive Computation 2021). Identify which utterances and specific spans caused an emotion expressed in dialogue.",
   "version": "1.0.0",
   "author": {
     "name": "Poria et al.",
@@ -9,7 +9,7 @@
     "affiliation": "Singapore University of Technology and Design"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "span"
@@ -30,12 +30,11 @@
     "cause-extraction",
     "dialogue",
     "reccon",
-    "emnlp2020",
     "conversation"
   ],
   "featured": false,
-  "paperReference": "Poria et al., EMNLP 2020",
-  "paperUrl": "https://aclanthology.org/2020.emnlp-main.431/",
+  "paperReference": "Poria et al., Cognitive Computation 2021",
+  "paperUrl": "https://link.springer.com/article/10.1007/s12559-021-09925-7",
   "datasetUrl": "https://github.com/declare-lab/RECCON",
-  "citation": "@inproceedings{poria-etal-2021-recognizing,\n    title = \"Recognizing Emotion Cause in Conversations\",\n    author = \"Poria, Soujanya  and Majumder, Navonil  and Hazarika, Devamanyu  and Ghosal, Deepanway  and Bhardwaj, Rishabh  and Jian, Samuel Yew Boon  and Hong, Pengfei  and Ghosh, Romila  and Roy, Abhinaba  and Chhaya, Niyati  and Gelbukh, Alexander  and Mihalcea, Rada\",\n    booktitle = \"Cognitive Computation\",\n    year = \"2021\",\n    publisher = \"Springer\",\n    url = \"https://aclanthology.org/2020.emnlp-main.431\"\n}"
+  "citation": "@article{poria2021recognizing,\n    title = {Recognizing Emotion Cause in Conversations},\n    author = {Poria, Soujanya and Majumder, Navonil and Hazarika, Devamanyu and Ghosal, Deepanway and Bhardwaj, Rishabh and Jian, Samson Yu Bai and Hong, Pengfei and Ghosh, Romila and Roy, Abhinaba and Chhaya, Niyati and Gelbukh, Alexander and Mihalcea, Rada},\n    journal = {Cognitive Computation},\n    volume = {13},\n    number = {5},\n    pages = {1317--1332},\n    year = {2021},\n    publisher = {Springer},\n    doi = {10.1007/s12559-021-09925-7},\n    url = {https://doi.org/10.1007/s12559-021-09925-7}\n}"
 }

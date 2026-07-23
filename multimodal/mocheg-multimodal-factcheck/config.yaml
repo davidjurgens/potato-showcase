@@ -1,10 +1,10 @@
-# MOCHEG: Multi-modal Multi-hop Fact-Checking with Explanations
+# MOCHEG: Multimodal Fact-Checking with Explanations
 # Based on Yao et al., SIGIR 2023
 # Paper: https://dl.acm.org/doi/10.1145/3539618.3591766
 #
 # Multimodal fact-checking requires verifying claims using evidence from
 # multiple modalities (text and images). Annotators must reason across
-# both modalities and across multiple evidence pieces (multi-hop) to
+# both modalities to
 # arrive at a verdict.
 #
 # Annotation Guidelines:

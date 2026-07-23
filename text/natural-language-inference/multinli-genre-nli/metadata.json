@@ -9,7 +9,7 @@
     "affiliation": "New York University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"
@@ -36,5 +36,5 @@
   "paperReference": "Williams et al., NAACL 2018",
   "paperUrl": "https://aclanthology.org/N18-1101/",
   "datasetUrl": "https://cims.nyu.edu/~sbowman/multinli/",
-  "citation": "@inproceedings{williams-etal-2018-broad,\n    title = \"A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference\",\n    author = \"Williams, Adina  and Nangia, Nikita  and Bowman, Samuel\",\n    booktitle = \"Proceedings of the 2018 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N18-1101\",\n    pages = \"1112--1122\"\n}"
+  "citation": "@inproceedings{williams-etal-2018-broad,\n    title = \"A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference\",\n    author = \"Williams, Adina and Nangia, Nikita and Bowman, Samuel R.\",\n    booktitle = \"Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N18-1101\",\n    doi = \"10.18653/v1/N18-1101\",\n    pages = \"1112--1122\"\n}"
 }

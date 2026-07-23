@@ -1,6 +1,6 @@
 {
   "title": "VoiceMOS Challenge 2024 - Speech Quality Assessment",
-  "description": "Speech quality assessment using Mean Opinion Score (MOS). Annotators rate synthesized or processed speech on naturalness, intelligibility, and overall quality on 1-5 scales (Cooper et al., INTERSPEECH 2024).",
+  "description": "Speech quality assessment using Mean Opinion Score (MOS). Annotators rate synthesized or processed speech on naturalness, intelligibility, and overall quality on 1-5 scales (Huang et al., IEEE SLT 2024).",
   "version": "1.0.0",
   "author": {
     "name": "Cooper et al.",
@@ -9,7 +9,7 @@
     "affiliation": "Multiple Institutions"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "likert"
   ],
@@ -32,8 +32,8 @@
     "interspeech2024"
   ],
   "featured": false,
-  "paperReference": "Cooper et al., INTERSPEECH 2024",
+  "paperReference": "Huang et al., IEEE SLT 2024",
   "paperUrl": "https://arxiv.org/abs/2409.07001",
-  "datasetUrl": "https://voicemos-challenge-2024.github.io/",
-  "citation": "@inproceedings{cooper24_interspeech,\n    title = \"The {V}oice{MOS} Challenge 2024: Beyond Speech Quality Prediction\",\n    author = \"Cooper, Erica and others\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    publisher = \"ISCA\",\n    url = \"https://arxiv.org/abs/2409.07001\"\n}"
+  "datasetUrl": "https://sites.google.com/view/voicemos-challenge/home",
+  "citation": "@inproceedings{huang2024voicemos,\n    title = \"The {V}oice{MOS} Challenge 2024: Beyond Speech Quality Prediction\",\n    author = \"Huang, Wen-Chin and Fu, Szu-Wei and Cooper, Erica and Zezario, Ryandhimas E. and Toda, Tomoki and Wang, Hsin-Min and Yamagishi, Junichi and Tsao, Yu\",\n    booktitle = \"2024 IEEE Spoken Language Technology Workshop (SLT)\",\n    year = \"2024\",\n    pages = \"803--810\",\n    publisher = \"IEEE\",\n    doi = \"10.1109/SLT61566.2024.10832295\",\n    url = \"https://arxiv.org/abs/2409.07001\"\n}"
 }

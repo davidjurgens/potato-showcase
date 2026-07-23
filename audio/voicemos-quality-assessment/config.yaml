@@ -1,7 +1,7 @@
 # VoiceMOS Challenge 2024 - Speech Quality Assessment
-# Based on Cooper et al., INTERSPEECH 2024
-# Paper: https://www.isca-archive.org/interspeech_2024/cooper24_interspeech.html
-# Dataset: https://voicemos-challenge-2024.github.io/
+# Based on Huang et al., IEEE SLT 2024
+# Paper: https://arxiv.org/abs/2409.07001
+# Dataset: https://sites.google.com/view/voicemos-challenge/home
 #
 # Task: Rate synthesized/processed speech quality using Mean Opinion Score (MOS).
 # Evaluate naturalness, intelligibility, and overall quality on 1-5 scales.

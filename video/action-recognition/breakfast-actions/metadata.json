@@ -9,7 +9,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "text",
     "video_annotation"
@@ -33,8 +33,8 @@
     "fine-grained"
   ],
   "featured": false,
-  "paperReference": "Kuehne et al., IJCV 2014",
-  "paperUrl": "https://arxiv.org/abs/1508.06073",
-  "datasetUrl": "https://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/",
-  "citation": "@article{kuehne2014language,\n  title={The language of actions: Recovering the syntax and semantics of goal-directed human activities},\n  author={Kuehne, Hilde and Arslan, Ali and Serre, Thomas},\n  journal={International Journal of Computer Vision},\n  volume={116},\n  number={3},\n  pages={259--276},\n  year={2014}\n}"
+  "paperReference": "Kuehne et al., CVPR 2014",
+  "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2014/html/Kuehne_The_Language_of_2014_CVPR_paper.html",
+  "datasetUrl": "https://serre.lab.brown.edu/#/resources/the-breakfast-actions-dataset",
+  "citation": "@inproceedings{kuehne2014language,\n    title={The Language of Actions: Recovering the Syntax and Semantics of Goal-Directed Human Activities},\n    author={Kuehne, Hilde and Arslan, Ali Bilgin and Serre, Thomas},\n    booktitle={2014 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages={780--787},\n    year={2014},\n    doi={10.1109/CVPR.2014.105}\n}"
 }
