@@ -9,7 +9,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "video_annotation",
     "radio"
@@ -34,8 +34,8 @@
     "msad"
   ],
   "featured": false,
-  "paperReference": "Zhang et al., NeurIPS 2024",
+  "paperReference": "Zhu et al., NeurIPS 2024",
   "paperUrl": "https://arxiv.org/abs/2402.04857",
-  "datasetUrl": "https://github.com/MSAD-dataset/MSAD",
-  "citation": "@inproceedings{zhang2024msad,\n  title={MSAD: A Multi-Scenario Video Anomaly Detection Dataset},\n  author={Zhang, Yiming and Li, Cheng and Wang, Zhuo and Liu, Yao and Chen, Xin},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
+  "datasetUrl": "https://github.com/Tom-roujiang/MSAD",
+  "citation": "@inproceedings{zhu2024advancing,\n    title={Advancing Video Anomaly Detection: A Concise Review and a New Dataset},\n    author={Zhu, Liyun and Wang, Lei and Raj, Arjun and Gedeon, Tom and Chen, Chen},\n    booktitle={Advances in Neural Information Processing Systems (NeurIPS 2024) Datasets and Benchmarks Track},\n    year={2024}\n}"
 }

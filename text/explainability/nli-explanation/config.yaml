@@ -77,7 +77,12 @@ annotation_schemes:
       "Key Evidence": "Words or phrases that are crucial for determining the relationship"
     allow_overlapping: false
 
-  # Step 4: Confidence
+  # Step 4: Natural language explanation (the defining e-SNLI output)
+  - annotation_type: text
+    name: explanation
+    description: "Write a natural language explanation of why the label holds, using the words you highlighted. Do not simply restate what is identical in both sentences."
+
+  # Step 5: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your classification?"

@@ -98,42 +98,36 @@ annotation_schemes:
 
   # Tier 4: Valence rating (7-point Likert-style)
   - name: "valence"
-    description: "Rate the emotional valence (pleasantness) on a 7-point scale from very negative to very positive."
+    description: "Rate the emotional valence (pleasantness) on a 5-point scale from very negative to very positive."
     annotation_type: radio
     labels:
       - "1-very-negative"
       - "2-negative"
-      - "3-slightly-negative"
-      - "4-neutral"
-      - "5-slightly-positive"
-      - "6-positive"
-      - "7-very-positive"
+      - "3-neutral"
+      - "4-positive"
+      - "5-very-positive"
 
-  # Tier 5: Activation/arousal rating (7-point Likert-style)
+  # Tier 5: Activation/arousal rating (5-point Likert-style)
   - name: "activation"
-    description: "Rate the emotional activation/arousal on a 7-point scale from very calm to very active."
+    description: "Rate the emotional activation/arousal on a 5-point scale from very calm to very active."
     annotation_type: radio
     labels:
       - "1-very-calm"
       - "2-calm"
-      - "3-slightly-calm"
-      - "4-neutral"
-      - "5-slightly-active"
-      - "6-active"
-      - "7-very-active"
+      - "3-neutral"
+      - "4-active"
+      - "5-very-active"
 
-  # Tier 6: Dominance rating (7-point Likert-style)
+  # Tier 6: Dominance rating (5-point Likert-style)
   - name: "dominance"
-    description: "Rate the perceived dominance/control on a 7-point scale from very submissive to very dominant."
+    description: "Rate the perceived dominance/control on a 5-point scale from very submissive to very dominant."
     annotation_type: radio
     labels:
       - "1-very-submissive"
       - "2-submissive"
-      - "3-slightly-submissive"
-      - "4-neutral"
-      - "5-slightly-dominant"
-      - "6-dominant"
-      - "7-very-dominant"
+      - "3-neutral"
+      - "4-dominant"
+      - "5-very-dominant"
 
 # HTML layout
 html_layout: |

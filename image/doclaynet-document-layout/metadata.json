@@ -9,7 +9,7 @@
     "affiliation": "IBM Research"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio",
@@ -37,5 +37,5 @@
   "paperReference": "Pfitzmann et al., KDD 2022",
   "paperUrl": "https://dl.acm.org/doi/10.1145/3534678.3539043",
   "datasetUrl": "https://github.com/DS4SD/DocLayNet",
-  "citation": "@inproceedings{pfitzmann2022doclaynet,\n    title = \"{DocLayNet}: A Large Human-Annotated Dataset for Document-Layout Segmentation\",\n    author = \"Pfitzmann, Birgit  and Auer, Christoph  and Dolfi, Michele  and Nassar, Ahmed S.  and Staar, Peter\",\n    booktitle = \"Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\",\n    pages = \"3743--3751\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    url = \"https://dl.acm.org/doi/10.1145/3534678.3539043\"\n}"
+  "citation": "@inproceedings{pfitzmann2022doclaynet,\n    title = \"{DocLayNet}: A Large Human-Annotated Dataset for Document-Layout Analysis\",\n    author = \"Pfitzmann, Birgit and Auer, Christoph and Dolfi, Michele and Nassar, Ahmed S. and Staar, Peter W. J.\",\n    booktitle = \"Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining\",\n    pages = \"3743--3751\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    doi = \"10.1145/3534678.3539043\",\n    url = \"https://dl.acm.org/doi/10.1145/3534678.3539043\"\n}"
 }

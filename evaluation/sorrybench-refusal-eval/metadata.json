@@ -8,12 +8,30 @@
     "The Potato config below reproduces the SORRY-Bench rating task. Annotators read a prompt and model response, mark whether the response fulfills or refuses the unsafe instruction, and tag the relevant safety category from the taxonomy."
   ],
   "datasetStats": [
-    { "label": "Base unsafe instructions", "value": "440" },
-    { "label": "Safety categories", "value": "44 fine-grained topics" },
-    { "label": "Instructions per category", "value": "10" },
-    { "label": "Linguistic mutations", "value": "20 styles" },
-    { "label": "Human annotations", "value": "7,000+" },
-    { "label": "Venue", "value": "ICLR 2025" }
+    {
+      "label": "Base unsafe instructions",
+      "value": "440"
+    },
+    {
+      "label": "Safety categories",
+      "value": "44 fine-grained topics"
+    },
+    {
+      "label": "Instructions per category",
+      "value": "10"
+    },
+    {
+      "label": "Linguistic mutations",
+      "value": "20 styles"
+    },
+    {
+      "label": "Human annotations",
+      "value": "7,000+"
+    },
+    {
+      "label": "Venue",
+      "value": "ICLR 2025"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "multiselect"
@@ -49,7 +67,7 @@
   ],
   "featured": false,
   "paperReference": "Xie et al., ICLR 2025",
-  "paperUrl": "https://openreview.net/forum?id=sorrybench2025",
+  "paperUrl": "https://arxiv.org/abs/2406.14598",
   "datasetUrl": "https://github.com/SORRY-Bench/SORRY-Bench",
-  "citation": "@inproceedings{xie2025sorrybench,\n  title={SORRY-Bench: Systematically Evaluating Large Language Model Safety Refusal},\n  author={Xie, Tinghao and Qi, Xiangyu and Zeng, Yi and Huang, Yangsibo and Kang, Udari Madhushani and Jia, Rishab and Henderson, Peter and Mittal, Prateek and others},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2025}\n}"
+  "citation": "@inproceedings{xie2025sorrybench,\n    title={SORRY-Bench: Systematically Evaluating Large Language Model Safety Refusal},\n    author={Xie, Tinghao and Qi, Xiangyu and Zeng, Yi and Huang, Yangsibo and Sehwag, Udari Madhushani and Huang, Kaixuan and He, Luxi and Wei, Boyi and Li, Dacheng and Sheng, Ying and Jia, Ruoxi and Li, Bo and Li, Kai and Chen, Danqi and Henderson, Peter and Mittal, Prateek},\n    booktitle={International Conference on Learning Representations (ICLR)},\n    year={2025},\n    url={https://arxiv.org/abs/2406.14598}\n}"
 }

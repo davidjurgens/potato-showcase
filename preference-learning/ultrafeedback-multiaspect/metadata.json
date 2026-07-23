@@ -8,12 +8,30 @@
     "The Potato config below reproduces the multi-aspect rating task: each model response is scored on the four UltraFeedback aspects using a 1-5 Likert scale, with an agreement rating and a free-text feedback box for the rationale."
   ],
   "datasetStats": [
-    { "label": "Prompts", "value": "64k" },
-    { "label": "Responses", "value": "256k (4 per prompt)" },
-    { "label": "Model pool", "value": "17 LLMs" },
-    { "label": "Fine-grained annotations", "value": "380k" },
-    { "label": "Rating aspects", "value": "4 (instruction-following, truthfulness, honesty, helpfulness)" },
-    { "label": "Score scale", "value": "1-5 (rated by GPT-4)" }
+    {
+      "label": "Prompts",
+      "value": "64k"
+    },
+    {
+      "label": "Responses",
+      "value": "256k (4 per prompt)"
+    },
+    {
+      "label": "Model pool",
+      "value": "17 LLMs"
+    },
+    {
+      "label": "Fine-grained annotations",
+      "value": "380k"
+    },
+    {
+      "label": "Rating aspects",
+      "value": "4 (instruction-following, truthfulness, honesty, helpfulness)"
+    },
+    {
+      "label": "Score scale",
+      "value": "1-5 (rated by GPT-4)"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multirate",
     "likert",
@@ -50,5 +68,5 @@
   "paperReference": "Cui et al., ICML 2024",
   "paperUrl": "https://arxiv.org/abs/2310.01377",
   "datasetUrl": "https://huggingface.co/datasets/openbmb/UltraFeedback",
-  "citation": "@inproceedings{cui2024ultrafeedback,\n    title = \"UltraFeedback: Boosting Language Models with Scaled AI Feedback\",\n    author = \"Cui, Ganqu and Yuan, Lifan and Ding, Ning and Yao, Guanming and Zhu, Wei and Ni, Yuan and Xie, Guotong and Liu, Zhiyuan and Sun, Maosong\",\n    booktitle = \"Proceedings of the 41st International Conference on Machine Learning\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2310.01377\"\n}"
+  "citation": "@inproceedings{cui2024ultrafeedback,\n    title = {UltraFeedback: Boosting Language Models with Scaled AI Feedback},\n    author = {Cui, Ganqu and Yuan, Lifan and Ding, Ning and Yao, Guanming and He, Bingxiang and Zhu, Wei and Ni, Yuan and Xie, Guotong and Xie, Ruobing and Lin, Yankai and Liu, Zhiyuan and Sun, Maosong},\n    booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},\n    year = {2024},\n    url = {https://arxiv.org/abs/2310.01377}\n}"
 }

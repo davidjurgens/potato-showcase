@@ -8,12 +8,30 @@
     "The Potato config below reproduces the temporal localization workflow: an annotator watches an untrimmed video, marks the boundaries of each activity instance, and labels it with one of the 200 activity classes."
   ],
   "datasetStats": [
-    { "label": "Activity classes", "value": "200" },
-    { "label": "Videos", "value": "19,994" },
-    { "label": "Total video", "value": "~648 hours" },
-    { "label": "Train / val / test", "value": "10,024 / 4,926 / 5,044" },
-    { "label": "Avg instances per video", "value": "~1.5" },
-    { "label": "Source", "value": "YouTube (untrimmed)" }
+    {
+      "label": "Activity classes",
+      "value": "200"
+    },
+    {
+      "label": "Videos",
+      "value": "19,994"
+    },
+    {
+      "label": "Total video",
+      "value": "~648 hours"
+    },
+    {
+      "label": "Train / val / test",
+      "value": "10,024 / 4,926 / 5,044"
+    },
+    {
+      "label": "Avg instances per video",
+      "value": "~1.5"
+    },
+    {
+      "label": "Source",
+      "value": "YouTube (untrimmed)"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "video_annotation"
   ],
@@ -46,8 +64,8 @@
     "untrimmed"
   ],
   "featured": false,
-  "paperReference": "Heilbron et al., CVPR 2015",
+  "paperReference": "Caba Heilbron et al., CVPR 2015",
   "paperUrl": "https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf",
   "datasetUrl": "http://activity-net.org",
-  "citation": "@inproceedings{heilbron2015activitynet,\n  title={ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding},\n  author={Heilbron, Fabian Caba and Escorcia, Victor and Ghanem, Bernard and Niebles, Juan Carlos},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={961--970},\n  year={2015}\n}"
+  "citation": "@inproceedings{caba2015activitynet,\n    title={ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding},\n    author={Caba Heilbron, Fabian and Escorcia, Victor and Ghanem, Bernard and Niebles, Juan Carlos},\n    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n    pages={961--970},\n    year={2015}\n}"
 }
