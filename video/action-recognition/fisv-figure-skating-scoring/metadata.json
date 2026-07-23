@@ -1,0 +1,37 @@
+{
+  "title": "Fis-V: Figure Skating Video Scoring",
+  "description": "Automatic figure skating scoring as video regression. Annotators mark the technical elements and record the Total Element Score (TES) and Total Program Component Score (PCS) for a ladies' short program (Xu et al., IEEE TCSVT 2020).",
+  "overview": [
+    "Fis-V is a dataset for automatically scoring figure skating performances, introduced by Chengming Xu, Yanwei Fu, and colleagues (IEEE Transactions on Circuits and Systems for Video Technology, 2020). It frames scoring as video regression: predict the referee scores a skater would receive from the full performance video.",
+    "The videos are ladies' singles short-program performances from international competitions. Each video is annotated with two official referee scores: the Total Element Score (TES), reflecting the difficulty and execution of technical elements, and the Total Program Component Score (PCS), reflecting skating skills, transitions, performance, composition, and music interpretation. Scores are the official values from a panel of nine referees.",
+    "The dataset contains 500 videos from 149 professional skaters, each roughly two minutes fifty seconds long. Every video carries the two score labels (TES and PCS); the paper also evaluates on the earlier MIT-Skate dataset.",
+    "The Potato config below reproduces the scoring task with a video segment scheme for the technical elements plus fields for the Total Element Score and Total Program Component Score. Use it to collect human scores for figure skating or as a template for scored-sport video assessment."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "IEEE TCSVT 2020" },
+    { "label": "Sport", "value": "Figure skating (ladies' short program)" },
+    { "label": "Videos", "value": "500" },
+    { "label": "Skaters", "value": "149" },
+    { "label": "Score labels", "value": "TES + PCS (per video)" },
+    { "label": "Referees", "value": "9" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Xu et al.",
+    "email": "",
+    "github": "loadder",
+    "affiliation": "Fudan University"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": ["video_annotation", "text"],
+  "domain": ["Computer Vision", "Video Understanding", "Sports"],
+  "useCase": ["Action Quality Assessment", "Video Regression", "Sports Scoring"],
+  "complexity": "advanced",
+  "tags": ["fis-v", "figure-skating", "action-quality-assessment", "video-regression", "sports", "scoring"],
+  "featured": false,
+  "paperReference": "Xu et al., IEEE TCSVT 2020",
+  "paperUrl": "https://arxiv.org/abs/1802.02774",
+  "datasetUrl": "https://github.com/loadder/MS_LSTM",
+  "citation": "@article{xu2020learning,\n    title={Learning to Score Figure Skating Sport Videos},\n    author={Xu, Chengming and Fu, Yanwei and Zhang, Bing and Chen, Zitian and Jiang, Yu-Gang and Xue, Xiangyang},\n    journal={IEEE Transactions on Circuits and Systems for Video Technology},\n    volume={30},\n    number={12},\n    pages={4578--4590},\n    year={2020},\n    doi={10.1109/TCSVT.2019.2927118}\n}"
+}

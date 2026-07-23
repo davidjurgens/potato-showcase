@@ -1,154 +1,143 @@
-# FineSports Fine-grained Action Recognition Configuration
-# Based on Xu et al., CVPR 2024
-# Task: Track athletes and label fine-grained hierarchical actions in sports videos
+# FineSports - Fine-grained Basketball Action Recognition
+# Based on Xu, Zhao, Yin, Zhou & Peng, CVPR 2024
+# Paper: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_FineSports_A_Multi-person_Hierarchical_Sports_Video_Dataset_for_Fine-grained_Action_CVPR_2024_paper.html
+# Dataset: https://github.com/PKU-ICST-MIPL/FineSports_CVPR2024
+#
+# FineSports is a multi-person hierarchical NBA basketball dataset for
+# fine-grained action understanding. Each action instance tracks the
+# ball-handler with a spatial-temporal tube (per-frame bounding boxes) and
+# is labeled with a coarse ball-handler action (12 categories) and a
+# fine-grained sub-action (52 categories).
+#
+# This Potato config reproduces the labeling: mark the temporal boundary of
+# the ball-handler's action, then select the coarse action and its
+# fine-grained sub-action.
 
-annotation_task_name: "FineSports Fine-grained Action Recognition"
+annotation_task_name: "FineSports - Fine-grained Basketball Action Recognition"
 task_dir: "."
 
-# Data configuration
 data_files:
   - sample-data.json
+
 item_properties:
   id_key: "id"
   text_key: "video_url"
 
-# Output
 output_annotation_dir: "annotation_output/"
 output_annotation_format: "json"
 
-# Annotation schemes
 annotation_schemes:
-  # Track athletes with bounding boxes
-  - name: "athlete_tracking"
-    description: |
-      Draw bounding boxes around each athlete visible in the frame.
-      Track the same athlete across frames using consistent IDs.
-      Focus on athletes actively performing actions.
+  # Step 1: mark the temporal boundary of the ball-handler action instance
+  - name: "action_segment"
+    description: "Mark the start and end of the ball-handler's action instance."
     annotation_type: "video_annotation"
-    mode: "tracking"
+    mode: "segment"
     labels:
-      - name: "athlete"
-        color: "#3B82F6"
-      - name: "referee"
-        color: "#EF4444"
-      - name: "coach"
-        color: "#F59E0B"
+      - name: "ball_handler_action"
+        color: "#F97316"
+        key_value: "a"
     frame_stepping: true
     show_timecode: true
     playback_rate_control: true
-    zoom_enabled: true
-    video_fps: 30
+    video_fps: 25
 
-  # Hierarchical action labels - Gymnastics
-  - name: "gymnastics_actions"
-    description: "Select all fine-grained gymnastics actions (if applicable)"
-    annotation_type: multiselect
+  # Step 2: coarse ball-handler action (12 categories)
+  - annotation_type: radio
+    name: coarse_action
+    description: "Coarse ball-handler action category (FineSports, 12 types):"
     labels:
-      - "vault_run"
-      - "vault_takeoff"
-      - "vault_flight"
-      - "vault_landing"
-      - "balance_beam_mount"
-      - "balance_beam_walk"
-      - "balance_beam_leap"
-      - "balance_beam_turn"
-      - "balance_beam_dismount"
-      - "floor_tumbling_pass"
-      - "floor_dance_sequence"
-      - "floor_leap_series"
-      - "uneven_bars_swing"
-      - "uneven_bars_release"
-      - "uneven_bars_dismount"
+      - "Drive"
+      - "Dribble"
+      - "Attack"
+      - "Shoot"
+      - "Pick&Roll (P&R)"
+      - "Pass"
+      - "Backboard"
+      - "Result"
+      - "Defense"
+      - "Lay-Up"
+      - "Steal&Interfere"
+      - "Foul&Violation"
 
-  # Hierarchical action labels - Diving
-  - name: "diving_actions"
-    description: "Select all fine-grained diving actions (if applicable)"
-    annotation_type: multiselect
+  # Step 3: fine-grained sub-action (52 categories)
+  - annotation_type: radio
+    name: fine_action
+    description: "Fine-grained sub-action (FineSports, 52 types):"
     labels:
-      - "approach"
-      - "hurdle"
-      - "takeoff_forward"
-      - "takeoff_backward"
-      - "takeoff_armstand"
-      - "flight_tuck"
-      - "flight_pike"
-      - "flight_layout"
-      - "flight_free"
-      - "twist"
-      - "somersault"
-      - "entry"
-      - "splash"
+      - "Drive Left"
+      - "Drive Right"
+      - "Drive Straight"
+      - "Drive Baseline"
+      - "Drive Middle"
+      - "Dribble Move"
+      - "Cut"
+      - "Isolation"
+      - "Post-Up Right Shoulder"
+      - "Post-Up Left Shoulder"
+      - "Pass Steal"
+      - "Dribble Steal"
+      - "Interfere Shot"
+      - "Basket"
+      - "To Basket"
+      - "High P&R"
+      - "Left P&R"
+      - "Right P&R"
+      - "Dribble Jumper"
+      - "No Dribble Jumper"
+      - "Jumper"
+      - "Early Jumper"
+      - "Free Throw"
+      - "Hand Off"
+      - "Ball Delivered"
+      - "To Shooter's Left"
+      - "To Shooter's Right"
+      - "Offensive Rebound Short"
+      - "Offensive Rebound Long"
+      - "Defensive Rebound Short"
+      - "Defensive Rebound Long"
+      - "Make 2 Pts"
+      - "Make 3 Pts"
+      - "Miss 2 Pts"
+      - "Miss 3 Pts"
+      - "Make 2 Pts Foul"
+      - "Make 3 Pts Foul"
+      - "Run Offense"
+      - "Turnover"
+      - "Fighting"
+      - "Personal Foul"
+      - "Double Foul"
+      - "Technical Foul"
+      - "Unsportsmanlike Foul"
+      - "Disqualifying Foul"
+      - "Traveling"
+      - "Player and Ball Out of Bound"
+      - "Defensive 3 Sec Violation"
+      - "Out of Bound 5 Sec Violation"
+      - "8 Sec Violation"
+      - "Shot Clock Violation"
+      - "Defense Commits"
 
-  # Hierarchical action labels - Figure Skating
-  - name: "figure_skating_actions"
-    description: "Select all fine-grained figure skating actions (if applicable)"
-    annotation_type: multiselect
-    labels:
-      - "jump_axel"
-      - "jump_lutz"
-      - "jump_flip"
-      - "jump_loop"
-      - "jump_salchow"
-      - "jump_toe_loop"
-      - "spin_upright"
-      - "spin_sit"
-      - "spin_camel"
-      - "spin_combination"
-      - "step_sequence"
-      - "spiral_sequence"
-      - "lift"
-      - "throw_jump"
-
-  # Hierarchical action labels - General Sports
-  - name: "general_sports_actions"
-    description: "Select general sports actions applicable across sports"
-    annotation_type: multiselect
-    labels:
-      - "preparation"
-      - "execution"
-      - "recovery"
-      - "celebration"
-      - "waiting"
-      - "walking"
-      - "running"
-      - "jumping"
-      - "landing"
-      - "falling"
-
-# User configuration
-allow_all_users: true
-
-# Task assignment
-instances_per_annotator: 20
-annotation_per_instance: 2
-
-# Instructions
 annotation_instructions: |
-  ## FineSports Fine-grained Action Recognition Task
+  You will see a short NBA basketball clip. For each ball-handler action:
 
-  Your goal is to track athletes and label their fine-grained actions in sports video clips.
+  1. Use the video timeline to mark the start and end of the action instance.
+  2. Identify the ball-handler (the player controlling the ball).
+  3. Select the coarse action category (12 options).
+  4. Select the fine-grained sub-action that best describes it (52 options).
 
-  ### Step 1: Track Athletes
-  - Draw bounding boxes around each athlete performing actions
-  - Track the same athlete across frames with consistent IDs
-  - Also mark referees and coaches if visible
+  The coarse and fine labels form a two-level hierarchy: pick the coarse
+  category first, then the specific sub-action under it.
 
-  ### Step 2: Label Hierarchical Actions
-  For each tracked athlete, select ALL fine-grained actions from the relevant sport category:
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #9a3412;">
+      NBA clip {{clip_id}} — track the ball-handler and label the action hierarchy.
+    </div>
+    <video controls style="width: 100%; border-radius: 8px;" src="{{video_url}}"></video>
+  </div>
 
-  **Gymnastics Actions:** vault, balance beam, floor, uneven bars phases
-  **Diving Actions:** approach, takeoff, flight, twist, entry phases
-  **Figure Skating Actions:** jumps, spins, step sequences, lifts
-  **General Actions:** preparation, execution, recovery, etc.
-
-  ### Important Notes:
-  - Actions are organized hierarchically by sport type
-  - One athlete can perform MULTIPLE actions simultaneously
-  - Label the finest-grained action visible (e.g., "jump_axel" not just "jumping")
-  - Only select actions from the sport category matching the video content
-  - Use frame stepping for precise action boundary marking
-
-  ### Tips:
-  - Use playback speed control to slow down fast movements
-  - Pay attention to transitions between action phases
-  - Some actions are very brief (< 1 second), use frame stepping
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

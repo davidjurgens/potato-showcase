@@ -1,0 +1,87 @@
+# FineDiving - Procedure-aware Action Quality Assessment
+# Based on Xu, Rao, Yu, Chen, Zhou & Lu, CVPR 2022
+# Dataset: https://github.com/xujinglin/FineDiving
+#
+# FineDiving is a fine-grained diving dataset for procedure-aware action
+# quality assessment. Each dive is annotated with an action type and its
+# consecutive sub-action steps (with temporal boundaries), plus the official
+# judge scores, the resulting diving score, and the difficulty degree.
+#
+# This Potato config reproduces the annotation: mark the dive and each
+# sub-action step on the timeline, record the action (dive) type and
+# difficulty degree, and enter the execution and final scores.
+
+annotation_task_name: "FineDiving - Procedure-aware Action Quality Assessment"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # Step 1: mark the dive and its consecutive sub-action steps
+  - name: "dive_steps"
+    description: "Mark the full dive, then each consecutive sub-action step (take-off, flight, entry)."
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "dive"
+        color: "#0EA5E9"
+        key_value: "d"
+      - name: "sub_action_step"
+        color: "#22C55E"
+        key_value: "s"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 25
+
+  # Step 2: action (dive) type
+  - annotation_type: text
+    name: dive_type
+    description: "Dive type / code (e.g. the FINA dive number and description)."
+
+  # Step 3: difficulty degree
+  - annotation_type: text
+    name: difficulty_degree
+    description: "Difficulty degree of the dive (as listed on the score sheet)."
+
+  # Step 4: execution and final scores
+  - annotation_type: text
+    name: execution_score
+    description: "Execution score (judges' raw scores or their average)."
+
+  - annotation_type: text
+    name: final_score
+    description: "Final diving score (execution scaled by difficulty degree)."
+
+annotation_instructions: |
+  You will see a competitive diving clip. For each dive:
+
+  1. Mark the temporal boundary of the whole dive on the timeline.
+  2. Mark each consecutive sub-action step (for example take-off, flight, entry).
+  3. Record the dive type / code and the difficulty degree.
+  4. Enter the execution score and the final score.
+
+  FineDiving pairs the semantic steps of a dive with its scores so models can
+  reason about the procedure, not just the overall look of the dive.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #075985;">
+      Diving clip {{clip_id}} — mark the dive steps and record the scores.
+    </div>
+    <video controls style="width: 100%; border-radius: 8px;" src="{{video_url}}"></video>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

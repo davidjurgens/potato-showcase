@@ -1,0 +1,8 @@
+[
+  { "id": "finediving_001", "clip_id": "OLY-M-3M-051", "video_url": "https://example.com/finediving/clip_001.mp4", "text": "Men's 3m springboard: forward dive group, pike position." },
+  { "id": "finediving_002", "clip_id": "WC-W-10M-118", "video_url": "https://example.com/finediving/clip_002.mp4", "text": "Women's 10m platform: back dive group, tuck position." },
+  { "id": "finediving_003", "clip_id": "WCH-M-10M-244", "video_url": "https://example.com/finediving/clip_003.mp4", "text": "Men's 10m platform: reverse dive group with somersaults." },
+  { "id": "finediving_004", "clip_id": "EAC-W-3M-076", "video_url": "https://example.com/finediving/clip_004.mp4", "text": "Women's 3m springboard: inward dive group, pike position." },
+  { "id": "finediving_005", "clip_id": "OLY-M-3M-133", "video_url": "https://example.com/finediving/clip_005.mp4", "text": "Men's 3m springboard: twisting dive group." },
+  { "id": "finediving_006", "clip_id": "WC-W-10M-201", "video_url": "https://example.com/finediving/clip_006.mp4", "text": "Women's 10m platform: armstand dive group." }
+]

@@ -1,0 +1,88 @@
+# Fis-V - Figure Skating Video Scoring
+# Based on Xu, Fu, Zhang, Chen, Jiang & Xue, IEEE TCSVT 2020
+# Paper: https://arxiv.org/abs/1802.02774
+# Dataset: https://github.com/loadder/MS_LSTM
+#
+# Fis-V frames figure skating scoring as video regression: predict the
+# referee scores a skater would receive from the full performance video.
+# Each ladies' singles short-program video carries two official scores:
+# the Total Element Score (TES) and the Total Program Component Score (PCS).
+#
+# This Potato config reproduces the scoring: watch the performance, mark the
+# technical elements, and record the TES and PCS.
+
+annotation_task_name: "Fis-V - Figure Skating Video Scoring"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+annotation_schemes:
+  # Step 1: mark the technical elements on the timeline
+  - name: "elements"
+    description: "Mark each technical element (jump, spin, step sequence) on the timeline."
+    annotation_type: "video_annotation"
+    mode: "segment"
+    labels:
+      - name: "jump"
+        color: "#6366F1"
+        key_value: "j"
+      - name: "spin"
+        color: "#14B8A6"
+        key_value: "s"
+      - name: "step_sequence"
+        color: "#F59E0B"
+        key_value: "t"
+    frame_stepping: true
+    show_timecode: true
+    playback_rate_control: true
+    video_fps: 25
+
+  # Step 2: Total Element Score (TES)
+  - annotation_type: text
+    name: total_element_score
+    description: "Total Element Score (TES) — difficulty and execution of technical elements."
+
+  # Step 3: Total Program Component Score (PCS)
+  - annotation_type: text
+    name: total_program_component_score
+    description: "Total Program Component Score (PCS) — skating skills, transitions, performance, composition, interpretation."
+
+  # Step 4: notes on the elements performed
+  - annotation_type: text
+    name: element_notes
+    description: "Optional notes on the elements performed and their quality."
+
+annotation_instructions: |
+  You will see a ladies' singles short-program figure skating performance.
+
+  1. Mark each technical element on the timeline (jump, spin, step sequence).
+  2. Record the Total Element Score (TES), which reflects the difficulty and
+     execution of the technical elements.
+  3. Record the Total Program Component Score (PCS), which reflects skating
+     skills, transitions, performance, composition, and music interpretation.
+  4. Optionally add notes on the elements performed.
+
+  In the official competition these two scores come from a panel of nine
+  referees; here you record the values that summarize the performance.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #3730a3;">
+      Skating performance {{clip_id}} — mark the elements and record TES and PCS.
+    </div>
+    <video controls style="width: 100%; border-radius: 8px;" src="{{video_url}}"></video>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true
+skip_reason_required: false

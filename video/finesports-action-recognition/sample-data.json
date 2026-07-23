@@ -1,82 +1,10 @@
 [
-  {
-    "id": "finesports_001",
-    "video_url": "https://example.com/videos/gymnastics_vault_001.mp4",
-    "sport_type": "gymnastics",
-    "timestamp_start": 0.0,
-    "timestamp_end": 8.5,
-    "scene_description": "Female gymnast performing a Yurchenko vault with full twist at international competition"
-  },
-  {
-    "id": "finesports_002",
-    "video_url": "https://example.com/videos/diving_platform_001.mp4",
-    "sport_type": "diving",
-    "timestamp_start": 0.0,
-    "timestamp_end": 6.2,
-    "scene_description": "Male diver executing a reverse 3.5 somersault tuck from the 10m platform"
-  },
-  {
-    "id": "finesports_003",
-    "video_url": "https://example.com/videos/figure_skating_001.mp4",
-    "sport_type": "figure_skating",
-    "timestamp_start": 12.0,
-    "timestamp_end": 25.0,
-    "scene_description": "Female figure skater performing a combination jump sequence: triple lutz, double toe loop"
-  },
-  {
-    "id": "finesports_004",
-    "video_url": "https://example.com/videos/gymnastics_beam_001.mp4",
-    "sport_type": "gymnastics",
-    "timestamp_start": 0.0,
-    "timestamp_end": 15.3,
-    "scene_description": "Female gymnast performing a balance beam routine with leaps and turns"
-  },
-  {
-    "id": "finesports_005",
-    "video_url": "https://example.com/videos/diving_springboard_001.mp4",
-    "sport_type": "diving",
-    "timestamp_start": 0.0,
-    "timestamp_end": 5.8,
-    "scene_description": "Female diver performing a forward 2.5 somersault pike from the 3m springboard"
-  },
-  {
-    "id": "finesports_006",
-    "video_url": "https://example.com/videos/figure_skating_pairs_001.mp4",
-    "sport_type": "figure_skating",
-    "timestamp_start": 45.0,
-    "timestamp_end": 60.0,
-    "scene_description": "Pairs figure skating team performing a throw triple salchow and death spiral sequence"
-  },
-  {
-    "id": "finesports_007",
-    "video_url": "https://example.com/videos/gymnastics_floor_001.mp4",
-    "sport_type": "gymnastics",
-    "timestamp_start": 0.0,
-    "timestamp_end": 12.0,
-    "scene_description": "Male gymnast performing a floor exercise tumbling pass with double layout somersault"
-  },
-  {
-    "id": "finesports_008",
-    "video_url": "https://example.com/videos/diving_synchro_001.mp4",
-    "sport_type": "diving",
-    "timestamp_start": 0.0,
-    "timestamp_end": 7.0,
-    "scene_description": "Synchronized diving pair performing matching inward 3.5 somersaults from 10m platform"
-  },
-  {
-    "id": "finesports_009",
-    "video_url": "https://example.com/videos/figure_skating_spin_001.mp4",
-    "sport_type": "figure_skating",
-    "timestamp_start": 30.0,
-    "timestamp_end": 42.0,
-    "scene_description": "Female figure skater executing a combination spin: camel, sit, upright with change of foot"
-  },
-  {
-    "id": "finesports_010",
-    "video_url": "https://example.com/videos/gymnastics_bars_001.mp4",
-    "sport_type": "gymnastics",
-    "timestamp_start": 0.0,
-    "timestamp_end": 18.5,
-    "scene_description": "Female gymnast performing uneven bars routine with release moves and dismount"
-  }
+  { "id": "finesports_001", "clip_id": "GSW-BOS-Q1-0342", "video_url": "https://example.com/finesports/clip_001.mp4", "text": "Ball-handler drives baseline from the right wing and finishes at the rim." },
+  { "id": "finesports_002", "clip_id": "LAL-DEN-Q2-115", "video_url": "https://example.com/finesports/clip_002.mp4", "text": "High pick-and-roll at the top of the key, ball-handler splits the defense." },
+  { "id": "finesports_003", "clip_id": "MIA-NYK-Q3-0908", "video_url": "https://example.com/finesports/clip_003.mp4", "text": "Ball-handler pulls up for a dribble jumper from mid-range." },
+  { "id": "finesports_004", "clip_id": "PHX-DAL-Q4-0221", "video_url": "https://example.com/finesports/clip_004.mp4", "text": "Isolation on the left wing, step-back three-point attempt." },
+  { "id": "finesports_005", "clip_id": "MIL-PHI-Q1-1130", "video_url": "https://example.com/finesports/clip_005.mp4", "text": "Post-up on the right shoulder, turnaround jumper over the defender." },
+  { "id": "finesports_006", "clip_id": "GSW-LAC-Q2-0455", "video_url": "https://example.com/finesports/clip_006.mp4", "text": "Defender interferes with the shot, contests at the rim." },
+  { "id": "finesports_007", "clip_id": "BOS-CLE-Q3-0733", "video_url": "https://example.com/finesports/clip_007.mp4", "text": "Ball-handler is stripped on the dribble for a steal in transition." },
+  { "id": "finesports_008", "clip_id": "DEN-MIN-Q4-0059", "video_url": "https://example.com/finesports/clip_008.mp4", "text": "Free throw attempt after a shooting foul." }
 ]

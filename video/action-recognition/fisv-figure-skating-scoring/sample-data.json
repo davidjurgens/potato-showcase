@@ -1,0 +1,7 @@
+[
+  { "id": "fisv_001", "clip_id": "WC-SP-014", "video_url": "https://example.com/fisv/clip_001.mp4", "text": "Ladies' short program: opening triple-triple combination jump." },
+  { "id": "fisv_002", "clip_id": "GPF-SP-032", "video_url": "https://example.com/fisv/clip_002.mp4", "text": "Ladies' short program: layback spin into a step sequence." },
+  { "id": "fisv_003", "clip_id": "EC-SP-108", "video_url": "https://example.com/fisv/clip_003.mp4", "text": "Ladies' short program: double axel and combination spin." },
+  { "id": "fisv_004", "clip_id": "WC-SP-051", "video_url": "https://example.com/fisv/clip_004.mp4", "text": "Ladies' short program: triple flip with a slight under-rotation." },
+  { "id": "fisv_005", "clip_id": "4CC-SP-077", "video_url": "https://example.com/fisv/clip_005.mp4", "text": "Ladies' short program: flying camel spin and closing step sequence." }
+]

@@ -1,0 +1,37 @@
+{
+  "title": "FineDiving: Procedure-aware Action Quality Assessment",
+  "description": "Fine-grained diving action quality assessment. Annotators mark a dive and its consecutive sub-action steps on the timeline, then record the dive type, difficulty degree, and scores (Xu et al., CVPR 2022).",
+  "overview": [
+    "FineDiving is a fine-grained dataset for procedure-aware action quality assessment in competitive diving, introduced by Jinglin Xu, Yongming Rao, Xumin Yu, Guangyi Chen, Jie Zhou, and Jiwen Lu at CVPR 2022. It was built to score dives by understanding the procedure of the dive, not just its overall appearance.",
+    "The videos come from major diving competitions including the Olympics, World Cup, World Championships, and European Aquatics Championships. Each dive is annotated along two structures: a semantic structure giving the action type and the sub-action type of each consecutive step, and a temporal structure marking the start and end frames of the whole dive and of each step.",
+    "The dataset contains 3,000 video samples across 52 action types, 29 sub-action types, and 23 difficulty-degree types. Each instance also records the official judge scores, the resulting diving score, and the difficulty degree, which together support procedure-aware action quality assessment.",
+    "The Potato config below reproduces this annotation with a video segment scheme for the dive and its sub-action steps, plus fields for the action type, difficulty degree, and scores. Use it to build procedure-aware action-quality data for diving or other scored sports."
+  ],
+  "datasetStats": [
+    { "label": "Released", "value": "CVPR 2022" },
+    { "label": "Sport", "value": "Competitive diving" },
+    { "label": "Video samples", "value": "3,000" },
+    { "label": "Action types", "value": "52" },
+    { "label": "Sub-action types", "value": "29" },
+    { "label": "Difficulty degrees", "value": "23" }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Xu et al.",
+    "email": "",
+    "github": "xujinglin",
+    "affiliation": "Tsinghua University / Peking University"
+  },
+  "createdAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "annotationTypes": ["video_annotation", "text"],
+  "domain": ["Computer Vision", "Video Understanding", "Sports"],
+  "useCase": ["Action Quality Assessment", "Temporal Action Segmentation", "Fine-grained Action Understanding"],
+  "complexity": "advanced",
+  "tags": ["finediving", "diving", "action-quality-assessment", "procedure-aware", "video", "sports", "fine-grained"],
+  "featured": false,
+  "paperReference": "Xu et al., CVPR 2022",
+  "paperUrl": "https://openaccess.thecvf.com/content/CVPR2022/html/Xu_FineDiving_A_Fine-Grained_Dataset_for_Procedure-Aware_Action_Quality_Assessment_CVPR_2022_paper.html",
+  "datasetUrl": "https://github.com/xujinglin/FineDiving",
+  "citation": "@inproceedings{xu2022finediving,\n    title={FineDiving: A Fine-grained Dataset for Procedure-aware Action Quality Assessment},\n    author={Xu, Jinglin and Rao, Yongming and Yu, Xumin and Chen, Guangyi and Zhou, Jie and Lu, Jiwen},\n    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages={2949--2958},\n    year={2022}\n}"
+}
