@@ -1,6 +1,38 @@
 {
   "title": "MMLU-Pro - Tiered Multi-Subject Evaluation",
   "description": "Tiered evaluation for multi-subject question answering, based on MMLU-Pro (Wang et al., NeurIPS 2024). Annotators verify answers to challenging 10-option multiple choice questions across STEM and humanities subjects, using a tiered annotation scheme for topic and subtopic categorization.",
+  "overview": [
+    "MMLU-Pro is a multiple-choice benchmark that extends the original MMLU across academic and professional subjects. It was built by Yubo Wang and colleagues (University of Waterloo and collaborators) and presented as a spotlight at the NeurIPS 2024 Datasets and Benchmarks track. It exists because leading models had begun to saturate MMLU, leaving little room to distinguish strong systems.",
+    "The questions were drawn and revised from MMLU and other sources, with the answer set expanded from four options to ten and trivial or noisy items removed. Each question has a single correct answer among up to ten options (A through J). The annotation task is to categorize a question by subject and select the correct option.",
+    "The dataset holds 12,032 questions across 14 disciplines: math, physics, chemistry, law, engineering, economics, health, psychology, business, biology, philosophy, computer science, history, and an 'other' category. Adding options and pruning weak items lowered model accuracy by 16 to 33 percent relative to MMLU and made scores more stable across prompt wordings (about 2 percent variation versus 4 to 5 percent on MMLU).",
+    "The Potato config below reproduces this task with a tiered annotation scheme that captures a topic and a dependent subtopic, plus a radio scheme for the ten answer options (A-J). Use it to sort questions into a subject hierarchy while verifying the correct answer."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "NeurIPS 2024 D&B (spotlight)"
+    },
+    {
+      "label": "Questions",
+      "value": "12,032"
+    },
+    {
+      "label": "Disciplines",
+      "value": "14"
+    },
+    {
+      "label": "Answer options",
+      "value": "Up to 10 (A-J)"
+    },
+    {
+      "label": "Accuracy drop vs MMLU",
+      "value": "16-33%"
+    },
+    {
+      "label": "Prompt sensitivity",
+      "value": "~2% (vs 4-5% in MMLU)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
@@ -9,7 +41,7 @@
     "affiliation": "University of Waterloo"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "tiered_annotation",
     "radio"
@@ -34,8 +66,8 @@
     "neurips2024"
   ],
   "featured": false,
-  "paperReference": "Wang et al., NeurIPS 2024",
+  "paperReference": "Wang et al., NeurIPS 2024 (Datasets & Benchmarks)",
   "paperUrl": "https://arxiv.org/abs/2406.01574",
   "datasetUrl": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
-  "citation": "@inproceedings{wang2024mmlu,\n    title = \"{MMLU}-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark\",\n    author = \"Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yunze and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Huang, Xiang and Chen, Wenhu\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.01574\"\n}"
+  "citation": "@inproceedings{wang2024mmlupro,\n    title = \"{MMLU}-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark\",\n    author = \"Wang, Yubo and Ma, Xueguang and Zhang, Ge and Ni, Yuansheng and Chandra, Abhranil and Guo, Shiguang and Ren, Weiming and Arulraj, Aaran and He, Xuan and Jiang, Ziyan and Li, Tianle and Ku, Max and Wang, Kai and Zhuang, Alex and Fan, Rongqi and Yue, Xiang and Chen, Wenhu\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.01574\"\n}"
 }

@@ -1,6 +1,38 @@
 {
   "title": "Arena Hard Auto - LLM Pairwise Evaluation",
-  "description": "Pairwise evaluation of LLM responses on challenging prompts from the Arena Hard benchmark (Li et al., arXiv 2024). Annotators compare two responses on a continuous scale and rate question difficulty.",
+  "description": "Pairwise evaluation of LLM responses on challenging prompts from the Arena Hard benchmark (Li et al., ICML 2025). Annotators compare two responses on a continuous scale and rate question difficulty.",
+  "overview": [
+    "Arena-Hard-Auto is a benchmark of 500 challenging, open-ended prompts for evaluating chat models. It was created by Tianle Li and colleagues at UC Berkeley (the LMSYS / LMArena group) using the BenchBuilder pipeline, and published at ICML 2025. It was built to separate strong models more cleanly than earlier automatic benchmarks while staying aligned with human preferences.",
+    "The prompts were mined automatically from large crowd-sourced conversation datasets, Chatbot Arena and WildChat-1M, by selecting for difficulty and quality. In the original benchmark two model responses to each prompt are compared by an LLM-as-judge. The annotation task here is the human version of that judgment: read the prompt and both responses, then say which is better and by how much.",
+    "Arena-Hard-Auto reports 98.6% correlation with human preference rankings and about three times the model separation of MT-Bench, at a cost of roughly $20 per evaluation run. The prompts cover open-ended tasks rather than fixed multiple-choice questions, which is what makes graded pairwise judgment the natural annotation format.",
+    "The Potato config below reproduces this comparison with a pairwise scheme on a -3 to +3 scale (A much better through Tie to B much better) and a five-point Likert scale for prompt difficulty. Use it to collect graded human preference judgments on model outputs, for example to validate an LLM-as-judge setup or to build preference data."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "ICML 2025 (PMLR v267)"
+    },
+    {
+      "label": "Prompts",
+      "value": "500 (challenging, open-ended)"
+    },
+    {
+      "label": "Source data",
+      "value": "Chatbot Arena, WildChat-1M"
+    },
+    {
+      "label": "Human-pref correlation",
+      "value": "98.6%"
+    },
+    {
+      "label": "Model separation",
+      "value": "3x vs MT-Bench"
+    },
+    {
+      "label": "Eval cost",
+      "value": "~$20 per run"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Li et al.",
@@ -9,7 +41,7 @@
     "affiliation": "UC Berkeley"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "pairwise",
     "likert"
@@ -33,8 +65,8 @@
     "arxiv2024"
   ],
   "featured": false,
-  "paperReference": "Li et al., arXiv 2024",
-  "paperUrl": "https://arxiv.org/abs/2406.11939",
-  "datasetUrl": "https://github.com/lm-sys/arena-hard-auto",
-  "citation": "@article{li2024crowdsourced,\n    title = \"From Crowdsourced Data to High-Quality Benchmarks: Arena Hard and BenchBuilder Pipeline\",\n    author = \"Li, Tianle and Chiang, Wei-Lin and Frick, Evan and Dunlap, Lisa and Wu, Tianhao and Zhu, Banghua and Gonzalez, Joseph E and Stoica, Ion\",\n    journal = \"arXiv preprint arXiv:2406.11939\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.11939\"\n}"
+  "paperReference": "Li et al., ICML 2025",
+  "paperUrl": "https://proceedings.mlr.press/v267/li25h.html",
+  "datasetUrl": "https://github.com/lmarena/arena-hard-auto",
+  "citation": "@inproceedings{li2025arenahard,\n    title = \"From Crowdsourced Data to High-quality Benchmarks: Arena-Hard and BenchBuilder Pipeline\",\n    author = \"Li, Tianle and Chiang, Wei-Lin and Frick, Evan and Dunlap, Lisa and Wu, Tianhao and Zhu, Banghua and Gonzalez, Joseph E. and Stoica, Ion\",\n    booktitle = \"Proceedings of the 42nd International Conference on Machine Learning (ICML)\",\n    series = \"PMLR\",\n    volume = \"267\",\n    pages = \"34209--34231\",\n    year = \"2025\",\n    url = \"https://proceedings.mlr.press/v267/li25h.html\"\n}"
 }

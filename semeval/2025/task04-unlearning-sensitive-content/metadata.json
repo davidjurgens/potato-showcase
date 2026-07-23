@@ -1,6 +1,38 @@
 {
   "title": "Unlearning Sensitive Content from LLMs",
   "description": "Evaluation of whether language models have successfully unlearned sensitive content, requiring annotators to assess model outputs for residual sensitive information leakage. Based on SemEval-2025 Task 4.",
+  "overview": [
+    "SemEval-2025 Task 4 asked participants to make a language model forget specific training content on demand, a problem known as machine unlearning. The shared task was organized by Anil Ramakrishna and colleagues and published in the Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025). It targets a practical need: once a model has memorized private or copyrighted text, retraining from scratch is costly, so the goal is to remove the content while keeping the rest of the model working.",
+    "The organizers released a benchmark called LUME and fine-tuned two OLMo checkpoints (7B and 1B parameters) so they memorized it. The benchmark covers three subtasks: synthetic short stories across genres, synthetic biographies carrying fake PII such as names, SSNs, phone numbers, emails, and addresses, and real biographies drawn from the Dolma corpus used to train OLMo. The original task scored unlearning with automatic metrics; the Potato config here reframes the same material as a human judgment task, where an annotator reads a prompt and a model response and decides whether sensitive content leaked through.",
+    "The benchmark contains 1,387 unique documents split into 697 to forget and 690 to retain, expanded to 4,394 evaluation examples across regurgitation and knowledge-test variants. Submissions were scored with ROUGE-L regurgitation, exact-match question answering, a loss-based membership inference attack, and MMLU for general utility, aggregated as a harmonic mean of twelve memorization metrics. The task drew over 100 submissions from 24 teams.",
+    "The Potato config below reproduces this evaluation as manual review with a four-way radio scheme (contains sensitive content, partially sensitive, not sensitive, ambiguous), a free-text box to describe what leaked, and a five-point Likert scale for leakage severity. It suits a human audit pass over unlearned model outputs before trusting the automatic scores."
+  ],
+  "datasetStats": [
+    {
+      "label": "Subtasks",
+      "value": "3 (creative, PII bios, real bios)"
+    },
+    {
+      "label": "Fine-tuned models",
+      "value": "OLMo-7B & OLMo-1B"
+    },
+    {
+      "label": "Unique documents",
+      "value": "1,387 (697 forget / 690 retain)"
+    },
+    {
+      "label": "Evaluation examples",
+      "value": "4,394"
+    },
+    {
+      "label": "Memorization metrics",
+      "value": "12 (harmonic-mean aggregate)"
+    },
+    {
+      "label": "Submissions",
+      "value": "100+ from 24 teams"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Choi et al.",
@@ -9,7 +41,7 @@
     "affiliation": "SemEval 2025 Organizers"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text",
@@ -37,8 +69,8 @@
     "sensitive-content"
   ],
   "featured": false,
-  "paperReference": "Choi et al., SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
+  "paperReference": "Ramakrishna et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.329/",
   "datasetUrl": "https://github.com/SemEval/SemEval2025-Task4",
-  "citation": "@inproceedings{choi-etal-2025-unlearning,\n    title = \"Unlearning Sensitive Content from {LLM}s\",\n    author = \"Choi, Yejin and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "citation": "@inproceedings{ramakrishna-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 4: Unlearning sensitive content from Large Language Models\",\n    author = \"Ramakrishna, Anil and Wan, Yixin and Jin, Xiaomeng and Chang, Kai-Wei and Bu, Zhiqi and Vinzamuri, Bhanukiran and Cevher, Volkan and Hong, Mingyi and Gupta, Rahul\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2584--2596\"\n}"
 }

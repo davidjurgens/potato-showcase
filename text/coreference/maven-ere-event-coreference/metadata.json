@@ -1,6 +1,38 @@
 {
   "title": "Event Coreference and Relations (MAVEN-ERE)",
   "description": "Unified event relation extraction covering coreference, temporal, causal, and subevent relations. Annotators identify event mentions and link them with typed relations (coreference, temporal_before/after/overlap, causal, subevent). Based on the MAVEN-ERE dataset which provides large-scale, unified annotations for four types of event relations.",
+  "overview": [
+    "MAVEN-ERE is a dataset for event relation extraction, the task of finding events in text and labeling how they relate. It covers four relation types at once: coreference (two mentions of the same event), temporal order, causal links, and subevent (part-of) structure. Xiaozhi Wang and colleagues at Tsinghua University (THU-KEG) introduced it at EMNLP 2022, building on the earlier MAVEN event-detection dataset.",
+    "The corpus is built from 4,480 English Wikipedia documents. Annotators first mark event triggers, then go through pairs of events and assign a relation label where one holds. Because a single document can contain many events, the relation annotations are dense: the paper reports an average of 272 temporal links per document.",
+    "In total the dataset has 103,193 event coreference chains, 1,216,217 temporal relations, 57,992 causal relations, and 15,841 subevent relations, which the authors note is at least an order of magnitude larger than prior event-relation datasets on every relation type.",
+    "The Potato config below reproduces this workflow in two steps: a span scheme for tagging event mentions with eleven coarse type labels (action, state change, movement, and so on), then a span-link scheme that connects two tagged events with one of six relation labels (coreference, temporal before/after/overlap, causal, subevent). The coarse type set is a simplified stand-in for MAVEN's finer event ontology. It suits annotating discourse-level event structure over full documents."
+  ],
+  "datasetStats": [
+    {
+      "label": "Documents",
+      "value": "4,480 (English Wikipedia)"
+    },
+    {
+      "label": "Event coreference chains",
+      "value": "103,193"
+    },
+    {
+      "label": "Temporal relations",
+      "value": "1,216,217"
+    },
+    {
+      "label": "Causal relations",
+      "value": "57,992"
+    },
+    {
+      "label": "Subevent relations",
+      "value": "15,841"
+    },
+    {
+      "label": "Relation types",
+      "value": "4 (coref / temporal / causal / subevent)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Tsinghua University"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "span_link"
@@ -38,5 +70,5 @@
   "paperReference": "Wang et al., EMNLP 2022",
   "paperUrl": "https://aclanthology.org/2022.emnlp-main.60/",
   "datasetUrl": "https://github.com/THU-KEG/MAVEN-ERE",
-  "citation": "@inproceedings{wang-etal-2022-maven-ere,\n    title = \"{MAVEN}-{ERE}: A Unified Large-scale Dataset for Event Coreference, Temporal, Causal, and Subevent Relations\",\n    author = \"Wang, Xiaozhi  and Chen, Yulin  and Ding, Ning  and Peng, Hao  and Wang, Zimu  and Lin, Yankai  and Han, Xu  and Hou, Lei  and Li, Juanzi  and Liu, Zhiyuan  and Li, Peng  and Zhou, Jie\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.emnlp-main.60\",\n    pages = \"926--941\"\n}"
+  "citation": "@inproceedings{wang-etal-2022-maven,\n    title = \"{MAVEN}-{ERE}: A Unified Large-scale Dataset for Event Coreference, Temporal, Causal, and Subevent Relation Extraction\",\n    author = \"Wang, Xiaozhi and Chen, Yulin and Ding, Ning and Peng, Hao and Wang, Zimu and Lin, Yankai and Han, Xu and Hou, Lei and Li, Juanzi and Liu, Zhiyuan and Li, Peng and Zhou, Jie\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"926--941\",\n    doi = \"10.18653/v1/2022.emnlp-main.60\"\n}"
 }

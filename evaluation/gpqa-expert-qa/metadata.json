@@ -1,6 +1,38 @@
 {
   "title": "GPQA - Graduate-Level Expert QA Evaluation",
-  "description": "Expert-level question answering evaluation on graduate-level science questions from the GPQA benchmark (Rein et al., ICLR 2024). Questions span physics, chemistry, and biology, designed to be answerable only by domain experts.",
+  "description": "Expert-level question answering evaluation on graduate-level science questions from the GPQA benchmark (Rein et al., COLM 2024). Questions span physics, chemistry, and biology, designed to be answerable only by domain experts.",
+  "overview": [
+    "GPQA is a multiple-choice question answering benchmark of graduate-level science questions written by domain experts in biology, physics, and chemistry. It was built by David Rein and colleagues (primarily at New York University) and presented at the first Conference on Language Modeling (COLM) in 2024. It exists to provide questions that stay hard even for skilled people with full web access, so researchers can study whether humans can oversee AI systems that may outperform them.",
+    "Each question was written by an expert who holds or is pursuing a PhD in the relevant field, then reviewed by other experts and attempted by skilled non-experts who had unrestricted access to the web. Every item has one correct answer and three distractors. The annotation task is to read the question, choose the single correct option, and record the reasoning behind the choice.",
+    "The main set contains 448 questions across biology, physics, and chemistry; the release also includes an extended set of 546 questions and a harder diamond set of 198. Experts reached 65% accuracy (74% after discounting mistakes they later identified), while non-expert validators reached only 34% despite spending more than 30 minutes per question online. A GPT-4 based baseline scored 39%, which is why the questions are described as Google-proof.",
+    "The Potato config below reproduces this task with a radio scheme for the four answer options (A-D), a number field for a 0-100 confidence score, and a free-text box for a short explanation. Use it to collect expert answers, calibrated confidence, and reasoning on hard science questions, or to run a model-versus-human comparison."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "COLM 2024 (spotlight)"
+    },
+    {
+      "label": "Questions",
+      "value": "448 (main set; 4-option MC)"
+    },
+    {
+      "label": "Subsets",
+      "value": "Main 448, Extended 546, Diamond 198"
+    },
+    {
+      "label": "Domains",
+      "value": "Biology, physics, chemistry"
+    },
+    {
+      "label": "Expert accuracy",
+      "value": "65% (74% discounting mistakes)"
+    },
+    {
+      "label": "Non-expert accuracy",
+      "value": "34% (30+ min web access)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Rein et al.",
@@ -9,7 +41,7 @@
     "affiliation": "New York University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "number",
     "radio",
@@ -35,8 +67,8 @@
     "iclr2024"
   ],
   "featured": false,
-  "paperReference": "Rein et al., ICLR 2024",
+  "paperReference": "Rein et al., COLM 2024",
   "paperUrl": "https://arxiv.org/abs/2311.12022",
   "datasetUrl": "https://github.com/idavidrein/gpqa",
-  "citation": "@inproceedings{rein2024gpqa,\n    title = \"{GPQA}: A Graduate-Level Google-Proof Q\\&A Benchmark\",\n    author = \"Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R.\",\n    booktitle = \"Proceedings of the International Conference on Learning Representations\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2311.12022\"\n}"
+  "citation": "@inproceedings{rein2024gpqa,\n    title = \"{GPQA}: A Graduate-Level Google-Proof Q&A Benchmark\",\n    author = \"Rein, David and Hou, Betty Li and Stickland, Asa Cooper and Petty, Jackson and Pang, Richard Yuanzhe and Dirani, Julien and Michael, Julian and Bowman, Samuel R.\",\n    booktitle = \"First Conference on Language Modeling (COLM)\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2311.12022\"\n}"
 }

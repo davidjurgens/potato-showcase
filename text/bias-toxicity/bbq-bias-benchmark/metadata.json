@@ -1,6 +1,38 @@
 {
   "title": "Bias Benchmark for QA (BBQ)",
   "description": "Annotate question-answering examples designed to probe social biases. Based on BBQ (Parrish et al., Findings of ACL 2022). Annotators select the correct answer given a context, assess the direction of bias in the question, categorize the type of bias, and explain their reasoning.",
+  "overview": [
+    "BBQ (Bias Benchmark for Question Answering) is a dataset built by Alicia Parrish and colleagues at New York University and published in Findings of ACL 2022. It tests whether a question-answering model falls back on social stereotypes when a question cannot be answered from the context it is given. Each item pairs two people from different social groups with a question that a stereotype would answer one way.",
+    "The examples are hand-written from templates rather than scraped from the web. Every template supplies an ambiguous context that lacks the information needed to answer, plus a disambiguated version that adds a fact settling the answer. Annotators read the context and question, choose answer A, answer B, or unknown, then judge whether naming a specific person would follow or go against a stereotype, and label which social category the question probes.",
+    "BBQ contains 58,492 unique examples across nine social dimensions relevant to U.S. English contexts, with two additional intersectional axes (race by gender and race by socioeconomic status), and at least 25 templates per category. The authors report that models score up to 3.4 points higher when the stereotype-aligned answer is also the correct one, with wider gaps on gender-related items.",
+    "The Potato config below reproduces this task with three radio schemes and one free-text field: a correct-answer choice (answer A, answer B, or unknown), a bias-direction judgment (stereotypical, anti-stereotypical, neutral, ambiguous), a nine-way bias-category label, and a reasoning box. It fits work that trains annotators to withhold judgment when a context is genuinely ambiguous."
+  ],
+  "datasetStats": [
+    {
+      "label": "Unique examples",
+      "value": "58,492"
+    },
+    {
+      "label": "Social categories",
+      "value": "9 core + 2 intersectional"
+    },
+    {
+      "label": "Templates per category",
+      "value": "at least 25"
+    },
+    {
+      "label": "Accuracy gap (bias-aligned vs conflicting)",
+      "value": "up to 3.4 points"
+    },
+    {
+      "label": "Venue",
+      "value": "Findings of ACL 2022"
+    },
+    {
+      "label": "Pages",
+      "value": "2086-2105"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Parrish et al.",
@@ -9,7 +41,7 @@
     "affiliation": "New York University"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"
@@ -39,5 +71,5 @@
   "paperReference": "Parrish et al., Findings of ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.findings-acl.165/",
   "datasetUrl": "https://github.com/nyu-mll/BBQ",
-  "citation": "@inproceedings{parrish-etal-2022-bbq,\n    title = \"{BBQ}: A Hand-Built Bias Benchmark for Question Answering\",\n    author = \"Parrish, Alicia  and Chen, Angelica  and Nangia, Nikita  and Padmakumar, Vishakh  and Phang, Jason  and Thompson, Jana  and Htut, Phu Mon  and Bowman, Samuel\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.165\",\n    pages = \"2086--2105\"\n}"
+  "citation": "@inproceedings{parrish-etal-2022-bbq,\n    title = \"{BBQ}: A hand-built bias benchmark for question answering\",\n    author = \"Parrish, Alicia and Chen, Angelica and Nangia, Nikita and Padmakumar, Vishakh and Phang, Jason and Thompson, Jana and Htut, Phu Mon and Bowman, Samuel R.\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.165\",\n    pages = \"2086--2105\"\n}"
 }

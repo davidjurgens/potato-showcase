@@ -1,6 +1,38 @@
 {
   "title": "MAUD: Legal Merger Agreement Understanding",
   "description": "Legal document understanding for merger agreements. Annotators identify key clauses in merger agreements and answer structured questions about deal terms (termination fees, representations, conditions, etc.). Based on the MAUD dataset of expert-annotated legal NLP for merger agreement understanding.",
+  "overview": [
+    "MAUD (Merger Agreement Understanding Dataset) is an expert-annotated legal reading-comprehension dataset for question answering over merger-and-acquisition contracts. It was curated under the supervision of M&A lawyers and released by Wang et al. at EMNLP 2023. Given a clause from a merger agreement, the task is to answer a standardized legal question about the deal terms. It was built because merger agreements are long and technical and there was almost no expert-labeled data for training or evaluating legal NLP on them.",
+    "The source text comes from 152 English-language public merger agreements, the same deals used in the American Bar Association's 2021 Public Target Deal Points Study. Law students and experienced lawyers read each agreement, located the clauses relevant to each deal point, and selected the correct answer from a fixed option set for 92 reading-comprehension questions.",
+    "The dataset holds 47,457 annotations in total, made up of 8,226 clause-level deal-point annotations and 39,231 question-answer examples. The annotation work ran to more than 10,000 hours by law students and experienced lawyers, which is what makes the labels dependable in a domain where exact wording carries legal weight.",
+    "The Potato config below reproduces this task with two schemes: a span layer where annotators highlight the clause that answers the question and tag it with one of six deal categories (Deal Protection, Conditions to Closing, Material Adverse Effect, Termination, Representations & Warranties, Indemnification), and a radio layer for the structured answer (Yes, No, Partial/Qualified, Not Addressed, Ambiguous). It collects clause spans and their legal reading in a single pass."
+  ],
+  "datasetStats": [
+    {
+      "label": "Merger agreements",
+      "value": "152 English-language public deals"
+    },
+    {
+      "label": "Total annotations",
+      "value": "47,457"
+    },
+    {
+      "label": "Question-answer examples",
+      "value": "39,231"
+    },
+    {
+      "label": "Deal-point clause annotations",
+      "value": "8,226"
+    },
+    {
+      "label": "Reading-comprehension questions",
+      "value": "92"
+    },
+    {
+      "label": "Annotation effort",
+      "value": "10,000+ expert hours"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Wang et al.",
@@ -9,7 +41,7 @@
     "affiliation": "NYU / Atticus Project"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"
@@ -36,5 +68,5 @@
   "paperReference": "Wang et al., EMNLP 2023",
   "paperUrl": "https://aclanthology.org/2023.emnlp-main.1019/",
   "datasetUrl": "https://github.com/TheAtticusProject/maud",
-  "citation": "@inproceedings{wang-etal-2023-maud,\n    title = \"{MAUD}: An Expert-Annotated Legal {NLP} Dataset for Merger Agreement Understanding\",\n    author = \"Wang, Steven H.  and Scardigli, Antoine  and Tang, Leonard  and Chen, Wei  and Levitt, Dimitry  and Chen, Anya  and Spencer, Jillian  and Goldber, Michael  and Rattner, Daniel  and Nishi, Celine  and Potts, Chris  and Ho, Daniel E.\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1019\",\n    pages = \"16226--16250\"\n}"
+  "citation": "@inproceedings{wang-etal-2023-maud,\n    title = \"{MAUD}: An Expert-Annotated Legal {NLP} Dataset for Merger Agreement Understanding\",\n    author = \"Wang, Steven and Scardigli, Antoine and Tang, Leonard and Chen, Wei and Levkin, Dmitry and Chen, Anya and Ball, Spencer and Woodside, Thomas and Zhang, Oliver and Hendrycks, Dan\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.1019/\",\n    doi = \"10.18653/v1/2023.emnlp-main.1019\",\n    pages = \"16369--16382\"\n}"
 }

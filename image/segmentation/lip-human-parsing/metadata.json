@@ -1,6 +1,38 @@
 {
   "title": "LIP Human Parsing",
-  "description": "Pixel-level human body part segmentation (Gong et al., CVPR 2017). Parse human images into 20 semantic parts including hair, face, arms, legs, and clothing items.",
+  "description": "Pixel-level human body part segmentation (Gong et al., CVPR 2017). Parse human images into 19 semantic body-part and clothing labels including hair, face, arms, legs, and clothing items.",
+  "overview": [
+    "Human parsing is the task of segmenting a person in an image into semantic parts such as hair, face, arms, legs, and individual clothing items. The Look Into Person (LIP) benchmark was introduced by Ke Gong, Xiaodan Liang, Dongyu Zhang, Xiaohui Shen, and Liang Lin at CVPR 2017 to give the task a larger and more varied dataset than what existed before, covering a wider range of viewpoints, occlusions, and background complexity.",
+    "The images are real photographs of single people cropped from a broader collection, chosen to include difficult poses and partial occlusion. Each image is annotated at the pixel level, with every pixel assigned to one of the human part or clothing categories or to background.",
+    "LIP contains over 50,000 elaborately annotated images labeled with 19 semantic part categories (plus background). The authors report that this scale and diversity was a substantial step up from prior human-parsing datasets, and they use it to benchmark leading parsing methods and their own self-supervised, structure-sensitive approach.",
+    "The Potato config below reproduces this task with a multiselect over the 19 LIP body-part and clothing labels, plus radio questions for the primary pose and the degree of occlusion. It runs as an image-level part-presence and attribute pass, which is useful for triaging images or checking which parts are visible before a heavier pixel-level segmentation stage."
+  ],
+  "datasetStats": [
+    {
+      "label": "Total images",
+      "value": "Over 50,000"
+    },
+    {
+      "label": "Semantic part labels",
+      "value": "19"
+    },
+    {
+      "label": "Annotation",
+      "value": "Pixel-level part segmentation"
+    },
+    {
+      "label": "Task",
+      "value": "Single-person human parsing"
+    },
+    {
+      "label": "Authors",
+      "value": "Gong et al."
+    },
+    {
+      "label": "Venue",
+      "value": "CVPR 2017"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Gong et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Sun Yat-sen University"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"
@@ -32,8 +64,8 @@
     "cvpr2017"
   ],
   "featured": true,
-  "paperReference": "Gong et al., CVPR 2017",
+  "paperReference": "Gong, Liang, Zhang, Shen & Lin, CVPR 2017",
   "paperUrl": "https://arxiv.org/abs/1703.05446",
-  "datasetUrl": "http://sysu-hcp.net/lip",
-  "citation": "@inproceedings{gong2017look,\n    title = \"Look into Person: Self-supervised Structure-sensitive Learning and A New Benchmark for Human Parsing\",\n    author = \"Gong, Ke  and Liang, Xiaodan  and Zhang, Dongyu  and Shen, Xiaohui  and Lin, Liang\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"932--940\",\n    year = \"2017\",\n    url = \"https://arxiv.org/abs/1703.05446\"\n}"
+  "datasetUrl": "https://arxiv.org/abs/1703.05446",
+  "citation": "@inproceedings{gong2017look,\n    title = {Look into Person: Self-supervised Structure-sensitive Learning and a New Benchmark for Human Parsing},\n    author = {Gong, Ke and Liang, Xiaodan and Zhang, Dongyu and Shen, Xiaohui and Lin, Liang},\n    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages = {932--940},\n    year = {2017}\n}"
 }

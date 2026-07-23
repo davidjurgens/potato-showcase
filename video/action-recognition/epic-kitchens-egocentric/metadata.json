@@ -1,6 +1,38 @@
 {
   "title": "EPIC-KITCHENS Egocentric Action Annotation",
   "description": "Annotate fine-grained actions in egocentric kitchen videos with verb-noun pairs. Identify cooking actions from a first-person perspective.",
+  "overview": [
+    "Egocentric action recognition is the task of labeling first-person video, recorded from a head-mounted camera, with the actions the wearer performs, described as verb-noun pairs such as \"open fridge\" or \"cut onion.\" EPIC-KITCHENS was introduced by Dima Damen and colleagues in \"Scaling Egocentric Vision: The EPIC-KITCHENS Dataset\" at ECCV 2018. It was created to address the shortage of large first-person datasets capturing how people interact with objects during everyday activity.",
+    "The footage was recorded by 32 participants in their own kitchens across four cities in North America and Europe. Recording was unscripted: each person simply started filming whenever they entered the kitchen, capturing natural cooking and cleaning. After recording, the participants narrated their own videos, and those narrations were transcribed and converted into temporally bounded action labels through crowdsourcing.",
+    "The dataset provides 55 hours of video totaling 11.5 million frames, densely labeled into 39,596 action segments and 454,255 object bounding boxes. Actions are organized into 125 verb classes and 331 noun classes. Because annotation started from the participants' own narrations, the labels reflect the actor's stated intention rather than an outside observer's guess.",
+    "The Potato config below reproduces this task with a video_annotation scheme in segment mode (60 fps, with frame-stepping and timecode display) for marking the temporal boundaries of each action, a radio scheme for the verb, a radio scheme for the noun, free-text fields as fallbacks for out-of-vocabulary verbs and nouns, and a radio scheme rating how visible the action is under hand occlusion. Each clip is shown to two annotators. This is useful for building fine-grained, verb-noun action-recognition datasets from egocentric video."
+  ],
+  "datasetStats": [
+    {
+      "label": "Participants / kitchens",
+      "value": "32"
+    },
+    {
+      "label": "Video duration",
+      "value": "55 hours (11.5M frames)"
+    },
+    {
+      "label": "Action segments",
+      "value": "39,596"
+    },
+    {
+      "label": "Object bounding boxes",
+      "value": "454,255"
+    },
+    {
+      "label": "Verb / noun classes",
+      "value": "125 verbs / 331 nouns"
+    },
+    {
+      "label": "Venue / Year",
+      "value": "ECCV 2018 (EPIC-KITCHENS-55)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2025-02-02",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text",
@@ -38,5 +70,5 @@
   "paperReference": "Damen et al., ECCV 2018",
   "paperUrl": "https://arxiv.org/abs/1804.02748",
   "datasetUrl": "https://epic-kitchens.github.io/",
-  "citation": "@inproceedings{damen2018scaling,\n  title={Scaling egocentric vision: The EPIC-KITCHENS dataset},\n  author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria and Fidler, Sanja and Furnari, Antonino and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan and Perrett, Toby and Price, Will and Wray, Michael},\n  booktitle={European Conference on Computer Vision},\n  pages={720--736},\n  year={2018}\n}"
+  "citation": "@inproceedings{damen2018scaling,\n    title = {Scaling Egocentric Vision: The EPIC-KITCHENS Dataset},\n    author = {Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria and Fidler, Sanja and Furnari, Antonino and Kazakos, Evangelos and Moltisanti, Davide and Munro, Jonathan and Perrett, Toby and Price, Will and Wray, Michael},\n    booktitle = {European Conference on Computer Vision (ECCV)},\n    pages = {720--736},\n    year = {2018}\n}"
 }

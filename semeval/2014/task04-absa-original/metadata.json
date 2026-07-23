@@ -1,6 +1,38 @@
 {
   "title": "Aspect-Based Sentiment Analysis (Original ABSA)",
   "description": "Identify aspect terms in review text and classify their sentiment polarity, based on SemEval-2014 Task 4 (Pontiki et al.). Annotators highlight aspect terms and assign sentiment labels across restaurant and laptop review domains.",
+  "overview": [
+    "SemEval-2014 Task 4, Aspect Based Sentiment Analysis, was organized by Maria Pontiki, Dimitris Galanis, John Pavlopoulos, Harris Papageorgiou, Ion Androutsopoulos, and Suresh Manandhar. ABSA moves past assigning one overall polarity to a sentence and instead identifies the specific aspects of an entity that a review mentions (battery, screen, service, food) and the sentiment expressed toward each. The task attracted 163 submissions from 32 teams.",
+    "The organizers released manually annotated reviews in two domains, restaurants and laptops. Four subtasks were defined: aspect term extraction (SB1) and aspect term polarity (SB2) for both domains, plus aspect category detection (SB3) and aspect category polarity (SB4) for restaurants only. Polarity uses four labels: positive, negative, neutral, and conflict, where conflict marks an aspect that carries both positive and negative sentiment. The restaurant training set reuses sentences from Ganu et al. (2009), to which the organizers added aspect-term annotations.",
+    "The restaurant data comprises 3,041 training and 800 test sentences. The laptop data comprises 3,045 training and 800 test sentences. Across both domains that is 6,086 training sentences and 1,600 test sentences. Aspect categories and their polarities (SB3, SB4) were annotated only for the restaurant domain.",
+    "The Potato config below reproduces this task with a span-highlighting scheme for marking aspect terms in the review text and a radio scheme for sentiment polarity (positive, negative, neutral, conflict). It fits opinion-mining work where annotators locate the evaluated features and label the sentiment. The original SB2 assigns a polarity to each aspect term individually; the config collects one overall polarity per review."
+  ],
+  "datasetStats": [
+    {
+      "label": "Domains",
+      "value": "restaurants, laptops"
+    },
+    {
+      "label": "Restaurant sentences",
+      "value": "3,041 train / 800 test"
+    },
+    {
+      "label": "Laptop sentences",
+      "value": "3,045 train / 800 test"
+    },
+    {
+      "label": "Total sentences",
+      "value": "6,086 train / 1,600 test"
+    },
+    {
+      "label": "Polarity labels",
+      "value": "positive, negative, neutral, conflict"
+    },
+    {
+      "label": "Participation",
+      "value": "163 submissions from 32 teams"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Pontiki et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Institute for Language and Speech Processing"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"
@@ -39,5 +71,5 @@
   "paperReference": "Pontiki et al., SemEval 2014",
   "paperUrl": "https://aclanthology.org/S14-2004/",
   "datasetUrl": "https://alt.qcri.org/semeval2014/task4/",
-  "citation": "@inproceedings{pontiki-etal-2014-semeval,\n    title = \"{S}em{E}val-2014 {T}ask 4: {A}spect {B}ased {S}entiment {A}nalysis\",\n    author = \"Pontiki, Maria  and Galanis, Dimitris  and Pavlopoulos, John  and Papageorgiou, Harris  and Androutsopoulos, Ion  and Manandhar, Suresh\",\n    booktitle = \"Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval-2014)\",\n    year = \"2014\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S14-2004\"\n}"
+  "citation": "@inproceedings{pontiki-etal-2014-semeval,\n    title = \"{S}em{E}val-2014 {T}ask 4: {A}spect {B}ased {S}entiment {A}nalysis\",\n    author = \"Pontiki, Maria and Galanis, Dimitris and Pavlopoulos, John and Papageorgiou, Harris and Androutsopoulos, Ion and Manandhar, Suresh\",\n    booktitle = \"Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014)\",\n    month = aug,\n    year = \"2014\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S14-2004/\",\n    doi = \"10.3115/v1/S14-2004\",\n    pages = \"27--35\"\n}"
 }

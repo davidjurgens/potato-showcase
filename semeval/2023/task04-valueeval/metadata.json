@@ -1,6 +1,38 @@
 {
   "title": "ValueEval - Human Values behind Arguments",
   "description": "Identification of human values expressed in arguments, classifying which of the Schwartz basic values an argument appeals to and whether it attains or constrains those values. Based on SemEval-2023 Task 4 (Kiesel et al.).",
+  "overview": [
+    "SemEval-2023 Task 4, called ValueEval, asked systems to detect the human values behind an argument. It was organized by Johannes Kiesel and colleagues and described in the task paper at the 17th International Workshop on Semantic Evaluation. The task builds on Schwartz's theory of basic human values, where an argument's persuasive force often rests on an implicit value such as tradition or universalism.",
+    "The shared task released a multi-sourced dataset of arguments, each given as a premise together with a conclusion and a stance of in favor or against. Annotators mark which value categories the argument appeals to, drawn from a taxonomy of 20 value categories grouped under Schwartz's higher-order values. The task is framed as multi-label classification, so each of the 20 categories is judged present or absent for a given argument.",
+    "The dataset holds over 9,000 arguments, and 39 teams submitted runs. The best systems reached 0.87 F1 on the universalism: nature category and above 0.70 on three more, while the hardest categories peaked at 0.39 F1, showing that values such as stimulation and hedonism stay difficult to detect.",
+    "The Potato config below reproduces a simplified version of this task with one multiselect and one radio: a multiselect over the ten higher-order Schwartz values (self-direction, stimulation, hedonism, achievement, power, security, conformity, tradition, benevolence, universalism) and a radio marking whether the argument attains or constrains those values. It fits argument-mining and ethics research that needs value labels tied to a stance."
+  ],
+  "datasetStats": [
+    {
+      "label": "Arguments",
+      "value": "over 9,000"
+    },
+    {
+      "label": "Value categories (level 2)",
+      "value": "20"
+    },
+    {
+      "label": "Participating teams",
+      "value": "39"
+    },
+    {
+      "label": "Best category F1",
+      "value": "0.87 (universalism: nature)"
+    },
+    {
+      "label": "Lowest peak F1",
+      "value": "0.39"
+    },
+    {
+      "label": "Venue / pages",
+      "value": "SemEval-2023, pp. 2287-2303"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Kiesel et al.",
@@ -9,7 +41,7 @@
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"
@@ -34,8 +66,8 @@
     "schwartz-values"
   ],
   "featured": false,
-  "paperReference": "Kiesel et al., SemEval 2023",
+  "paperReference": "Kiesel et al., SemEval-2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.313/",
   "datasetUrl": "https://touche.webis.de/semeval23/touche23-web/",
-  "citation": "@inproceedings{kiesel-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 4: {V}alue{E}val: Identification of Human Values behind Arguments\",\n    author = \"Kiesel, Johannes  and Alshomary, Milad  and Mirzakhmedova, Nailia  and Wachsmuth, Henning  and Stein, Benno\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.313\"\n}"
+  "citation": "@inproceedings{kiesel-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 {T}ask 4: {V}alue{E}val: Identification of Human Values Behind Arguments\",\n    author = \"Kiesel, Johannes and Alshomary, Milad and Mirzakhmedova, Nailia and Heinrich, Maximilian and Handke, Nicolas and Wachsmuth, Henning and Stein, Benno\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.313\",\n    pages = \"2287--2303\"\n}"
 }

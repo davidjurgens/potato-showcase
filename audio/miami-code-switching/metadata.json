@@ -1,6 +1,38 @@
 {
   "title": "Miami Bangor Code-Switching Annotation",
-  "description": "Multi-tier annotation of Spanish-English bilingual speech for code-switching analysis. Annotators perform per-word language identification, mark code-switch boundaries and types, classify switch direction and utterance-level language dominance, and provide orthographic transcriptions -- all on parallel tiers aligned to the audio timeline (Deuchar et al., International Journal of Bilingualism 2014).",
+  "description": "Multi-tier annotation of Spanish-English bilingual speech for code-switching analysis. Annotators perform per-word language identification, mark code-switch boundaries and types, classify switch direction and utterance-level language dominance, and provide orthographic transcriptions -- all on parallel tiers aligned to the audio timeline (Deuchar & Parafita Couto, Bangor Miami Corpus, TalkBank).",
+  "overview": [
+    "The Bangor Miami corpus is a collection of recorded Spanish-English bilingual conversations from Miami, built to study code-switching in natural speech. It was produced by Margaret Deuchar and colleagues at Bangor University and is distributed through TalkBank and the BangorTalk site. The annotation task is code-switching analysis: transcribe bilingual speech and label, word by word, which language is used and where speakers switch between languages.",
+    "The recordings are informal conversations between bilingual speakers, captured between 2008 and 2011. In the original project the audio was transcribed in CHAT format and each word was tagged for its language, so the corpus supports per-word language identification and analysis of where and how switching happens.",
+    "The corpus contains 56 conversations from 84 speakers, roughly 35 hours of recorded speech, transcribed into 242,475 words. The audio, transcripts, and speaker metadata are freely available for research.",
+    "The Potato config below reproduces this task with a five-tier ELAN-style layout aligned to the audio: two temporal span tiers (per-word language among English, Spanish, mixed, ambiguous, other; and code-switch boundary type among inter-sentential, intra-sentential, tag-switch, intra-word), two radio tiers (switch direction and predominant utterance language), and a free-text transcription tier. It is aimed at producing aligned, multi-layer annotations of bilingual conversational speech."
+  ],
+  "datasetStats": [
+    {
+      "label": "Conversations",
+      "value": "56"
+    },
+    {
+      "label": "Speakers",
+      "value": "84"
+    },
+    {
+      "label": "Recorded speech",
+      "value": "~35 hours"
+    },
+    {
+      "label": "Transcribed words",
+      "value": "242,475"
+    },
+    {
+      "label": "Recording period",
+      "value": "2008-2011"
+    },
+    {
+      "label": "Languages",
+      "value": "Spanish-English (Miami)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio",
@@ -36,8 +68,8 @@
     "miami-corpus"
   ],
   "featured": false,
-  "paperReference": "Deuchar et al., International Journal of Bilingualism 2014",
-  "paperUrl": "https://doi.org/10.1177/1367006913487303",
+  "paperReference": "Deuchar & Parafita Couto, TalkBank 2011",
+  "paperUrl": "https://talkbank.org/biling/access/Bangor/Miami.html",
   "datasetUrl": "http://bangortalk.org.uk/speakers.php?c=miami",
-  "citation": "@article{deuchar2014miami,\n    title = \"Building Bilingual Corpora\",\n    author = \"Deuchar, Margaret and Davies, Peredur and Herring, Jon and Parafita Couto, M. Carmen and Carter, Diana\",\n    journal = \"International Journal of Bilingualism\",\n    volume = \"18\",\n    number = \"5\",\n    pages = \"451--472\",\n    year = \"2014\",\n    publisher = \"SAGE Publications\",\n    doi = \"10.1177/1367006913487303\"\n}"
+  "citation": "@misc{deuchar2011bangormiami,\n    title = \"The Bangor Miami Corpus\",\n    author = \"Deuchar, Margaret and Parafita Couto, Maria Carmen\",\n    year = \"2011\",\n    publisher = \"TalkBank\",\n    doi = \"10.21415/T5J01D\",\n    url = \"https://talkbank.org/biling/access/Bangor/Miami.html\"\n}"
 }

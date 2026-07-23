@@ -1,6 +1,38 @@
 {
   "title": "FLUTE: Figurative Language Understanding through Textual Explanations",
   "description": "Figurative language understanding via NLI. Annotators classify figurative sentences (sarcasm, simile, metaphor, idiom) and provide textual explanations of the figurative meaning. The task combines natural language inference with fine-grained figurative language type classification.",
+  "overview": [
+    "FLUTE was introduced by Tuhin Chakrabarty, Arkadiy Saakyan, Debanjan Ghosh, and Smaranda Muresan at EMNLP 2022. It frames figurative language understanding as a natural language inference (NLI) task: given a literal premise and a figurative hypothesis, a system decides whether the premise entails or contradicts the figurative meaning and then explains that judgment in plain text. The goal was to test whether models actually reason about sarcasm, similes, metaphors, and idioms rather than lean on annotation artifacts in earlier NLI data.",
+    "The dataset covers four categories of figurative language: sarcasm, simile, metaphor, and idiom. It was built with a model-in-the-loop pipeline. GPT-3 generated candidate literal paraphrases, contradictions, and explanations; crowd workers on Amazon Mechanical Turk supplied or transformed sentences; and expert annotators verified and lightly edited the output. Every instance pairs a premise with a hypothesis, an entailment or contradiction label, and a written explanation of what the figurative expression means.",
+    "FLUTE contains 9,000 literal-figurative pairs with entailment/contradiction labels and explanations. The sarcasm portion holds 2,678 sentences, while the simile and metaphor portions each contribute 1,500 pairs split evenly into 750 entailment and 750 contradiction examples. Experts flagged about 25% of the sarcasm instances as needing edits and revised roughly 21% of the sarcasm explanations, which indicates the level of manual quality control applied.",
+    "The Potato config below reproduces this task with a radio scheme for the entailment relationship (entailment, contradiction, neutral), a multiselect scheme for the figurative-language type (sarcasm, simile, metaphor, idiom), and a free-text box for the explanation. It suits collecting NLI-style judgments together with written rationales for figurative sentences. The original FLUTE labels are binary entailment/contradiction; the config adds a neutral option."
+  ],
+  "datasetStats": [
+    {
+      "label": "Total instances",
+      "value": "9,000"
+    },
+    {
+      "label": "Figurative categories",
+      "value": "4 (sarcasm, simile, metaphor, idiom)"
+    },
+    {
+      "label": "NLI labels",
+      "value": "entailment, contradiction"
+    },
+    {
+      "label": "Sarcasm instances",
+      "value": "2,678"
+    },
+    {
+      "label": "Simile pairs",
+      "value": "1,500 (750 entailment, 750 contradiction)"
+    },
+    {
+      "label": "Metaphor pairs",
+      "value": "1,500 (750 entailment, 750 contradiction)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Chakrabarty et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Columbia University"
   },
   "createdAt": "2026-02-23",
-  "updatedAt": "2026-02-23",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text",
@@ -40,5 +72,5 @@
   "paperReference": "Chakrabarty et al., EMNLP 2022",
   "paperUrl": "https://aclanthology.org/2022.emnlp-main.481/",
   "datasetUrl": "https://github.com/google/FLUTE",
-  "citation": "@inproceedings{chakrabarty-etal-2022-flute,\n    title = \"{FLUTE}: Figurative Language Understanding through Textual Explanations\",\n    author = \"Chakrabarty, Tuhin  and Saakyan, Arkadiy  and Ghosh, Debanjan  and Muresan, Smaranda\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.emnlp-main.481\",\n    pages = \"7139--7159\"\n}"
+  "citation": "@inproceedings{chakrabarty-etal-2022-flute,\n    title = \"{FLUTE}: Figurative Language Understanding through Textual Explanations\",\n    author = \"Chakrabarty, Tuhin and Saakyan, Arkadiy and Ghosh, Debanjan and Muresan, Smaranda\",\n    booktitle = \"Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.emnlp-main.481/\",\n    doi = \"10.18653/v1/2022.emnlp-main.481\",\n    pages = \"7139--7159\"\n}"
 }

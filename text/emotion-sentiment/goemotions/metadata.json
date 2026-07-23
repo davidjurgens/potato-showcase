@@ -1,6 +1,38 @@
 {
   "title": "GoEmotions - Fine-Grained Emotion Classification",
   "description": "Multi-label emotion classification with 27 emotion categories plus neutral, based on the Google Research GoEmotions dataset (Demszky et al., ACL 2020). Taxonomy covers 12 positive, 11 negative, and 4 ambiguous emotions designed for Reddit comment analysis.",
+  "overview": [
+    "GoEmotions is a fine-grained emotion classification dataset built by Dorottya Demszky and colleagues at Google Research and published at ACL 2020. The authors wanted a large, manually annotated resource with a richer set of emotion labels than the handful used in most sentiment work, so that models could be trained and evaluated on subtle emotional distinctions.",
+    "The data is 58,009 English comments sampled from popular Reddit subreddits. Each comment was labeled for the emotions the author expresses, drawn from a taxonomy of 27 emotions plus a Neutral option. Annotators could assign more than one emotion to a comment, since a single message often carries several feelings at once.",
+    "The 27 emotions are grouped by sentiment into 12 positive, 11 negative, and 4 ambiguous categories. Each comment was rated by several annotators, and the authors report that 94% of examples have at least two raters agreeing on at least one emotion label; a filtered training split of 43,410 examples keeps only comments with rater agreement. A BERT baseline reaches an average F1 of .46 across the taxonomy.",
+    "The Potato config below reproduces this task with a multiselect scheme carrying all 27 emotion labels so annotators can mark every emotion present, plus a radio scheme that flags whether a comment is emotionally neutral. It suits anyone building an emotion or affect classifier who needs multi-label judgments on short, informal text."
+  ],
+  "datasetStats": [
+    {
+      "label": "Comments",
+      "value": "58,009 English Reddit comments"
+    },
+    {
+      "label": "Emotion categories",
+      "value": "27 emotions + Neutral"
+    },
+    {
+      "label": "Sentiment grouping",
+      "value": "12 positive, 11 negative, 4 ambiguous"
+    },
+    {
+      "label": "Inter-rater agreement",
+      "value": "94% of examples have 2+ raters agreeing on a label"
+    },
+    {
+      "label": "Filtered training set",
+      "value": "43,410 examples"
+    },
+    {
+      "label": "BERT baseline",
+      "value": "Average F1 = .46"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Demszky et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Google Research"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"
@@ -36,5 +68,5 @@
   "paperReference": "Demszky et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.372/",
   "datasetUrl": "https://github.com/google-research/google-research/tree/master/goemotions",
-  "citation": "@inproceedings{demszky-etal-2020-goemotions,\n    title = \"{G}o{E}motions: A Dataset of Fine-Grained Emotions\",\n    author = \"Demszky, Dorottya  and Movshovitz-Attias, Dana  and Ko, Jeongwoo  and Cowen, Alan  and Nemade, Gaurav  and Ravi, Sujith\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.372\",\n    pages = \"4040--4054\"\n}"
+  "citation": "@inproceedings{demszky-etal-2020-goemotions,\n    title = \"{G}o{E}motions: A Dataset of Fine-Grained Emotions\",\n    author = \"Demszky, Dorottya and Movshovitz-Attias, Dana and Ko, Jeongwoo and Cowen, Alan and Nemade, Gaurav and Ravi, Sujith\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.372\",\n    pages = \"4040--4054\"\n}"
 }

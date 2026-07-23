@@ -1,6 +1,38 @@
 {
   "title": "MVTec AD Industrial Defect Detection",
   "description": "Anomaly detection and localization in industrial images (Bergmann et al., CVPR 2019). Detect defects across 15 object and texture categories including metal nuts, transistors, and leather.",
+  "overview": [
+    "Anomaly detection asks a model to flag images that deviate from a set of known-good examples, and to localize where the deviation is. The MVTec Anomaly Detection (MVTec AD) dataset was introduced by Paul Bergmann, Michael Fauser, David Sattlegger, and Carsten Steger at CVPR 2019 to give unsupervised anomaly detection a realistic industrial benchmark, since earlier datasets were small and did not reflect factory inspection conditions.",
+    "The images show manufactured objects and material textures photographed under controlled lighting. Training images are all defect-free, and the test images add real manufacturing defects such as scratches, dents, contaminations, and structural changes. Each defect in the test set comes with a pixel-precise ground-truth region marking exactly where the anomaly is.",
+    "The dataset contains 5,354 high-resolution color images spread across 15 categories, split into 10 object categories and 5 texture categories. The test images cover over 70 different types of defects, and every anomaly is labeled with a pixel-precise ground-truth mask. Because the training split holds only normal samples, the benchmark is aimed at methods that learn what 'good' looks like without seeing defects during training.",
+    "The Potato config below reproduces this task with a radio question for the product category (the 15 MVTec classes), a radio question for normal versus defective, a multiselect for the defect types present, and a free-text field for describing where the defect sits. This turns MVTec AD into an image-level triage and defect-tagging pass that a human can run over inspection photos."
+  ],
+  "datasetStats": [
+    {
+      "label": "Total images",
+      "value": "5,354"
+    },
+    {
+      "label": "Categories",
+      "value": "15 (10 objects, 5 textures)"
+    },
+    {
+      "label": "Defect types",
+      "value": "Over 70"
+    },
+    {
+      "label": "Ground truth",
+      "value": "Pixel-precise anomaly regions"
+    },
+    {
+      "label": "Training data",
+      "value": "Defect-free images only"
+    },
+    {
+      "label": "Venue",
+      "value": "CVPR 2019"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Bergmann et al.",
@@ -9,7 +41,7 @@
     "affiliation": "MVTec Software GmbH"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio",
@@ -34,8 +66,8 @@
     "cvpr2019"
   ],
   "featured": true,
-  "paperReference": "Bergmann et al., CVPR 2019",
+  "paperReference": "Bergmann, Fauser, Sattlegger & Steger, CVPR 2019",
   "paperUrl": "https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html",
   "datasetUrl": "https://www.mvtec.com/company/research/datasets/mvtec-ad",
-  "citation": "@inproceedings{bergmann2019mvtec,\n    title = \"{MVTec AD} -- A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection\",\n    author = \"Bergmann, Paul  and Fauser, Michael  and Sattlegger, David  and Steger, Carsten\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    pages = \"9592--9600\",\n    year = \"2019\",\n    url = \"https://openaccess.thecvf.com/content_CVPR_2019/html/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.html\"\n}"
+  "citation": "@inproceedings{bergmann2019mvtec,\n    title = {{MVTec AD} -- A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection},\n    author = {Bergmann, Paul and Fauser, Michael and Sattlegger, David and Steger, Carsten},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages = {9592--9600},\n    year = {2019}\n}"
 }

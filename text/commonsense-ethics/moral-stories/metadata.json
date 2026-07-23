@@ -1,6 +1,38 @@
 {
   "title": "Moral Stories Annotation",
   "description": "Annotate moral reasoning in situated narratives. Based on Emelin et al., EMNLP 2021. Evaluate whether actions adhere to or diverge from social norms given situations and intentions.",
+  "overview": [
+    "Moral Stories is a dataset for studying social and moral reasoning, created by Denis Emelin, Ronan Le Bras, Jena D. Hwang, Maxwell Forbes, and Yejin Choi and published at EMNLP 2021. It was built to test whether language generation models can reason about how everyday actions relate to social norms and about the consequences those actions produce.",
+    "Each entry is a short structured narrative of seven sentences. The narrative states a social norm, a situation, and an actor's intention, then splits into two branches: a moral action that respects the norm along with its consequence, and an immoral action that violates the norm along with its consequence. The norms that seed each story were selected from the Social-Chemistry-101 dataset and given to crowd workers as writing prompts.",
+    "The dataset contains 12,000 of these branching narratives. Because every story pairs a norm-following and a norm-violating path around the same situation and goal, it supports both classifying whether an action is moral and generating actions, consequences, or norms under a normative constraint.",
+    "The Potato config below adapts this material into a judgment task: a radio scheme asks whether the described action follows or violates the norm, a second radio scheme predicts the likely consequence, a third rates how applicable the norm is to the situation, and a five-point Likert scale records whether the annotator personally agrees with the norm. It is useful for collecting human moral judgments or for auditing model behavior on norm-grounded scenarios."
+  ],
+  "datasetStats": [
+    {
+      "label": "Structured narratives",
+      "value": "12,000 stories"
+    },
+    {
+      "label": "Sentences per story",
+      "value": "7"
+    },
+    {
+      "label": "Story components",
+      "value": "Norm, situation, intention, moral action + consequence, immoral action + consequence"
+    },
+    {
+      "label": "Norm source",
+      "value": "Social-Chemistry-101 (Forbes et al., 2020)"
+    },
+    {
+      "label": "Venue",
+      "value": "EMNLP 2021 (main track)"
+    },
+    {
+      "label": "Paper pages",
+      "value": "698-718"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Emelin et al.",
@@ -9,7 +41,7 @@
     "affiliation": "ETH Zurich"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "likert",
     "radio"
@@ -36,6 +68,6 @@
   "featured": true,
   "paperReference": "Emelin et al., EMNLP 2021",
   "paperUrl": "https://aclanthology.org/2021.emnlp-main.54/",
-  "datasetUrl": "https://huggingface.co/datasets/demelin/moral_stories",
-  "citation": "@inproceedings{emelin-etal-2021-moral,\n    title = \"Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences\",\n    author = \"Emelin, Denis  and Le Bras, Ronan  and Hwang, Jena D.  and Forbes, Maxwell  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2021\",\n    address = \"Online and Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.emnlp-main.54\",\n    pages = \"698--718\"\n}"
+  "datasetUrl": "https://github.com/demelin/moral_stories",
+  "citation": "@inproceedings{emelin-etal-2021-moral,\n    title = \"Moral Stories: Situated Reasoning about Norms, Intents, Actions, and their Consequences\",\n    author = \"Emelin, Denis and Le Bras, Ronan and Hwang, Jena D. and Forbes, Maxwell and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2021\",\n    address = \"Online and Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.emnlp-main.54\",\n    pages = \"698--718\"\n}"
 }

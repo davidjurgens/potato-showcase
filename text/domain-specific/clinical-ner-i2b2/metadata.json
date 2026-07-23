@@ -1,6 +1,38 @@
 {
   "title": "i2b2 Clinical Named Entity Recognition",
-  "description": "Named entity recognition and assertion classification for clinical notes, based on the i2b2/VA 2010 challenge (Stubbs et al., JAMIA 2015). Annotators identify clinical entities such as problems, treatments, tests, medications, and their assertion status in de-identified medical text.",
+  "description": "Named entity recognition and assertion classification for clinical notes, based on the i2b2/VA 2010 challenge (Uzuner et al., JAMIA 2011). Annotators identify clinical entities such as problems, treatments, tests, medications, and their assertion status in de-identified medical text.",
+  "overview": [
+    "This design recreates the concept-extraction and assertion-classification tasks from the 2010 i2b2/VA challenge, a shared task on pulling clinical information out of patient records. Uzuner, South, Shen, and DuVall described the challenge and its reference corpus in the Journal of the American Medical Informatics Association in 2011. The task is clinical named entity recognition plus assertion classification: find medical concepts in a note and decide, for each finding, whether it is present, absent, uncertain, and so on.",
+    "The reference corpus was built from de-identified discharge summaries and progress notes contributed by Partners HealthCare, Beth Israel Deaconess Medical Center, and the University of Pittsburgh Medical Center. Annotators marked spans of three concept types (medical problems, treatments, and tests) and labeled the assertion status of each problem concept.",
+    "The released corpus contained 394 annotated training reports and 477 annotated test reports, alongside 877 unannotated reports. The concept task used three entity types; the assertion task used six categories: present, absent, possible, conditional, hypothetical, and associated with someone other than the patient. Twenty-two teams built concept-extraction systems and twenty-one built assertion systems against this reference standard.",
+    "The Potato config below reproduces this task with a span scheme and a radio scheme. The span scheme labels clinical entities with seven types (Problem, Treatment, Test, Medication, Dosage, Duration, Frequency), extending the original three concepts with medication attributes, and the radio scheme records assertion status. It fits training a clinical NER model or checking annotator agreement on medical text."
+  ],
+  "datasetStats": [
+    {
+      "label": "Annotated training reports",
+      "value": "394"
+    },
+    {
+      "label": "Annotated test reports",
+      "value": "477"
+    },
+    {
+      "label": "Unannotated reports",
+      "value": "877"
+    },
+    {
+      "label": "Concept types",
+      "value": "3 (problem, test, treatment)"
+    },
+    {
+      "label": "Assertion categories",
+      "value": "6"
+    },
+    {
+      "label": "Contributing institutions",
+      "value": "3 (Partners, BIDMC, UPMC)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Stubbs et al.",
@@ -9,7 +41,7 @@
     "affiliation": "Harvard Medical School / i2b2"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "span",
     "radio"
@@ -33,8 +65,8 @@
     "assertion"
   ],
   "featured": false,
-  "paperReference": "Stubbs et al., JAMIA 2015",
-  "paperUrl": "https://academic.oup.com/jamia/article/22/6/1220/2357822",
+  "paperReference": "Uzuner et al., JAMIA 2011",
+  "paperUrl": "https://doi.org/10.1136/amiajnl-2011-000203",
   "datasetUrl": "https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/",
-  "citation": "@article{stubbs2015annotating,\n    title = \"Annotating longitudinal clinical narratives for de-identification: The 2014 i2b2/UTHealth corpus\",\n    author = \"Stubbs, Amber and Kotfila, Christopher and Uzuner, Ozlem\",\n    journal = \"Journal of Biomedical Informatics\",\n    volume = \"58\",\n    pages = \"S20--S29\",\n    year = \"2015\",\n    publisher = \"Elsevier\",\n    url = \"https://academic.oup.com/jamia/article/22/6/1220/2357822\"\n}"
+  "citation": "@article{uzuner2011i2b2,\n    title = \"2010 i2b2/{VA} challenge on concepts, assertions, and relations in clinical text\",\n    author = \"Uzuner, {\\\"O}zlem and South, Brett R and Shen, Shuying and DuVall, Scott L\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"18\",\n    number = \"5\",\n    pages = \"552--556\",\n    year = \"2011\",\n    publisher = \"Oxford University Press\",\n    doi = \"10.1136/amiajnl-2011-000203\"\n}"
 }

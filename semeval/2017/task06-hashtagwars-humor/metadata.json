@@ -1,6 +1,38 @@
 {
   "title": "#HashtagWars - Learning a Sense of Humor",
   "description": "Humor ranking of tweets submitted to Comedy Central's @midnight #HashtagWars, classifying comedic quality. Based on SemEval-2017 Task 6.",
+  "overview": [
+    "SemEval-2017 Task 6, #HashtagWars: Learning a Sense of Humor, was organized by Peter Potash, Alexey Romanov, and Anna Rumshisky of the University of Massachusetts Lowell. The task reframes humor detection as comparative ranking instead of the usual binary humor/not-humor classification. Because every tweet in a group is written for the same hashtag prompt, systems are asked to judge which tweets the show found funnier rather than whether a tweet is humorous at all.",
+    "The data comes from the Hashtag Wars segment of Comedy Central's late-night show @midnight, where the host proposes a topic as a hashtag and viewers reply with tweets. The organizers pulled tweets through the public Twitter search API and used the show's official Tumblr top-10 posts and website to label each tweet on a three-point scale: 2 for the episode's single winning tweet, 1 for a tweet that made the top ten, and 0 for all others.",
+    "Collection ran for roughly eight months and produced 12,734 tweets across 112 hashtags. The organizers released 101 files (11,325 tweets) as training data, 5 files (660 tweets) as trial data, and 6 files (749 tweets) for evaluation. Two subtasks were scored: pairwise comparison (subtask A, 7 teams, best accuracy 0.675) and full ranking (subtask B, 5 teams, best rank edit distance 0.872).",
+    "The Potato config below reproduces this task with a single radio scheme that rates each tweet against its hashtag prompt as Funny (Winner), Somewhat Funny, or Not Funny. It works for collecting quick per-tweet humor judgments. The original dataset uses ordinal 0/1/2 labels derived from the show's top-10 and winner; the config adapts these into a three-way funniness rating."
+  ],
+  "datasetStats": [
+    {
+      "label": "Total tweets",
+      "value": "12,734"
+    },
+    {
+      "label": "Hashtags",
+      "value": "112"
+    },
+    {
+      "label": "Labels",
+      "value": "0, 1, 2 (2 = winner, 1 = top-10, 0 = other)"
+    },
+    {
+      "label": "Training set",
+      "value": "101 files, 11,325 tweets"
+    },
+    {
+      "label": "Trial set",
+      "value": "5 files, 660 tweets"
+    },
+    {
+      "label": "Evaluation set",
+      "value": "6 files, 749 tweets"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potash et al.",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio"
   ],
@@ -38,5 +70,5 @@
   "paperReference": "Potash et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2004/",
   "datasetUrl": "https://github.com/pppotash/SemEval-2017-Task-6",
-  "citation": "@inproceedings{potash-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 6: \\#{H}ashtag{W}ars: Learning a Sense of Humor\",\n    author = \"Potash, Peter and Romanov, Alexey and Rumshisky, Anna\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2004\"\n}"
+  "citation": "@inproceedings{potash-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 6: {\\#}{H}ashtag{W}ars: Learning a Sense of Humor\",\n    author = \"Potash, Peter and Romanov, Alexey and Rumshisky, Anna\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)\",\n    month = aug,\n    year = \"2017\",\n    address = \"Vancouver, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2004/\",\n    doi = \"10.18653/v1/S17-2004\",\n    pages = \"49--57\"\n}"
 }

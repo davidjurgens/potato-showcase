@@ -1,6 +1,38 @@
 {
   "title": "RefCOCO - Referring Expression Grounding",
   "description": "Visual grounding task where annotators draw bounding boxes around objects referred to by natural language expressions. Based on the RefCOCO dataset (Yu et al., ECCV 2016), this task links referring expressions to spatial regions in images.",
+  "overview": [
+    "Referring expression comprehension, a form of visual grounding, is the task of taking an image plus a natural-language phrase that names one specific object and locating that object in the image. The RefCOCO and RefCOCO+ datasets were introduced by Licheng Yu, Patrick Poirson, Shan Yang, Alexander C. Berg, and Tamara L. Berg in \"Modeling Context in Referring Expressions\" at ECCV 2016. The paper studies how visual context, meaning comparison to the other objects in an image, helps both generate and understand these expressions.",
+    "The images come from MS COCO. The referring expressions were collected with the ReferItGame two-player interface (Kazemzadeh et al., EMNLP 2014): one player writes an expression for a marked object, and a second player has to click the region it describes, which keeps the expressions unambiguous. RefCOCO+ uses the same setup but forbids absolute spatial words like \"left\" or \"right,\" so its expressions rely on appearance and attributes and are harder to ground.",
+    "RefCOCO contains 142,209 referring expressions for 50,000 objects across 19,994 images. RefCOCO+ contains 141,564 expressions for 49,856 objects across 19,992 images. Because the collection ran as a game where a second player had to identify the target, expressions that did not point clearly to the intended object were filtered out during play.",
+    "The Potato config below reproduces the grounding side of this task with an image_annotation scheme using the bbox tool, where the annotator draws a tight bounding box around the object named by the expression, plus an optional text field for rewriting the expression more precisely when it is ambiguous. Each item displays the image with its referring expression and is shown to two annotators. This is useful for building or auditing visual-grounding datasets."
+  ],
+  "datasetStats": [
+    {
+      "label": "RefCOCO expressions",
+      "value": "142,209"
+    },
+    {
+      "label": "RefCOCO objects / images",
+      "value": "50,000 objects in 19,994 images"
+    },
+    {
+      "label": "RefCOCO+ expressions",
+      "value": "141,564"
+    },
+    {
+      "label": "RefCOCO+ objects / images",
+      "value": "49,856 objects in 19,992 images"
+    },
+    {
+      "label": "Image source",
+      "value": "MS COCO"
+    },
+    {
+      "label": "Venue / Year",
+      "value": "ECCV 2016"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Yu et al.",
@@ -9,7 +41,7 @@
     "affiliation": "UNC Chapel Hill"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "image_annotation",
     "text"
@@ -36,5 +68,5 @@
   "paperReference": "Yu et al., ECCV 2016",
   "paperUrl": "https://arxiv.org/abs/1608.00272",
   "datasetUrl": "https://github.com/lichengunc/refer",
-  "citation": "@inproceedings{yu2016refcoco,\n    title = \"Modeling Context in Referring Expressions\",\n    author = \"Yu, Licheng and Poirson, Patrick and Yang, Shan and Berg, Alexander C. and Berg, Tamara L.\",\n    booktitle = \"European Conference on Computer Vision (ECCV)\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1608.00272\"\n}"
+  "citation": "@inproceedings{yu2016modeling,\n    title = {Modeling Context in Referring Expressions},\n    author = {Yu, Licheng and Poirson, Patrick and Yang, Shan and Berg, Alexander C. and Berg, Tamara L.},\n    booktitle = {European Conference on Computer Vision (ECCV)},\n    year = {2016}\n}"
 }

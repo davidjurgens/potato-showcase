@@ -1,6 +1,38 @@
 {
   "title": "Persuasion Techniques in Memes",
   "description": "Detection and classification of persuasion techniques in memes, requiring annotators to identify rhetorical and propaganda techniques in meme text and highlight persuasive spans. Based on SemEval-2024 Task 4.",
+  "overview": [
+    "SemEval-2024 Task 4 asked systems to detect persuasion techniques in memes. It was organized by Dimitar Dimitrov, Firoj Alam, Maram Hasanain, Abul Hasnat, Fabrizio Silvestri, Preslav Nakov, and Giovanni Da San Martino, and published in the Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024). Given a meme's text and image, the goal is to identify which rhetorical and propaganda techniques it uses.",
+    "The task splits into three subtasks: deciding whether a meme uses any persuasion technique, labeling techniques in the meme's textual content alone, and labeling techniques across both the text and the image (a multimodal setting). It covered four languages, with surprise test sets in Bulgarian, North Macedonian, and Arabic added at evaluation time.",
+    "Techniques are drawn from a hierarchy of 22 persuasion techniques. The shared task drew 153 registered teams, of which 48 submitted results and 32 wrote system description papers.",
+    "The Potato config below reproduces this task with a multiselect scheme covering a nine-technique subset of the taxonomy, paired with a span scheme for highlighting the exact words that carry each technique. Each meme is shown with its text and an image description, so annotators can select the techniques present and mark the spans that trigger them."
+  ],
+  "datasetStats": [
+    {
+      "label": "Persuasion techniques",
+      "value": "22 (hierarchical)"
+    },
+    {
+      "label": "Languages",
+      "value": "4 (English + Bulgarian, N. Macedonian, Arabic test)"
+    },
+    {
+      "label": "Subtasks",
+      "value": "3"
+    },
+    {
+      "label": "Registered teams",
+      "value": "153"
+    },
+    {
+      "label": "Teams submitting results",
+      "value": "48"
+    },
+    {
+      "label": "System description papers",
+      "value": "32"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Dimitrov et al.",
@@ -9,7 +41,7 @@
     "affiliation": "SemEval Organizers"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "span"
@@ -36,8 +68,8 @@
     "multimodal"
   ],
   "featured": false,
-  "paperReference": "Dimitrov et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task4",
-  "citation": "@inproceedings{dimitrov-etal-2024-persuasion-memes,\n    title = \"Multilingual Detection of Persuasion Techniques in Memes\",\n    author = \"Dimitrov, Dimitar and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Dimitrov et al., SemEval-2024",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.275/",
+  "datasetUrl": "https://propaganda.math.unipd.it/semeval2024task4/",
+  "citation": "@inproceedings{dimitrov-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 4: Multilingual Detection of Persuasion Techniques in Memes\",\n    author = \"Dimitrov, Dimitar and Alam, Firoj and Hasanain, Maram and Hasnat, Abul and Silvestri, Fabrizio and Nakov, Preslav and Da San Martino, Giovanni\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    pages = \"2009--2026\",\n    publisher = \"Association for Computational Linguistics\"\n}"
 }

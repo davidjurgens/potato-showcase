@@ -1,6 +1,38 @@
 {
   "title": "MedNLI: Clinical Natural Language Inference",
   "description": "Natural language inference for clinical text. Annotators determine whether a clinical hypothesis is entailed by, contradicted by, or neutral with respect to a premise sentence from clinical notes. Based on the MedNLI dataset derived from MIMIC-III clinical notes.",
+  "overview": [
+    "MedNLI is a clinical natural language inference benchmark introduced by Alexey Romanov and Chaitanya Shivade in \"Lessons from Natural Language Inference in the Clinical Domain\" (EMNLP 2018). The task asks whether a hypothesis sentence is entailed by, contradicts, or is neutral to a premise drawn from a real clinical note. It exists because general-domain NLI models trained on datasets like SNLI transfer poorly to medicine, where terminology and implicit clinical knowledge change what counts as a valid inference.",
+    "The premise sentences come from MIMIC-III clinical notes. To limit privacy risk the authors worked only with notes from deceased patients, and clinicians selected the Past Medical History section as the most informative source of inferences. Practicing physicians then wrote one entailed, one contradictory, and one neutral hypothesis for each premise, producing the three-way labeled pairs.",
+    "The released dataset contains 14,049 premise-hypothesis pairs, split into 11,232 training, 1,395 development, and 1,422 test pairs. Because the hypotheses were authored by clinicians rather than crowd workers, the labels reflect expert medical judgment. The data is distributed through PhysioNet under a credentialed license tied to MIMIC-III.",
+    "The Potato config below reproduces this task with a three-way radio scheme (entailment, contradiction, neutral) plus a confidence radio (high/medium/low) and an optional free-text reasoning field, showing each premise and hypothesis with the clinical department. It is useful for training annotators on clinical inference or for collecting expert judgments on model-generated hypotheses."
+  ],
+  "datasetStats": [
+    {
+      "label": "Total premise-hypothesis pairs",
+      "value": "14,049"
+    },
+    {
+      "label": "Train / dev / test split",
+      "value": "11,232 / 1,395 / 1,422"
+    },
+    {
+      "label": "Label set",
+      "value": "entailment, contradiction, neutral (3-way)"
+    },
+    {
+      "label": "Premise source",
+      "value": "MIMIC-III notes (Past Medical History)"
+    },
+    {
+      "label": "Annotators",
+      "value": "Practicing clinicians (physicians)"
+    },
+    {
+      "label": "Venue",
+      "value": "EMNLP 2018 (pp. 1586-1596)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Romanov & Shivade",
@@ -9,7 +41,7 @@
     "affiliation": "University of Massachusetts Amherst / IBM Research"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "text"
@@ -37,5 +69,5 @@
   "paperReference": "Romanov & Shivade, EMNLP 2018",
   "paperUrl": "https://aclanthology.org/D18-1187/",
   "datasetUrl": "https://physionet.org/content/mednli/1.0.0/",
-  "citation": "@inproceedings{romanov-shivade-2018-lessons,\n    title = \"Lessons from Natural Language Inference in the Clinical Domain\",\n    author = \"Romanov, Alexey and Shivade, Chaitanya\",\n    booktitle = \"Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing\",\n    month = oct # \"-\" # nov,\n    year = \"2018\",\n    address = \"Brussels, Belgium\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D18-1187\",\n    doi = \"10.18653/v1/D18-1187\",\n    pages = \"1586--1596\"\n}"
+  "citation": "@inproceedings{romanov-shivade-2018-lessons,\n    title = \"Lessons from Natural Language Inference in the Clinical Domain\",\n    author = \"Romanov, Alexey and Shivade, Chaitanya\",\n    booktitle = \"Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing\",\n    year = \"2018\",\n    address = \"Brussels, Belgium\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D18-1187\",\n    doi = \"10.18653/v1/D18-1187\",\n    pages = \"1586--1596\"\n}"
 }

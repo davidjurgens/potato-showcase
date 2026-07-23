@@ -1,6 +1,38 @@
 {
   "title": "AlpacaEval: Instruction-Following Preference Evaluation",
   "description": "Pairwise preference annotation for instruction-following language models. Annotators compare two model responses side by side, select their preferred response, indicate preference strength, and rate individual response quality across diverse instruction categories.",
+  "overview": [
+    "AlpacaEval is an automatic benchmark for instruction-following language models that scores a model by how often its answers are preferred over a reference model's answers on a fixed set of prompts. It comes out of the AlpacaFarm project by Yann Dubois and colleagues at Stanford (Tatsu Lab), published at NeurIPS 2023. The aim is to approximate expensive human preference judgments with a cheaper, repeatable proxy.",
+    "The evaluation set has 805 instructions covering everyday tasks such as writing, explanation, and coding help. For each instruction the evaluator sees two responses, the model under test and a baseline, and picks the better one; win rate is the average preference across all instructions, with output order randomized to reduce position bias. AlpacaEval uses a GPT-4 judge for this, and the Potato config here puts the same pairwise comparison in front of human annotators.",
+    "On roughly 650 examples with four human annotations each, the default automatic annotator agrees with the human majority vote 69.2% of the time (as reported in the tatsu-lab/alpaca_eval repository). The validation set behind that figure comprises about 20,000 human annotations, and running the automatic evaluator costs about $13.60 per 1,000 examples against roughly $300 for human annotation.",
+    "The Potato config below reproduces this comparison with a five-point pairwise preference scheme (from Response A much better to Response B much better), a matching preference-strength radio, separate five-point quality ratings for each response, and a free-text box for the annotator's reasoning. It fits collecting human preference data to validate or calibrate an automatic judge."
+  ],
+  "datasetStats": [
+    {
+      "label": "Evaluation instructions",
+      "value": "805"
+    },
+    {
+      "label": "Auto-evaluator vs human agreement",
+      "value": "69.2%"
+    },
+    {
+      "label": "Human annotations collected",
+      "value": "~20,000"
+    },
+    {
+      "label": "Cross-annotated examples",
+      "value": "650 (4 annotators each)"
+    },
+    {
+      "label": "Auto-evaluator cost",
+      "value": "$13.6 / 1,000 examples"
+    },
+    {
+      "label": "Human annotation cost",
+      "value": "$300 / 1,000 examples"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -9,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-02-24",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "pairwise",
     "radio",
@@ -34,8 +66,8 @@
     "llm-comparison"
   ],
   "featured": false,
-  "paperReference": "Li et al., arXiv 2023",
-  "paperUrl": "https://arxiv.org/abs/2404.04475",
+  "paperReference": "Dubois et al., NeurIPS 2023 (AlpacaFarm)",
+  "paperUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5fc47800ee5b30b8777fdd30abcaaf3b-Abstract-Conference.html",
   "datasetUrl": "https://github.com/tatsu-lab/alpaca_eval",
-  "citation": "@article{li2024alpacaeval,\n  title={AlpacaEval: An Automatic Evaluator for Instruction-following Language Models},\n  author={Li, Xuechen and Zhang, Tianyi and Dubois, Yann and Taori, Rohan and Gulrajani, Ishaan and Guestrin, Carlos and Liang, Percy and Hashimoto, Tatsunori B.},\n  journal={arXiv preprint arXiv:2404.04475},\n  year={2024}\n}"
+  "citation": "@inproceedings{dubois2023alpacafarm,\n    title = {AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback},\n    author = {Dubois, Yann and Li, Xuechen and Taori, Rohan and Zhang, Tianyi and Gulrajani, Ishaan and Ba, Jimmy and Guestrin, Carlos and Liang, Percy and Hashimoto, Tatsunori B.},\n    booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},\n    year = {2023}\n}"
 }

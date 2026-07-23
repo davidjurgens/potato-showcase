@@ -1,6 +1,38 @@
 {
   "title": "Places365 Scene Classification",
   "description": "Scene recognition and classification following the Places365 dataset (Zhou et al., TPAMI 2017). Classify images into 365 scene categories spanning indoor, outdoor, and natural environments.",
+  "overview": [
+    "Scene recognition is the task of labeling a whole image with the kind of place or environment it depicts, such as a bedroom, a forest, or an airport terminal. The Places database was introduced by Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba in \"Places: A 10 Million Image Database for Scene Recognition\" (IEEE Transactions on Pattern Analysis and Machine Intelligence, 2017). It was built to give scene-centric neural networks training data at the scale that object-centric datasets like ImageNet already had, so that models could learn to recognize environments rather than isolated objects.",
+    "The images were collected from web search engines using a large vocabulary of scene categories drawn from the SUN database, then passed to crowd workers who confirmed whether each image matched its category. The result is organized into several releases; Places365-Standard is the subset most commonly used for training and benchmarking, covering 365 scene categories that span indoor, urban, and natural environments.",
+    "Places365-Standard contains about 1.8 million training images across its 365 categories, with 50 validation images and 900 test images per category (18,250 validation and 328,500 test images in total). The full Places database holds over 10 million images. Category labels were verified through crowdsourced agreement to keep the scene assignments consistent.",
+    "The Potato config below reproduces a coarse-grained version of this task rather than the full 365-way vocabulary. It uses a radio scheme for a top-level scene category (eight groups such as indoor_home, outdoor_nature, and transportation), a multiselect for scene attributes (natural, man-made, open, enclosed, vegetation, water, crowded, and others), a second radio for indoor versus outdoor versus semi-outdoor, and a free-text field for a specific place name. This suits quick scene labeling and attribute collection when a full fine-grained taxonomy is not needed."
+  ],
+  "datasetStats": [
+    {
+      "label": "Scene categories (Places365)",
+      "value": "365"
+    },
+    {
+      "label": "Training images (Places365-Standard)",
+      "value": "~1.8 million"
+    },
+    {
+      "label": "Validation images",
+      "value": "18,250 (50 per category)"
+    },
+    {
+      "label": "Test images",
+      "value": "328,500 (900 per category)"
+    },
+    {
+      "label": "Full Places database",
+      "value": "10+ million images"
+    },
+    {
+      "label": "Venue / Year",
+      "value": "IEEE TPAMI 2017 (vol. 40, no. 6, pp. 1452-1464)"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Zhou et al.",
@@ -9,7 +41,7 @@
     "affiliation": "MIT CSAIL"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio",
@@ -33,8 +65,8 @@
     "tpami2017"
   ],
   "featured": true,
-  "paperReference": "Zhou et al., TPAMI 2017",
+  "paperReference": "Zhou et al., IEEE TPAMI 2017",
   "paperUrl": "https://ieeexplore.ieee.org/document/7968387",
   "datasetUrl": "http://places2.csail.mit.edu",
-  "citation": "@article{zhou2017places,\n    title = \"Places: A 10 Million Image Database for Scene Recognition\",\n    author = \"Zhou, Bolei  and Lapedriza, Agata  and Khosla, Aditya  and Oliva, Aude  and Torralba, Antonio\",\n    journal = \"IEEE Transactions on Pattern Analysis and Machine Intelligence\",\n    volume = \"40\",\n    number = \"6\",\n    pages = \"1452--1464\",\n    year = \"2017\",\n    publisher = \"IEEE\",\n    url = \"https://ieeexplore.ieee.org/document/7968387\"\n}"
+  "citation": "@article{zhou2017places,\n    title = {Places: A 10 Million Image Database for Scene Recognition},\n    author = {Zhou, Bolei and Lapedriza, Agata and Khosla, Aditya and Oliva, Aude and Torralba, Antonio},\n    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n    volume = {40},\n    number = {6},\n    pages = {1452--1464},\n    year = {2017},\n    publisher = {IEEE}\n}"
 }

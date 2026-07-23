@@ -1,6 +1,38 @@
 {
   "title": "Social Chemistry 101 (Social Norms)",
   "description": "Annotate rules-of-thumb for social and moral norms. Based on Forbes et al., EMNLP 2020. Capture 12 dimensions of social judgment including cultural pressure, moral foundations, and legality.",
+  "overview": [
+    "Social Chemistry 101 is a large resource for reasoning about social and moral norms, assembled by Maxwell Forbes, Jena D. Hwang, Vered Shwartz, Maarten Sap, and Yejin Choi and published at EMNLP 2020. The goal was to catalog the everyday rules of thumb people use to judge behavior and to make those judgments learnable by models.",
+    "The core unit is a rule of thumb, a short descriptive norm such as \"It is rude to run a blender at 5am,\" attached to a real-life situation. Situations were drawn from four sources: Reddit's Am I the Asshole forum, the Dear Abby advice column, ROCStories, and a Confessions dataset. Crowd workers wrote rules of thumb for each situation and then annotated each one along 12 dimensions of judgment covering social acceptability, moral foundations, expected cultural pressure, and assumed legality.",
+    "The released corpus, SOCIAL-CHEM-101, contains 292,000 rules of thumb over 104,000 situations, with 365,000 sets of structural annotations that break each rule into its 12 dimensions. Altogether it holds more than 4.5 million categorical and free-text annotations.",
+    "The Potato config below reproduces a slice of this scheme: a radio scale for the social judgment of an action, a radio scheme for its primary moral foundation, a Likert scale for cultural pressure, a radio scheme for legality, and a Likert scale for how much others would agree with the judgment. It fits projects that need structured human norm judgments over described situations."
+  ],
+  "datasetStats": [
+    {
+      "label": "Rules-of-thumb",
+      "value": "292,000"
+    },
+    {
+      "label": "Situations",
+      "value": "104,000 real-life situations"
+    },
+    {
+      "label": "Dimensions per rule-of-thumb",
+      "value": "12"
+    },
+    {
+      "label": "Structural annotation sets",
+      "value": "365,000"
+    },
+    {
+      "label": "Total annotations",
+      "value": "4.5 million+ (categorical + free-text)"
+    },
+    {
+      "label": "Situation sources",
+      "value": "AITA (Reddit), Dear Abby, ROCStories, Confessions"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Forbes et al.",
@@ -9,7 +41,7 @@
     "affiliation": "University of Washington"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "likert"
@@ -36,5 +68,5 @@
   "paperReference": "Forbes et al., EMNLP 2020",
   "paperUrl": "https://aclanthology.org/2020.emnlp-main.48/",
   "datasetUrl": "https://maxwellforbes.com/social-chemistry/",
-  "citation": "@inproceedings{forbes-etal-2020-social,\n    title = \"Social Chemistry 101: Learning to Reason about Social and Moral Norms\",\n    author = \"Forbes, Maxwell  and Hwang, Jena D.  and Shwartz, Vered  and Sap, Maarten  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.48\",\n    pages = \"653--670\"\n}"
+  "citation": "@inproceedings{forbes-etal-2020-social,\n    title = \"Social Chemistry 101: Learning to Reason about Social and Moral Norms\",\n    author = \"Forbes, Maxwell and Hwang, Jena D. and Shwartz, Vered and Sap, Maarten and Choi, Yejin\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.48\",\n    pages = \"653--670\"\n}"
 }

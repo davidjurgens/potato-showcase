@@ -1,6 +1,38 @@
 {
   "title": "Social Bias Frames (SBIC)",
   "description": "Annotate social media posts for bias using structured frames. Based on Sap et al., ACL 2020. Identify offensiveness, intent, implied stereotypes, and targeted groups.",
+  "overview": [
+    "Social Bias Frames is a framework introduced by Maarten Sap and coauthors at ACL 2020 for describing how a piece of language implies bias, not only whether it reads as toxic. In place of a single offensiveness label, a frame records who is targeted and what stereotype a statement implies about them.",
+    "The accompanying Social Bias Inference Corpus draws posts from social media and related sources. Annotators answer a structured set of questions about each post: whether it could be offensive, whether the offense seems intentional, whether it is lewd, whether it implies something about a group, and which group is targeted, together with the implied stereotype the statement carries.",
+    "The corpus holds roughly 150,000 structured annotations covering more than 34,000 implied statements about about a thousand demographic groups. In the paper's experiments, neural models reach around 80% F1 on the higher-level categorization but do much worse at generating the implied stereotype in words.",
+    "The Potato config below reproduces this task with four radio schemes and one multiselect: offensiveness, intent, lewdness, and group implication as radios, plus a target-group multiselect over fourteen demographic options. It fits content-moderation work that needs the reasoning behind a label rather than the label alone."
+  ],
+  "datasetStats": [
+    {
+      "label": "Structured annotations",
+      "value": "~150,000"
+    },
+    {
+      "label": "Implied statements covered",
+      "value": "34,000+"
+    },
+    {
+      "label": "Demographic groups",
+      "value": "~1,000"
+    },
+    {
+      "label": "Best model F1 (high-level categorization)",
+      "value": "~80%"
+    },
+    {
+      "label": "Venue",
+      "value": "ACL 2020"
+    },
+    {
+      "label": "Pages",
+      "value": "5477-5490"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Sap et al.",
@@ -9,7 +41,7 @@
     "affiliation": "University of Washington"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"
@@ -37,5 +69,5 @@
   "paperReference": "Sap et al., ACL 2020",
   "paperUrl": "https://aclanthology.org/2020.acl-main.486/",
   "datasetUrl": "https://maartensap.com/social-bias-frames/",
-  "citation": "@inproceedings{sap-etal-2020-social,\n    title = \"Social Bias Frames: Reasoning about Social and Power Implications of Language\",\n    author = \"Sap, Maarten  and Gabriel, Saadia  and Qin, Lianhui  and Jurafsky, Dan  and Smith, Noah A.  and Choi, Yejin\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.486\",\n    pages = \"5477--5490\"\n}"
+  "citation": "@inproceedings{sap-etal-2020-social,\n    title = \"Social Bias Frames: Reasoning about Social and Power Implications of Language\",\n    author = \"Sap, Maarten and Gabriel, Saadia and Qin, Lianhui and Jurafsky, Dan and Smith, Noah A. and Choi, Yejin\",\n    booktitle = \"Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.acl-main.486\",\n    pages = \"5477--5490\"\n}"
 }

@@ -1,6 +1,38 @@
 {
   "title": "Object Detection",
   "description": "Draw bounding boxes around objects for object detection model training.",
+  "overview": [
+    "Object detection is the task of finding each object of interest in an image and marking it with a bounding box plus a class label. It is one of the core supervised computer-vision tasks and supplies the training data that detectors such as the YOLO and Faster R-CNN families learn from.",
+    "This entry is a generic annotation template rather than a specific published dataset. The images are placeholders, and the label set is a small illustrative one (person, car, dog, cat) meant to be swapped for whatever classes a project needs. The annotation task is to draw a tight box around every instance of a target class and assign it a label.",
+    "Because it is a template, there is no fixed corpus, category count, or benchmark split to report. In practice, bounding-box detection is defined by public datasets like COCO and PASCAL VOC, which are the canonical references for evaluation and label conventions but are not reproduced here.",
+    "The Potato config below reproduces this task with a single image_annotation scheme using the bbox tool and a short list of class labels, writing each box as coordinates in JSON output. It is meant as a starting point that you point at your own images and edit the label set to build a detection training set."
+  ],
+  "datasetStats": [
+    {
+      "label": "Task type",
+      "value": "Object detection"
+    },
+    {
+      "label": "Annotation method",
+      "value": "Bounding boxes"
+    },
+    {
+      "label": "Potato tool",
+      "value": "image_annotation (bbox)"
+    },
+    {
+      "label": "Example labels",
+      "value": "Person, Car, Dog, Cat"
+    },
+    {
+      "label": "Output format",
+      "value": "JSON box coordinates"
+    },
+    {
+      "label": "Canonical references",
+      "value": "COCO, PASCAL VOC"
+    }
+  ],
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",
@@ -8,7 +40,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-01-15",
-  "updatedAt": "2025-01-15",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "image_annotation"
   ],
