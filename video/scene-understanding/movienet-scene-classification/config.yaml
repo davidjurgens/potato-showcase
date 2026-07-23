@@ -1,12 +1,12 @@
 # MovieNet Scene Classification Configuration
-# Based on Qian et al., ECCV 2020
+# Based on Huang et al., ECCV 2020
 # Task: Classify movie scenes by various attributes
 
 annotation_task_name: "MovieNet Scene Classification"
 task_dir: "."
 
 data_files:
-  - data.json
+  - sample-data.json
 item_properties:
   id_key: "id"
   text_key: "video_url"

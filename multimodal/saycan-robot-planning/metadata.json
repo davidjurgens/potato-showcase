@@ -8,12 +8,30 @@
     "The Potato config below reproduces the human evaluation of these plans: annotators judge whether a generated plan is feasible, mark the primitive skills it uses, describe the plan in words, and rate its safety."
   ],
   "datasetStats": [
-    { "label": "Instructions evaluated", "value": "101" },
-    { "label": "Instruction families", "value": "7" },
-    { "label": "Robot skills", "value": "551" },
-    { "label": "Skill families / objects", "value": "7 / 17" },
-    { "label": "Plan success", "value": "84%" },
-    { "label": "Execution success", "value": "74%" }
+    {
+      "label": "Instructions evaluated",
+      "value": "101"
+    },
+    {
+      "label": "Instruction families",
+      "value": "7"
+    },
+    {
+      "label": "Robot skills",
+      "value": "551"
+    },
+    {
+      "label": "Skill families / objects",
+      "value": "7 / 17"
+    },
+    {
+      "label": "Plan success",
+      "value": "84%"
+    },
+    {
+      "label": "Execution success",
+      "value": "74%"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "Google Research / Everyday Robots"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "multiselect",
@@ -53,5 +71,5 @@
   "paperReference": "Ahn et al., CoRL 2022",
   "paperUrl": "https://arxiv.org/abs/2204.01691",
   "datasetUrl": "https://say-can.github.io/",
-  "citation": "@inproceedings{ahn2022saycan,\n    title = \"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances\",\n    author = \"Ahn, Michael and Brohan, Anthony and Brown, Noah and Chebotar, Yevgen and Cortes, Omar and David, Byron and Finn, Chelsea and Fu, Chuyuan and Gober, Keerthana and Hausman, Karol and others\",\n    booktitle = \"Conference on Robot Learning (CoRL)\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2204.01691\"\n}"
+  "citation": "@inproceedings{ahn2022saycan,\n    title = \"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances\",\n    author = \"Ahn, Michael and Brohan, Anthony and Brown, Noah and Chebotar, Yevgen and Cortes, Omar and David, Byron and Finn, Chelsea and Fu, Chuyuan and Gopalakrishnan, Keerthana and Hausman, Karol and others\",\n    booktitle = \"Conference on Robot Learning (CoRL)\",\n    year = \"2022\",\n    url = \"https://arxiv.org/abs/2204.01691\"\n}"
 }

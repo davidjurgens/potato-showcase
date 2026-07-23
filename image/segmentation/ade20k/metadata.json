@@ -1,6 +1,6 @@
 {
   "title": "ADE20K: Scene Parsing and Semantic Segmentation Dataset",
-  "description": "ADE20K is a scene parsing dataset from MIT CSAIL (Zhou et al., CVPR 2017) with dense pixel labels for objects, stuff, and parts. This Potato config reproduces its 150-class segmentation annotation workflow.",
+  "description": "ADE20K is a scene parsing dataset from MIT CSAIL (Zhou et al., CVPR 2017) with dense pixel labels for objects, stuff, and parts. This Potato config adapts it to an image-level category-tagging task over a curated subset of common ADE20K categories.",
   "overview": [
     "ADE20K is a scene parsing and semantic segmentation dataset built by Bolei Zhou and colleagues at MIT CSAIL and presented at CVPR 2017. Every image is densely labeled at the pixel level, covering objects, background stuff, and the parts that make up each object.",
     "The full dataset contains 25,210 images: 20,210 for training, 2,000 for validation, and 3,000 for testing. Across these images annotators marked 434,826 object instances and 175,961 part instances, with an average of 19.5 instances and 10.5 object classes per image.",
@@ -8,14 +8,32 @@
     "The Potato config below reproduces this labeling task. Annotators select which of the 150 scene categories appear in an image and assign a primary scene label, mirroring the object-plus-stuff taxonomy that drives ADE20K's pixel-level segmentation."
   ],
   "datasetStats": [
-    { "label": "Total images", "value": "25,210" },
-    { "label": "Train / val split", "value": "20,210 / 2,000" },
-    { "label": "Object + stuff classes", "value": "2,693" },
-    { "label": "Part classes", "value": "476" },
-    { "label": "SceneParse150 benchmark", "value": "150 classes" },
-    { "label": "Object instances", "value": "434,826" }
+    {
+      "label": "Total images",
+      "value": "25,210"
+    },
+    {
+      "label": "Train / val split",
+      "value": "20,210 / 2,000"
+    },
+    {
+      "label": "Object + stuff classes",
+      "value": "2,693"
+    },
+    {
+      "label": "Part classes",
+      "value": "476"
+    },
+    {
+      "label": "SceneParse150 benchmark",
+      "value": "150 classes"
+    },
+    {
+      "label": "Object instances",
+      "value": "434,826"
+    }
   ],
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "version": "1.0.0",
   "author": {
     "name": "Zhou et al.",
@@ -47,7 +65,7 @@
   ],
   "featured": true,
   "paperReference": "Zhou et al., CVPR 2017",
-  "paperUrl": "https://arxiv.org/abs/1608.05442",
+  "paperUrl": "https://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Scene_Parsing_Through_CVPR_2017_paper.html",
   "datasetUrl": "https://groups.csail.mit.edu/vision/datasets/ADE20K",
-  "citation": "@inproceedings{zhou2017scene,\n    title = \"Scene Parsing through {ADE20K} Dataset\",\n    author = \"Zhou, Bolei  and Zhao, Hang  and Puig, Xavier  and Fidler, Sanja  and Barriuso, Adela  and Torralba, Antonio\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"633--641\",\n    year = \"2017\",\n    url = \"https://arxiv.org/abs/1608.05442\"\n}"
+  "citation": "@inproceedings{zhou2017scene,\n    title = \"Scene Parsing through {ADE20K} Dataset\",\n    author = \"Zhou, Bolei and Zhao, Hang and Puig, Xavier and Fidler, Sanja and Barriuso, Adela and Torralba, Antonio\",\n    booktitle = \"Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)\",\n    pages = \"633--641\",\n    year = \"2017\",\n    url = \"https://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Scene_Parsing_Through_CVPR_2017_paper.html\"\n}"
 }

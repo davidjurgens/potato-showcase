@@ -8,12 +8,30 @@
     "The Potato config below reproduces the relevance-judgment step: an annotator reads a query and a candidate passage, then assigns a graded relevance label on a radio scale, the human signal that produces the qrels behind ranking evaluation."
   ],
   "datasetStats": [
-    { "label": "Passage collection", "value": "~8.8M passages" },
-    { "label": "Training queries", "value": "~808K" },
-    { "label": "Training qrels", "value": "532,761" },
-    { "label": "Dev queries (leaderboard)", "value": "6,980" },
-    { "label": "Official metric", "value": "MRR@10" },
-    { "label": "Query source", "value": "Real Bing search logs" }
+    {
+      "label": "Passage collection",
+      "value": "~8.8M passages"
+    },
+    {
+      "label": "Training queries",
+      "value": "~808K"
+    },
+    {
+      "label": "Training qrels",
+      "value": "532,761"
+    },
+    {
+      "label": "Dev queries (leaderboard)",
+      "value": "6,980"
+    },
+    {
+      "label": "Official metric",
+      "value": "MRR@10"
+    },
+    {
+      "label": "Query source",
+      "value": "Real Bing search logs"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "Microsoft"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "select",
     "radio"
@@ -47,8 +65,8 @@
     "neurips2016"
   ],
   "featured": false,
-  "paperReference": "Nguyen et al., NeurIPS 2016 Workshop",
+  "paperReference": "Nguyen et al., NIPS 2016 Workshop (CoCo@NIPS)",
   "paperUrl": "https://arxiv.org/abs/1611.09268",
   "datasetUrl": "https://microsoft.github.io/msmarco/",
-  "citation": "@inproceedings{nguyen2016msmarco,\n    title = \"{MS MARCO}: A Human Generated {MA}chine Reading {CO}mprehension Dataset\",\n    author = \"Nguyen, Tri and Rosenberg, Markus and Song, Xia and Gao, Jianfeng and Tiwary, Saurabh and Majumder, Rangan and Deng, Li\",\n    booktitle = \"Proceedings of the Workshop on Cognitive Computation: Integrating Neural and Symbolic Approaches (NeurIPS 2016)\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1611.09268\"\n}"
+  "citation": "@inproceedings{nguyen2016msmarco,\n    title = \"{MS MARCO}: A Human Generated {MA}chine Reading {CO}mprehension Dataset\",\n    author = \"Nguyen, Tri and Rosenberg, Mir and Song, Xia and Gao, Jianfeng and Tiwary, Saurabh and Majumder, Rangan and Deng, Li\",\n    booktitle = \"Proceedings of the Workshop on Cognitive Computation: Integrating Neural and Symbolic Approaches (CoCo@NIPS 2016)\",\n    year = \"2016\",\n    url = \"https://arxiv.org/abs/1611.09268\"\n}"
 }

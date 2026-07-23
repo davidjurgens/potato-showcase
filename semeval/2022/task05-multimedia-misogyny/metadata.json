@@ -8,12 +8,30 @@
     "The Potato config below reproduces both subtasks: a radio scheme for the binary misogyny label and a multiselect scheme for the four Subtask B types, with the meme text shown to the annotator."
   ],
   "datasetStats": [
-    { "label": "Venue", "value": "SemEval-2022 Task 5 (Seattle, July 2022)" },
-    { "label": "Training memes", "value": "10,000" },
-    { "label": "Test memes", "value": "1,000" },
-    { "label": "Subtasks", "value": "A: misogynous yes/no; B: type (multi-label)" },
-    { "label": "Subtask B categories", "value": "stereotype, shaming, objectification, violence" },
-    { "label": "Participation", "value": "400+ participants, 65 teams in A, 41 in B, 13 countries" }
+    {
+      "label": "Venue",
+      "value": "SemEval-2022 Task 5 (Seattle, July 2022)"
+    },
+    {
+      "label": "Training memes",
+      "value": "10,000"
+    },
+    {
+      "label": "Test memes",
+      "value": "1,000"
+    },
+    {
+      "label": "Subtasks",
+      "value": "A: misogynous yes/no; B: type (multi-label)"
+    },
+    {
+      "label": "Subtask B categories",
+      "value": "stereotype, shaming, objectification, violence"
+    },
+    {
+      "label": "Participation",
+      "value": "400+ participants, 65 teams in A, 41 in B, 13 countries"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "SemEval"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "radio",
     "multiselect"
@@ -52,5 +70,5 @@
   "paperReference": "Fersini et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.74/",
   "datasetUrl": "https://competitions.codalab.org/competitions/34175",
-  "citation": "@inproceedings{fersini-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 5: Multimedia Automatic Misogyny Identification\",\n    author = \"Fersini, Elisabetta  and Gasparini, Francesca  and Rizzi, Giulia  and Saibene, Aurora  and Scagnetti, Berta\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.74\"\n}"
+  "citation": "@inproceedings{fersini-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 5: Multimedia Automatic Misogyny Identification\",\n    author = \"Fersini, Elisabetta and Gasparini, Francesca and Rizzi, Giulia and Saibene, Aurora and Chulvi, Berta and Rosso, Paolo and Lees, Alyssa and Sorensen, Jeffrey\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"533--549\",\n    doi = \"10.18653/v1/2022.semeval-1.74\",\n    url = \"https://aclanthology.org/2022.semeval-1.74\"\n}"
 }

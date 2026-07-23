@@ -8,12 +8,30 @@
     "The Potato config below reproduces this segment-and-describe workflow: an annotator watches a video, marks temporal start and end times for each event, and writes a free-text caption for the marked span."
   ],
   "datasetStats": [
-    { "label": "Videos", "value": "~20,000 untrimmed" },
-    { "label": "Sentence descriptions", "value": "~100,000" },
-    { "label": "Total video hours", "value": "849" },
-    { "label": "Sentences per video", "value": "3.65 average" },
-    { "label": "Words per sentence", "value": "13.48 average" },
-    { "label": "Coverage per sentence", "value": "~36s / 31% of video" }
+    {
+      "label": "Videos",
+      "value": "~20,000 untrimmed"
+    },
+    {
+      "label": "Sentence descriptions",
+      "value": "~100,000"
+    },
+    {
+      "label": "Total video hours",
+      "value": "849"
+    },
+    {
+      "label": "Sentences per video",
+      "value": "3.65 average"
+    },
+    {
+      "label": "Words per sentence",
+      "value": "13.48 average"
+    },
+    {
+      "label": "Coverage per sentence",
+      "value": "~36s / 31% of video"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "video_annotation",
     "text"
@@ -50,6 +68,6 @@
   "featured": false,
   "paperReference": "Krishna et al., ICCV 2017",
   "paperUrl": "https://arxiv.org/abs/1705.00754",
-  "datasetUrl": "http://activity-net.org/challenges/2017/captions.html",
+  "datasetUrl": "https://cs.stanford.edu/people/ranjaykrishna/densevid/",
   "citation": "@inproceedings{krishna2017dense,\n  title={Dense-captioning events in videos},\n  author={Krishna, Ranjay and Hata, Kenji and Ren, Frederic and Fei-Fei, Li and Niebles, Juan Carlos},\n  booktitle={Proceedings of the IEEE International Conference on Computer Vision},\n  pages={706--715},\n  year={2017}\n}"
 }

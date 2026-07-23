@@ -1,6 +1,6 @@
 # RadQA: Radiology Report Question Answering
-# Based on Soni et al., ACL BioNLP Workshop 2022
-# Paper: https://aclanthology.org/2022.louhi-1.6/
+# Based on Soni et al., LREC 2022
+# Paper: https://aclanthology.org/2022.lrec-1.672/
 # Dataset: https://physionet.org/content/radqa/1.0.0/
 #
 # Task: Extractive question answering on clinical radiology reports

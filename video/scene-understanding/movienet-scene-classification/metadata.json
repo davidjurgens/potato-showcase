@@ -8,12 +8,30 @@
     "The Potato config below reproduces the scene classification task: annotators view a scene and assign place tags, time of day, and cinematic attributes using multiselect and radio schemes, mirroring the multi-label place and style annotation in MovieNet."
   ],
   "datasetStats": [
-    { "label": "Movies", "value": "1,100" },
-    { "label": "Scene boundaries", "value": "42,000" },
-    { "label": "Place + action tags", "value": "65,000" },
-    { "label": "Cinematic style tags", "value": "92,000" },
-    { "label": "Character boxes + identities", "value": "1.1M" },
-    { "label": "Place / action classes", "value": "90 / 80" }
+    {
+      "label": "Movies",
+      "value": "1,100"
+    },
+    {
+      "label": "Scene boundaries",
+      "value": "42,000"
+    },
+    {
+      "label": "Place + action tags",
+      "value": "65,000"
+    },
+    {
+      "label": "Cinematic style tags",
+      "value": "92,000"
+    },
+    {
+      "label": "Character boxes + identities",
+      "value": "1.1M"
+    },
+    {
+      "label": "Place / action classes",
+      "value": "90 / 80"
+    }
   ],
   "version": "1.0.0",
   "author": {
@@ -23,7 +41,7 @@
     "affiliation": "University of Michigan"
   },
   "createdAt": "2025-02-02",
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-22",
   "annotationTypes": [
     "multiselect",
     "radio"
@@ -47,8 +65,8 @@
     "cinematic"
   ],
   "featured": false,
-  "paperReference": "Qian et al., ECCV 2020",
+  "paperReference": "Huang et al., ECCV 2020",
   "paperUrl": "https://arxiv.org/abs/2007.10937",
   "datasetUrl": "https://movienet.github.io",
-  "citation": "@inproceedings{qian2020movienet,\n  title={Movienet: A holistic dataset for movie understanding},\n  author={Qian, Yuanliang and others},\n  booktitle={European Conference on Computer Vision},\n  pages={709--727},\n  year={2020}\n}"
+  "citation": "@inproceedings{huang2020movienet,\n    title = \"MovieNet: A Holistic Dataset for Movie Understanding\",\n    author = \"Huang, Qingqiu and Xiong, Yu and Rao, Anyi and Wang, Jiaze and Lin, Dahua\",\n    booktitle = \"Proceedings of the European Conference on Computer Vision (ECCV)\",\n    pages = \"709--727\",\n    year = \"2020\"\n}"
 }
