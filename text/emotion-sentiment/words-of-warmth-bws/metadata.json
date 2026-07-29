@@ -41,5 +41,5 @@
   "paperReference": "Mohammad, ACL 2025",
   "paperUrl": "https://aclanthology.org/2025.acl-long.922/",
   "datasetUrl": "https://saifmohammad.com/warmth.html",
-  "citation": "@inproceedings{mohammad-2025-words,\n    title = \"Words of Warmth: Trust and Sociability Norms for over 26k {E}nglish Words\",\n    author = \"Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.acl-long.922\"\n}"
+  "citation": "@inproceedings{mohammad-2025-words,\n    title = \"Words of Warmth: Trust and Sociability Norms for over 26k {E}nglish Words\",\n    author = \"Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.acl-long.922\",\n    pages = \"18830--18850\"\n}"
 }
