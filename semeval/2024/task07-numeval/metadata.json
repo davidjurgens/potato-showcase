@@ -1,18 +1,18 @@
 {
-  "title": "NumEval - Numeral-Aware Language Understanding",
-  "description": "Numeral-aware language understanding task requiring annotators to predict numerical values from text, classify numeral types, and provide explanations. Based on SemEval-2024 Task 7 (NumEval).",
+  "title": "NumEval - Numeral-Aware Language Understanding and Generation",
+  "description": "Numeral-aware language understanding and generation across the five NumEval datasets: Quantitative Prediction (QP), Quantitative Natural Language Inference (QNLI), Quantitative Question Answering (QQA), reading comprehension of numerals (NQuAD), and numeral-aware headline generation (Num-HG). Based on SemEval-2024 Task 7 (NumEval).",
   "version": "1.0.0",
   "author": {
-    "name": "Chen et al.",
+    "name": "Chung-Chi Chen et al.",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "",
+    "affiliation": "SemEval-2024 Task 7 organizers (AIST, Zhejiang Lab, Academia Sinica, National Taiwan University)"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-07-29",
   "annotationTypes": [
-    "number",
     "radio",
+    "number",
     "text"
   ],
   "domain": [
@@ -36,8 +36,8 @@
     "numerical-reasoning"
   ],
   "featured": false,
-  "paperReference": "Chen et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task7",
-  "citation": "@inproceedings{chen-etal-2024-numeval,\n    title = \"{N}um{E}val: Numeral-Aware Language Understanding\",\n    author = \"Chen, Chung-Chi and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Chen et al., SemEval-2024 (2024.semeval-1.213)",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.213/",
+  "datasetUrl": "https://sites.google.com/view/numeval/numeval",
+  "citation": "@inproceedings{chen-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 7: Numeral-Aware Language Understanding and Generation\",\n    author = \"Chen, Chung-chi and Huang, Jian-tao and Huang, Hen-hsen and Takamura, Hiroya and Chen, Hsin-hsi\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1482--1491\",\n    doi = \"10.18653/v1/2024.semeval-1.213\"\n}"
 }

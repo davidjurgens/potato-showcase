@@ -37,5 +37,5 @@
   "paperReference": "Wang et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.39/",
   "datasetUrl": "https://github.com/wangcunxiang/SemEval2020-Task4-Commonsense-Validation-and-Explanation",
-  "citation": "@inproceedings{wang-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 4: {C}ommonsense {V}alidation and {E}xplanation\",\n    author = \"Wang, Cunxiang  and Liang, Shuailong  and Jin, Yili  and Wang, Yilong  and Zhu, Xiaodan  and Zhang, Yue\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.39\"\n}"
+  "citation": "@inproceedings{wang-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 Task 4: Commonsense Validation and Explanation\",\n    author = \"Wang, Cunxiang  and Liang, Shuailong  and Jin, Yili  and Wang, Yilong  and Zhu, Xiaodan  and Zhang, Yue\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.39/\",\n    doi = \"10.18653/v1/2020.semeval-1.39\",\n    pages = \"307--321\"\n}"
 }

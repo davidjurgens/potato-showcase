@@ -35,6 +35,6 @@
   "featured": false,
   "paperReference": "Aleithan et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2410.06992",
-  "datasetUrl": "https://github.com/patchscreening/SWE-Bench-Plus",
+  "datasetUrl": "https://zenodo.org/records/13879453",
   "citation": "@article{aleithan2024swebenchplus, title={SWE-Bench+: Enhanced Coding Benchmark for LLMs}, author={Reem Aleithan and Haoran Xue and Mohammad Mahdi Mohajer and Elijah Nnorom and Gias Uddin and Song Wang}, journal={arXiv preprint arXiv:2410.06992}, year={2024}}"
 }

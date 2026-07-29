@@ -39,5 +39,5 @@
   "paperReference": "Koh et al., ACL 2024",
   "paperUrl": "https://arxiv.org/abs/2401.13649",
   "datasetUrl": "https://jykoh.com/vwa",
-  "citation": "@inproceedings{koh2024visualwebarena,\n  title={VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks},\n  author={Koh, Jing Yu and Lo, Robert and Jang, Lawrence and Duvvur, Vikram and Lim, Ming Chong and Huang, Po-Yu and Neubig, Graham and Zhou, Shuyan and Salakhutdinov, Ruslan and Fried, Daniel},\n  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},\n  year={2024}\n}"
+  "citation": "@inproceedings{koh2024visualwebarena,\n  title={VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks},\n  author={Koh, Jing Yu and Lo, Robert and Jang, Lawrence and Duvvur, Vikram and Lim, Ming Chong and Huang, Po-Yu and Neubig, Graham and Zhou, Shuyan and Salakhutdinov, Ruslan and Fried, Daniel},\n  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  pages={881--905},\n  year={2024},\n  address={Bangkok, Thailand},\n  publisher={Association for Computational Linguistics},\n  doi={10.18653/v1/2024.acl-long.50}\n}"
 }

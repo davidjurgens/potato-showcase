@@ -35,6 +35,6 @@
   "featured": false,
   "paperReference": "Ma et al., NeurIPS 2024",
   "paperUrl": "https://arxiv.org/abs/2401.13178",
-  "datasetUrl": "",
+  "datasetUrl": "https://huggingface.co/datasets/hkust-nlp/agentboard",
   "citation": "@inproceedings{ma2024agentboard,\n  title={AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents},\n  author={Ma, Chang and Zhang, Junlei and Zhu, Zhihao and Yang, Cheng and Yang, Yujiu and Jin, Yaohui and Lan, Zhenzhong and Kong, Lingpeng and He, Junxian},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
 }

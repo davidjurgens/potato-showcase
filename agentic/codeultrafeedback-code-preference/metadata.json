@@ -1,6 +1,6 @@
 {
   "title": "CodeUltraFeedback: Code Preference Evaluation",
-  "description": "Pairwise comparison of code responses with multi-dimensional quality rating. Annotators compare two code solutions to a programming task, select which is better, rate both on correctness, efficiency, readability, completeness, and instruction following, then justify their preference.",
+  "description": "Pairwise comparison of code responses with multi-dimensional quality rating. Annotators compare two code solutions to a programming task, select which is better, rate both on the five CodeUltraFeedback coding-preference dimensions (instruction following, readability, complexity, style, and explanation), then justify their preference.",
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",

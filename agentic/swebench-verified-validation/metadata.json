@@ -31,8 +31,8 @@
     "agentic-coding"
   ],
   "featured": false,
-  "paperReference": "Chowdhury et al., OpenAI Technical Report 2024",
+  "paperReference": "Chowdhury et al., \"Introducing SWE-bench Verified\", OpenAI (2024); based on SWE-bench (Jimenez et al., ICLR 2024, arXiv:2310.06770)",
   "paperUrl": "https://openai.com/index/introducing-swe-bench-verified/",
-  "datasetUrl": "https://www.swebench.com/",
-  "citation": "@article{chowdhury2024swebenchverified, title={SWE-bench Verified: A Manually Validated Subset of SWE-bench}, author={Neil Chowdhury and James Aung and Chan Jun Shern and others}, journal={OpenAI Technical Report}, year={2024}}"
+  "datasetUrl": "https://www.swebench.com/verified.html",
+  "citation": "@misc{chowdhury2024swebenchverified, title={Introducing SWE-bench Verified}, author={Neil Chowdhury and James Aung and Chan Jun Shern and Oliver Jaffe and Dane Sherburn and Giulio Starace and Evan Mays and Rachel Dias and Marwan Aljubeh and Mia Glaese and Carlos E. Jimenez and John Yang and Kevin Liu and Aleksander Madry}, year={2024}, howpublished={OpenAI blog}, url={https://openai.com/index/introducing-swe-bench-verified/}}\n@inproceedings{jimenez2024swebench, title={SWE-bench: Can Language Models Resolve Real-World GitHub Issues?}, author={Carlos E. Jimenez and John Yang and Alexander Wettig and Shunyu Yao and Kexin Pei and Ofir Press and Karthik Narasimhan}, booktitle={The Twelfth International Conference on Learning Representations (ICLR)}, year={2024}, eprint={2310.06770}, archivePrefix={arXiv}}"
 }

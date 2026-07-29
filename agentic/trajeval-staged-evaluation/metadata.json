@@ -36,5 +36,5 @@
   "paperReference": "Kim et al., arXiv 2026",
   "paperUrl": "https://arxiv.org/abs/2603.24631",
   "datasetUrl": "",
-  "citation": "@article{kim2026trajeval,\n  title={TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis},\n  author={Kim, Myeongsoo and Wang, Dingmin and Cui, Siwei and Farmahinifarahani, Farima and Garg, Shweta and Ray, Baishakhi and Zhuo, Terry Yue and Mukherjee, Rajdeep and Kumar, Varun},\n  journal={arXiv preprint arXiv:2603.24631},\n  year={2026}\n}"
+  "citation": "@article{kim2026trajeval,\n  title={Coherence Collapse: Diagnosing Why Code Agents Fail After Reaching the Right Code},\n  author={Kim, Myeongsoo and Wang, Dingmin and Cui, Siwei and Farmahinifarahani, Farima and Zhuo, Terry Yue and Garg, Shweta and Ray, Baishakhi and Mukherjee, Rajdeep and Kumar, Varun},\n  journal={arXiv preprint arXiv:2603.24631},\n  year={2026}\n}"
 }

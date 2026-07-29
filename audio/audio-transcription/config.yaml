@@ -28,8 +28,8 @@ audio:
 
 # Data configuration
 data_files:
-  - path: data/transcripts.json
-    audio_field: audio_file
+  - path: sample-data.json
+    audio_field: audio_url
     text_field: transcript
 
 # Annotation schemes

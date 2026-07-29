@@ -1,5 +1,6 @@
 # SWE-bench Verified Issue Validation
-# Based on "SWE-bench Verified" (Neil Chowdhury, James Aung, Chan Jun Shern et al., OpenAI Technical Report 2024)
+# Based on "Introducing SWE-bench Verified" (Neil Chowdhury, James Aung, Chan Jun Shern et al., OpenAI blog, 2024)
+# Underlying benchmark: SWE-bench (Jimenez et al., ICLR 2024, arXiv:2310.06770)
 # Task: Validate GitHub issues from SWE-bench for specification quality, test adequacy, and solvability
 
 annotation_task_name: "SWE-bench Verified Issue Validation"

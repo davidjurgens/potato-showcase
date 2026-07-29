@@ -1,5 +1,5 @@
 # TrajEval Staged Evaluation
-# Based on "TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis" (Kim et al., arXiv 2026)
+# Based on the TRAJEVAL framework from "Coherence Collapse: Diagnosing Why Code Agents Fail After Reaching the Right Code" (Kim et al., arXiv:2603.24631, 2026)
 # Task: Evaluate code agent trajectories by scoring decomposed stages (search, edit, verification)
 
 annotation_task_name: "TrajEval Staged Evaluation"

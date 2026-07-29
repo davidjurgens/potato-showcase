@@ -54,11 +54,11 @@ annotation_schemes:
       - "4 - Good"
       - "5 - Excellent"
     options:
-      - "Correctness"
-      - "Efficiency"
-      - "Readability"
-      - "Completeness"
       - "Instruction Following"
+      - "Readability"
+      - "Complexity"
+      - "Style"
+      - "Explanation"
 
   - name: "preference_rationale"
     annotation_type: text

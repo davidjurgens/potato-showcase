@@ -1,6 +1,6 @@
 # HatReD: Multi-Domain Hateful Meme Detection
-# Based on Bhandari et al., IJCAI 2023
-# Paper: https://www.ijcai.org/proceedings/2023/0109.pdf
+# Based on Hee et al., "Decoding the Underlying Meaning of Multimodal Hateful Memes", IJCAI 2023
+# Paper: https://www.ijcai.org/proceedings/2023/0665.pdf
 #
 # Hateful meme detection requires understanding the interplay between image
 # and text. A meme may appear benign when either modality is considered in

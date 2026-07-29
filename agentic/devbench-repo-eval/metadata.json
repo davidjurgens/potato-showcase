@@ -34,6 +34,6 @@
   "featured": false,
   "paperReference": "Li et al., arXiv 2024",
   "paperUrl": "https://arxiv.org/abs/2403.08604",
-  "datasetUrl": "https://github.com/open-compass/DevBench",
+  "datasetUrl": "https://github.com/open-compass/DevEval",
   "citation": "@article{li2024devbench, title={Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study}, author={Bowen Li and Wenhan Wu and Ziwei Tang and Lin Shi and John Yang and others}, journal={arXiv preprint arXiv:2403.08604}, year={2024}}"
 }

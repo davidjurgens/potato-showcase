@@ -35,8 +35,8 @@
     "disagreement"
   ],
   "featured": false,
-  "paperReference": "Aroyo et al., NeurIPS 2023",
+  "paperReference": "Aroyo et al., NeurIPS 2023 (Datasets and Benchmarks Track)",
   "paperUrl": "https://arxiv.org/abs/2306.11247",
   "datasetUrl": "https://github.com/google-research-datasets/dices-dataset",
-  "citation": "@inproceedings{aroyo2023dices,\n    title = \"{DICES} Dataset: Diversity in Conversational {AI} Evaluation for Safety\",\n    author = \"Aroyo, Lora  and Taylor, Alex S.  and Diaz, Mark  and Hershcovich, Christopher  and Prabhakaran, Vinodkumar  and Wang, Ding\",\n    booktitle = \"Advances in Neural Information Processing Systems\",\n    volume = \"36\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2306.11247\"\n}"
+  "citation": "@inproceedings{aroyo2023dices,\n    title = \"{DICES} Dataset: Diversity in Conversational {AI} Evaluation for Safety\",\n    author = \"Aroyo, Lora  and Taylor, Alex S.  and Diaz, Mark  and Homan, Christopher M.  and Parrish, Alicia  and Serapio-Garcia, Greg  and Prabhakaran, Vinodkumar  and Wang, Ding\",\n    booktitle = \"Advances in Neural Information Processing Systems 36 (NeurIPS 2023) Datasets and Benchmarks Track\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2306.11247\"\n}"
 }
