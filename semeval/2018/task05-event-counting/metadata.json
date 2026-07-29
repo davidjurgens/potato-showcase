@@ -38,6 +38,6 @@
   "featured": false,
   "paperReference": "Postma et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1009/",
-  "datasetUrl": "http://www.newsreader-project.eu/results/data/wikinews/",
-  "citation": "@inproceedings{postma-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 5: Counting Events and Participants in the Long Tail\",\n    author = \"Postma, Marten and Ilievski, Filip and Vossen, Piek\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1009\"\n}"
+  "datasetUrl": "https://cltl.github.io/LongTailQATask/",
+  "citation": "@inproceedings{postma-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 5: Counting Events and Participants in the Long Tail\",\n    author = \"Postma, Marten and Ilievski, Filip and Vossen, Piek\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"70--80\",\n    doi = \"10.18653/v1/S18-1009\",\n    url = \"https://aclanthology.org/S18-1009\"\n}"
 }

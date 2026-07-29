@@ -1,7 +1,7 @@
 # Machine Comprehension Using Commonsense Knowledge
 # Based on Ostermann et al., SemEval 2018
 # Paper: https://aclanthology.org/S18-1119/
-# Dataset: https://github.com/Heidelberg-NLP/SemEval-2018-Task-11
+# Dataset: https://competitions.codalab.org/competitions/17184
 #
 # This task asks annotators to read a short narrative, answer a
 # multiple-choice question requiring commonsense reasoning, and

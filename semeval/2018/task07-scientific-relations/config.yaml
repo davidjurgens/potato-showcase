@@ -1,7 +1,7 @@
 # Semantic Relation Extraction and Classification in Scientific Papers
 # Based on Gabor et al., SemEval 2018
-# Paper: https://aclanthology.org/S18-1027/
-# Dataset: https://lipn.univ-paris13.fr/~gabor/semeval2018task7/
+# Paper: https://aclanthology.org/S18-1111/
+# Dataset: https://github.com/gkata/SemEval2018Task7
 #
 # This task asks annotators to identify entity pairs in scientific text
 # and classify the semantic relation between them.

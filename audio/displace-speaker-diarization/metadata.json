@@ -1,9 +1,9 @@
 {
   "title": "DISPLACE 2024 - Speaker and Language Diarization",
-  "description": "Speaker and language diarization in multilingual conversational audio. Annotators mark speaker turn boundaries, identify speakers, and label the language of each segment in conversational environments (Kundu et al., INTERSPEECH 2024).",
+  "description": "Speaker and language diarization in multilingual conversational audio. Annotators mark speaker turn boundaries, identify speakers, and label the language of each segment in conversational environments (Kalluri et al., INTERSPEECH 2024).",
   "version": "1.0.0",
   "author": {
-    "name": "Kundu et al.",
+    "name": "Kalluri et al.",
     "email": "",
     "github": "displace2024",
     "affiliation": "Multiple Institutions"
@@ -33,8 +33,8 @@
     "interspeech2024"
   ],
   "featured": false,
-  "paperReference": "Kundu et al., INTERSPEECH 2024",
-  "paperUrl": "https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html",
+  "paperReference": "Kalluri et al., INTERSPEECH 2024",
+  "paperUrl": "https://www.isca-archive.org/interspeech_2024/kalluri24_interspeech.html",
   "datasetUrl": "https://displace2024.github.io/",
-  "citation": "@inproceedings{kundu24_interspeech,\n    title = \"{DISPLACE} 2024: {DI}arization of {SP}eaker and {LA}nguage in {C}onversational {E}nvironments\",\n    author = \"Kundu, Shikha and others\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html\"\n}"
+  "citation": "@inproceedings{kalluri24_interspeech,\n    title = \"The Second {DISPLACE} Challenge: {DI}arization of {SP}eaker and {LA}nguage in {C}onversational {E}nvironments\",\n    author = \"Kalluri, Shareef Babu and Singh, Prachi and Roy Chowdhuri, Pratik and Kulkarni, Apoorva and Baghel, Shikha and Hegde, Pradyoth and Sontakke, Swapnil and Deepak, K T and Prasanna, S. R. Mahadeva and Vijayasenan, Deepu and Ganapathy, Sriram\",\n    booktitle = \"Interspeech 2024\",\n    year = \"2024\",\n    pages = \"1630--1634\",\n    doi = \"10.21437/Interspeech.2024-1833\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/kalluri24_interspeech.html\"\n}"
 }

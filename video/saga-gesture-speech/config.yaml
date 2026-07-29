@@ -1,6 +1,6 @@
 # SaGA Gesture-Speech Alignment Multi-Tier Annotation Configuration
-# Based on Luecking et al., Gesture 2013
-# Paper: https://doi.org/10.1075/gest.13.2.07luc
+# Based on Lücking et al., Journal on Multimodal User Interfaces 2013
+# Paper: https://doi.org/10.1007/s12193-012-0106-8
 # Task: ELAN-style multi-tier annotation of co-speech gesture phases, types, and alignment
 
 annotation_task_name: "SaGA Gesture-Speech Alignment Multi-Tier Annotation"

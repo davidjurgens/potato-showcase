@@ -1,7 +1,7 @@
 # Counting Events and Participants in News
 # Based on Postma et al., SemEval 2018
 # Paper: https://aclanthology.org/S18-1009/
-# Dataset: http://www.newsreader-project.eu/results/data/wikinews/
+# Dataset: https://cltl.github.io/LongTailQATask/
 #
 # This task asks annotators to count the number of distinct events or
 # incidents described in a news article and provide a brief description

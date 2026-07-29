@@ -6,7 +6,7 @@
     "name": "Gabor et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Universite Paris-Saclay"
+    "affiliation": "LIPN, Universite Paris 13"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Gabor et al., SemEval 2018",
-  "paperUrl": "https://aclanthology.org/S18-1027/",
-  "datasetUrl": "https://lipn.univ-paris13.fr/~gabor/semeval2018task7/",
-  "citation": "@inproceedings{gabor-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 7: Semantic Relation Extraction and Classification in Scientific Papers\",\n    author = \"G{\\'a}bor, Kata and Buscaldi, Davide and Schumann, Anne-Kathrin and QasemiZadeh, Behrang and Zargayouna, Ha{\\\"\\i}fa and Charnois, Thierry\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1027\"\n}"
+  "paperUrl": "https://aclanthology.org/S18-1111/",
+  "datasetUrl": "https://github.com/gkata/SemEval2018Task7",
+  "citation": "@inproceedings{gabor-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 7: Semantic Relation Extraction and Classification in Scientific Papers\",\n    author = \"G{\\'a}bor, Kata and Buscaldi, Davide and Schumann, Anne-Kathrin and QasemiZadeh, Behrang and Zargayouna, Ha{\\\"\\i}fa and Charnois, Thierry\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"679--688\",\n    doi = \"10.18653/v1/S18-1111\",\n    url = \"https://aclanthology.org/S18-1111\"\n}"
 }

@@ -35,6 +35,6 @@
   "featured": false,
   "paperReference": "Gautam et al., ICLR 2025",
   "paperUrl": "https://arxiv.org/abs/2503.07832",
-  "datasetUrl": "https://github.com/refactorbench/refactorbench",
+  "datasetUrl": "https://github.com/microsoft/RefactorBench",
   "citation": "@inproceedings{gautam2025refactorbench, title={RefactorBench: Evaluating Stateful Reasoning in Language Agents Through Code}, author={Dhruv Gautam and Spandan Garg and Jinu Jang and Neel Sundaresan and Roshanak Zilouchian Moghaddam}, booktitle={International Conference on Learning Representations (ICLR)}, year={2025}}"
 }

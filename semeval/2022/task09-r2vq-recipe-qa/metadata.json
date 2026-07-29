@@ -1,9 +1,9 @@
 {
   "title": "R2VQ - Recipe Question Answering",
-  "description": "Question answering over recipe texts, where annotators answer questions about recipes and classify whether the answer is explicitly stated, inferable, or not answerable from the recipe. Based on SemEval-2022 Task 9 (Jia et al.).",
+  "description": "Question answering over recipe texts, where annotators answer questions about recipes and classify whether the answer is explicitly stated, inferable, or not answerable from the recipe. A simplified adaptation of SemEval-2022 Task 9 (R2VQ, Tu et al.), whose original competence-based protocol answers template-based question families over recipes annotated with cooking-role and semantic-role layers.",
   "version": "1.0.0",
   "author": {
-    "name": "Jia et al.",
+    "name": "Tu et al.",
     "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
@@ -34,8 +34,8 @@
     "procedural-text"
   ],
   "featured": false,
-  "paperReference": "Jia et al., SemEval 2022",
-  "paperUrl": "https://aclanthology.org/2022.semeval-1.156/",
-  "datasetUrl": "https://github.com/recipe-qa/SemEval2022-Task9",
-  "citation": "@inproceedings{jia-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 9: {R2VQ} -- Competence-Based Multimodal Question Answering\",\n    author = \"Jia, Jingxuan  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.156\"\n}"
+  "paperReference": "Tu et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.176/",
+  "datasetUrl": "https://competitions.codalab.org/competitions/34056",
+  "citation": "@inproceedings{tu-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 9: {R}2{VQ} {--} Competence-based Multimodal Question Answering\",\n    author = \"Tu, Jingxuan  and Holderness, Eben  and Maru, Marco  and Conia, Simone  and Rim, Kyeongmin  and Lynch, Kelley  and Brutti, Richard  and Navigli, Roberto  and Pustejovsky, James\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.176/\",\n    doi = \"10.18653/v1/2022.semeval-1.176\",\n    pages = \"1244--1255\"\n}"
 }

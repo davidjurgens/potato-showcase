@@ -1,6 +1,6 @@
 # DISPLACE 2024 - Speaker and Language Diarization
-# Based on Kundu et al., INTERSPEECH 2024
-# Paper: https://www.isca-archive.org/interspeech_2024/kundu24_interspeech.html
+# Based on Kalluri et al., "The Second DISPLACE Challenge", INTERSPEECH 2024
+# Paper: https://www.isca-archive.org/interspeech_2024/kalluri24_interspeech.html
 # Dataset: https://displace2024.github.io/
 #
 # Task: Speaker and language diarization in multilingual conversational audio.

@@ -3,8 +3,9 @@
   "description": "Identify and label different speakers in audio recordings with timestamp-based segment annotation.",
   "category": "audio",
   "annotationType": [
-    "span",
-    "radio"
+    "radio",
+    "multiselect",
+    "text"
   ],
   "domain": [
     "speech",

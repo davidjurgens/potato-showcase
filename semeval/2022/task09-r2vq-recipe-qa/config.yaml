@@ -1,10 +1,11 @@
 # R2VQ - Recipe Question Answering
-# Based on Jia et al., SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.156/
-# Dataset: https://github.com/recipe-qa/SemEval2022-Task9
+# Based on Tu et al., SemEval-2022 Task 9 (R2VQ)
+# Paper: https://aclanthology.org/2022.semeval-1.176/
+# Dataset / task site: https://competitions.codalab.org/competitions/34056
 #
-# This task asks annotators to answer questions about recipes and
-# classify the answerability of each question relative to the recipe text.
+# This is a simplified adaptation of the R2VQ competence-based QA task.
+# It asks annotators to answer questions about recipes and classify the
+# answerability of each question relative to the recipe text.
 #
 # Answerability Labels:
 # - Explicitly Stated: The answer is directly written in the recipe

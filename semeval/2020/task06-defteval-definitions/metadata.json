@@ -36,5 +36,5 @@
   "paperReference": "Spala et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.41/",
   "datasetUrl": "https://github.com/adobe-research/deft_corpus",
-  "citation": "@inproceedings{spala-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 6: {D}efinition {E}xtraction from {F}ree {T}ext with the {DEFT} {C}orpus\",\n    author = \"Spala, Sasha  and Miller, Nicholas A.  and Yang, Yiming  and Dernoncourt, Franck  and Dockhorn, Carl\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.41\"\n}"
+  "citation": "@inproceedings{spala-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 6: {D}efinition {E}xtraction from {F}ree {T}ext with the {DEFT} {C}orpus\",\n    author = \"Spala, Sasha  and Miller, Nicholas  and Dernoncourt, Franck  and Dockhorn, Carl\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.41/\",\n    doi = \"10.18653/v1/2020.semeval-1.41\",\n    pages = \"336--345\"\n}"
 }

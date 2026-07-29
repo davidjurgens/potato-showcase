@@ -38,5 +38,5 @@
   "paperReference": "Ardila et al., LREC 2020",
   "paperUrl": "https://aclanthology.org/2020.lrec-1.520/",
   "datasetUrl": "https://commonvoice.mozilla.org/",
-  "citation": "@inproceedings{ardila2020common,\n  title={Common Voice: A Massively-Multilingual Speech Corpus},\n  author={Ardila, Rosana and Branez, Megan and Davis, Kelly and Henretty, Michael and Kohler, Michael and Meyer, Josh and Morais, Reuben and Saunders, Lindsay and Tyers, Francis M. and Weber, Gregor},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference (LREC)},\n  pages={4218--4222},\n  year={2020}\n}"
+  "citation": "@inproceedings{ardila2020common,\n  title={Common Voice: A Massively-Multilingual Speech Corpus},\n  author={Ardila, Rosana and Branson, Megan and Davis, Kelly and Kohler, Michael and Meyer, Josh and Henretty, Michael and Morais, Reuben and Saunders, Lindsay and Tyers, Francis M. and Weber, Gregor},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference (LREC)},\n  pages={4218--4222},\n  year={2020}\n}"
 }

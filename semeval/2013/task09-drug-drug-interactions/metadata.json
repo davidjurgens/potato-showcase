@@ -39,6 +39,6 @@
   "featured": false,
   "paperReference": "Segura-Bedmar et al., SemEval 2013",
   "paperUrl": "https://aclanthology.org/S13-2056/",
-  "datasetUrl": "https://www.cs.york.ac.uk/semeval-2013/task9/",
-  "citation": "@inproceedings{segura-bedmar-etal-2013-semeval,\n    title = \"{S}em{E}val-2013 {T}ask 9: {E}xtraction of {D}rug-{D}rug {I}nteractions from {B}iomedical {T}exts ({DDI}Extraction 2013)\",\n    author = \"Segura-Bedmar, Isabel  and Mart{\\'{\\i}}nez, Paloma  and Herrero-Zazo, Mar{\\'{\\i}}a\",\n    booktitle = \"Proceedings of the 7th International Workshop on Semantic Evaluation (SemEval-2013)\",\n    year = \"2013\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S13-2056\"\n}"
+  "datasetUrl": "https://github.com/isegura/DDICorpus",
+  "citation": "@inproceedings{segura-bedmar-etal-2013-semeval,\n    title = \"{S}em{E}val-2013 Task 9 : Extraction of Drug-Drug Interactions from Biomedical Texts ({DDIE}xtraction 2013)\",\n    author = \"Segura-Bedmar, Isabel  and Mart{\\'i}nez, Paloma  and Herrero-Zazo, Mar{\\'i}a\",\n    editor = \"Manandhar, Suresh  and Yuret, Deniz\",\n    booktitle = \"Second Joint Conference on Lexical and Computational Semantics (*{SEM}), Volume 2: Proceedings of the Seventh International Workshop on Semantic Evaluation ({S}em{E}val 2013)\",\n    month = jun,\n    year = \"2013\",\n    address = \"Atlanta, Georgia, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S13-2056/\",\n    pages = \"341--350\"\n}"
 }
