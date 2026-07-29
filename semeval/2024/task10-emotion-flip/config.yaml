@@ -1,7 +1,7 @@
 # Emotion Discovery and Reasoning its Flip
 # Based on Kumar et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2024-task10
+# Paper: https://aclanthology.org/2024.semeval-1.270/
+# Dataset: https://codalab.lisn.upsaclay.fr/competitions/16769
 #
 # This task asks annotators to identify the emotion expressed in a dialogue
 # turn, and to highlight the trigger spans that cause the emotion as well

@@ -7,10 +7,11 @@
 # posted in community question answering forums. Annotators read both
 # the question and the answer, then judge the truthfulness of the answer.
 #
-# Truthfulness Labels:
-# - True: The answer is factually correct
-# - False: The answer is factually incorrect
-# - Half-True: The answer contains a mix of true and false information
+# Truthfulness Labels (SemEval-2019 Task 8, Subtask B):
+# - True: The answer is factually true
+# - False: The answer is factually false
+# - Non-Factual: The answer does not provide a factual response
+#   (e.g., an opinion, a joke, or advice rather than a verifiable claim)
 
 annotation_task_name: "Fact-Checking in Community QA Forums"
 task_dir: "."
@@ -35,20 +36,21 @@ annotation_schemes:
     labels:
       - "True"
       - "False"
-      - "Half-True"
+      - "Non-Factual"
     keyboard_shortcuts:
       "True": "1"
       "False": "2"
-      "Half-True": "3"
+      "Non-Factual": "3"
     tooltips:
-      "True": "The answer is factually correct and supported by evidence"
-      "False": "The answer is factually incorrect or misleading"
-      "Half-True": "The answer contains a mix of accurate and inaccurate information"
+      "True": "The answer is factually true and supported by evidence"
+      "False": "The answer is factually false or misleading"
+      "Non-Factual": "The answer does not give a factual response (e.g., an opinion, joke, or advice)"
 
 annotation_instructions: |
   You will be shown a question from a community forum along with an answer.
   Your task is to judge the factual accuracy of the answer.
-  Consider whether the claims made in the answer are true, false, or partially true.
+  Consider whether the answer is True, False, or Non-Factual (i.e., it does not
+  give a factual response, such as an opinion, a joke, or personal advice).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

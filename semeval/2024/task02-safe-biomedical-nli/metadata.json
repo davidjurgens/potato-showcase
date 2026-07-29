@@ -1,6 +1,6 @@
 {
   "title": "Safe Biomedical NLI",
-  "description": "Safe biomedical natural language inference task requiring annotators to determine entailment or contradiction between clinical premise-hypothesis pairs and provide reasoning. Based on SemEval-2024 Task 2 (Safe Biomedical NLI).",
+  "description": "Safe biomedical natural language inference task requiring annotators to determine entailment or contradiction between statements and clinical trial report sections and provide reasoning. Based on SemEval-2024 Task 2 (NLI4CT: Safe Biomedical Natural Language Inference for Clinical Trials).",
   "version": "1.0.0",
   "author": {
     "name": "Jullien et al.",
@@ -36,8 +36,8 @@
     "safe-ai"
   ],
   "featured": false,
-  "paperReference": "Jullien et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task2",
-  "citation": "@inproceedings{jullien-etal-2024-safe-biomedical-nli,\n    title = \"Safe Biomedical Natural Language Inference\",\n    author = \"Jullien, Mael and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Jullien, Valentino & Freitas, SemEval 2024",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.271/",
+  "datasetUrl": "https://github.com/ai-systems/Task-2-SemEval-2024",
+  "citation": "@inproceedings{jullien-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 2: Safe Biomedical Natural Language Inference for Clinical Trials\",\n    author = \"Jullien, Mael and Valentino, Marco and Freitas, Andr{\\'e}\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1947--1962\",\n    doi = \"10.18653/v1/2024.semeval-1.271\"\n}"
 }

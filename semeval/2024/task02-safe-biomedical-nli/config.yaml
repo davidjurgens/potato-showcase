@@ -1,7 +1,7 @@
 # Safe Biomedical NLI
-# Based on Jullien et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2024-task2
+# Based on Jullien, Valentino & Freitas, SemEval-2024 Task 2 (NLI4CT)
+# Paper: https://aclanthology.org/2024.semeval-1.271/
+# Dataset: https://github.com/ai-systems/Task-2-SemEval-2024
 #
 # This task asks annotators to determine the entailment relationship
 # between a clinical premise and hypothesis, focusing on safety-critical

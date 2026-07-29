@@ -1,7 +1,7 @@
 # FLARE - Financial Named Entity Recognition
-# Based on Xie et al., arXiv 2024
-# Paper: https://arxiv.org/abs/2311.00640
-# Dataset: https://huggingface.co/TheFinAI
+# Based on the FLARE benchmark introduced in PIXIU (Xie et al., NeurIPS 2023 Datasets & Benchmarks)
+# Paper: https://arxiv.org/abs/2306.05443
+# Dataset: https://github.com/The-FinAI/PIXIU
 #
 # Annotate financial text for named entities and classify document types.
 # Entity types include companies, persons, currencies, monetary amounts,

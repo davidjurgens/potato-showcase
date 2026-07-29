@@ -1,6 +1,6 @@
 {
   "title": "FLARE - Financial Named Entity Recognition",
-  "description": "Named entity recognition and document classification for financial texts, based on the FLARE benchmark (Xie et al., arXiv 2024). Annotators identify financial entities such as companies, currencies, stock tickers, and amounts, and classify document types.",
+  "description": "Named entity recognition and document classification for financial texts, based on the FLARE benchmark introduced in PIXIU (Xie et al., NeurIPS 2023 Datasets & Benchmarks). Annotators identify financial entities such as companies, currencies, stock tickers, and amounts, and classify document types.",
   "version": "1.0.0",
   "author": {
     "name": "Xie et al.",
@@ -33,8 +33,8 @@
     "document-classification"
   ],
   "featured": false,
-  "paperReference": "Xie et al., arXiv 2024",
-  "paperUrl": "https://arxiv.org/abs/2311.00640",
-  "datasetUrl": "https://huggingface.co/TheFinAI",
-  "citation": "@article{xie2024finben,\n    title = \"The FinBen: An Holistic Financial Benchmark for Large Language Models\",\n    author = \"Xie, Qianqian and Han, Weiguang and Chen, Zhengyu and Xia, Ruoyu and Zhang, Xiao and He, Yueru and Xiao, Mengxi and Li, Dong and Dai, Yongfu and Feng, Duanyu and others\",\n    journal = \"arXiv preprint arXiv:2311.00640\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2311.00640\"\n}"
+  "paperReference": "Xie et al., PIXIU (NeurIPS 2023 Datasets & Benchmarks)",
+  "paperUrl": "https://arxiv.org/abs/2306.05443",
+  "datasetUrl": "https://github.com/The-FinAI/PIXIU",
+  "citation": "@inproceedings{xie2023pixiu,\n    title = \"PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance\",\n    author = \"Xie, Qianqian and Han, Weiguang and Zhang, Xiao and Lai, Yanzhao and Peng, Min and Lopez-Lira, Alejandro and Huang, Jimin\",\n    booktitle = \"Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track\",\n    year = \"2023\",\n    url = \"https://arxiv.org/abs/2306.05443\"\n}"
 }

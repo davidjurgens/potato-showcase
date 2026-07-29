@@ -1,18 +1,17 @@
 {
-  "title": "ADMIRE - Multimodal Idiomaticity Recognition",
-  "description": "Multimodal idiomaticity detection task requiring annotators to identify whether expressions are used idiomatically or literally, with supporting cue analysis. Based on SemEval-2025 Task 1 (ADMIRE).",
+  "title": "AdMIRe - Advancing Multimodal Idiomaticity Representation",
+  "description": "Multimodal idiomaticity task (SemEval-2025 Task 1, Subtask A): given a potentially idiomatic nominal compound in a context sentence, annotators rank five candidate images by how well each represents the sense in which the compound is used.",
   "version": "1.0.0",
   "author": {
-    "name": "Tayyar Madabushi et al.",
+    "name": "Pickard et al.",
     "email": "",
-    "github": "H-TayyarMadabworked",
-    "affiliation": "University of Bath"
+    "github": "",
+    "affiliation": "University of Sheffield"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
   "annotationTypes": [
-    "radio",
-    "multiselect"
+    "radio"
   ],
   "domain": [
     "SemEval",
@@ -35,8 +34,8 @@
     "figurative-language"
   ],
   "featured": false,
-  "paperReference": "Tayyar Madabushi et al., SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/H-TayyarMadabushi/SemEval2025-Task1",
-  "citation": "@inproceedings{tayyarmadabushi-etal-2025-admire,\n    title = \"{ADMIRE}: Multimodal Idiomaticity Recognition\",\n    author = \"Tayyar Madabushi, Harish and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Pickard et al., SemEval-2025 (ACL)",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.330/",
+  "datasetUrl": "https://semeval2025-task1.github.io/",
+  "citation": "@inproceedings{pickard-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 1: {A}d{MIR}e - Advancing Multimodal Idiomaticity Representation\",\n    author = \"Pickard, Thomas and Villavicencio, Aline and Mi, Maggie and He, Wei and Phelps, Dylan and Idiart, Marco\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2597--2609\"\n}"
 }

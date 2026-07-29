@@ -3,7 +3,7 @@
   "description": "Semantic textual relatedness task requiring annotators to rate the degree of semantic relatedness between sentence pairs using both a Likert scale and a continuous slider. Based on SemEval-2024 Task 1 (STR).",
   "version": "1.0.0",
   "author": {
-    "name": "Abdalla et al.",
+    "name": "Ousidhoum et al.",
     "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
@@ -35,8 +35,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "Abdalla et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
+  "paperReference": "Ousidhoum et al., SemEval-2024 Task 1",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.272/",
   "datasetUrl": "https://github.com/semantic-textual-relatedness/Semantic_Relatedness_SemEval2024",
-  "citation": "@inproceedings{abdalla-etal-2024-str,\n    title = \"Semantic Textual Relatedness\",\n    author = \"Abdalla, Mohamed and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "citation": "@inproceedings{ousidhoum-etal-2024-semeval,\n    title = \"{S}em{E}val Task 1: Semantic Textual Relatedness for {A}frican and {A}sian Languages\",\n    author = \"Ousidhoum, Nedjma and Muhammad, Shamsuddeen Hassan and Abdalla, Mohamed and Abdulmumin, Idris and Ahmad, Ibrahim Said and Ahuja, Sanchit and Aji, Alham Fikri and Araujo, Vladimir and Beloucif, Meriem and De Kock, Christine and Hourrane, Oumaima and Shrivastava, Manish and Solorio, Thamar and Surange, Nirmal and Vishnubhotla, Krishnapriya and Yimam, Seid Muhie and Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1963--1978\",\n    url = \"https://aclanthology.org/2024.semeval-1.272/\"\n}"
 }

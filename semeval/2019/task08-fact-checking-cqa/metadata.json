@@ -1,6 +1,6 @@
 {
   "title": "Fact-Checking in Community Question Answering Forums",
-  "description": "Verification of factual claims in community question answering forums, classifying answers as true, false, or half-true. Based on SemEval-2019 Task 8 (Fact-Checking in CQA).",
+  "description": "Verification of factual claims in community question answering forums, classifying answers to factual questions as true, false, or non-factual. Based on SemEval-2019 Task 8 (Fact-Checking in CQA), Subtask B.",
   "version": "1.0.0",
   "author": {
     "name": "Mihaylova et al.",
@@ -38,5 +38,5 @@
   "paperReference": "Mihaylova et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2149/",
   "datasetUrl": "http://alt.qcri.org/semeval2019/index.php?id=tasks",
-  "citation": "@inproceedings{mihaylova-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 8: Fact Checking in Community Question Answering Forums\",\n    author = \"Mihaylova, Tsvetomila and Nakov, Preslav and M\\`arquez, Llu{\\'\\i}s and Barr{\\'o}n-Cede{\\~n}o, Alberto and Mohtarami, Mitra and Karadzhov, Georgi and Glass, James\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2149\"\n}"
+  "citation": "@inproceedings{mihaylova-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 8: Fact Checking in Community Question Answering Forums\",\n    author = \"Mihaylova, Tsvetomila and Karadzhov, Georgi and Atanasova, Pepa and Baly, Ramy and Mohtarami, Mitra and Nakov, Preslav\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2149/\",\n    doi = \"10.18653/v1/S19-2149\",\n    pages = \"860--869\"\n}"
 }

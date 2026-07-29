@@ -3,7 +3,7 @@
   "description": "Emotion discovery and flip reasoning task requiring annotators to identify the current emotion in a dialogue turn, and locate trigger spans and flip points where emotions change. Based on SemEval-2024 Task 10.",
   "version": "1.0.0",
   "author": {
-    "name": "Kumar et al.",
+    "name": "Shivani Kumar et al.",
     "email": "",
     "github": "SemEval",
     "affiliation": "SemEval Organizers"
@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Kumar et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task10",
-  "citation": "@inproceedings{kumar-etal-2024-emotion-flip,\n    title = \"Emotion Discovery and Reasoning its Flip in Conversation\",\n    author = \"Kumar, Shivani and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.270/",
+  "datasetUrl": "https://codalab.lisn.upsaclay.fr/competitions/16769",
+  "citation": "@inproceedings{kumar-etal-2024-semeval,\n    title = \"{S}em{E}val 2024 - Task 10: Emotion Discovery and Reasoning its Flip in Conversation ({ED}i{R}e{F})\",\n    author = \"Kumar, Shivani and Akhtar, Md. Shad and Cambria, Erik and Chakraborty, Tanmoy\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1933--1946\",\n    doi = \"10.18653/v1/2024.semeval-1.270\"\n}"
 }

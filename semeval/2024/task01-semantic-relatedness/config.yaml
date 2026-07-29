@@ -1,6 +1,6 @@
 # Semantic Textual Relatedness
-# Based on Abdalla et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
+# Based on Ousidhoum et al., SemEval-2024 Task 1
+# Paper: https://aclanthology.org/2024.semeval-1.272/
 # Dataset: https://github.com/semantic-textual-relatedness/Semantic_Relatedness_SemEval2024
 #
 # This task asks annotators to rate how semantically related two sentences
