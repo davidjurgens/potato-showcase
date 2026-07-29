@@ -33,22 +33,23 @@ html_layout: |
 
 annotation_schemes:
   - name: failure_modes
-    description: "Select all failure modes from the MAST taxonomy that apply to this trace."
+    description: "Select all failure modes from the MAST taxonomy that apply to this trace. Modes are grouped into three categories: (1) Specification & System Design, (2) Inter-Agent Misalignment, (3) Task Verification."
     annotation_type: multiselect
     labels:
-      - "Specification Ambiguity"
-      - "Task Decomposition Error"
-      - "Resource Misallocation"
-      - "Role Confusion"
-      - "Miscommunication"
-      - "Information Withholding"
-      - "Conflicting Actions"
-      - "Cascading Errors"
-      - "Premature Termination"
-      - "Infinite Loop"
-      - "Hallucinated Action"
-      - "Tool Misuse"
-      - "Verification Failure"
+      - "1.1 Disobey Task Specification"
+      - "1.2 Disobey Role Specification"
+      - "1.3 Step Repetition"
+      - "1.4 Loss of Conversation History"
+      - "1.5 Unaware of Termination Conditions"
+      - "2.1 Conversation Reset"
+      - "2.2 Fail to Ask for Clarification"
+      - "2.3 Task Derailment"
+      - "2.4 Information Withholding"
+      - "2.5 Ignored Other Agent's Input"
+      - "2.6 Reasoning-Action Mismatch"
+      - "3.1 Premature Termination"
+      - "3.2 No or Incomplete Verification"
+      - "3.3 Incorrect Verification"
       - "No Failure Detected"
 
   - name: severity

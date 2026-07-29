@@ -1,6 +1,6 @@
 # DGS Corpus Sign Language Multi-Tier Annotation Configuration
-# Based on Hanke et al., LREC 2020
-# Paper: https://aclanthology.org/2020.lrec-1.720/
+# Based on Hanke et al., sign-lang@LREC 2020
+# Paper: https://aclanthology.org/2020.signlang-1.12/
 # Task: ELAN-style multi-tier annotation of German Sign Language corpus videos
 
 annotation_task_name: "DGS Corpus Sign Language Multi-Tier Annotation"

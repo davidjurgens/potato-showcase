@@ -1,5 +1,5 @@
 # tau-bench Agent Evaluation
-# Based on "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains" (Yao et al., ICLR 2025)
+# Based on "tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains" (Yao et al., arXiv 2024)
 # Task: Evaluate tool-agent-user interactions in customer service domains
 
 annotation_task_name: "tau-bench Agent Evaluation"

@@ -1,6 +1,6 @@
 # Patronizing and Condescending Language Detection
 # Based on Perez-Almendros et al., SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.43/
+# Paper: https://aclanthology.org/2022.semeval-1.38/
 # Dataset: https://github.com/Perez-AlmendrosC/dontpatronizeme
 #
 # This task asks annotators to detect patronizing and condescending language

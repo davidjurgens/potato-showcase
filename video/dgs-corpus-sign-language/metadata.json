@@ -39,5 +39,5 @@
   "paperReference": "Hanke et al., LREC 2020",
   "paperUrl": "https://aclanthology.org/2020.signlang-1.12/",
   "datasetUrl": "https://www.sign-lang.uni-hamburg.de/meinedgs/ling/start-name_en.html",
-  "citation": "@inproceedings{hanke2020public,\n  title={The Public DGS Corpus: A Large, Annotated, Multi-modal Corpus of German Sign Language},\n  author={Hanke, Thomas and Schulder, Marc and Konrad, Reiner and Jahn, Elena},\n  booktitle={Proceedings of the 12th Language Resources and Evaluation Conference},\n  pages={5830--5838},\n  year={2020},\n  publisher={European Language Resources Association}\n}"
+  "citation": "@inproceedings{hanke2020extending,\n  title={Extending the Public DGS Corpus in Size and Depth},\n  author={Hanke, Thomas and Schulder, Marc and Konrad, Reiner and Jahn, Elena},\n  booktitle={Proceedings of the LREC2020 9th Workshop on the Representation and Processing of Sign Languages: Sign Language Resources in the Service of the Language Community, Technological Challenges and Application Perspectives},\n  pages={75--82},\n  year={2020},\n  publisher={European Language Resources Association (ELRA)}\n}"
 }

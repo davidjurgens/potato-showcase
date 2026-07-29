@@ -1,6 +1,6 @@
 # FLORES - Machine Translation Quality Estimation
 # Based on Goyal et al., TACL 2022
-# Paper: https://aclanthology.org/2022.tacl-1.21/
+# Paper: https://aclanthology.org/2022.tacl-1.30/
 # Dataset: https://github.com/facebookresearch/flores
 #
 # This task evaluates machine translation quality by presenting source

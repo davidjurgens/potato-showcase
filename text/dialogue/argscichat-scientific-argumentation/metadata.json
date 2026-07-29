@@ -3,7 +3,7 @@
   "description": "Annotation of argumentative dialogues about scientific papers based on the ArgSciChat dataset. Annotators label dialogue turns for argument components (claim, evidence, rebuttal) and assess argument quality dimensions such as clarity, relevance, and persuasiveness.",
   "version": "1.0.0",
   "author": {
-    "name": "Ruiz-Dolz et al.",
+    "name": "Ruggeri et al.",
     "email": "",
     "github": "UKPLab",
     "affiliation": "TU Darmstadt"
@@ -34,8 +34,8 @@
     "persuasiveness"
   ],
   "featured": false,
-  "paperReference": "Ruiz-Dolz et al., ACL 2023",
+  "paperReference": "Ruggeri et al., ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.acl-long.425/",
-  "datasetUrl": "https://github.com/UKPLab/ArgSciChat",
-  "citation": "@inproceedings{ruizdolz2023argscichat,\n    title = \"{A}rg{S}ci{C}hat: A Dataset for Argumentative Dialogues on Scientific Papers\",\n    author = \"Ruiz-Dolz, Ramon  and Alemany, Jose  and Heras, Stella  and Garcia-Fornes, Ana\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.425/\"\n}"
+  "datasetUrl": "https://github.com/UKPLab/acl2023-argscichat",
+  "citation": "@inproceedings{ruggeri2023argscichat,\n    title = \"A Dataset of Argumentative Dialogues on Scientific Papers\",\n    author = \"Ruggeri, Federico  and Mesgar, Mohsen  and Gurevych, Iryna\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"7684--7699\",\n    url = \"https://aclanthology.org/2023.acl-long.425/\"\n}"
 }

@@ -38,5 +38,5 @@
   "paperReference": "Kiesel et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2145/",
   "datasetUrl": "https://zenodo.org/record/1489920",
-  "citation": "@inproceedings{kiesel-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 4: Hyperpartisan News Detection\",\n    author = \"Kiesel, Johannes and Mestre, Maria and Shukla, Rishabh and Vincent, Emmanuel and Adineh, Payam and Corney, David and Stein, Benno and Potthast, Martin\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2145\"\n}"
+  "citation": "@inproceedings{kiesel-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 4: Hyperpartisan News Detection\",\n    author = \"Kiesel, Johannes and Mestre, Maria and Shukla, Rishabh and Vincent, Emmanuel and Adineh, Payam and Corney, David and Stein, Benno and Potthast, Martin\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"829--839\",\n    url = \"https://aclanthology.org/S19-2145\"\n}"
 }

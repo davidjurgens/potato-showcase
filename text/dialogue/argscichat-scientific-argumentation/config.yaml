@@ -1,7 +1,7 @@
 # ArgSciChat Scientific Argumentation Dialogue
-# Based on Ruiz-Dolz et al., ACL 2023
-# Paper: https://aclanthology.org/2023.acl-long.414/
-# Dataset: https://github.com/UKPLab/ArgSciChat
+# Based on Ruggeri et al., ACL 2023
+# Paper: https://aclanthology.org/2023.acl-long.425/
+# Dataset: https://github.com/UKPLab/acl2023-argscichat
 #
 # Task: Annotate argumentative dialogues about scientific papers.
 # Label each dialogue turn for argument components and assess

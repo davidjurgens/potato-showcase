@@ -38,5 +38,5 @@
   "paperReference": "Schneider et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1084/",
   "datasetUrl": "https://dimsum16.github.io/",
-  "citation": "@inproceedings{schneider-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 10: Detecting Minimal Semantic Units and their Meanings ({D}i{MSUM})\",\n    author = \"Schneider, Nathan and Hovy, Dirk and Johannsen, Anders and Carpuat, Marine\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1084\"\n}"
+  "citation": "@inproceedings{schneider-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 10: Detecting Minimal Semantic Units and their Meanings ({D}i{MSUM})\",\n    author = \"Schneider, Nathan and Hovy, Dirk and Johannsen, Anders and Carpuat, Marine\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016)\",\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"546--559\",\n    doi = \"10.18653/v1/S16-1084\",\n    url = \"https://aclanthology.org/S16-1084\"\n}"
 }

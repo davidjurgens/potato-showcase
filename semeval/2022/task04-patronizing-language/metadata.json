@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Perez-Almendros et al., SemEval 2022",
-  "paperUrl": "https://aclanthology.org/2022.semeval-1.43/",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.38/",
   "datasetUrl": "https://github.com/Perez-AlmendrosC/dontpatronizeme",
-  "citation": "@inproceedings{perez-almendros-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 4: Patronizing and Condescending Language Detection\",\n    author = \"Perez-Almendros, Carla  and Espinosa-Anke, Luis  and Schockaert, Steven\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.43\"\n}"
+  "citation": "@inproceedings{perez-almendros-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 4: Patronizing and Condescending Language Detection\",\n    author = \"Perez-Almendros, Carla  and Espinosa-Anke, Luis  and Schockaert, Steven\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"298--307\",\n    url = \"https://aclanthology.org/2022.semeval-1.38/\"\n}"
 }
