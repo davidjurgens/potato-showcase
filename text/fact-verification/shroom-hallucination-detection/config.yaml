@@ -1,6 +1,6 @@
 # SHROOM: Shared-task on Hallucinations and Related Observable Overgeneration Mistakes
 # Based on Mickus et al., SemEval@NAACL 2024
-# Paper: https://aclanthology.org/2024.semeval-1.289/
+# Paper: https://aclanthology.org/2024.semeval-1.273/
 # Dataset: https://github.com/Helsinki-NLP/shroom
 #
 # This task performs binary hallucination detection in NLG outputs.

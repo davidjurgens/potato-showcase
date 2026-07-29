@@ -1,12 +1,12 @@
 {
-  "title": "PromiseEval - Promise Verification in Political Discourse",
-  "description": "Verification of political promises, requiring annotators to identify whether promises were made, kept, or broken based on political statements and context. Based on SemEval-2025 Task 6.",
+  "title": "PromiseEval - Corporate ESG Promise Verification",
+  "description": "Verification of corporate ESG (Environmental, Social, Governance) promises, requiring annotators to identify whether a statement contains a promise, whether supporting evidence exists, the clarity of the promise-evidence pair, and when the promise can be verified. Based on SemEval-2025 Task 6 (PromiseEval).",
   "version": "1.0.0",
   "author": {
-    "name": "Nakov et al.",
+    "name": "Chen et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Mohamed bin Zayed University of AI"
+    "affiliation": "AIST / University of Tsukuba"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -18,12 +18,13 @@
     "SemEval",
     "NLP",
     "Fact-Checking",
-    "Political Discourse"
+    "ESG",
+    "Corporate Disclosure"
   ],
   "useCase": [
-    "Promise Tracking",
-    "Political Analysis",
-    "Fact Verification"
+    "Promise Verification",
+    "ESG Analysis",
+    "Corporate Transparency"
   ],
   "complexity": "intermediate",
   "tags": [
@@ -31,13 +32,14 @@
     "semeval-2025",
     "shared-task",
     "promise",
-    "political",
+    "esg",
+    "corporate",
     "fact-checking",
     "verification"
   ],
   "featured": false,
-  "paperReference": "Nakov et al., SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/SemEval2025-Task6",
-  "citation": "@inproceedings{nakov-etal-2025-promiseeval,\n    title = \"{P}romise{E}val: Promise Verification in Political Discourse\",\n    author = \"Nakov, Preslav and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Chen et al., SemEval-2025 Task 6",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.321/",
+  "datasetUrl": "https://sites.google.com/view/promiseeval/promiseeval",
+  "citation": "@inproceedings{chen-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 6: Multinational, Multilingual, Multi-Industry Promise Verification\",\n    author = {Chen, Chung-Chi and Seki, Yohei and Shu, Hakusen and Lhuissier, Ana{\\\"i}s and Kang, Juyeon and Lee, Hanwool and Day, Min-Yuh and Takamura, Hiroya},\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2461--2471\"\n}"
 }

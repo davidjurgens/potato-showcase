@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Lybarger et al., JAMIA 2023",
-  "paperUrl": "https://academic.oup.com/jamia/article/30/8/1382/7184752",
+  "paperUrl": "https://academic.oup.com/jamia/article/30/8/1367/7043152",
   "datasetUrl": "https://portal.dbmi.hms.harvard.edu/projects/n2c2-2022-track2/",
-  "citation": "@article{lybarger-etal-2023-n2c2,\n    title = \"{n2c2} 2022 Track 2: Contextualized Medication Event Extraction and Social Determinants of Health\",\n    author = \"Lybarger, Kevin  and Yetisgen, Meliha  and Uzuner, \\\"Ozlem  and Ostendorf, Mari\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1382--1393\",\n    year = \"2023\",\n    publisher = \"Oxford University Press\",\n    url = \"https://academic.oup.com/jamia/article/30/8/1382/7184752\"\n}"
+  "citation": "@article{lybarger-2023-2022-n2c2-sdoh,\n    title = \"The 2022 {n2c2}/{UW} shared task on extracting social determinants of health\",\n    author = \"Lybarger, Kevin  and Yetisgen, Meliha  and Uzuner, {\\\"O}zlem\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1367--1378\",\n    year = \"2023\",\n    publisher = \"Oxford University Press\",\n    doi = \"10.1093/jamia/ocad012\",\n    url = \"https://academic.oup.com/jamia/article/30/8/1367/7043152\"\n}"
 }

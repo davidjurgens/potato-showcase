@@ -1,7 +1,7 @@
 # Text-Based Emotion Detection
-# Based on SemEval 2025 Task 11 Organizers, SemEval 2025
-# Paper: https://aclanthology.org/volumes/2025.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2025-task11
+# Based on Muhammad et al., SemEval-2025 Task 11: Bridging the Gap in Text-Based Emotion Detection
+# Paper: https://aclanthology.org/2025.semeval-1.327/
+# Dataset: https://github.com/emotion-analysis-project/SemEval2025-Task11
 #
 # This task asks annotators to identify the primary emotion expressed
 # in a text and to characterize how the emotion is conveyed (explicitly,

@@ -1,6 +1,6 @@
 # n2c2 2022 Track 2: Social Determinants of Health Extraction
 # Based on Lybarger et al., JAMIA 2023
-# Paper: https://academic.oup.com/jamia/article/30/8/1382/7184752
+# Paper: https://academic.oup.com/jamia/article/30/8/1367/7043152
 # Dataset: https://portal.dbmi.hms.harvard.edu/projects/n2c2-2022-track2/
 #
 # Task: Extract SDOH entities and attributes from clinical notes
@@ -13,7 +13,6 @@
 # - Alcohol: alcohol use, drinking behaviors
 # - Drug: illicit drug use, substance abuse
 # - Tobacco: smoking, tobacco/nicotine use
-# - Insurance: health insurance status, coverage information
 #
 # Status Attributes: Current, Past, None, Unknown
 
@@ -40,21 +39,18 @@ annotation_schemes:
       - "Alcohol"
       - "Drug"
       - "Tobacco"
-      - "Insurance"
     label_colors:
       "Employment": "#22c55e"
       "LivingStatus": "#3b82f6"
       "Alcohol": "#ef4444"
       "Drug": "#f97316"
       "Tobacco": "#eab308"
-      "Insurance": "#8b5cf6"
     tooltips:
       "Employment": "Mentions of job status, occupation, work, unemployment, retirement, or disability"
       "LivingStatus": "Mentions of housing situation, living arrangements, homelessness, or shelter"
       "Alcohol": "Mentions of alcohol consumption, drinking, or alcohol-related behaviors"
       "Drug": "Mentions of illicit drug use, substance abuse, or recreational drug use"
       "Tobacco": "Mentions of smoking, tobacco use, vaping, chewing tobacco, or nicotine"
-      "Insurance": "Mentions of health insurance status, coverage type, or lack of insurance"
     allow_overlapping: false
 
   # Step 2: Status of the identified SDOH entity

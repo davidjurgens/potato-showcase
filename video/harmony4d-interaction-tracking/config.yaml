@@ -1,5 +1,5 @@
 # Harmony4D Human Interaction Tracking Configuration
-# Based on Jung et al., NeurIPS 2024
+# Based on Khirodkar et al., NeurIPS 2024
 # Task: Track multiple people during close physical interactions with bounding boxes and interaction labels
 
 annotation_task_name: "Harmony4D Human Interaction Tracking"

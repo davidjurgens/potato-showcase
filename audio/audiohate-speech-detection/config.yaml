@@ -1,7 +1,7 @@
 # AudioHate - Audio Hate Speech Detection with Explanations
-# Based on Guo et al., SIGDIAL 2024
-# Paper: https://aclanthology.org/2024.sigdial-1.35/
-# Dataset: https://github.com/audio-hate/AudioHateXplain
+# Based on An et al., "An Investigation into Explainable Audio Hate Speech Detection", SIGDIAL 2024
+# Paper: https://aclanthology.org/2024.sigdial-1.45/
+# Dataset: https://arxiv.org/abs/2408.06065
 #
 # Task: Classify audio clips for hate speech, identify target groups,
 # and note acoustic indicators (tone, emphasis, prosody).

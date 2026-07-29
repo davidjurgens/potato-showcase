@@ -36,8 +36,8 @@
     "harmony4d"
   ],
   "featured": false,
-  "paperReference": "Jung et al., NeurIPS 2024",
+  "paperReference": "Khirodkar et al., NeurIPS 2024",
   "paperUrl": "https://arxiv.org/abs/2410.20294",
-  "datasetUrl": "https://harmony4d.github.io/",
-  "citation": "@inproceedings{jung2024harmony4d,\n  title={Harmony4D: A Video Dataset for Close-Range Human Interaction Understanding},\n  author={Jung, Rawal and Kim, Soyong and Park, Jiyoung and Lee, Kyungdon and Cho, Minsu},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
+  "datasetUrl": "https://jyuntins.github.io/harmony4d/",
+  "citation": "@inproceedings{khirodkar2024harmony4d,\n  title={Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions},\n  author={Khirodkar, Rawal and Song, Jyun-Ting and Cao, Jinkun and Luo, Zhengyi and Kitani, Kris},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2024}\n}"
 }

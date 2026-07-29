@@ -1,6 +1,6 @@
 {
   "title": "CODWOE - Comparing Dictionaries and Word Embeddings",
-  "description": "Definition generation and concreteness classification for words in context, comparing dictionary definitions with distributional word representations. Based on SemEval-2022 Task 1 (Mickus et al.).",
+  "description": "Definition modeling for words in context, adapting SemEval-2022 Task 1 (CODWOE), which compared dictionary definitions with distributional word representations across two subtasks: definition modeling (embedding to definition) and reverse dictionary (definition to embedding). Based on Mickus et al.",
   "version": "1.0.0",
   "author": {
     "name": "Mickus et al.",
@@ -38,5 +38,5 @@
   "paperReference": "Mickus et al., SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.1/",
   "datasetUrl": "https://codwoe.atilf.fr/",
-  "citation": "@inproceedings{mickus-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 1: {CODWOE} -- Comparing Dictionaries and Word Embeddings\",\n    author = \"Mickus, Timothee  and Paperno, Denis  and Constant, Mathieu  and van Deemter, Kees\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.1\"\n}"
+  "citation": "@inproceedings{mickus-etal-2022-semeval,\n    title = \"{S}emeval-2022 Task 1: {CODWOE} {--} Comparing Dictionaries and Word Embeddings\",\n    author = \"Mickus, Timothee  and Van Deemter, Kees  and Constant, Mathieu  and Paperno, Denis\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1--14\",\n    doi = \"10.18653/v1/2022.semeval-1.1\",\n    url = \"https://aclanthology.org/2022.semeval-1.1\"\n}"
 }

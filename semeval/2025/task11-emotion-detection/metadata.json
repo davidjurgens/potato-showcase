@@ -3,10 +3,10 @@
   "description": "Text-based emotion detection task requiring annotators to classify the primary emotion in text and identify expression characteristics such as explicitness, sarcasm, and mixed emotions. Based on SemEval-2025 Task 11.",
   "version": "1.0.0",
   "author": {
-    "name": "SemEval 2025 Task 11 Organizers",
+    "name": "Shamsuddeen Hassan Muhammad, Nedjma Ousidhoum, Idris Abdulmumin, Seid Muhie Yimam, et al. (SemEval-2025 Task 11 Organizers)",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "emotion-analysis-project",
+    "affiliation": "SemEval-2025 Task 11 Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -35,8 +35,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "SemEval 2025 Task 11 Organizers, SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2025-task11",
-  "citation": "@inproceedings{semeval2025-task11,\n    title = \"Text-Based Emotion Detection\",\n    author = \"SemEval 2025 Task 11 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Muhammad et al., SemEval-2025 Task 11: Bridging the Gap in Text-Based Emotion Detection, SemEval-2025",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.327/",
+  "datasetUrl": "https://github.com/emotion-analysis-project/SemEval2025-Task11",
+  "citation": "@inproceedings{muhammad-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 11: Bridging the Gap in Text-Based Emotion Detection\",\n    author = \"Muhammad, Shamsuddeen Hassan and Ousidhoum, Nedjma and Abdulmumin, Idris and Yimam, Seid Muhie and Wahle, Jan Philip and Lima Ruas, Terry and Beloucif, Meriem and De Kock, Christine and Belay, Tadesse Destaw and Ahmad, Ibrahim Said and Surange, Nirmal and Teodorescu, Daniela and Adelani, David Ifeoluwa and Aji, Alham Fikri and Ali, Felermino Dario Mario and Araujo, Vladimir and Ayele, Abinew Ali and Ignat, Oana and Panchenko, Alexander and Zhou, Yi and Mohammad, Saif\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2558--2569\"\n}"
 }

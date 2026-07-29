@@ -6,7 +6,7 @@
     "name": "Braud et al.",
     "email": "",
     "github": "disrpt",
-    "affiliation": "Universite Paris Cite"
+    "affiliation": "CNRS, IRIT, Toulouse"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
@@ -37,5 +37,5 @@
   "paperReference": "Braud et al., DISRPT@ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.disrpt-1.1/",
   "datasetUrl": "https://github.com/disrpt/sharedtask2023",
-  "citation": "@inproceedings{braud-etal-2023-disrpt,\n    title = \"{DISRPT}: A Multilingual, Multi-domain, Cross-framework Benchmark for Discourse Processing\",\n    author = \"Braud, Chlo{\\'e}  and Zeldes, Amir  and Liu, Yang Janet  and Muller, Philippe  and Badene, Stefania  and Aoyama, Tatsuya\",\n    booktitle = \"Proceedings of the 3rd Shared Task on Discourse Relation Parsing and Treebanking (DISRPT 2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.disrpt-1.1\",\n    pages = \"1--17\"\n}"
+  "citation": "@inproceedings{braud-etal-2023-disrpt,\n    title = \"The {DISRPT} 2023 Shared Task on Elementary Discourse Unit Segmentation, Connective Detection, and Relation Classification\",\n    author = \"Braud, Chlo{\\'e}  and Liu, Yang Janet  and Metheniti, Eleni  and Muller, Philippe  and Rivi{\\`e}re, Laura  and Rutherford, Attapol  and Zeldes, Amir\",\n    booktitle = \"Proceedings of the 3rd Shared Task on Discourse Relation Parsing and Treebanking (DISRPT 2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.disrpt-1.1\",\n    pages = \"1--21\"\n}"
 }

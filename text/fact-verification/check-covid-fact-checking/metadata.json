@@ -6,7 +6,7 @@
     "name": "Wang et al.",
     "email": "",
     "github": "posuer",
-    "affiliation": "University of Michigan"
+    "affiliation": "Columbia University"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
@@ -38,5 +38,5 @@
   "paperReference": "Wang et al., Findings ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.findings-acl.888/",
   "datasetUrl": "https://github.com/posuer/Check-COVID",
-  "citation": "@inproceedings{wang-etal-2023-check-covid,\n    title = \"Check-{COVID}: Fact-Checking {COVID}-19 News Claims with Scientific Evidence\",\n    author = \"Wang, Xia  and Yao, Bingqian  and Yao, Jiawei  and Wang, Qi  and Wang, Lu\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2023\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.findings-acl.888\",\n    pages = \"14078--14095\"\n}"
+  "citation": "@inproceedings{wang-etal-2023-check-covid,\n    title = \"Check-{COVID}: Fact-Checking {COVID}-19 News Claims with Scientific Evidence\",\n    author = \"Wang, Gengyu  and Harwood, Kate  and Chillrud, Lawrence  and Ananthram, Amith  and Subbiah, Melanie  and McKeown, Kathleen\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2023\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.findings-acl.888\",\n    pages = \"14114--14127\"\n}"
 }

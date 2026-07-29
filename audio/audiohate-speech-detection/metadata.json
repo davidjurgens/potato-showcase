@@ -1,12 +1,12 @@
 {
   "title": "AudioHate - Audio Hate Speech Detection",
-  "description": "Audio hate speech detection with explanations. Annotators classify audio clips for hate speech presence, identify target groups, and note acoustic indicators such as tone, emphasis, and prosody (Guo et al., SIGDIAL 2024).",
+  "description": "Audio hate speech detection with explanations. Annotators classify audio clips for hate speech presence, identify target groups, and note acoustic indicators such as tone, emphasis, and prosody (An et al., SIGDIAL 2024).",
   "version": "1.0.0",
   "author": {
-    "name": "Guo et al.",
+    "name": "An et al.",
     "email": "",
-    "github": "audio-hate",
-    "affiliation": "Multiple Institutions"
+    "github": "",
+    "affiliation": "POSTECH"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
@@ -32,8 +32,8 @@
     "sigdial2024"
   ],
   "featured": false,
-  "paperReference": "Guo et al., SIGDIAL 2024",
+  "paperReference": "An et al., SIGDIAL 2024",
   "paperUrl": "https://aclanthology.org/2024.sigdial-1.45/",
-  "datasetUrl": "https://github.com/audio-hate/AudioHateXplain",
-  "citation": "@inproceedings{guo-etal-2024-towards-explainable,\n    title = \"Towards Explainable Audio Hate Speech Detection\",\n    author = \"Guo, Jinmyeong and others\",\n    booktitle = \"Proceedings of the 25th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.sigdial-1.45/\"\n}"
+  "datasetUrl": "https://arxiv.org/abs/2408.06065",
+  "citation": "@inproceedings{an-etal-2024-investigation,\n    title = \"An Investigation into Explainable Audio Hate Speech Detection\",\n    author = \"An, Jinmyeong and Lee, Wonjun and Jeon, Yejin and Ok, Jungseul and Kim, Yunsu and Lee, Gary Geunbae\",\n    booktitle = \"Proceedings of the 25th Annual Meeting of the Special Interest Group on Discourse and Dialogue\",\n    month = sep,\n    year = \"2024\",\n    address = \"Kyoto, Japan\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"533--543\",\n    url = \"https://aclanthology.org/2024.sigdial-1.45/\"\n}"
 }

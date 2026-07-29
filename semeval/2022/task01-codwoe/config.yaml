@@ -3,14 +3,22 @@
 # Paper: https://aclanthology.org/2022.semeval-1.1/
 # Dataset: https://codwoe.atilf.fr/
 #
-# This task asks annotators to write a definition for a target word based
-# on the context in which it appears, and to classify whether the word
-# is used in a concrete, abstract, or mixed sense.
+# CODWOE (SemEval-2022 Task 1) compared dictionaries and word embeddings
+# through two automatic subtasks: definition modeling (generate a definition
+# from a word embedding) and reverse dictionary (generate an embedding from a
+# definition). Neither is directly human-annotatable, so this Potato design
+# adapts the definition-modeling direction into a human writing task and
+# grounds a companion judgment in the reverse-dictionary direction.
 #
-# Concreteness Labels:
-# - Concrete: The word refers to something tangible or perceivable
-# - Abstract: The word refers to a concept, quality, or intangible entity
-# - Mixed: The word has both concrete and abstract aspects in this context
+# This task asks annotators to (1) write a definition for a target word based
+# on the context in which it appears (definition modeling), and (2) judge how
+# uniquely that word could be recovered from a definition alone (reverse
+# dictionary difficulty).
+#
+# Recoverability Labels:
+# - Easily identifiable: The definition points clearly to this exact word
+# - Somewhat ambiguous: The definition could fit a few related words
+# - Highly ambiguous: The definition could describe many different words
 
 annotation_task_name: "CODWOE - Comparing Dictionaries and Word Embeddings"
 task_dir: "."
@@ -34,26 +42,30 @@ annotation_schemes:
     description: "Write a definition for the target word as used in this context"
 
   - annotation_type: radio
-    name: concreteness
-    description: "Is the target word used in a concrete, abstract, or mixed sense?"
+    name: recoverability
+    description: "If given only your definition, how uniquely could the target word be recovered?"
     labels:
-      - "Concrete"
-      - "Abstract"
-      - "Mixed"
+      - "Easily identifiable"
+      - "Somewhat ambiguous"
+      - "Highly ambiguous"
     keyboard_shortcuts:
-      "Concrete": "1"
-      "Abstract": "2"
-      "Mixed": "3"
+      "Easily identifiable": "1"
+      "Somewhat ambiguous": "2"
+      "Highly ambiguous": "3"
     tooltips:
-      "Concrete": "The word refers to something tangible, physical, or directly perceivable by the senses"
-      "Abstract": "The word refers to a concept, quality, state, or intangible entity"
-      "Mixed": "The word has both concrete and abstract aspects in this particular context"
+      "Easily identifiable": "The definition points clearly to this exact target word"
+      "Somewhat ambiguous": "The definition could plausibly fit a few closely related words"
+      "Highly ambiguous": "The definition could describe many different words"
 
 annotation_instructions: |
-  You will see a sentence with a target word highlighted and the language of the text.
+  This task adapts SemEval-2022 Task 1 (CODWOE), which paired definition
+  modeling with a reverse-dictionary subtask. You will see a sentence with a
+  target word and the language of the text.
   1. Read the sentence and identify the target word.
-  2. Write a clear, concise definition for the target word as it is used in this context.
-  3. Classify whether the target word is used in a concrete, abstract, or mixed sense.
+  2. Write a clear, concise definition for the target word as it is used in this
+     context (definition modeling).
+  3. Judge how uniquely the target word could be recovered from your definition
+     alone (reverse-dictionary difficulty).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
