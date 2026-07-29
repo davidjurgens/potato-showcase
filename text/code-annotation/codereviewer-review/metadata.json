@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Li et al., FSE 2022",
-  "paperUrl": "https://doi.org/10.1145/3540250.3549081",
+  "paperUrl": "https://arxiv.org/abs/2203.09095",
   "datasetUrl": "https://github.com/microsoft/CodeBERT/tree/master/CodeReviewer",
-  "citation": "@inproceedings{li2022codereviewer,\n    title = \"{C}ode{R}eviewer: Pre-Training for Automating Code Review Activities\",\n    author = \"Li, Zhiyu and Lu, Shuai and Guo, Daya and Duan, Nan and Janber, Shailesh and Zheng, Ming and Svyatkovskiy, Alexey and Shangyin, Thomas and Liu, Jian and Yin, Shengyu\",\n    booktitle = \"Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    url = \"https://doi.org/10.1145/3540250.3549081\",\n    pages = \"1035--1047\"\n}"
+  "citation": "@inproceedings{li2022automating,\n    title = \"Automating Code Review Activities by Large-Scale Pre-training\",\n    author = \"Li, Zhiyu and Lu, Shuai and Guo, Daya and Duan, Nan and Jannu, Shailesh and Jenks, Grant and Majumder, Deep and Green, Jared and Svyatkovskiy, Alexey and Fu, Shengyu and Sundaresan, Neel\",\n    booktitle = \"Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2022)\",\n    year = \"2022\",\n    publisher = \"ACM\",\n    doi = \"10.1145/3540250.3549081\",\n    url = \"https://doi.org/10.1145/3540250.3549081\",\n    pages = \"1035--1047\"\n}"
 }
