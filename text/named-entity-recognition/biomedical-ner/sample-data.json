@@ -1,42 +1,42 @@
 [
   {
     "id": "bio_001",
-    "text": "The patient was diagnosed with type 2 diabetes mellitus and started on metformin 500mg twice daily. Blood glucose levels improved significantly after 3 months of treatment."
+    "text": "Activation of the IL-2 gene in Jurkat T cells requires binding of NF-kappa B to the kappa B enhancer element."
   },
   {
     "id": "bio_002",
-    "text": "MRI of the brain revealed a 2cm lesion in the left temporal lobe, suspicious for glioblastoma. The patient was referred to neurosurgery for biopsy."
+    "text": "Glucocorticoids repress transcription of the interleukin-2 gene by interfering with AP-1 and NF-AT in peripheral blood lymphocytes."
   },
   {
     "id": "bio_003",
-    "text": "Patient presents with fever, cough, and shortness of breath. COVID-19 PCR test positive. Chest X-ray shows bilateral pneumonia. Started on dexamethasone and supplemental oxygen."
+    "text": "TNF-alpha induced expression of IL-6 mRNA in human monocytes through activation of the NF-kappa B transcription factor."
   },
   {
     "id": "bio_004",
-    "text": "Genetic testing revealed a pathogenic variant in the BRCA1 gene, conferring increased risk for breast and ovarian cancer. Prophylactic mastectomy was discussed."
+    "text": "The STAT1 protein was rapidly phosphorylated following IFN-gamma stimulation of HeLa cells."
   },
   {
     "id": "bio_005",
-    "text": "The patient has a history of hypertension and hyperlipidemia, currently managed with lisinopril 10mg daily and atorvastatin 40mg at bedtime."
+    "text": "Expression of the c-fos proto-oncogene was detected in resting T lymphocytes after treatment with phorbol ester."
   },
   {
     "id": "bio_006",
-    "text": "Blood culture grew Staphylococcus aureus. Patient started on vancomycin IV for suspected endocarditis. Echocardiogram ordered to evaluate cardiac valves."
+    "text": "The kappa B site in the HIV-1 long terminal repeat is recognized by the p50 and p65 subunits of NF-kappa B."
   },
   {
     "id": "bio_007",
-    "text": "The study found elevated levels of inflammatory cytokines including IL-6 and TNF-alpha in patients with rheumatoid arthritis compared to healthy controls."
+    "text": "Retinoic acid receptor alpha binds the RARE element in the promoter of the RAR beta 2 gene in HL-60 cells."
   },
   {
     "id": "bio_008",
-    "text": "Patient underwent laparoscopic cholecystectomy for symptomatic gallstones. Post-operative recovery was uncomplicated. Discharged on acetaminophen for pain management."
+    "text": "IL-4 upregulates CD23 mRNA levels in B cells through a STAT6-dependent signaling pathway."
   },
   {
     "id": "bio_009",
-    "text": "Lab results: hemoglobin 9.2 g/dL, WBC 12,500/μL, platelets 180,000/μL. Iron studies consistent with iron deficiency anemia. Started on ferrous sulfate 325mg daily."
+    "text": "The GATA-1 transcription factor is essential for erythroid differentiation of hematopoietic progenitor cells."
   },
   {
     "id": "bio_010",
-    "text": "The patient developed severe allergic reaction to penicillin, presenting with angioedema and urticaria. Treated with epinephrine 0.3mg IM and diphenhydramine 50mg IV."
+    "text": "Overexpression of the Bcl-2 protein protected the U937 cell line from apoptosis induced by TNF-alpha."
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "title": "MS COCO Object Detection & Segmentation",
-  "description": "Object detection and instance segmentation annotation following the MS COCO format (Lin et al., ECCV 2014). Annotate objects with bounding boxes and polygon segmentation masks across 80 common object categories.",
+  "title": "MS COCO Object Detection & Categorization",
+  "description": "Object detection annotation following the MS COCO format (Lin et al., ECCV 2014). Select all object categories present in each image and mark object locations with bounding boxes, drawn from COCO's 80 common object categories.",
   "version": "1.0.0",
   "author": {
     "name": "Lin et al.",
@@ -21,16 +21,15 @@
   ],
   "useCase": [
     "Object Detection",
-    "Instance Segmentation",
+    "Multi-label Classification",
     "Scene Understanding"
   ],
   "complexity": "advanced",
   "tags": [
     "coco",
     "object-detection",
-    "segmentation",
+    "classification",
     "bounding-box",
-    "polygon",
     "eccv2014"
   ],
   "featured": true,

@@ -1,6 +1,6 @@
 # Stance Detection (VAST-style)
 # Based on Allaway & McKeown, EMNLP 2020
-# Paper: https://aclanthology.org/2020.emnlp-main.197/
+# Paper: https://aclanthology.org/2020.emnlp-main.717/
 #
 # Stance detection determines the author's position toward a target topic.
 # This is crucial for understanding public opinion, debate analysis, and

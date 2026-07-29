@@ -1,7 +1,7 @@
 # Detecting Persuasion Techniques in News
 # Based on Piskorski et al., SemEval 2023
 # Paper: https://aclanthology.org/2023.semeval-1.317/
-# Dataset: https://propaganda.qcri.org/semeval2023-task3/
+# Dataset: https://propaganda.math.unipd.it/semeval2023task3/
 #
 # This task asks annotators to identify persuasion and propaganda techniques
 # used in news paragraphs. Annotators both classify which techniques are
@@ -44,8 +44,8 @@ annotation_schemes:
       - "Flag Waving"
       - "Causal Oversimplification"
       - "Appeal to Authority"
-      - "Black and White Fallacy"
-      - "Bandwagon"
+      - "False Dilemma"
+      - "Appeal to Popularity"
     tooltips:
       "Loaded Language": "Using words with strong emotional connotations to influence the audience"
       "Name Calling": "Labeling the target with negative terms to discredit them"
@@ -55,8 +55,8 @@ annotation_schemes:
       "Flag Waving": "Appealing to patriotic or group identity feelings"
       "Causal Oversimplification": "Assuming a single cause for a complex situation"
       "Appeal to Authority": "Citing an authority figure to support a claim without evidence"
-      "Black and White Fallacy": "Presenting only two options when more exist"
-      "Bandwagon": "Suggesting everyone is doing it so the reader should too"
+      "False Dilemma": "Presenting only two options when more exist"
+      "Appeal to Popularity": "Suggesting everyone is doing it so the reader should too"
 
   - annotation_type: span
     name: persuasion_span

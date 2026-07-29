@@ -1,11 +1,11 @@
 {
   "title": "Biomedical Named Entity Recognition (JNLPBA)",
-  "description": "Named entity recognition for biomedical text based on the JNLPBA shared task. Annotate entities including proteins, DNA, RNA, cell lines, and cell types following BioNLP community standards.",
+  "description": "Named entity recognition for biomedical text based on the JNLPBA shared task. Annotate the five GENIA bio-entity classes (protein, DNA, RNA, cell line, cell type) in molecular-biology MEDLINE abstracts, following BioNLP community standards.",
   "version": "1.0.0",
   "author": {
-    "name": "Kim et al.",
+    "name": "Collier et al.",
     "email": "",
-    "affiliation": "KAIST"
+    "affiliation": "National Institute of Informatics"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -33,8 +33,8 @@
     "bionlp"
   ],
   "featured": true,
-  "paperReference": "Kim et al., BioNLP 2004",
+  "paperReference": "Collier et al., JNLPBA/BioNLP 2004",
   "paperUrl": "https://aclanthology.org/W04-1213/",
   "datasetUrl": "https://huggingface.co/datasets/jnlpba",
-  "citation": "@inproceedings{kim-etal-2004-introduction,\n    title = \"Introduction to the Bio-Entity Recognition Task at {JNLPBA}\",\n    author = \"Kim, Jin-Dong  and Ohta, Tomoko  and Tsuruoka, Yoshimasa  and Tateisi, Yuka  and Collier, Nigel\",\n    booktitle = \"Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications ({NLPBA}/{B}io{NLP})\",\n    month = aug,\n    year = \"2004\",\n    address = \"Geneva, Switzerland\",\n    publisher = \"COLING\",\n    url = \"https://aclanthology.org/W04-1213\",\n    pages = \"70--75\"\n}"
+  "citation": "@inproceedings{collier-kim-2004-introduction,\n    title = \"Introduction to the Bio-entity Recognition Task at {JNLPBA}\",\n    author = \"Collier, Nigel  and Ohta, Tomoko  and Tsuruoka, Yoshimasa  and Tateisi, Yuka  and Kim, Jin-Dong\",\n    editor = \"Collier, Nigel  and Ruch, Patrick  and Nazarenko, Adeline\",\n    booktitle = \"Proceedings of the International Joint Workshop on Natural Language Processing in Biomedicine and its Applications ({NLPBA}/{B}io{NLP})\",\n    month = aug,\n    year = \"2004\",\n    address = \"Geneva, Switzerland\",\n    publisher = \"COLING\",\n    url = \"https://aclanthology.org/W04-1213/\",\n    pages = \"73--78\"\n}"
 }

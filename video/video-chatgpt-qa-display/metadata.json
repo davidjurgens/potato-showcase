@@ -37,5 +37,5 @@
   "paperReference": "Maaz et al., ACL 2024",
   "paperUrl": "https://arxiv.org/abs/2306.05424",
   "datasetUrl": "https://github.com/mbzuai-oryx/Video-ChatGPT",
-  "citation": "@inproceedings{maaz2024videochatgpt,\n    title = \"Video-{C}hat{GPT}: Towards Detailed Video Understanding via Large Vision and Language Models\",\n    author = \"Maaz, Muhammad and Rasheed, Hanoona and Khan, Salman and Khan, Fahad Shahbaz\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2306.05424\"\n}"
+  "citation": "@inproceedings{maaz2024videochatgpt,\n    title = \"Video-{C}hat{GPT}: Towards Detailed Video Understanding via Large Vision and Language Models\",\n    author = \"Maaz, Muhammad and Rasheed, Hanoona and Khan, Salman and Khan, Fahad Shahbaz\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2024\",\n    pages = \"12585--12602\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.acl-long.679/\"\n}"
 }

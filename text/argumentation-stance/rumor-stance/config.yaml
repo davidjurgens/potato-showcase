@@ -1,7 +1,7 @@
 # Rumor Stance Detection (PHEME)
-# Based on Zubiaga et al., EMNLP 2018
-# Paper: https://aclanthology.org/D18-1401/
-# Dataset: https://figshare.com/articles/dataset/PHEME_dataset
+# Based on Zubiaga et al., COLING 2016
+# Paper: https://aclanthology.org/C16-1230/
+# Dataset: https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078
 #
 # This task classifies how users respond to rumors on social media.
 # Understanding stance helps assess rumor veracity and spread patterns.

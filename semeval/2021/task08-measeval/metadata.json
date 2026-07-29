@@ -6,7 +6,7 @@
     "name": "Harper et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Georgetown University"
+    "affiliation": "Elsevier"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -38,5 +38,5 @@
   "paperReference": "Harper et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.38/",
   "datasetUrl": "https://github.com/harperco/MeasEval",
-  "citation": "@inproceedings{harper-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 8: {M}eas{E}val -- {E}xtracting {C}ounts and {M}easurements and their {R}elated {C}ontexts\",\n    author = \"Harper, Corey  and Cox, Jessica  and Kohler, Curt  and Scuba, Antoinette  and Rick, JoEllen  and Shriberg, Edith\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.38\"\n}"
+  "citation": "@inproceedings{harper-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 Task 8: {M}eas{E}val {--} Extracting Counts and Measurements and their Related Contexts\",\n    author = \"Harper, Corey  and Cox, Jessica  and Kohler, Curt  and Scerri, Antony  and Daniel Jr., Ron  and Groth, Paul\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.38/\",\n    doi = \"10.18653/v1/2021.semeval-1.38\",\n    pages = \"306--316\"\n}"
 }

@@ -1,30 +1,35 @@
-# Biomedical Named Entity Recognition
-# Based on standard biomedical NER annotation guidelines
-# (JNLPBA, BC5CDR, NCBI Disease, i2b2, etc.)
+# Biomedical Named Entity Recognition (JNLPBA)
+# Based on the JNLPBA 2004 Bio-Entity Recognition shared task
+# (Collier et al., JNLPBA/BioNLP 2004), which annotates the GENIA
+# corpus of molecular-biology MEDLINE abstracts.
 #
-# Entity Types:
-# - Disease/Condition: Diseases, disorders, symptoms, findings
-# - Medication/Drug: Medications, drugs, therapeutic agents
-# - Procedure: Medical procedures, surgeries, treatments
-# - Anatomy: Body parts, organs, tissues, cells
-# - Gene/Protein: Genes, proteins, gene products
-# - Chemical: Chemical compounds (non-drug)
-# - Organism: Species, pathogens, organisms
+# Entity Types (the five JNLPBA / GENIA bio-entity classes):
+# - Protein:   proteins, protein families/complexes/subunits, receptors
+#              (e.g., "NF-kappa B", "IL-2", "STAT1", "TNF-alpha")
+# - DNA:       genes, gene families, DNA regions, promoters, binding sites
+#              (e.g., "IL-2 gene", "kappa B site", "IL-2 promoter")
+# - RNA:       RNA and mRNA (e.g., "IL-6 mRNA", "CD23 mRNA")
+# - Cell_line: established cell lines (e.g., "Jurkat cells", "HeLa cells",
+#              "HL-60 cells", "U937 cell line")
+# - Cell_type: cell types (e.g., "T cells", "monocytes",
+#              "peripheral blood lymphocytes", "B cells")
 #
 # Annotation Guidelines:
-# 1. Annotate the full noun phrase, including modifiers
-#    - "severe acute respiratory syndrome" not just "syndrome"
-# 2. Include abbreviations when they stand alone
-#    - "COVID-19", "HIV", "NSAID"
+# 1. Annotate the full entity phrase, including modifiers
+#    - "peripheral blood lymphocytes" not just "lymphocytes"
+# 2. Include stand-alone abbreviations and symbols
+#    - "IL-2", "NF-kappa B", "TNF-alpha"
 # 3. Do NOT include articles (a, the) in the span
-# 4. For nested entities, annotate the outermost mention
+# 4. For nested entities, annotate the outermost (longest) mention
 # 5. Annotate each mention, even if repeated
-# 6. When uncertain, prefer broader entity boundaries
+# 6. When the class is ambiguous, use surrounding context to decide
+#    (e.g., "IL-2" as the protein vs. "IL-2 gene" as DNA)
 #
 # Difficult Cases:
-# - "Heart attack" → Disease (entire phrase)
-# - "Blood pressure" → can be Anatomy or finding depending on context
-# - "Insulin treatment" → Medication (insulin) + Procedure (treatment)
+# - "IL-2 gene" → DNA (whole phrase); "IL-2" alone → Protein
+# - "IL-2 mRNA" → RNA (whole phrase)
+# - "Jurkat cells" → Cell_line; "T cells" → Cell_type
+# - "kappa B site" / "IL-2 promoter" → DNA (regulatory DNA regions)
 
 annotation_task_name: "Biomedical Named Entity Recognition"
 task_dir: "."
@@ -41,46 +46,25 @@ output_annotation_format: "json"
 annotation_schemes:
   - annotation_type: span
     name: entities
-    description: "Highlight all biomedical entities in the text"
+    description: "Highlight all bio-entities in the text using the five JNLPBA classes"
     labels:
-      # Core clinical entities
-      - "Disease"
-      - "Symptom"
-      - "Medication"
-      - "Procedure"
-      - "Anatomy"
-      # Molecular/biological entities
-      - "Gene"
       - "Protein"
-      - "Chemical"
-      - "Organism"
-      # Clinical values
-      - "Lab_Value"
-      - "Dosage"
+      - "DNA"
+      - "RNA"
+      - "Cell_line"
+      - "Cell_type"
     label_colors:
-      "Disease": "#ef4444"
-      "Symptom": "#f97316"
-      "Medication": "#3b82f6"
-      "Procedure": "#8b5cf6"
-      "Anatomy": "#22c55e"
-      "Gene": "#06b6d4"
       "Protein": "#0891b2"
-      "Chemical": "#eab308"
-      "Organism": "#84cc16"
-      "Lab_Value": "#a855f7"
-      "Dosage": "#ec4899"
+      "DNA": "#3b82f6"
+      "RNA": "#8b5cf6"
+      "Cell_line": "#ef4444"
+      "Cell_type": "#22c55e"
     tooltips:
-      "Disease": "Diseases, disorders, conditions, syndromes (e.g., 'diabetes', 'hypertension', 'COVID-19')"
-      "Symptom": "Signs, symptoms, clinical findings (e.g., 'fever', 'chest pain', 'fatigue')"
-      "Medication": "Drugs, medications, therapeutic agents (e.g., 'aspirin', 'metformin', 'insulin')"
-      "Procedure": "Medical procedures, surgeries, treatments (e.g., 'biopsy', 'MRI', 'chemotherapy')"
-      "Anatomy": "Body parts, organs, tissues, cells (e.g., 'liver', 'left ventricle', 'neurons')"
-      "Gene": "Gene names and symbols (e.g., 'BRCA1', 'TP53', 'insulin gene')"
-      "Protein": "Protein names (e.g., 'hemoglobin', 'albumin', 'cytokines')"
-      "Chemical": "Chemical compounds, non-drug chemicals (e.g., 'glucose', 'sodium chloride')"
-      "Organism": "Species, pathogens, microorganisms (e.g., 'E. coli', 'SARS-CoV-2', 'Staphylococcus')"
-      "Lab_Value": "Laboratory measurements and values (e.g., 'blood glucose 120 mg/dL', 'WBC count')"
-      "Dosage": "Drug dosages and frequencies (e.g., '500mg twice daily', '10mg/kg')"
+      "Protein": "Proteins, protein families/complexes/subunits, receptors, transcription factors (e.g., 'NF-kappa B', 'IL-2', 'STAT1', 'TNF-alpha')"
+      "DNA": "Genes, gene families, DNA regions, promoters and binding sites (e.g., 'IL-2 gene', 'kappa B site', 'IL-2 promoter')"
+      "RNA": "RNA and mRNA (e.g., 'IL-6 mRNA', 'CD23 mRNA')"
+      "Cell_line": "Established cell lines (e.g., 'Jurkat cells', 'HeLa cells', 'HL-60 cells', 'U937 cell line')"
+      "Cell_type": "Cell types (e.g., 'T cells', 'monocytes', 'peripheral blood lymphocytes', 'B cells')"
     allow_overlapping: false
 
 allow_all_users: true

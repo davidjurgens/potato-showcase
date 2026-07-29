@@ -34,6 +34,6 @@
   "featured": false,
   "paperReference": "Gygli et al., ECCV 2014",
   "paperUrl": "https://link.springer.com/chapter/10.1007/978-3-319-10584-0_33",
-  "datasetUrl": "https://gyglim.github.io/me/vsum/index.html",
+  "datasetUrl": "https://data.vision.ee.ethz.ch/cvl/SumMe/",
   "citation": "@inproceedings{gygli2014creating,\n  title={Creating summaries from user videos},\n  author={Gygli, Michael and Grabner, Helmut and Riemenschneider, Hayko and Van Gool, Luc},\n  booktitle={European Conference on Computer Vision},\n  pages={505--520},\n  year={2014}\n}"
 }
