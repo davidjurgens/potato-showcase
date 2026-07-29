@@ -1,12 +1,10 @@
 [
-  {"id": "sentint_001", "text": "This is the most wonderful day of my entire life!"},
-  {"id": "sentint_002", "text": "I am absolutely devastated by the terrible news."},
-  {"id": "sentint_003", "text": "The meeting is scheduled for 3 PM tomorrow."},
-  {"id": "sentint_004", "text": "What a beautiful and heartwarming surprise!"},
-  {"id": "sentint_005", "text": "The service was mediocre, nothing special but not bad either."},
-  {"id": "sentint_006", "text": "I hate everything about this horrible experience."},
-  {"id": "sentint_007", "text": "The results were slightly better than expected."},
-  {"id": "sentint_008", "text": "This is somewhat disappointing but not a disaster."},
-  {"id": "sentint_009", "text": "I am overjoyed and grateful beyond words!"},
-  {"id": "sentint_010", "text": "The weather report indicates rain for the afternoon."}
+  {"id": "bws_001", "prompt": "Phrase 1: happy accident | Phrase 2: total failure | Phrase 3: pretty good | Phrase 4: mildly annoying", "options": ["happy accident", "total failure", "pretty good", "mildly annoying"]},
+  {"id": "bws_002", "prompt": "Phrase 1: absolutely wonderful | Phrase 2: not bad | Phrase 3: deeply disappointing | Phrase 4: painfully boring", "options": ["absolutely wonderful", "not bad", "deeply disappointing", "painfully boring"]},
+  {"id": "bws_003", "prompt": "Phrase 1: shining star | Phrase 2: broken promise | Phrase 3: slightly better | Phrase 4: utterly hopeless", "options": ["shining star", "broken promise", "slightly better", "utterly hopeless"]},
+  {"id": "bws_004", "prompt": "Phrase 1: heartwarming surprise | Phrase 2: mediocre service | Phrase 3: terrible news | Phrase 4: quietly hopeful", "options": ["heartwarming surprise", "mediocre service", "terrible news", "quietly hopeful"]},
+  {"id": "bws_005", "prompt": "Phrase 1: overjoyed and grateful | Phrase 2: somewhat disappointing | Phrase 3: horrible experience | Phrase 4: perfectly fine", "options": ["overjoyed and grateful", "somewhat disappointing", "horrible experience", "perfectly fine"]},
+  {"id": "bws_006", "prompt": "Phrase 1: brilliant idea | Phrase 2: cold and distant | Phrase 3: mild improvement | Phrase 4: crushing defeat", "options": ["brilliant idea", "cold and distant", "mild improvement", "crushing defeat"]},
+  {"id": "bws_007", "prompt": "Phrase 1: pleasant afternoon | Phrase 2: bitter disappointment | Phrase 3: reasonably okay | Phrase 4: devastating loss", "options": ["pleasant afternoon", "bitter disappointment", "reasonably okay", "devastating loss"]},
+  {"id": "bws_008", "prompt": "Phrase 1: delightful treat | Phrase 2: awkward silence | Phrase 3: fairly average | Phrase 4: dreadful mistake", "options": ["delightful treat", "awkward silence", "fairly average", "dreadful mistake"]}
 ]

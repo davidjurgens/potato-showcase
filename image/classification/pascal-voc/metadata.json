@@ -1,6 +1,6 @@
 {
   "title": "PASCAL VOC Object Detection",
-  "description": "Bounding box object detection following the PASCAL Visual Object Classes challenge (Everingham et al., IJCV 2010). Annotate 20 object categories with axis-aligned bounding boxes.",
+  "description": "Multi-label object classification following the PASCAL Visual Object Classes challenge (Everingham et al., IJCV 2010). Tag which of the 20 VOC object categories are present in each image, with VOC-style difficulty, truncation, and occlusion attributes.",
   "version": "1.0.0",
   "author": {
     "name": "Everingham et al.",
@@ -34,5 +34,5 @@
   "paperReference": "Everingham et al., IJCV 2010",
   "paperUrl": "https://link.springer.com/article/10.1007/s11263-009-0275-4",
   "datasetUrl": "http://host.robots.ox.ac.uk/pascal/VOC",
-  "citation": "@article{everingham2010pascal,\n    title = \"The {PASCAL} Visual Object Classes ({VOC}) Challenge\",\n    author = \"Everingham, Mark  and Van Gool, Luc  and Williams, Christopher K. I.  and Winn, John  and Zisserman, Andrew\",\n    journal = \"International Journal of Computer Vision\",\n    volume = \"88\",\n    number = \"2\",\n    pages = \"303--338\",\n    year = \"2010\",\n    publisher = \"Springer\",\n    url = \"https://link.springer.com/article/10.1007/s11263-009-0275-4\"\n}"
+  "citation": "@article{everingham2010pascal,\n    title = \"The {PASCAL} Visual Object Classes ({VOC}) Challenge\",\n    author = \"Everingham, Mark  and Van Gool, Luc  and Williams, Christopher K. I.  and Winn, John  and Zisserman, Andrew\",\n    journal = \"International Journal of Computer Vision\",\n    volume = \"88\",\n    number = \"2\",\n    pages = \"303--338\",\n    year = \"2010\",\n    publisher = \"Springer\",\n    doi = \"10.1007/s11263-009-0275-4\",\n    url = \"https://link.springer.com/article/10.1007/s11263-009-0275-4\"\n}"
 }

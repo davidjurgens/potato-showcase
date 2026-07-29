@@ -3,17 +3,28 @@
 # Paper: https://aclanthology.org/S16-1002/
 # Dataset: http://alt.qcri.org/semeval2016/task5/
 #
-# This task asks annotators to identify aspect terms in review text
-# and classify the sentiment polarity expressed toward each aspect.
+# This task follows the SemEval-2016 Task 5 sentence-level ABSA protocol
+# (Subtask 1), which annotates three slots per opinion:
+#   1. Aspect Category Detection -- an Entity#Attribute (E#A) pair from a
+#      predefined inventory (e.g., FOOD#QUALITY, LAPTOP#PRICE).
+#   2. Opinion Target Expression (OTE) -- the span of text naming the target
+#      (marked NULL when the target is implicit).
+#   3. Sentiment Polarity -- positive, negative, or neutral.
 #
-# Span Labels:
-# - Aspect Term: A word or phrase representing an aspect being evaluated
+# Opinion Target Expression (span):
+# - Highlight the exact word/phrase that names the reviewed target.
 #
-# Sentiment Polarity Labels:
+# Aspect Category (E#A) Labels (examples across domains):
+# - RESTAURANT#GENERAL, FOOD#QUALITY, SERVICE#GENERAL, AMBIENCE#GENERAL,
+#   LAPTOP#GENERAL, LAPTOP#PRICE, DISPLAY#QUALITY, BATTERY#OPERATION_PERFORMANCE,
+#   HOTEL#GENERAL, ROOMS#GENERAL
+#
+# Sentiment Polarity Labels (sentence-level, SemEval-2016 Subtask 1):
 # - Positive: Favorable opinion toward the aspect
 # - Negative: Unfavorable opinion toward the aspect
-# - Neutral: Neither positive nor negative opinion
-# - Conflict: Both positive and negative opinions about the same aspect
+# - Neutral: Mildly positive/negative or no clear polarity
+# (Note: the "conflict" label used in SemEval-2014 was dropped for the
+#  sentence-level 2016 subtask.)
 
 annotation_task_name: "Aspect-Based Sentiment Analysis"
 task_dir: "."
@@ -33,10 +44,25 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
-    name: aspect_terms
-    description: "Highlight aspect terms (features or attributes being evaluated) in the review."
+    name: opinion_target_expression
+    description: "Highlight the Opinion Target Expression (OTE): the exact word or phrase naming the target being evaluated."
     labels:
-      - "Aspect Term"
+      - "Opinion Target"
+
+  - annotation_type: radio
+    name: aspect_category
+    description: "Select the aspect category (Entity#Attribute pair) toward which the opinion is expressed."
+    labels:
+      - "RESTAURANT#GENERAL"
+      - "FOOD#QUALITY"
+      - "SERVICE#GENERAL"
+      - "AMBIENCE#GENERAL"
+      - "LAPTOP#GENERAL"
+      - "LAPTOP#PRICE"
+      - "DISPLAY#QUALITY"
+      - "BATTERY#OPERATION_PERFORMANCE"
+      - "HOTEL#GENERAL"
+      - "ROOMS#GENERAL"
 
   - annotation_type: radio
     name: sentiment_polarity
@@ -45,23 +71,25 @@ annotation_schemes:
       - "Positive"
       - "Negative"
       - "Neutral"
-      - "Conflict"
     keyboard_shortcuts:
       "Positive": "1"
       "Negative": "2"
       "Neutral": "3"
-      "Conflict": "4"
     tooltips:
       "Positive": "The reviewer expresses a favorable opinion about this aspect"
       "Negative": "The reviewer expresses an unfavorable opinion about this aspect"
-      "Neutral": "The reviewer mentions the aspect without clear positive or negative sentiment"
-      "Conflict": "The reviewer expresses both positive and negative opinions about this aspect"
+      "Neutral": "The reviewer mentions the aspect with only mild or no clear positive/negative sentiment"
 
 annotation_instructions: |
-  You will be shown a review text from a specific domain. Your task is to:
-  1. Highlight all aspect terms -- words or phrases referring to features or attributes
-     being evaluated (e.g., "battery life", "service", "taste").
-  2. For the primary aspect, classify the sentiment polarity expressed toward it.
+  You will be shown a review sentence from a specific domain. Following the
+  SemEval-2016 Task 5 sentence-level protocol, for each opinion expressed:
+  1. Highlight the Opinion Target Expression (OTE) -- the exact word or phrase
+     that names the target being evaluated (e.g., "battery life", "waiter").
+     Leave the span empty if the target is implicit (NULL).
+  2. Select the aspect category as an Entity#Attribute (E#A) pair
+     (e.g., FOOD#QUALITY, LAPTOP#PRICE).
+  3. Classify the sentiment polarity expressed toward it as
+     positive, negative, or neutral.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

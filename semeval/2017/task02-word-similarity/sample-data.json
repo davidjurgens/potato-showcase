@@ -8,5 +8,5 @@
   {"id": "wordsim_007", "text": "Katze", "word_2": "cat", "language": "German-English"},
   {"id": "wordsim_008", "text": "libro", "word_2": "book", "language": "Spanish-English"},
   {"id": "wordsim_009", "text": "planet", "word_2": "galaxy", "language": "English"},
-  {"id": "wordsim_010", "text": "maison", "word_2": "house", "language": "French-English"}
+  {"id": "wordsim_010", "text": "casa", "word_2": "house", "language": "Italian-English"}
 ]

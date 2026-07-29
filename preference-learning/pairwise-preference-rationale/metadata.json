@@ -37,5 +37,5 @@
   "paperReference": "Wang et al., 2024",
   "paperUrl": "https://arxiv.org/abs/2410.01257",
   "datasetUrl": "https://huggingface.co/datasets/nvidia/HelpSteer2",
-  "citation": "@article{wang2024helpsteer2preference,\n  title={HelpSteer2-Preference: Complementing Ratings with Human Preferences},\n  author={Wang, Zhilin and others},\n  journal={arXiv preprint arXiv:2410.01257},\n  year={2024}\n}"
+  "citation": "@article{wang2024helpsteer2preference,\n  title={HelpSteer2-Preference: Complementing Ratings with Preferences},\n  author={Wang, Zhilin and Bukharin, Alexander and Delalleau, Olivier and Egert, Daniel and Shen, Gerald and Zeng, Jiaqi and Kuchaiev, Oleksii and Dong, Yi},\n  journal={arXiv preprint arXiv:2410.01257},\n  year={2024}\n}"
 }

@@ -3,15 +3,13 @@
 # Paper: https://aclanthology.org/S16-1004/
 # Dataset: http://saifmohammad.com/WebPages/BestWorst.html
 #
-# This task asks annotators to rate the sentiment intensity of a phrase
-# or sentence on an 11-point scale from most negative to most positive.
-#
-# Sentiment Intensity Scale (Likert 0-10):
-# 0 = Most Negative (extremely negative sentiment)
-# 5 = Neutral (no sentiment)
-# 10 = Most Positive (extremely positive sentiment)
+# This task uses Best-Worst Scaling (BWS, a.k.a. MaxDiff): annotators are shown
+# a tuple of four phrases and select the ONE that is most positive (best) and the
+# ONE that is most negative (worst). Aggregating many such judgments yields a
+# real-valued sentiment intensity score in [0, 1] for each phrase (0 = most
+# negative, 1 = most positive).
 
-annotation_task_name: "Sentiment Intensity Scoring"
+annotation_task_name: "Sentiment Intensity (Best-Worst Scaling)"
 task_dir: "."
 
 data_files:
@@ -19,7 +17,7 @@ data_files:
 
 item_properties:
   id_key: "id"
-  text_key: "text"
+  text_key: "prompt"
 
 output_annotation_dir: "annotation_output/"
 output_annotation_format: "json"
@@ -28,26 +26,41 @@ port: 8000
 server_name: localhost
 
 annotation_schemes:
-  - annotation_type: likert
-    name: sentiment_intensity
-    description: "Rate the sentiment intensity of this text from most negative to most positive."
-    min_label: "Most Negative"
-    max_label: "Most Positive"
-    size: 11
+  - annotation_type: radio
+    name: bws_best
+    description: "Which phrase is the MOST POSITIVE?"
+    horizontal: true
+    labels:
+      - "Phrase 1"
+      - "Phrase 2"
+      - "Phrase 3"
+      - "Phrase 4"
+    sequential_key_binding: true
+  - annotation_type: radio
+    name: bws_worst
+    description: "Which phrase is the MOST NEGATIVE?"
+    horizontal: true
+    labels:
+      - "Phrase 1"
+      - "Phrase 2"
+      - "Phrase 3"
+      - "Phrase 4"
+    sequential_key_binding: true
 
 annotation_instructions: |
-  You will be shown a phrase or sentence. Your task is to rate the sentiment intensity
-  on an 11-point scale. Use the full range of the scale:
-  - 0: Extremely negative
-  - 5: Neutral (no positive or negative sentiment)
-  - 10: Extremely positive
-  Focus on the emotional valence and intensity of the text.
+  You will be shown a set of four phrases at a time. For this set, make two
+  judgments:
+  - Best: pick the ONE phrase that is the MOST POSITIVE in sentiment.
+  - Worst: pick the ONE phrase that is the MOST NEGATIVE in sentiment.
+  The "best" and "worst" phrases must be different. These comparative choices are
+  later aggregated (Best-Worst Scaling) into a real-valued sentiment intensity
+  score in [0, 1] for each phrase.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
     <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
-      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0; text-align: center;">{{text}}</p>
+      <strong style="color: #0369a1;">Compare these four phrases:</strong>
+      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0;">{{prompt}}</p>
     </div>
   </div>
 

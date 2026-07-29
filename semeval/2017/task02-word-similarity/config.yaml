@@ -7,19 +7,20 @@
 # on a graded scale. This task supports multilingual and cross-lingual
 # word pair evaluation for distributional semantic models.
 #
-# Similarity Scale (Likert):
-# 1 = Completely Different (no semantic overlap)
-# 2 = Slightly Similar (vague topical connection)
-# 3 = Moderately Similar (share some meaning)
-# 4 = Very Similar (closely related meaning)
-# 5 = Identical Meaning (perfect synonyms in context)
+# Similarity Scale (five-point Likert, 0-4; Table 2 of the task paper):
+# 4 = Very similar (the two words are synonyms, e.g., midday-noon)
+# 3 = Similar (share many important ideas but differ in detail, e.g., lion-zebra)
+# 2 = Slightly similar (share a common topic/domain/function, e.g., airplane-pilot)
+# 1 = Dissimilar (clearly dissimilar concepts, minor shared domain, e.g., software-keyboard)
+# 0 = Totally dissimilar and unrelated (e.g., pencil-frog)
+# Annotators may use a step size of 0.25 to indicate a blend of two levels.
 #
 # Annotation Guidelines:
 # 1. Read both words carefully
 # 2. Consider the most common sense of each word
-# 3. Rate how semantically similar the two words are
-# 4. Use the full range of the scale
-# 5. Note the language of the word pair
+# 3. Rate how semantically similar the two words are (0-4)
+# 4. Distinguish similarity from mere relatedness
+# 5. Note the language(s) of the word pair (English, Farsi, German, Italian, Spanish)
 
 annotation_task_name: "Multilingual Semantic Word Similarity"
 task_dir: "."
@@ -40,27 +41,34 @@ server_name: localhost
 annotation_schemes:
   - annotation_type: likert
     name: similarity_rating
-    description: "How semantically similar are these two words?"
-    min_label: "Completely Different"
-    max_label: "Identical Meaning"
+    description: "How semantically similar are these two words? (0 = totally unrelated, 4 = synonyms)"
+    min_label: "Totally dissimilar / unrelated"
+    max_label: "Very similar (synonyms)"
     size: 5
 
   - annotation_type: slider
     name: similarity_slider
-    description: "Rate the semantic similarity using the slider (0 = unrelated, 4 = identical)"
+    description: "Fine-grained rating: slide between 0 (totally unrelated) and 4 (synonyms); steps of 0.25 allowed"
     min_value: 0
     max_value: 4
     starting_value: 2
 
 annotation_instructions: |
-  You will be shown two words, possibly from different languages. Your task is to judge
-  how semantically similar these two words are.
+  You will be shown two words, possibly from different languages (the task covers
+  English, Farsi, German, Italian, and Spanish, including cross-lingual pairs). Your
+  task is to judge how semantically similar these two words are on a 0-4 scale:
 
-  Use the Likert scale for a quick categorical judgment (1-5) and the slider for a
-  fine-grained continuous rating (0-4).
+    4 = Very similar (the two words are synonyms, e.g., midday-noon)
+    3 = Similar (share many important ideas but differ in detail, e.g., lion-zebra)
+    2 = Slightly similar (share a common topic/domain/function, e.g., airplane-pilot)
+    1 = Dissimilar (clearly dissimilar concepts, minor shared domain, e.g., software-keyboard)
+    0 = Totally dissimilar and unrelated (e.g., pencil-frog)
 
-  Consider the most common meaning of each word. Two words are semantically similar
-  if they refer to the same or closely related concepts.
+  Use the Likert scale for the categorical judgment and the slider for a fine-grained
+  rating (steps of 0.25 are allowed to indicate a blend of two levels).
+
+  Consider the most common meaning of each word, and be careful to distinguish
+  semantic similarity from mere topical relatedness.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

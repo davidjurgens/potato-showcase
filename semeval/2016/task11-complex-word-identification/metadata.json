@@ -37,6 +37,6 @@
   "featured": false,
   "paperReference": "Paetzold and Specia, SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1085/",
-  "datasetUrl": "https://www.cs.york.ac.uk/semeval-2016/task11/",
-  "citation": "@inproceedings{paetzold-specia-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 11: Complex Word Identification\",\n    author = \"Paetzold, Gustavo and Specia, Lucia\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1085\"\n}"
+  "datasetUrl": "https://alt.qcri.org/semeval2016/task11/",
+  "citation": "@inproceedings{paetzold-specia-2016-semeval,\n    title = \"{S}em{E}val 2016 Task 11: Complex Word Identification\",\n    author = \"Paetzold, Gustavo and Specia, Lucia\",\n    editor = \"Bethard, Steven and Carpuat, Marine and Cer, Daniel and Jurgens, David and Nakov, Preslav and Zesch, Torsten\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation ({S}em{E}val-2016)\",\n    month = jun,\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1085/\",\n    doi = \"10.18653/v1/S16-1085\",\n    pages = \"560--569\"\n}"
 }

@@ -38,6 +38,6 @@
   "featured": false,
   "paperReference": "Agirre et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1082/",
-  "datasetUrl": "http://ixa2.si.ehu.eus/stswiki/",
-  "citation": "@inproceedings{agirre-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 2: Interpretable Semantic Textual Similarity\",\n    author = \"Agirre, Eneko and Banea, Carmen and Cer, Daniel and Diab, Mona and Gonzalez-Agirre, Aitor and Mihalcea, Rada and Rigau, German and Wiebe, Janyce\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1082\"\n}"
+  "datasetUrl": "https://alt.qcri.org/semeval2016/task2/",
+  "citation": "@inproceedings{agirre-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 2: Interpretable Semantic Textual Similarity\",\n    author = \"Agirre, Eneko and Gonzalez-Agirre, Aitor and Lopez-Gazpio, I{\\~n}igo and Maritxalar, Montse and Rigau, German and Uria, Larraitz\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation ({S}em{E}val-2016)\",\n    month = jun,\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1082/\",\n    doi = \"10.18653/v1/S16-1082\",\n    pages = \"512--524\"\n}"
 }

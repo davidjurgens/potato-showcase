@@ -3,16 +3,21 @@
 # Paper: https://aclanthology.org/S16-1082/
 # Dataset: http://ixa2.si.ehu.eus/stswiki/
 #
-# This task asks annotators to assess semantic similarity between
-# sentence pairs at a fine-grained level. Annotators highlight aligned
-# chunks and rate the overall similarity on a 6-point scale.
+# Interpretable STS (iSTS) explains the commonalities and differences
+# between two sentences. Annotators align chunks across the two sentences
+# and label each alignment with a relation type and a similarity score.
 #
-# Span Labels:
-# - Aligned Chunk: A text chunk that corresponds to content in the other sentence
+# Alignment relation types:
+# - EQUI:  chunks are semantically equivalent
+# - OPPO:  chunks are opposite in meaning
+# - SPE1:  chunk in Sentence 1 is more specific than its counterpart in Sentence 2
+# - SPE2:  chunk in Sentence 2 is more specific than its counterpart in Sentence 1
+# - SIMI:  chunks are similar in meaning (not EQUI/OPPO/SPE)
+# - REL:   chunks are related in meaning (not EQUI/OPPO/SPE/SIMI)
+# - NOALI: chunk is not aligned to any chunk in the other sentence
 #
-# Similarity Scale (Likert 1-6):
-# 1 = Completely Different (no semantic overlap)
-# 6 = Identical Meaning (same meaning, possibly different wording)
+# Similarity score (0-5):
+# 5 = maximally similar; 0 = no similarity. NOALI alignments have no score.
 
 annotation_task_name: "Interpretable Semantic Textual Similarity"
 task_dir: "."
@@ -32,23 +37,41 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
-    name: aligned_chunks
-    description: "Highlight chunks in Sentence 1 that align with content in Sentence 2."
+    name: alignment_relation
+    description: "Highlight a chunk, then label the relation of its alignment to the other sentence."
     labels:
-      - "Aligned Chunk"
+      - name: "EQUI"
+        tooltip: "Chunks are semantically equivalent."
+      - name: "OPPO"
+        tooltip: "Chunks are opposite in meaning."
+      - name: "SPE1"
+        tooltip: "Chunk in Sentence 1 is more specific than its counterpart in Sentence 2."
+      - name: "SPE2"
+        tooltip: "Chunk in Sentence 2 is more specific than its counterpart in Sentence 1."
+      - name: "SIMI"
+        tooltip: "Chunks are similar in meaning (not EQUI/OPPO/SPE)."
+      - name: "REL"
+        tooltip: "Chunks are related in meaning (not EQUI/OPPO/SPE/SIMI)."
+      - name: "NOALI"
+        tooltip: "Chunk is not aligned to any chunk in the other sentence."
 
-  - annotation_type: likert
+  - annotation_type: radio
     name: similarity_score
-    description: "How semantically similar are the two sentences?"
-    min_label: "Completely Different"
-    max_label: "Identical Meaning"
-    size: 6
+    description: "Similarity score for the alignment (0 = no similarity, 5 = maximally similar; NOALI has no score)."
+    labels:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
 
 annotation_instructions: |
-  You will be shown two sentences. Your task is to:
-  1. Highlight chunks in Sentence 1 that correspond to content in Sentence 2.
-  2. Rate the overall semantic similarity between the two sentences on a 1-6 scale.
-  Consider both the meaning and the information conveyed by each sentence.
+  You will be shown two sentences that have been divided into chunks. Your task is to:
+  1. Align each chunk in one sentence with the corresponding chunk(s) in the other sentence.
+  2. Label each alignment with a relation type: EQUI, OPPO, SPE1, SPE2, SIMI, REL, or NOALI.
+  3. Give each aligned pair a similarity score from 0 (no similarity) to 5 (maximally similar).
+  Chunks with no counterpart should be labeled NOALI.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

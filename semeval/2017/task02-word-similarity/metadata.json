@@ -37,5 +37,5 @@
   "paperReference": "Camacho-Collados et al., SemEval 2017",
   "paperUrl": "https://aclanthology.org/S17-2002/",
   "datasetUrl": "http://alt.qcri.org/semeval2017/task2/",
-  "citation": "@inproceedings{camacho-collados-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 2: Multilingual and Cross-lingual Semantic Word Similarity\",\n    author = \"Camacho-Collados, Jose  and Pilehvar, Mohammad Taher  and Collier, Nigel  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)\",\n    year = \"2017\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2002\"\n}"
+  "citation": "@inproceedings{camacho-collados-etal-2017-semeval,\n    title = \"{S}em{E}val-2017 Task 2: Multilingual and Cross-lingual Semantic Word Similarity\",\n    author = \"Camacho-Collados, Jose  and Pilehvar, Mohammad Taher  and Collier, Nigel  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 11th International Workshop on Semantic Evaluation ({S}em{E}val-2017)\",\n    month = aug,\n    year = \"2017\",\n    address = \"Vancouver, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S17-2002\",\n    doi = \"10.18653/v1/S17-2002\",\n    pages = \"15--26\"\n}"
 }

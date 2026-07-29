@@ -1,17 +1,17 @@
 [
   {
     "id": "kitti_001",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Spyker_C8_Spyder.jpg/1200px-Spyker_C8_Spyder.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Great_Portland_Street_London_Traffic.jpg/1280px-Great_Portland_Street_London_Traffic.jpg",
     "context": "Road scene from driving perspective. Annotate all vehicles, pedestrians, and cyclists with bounding boxes."
   },
   {
     "id": "kitti_002",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1200px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rome_Traffic.jpg/1280px-Rome_Traffic.jpg",
     "context": "Urban driving scene. Mark occlusion and truncation levels for each object."
   },
   {
     "id": "kitti_003",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Frankfurt_Skyline.jpg/1200px-Frankfurt_Skyline.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bucharest_Traffic_2x.JPG/1280px-Bucharest_Traffic_2x.JPG",
     "context": "Street view. Detect cars, vans, trucks, pedestrians, and cyclists."
   }
 ]

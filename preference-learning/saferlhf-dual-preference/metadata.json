@@ -35,8 +35,8 @@
     "dual-objective"
   ],
   "featured": false,
-  "paperReference": "Ji et al., 2024 / Dai et al., ICLR 2024",
-  "paperUrl": "https://arxiv.org/abs/2406.15513",
+  "paperReference": "Dai et al., ICLR 2024 (Safe RLHF); dataset: PKU-SafeRLHF (Ji et al.)",
+  "paperUrl": "https://arxiv.org/abs/2310.12773",
   "datasetUrl": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF",
-  "citation": "@article{ji2024pkusaferlhf,\n  title={PKU-SafeRLHF: Towards Multi-Level Safety Alignment for LLMs with Human Preference},\n  author={Ji, Jiaming and others},\n  journal={arXiv preprint arXiv:2406.15513},\n  year={2024}\n}"
+  "citation": "@inproceedings{dai2024safe,\n  title={Safe RLHF: Safe Reinforcement Learning from Human Feedback},\n  author={Dai, Josef and Pan, Xuehai and Sun, Ruiyang and Ji, Jiaming and Xu, Xinbo and Liu, Mickel and Wang, Yizhou and Yang, Yaodong},\n  booktitle={The Twelfth International Conference on Learning Representations (ICLR)},\n  year={2024}\n}"
 }

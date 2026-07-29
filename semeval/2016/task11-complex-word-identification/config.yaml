@@ -1,7 +1,7 @@
 # Complex Word Identification
 # Based on Paetzold and Specia, SemEval 2016
 # Paper: https://aclanthology.org/S16-1085/
-# Dataset: https://www.cs.york.ac.uk/semeval-2016/task11/
+# Dataset: https://alt.qcri.org/semeval2016/task11/
 #
 # This task asks annotators to determine whether a target word in context
 # is complex (difficult to understand for non-native speakers or people

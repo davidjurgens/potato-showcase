@@ -1,6 +1,6 @@
 {
   "title": "Determining Sentiment Intensity of English and Arabic Phrases",
-  "description": "Fine-grained sentiment intensity scoring of text phrases on an 11-point scale from most negative to most positive. Based on SemEval-2016 Task 7.",
+  "description": "Determine the sentiment intensity of English and Arabic phrases using Best-Worst Scaling: annotators see four phrases at a time and select the most positive and most negative, which are aggregated into real-valued intensity scores in [0,1]. Based on SemEval-2016 Task 7.",
   "version": "1.0.0",
   "author": {
     "name": "Kiritchenko et al.",
@@ -11,7 +11,7 @@
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
   "annotationTypes": [
-    "likert"
+    "radio"
   ],
   "domain": [
     "SemEval",
@@ -37,5 +37,5 @@
   "paperReference": "Kiritchenko et al., SemEval 2016",
   "paperUrl": "https://aclanthology.org/S16-1004/",
   "datasetUrl": "http://saifmohammad.com/WebPages/BestWorst.html",
-  "citation": "@inproceedings{kiritchenko-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 7: Determining Sentiment Intensity of {E}nglish and {A}rabic Phrases\",\n    author = \"Kiritchenko, Svetlana and Mohammad, Saif and Salameh, Mohammad\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation\",\n    year = \"2016\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1004\"\n}"
+  "citation": "@inproceedings{kiritchenko-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 7: Determining Sentiment Intensity of {E}nglish and {A}rabic Phrases\",\n    author = \"Kiritchenko, Svetlana and Mohammad, Saif M. and Salameh, Mohammad\",\n    booktitle = \"Proceedings of the 10th International Workshop on Semantic Evaluation ({S}em{E}val-2016)\",\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1004\",\n    doi = \"10.18653/v1/S16-1004\",\n    pages = \"42--51\"\n}"
 }
