@@ -1,0 +1,86 @@
+# POLAR: Detecting Multilingual, Multicultural and Multievent Online Polarization
+# Based on Naseem et al., SemEval-2026 Task 9
+# Paper: https://aclanthology.org/2026.semeval-1.453/
+# Task page: https://polar-semeval.github.io/
+#
+# Given a social-media post (one of 22 languages), judge whether it is
+# polarized. The shared task has three subtasks:
+#   - Subtask 1: binary polarization detection (polarized / not)
+#   - Subtask 2: polarization type (the social dimension involved)
+#   - Subtask 3: manifestation categories (how polarization is expressed)
+# The organizers characterize polarization as encompassing stereotyping,
+# vilification, dehumanization, and intolerance toward social groups; those
+# form the manifestation labels below. This showcase collects the binary
+# label, the manifestation(s), and the polarization type as free text
+# (the official type inventory is defined by the task).
+
+annotation_task_name: "POLAR - Online Polarization"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: polarized
+    description: "Is this post polarized?"
+    labels:
+      - "Polarized"
+      - "Not polarized"
+    keyboard_shortcuts:
+      "Polarized": "1"
+      "Not polarized": "2"
+
+  - annotation_type: multiselect
+    name: manifestation
+    description: "If polarized, how is it manifested? (Select all that apply)"
+    labels:
+      - "Stereotyping"
+      - "Vilification"
+      - "Dehumanization"
+      - "Intolerance"
+    tooltips:
+      "Stereotyping": "Attributing fixed, oversimplified traits to a group"
+      "Vilification": "Portraying a group as evil, blameworthy, or threatening"
+      "Dehumanization": "Denying a group's humanity (e.g. comparing to animals/objects)"
+      "Intolerance": "Rejecting a group's right to exist, speak, or participate"
+
+  - annotation_type: text
+    name: polarization_type
+    description: "If polarized, what is the target dimension/type (e.g. political, religious, ethnic, gender)? - optional"
+    textarea: false
+    required: false
+
+annotation_instructions: |
+  Read the social-media post (an English gloss is provided for reference).
+  First decide whether it is polarized. If it is, select how the
+  polarization is manifested (stereotyping, vilification, dehumanization,
+  intolerance) and note the target dimension (e.g. political, religious,
+  ethnic, gender).
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;">
+      <strong style="color: #9f1239;">Language:</strong> <span>{{language}}</span>
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #991b1b;">Post:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px; font-style: italic;">English gloss (reference): {{gloss}}</div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true

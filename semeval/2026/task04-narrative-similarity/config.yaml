@@ -1,0 +1,77 @@
+# Narrative Story Similarity
+# Based on Hatzel et al., SemEval-2026 Task 4
+# Paper: https://aclanthology.org/2026.semeval-1.429/
+# Task page: https://narrative-similarity-task.github.io/
+#
+# Track A (Comparative Narrative Similarity) is a pairwise choice: given an
+# anchor story and two candidate stories, decide which candidate is
+# structurally more similar to the anchor. Similarity is judged across
+# three orthogonal dimensions:
+#   - Abstract theme: the underlying idea/message
+#   - Course of action: the sequence of events/what the characters do
+#   - Outcomes: how things turn out
+# (Track B of the shared task learns embeddings reflecting these judgments.)
+# This showcase models Track A plus a note of which dimensions drove the
+# decision.
+
+annotation_task_name: "Narrative Story Similarity"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "anchor"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: more_similar
+    description: "Which candidate story is more similar to the anchor story?"
+    labels:
+      - "Story A"
+      - "Story B"
+    keyboard_shortcuts:
+      "Story A": "1"
+      "Story B": "2"
+
+  - annotation_type: multiselect
+    name: similarity_dimensions
+    description: "Which dimension(s) made your chosen story more similar? (Select all that apply)"
+    labels:
+      - "Abstract theme"
+      - "Course of action"
+      - "Outcomes"
+
+annotation_instructions: |
+  Read the anchor story and the two candidate stories (A and B). Decide
+  which candidate is structurally more similar to the anchor, considering
+  the abstract theme, the course of action, and the outcomes. Then indicate
+  which of those dimensions drove your decision.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+      <strong style="color: #92400e;">Anchor story:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{anchor}}</p>
+    </div>
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+      <strong style="color: #1e40af;">Story A:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{story_a}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px;">
+      <strong style="color: #166534;">Story B:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{story_b}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 3
+allow_skip: true

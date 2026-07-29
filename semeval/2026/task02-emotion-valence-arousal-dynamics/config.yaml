@@ -1,0 +1,72 @@
+# Emotional Valence and Arousal over Time from Ecological Essays
+# Based on Soni et al., SemEval-2026 Task 2
+# Paper: https://aclanthology.org/2026.semeval-1.451/
+# Task page: https://semeval2026task2.github.io/SemEval-2026-Task2/
+#
+# Ecological essays are first-person diary entries written over time, each
+# paired with the author's OWN valence/arousal self-report (subjectively
+# experienced affect, not third-party sentiment). The shared task has:
+#   - Subtask 1: assess affect (valence & arousal) for each essay
+#   - Subtask 2A/2B: forecast future affect across successive entries
+# This showcase models Subtask 1: read the essay, rate its valence and
+# arousal.
+#
+# Valence: how pleasant/positive the writer feels (1 = very unpleasant,
+#          5 = neutral, 9 = very pleasant).
+# Arousal: how activated/energized the writer feels (1 = very calm/low
+#          energy, 9 = very activated/high energy).
+
+annotation_task_name: "Ecological Essay Valence & Arousal"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: slider
+    name: valence
+    description: "Valence: how pleasant/positive does the writer feel? (1 = very unpleasant, 9 = very pleasant)"
+    min_value: 1
+    max_value: 9
+
+  - annotation_type: slider
+    name: arousal
+    description: "Arousal: how activated/energized does the writer feel? (1 = very calm, 9 = very activated)"
+    min_value: 1
+    max_value: 9
+
+  - annotation_type: text
+    name: notes
+    description: "Optional notes on cues that informed your rating"
+    textarea: true
+    required: false
+
+annotation_instructions: |
+  Read the diary-style essay written in the first person. Rate the emotion
+  the writer is expressing on two continuous dimensions: valence (how
+  pleasant vs. unpleasant they feel) and arousal (how activated vs. calm
+  they feel). Judge the writer's own experienced affect, not your reaction
+  to the topic.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fdf4ff; border: 1px solid #f5d0fe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #86198f;">Diary entry:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true

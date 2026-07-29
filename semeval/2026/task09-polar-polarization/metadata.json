@@ -1,0 +1,42 @@
+{
+  "title": "POLAR: Detecting Multilingual, Multicultural and Multievent Online Polarization",
+  "description": "SemEval-2026 Task 9 (POLAR): detecting online polarization across 22 languages, many cultures, and multiple real-world events. Annotators judge whether a social-media post is polarized and, if so, identify the type of polarization and how it is rhetorically manifested (e.g. stereotyping, vilification, dehumanization, intolerance). Polarization encompasses stereotyping, vilification, dehumanization, and intolerance directed at social groups.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "SemEval"
+  ],
+  "useCase": [
+    "Polarization Detection",
+    "Content Moderation",
+    "Multilingual NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "polarization",
+    "multilingual",
+    "social-media"
+  ],
+  "featured": false,
+  "paperReference": "Naseem et al., SemEval 2026 (Task 9)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.453/",
+  "datasetUrl": "https://polar-semeval.github.io/",
+  "citation": "@inproceedings{naseem-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 9: Detecting Multilingual, Multicultural and Multievent Online Polarization\",\n    author = \"Naseem, Usman  and Geislinger, Robert  and Ren, Ada  and Kohail, Sarah  and Garrido Veliz, Rudy  and Muhammad, Shamsuddeen Hassan  and Yimam, Seid Muhie  and others\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.453\",\n    pages = \"3779--3796\"\n}"
+}

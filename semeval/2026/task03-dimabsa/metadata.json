@@ -1,0 +1,42 @@
+{
+  "title": "DimABSA: Dimensional Aspect-Based Sentiment Analysis",
+  "description": "SemEval-2026 Task 3 (DimABSA): aspect-based sentiment analysis where sentiment toward each aspect is modeled along the continuous valence-arousal (VA) dimensions instead of categorical polarity. Annotators mark aspect terms and their opinion terms and rate the sentiment on valence and arousal scales. The task spans six languages and four domains, and includes a Dimensional Stance (DimStance) track that treats stance targets as aspects.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "span",
+    "slider",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Sentiment Analysis",
+    "SemEval"
+  ],
+  "useCase": [
+    "Aspect-Based Sentiment Analysis",
+    "Dimensional Sentiment",
+    "Stance Detection"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "aspect-based-sentiment",
+    "valence-arousal",
+    "dimensional-sentiment"
+  ],
+  "featured": false,
+  "paperReference": "Yu et al., SemEval 2026 (Task 3)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.452/",
+  "datasetUrl": "https://github.com/DimABSA/DimABSA2026",
+  "citation": "@inproceedings{yu-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 3: Dimensional Aspect-Based Sentiment Analysis ({D}im{ABSA})\",\n    author = \"Yu, Liang-Chih  and Becker, Jonas  and Muhammad, Shamsuddeen Hassan  and Abdulmumin, Idris  and Lee, Lung-Hao  and Lin, Ying-Lung  and Wang, Jin  and Wahle, Jan Philip  and Ruas, Terry Lima  and Loukachevitch, Natalia  and Panchenko, Alexander  and Alimova, Ilseyar  and Wanzare, Lilian Diana Awuor  and Odhiambo, Nelson  and Gipp, Bela  and Chang, Kai-Wei  and Mohammad, Saif\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.452\",\n    pages = \"3753--3778\"\n}"
+}

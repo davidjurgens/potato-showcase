@@ -1,0 +1,75 @@
+# PsyCoMark: Psycholinguistic Conspiracy Marker Extraction and Detection
+# Based on Samory, Soldner, and Batzdorfer, SemEval-2026 Task 10
+# Paper: https://aclanthology.org/2026.semeval-1.444/
+# Task page: https://hide-ous.github.io/semeval2026-psycomark
+#
+# The task pairs binary conspiracy detection with the extraction of five
+# psycholinguistic markers that characterize conspiracy narratives. Data
+# are English Reddit submission statements.
+#
+# Document-level conspiracy label: Yes / No / Can't tell.
+# Five psycholinguistic markers (extracted as spans):
+# - Actor: who is claimed to be secretly acting (the alleged conspirators)
+# - Action: the secret/malicious action they are said to carry out
+# - Effect: the claimed outcome or consequence of the action
+# - Victim: who is claimed to be harmed
+# - Evidence: text the author offers as proof of the claim
+
+annotation_task_name: "PsyCoMark - Conspiracy Markers"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: conspiracy
+    description: "Does this statement express a conspiracy theory?"
+    labels:
+      - "Yes"
+      - "No"
+      - "Can't tell"
+    keyboard_shortcuts:
+      "Yes": "1"
+      "No": "2"
+      "Can't tell": "3"
+
+  - annotation_type: span
+    name: markers
+    description: "Highlight the psycholinguistic conspiracy markers"
+    labels:
+      - "Actor"
+      - "Action"
+      - "Effect"
+      - "Victim"
+      - "Evidence"
+
+annotation_instructions: |
+  Read the statement. First decide whether it expresses a conspiracy theory
+  (Yes / No / Can't tell). Then, if relevant, highlight the psycholinguistic
+  markers: the Actor (alleged conspirators), the Action they secretly take,
+  the Effect of that action, the Victim harmed, and any Evidence offered as
+  proof.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #991b1b;">Statement:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 3
+allow_skip: true

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wsp_001",
+    "story": "Mara had been saving for months. She finally walked down to the bank and waited in line. When it was her turn, she slid the envelope across the counter. The teller smiled and counted the bills.",
+    "target_word": "bank",
+    "candidate_sense": "a financial institution"
+  },
+  {
+    "id": "wsp_002",
+    "story": "The afternoon was hot and still. They followed the trail until it opened onto the river. Tom sat down on the bank and dipped his feet in the cool water. Dragonflies skimmed the surface.",
+    "target_word": "bank",
+    "candidate_sense": "a financial institution"
+  },
+  {
+    "id": "wsp_003",
+    "story": "The band tuned up backstage. When the curtain rose, the crowd roared. She stepped to the microphone and the first bat of the drum kicked in. Everyone began to dance.",
+    "target_word": "bat",
+    "candidate_sense": "a nocturnal flying mammal"
+  },
+  {
+    "id": "wsp_004",
+    "story": "At dusk the old barn grew noisy. Something rustled in the rafters overhead. A single bat swooped low across the yard and vanished into the trees. The children shrieked with delight.",
+    "target_word": "bat",
+    "candidate_sense": "a nocturnal flying mammal"
+  },
+  {
+    "id": "wsp_005",
+    "story": "The carpenter measured twice and cut once. He needed the board to be exactly right. He set the spring in place and tested the tension. The little trap snapped shut cleanly.",
+    "target_word": "spring",
+    "candidate_sense": "the season after winter"
+  },
+  {
+    "id": "wsp_006",
+    "story": "After the long grey months, the meadow burst into color. Lambs wobbled in the fields. Every morning the spring air smelled of blossom and rain. The whole valley felt new again.",
+    "target_word": "spring",
+    "candidate_sense": "the season after winter"
+  },
+  {
+    "id": "wsp_007",
+    "story": "The editor frowned at the draft. There was too much jargon and not enough clarity. She reached for her pen and drew a firm line through the tangled paragraph. Much better, she thought.",
+    "target_word": "pen",
+    "candidate_sense": "an enclosure for animals"
+  },
+  {
+    "id": "wsp_008",
+    "story": "The farmer rose before dawn. The sheep were restless and needed moving. He opened the gate of the pen and whistled for the dog. One by one the animals filed out into the field.",
+    "target_word": "pen",
+    "candidate_sense": "an enclosure for animals"
+  },
+  {
+    "id": "wsp_009",
+    "story": "The orchestra fell silent as she raised her arms. Every eye was on the conductor. She gave a sharp downbeat and the whole hall filled with sound. The symphony had begun.",
+    "target_word": "note",
+    "candidate_sense": "a short written message"
+  },
+  {
+    "id": "wsp_010",
+    "story": "He got home and found the apartment empty. On the kitchen table lay a folded slip of paper. The note said she would be back by nine and to feed the cat. He smiled and put the kettle on.",
+    "target_word": "note",
+    "candidate_sense": "a short written message"
+  }
+]

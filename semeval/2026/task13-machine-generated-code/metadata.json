@@ -1,0 +1,41 @@
+{
+  "title": "Detecting Machine-Generated Code",
+  "description": "SemEval-2026 Task 13: detecting machine-generated code across multiple programming languages, generators, and application scenarios. Annotators judge whether a code snippet is human-written or machine-generated (Subtask A), attribute the generator family (Subtask B), and give a fine-grained origin label (Subtask C: fully human, fully AI, human-AI hybrid, or AI tuned to look human-like). Training code is in C++/Python/Java, with unseen languages and domains at test time.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Code",
+    "SemEval"
+  ],
+  "useCase": [
+    "Machine-Generated Text Detection",
+    "Code Provenance",
+    "AI Content Attribution"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "machine-generated-code",
+    "ai-detection",
+    "code"
+  ],
+  "featured": false,
+  "paperReference": "Orel et al., SemEval 2026 (Task 13)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.445/",
+  "datasetUrl": "https://github.com/mbzuai-nlp/SemEval-2026-Task13",
+  "citation": "@inproceedings{orel-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 13: Detecting Machine-Generated Code with Multiple Programming Languages, Generators, and Application Scenarios\",\n    author = \"Orel, Daniil  and Azizov, Dilshod  and Paul, Indraneil  and Wang, Yuxia  and Gurevych, Iryna  and Nakov, Preslav\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.445\",\n    pages = \"3640--3658\"\n}"
+}

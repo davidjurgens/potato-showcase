@@ -1,0 +1,42 @@
+{
+  "title": "Everyday Knowledge Across Diverse Languages and Cultures (BLEnD)",
+  "description": "SemEval-2026 Task 7: evaluating everyday cultural knowledge across diverse languages and cultures, built on the BLEnD benchmark. Annotators answer culturally grounded everyday-knowledge questions (e.g. common foods, customs, celebrations) for a given country/region. Two subtasks: Short Answer Questions (SAQ) and Multiple-Choice Questions (MCQ), covering many languages including low-resource ones.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Cultural Knowledge",
+    "SemEval"
+  ],
+  "useCase": [
+    "Question Answering",
+    "Cultural Competence Evaluation",
+    "Multilingual NLP"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "cultural-knowledge",
+    "multilingual",
+    "question-answering",
+    "blend"
+  ],
+  "featured": false,
+  "paperReference": "Ousidhoum et al., SemEval 2026 (Task 7); built on BLEnD (Myung et al., NeurIPS 2024)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.455/",
+  "datasetUrl": "https://github.com/BLEnD-SemEval2026/SemEval-2026-Task-7",
+  "citation": "@inproceedings{ousidhoum-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 7: Everyday Knowledge Across Diverse Languages and Cultures\",\n    author = \"Ousidhoum, Nedjma  and Myung, Junho  and Perez-Almendros, Carla  and Jin, Jiho  and Keleg, Amr  and Beloucif, Meriem  and Zhou, Yi  and Agerri, Rodrigo  and Araujo, Vladimir  and Baes, Naomi  and Barry, James  and Boisson, Joanne  and Chen, Nancy F.  and de Kock, Christine  and Edwards, Aleksandra  and Fernandez de Landa, Joseba  and Imam, Mohamed Fazli  and Hakami, Huda  and Hsieh, Shu-Kai  and Imperial, Joseph Marvin  and Lee, Roy Ka-Wei  and Liu, Zhengyuan  and Lyu, Chenyang  and Samih, Younes  and Sjons, Johan  and Tan, Bryan  and Ushio, Asahi  and Zheng, Weihua  and Oh, Alice  and Camacho-Collados, Jose\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.455\",\n    pages = \"3823--3837\"\n}\n\n@inproceedings{myung2024blend,\n    title = \"{BL}{E}n{D}: A Benchmark for {LLM}s on Everyday Knowledge in Diverse Cultures and Languages\",\n    author = \"Myung, Junho and Lee, Nayeon and Zhou, Yi and Jin, Jiho and Putri, Rifki Afina and Antypas, Dimosthenis and Borkakoty, Hsuvas and Kim, Eunsu and Perez-Almendros, Carla and Ayele, Abinew Ali and Guti{\\'e}rrez-Basulto, V{\\'i}ctor and Ib{\\'a}{\\~n}ez-Garc{\\'i}a, Yazm{\\'i}n and Lee, Hwaran and Muhammad, Shamsuddeen Hassan and Park, Kiwoong and Rzayev, Anar Sabuhi and White, Nina and Yimam, Seid Muhie and Pilehvar, Mohammad Taher and Ousidhoum, Nedjma and Camacho-Collados, Jose and Oh, Alice\",\n    booktitle = \"Advances in Neural Information Processing Systems 37 (NeurIPS 2024) Datasets and Benchmarks Track\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2406.09948\"\n}"
+}

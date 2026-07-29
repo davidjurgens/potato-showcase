@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bln_001",
+    "region": "South Korea",
+    "language": "Korean",
+    "question": "What soup is traditionally eaten on New Year's Day to mark getting a year older?",
+    "options": "A) Tteokguk   B) Miyeokguk   C) Kimchi jjigae   D) Samgyetang"
+  },
+  {
+    "id": "bln_002",
+    "region": "Mexico",
+    "language": "Spanish",
+    "question": "What bread is traditionally eaten around the Day of the Dead?",
+    "options": "A) Bolillo   B) Pan de muerto   C) Concha   D) Telera"
+  },
+  {
+    "id": "bln_003",
+    "region": "Ethiopia",
+    "language": "Amharic",
+    "question": "What flatbread is a staple served with most meals?",
+    "options": "A) Injera   B) Naan   C) Roti   D) Pita"
+  },
+  {
+    "id": "bln_004",
+    "region": "Nigeria",
+    "language": "Hausa",
+    "question": "What is a common breakfast made from fried bean paste?",
+    "options": "A) Akara   B) Jollof rice   C) Suya   D) Egusi"
+  },
+  {
+    "id": "bln_005",
+    "region": "Japan",
+    "language": "Japanese",
+    "question": "What do people traditionally eat on their birthday alongside cake in many families?",
+    "options": "A) Sekihan (red bean rice)   B) Ramen   C) Onigiri   D) Takoyaki"
+  },
+  {
+    "id": "bln_006",
+    "region": "India (Assam)",
+    "language": "Assamese",
+    "question": "Which festival marks the Assamese new year and harvest in mid-April?",
+    "options": "A) Bihu   B) Onam   C) Pongal   D) Baisakhi"
+  },
+  {
+    "id": "bln_007",
+    "region": "Indonesia (Sunda)",
+    "language": "Sundanese",
+    "question": "What fresh vegetable dish with peanut sauce is commonly eaten?",
+    "options": "A) Karedok   B) Rendang   C) Soto   D) Bakso"
+  },
+  {
+    "id": "bln_008",
+    "region": "Azerbaijan",
+    "language": "Azerbaijani",
+    "question": "What sweet pastry is a signature treat prepared for Novruz?",
+    "options": "A) Pakhlava   B) Baklava rolls   C) Halva   D) Shekerbura"
+  },
+  {
+    "id": "bln_009",
+    "region": "United Kingdom",
+    "language": "English",
+    "question": "What is traditionally eaten as a Sunday midday meal in many households?",
+    "options": "A) Sunday roast   B) Fish and chips   C) Full English breakfast   D) Ploughman's lunch"
+  },
+  {
+    "id": "bln_010",
+    "region": "China",
+    "language": "Chinese",
+    "question": "What food is traditionally eaten during the Mid-Autumn Festival?",
+    "options": "A) Mooncakes   B) Zongzi   C) Tangyuan   D) Dumplings"
+  }
+]

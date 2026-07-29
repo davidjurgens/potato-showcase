@@ -1,0 +1,41 @@
+{
+  "title": "CLARITY: Unmasking Political Question Evasions",
+  "description": "SemEval-2026 Task 6 (CLARITY): detecting how directly a politician answers a question. Given a question-answer pair from a U.S. presidential interview, annotators classify the reply into one of three clarity levels (Clear Reply, Ambiguous, Clear Non-Reply) and, when the answer is evasive, identify the evasion technique used. Multi-part questions are first decomposed into single sub-questions so each judgment captures how well one specific inquiry is addressed.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Political Discourse",
+    "SemEval"
+  ],
+  "useCase": [
+    "Question Answering Analysis",
+    "Discourse Analysis",
+    "Political Communication"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "political-discourse",
+    "evasion",
+    "question-answering"
+  ],
+  "featured": false,
+  "paperReference": "Thomas et al., SemEval 2026 (Task 6)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.449/",
+  "datasetUrl": "https://konstantinosftw.github.io/CLARITY-SemEval-2026/",
+  "citation": "@inproceedings{thomas-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 6: {CLARITY} -- Unmasking Political Question Evasions\",\n    author = \"Thomas, Konstantinos  and Filandrianos, Giorgos  and Lymperaiou, Maria  and Zerva, Chrysoula  and Stamou, Giorgos\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.449\",\n    pages = \"3704--3715\"\n}"
+}

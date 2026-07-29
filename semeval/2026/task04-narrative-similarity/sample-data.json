@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nss_001",
+    "anchor": "A young fox leaves its den to find food during a harsh winter, braving the cold and outwitting a hungry wolf before returning home with a rabbit.",
+    "story_a": "A stray cat wanders the city in a snowstorm searching for scraps, dodging a pack of dogs, and finally carries a fish back to her kittens.",
+    "story_b": "A wealthy merchant hosts a lavish winter feast, showing off his riches to impress the guests who fill his warm and glittering hall."
+  },
+  {
+    "id": "nss_002",
+    "anchor": "A student stays up all night studying for an exam, nearly gives up, but pushes through and passes with the highest grade in the class.",
+    "story_a": "A runner trains for months for a marathon, wants to quit at mile twenty, but finds a second wind and crosses the finish line.",
+    "story_b": "A tourist gets lost in a foreign city, asks a kind stranger for directions, and ends up discovering a beautiful hidden garden."
+  },
+  {
+    "id": "nss_003",
+    "anchor": "Two rival bakers in a small town compete for the same prize, but after a fire destroys one shop, the other helps rebuild it and they become partners.",
+    "story_a": "Two feuding neighbors argue over a fence for years until a flood forces them to work together, and they end up close friends.",
+    "story_b": "A lone inventor toils in secret for a decade and finally unveils a machine that makes him famous overnight across the country."
+  },
+  {
+    "id": "nss_004",
+    "anchor": "A knight sets out to slay a dragon terrorizing a village, but discovers the dragon is only defending its young, and negotiates peace instead.",
+    "story_a": "A hunter tracks a bear blamed for raiding a farm, only to find it protecting its cubs, and decides to guide it back to the forest.",
+    "story_b": "A general leads his army into a decisive battle, wins a crushing victory, and is celebrated with a parade through the capital."
+  },
+  {
+    "id": "nss_005",
+    "anchor": "A girl plants a single seed and tends it daily; despite drought and pests, the plant grows into a tree that shades the whole village.",
+    "story_a": "A boy adopts a sickly puppy nobody wanted and nurses it back to health; it grows into a loyal dog that saves his family from a fire.",
+    "story_b": "A king demands a grand statue of himself be built, and the sculptors labor for years to complete the enormous monument."
+  },
+  {
+    "id": "nss_006",
+    "anchor": "An old fisherman catches a giant fish after days at sea, but sharks devour it on the way back, leaving him with only the skeleton and his pride.",
+    "story_a": "A prospector finally strikes gold after years of digging, but a landslide buries his claim, leaving him with just a single nugget and his memories.",
+    "story_b": "A chef opens a restaurant that becomes an instant sensation, and within a year he owns a chain of successful eateries across the region."
+  },
+  {
+    "id": "nss_007",
+    "anchor": "A shy musician is too afraid to perform, but a friend secretly enters her in a contest; she plays beautifully and gains the confidence to pursue music.",
+    "story_a": "A timid writer hides his poems in a drawer until his sister submits one to a magazine; it is published and he finally shares his work openly.",
+    "story_b": "A famous actor grows bored of fame, abandons Hollywood, and moves to a quiet farm where he lives out his days in solitude."
+  },
+  {
+    "id": "nss_008",
+    "anchor": "A village suffers a long drought until a child remembers an old song about a hidden spring; the villagers follow the clues and find water.",
+    "story_a": "A crew is stranded at sea until the youngest sailor recalls a tale about a nearby island; they follow the stars and reach safe harbor.",
+    "story_b": "A scientist spends her career studying rainfall patterns and eventually publishes a landmark paper that reshapes the entire field."
+  }
+]

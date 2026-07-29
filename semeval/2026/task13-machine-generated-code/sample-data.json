@@ -1,0 +1,52 @@
+[
+  {
+    "id": "mgc_001",
+    "language": "Python",
+    "code": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []"
+  },
+  {
+    "id": "mgc_002",
+    "language": "Python",
+    "code": "# quick hack, fix later\ndef f(a):\n    x=0\n    for i in a:\n        x+=i\n    return x/len(a) if a else 0"
+  },
+  {
+    "id": "mgc_003",
+    "language": "Java",
+    "code": "public static boolean isPalindrome(String s) {\n    int i = 0, j = s.length() - 1;\n    while (i < j) {\n        if (s.charAt(i) != s.charAt(j)) return false;\n        i++; j--;\n    }\n    return true;\n}"
+  },
+  {
+    "id": "mgc_004",
+    "language": "C++",
+    "code": "int gcd(int a, int b) {\n    // Euclid's algorithm\n    while (b) {\n        a %= b;\n        std::swap(a, b);\n    }\n    return a;\n}"
+  },
+  {
+    "id": "mgc_005",
+    "language": "Python",
+    "code": "def factorial(n: int) -> int:\n    \"\"\"Return the factorial of a non-negative integer n.\"\"\"\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result"
+  },
+  {
+    "id": "mgc_006",
+    "language": "Go",
+    "code": "func reverse(s string) string {\n    r := []rune(s)\n    for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {\n        r[i], r[j] = r[j], r[i]\n    }\n    return string(r)\n}"
+  },
+  {
+    "id": "mgc_007",
+    "language": "JavaScript",
+    "code": "const debounce = (fn, delay) => {\n  let t;\n  return (...args) => {\n    clearTimeout(t);\n    t = setTimeout(() => fn(...args), delay);\n  };\n};"
+  },
+  {
+    "id": "mgc_008",
+    "language": "Python",
+    "code": "import sys\nn=int(input())\na=list(map(int,input().split()))\nprint(max(a)-min(a))"
+  },
+  {
+    "id": "mgc_009",
+    "language": "C#",
+    "code": "public int Fibonacci(int n)\n{\n    if (n <= 1) return n;\n    int a = 0, b = 1;\n    for (int i = 2; i <= n; i++)\n    {\n        int c = a + b;\n        a = b;\n        b = c;\n    }\n    return b;\n}"
+  },
+  {
+    "id": "mgc_010",
+    "language": "Python",
+    "code": "def merge_sorted(a, b):\n    merged = []\n    i = j = 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            merged.append(a[i]); i += 1\n        else:\n            merged.append(b[j]); j += 1\n    merged.extend(a[i:]); merged.extend(b[j:])\n    return merged"
+  }
+]

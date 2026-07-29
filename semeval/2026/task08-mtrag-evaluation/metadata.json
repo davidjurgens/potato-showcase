@@ -1,0 +1,43 @@
+{
+  "title": "MTRAGEval: Evaluating Multi-Turn RAG Conversations",
+  "description": "SemEval-2026 Task 8 (MTRAGEval): evaluating retrieval-augmented generation (RAG) in multi-turn conversations, built on the MTRAG benchmark. Given a conversation, the retrieved reference passages, and a system-generated response, annotators judge how faithful the response is to the passages, how well it answers the user's latest question, and whether it correctly handles unanswerable, underspecified, non-standalone, or unclear questions. The shared task covers retrieval (A), generation (B), and full RAG (C).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Evaluation",
+    "SemEval"
+  ],
+  "useCase": [
+    "RAG Evaluation",
+    "Conversational QA",
+    "Faithfulness Assessment"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "rag",
+    "retrieval-augmented-generation",
+    "evaluation",
+    "multi-turn"
+  ],
+  "featured": false,
+  "paperReference": "Rosenthal et al., SemEval 2026 (Task 8); built on the MTRAG benchmark (Katsis et al., 2025)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.447/",
+  "datasetUrl": "https://ibm.github.io/mt-rag-benchmark/MTRAGEval/",
+  "citation": "@inproceedings{rosenthal-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 8: {MTRAGE}val: Evaluating Multi-Turn {RAG} Conversations\",\n    author = \"Rosenthal, Sara  and Shah, Vraj  and Katsis, Yannis  and Danilevsky, Marina\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.447\",\n    pages = \"3673--3690\"\n}"
+}

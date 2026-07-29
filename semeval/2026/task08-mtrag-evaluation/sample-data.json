@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mtr_001",
+    "conversation": "User: What is the return window for online orders?\nAssistant: Online orders can be returned within 30 days of delivery.\nUser: Does that apply to items bought on sale?",
+    "passages": "[Policy 4.2] Sale and clearance items may be returned within 14 days of delivery. Standard-price items follow the 30-day return window.",
+    "response": "Yes, sale items follow the same 30-day window as everything else."
+  },
+  {
+    "id": "mtr_002",
+    "conversation": "User: How do I reset my account password?\nUser: And will I be logged out of other devices?",
+    "passages": "[Help 12] Resetting your password from Settings > Security signs you out of all other active sessions for security.",
+    "response": "Yes. When you reset your password from Settings > Security, you are signed out of all other active sessions."
+  },
+  {
+    "id": "mtr_003",
+    "conversation": "User: What were the company's Q3 earnings?\nUser: How does that compare to Q2?",
+    "passages": "[Report] Q3 revenue was $4.2B. (The document does not report Q2 figures.)",
+    "response": "Q3 revenue was $4.2B, up 8% from Q2's $3.9B."
+  },
+  {
+    "id": "mtr_004",
+    "conversation": "User: Can I bring a pet on the train?",
+    "passages": "[FAQ] Small pets in carriers are permitted on all regional trains. Assistance animals travel free at all times.",
+    "response": "Small pets are allowed if they are kept in a carrier, and assistance animals travel free at any time."
+  },
+  {
+    "id": "mtr_005",
+    "conversation": "User: What's the best stock to buy right now?",
+    "passages": "[Disclaimer] This service provides general account information only and does not offer investment advice.",
+    "response": "I can't recommend specific investments; this service only provides general account information and doesn't offer investment advice."
+  },
+  {
+    "id": "mtr_006",
+    "conversation": "User: How long does shipping take to Canada?\nUser: What about express?",
+    "passages": "[Shipping] Standard international shipping to Canada takes 7-10 business days. Express is not currently available to Canada.",
+    "response": "Standard shipping to Canada takes 7-10 business days, and express delivery is available in 2-3 days."
+  },
+  {
+    "id": "mtr_007",
+    "conversation": "User: Is the museum open on Mondays?",
+    "passages": "[Hours] The museum is open Tuesday through Sunday, 10am-5pm. Closed Mondays and public holidays.",
+    "response": "No, the museum is closed on Mondays. It is open Tuesday through Sunday, 10am to 5pm."
+  },
+  {
+    "id": "mtr_008",
+    "conversation": "User: Does my plan include international roaming?\nUser: What about in Japan specifically?",
+    "passages": "[Plan] The Premium plan includes roaming in the EU and North America. Roaming outside those regions is billed per use.",
+    "response": "Your Premium plan includes roaming in the EU and North America; for Japan, roaming would be billed per use rather than included."
+  }
+]

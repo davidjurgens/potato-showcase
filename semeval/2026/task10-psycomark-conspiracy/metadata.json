@@ -1,0 +1,41 @@
+{
+  "title": "PsyCoMark: Psycholinguistic Conspiracy Marker Extraction and Detection",
+  "description": "SemEval-2026 Task 10 (PsyCoMark): studying how conspiracy theories are expressed in social-media (Reddit) statements. Annotators make a document-level conspiracy judgment (Yes / No / Can't tell) and extract five psycholinguistic conspiracy markers as spans: Actor, Action, Effect, Victim, and Evidence.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "SemEval"
+  ],
+  "useCase": [
+    "Conspiracy Detection",
+    "Psycholinguistics",
+    "Span Extraction"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "conspiracy",
+    "psycholinguistics",
+    "social-media"
+  ],
+  "featured": false,
+  "paperReference": "Samory et al., SemEval 2026 (Task 10)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.444/",
+  "datasetUrl": "https://hide-ous.github.io/semeval2026-psycomark",
+  "citation": "@inproceedings{samory-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 10: {P}sy{C}o{M}ark -- Psycholinguistic Conspiracy Marker Extraction and Detection\",\n    author = \"Samory, Mattia  and Soldner, Felix  and Batzdorfer, Veronika\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.444\",\n    pages = \"3628--3639\"\n}"
+}

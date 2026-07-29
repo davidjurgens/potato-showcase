@@ -1,0 +1,90 @@
+# MTRAGEval: Evaluating Multi-Turn RAG Conversations
+# Based on Rosenthal, Shah, Katsis, and Danilevsky, SemEval-2026 Task 8
+# Paper: https://aclanthology.org/2026.semeval-1.447/
+# Task page: https://ibm.github.io/mt-rag-benchmark/MTRAGEval/
+# Underlying benchmark: MTRAG (Katsis et al., 2025)
+#
+# MTRAGEval measures multi-turn RAG across three subtasks: A. Retrieval,
+# B. Generation (given gold passages), and C. full Retrieve+Generate. This
+# showcase models the human-evaluation side of Subtask B: given the
+# conversation, the reference passages, and a system response, judge the
+# response's faithfulness and quality. The benchmark emphasizes hard cases:
+# Unanswerable, Underspecified, Non-Standalone, and Unclear questions.
+
+annotation_task_name: "MTRAGEval - RAG Response Evaluation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "response"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: faithfulness
+    description: "Is the response faithful to (grounded in) the reference passages?"
+    labels:
+      - "Fully grounded"
+      - "Partially grounded"
+      - "Not grounded / hallucinated"
+    keyboard_shortcuts:
+      "Fully grounded": "1"
+      "Partially grounded": "2"
+      "Not grounded / hallucinated": "3"
+
+  - annotation_type: likert
+    name: answer_quality
+    description: "How well does the response answer the user's latest question?"
+    size: 5
+    min_label: "Not at all"
+    max_label: "Completely"
+
+  - annotation_type: radio
+    name: unanswerable_handling
+    description: "If the question is unanswerable/underspecified/unclear from the passages, does the response handle it appropriately (e.g. says it cannot answer or asks for clarification)?"
+    labels:
+      - "Handled appropriately"
+      - "Not handled (answered anyway)"
+      - "Not applicable (question is answerable)"
+
+  - annotation_type: text
+    name: notes
+    description: "Optional notes (e.g. unsupported claims, missing context)"
+    textarea: true
+    required: false
+
+annotation_instructions: |
+  Review the conversation so far, the reference passages, and the system's
+  response to the user's latest turn. Judge whether the response is grounded
+  in the passages, how well it answers the question, and whether it
+  appropriately handles questions that cannot be fully answered from the
+  passages.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+      <strong style="color: #334155;">Conversation:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-line;">{{conversation}}</p>
+    </div>
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+      <strong style="color: #3730a3;">Reference passages:</strong>
+      <p style="font-size: 14px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-line;">{{passages}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px;">
+      <strong style="color: #166534;">System response:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{response}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true

@@ -1,0 +1,41 @@
+{
+  "title": "Emotional Valence and Arousal over Time from Ecological Essays",
+  "description": "SemEval-2026 Task 2: predicting self-reported emotional valence and arousal from ecological, first-person diary essays written over time. Unlike third-party sentiment labels, the ratings reflect the author's own subjectively experienced affect. Annotators read a diary-style essay and rate its valence and arousal; the shared task also forecasts how affect changes across successive entries.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "slider",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Emotion",
+    "SemEval"
+  ],
+  "useCase": [
+    "Emotion Recognition",
+    "Dimensional Affect",
+    "Longitudinal Modeling"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "valence-arousal",
+    "emotion",
+    "longitudinal"
+  ],
+  "featured": false,
+  "paperReference": "Soni et al., SemEval 2026 (Task 2)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.451/",
+  "datasetUrl": "https://semeval2026task2.github.io/SemEval-2026-Task2/",
+  "citation": "@inproceedings{soni-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 2: Predicting Variation in Emotional Valence and Arousal over Time from Ecological Essays\",\n    author = \"Soni, Nikita  and Schwartz, H. Andrew  and Boyd, Ryan L.  and Bui, Phi Long  and Mahwish, Syeda  and Nilsson, August H{\\aa}kan  and Ganesan, Adithya V  and Ungar, Lyle  and Balasubramanian, Niranjan  and Mohammad, Saif M.\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.451\",\n    pages = \"3731--3752\"\n}"
+}

@@ -1,0 +1,84 @@
+# DimABSA: Dimensional Aspect-Based Sentiment Analysis
+# Based on Yu et al., SemEval-2026 Task 3
+# Paper: https://aclanthology.org/2026.semeval-1.452/
+# Task/dataset: https://github.com/DimABSA/DimABSA2026
+#
+# DimABSA replaces categorical polarity (positive/negative/neutral) with
+# continuous valence-arousal (VA) ratings. Track A (DimABSA) has three
+# subtasks over consumer reviews: (1) dimensional aspect sentiment
+# regression, (2) triplet extraction (aspect, opinion, VA), and (3)
+# quadruplet extraction (aspect, category, opinion, VA). Track B
+# (DimStance) reformulates stance detection as VA regression over stance
+# targets. This showcase models the core annotation: mark the aspect term
+# and its opinion term, then rate valence and arousal.
+#
+# Valence: how pleasant/positive the sentiment is (1 = very negative,
+#          9 = very positive; 5 = neutral).
+# Arousal: how active/intense the sentiment is (1 = very calm,
+#          9 = very excited/intense).
+
+annotation_task_name: "DimABSA - Dimensional Aspect Sentiment"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: aspect_term
+    description: "Highlight the aspect term (the entity or feature being evaluated)"
+    labels:
+      - "Aspect"
+
+  - annotation_type: span
+    name: opinion_term
+    description: "Highlight the opinion term expressing sentiment toward the aspect"
+    labels:
+      - "Opinion"
+
+  - annotation_type: slider
+    name: valence
+    description: "Valence of the sentiment toward this aspect (1 = very negative, 5 = neutral, 9 = very positive)"
+    min_value: 1
+    max_value: 9
+
+  - annotation_type: slider
+    name: arousal
+    description: "Arousal of the sentiment toward this aspect (1 = very calm, 9 = very intense)"
+    min_value: 1
+    max_value: 9
+
+  - annotation_type: text
+    name: aspect_category
+    description: "Aspect category (for the quadruplet setting, e.g. FOOD#QUALITY) - optional"
+    textarea: false
+    required: false
+
+annotation_instructions: |
+  Read the sentence. Highlight each aspect term (what is being evaluated)
+  and the opinion term expressing sentiment about it. Then rate the
+  sentiment on two continuous dimensions: valence (how positive/negative)
+  and arousal (how calm/intense). Optionally record the aspect category.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #5b21b6;">Sentence:</strong>
+      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 3
+allow_skip: true

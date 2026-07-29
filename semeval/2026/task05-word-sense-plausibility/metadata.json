@@ -1,0 +1,40 @@
+{
+  "title": "Rating Plausibility of Word Senses through Narrative Understanding",
+  "description": "SemEval-2026 Task 5: rating how plausible a particular sense of an ambiguous word is within a short narrative. Each item is a 4-5 sentence story containing a homonym in a target sentence, with sparse contextual cues. Annotators judge, on a 1-5 scale, how plausible a given candidate sense of the homonym is in that narrative context. Built on the Ambistory dataset.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Word Sense",
+    "SemEval"
+  ],
+  "useCase": [
+    "Word Sense Disambiguation",
+    "Narrative Understanding",
+    "Plausibility Rating"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "word-sense",
+    "narrative",
+    "plausibility"
+  ],
+  "featured": false,
+  "paperReference": "Gehring, Meyer & Roth, SemEval 2026 (Task 5)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.448/",
+  "datasetUrl": "https://nlu-lab.github.io/semeval.html",
+  "citation": "@inproceedings{gehring-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 5: Rating Plausibility of Word Senses in Ambiguous Stories through Narrative Understanding\",\n    author = \"Gehring, Janosch  and Meyer, Selina  and Roth, Michael\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.448\",\n    pages = \"3691--3703\"\n}"
+}

@@ -1,0 +1,86 @@
+# CLARITY: Unmasking Political Question Evasions
+# Based on Thomas, Filandrianos, Lymperaiou, Zerva, and Stamou, SemEval-2026 Task 6
+# Paper: https://aclanthology.org/2026.semeval-1.449/
+# Task page: https://konstantinosftw.github.io/CLARITY-SemEval-2026/
+#
+# Given a question-answer (QA) pair from a U.S. presidential interview
+# (2006-2023), judge how directly the answer addresses the question. The
+# task has two nested subtasks:
+#   - Subtask 1 (Clarity): 3 coarse clarity tiers
+#   - Subtask 2 (Evasion): one of 9 fine-grained evasion techniques when
+#     the answer is not a clear reply
+# Multi-part questions are decomposed into single sub-questions so each
+# annotation captures how well one specific inquiry is addressed.
+#
+# Subtask 1 clarity labels (from the official task page):
+# - Clear Reply: the answer directly and unambiguously addresses the question
+# - Ambiguous: the answer partially addresses it or is unclear
+# - Clear Non-Reply: the answer avoids the question
+#
+# Subtask 2 uses a taxonomy of 9 evasion techniques (e.g. deflection,
+# partial answer, declining to answer, attacking the question). This
+# showcase collects the technique as free text; consult the task paper for
+# the full 9-way label set.
+
+annotation_task_name: "CLARITY - Political Question Evasion"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "answer"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: clarity
+    description: "How directly does the answer address the question?"
+    labels:
+      - "Clear Reply"
+      - "Ambiguous"
+      - "Clear Non-Reply"
+    keyboard_shortcuts:
+      "Clear Reply": "1"
+      "Ambiguous": "2"
+      "Clear Non-Reply": "3"
+    tooltips:
+      "Clear Reply": "The answer directly and unambiguously addresses the question"
+      "Ambiguous": "The answer only partially addresses the question or is unclear"
+      "Clear Non-Reply": "The answer avoids or does not address the question"
+
+  - annotation_type: text
+    name: evasion_technique
+    description: "If the answer is not a Clear Reply, which evasion technique is used? (see task taxonomy of 9 techniques)"
+    textarea: false
+    required: false
+    placeholder: "e.g. deflection, partial answer, declining to answer..."
+
+annotation_instructions: |
+  Read the question and the politician's answer. Decide whether the answer
+  is a Clear Reply, is Ambiguous, or is a Clear Non-Reply to that specific
+  question. If it is not a Clear Reply, note which evasion technique the
+  respondent used.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+      <strong style="color: #1e40af;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 6px 0 0 0;">{{question}}</p>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+      <strong style="color: #334155;">Answer:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 6px 0 0 0;">{{answer}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true

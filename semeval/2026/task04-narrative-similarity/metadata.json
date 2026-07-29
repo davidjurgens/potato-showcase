@@ -1,0 +1,41 @@
+{
+  "title": "Narrative Story Similarity",
+  "description": "SemEval-2026 Task 4: judging narrative similarity between short stories. In the comparative setting (Track A), annotators see an anchor story and two candidate stories and decide which candidate is structurally more similar to the anchor. Narrative similarity is considered across three orthogonal dimensions: abstract theme, course of action, and outcomes. (Track B of the shared task learns story embeddings that reflect these human judgments.)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Narrative Understanding",
+    "SemEval"
+  ],
+  "useCase": [
+    "Semantic Similarity",
+    "Narrative Analysis",
+    "Representation Learning"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2026",
+    "shared-task",
+    "narrative",
+    "story-similarity",
+    "semantic-similarity"
+  ],
+  "featured": false,
+  "paperReference": "Hatzel et al., SemEval 2026 (Task 4)",
+  "paperUrl": "https://aclanthology.org/2026.semeval-1.429/",
+  "datasetUrl": "https://narrative-similarity-task.github.io/",
+  "citation": "@inproceedings{hatzel-etal-2026-semeval,\n    title = \"{S}em{E}val-2026 Task 4: Narrative Story Similarity and Narrative Representation Learning\",\n    author = \"Hatzel, Hans Ole  and Artemova, Ekaterina  and Stiemer, Haimo Paul  and Gius, Evelyn  and Biemann, Chris\",\n    booktitle = \"Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.semeval-1.429\",\n    pages = \"3460--3478\"\n}"
+}

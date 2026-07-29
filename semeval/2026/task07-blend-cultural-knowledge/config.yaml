@@ -1,0 +1,85 @@
+# Everyday Knowledge Across Diverse Languages and Cultures (BLEnD)
+# Based on Ousidhoum et al., SemEval-2026 Task 7
+# Paper: https://aclanthology.org/2026.semeval-1.455/
+# Task repo: https://github.com/BLEnD-SemEval2026/SemEval-2026-Task-7
+# Underlying dataset: BLEnD (Myung et al., NeurIPS 2024) https://arxiv.org/abs/2406.09948
+#
+# The task probes everyday cultural knowledge (daily habits, customs,
+# foods, celebrations) that is often shared within a culture but rarely
+# written down. Questions are grounded in a specific country/region.
+# Two subtasks:
+#   - Subtask 1 (SAQ): give the short free-text answer expected in that culture
+#   - Subtask 2 (MCQ): pick the correct option
+# This showcase collects both a short answer and a multiple-choice answer,
+# plus an optional applicability judgment.
+
+annotation_task_name: "BLEnD - Everyday Cultural Knowledge"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "question"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: text
+    name: short_answer
+    description: "Subtask 1 (SAQ): the short answer most people in this culture would give"
+    textarea: false
+    required: false
+    placeholder: "Short answer..."
+
+  - annotation_type: radio
+    name: mcq_answer
+    description: "Subtask 2 (MCQ): select the correct option"
+    labels:
+      - "A"
+      - "B"
+      - "C"
+      - "D"
+    keyboard_shortcuts:
+      "A": "1"
+      "B": "2"
+      "C": "3"
+      "D": "4"
+
+  - annotation_type: radio
+    name: applicability
+    description: "Does this question have a clear culturally-shared answer for the given region?"
+    labels:
+      - "Yes"
+      - "No / varies too much"
+
+annotation_instructions: |
+  Each item shows an everyday-knowledge question grounded in a specific
+  country or region, along with multiple-choice options. Provide the short
+  answer most people in that culture would give (Subtask 1), select the
+  correct multiple-choice option (Subtask 2), and indicate whether the
+  question has a clear culturally-shared answer.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+      <strong style="color: #155e75;">Region:</strong>
+      <span style="margin-left: 8px;">{{region}}</span>
+      <span style="color:#64748b; margin-left: 12px;">Language: {{language}}</span>
+    </div>
+    <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #115e59;">Question:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{question}}</p>
+    </div>
+    <div style="color:#334155; font-size: 15px;">{{options}}</div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
