@@ -35,6 +35,6 @@
   "featured": false,
   "paperReference": "Pradhan et al., SemEval 2007",
   "paperUrl": "https://aclanthology.org/S07-1003/",
-  "datasetUrl": "https://web.eecs.umich.edu/~miMDalMDhal/downloads.html",
+  "datasetUrl": "https://aclanthology.org/S07-1003/",
   "citation": "@inproceedings{pradhan-etal-2007-semeval,\n    title = \"{S}em{E}val-2007 Task-17: {E}nglish Lexical Sample, {SRL} and All Words\",\n    author = \"Pradhan, Sameer and Loper, Edward and Dligach, Dmitriy and Palmer, Martha\",\n    booktitle = \"Proceedings of the Fourth International Workshop on Semantic Evaluations (SemEval-2007)\",\n    year = \"2007\",\n    url = \"https://aclanthology.org/S07-1003\",\n    pages = \"87--92\"\n}"
 }

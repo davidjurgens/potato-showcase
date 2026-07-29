@@ -36,8 +36,8 @@
     "language-acquisition"
   ],
   "featured": false,
-  "paperReference": "MacWhinney, Journal of Child Language 2000",
-  "paperUrl": "https://doi.org/10.1017/S0305000900003581",
+  "paperReference": "MacWhinney, 2000 (Lawrence Erlbaum, 3rd ed.)",
+  "paperUrl": "https://childes.talkbank.org/",
   "datasetUrl": "https://childes.talkbank.org/",
-  "citation": "@article{macwhinney2000childes,\n  title={The CHILDES Project: Tools for Analyzing Talk},\n  author={MacWhinney, Brian},\n  journal={Journal of Child Language},\n  volume={27},\n  number={2},\n  pages={375--382},\n  year={2000},\n  publisher={Cambridge University Press}\n}"
+  "citation": "@book{macwhinney2000childes,\n  title={The {CHILDES} Project: Tools for Analyzing Talk},\n  author={MacWhinney, Brian},\n  edition={3rd},\n  year={2000},\n  publisher={Lawrence Erlbaum Associates},\n  address={Mahwah, NJ},\n  url={https://childes.talkbank.org/}\n}"
 }

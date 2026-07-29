@@ -43,5 +43,5 @@
   "paperReference": "Ginn et al., SIGMORPHON 2023",
   "paperUrl": "https://aclanthology.org/2023.sigmorphon-1.20/",
   "datasetUrl": "https://github.com/sigmorphon/2023glossingST",
-  "citation": "@inproceedings{ginn-etal-2023-findings,\n    title = \"Findings of the {SIGMORPHON} 2023 Shared Task on Interlinear Glossing\",\n    author = \"Ginn, Michael  and Marecek, David  and others\",\n    booktitle = \"Proceedings of the 20th SIGMORPHON workshop on Computational Research in Phonetics, Phonology, and Morphology\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.sigmorphon-1.20\"\n}"
+  "citation": "@inproceedings{ginn-etal-2023-findings,\n    title = \"Findings of the {SIGMORPHON} 2023 Shared Task on Interlinear Glossing\",\n    author = \"Ginn, Michael  and Moeller, Sarah  and Palmer, Alexis  and Stacey, Anna  and Nicolai, Garrett  and Hulden, Mans  and Silfverberg, Miikka\",\n    booktitle = \"Proceedings of the 20th SIGMORPHON workshop on Computational Research in Phonetics, Phonology, and Morphology\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.sigmorphon-1.20\"\n}"
 }

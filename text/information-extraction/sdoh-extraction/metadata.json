@@ -34,8 +34,8 @@
     "healthcare"
   ],
   "featured": true,
-  "paperReference": "Lybarger et al., JAMIA 2023",
+  "paperReference": "Lybarger et al., JAMIA 2023 (n2c2/UW SDOH shared task)",
   "paperUrl": "https://pubmed.ncbi.nlm.nih.gov/36795066/",
   "datasetUrl": "https://n2c2.dbmi.hms.harvard.edu/2022-track-2",
-  "citation": "@article{lybarger2023shac,\n    title = \"Leveraging natural language processing to augment structured social determinants of health data in the electronic health record\",\n    author = \"Lybarger, Kevin  and Yetisgen, Meliha  and Ostendorf, Mari\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1389--1397\",\n    year = \"2023\",\n    publisher = \"Oxford University Press\",\n    url = \"https://pubmed.ncbi.nlm.nih.gov/36795066/\"\n}"
+  "citation": "@article{lybarger-2023-2022,\n    title = \"The 2022 n2c2/{UW} shared task on extracting social determinants of health\",\n    author = \"Lybarger, Kevin and Yetisgen, Meliha and Uzuner, {\\\"O}zlem\",\n    journal = \"Journal of the American Medical Informatics Association\",\n    volume = \"30\",\n    number = \"8\",\n    pages = \"1367--1378\",\n    year = \"2023\",\n    doi = \"10.1093/jamia/ocad012\",\n    url = \"https://pubmed.ncbi.nlm.nih.gov/36795066/\"\n}"
 }

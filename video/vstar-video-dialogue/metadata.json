@@ -38,6 +38,6 @@
   "featured": false,
   "paperReference": "Wang et al., ACL 2023",
   "paperUrl": "https://aclanthology.org/2023.acl-long.276/",
-  "datasetUrl": "https://github.com/Yuxuan-W/VSTAR",
-  "citation": "@inproceedings{wang2023vstar,\n  title={VSTAR: A Video-grounded Dialogue Dataset for Situated Semantic Understanding with Scene and Topic Transitions},\n  author={Wang, Yuxuan and Liang, Zilong and Zhang, Xin Eric and Feng, Yutong},\n  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics},\n  pages={5004--5024},\n  year={2023}\n}"
+  "datasetUrl": "https://vstar-benchmark.github.io/",
+  "citation": "@inproceedings{wang-etal-2023-vstar,\n    title = \"{VSTAR}: A Video-grounded Dialogue Dataset for Situated Semantic Understanding with Scene and Topic Transitions\",\n    author = \"Wang, Yuxuan  and Zheng, Zilong  and Zhao, Xueliang  and Li, Jinpeng  and Wang, Yueqian  and Zhao, Dongyan\",\n    booktitle = \"Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.acl-long.276\",\n    doi = \"10.18653/v1/2023.acl-long.276\",\n    pages = \"5036--5048\"\n}"
 }
