@@ -2,7 +2,7 @@ annotation_task_name: "User Feedback Survey"
 task_dir: "."
 item_properties:
   id_key: "id"
-  text_key: "text"
+  text_key: "product_name"
 output_annotation_dir: "annotation_output/"
 output_annotation_format: "json"
 

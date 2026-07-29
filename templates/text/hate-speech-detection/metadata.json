@@ -3,8 +3,9 @@
   "description": "Identify and categorize hate speech, offensive language, and toxic content in text.",
   "category": "text",
   "annotationType": [
-    "radio",
-    "multiselect"
+    "likert",
+    "multiselect",
+    "radio"
   ],
   "domain": [
     "nlp",

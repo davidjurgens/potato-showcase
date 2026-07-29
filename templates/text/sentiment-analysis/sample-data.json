@@ -1,3 +1,42 @@
-{"id":"sample_1","text":"I absolutely love this product! It exceeded all my expectations and I would highly recommend it to everyone."}
-{"id":"sample_2","text":"The service was terrible. I waited for hours and nobody helped me. Very disappointed."}
-{"id":"sample_3","text":"The weather today is partly cloudy with temperatures around 72 degrees Fahrenheit."}
+[
+  {
+    "id": "sample_1",
+    "text": "I absolutely love this product! It exceeded all my expectations and I would highly recommend it to everyone."
+  },
+  {
+    "id": "sample_2",
+    "text": "The service was terrible. I waited for hours and nobody helped me. Very disappointed."
+  },
+  {
+    "id": "sample_3",
+    "text": "The weather today is partly cloudy with temperatures around 72 degrees Fahrenheit."
+  },
+  {
+    "id": "sample_4",
+    "text": "This is hands down the best meal I've had all year. The chef deserves a raise!"
+  },
+  {
+    "id": "sample_5",
+    "text": "The package arrived on the scheduled delivery date as described."
+  },
+  {
+    "id": "sample_6",
+    "text": "I'm so frustrated with this app. It crashes every single time I try to open it."
+  },
+  {
+    "id": "sample_7",
+    "text": "The meeting has been rescheduled to next Wednesday at 10 a.m."
+  },
+  {
+    "id": "sample_8",
+    "text": "What a wonderful surprise! My friends threw me the sweetest birthday party."
+  },
+  {
+    "id": "sample_9",
+    "text": "The instructions were confusing and the parts didn't fit together properly at all."
+  },
+  {
+    "id": "sample_10",
+    "text": "The report summarizes quarterly sales figures across all regional offices."
+  }
+]

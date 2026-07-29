@@ -3,8 +3,10 @@
   "description": "Rate the semantic similarity between pairs of sentences on a continuous scale.",
   "category": "text",
   "annotationType": [
-    "slider",
-    "likert"
+    "likert",
+    "multiselect",
+    "radio",
+    "slider"
   ],
   "domain": [
     "nlp",

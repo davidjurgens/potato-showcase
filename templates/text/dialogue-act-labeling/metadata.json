@@ -3,6 +3,7 @@
   "description": "Classify utterances in conversations by their communicative function (question, statement, request, etc.).",
   "category": "text",
   "annotationType": [
+    "multiselect",
     "radio"
   ],
   "domain": [

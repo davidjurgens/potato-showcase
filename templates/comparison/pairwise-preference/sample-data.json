@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pair_001",
+    "prompt": "What are the benefits of regular exercise?",
+    "response_a": "Exercise is good for you and you should do it every day.",
+    "response_b": "Regular exercise improves cardiovascular health, boosts mood through endorphin release, supports weight management, strengthens muscles and bones, and reduces the risk of chronic diseases such as type 2 diabetes."
+  },
+  {
+    "id": "pair_002",
+    "prompt": "How do I make scrambled eggs?",
+    "response_a": "Beat 2-3 eggs with a splash of milk. Heat butter in a pan over medium-low heat, pour in the eggs, and gently stir, pushing the curds from the edges to the center. Remove them while slightly wet so they finish cooking off the heat. Season with salt and pepper.",
+    "response_b": "Crack eggs, cook them in a pan, and stir until done."
+  },
+  {
+    "id": "pair_003",
+    "prompt": "Explain why the sky is blue.",
+    "response_a": "The sky is blue because of the way light works in the atmosphere.",
+    "response_b": "Sunlight contains all colors. As it passes through the atmosphere, blue light scatters more than other colors because of its shorter wavelength (Rayleigh scattering). This scattered blue light reaches our eyes from every direction, so the sky looks blue."
+  },
+  {
+    "id": "pair_004",
+    "prompt": "Write a short product description for a ceramic coffee mug.",
+    "response_a": "This is a ceramic mug. It holds coffee and has a handle.",
+    "response_b": "Start your morning right with our premium 12oz ceramic mug. Dishwasher-safe and built to keep drinks hot while staying comfortable to hold, it is the perfect companion for your favorite brew."
+  },
+  {
+    "id": "pair_005",
+    "prompt": "Summarize the plot of Romeo and Juliet in two sentences.",
+    "response_a": "Two young people from feuding families in Verona fall in love and secretly marry. A series of misunderstandings leads to both of them taking their own lives, which finally reconciles their families.",
+    "response_b": "Romeo and Juliet is a play by Shakespeare about two people who like each other but things go wrong and they die at the end."
+  },
+  {
+    "id": "pair_006",
+    "prompt": "How should I safely dispose of used cooking oil?",
+    "response_a": "Just pour it down the sink with some hot water to wash it away.",
+    "response_b": "Let the oil cool, then pour it into a sealable container such as an empty jar or the original bottle and place it in the trash. Many communities also have recycling programs that accept used cooking oil. Never pour it down the drain, as it can clog pipes."
+  },
+  {
+    "id": "pair_007",
+    "prompt": "Give me tips for a first job interview.",
+    "response_a": "Research the company beforehand, practice answers to common questions, dress appropriately, arrive a few minutes early, bring copies of your resume, and prepare a couple of thoughtful questions to ask the interviewer.",
+    "response_b": "Just be yourself and try not to be nervous."
+  },
+  {
+    "id": "pair_008",
+    "prompt": "Explain what a variable is in programming to a beginner.",
+    "response_a": "A variable is a named container that stores a value in your program. You can think of it like a labeled box: you put a value inside, refer to it by its label, and change what is inside later if you need to.",
+    "response_b": "A variable is a thing that holds data in code."
+  }
+]

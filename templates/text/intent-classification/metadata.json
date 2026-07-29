@@ -3,8 +3,10 @@
   "description": "Classify user utterances into intents for chatbot and virtual assistant training.",
   "category": "text",
   "annotationType": [
+    "likert",
+    "multiselect",
     "radio",
-    "multiselect"
+    "text"
   ],
   "domain": [
     "nlp",

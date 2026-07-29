@@ -4,7 +4,8 @@
   "category": "survey",
   "annotationType": [
     "likert",
-    "multirate"
+    "multiselect",
+    "text"
   ],
   "domain": [
     "research",

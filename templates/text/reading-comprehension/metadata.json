@@ -3,8 +3,8 @@
   "description": "Evaluate question-answer pairs for reading comprehension by verifying answers and rating quality.",
   "category": "text",
   "annotationType": [
+    "likert",
     "radio",
-    "span",
     "text"
   ],
   "domain": [

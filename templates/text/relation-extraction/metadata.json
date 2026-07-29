@@ -3,8 +3,9 @@
   "description": "Identify and classify relationships between entities in text (e.g., works-for, located-in, married-to).",
   "category": "text",
   "annotationType": [
+    "likert",
     "radio",
-    "span"
+    "text"
   ],
   "domain": [
     "nlp",

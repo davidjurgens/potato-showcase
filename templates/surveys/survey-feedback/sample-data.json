@@ -1,0 +1,34 @@
+[
+  {
+    "id": "feedback_001",
+    "product_name": "Potato Annotation Tool - a lightweight, configurable annotation platform for NLP research."
+  },
+  {
+    "id": "feedback_002",
+    "product_name": "Documentation Portal - an interactive guide for setting up and running annotation tasks."
+  },
+  {
+    "id": "feedback_003",
+    "product_name": "Config Playground - a visual builder for creating annotation configurations."
+  },
+  {
+    "id": "feedback_004",
+    "product_name": "Admin Dashboard - a management console for monitoring annotators and reviewing progress."
+  },
+  {
+    "id": "feedback_005",
+    "product_name": "Export Toolkit - utilities for exporting annotation results to common data formats."
+  },
+  {
+    "id": "feedback_006",
+    "product_name": "Crowdsourcing Integration - connectors for launching tasks on external annotation platforms."
+  },
+  {
+    "id": "feedback_007",
+    "product_name": "Quality Control Suite - features for measuring inter-annotator agreement and catching errors."
+  },
+  {
+    "id": "feedback_008",
+    "product_name": "AI Assistance Module - model-in-the-loop suggestions to speed up annotation."
+  }
+]

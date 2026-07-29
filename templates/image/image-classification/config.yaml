@@ -2,7 +2,8 @@ annotation_task_name: "Image Classification"
 task_dir: "."
 item_properties:
   id_key: "id"
-  text_key: "text"
+  text_key: "image_url"
+  image_key: "image_url"
 output_annotation_dir: "annotation_output/"
 output_annotation_format: "json"
 
@@ -23,8 +24,7 @@ image:
 
 # Data configuration
 data_files:
-  - path: data/images.json
-    image_field: image_path
+  - "sample-data.json"
 
 # Annotation schemes
 annotation_schemes:

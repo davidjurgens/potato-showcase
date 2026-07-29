@@ -3,6 +3,7 @@
   "description": "Identify sarcastic statements and label their type and target in social media and conversational text.",
   "category": "text",
   "annotationType": [
+    "likert",
     "radio",
     "text"
   ],

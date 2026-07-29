@@ -3,6 +3,8 @@
   "description": "Verify claims as supported, refuted, or not enough information based on provided evidence.",
   "category": "text",
   "annotationType": [
+    "likert",
+    "multiselect",
     "radio",
     "text"
   ],

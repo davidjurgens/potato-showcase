@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ner_001",
+    "text": "Apple announced a new office in Austin, Texas, led by Tim Cook."
+  },
+  {
+    "id": "ner_002",
+    "text": "The United Nations met in Geneva on Monday to discuss climate policy."
+  },
+  {
+    "id": "ner_003",
+    "text": "Maria Garcia joined Siemens as chief engineer in Munich last March."
+  },
+  {
+    "id": "ner_004",
+    "text": "Google acquired the startup for $2 billion, according to Reuters."
+  },
+  {
+    "id": "ner_005",
+    "text": "President Lincoln delivered the Gettysburg Address in November 1863."
+  },
+  {
+    "id": "ner_006",
+    "text": "The Amazon River flows through Brazil, Peru, and Colombia."
+  },
+  {
+    "id": "ner_007",
+    "text": "Serena Williams won the Wimbledon final against her opponent in London."
+  },
+  {
+    "id": "ner_008",
+    "text": "Toyota opened a manufacturing plant near Nagoya earlier this year."
+  },
+  {
+    "id": "ner_009",
+    "text": "The European Central Bank raised interest rates on Thursday in Frankfurt."
+  },
+  {
+    "id": "ner_010",
+    "text": "Dr. Ahmed Hassan presented his research at Stanford University in California."
+  }
+]
