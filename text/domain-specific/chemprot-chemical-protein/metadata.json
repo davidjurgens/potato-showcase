@@ -34,7 +34,7 @@
   ],
   "featured": false,
   "paperReference": "Krallinger et al., BioCreative VI 2017",
-  "paperUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/",
-  "datasetUrl": "https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/",
-  "citation": "@inproceedings{krallinger2017biocreative,\n    title = \"Overview of the BioCreative VI chemical-protein interaction Track\",\n    author = \"Krallinger, Martin and Rabal, Obdulia and Akhondi, Saber A. and others\",\n    booktitle = \"Proceedings of the BioCreative VI Workshop\",\n    year = \"2017\",\n    url = \"https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/\"\n}"
+  "paperUrl": "https://www.semanticscholar.org/paper/eed781f498b563df5a9e8a241c67d63dd1d92ad5",
+  "datasetUrl": "https://huggingface.co/datasets/bigbio/chemprot",
+  "citation": "@inproceedings{krallinger2017biocreative,\n    title = \"Overview of the BioCreative VI chemical-protein interaction Track\",\n    author = \"Krallinger, Martin and Rabal, Obdulia and Akhondi, Saber A. and others\",\n    booktitle = \"Proceedings of the Sixth BioCreative Challenge Evaluation Workshop\",\n    volume = \"1\",\n    pages = \"141--146\",\n    year = \"2017\",\n    url = \"https://www.semanticscholar.org/paper/eed781f498b563df5a9e8a241c67d63dd1d92ad5\"\n}"
 }

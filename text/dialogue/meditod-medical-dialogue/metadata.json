@@ -3,10 +3,10 @@
   "description": "Medical history-taking dialogue annotation based on the MediTOD dataset. Annotators label dialogue acts, identify medical entities (symptoms, conditions, medications, tests), and assess doctor-patient communication quality across multi-turn clinical conversations.",
   "version": "1.0.0",
   "author": {
-    "name": "Kazi et al.",
+    "name": "Saley et al.",
     "email": "",
-    "github": "HealthNLPLab",
-    "affiliation": "University of Pittsburgh"
+    "github": "dair-iitd",
+    "affiliation": "IIT Delhi"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
@@ -36,8 +36,8 @@
     "dialogue-acts"
   ],
   "featured": false,
-  "paperReference": "Kazi et al., EMNLP 2024",
+  "paperReference": "Saley et al., EMNLP 2024",
   "paperUrl": "https://aclanthology.org/2024.emnlp-main.936/",
-  "datasetUrl": "https://github.com/HealthNLPLab/MediTOD",
-  "citation": "@inproceedings{kazi2024meditod,\n    title = \"{M}edi{TOD}: An {E}nglish Dialogue Dataset for Medical History Taking with Comprehensive Annotations\",\n    author = \"Kazi, Rhea Sunil  and Ning, Yilin  and Duong, Hanh  and Peng, Yifan  and Xia, Fei\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.936/\"\n}"
+  "datasetUrl": "https://github.com/dair-iitd/MediTOD",
+  "citation": "@inproceedings{saley-etal-2024-meditod,\n    title = \"{M}edi{TOD}: An {E}nglish Dialogue Dataset for Medical History Taking with Comprehensive Annotations\",\n    author = \"Saley, Vishal Vivek  and Saha, Goonjan  and Das, Rocktim Jyoti  and Raghu, Dinesh  and Mausam\",\n    editor = \"Al-Onaizan, Yaser  and Bansal, Mohit  and Chen, Yun-Nung\",\n    booktitle = \"Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2024\",\n    address = \"Miami, Florida, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.emnlp-main.936/\",\n    doi = \"10.18653/v1/2024.emnlp-main.936\",\n    pages = \"16843--16877\"\n}"
 }

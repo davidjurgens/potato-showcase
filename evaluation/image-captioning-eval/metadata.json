@@ -1,6 +1,6 @@
 {
   "title": "Image Captioning Evaluation",
-  "description": "Rate AI-generated image captions for accuracy, fluency, and detail.",
+  "description": "Rate AI-generated image captions for accuracy, level of detail, and hallucination.",
   "version": "1.0.0",
   "author": {
     "name": "Potato Team",

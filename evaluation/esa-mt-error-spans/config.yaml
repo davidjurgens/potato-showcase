@@ -1,6 +1,6 @@
 # ESA: Error Span Annotation for Machine Translation
-# Based on "Error Span Annotation for Machine Translation Evaluation" (Kocmi et al., WMT@EMNLP 2024)
-# Task: Identify error spans in translations, classify error types, and rate severity
+# Based on "Error Span Annotation: A Balanced Approach for Human Evaluation of Machine Translation" (Kocmi et al., WMT 2024)
+# Task: Mark error spans in translations with severity (minor/major), then give a segment-level quality score
 
 annotation_task_name: "ESA: Error Span Annotation for MT"
 task_dir: "."
@@ -31,28 +31,16 @@ html_layout: |
 
 # Annotation schemes
 annotation_schemes:
-  # Span annotation for error identification
+  # Span annotation for error identification (ESA: mark each error span by severity)
   - name: "error_spans"
-    description: "Select spans in the translation that contain errors. Highlight each error span individually."
+    description: "Highlight each span in the translation that contains an error and mark its severity. In ESA, annotators mark spans as minor or major errors (no need to classify the error type)."
     annotation_type: span
     labels:
-      - "Accuracy - Mistranslation"
-      - "Accuracy - Omission"
-      - "Accuracy - Addition"
-      - "Fluency - Grammar"
-      - "Fluency - Spelling/Punctuation"
-      - "Fluency - Register"
-      - "Terminology"
-      - "Style"
+      - "Minor error"
+      - "Major error"
     label_colors:
-      "Accuracy - Mistranslation": "#ff5252"
-      "Accuracy - Omission": "#ff7043"
-      "Accuracy - Addition": "#ff9800"
-      "Fluency - Grammar": "#ab47bc"
-      "Fluency - Spelling/Punctuation": "#7e57c2"
-      "Fluency - Register": "#5c6bc0"
-      "Terminology": "#26a69a"
-      "Style": "#78909c"
+      "Minor error": "#ffb74d"
+      "Major error": "#ff5252"
 
   # Error type classification
   - name: "primary_error_type"

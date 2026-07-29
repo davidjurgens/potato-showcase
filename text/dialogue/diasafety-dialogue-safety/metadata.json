@@ -1,6 +1,6 @@
 {
   "title": "DiaSafety Dialogue Safety Annotation",
-  "description": "Safety taxonomy annotation for dialogue systems based on the DiaSafety framework. Annotators classify dialogue turns for safety issues across 6 categories: offending user, risk ignorance, unauthorized expertise, toxicity generation, bias, and privacy violations.",
+  "description": "Safety taxonomy annotation for dialogue systems based on the DiaSafety framework. Annotators classify dialogue responses for context-sensitive unsafety across 6 categories: offending user, risk ignorance, unauthorized expertise, toxicity agreement, biased opinion, and sensitive topic continuation (plus safe).",
   "version": "1.0.0",
   "author": {
     "name": "Sun et al.",
@@ -37,5 +37,5 @@
   "paperReference": "Sun et al., Findings ACL 2022",
   "paperUrl": "https://aclanthology.org/2022.findings-acl.308/",
   "datasetUrl": "https://github.com/thu-coai/DiaSafety",
-  "citation": "@inproceedings{sun2022diasafety,\n    title = \"{D}ia{S}afety: A Safety Framework for Dialogue Systems\",\n    author = \"Sun, Hao  and Zhang, Guangxuan  and Dong, Jiawen  and Zhang, Zhexin  and Gong, Jian  and Huang, Minlie\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.findings-acl.308/\"\n}"
+  "citation": "@inproceedings{sun-etal-2022-safety,\n    title = \"On the Safety of Conversational Models: Taxonomy, Dataset, and Benchmark\",\n    author = \"Sun, Hao  and Xu, Guangxuan  and Deng, Jiawen  and Cheng, Jiale  and Zheng, Chujie  and Zhou, Hao  and Peng, Nanyun  and Zhu, Xiaoyan  and Huang, Minlie\",\n    booktitle = \"Findings of the Association for Computational Linguistics: ACL 2022\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"3906--3923\",\n    doi = \"10.18653/v1/2022.findings-acl.308\",\n    url = \"https://aclanthology.org/2022.findings-acl.308/\"\n}"
 }

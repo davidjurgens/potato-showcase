@@ -35,8 +35,8 @@
     "mqm"
   ],
   "featured": false,
-  "paperReference": "Kocmi et al., WMT@EMNLP 2024",
-  "paperUrl": "https://aclanthology.org/2024.wmt-1.124/",
-  "datasetUrl": "https://github.com/WMT-Metrics-task/wmt24-esa",
-  "citation": "@inproceedings{kocmi2024error,\n  title={Error Span Annotation for Machine Translation Evaluation},\n  author={Kocmi, Tom and Avramidis, Eleftherios and Bawden, Rachel and Bojar, Ond{\\v{r}}ej and Dvorkovich, Anton and Federmann, Christian and Fishel, Mark and Freitag, Markus and Gowda, Thamme and Grundkiewicz, Roman and others},\n  booktitle={Proceedings of the Ninth Conference on Machine Translation (WMT@EMNLP)},\n  year={2024}\n}"
+  "paperReference": "Kocmi et al., WMT 2024",
+  "paperUrl": "https://aclanthology.org/2024.wmt-1.131/",
+  "datasetUrl": "https://github.com/wmt-conference/ErrorSpanAnnotation",
+  "citation": "@inproceedings{kocmi-etal-2024-error,\n  title={Error Span Annotation: A Balanced Approach for Human Evaluation of Machine Translation},\n  author={Kocmi, Tom and Zouhar, Vil{\\'e}m and Avramidis, Eleftherios and Grundkiewicz, Roman and Karpinska, Marzena and Popovi{\\'c}, Maja and Sachan, Mrinmaya and Shmatova, Mariya},\n  booktitle={Proceedings of the Ninth Conference on Machine Translation},\n  pages={1440--1453},\n  year={2024},\n  address={Miami, Florida, USA},\n  publisher={Association for Computational Linguistics},\n  url={https://aclanthology.org/2024.wmt-1.131/}\n}"
 }

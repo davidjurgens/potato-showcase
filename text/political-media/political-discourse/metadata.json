@@ -37,5 +37,5 @@
   "paperReference": "Sermpezis et al., arXiv 2025",
   "paperUrl": "https://arxiv.org/abs/2501.06265",
   "datasetUrl": "https://arxiv.org/abs/2501.06265",
-  "citation": "@article{sermpezis2025agoraspeech,\n    title = \"{A}gora{S}peech: A multi-task benchmark for political discourse understanding\",\n    author = \"Sermpezis, Pavlos  and others\",\n    journal = \"arXiv preprint arXiv:2501.06265\",\n    year = \"2025\",\n    url = \"https://arxiv.org/abs/2501.06265\"\n}"
+  "citation": "@article{sermpezis2025agoraspeech,\n    title = \"{A}gora{S}peech: A multi-annotated comprehensive dataset of political discourse through the lens of humans and {AI}\",\n    author = \"Sermpezis, Pavlos and Karamanidis, Stelios and Paraschou, Eva and Dimitriadis, Ilias and Yfantidou, Sofia and Kouskouveli, Filitsa-Ioanna and Troboukis, Thanasis and Kiki, Kelly and Galanopoulos, Antonis and Vakali, Athena\",\n    journal = \"arXiv preprint arXiv:2501.06265\",\n    year = \"2025\",\n    url = \"https://arxiv.org/abs/2501.06265\"\n}"
 }

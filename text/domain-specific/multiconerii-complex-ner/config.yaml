@@ -1,6 +1,6 @@
 # MultiCoNER II: Multilingual Complex Named Entity Recognition
 # Based on SemEval-2023 Task 2 (Fetahu et al., SemEval@ACL 2023)
-# Paper: https://aclanthology.org/2023.semeval-1.281/
+# Paper: https://aclanthology.org/2023.semeval-1.310/
 # Dataset: https://multiconer.github.io/dataset
 #
 # Task: Fine-grained NER across 12 languages with complex entities
@@ -13,16 +13,14 @@
 # - Multilingual text with code-switching
 # - Low-context short sentences from search queries and social media
 #
-# Entity Types (Fine-grained):
-# - Person: Real and fictional people
-# - Location: Places, facilities, geographical features
-# - Organization: Companies, institutions, agencies
-# - CreativeWork: Movies, books, songs, TV shows, games
-# - Group: Bands, teams, political parties, movements
-# - Medical: Diseases, symptoms, treatments, medications
-# - Product: Consumer goods, vehicles, software, devices
-# - Event: Named events, festivals, competitions
-# - MISC: Other named entities not fitting above categories
+# Entity Types (6 coarse groups; each spans fine-grained subtypes):
+# - Person: Scientist, Artist, Athlete, Politician, Cleric, SportsManager, OtherPER
+# - Location: Facility, HumanSettlement, Station, OtherLOC
+# - Group: MusicalGRP, PublicCORP, PrivateCORP, AerospaceManufacturer,
+#          SportsGRP, CarManufacturer, ORG (companies/institutions)
+# - CreativeWork: VisualWork, MusicalWork, WrittenWork, ArtWork, Software
+# - Product: Clothing, Vehicle, Food, Drink, OtherPROD
+# - Medical: Medication/Vaccine, MedicalProcedure, AnatomicalStructure, Symptom, Disease
 
 annotation_task_name: "MultiCoNER II: Complex Named Entity Recognition"
 task_dir: "."
@@ -43,33 +41,24 @@ annotation_schemes:
     labels:
       - "Person"
       - "Location"
-      - "Organization"
-      - "CreativeWork"
       - "Group"
-      - "Medical"
+      - "CreativeWork"
       - "Product"
-      - "Event"
-      - "MISC"
+      - "Medical"
     label_colors:
       "Person": "#3b82f6"
       "Location": "#22c55e"
-      "Organization": "#8b5cf6"
-      "CreativeWork": "#ec4899"
       "Group": "#f59e0b"
-      "Medical": "#ef4444"
+      "CreativeWork": "#ec4899"
       "Product": "#06b6d4"
-      "Event": "#f97316"
-      "MISC": "#6b7280"
+      "Medical": "#ef4444"
     tooltips:
-      "Person": "Names of real or fictional people (e.g., Albert Einstein, Harry Potter)"
-      "Location": "Places, facilities, geographical features (e.g., Tokyo, Central Park, Mount Everest)"
-      "Organization": "Companies, institutions, government agencies (e.g., Google, WHO, MIT)"
-      "CreativeWork": "Movies, books, songs, TV shows, video games, artworks (e.g., The Matrix, Bohemian Rhapsody)"
-      "Group": "Bands, sports teams, political parties, social movements (e.g., Coldplay, FC Barcelona, Greenpeace)"
-      "Medical": "Diseases, symptoms, treatments, medications, medical procedures (e.g., COVID-19, ibuprofen)"
-      "Product": "Consumer goods, vehicles, software, devices (e.g., iPhone, Windows 11, Boeing 747)"
-      "Event": "Named events, festivals, competitions, historical events (e.g., Olympics, Coachella, World War II)"
-      "MISC": "Other named entities not fitting the above categories"
+      "Person": "People: scientists, artists, athletes, politicians, clerics, sports managers, others (e.g., Albert Einstein, Lamine Yamal)"
+      "Location": "Facilities, human settlements, stations, other locations (e.g., Tokyo, Elbphilharmonie, Ohio State Reformatory)"
+      "Group": "Musical groups, public/private corporations, sports groups, aerospace/car manufacturers, and other organizations (e.g., Daft Punk, FC Barcelona, Sony, WHO)"
+      "CreativeWork": "Visual works, musical works, written works, artworks, software (e.g., The Shawshank Redemption, PlayStation 5 Pro games)"
+      "Product": "Clothing, vehicles, food, drink, other products (e.g., iPhone, Boeing 747, Snapdragon 8 Gen 3)"
+      "Medical": "Medications/vaccines, medical procedures, anatomical structures, symptoms, diseases (e.g., COVID-19, remdesivir, rVSV-ZEBOV)"
     allow_overlapping: false
 
 html_layout: |

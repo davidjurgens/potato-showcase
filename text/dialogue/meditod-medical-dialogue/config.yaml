@@ -1,7 +1,7 @@
 # MediTOD Medical Dialogue Annotation
-# Based on Kazi et al., EMNLP 2024
-# Paper: https://aclanthology.org/2024.emnlp-main.786/
-# Dataset: https://github.com/HealthNLPLab/MediTOD
+# Based on Saley et al., EMNLP 2024
+# Paper: https://aclanthology.org/2024.emnlp-main.936/
+# Dataset: https://github.com/dair-iitd/MediTOD
 #
 # Task: Annotate medical history-taking dialogues with dialogue acts,
 # medical entities, and communication quality assessments.

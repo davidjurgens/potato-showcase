@@ -1,7 +1,7 @@
 # ChemProt - Chemical-Protein Interaction Annotation
 # Based on Krallinger et al., BioCreative VI 2017
-# Paper: https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/
-# Dataset: https://biocreative.bioinformatics.udel.edu/tasks/biocreative-vi/track-5/
+# Paper: https://www.semanticscholar.org/paper/eed781f498b563df5a9e8a241c67d63dd1d92ad5
+# Dataset: https://huggingface.co/datasets/bigbio/chemprot
 #
 # Annotate biomedical abstracts to identify chemical and gene/protein entities,
 # then classify the type of interaction between them. This supports automated
