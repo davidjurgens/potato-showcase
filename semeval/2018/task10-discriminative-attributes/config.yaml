@@ -1,7 +1,7 @@
 # Capturing Discriminative Attributes
 # Based on Krebs et al., SemEval 2018
 # Paper: https://aclanthology.org/S18-1117/
-# Dataset: https://github.com/dpaperno/DiscAtt
+# Dataset: https://competitions.codalab.org/competitions/17326
 #
 # This task asks annotators to determine whether a given attribute
 # (property or feature) discriminates between two words -- that is,

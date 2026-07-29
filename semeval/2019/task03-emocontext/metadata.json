@@ -37,6 +37,6 @@
   "featured": false,
   "paperReference": "Chatterjee et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2005/",
-  "datasetUrl": "https://www.humanizing-ai.com/emocontext.html",
-  "citation": "@inproceedings{chatterjee-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 3: {E}mo{C}ontext Contextual Emotion Detection in Text\",\n    author = \"Chatterjee, Ankush and Narahari, Kedhar Nath and Joshi, Meghana and Agrawal, Puneet\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2005\"\n}"
+  "datasetUrl": "https://competitions.codalab.org/competitions/19790",
+  "citation": "@inproceedings{chatterjee-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 3: {E}mo{C}ontext Contextual Emotion Detection in Text\",\n    author = \"Chatterjee, Ankush and Narahari, Kedhar Nath and Joshi, Meghana and Agrawal, Puneet\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2005\",\n    doi = \"10.18653/v1/S19-2005\",\n    pages = \"39--48\"\n}"
 }

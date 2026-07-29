@@ -96,45 +96,45 @@ annotation_schemes:
 
   - name: "complexity"
     description: |
-      How appropriate is the complexity level for the intended audience?
-      Consider technical depth, vocabulary, and assumed knowledge.
+      How much intellectual depth is required to write the response?
+      Consider whether it could be written by anyone with basic language competency or requires deep domain expertise.
     annotation_type: likert
     size: 5
-    min_label: "0 - Too simple"
-    max_label: "4 - Ideal complexity"
+    min_label: "0 - Basic"
+    max_label: "4 - Expert"
     labels:
-      - "0 - Far too simple or too complex for the context"
-      - "1 - Somewhat mismatched complexity"
-      - "2 - Acceptable complexity level"
-      - "3 - Good complexity match for the audience"
-      - "4 - Perfect complexity level for the context"
+      - "0 - Basic, writable by anyone with basic language competency"
+      - "1 - Simple, requires only common knowledge"
+      - "2 - Moderate, requires some subject familiarity"
+      - "3 - Advanced, requires substantial domain knowledge"
+      - "4 - Expert, requires deep domain expertise"
     keyboard_shortcuts:
-      "0 - Far too simple or too complex for the context": "z"
-      "1 - Somewhat mismatched complexity": "x"
-      "2 - Acceptable complexity level": "c"
-      "3 - Good complexity match for the audience": "v"
-      "4 - Perfect complexity level for the context": "b"
+      "0 - Basic, writable by anyone with basic language competency": "z"
+      "1 - Simple, requires only common knowledge": "x"
+      "2 - Moderate, requires some subject familiarity": "c"
+      "3 - Advanced, requires substantial domain knowledge": "v"
+      "4 - Expert, requires deep domain expertise": "b"
 
   - name: "verbosity"
     description: |
-      How appropriate is the response length?
-      Consider whether it's too brief, too long, or just right for the request.
+      How much detail is included in the response, relative to what is asked for in the prompt?
+      Rate the overall amount of detail from terse to verbose.
     annotation_type: likert
     size: 5
-    min_label: "0 - Very inappropriate length"
-    max_label: "4 - Perfect length"
+    min_label: "0 - Terse"
+    max_label: "4 - Verbose"
     labels:
-      - "0 - Far too short or excessively long"
-      - "1 - Somewhat too brief or verbose"
-      - "2 - Acceptable length"
-      - "3 - Good length for the request"
-      - "4 - Perfect length, neither too short nor too long"
+      - "0 - Very terse, minimal detail"
+      - "1 - Somewhat terse"
+      - "2 - Moderate amount of detail"
+      - "3 - Somewhat verbose"
+      - "4 - Very verbose, highly detailed"
     keyboard_shortcuts:
-      "0 - Far too short or excessively long": "n"
-      "1 - Somewhat too brief or verbose": "m"
-      "2 - Acceptable length": ","
-      "3 - Good length for the request": "."
-      "4 - Perfect length, neither too short nor too long": "/"
+      "0 - Very terse, minimal detail": "n"
+      "1 - Somewhat terse": "m"
+      "2 - Moderate amount of detail": ","
+      "3 - Somewhat verbose": "."
+      "4 - Very verbose, highly detailed": "/"
 
 # User configuration
 allow_all_users: true
@@ -168,14 +168,14 @@ annotation_instructions: |
   - 4: Crystal clear and logical
 
   **4. Complexity (0-4)**
-  Is the complexity appropriate for the context?
-  - 0: Completely mismatched (too simple or too complex)
-  - 4: Perfect complexity level
+  How much intellectual depth is required to write the response?
+  - 0: Basic, writable with basic language competency
+  - 4: Expert, requires deep domain expertise
 
   **5. Verbosity (0-4)**
-  Is the response length appropriate?
-  - 0: Far too short or too long
-  - 4: Perfect length
+  How much detail is included, relative to what the prompt asks for?
+  - 0: Very terse, minimal detail
+  - 4: Very verbose, highly detailed
 
   ### Tips:
   - Read the prompt carefully to understand user intent

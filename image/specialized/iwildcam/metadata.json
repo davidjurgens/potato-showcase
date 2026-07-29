@@ -35,7 +35,7 @@
   ],
   "featured": true,
   "paperReference": "Beery et al., CVPR 2019",
-  "paperUrl": "https://arxiv.org/abs/1904.05986",
+  "paperUrl": "https://arxiv.org/abs/1907.07617",
   "datasetUrl": "https://github.com/visipedia/iwildcam_comp",
-  "citation": "@inproceedings{beery2019iwildcam,\n    title = \"The {iWildCam} 2019 Challenge Dataset\",\n    author = \"Beery, Sara  and Morris, Dan  and Yang, Siyu\",\n    booktitle = \"arXiv preprint arXiv:1904.05986\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1904.05986\"\n}"
+  "citation": "@article{beery2019iwildcam,\n    title = \"The {iWildCam} 2019 Challenge Dataset\",\n    author = \"Beery, Sara  and Morris, Dan  and Perona, Pietro\",\n    journal = \"arXiv preprint arXiv:1907.07617\",\n    year = \"2019\",\n    url = \"https://arxiv.org/abs/1907.07617\"\n}"
 }

@@ -36,5 +36,5 @@
   "paperReference": "Lam et al., arXiv 2018",
   "paperUrl": "https://arxiv.org/abs/1802.07856",
   "datasetUrl": "https://challenge.xviewdataset.org",
-  "citation": "@article{lam2018xview,\n    title = \"{xView}: Objects in Context in Overhead Imagery\",\n    author = \"Lam, Darius  and Kuzma, Richard  and McGee, Kevin  and Dooley, Samuel  and Laiber, Michael  and Ber, Matthew  and Manjunatha, Varun  and Naber, Jonathan\",\n    journal = \"arXiv preprint arXiv:1802.07856\",\n    year = \"2018\",\n    url = \"https://arxiv.org/abs/1802.07856\"\n}"
+  "citation": "@article{lam2018xview,\n    title = \"{xView}: Objects in Context in Overhead Imagery\",\n    author = \"Lam, Darius  and Kuzma, Richard  and McGee, Kevin  and Dooley, Samuel  and Laielli, Michael  and Klaric, Matthew  and Bulatov, Yaroslav  and McCord, Brendan\",\n    journal = \"arXiv preprint arXiv:1802.07856\",\n    year = \"2018\",\n    url = \"https://arxiv.org/abs/1802.07856\"\n}"
 }

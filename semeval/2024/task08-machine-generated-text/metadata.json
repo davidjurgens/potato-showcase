@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Wang et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task8",
-  "citation": "@inproceedings{wang-etal-2024-machine-generated-text,\n    title = \"Multigenerator, Multidomain, and Multilingual Black-Box Machine-Generated Text Detection\",\n    author = \"Wang, Yuxia and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.279/",
+  "datasetUrl": "https://github.com/mbzuai-nlp/SemEval2024-task8",
+  "citation": "@inproceedings{wang-etal-2024-semeval-2024,\n    title = \"{S}em{E}val-2024 Task 8: Multidomain, Multimodel and Multilingual Machine-Generated Text Detection\",\n    author = \"Wang, Yuxia and Mansurov, Jonibek and Ivanov, Petar and Su, Jinyan and Shelmanov, Artem and Tsvigun, Akim and Mohammed Afzal, Osama and Mahmoud, Tarek and Puccetti, Giovanni and Arnold, Thomas and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2057--2079\",\n    doi = \"10.18653/v1/2024.semeval-1.279\"\n}"
 }

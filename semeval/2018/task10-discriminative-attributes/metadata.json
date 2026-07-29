@@ -36,6 +36,6 @@
   "featured": false,
   "paperReference": "Krebs et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1117/",
-  "datasetUrl": "https://github.com/dpaperno/DiscAtt",
-  "citation": "@inproceedings{krebs-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 10: Capturing Discriminative Attributes\",\n    author = \"Krebs, Alicia and Paperno, Denis\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1117\"\n}"
+  "datasetUrl": "https://competitions.codalab.org/competitions/17326",
+  "citation": "@inproceedings{krebs-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 10: Capturing Discriminative Attributes\",\n    author = \"Krebs, Alicia and Lenci, Alessandro and Paperno, Denis\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1117\",\n    pages = \"732--740\"\n}"
 }

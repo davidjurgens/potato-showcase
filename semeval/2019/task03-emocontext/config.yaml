@@ -1,7 +1,7 @@
 # EmoContext - Contextual Emotion Detection in Text
 # Based on Chatterjee et al., SemEval 2019
 # Paper: https://aclanthology.org/S19-2005/
-# Dataset: https://www.humanizing-ai.com/emocontext.html
+# Dataset: https://competitions.codalab.org/competitions/19790
 #
 # This task asks annotators to classify the emotion expressed in the
 # third turn of a 3-turn conversation. The conversational context
