@@ -1,12 +1,12 @@
 {
   "title": "Math Question Answering and Category Classification",
-  "description": "Mathematical question answering with category classification, covering algebra, geometry, number theory, and statistics. Based on SemEval-2019 Task 10 (Math QA).",
+  "description": "Answering SAT-style mathematical questions with category classification, covering closed-vocabulary algebra, open-vocabulary algebra, and geometry. Based on SemEval-2019 Task 10 (Math QA).",
   "version": "1.0.0",
   "author": {
     "name": "Hopkins et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Educational Testing Service"
+    "affiliation": "Allen Institute for Artificial Intelligence"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -38,5 +38,5 @@
   "paperReference": "Hopkins et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2153/",
   "datasetUrl": "https://competitions.codalab.org/competitions/20013",
-  "citation": "@inproceedings{hopkins-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 10: Math Question Answering\",\n    author = \"Hopkins, Mark and Bras, Ronan Le and Petrescu-Prahova, Cristian and Stanovsky, Gabriel and Hajishirzi, Hannaneh and Koncel-Kedziorski, Rik\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2153\"\n}"
+  "citation": "@inproceedings{hopkins-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 10: Math Question Answering\",\n    author = \"Hopkins, Mark and Le Bras, Ronan and Petrescu-Prahova, Cristian and Stanovsky, Gabriel and Hajishirzi, Hannaneh and Koncel-Kedziorski, Rik\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2153\",\n    doi = \"10.18653/v1/S19-2153\",\n    pages = \"893--899\"\n}"
 }

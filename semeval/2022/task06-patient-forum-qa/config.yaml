@@ -1,7 +1,8 @@
 # Patient Forum Question Answering
-# Based on Akhtar et al., SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.75/
-# Dataset: https://github.com/Akhtar-SemEval2022-Task6
+# NOTE: Illustrative task template with no confirmed primary source.
+# It does NOT correspond to SemEval-2022 Task 6 (iSarcasmEval, sarcasm
+# detection: https://aclanthology.org/2022.semeval-1.111/) or any other
+# real SemEval-2022 task. Do not cite it as such.
 #
 # This task asks annotators to answer patient forum questions and classify
 # the type of response that would be most appropriate. The categories

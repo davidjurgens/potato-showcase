@@ -1,16 +1,20 @@
-# Plausible Clarifications of Implicit and Underspecified Instructions
-# Based on Roth and Anthonio, SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.133/
-# Dataset: https://github.com/Anthonio/SemEval2022-Task7
+# Plausible Clarifications of Implicit and Underspecified Phrases
+# Based on Roth, Anthonio, and Sauer, SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.146/
+# Dataset: https://github.com/acidAnn/semeval2022_task7_starter_kit
+# Task page: https://clarificationtask.github.io/
 #
-# This task asks annotators to judge whether a proposed clarification
-# of an underspecified instruction is plausible or implausible. The
-# clarification fills in implicit information that was left unstated
-# in the original instruction.
+# Instructional texts (wikiHow how-to guides) contain gaps where a phrase
+# was left implicit or underspecified. For each gap, several candidate
+# fillers (clarifications) are proposed. Annotators rate how plausible each
+# filler is in context, mirroring the two SemEval-2022 Task 7 subtasks:
+#   - Classification: IMPLAUSIBLE / NEUTRAL / PLAUSIBLE
+#   - Ranking: a graded 1-5 plausibility score
 #
-# Plausibility Labels:
-# - Plausible: The clarification is a reasonable interpretation of the instruction
-# - Implausible: The clarification is unreasonable or contradicts the instruction
+# Classification Labels:
+# - PLAUSIBLE: The filler clearly makes sense in the how-to guide
+# - NEUTRAL: The filler is borderline / neither clearly plausible nor implausible
+# - IMPLAUSIBLE: The filler does not make sense in context
 
 annotation_task_name: "Plausible Clarifications of Instructions"
 task_dir: "."
@@ -30,32 +34,48 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
-    name: plausibility
-    description: "Is this clarification a plausible interpretation of the instruction?"
+    name: plausibility_class
+    description: "How plausible is this filler for the gap in the how-to guide?"
     labels:
-      - "Plausible"
-      - "Implausible"
+      - "PLAUSIBLE"
+      - "NEUTRAL"
+      - "IMPLAUSIBLE"
     keyboard_shortcuts:
-      "Plausible": "1"
-      "Implausible": "2"
+      "PLAUSIBLE": "1"
+      "NEUTRAL": "2"
+      "IMPLAUSIBLE": "3"
     tooltips:
-      "Plausible": "The clarification is a reasonable, sensible interpretation of what the instruction means"
-      "Implausible": "The clarification is unreasonable, contradictory, or does not make sense in context"
+      "PLAUSIBLE": "The filler clearly makes sense in the context of the how-to guide"
+      "NEUTRAL": "Borderline: neither clearly plausible nor clearly implausible"
+      "IMPLAUSIBLE": "The filler does not make sense in the context of the how-to guide"
+
+  - annotation_type: radio
+    name: plausibility_score
+    description: "Graded plausibility rating (1 = clearly implausible, 5 = clearly plausible)"
+    labels:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
 
 annotation_instructions: |
-  You will see an instruction and a proposed clarification of that instruction.
-  The clarification attempts to make explicit something that was left implicit or underspecified.
-  Judge whether the clarification is plausible (reasonable) or implausible (unreasonable).
+  You will see a step from a wikiHow how-to guide with a gap (shown as ____),
+  followed by a candidate filler (clarification) proposed for that gap.
+  The filler makes explicit a phrase that was left implicit or underspecified.
+  First rate how plausible the filler is in context on the 1-5 scale
+  (1 = clearly implausible, 5 = clearly plausible), then assign the
+  overall class: PLAUSIBLE, NEUTRAL, or IMPLAUSIBLE.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
     <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Instruction:</strong>
+      <strong style="color: #0369a1;">How-to guide step (gap shown as ____):</strong>
       <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
     </div>
     <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #92400e;">Proposed Clarification:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{clarification}}</p>
+      <strong style="color: #92400e;">Candidate filler:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{filler}}</p>
     </div>
   </div>
 

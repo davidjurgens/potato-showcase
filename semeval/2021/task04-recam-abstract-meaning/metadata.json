@@ -5,8 +5,8 @@
   "author": {
     "name": "Zheng et al.",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "National University of Defense Technology"
+    "github": "boyuanzheng010",
+    "affiliation": "Queen's University; iFLYTEK; University of Science and Technology of China"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -32,7 +32,7 @@
   ],
   "featured": false,
   "paperReference": "Zheng et al., SemEval 2021",
-  "paperUrl": "https://aclanthology.org/2021.semeval-1.7/",
+  "paperUrl": "https://aclanthology.org/2021.semeval-1.4/",
   "datasetUrl": "https://github.com/boyuanzheng010/SemEval2021-Reading-Comprehension-of-Abstract-Meaning",
-  "citation": "@inproceedings{zheng-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 4: {R}eading {C}omprehension of {A}bstract {M}eaning\",\n    author = \"Zheng, Boyuan  and Yang, Xiaoyu  and Ruan, Yuping  and Quan, Zhenhua  and Li, Jian\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.7\"\n}"
+  "citation": "@inproceedings{zheng-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 4: {R}eading {C}omprehension of {A}bstract {M}eaning\",\n    author = \"Zheng, Boyuan  and Yang, Xiaoyu  and Ruan, Yu-Ping  and Ling, Zhenhua  and Liu, Quan  and Wei, Si  and Zhu, Xiaodan\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    month = aug,\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"37--50\",\n    doi = \"10.18653/v1/2021.semeval-1.4\",\n    url = \"https://aclanthology.org/2021.semeval-1.4/\"\n}"
 }

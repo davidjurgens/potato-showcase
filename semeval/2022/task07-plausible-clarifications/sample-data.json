@@ -1,52 +1,62 @@
 [
   {
-    "id": "plausible_001",
-    "text": "Add the butter to the pan and heat until melted.",
-    "clarification": "Heat the butter on medium heat until it is fully liquefied and starts to bubble slightly."
+    "id": "42_1",
+    "text": "How to Keep a Band Together. Talk openly about ____ before it grows into a bigger conflict.",
+    "filler": "the situation"
   },
   {
-    "id": "plausible_002",
-    "text": "Add the butter to the pan and heat until melted.",
-    "clarification": "Heat the butter to 500 degrees Fahrenheit until it turns black and produces thick smoke."
+    "id": "42_2",
+    "text": "How to Keep a Band Together. Talk openly about ____ before it grows into a bigger conflict.",
+    "filler": "the music"
   },
   {
-    "id": "plausible_003",
-    "text": "Tighten the screw until secure.",
-    "clarification": "Turn the screw clockwise until it is firm and the attached piece no longer moves or wobbles."
+    "id": "42_3",
+    "text": "How to Keep a Band Together. Talk openly about ____ before it grows into a bigger conflict.",
+    "filler": "the parking lot"
   },
   {
-    "id": "plausible_004",
-    "text": "Tighten the screw until secure.",
-    "clarification": "Turn the screw counterclockwise repeatedly until it falls out of the hole completely."
+    "id": "108_1",
+    "text": "How to Store Jalapenos. After slicing the peppers, wash ____ thoroughly with soap and water.",
+    "filler": "your hands"
   },
   {
-    "id": "plausible_005",
-    "text": "Let the dough rise in a warm place.",
-    "clarification": "Place the dough in a location around 75-80 degrees Fahrenheit, such as an oven with just the light on, for about an hour until it doubles in size."
+    "id": "108_2",
+    "text": "How to Store Jalapenos. After slicing the peppers, wash ____ thoroughly with soap and water.",
+    "filler": "the jalapenos"
   },
   {
-    "id": "plausible_006",
-    "text": "Water the plants regularly.",
-    "clarification": "Water the plants once every day by submerging them completely in a bathtub filled with water for six hours."
+    "id": "108_3",
+    "text": "How to Store Jalapenos. After slicing the peppers, wash ____ thoroughly with soap and water.",
+    "filler": "the ceiling"
   },
   {
-    "id": "plausible_007",
-    "text": "Sand the surface until smooth.",
-    "clarification": "Use progressively finer sandpaper starting with 120-grit and finishing with 220-grit, rubbing in the direction of the wood grain until the surface feels even to the touch."
+    "id": "215_1",
+    "text": "How to Build Deck Stairs. Measure from ____ the deck down to the ground to determine the total rise.",
+    "filler": "the top of"
   },
   {
-    "id": "plausible_008",
-    "text": "Apply the paint evenly across the wall.",
-    "clarification": "Use a roller to spread the paint in W-shaped strokes, then go over the area with straight vertical passes to create a uniform coating without visible streaks."
+    "id": "215_2",
+    "text": "How to Build Deck Stairs. Measure from ____ the deck down to the ground to determine the total rise.",
+    "filler": "the bottom of"
   },
   {
-    "id": "plausible_009",
-    "text": "Fold the paper in half.",
-    "clarification": "Fold the paper diagonally by bringing one corner to the opposite corner, creating a triangular shape."
+    "id": "331_1",
+    "text": "How to Repot a Houseplant. Gently loosen ____ so the plant slides out of its old container.",
+    "filler": "the roots"
   },
   {
-    "id": "plausible_010",
-    "text": "Season the steak generously before grilling.",
-    "clarification": "Apply a thick layer of salt, pepper, and garlic powder on both sides of the steak about 30 minutes before placing it on the hot grill."
+    "id": "331_2",
+    "text": "How to Repot a Houseplant. Gently loosen ____ so the plant slides out of its old container.",
+    "filler": "the window"
+  },
+  {
+    "id": "447_1",
+    "text": "How to Make Cold Brew Coffee. Let ____ steep in the refrigerator for at least twelve hours.",
+    "filler": "the grounds"
+  },
+  {
+    "id": "447_2",
+    "text": "How to Make Cold Brew Coffee. Let ____ steep in the refrigerator for at least twelve hours.",
+    "filler": "the mixture"
   }
 ]

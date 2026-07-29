@@ -1,7 +1,9 @@
 # Multilingual Semantic Role Labeling
-# Based on Blloshmi et al., SemEval 2021
-# Paper: https://aclanthology.org/2021.semeval-1.4/
-# Dataset: https://github.com/SapienzaNLP/xl-amr
+# Topic of SemEval-2021 Task 3 (Span- and Dependency-based Multilingual
+# and Cross-lingual SRL); grounded in the UniteD-SRL dataset.
+# Based on Tripodi, Conia & Navigli, Findings of EMNLP 2021
+# Paper: https://aclanthology.org/2021.findings-emnlp.197/
+# Dataset: https://github.com/SapienzaNLP/united-srl
 #
 # Annotators identify predicate-argument structures in sentences by
 # marking spans for semantic roles (Predicate, Agent, Patient, etc.)

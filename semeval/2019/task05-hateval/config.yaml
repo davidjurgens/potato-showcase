@@ -3,18 +3,22 @@
 # Paper: https://aclanthology.org/S19-2007/
 # Dataset: https://competitions.codalab.org/competitions/19935
 #
-# This task asks annotators to first determine whether a tweet contains
-# hate speech, and if so, to identify the types of hate expressed.
+# HatEval targets hate speech against immigrants and women. Following the
+# official protocol, annotators complete two subtasks:
+#   Task A (HS): binary detection of hate speech.
+#   Task B: for hateful tweets, the target range (TR) and aggressiveness (AG).
 #
-# Hate Speech Labels:
-# - Hateful: The tweet contains hate speech targeting a group
+# Task A - Hate Speech (HS):
+# - Hateful: The tweet contains hate speech against immigrants or women
 # - Not Hateful: The tweet does not contain hate speech
 #
-# Hate Type Categories:
-# - Racism: Targeting based on race or ethnicity
-# - Sexism: Targeting based on gender
-# - Xenophobia: Targeting based on national origin or immigration status
-# - Other: Other forms of hate not covered above
+# Task B - Target Range (TR): applies only when the tweet is hateful
+# - Individual: hate directed at a specific individual
+# - Generic: hate directed at a group / class of people
+#
+# Task B - Aggressiveness (AG): applies only when the tweet is hateful
+# - Aggressive: the tweet incites harm or aggressive action
+# - Not Aggressive: hateful but without inciting aggression
 
 annotation_task_name: "HatEval - Hate Speech Detection"
 task_dir: "."
@@ -34,8 +38,8 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
-    name: hate_speech_detection
-    description: "Does this tweet contain hate speech?"
+    name: hate_speech
+    description: "Task A (HS): Does this tweet contain hate speech against immigrants or women?"
     labels:
       - "Hateful"
       - "Not Hateful"
@@ -43,28 +47,36 @@ annotation_schemes:
       "Hateful": "1"
       "Not Hateful": "2"
     tooltips:
-      "Hateful": "The tweet contains language that targets or demeans a group"
+      "Hateful": "The tweet contains hate speech against immigrants or women"
       "Not Hateful": "The tweet does not contain hate speech"
 
-  - annotation_type: multiselect
-    name: hate_type
-    description: "If hateful, what types of hate are expressed? Select all that apply."
+  - annotation_type: radio
+    name: target_range
+    description: "Task B (TR): If hateful, is the target an individual or a group?"
     labels:
-      - "Racism"
-      - "Sexism"
-      - "Xenophobia"
-      - "Other"
+      - "Individual"
+      - "Generic"
     tooltips:
-      "Racism": "Hate speech targeting based on race or ethnicity"
-      "Sexism": "Hate speech targeting based on gender"
-      "Xenophobia": "Hate speech targeting based on national origin or immigration status"
-      "Other": "Other forms of hate not covered by the above categories"
+      "Individual": "Hate directed at a specific person"
+      "Generic": "Hate directed at a group or class of people"
+
+  - annotation_type: radio
+    name: aggressiveness
+    description: "Task B (AG): If hateful, is the tweet aggressive?"
+    labels:
+      - "Aggressive"
+      - "Not Aggressive"
+    tooltips:
+      "Aggressive": "The tweet incites harm or aggressive action against the target"
+      "Not Aggressive": "Hateful but does not incite aggression"
 
 annotation_instructions: |
-  You will be shown a tweet and its target group. Your task is to:
-  1. Determine whether the tweet contains hate speech (hateful vs. not hateful).
-  2. If hateful, select all applicable hate type categories.
-  Consider the context and target group when making your judgment.
+  You will be shown a tweet. Your task is to:
+  1. Task A (HS): Determine whether the tweet contains hate speech against
+     immigrants or women (hateful vs. not hateful).
+  2. Task B: If the tweet is hateful, judge the target range (individual vs.
+     generic group) and whether the tweet is aggressive.
+  Leave the Task B fields unanswered when the tweet is not hateful.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

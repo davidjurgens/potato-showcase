@@ -1,6 +1,6 @@
 {
   "title": "Multilingual News Article Similarity",
-  "description": "Rating the similarity between pairs of news articles on a 5-point scale, assessing whether they cover the same story across multiple languages. Based on SemEval-2022 Task 8 (Chen et al.).",
+  "description": "Rating the similarity between pairs of news articles across seven dimensions (geography, entities, time, narrative, overall, style, tone), each on a 4-point scale, to assess whether they cover the same story across multiple languages. Based on SemEval-2022 Task 8 (Chen et al.).",
   "version": "1.0.0",
   "author": {
     "name": "Chen et al.",
@@ -33,8 +33,8 @@
     "document-similarity"
   ],
   "featured": false,
-  "paperReference": "Chen et al., SemEval 2022",
+  "paperReference": "Chen et al., SemEval 2022, pages 1094-1106",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.155/",
-  "datasetUrl": "https://github.com/euagendas/semeval-2022-task8",
-  "citation": "@inproceedings{chen-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 8: Multilingual News Article Similarity\",\n    author = \"Chen, Xi  and Zesch, Torsten  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.155\"\n}"
+  "datasetUrl": "https://github.com/euagendas/semeval_8_2022_ia_downloader",
+  "citation": "@inproceedings{chen-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 8: Multilingual news article similarity\",\n    author = {Chen, Xi  and Zeynali, Ali  and Camargo, Chico  and Fl{\\\"o}ck, Fabian  and Gaffney, Devin  and Grabowicz, Przemyslaw  and Hale, Scott A.  and Jurgens, David  and Samory, Mattia},\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.155/\",\n    doi = \"10.18653/v1/2022.semeval-1.155\",\n    pages = \"1094--1106\"\n}"
 }

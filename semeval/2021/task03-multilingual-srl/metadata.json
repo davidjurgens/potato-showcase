@@ -1,11 +1,11 @@
 {
   "title": "Multilingual Semantic Role Labeling",
-  "description": "Annotate abstract semantic frames in multilingual text by marking predicate-argument structures and voice type, based on SemEval-2021 Task 3 (Blloshmi et al.). Covers cross-lingual semantic role labeling with abstract meaning representations.",
+  "description": "Annotate predicate-argument structure in multilingual text by marking predicates, labeling their argument spans with semantic roles, and classifying voice type. Mirrors the topic of SemEval-2021 Task 3 (Span- and Dependency-based Multilingual and Cross-lingual Semantic Role Labeling); grounded in the UniteD-SRL dataset (Tripodi, Conia & Navigli, Findings of EMNLP 2021).",
   "version": "1.0.0",
   "author": {
-    "name": "Blloshmi et al.",
+    "name": "Tripodi, Conia & Navigli",
     "email": "",
-    "github": "SemEval",
+    "github": "SapienzaNLP",
     "affiliation": "Sapienza University of Rome"
   },
   "createdAt": "2025-01-16",
@@ -32,8 +32,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "Blloshmi et al., SemEval 2021",
+  "paperReference": "Tripodi, Conia & Navigli, Findings of EMNLP 2021 (UniteD-SRL)",
   "paperUrl": "https://aclanthology.org/2021.findings-emnlp.197/",
-  "datasetUrl": "https://github.com/SapienzaNLP/xl-amr",
-  "citation": "@inproceedings{blloshmi-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 3: {S}pan- and {D}ependency-{B}ased {M}ultilingual and {C}ross-{L}ingual {S}emantic {R}ole {L}abeling\",\n    author = \"Blloshmi, Rexhina  and Conia, Simone  and Navigli, Roberto\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.findings-emnlp.197\"\n}"
+  "datasetUrl": "https://github.com/SapienzaNLP/united-srl",
+  "citation": "@inproceedings{tripodi-etal-2021-united-srl,\n    title = \"{U}nite{D}-{SRL}: A Unified Dataset for Span- and Dependency-Based Multilingual and Cross-Lingual {S}emantic {R}ole {L}abeling\",\n    author = \"Tripodi, Rocco  and Conia, Simone  and Navigli, Roberto\",\n    booktitle = \"Findings of the Association for Computational Linguistics: EMNLP 2021\",\n    month = nov,\n    year = \"2021\",\n    address = \"Punta Cana, Dominican Republic\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.findings-emnlp.197/\",\n    doi = \"10.18653/v1/2021.findings-emnlp.197\",\n    pages = \"2293--2305\"\n}"
 }

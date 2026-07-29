@@ -1,23 +1,31 @@
-# SecureNLP - Malware and Security Entity Recognition
-# Based on Phandi et al., SemEval 2018
+# SecureNLP - Malware Report Semantic Extraction
+# Based on Phandi et al., SemEval 2018 (SecureNLP), MalwareTextDB corpus
 # Paper: https://aclanthology.org/S18-1113/
 # Dataset: https://competitions.codalab.org/competitions/17262
 #
-# This task asks annotators to identify cybersecurity-related entities
-# in text and classify the document type.
+# SecureNLP defines four incremental SubTasks over sentences from APT
+# malware reports:
+#   SubTask 1: classify whether a sentence is relevant to malware
+#              actions/capabilities (relevant vs. irrelevant)
+#   SubTask 2: predict token labels (Action / Entity / Modifier)
+#   SubTask 3: predict relation labels between tokens
+#              (SubjAction, ActionObj, ActionMod, ModObj)
+#   SubTask 4: predict MAEC attribute labels for Action tokens
 #
-# Entity Span Labels:
-# - Malware: Names of malware, viruses, trojans, ransomware
-# - Attack Pattern: Descriptions of attack techniques or methods
-# - Indicator: IoCs such as IP addresses, hashes, domains
-# - Tool: Security or hacking tools mentioned
-# - Vulnerability: CVE identifiers or vulnerability descriptions
-# - Organization: Threat actor groups or affected organizations
+# This showcase covers SubTask 1 (sentence relevance), SubTask 2 (token
+# labels), and SubTask 4 (attribute category on Action tokens).
 #
-# Document Types:
-# - Threat Report, Advisory, Analysis, News
+# Token Labels (SubTask 2):
+# - Action: an event/verb describing malware behaviour (e.g. "implements",
+#           "deploys", "transferred")
+# - Entity: the initiator (Subject) or recipient (Object) of an Action,
+#           or word phrases elaborating on the Action
+# - Modifier: tokens linking to phrases that elaborate on the Action (e.g. "to")
+#
+# Attribute Categories (SubTask 4, from the MAEC vocabulary):
+# - ActionName, Capability, StrategicObjectives, TacticalObjectives
 
-annotation_task_name: "SecureNLP - Cybersecurity Entity Recognition"
+annotation_task_name: "SecureNLP - Malware Report Semantic Extraction"
 task_dir: "."
 
 data_files:
@@ -34,50 +42,55 @@ port: 8000
 server_name: localhost
 
 annotation_schemes:
-  - annotation_type: span
-    name: security_entities
-    description: "Highlight all cybersecurity-related entities in the text."
-    labels:
-      - "Malware"
-      - "Attack Pattern"
-      - "Indicator"
-      - "Tool"
-      - "Vulnerability"
-      - "Organization"
-
   - annotation_type: radio
-    name: document_type
-    description: "What type of cybersecurity document is this?"
+    name: sentence_relevance
+    description: "SubTask 1: Is this sentence relevant to malware actions or capabilities?"
     labels:
-      - "Threat Report"
-      - "Advisory"
-      - "Analysis"
-      - "News"
+      - "Relevant"
+      - "Irrelevant"
     keyboard_shortcuts:
-      "Threat Report": "1"
-      "Advisory": "2"
-      "Analysis": "3"
-      "News": "4"
+      "Relevant": "1"
+      "Irrelevant": "2"
     tooltips:
-      "Threat Report": "Detailed report on a specific threat or campaign"
-      "Advisory": "Security advisory or bulletin with recommendations"
-      "Analysis": "Technical analysis of malware, vulnerabilities, or attacks"
-      "News": "News article covering cybersecurity events"
+      "Relevant": "The sentence describes a malware action or capability"
+      "Irrelevant": "The sentence provides no information about malware behaviour"
+
+  - annotation_type: span
+    name: token_labels
+    description: "SubTask 2: Highlight tokens as Action, Entity, or Modifier."
+    labels:
+      - "Action"
+      - "Entity"
+      - "Modifier"
+
+  - annotation_type: multiselect
+    name: attribute_category
+    description: "SubTask 4: Which MAEC attribute categories apply to the Action tokens?"
+    labels:
+      - "ActionName"
+      - "Capability"
+      - "StrategicObjectives"
+      - "TacticalObjectives"
+    tooltips:
+      "ActionName": "Specific named action from the MAEC vocabulary (211 labels)"
+      "Capability": "Malware capability, e.g. data exfiltration (20 labels)"
+      "StrategicObjectives": "Higher-level strategic objective of the action (65 labels)"
+      "TacticalObjectives": "Tactical objective realising a capability (148 labels)"
 
 annotation_instructions: |
-  You will be shown a cybersecurity text. Your task is to:
-  1. Highlight all cybersecurity entities (malware names, attack patterns, indicators,
-     tools, vulnerabilities, and organizations).
-  2. Classify the document type (threat report, advisory, analysis, or news).
+  You will be shown a sentence from a malware / APT cybersecurity report.
+  Following the SecureNLP protocol:
+  1. Mark whether the sentence is Relevant (describes a malware action or
+     capability) or Irrelevant.
+  2. For relevant sentences, highlight tokens with the Action, Entity, or
+     Modifier labels. Action is the malware event/verb; Entity is the
+     Subject/Object of the Action; Modifier links to elaborating phrases.
+  3. Select the MAEC attribute categories that apply to the Action tokens.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #a16207;">Source Type:</strong>
-      <span style="font-size: 15px;">{{source_type}}</span>
-    </div>
     <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
+      <strong style="color: #0369a1;">Sentence:</strong>
       <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
     </div>
   </div>

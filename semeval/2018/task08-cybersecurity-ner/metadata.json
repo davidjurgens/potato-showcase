@@ -1,18 +1,19 @@
 {
-  "title": "SecureNLP - Malware and Security Entity Recognition",
-  "description": "Named entity recognition in cybersecurity text, identifying malware, attack patterns, indicators, tools, vulnerabilities, and organizations, with document-level classification. Based on SemEval-2018 Task 8.",
+  "title": "SecureNLP - Malware Report Semantic Extraction",
+  "description": "Semantic extraction from cybersecurity (APT malware) reports, following SemEval-2018 Task 8 (SecureNLP) on the MalwareTextDB corpus: classify whether a sentence is relevant to malware actions/capabilities, then tag tokens with the Action / Entity / Modifier labels and assign MAEC attribute categories to Action tokens.",
   "version": "1.0.0",
   "author": {
     "name": "Phandi et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Singapore Management University"
+    "affiliation": "Singapore University of Technology and Design"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
   "annotationTypes": [
     "span",
-    "radio"
+    "radio",
+    "multiselect"
   ],
   "domain": [
     "SemEval",
@@ -39,5 +40,5 @@
   "paperReference": "Phandi et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1113/",
   "datasetUrl": "https://competitions.codalab.org/competitions/17262",
-  "citation": "@inproceedings{phandi-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 8: Semantic Extraction from {C}yber{S}ecurity{RE}ports using Natural Language Processing ({S}ecure{NLP})\",\n    author = \"Phandi, Peter and Silva, Amila and Lu, Wei\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1113\"\n}"
+  "citation": "@inproceedings{phandi-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 8: Semantic Extraction from {C}ybersec{U}rity {RE}ports using Natural Language Processing ({S}ecure{NLP})\",\n    author = \"Phandi, Peter and Silva, Amila and Lu, Wei\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1113\",\n    doi = \"10.18653/v1/S18-1113\",\n    pages = \"697--706\"\n}"
 }

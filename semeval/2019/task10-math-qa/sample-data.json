@@ -1,12 +1,12 @@
 [
   {"id": "mathqa_001", "text": "If 3x + 7 = 22, what is the value of x?", "difficulty": "Easy"},
-  {"id": "mathqa_002", "text": "A triangle has sides of length 5, 12, and 13. What is the area of the triangle?", "difficulty": "Medium"},
-  {"id": "mathqa_003", "text": "What is the greatest common divisor of 84 and 126?", "difficulty": "Easy"},
-  {"id": "mathqa_004", "text": "The mean of five numbers is 20. If four of the numbers are 15, 18, 22, and 25, what is the fifth number?", "difficulty": "Medium"},
+  {"id": "mathqa_002", "text": "Suppose 3x + y = 15, where x is a positive integer. What is the difference between the largest possible value of y and the smallest possible value of x, assuming that y is also a positive integer?", "difficulty": "Medium"},
+  {"id": "mathqa_003", "text": "At a basketball tournament involving 8 teams, each team played 4 games with each of the other teams. How many games were played at this tournament?", "difficulty": "Medium"},
+  {"id": "mathqa_004", "text": "A right triangle has legs of length 5 and 12. What is the length of the hypotenuse?", "difficulty": "Easy"},
   {"id": "mathqa_005", "text": "Solve for y: 2y^2 - 5y - 3 = 0", "difficulty": "Medium"},
   {"id": "mathqa_006", "text": "A circle has a circumference of 31.4 cm. What is its radius? (Use pi = 3.14)", "difficulty": "Easy"},
-  {"id": "mathqa_007", "text": "How many prime numbers are there between 50 and 70?", "difficulty": "Medium"},
-  {"id": "mathqa_008", "text": "A bag contains 4 red balls, 3 blue balls, and 5 green balls. What is the probability of drawing a blue ball?", "difficulty": "Easy"},
-  {"id": "mathqa_009", "text": "If f(x) = 2x^3 - 4x + 1, what is f(3)?", "difficulty": "Medium"},
-  {"id": "mathqa_010", "text": "The interior angles of a regular polygon sum to 1440 degrees. How many sides does the polygon have?", "difficulty": "Hard"}
+  {"id": "mathqa_007", "text": "A train travels 60 miles in the same time that a car travels 45 miles. If the car travels at 30 miles per hour, how fast is the train traveling, in miles per hour?", "difficulty": "Medium"},
+  {"id": "mathqa_008", "text": "If f(x) = 2x^3 - 4x + 1, what is f(3)?", "difficulty": "Medium"},
+  {"id": "mathqa_009", "text": "The interior angles of a regular polygon sum to 1440 degrees. How many sides does the polygon have?", "difficulty": "Hard"},
+  {"id": "mathqa_010", "text": "In the figure, two parallel lines are cut by a transversal. If one of the acute angles measures 65 degrees, what is the measure, in degrees, of its corresponding angle?", "difficulty": "Easy"}
 ]

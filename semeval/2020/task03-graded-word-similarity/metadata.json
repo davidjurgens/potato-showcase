@@ -1,12 +1,12 @@
 {
   "title": "Graded Word Similarity in Context",
-  "description": "Rate the semantic similarity of two words in their respective contexts on a graded scale, based on SemEval-2020 Task 3 (Armendariz et al.). Annotators assess how similar word meanings are when each word appears in a specific sentence context.",
+  "description": "Rate the graded semantic similarity of a PAIR of target words that appear together within a shared context, based on SemEval-2020 Task 3 (Armendariz et al.). The same word pair is judged within two different contexts; Subtask 1 predicts the change in similarity between contexts and Subtask 2 predicts the absolute rating. Ratings follow the SimLex-style 0-6 similarity scale (later mapped to 0-10). Similarity is distinct from relatedness (e.g., coffee and cup are related but not similar).",
   "version": "1.0.0",
   "author": {
     "name": "Armendariz et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "Cardiff University"
+    "affiliation": "Queen Mary University of London"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -37,5 +37,5 @@
   "paperReference": "Armendariz et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.3/",
   "datasetUrl": "https://competitions.codalab.org/competitions/20905",
-  "citation": "@inproceedings{armendariz-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 3: {G}raded {W}ord {S}imilarity in {C}ontext\",\n    author = \"Armendariz, Carlos S.  and Purver, Matthew  and Pollak, Senja  and Ljubesic, Nikola  and Ulcar, Matej  and Vulc, Ivan  and Pilehvar, Mohammad Taher\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.3\"\n}"
+  "citation": "@inproceedings{armendariz-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 Task 3: Graded Word Similarity in Context\",\n    author = \"Armendariz, Carlos Santos  and Purver, Matthew  and Pollak, Senja  and Ljube{\\v{s}}i{\\'c}, Nikola  and Ul{\\v{c}}ar, Matej  and Vuli{\\'c}, Ivan  and Pilehvar, Mohammad Taher\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.3/\",\n    doi = \"10.18653/v1/2020.semeval-1.3\",\n    pages = \"36--49\"\n}"
 }

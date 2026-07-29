@@ -1,6 +1,6 @@
 # ReCAM - Reading Comprehension of Abstract Meaning
 # Based on Zheng et al., SemEval 2021
-# Paper: https://aclanthology.org/2021.semeval-1.7/
+# Paper: https://aclanthology.org/2021.semeval-1.4/
 # Dataset: https://github.com/boyuanzheng010/SemEval2021-Reading-Comprehension-of-Abstract-Meaning
 #
 # Annotators read a passage with a blank and select the best word from

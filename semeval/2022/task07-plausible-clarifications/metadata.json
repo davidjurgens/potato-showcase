@@ -1,12 +1,12 @@
 {
   "title": "Plausible Clarifications of Implicit and Underspecified Instructions",
-  "description": "Binary plausibility judgment for clarifications of underspecified or ambiguous instructions, determining whether a proposed clarification is plausible or implausible. Based on SemEval-2022 Task 7 (Roth and Anthonio).",
+  "description": "Rate the plausibility of a candidate filler (clarification) for a gap in a wikiHow instructional text. Combines a multi-class judgment (IMPLAUSIBLE / NEUTRAL / PLAUSIBLE) with a graded 1-5 plausibility score. Based on SemEval-2022 Task 7 (Roth, Anthonio, and Sauer).",
   "version": "1.0.0",
   "author": {
-    "name": "Roth and Anthonio",
+    "name": "Roth, Anthonio, and Sauer",
     "email": "",
     "github": "semeval",
-    "affiliation": "SemEval"
+    "affiliation": "University of Stuttgart / SemEval"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -34,8 +34,8 @@
     "pragmatics"
   ],
   "featured": false,
-  "paperReference": "Roth and Anthonio, SemEval 2022",
+  "paperReference": "Roth, Anthonio, and Sauer, SemEval 2022",
   "paperUrl": "https://aclanthology.org/2022.semeval-1.146/",
-  "datasetUrl": "https://github.com/Anthonio/SemEval2022-Task7",
-  "citation": "@inproceedings{roth-anthonio-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 7: Identifying Plausible Clarifications of Implicit and Underspecified Language in Instructional Texts\",\n    author = \"Roth, Michael  and Anthonio, Talita\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.146\"\n}"
+  "datasetUrl": "https://github.com/acidAnn/semeval2022_task7_starter_kit",
+  "citation": "@inproceedings{roth-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 7: Identifying Plausible Clarifications of Implicit and Underspecified Phrases in Instructional Texts\",\n    author = \"Roth, Michael  and Anthonio, Talita  and Sauer, Anna\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.146/\",\n    doi = \"10.18653/v1/2022.semeval-1.146\",\n    pages = \"1039--1049\"\n}"
 }

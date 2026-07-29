@@ -3,9 +3,15 @@
 # Paper: https://aclanthology.org/2020.semeval-1.3/
 # Dataset: https://competitions.codalab.org/competitions/20905
 #
-# Annotators rate how similar the meanings of two target words are,
-# given their respective sentence contexts. The task captures the
-# graded, context-dependent nature of word similarity.
+# Annotators rate how similar the meanings of a PAIR of target words are
+# when both words appear together within a single shared context. Each
+# word pair is rated within two different contexts, and the task studies
+# how context modulates the graded similarity of the pair (CoSimLex).
+# Subtask 1 measures the CHANGE in similarity between the two contexts;
+# Subtask 2 measures the ABSOLUTE similarity rating within each context.
+# Ratings use the SimLex-style 0-6 similarity scale (later mapped to 0-10).
+# Note: similarity is not the same as relatedness (e.g., coffee and cup
+# are strongly related but not similar).
 
 annotation_task_name: "Graded Word Similarity in Context"
 task_dir: "."
@@ -26,38 +32,45 @@ server_name: localhost
 annotation_schemes:
   - annotation_type: likert
     name: similarity_likert
-    description: "Rate how similar the meanings of the two target words are in their respective contexts."
+    description: "How similar in meaning are the two target words as used in this context?"
     min_label: "Completely Different"
-    max_label: "Identical"
-    size: 5
+    max_label: "Identical / Synonymous"
+    size: 7
 
   - annotation_type: slider
     name: similarity_slider
-    description: "Provide a fine-grained similarity rating on a continuous scale."
+    description: "Fine-grained similarity rating on the SimLex-style scale (0 = completely different, 6 = identical meaning)."
     min_value: 0
-    max_value: 4
-    starting_value: 2
+    max_value: 6
+    starting_value: 3
 
 annotation_instructions: |
-  You will see two sentences, each containing a target word. Your task is to:
-  1. Read both sentences carefully and pay attention to the highlighted target words.
-  2. Consider how similar the meanings of the two words are IN THEIR GIVEN CONTEXTS.
+  You will see a short context (a sentence or passage) that contains TWO
+  highlighted target words. Your task is to:
+  1. Read the whole context carefully so that its meaning primes you naturally.
+  2. Consider how SIMILAR in meaning the two target words are AS USED IN THIS
+     context (not their general dictionary definitions).
   3. Rate the similarity on the Likert scale (Completely Different to Identical).
-  4. Provide a fine-grained continuous rating using the slider (0 = completely different,
-     4 = identical meaning).
+  4. Give a fine-grained rating using the slider (0 = completely different,
+     6 = identical / synonymous). This 0-6 scale follows SimLex-999.
 
-  Important: Focus on the meaning of the words as used in these specific contexts,
-  not their general dictionary definitions.
+  Important notes:
+  - Judge SIMILARITY, not relatedness. Words can be strongly related yet not
+    similar: for example, "coffee" and "cup" are related but not similar.
+  - The same word pair will also be shown to you within a DIFFERENT context.
+    Rate each context on its own; the study compares how the context changes
+    your similarity judgement (Subtask 1: change of similarity; Subtask 2:
+    the absolute rating in each context).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Context 1 (Target: <em>{{word_1}}</em>):</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 10px 16px; margin-bottom: 12px;">
+      <strong style="color: #4338ca;">Target word pair:</strong>
+      <span style="font-size: 16px;"><em>{{word_1}}</em> &nbsp;&mdash;&nbsp; <em>{{word_2}}</em></span>
     </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Context 2 (Target: <em>{{word_2}}</em>):</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{context_2}}</p>
+    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #0369a1;">Context:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
     </div>
   </div>
 

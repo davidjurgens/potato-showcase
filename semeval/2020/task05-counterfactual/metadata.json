@@ -6,7 +6,7 @@
     "name": "Yang et al.",
     "email": "",
     "github": "SemEval",
-    "affiliation": "University of Florida"
+    "affiliation": "Queen's University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -36,5 +36,5 @@
   "paperReference": "Yang et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.40/",
   "datasetUrl": "https://github.com/arielsho/SemEval-2020-Task-5",
-  "citation": "@inproceedings{yang-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 5: {C}ounterfactual {R}ecognition\",\n    author = \"Yang, Xiaoyu  and Obadinma, Stephen  and Zhao, Huasha  and Zhang, Qiong  and Matwin, Stan  and Zhu, Xiaodan\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.40\"\n}"
+  "citation": "@inproceedings{yang-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 Task 5: Counterfactual Recognition\",\n    author = \"Yang, Xiaoyu  and Obadinma, Stephen  and Zhao, Huasha  and Zhang, Qiong  and Matwin, Stan  and Zhu, Xiaodan\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.40/\",\n    doi = \"10.18653/v1/2020.semeval-1.40\",\n    pages = \"322--335\"\n}"
 }

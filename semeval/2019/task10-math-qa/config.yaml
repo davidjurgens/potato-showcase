@@ -3,15 +3,16 @@
 # Paper: https://aclanthology.org/S19-2153/
 # Dataset: https://competitions.codalab.org/competitions/20013
 #
-# This task asks annotators to solve mathematical problems and classify
-# them by mathematical category. Annotators provide the answer to the
-# problem and identify its mathematical domain.
+# This task asks annotators to solve SAT-style mathematical questions and
+# classify them by category. Annotators provide the answer to the question
+# (numeric or multiple-choice) and identify its mathematical category.
 #
-# Category Labels:
-# - Algebra: Equations, expressions, functions, polynomials
-# - Geometry: Shapes, areas, angles, spatial reasoning
-# - Number Theory: Properties of integers, divisibility, primes
-# - Statistics: Probability, averages, data analysis
+# Category Labels (following the shared task's three-way taxonomy):
+# - Closed-vocabulary Algebra: symbolic algebra questions using a restricted
+#   vocabulary (equations, expressions, functions, polynomials)
+# - Open-vocabulary Algebra: algebra word problems requiring reasoning over
+#   free-form natural language
+# - Geometry: shapes, areas, angles, and spatial reasoning (may include a diagram)
 
 annotation_task_name: "Math Question Answering"
 task_dir: "."
@@ -32,31 +33,28 @@ server_name: localhost
 annotation_schemes:
   - annotation_type: text
     name: answer
-    description: "Provide the answer to the math problem."
+    description: "Provide the answer to the question (a number, or the letter of the correct multiple-choice option)."
 
   - annotation_type: radio
     name: math_category
-    description: "What mathematical category does this problem belong to?"
+    description: "Which category does this question belong to?"
     labels:
-      - "Algebra"
+      - "Closed-vocabulary Algebra"
+      - "Open-vocabulary Algebra"
       - "Geometry"
-      - "Number Theory"
-      - "Statistics"
     keyboard_shortcuts:
-      "Algebra": "1"
-      "Geometry": "2"
-      "Number Theory": "3"
-      "Statistics": "4"
+      "Closed-vocabulary Algebra": "1"
+      "Open-vocabulary Algebra": "2"
+      "Geometry": "3"
     tooltips:
-      "Algebra": "Problems involving equations, expressions, functions, or polynomials"
-      "Geometry": "Problems involving shapes, areas, angles, or spatial reasoning"
-      "Number Theory": "Problems involving properties of integers, divisibility, or primes"
-      "Statistics": "Problems involving probability, averages, or data analysis"
+      "Closed-vocabulary Algebra": "Symbolic algebra questions using a restricted vocabulary (equations, expressions, functions, polynomials)"
+      "Open-vocabulary Algebra": "Algebra word problems requiring reasoning over free-form natural language"
+      "Geometry": "Questions involving shapes, areas, angles, or spatial reasoning (may include a diagram)"
 
 annotation_instructions: |
-  You will be shown a math problem along with its difficulty level. Your task is to:
-  1. Solve the problem and provide the answer in the text field.
-  2. Classify the problem into one of four mathematical categories.
+  You will be shown a SAT-style math question along with its difficulty level. Your task is to:
+  1. Solve the question and provide the answer (a number, or the letter of the correct multiple-choice option) in the text field.
+  2. Classify the question into one of three categories: Closed-vocabulary Algebra, Open-vocabulary Algebra, or Geometry.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

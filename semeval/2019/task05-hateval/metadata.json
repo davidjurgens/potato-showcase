@@ -1,6 +1,6 @@
 {
   "title": "HatEval - Multilingual Detection of Hate Speech Against Immigrants and Women",
-  "description": "Detection and classification of hate speech targeting immigrants and women on Twitter, including fine-grained categorization of hate type. Based on SemEval-2019 Task 5 (HatEval).",
+  "description": "Detection and classification of hate speech targeting immigrants and women on Twitter, including fine-grained annotation of target range (individual vs. generic) and aggressiveness. Based on SemEval-2019 Task 5 (HatEval).",
   "version": "1.0.0",
   "author": {
     "name": "Basile et al.",
@@ -39,5 +39,5 @@
   "paperReference": "Basile et al., SemEval 2019",
   "paperUrl": "https://aclanthology.org/S19-2007/",
   "datasetUrl": "https://competitions.codalab.org/competitions/19935",
-  "citation": "@inproceedings{basile-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 5: Multilingual Detection of Hate Speech Against Immigrants and Women in {T}witter\",\n    author = \"Basile, Valerio and Bosco, Cristina and Ferrara, Elisabetta and Ferraro, Danilo and Ferrini, Valerio and Guillen, Antonia and Ferrara, Elisabetta\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    year = \"2019\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2007\"\n}"
+  "citation": "@inproceedings{basile-etal-2019-semeval,\n    title = \"{S}em{E}val-2019 Task 5: Multilingual Detection of Hate Speech Against Immigrants and Women in {T}witter\",\n    author = \"Basile, Valerio and Bosco, Cristina and Fersini, Elisabetta and Nozza, Debora and Patti, Viviana and Rangel Pardo, Francisco Manuel and Rosso, Paolo and Sanguinetti, Manuela\",\n    booktitle = \"Proceedings of the 13th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S19-2007/\",\n    doi = \"10.18653/v1/S19-2007\",\n    pages = \"54--63\"\n}"
 }

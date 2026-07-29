@@ -1,12 +1,12 @@
 {
   "title": "Patient Forum Question Answering",
-  "description": "Question answering and response classification for patient health forum posts, categorizing responses by type (medical advice, experience sharing, information request, emotional support). Based on SemEval-2022 Task 6 (Akhtar et al.).",
+  "description": "Question answering and response classification for patient health forum posts, categorizing responses by type (medical advice, experience sharing, information request, emotional support). NOTE: This is an illustrative task template not tied to a confirmed primary source. It does NOT correspond to SemEval-2022 Task 6 (which is iSarcasmEval, intended sarcasm detection) or to any other real SemEval-2022 task.",
   "version": "1.0.0",
   "author": {
-    "name": "Akhtar et al.",
+    "name": "Potato Showcase",
     "email": "",
-    "github": "semeval",
-    "affiliation": "SemEval"
+    "github": "",
+    "affiliation": ""
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -35,8 +35,8 @@
     "medical"
   ],
   "featured": false,
-  "paperReference": "Akhtar et al., SemEval 2022",
-  "paperUrl": "https://aclanthology.org/2022.semeval-1.75/",
-  "datasetUrl": "https://github.com/Akhtar-SemEval2022-Task6",
-  "citation": "@inproceedings{akhtar-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 6: i{S}arcasm{E}val, Intended Sarcasm Detection in {E}nglish and {A}rabic\",\n    author = \"Akhtar, Md Shad  and others\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    year = \"2022\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.75\"\n}"
+  "paperReference": "TODO: no confirmed primary source (content does not match any real SemEval-2022 task)",
+  "paperUrl": "",
+  "datasetUrl": "",
+  "citation": "TODO: This showcase entry describes a patient-forum question-answering task that does not correspond to any real SemEval-2022 shared task. SemEval-2022 Task 6 is iSarcasmEval (Abu Farha, Oprea, Wilson, Magdy; https://aclanthology.org/2022.semeval-1.111/), an unrelated sarcasm-detection task. No verified primary source could be found for this content; a citation must not be invented."
 }

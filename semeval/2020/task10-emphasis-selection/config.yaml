@@ -1,7 +1,7 @@
 # Emphasis Selection for Written Text
 # Based on Shirani et al., SemEval 2020
-# Paper: https://aclanthology.org/2020.semeval-1.186/
-# Dataset: https://github.com/RiTUAL-UH/SemEval2020_Task10
+# Paper: https://aclanthology.org/2020.semeval-1.184/
+# Dataset: https://github.com/RiTUAL-UH/SemEval2020_Task10_Emphasis_Selection
 #
 # Annotators select which words or phrases in a short text should be
 # emphasized (e.g., bolded, highlighted) to best convey the intended

@@ -1,12 +1,12 @@
 [
-  {"id": "gws_001", "text": "The bank of the river was covered in wildflowers during spring.", "context_2": "She deposited her savings at the bank downtown.", "word_1": "bank", "word_2": "bank"},
-  {"id": "gws_002", "text": "The bright star was visible in the night sky even from the city center.", "context_2": "The movie star arrived at the premiere in a luxury limousine.", "word_1": "star", "word_2": "star"},
-  {"id": "gws_003", "text": "He used a bat to hit the ball over the fence during the game.", "context_2": "A bat flew out of the cave at dusk and circled overhead.", "word_1": "bat", "word_2": "bat"},
-  {"id": "gws_004", "text": "The doctor examined the patient carefully before making a diagnosis.", "context_2": "The physician prescribed antibiotics for the infection.", "word_1": "doctor", "word_2": "physician"},
-  {"id": "gws_005", "text": "The child was running quickly through the park to catch the bus.", "context_2": "Water was running from the tap in the kitchen all morning.", "word_1": "running", "word_2": "running"},
-  {"id": "gws_006", "text": "She felt a deep sense of joy when she heard the good news.", "context_2": "The celebration brought great happiness to the entire family.", "word_1": "joy", "word_2": "happiness"},
-  {"id": "gws_007", "text": "The crane lifted the heavy steel beams onto the construction site.", "context_2": "A crane stood gracefully in the shallow water of the marsh.", "word_1": "crane", "word_2": "crane"},
-  {"id": "gws_008", "text": "The car was traveling at a high speed on the highway.", "context_2": "The train was moving very fast along the tracks to the station.", "word_1": "speed", "word_2": "fast"},
-  {"id": "gws_009", "text": "The leaves on the tree began to change color in autumn.", "context_2": "Please leave the documents on my desk before you go.", "word_1": "leaves", "word_2": "leave"},
-  {"id": "gws_010", "text": "The concert was a brilliant performance by the entire orchestra.", "context_2": "The show received standing ovations from the audience every night.", "word_1": "performance", "word_2": "show"}
+  {"id": "gws_001", "pair_id": "car_automobile", "context_num": 1, "word_1": "car", "word_2": "automobile", "text": "The mechanic explained that the old car needed new brakes before the automobile could pass its yearly inspection."},
+  {"id": "gws_002", "pair_id": "car_automobile", "context_num": 2, "word_1": "car", "word_2": "automobile", "text": "In the design museum, a hand-built vintage automobile sat beside a sleek electric car to show a century of engineering."},
+  {"id": "gws_003", "pair_id": "bank_money", "context_num": 1, "word_1": "bank", "word_2": "money", "text": "She hurried to the bank before closing time to deposit the money she had earned over the summer."},
+  {"id": "gws_004", "pair_id": "bank_money", "context_num": 2, "word_1": "bank", "word_2": "money", "text": "They rested on the mossy bank of the stream, joking that clean air and quiet were worth more than any money."},
+  {"id": "gws_005", "pair_id": "cup_coffee", "context_num": 1, "word_1": "cup", "word_2": "coffee", "text": "He filled the chipped ceramic cup with steaming coffee and carried it carefully back to his desk."},
+  {"id": "gws_006", "pair_id": "cup_coffee", "context_num": 2, "word_1": "cup", "word_2": "coffee", "text": "The barista competition judged both the flavour of the coffee and how neatly the crema sat inside the cup."},
+  {"id": "gws_007", "pair_id": "star_sun", "context_num": 1, "word_1": "star", "word_2": "sun", "text": "The astronomer reminded the students that our sun is simply the nearest star to the Earth."},
+  {"id": "gws_008", "pair_id": "star_sun", "context_num": 2, "word_1": "star", "word_2": "sun", "text": "On the poster above the crib, a smiling cartoon sun and a glittering gold star decorated the child's bedroom wall."},
+  {"id": "gws_009", "pair_id": "teacher_professor", "context_num": 1, "word_1": "teacher", "word_2": "professor", "text": "The high-school teacher encouraged her best student to one day become a university professor of physics."},
+  {"id": "gws_010", "pair_id": "teacher_professor", "context_num": 2, "word_1": "teacher", "word_2": "professor", "text": "At the reunion the retired professor thanked the elementary teacher who first sparked his love of reading."}
 ]

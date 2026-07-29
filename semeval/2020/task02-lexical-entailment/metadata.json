@@ -1,9 +1,9 @@
 {
   "title": "Predicting Multilingual and Cross-Lingual Lexical Entailment",
-  "description": "Determine whether the meaning of a word in one context entails, is entailed by, or is unrelated to the meaning of another word, based on SemEval-2020 Task 2 (Glavavs et al.). Supports graded lexical entailment across multiple languages.",
+  "description": "Rate the degree to which one word (X) is a type of another word (Y) — graded lexical entailment (hyponymy/is-a) — based on SemEval-2020 Task 2 (Glavaš et al.). Covers multilingual and cross-lingual graded lexical entailment derived from HyperLex.",
   "version": "1.0.0",
   "author": {
-    "name": "Glavavs et al.",
+    "name": "Glavaš et al.",
     "email": "",
     "github": "SemEval",
     "affiliation": "University of Mannheim"
@@ -32,8 +32,8 @@
     "cross-lingual"
   ],
   "featured": false,
-  "paperReference": "Glavavs et al., SemEval 2020",
+  "paperReference": "Glavaš et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.2/",
-  "datasetUrl": "https://competitions.codalab.org/competitions/22192",
-  "citation": "@inproceedings{glavas-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 2: {P}redicting {M}ultilingual and {C}ross-{L}ingual ({G}raded) {L}exical {E}ntailment\",\n    author = \"Glava{\\v{s}}, Goran  and Vulic, Ivan  and Korhonen, Anna\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.2\"\n}"
+  "datasetUrl": "https://competitions.codalab.org/competitions/20865",
+  "citation": "@inproceedings{glavas-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 2: {P}redicting {M}ultilingual and {C}ross-{L}ingual ({G}raded) {L}exical {E}ntailment\",\n    author = \"Glava{\\v{s}}, Goran  and Vuli{\\'{c}}, Ivan  and Korhonen, Anna  and Ponzetto, Simone Paolo\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.2/\",\n    doi = \"10.18653/v1/2020.semeval-1.2\",\n    pages = \"24--35\"\n}"
 }

@@ -34,6 +34,6 @@
   "featured": false,
   "paperReference": "Shirani et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.184/",
-  "datasetUrl": "https://github.com/RiTUAL-UH/SemEval2020_Task10",
-  "citation": "@inproceedings{shirani-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 10: {E}mphasis {S}election for {W}ritten {T}ext in {V}isual {M}edia\",\n    author = \"Shirani, Amirreza  and Dernoncourt, Franck  and Asber, Paul  and Lipka, Nedim  and Kim, Seokhwan  and Echevarria, Jose  and Solorio, Thamar\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.184\"\n}"
+  "datasetUrl": "https://github.com/RiTUAL-UH/SemEval2020_Task10_Emphasis_Selection",
+  "citation": "@inproceedings{shirani-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 10: {E}mphasis {S}election for {W}ritten {T}ext in {V}isual {M}edia\",\n    author = \"Shirani, Amirreza  and Dernoncourt, Franck  and Lipka, Nedim  and Asente, Paul  and Echevarria, Jose  and Solorio, Thamar\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    pages = \"1360--1370\",\n    doi = \"10.18653/v1/2020.semeval-1.184\",\n    url = \"https://aclanthology.org/2020.semeval-1.184\"\n}"
 }

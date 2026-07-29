@@ -1,18 +1,24 @@
 # Multilingual News Article Similarity
 # Based on Chen et al., SemEval 2022
 # Paper: https://aclanthology.org/2022.semeval-1.155/
-# Dataset: https://github.com/euagendas/semeval-2022-task8
+# Dataset: https://github.com/euagendas/semeval_8_2022_ia_downloader
 #
 # This task asks annotators to rate the similarity between two news
-# articles on a 5-point scale, from completely different stories to
-# identical stories. Articles may be in different languages.
+# articles across seven dimensions of similarity, each on a 4-point
+# Likert scale. Articles may be in different languages.
 #
-# Scale:
-# 1 - Completely Different: The articles cover unrelated topics
-# 2 - Somewhat Related: Articles share a general topic but cover different events
-# 3 - Related: Articles cover the same general event but with different angles
-# 4 - Very Similar: Articles cover the same event with mostly the same details
-# 5 - Identical Story: Articles are about the exact same event and details
+# Following the paper's codebook, each dimension is answered on a
+# four-point scale where 1 = Very Similar, 2 = Somewhat Similar,
+# 3 = Somewhat Dissimilar, and 4 = Very Dissimilar.
+#
+# Dimensions (codebook questions):
+#   GEO      - Geographic focus (places, cities, countries)
+#   ENT      - Named entities (people, companies, organizations, products)
+#   TIME     - Time periods described / relevance
+#   NARRATIVE- Narrative schemas presented
+#   OVERALL  - Whether the articles cover the same substantive news story
+#   STYLE    - Writing style
+#   TONE     - Tone
 
 annotation_task_name: "Multilingual News Article Similarity"
 task_dir: "."
@@ -32,20 +38,60 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: likert
-    name: similarity_rating
-    description: "How similar are these two news articles?"
-    min_label: "Completely Different"
-    max_label: "Identical Story"
-    size: 5
+    name: geography
+    description: "GEO: How similar is the geographic focus (places, cities, countries, etc.) of the two articles?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: entities
+    description: "ENT: How similar are the named entities (people, companies, organizations, products, named living beings), excluding locations already considered above?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: time
+    description: "TIME: Are the two articles relevant to similar time periods or describing similar time periods?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: narrative
+    description: "NAR: How similar are the narrative schemas presented in the two articles?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: overall
+    description: "OVERALL: Overall, are the two articles covering the same substantive news story? (excluding style, framing, and tone)"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: style
+    description: "STYLE: Do the articles have similar writing styles?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
+  - annotation_type: likert
+    name: tone
+    description: "TONE: Do the articles have similar tones?"
+    min_label: "Very Similar"
+    max_label: "Very Dissimilar"
+    size: 4
 
 annotation_instructions: |
   You will see two news articles (possibly in different languages) and the language pair.
-  Rate how similar the two articles are on a scale from 1 to 5.
-  1: Completely different topics
-  2: Somewhat related topic but different events
-  3: Same general event but different angles or details
-  4: Very similar coverage of the same event
-  5: Identical story with the same key details
+  Rate the similarity of the two articles on seven dimensions. Each dimension uses a
+  four-point scale where 1 = Very Similar, 2 = Somewhat Similar,
+  3 = Somewhat Dissimilar, and 4 = Very Dissimilar.
+  - Geography: similarity of the geographic focus (places, cities, countries).
+  - Entities: similarity of the named entities (people, companies, organizations, products).
+  - Time: whether the articles describe or are relevant to similar time periods.
+  - Narrative: similarity of the narrative schemas presented.
+  - Overall: whether the two articles cover the same substantive news story (excluding style, framing, and tone).
+  - Style: whether the articles have similar writing styles.
+  - Tone: whether the articles have similar tones.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
