@@ -38,5 +38,5 @@
   "paperReference": "Van Hee et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1005/",
   "datasetUrl": "https://github.com/Cyvhee/SemEval2018-Task3",
-  "citation": "@inproceedings{van-hee-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 3: Irony Detection in {E}nglish Tweets\",\n    author = \"Van Hee, Cynthia and Lefever, Els and Hoste, V{\\'e}ronique\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1005\"\n}"
+  "citation": "@inproceedings{van-hee-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 3: Irony Detection in {E}nglish Tweets\",\n    author = \"Van Hee, Cynthia and Lefever, Els and Hoste, V{\\'e}ronique\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1005\",\n    doi = \"10.18653/v1/S18-1005\",\n    pages = \"39--50\"\n}"
 }

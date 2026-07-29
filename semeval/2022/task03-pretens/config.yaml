@@ -1,16 +1,17 @@
 # PreTENS - Presuppositional Acceptability
-# Based on Jeretic et al., SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.14/
-# Dataset: https://github.com/Ukraine-NLU/pretens
+# Based on Zamparelli et al., SemEval 2022
+# Paper: https://aclanthology.org/2022.semeval-1.29/
+# Dataset: https://github.com/shammur/SemEval2022Task3
 #
-# This task asks annotators to judge whether a sentence is semantically
-# acceptable or unacceptable based on presuppositional knowledge. Sentences
-# may violate presuppositions related to factivity, aspectual verbs,
-# change-of-state, or other trigger types.
+# This task asks annotators to judge whether a sentence is acceptable given the
+# taxonomic relation presupposed between its two nominal arguments. Sentences use
+# constructions (comparatives, exemplifications, generalizations) that presuppose
+# one argument is a supercategory or subcategory of the other, e.g.
+# "I like trees, and in particular birches" (acceptable) vs.
+# "I like birches, and in particular trees" (unacceptable).
 #
-# Acceptability Labels:
-# - Acceptable: The sentence is semantically well-formed and plausible
-# - Unacceptable: The sentence violates a presupposition or is semantically odd
+# Subtask 1 (binary): Acceptable vs. Unacceptable.
+# Subtask 2 (regression): a 1-7 acceptability rating.
 
 annotation_task_name: "PreTENS - Presuppositional Acceptability"
 task_dir: "."
@@ -31,7 +32,7 @@ server_name: localhost
 annotation_schemes:
   - annotation_type: radio
     name: acceptability
-    description: "Is this sentence semantically acceptable?"
+    description: "Is this sentence acceptable?"
     labels:
       - "Acceptable"
       - "Unacceptable"
@@ -39,21 +40,35 @@ annotation_schemes:
       "Acceptable": "1"
       "Unacceptable": "2"
     tooltips:
-      "Acceptable": "The sentence is semantically well-formed, natural, and does not violate any presuppositions"
-      "Unacceptable": "The sentence is semantically odd, contradictory, or violates a presupposition"
+      "Acceptable": "The taxonomic relation between the two arguments fits the construction (e.g. a subcategory exemplifies its supercategory)"
+      "Unacceptable": "The taxonomic relation is reversed or does not hold, making the sentence odd (e.g. a supercategory presented as an example of its subcategory)"
+
+  - annotation_type: likert
+    name: acceptability_rating
+    description: "How acceptable is this sentence?"
+    size: 7
+    min_label: "Not at all acceptable"
+    max_label: "Completely acceptable"
 
 annotation_instructions: |
-  You will see a sentence and its presupposition type. Judge whether the sentence is
-  semantically acceptable or unacceptable.
-  - Acceptable: The sentence makes sense and does not contradict itself or common knowledge.
-  - Unacceptable: The sentence is semantically odd, contradictory, or violates expectations.
-  Focus on meaning, not grammar. A grammatically correct sentence can still be semantically unacceptable.
+  Each sentence relates two nominal arguments (e.g. "trees" and "birches") through a
+  construction such as a comparison, an exemplification, or a generalization. The
+  construction presupposes a taxonomic relation between the arguments -- typically that
+  one is a supercategory (superset) of the other.
+  - Acceptable: The presupposed taxonomic relation holds. For example, an exemplification
+    should introduce a subcategory of the more general term ("I like trees, and in
+    particular birches").
+  - Unacceptable: The relation is reversed or does not hold, so the sentence is odd
+    ("I like birches, and in particular trees").
+  Judge acceptability of the meaning, not grammar. A grammatically correct sentence can
+  still be unacceptable. Then give an overall acceptability rating from 1 (not at all
+  acceptable) to 7 (completely acceptable).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
     <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #7e22ce;">Presupposition Type:</strong>
-      <span style="font-size: 15px; margin-left: 8px;">{{presupposition_type}}</span>
+      <strong style="color: #7e22ce;">Construction:</strong>
+      <span style="font-size: 15px; margin-left: 8px;">{{construction_type}}</span>
     </div>
     <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
       <strong style="color: #0369a1;">Sentence:</strong>

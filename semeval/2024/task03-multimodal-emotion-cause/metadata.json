@@ -36,7 +36,7 @@
   ],
   "featured": false,
   "paperReference": "Wang et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task3",
-  "citation": "@inproceedings{wang-etal-2024-multimodal-emotion-cause,\n    title = \"Multimodal Emotion Cause Analysis in Conversations\",\n    author = \"Wang, Fanfan and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.277/",
+  "datasetUrl": "https://github.com/NUSTM/SemEval-2024_ECAC",
+  "citation": "@inproceedings{wang-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 3: Multimodal Emotion Cause Analysis in Conversations\",\n    author = \"Wang, Fanfan and Ma, Heqing and Xia, Rui and Yu, Jianfei and Cambria, Erik\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2024.semeval-1.277/\",\n    doi = \"10.18653/v1/2024.semeval-1.277\",\n    pages = \"2039--2050\"\n}"
 }

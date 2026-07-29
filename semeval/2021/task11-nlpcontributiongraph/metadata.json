@@ -37,5 +37,5 @@
   "paperReference": "D'Souza et al., SemEval 2021",
   "paperUrl": "https://aclanthology.org/2021.semeval-1.44/",
   "datasetUrl": "https://ncg-task.github.io/",
-  "citation": "@inproceedings{dsouza-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 {T}ask 11: {NLPC}ontribution{G}raph -- {S}tructured {E}xtraction of {NLP} {C}ontributions from {R}esearch {P}apers\",\n    author = \"D'Souza, Jennifer  and Auer, S{\\\"o}ren  and Pedersen, Ted\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.semeval-1.44\"\n}"
+  "citation": "@inproceedings{dsouza-etal-2021-semeval,\n    title = \"{S}em{E}val-2021 Task 11: {NLPC}ontribution{G}raph - Structuring Scholarly {NLP} Contributions for a Research Knowledge Graph\",\n    author = \"D'Souza, Jennifer  and Auer, S{\\\"o}ren  and Pedersen, Ted\",\n    booktitle = \"Proceedings of the 15th International Workshop on Semantic Evaluation (SemEval-2021)\",\n    year = \"2021\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"364--376\",\n    url = \"https://aclanthology.org/2021.semeval-1.44\"\n}"
 }

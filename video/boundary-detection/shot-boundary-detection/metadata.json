@@ -32,8 +32,8 @@
     "broadcast"
   ],
   "featured": false,
-  "paperReference": "Over et al., TRECVID Overview",
-  "paperUrl": "https://trecvid.nist.gov",
+  "paperReference": "Smeaton, Over & Doherty, Computer Vision and Image Understanding 2010",
+  "paperUrl": "https://doi.org/10.1016/j.cviu.2009.03.011",
   "datasetUrl": "https://trecvid.nist.gov",
-  "citation": "@misc{trecvid,\n  title={TRECVID Shot Boundary Detection Task},\n  author={Over, Paul and others},\n  howpublished={https://trecvid.nist.gov},\n  year={2020}\n}"
+  "citation": "@article{smeaton2010video,\n  title={Video shot boundary detection: Seven years of TRECVid activity},\n  author={Smeaton, Alan F. and Over, Paul and Doherty, Aiden R.},\n  journal={Computer Vision and Image Understanding},\n  volume={114},\n  number={4},\n  pages={411--418},\n  year={2010},\n  publisher={Elsevier}\n}"
 }

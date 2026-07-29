@@ -1,6 +1,6 @@
 {
   "title": "Parsing Time Normalizations",
-  "description": "Identification and normalization of time expressions in text, combining span annotation for time mentions with ISO-format temporal normalization. Based on SemEval-2018 Task 6.",
+  "description": "Parsing time expressions in text using the SCATE (Semantically Compositional Annotation of Time Expressions) schema, marking typed time entities and operators (e.g., Year, Month-Of-Year, Day-Of-Month, Last, Next, This, Between) that compose into interval semantics. Based on SemEval-2018 Task 6.",
   "version": "1.0.0",
   "author": {
     "name": "Laparra et al.",
@@ -39,5 +39,5 @@
   "paperReference": "Laparra et al., SemEval 2018",
   "paperUrl": "https://aclanthology.org/S18-1011/",
   "datasetUrl": "https://github.com/bethard/anafora-annotations",
-  "citation": "@inproceedings{laparra-etal-2018-semeval,\n    title = \"{S}em{E}val-2018 Task 6: Parsing Time Normalizations\",\n    author = \"Laparra, Egoitz and Xu, Dongfang and Elsayed, Ahmed S. and Bethard, Steven and Palmer, Martha\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    year = \"2018\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1011\"\n}"
+  "citation": "@inproceedings{laparra-etal-2018-semeval,\n    title = \"{S}em{E}val 2018 Task 6: Parsing Time Normalizations\",\n    author = \"Laparra, Egoitz and Xu, Dongfang and Elsayed, Ahmed and Bethard, Steven and Palmer, Martha\",\n    booktitle = \"Proceedings of the 12th International Workshop on Semantic Evaluation\",\n    month = jun,\n    year = \"2018\",\n    address = \"New Orleans, Louisiana\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S18-1011/\",\n    doi = \"10.18653/v1/S18-1011\",\n    pages = \"88--96\"\n}"
 }

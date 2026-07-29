@@ -38,5 +38,5 @@
   "paperReference": "Deng et al., NeurIPS 2023",
   "paperUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5950bf290a1570ea401bf98882128160-Abstract-Datasets_and_Benchmarks.html",
   "datasetUrl": "https://osu-nlp-group.github.io/Mind2Web/",
-  "citation": "@inproceedings{deng2023mind2web,\n  title={Mind2Web: Towards a Generalist Agent for the Web},\n  author={Deng, Xiang and Gu, Yu and Zheng, Boyuan and Chen, Shijie and Stevens, Sam and Wang, Boshi and Sun, Huan and Su, Yu},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2023}\n}"
+  "citation": "@inproceedings{deng2023mind2web,\n  title={Mind2Web: Towards a Generalist Agent for the Web},\n  author={Deng, Xiang and Gu, Yu and Zheng, Boyuan and Chen, Shijie and Stevens, Samuel and Wang, Boshi and Sun, Huan and Su, Yu},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2023}\n}"
 }

@@ -3,14 +3,18 @@
 # Paper: https://aclanthology.org/S18-1011/
 # Dataset: https://github.com/bethard/anafora-annotations
 #
-# This task asks annotators to identify time expressions in text and
-# normalize them to ISO 8601 format. Annotators first highlight time
-# expression spans, then provide the normalized ISO representation.
+# This task follows the SCATE (Semantically Compositional Annotation of
+# Time Expressions) schema used in SemEval-2018 Task 6. Annotators mark
+# the sub-spans of each time expression and label them with SCATE entity
+# and operator types that compose into interval semantics on the timeline.
 #
-# Span Labels:
-# - Time Expression: Any expression referring to a point or period in time
+# Entity types (non-operators): Year, Month-Of-Year, Day-Of-Month,
+#   Day-Of-Week, Hour-Of-Day, Minute-Of-Hour, Part-Of-Day, Season-Of-Year,
+#   Calendar-Interval, Period.
+# Operator types: Last, Next, This, Before, After, Between.
 #
-# Normalization: ISO 8601 format (e.g., 2018-03-15, 2018-W12, PT2H30M)
+# The document date is provided so relative operators (Last/Next/This)
+# can be anchored to the correct interval.
 
 annotation_task_name: "Parsing Time Normalizations"
 task_dir: "."
@@ -30,21 +34,60 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
-    name: time_expression_spans
-    description: "Highlight all time expressions in the text."
+    name: scate_time_entities
+    description: "Highlight each sub-span of a time expression and label it with its SCATE type."
     labels:
-      - "Time Expression"
+      - name: "Year"
+        tooltip: "A calendar year, e.g. 2018."
+      - name: "Month-Of-Year"
+        tooltip: "A named or numbered month, e.g. January."
+      - name: "Day-Of-Month"
+        tooltip: "A numbered day within a month, e.g. the 15th."
+      - name: "Day-Of-Week"
+        tooltip: "A named weekday, e.g. Tuesday."
+      - name: "Hour-Of-Day"
+        tooltip: "An hour value, e.g. 3 (PM)."
+      - name: "Minute-Of-Hour"
+        tooltip: "A minute value, e.g. 30."
+      - name: "Part-Of-Day"
+        tooltip: "A named part of the day, e.g. afternoon, morning, night."
+      - name: "Season-Of-Year"
+        tooltip: "A season, e.g. spring, fall."
+      - name: "Calendar-Interval"
+        tooltip: "A calendar unit used as an interval, e.g. week, month, year."
+      - name: "Period"
+        tooltip: "An explicit duration, e.g. 90 minutes, three weeks."
+      - name: "Last"
+        tooltip: "Operator selecting the most recent preceding interval, e.g. last Monday."
+      - name: "Next"
+        tooltip: "Operator selecting the nearest following interval, e.g. next Tuesday."
+      - name: "This"
+        tooltip: "Operator selecting the interval containing the anchor time, e.g. this November."
+      - name: "Before"
+        tooltip: "Operator shifting to an interval before the anchor, e.g. two hours before."
+      - name: "After"
+        tooltip: "Operator shifting to an interval after the anchor, e.g. within twenty minutes."
+      - name: "Between"
+        tooltip: "Operator bounding an interval between two endpoints, e.g. from June to September."
 
   - annotation_type: text
-    name: normalized_time
-    description: "Provide the ISO 8601 normalized form of the highlighted time expressions."
+    name: entity_properties
+    description: "Optional: record the entity value or its link to a parent/sub-interval entity (e.g. Value=2018, Sub-Interval->Month-Of-Year)."
 
 annotation_instructions: |
   You will be shown a text passage along with the document date for reference.
+  This task uses the SCATE schema, which decomposes each time expression into
+  smaller typed entities that compose into an interval on the timeline.
   Your task is to:
-  1. Highlight all time expressions in the text (dates, times, durations, frequencies).
-  2. Provide the ISO 8601 normalized form for each time expression.
-  Use the document date to resolve relative expressions like "yesterday" or "last week".
+  1. Highlight each sub-span of every time expression (do not merge a whole
+     phrase into one span) and label it with its SCATE type from the list.
+     For example, in "January 15, 2005", mark "January" as Month-Of-Year,
+     "15" as Day-Of-Month, and "2005" as Year.
+  2. Label operator words such as "last", "next", "this", "before", "after",
+     and range markers ("from ... to ...") with the matching operator type.
+  3. Optionally record each entity's value or its link to a parent or
+     sub-interval entity in the properties field.
+  Use the document date to anchor relative operators like Last, Next, and This.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

@@ -6,7 +6,7 @@
     "name": "Yao et al.",
     "email": "",
     "github": "yao8839836",
-    "affiliation": "Illinois Institute of Technology"
+    "affiliation": "Northwestern University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -30,11 +30,11 @@
     "triple-validation",
     "relation-extraction",
     "kg-bert",
-    "aaai2020"
+    "arxiv2019"
   ],
   "featured": false,
-  "paperReference": "Yao et al., AAAI 2020",
+  "paperReference": "Yao et al., arXiv 2019",
   "paperUrl": "https://arxiv.org/abs/1909.03193",
   "datasetUrl": "https://github.com/yao8839836/kg-bert",
-  "citation": "@inproceedings{yao2019kg,\n  title={KG-BERT: BERT for Knowledge Graph Completion},\n  author={Yao, Liang and Mao, Chengsheng and Luo, Yuan},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  year={2020}\n}"
+  "citation": "@article{yao2019kg,\n  title={KG-BERT: BERT for Knowledge Graph Completion},\n  author={Yao, Liang and Mao, Chengsheng and Luo, Yuan},\n  journal={arXiv preprint arXiv:1909.03193},\n  year={2019}\n}"
 }

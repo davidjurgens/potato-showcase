@@ -1,7 +1,7 @@
 # Multimodal Emotion Cause Analysis
 # Based on Wang et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2024-task3
+# Paper: https://aclanthology.org/2024.semeval-1.277/
+# Dataset: https://github.com/NUSTM/SemEval-2024_ECAC
 #
 # This task asks annotators to identify emotion expressions and their
 # causal utterances within conversational dialogue. Annotators also

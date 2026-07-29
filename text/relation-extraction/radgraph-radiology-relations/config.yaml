@@ -1,5 +1,5 @@
 # RadGraph-XL: Radiology Entity and Relation Extraction
-# Based on Khanna et al., Findings ACL 2024
+# Based on Delbrouck et al., Findings ACL 2024
 # Paper: https://aclanthology.org/2024.findings-acl.765/
 # Dataset: https://physionet.org/content/radgraph-xl/
 #
@@ -7,31 +7,26 @@
 # entities and relations. This enables automated extraction of structured
 # information from free-text radiology reports.
 #
-# Entity Types:
+# Entity Types (each entity is Anatomy or Observation, with a certainty level):
 # - Anatomy: Body parts, organs, anatomical structures
 #   (e.g., lungs, heart, mediastinum, pleural space)
 # - Observation: Clinical findings, conditions, abnormalities
 #   (e.g., opacity, effusion, consolidation, pneumothorax)
-# - Medical Device: Tubes, lines, implants, equipment
-#   (e.g., endotracheal tube, central line, pacemaker)
-# - Procedure: Medical procedures, interventions
-#   (e.g., intubation, thoracentesis, CABG)
-# - Descriptor: Modifiers describing size, severity, change
-#   (e.g., bilateral, small, stable, worsening, new)
+# Certainty levels: Definitely Present, Uncertain, Definitely Absent
+#   (e.g., "no pericardial effusion" is an Observation: Definitely Absent)
 #
 # Relation Types:
-# - located_at: Observation/device is located at an anatomy
-# - suggestive_of: Observation suggests a condition
-# - modify: Descriptor modifies an entity
-# - part_of: Anatomy is part of another anatomy
+# - located_at: an Observation is located at an Anatomy
+# - suggestive_of: an Observation suggests another Observation/condition
+# - modify: one entity modifies another of the same type
 #
 # Annotation Guidelines:
 # 1. Read the radiology report sentence in context
-# 2. Identify all clinical entities and assign types
-# 3. For each entity pair, determine the relation type
-# 4. Anatomy-observation pairs typically use located_at
-# 5. Descriptor-entity pairs typically use modify
-# 6. Consider negation and uncertainty in observations
+# 2. Identify all Anatomy and Observation entities
+# 3. Assign each entity a certainty level (present / uncertain / absent)
+# 4. For each entity pair, determine the relation type
+# 5. Observation-anatomy pairs typically use located_at
+# 6. Consider negation and hedging when assigning certainty
 
 annotation_task_name: "RadGraph-XL: Radiology Relation Extraction"
 task_dir: "."
@@ -46,34 +41,38 @@ output_annotation_dir: "annotation_output/"
 output_annotation_format: "json"
 
 annotation_schemes:
-  # Step 1: Identify clinical entities
+  # Step 1: Identify clinical entities (Anatomy / Observation) with certainty
   - annotation_type: span
     name: clinical_entities
-    description: "Highlight all clinical entities in the radiology report"
+    description: "Highlight all Anatomy and Observation entities, marking each with a certainty level"
     labels:
-      - "Anatomy"
-      - "Observation"
-      - "Medical Device"
-      - "Procedure"
-      - "Descriptor"
+      - "Observation: Definitely Present"
+      - "Observation: Uncertain"
+      - "Observation: Definitely Absent"
+      - "Anatomy: Definitely Present"
+      - "Anatomy: Uncertain"
+      - "Anatomy: Definitely Absent"
     label_colors:
-      "Anatomy": "#3b82f6"
-      "Observation": "#ef4444"
-      "Medical Device": "#22c55e"
-      "Procedure": "#f59e0b"
-      "Descriptor": "#8b5cf6"
+      "Observation: Definitely Present": "#ef4444"
+      "Observation: Uncertain": "#f59e0b"
+      "Observation: Definitely Absent": "#9ca3af"
+      "Anatomy: Definitely Present": "#3b82f6"
+      "Anatomy: Uncertain": "#38bdf8"
+      "Anatomy: Definitely Absent": "#a5b4fc"
     keyboard_shortcuts:
-      "Anatomy": "1"
-      "Observation": "2"
-      "Medical Device": "3"
-      "Procedure": "4"
-      "Descriptor": "5"
+      "Observation: Definitely Present": "1"
+      "Observation: Uncertain": "2"
+      "Observation: Definitely Absent": "3"
+      "Anatomy: Definitely Present": "4"
+      "Anatomy: Uncertain": "5"
+      "Anatomy: Definitely Absent": "6"
     tooltips:
-      "Anatomy": "Body parts, organs, anatomical structures (e.g., lungs, heart, mediastinum, pleural space)"
-      "Observation": "Clinical findings, conditions, abnormalities (e.g., opacity, effusion, consolidation, pneumothorax)"
-      "Medical Device": "Tubes, lines, implants, equipment (e.g., endotracheal tube, central line, pacemaker)"
-      "Procedure": "Medical procedures or interventions (e.g., intubation, thoracentesis, sternotomy)"
-      "Descriptor": "Modifiers describing size, severity, or change (e.g., bilateral, small, stable, worsening)"
+      "Observation: Definitely Present": "A finding stated to be present (e.g., opacity, effusion, consolidation, pneumothorax)"
+      "Observation: Uncertain": "A finding stated with hedging or uncertainty (e.g., 'concerning for', 'possible', 'may represent')"
+      "Observation: Definitely Absent": "A finding explicitly negated (e.g., 'no pericardial effusion', 'lungs are clear')"
+      "Anatomy: Definitely Present": "A body part or anatomical structure referenced as present (e.g., lungs, heart, mediastinum)"
+      "Anatomy: Uncertain": "An anatomical structure referenced with uncertainty"
+      "Anatomy: Definitely Absent": "An anatomical structure referenced as absent (e.g., surgically removed)"
     allow_overlapping: false
 
   # Step 2: Link entities with clinical relation types
@@ -84,12 +83,10 @@ annotation_schemes:
       - "located_at"
       - "suggestive_of"
       - "modify"
-      - "part_of"
     tooltips:
-      "located_at": "Observation or device is located at an anatomical structure (e.g., opacity located_at right lung)"
-      "suggestive_of": "Observation suggests or indicates a clinical condition (e.g., air-fluid level suggestive_of abscess)"
-      "modify": "Descriptor modifies another entity (e.g., bilateral modify effusion; small modify opacity)"
-      "part_of": "Anatomical structure is part of another structure (e.g., right lobe part_of liver)"
+      "located_at": "An Observation is located at an anatomical structure (e.g., opacity located_at right lung)"
+      "suggestive_of": "An Observation suggests or indicates another Observation/condition (e.g., air-fluid level suggestive_of abscess)"
+      "modify": "One entity modifies another of the same type (e.g., 'small' modify effusion; 'lower' modify lobe)"
 
 html_layout: |
   <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">

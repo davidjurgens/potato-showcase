@@ -32,8 +32,8 @@
     "documentary"
   ],
   "featured": false,
-  "paperReference": "Sidiropoulos et al., ACM MM 2011",
-  "paperUrl": "https://ieeexplore.ieee.org/document/6095496",
-  "datasetUrl": "https://www.bbc.co.uk/rd/projects/bbc-planet-earth",
-  "citation": "@inproceedings{sidiropoulos2011temporal,\n  title={Temporal video segmentation to scenes using high-level audiovisual features},\n  author={Sidiropoulos, Panagiotis and Mezaris, Vasileios and Kompatsiaris, Ioannis and Meinedo, Hugo and Bugalho, Miguel and Trancoso, Isabel},\n  booktitle={Proceedings of the 2011 ACM Multimedia Conference},\n  year={2011}\n}"
+  "paperReference": "Sidiropoulos et al., IEEE TCSVT 2011",
+  "paperUrl": "https://doi.org/10.1109/TCSVT.2011.2138830",
+  "datasetUrl": "https://aimagelab.ing.unimore.it/imagelab/page.asp?IdPage=12",
+  "citation": "@article{sidiropoulos2011temporal,\n  title={Temporal video segmentation to scenes using high-level audiovisual features},\n  author={Sidiropoulos, Panagiotis and Mezaris, Vasileios and Kompatsiaris, Ioannis and Meinedo, Hugo and Bugalho, Miguel and Trancoso, Isabel},\n  journal={IEEE Transactions on Circuits and Systems for Video Technology},\n  volume={21},\n  number={8},\n  pages={1163--1177},\n  year={2011}\n}"
 }
