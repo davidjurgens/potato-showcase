@@ -1,0 +1,83 @@
+# Symlink: Linking Mathematical Symbols to their Descriptions
+# Based on Lai, Pouran Ben Veyseh, Dernoncourt, and Nguyen, SemEval-2022 Task 12
+# Paper: https://aclanthology.org/2022.semeval-1.230/
+# Dataset/task page: https://sites.google.com/view/symlink
+#
+# Symlink combines entity recognition and relation extraction over the text
+# of scientific documents (from arXiv). Annotators first mark the spans that
+# are mathematical symbols and the spans that describe them, then link each
+# symbol to its description with one of the task's relation types.
+#
+# Entity spans:
+# - Symbol: a mathematical symbol (e.g., x, \theta, A_{ij})
+# - Description: the text that describes/defines a symbol. In the official
+#   corpus, descriptions are further distinguished as primary vs. ordered.
+#
+# Relation types (symbol <-> description links):
+# - Direct: a symbol is directly linked to its description
+# - Count: a description quantifies a set of symbols
+# - Coref-Symbol: two symbol mentions refer to the same entity
+# - Coref-Description: two description mentions refer to the same entity
+
+annotation_task_name: "Symlink - Symbols and Descriptions"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: span
+    name: entities
+    description: "Mark each mathematical symbol and each description span"
+    labels:
+      - "Symbol"
+      - "Description"
+
+  - annotation_type: radio
+    name: relation_type
+    description: "For the primary symbol-description pair, what is the relation?"
+    labels:
+      - "Direct"
+      - "Count"
+      - "Coref-Symbol"
+      - "Coref-Description"
+    tooltips:
+      "Direct": "A symbol is directly linked to its description"
+      "Count": "A description quantifies a set of symbols"
+      "Coref-Symbol": "Two symbol mentions refer to the same entity"
+      "Coref-Description": "Two description mentions refer to the same entity"
+
+  - annotation_type: text
+    name: notes
+    description: "Notes on additional symbol-description links in this passage (optional)"
+    textarea: true
+    required: false
+
+annotation_instructions: |
+  Read the passage from a scientific document. First highlight every
+  mathematical symbol span and every description span. Then, for the main
+  symbol-description pair, select the relation type that links them. Use the
+  notes field to record any additional links present in the passage.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #1e40af;">Passage:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true

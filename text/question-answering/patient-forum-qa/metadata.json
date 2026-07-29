@@ -1,0 +1,39 @@
+{
+  "title": "Patient Forum Question Answering",
+  "description": "Question answering and response classification for patient health forum posts: annotators write or assess an answer to a patient's question and categorize each response by type (medical advice, experience sharing, information request, emotional support). A generic showcase design for consumer-health forum analysis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "text",
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Biomedical"
+  ],
+  "useCase": [
+    "Question Answering",
+    "Health Forum Analysis",
+    "Patient Support"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "question-answering",
+    "patient-forum",
+    "health",
+    "medical",
+    "consumer-health"
+  ],
+  "featured": false,
+  "paperReference": "N/A (generic showcase design)",
+  "paperUrl": "",
+  "datasetUrl": "",
+  "citation": ""
+}

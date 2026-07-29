@@ -1,0 +1,96 @@
+# iSarcasmEval: Intended Sarcasm Detection
+# Based on Abu Farha, Oprea, Wilson, and Magdy, SemEval-2022 Task 6
+# Paper: https://aclanthology.org/2022.semeval-1.111/
+# Dataset: https://github.com/iabufarha/iSarcasmEval
+#
+# iSarcasmEval is the first shared task to focus on INTENDED sarcasm: each
+# text is labeled by its own author, not by third-party annotators. The
+# shared task defines three subtasks:
+#   - SubTask A: is the text sarcastic? (binary)
+#   - SubTask B: which category of ironic speech does it express?
+#   - SubTask C: given a sarcastic text and its non-sarcastic rephrase,
+#                tell which one is the sarcastic one (pairwise)
+# This showcase models SubTask A (binary) and SubTask B (category), and
+# collects an optional non-sarcastic rephrase in the spirit of SubTask C.
+#
+# SubTask B ironic-speech categories (Leggitt & Gibbs):
+# - Sarcasm: contradicts the state of affairs and is critical toward someone
+# - Irony: contradicts the state of affairs but is not necessarily critical
+# - Satire: ridicules a subject through humor, irony, or exaggeration
+# - Understatement: undermines the magnitude of a state of affairs
+# - Overstatement: exaggerates the magnitude of a state of affairs
+# - Rhetorical Question: a question whose answer is not expected
+
+annotation_task_name: "iSarcasmEval - Intended Sarcasm Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: is_sarcastic
+    description: "Is this text sarcastic (as intended by its author)?"
+    labels:
+      - "Sarcastic"
+      - "Not Sarcastic"
+    keyboard_shortcuts:
+      "Sarcastic": "1"
+      "Not Sarcastic": "2"
+    tooltips:
+      "Sarcastic": "The author intended the text to be sarcastic or ironic"
+      "Not Sarcastic": "The text is meant literally"
+
+  - annotation_type: multiselect
+    name: sarcasm_category
+    description: "If sarcastic, which category of ironic speech applies? (Select all that apply)"
+    labels:
+      - "Sarcasm"
+      - "Irony"
+      - "Satire"
+      - "Understatement"
+      - "Overstatement"
+      - "Rhetorical Question"
+    tooltips:
+      "Sarcasm": "Contradicts the state of affairs and is critical toward someone/something"
+      "Irony": "Contradicts the state of affairs but is not necessarily critical"
+      "Satire": "Ridicules a subject through humor, irony, or exaggeration"
+      "Understatement": "Undermines the magnitude of a state of affairs"
+      "Overstatement": "Exaggerates the magnitude of a state of affairs"
+      "Rhetorical Question": "A question posed without expecting an answer"
+
+  - annotation_type: text
+    name: rephrase
+    description: "If sarcastic, provide a non-sarcastic rephrase that conveys the intended meaning (optional)"
+    textarea: true
+    required: false
+    placeholder: "Non-sarcastic rephrase..."
+
+annotation_instructions: |
+  You will see a short social-media text. First decide whether it is
+  sarcastic as intended by its author. If it is, select the category or
+  categories of ironic speech it expresses, and optionally write a
+  non-sarcastic rephrase that conveys the same intended meaning.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+      <strong style="color: #9a3412;">Text:</strong>
+      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true

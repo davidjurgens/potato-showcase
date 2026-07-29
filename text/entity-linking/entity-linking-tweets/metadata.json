@@ -1,0 +1,39 @@
+{
+  "title": "Entity Linking in Tweets",
+  "description": "Named entity recognition and entity linking in tweets: annotators identify entity mentions in short, noisy social-media text and map each mention to its corresponding knowledge base entry. A generic showcase design for social-media entity linking and knowledge base population.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2025-01-16",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "span",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media"
+  ],
+  "useCase": [
+    "Entity Linking",
+    "Named Entity Recognition",
+    "Knowledge Base Population"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "entity-linking",
+    "ner",
+    "tweets",
+    "social-media",
+    "knowledge-base"
+  ],
+  "featured": false,
+  "paperReference": "N/A (generic showcase design)",
+  "paperUrl": "",
+  "datasetUrl": "",
+  "citation": ""
+}

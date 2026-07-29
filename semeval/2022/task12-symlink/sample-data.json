@@ -1,0 +1,42 @@
+[
+  {
+    "id": "sym_001",
+    "text": "Let n denote the number of samples in the training set, where n is a positive integer."
+  },
+  {
+    "id": "sym_002",
+    "text": "The learning rate alpha controls the step size taken during each gradient update."
+  },
+  {
+    "id": "sym_003",
+    "text": "We denote by theta the vector of model parameters to be optimized."
+  },
+  {
+    "id": "sym_004",
+    "text": "Here, x_i is the i-th input feature vector and y_i is its corresponding label."
+  },
+  {
+    "id": "sym_005",
+    "text": "The loss function L measures the discrepancy between predictions and ground-truth labels."
+  },
+  {
+    "id": "sym_006",
+    "text": "Let G = (V, E) be a graph with vertex set V and edge set E."
+  },
+  {
+    "id": "sym_007",
+    "text": "The temperature T is a hyperparameter that scales the logits before the softmax."
+  },
+  {
+    "id": "sym_008",
+    "text": "We use sigma to denote the standard deviation of the Gaussian noise added to each pixel."
+  },
+  {
+    "id": "sym_009",
+    "text": "The matrix W represents the weights of the fully connected layer, and b is the bias term."
+  },
+  {
+    "id": "sym_010",
+    "text": "For each epoch t, the model parameters are updated using the accumulated gradients."
+  }
+]

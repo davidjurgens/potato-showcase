@@ -1,0 +1,42 @@
+{
+  "title": "iSarcasmEval: Intended Sarcasm Detection",
+  "description": "SemEval-2022 Task 6 (iSarcasmEval): detecting intended sarcasm in English and Arabic. Unlike prior datasets labeled by third parties, iSarcasmEval texts are labeled by their own authors for intended sarcasm. Annotators decide whether a text is sarcastic and, if so, which category of ironic speech it expresses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Social Media",
+    "SemEval"
+  ],
+  "useCase": [
+    "Sarcasm Detection",
+    "Figurative Language",
+    "Sentiment Analysis"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "sarcasm",
+    "irony",
+    "figurative-language"
+  ],
+  "featured": false,
+  "paperReference": "Abu Farha et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.111/",
+  "datasetUrl": "https://github.com/iabufarha/iSarcasmEval",
+  "citation": "@inproceedings{abu-farha-etal-2022-semeval,\n    title = \"{S}em{E}val-2022 Task 6: i{S}arcasm{E}val, Intended Sarcasm Detection in {E}nglish and {A}rabic\",\n    author = \"Abu Farha, Ibrahim  and Oprea, Silviu Vlad  and Wilson, Steven  and Magdy, Walid\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.111\",\n    doi = \"10.18653/v1/2022.semeval-1.111\",\n    pages = \"802--814\"\n}"
+}

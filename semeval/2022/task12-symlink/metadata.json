@@ -1,0 +1,43 @@
+{
+  "title": "Symlink: Linking Mathematical Symbols to their Descriptions",
+  "description": "SemEval-2022 Task 12 (Symlink): extracting mathematical symbols and their textual descriptions from scientific documents and linking each symbol to the description it refers to. Annotators mark symbol and description spans, then link them with relation types (Direct, Count, Coref-Symbol, Coref-Description). Documents are drawn from arXiv papers across mathematics, physics, biology, economics, and computer science.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "span",
+    "radio",
+    "text"
+  ],
+  "domain": [
+    "NLP",
+    "Scientific Text",
+    "SemEval"
+  ],
+  "useCase": [
+    "Entity Recognition",
+    "Relation Extraction",
+    "Scientific Document Understanding"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "semeval",
+    "semeval-2022",
+    "shared-task",
+    "entity-linking",
+    "relation-extraction",
+    "mathematics",
+    "scientific-text"
+  ],
+  "featured": false,
+  "paperReference": "Lai et al., SemEval 2022",
+  "paperUrl": "https://aclanthology.org/2022.semeval-1.230/",
+  "datasetUrl": "https://sites.google.com/view/symlink",
+  "citation": "@inproceedings{lai-etal-2022-semeval,\n    title = \"{S}em{E}val 2022 Task 12: Symlink - Linking Mathematical Symbols to their Descriptions\",\n    author = \"Lai, Viet  and Pouran Ben Veyseh, Amir  and Dernoncourt, Franck  and Nguyen, Thien\",\n    booktitle = \"Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)\",\n    month = jul,\n    year = \"2022\",\n    address = \"Seattle, United States\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.semeval-1.230\",\n    doi = \"10.18653/v1/2022.semeval-1.230\",\n    pages = \"1671--1678\"\n}"
+}

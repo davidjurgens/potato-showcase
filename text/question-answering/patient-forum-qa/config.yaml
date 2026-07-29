@@ -1,8 +1,6 @@
 # Patient Forum Question Answering
-# NOTE: Illustrative task template with no confirmed primary source.
-# It does NOT correspond to SemEval-2022 Task 6 (iSarcasmEval, sarcasm
-# detection: https://aclanthology.org/2022.semeval-1.111/) or any other
-# real SemEval-2022 task. Do not cite it as such.
+# A generic showcase design for consumer-health forum analysis (no specific
+# primary source).
 #
 # This task asks annotators to answer patient forum questions and classify
 # the type of response that would be most appropriate. The categories
