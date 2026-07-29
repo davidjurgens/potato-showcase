@@ -1,7 +1,7 @@
 # ToBI Prosodic Annotation
-# Based on Silverman et al., Speech Communication 1992
-# Paper: https://doi.org/10.1016/0167-6393(92)90016-Z
-# Dataset: https://www.ling.ohio-state.edu/~tobi/
+# Based on Silverman et al., ICSLP 1992
+# Paper: https://www.isca-archive.org/icslp_1992/silverman92_icslp.html
+# Dataset: https://www.ling.ohio-state.edu/research/phonetics/E_ToBI/
 #
 # Task: Multi-tier prosodic annotation following the ToBI (Tones and Break
 # Indices) framework. Annotators produce layered prosodic transcriptions

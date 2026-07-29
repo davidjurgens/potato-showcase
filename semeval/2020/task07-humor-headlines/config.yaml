@@ -3,9 +3,10 @@
 # Paper: https://aclanthology.org/2020.semeval-1.98/
 # Dataset: https://cs.rochester.edu/u/nhossain/humicroedit.html
 #
-# Annotators rate how funny an edited headline is and compare it to the
-# original headline. Headlines have been minimally edited by replacing a
-# single word to create humorous effect.
+# Following the two SemEval-2020 Task 7 subtasks: annotators grade how funny
+# each edited headline is on a 0-3 scale (Subtask 1), and judge which of two
+# edited versions of the same headline is funnier (Subtask 2). Headlines have
+# been minimally edited by replacing a single word to create humorous effect.
 
 annotation_task_name: "Assessing Humor in Edited News Headlines"
 task_dir: "."
@@ -24,35 +25,46 @@ port: 8000
 server_name: localhost
 
 annotation_schemes:
+  # Subtask 1: grade the funniness of each edited headline on the 0-3 scale
+  # used in the shared task (0 = Not Funny ... 3 = Funny).
   - annotation_type: likert
-    name: funniness_rating
-    description: "Rate how funny the edited headline is."
+    name: funniness_edit_a
+    description: "Grade how funny Edit A is (0 = Not Funny, 3 = Funny)."
     min_label: "Not Funny"
-    max_label: "Very Funny"
-    size: 5
+    max_label: "Funny"
+    size: 4
 
+  - annotation_type: likert
+    name: funniness_edit_b
+    description: "Grade how funny Edit B is (0 = Not Funny, 3 = Funny)."
+    min_label: "Not Funny"
+    max_label: "Funny"
+    size: 4
+
+  # Subtask 2: given the two edited versions of the same headline, judge which
+  # one is funnier (or that they are equally funny).
   - annotation_type: radio
     name: humor_comparison
-    description: "Which version is funnier?"
+    description: "Which edited version is funnier?"
     labels:
-      - "Original Funnier"
-      - "Edit Funnier"
+      - "Edit A Funnier"
+      - "Edit B Funnier"
       - "Equally Funny"
     keyboard_shortcuts:
-      "Original Funnier": "1"
-      "Edit Funnier": "2"
+      "Edit A Funnier": "1"
+      "Edit B Funnier": "2"
       "Equally Funny": "3"
     tooltips:
-      "Original Funnier": "The original headline is more humorous than the edited version"
-      "Edit Funnier": "The edited headline is more humorous than the original"
-      "Equally Funny": "Both versions are equally funny (or equally unfunny)"
+      "Edit A Funnier": "Edit A is more humorous than Edit B"
+      "Edit B Funnier": "Edit B is more humorous than Edit A"
+      "Equally Funny": "Both edits are equally funny (or equally unfunny)"
 
 annotation_instructions: |
-  You will see an original news headline, an edited version where one word has been
-  replaced, and the word that was substituted. Your task is to:
-  1. Read both the original and edited headlines.
-  2. Rate how funny the edited headline is on a 5-point scale.
-  3. Compare the two versions and decide which is funnier.
+  You will see an original news headline together with two edited versions (Edit A
+  and Edit B), each created by replacing a single word. Your task is to:
+  1. Read the original headline and both edited versions.
+  2. Grade how funny each edited version is on the 0-3 scale (0 = Not Funny, 3 = Funny).
+  3. Decide which of the two edits is funnier (or whether they are equally funny).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
@@ -61,12 +73,12 @@ html_layout: |
       <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
     </div>
     <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Edited Headline:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edited_headline}}</p>
+      <strong style="color: #a16207;">Edit A</strong> <span style="color: #a16207;">(replaced with "<strong>{{edit_word_a}}</strong>"):</span>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edit_a}}</p>
     </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #166534;">Edit Word:</strong>
-      <span style="font-size: 16px; font-weight: bold; color: #15803d;">{{edit_word}}</span>
+    <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #be185d;">Edit B</strong> <span style="color: #be185d;">(replaced with "<strong>{{edit_word_b}}</strong>"):</span>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edit_b}}</p>
     </div>
   </div>
 

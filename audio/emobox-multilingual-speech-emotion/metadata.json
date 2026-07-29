@@ -33,7 +33,7 @@
   ],
   "featured": false,
   "paperReference": "Ma et al., INTERSPEECH 2024",
-  "paperUrl": "https://www.isca-archive.org/interspeech_2024/ma24_interspeech.html",
+  "paperUrl": "https://www.isca-archive.org/interspeech_2024/ma24b_interspeech.html",
   "datasetUrl": "https://github.com/emo-box/EmoBox",
-  "citation": "@inproceedings{ma24_interspeech,\n    title = \"{E}mo{B}ox: Multilingual Multi-corpus Speech Emotion Recognition Toolkit and Benchmark\",\n    author = \"Ma, Ziyang and Zheng, Mingjie and Ye, Hezhao and others\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/ma24_interspeech.html\"\n}"
+  "citation": "@inproceedings{ma24b_interspeech,\n    title = \"{E}mo{B}ox: Multilingual Multi-corpus Speech Emotion Recognition Toolkit and Benchmark\",\n    author = \"Ma, Ziyang and Chen, Mingjie and Zhang, Hezhao and Zheng, Zhisheng and Chen, Wenxi and Li, Xiquan and Ye, Jiaxin and Chen, Xie and Hain, Thomas\",\n    booktitle = \"Proceedings of INTERSPEECH 2024\",\n    year = \"2024\",\n    pages = \"1580--1584\",\n    doi = \"10.21437/Interspeech.2024-788\",\n    publisher = \"ISCA\",\n    url = \"https://www.isca-archive.org/interspeech_2024/ma24b_interspeech.html\"\n}"
 }

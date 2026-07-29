@@ -36,6 +36,6 @@
   "featured": false,
   "paperReference": "Kirillov et al., ICCV 2023",
   "paperUrl": "https://openaccess.thecvf.com/content/ICCV2023/papers/Kirillov_Segment_Anything_ICCV_2023_paper.pdf",
-  "datasetUrl": "https://segment-anything.com/dataset/index.html",
+  "datasetUrl": "https://ai.meta.com/datasets/segment-anything/",
   "citation": "@inproceedings{kirillov2023segment,\n    title = \"Segment Anything\",\n    author = \"Kirillov, Alexander  and Mintun, Eric  and Ravi, Nikhila  and Mao, Hanzi  and Rolland, Chloe  and Gustafson, Laura  and Xiao, Tete  and Whitehead, Spencer  and Berg, Alexander C.  and Lo, Wan-Yen  and Doll{\\'a}r, Piotr  and Girshick, Ross\",\n    booktitle = \"Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)\",\n    pages = \"4015--4026\",\n    year = \"2023\",\n    url = \"https://openaccess.thecvf.com/content/ICCV2023/papers/Kirillov_Segment_Anything_ICCV_2023_paper.pdf\"\n}"
 }

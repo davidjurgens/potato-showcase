@@ -1,12 +1,12 @@
 {
-  "title": "FAVA: Fine-grained Hallucination Annotations for Faithful Generation",
+  "title": "FAVA: Fine-grained Hallucination Detection and Editing for Language Models",
   "description": "Fine-grained hallucination span annotation. Annotators identify hallucinated spans in LLM output and classify hallucination types (entity error, relation error, contradicted, invented, subjective, unverifiable). Based on the FAVA framework for fine-grained faithfulness evaluation.",
   "version": "1.0.0",
   "author": {
     "name": "Mishra et al.",
     "email": "",
-    "github": "fava-nlp",
-    "affiliation": "University of Massachusetts Amherst"
+    "github": "abhika-m",
+    "affiliation": "University of Washington"
   },
   "createdAt": "2026-02-23",
   "updatedAt": "2026-02-23",
@@ -31,12 +31,12 @@
     "fine-grained",
     "span-annotation",
     "fava",
-    "acl2024",
+    "colm2024",
     "llm-evaluation"
   ],
   "featured": false,
-  "paperReference": "Mishra et al., ACL 2024",
-  "paperUrl": "https://arxiv.org/abs/2401.06855/",
-  "datasetUrl": "https://github.com/fava-nlp/fava",
-  "citation": "@inproceedings{mishra-etal-2024-fava,\n    title = \"{FAVA}: Fine-grained Hallucination Annotations for Faithful Generation\",\n    author = \"Mishra, Abhika  and Celikyilmaz, Asli  and Thickstun, John  and Hashimoto, Tatsunori  and Iyer, Shankar\",\n    booktitle = \"Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2024\",\n    address = \"Bangkok, Thailand\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://arxiv.org/abs/2401.06855\",\n    pages = \"12318--12349\"\n}"
+  "paperReference": "Mishra et al., COLM 2024",
+  "paperUrl": "https://arxiv.org/abs/2401.06855",
+  "datasetUrl": "https://github.com/abhika-m/FAVA",
+  "citation": "@inproceedings{mishra-etal-2024-fava,\n    title = \"Fine-grained Hallucination Detection and Editing for Language Models\",\n    author = \"Mishra, Abhika  and Asai, Akari  and Balachandran, Vidhisha  and Wang, Yizhong  and Neubig, Graham  and Tsvetkov, Yulia  and Hajishirzi, Hannaneh\",\n    booktitle = \"First Conference on Language Modeling (COLM)\",\n    year = \"2024\",\n    url = \"https://arxiv.org/abs/2401.06855\"\n}"
 }

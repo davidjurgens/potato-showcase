@@ -1,6 +1,6 @@
 {
   "title": "Assessing Humor in Edited News Headlines",
-  "description": "Rate the funniness of edited news headlines and compare humor between original and edited versions, based on SemEval-2020 Task 7 (Hossain et al.). Headlines are minimally edited by replacing a single word to create humorous effect.",
+  "description": "Rate the funniness of edited news headlines on a 0-3 scale and judge which of two edited versions is funnier, based on SemEval-2020 Task 7 (Hossain et al.). Headlines are minimally edited by replacing a single word to create humorous effect.",
   "version": "1.0.0",
   "author": {
     "name": "Hossain et al.",
@@ -37,5 +37,5 @@
   "paperReference": "Hossain et al., SemEval 2020",
   "paperUrl": "https://aclanthology.org/2020.semeval-1.98/",
   "datasetUrl": "https://cs.rochester.edu/u/nhossain/humicroedit.html",
-  "citation": "@inproceedings{hossain-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 7: {A}ssessing {H}umor in {E}dited {N}ews {H}eadlines\",\n    author = \"Hossain, Nabil  and Krumm, John  and Gamon, Michael  and Kautz, Henry\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.semeval-1.98\"\n}"
+  "citation": "@inproceedings{hossain-etal-2020-semeval,\n    title = \"{S}em{E}val-2020 {T}ask 7: {A}ssessing {H}umor in {E}dited {N}ews {H}eadlines\",\n    author = \"Hossain, Nabil  and Krumm, John  and Gamon, Michael  and Kautz, Henry\",\n    booktitle = \"Proceedings of the Fourteenth Workshop on Semantic Evaluation\",\n    year = \"2020\",\n    address = \"Barcelona (online)\",\n    publisher = \"International Committee for Computational Linguistics\",\n    pages = \"746--758\",\n    url = \"https://aclanthology.org/2020.semeval-1.98\"\n}"
 }

@@ -1,12 +1,12 @@
 [
-  {"id": "hh_001", "text": "Trump says he will release his tax returns by end of month", "edited_headline": "Trump says he will release his tax returns by end of century", "edit_word": "century"},
-  {"id": "hh_002", "text": "Scientists discover high levels of mercury in fish", "edited_headline": "Scientists discover high levels of mercury in politicians", "edit_word": "politicians"},
-  {"id": "hh_003", "text": "New study reveals benefits of daily exercise for heart health", "edited_headline": "New study reveals benefits of daily napping for heart health", "edit_word": "napping"},
-  {"id": "hh_004", "text": "Congress reaches agreement on new spending bill", "edited_headline": "Congress reaches agreement on new pizza bill", "edit_word": "pizza"},
-  {"id": "hh_005", "text": "World leaders meet to discuss climate change solutions", "edited_headline": "World leaders meet to discuss snack change solutions", "edit_word": "snack"},
-  {"id": "hh_006", "text": "Federal Reserve announces interest rate decision today", "edited_headline": "Federal Reserve announces interest rate confusion today", "edit_word": "confusion"},
-  {"id": "hh_007", "text": "Experts warn of global shortage of semiconductor chips", "edited_headline": "Experts warn of global shortage of potato chips", "edit_word": "potato"},
-  {"id": "hh_008", "text": "President signs executive order on cybersecurity", "edited_headline": "President signs executive order on naptime", "edit_word": "naptime"},
-  {"id": "hh_009", "text": "Tech giant announces plan to hire thousands of engineers", "edited_headline": "Tech giant announces plan to hire thousands of cats", "edit_word": "cats"},
-  {"id": "hh_010", "text": "NASA launches new mission to explore the surface of Mars", "edited_headline": "NASA launches new mission to explore the surface of cheese", "edit_word": "cheese"}
+  {"id": "hh_001", "text": "Trump says he will release his tax returns by end of month", "edit_a": "Trump says he will release his tax returns by end of century", "edit_word_a": "century", "edit_b": "Trump says he will release his tax returns by end of nap", "edit_word_b": "nap"},
+  {"id": "hh_002", "text": "Scientists discover high levels of mercury in fish", "edit_a": "Scientists discover high levels of mercury in politicians", "edit_word_a": "politicians", "edit_b": "Scientists discover high levels of mercury in cereal", "edit_word_b": "cereal"},
+  {"id": "hh_003", "text": "New study reveals benefits of daily exercise for heart health", "edit_a": "New study reveals benefits of daily napping for heart health", "edit_word_a": "napping", "edit_b": "New study reveals benefits of daily pizza for heart health", "edit_word_b": "pizza"},
+  {"id": "hh_004", "text": "Congress reaches agreement on new spending bill", "edit_a": "Congress reaches agreement on new pizza bill", "edit_word_a": "pizza", "edit_b": "Congress reaches agreement on new napping bill", "edit_word_b": "napping"},
+  {"id": "hh_005", "text": "World leaders meet to discuss climate change solutions", "edit_a": "World leaders meet to discuss snack change solutions", "edit_word_a": "snack", "edit_b": "World leaders meet to discuss climate change recipes", "edit_word_b": "recipes"},
+  {"id": "hh_006", "text": "Federal Reserve announces interest rate decision today", "edit_a": "Federal Reserve announces interest rate confusion today", "edit_word_a": "confusion", "edit_b": "Federal Reserve announces interest rate party today", "edit_word_b": "party"},
+  {"id": "hh_007", "text": "Experts warn of global shortage of semiconductor chips", "edit_a": "Experts warn of global shortage of potato chips", "edit_word_a": "potato", "edit_b": "Experts warn of global shortage of semiconductor snacks", "edit_word_b": "snacks"},
+  {"id": "hh_008", "text": "President signs executive order on cybersecurity", "edit_a": "President signs executive order on naptime", "edit_word_a": "naptime", "edit_b": "President signs executive order on pizza", "edit_word_b": "pizza"},
+  {"id": "hh_009", "text": "Tech giant announces plan to hire thousands of engineers", "edit_a": "Tech giant announces plan to hire thousands of cats", "edit_word_a": "cats", "edit_b": "Tech giant announces plan to hire thousands of clowns", "edit_word_b": "clowns"},
+  {"id": "hh_010", "text": "NASA launches new mission to explore the surface of Mars", "edit_a": "NASA launches new mission to explore the surface of cheese", "edit_word_a": "cheese", "edit_b": "NASA launches new mission to explore the surface of donuts", "edit_word_b": "donuts"}
 ]

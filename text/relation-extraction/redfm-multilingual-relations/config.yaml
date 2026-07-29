@@ -1,15 +1,15 @@
 # REDFM: Filtered and Multilingual Relation Extraction
 # Based on Huguet Cabot et al., ACL 2023
-# Paper: https://aclanthology.org/2023.acl-long.367/
-# Dataset: https://huggingface.co/datasets/DFKI-SLT/REDFM
+# Paper: https://aclanthology.org/2023.acl-long.237/
+# Dataset: https://huggingface.co/datasets/Babelscape/REDFM
 #
-# REDFM is a large-scale multilingual relation extraction dataset derived
-# from Wikidata, covering 20+ languages with curated relation types.
-# The dataset uses distant supervision from Wikidata, with filtering
+# REDFM is a human-revised multilingual relation extraction dataset derived
+# from Wikidata, covering 7 languages with curated relation types. The larger
+# automatically-annotated SREDFM dataset covers 18 languages and 400 relation
+# types. The pipeline uses distant supervision from Wikidata, with filtering
 # to reduce noise and improve annotation quality.
 #
-# Languages include: English, French, German, Spanish, Italian, Portuguese,
-# Chinese, Japanese, Korean, Arabic, Hindi, Russian, and more.
+# REDFM languages (7): Arabic, Chinese, English, French, German, Italian, Spanish.
 #
 # Entity Types:
 # - Person, Organization, Location, Date, Event, Work, Other

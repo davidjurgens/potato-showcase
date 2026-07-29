@@ -1,7 +1,7 @@
-# FAVA: Fine-grained Hallucination Annotations for Faithful Generation
-# Based on Mishra et al., ACL 2024
-# Paper: https://aclanthology.org/2024.acl-long.664/
-# Dataset: https://github.com/fava-nlp/fava
+# FAVA: Fine-grained Hallucination Detection and Editing for Language Models
+# Based on Mishra et al., COLM 2024
+# Paper: https://arxiv.org/abs/2401.06855
+# Dataset: https://github.com/abhika-m/FAVA
 #
 # This task annotates fine-grained hallucination spans in LLM-generated text.
 # Annotators compare generated text against a source and identify spans that

@@ -1,6 +1,6 @@
 # EmoBox - Multilingual Speech Emotion Recognition
 # Based on Ma et al., INTERSPEECH 2024
-# Paper: https://www.isca-archive.org/interspeech_2024/ma24_interspeech.html
+# Paper: https://www.isca-archive.org/interspeech_2024/ma24b_interspeech.html
 # Dataset: https://github.com/emo-box/EmoBox
 #
 # Task: Classify emotional states in multilingual speech clips and rate intensity.
