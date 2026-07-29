@@ -1,18 +1,18 @@
-# LegalEval - Legal Document Analysis
-# Based on Modi et al., SemEval 2023
-# Paper: https://aclanthology.org/2023.semeval-1.310/
+# LegalEval - Understanding Legal Texts
+# Based on Modi et al., SemEval-2023 Task 6
+# Paper: https://aclanthology.org/2023.semeval-1.318/
 # Dataset: https://sites.google.com/view/legaleval/home
 #
-# This task asks annotators to assess the relevance of legal document passages
-# and identify key legal entities within the text. Entity categories include
-# courts, petitioners, respondents, judges, dates, statutes, and precedents.
+# SemEval-2023 Task 6 (LegalEval) has three sub-tasks:
+#   Task A - Rhetorical Roles Labeling: assign a rhetorical role to each
+#            sentence of a legal judgment (e.g., PREAMBLE, FAC, ISSUE, RATIO).
+#   Task B - Legal Named Entity Recognition (L-NER): identify legal entities
+#            such as courts, petitioners, respondents, judges, statutes, etc.
+#   Task C - Court Judgment Prediction with Explanation (CJPE): predict the
+#            binary case outcome and supply supporting explanation sentences.
 #
-# Relevance Labels:
-# - Relevant: The passage contains substantive legal content
-# - Not Relevant: The passage is procedural boilerplate or irrelevant
-#
-# Entity Categories:
-# - Court, Petitioner, Respondent, Judge, Date, Statute, Precedent
+# This showcase config demonstrates Task A (rhetorical role, radio) and
+# Task B (L-NER, span) on sentence-level legal passages.
 
 annotation_task_name: "LegalEval - Legal Document Analysis"
 task_dir: "."
@@ -32,36 +32,65 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
-    name: relevance
-    description: "Is this passage substantively relevant to the legal case?"
+    name: rhetorical_role
+    description: "Task A - Assign the rhetorical role of this sentence in the legal judgment"
     labels:
-      - "Relevant"
-      - "Not Relevant"
-    keyboard_shortcuts:
-      "Relevant": "1"
-      "Not Relevant": "2"
+      - "PREAMBLE"
+      - "FAC"
+      - "RLC"
+      - "ISSUE"
+      - "ARG_PETITIONER"
+      - "ARG_RESPONDENT"
+      - "ANALYSIS"
+      - "STA"
+      - "PRE_RELIED"
+      - "PRE_NOT_RELIED"
+      - "RATIO"
+      - "RPC"
+      - "NONE"
     tooltips:
-      "Relevant": "The passage contains substantive legal arguments, facts, or reasoning"
-      "Not Relevant": "The passage is procedural boilerplate or not relevant to the case outcome"
+      "PREAMBLE": "Metadata / header of the judgment (court, parties, judges)"
+      "FAC": "Facts - events or circumstances that led to the case"
+      "RLC": "Ruling by Lower Court"
+      "ISSUE": "Legal issues framed by the court"
+      "ARG_PETITIONER": "Arguments advanced by the petitioner/appellant"
+      "ARG_RESPONDENT": "Arguments advanced by the respondent"
+      "ANALYSIS": "Court's analysis / reasoning and application of law to facts"
+      "STA": "Statute - relevant statutory provisions cited"
+      "PRE_RELIED": "Precedent relied upon by the court"
+      "PRE_NOT_RELIED": "Precedent cited but not relied upon"
+      "RATIO": "Ratio of the decision - the reason for the final decision"
+      "RPC": "Ruling by Present Court - final decision / order"
+      "NONE": "No rhetorical role applies"
 
   - annotation_type: span
     name: legal_entities
-    description: "Highlight and label all legal entities in the text"
+    description: "Task B (L-NER) - Highlight and label all legal named entities in the text"
     labels:
-      - "Court"
-      - "Petitioner"
-      - "Respondent"
-      - "Judge"
-      - "Date"
-      - "Statute"
-      - "Precedent"
+      - "COURT"
+      - "PETITIONER"
+      - "RESPONDENT"
+      - "JUDGE"
+      - "LAWYER"
+      - "DATE"
+      - "ORG"
+      - "GPE"
+      - "STATUTE"
+      - "PROVISION"
+      - "PRECEDENT"
+      - "CASE_NUMBER"
+      - "WITNESS"
+      - "OTHER_PERSON"
 
 annotation_instructions: |
-  You will see a passage from a legal document.
-  1. First, determine whether the passage is substantively relevant to the legal case.
-  2. Then, highlight all legal entities in the text and assign the appropriate label.
-  3. Entity types include: Court names, Petitioners, Respondents, Judge names,
-     Dates, Statute references, and Precedent case citations.
+  You will see a sentence from an Indian court judgment.
+  1. Task A (Rhetorical Role): assign the single rhetorical role that best
+     describes the function of this sentence in the judgment (e.g., PREAMBLE,
+     FAC, ISSUE, ANALYSIS, RATIO, RPC).
+  2. Task B (L-NER): highlight every legal named entity in the sentence and
+     assign the appropriate label. Entity types include COURT, PETITIONER,
+     RESPONDENT, JUDGE, LAWYER, DATE, ORG, GPE, STATUTE, PROVISION, PRECEDENT,
+     CASE_NUMBER, WITNESS, and OTHER_PERSON.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

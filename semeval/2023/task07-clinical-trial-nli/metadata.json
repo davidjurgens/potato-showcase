@@ -37,6 +37,6 @@
   "featured": false,
   "paperReference": "Jullien et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.307/",
-  "datasetUrl": "https://github.com/ai-systems/Task-7-SemEval-2023",
-  "citation": "@inproceedings{jullien-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 7: Multi-Evidence Natural Language Inference for Clinical Trial Data\",\n    author = \"Jullien, Ma{\\\"e}l  and Valentino, Marco  and Freitas, Andr{\\'e}\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.307\"\n}"
+  "datasetUrl": "https://github.com/ai-systems/nli4ct",
+  "citation": "@inproceedings{jullien-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 7: Multi-Evidence Natural Language Inference for Clinical Trial Data\",\n    author = {Jullien, Ma{\\\"e}l  and Valentino, Marco  and Frost, Hannah  and O{'}regan, Paul  and Landers, Donal  and Freitas, Andr{\\'e}},\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2216--2226\",\n    doi = \"10.18653/v1/2023.semeval-1.307\"\n}"
 }

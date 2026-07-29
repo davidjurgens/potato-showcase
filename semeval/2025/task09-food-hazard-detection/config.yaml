@@ -1,11 +1,12 @@
 # Food Hazard Detection
-# Based on SemEval 2025 Task 9 Organizers, SemEval 2025
-# Paper: https://aclanthology.org/volumes/2025.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2025-task9
+# Based on Randl et al., SemEval-2025 Task 9: The Food Hazard Detection Challenge
+# Paper: https://aclanthology.org/2025.semeval-1.325/
+# Dataset: https://food-hazard-detection-semeval-2025.github.io/
 #
-# This task asks annotators to identify food safety hazards in incident reports.
-# Annotators highlight hazard mentions, affected products, and risk levels,
-# classify the required action, and select applicable hazard categories.
+# This task asks annotators to classify short food-incident report texts.
+# Following the two SemEval subtasks, annotators assign the coarse hazard-category
+# (1 of 10) and product-category (1 of 22), and highlight the specific hazard and
+# product mentions that ground the fine-grained (ST2) labels.
 
 annotation_task_name: "Food Hazard Detection"
 task_dir: "."
@@ -24,52 +25,75 @@ port: 8000
 server_name: localhost
 
 annotation_schemes:
+  # Subtask 1 (coarse): single hazard-category label (1 of 10)
+  - annotation_type: radio
+    name: hazard_category
+    description: "Which hazard-category does this text imply? (choose one)"
+    labels:
+      - "allergens"
+      - "biological"
+      - "chemical"
+      - "foreign bodies"
+      - "fraud"
+      - "organoleptic aspects"
+      - "packaging defect"
+      - "food additives and flavourings"
+      - "migration"
+      - "other hazard"
+    tooltips:
+      "allergens": "Undeclared or mislabelled allergens (e.g., milk, nuts, gluten)"
+      "biological": "Microbiological contamination (e.g., Listeria, Salmonella, E. coli)"
+      "chemical": "Chemical contamination (e.g., pesticides, heavy metals, toxins, aflatoxins)"
+      "foreign bodies": "Physical contaminants such as glass, metal, or plastic fragments"
+      "fraud": "Adulteration, mislabelling, or fraudulent substitution"
+      "organoleptic aspects": "Abnormal smell, taste, colour, or texture"
+      "packaging defect": "Faulty or damaged packaging affecting safety"
+      "food additives and flavourings": "Unauthorised or excessive additives/flavourings"
+      "migration": "Migration of substances from packaging or contact materials"
+      "other hazard": "Any hazard not covered by the categories above"
+
+  # Subtask 1 (coarse): single product-category label (1 of 22)
+  - annotation_type: radio
+    name: product_category
+    description: "Which product-category is affected? (choose one)"
+    labels:
+      - "meat, egg and dairy products"
+      - "cereals and bakery products"
+      - "fruits and vegetables"
+      - "soups, broths, sauces and condiments"
+      - "prepared dishes and snacks"
+      - "seafood and fish products"
+      - "nuts, nut products and seeds"
+      - "confectionery"
+      - "fats and oils"
+      - "cocoa and cocoa preparations, coffee and tea"
+      - "alcoholic beverages"
+      - "non-alcoholic beverages"
+      - "herbs and spices"
+      - "food additives and flavourings"
+      - "food contact materials"
+      - "dietetic foods, food supplements, fortified foods"
+      - "honey and royal jelly"
+      - "ices and desserts"
+      - "sugars and syrups"
+      - "feed materials"
+      - "pet feed"
+      - "other food product / mixed"
+
+  # Subtask 2 (fine-grained): highlight the specific hazard and product mentions
   - annotation_type: span
-    name: hazard_spans
-    description: "Highlight hazards, products, and risk levels in the text."
+    name: hazard_product_spans
+    description: "Highlight the specific hazard and product mentioned in the text."
     labels:
       - "Hazard"
       - "Product"
-      - "Risk Level"
-
-  - annotation_type: radio
-    name: action_required
-    description: "What action is required for this food safety incident?"
-    labels:
-      - "Recall Required"
-      - "Warning Issued"
-      - "No Action Needed"
-    keyboard_shortcuts:
-      "Recall Required": "1"
-      "Warning Issued": "2"
-      "No Action Needed": "3"
-    tooltips:
-      "Recall Required": "The product must be recalled from the market"
-      "Warning Issued": "A public health warning should be issued"
-      "No Action Needed": "The incident does not require public action"
-
-  - annotation_type: multiselect
-    name: hazard_categories
-    description: "Select all hazard categories that apply."
-    labels:
-      - "Biological"
-      - "Chemical"
-      - "Physical"
-      - "Allergen"
-      - "Other"
-    tooltips:
-      "Biological": "Microbial contamination such as bacteria, viruses, or parasites"
-      "Chemical": "Chemical contamination including pesticides, heavy metals, or toxins"
-      "Physical": "Physical contaminants such as glass, metal, or plastic"
-      "Allergen": "Undeclared allergens that could cause allergic reactions"
-      "Other": "Other types of hazards not covered above"
 
 annotation_instructions: |
-  You will be shown a food safety incident report. Your task is to:
+  You will be shown the title or text of a food-incident report. Your task is to:
   1. Read the report carefully.
-  2. Highlight spans indicating the hazard, affected product, and risk level.
-  3. Classify the required action (recall, warning, or no action).
-  4. Select all applicable hazard categories.
+  2. Assign the single best hazard-category (Subtask 1).
+  3. Assign the single best product-category (Subtask 1).
+  4. Highlight the specific hazard and product mentions in the text (Subtask 2).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

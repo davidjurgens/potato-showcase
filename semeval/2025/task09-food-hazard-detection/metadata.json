@@ -1,12 +1,12 @@
 {
   "title": "Food Hazard Detection",
-  "description": "Food safety hazard detection task requiring annotators to identify hazards, products, and risk levels in food incident reports, and classify the type of contamination. Based on SemEval-2025 Task 9.",
+  "description": "Food safety hazard detection task requiring annotators to classify short food-incident report texts by hazard-category and product-category (coarse labels), and to identify the specific hazard and product mentions (fine-grained labels). Based on SemEval-2025 Task 9: The Food Hazard Detection Challenge.",
   "version": "1.0.0",
   "author": {
-    "name": "SemEval 2025 Task 9 Organizers",
+    "name": "Korbinian Randl, John Pavlopoulos, Aron Henriksson, Tony Lindgren, Juli Bakagianni (SemEval-2025 Task 9 Organizers)",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "food-hazard-detection-semeval-2025",
+    "affiliation": "Stockholm University; Athens University of Economics and Business"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -36,8 +36,8 @@
     "span-annotation"
   ],
   "featured": false,
-  "paperReference": "SemEval 2025 Task 9 Organizers, SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2025-task9",
-  "citation": "@inproceedings{semeval2025-task9,\n    title = \"Food Hazard Detection\",\n    author = \"SemEval 2025 Task 9 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Randl et al., SemEval-2025 Task 9: The Food Hazard Detection Challenge, SemEval 2025",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.325/",
+  "datasetUrl": "https://food-hazard-detection-semeval-2025.github.io/",
+  "citation": "@inproceedings{randl-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 9: The Food Hazard Detection Challenge\",\n    author = \"Randl, Korbinian and Pavlopoulos, John and Henriksson, Aron and Lindgren, Tony and Bakagianni, Juli\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    pages = \"2523--2534\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.semeval-1.325/\"\n}"
 }

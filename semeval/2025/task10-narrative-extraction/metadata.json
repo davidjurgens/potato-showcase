@@ -1,18 +1,19 @@
 {
-  "title": "Multilingual Narrative Extraction",
-  "description": "Multilingual narrative extraction task requiring annotators to identify narrative elements such as events, actors, and causal relations in news texts, and classify the narrative themes. Based on SemEval-2025 Task 10.",
+  "title": "Multilingual Characterization and Extraction of Narratives",
+  "description": "Multilingual narrative analysis over online news, adapted from SemEval-2025 Task 10. Covers the task's three subtasks: (1) entity framing, labeling the role each named entity plays (protagonist, antagonist, innocent); (2) narrative classification, assigning topic-specific narrative labels to the article; and (3) narrative extraction, writing a short justification for the article's dominant narrative. Original data spans the Ukraine-Russia War and Climate Change domains in Bulgarian, English, Hindi, Portuguese, and Russian.",
   "version": "1.0.0",
   "author": {
-    "name": "SemEval 2025 Task 10 Organizers",
+    "name": "Jakub Piskorski, Tarek Mahmoud, Nikolaos Nikolaidis, et al. (SemEval-2025 Task 10 organizers)",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "",
+    "affiliation": "SemEval-2025 Task 10"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
   "annotationTypes": [
     "span",
-    "multiselect"
+    "multiselect",
+    "text"
   ],
   "domain": [
     "SemEval",
@@ -21,8 +22,9 @@
     "Multilingual"
   ],
   "useCase": [
+    "Entity Framing",
+    "Narrative Classification",
     "Narrative Extraction",
-    "Event Detection",
     "Discourse Analysis"
   ],
   "complexity": "advanced",
@@ -35,8 +37,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "SemEval 2025 Task 10 Organizers, SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2025-task10",
-  "citation": "@inproceedings{semeval2025-task10,\n    title = \"Multilingual Narrative Extraction\",\n    author = \"SemEval 2025 Task 10 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Piskorski et al. (2025). SemEval 2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News. Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025), pages 2610-2643.",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.331/",
+  "datasetUrl": "https://propaganda.math.unipd.it/semeval2025task10/",
+  "citation": "@inproceedings{piskorski-etal-2025-semeval,\n    title = \"{S}em{E}val 2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News\",\n    author = \"Piskorski, Jakub and Mahmoud, Tarek and Nikolaidis, Nikolaos and Campos, Ricardo and Mario Jorge, Alipio and Dimitrov, Dimitar and Silvano, Purifica{\\c{c}}{\\~a}o and Yangarber, Roman and Sharma, Shivam and Chakraborty, Tanmoy and Guimaraes, Nuno and Sartori, Elisa and Stefanovitch, Nicolas and Xie, Zhuohan and Nakov, Preslav and Da San Martino, Giovanni\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2610--2643\"\n}"
 }

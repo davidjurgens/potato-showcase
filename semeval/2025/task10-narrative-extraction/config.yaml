@@ -1,14 +1,18 @@
-# Multilingual Narrative Extraction
-# Based on SemEval 2025 Task 10 Organizers, SemEval 2025
-# Paper: https://aclanthology.org/volumes/2025.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2025-task10
+# Multilingual Characterization and Extraction of Narratives
+# Based on Piskorski et al. (2025), SemEval-2025 Task 10
+# Paper: https://aclanthology.org/2025.semeval-1.331/
+# Dataset: https://propaganda.math.unipd.it/semeval2025task10/ (access via registration)
 #
-# This task asks annotators to extract narrative elements from multilingual
-# news texts, including events, actors, locations, temporal markers, and
-# causal relations. Annotators also classify the thematic domains of each
-# narrative.
+# Honest single-page adaptation of SemEval-2025 Task 10, which is organized
+# into three subtasks over online news articles (Ukraine-Russia War and
+# Climate Change domains; Bulgarian, English, Hindi, Portuguese, Russian):
+#   ST1 Entity Framing        - label the role each named entity plays
+#                               (protagonist / antagonist / innocent).
+#   ST2 Narrative Classification - assign topic-specific narrative labels.
+#   ST3 Narrative Extraction  - write a short justification (<= 80 words)
+#                               for the article's dominant narrative.
 
-annotation_task_name: "Multilingual Narrative Extraction"
+annotation_task_name: "Multilingual Characterization and Extraction of Narratives"
 task_dir: "."
 
 data_files:
@@ -25,40 +29,62 @@ port: 8000
 server_name: localhost
 
 annotation_schemes:
+  # Subtask 1: Entity Framing - highlight each named entity and assign the
+  # role it plays. SemEval-2025 Task 10 uses a fine-grained taxonomy nested
+  # under three main roles; this adaptation exposes the three main roles.
   - annotation_type: span
-    name: narrative_elements
-    description: "Highlight narrative elements in the text."
+    name: entity_framing
+    description: "Highlight each key named entity and label the role it plays in the narrative."
     labels:
-      - "Event"
-      - "Actor"
-      - "Location"
-      - "Time"
-      - "Cause"
-      - "Effect"
-
-  - annotation_type: multiselect
-    name: narrative_themes
-    description: "Select all thematic domains that apply to this narrative."
-    labels:
-      - "Political"
-      - "Economic"
-      - "Social"
-      - "Environmental"
-      - "Cultural"
-      - "Conflict"
+      - "Protagonist"
+      - "Antagonist"
+      - "Innocent"
     tooltips:
-      "Political": "Related to government, policy, elections, or political actors"
-      "Economic": "Related to markets, trade, employment, or financial systems"
-      "Social": "Related to communities, demographics, health, or education"
-      "Environmental": "Related to climate, ecology, natural disasters, or sustainability"
-      "Cultural": "Related to arts, traditions, identity, or cultural practices"
-      "Conflict": "Related to war, disputes, protests, or violence"
+      "Protagonist": "A positively framed actor: e.g. guardian, martyr, peacemaker, rebel, underdog, virtuous"
+      "Antagonist": "A negatively framed actor: e.g. instigator, conspirator, tyrant, foreign adversary, traitor, terrorist, deceiver, corrupt, incompetent"
+      "Innocent": "A party framed as harmed or blameless: e.g. victim, exploited, scapegoat, forgotten"
+
+  # Subtask 2: Narrative Classification - assign topic-specific narrative
+  # labels to the whole document.
+  - annotation_type: multiselect
+    name: narrative_classification
+    description: "Select all narrative categories present in this article."
+    labels:
+      - "Blaming the West / NATO"
+      - "Discrediting Ukraine"
+      - "Praising / justifying Russia"
+      - "Amplifying war consequences"
+      - "Climate change is not real / not urgent"
+      - "Criticism of climate policies"
+      - "Criticism of climate movement"
+      - "Green technology is unreliable"
+      - "Other narrative"
+    tooltips:
+      "Blaming the West / NATO": "Ukraine-Russia domain: narratives attributing the conflict to Western actors"
+      "Discrediting Ukraine": "Ukraine-Russia domain: narratives undermining Ukraine or its leadership"
+      "Praising / justifying Russia": "Ukraine-Russia domain: narratives defending Russian actions"
+      "Amplifying war consequences": "Ukraine-Russia domain: narratives emphasizing costs or threats of the war"
+      "Climate change is not real / not urgent": "Climate domain: denial or downplaying narratives"
+      "Criticism of climate policies": "Climate domain: narratives attacking climate regulations or measures"
+      "Criticism of climate movement": "Climate domain: narratives attacking activists or institutions"
+      "Green technology is unreliable": "Climate domain: narratives casting doubt on renewable/green technology"
+      "Other narrative": "A dominant narrative not captured by the categories above"
+
+  # Subtask 3: Narrative Extraction - free-text justification of the
+  # dominant narrative (SemEval limits responses to ~80 words).
+  - annotation_type: text
+    name: narrative_extraction
+    description: "In up to 80 words, describe and justify the dominant narrative of the article, grounded in its text."
 
 annotation_instructions: |
-  You will be shown a news text passage. Your task is to:
-  1. Read the passage carefully.
-  2. Highlight narrative elements: events, actors, locations, temporal markers, causes, and effects.
-  3. Select all thematic domains that apply to the narrative.
+  You will be shown a news article passage. Your task follows the three
+  subtasks of SemEval-2025 Task 10:
+  1. Entity Framing: highlight each key named entity and label it as
+     Protagonist, Antagonist, or Innocent based on how the article frames it.
+  2. Narrative Classification: select all narrative categories that the
+     article promotes.
+  3. Narrative Extraction: write a short justification (up to 80 words) for
+     the article's dominant narrative, grounded in the text.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

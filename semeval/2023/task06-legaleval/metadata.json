@@ -1,6 +1,6 @@
 {
   "title": "LegalEval - Legal Document Analysis",
-  "description": "Relevance classification and named entity recognition for legal documents, identifying key entities such as courts, petitioners, respondents, judges, dates, statutes, and precedents. Based on SemEval-2023 Task 6 (Modi et al.).",
+  "description": "Understanding legal texts through the SemEval-2023 Task 6 (LegalEval) protocol: rhetorical role labeling of sentences, legal named entity recognition (L-NER) for entities such as courts, petitioners, respondents, judges, statutes, and precedents, and court judgment prediction with explanation. Based on SemEval-2023 Task 6 (Modi et al.).",
   "version": "1.0.0",
   "author": {
     "name": "Modi et al.",
@@ -35,7 +35,7 @@
   ],
   "featured": false,
   "paperReference": "Modi et al., SemEval 2023",
-  "paperUrl": "https://aclanthology.org/2023.semeval-1.310/",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.318/",
   "datasetUrl": "https://sites.google.com/view/legaleval/home",
-  "citation": "@inproceedings{modi-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 6: {L}egal{E}val: Understanding Legal Texts\",\n    author = \"Modi, Ashutosh  and Kalamkar, Prathamesh  and Karn, Saurabh\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.310\"\n}"
+  "citation": "@inproceedings{modi-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 6: {L}egal{E}val - Understanding Legal Texts\",\n    author = \"Modi, Ashutosh  and Kalamkar, Prathamesh  and Karn, Saurabh  and Tiwari, Aman  and Joshi, Abhinav  and Tanikella, Sai Kiran  and Guha, Shouvik Kumar  and Malhan, Sachin  and Raghavan, Vivek\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2362--2374\",\n    doi = \"10.18653/v1/2023.semeval-1.318\",\n    url = \"https://aclanthology.org/2023.semeval-1.318\"\n}"
 }

@@ -1,7 +1,7 @@
 # Clinical Trial NLI
 # Based on Jullien et al., SemEval 2023
 # Paper: https://aclanthology.org/2023.semeval-1.307/
-# Dataset: https://github.com/ai-systems/Task-7-SemEval-2023
+# Dataset: https://github.com/ai-systems/nli4ct
 #
 # This task asks annotators to determine whether a statement about a clinical
 # trial is entailed or contradicted by the provided evidence from the trial

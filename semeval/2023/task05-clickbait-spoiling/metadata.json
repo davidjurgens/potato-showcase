@@ -1,9 +1,9 @@
 {
   "title": "Clickbait Spoiling",
-  "description": "Classification and extraction of spoilers for clickbait posts, including spoiler type identification and span-level spoiler detection. Based on SemEval-2023 Task 5 (Hagen et al.).",
+  "description": "Classification and extraction of spoilers for clickbait posts, including spoiler type identification and span-level spoiler detection. Based on SemEval-2023 Task 5 (Fröbe et al.).",
   "version": "1.0.0",
   "author": {
-    "name": "Hagen et al.",
+    "name": "Fröbe et al.",
     "email": "",
     "github": "semeval",
     "affiliation": "SemEval"
@@ -35,8 +35,8 @@
     "span-extraction"
   ],
   "featured": false,
-  "paperReference": "Hagen et al., SemEval 2023",
+  "paperReference": "Fröbe et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.312/",
-  "datasetUrl": "https://webis.de/events/clickbait-challenge/",
-  "citation": "@inproceedings{hagen-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 5: Clickbait Spoiling\",\n    author = \"Hagen, Matthias  and Frobe, Maik  and Jurgens, David  and Potthast, Martin\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.312\"\n}"
+  "datasetUrl": "https://pan.webis.de/semeval23/pan23-web/clickbait-challenge.html",
+  "citation": "@inproceedings{frobe-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 5: Clickbait Spoiling\",\n    author = {Fr{\\\"o}be, Maik  and Stein, Benno  and Gollub, Tim  and Hagen, Matthias  and Potthast, Martin},\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.312/\",\n    doi = \"10.18653/v1/2023.semeval-1.312\",\n    pages = \"2275--2286\"\n}"
 }

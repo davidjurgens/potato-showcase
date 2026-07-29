@@ -1,23 +1,21 @@
-# LLMs4Subjects - Automated Subject Tagging
-# Based on Sinhababu et al., SemEval 2025
-# Paper: https://aclanthology.org/volumes/2025.semeval-1/
-# Dataset: https://github.com/SemEval/SemEval2025-Task5
+# LLMs4Subjects - Subject Tagging for a Technical Library
+# Based on D'Souza et al., SemEval-2025 Task 5
+# Paper: https://aclanthology.org/2025.semeval-1.328/
+# Dataset: https://github.com/jd-coderepos/llms4subjects
 #
-# This task involves assigning subject categories to academic text
-# passages. Annotators select all applicable subject areas and
-# indicate whether the text belongs to a single discipline or
-# spans multiple fields.
+# SemEval-2025 Task 5 (LLMs4Subjects) asks systems to recommend subject
+# headings from the GND (Gemeinsame Normdatei) vocabulary for technical
+# bibliographic records in the TIB Leibniz Information Centre's bilingual
+# (English/German) open-access TIBKAT catalog. This showcase is a
+# simplified HUMAN-annotation adaptation: rather than the full open GND
+# vocabulary of tens of thousands of headings, annotators tag each record
+# with broad subject domains and its record type, reproducing the manual
+# subject-indexing workflow the shared task automates.
 #
-# Subject Categories:
-# - Computer Science, Mathematics, Physics, Biology, Medicine,
-#   Engineering, Social Science, Humanities, Law, Economics
-#
-# Classification:
-# - Single Subject: Text belongs to one clear discipline
-# - Multi-Subject: Text spans multiple disciplines
-# - Unclear: Subject classification is ambiguous
+# Note: the official gold standard uses the full GND subject taxonomy;
+# the fixed domain list below is a demonstration simplification.
 
-annotation_task_name: "LLMs4Subjects - Automated Subject Tagging"
+annotation_task_name: "LLMs4Subjects - Subject Tagging for a Technical Library"
 task_dir: "."
 
 data_files:
@@ -36,7 +34,7 @@ server_name: localhost
 annotation_schemes:
   - annotation_type: multiselect
     name: subject_categories
-    description: "Select all subject areas that apply to this text."
+    description: "Select all subject domains this record should be indexed under (a simplified stand-in for GND subject headings)."
     labels:
       - "Computer Science"
       - "Mathematics"
@@ -61,26 +59,34 @@ annotation_schemes:
       "Economics": "Micro/macroeconomics, finance, econometrics, etc."
 
   - annotation_type: radio
-    name: subject_scope
-    description: "Does this text belong to a single subject or multiple subjects?"
+    name: record_type
+    description: "What type of bibliographic record is this?"
     labels:
-      - "Single Subject"
-      - "Multi-Subject"
-      - "Unclear"
+      - "Article"
+      - "Book"
+      - "Conference"
+      - "Report"
+      - "Thesis"
     keyboard_shortcuts:
-      "Single Subject": "1"
-      "Multi-Subject": "2"
-      "Unclear": "3"
+      "Article": "1"
+      "Book": "2"
+      "Conference": "3"
+      "Report": "4"
+      "Thesis": "5"
     tooltips:
-      "Single Subject": "The text clearly belongs to one academic discipline"
-      "Multi-Subject": "The text spans multiple academic disciplines"
-      "Unclear": "The subject classification is ambiguous or hard to determine"
+      "Article": "Journal or periodical article"
+      "Book": "Monograph or edited book"
+      "Conference": "Conference or workshop proceedings paper"
+      "Report": "Technical or research report"
+      "Thesis": "Dissertation or thesis"
 
 annotation_instructions: |
-  You will be shown an academic text passage with its title. Your tasks are:
-  1. Read the passage carefully and identify the subject area(s).
-  2. Select all applicable subject categories from the list.
-  3. Indicate whether the text is primarily about one subject or multiple subjects.
+  You are performing subject indexing for a technical-library catalog record
+  (TIBKAT), in the style of SemEval-2025 Task 5 (LLMs4Subjects). Records may be
+  in English or German. Your tasks are:
+  1. Read the record's title and text and identify what it is about.
+  2. Select all subject domains under which the record should be indexed.
+  3. Choose the record type (article, book, conference, report, or thesis).
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">

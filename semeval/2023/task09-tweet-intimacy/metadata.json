@@ -36,6 +36,6 @@
   "featured": false,
   "paperReference": "Pei et al., SemEval 2023",
   "paperUrl": "https://aclanthology.org/2023.semeval-1.309/",
-  "datasetUrl": "https://github.com/LittleYUYU/MINT",
-  "citation": "@inproceedings{pei-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 9: Multilingual Tweet Intimacy Analysis\",\n    author = \"Pei, Jiaxin  and Jurgens, David\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.309\"\n}"
+  "datasetUrl": "https://codalab.lisn.upsaclay.fr/competitions/7096",
+  "citation": "@inproceedings{pei-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 9: Multilingual Tweet Intimacy Analysis\",\n    author = \"Pei, Jiaxin  and Silva, V{\\'\\i}tor  and Bos, Maarten  and Liu, Yozen  and Neves, Leonardo  and Jurgens, David  and Barbieri, Francesco\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.309\",\n    doi = \"10.18653/v1/2023.semeval-1.309\",\n    pages = \"2235--2246\"\n}"
 }

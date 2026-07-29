@@ -1,7 +1,7 @@
 # BRAINTEASER - Commonsense-Defying QA
 # Based on Jiang et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2024-task9
+# Paper: https://aclanthology.org/2024.semeval-1.274/
+# Dataset: https://brainteasersem.github.io/
 #
 # This task asks annotators to solve brain teasers that defy default
 # commonsense assumptions. Annotators select the best answer from four
@@ -48,10 +48,14 @@ annotation_schemes:
     description: "Explain your reasoning for the selected answer."
 
 annotation_instructions: |
-  You will be shown a brain teaser question with four answer options. Your task is to:
+  You will be shown a brain teaser question with four answer options. The task
+  covers two subtasks: Sentence Puzzles (reasoning defies commonsense at the
+  sentence level) and Word Puzzles (the answer violates the default meaning of
+  a word and hinges on its letter composition). Your task is to:
   1. Read the question carefully. These are lateral thinking puzzles that may
      defy your initial commonsense assumptions.
-  2. Consider all four options before selecting your answer.
+  2. Consider all four options before selecting your answer. Following the
+     BRAINTEASER format, the fourth option may be "None of the above."
   3. Think creatively -- the answer may involve wordplay, unconventional logic,
      or challenging default assumptions.
   4. Provide a brief explanation of your reasoning.

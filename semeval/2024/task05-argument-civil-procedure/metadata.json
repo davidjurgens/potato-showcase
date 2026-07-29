@@ -1,18 +1,17 @@
 {
   "title": "Argument Reasoning in Civil Procedure",
-  "description": "Legal argument reasoning task requiring annotators to answer multiple-choice questions about civil procedure by selecting the best answer and providing legal reasoning. Based on SemEval-2024 Task 5.",
+  "description": "Legal argument reasoning task from SemEval-2024 Task 5. Given a short introduction to a U.S. civil procedure topic, a question, and a candidate answer (a possible solution argument), annotators perform binary classification: judge whether the answer candidate is correct (True) or incorrect (False). Questions and answers are drawn from a civil procedure textbook widely used in U.S. law schools.",
   "version": "1.0.0",
   "author": {
-    "name": "Bongard et al.",
+    "name": "Held & Habernal (SemEval-2024 Task 5 organizers)",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "trusthlt",
+    "affiliation": "TU Darmstadt"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
   "annotationTypes": [
-    "radio",
-    "text"
+    "radio"
   ],
   "domain": [
     "SemEval",
@@ -23,7 +22,7 @@
   "useCase": [
     "Legal Reasoning",
     "Argument Analysis",
-    "Question Answering"
+    "Answer Validation"
   ],
   "complexity": "advanced",
   "tags": [
@@ -33,11 +32,11 @@
     "legal",
     "civil-procedure",
     "argumentation",
-    "qa"
+    "binary-classification"
   ],
   "featured": false,
-  "paperReference": "Bongard et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task5",
-  "citation": "@inproceedings{bongard-etal-2024-argument-civil-procedure,\n    title = \"Argument Reasoning in Civil Procedure\",\n    author = \"Bongard, Lena and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Held & Habernal, SemEval 2024",
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.276/",
+  "datasetUrl": "https://github.com/trusthlt/legal-argument-reasoning-task",
+  "citation": "@inproceedings{held-habernal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 5: Argument Reasoning in Civil Procedure\",\n    author = \"Held, Lena and Habernal, Ivan\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"2027--2038\",\n    doi = \"10.18653/v1/2024.semeval-1.276\",\n    url = \"https://aclanthology.org/2024.semeval-1.276/\"\n}"
 }

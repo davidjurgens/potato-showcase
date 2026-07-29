@@ -1,12 +1,12 @@
 {
   "title": "QA over Tabular Data",
-  "description": "Question answering over tabular data task requiring annotators to answer questions based on table content and classify answerability. Based on SemEval-2025 Task 8.",
+  "description": "Question answering over tabular data: annotators answer natural-language questions from a table by providing the value or list derived from it, and label the answer type (boolean, category, number, or list). Based on SemEval-2025 Task 8 (DataBench).",
   "version": "1.0.0",
   "author": {
-    "name": "SemEval 2025 Task 8 Organizers",
+    "name": "Jorge Osés Grijalba, L. Alfonso Ureña-López, Eugenio Martínez Cámara, Jose Camacho-Collados",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "jorses",
+    "affiliation": "Universidad de Jaén; Cardiff NLP, Cardiff University"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -35,8 +35,8 @@
     "tables"
   ],
   "featured": false,
-  "paperReference": "SemEval 2025 Task 8 Organizers, SemEval 2025",
+  "paperReference": "Osés Grijalba et al., SemEval-2025 Task 8: Question Answering over Tabular Data, SemEval 2025",
   "paperUrl": "https://aclanthology.org/2025.semeval-1.324/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2025-task8",
-  "citation": "@inproceedings{semeval2025-task8,\n    title = \"{QA} over Tabular Data\",\n    author = \"SemEval 2025 Task 8 Organizers\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "datasetUrl": "https://huggingface.co/datasets/cardiffnlp/databench",
+  "citation": "@inproceedings{oses-grijalba-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 8: Question Answering over Tabular Data\",\n    author = \"Os{\\'e}s Grijalba, Jorge and Ure{\\~n}a-L{\\'o}pez, L. Alfonso and Mart{\\'i}nez C{\\'a}mara, Eugenio and Camacho-Collados, Jose\",\n    editor = \"Rosenthal, Sara and Ros{\\'a}, Aiala and Ghosh, Debanjan and Zampieri, Marcos\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.semeval-1.324/\",\n    pages = \"2512--2522\",\n    ISBN = \"979-8-89176-273-2\"\n}"
 }

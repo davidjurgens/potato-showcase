@@ -1,7 +1,7 @@
 # Tweet Intimacy Analysis
 # Based on Pei et al., SemEval 2023
 # Paper: https://aclanthology.org/2023.semeval-1.309/
-# Dataset: https://github.com/LittleYUYU/MINT
+# Dataset (MINT): https://codalab.lisn.upsaclay.fr/competitions/7096
 #
 # This task asks annotators to rate the level of intimacy expressed in
 # tweets on a 5-point Likert scale. Intimacy refers to how personal,

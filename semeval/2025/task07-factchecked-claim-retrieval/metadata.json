@@ -1,12 +1,12 @@
 {
-  "title": "Multilingual Fact-Checked Claim Retrieval",
-  "description": "Fact-checked claim retrieval task requiring annotators to assess whether a fact-check article matches a given claim, supporting multilingual evaluation. Based on SemEval-2025 Task 7.",
+  "title": "Multilingual and Crosslingual Fact-Checked Claim Retrieval",
+  "description": "Fact-checked claim retrieval task requiring annotators to judge whether a previously fact-checked claim matches a claim from a social media post, supporting multilingual and crosslingual evaluation. Based on SemEval-2025 Task 7.",
   "version": "1.0.0",
   "author": {
-    "name": "Nakov et al.",
+    "name": "Peng et al.",
     "email": "",
-    "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "github": "kinit-sk",
+    "affiliation": "SemEval-2025 Task 7 Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -35,8 +35,8 @@
     "multilingual"
   ],
   "featured": false,
-  "paperReference": "Nakov et al., SemEval 2025",
-  "paperUrl": "https://aclanthology.org/volumes/2025.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2025-task7",
-  "citation": "@inproceedings{nakov-etal-2025-factchecked,\n    title = \"Multilingual Fact-Checked Claim Retrieval\",\n    author = \"Nakov, Preslav and others\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    year = \"2025\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperReference": "Peng et al., SemEval 2025",
+  "paperUrl": "https://aclanthology.org/2025.semeval-1.323/",
+  "datasetUrl": "https://zenodo.org/records/14989177",
+  "citation": "@inproceedings{peng-etal-2025-semeval,\n    title = \"{S}em{E}val-2025 Task 7: Multilingual and Crosslingual Fact-Checked Claim Retrieval\",\n    author = \"Peng, Qiwei and Moro, Robert and Gregor, Michal and Srba, Ivan and Ostermann, Simon and Simko, Marian and Podrouzek, Juraj and Mesar{\\v{c}}{\\'\\i}k, Mat{\\'u}{\\v{s}} and Kop{\\v{c}}an, Jaroslav and S{\\o}gaard, Anders\",\n    editor = \"Rosenthal, Sara and Ros{\\'a}, Aiala and Ghosh, Debanjan and Zampieri, Marcos\",\n    booktitle = \"Proceedings of the 19th International Workshop on Semantic Evaluation (SemEval-2025)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.semeval-1.323/\",\n    pages = \"2498--2511\",\n    ISBN = \"979-8-89176-273-2\"\n}"
 }

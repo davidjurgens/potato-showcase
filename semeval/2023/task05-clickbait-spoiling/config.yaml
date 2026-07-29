@@ -1,7 +1,7 @@
 # Clickbait Spoiling
-# Based on Hagen et al., SemEval 2023
+# Based on Fröbe et al., SemEval 2023
 # Paper: https://aclanthology.org/2023.semeval-1.312/
-# Dataset: https://webis.de/events/clickbait-challenge/
+# Dataset: https://pan.webis.de/semeval23/pan23-web/clickbait-challenge.html
 #
 # This task asks annotators to classify the type of spoiler needed for a
 # clickbait headline and identify the spoiler text within the article excerpt.

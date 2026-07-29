@@ -3,10 +3,10 @@
   "description": "Lateral thinking and commonsense-defying question answering task requiring annotators to select answers to brain teasers that defy default commonsense assumptions and provide explanations. Based on SemEval-2024 Task 9 (BRAINTEASER).",
   "version": "1.0.0",
   "author": {
-    "name": "Jiang et al.",
+    "name": "Yifan Jiang, Filip Ilievski, Kaixin Ma",
     "email": "",
     "github": "SemEval",
-    "affiliation": "SemEval Organizers"
+    "affiliation": "SemEval-2024 Task 9 Organizers"
   },
   "createdAt": "2025-01-16",
   "updatedAt": "2025-01-16",
@@ -37,7 +37,7 @@
   ],
   "featured": false,
   "paperReference": "Jiang et al., SemEval 2024",
-  "paperUrl": "https://aclanthology.org/volumes/2024.semeval-1/",
-  "datasetUrl": "https://github.com/SemEval/semeval-2024-task9",
-  "citation": "@inproceedings{jiang-etal-2024-brainteaser,\n    title = \"{BRAINTEASER}: Lateral Thinking Puzzles for Large Language Models\",\n    author = \"Jiang, Yifan and others\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    year = \"2024\",\n    publisher = \"Association for Computational Linguistics\"\n}"
+  "paperUrl": "https://aclanthology.org/2024.semeval-1.274/",
+  "datasetUrl": "https://brainteasersem.github.io/",
+  "citation": "@inproceedings{jiang-etal-2024-semeval,\n    title = \"{S}em{E}val-2024 Task 9: {BRAINTEASER}: A Novel Task Defying Common Sense\",\n    author = \"Jiang, Yifan and Ilievski, Filip and Ma, Kaixin\",\n    booktitle = \"Proceedings of the 18th International Workshop on Semantic Evaluation (SemEval-2024)\",\n    month = jun,\n    year = \"2024\",\n    address = \"Mexico City, Mexico\",\n    publisher = \"Association for Computational Linguistics\",\n    pages = \"1994--2008\",\n    doi = \"10.18653/v1/2024.semeval-1.274\",\n    url = \"https://aclanthology.org/2024.semeval-1.274/\"\n}"
 }

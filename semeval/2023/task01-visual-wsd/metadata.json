@@ -33,7 +33,7 @@
   ],
   "featured": false,
   "paperReference": "Raganato et al., SemEval 2023",
-  "paperUrl": "https://aclanthology.org/2023.semeval-1.1/",
+  "paperUrl": "https://aclanthology.org/2023.semeval-1.308/",
   "datasetUrl": "https://raganato.github.io/vwsd/",
-  "citation": "@inproceedings{raganato-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 1: Visual Word Sense Disambiguation\",\n    author = \"Raganato, Alessandro  and Calixto, Iacer  and Ushio, Asahi  and Camacho-Collados, Jose  and Pilehvar, Mohammad Taher\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    year = \"2023\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.1\"\n}"
+  "citation": "@inproceedings{raganato-etal-2023-semeval,\n    title = \"{S}em{E}val-2023 Task 1: Visual Word Sense Disambiguation\",\n    author = \"Raganato, Alessandro  and Calixto, Iacer  and Ushio, Asahi  and Camacho-Collados, Jose  and Pilehvar, Mohammad Taher\",\n    booktitle = \"Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023)\",\n    month = jul,\n    year = \"2023\",\n    address = \"Toronto, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.semeval-1.308\",\n    doi = \"10.18653/v1/2023.semeval-1.308\",\n    pages = \"2227--2234\"\n}"
 }

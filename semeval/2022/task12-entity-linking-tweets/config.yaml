@@ -1,7 +1,9 @@
 # Entity Linking in Tweets
-# Based on Agarwal et al., SemEval 2022
-# Paper: https://aclanthology.org/2022.semeval-1.196/
-# Dataset: https://github.com/Agarwal-SemEval2022-Task12
+# WARNING: This config does NOT reflect the real SemEval-2022 Task 12.
+# The genuine Task 12 is "Symlink - Linking Mathematical Symbols to their
+# Descriptions" (Lai et al., https://aclanthology.org/2022.semeval-1.230/,
+# CodaLab https://competitions.codalab.org/competitions/34011). This folder's
+# tweets entity-linking protocol is unverified; see metadata.json citation TODO.
 #
 # This task asks annotators to identify entity mentions in tweets and
 # provide their corresponding knowledge base URIs (e.g., Wikipedia or

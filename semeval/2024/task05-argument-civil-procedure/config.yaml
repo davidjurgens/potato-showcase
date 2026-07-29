@@ -1,11 +1,12 @@
 # Argument Reasoning in Civil Procedure
-# Based on Bongard et al., SemEval 2024
-# Paper: https://aclanthology.org/volumes/2024.semeval-1/
-# Dataset: https://github.com/SemEval/semeval-2024-task5
+# Based on SemEval-2024 Task 5 (Held & Habernal, 2024)
+# Paper: https://aclanthology.org/2024.semeval-1.276/
+# Dataset: https://github.com/trusthlt/legal-argument-reasoning-task
 #
-# This task asks annotators to answer multiple-choice questions about
-# civil procedure law by selecting the best answer from five options
-# and providing a brief legal reasoning explanation.
+# Given a short introduction to a U.S. civil procedure topic, a question,
+# and a single candidate answer (a possible solution argument), annotators
+# perform BINARY classification: judge whether the answer candidate is
+# correct (True) or incorrect (False).
 
 annotation_task_name: "Argument Reasoning in Civil Procedure"
 task_dir: "."
@@ -25,53 +26,42 @@ server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
-    name: answer_choice
-    description: "Select the best answer to the civil procedure question."
+    name: answer_correctness
+    description: "Is the candidate answer a correct solution to the question?"
     labels:
-      - "A"
-      - "B"
-      - "C"
-      - "D"
-      - "E"
+      - "Correct"
+      - "Incorrect"
     keyboard_shortcuts:
-      "A": "1"
-      "B": "2"
-      "C": "3"
-      "D": "4"
-      "E": "5"
+      "Correct": "1"
+      "Incorrect": "2"
     tooltips:
-      "A": "Option A"
-      "B": "Option B"
-      "C": "Option C"
-      "D": "Option D"
-      "E": "Option E"
-
-  - annotation_type: text
-    name: legal_reasoning
-    description: "Provide a brief legal reasoning for your answer choice."
+      "Correct": "The candidate answer correctly resolves the question (True)."
+      "Incorrect": "The candidate answer does not correctly resolve the question (False)."
 
 annotation_instructions: |
-  You will be shown a civil procedure question with five answer options. Your task is to:
-  1. Read the question carefully, noting the legal scenario.
-  2. Consider all five options.
-  3. Select the best answer.
-  4. Provide a brief legal reasoning explaining why your chosen answer is correct.
+  You will be shown a short introduction to a topic in U.S. civil procedure,
+  a specific question, and a single candidate answer (a possible solution
+  argument). Your task is to:
+  1. Read the introduction to understand the legal context.
+  2. Read the question carefully.
+  3. Read the candidate answer.
+  4. Decide whether the candidate answer is a correct solution to the
+     question. Select "Correct" (True) if it correctly resolves the question,
+     or "Incorrect" (False) if it does not.
 
 html_layout: |
   <div style="padding: 15px; max-width: 800px; margin: auto;">
     <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+      <strong style="color: #0369a1;">Introduction:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{introduction}}</p>
     </div>
     <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Options:</strong>
-      <ul style="font-size: 15px; line-height: 1.8; margin: 8px 0 0 0;">
-        <li><strong>A:</strong> {{option_a}}</li>
-        <li><strong>B:</strong> {{option_b}}</li>
-        <li><strong>C:</strong> {{option_c}}</li>
-        <li><strong>D:</strong> {{option_d}}</li>
-        <li><strong>E:</strong> {{option_e}}</li>
-      </ul>
+      <strong style="color: #a16207;">Question:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+      <strong style="color: #15803d;">Candidate Answer:</strong>
+      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{answer_candidate}}</p>
     </div>
   </div>
 
