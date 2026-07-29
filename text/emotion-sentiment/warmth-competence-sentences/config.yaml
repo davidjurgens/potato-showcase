@@ -1,0 +1,105 @@
+# Warmth and Competence — Sentence-Level Social Perception
+# Based on the W&C-Sent dataset:
+#   Ayesh, Mohammad, and Ousidhoum (2026), "Annotating Dimensions of Social
+#   Perception in Text: A Sentence-Level Dataset of Warmth and Competence."
+#   ACL 2026 (Volume 1: Long Papers), pp. 6374-6412.
+#   Paper: https://aclanthology.org/2026.acl-long.289/
+#   Data:  https://github.com/nedjmaou/W_C_Sent
+#
+# Warmth and competence are the two fundamental dimensions along which people
+# evaluate individuals and social groups. Each item pairs a sentence with a
+# target entity; annotators rate the sentence, with respect to that target, on
+# three independent 7-point (-3 to +3) dimensions:
+#   - Trust        (a component of warmth)
+#   - Sociability  (a component of warmth)
+#   - Competence
+# In the original study each sentence-target pair was rated by 4-7 annotators,
+# with each dimension presented independently to reduce cognitive load.
+
+annotation_task_name: "Warmth and Competence - Social Perception"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: likert
+    name: trust
+    description: "TRUST (a component of warmth): how much does the sentence express trust vs. distrust toward the target?"
+    min_value: -3
+    max_value: 3
+    labels:
+      -3: "-3 high distrust"
+      -2: "-2 moderate distrust"
+      -1: "-1 slight distrust"
+      0: "0 neutral / not applicable / not expressed"
+      1: "+1 slight trust"
+      2: "+2 moderate trust"
+      3: "+3 high trust"
+
+  - annotation_type: likert
+    name: sociability
+    description: "SOCIABILITY (a component of warmth): how much does the sentence express sociability vs. unsociability toward the target?"
+    min_value: -3
+    max_value: 3
+    labels:
+      -3: "-3 high unsociability"
+      -2: "-2 moderate unsociability"
+      -1: "-1 slight unsociability"
+      0: "0 neutral / not applicable / not expressed"
+      1: "+1 slight sociability"
+      2: "+2 moderate sociability"
+      3: "+3 high sociability"
+
+  - annotation_type: likert
+    name: competence
+    description: "COMPETENCE: how much does the sentence express competence vs. incompetence toward the target?"
+    min_value: -3
+    max_value: 3
+    labels:
+      -3: "-3 high incompetence"
+      -2: "-2 moderate incompetence"
+      -1: "-1 slight incompetence"
+      0: "0 neutral / not applicable / not expressed"
+      1: "+1 slight competence"
+      2: "+2 moderate competence"
+      3: "+3 high competence"
+
+annotation_instructions: |
+  You are shown a social-media post together with a TARGET entity (an individual
+  or a social group). Read the post and judge what it expresses about the target
+  along three dimensions, each on a scale from -3 to +3:
+
+    - Trust:        does it portray the target as trustworthy or untrustworthy?
+    - Sociability:  does it portray the target as warm/friendly or cold/hostile?
+    - Competence:   does it portray the target as capable or incapable?
+
+  Rate each dimension independently. Use 0 when the dimension is neutral, not
+  applicable, or not expressed. Judge only what the sentence conveys about the
+  named target, not your own opinion of that target.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 800px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;">
+      <strong style="color: #1e40af;">Target:</strong> <span>{{target}}</span>
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+      <strong style="color: #334155;">Post:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 5
+allow_skip: true

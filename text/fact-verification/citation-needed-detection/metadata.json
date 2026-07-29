@@ -1,0 +1,40 @@
+{
+  "title": "Citation Needed Detection (Multilingual Wikipedia)",
+  "description": "Sentence-level Citation Needed Detection (CND): given a claim from a Wikipedia article (with surrounding context), decide whether it requires an inline citation to a reliable source. Based on the Multilingual Citation Needed (MCN) corpus (Quaremba et al., ACL 2026), which spans 18 languages across three resource levels. Following prior CND work (Redi et al., 2019), corpus labels are derived from the presence or absence of inline citations; this task reproduces the underlying human verifiability judgment as a binary decision.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Fact Verification",
+    "Wikipedia"
+  ],
+  "useCase": [
+    "Verifiability Assessment",
+    "Fact-Checking",
+    "Multilingual NLP"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "citation-needed",
+    "verifiability",
+    "wikipedia",
+    "fact-checking",
+    "multilingual",
+    "claim-detection"
+  ],
+  "featured": false,
+  "paperReference": "Gerrit Quaremba, Amy Rechkemmer, Elizabeth Black, Denny Vrandečić, and Elena Simperl. 2026. Multilingual and Cross-Lingual Citation Needed Detection on Wikipedia for Lower-Resource Languages. In Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers).",
+  "paperUrl": "https://aclanthology.org/2026.acl-long.1291/",
+  "datasetUrl": "https://arxiv.org/abs/2605.31136",
+  "citation": "@inproceedings{quaremba-etal-2026-multilingual,\n    title = \"Multilingual and Cross-Lingual Citation Needed Detection on {W}ikipedia for Lower-Resource Languages\",\n    author = \"Quaremba, Gerrit  and Rechkemmer, Amy  and Black, Elizabeth  and Vrande{\\v{c}}i{\\'c}, Denny  and Simperl, Elena\",\n    booktitle = \"Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.acl-long.1291\",\n    pages = \"28001--28021\"\n}"
+}

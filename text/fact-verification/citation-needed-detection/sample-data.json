@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cnd_001",
+    "title": "Mount Kilimanjaro",
+    "language": "English",
+    "claim": "Mount Kilimanjaro rises approximately 4,900 metres from its base to a summit elevation of 5,895 metres above sea level.",
+    "context": "Mount Kilimanjaro is a dormant volcano in Tanzania. Mount Kilimanjaro rises approximately 4,900 metres from its base to a summit elevation of 5,895 metres above sea level. It is the highest mountain in Africa and the highest single free-standing mountain above sea level in the world."
+  },
+  {
+    "id": "cnd_002",
+    "title": "Photosynthesis",
+    "language": "English",
+    "claim": "Photosynthesis is a process used by plants and other organisms to convert light energy into chemical energy.",
+    "context": "Photosynthesis is a process used by plants and other organisms to convert light energy into chemical energy. This chemical energy is stored in carbohydrate molecules that are synthesized from carbon dioxide and water."
+  },
+  {
+    "id": "cnd_003",
+    "title": "The Great Gatsby",
+    "language": "English",
+    "claim": "The narrator, Nick Carraway, moves to Long Island and becomes the neighbour of the mysterious Jay Gatsby.",
+    "context": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. The narrator, Nick Carraway, moves to Long Island and becomes the neighbour of the mysterious Jay Gatsby. Over the course of the summer, Nick is drawn into Gatsby's world."
+  },
+  {
+    "id": "cnd_004",
+    "title": "Marie Curie",
+    "language": "English",
+    "claim": "In 1911 she became the first person to win Nobel Prizes in two different scientific fields.",
+    "context": "Marie Curie conducted pioneering research on radioactivity. In 1911 she became the first person to win Nobel Prizes in two different scientific fields. She was also the first woman to become a professor at the University of Paris."
+  },
+  {
+    "id": "cnd_005",
+    "title": "Water",
+    "language": "English",
+    "claim": "Water is an inorganic compound with the chemical formula H2O.",
+    "context": "Water is an inorganic compound with the chemical formula H2O. It is a transparent, tasteless, odourless, and nearly colourless chemical substance."
+  },
+  {
+    "id": "cnd_006",
+    "title": "Amazon rainforest",
+    "language": "English",
+    "claim": "A 2021 study reported that parts of the southeastern Amazon have shifted from a carbon sink to a net source of carbon dioxide.",
+    "context": "The Amazon rainforest plays a major role in the global carbon cycle. A 2021 study reported that parts of the southeastern Amazon have shifted from a carbon sink to a net source of carbon dioxide. Researchers attributed the change to deforestation and rising temperatures."
+  },
+  {
+    "id": "cnd_007",
+    "title": "Chess",
+    "language": "English",
+    "claim": "The game is played on a square board divided into 64 squares arranged in an eight-by-eight grid.",
+    "context": "Chess is a board game for two players. The game is played on a square board divided into 64 squares arranged in an eight-by-eight grid. Each player begins with sixteen pieces."
+  },
+  {
+    "id": "cnd_008",
+    "title": "Tokyo",
+    "language": "English",
+    "claim": "According to the 2020 census, the Tokyo metropolitan area had a population of over 37 million people.",
+    "context": "Tokyo is the capital of Japan. According to the 2020 census, the Tokyo metropolitan area had a population of over 37 million people, making it the most populous metropolitan area in the world."
+  },
+  {
+    "id": "cnd_009",
+    "title": "Coffee",
+    "language": "English",
+    "claim": "Coffee is a beverage prepared from roasted coffee beans.",
+    "context": "Coffee is a beverage prepared from roasted coffee beans. Darkly coloured, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content."
+  },
+  {
+    "id": "cnd_010",
+    "title": "Ada Lovelace",
+    "language": "English",
+    "claim": "She is often regarded as the first computer programmer for her notes on Charles Babbage's proposed Analytical Engine.",
+    "context": "Ada Lovelace was an English mathematician. She is often regarded as the first computer programmer for her notes on Charles Babbage's proposed Analytical Engine, which included what is recognised as an early algorithm intended to be carried out by a machine."
+  }
+]

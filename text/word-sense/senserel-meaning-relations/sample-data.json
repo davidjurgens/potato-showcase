@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sr_001",
+    "word": "calf",
+    "sense_a": "The young of a domestic cow.",
+    "example_a": "The farmer bottle-fed the newborn calf at dawn.",
+    "sense_b": "The young of various large mammals, such as elephants or whales.",
+    "example_b": "The whale calf swam close to its mother for the first weeks of life."
+  },
+  {
+    "id": "sr_002",
+    "word": "escort",
+    "sense_a": "A person or group accompanying another to give protection, provide supervision, or as a courtesy.",
+    "example_a": "A police escort accompanied the convoy to the border.",
+    "sense_b": "A person hired to accompany someone to a social event.",
+    "example_b": "She hired an escort to attend the gala with her."
+  },
+  {
+    "id": "sr_003",
+    "word": "head",
+    "sense_a": "The upper division of the animal body that contains the brain.",
+    "example_a": "He turned his head to look over his shoulder.",
+    "sense_b": "The seat of the intellect; the mind.",
+    "example_b": "She has a good head for numbers."
+  },
+  {
+    "id": "sr_004",
+    "word": "wing",
+    "sense_a": "One of the movable feathered paired appendages by means of which a bird is able to fly.",
+    "example_a": "The eagle spread its wings and lifted off the cliff.",
+    "sense_b": "A part or feature of a building projecting from and subordinate to the main or central part.",
+    "example_b": "The new laboratories are in the east wing of the hospital."
+  },
+  {
+    "id": "sr_005",
+    "word": "bull",
+    "sense_a": "An adult male bovine animal.",
+    "example_a": "The bull grazed at the far end of the pasture.",
+    "sense_b": "A solemn, sealed letter issued by the Pope.",
+    "example_b": "The papal bull was read aloud in the cathedral."
+  },
+  {
+    "id": "sr_006",
+    "word": "trauma",
+    "sense_a": "A physical wound or injury to the body.",
+    "example_a": "The patient was treated for blunt-force trauma after the crash.",
+    "sense_b": "A deeply distressing or disturbing emotional experience.",
+    "example_b": "She spent years processing the trauma of her childhood."
+  },
+  {
+    "id": "sr_007",
+    "word": "mouse",
+    "sense_a": "A small rodent with a pointed snout and a long thin tail.",
+    "example_a": "A mouse darted across the kitchen floor.",
+    "sense_b": "A handheld device used to control the cursor on a computer screen.",
+    "example_b": "He clicked the mouse to open the file."
+  },
+  {
+    "id": "sr_008",
+    "word": "paper",
+    "sense_a": "A material made from wood pulp used for writing or printing on.",
+    "example_a": "She wrote the address on a scrap of paper.",
+    "sense_b": "A daily or weekly printed publication reporting the news.",
+    "example_b": "He read about the election in the morning paper."
+  },
+  {
+    "id": "sr_009",
+    "word": "crane",
+    "sense_a": "A large long-legged, long-necked wading bird.",
+    "example_a": "A crane stood motionless in the shallows of the marsh.",
+    "sense_b": "A tall machine with a projecting arm used for lifting and moving heavy objects.",
+    "example_b": "The crane hoisted the steel beam to the top floor."
+  },
+  {
+    "id": "sr_010",
+    "word": "harvest",
+    "sense_a": "The process or period of gathering in crops.",
+    "example_a": "The whole village helped with the wheat harvest.",
+    "sense_b": "The result or consequence of an activity, viewed as something gathered.",
+    "example_b": "The report was the harvest of two years of painstaking research."
+  }
+]

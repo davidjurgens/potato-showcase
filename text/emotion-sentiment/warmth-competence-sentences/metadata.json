@@ -1,0 +1,40 @@
+{
+  "title": "Warmth and Competence (Sentence-Level Social Perception)",
+  "description": "Sentence-level annotation of social perception along the two fundamental dimensions of social cognition: warmth and competence. Following the W&C-Sent dataset (Ayesh, Mohammad, and Ousidhoum, ACL 2026), each item pairs a social-media sentence with a target entity (an individual or social group), and annotators rate how much the sentence expresses trust and sociability (the two components of warmth) and competence toward that target, each on a 7-point scale from -3 to +3. The dimensions are rated independently.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "Affective Computing"
+  ],
+  "useCase": [
+    "Social Perception",
+    "Stereotype Analysis",
+    "Attitude Detection"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "social-perception",
+    "warmth",
+    "competence",
+    "stereotype-content-model",
+    "social-media",
+    "affect"
+  ],
+  "featured": false,
+  "paperReference": "Mutaz Ayesh, Saif M. Mohammad, and Nedjma Ousidhoum. 2026. Annotating Dimensions of Social Perception in Text: A Sentence-Level Dataset of Warmth and Competence. In Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers).",
+  "paperUrl": "https://aclanthology.org/2026.acl-long.289/",
+  "datasetUrl": "https://github.com/nedjmaou/W_C_Sent",
+  "citation": "@inproceedings{ayesh-etal-2026-annotating,\n    title = \"Annotating Dimensions of Social Perception in Text: A Sentence-Level Dataset of Warmth and Competence\",\n    author = \"Ayesh, Mutaz  and Mohammad, Saif M.  and Ousidhoum, Nedjma\",\n    booktitle = \"Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.acl-long.289\",\n    pages = \"6374--6412\"\n}"
+}

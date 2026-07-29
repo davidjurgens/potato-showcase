@@ -1,0 +1,52 @@
+[
+  {
+    "id": "wc_001",
+    "target": "the new team lead",
+    "text": "Honestly the new team lead has bailed us out of three impossible deadlines already, the person just knows what they're doing."
+  },
+  {
+    "id": "wc_002",
+    "target": "my landlord",
+    "text": "My landlord never answers messages and only shows up when the rent is a day late."
+  },
+  {
+    "id": "wc_003",
+    "target": "volunteers at the shelter",
+    "text": "The volunteers at the shelter stayed until midnight making sure every family had a warm meal."
+  },
+  {
+    "id": "wc_004",
+    "target": "that consultant",
+    "text": "That consultant talks a big game but couldn't answer a single technical question in the meeting."
+  },
+  {
+    "id": "wc_005",
+    "target": "the city's transit workers",
+    "text": "Say what you want, the transit workers kept the whole city moving through the storm without a hitch."
+  },
+  {
+    "id": "wc_006",
+    "target": "our group project partner",
+    "text": "Our group project partner is friendly enough but hasn't submitted a single thing on time all semester."
+  },
+  {
+    "id": "wc_007",
+    "target": "the customer support agent",
+    "text": "The support agent was rude, dismissive, and clearly didn't care whether my problem got solved."
+  },
+  {
+    "id": "wc_008",
+    "target": "the local librarian",
+    "text": "The librarian remembered my kid's name and set aside three books she thought he'd love."
+  },
+  {
+    "id": "wc_009",
+    "target": "the quarterly report",
+    "text": "The quarterly report will be released to shareholders on Thursday afternoon."
+  },
+  {
+    "id": "wc_010",
+    "target": "the opposing debate team",
+    "text": "You can't trust a word they say, and frankly half their arguments didn't even make sense."
+  }
+]

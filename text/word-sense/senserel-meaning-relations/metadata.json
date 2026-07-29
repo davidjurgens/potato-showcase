@@ -1,0 +1,40 @@
+{
+  "title": "SenseRel: Denotational and Connotational Meaning Relations",
+  "description": "Sense-level annotation of semantic relations between pairs of word senses. Following the SenseRel benchmark (Cassotti et al., ACL 2026), each item presents a word with two senses (an original and a related sense); annotators label the denotational relation between them (generalization, specialization, metonymy, metaphor, or homonymy) and rate the connotational difference between the senses along two affective dimensions, valence and arousal (Same / Small / Big difference).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Showcase",
+    "email": "",
+    "github": "",
+    "affiliation": ""
+  },
+  "createdAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "NLP",
+    "Lexical Semantics",
+    "Semantic Change"
+  ],
+  "useCase": [
+    "Word Sense Analysis",
+    "Semantic Change Detection",
+    "Affective Lexical Semantics"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "word-sense",
+    "lexical-semantics",
+    "semantic-change",
+    "metaphor",
+    "metonymy",
+    "valence-arousal"
+  ],
+  "featured": false,
+  "paperReference": "Pierluigi Cassotti, Naomi Baes, Stefano De Pascale, Jáder Martins Camboim de Sá, Francesco Periti, Nick Haslam, Dirk Geeraerts, and Nina Tahmasebi. 2026. SenseRel: A Sense-Level Benchmark for Denotational and Connotational Meaning Relations. In Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers).",
+  "paperUrl": "https://aclanthology.org/2026.acl-long.20/",
+  "datasetUrl": "https://www.changeiskey.org/publication/2026-acl/",
+  "citation": "@inproceedings{cassotti-etal-2026-senserel,\n    title = \"{S}ense{R}el: A Sense-Level Benchmark for Denotational and Connotational Meaning Relations\",\n    author = \"Cassotti, Pierluigi  and Baes, Naomi  and De Pascale, Stefano  and Martins Camboim de S{\\'a}, J{\\'a}der  and Periti, Francesco  and Haslam, Nick  and Geeraerts, Dirk  and Tahmasebi, Nina\",\n    booktitle = \"Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2026\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.acl-long.20\",\n    pages = \"499--515\"\n}"
+}

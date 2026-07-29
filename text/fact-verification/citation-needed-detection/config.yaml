@@ -1,0 +1,75 @@
+# Citation Needed Detection (CND) — Multilingual Wikipedia
+# Based on the Multilingual Citation Needed (MCN) corpus:
+#   Quaremba, Rechkemmer, Black, Vrandečić, and Simperl (2026),
+#   "Multilingual and Cross-Lingual Citation Needed Detection on Wikipedia
+#    for Lower-Resource Languages." ACL 2026 (Vol. 1: Long Papers), pp. 28001-28021.
+#   Paper: https://aclanthology.org/2026.acl-long.1291/
+#   Data/code announced at: https://github.com/gerritq/mcn
+#
+# Task: given a sentence-level CLAIM from a Wikipedia article, together with the
+# surrounding paragraph context, decide whether the claim requires an inline
+# citation to a reliable source. This is the well-established binary CND
+# formulation (Redi et al., 2019); in the MCN corpus, gold labels are derived
+# from the presence/absence of inline citations, and here a human annotator makes
+# the underlying verifiability judgment directly.
+
+annotation_task_name: "Citation Needed Detection"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "claim"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: radio
+    name: citation_needed
+    description: "Does this claim require an inline citation to a reliable source?"
+    labels:
+      - "Citation Needed"
+      - "No Citation Needed"
+    keyboard_shortcuts:
+      "Citation Needed": "1"
+      "No Citation Needed": "2"
+    tooltips:
+      "Citation Needed": "The claim states a fact/figure/quotation that a reader could reasonably want verified against a source"
+      "No Citation Needed": "Common knowledge, a definition, an internal summary, or otherwise not requiring a source"
+
+annotation_instructions: |
+  You are shown a CLAIM taken from a Wikipedia article, along with the paragraph
+  it appears in for context. Decide whether the claim would require an inline
+  citation to a reliable source under Wikipedia's verifiability policy.
+
+  Mark "Citation Needed" for claims likely to be challenged: statistics, specific
+  dates or figures, quotations, contested or surprising assertions, and statements
+  attributing views to people or organizations. Mark "No Citation Needed" for
+  common knowledge, definitions, plot/internal summaries, or purely structural
+  sentences. Judge the claim itself; the surrounding context is only to help you
+  understand it.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Article:</strong> {{title}} &nbsp;·&nbsp; <strong>Language:</strong> {{language}}
+    </div>
+    <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #92400e;">Claim:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{claim}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 14px; line-height: 1.6;">
+      <strong>Paragraph context:</strong> {{context}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true
