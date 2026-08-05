@@ -12,9 +12,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `labels`: Non-empty list of label strings
 
 **Example tasks:**
-- [GoEmotions](./text/emotion-sentiment/goemotions/) -- Fine-grained emotion classification
-- [ToxiGen Implicit Hate Speech](./text/bias-toxicity/toxigen-implicit-hate/) -- Implicit hate speech detection and classification
-- [Stance Detection (VAST)](./text/argumentation-stance/stance-detection/) -- Zero-shot stance detection toward topics
+- [GoEmotions](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment/goemotions) -- Fine-grained emotion classification
+- [ToxiGen Implicit Hate Speech](https://github.com/davidjurgens/potato-showcase/tree/main/text/bias-toxicity/toxigen-implicit-hate) -- Implicit hate speech detection and classification
+- [Stance Detection (VAST)](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/stance-detection) -- Zero-shot stance detection toward topics
 
 ---
 
@@ -26,9 +26,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `labels`: Non-empty list of label strings
 
 **Example tasks:**
-- [GoEmotions](./text/emotion-sentiment/goemotions/) -- Multi-label emotion tagging with 27+ categories
-- [PASCAL VOC](./image/classification/pascal-voc/) -- Multi-label object category annotation
-- [SemEval Emotion Detection](./text/emotion-sentiment/semeval-emotion-detection/) -- Multi-label tweet emotion classification
+- [GoEmotions](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment/goemotions) -- Multi-label emotion tagging with 27+ categories
+- [PASCAL VOC](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/pascal-voc) -- Multi-label object category annotation
+- [SemEval Emotion Detection](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment/semeval-emotion-detection) -- Multi-label tweet emotion classification
 
 ---
 
@@ -40,9 +40,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [TriviaQA](./text/question-answering/triviaqa-reading-comprehension/) -- Reading comprehension with free-text answers
-- [Politeness Annotation](./text/computational-social-science/politeness-annotation/) -- Text rewrite suggestions for politeness transfer
-- [WavCaps Audio Captioning](./audio/wavcaps-audio-captioning/) -- Free-text audio descriptions
+- [TriviaQA](https://github.com/davidjurgens/potato-showcase/tree/main/text/question-answering/triviaqa-reading-comprehension) -- Reading comprehension with free-text answers
+- [Politeness Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/politeness-annotation) -- Text rewrite suggestions for politeness transfer
+- [WavCaps Audio Captioning](https://github.com/davidjurgens/potato-showcase/tree/main/audio/wavcaps-audio-captioning) -- Free-text audio descriptions
 
 ---
 
@@ -55,9 +55,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `min_label`, `max_label`, `size`: Endpoint labels and scale size (integer >= 2)
 
 **Example tasks:**
-- [HelpSteer Multi-Attribute Rating](./preference-learning/helpsteer-multiattribute-rating/) -- Multi-dimensional quality rating on 0-4 scales
-- [Stance Detection (VAST)](./text/argumentation-stance/stance-detection/) -- Confidence rating for stance judgments
-- [VoiceMOS Quality Assessment](./audio/voicemos-quality-assessment/) -- Speech synthesis quality ratings
+- [HelpSteer Multi-Attribute Rating](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/helpsteer-multiattribute-rating) -- Multi-dimensional quality rating on 0-4 scales
+- [Stance Detection (VAST)](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/stance-detection) -- Confidence rating for stance judgments
+- [VoiceMOS Quality Assessment](https://github.com/davidjurgens/potato-showcase/tree/main/audio/voicemos-quality-assessment) -- Speech synthesis quality ratings
 
 ---
 
@@ -70,9 +70,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `min_value`, `max_value`, `starting_value`: Numeric range and initial position
 
 **Example tasks:**
-- [STS Benchmark](./text/semantic-similarity/stsb-sentence-similarity/) -- Continuous 0-5 semantic similarity scoring
-- [Automated Essay Scoring](./text/education/automated-essay-scoring/) -- Holistic essay quality rating
-- [Semantic Similarity Template](./templates/text/semantic-similarity/) -- Reusable slider-based similarity template
+- [STS Benchmark](https://github.com/davidjurgens/potato-showcase/tree/main/text/semantic-similarity/stsb-sentence-similarity) -- Continuous 0-5 semantic similarity scoring
+- [Automated Essay Scoring](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/automated-essay-scoring) -- Holistic essay quality rating
+- [Semantic Similarity Template](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/semantic-similarity) -- Reusable slider-based similarity template
 
 ---
 
@@ -84,9 +84,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `labels`: Non-empty list of span label strings
 
 **Example tasks:**
-- [WNUT-2017 Emerging Entities](./text/named-entity-recognition/wnut2017-emerging-entities/) -- Named entity recognition in social media text
-- [FAVA Hallucination Spans](./text/fact-verification/fava-hallucination-spans/) -- Fine-grained hallucination span detection
-- [Toxic Spans](./text/hate-speech-moderation/toxic-spans/) -- Character-level toxicity span identification
+- [WNUT-2017 Emerging Entities](https://github.com/davidjurgens/potato-showcase/tree/main/text/named-entity-recognition/wnut2017-emerging-entities) -- Named entity recognition in social media text
+- [FAVA Hallucination Spans](https://github.com/davidjurgens/potato-showcase/tree/main/text/fact-verification/fava-hallucination-spans) -- Fine-grained hallucination span detection
+- [Toxic Spans](https://github.com/davidjurgens/potato-showcase/tree/main/text/hate-speech-moderation/toxic-spans) -- Character-level toxicity span identification
 
 ---
 
@@ -98,9 +98,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [MultiTACRED](./text/relation-extraction/multitacred-multilingual-relations/) -- Multilingual relation extraction with 41 relation types
-- [CrossRE](./text/relation-extraction/crossre-cross-domain-relations/) -- Cross-domain relation extraction across 6 domains
-- [RadGraph-XL](./text/relation-extraction/radgraph-radiology-relations/) -- Radiology entity and relation extraction
+- [MultiTACRED](https://github.com/davidjurgens/potato-showcase/tree/main/text/relation-extraction/multitacred-multilingual-relations) -- Multilingual relation extraction with 41 relation types
+- [CrossRE](https://github.com/davidjurgens/potato-showcase/tree/main/text/relation-extraction/crossre-cross-domain-relations) -- Cross-domain relation extraction across 6 domains
+- [RadGraph-XL](https://github.com/davidjurgens/potato-showcase/tree/main/text/relation-extraction/radgraph-radiology-relations) -- Radiology entity and relation extraction
 
 ---
 
@@ -112,9 +112,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `labels`: Non-empty list of label strings
 
 **Example tasks:**
-- [WSD SemEval-2007](./text/word-sense/wsd-semeval2007/) -- Word sense disambiguation from sense inventories
-- [MS MARCO Passage Ranking](./text/information-retrieval/msmarco-passage-ranking/) -- Graded passage relevance selection
-- [Financial PhraseBank](./text/financial/financial-phrasebank-sentiment/) -- Financial sentiment classification via dropdown
+- [WSD SemEval-2007](https://github.com/davidjurgens/potato-showcase/tree/main/text/word-sense/wsd-semeval2007) -- Word sense disambiguation from sense inventories
+- [MS MARCO Passage Ranking](https://github.com/davidjurgens/potato-showcase/tree/main/text/information-retrieval/msmarco-passage-ranking) -- Graded passage relevance selection
+- [Financial PhraseBank](https://github.com/davidjurgens/potato-showcase/tree/main/text/financial/financial-phrasebank-sentiment) -- Financial sentiment classification via dropdown
 
 ---
 
@@ -126,9 +126,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [SemEval-2018 Event Counting](./semeval/2018/task05-event-counting/) -- Counting events and participants in news
-- [GPQA Expert QA](./evaluation/gpqa-expert-qa/) -- Graduate-level science question evaluation
-- [BIG-Bench Task Evaluation](./evaluation/big-bench-task-eval/) -- Confidence scoring for model outputs
+- [SemEval-2018 Event Counting](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2018/task05-event-counting) -- Counting events and participants in news
+- [GPQA Expert QA](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/gpqa-expert-qa) -- Graduate-level science question evaluation
+- [BIG-Bench Task Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/big-bench-task-eval) -- Confidence scoring for model outputs
 
 ---
 
@@ -141,9 +141,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `options` or `options_from_data`: List of items to rate, or a data field name to pull items from
 
 **Example tasks:**
-- [UltraFeedback Multi-Aspect](./preference-learning/ultrafeedback-multiaspect/) -- Rate AI responses on helpfulness, honesty, instruction-following, and truthfulness
-- [SemEval Sentiment Multi-Rating](./text/emotion-sentiment/semeval-sentiment-multirate/) -- Multi-dimensional sentiment rating of tweets
-- [RewardBench Reward Evaluation](./evaluation/rewardbench-reward-eval/) -- Multi-aspect reward model evaluation
+- [UltraFeedback Multi-Aspect](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/ultrafeedback-multiaspect) -- Rate AI responses on helpfulness, honesty, instruction-following, and truthfulness
+- [SemEval Sentiment Multi-Rating](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment/semeval-sentiment-multirate) -- Multi-dimensional sentiment rating of tweets
+- [RewardBench Reward Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/rewardbench-reward-eval) -- Multi-aspect reward model evaluation
 
 ---
 
@@ -155,7 +155,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [HELM Model Card Display](./evaluation/helm-model-card-display/) -- Display model performance summaries for review
+- [HELM Model Card Display](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/helm-model-card-display) -- Display model performance summaries for review
 
 ---
 
@@ -168,9 +168,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `mode`: `"binary"` (win/lose/tie) or `"scale"` (graded preference)
 
 **Example tasks:**
-- [DPO Preference Data](./preference-learning/dpo-preference-data/) -- Pairwise preference collection for Direct Preference Optimization
-- [WildBench LLM Evaluation](./evaluation/wildbench-llm-eval/) -- Pairwise LLM output comparison on real-world tasks
-- [MT-Bench](./evaluation/mtbench-llm-evaluation/) -- Multi-turn LLM response quality comparison
+- [DPO Preference Data](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/dpo-preference-data) -- Pairwise preference collection for Direct Preference Optimization
+- [WildBench LLM Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/wildbench-llm-eval) -- Pairwise LLM output comparison on real-world tasks
+- [MT-Bench](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/mtbench-llm-evaluation) -- Multi-turn LLM response quality comparison
 
 ---
 
@@ -182,8 +182,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `tuple_size`: Number of items shown per comparison (integer >= 2)
 
 **Example tasks:**
-- [Chatbot Arena BWS](./evaluation/chatbot-arena-pairwise-bws/) -- Best-worst scaling of chatbot responses
-- [Ruddit Offensiveness BWS](./text/computational-social-science/ruddit-offensiveness-bws/) -- Best-worst scaling of Reddit comment offensiveness (tuple size 4)
+- [Chatbot Arena BWS](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/chatbot-arena-pairwise-bws) -- Best-worst scaling of chatbot responses
+- [Ruddit Offensiveness BWS](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/ruddit-offensiveness-bws) -- Best-worst scaling of Reddit comment offensiveness (tuple size 4)
 
 ---
 
@@ -196,9 +196,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `labels`: Non-empty list of label strings for annotated regions
 
 **Example tasks:**
-- [RefCOCO Expression Grounding](./image/visual-grounding/refcoco-expression/) -- Bounding box grounding of referring expressions
-- [ViTPose Keypoint Annotation](./image/human-pose/vitpose-keypoint-annotation/) -- Human body keypoint and pose annotation
-- [CHART-Infographics Analysis](./multimodal/chartinfo-chart-analysis/) -- Chart element detection with bounding boxes
+- [RefCOCO Expression Grounding](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-grounding/refcoco-expression) -- Bounding box grounding of referring expressions
+- [ViTPose Keypoint Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/human-pose/vitpose-keypoint-annotation) -- Human body keypoint and pose annotation
+- [CHART-Infographics Analysis](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/chartinfo-chart-analysis) -- Chart element detection with bounding boxes
 
 ---
 
@@ -212,9 +212,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - If mode is `"questions"` or `"both"`: requires `segment_schemes`
 
 **Example tasks:**
-- [CoVoST Speech Translation](./audio/covost-speech-translation/) -- Audio segment labeling for speech translation
-- [LibriSpeech Transcription](./audio/librispeech-transcription/) -- Audio segment classification by content type
-- [Speech Commands Recognition](./audio/speech-commands-recognition/) -- Keyword boundary annotation in audio clips
+- [CoVoST Speech Translation](https://github.com/davidjurgens/potato-showcase/tree/main/audio/covost-speech-translation) -- Audio segment labeling for speech translation
+- [LibriSpeech Transcription](https://github.com/davidjurgens/potato-showcase/tree/main/audio/librispeech-transcription) -- Audio segment classification by content type
+- [Speech Commands Recognition](https://github.com/davidjurgens/potato-showcase/tree/main/audio/speech-commands-recognition) -- Keyword boundary annotation in audio clips
 
 ---
 
@@ -227,9 +227,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Most modes require `labels`
 
 **Example tasks:**
-- [Charades-STA Temporal Grounding](./video/temporal-grounding/charades-sta-grounding/) -- Ground language descriptions to video segments
-- [AVA Atomic Visual Actions](./video/action-recognition/ava-atomic-actions/) -- Spatio-temporal action annotation in movie clips
-- [Ego4D Episodic Memory](./video/ego4d-episodic-memory/) -- Egocentric video activity segmentation and narration
+- [Charades-STA Temporal Grounding](https://github.com/davidjurgens/potato-showcase/tree/main/video/temporal-grounding/charades-sta-grounding) -- Ground language descriptions to video segments
+- [AVA Atomic Visual Actions](https://github.com/davidjurgens/potato-showcase/tree/main/video/action-recognition/ava-atomic-actions) -- Spatio-temporal action annotation in movie clips
+- [Ego4D Episodic Memory](https://github.com/davidjurgens/potato-showcase/tree/main/video/ego4d-episodic-memory) -- Egocentric video activity segmentation and narration
 
 ---
 
@@ -241,8 +241,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [Video-ChatGPT QA Display](./video/video-chatgpt-qa-display/) -- Video display for QA evaluation of model outputs
-- [TVSum Summarization](./video/summarization/tvsum-summarization/) -- Video display for frame-level importance scoring
+- [Video-ChatGPT QA Display](https://github.com/davidjurgens/potato-showcase/tree/main/video/video-chatgpt-qa-display) -- Video display for QA evaluation of model outputs
+- [TVSum Summarization](https://github.com/davidjurgens/potato-showcase/tree/main/video/summarization/tvsum-summarization) -- Video display for frame-level importance scoring
 
 ---
 
@@ -254,7 +254,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [OntoNotes Coreference](./text/coreference/ontonotes-coreference-resolution/) -- Full coreference resolution on the OntoNotes 5.0 corpus
+- [OntoNotes Coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference/ontonotes-coreference-resolution) -- Full coreference resolution on the OntoNotes 5.0 corpus
 
 ---
 
@@ -266,9 +266,9 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [Universal Dependencies Parsing](./text/parsing/ud-dependency-parsing/) -- Syntactic dependency tree construction
-- [PDTB Discourse Relations](./text/discourse/pdtb-discourse-relations-tree/) -- Hierarchical discourse tree annotation
-- [RumourEval Verification](./text/computational-social-science/rumoureval-verification/) -- Thread structure analysis for rumour verification
+- [Universal Dependencies Parsing](https://github.com/davidjurgens/potato-showcase/tree/main/text/parsing/ud-dependency-parsing) -- Syntactic dependency tree construction
+- [PDTB Discourse Relations](https://github.com/davidjurgens/potato-showcase/tree/main/text/discourse/pdtb-discourse-relations-tree) -- Hierarchical discourse tree annotation
+- [RumourEval Verification](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/rumoureval-verification) -- Thread structure analysis for rumour verification
 
 ---
 
@@ -280,8 +280,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [CoNLL-2003 NER with Triage](./text/named-entity-recognition/conll2003-ner-triage/) -- Triage step before span-based NER annotation
-- [Triage Quick Annotation Template](./templates/text/triage-quick-annotation/) -- Reusable triage template for any workflow
+- [CoNLL-2003 NER with Triage](https://github.com/davidjurgens/potato-showcase/tree/main/text/named-entity-recognition/conll2003-ner-triage) -- Triage step before span-based NER annotation
+- [Triage Quick Annotation Template](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/triage-quick-annotation) -- Reusable triage template for any workflow
 
 ---
 
@@ -293,7 +293,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - No extra required fields beyond standard scheme fields
 
 **Example tasks:**
-- [BioNLP Gene Regulation Events](./text/domain-specific/bionlp-gene-regulation-events/) -- Biomedical event extraction for gene regulation
+- [BioNLP Gene Regulation Events](https://github.com/davidjurgens/potato-showcase/tree/main/text/domain-specific/bionlp-gene-regulation-events) -- Biomedical event extraction for gene regulation
 
 ---
 
@@ -306,7 +306,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `source_field`: The data field to annotate
 
 **Example tasks:**
-- [MMLU-Pro Tiered Evaluation](./preference-learning/mmlu-pro-tiered-eval/) -- Tiered topic and subtopic categorization for multi-subject QA
+- [MMLU-Pro Tiered Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/mmlu-pro-tiered-eval) -- Tiered topic and subtopic categorization for multi-subject QA
 
 ---
 
@@ -320,7 +320,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `allow_ties`: Whether annotators may assign the same rank to multiple items
 
 **Example tasks:**
-- [WMT15 Relative Ranking](./evaluation/wmt15-relative-ranking/) -- Five-way relative ranking of machine translations with ties allowed
+- [WMT15 Relative Ranking](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/wmt15-relative-ranking) -- Five-way relative ranking of machine translations with ties allowed
 
 ---
 
@@ -333,7 +333,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `scale_points`: Number of points on each scale (typically 5 or 7)
 
 **Example tasks:**
-- [Godspeed Agent Perception](./evaluation/godspeed-agent-perception/) -- The Godspeed questionnaire's anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety series
+- [Godspeed Agent Perception](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/godspeed-agent-perception) -- The Godspeed questionnaire's anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety series
 
 ---
 
@@ -347,7 +347,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `show_none_option`: Whether to offer a "neither" choice
 
 **Example tasks:**
-- [Conjoint Candidate/Immigrant Profiles](./text/computational-social-science/conjoint-candidate-profiles/) -- Forced-choice profile comparison plus per-profile rating scales
+- [Conjoint Candidate/Immigrant Profiles](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/conjoint-candidate-profiles) -- Forced-choice profile comparison plus per-profile rating scales
 
 ---
 
@@ -361,7 +361,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `min_per_label`, `show_distribution_chart`
 
 **Example tasks:**
-- [ChaosNLI Label Distributions](./text/natural-language-inference/chaosnli-label-distributions/) -- Collective NLI label distributions over entailment/neutral/contradiction
+- [ChaosNLI Label Distributions](https://github.com/davidjurgens/potato-showcase/tree/main/text/natural-language-inference/chaosnli-label-distributions) -- Collective NLI label distributions over entailment/neutral/contradiction
 
 ---
 
@@ -374,7 +374,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `scale_points`, `scale_labels`, `show_overall`
 
 **Example tasks:**
-- [FLASK Skill-based Rubric Evaluation](./evaluation/flask-skill-rubric-evaluation/) -- Twelve fine-grained alignment skills scored on the paper's 1--5 rubrics
+- [FLASK Skill-based Rubric Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/flask-skill-rubric-evaluation) -- Twelve fine-grained alignment skills scored on the paper's 1--5 rubrics
 
 ---
 
@@ -388,8 +388,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `show_score`, `max_score`: Live quality score derived from marked errors
 
 **Example tasks:**
-- [MQM MT Error Annotation](./evaluation/mqm-mt-error-annotation/) -- Full MQM error hierarchy with major/minor/neutral severities
-- See also [ESA MT Error Spans](./evaluation/esa-mt-error-spans/) for the lighter Error Span Annotation protocol
+- [MQM MT Error Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/mqm-mt-error-annotation) -- Full MQM error hierarchy with major/minor/neutral severities
+- See also [ESA MT Error Spans](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/esa-mt-error-spans) for the lighter Error Span Annotation protocol
 
 ---
 
@@ -402,7 +402,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `show_diff`, `show_edit_distance`, `allow_reset`
 
 **Example tasks:**
-- [JFLEG Fluency Rewriting](./text/education/jfleg-fluency-rewriting/) -- Holistic fluency rewrites of learner sentences plus a fluency rating
+- [JFLEG Fluency Rewriting](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/jfleg-fluency-rewriting) -- Holistic fluency rewrites of learner sentences plus a fluency rating
 
 ---
 
@@ -415,7 +415,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `auto_select_parent`, `auto_select_children`, `expand_depth`, `show_search`, `max_selections`
 
 **Example tasks:**
-- [RCV1 Hierarchical Topic Coding](./text/topic-classification/rcv1-hierarchical-topic-coding/) -- Reuters topic hierarchy with the corpus's parent-propagation coding policy
+- [RCV1 Hierarchical Topic Coding](https://github.com/davidjurgens/potato-showcase/tree/main/text/topic-classification/rcv1-hierarchical-topic-coding) -- Reuters topic hierarchy with the corpus's parent-propagation coding policy
 
 ---
 
@@ -428,8 +428,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `allow_annotator_create`: Whether annotators may create new event instances
 
 **Example tasks:**
-- [ECB+ Cross-Document Event Coreference](./text/coreference/ecb-plus-cross-document-events/) -- Event and entity mention slots linked across documents in the same topic
-- See also [MAVEN-ERE](./text/coreference/maven-ere-event-coreference/) for within-document event relation annotation
+- [ECB+ Cross-Document Event Coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference/ecb-plus-cross-document-events) -- Event and entity mention slots linked across documents in the same topic
+- See also [MAVEN-ERE](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference/maven-ere-event-coreference) for within-document event relation annotation
 
 ---
 
@@ -443,7 +443,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `audio_key`, `allow_correction`
 
 **Example tasks:**
-- [PodcastFillers Disfluency Tagging](./audio/podcastfillers-disfluency-tagging/) -- Filler-word and disfluency tagging over aligned podcast transcripts
+- [PodcastFillers Disfluency Tagging](https://github.com/davidjurgens/potato-showcase/tree/main/audio/podcastfillers-disfluency-tagging) -- Filler-word and disfluency tagging over aligned podcast transcripts
 
 ---
 
@@ -456,7 +456,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `events_key`: Data field holding the query/event definitions to ground
 
 **Example tasks:**
-- [QVHighlights Moment Grounding and Saliency](./video/temporal-grounding/qvhighlights-moment-saliency/) -- Query-based moment boundaries plus saliency rating
+- [QVHighlights Moment Grounding and Saliency](https://github.com/davidjurgens/potato-showcase/tree/main/video/temporal-grounding/qvhighlights-moment-saliency) -- Query-based moment boundaries plus saliency rating
 
 ---
 
@@ -470,7 +470,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `roles`: Per-cell role label set
 
 **Example tasks:**
-- [WTW Wired Table Structure Annotation](./image/wtw-table-structure-annotation/) -- Wired table structure recovery in natural scenes
+- [WTW Wired Table Structure Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation) -- Wired table structure recovery in natural scenes
 
 ---
 
@@ -484,8 +484,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `inline_with_trace`: Attach the controls inline to a chain-of-thought trace display
 
 **Example tasks:**
-- [ProcessBench Earliest-Error Identification](./agentic/processbench-math-error-steps/) -- Locate the earliest erroneous step in a math solution
-- [PRM800K Step Verification](./agentic/prm800k-step-verification/) -- Per-step positive/neutral/negative process supervision
+- [ProcessBench Earliest-Error Identification](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/processbench-math-error-steps) -- Locate the earliest erroneous step in a math solution
+- [PRM800K Step Verification](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/prm800k-step-verification) -- Per-step positive/neutral/negative process supervision
 
 ---
 
@@ -499,7 +499,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `coord_space`, `verdict_options`
 
 **Example tasks:**
-- [AITW Mobile Trajectory Review](./agentic/aitw-mobile-trajectory-review/) -- Android device-control episode review in the Android in the Wild style
+- [AITW Mobile Trajectory Review](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/aitw-mobile-trajectory-review) -- Android device-control episode review in the Android in the Wild style
 
 ---
 
@@ -512,7 +512,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `verdict_options`: Per-call verdict label set
 
 **Example tasks:**
-- [API-Bank Tool Call Review](./agentic/apibank-tool-call-review/) -- Per-call review of API calls in tool-augmented assistant dialogues
+- [API-Bank Tool Call Review](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/apibank-tool-call-review) -- Per-call review of API calls in tool-augmented assistant dialogues
 
 ---
 
@@ -525,8 +525,8 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - `agent_key`: Per-step field naming the acting agent
 
 **Example tasks:**
-- [Who&When Multi-Agent Failure Attribution](./agentic/whowhen-failure-attribution/) -- Responsible agent, decisive step, and reason for the failure
-- See also [MAST Failure Taxonomy](./agentic/mast-failure-taxonomy/) for taxonomy-based failure mode labeling
+- [Who&When Multi-Agent Failure Attribution](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/whowhen-failure-attribution) -- Responsible agent, decisive step, and reason for the failure
+- See also [MAST Failure Taxonomy](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/mast-failure-taxonomy) for taxonomy-based failure mode labeling
 
 ---
 
@@ -540,4 +540,4 @@ A guide to the 39 annotation types used in this showcase, with example configura
 - Optional `scale`, `milestones`
 
 **Example tasks:**
-- [MultiAgentBench Collaboration Scorecard](./agentic/multiagentbench-collaboration-scorecard/) -- Communication and planning ratings plus milestone checklist
+- [MultiAgentBench Collaboration Scorecard](https://github.com/davidjurgens/potato-showcase/tree/main/agentic/multiagentbench-collaboration-scorecard) -- Communication and planning ratings plus milestone checklist

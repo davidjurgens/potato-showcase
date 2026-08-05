@@ -44,36 +44,36 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
-| [Emotion & Sentiment](./text/emotion-sentiment/) | 16 | GoEmotions, NRC-VAD & Affect Intensity (Best-Worst Scaling), Words of Warmth, WorryWords, Word-Colour |
-| [Hate Speech & Moderation](./text/hate-speech-moderation/) | 6 | HateXplain, Implicit Hate, Social Bias Frames, Toxic Spans, AfriHate |
-| [Named Entity Recognition](./text/named-entity-recognition/) | 7 | CoNLL-2003, WNUT-2017, Biomedical NER, Complex NER, MasakhaNER 2.0 |
-| [Information Extraction](./text/information-extraction/) | 8 | KG-BERT, Event Arguments, Dialogue Relations, MASSIVE (intent + slot filling) |
-| [Argumentation & Stance](./text/argumentation-stance/) | 5 | Argument Quality, Stance Detection, Rumor Stance |
-| [Fact Verification](./text/fact-verification/) | 9 | FActScore, FAVA, Scientific Claims, Propaganda |
-| [Commonsense & Ethics](./text/commonsense-ethics/) | 6 | Social Chemistry, Moral Stories, Commonsense Inference |
-| [Explainability](./text/explainability/) | 2 | Rationale Annotation, NLI Explanation |
-| [Dialogue](./text/dialogue/) | 7 | SWBD-DAMSL Dialogue Acts, Conversation Quality |
-| [Political & Media](./text/political-media/) | 1 | Political Discourse |
-| [Discourse](./text/discourse/) | 4 | PDTB Discourse Trees, DISRPT, Timeline Relations |
-| [Coreference](./text/coreference/) | 5 | OntoNotes, CorefUD, MAVEN-ERE, ECB+ cross-document events |
-| [Cross-lingual](./text/cross-lingual/) | 7 | XNLI, Belebele, FLORES MT Quality, IndicNLP, MasakhaNEWS, NusaX |
-| [Domain-specific](./text/domain-specific/) | 9 | BioNLP, ChemProt, Clinical NER, Legal, Medical |
-| [Computational Social Science](./text/computational-social-science/) | 9 | OffensEval, Moral Foundations, Ruddit (best-worst scaling), conjoint profiles |
-| [Relation Extraction](./text/relation-extraction/) | 5 | MultiTACRED, CrossRE, RadGraph, SciER |
-| [Entity Linking](./text/entity-linking/) | 4 | AIDA-CoNLL, MedMentions, DWIE document-level linking |
-| [Code Annotation](./text/code-annotation/) | 3 | CodeXGLUE Defect Detection |
-| [Tabular](./text/tabular/) | 2 | Tabular Data Annotation |
-| [Reading Comprehension](./text/reading-comprehension/) | 4 | SQuAD Extractive QA |
-| [Natural Language Inference](./text/natural-language-inference/) | 3 | SNLI, MultiNLI, ChaosNLI label distributions |
-| [Question Answering](./text/question-answering/) | 3 | Natural Questions, TriviaQA |
-| [Information Retrieval](./text/information-retrieval/) | 2 | MS MARCO, TREC-DL |
-| [Semantic Similarity](./text/semantic-similarity/) | 1 | STS Benchmark |
-| [Word Sense](./text/word-sense/) | 2 | SemEval-2007 WSD |
-| [Parsing](./text/parsing/) | 3 | Universal Dependencies, MasakhaPOS, Interlinear Glossing |
-| [Education](./text/education/) | 4 | Essay Scoring, MathDial Tutoring, JFLEG fluency rewriting |
-| [Financial](./text/financial/) | 3 | FinBERT, FLARE NER, Financial PhraseBank |
-| [Bias & Toxicity](./text/bias-toxicity/) | 3 | Bias and toxicity annotation designs |
-| [Topic Classification](./text/topic-classification/) | 1 | RCV1 hierarchical topic coding |
+| [Emotion & Sentiment](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment) | 16 | GoEmotions, NRC-VAD & Affect Intensity (Best-Worst Scaling), Words of Warmth, WorryWords, Word-Colour |
+| [Hate Speech & Moderation](https://github.com/davidjurgens/potato-showcase/tree/main/text/hate-speech-moderation) | 6 | HateXplain, Implicit Hate, Social Bias Frames, Toxic Spans, AfriHate |
+| [Named Entity Recognition](https://github.com/davidjurgens/potato-showcase/tree/main/text/named-entity-recognition) | 7 | CoNLL-2003, WNUT-2017, Biomedical NER, Complex NER, MasakhaNER 2.0 |
+| [Information Extraction](https://github.com/davidjurgens/potato-showcase/tree/main/text/information-extraction) | 8 | KG-BERT, Event Arguments, Dialogue Relations, MASSIVE (intent + slot filling) |
+| [Argumentation & Stance](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance) | 5 | Argument Quality, Stance Detection, Rumor Stance |
+| [Fact Verification](https://github.com/davidjurgens/potato-showcase/tree/main/text/fact-verification) | 9 | FActScore, FAVA, Scientific Claims, Propaganda |
+| [Commonsense & Ethics](https://github.com/davidjurgens/potato-showcase/tree/main/text/commonsense-ethics) | 6 | Social Chemistry, Moral Stories, Commonsense Inference |
+| [Explainability](https://github.com/davidjurgens/potato-showcase/tree/main/text/explainability) | 2 | Rationale Annotation, NLI Explanation |
+| [Dialogue](https://github.com/davidjurgens/potato-showcase/tree/main/text/dialogue) | 7 | SWBD-DAMSL Dialogue Acts, Conversation Quality |
+| [Political & Media](https://github.com/davidjurgens/potato-showcase/tree/main/text/political-media) | 1 | Political Discourse |
+| [Discourse](https://github.com/davidjurgens/potato-showcase/tree/main/text/discourse) | 4 | PDTB Discourse Trees, DISRPT, Timeline Relations |
+| [Coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference) | 5 | OntoNotes, CorefUD, MAVEN-ERE, ECB+ cross-document events |
+| [Cross-lingual](https://github.com/davidjurgens/potato-showcase/tree/main/text/cross-lingual) | 7 | XNLI, Belebele, FLORES MT Quality, IndicNLP, MasakhaNEWS, NusaX |
+| [Domain-specific](https://github.com/davidjurgens/potato-showcase/tree/main/text/domain-specific) | 9 | BioNLP, ChemProt, Clinical NER, Legal, Medical |
+| [Computational Social Science](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science) | 9 | OffensEval, Moral Foundations, Ruddit (best-worst scaling), conjoint profiles |
+| [Relation Extraction](https://github.com/davidjurgens/potato-showcase/tree/main/text/relation-extraction) | 5 | MultiTACRED, CrossRE, RadGraph, SciER |
+| [Entity Linking](https://github.com/davidjurgens/potato-showcase/tree/main/text/entity-linking) | 4 | AIDA-CoNLL, MedMentions, DWIE document-level linking |
+| [Code Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/text/code-annotation) | 3 | CodeXGLUE Defect Detection |
+| [Tabular](https://github.com/davidjurgens/potato-showcase/tree/main/text/tabular) | 2 | Tabular Data Annotation |
+| [Reading Comprehension](https://github.com/davidjurgens/potato-showcase/tree/main/text/reading-comprehension) | 4 | SQuAD Extractive QA |
+| [Natural Language Inference](https://github.com/davidjurgens/potato-showcase/tree/main/text/natural-language-inference) | 3 | SNLI, MultiNLI, ChaosNLI label distributions |
+| [Question Answering](https://github.com/davidjurgens/potato-showcase/tree/main/text/question-answering) | 3 | Natural Questions, TriviaQA |
+| [Information Retrieval](https://github.com/davidjurgens/potato-showcase/tree/main/text/information-retrieval) | 2 | MS MARCO, TREC-DL |
+| [Semantic Similarity](https://github.com/davidjurgens/potato-showcase/tree/main/text/semantic-similarity) | 1 | STS Benchmark |
+| [Word Sense](https://github.com/davidjurgens/potato-showcase/tree/main/text/word-sense) | 2 | SemEval-2007 WSD |
+| [Parsing](https://github.com/davidjurgens/potato-showcase/tree/main/text/parsing) | 3 | Universal Dependencies, MasakhaPOS, Interlinear Glossing |
+| [Education](https://github.com/davidjurgens/potato-showcase/tree/main/text/education) | 4 | Essay Scoring, MathDial Tutoring, JFLEG fluency rewriting |
+| [Financial](https://github.com/davidjurgens/potato-showcase/tree/main/text/financial) | 3 | FinBERT, FLARE NER, Financial PhraseBank |
+| [Bias & Toxicity](https://github.com/davidjurgens/potato-showcase/tree/main/text/bias-toxicity) | 3 | Bias and toxicity annotation designs |
+| [Topic Classification](https://github.com/davidjurgens/potato-showcase/tree/main/text/topic-classification) | 1 | RCV1 hierarchical topic coding |
 
 ---
 
@@ -83,16 +83,16 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
-| [Classification](./image/classification/) | 6 | MS-COCO, ImageNet, Places365, CUB-200 |
-| [Segmentation](./image/segmentation/) | 3 | Cityscapes, ADE20K, LIP Human Parsing |
-| [Visual QA](./image/visual-qa/) | 2 | VQAv2, TextVQA |
-| [Visual Grounding](./image/visual-grounding/) | 1 | RefCOCO |
-| [Medical Imaging](./image/medical/) | 3 | CheXpert, MIMIC-CXR, Camelyon Pathology |
-| [Human Pose](./image/human-pose/) | 1 | ViTPose Keypoint Annotation |
-| [Generation Evaluation](./image/generation-eval/) | 1 | T2I-CompBench |
-| [Autonomous Driving](./image/driving/) | 2 | KITTI, BDD100K |
-| [Aerial & Remote Sensing](./image/aerial/) | 3 | BigEarthNet, xView, DOTA |
-| [Specialized Domains](./image/specialized/) | 6 | MVTec-AD, DeepFashion, CelebA, iWildCam |
+| [Classification](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification) | 6 | MS-COCO, ImageNet, Places365, CUB-200 |
+| [Segmentation](https://github.com/davidjurgens/potato-showcase/tree/main/image/segmentation) | 3 | Cityscapes, ADE20K, LIP Human Parsing |
+| [Visual QA](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa) | 2 | VQAv2, TextVQA |
+| [Visual Grounding](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-grounding) | 1 | RefCOCO |
+| [Medical Imaging](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical) | 3 | CheXpert, MIMIC-CXR, Camelyon Pathology |
+| [Human Pose](https://github.com/davidjurgens/potato-showcase/tree/main/image/human-pose) | 1 | ViTPose Keypoint Annotation |
+| [Generation Evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/image/generation-eval) | 1 | T2I-CompBench |
+| [Autonomous Driving](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving) | 2 | KITTI, BDD100K |
+| [Aerial & Remote Sensing](https://github.com/davidjurgens/potato-showcase/tree/main/image/aerial) | 3 | BigEarthNet, xView, DOTA |
+| [Specialized Domains](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized) | 6 | MVTec-AD, DeepFashion, CelebA, iWildCam |
 | [Document & Table Analysis](./image/) | 3 | DocLayNet, OmniDocBench, WTW wired tables |
 | [Other Image Tasks](./image/) | 3 | SA-1B, FLAIR land use, xBD building damage |
 
@@ -104,13 +104,13 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Subcategory | Tasks | Examples |
 |-------------|-------|----------|
-| [Action Recognition](./video/action-recognition/) | 10 | AVA, Charades, THUMOS14, EPIC-KITCHENS |
-| [Temporal Grounding](./video/temporal-grounding/) | 4 | ActivityNet Captions, DiDeMo, Charades-STA, QVHighlights |
-| [Video Summarization](./video/summarization/) | 4 | TVSum, SumMe, YouTube Highlights, LSMDC |
-| [Boundary Detection](./video/boundary-detection/) | 3 | Scene/Shot Boundary, MovieScenes |
-| [Video QA](./video/video-qa/) | 2 | NExT-QA, MVBench |
-| [Scene Understanding](./video/scene-understanding/) | 1 | MovieNet Scene Classification |
-| [Instructional Video](./video/instructional/) | 2 | HowTo100M, YouCook2 |
+| [Action Recognition](https://github.com/davidjurgens/potato-showcase/tree/main/video/action-recognition) | 10 | AVA, Charades, THUMOS14, EPIC-KITCHENS |
+| [Temporal Grounding](https://github.com/davidjurgens/potato-showcase/tree/main/video/temporal-grounding) | 4 | ActivityNet Captions, DiDeMo, Charades-STA, QVHighlights |
+| [Video Summarization](https://github.com/davidjurgens/potato-showcase/tree/main/video/summarization) | 4 | TVSum, SumMe, YouTube Highlights, LSMDC |
+| [Boundary Detection](https://github.com/davidjurgens/potato-showcase/tree/main/video/boundary-detection) | 3 | Scene/Shot Boundary, MovieScenes |
+| [Video QA](https://github.com/davidjurgens/potato-showcase/tree/main/video/video-qa) | 2 | NExT-QA, MVBench |
+| [Scene Understanding](https://github.com/davidjurgens/potato-showcase/tree/main/video/scene-understanding) | 1 | MovieNet Scene Classification |
+| [Instructional Video](https://github.com/davidjurgens/potato-showcase/tree/main/video/instructional) | 2 | HowTo100M, YouCook2 |
 | [Other Video Tasks](./video/) | 14 | Video-ChatGPT, Sign Language, Child Language, etc. |
 
 ---
@@ -121,16 +121,16 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Task | Description |
 |------|-------------|
-| [librispeech-transcription](./audio/librispeech-transcription) | Audio quality + transcription (slider, audio_annotation) |
-| [speech-commands-recognition](./audio/speech-commands-recognition) | Speech command labeling (audio_annotation) |
-| [covost-speech-translation](./audio/covost-speech-translation) | Speech translation evaluation |
-| [clotho-audio-captioning](./audio/clotho-audio-captioning) | Audio event captioning |
-| [audio-transcription](./audio/audio-transcription) | Speech transcription review |
-| [speaker-diarization](./audio/speaker-diarization) | Speaker identification |
-| [emotion-recognition](./audio/emotion-recognition) | Speech emotion classification |
-| [music-genre-classification](./audio/music-genre-classification) | Music genre tagging |
-| [sporc-podcast-turn-annotation](./audio/sporc-podcast-turn-annotation) | Podcast speaker-role and turn annotation (audio dialogue display) |
-| [podcastfillers-disfluency-tagging](./audio/podcastfillers-disfluency-tagging) | Filler-word and disfluency tagging on speech transcripts |
+| [librispeech-transcription](https://github.com/davidjurgens/potato-showcase/tree/main/audio/librispeech-transcription) | Audio quality + transcription (slider, audio_annotation) |
+| [speech-commands-recognition](https://github.com/davidjurgens/potato-showcase/tree/main/audio/speech-commands-recognition) | Speech command labeling (audio_annotation) |
+| [covost-speech-translation](https://github.com/davidjurgens/potato-showcase/tree/main/audio/covost-speech-translation) | Speech translation evaluation |
+| [clotho-audio-captioning](https://github.com/davidjurgens/potato-showcase/tree/main/audio/clotho-audio-captioning) | Audio event captioning |
+| [audio-transcription](https://github.com/davidjurgens/potato-showcase/tree/main/audio/audio-transcription) | Speech transcription review |
+| [speaker-diarization](https://github.com/davidjurgens/potato-showcase/tree/main/audio/speaker-diarization) | Speaker identification |
+| [emotion-recognition](https://github.com/davidjurgens/potato-showcase/tree/main/audio/emotion-recognition) | Speech emotion classification |
+| [music-genre-classification](https://github.com/davidjurgens/potato-showcase/tree/main/audio/music-genre-classification) | Music genre tagging |
+| [sporc-podcast-turn-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/audio/sporc-podcast-turn-annotation) | Podcast speaker-role and turn annotation (audio dialogue display) |
+| [podcastfillers-disfluency-tagging](https://github.com/davidjurgens/potato-showcase/tree/main/audio/podcastfillers-disfluency-tagging) | Filler-word and disfluency tagging on speech transcripts |
 | + 9 more | DiSPLACE, DoReCo, EmoBox, VoiceMOS, etc. |
 
 ---
@@ -141,20 +141,20 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Task | Paper | Types |
 |------|-------|-------|
-| [wildbench-llm-eval](./evaluation/wildbench-llm-eval) | WildBench (COLM 2024) | pairwise, likert, text |
-| [mt-bench-judge-consistency](./evaluation/mt-bench-judge-consistency) | MT-Bench (NeurIPS 2023) | pairwise, likert, radio |
-| [arena-hard-auto](./evaluation/arena-hard-auto) | Arena Hard (2024) | pairwise (scale), likert |
-| [rewardbench-reward-eval](./evaluation/rewardbench-reward-eval) | RewardBench (ICML 2024) | pairwise, radio, multirate |
-| [mmlu-knowledge-eval](./evaluation/mmlu-knowledge-eval) | MMLU (ICLR 2021) | radio, text |
-| [humaneval-code-correctness](./evaluation/humaneval-code-correctness) | HumanEval (2021) | radio, text, number |
-| [gpqa-expert-qa](./evaluation/gpqa-expert-qa) | GPQA (ICLR 2024) | number, radio, text |
-| [big-bench-task-eval](./evaluation/big-bench-task-eval) | BIG-Bench (TMLR 2023) | radio, text, number |
-| [helm-model-card-display](./evaluation/helm-model-card-display) | HELM (TMLR 2023) | pure_display, likert |
-| [chatbot-arena-pairwise-bws](./evaluation/chatbot-arena-pairwise-bws) | Chatbot Arena (ICML 2024) | bws, pairwise |
-| [mqm-mt-error-annotation](./evaluation/mqm-mt-error-annotation) | MQM (TACL 2021) | error_span |
-| [wmt15-relative-ranking](./evaluation/wmt15-relative-ranking) | WMT15 (WMT 2015) | ranking |
-| [flask-skill-rubric-evaluation](./evaluation/flask-skill-rubric-evaluation) | FLASK (ICLR 2024) | rubric_eval, radio |
-| [godspeed-agent-perception](./evaluation/godspeed-agent-perception) | Godspeed (Int J Soc Robotics 2009) | semantic_differential |
+| [wildbench-llm-eval](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/wildbench-llm-eval) | WildBench (COLM 2024) | pairwise, likert, text |
+| [mt-bench-judge-consistency](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/mt-bench-judge-consistency) | MT-Bench (NeurIPS 2023) | pairwise, likert, radio |
+| [arena-hard-auto](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/arena-hard-auto) | Arena Hard (2024) | pairwise (scale), likert |
+| [rewardbench-reward-eval](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/rewardbench-reward-eval) | RewardBench (ICML 2024) | pairwise, radio, multirate |
+| [mmlu-knowledge-eval](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/mmlu-knowledge-eval) | MMLU (ICLR 2021) | radio, text |
+| [humaneval-code-correctness](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/humaneval-code-correctness) | HumanEval (2021) | radio, text, number |
+| [gpqa-expert-qa](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/gpqa-expert-qa) | GPQA (ICLR 2024) | number, radio, text |
+| [big-bench-task-eval](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/big-bench-task-eval) | BIG-Bench (TMLR 2023) | radio, text, number |
+| [helm-model-card-display](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/helm-model-card-display) | HELM (TMLR 2023) | pure_display, likert |
+| [chatbot-arena-pairwise-bws](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/chatbot-arena-pairwise-bws) | Chatbot Arena (ICML 2024) | bws, pairwise |
+| [mqm-mt-error-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/mqm-mt-error-annotation) | MQM (TACL 2021) | error_span |
+| [wmt15-relative-ranking](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/wmt15-relative-ranking) | WMT15 (WMT 2015) | ranking |
+| [flask-skill-rubric-evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/flask-skill-rubric-evaluation) | FLASK (ICLR 2024) | rubric_eval, radio |
+| [godspeed-agent-perception](https://github.com/davidjurgens/potato-showcase/tree/main/evaluation/godspeed-agent-perception) | Godspeed (Int J Soc Robotics 2009) | semantic_differential |
 | + 13 more | AlpacaEval, DoNotAnswer, ESA-MT, IFEval, etc. |
 
 ---
@@ -165,11 +165,11 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Task | Paper | Types |
 |------|-------|-------|
-| [dpo-preference-data](./preference-learning/dpo-preference-data) | DPO (NeurIPS 2023) | pairwise, radio, text |
-| [ultrafeedback-multiaspect](./preference-learning/ultrafeedback-multiaspect) | UltraFeedback (ICML 2024) | multirate, likert, text |
-| [spin-self-play](./preference-learning/spin-self-play) | SPIN (ICML 2024) | pairwise, radio |
-| [constitutional-ai-harmlessness](./preference-learning/constitutional-ai-harmlessness) | Constitutional AI (2022) | radio, likert, text |
-| [mmlu-pro-tiered-eval](./preference-learning/mmlu-pro-tiered-eval) | MMLU-Pro (NeurIPS 2024) | tiered_annotation, radio |
+| [dpo-preference-data](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/dpo-preference-data) | DPO (NeurIPS 2023) | pairwise, radio, text |
+| [ultrafeedback-multiaspect](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/ultrafeedback-multiaspect) | UltraFeedback (ICML 2024) | multirate, likert, text |
+| [spin-self-play](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/spin-self-play) | SPIN (ICML 2024) | pairwise, radio |
+| [constitutional-ai-harmlessness](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/constitutional-ai-harmlessness) | Constitutional AI (2022) | radio, likert, text |
+| [mmlu-pro-tiered-eval](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/mmlu-pro-tiered-eval) | MMLU-Pro (NeurIPS 2024) | tiered_annotation, radio |
 | + 13 more | HH-RLHF, SafeRLHF, BeaverTails, WebGPT, etc. |
 
 ---
@@ -198,17 +198,17 @@ Comprehensive coverage of SemEval shared tasks from 2013-2026. Browse by year be
 
 | Year | Tasks | Highlights |
 |------|-------|------------|
-| [2026](./semeval/2026/) | 10 | Dimensional ABSA, and other 2026 tracks |
-| [2025](./semeval/2025/) | 10 | Multimodal idiomaticity, entity-aware MT, emotion detection |
-| [2024](./semeval/2024/) | 9 | Semantic relatedness, persuasion in memes, BRAINTEASER |
-| [2023](./semeval/2023/) | 10 | Visual WSD, clickbait spoiling, AfriSenti |
-| [2022](./semeval/2022/) | 10 | Patronizing language, idiomaticity, news similarity |
-| [2021](./semeval/2021/) | 9 | Lexical complexity, humor detection, MeasEval |
-| [2020](./semeval/2020/) | 9 | Commonsense validation, counterfactuals, code-mixed |
-| [2019](./semeval/2019/) | 7 | HatEval, hyperpartisan news, suggestion mining |
-| [2018](./semeval/2018/) | 10 | Emoji prediction, irony, cybersecurity NER |
-| [2017](./semeval/2017/) | 5 | Financial sentiment, humor, pun detection |
-| [2016](./semeval/2016/) | 7 | Stance detection, aspect sentiment, clinical TempEval |
+| [2026](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2026) | 10 | Dimensional ABSA, and other 2026 tracks |
+| [2025](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2025) | 10 | Multimodal idiomaticity, entity-aware MT, emotion detection |
+| [2024](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2024) | 9 | Semantic relatedness, persuasion in memes, BRAINTEASER |
+| [2023](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2023) | 10 | Visual WSD, clickbait spoiling, AfriSenti |
+| [2022](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2022) | 10 | Patronizing language, idiomaticity, news similarity |
+| [2021](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2021) | 9 | Lexical complexity, humor detection, MeasEval |
+| [2020](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2020) | 9 | Commonsense validation, counterfactuals, code-mixed |
+| [2019](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2019) | 7 | HatEval, hyperpartisan news, suggestion mining |
+| [2018](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2018) | 10 | Emoji prediction, irony, cybersecurity NER |
+| [2017](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2017) | 5 | Financial sentiment, humor, pun detection |
+| [2016](https://github.com/davidjurgens/potato-showcase/tree/main/semeval/2016) | 7 | Stance detection, aspect sentiment, clinical TempEval |
 | [2013-2015](./semeval/) | 4 | Drug interactions, ABSA, timeline ordering, clinical |
 
 ---

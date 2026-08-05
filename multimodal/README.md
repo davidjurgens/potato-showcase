@@ -8,15 +8,15 @@ This category contains annotation task designs that combine text with images, ch
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [chartinfo-chart-analysis](./chartinfo-chart-analysis) | Chart and infographic analysis with structured extraction | Template |
-| [hatred-hateful-memes](./hatred-hateful-memes) | Hateful meme detection requiring understanding of both image and text | Hee et al., IJCAI 2023 |
-| [mmbench-multimodal-eval](./mmbench-multimodal-eval) | MMBench is a multiple-choice benchmark of about 2,974 questions testing vision-language models across 20… | Liu et al., ECCV 2024 |
-| [mmmu-multimodal-understanding](./mmmu-multimodal-understanding) | Multi-discipline multimodal QA requiring college-level understanding | Yue et al., CVPR 2024 |
-| [mocheg-multimodal-factcheck](./mocheg-multimodal-factcheck) | Multimodal fact-checking requiring reasoning over both text and images | Yao et al., SIGIR 2023 |
-| [rt2-robotic-action-annotation](./rt2-robotic-action-annotation) | Robotic manipulation task evaluation and action segmentation based on RT-2 | Brohan et al., CoRL 2023 |
-| [saycan-robot-planning](./saycan-robot-planning) | SayCan grounds a large language model in learned robot skills so a robot can carry out long-horizon… | Ahn et al., CoRL 2022 |
-| [scienceqa-multimodal-reasoning](./scienceqa-multimodal-reasoning) | Multimodal science question answering with chain-of-thought reasoning, based on ScienceQA. Annotators… | Lu et al., NeurIPS 2022 |
-| [soda-eval-social-dialogue](./soda-eval-social-dialogue) | Evaluate the quality of socially-grounded dialogues generated through social commonsense contextualization | Mendonca et al., Findings of EMNLP 2024 |
+| [chartinfo-chart-analysis](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/chartinfo-chart-analysis) | Chart and infographic analysis with structured extraction | Template |
+| [hatred-hateful-memes](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/hatred-hateful-memes) | Hateful meme detection requiring understanding of both image and text | Hee et al., IJCAI 2023 |
+| [mmbench-multimodal-eval](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/mmbench-multimodal-eval) | MMBench is a multiple-choice benchmark of about 2,974 questions testing vision-language models across 20… | Liu et al., ECCV 2024 |
+| [mmmu-multimodal-understanding](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/mmmu-multimodal-understanding) | Multi-discipline multimodal QA requiring college-level understanding | Yue et al., CVPR 2024 |
+| [mocheg-multimodal-factcheck](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/mocheg-multimodal-factcheck) | Multimodal fact-checking requiring reasoning over both text and images | Yao et al., SIGIR 2023 |
+| [rt2-robotic-action-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/rt2-robotic-action-annotation) | Robotic manipulation task evaluation and action segmentation based on RT-2 | Brohan et al., CoRL 2023 |
+| [saycan-robot-planning](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/saycan-robot-planning) | SayCan grounds a large language model in learned robot skills so a robot can carry out long-horizon… | Ahn et al., CoRL 2022 |
+| [scienceqa-multimodal-reasoning](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/scienceqa-multimodal-reasoning) | Multimodal science question answering with chain-of-thought reasoning, based on ScienceQA. Annotators… | Lu et al., NeurIPS 2022 |
+| [soda-eval-social-dialogue](https://github.com/davidjurgens/potato-showcase/tree/main/multimodal/soda-eval-social-dialogue) | Evaluate the quality of socially-grounded dialogues generated through social commonsense contextualization | Mendonca et al., Findings of EMNLP 2024 |
 
 ## Quick Start
 

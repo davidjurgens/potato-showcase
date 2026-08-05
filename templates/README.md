@@ -6,49 +6,45 @@ This category contains generic annotation templates without specific paper refer
 
 ## Subcategories
 
-### [Comparison Tasks](./comparison/)
-Templates for preference and ranking annotations.
+### [Comparison](https://github.com/davidjurgens/potato-showcase/tree/main/templates/comparison)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [best-worst-scaling](./comparison/best-worst-scaling) | MaxDiff annotation | Beginner |
-| [pairwise-preference](./comparison/pairwise-preference) | Side-by-side preference | Beginner |
-| [ranking-task](./comparison/ranking-task) | Drag-and-drop ranking | Beginner |
+| [best-worst-scaling](https://github.com/davidjurgens/potato-showcase/tree/main/templates/comparison/best-worst-scaling) | MaxDiff annotation where annotators select the best and worst items from a set for relative comparison | Template |
+| [pairwise-preference](https://github.com/davidjurgens/potato-showcase/tree/main/templates/comparison/pairwise-preference) | Compare two items and select the preferred one | Template |
+| [ranking-task](https://github.com/davidjurgens/potato-showcase/tree/main/templates/comparison/ranking-task) | Drag-and-drop ranking interface to order items from best to worst | Template |
 
-### [Image Annotation](./image/)
-General-purpose image annotation templates.
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [image-classification](./image/image-classification) | Multi-label image classification | Beginner |
-| [image-segmentation](./image/image-segmentation) | Polygon segmentation | Advanced |
-| [object-detection](./image/object-detection) | Bounding box annotation | Intermediate |
-
-### [Surveys](./surveys/)
-Templates for collecting user feedback and attitudes.
+### [Image](https://github.com/davidjurgens/potato-showcase/tree/main/templates/image)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [likert-scale-survey](./surveys/likert-scale-survey) | Attitude measurement | Beginner |
-| [survey-feedback](./surveys/survey-feedback) | User experience survey | Beginner |
+| [image-classification](https://github.com/davidjurgens/potato-showcase/tree/main/templates/image/image-classification) | Multi-class image classification with thumbnail preview and zoom controls | Template |
+| [image-segmentation](https://github.com/davidjurgens/potato-showcase/tree/main/templates/image/image-segmentation) | Draw polygon masks around objects for semantic segmentation tasks | Template |
+| [object-detection](https://github.com/davidjurgens/potato-showcase/tree/main/templates/image/object-detection) | Draw bounding boxes around objects for object detection model training | Template |
 
-### [Text Annotation](./text/)
-General-purpose text annotation templates.
+### [Surveys](https://github.com/davidjurgens/potato-showcase/tree/main/templates/surveys)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [dialogue-act-labeling](./text/dialogue-act-labeling) | Utterance communicative function | Intermediate |
-| [fact-verification](./text/fact-verification) | Claim verification | Intermediate |
-| [hate-speech-detection](./text/hate-speech-detection) | Hate speech categorization | Intermediate |
-| [intent-classification](./text/intent-classification) | Chatbot intent classification | Beginner |
-| [named-entity-recognition](./text/named-entity-recognition) | Span-based NER | Intermediate |
-| [reading-comprehension](./text/reading-comprehension) | QA evaluation | Intermediate |
-| [relation-extraction](./text/relation-extraction) | Entity relationship identification | Advanced |
-| [sarcasm-detection](./text/sarcasm-detection) | Sarcasm detection and typing | Intermediate |
-| [semantic-similarity](./text/semantic-similarity) | Sentence pair similarity | Beginner |
-| [sentiment-analysis](./text/sentiment-analysis) | Multi-class sentiment classification | Beginner |
-| [toxicity-detection](./text/toxicity-detection) | Multi-label toxicity classification | Beginner |
-| [triage-quick-annotation](./text/triage-quick-annotation) | A reusable template for quick triage annotation | N/A (Template) |
+| [likert-scale-survey](https://github.com/davidjurgens/potato-showcase/tree/main/templates/surveys/likert-scale-survey) | Multi-question survey using Likert scales to measure agreement, satisfaction, or frequency | Template |
+| [survey-feedback](https://github.com/davidjurgens/potato-showcase/tree/main/templates/surveys/survey-feedback) | Multi-question survey with Likert scales, text fields, and multiple choice | Template |
+
+### [Text](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [dialogue-act-labeling](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/dialogue-act-labeling) | Classify utterances in conversations by their communicative function (question, statement, request, etc.) | Template |
+| [fact-verification](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/fact-verification) | Verify claims as supported, refuted, or not enough information based on provided evidence | Template |
+| [hate-speech-detection](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/hate-speech-detection) | Identify and categorize hate speech, offensive language, and toxic content in text | Template |
+| [intent-classification](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/intent-classification) | Classify user utterances into intents for chatbot and virtual assistant training | Template |
+| [named-entity-recognition](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/named-entity-recognition) | Span-based entity labeling for identifying people, organizations, locations, and more | Template |
+| [reading-comprehension](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/reading-comprehension) | Evaluate question-answer pairs for reading comprehension by verifying answers and rating quality | Template |
+| [relation-extraction](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/relation-extraction) | Identify and classify relationships between entities in text (e.g., works-for, located-in, married-to) | Template |
+| [sarcasm-detection](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/sarcasm-detection) | Identify sarcastic statements and label their type and target in social media and conversational text | Template |
+| [semantic-similarity](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/semantic-similarity) | Rate the semantic similarity between pairs of sentences on a continuous scale | Template |
+| [sentiment-analysis](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/sentiment-analysis) | Simple 3-way sentiment classification with radio buttons | Template |
+| [toxicity-detection](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/toxicity-detection) | Multi-label toxicity classification with severity ratings for content moderation | Template |
+| [triage-quick-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/templates/text/triage-quick-annotation) | A reusable template for quick triage annotation | N/A (Template) |
 
 ## Quick Start
 

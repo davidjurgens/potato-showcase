@@ -6,125 +6,119 @@ This category contains annotation task designs for computer vision research, inc
 
 ## Subcategories
 
-### [Aerial & Remote Sensing](./aerial/)
-Tasks for satellite imagery and aerial photograph analysis.
+### [Aerial](https://github.com/davidjurgens/potato-showcase/tree/main/image/aerial)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [bigearth-net](./aerial/bigearth-net) | Sentinel-2 land cover classification (43 classes) | Sumbul et al., IGARSS 2019 |
-| [dota-aerial](./aerial/dota-aerial) | Oriented bounding box detection in aerial images | Xia et al., CVPR 2018 |
-| [xview](./aerial/xview) | Satellite object detection (60 classes) | Lam et al., arXiv 2018 |
+| [bigearth-net](https://github.com/davidjurgens/potato-showcase/tree/main/image/aerial/bigearth-net) | Multi-label land cover classification from Sentinel-2 imagery | Sumbul et al., IGARSS 2019 |
+| [dota-aerial](https://github.com/davidjurgens/potato-showcase/tree/main/image/aerial/dota-aerial) | Oriented bounding box detection in aerial images | Xia et al., CVPR 2018 |
+| [xview](https://github.com/davidjurgens/potato-showcase/tree/main/image/aerial/xview) | Large-scale overhead imagery object detection | Lam et al., arXiv 2018 |
 
-### [Classification](./classification/)
-Tasks for image-level classification and tagging.
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [cub-200-birds](./classification/cub-200-birds) | Fine-grained bird species classification (200 species) | Wah et al., 2011 |
-| [imagenet](./classification/imagenet) | Large-scale image classification (1000+ synsets) | Deng et al., CVPR 2009 |
-| [ms-coco](./classification/ms-coco) | Object detection & instance segmentation (80 categories) | Lin et al., ECCV 2014 |
-| [open-images](./classification/open-images) | Large-scale object detection (600 classes) | Kuznetsova et al., IJCV 2020 |
-| [pascal-voc](./classification/pascal-voc) | Object detection with bounding boxes (20 classes) | Everingham et al., IJCV 2010 |
-| [places365](./classification/places365) | Scene classification (365 categories) | Zhou et al., TPAMI 2017 |
-
-### [Doclaynet Document Layout](./doclaynet-document-layout/)
+### [Classification](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [doclaynet-document-layout](./doclaynet-document-layout) | Document layout analysis with bounding box annotations | Pfitzmann et al., KDD 2022 |
+| [cub-200-birds](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/cub-200-birds) | CUB-200-2011 is a fine-grained bird image dataset of 11,788 photos across 200 species, each labeled with… | Wah et al., 2011 |
+| [imagenet](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/imagenet) | Large-scale image classification following the ImageNet dataset | Deng et al., CVPR 2009 |
+| [ms-coco](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/ms-coco) | Object detection annotation following the MS COCO format | Lin et al., ECCV 2014 |
+| [open-images](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/open-images) | Large-scale image-level labeling following the Open Images dataset | Kuznetsova et al., IJCV 2020 |
+| [pascal-voc](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/pascal-voc) | Multi-label object classification following the PASCAL Visual Object Classes challenge | Everingham et al., IJCV 2010 |
+| [places365](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/places365) | Scene recognition and classification following the Places365 dataset | Zhou et al., IEEE TPAMI 2017 |
 
-### [Autonomous Driving](./driving/)
-Tasks for self-driving car perception and scene understanding.
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [bdd100k](./driving/bdd100k) | Diverse driving scene segmentation | Yu et al., CVPR 2020 |
-| [kitti](./driving/kitti) | Road object detection with 3D bounding boxes | Geiger et al., CVPR 2012 |
-
-### [Flair Aerial Land Use](./flair-aerial-land-use/)
+### [Doclaynet Document Layout](https://github.com/davidjurgens/potato-showcase/tree/main/image/doclaynet-document-layout)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [flair-aerial-land-use](./flair-aerial-land-use) | Land use and land cover classification from high-resolution aerial imagery | Garioud et al., NeurIPS 2023 |
+| [doclaynet-document-layout](https://github.com/davidjurgens/potato-showcase/tree/main/image/doclaynet-document-layout) | Document layout analysis with bounding box annotations | Pfitzmann et al., KDD 2022 |
 
-### [Generation Eval](./generation-eval/)
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [t2i-compbench](./generation-eval/t2i-compbench) | T2I-CompBench is a 6,000-prompt benchmark for compositional text-to-image generation | Huang et al., NeurIPS 2023 |
-
-### [Human Pose](./human-pose/)
+### [Driving](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [vitpose-keypoint-annotation](./human-pose/vitpose-keypoint-annotation) | Annotate human body keypoints and classify pose categories in images | Template |
+| [bdd100k](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving/bdd100k) | BDD100K is a 100,000-video driving dataset from UC Berkeley spanning detection, segmentation, lane… | Yu et al., CVPR 2020 |
+| [kitti](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving/kitti) | Autonomous driving benchmark for object detection | Geiger et al., CVPR 2012 |
 
-### [Medical Imaging](./medical/)
-Tasks for medical image analysis and clinical applications.
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [camelyon-pathology](./medical/camelyon-pathology) | Pathology slide annotation for breast cancer metastasis detection | Ehteshami Bejnordi et al., JAMA 2017 |
-| [chexpert](./medical/chexpert) | Chest X-ray multi-label classification (14 observations) | Irvin et al., AAAI 2019 |
-| [mimic-cxr](./medical/mimic-cxr) | Chest radiograph classification with reports | Johnson et al., Scientific Data 2019 |
-
-### [Omnidocbench Document Parsing](./omnidocbench-document-parsing/)
+### [Flair Aerial Land Use](https://github.com/davidjurgens/potato-showcase/tree/main/image/flair-aerial-land-use)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [omnidocbench-document-parsing](./omnidocbench-document-parsing) | Comprehensive document parsing annotation covering layout detection, text recognition, table structure,… | Ouyang et al., CVPR 2025 |
+| [flair-aerial-land-use](https://github.com/davidjurgens/potato-showcase/tree/main/image/flair-aerial-land-use) | Land use and land cover classification from high-resolution aerial imagery | Garioud et al., NeurIPS 2023 |
 
-### [Sa1B Segment Anything](./sa1b-segment-anything/)
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [sa1b-segment-anything](./sa1b-segment-anything) | Interactive image segmentation annotation | Kirillov et al., ICCV 2023 |
-
-### [Segmentation](./segmentation/)
-Tasks for pixel-level semantic and instance segmentation.
+### [Generation Eval](https://github.com/davidjurgens/potato-showcase/tree/main/image/generation-eval)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [ade20k](./segmentation/ade20k) | Semantic segmentation (150 classes) | Zhou et al., CVPR 2017 |
-| [cityscapes](./segmentation/cityscapes) | Urban scene instance segmentation | Cordts et al., CVPR 2016 |
-| [lip-human-parsing](./segmentation/lip-human-parsing) | Human body part segmentation (20 parts) | Gong et al., CVPR 2017 |
+| [t2i-compbench](https://github.com/davidjurgens/potato-showcase/tree/main/image/generation-eval/t2i-compbench) | T2I-CompBench is a 6,000-prompt benchmark for compositional text-to-image generation | Huang et al., NeurIPS 2023 |
 
-### [Specialized Domains](./specialized/)
-Tasks for domain-specific image annotation applications.
+### [Human Pose](https://github.com/davidjurgens/potato-showcase/tree/main/image/human-pose)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [celeba](./specialized/celeba) | Face attributes classification (40 attributes) | Liu et al., ICCV 2015 |
-| [deepfashion](./specialized/deepfashion) | Fine-grained fashion classification | Liu et al., CVPR 2016 |
-| [docbank](./specialized/docbank) | Document layout analysis | Li et al., COLING 2020 |
-| [iwildcam](./specialized/iwildcam) | Wildlife camera trap classification | Beery et al., CVPR 2019 |
-| [mvtec-ad](./specialized/mvtec-ad) | Industrial defect detection (15 categories) | Bergmann et al., CVPR 2019 |
-| [wikiart](./specialized/wikiart) | Artwork style and genre classification | Saleh & Elgammal, 2015 |
+| [vitpose-keypoint-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/human-pose/vitpose-keypoint-annotation) | Annotate human body keypoints and classify pose categories in images | Template |
 
-### [Visual Grounding](./visual-grounding/)
+### [Medical](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [refcoco-expression](./visual-grounding/refcoco-expression) | Visual grounding task where annotators draw bounding boxes around objects referred to by natural language… | Yu et al., ECCV 2016 |
+| [camelyon-pathology](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical/camelyon-pathology) | Pathology slide annotation for breast cancer metastasis detection | Ehteshami Bejnordi et al., JAMA 2017 |
+| [chexpert](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical/chexpert) | Multi-label classification of chest radiographs for 14 observations | Irvin et al., AAAI 2019 |
+| [mimic-cxr](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical/mimic-cxr) | Large-scale chest radiograph classification based on MIMIC-CXR. Multi-label classification with 14… | Johnson et al., Scientific Data 2019 |
 
-### [Visual Qa](./visual-qa/)
-
-| Design | Description | Reference |
-|--------|-------------|-----------|
-| [textvqa-reading-in-images](./visual-qa/textvqa-reading-in-images) | TextVQA is a visual question answering dataset where reading scene text in the image is needed to answer | Singh et al., CVPR 2019 |
-| [vqav2-visual-question-answering](./visual-qa/vqav2-visual-question-answering) | VQA v2.0 is a balanced visual question answering benchmark of open-ended questions over COCO images, with… | Goyal et al., CVPR 2017 |
-
-### [Wtw Table Structure Annotation](./wtw-table-structure-annotation/)
+### [Omnidocbench Document Parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/omnidocbench-document-parsing)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [wtw-table-structure-annotation](./wtw-table-structure-annotation) | Cell-grid structure annotation for photographed and scanned wired tables, based on the WTW (Wired Table in… | Long et al., ICCV 2021 |
+| [omnidocbench-document-parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/omnidocbench-document-parsing) | Comprehensive document parsing annotation covering layout detection, text recognition, table structure,… | Ouyang et al., CVPR 2025 |
 
-### [Xbd Building Damage](./xbd-building-damage/)
+### [Sa1B Segment Anything](https://github.com/davidjurgens/potato-showcase/tree/main/image/sa1b-segment-anything)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [xbd-building-damage](./xbd-building-damage) | Building damage assessment from pre- and post-disaster satellite imagery | Gupta et al., CVPR Workshops 2019 |
+| [sa1b-segment-anything](https://github.com/davidjurgens/potato-showcase/tree/main/image/sa1b-segment-anything) | Interactive image segmentation annotation | Kirillov et al., ICCV 2023 |
+
+### [Segmentation](https://github.com/davidjurgens/potato-showcase/tree/main/image/segmentation)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [ade20k](https://github.com/davidjurgens/potato-showcase/tree/main/image/segmentation/ade20k) | ADE20K is a scene parsing dataset from MIT CSAIL with dense pixel labels for objects, stuff, and parts | Zhou et al., CVPR 2017 |
+| [cityscapes](https://github.com/davidjurgens/potato-showcase/tree/main/image/segmentation/cityscapes) | Urban scene understanding with instance-level semantic labeling | Cordts et al., CVPR 2016 |
+| [lip-human-parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/segmentation/lip-human-parsing) | Pixel-level human body part segmentation | Gong, Liang, Zhang, Shen & Lin, CVPR 2017 |
+
+### [Specialized](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [celeba](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/celeba) | CelebA is a face dataset of 202,599 celebrity images, each labeled with 40 binary attributes, identity,… | Liu et al., ICCV 2015 |
+| [deepfashion](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/deepfashion) | DeepFashion is a clothes recognition and retrieval dataset of 800,000+ images labeled with 50 categories,… | Liu et al., CVPR 2016 |
+| [docbank](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/docbank) | Document layout analysis benchmark | Li et al., COLING 2020 |
+| [iwildcam](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/iwildcam) | Camera trap image classification for wildlife monitoring | Beery et al., CVPR 2019 |
+| [mvtec-ad](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/mvtec-ad) | Anomaly detection and localization in industrial images | Bergmann, Fauser, Sattlegger & Steger, CVPR 2019 |
+| [wikiart](https://github.com/davidjurgens/potato-showcase/tree/main/image/specialized/wikiart) | Art classification by style, genre, and artist (Saleh & Elgammal, 2015) | Saleh & Elgammal, 2015 |
+
+### [Visual Grounding](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-grounding)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [refcoco-expression](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-grounding/refcoco-expression) | Visual grounding task where annotators draw bounding boxes around objects referred to by natural language… | Yu et al., ECCV 2016 |
+
+### [Visual Qa](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [textvqa-reading-in-images](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa/textvqa-reading-in-images) | TextVQA is a visual question answering dataset where reading scene text in the image is needed to answer | Singh et al., CVPR 2019 |
+| [vqav2-visual-question-answering](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa/vqav2-visual-question-answering) | VQA v2.0 is a balanced visual question answering benchmark of open-ended questions over COCO images, with… | Goyal et al., CVPR 2017 |
+
+### [Wtw Table Structure Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [wtw-table-structure-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation) | Cell-grid structure annotation for photographed and scanned wired tables, based on the WTW (Wired Table in… | Long et al., ICCV 2021 |
+
+### [Xbd Building Damage](https://github.com/davidjurgens/potato-showcase/tree/main/image/xbd-building-damage)
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [xbd-building-damage](https://github.com/davidjurgens/potato-showcase/tree/main/image/xbd-building-damage) | Building damage assessment from pre- and post-disaster satellite imagery | Gupta et al., CVPR Workshops 2019 |
 
 ## Quick Start
 
