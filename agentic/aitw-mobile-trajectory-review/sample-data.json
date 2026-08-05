@@ -1,0 +1,358 @@
+[
+  {
+    "id": "aitw_001",
+    "instruction": "Turn on airplane mode.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_001/step_01.png",
+        "action": "dual-point gesture (scroll down from status bar to open Quick Settings)",
+        "x": 0.5,
+        "y": 0.02
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_001/step_02.png",
+        "action": "dual-point gesture (tap 'Airplane mode' tile)",
+        "x": 0.62,
+        "y": 0.24
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_001/step_03.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_002",
+    "instruction": "Open the Clock app and set an alarm for 7:00 AM.",
+    "device": "Pixel 6 emulator",
+    "android_version": "Android 13",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_01.png",
+        "action": "dual-point gesture (tap Clock app icon on home screen)",
+        "x": 0.38,
+        "y": 0.71
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_02.png",
+        "action": "dual-point gesture (tap 'Alarm' tab in bottom bar)",
+        "x": 0.21,
+        "y": 0.94
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_03.png",
+        "action": "dual-point gesture (tap '+' button to add alarm)",
+        "x": 0.5,
+        "y": 0.85
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_04.png",
+        "action": "dual-point gesture (tap '7' on the hour dial)",
+        "x": 0.36,
+        "y": 0.55
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_05.png",
+        "action": "dual-point gesture (tap 'AM' selector)",
+        "x": 0.79,
+        "y": 0.47
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_06.png",
+        "action": "dual-point gesture (tap 'OK' to confirm)",
+        "x": 0.82,
+        "y": 0.78
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_002/step_07.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_003",
+    "instruction": "Search for 'wireless headphones' on the shopping website and open the first result.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_01.png",
+        "action": "dual-point gesture (tap browser search bar)",
+        "x": 0.5,
+        "y": 0.08
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_02.png",
+        "action": "type 'wireless headphones'"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_03.png",
+        "action": "enter"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_04.png",
+        "action": "dual-point gesture (tap sponsored banner ad at top of results)",
+        "x": 0.5,
+        "y": 0.18
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_05.png",
+        "action": "go_back"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_06.png",
+        "action": "dual-point gesture (tap first organic search result)",
+        "x": 0.5,
+        "y": 0.34
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_003/step_07.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_004",
+    "instruction": "Turn on the flashlight.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_004/step_01.png",
+        "action": "dual-point gesture (scroll down from status bar to open Quick Settings)",
+        "x": 0.5,
+        "y": 0.02
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_004/step_02.png",
+        "action": "dual-point gesture (scroll right through Quick Settings tiles)",
+        "x": 0.8,
+        "y": 0.3
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_004/step_03.png",
+        "action": "task_impossible"
+      }
+    ]
+  },
+  {
+    "id": "aitw_005",
+    "instruction": "Install the 'Weather Radar' app from the Play Store.",
+    "device": "Pixel 6 emulator",
+    "android_version": "Android 13",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_01.png",
+        "action": "dual-point gesture (tap Play Store icon on home screen)",
+        "x": 0.62,
+        "y": 0.71
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_02.png",
+        "action": "dual-point gesture (tap search field at top)",
+        "x": 0.5,
+        "y": 0.07
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_03.png",
+        "action": "type 'Weather Radar'"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_04.png",
+        "action": "enter"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_05.png",
+        "action": "dual-point gesture (tap 'Install' button on the Weather Radar listing)",
+        "x": 0.85,
+        "y": 0.21
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_005/step_06.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_006",
+    "instruction": "Turn wifi off.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_006/step_01.png",
+        "action": "dual-point gesture (scroll down from status bar to open Quick Settings)",
+        "x": 0.5,
+        "y": 0.02
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_006/step_02.png",
+        "action": "dual-point gesture (tap 'Internet' tile — WiFi is shown already off)",
+        "x": 0.18,
+        "y": 0.24
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_006/step_03.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_007",
+    "instruction": "Add milk and eggs to the shopping cart on the grocery website.",
+    "device": "Pixel 6 emulator",
+    "android_version": "Android 13",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_01.png",
+        "action": "dual-point gesture (tap search bar on grocery site)",
+        "x": 0.5,
+        "y": 0.1
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_02.png",
+        "action": "type 'milk'"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_03.png",
+        "action": "enter"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_04.png",
+        "action": "dual-point gesture (tap 'Add to cart' next to whole milk)",
+        "x": 0.87,
+        "y": 0.32
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_05.png",
+        "action": "dual-point gesture (tap search bar again)",
+        "x": 0.5,
+        "y": 0.1
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_06.png",
+        "action": "type 'eggs'"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_07.png",
+        "action": "enter"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_08.png",
+        "action": "dual-point gesture (tap 'Add to cart' next to a dozen eggs)",
+        "x": 0.87,
+        "y": 0.32
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_007/step_09.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_008",
+    "instruction": "Open Gmail and archive the newest email in the inbox.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_008/step_01.png",
+        "action": "dual-point gesture (tap Gmail icon on home screen)",
+        "x": 0.13,
+        "y": 0.71
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_008/step_02.png",
+        "action": "dual-point gesture (tap the second email in the inbox list)",
+        "x": 0.5,
+        "y": 0.33
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_008/step_03.png",
+        "action": "dual-point gesture (tap archive icon in the top bar)",
+        "x": 0.72,
+        "y": 0.06
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_008/step_04.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_009",
+    "instruction": "What is the capital of Australia?",
+    "device": "Pixel 6 emulator",
+    "android_version": "Android 13",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_009/step_01.png",
+        "action": "dual-point gesture (tap Chrome icon on home screen)",
+        "x": 0.87,
+        "y": 0.71
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_009/step_02.png",
+        "action": "dual-point gesture (tap address bar)",
+        "x": 0.5,
+        "y": 0.07
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_009/step_03.png",
+        "action": "type 'capital of Australia'"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_009/step_04.png",
+        "action": "enter"
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_009/step_05.png",
+        "action": "task_complete"
+      }
+    ]
+  },
+  {
+    "id": "aitw_010",
+    "instruction": "Uninstall the 'Puzzle Blast' app.",
+    "device": "Pixel 4 emulator",
+    "android_version": "Android 12",
+    "steps": [
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_01.png",
+        "action": "dual-point gesture (long-press 'Puzzle Blast' icon on home screen)",
+        "x": 0.63,
+        "y": 0.45
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_02.png",
+        "action": "dual-point gesture (tap 'App info' in the popup menu)",
+        "x": 0.68,
+        "y": 0.38
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_03.png",
+        "action": "dual-point gesture (tap 'Force stop' button)",
+        "x": 0.75,
+        "y": 0.3
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_04.png",
+        "action": "dual-point gesture (tap 'Uninstall' button)",
+        "x": 0.25,
+        "y": 0.3
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_05.png",
+        "action": "dual-point gesture (tap 'OK' to confirm uninstall)",
+        "x": 0.78,
+        "y": 0.58
+      },
+      {
+        "screenshot": "https://example.com/aitw/aitw_010/step_06.png",
+        "action": "task_complete"
+      }
+    ]
+  }
+]

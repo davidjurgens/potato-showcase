@@ -1,0 +1,108 @@
+# API-Bank Tool Call Review
+# Based on: Minghao Li, Yingxiu Zhao, Bowen Yu, Feifan Song, Hangyu Li,
+#   Haiyang Yu, Zhoujun Li, Fei Huang, and Yongbin Li (2023). "API-Bank: A
+#   Comprehensive Benchmark for Tool-Augmented LLMs." Proceedings of the 2023
+#   Conference on Empirical Methods in Natural Language Processing (EMNLP),
+#   pp. 3102-3116. DOI 10.18653/v1/2023.emnlp-main.187. arXiv:2304.08244.
+#   Paper: https://aclanthology.org/2023.emnlp-main.187/
+#   Dataset: https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank
+#
+# Task: review each API (tool) call in a tool-augmented dialogue: was the
+# right API chosen for the user's query, were the input parameters correct,
+# and were the calls made in the right order (API-Bank's Call,
+# Retrieval+Call, and Plan+Retrieval+Call abilities)? A dialogue-level radio
+# judges whether the assistant's final response is grounded in the API
+# execution results (API-Bank's response-quality perspective). This adapts
+# API-Bank's annotation and quality-review process — where each dialogue was
+# annotated by two discussing annotators and reviewed by two more for format,
+# logical consistency, and reasonability of API calls — into a per-call
+# review task.
+#
+# Annotation instructions adapted from Sections 3.2 and 3.3; the paper
+# describes its annotation and evaluation criteria in prose but does not
+# publish the verbatim annotator guidelines.
+
+annotation_task_name: "API-Bank Tool Call Review"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "query"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You are shown a dialogue between a user and a tool-augmented assistant. The
+  assistant can call APIs from an API pool; every call it made is extracted
+  below as a card showing the API name and its arguments, together with the
+  execution result in the transcript.
+
+  Following API-Bank's quality criteria — the format, logical consistency,
+  and reasonability of API calls, and consistency with the user's requirement
+  — review each API call individually:
+
+  - correct: this is the right API for what the user asked, the input
+    parameters are correct and well-formed (matching the API document and the
+    details given in the dialogue), and the call occurs at a sensible point
+    in the call sequence.
+  - wrong_tool: a different API from the pool should have been called (e.g.,
+    the query requires a search or a different domain API).
+  - wrong_args: the right API, but the input parameters are wrong, malformed,
+    or inconsistent with what the user actually specified.
+  - wrong_order: the call is out of sequence — e.g., an API that depends on
+    the result of another call was invoked before it, or a required API
+    Search / planning step was skipped ahead of this call.
+
+  Use the notes field to explain any verdict other than correct.
+
+  Then judge the assistant's final response at the dialogue level: is it
+  consistent with (grounded in) the returned API execution results, and does
+  it fulfill the user's requirement? An API call can be correct while the
+  response misreports its result, and vice versa.
+
+annotation_schemes:
+  - annotation_type: tool_call_review
+    name: tool_review
+    description: "Judge each API call: right API? correct arguments? right order?"
+    steps_key: steps
+    verdict_options: [correct, wrong_tool, wrong_args, wrong_order]
+
+  - annotation_type: radio
+    name: response_grounding
+    description: "Is the assistant's final response grounded in the API execution results and responsive to the user's query?"
+    labels:
+      - "Grounded and responsive — response matches the API results and answers the query"
+      - "Partially grounded — response answers the query but misreports or omits API results"
+      - "Not grounded — response contradicts or ignores the API results"
+    keyboard_shortcuts:
+      "Grounded and responsive — response matches the API results and answers the query": "1"
+      "Partially grounded — response answers the query but misreports or omits API results": "2"
+      "Not grounded — response contradicts or ignores the API results": "3"
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Ability level:</strong> {{ability}} &nbsp;·&nbsp; <strong>Domain:</strong> {{domain}}
+    </div>
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 6px 0; color: #3730a3; font-size: 15px;">User's requirement</h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #1e1b4b;">{{query}}</p>
+    </div>
+    <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">Dialogue transcript (with API execution results)</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #1f2937;">{{transcript}}</div>
+    </div>
+    <p style="color: #6b7280; font-size: 13px; margin: 0;">Each API call extracted from the dialogue appears below as a card. Give a verdict per call, then rate the final response's grounding.</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true

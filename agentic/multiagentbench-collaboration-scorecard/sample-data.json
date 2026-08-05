@@ -1,0 +1,159 @@
+[
+  {
+    "id": "mabench_001",
+    "scenario": "Research",
+    "coordination": "graph",
+    "task": "Draft a short position paper arguing that retrieval-augmented generation should be evaluated on citation faithfulness rather than answer accuracy alone.",
+    "transcript": "Turn 1 — PI: Framing the claim: current RAG benchmarks reward correct answers even when the cited passage does not support them. Surveyor, gather three benchmarks that report citation-level metrics; Writer, start the introduction from the claim above.\nTurn 2 — Surveyor: Found three candidates with span-level attribution scoring. Two of them report attribution only as a secondary metric. Sending short summaries to Writer and PI.\nTurn 3 — Writer: Introduction drafted around the faithfulness-vs-accuracy contrast, with placeholders for the three benchmarks Surveyor listed.\nTurn 4 — Critic: The intro overstates the claim — one of the three benchmarks does treat attribution as primary. Suggest softening to \"most\" and citing that benchmark as the counterexample.\nTurn 5 — Writer: Revised the claim to \"most current benchmarks\" and added the counterexample sentence.\nTurn 6 — PI: Position section reads coherently. Approving the draft outline.",
+    "steps": [
+      { "agent": "PI", "content": "Framing the claim: current RAG benchmarks reward correct answers even when the cited passage does not support them. Assigning survey work and drafting." },
+      { "agent": "Surveyor", "content": "Found three candidate benchmarks with span-level attribution scoring; two report attribution only as a secondary metric." },
+      { "agent": "Writer", "content": "Drafted the introduction around the faithfulness-vs-accuracy contrast with placeholders for the three benchmarks." },
+      { "agent": "Critic", "content": "Flagged that the intro overstates the claim; one benchmark does treat attribution as primary. Suggested softening the wording." },
+      { "agent": "Writer", "content": "Revised to \"most current benchmarks\" and added the counterexample sentence." },
+      { "agent": "PI", "content": "Reviewed the position section and approved the draft outline." }
+    ]
+  },
+  {
+    "id": "mabench_002",
+    "scenario": "Research",
+    "coordination": "star",
+    "task": "Design an ablation study that isolates whether a reranker or the base retriever accounts for a reported accuracy gain.",
+    "transcript": "Turn 1 — Coordinator: Everyone reports to me. Methodologist, propose the ablation grid. Engineer, list what has to be swappable in the pipeline. Analyst, define the decision rule.\nTurn 2 — Methodologist: Proposed a 2x2: base retriever {old, new} x reranker {off, on}, holding the generator fixed.\nTurn 3 — Engineer: Both components are already behind interfaces, so all four cells are runnable without code changes. Noted that the reranker caches scores, which must be cleared between cells.\nTurn 4 — Analyst: Decision rule: attribute the gain to the reranker if the reranker-on effect is larger than the retriever-swap effect in both retriever conditions.\nTurn 5 — Coordinator: Approved. Engineer, run the grid; Analyst, apply the rule and report.\nTurn 6 — Engineer: Ran all four cells with caches cleared. Results sent to Analyst.\nTurn 7 — Analyst: Reranker effect dominates in both conditions. Gain attributed to the reranker.",
+    "steps": [
+      { "agent": "Coordinator", "content": "Assigned the ablation grid, engineering feasibility check, and decision rule to the three specialists." },
+      { "agent": "Methodologist", "content": "Proposed a 2x2 grid: base retriever {old, new} x reranker {off, on}, generator held fixed." },
+      { "agent": "Engineer", "content": "Confirmed all four cells are runnable; flagged that the reranker's score cache must be cleared between cells." },
+      { "agent": "Analyst", "content": "Defined the attribution rule comparing reranker-on effect against retriever-swap effect." },
+      { "agent": "Coordinator", "content": "Approved the design and assigned execution and analysis." },
+      { "agent": "Engineer", "content": "Ran all four cells with caches cleared and forwarded results." },
+      { "agent": "Analyst", "content": "Applied the rule; reranker effect dominates in both conditions, so the gain is attributed to the reranker." }
+    ]
+  },
+  {
+    "id": "mabench_003",
+    "scenario": "Coding",
+    "coordination": "chain",
+    "task": "Fix a failing pagination endpoint so that requesting a page beyond the last one returns an empty result set instead of a server error.",
+    "transcript": "Turn 1 — Triager: The stack trace points at an offset computation that goes negative when page exceeds total_pages. Passing to Implementer.\nTurn 2 — Implementer: Clamped the offset at zero and added an early return when offset >= total_count. Passing to Tester.\nTurn 3 — Tester: The clamp hides the bug for page=0 but page=-1 still returns the first page rather than an error. Passing back to Implementer.\nTurn 4 — Implementer: Added explicit validation rejecting page < 1 with a 400. Passing to Tester.\nTurn 5 — Tester: All pagination tests pass, including the two new boundary cases. Passing to Reviewer.\nTurn 6 — Reviewer: Approved. Noted the 400 message should name the offending parameter, filed as a follow-up.",
+    "steps": [
+      { "agent": "Triager", "content": "Localized the failure to an offset computation that goes negative when page exceeds total_pages." },
+      { "agent": "Implementer", "content": "Clamped the offset at zero and added an early return when offset >= total_count." },
+      { "agent": "Tester", "content": "Found that page=-1 still returns the first page instead of an error; sent back for revision." },
+      { "agent": "Implementer", "content": "Added explicit validation rejecting page < 1 with a 400 response." },
+      { "agent": "Tester", "content": "Confirmed all pagination tests pass, including the two new boundary cases." },
+      { "agent": "Reviewer", "content": "Approved the fix; filed a follow-up asking the 400 message to name the offending parameter." }
+    ]
+  },
+  {
+    "id": "mabench_004",
+    "scenario": "Coding",
+    "coordination": "tree",
+    "task": "Split a monolithic report-generation function into testable units without changing its output.",
+    "transcript": "Turn 1 — Architect: Splitting into three leaves: data loading, aggregation, rendering. Assigning one to each Worker; Integrator merges.\nTurn 2 — Worker A: Extracted the loader. It silently swallowed a missing-file error, which I preserved to keep behavior identical, with a TODO.\nTurn 3 — Worker B: Extracted aggregation. Found the original mutated the input list; kept the mutation to preserve output but documented it.\nTurn 4 — Worker C: Extracted rendering. No behavioral surprises.\nTurn 5 — Integrator: Merged all three. Golden-output test on twelve fixtures reproduces the original byte-for-byte.\nTurn 6 — Architect: Accepted. The two preserved quirks are now visible and each has a test pinning current behavior.",
+    "steps": [
+      { "agent": "Architect", "content": "Decomposed the function into three leaves — loading, aggregation, rendering — and assigned one per worker." },
+      { "agent": "Worker A", "content": "Extracted the loader, preserving its silent swallow of a missing-file error with a TODO." },
+      { "agent": "Worker B", "content": "Extracted aggregation; kept the input-list mutation to preserve output and documented it." },
+      { "agent": "Worker C", "content": "Extracted rendering with no behavioral changes." },
+      { "agent": "Integrator", "content": "Merged all three; golden-output tests on twelve fixtures reproduce the original byte-for-byte." },
+      { "agent": "Architect", "content": "Accepted the refactor; both preserved quirks now have pinning tests." }
+    ]
+  },
+  {
+    "id": "mabench_005",
+    "scenario": "Database",
+    "coordination": "star",
+    "task": "Answer which product category had the largest month-over-month revenue drop in the last quarter, using a schema the agents must first inspect.",
+    "transcript": "Turn 1 — Coordinator: Schema is unknown. Explorer, list the tables and keys. Query Writer, wait for the schema.\nTurn 2 — Explorer: Four tables: orders, order_items, products, categories. Revenue lives in order_items.line_total; category is two joins away.\nTurn 3 — Query Writer: Wrote a monthly revenue rollup joining order_items to categories, then a lag comparison across months.\nTurn 4 — Validator: The rollup counts cancelled orders. orders.status must be filtered to 'completed'.\nTurn 5 — Query Writer: Added the status filter and reran.\nTurn 6 — Validator: Totals now reconcile with the finance summary table to within rounding. Largest drop: Outdoor Furniture, down 31% from May to June.\nTurn 7 — Coordinator: Answer accepted and reported.",
+    "steps": [
+      { "agent": "Coordinator", "content": "Sequenced the work: schema exploration first, then query writing." },
+      { "agent": "Explorer", "content": "Mapped four tables and reported that revenue lives in order_items.line_total, two joins from category." },
+      { "agent": "Query Writer", "content": "Wrote a monthly revenue rollup with a lag comparison across months." },
+      { "agent": "Validator", "content": "Caught that cancelled orders were included; required a status filter." },
+      { "agent": "Query Writer", "content": "Added the status filter and reran the query." },
+      { "agent": "Validator", "content": "Reconciled totals with the finance summary; identified Outdoor Furniture, down 31% May to June." },
+      { "agent": "Coordinator", "content": "Accepted and reported the answer." }
+    ]
+  },
+  {
+    "id": "mabench_006",
+    "scenario": "Minecraft",
+    "coordination": "chain",
+    "task": "Cooperatively gather materials and build a three-room shelter before nightfall.",
+    "transcript": "Turn 1 — Scout: Found a hillside with exposed stone and an oak grove within forty blocks. Handing coordinates to Gatherer.\nTurn 2 — Gatherer: Collected 64 logs and 40 cobblestone. Handing inventory report to Builder.\nTurn 3 — Builder: Laid the floor plan for three rooms but ran out of planks halfway through the second wall — the log-to-plank conversion was not accounted for.\nTurn 4 — Gatherer: Returned for 32 more logs. Night is approaching.\nTurn 5 — Builder: Walls and roof complete; no door yet.\nTurn 6 — Scout: Night fell before the door was placed; a hostile mob entered the shelter.",
+    "steps": [
+      { "agent": "Scout", "content": "Located a hillside with exposed stone and an oak grove within forty blocks." },
+      { "agent": "Gatherer", "content": "Collected 64 logs and 40 cobblestone and reported inventory." },
+      { "agent": "Builder", "content": "Laid the three-room floor plan but ran out of planks — log-to-plank conversion was not accounted for." },
+      { "agent": "Gatherer", "content": "Returned for 32 more logs as night approached." },
+      { "agent": "Builder", "content": "Completed walls and roof but did not place a door." },
+      { "agent": "Scout", "content": "Reported that night fell before the door was placed and a hostile mob entered." }
+    ]
+  },
+  {
+    "id": "mabench_007",
+    "scenario": "Minecraft",
+    "coordination": "graph",
+    "task": "Divide labor to mine, smelt, and deliver twenty iron ingots to a shared chest.",
+    "transcript": "Turn 1 — Miner A: Descending to y=14 on the east branch. Will report ore counts every twenty blocks.\nTurn 2 — Miner B: Taking the west branch to avoid overlapping A's tunnel.\nTurn 3 — Smelter: Furnace array ready with charcoal stocked. Send ore directly to me rather than the chest.\nTurn 4 — Miner A: Twelve iron ore delivered to Smelter.\nTurn 5 — Miner B: Nine iron ore delivered. Total twenty-one, one over target.\nTurn 6 — Smelter: Smelted all twenty-one and deposited them in the shared chest.\nTurn 7 — Miner A: Confirmed chest contains twenty-one ingots. Target met.",
+    "steps": [
+      { "agent": "Miner A", "content": "Took the east branch at y=14 and committed to reporting ore counts every twenty blocks." },
+      { "agent": "Miner B", "content": "Took the west branch to avoid overlapping A's tunnel." },
+      { "agent": "Smelter", "content": "Prepared the furnace array and redirected ore delivery from the chest to the furnaces." },
+      { "agent": "Miner A", "content": "Delivered twelve iron ore to the smelter." },
+      { "agent": "Miner B", "content": "Delivered nine iron ore, bringing the total to twenty-one." },
+      { "agent": "Smelter", "content": "Smelted all twenty-one ore and deposited the ingots in the shared chest." },
+      { "agent": "Miner A", "content": "Verified the chest contents and confirmed the target was met." }
+    ]
+  },
+  {
+    "id": "mabench_008",
+    "scenario": "Bargaining",
+    "coordination": "chain",
+    "task": "Negotiate the sale of a used bicycle where the seller's reserve is 120 and the buyer's ceiling is 160, both private.",
+    "transcript": "Turn 1 — Seller: Opening at 185, citing a recent tune-up and new tires.\nTurn 2 — Buyer: Countered at 110, noting visible rust on the chainstay.\nTurn 3 — Seller: Came down to 165, offering to include a lock.\nTurn 4 — Buyer: Moved to 135 and asked whether the tune-up has a receipt.\nTurn 5 — Seller: Produced the receipt and held at 155.\nTurn 6 — Buyer: Offered 145 as a final number.\nTurn 7 — Seller: Accepted 145 with the lock included.",
+    "steps": [
+      { "agent": "Seller", "content": "Opened at 185, citing a recent tune-up and new tires." },
+      { "agent": "Buyer", "content": "Countered at 110, noting visible rust on the chainstay." },
+      { "agent": "Seller", "content": "Came down to 165 and offered to include a lock." },
+      { "agent": "Buyer", "content": "Moved to 135 and asked for a tune-up receipt." },
+      { "agent": "Seller", "content": "Produced the receipt and held at 155." },
+      { "agent": "Buyer", "content": "Offered 145 as a final number." },
+      { "agent": "Seller", "content": "Accepted 145 with the lock included." }
+    ]
+  },
+  {
+    "id": "mabench_009",
+    "scenario": "Werewolf",
+    "coordination": "graph",
+    "task": "Play one full day-night cycle of social deduction, where two agents are covertly assigned the werewolf role.",
+    "transcript": "Turn 1 — Villager 1: Nobody has information yet, so I propose we not vote anyone out on day one.\nTurn 2 — Werewolf A (posing as villager): Agreeing with Villager 1 — but I noticed Villager 3 stayed silent, which reads as evasive.\nTurn 3 — Villager 3: I was silent because there was nothing to say. Pointing at silence on day one is exactly what a wolf does.\nTurn 4 — Seer: I have information I would rather not reveal yet. I will say only that Villager 3's defense is consistent with what I saw.\nTurn 5 — Werewolf B: Then reveal it, or the claim is worthless. Voting Villager 3.\nTurn 6 — Villager 1: Werewolf B pushing hard right after A pointed the same direction is the strongest signal so far. Voting Werewolf B.\nTurn 7 — Villager 3: Agreed, voting Werewolf B.\nTurn 8 — Moderator: Werewolf B eliminated. Night falls.",
+    "steps": [
+      { "agent": "Villager 1", "content": "Proposed not voting anyone out on day one for lack of information." },
+      { "agent": "Werewolf A", "content": "Posed as a villager, agreed, then cast suspicion on Villager 3 for staying silent." },
+      { "agent": "Villager 3", "content": "Defended the silence and named the accusation itself as wolf-like behavior." },
+      { "agent": "Seer", "content": "Withheld the specific claim but publicly endorsed Villager 3's consistency." },
+      { "agent": "Werewolf B", "content": "Demanded the Seer reveal or be ignored, and voted Villager 3." },
+      { "agent": "Villager 1", "content": "Identified the coordinated push from A and B as the strongest signal and voted Werewolf B." },
+      { "agent": "Villager 3", "content": "Joined the vote against Werewolf B." },
+      { "agent": "Moderator", "content": "Eliminated Werewolf B and advanced to night." }
+    ]
+  },
+  {
+    "id": "mabench_010",
+    "scenario": "Research",
+    "coordination": "tree",
+    "task": "Produce a reproducibility checklist for a submitted paper by dividing the manuscript among reviewers.",
+    "transcript": "Turn 1 — Lead: Splitting the manuscript: Reviewer A takes data and preprocessing, Reviewer B takes model and training, Reviewer C takes evaluation. Report gaps only.\nTurn 2 — Reviewer A: Dataset is named but the split seed is unreported, and the filtering threshold appears only in a figure caption.\nTurn 3 — Reviewer B: Hyperparameters are complete; compute budget and hardware are missing entirely.\nTurn 4 — Reviewer C: Metric definitions are precise, but significance testing is described as \"standard\" without naming a test.\nTurn 5 — Lead: Compiling four gaps. Reviewer B, does the appendix mention hardware anywhere?\nTurn 6 — Reviewer B: Checked — no hardware mention in appendix either. Confirmed as a genuine gap.\nTurn 7 — Lead: Checklist finalized with four required author responses.",
+    "steps": [
+      { "agent": "Lead", "content": "Divided the manuscript across three reviewers by section and asked for gaps only." },
+      { "agent": "Reviewer A", "content": "Reported an unreported split seed and a filtering threshold buried in a figure caption." },
+      { "agent": "Reviewer B", "content": "Reported complete hyperparameters but missing compute budget and hardware." },
+      { "agent": "Reviewer C", "content": "Reported precise metrics but unnamed significance testing." },
+      { "agent": "Lead", "content": "Compiled the gaps and asked Reviewer B to double-check the appendix for hardware." },
+      { "agent": "Reviewer B", "content": "Confirmed no hardware mention in the appendix either." },
+      { "agent": "Lead", "content": "Finalized the checklist with four required author responses." }
+    ]
+  }
+]

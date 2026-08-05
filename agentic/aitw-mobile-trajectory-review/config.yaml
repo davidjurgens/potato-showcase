@@ -1,0 +1,113 @@
+# Android in the Wild (AITW) Mobile Trajectory Review
+# Based on: Christopher Rawles, Alice Li, Daniel Rodriguez, Oriana Riva, and
+#   Timothy Lillicrap (2023). "Android in the Wild: A Large-Scale Dataset for
+#   Android Device Control." Advances in Neural Information Processing Systems
+#   36 (NeurIPS 2023), Datasets and Benchmarks Track. arXiv:2307.10088.
+#   Paper: https://arxiv.org/abs/2307.10088
+#   Dataset: https://github.com/google-research/google-research/tree/master/android_in_the_wild
+#
+# Task: review an AITW-style Android device-control episode step by step. Each
+# step shows the screenshot the device displayed and the action taken (AITW's
+# action space: dual-point gesture (tap/scroll), type, go_back, go_home,
+# enter, task_complete, task_impossible), with tap coordinates rendered as a
+# grounding marker on the screenshot. The annotator judges whether each
+# action was correct and well-grounded for the natural-language instruction,
+# then gives an episode-level verdict. AITW itself is a demonstration corpus
+# (paid raters performed the tasks rather than labeling them); this config
+# adapts its collection protocol into a quality-review task over such
+# episodes. Compare agentic/androidworld-mobile-agent-eval: AndroidWorld is a
+# live-environment benchmark with programmatic reward signals, while AITW is a
+# static corpus of human demonstrations.
+#
+# Annotation instructions adapted from Sections 3, 3.1 and Appendix A.1; the
+# paper states raters received "a detailed instructional document and a video
+# tutorial" but does not publish the verbatim rater guidelines. The quoted
+# rater prompt and behavioral rules from Section 3.1 are reproduced verbatim
+# inside the instructions below.
+
+annotation_task_name: "AITW Mobile Trajectory Review"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "instruction"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You are shown an Android device-control episode: a natural-language
+  instruction, followed by the sequence of screenshots the device displayed
+  and the action performed at each step. Episodes follow the collection
+  protocol of Android in the Wild (AITW), where raters were prompted:
+  "Imagine a friend is asking you to perform the task on their phone..." and
+  were asked "to interact with the device in a natural way, to avoid clicking
+  on anything unrelated to the task, and to avoid unnecessary scrolling."
+  Raters ended every episode with a status action: task_complete, or
+  task_impossible "when an invalid or unavailable instruction is given"; for
+  instructions that result in verification rather than a state change (e.g.,
+  "Turn wifi off" when WiFi is already off), the task is marked successful.
+
+  Your job is to review each step of the episode against the instruction:
+
+  1. For every step, judge the action taken on the screen shown:
+     - correct: the action is a reasonable, well-grounded step toward
+       completing the instruction, and any tap lands on the right element.
+     - wrong_element: the right kind of action, but the tap/gesture landed on
+       the wrong UI element (check the grounding marker on the screenshot).
+     - wrong_action: the wrong kind of action for this screen (e.g., typing
+       when a tap was needed, unnecessary scrolling, unrelated clicking).
+     - hallucinated: the action refers to an element or state not present on
+       the screen at all.
+  2. Then give an episode-level verdict: whether the episode faithfully
+     completes the instruction, ends with an appropriate status action
+     (task_complete / task_impossible), and avoids unrelated detours.
+
+  Use the notes field on a step to explain any verdict other than correct.
+
+annotation_schemes:
+  - annotation_type: gui_trajectory
+    name: step_review
+    description: "For each step: was the action correct and did the tap land on the right element?"
+    steps_key: steps
+    screenshot_key: screenshot
+    action_key: action
+    coord_space: normalized
+    verdict_options: [correct, wrong_element, wrong_action, hallucinated]
+
+  - annotation_type: radio
+    name: episode_verdict
+    description: "Overall, does this episode correctly demonstrate the instruction?"
+    labels:
+      - "Successful demonstration — instruction achieved, appropriate status action"
+      - "Achieved with flaws — instruction achieved, but with unrelated or wasted steps"
+      - "Not achieved — episode ends without completing the instruction"
+      - "task_impossible correctly used — instruction invalid or unavailable in this environment"
+    keyboard_shortcuts:
+      "Successful demonstration — instruction achieved, appropriate status action": "1"
+      "Achieved with flaws — instruction achieved, but with unrelated or wasted steps": "2"
+      "Not achieved — episode ends without completing the instruction": "3"
+      "task_impossible correctly used — instruction invalid or unavailable in this environment": "4"
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Device:</strong> {{device}} &nbsp;·&nbsp; <strong>Android version:</strong> {{android_version}}
+    </div>
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 6px 0; color: #3730a3; font-size: 15px;">Instruction</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #1e1b4b;">{{instruction}}</p>
+    </div>
+    <p style="color: #6b7280; font-size: 13px; margin: 0;">The episode's per-step screenshots and actions are shown below. Judge each action, then give the episode-level verdict.</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 25
+annotation_per_instance: 3
+allow_skip: true

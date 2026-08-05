@@ -1,0 +1,68 @@
+{
+  "title": "MultiAgentBench Collaboration Scorecard",
+  "description": "Coordination-quality rating of multi-agent LLM runs, based on MultiAgentBench (Zhu et al., ACL 2025). Annotators read a full multi-agent run transcript and score its communication and planning on 5-point scales using the paper's own evaluation rubric, then check off which run milestones were reached. Complements agentic/whowhen-failure-attribution, which localizes a single decisive failure rather than rating overall collaboration quality.",
+  "overview": [
+    "MultiAgentBench is a benchmark for LLM-based multi-agent systems, built on the MARBLE framework. It evaluates not only whether a task was completed but also the quality of the collaboration and competition that produced the outcome, using milestone-based key performance indicators alongside dimension ratings.",
+    "The benchmark spans diverse interactive scenarios and evaluates several coordination protocols — star, chain, tree, and graph topologies — as well as strategies such as group discussion and cognitive planning. The paper reports that gpt-4o-mini reaches the highest average task score, that the graph structure performs best among coordination protocols in the research scenario, and that cognitive planning improves milestone achievement rates by 3%.",
+    "Collaboration quality is scored on two dimensions, communication and planning, each on a 5-point scale with explicit anchor descriptions. Appendix A.3 reports a human evaluation in which annotators rate runs on these same two dimensions; the paper states that each human annotator uses the same instructions and sees the same inputs as the LLM judges, so the evaluation prompts in Appendix Figures 22 and 23 are the instructions the human raters worked from. Those prompts are reproduced verbatim in this config's annotation_instructions.",
+    "IMPORTANT CAVEAT ON SCOPE: the paper's human evaluation is coordination-level — one communication score and one planning score per run. The per-agent rows in this scorecard apply the same two dimensions at agent granularity, which is a showcase extension beyond the published protocol. Only the team-level scores correspond to the paper's human-rating design; the milestone checklist reflects the benchmark's milestone-based KPIs rather than a separately published human annotation task.",
+    "This Potato config uses the agent_scorecard scheme, which renders one rating row per participating agent (derived from the run's turns via steps_key/agent_key), a team-level row for the same dimensions, and a milestone checklist, all attached to a scrollable run transcript."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2025 (arXiv:2503.01935); ACL 2025"
+    },
+    {
+      "label": "Coordination protocols evaluated",
+      "value": "star, chain, tree, graph"
+    },
+    {
+      "label": "Rating dimensions",
+      "value": "communication, planning (5-point scales)"
+    },
+    {
+      "label": "Human raters per run",
+      "value": "2 (Appendix A.3)"
+    },
+    {
+      "label": "Reported effect of cognitive planning",
+      "value": "+3% milestone achievement rate"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "agent_scorecard"
+  ],
+  "domain": [
+    "Multi-Agent Systems",
+    "Agent Evaluation"
+  ],
+  "useCase": [
+    "Multi-Agent Evaluation",
+    "Coordination Quality Rating",
+    "Benchmark Annotation"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "multi-agent",
+    "collaboration",
+    "coordination",
+    "scorecard",
+    "milestones",
+    "llm-agents"
+  ],
+  "featured": false,
+  "paperReference": "Zhu et al., ACL 2025",
+  "paperUrl": "https://aclanthology.org/2025.acl-long.421/",
+  "datasetUrl": "https://github.com/ulab-uiuc/MARBLE",
+  "citation": "@inproceedings{zhu-etal-2025-multiagentbench,\n    title = \"{M}ulti{A}gent{B}ench: Evaluating the Collaboration and Competition of {LLM} agents\",\n    author = \"Zhu, Kunlun and Du, Hongyi and Hong, Zhaochen and Yang, Xiaocheng and Guo, Shuyi and Wang, Zhe and Wang, Zhenhailong and Qian, Cheng and Tang, Xiangru and Ji, Heng and You, Jiaxuan\",\n    booktitle = \"Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.acl-long.421/\",\n    doi = \"10.18653/v1/2025.acl-long.421\",\n    pages = \"8580--8622\"\n}"
+}

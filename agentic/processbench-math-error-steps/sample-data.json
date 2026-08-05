@@ -1,0 +1,122 @@
+[
+  {
+    "id": "processbench_001",
+    "problem": "A bakery sells muffins for $3 each and croissants for $2 each. On Monday it sold 24 muffins and 18 croissants. On Tuesday it sold twice as many muffins as Monday and half as many croissants. How much revenue did the bakery earn over the two days?",
+    "steps": [
+      "On Monday, muffin revenue is 24 × $3 = $72 and croissant revenue is 18 × $2 = $36, so Monday's total is $72 + $36 = $108.",
+      "On Tuesday, the bakery sold twice as many muffins as Monday, which is 2 × 24 = 48 muffins, and half as many croissants, which is 18 ÷ 2 = 9 croissants.",
+      "Tuesday's muffin revenue is 48 × $3 = $124, and Tuesday's croissant revenue is 9 × $2 = $18, so Tuesday's total is $124 + $18 = $142.",
+      "Adding the two days together, the total revenue is $108 + $142 = $250."
+    ],
+    "final_answer": "$250",
+    "reference_answer": "$270"
+  },
+  {
+    "id": "processbench_002",
+    "problem": "Solve for x: 5(x - 2) + 3 = 2x + 14.",
+    "steps": [
+      "Distribute the 5 on the left side: 5x - 10 + 3 = 2x + 14.",
+      "Combine like terms on the left side: 5x - 7 = 2x + 14.",
+      "Subtract 2x from both sides: 3x - 7 = 14.",
+      "Add 7 to both sides: 3x = 21.",
+      "Divide both sides by 3: x = 7."
+    ],
+    "final_answer": "x = 7",
+    "reference_answer": "x = 7"
+  },
+  {
+    "id": "processbench_003",
+    "problem": "A drawer contains 5 black socks and 3 white socks. Two socks are drawn at random without replacement. What is the probability that both socks are black?",
+    "steps": [
+      "There are 5 + 3 = 8 socks in total, so the probability that the first sock drawn is black is 5/8.",
+      "Since the draws are independent, the probability that the second sock is black is also 5/8.",
+      "The probability that both socks are black is (5/8) × (5/8) = 25/64."
+    ],
+    "final_answer": "25/64",
+    "reference_answer": "5/14"
+  },
+  {
+    "id": "processbench_004",
+    "problem": "In triangle ABC, angle C = 90°, AC = 9, and BC = 12. Find the length of the hypotenuse AB and the area of the triangle.",
+    "steps": [
+      "Since angle C is the right angle, AB is the hypotenuse, and by the Pythagorean theorem AB² = AC² + BC² = 9² + 12² = 81 + 144 = 225.",
+      "Taking the square root gives AB = √225 = 15.",
+      "The legs AC and BC are perpendicular, so the area is (1/2) × AC × BC = (1/2) × 9 × 12 = 54.",
+      "Therefore the hypotenuse is 15 and the area is 54 square units."
+    ],
+    "final_answer": "AB = 15, area = 54",
+    "reference_answer": "AB = 15, area = 54"
+  },
+  {
+    "id": "processbench_005",
+    "problem": "Find the remainder when 3^41 is divided by 8.",
+    "steps": [
+      "Compute the first few powers of 3 modulo 8: 3^1 ≡ 3 (mod 8), 3^2 ≡ 9 ≡ 1 (mod 8), 3^3 ≡ 3 (mod 8), 3^4 ≡ 1 (mod 8).",
+      "The powers of 3 modulo 8 therefore repeat with period 4: the pattern is 3, 1, 3, 1, so we should reduce the exponent modulo 4.",
+      "Since 41 = 10 × 4 + 1, we have 3^41 ≡ 3^1 ≡ 3 (mod 8).",
+      "Therefore the remainder when 3^41 is divided by 8 is 3."
+    ],
+    "final_answer": "3",
+    "reference_answer": "3"
+  },
+  {
+    "id": "processbench_006",
+    "problem": "How many ways can 6 people be seated around a circular table if rotations are considered identical but reflections are considered distinct?",
+    "steps": [
+      "For circular arrangements where rotations are identical, we fix one person's seat and arrange the remaining people relative to that person.",
+      "With one person fixed, the remaining 5 people can be arranged in the other 5 seats in 5! ways.",
+      "Compute 5! = 120.",
+      "Since reflections are considered distinct, no further division is needed, so there are 120 arrangements."
+    ],
+    "final_answer": "120",
+    "reference_answer": "120"
+  },
+  {
+    "id": "processbench_007",
+    "problem": "A jacket originally costs $80. It is discounted by 25%, and then a further 10% is taken off the discounted price. What is the final price?",
+    "steps": [
+      "A 25% discount followed by a 10% discount is a total discount of 25% + 10% = 35%.",
+      "35% of $80 is 0.35 × 80 = $28.",
+      "Subtracting the discount from the original price gives $80 - $28 = $52.",
+      "Therefore the final price of the jacket is $52."
+    ],
+    "final_answer": "$52",
+    "reference_answer": "$54"
+  },
+  {
+    "id": "processbench_008",
+    "problem": "A sequence is defined by a_1 = 4 and a_(n+1) = 2a_n - 3 for n ≥ 1. Find a_4.",
+    "steps": [
+      "Start with a_1 = 4.",
+      "Apply the recurrence: a_2 = 2 × 4 - 3 = 8 - 3 = 5.",
+      "Apply the recurrence again: a_3 = 2 × 5 - 3 = 10 - 3 = 7.",
+      "Apply the recurrence once more: a_4 = 2 × 7 - 3 = 14 - 3 = 11."
+    ],
+    "final_answer": "a_4 = 11",
+    "reference_answer": "a_4 = 11"
+  },
+  {
+    "id": "processbench_009",
+    "problem": "The product of two consecutive positive even integers is 168. Find the two integers.",
+    "steps": [
+      "Let the two consecutive even integers be n and n + 2, so n(n + 2) = 168.",
+      "Expanding gives n² + 2n - 168 = 0.",
+      "Factor the quadratic: we need two numbers whose product is -168 and whose sum is 2; these are 14 and -12, so (n + 14)(n - 12) = 0.",
+      "The roots are n = -14 and n = 12; since the integers are positive, n = 12.",
+      "The two consecutive even integers are therefore 12 and 13."
+    ],
+    "final_answer": "12 and 13",
+    "reference_answer": "12 and 14"
+  },
+  {
+    "id": "processbench_010",
+    "problem": "Two trains leave stations 300 miles apart at the same time and travel toward each other. One train travels at 70 mph and the other at 80 mph. After how many hours do they meet?",
+    "steps": [
+      "Since the trains travel toward each other, their speeds add, giving a combined closing speed of 70 + 80 = 150 mph.",
+      "The time to close a 300-mile gap at 150 mph is 300 ÷ 150 = 2 hours.",
+      "Therefore the trains meet after 2 hours."
+    ],
+    "final_answer": "2 hours",
+    "reference_answer": "2 hours"
+  }
+]

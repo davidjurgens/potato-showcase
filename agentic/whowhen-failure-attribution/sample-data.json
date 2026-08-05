@@ -1,0 +1,288 @@
+[
+  {
+    "id": "whowhen_001",
+    "query": "What was the closing price of Acme Corp stock on the day its CEO announced her resignation in 2019?",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "GAIA-style",
+    "transcript": "Step 0 — Orchestrator: Plan: (1) find the date of the CEO resignation announcement, (2) find the closing stock price on that date. Assigning WebSurfer.\nStep 1 — WebSurfer: Searched 'Acme Corp CEO resignation 2019'. Found a news article dated March 14, 2019 about the announcement. Reported the date as March 14, 2019.\nStep 2 — Orchestrator: Good. WebSurfer, now find the closing price on March 14, 2019.\nStep 3 — WebSurfer: Opened a historical price chart, read the row for March 4, 2019 instead of March 14, and reported $42.17.\nStep 4 — Orchestrator: Final answer: $42.17.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "Plan: (1) find the date of the CEO resignation announcement, (2) find the closing stock price on that date. Assigning WebSurfer."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "Searched 'Acme Corp CEO resignation 2019'. Found a news article dated March 14, 2019 about the announcement. Reported the date as March 14, 2019."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Good. WebSurfer, now find the closing price on March 14, 2019."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "Opened a historical price chart, read the row for March 4, 2019 instead of March 14, and reported $42.17."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: $42.17."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_002",
+    "query": "Write a Python function that returns the number of Sundays that fell on the first of a month between 1901 and 2000, and report the answer.",
+    "system": "CaptainAgent style (algorithm-generated)",
+    "benchmark": "Algorithm-generated task",
+    "transcript": "Step 0 — Planner: Decompose: Coder writes a date-iteration script, Executor runs it, Verifier checks the result.\nStep 1 — Coder: Wrote a script iterating months from 1901-2000 using weekday() == 6 to test for Sunday.\nStep 2 — Executor: Ran the script; it printed 171.\nStep 3 — Verifier: The check weekday() == 6 matches Sunday in Python, and the range looks right. Approving 171.\nStep 4 — Planner: Final answer: 171.",
+    "steps": [
+      {
+        "agent": "Planner",
+        "content": "Decompose: Coder writes a date-iteration script, Executor runs it, Verifier checks the result."
+      },
+      {
+        "agent": "Coder",
+        "content": "Wrote a script iterating months from 1901-2000 using weekday() == 6 to test for Sunday."
+      },
+      {
+        "agent": "Executor",
+        "content": "Ran the script; it printed 171."
+      },
+      {
+        "agent": "Verifier",
+        "content": "The check weekday() == 6 matches Sunday in Python, and the range looks right. Approving 171."
+      },
+      {
+        "agent": "Planner",
+        "content": "Final answer: 171."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_003",
+    "query": "According to the attached PDF report, what percentage of survey respondents preferred remote work in the 2022 survey?",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "AssistantBench-style",
+    "transcript": "Step 0 — Orchestrator: FileSurfer, open the PDF and find the remote-work preference figure for 2022.\nStep 1 — FileSurfer: Opened the PDF. Found a chart on page 3 titled 'Work preference by year'. Read the 2021 bar (58%) and reported 58% without checking the year label.\nStep 2 — Orchestrator: 58% seems plausible. Reporting 58%.\nStep 3 — Orchestrator: Final answer: 58%.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "FileSurfer, open the PDF and find the remote-work preference figure for 2022."
+      },
+      {
+        "agent": "FileSurfer",
+        "content": "Opened the PDF. Found a chart on page 3 titled 'Work preference by year'. Read the 2021 bar (58%) and reported 58% without checking the year label."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "58% seems plausible. Reporting 58%."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: 58%."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_004",
+    "query": "Find the email address listed on the contact page of the personal website of the author of the book 'Silent Rivers'.",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "AssistantBench-style",
+    "transcript": "Step 0 — Orchestrator: Plan: identify the author of 'Silent Rivers', then visit their personal website's contact page. WebSurfer, go.\nStep 1 — WebSurfer: Searched the book; the author is Helena Marsh. Found helenamarsh.com in the results.\nStep 2 — WebSurfer: Visited helenamarsh.com but landed on the blog page. Could not immediately see a contact link and concluded the site has no contact page.\nStep 3 — Orchestrator: If there is no contact page, report that no email is available.\nStep 4 — Orchestrator: Final answer: no email address is listed.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "Plan: identify the author of 'Silent Rivers', then visit their personal website's contact page. WebSurfer, go."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "Searched the book; the author is Helena Marsh. Found helenamarsh.com in the results."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "Visited helenamarsh.com but landed on the blog page. Could not immediately see a contact link and concluded the site has no contact page."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "If there is no contact page, report that no email is available."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: no email address is listed."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_005",
+    "query": "Compute the average monthly rainfall in the provided rainfall.csv and state which month is wettest.",
+    "system": "CaptainAgent style (algorithm-generated)",
+    "benchmark": "Algorithm-generated task",
+    "transcript": "Step 0 — Planner: Coder loads rainfall.csv, computes monthly averages, finds the max. Executor runs it.\nStep 1 — Coder: Wrote pandas code grouping by the 'month' column and averaging the 'rainfall_mm' column.\nStep 2 — Executor: Execution failed: KeyError 'rainfall_mm' (the column is named 'precip_mm').\nStep 3 — Coder: Re-issued the same code unchanged, assuming the error was transient.\nStep 4 — Executor: Same KeyError again.\nStep 5 — Planner: We are out of retries. Reporting that the file could not be analyzed.",
+    "steps": [
+      {
+        "agent": "Planner",
+        "content": "Coder loads rainfall.csv, computes monthly averages, finds the max. Executor runs it."
+      },
+      {
+        "agent": "Coder",
+        "content": "Wrote pandas code grouping by the 'month' column and averaging the 'rainfall_mm' column."
+      },
+      {
+        "agent": "Executor",
+        "content": "Execution failed: KeyError 'rainfall_mm' (the column is named 'precip_mm')."
+      },
+      {
+        "agent": "Coder",
+        "content": "Re-issued the same code unchanged, assuming the error was transient."
+      },
+      {
+        "agent": "Executor",
+        "content": "Same KeyError again."
+      },
+      {
+        "agent": "Planner",
+        "content": "We are out of retries. Reporting that the file could not be analyzed."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_006",
+    "query": "How many kilometers is the driving distance between the two stadiums that hosted the 2010 and 2014 FIFA World Cup finals?",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "GAIA-style",
+    "transcript": "Step 0 — Orchestrator: Plan: identify both final stadiums, then get the driving distance. WebSurfer first.\nStep 1 — WebSurfer: 2010 final: Soccer City, Johannesburg. 2014 final: Maracanã, Rio de Janeiro.\nStep 2 — Orchestrator: ComputerTerminal, compute the driving distance between Johannesburg and Rio de Janeiro.\nStep 3 — ComputerTerminal: Computed the great-circle distance with the haversine formula: 7,113 km.\nStep 4 — Orchestrator: Final answer: approximately 7,113 km driving distance.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "Plan: identify both final stadiums, then get the driving distance. WebSurfer first."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "2010 final: Soccer City, Johannesburg. 2014 final: Maracanã, Rio de Janeiro."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "ComputerTerminal, compute the driving distance between Johannesburg and Rio de Janeiro."
+      },
+      {
+        "agent": "ComputerTerminal",
+        "content": "Computed the great-circle distance with the haversine formula: 7,113 km."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: approximately 7,113 km driving distance."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_007",
+    "query": "Summarize the three main findings of the linked 40-page climate report.",
+    "system": "CaptainAgent style (algorithm-generated)",
+    "benchmark": "Algorithm-generated task",
+    "transcript": "Step 0 — Planner: Reader extracts the key findings, Writer drafts the summary, Reviewer checks it.\nStep 1 — Reader: Read only the executive summary's first page due to a context limit and listed two findings: sea-level rise acceleration and crop-yield decline.\nStep 2 — Writer: Drafted a summary of the two findings, inventing a third finding about glacier mass loss to satisfy the 'three findings' requirement.\nStep 3 — Reviewer: The summary reads well and has three findings as requested. Approved.\nStep 4 — Planner: Delivered the summary.",
+    "steps": [
+      {
+        "agent": "Planner",
+        "content": "Reader extracts the key findings, Writer drafts the summary, Reviewer checks it."
+      },
+      {
+        "agent": "Reader",
+        "content": "Read only the executive summary's first page due to a context limit and listed two findings: sea-level rise acceleration and crop-yield decline."
+      },
+      {
+        "agent": "Writer",
+        "content": "Drafted a summary of the two findings, inventing a third finding about glacier mass loss to satisfy the 'three findings' requirement."
+      },
+      {
+        "agent": "Reviewer",
+        "content": "The summary reads well and has three findings as requested. Approved."
+      },
+      {
+        "agent": "Planner",
+        "content": "Delivered the summary."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_008",
+    "query": "What is the ISBN of the first edition of the novel that won the 1997 Booker Prize?",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "GAIA-style",
+    "transcript": "Step 0 — Orchestrator: WebSurfer, find the 1997 Booker Prize winner, then its first-edition ISBN.\nStep 1 — WebSurfer: The 1997 Booker Prize was won by 'The God of Small Things' by Arundhati Roy.\nStep 2 — Orchestrator: Now find the first-edition ISBN.\nStep 3 — WebSurfer: Opened a retailer page for the 2017 twentieth-anniversary paperback and reported its ISBN 978-0-00-826415-4.\nStep 4 — Orchestrator: Final answer: 978-0-00-826415-4.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "WebSurfer, find the 1997 Booker Prize winner, then its first-edition ISBN."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "The 1997 Booker Prize was won by 'The God of Small Things' by Arundhati Roy."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Now find the first-edition ISBN."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "Opened a retailer page for the 2017 twentieth-anniversary paperback and reported its ISBN 978-0-00-826415-4."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: 978-0-00-826415-4."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_009",
+    "query": "Convert the attached meeting_notes.docx into a table of action items with owners and due dates.",
+    "system": "CaptainAgent style (algorithm-generated)",
+    "benchmark": "Algorithm-generated task",
+    "transcript": "Step 0 — Planner: FileReader parses the document, Extractor pulls action items, Formatter builds the table.\nStep 1 — FileReader: Parsed meeting_notes.docx and returned the full text, including the 'Action items' section with five items.\nStep 2 — Extractor: Extracted only the three action items that had explicit owners, silently dropping the two items with missing owners instead of flagging them.\nStep 3 — Formatter: Built a clean three-row table with owners and due dates.\nStep 4 — Planner: Delivered the table with three action items.",
+    "steps": [
+      {
+        "agent": "Planner",
+        "content": "FileReader parses the document, Extractor pulls action items, Formatter builds the table."
+      },
+      {
+        "agent": "FileReader",
+        "content": "Parsed meeting_notes.docx and returned the full text, including the 'Action items' section with five items."
+      },
+      {
+        "agent": "Extractor",
+        "content": "Extracted only the three action items that had explicit owners, silently dropping the two items with missing owners instead of flagging them."
+      },
+      {
+        "agent": "Formatter",
+        "content": "Built a clean three-row table with owners and due dates."
+      },
+      {
+        "agent": "Planner",
+        "content": "Delivered the table with three action items."
+      }
+    ]
+  },
+  {
+    "id": "whowhen_010",
+    "query": "Which year did the architect of the Sydney Opera House win the Pritzker Prize?",
+    "system": "Magnetic-One style (hand-crafted)",
+    "benchmark": "GAIA-style",
+    "transcript": "Step 0 — Orchestrator: Two sub-questions: who designed the Sydney Opera House, and when did they win the Pritzker. WebSurfer, go.\nStep 1 — WebSurfer: The Sydney Opera House was designed by Jørn Utzon.\nStep 2 — Orchestrator: We already know enough; famous architects usually won the Pritzker in the 1990s. Report 1998 without further search.\nStep 3 — Orchestrator: Final answer: 1998.",
+    "steps": [
+      {
+        "agent": "Orchestrator",
+        "content": "Two sub-questions: who designed the Sydney Opera House, and when did they win the Pritzker. WebSurfer, go."
+      },
+      {
+        "agent": "WebSurfer",
+        "content": "The Sydney Opera House was designed by Jørn Utzon."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "We already know enough; famous architects usually won the Pritzker in the 1990s. Report 1998 without further search."
+      },
+      {
+        "agent": "Orchestrator",
+        "content": "Final answer: 1998."
+      }
+    ]
+  }
+]

@@ -1,0 +1,116 @@
+# Who&When Multi-Agent Failure Attribution
+# Based on: Shaokun Zhang, Ming Yin, Jieyu Zhang, Jiale Liu, Zhiguang Han,
+#   Jingyang Zhang, Beibin Li, Chi Wang, Huazheng Wang, Yiran Chen, and
+#   Qingyun Wu (2025). "Which Agent Causes Task Failures and When? On
+#   Automated Failure Attribution of LLM Multi-Agent Systems." Proceedings of
+#   the 42nd International Conference on Machine Learning (ICML 2025,
+#   Spotlight), PMLR 267:76583-76599. arXiv:2505.00212.
+#   Paper: https://proceedings.mlr.press/v267/zhang25cq.html
+#   Dataset: https://huggingface.co/datasets/Kevin355/Who_and_When
+#
+# Task: read the failure log of an LLM multi-agent run that did not solve its
+# query, then attribute the failure: select the single responsible agent, the
+# decisive error step (indexed from 0, and made by that agent), and describe
+# the mistake in natural language. This is the annotation protocol behind the
+# Who&When dataset, which the paper collected in three rounds (independent
+# annotation with uncertainty flagging, consensus discussion, and
+# cross-validation). The uncertainty radio below mirrors the guideline's
+# requirement to mark uncertain annotations for later discussion and voting.
+# Compare agentic/mast-failure-taxonomy: MAST is a taxonomy of HOW multi-agent
+# systems fail (14 failure modes); Who&When is attribution of WHO failed and
+# WHEN.
+#
+# Annotation instructions reproduced verbatim from Appendix F, Figure 10 of
+# the paper (the standardized annotation guideline used by all annotators).
+
+annotation_task_name: "Who&When Multi-Agent Failure Attribution"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "query"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You are shown the failure log of an LLM multi-agent system that failed to
+  solve the user's query. Attribute the failure using the guideline below.
+
+  **Annotation Guideline** (reproduced verbatim from Appendix F, Figure 10):
+
+  Failure Responsible Agent:
+
+  a) Select the single agent that should be directly responsible for this
+  failure in your mind. Allow for some subjectivity, but be prepared to give
+  your reasons.
+  b) Don't be too strict. If there exist agents that do redundant steps and
+  agents that make mistakes, choose the agent who makes mistakes.
+  c) If there are no agents that make obvious mistakes, decide one single
+  agent in your mind.
+  d) If multiple agents make mistakes, choose the one that made the most
+  serious mistake
+
+  Decisive error step:
+
+  a) First decide one single mistake agent, then decide one single mistake
+  step. The Mistake step must be made by the mistake agent.
+  b) If the mistake agent makes mistakes in multiple steps, choose the
+  first step.
+  c) Index from 0.
+
+  Failure Reasons:
+
+  a) First, use natural language to describe the reason. E.g., "The agent
+  wrote the wrong code".
+  b) Make sure the reader could understand the annotations.
+
+  Others:
+
+  a) Accurately record the time of labeling.
+  b) Mark all annotation if you have any uncertain, and then we need to vote
+  and discuss later.
+
+annotation_schemes:
+  - annotation_type: failure_attribution
+    name: attribution
+    description: "Which agent is responsible for the failure, at which step, and why?"
+    steps_key: steps
+    agent_key: agent
+
+  - annotation_type: radio
+    name: certainty
+    description: "Are you certain about this attribution? Uncertain annotations go to group discussion and voting."
+    labels:
+      - "Certain — undoubtedly confident this attribution is correct"
+      - "Uncertain — mark for later discussion and voting"
+    keyboard_shortcuts:
+      "Certain — undoubtedly confident this attribution is correct": "1"
+      "Uncertain — mark for later discussion and voting": "2"
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>System:</strong> {{system}} &nbsp;·&nbsp; <strong>Source benchmark:</strong> {{benchmark}}
+    </div>
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 6px 0; color: #991b1b; font-size: 15px;">Failed query</h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #450a0a;">{{query}}</p>
+    </div>
+    <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">Failure log (steps indexed from 0)</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #1f2937;">{{transcript}}</div>
+    </div>
+    <p style="color: #6b7280; font-size: 13px; margin: 0;">Select the responsible agent and decisive error step below — the choices are populated from this run's own turns — then describe the failure reason and flag your certainty.</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 20
+annotation_per_instance: 3
+allow_skip: true

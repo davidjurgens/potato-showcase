@@ -1,0 +1,148 @@
+# MultiAgentBench Collaboration Scorecard
+# Based on: Kunlun Zhu, Hongyi Du, Zhaochen Hong, Xiaocheng Yang, Shuyi Guo,
+#   Zhe Wang, Zhenhailong Wang, Cheng Qian, Xiangru Tang, Heng Ji, and
+#   Jiaxuan You (2025). "MultiAgentBench: Evaluating the Collaboration and
+#   Competition of LLM agents." Proceedings of the 63rd Annual Meeting of the
+#   Association for Computational Linguistics (Volume 1: Long Papers),
+#   pp. 8580-8622. arXiv:2503.01935.
+#   Paper: https://aclanthology.org/2025.acl-long.421/
+#   Dataset: https://github.com/ulab-uiuc/MARBLE
+#
+# Task: rate a multi-agent run's communication and planning quality on
+# 5-point scales using the paper's rubric, and check off run milestones
+# (MultiAgentBench's milestone-based KPIs). IMPORTANT CAVEAT: the paper's
+# human evaluation (Appendix A.3) collected coordination-level ratings — one
+# communication score and one planning score per run, averaged over two
+# annotators. The per-agent rows of the scorecard below are a showcase
+# extension of that protocol to agent granularity; only the team-level scores
+# correspond to the published human-rating design.
+#
+# Annotation instructions reproduced verbatim (with "[...]" trims) from the
+# Communication Evaluation Prompt (Appendix Figure 22) and the Planning
+# Evaluation Prompt (Appendix Figure 23). Appendix A.3 states that each human
+# annotator "uses the same instructions and sees the same inputs as the LLMs
+# when rating the outputs for both the planning and communication
+# dimensions," so these prompts are the instructions the human raters used.
+
+annotation_task_name: "MultiAgentBench Collaboration Scorecard"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "task"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  Read the multi-agent run below, then score its communication and planning
+  on 5-point scales. The scoring instructions are reproduced verbatim from
+  the paper's evaluation prompts (Appendix Figures 22-23), which its human
+  annotators also used.
+
+  **Communication** (Appendix Figure 22):
+
+  "You are tasked with evaluating the quality of communication among agents
+  operating within a multiagent system. Evaluate whether agents made
+  effective decisions based on the provided task results and whether their
+  communication aligns with their agent profiles and social relationships.
+  Consider the following:
+  1. Effective Decision-Making: Did agents use task results to guide their
+  decisions effectively?
+  2. Clarity and Precision: Were communications clear and unambiguous?
+  3. Adherence to Social Relationships: Did communications reflect the
+  expected interactions based on the agents' social relationships?
+  4. Alignment with Agent Profiles: Were the messages consistent with the
+  defined agent profiles?
+  5. Overall Effectiveness: Did the communication facilitate task progress,
+  considering both cooperative and competitive aspects?
+
+  Scoring Criteria (Communication):
+  - 5 (Exceptional): Outstanding communication with clear, precise messages
+  fully aligned with agent profiles and social relationships. [...]
+  - 4 (Very Good): Mostly effective communication with only minor lapses
+  and slight ambiguities. [...]
+  - 3 (Adequate): Acceptable communication with moderate ambiguities or
+  inconsistencies. [...]
+  - 2 (Poor): Frequent unclear or misaligned communications causing
+  significant miscommunication. [...]
+  - 1 (Very Poor): Largely ineffective communication with confusing messages
+  and complete misalignment. [...]"
+
+  **Planning** (Appendix Figure 23):
+
+  "You are tasked with evaluating the effectiveness of the planning process
+  in a multiagent system. Evaluate whether the planning across all iterations
+  demonstrates clear role definitions, effective task assignments, and a
+  rational workload distribution that aligns with each agent's profile.
+  Consider the following:
+  1. Clarity of Task Assignment: Were tasks assigned in a clear and
+  unambiguous manner?
+  2. Definition of Roles: Were roles and responsibilities clearly defined in
+  each iteration?
+  3. Workload Distribution: Was the distribution of tasks reasonable and
+  aligned with each agent's profile?
+  4. Effectiveness of Outcomes: Did the planning lead to successful progress
+  in task advancement across iterations?
+  5. Overall Strategic Coordination: Did the planning incorporate effective
+  cooperation and competition strategies?
+
+  Scoring Criteria (Planning):
+  - 5 (Exceptional Planning): Planning is exemplary; every iteration shows
+  clear, well-structured task assignments with roles perfectly defined and
+  workloads optimally distributed, consistently advancing the objectives. [...]
+  - 4 (Very Good Planning): Planning is mostly effective with only minor
+  ambiguities; roles are clear and task assignments are appropriate, though
+  there were slight inefficiencies. [...]
+  - 3 (Adequate Planning): Planning is acceptable but shows moderate
+  ambiguities or inefficiencies. [...]
+  - 2 (Poor Planning): There were frequent ambiguities in task assignments
+  and role definitions; planning was inconsistent and did not align well with
+  agent profiles, resulting in noticeable inefficiencies. [...]
+  - 1 (Very Poor Planning): Planning was severely flawed; task assignments
+  were unclear, roles were undefined, and workload distributions were
+  unreasonable, hindering progress. [...]"
+
+  Apply these criteria at the team level as in the paper. As a showcase
+  extension beyond the published protocol, also apply the same two dimensions
+  to each individual agent's contribution, and check off which run milestones
+  were reached (MultiAgentBench measures milestone-based KPIs alongside these
+  ratings).
+
+annotation_schemes:
+  - annotation_type: agent_scorecard
+    name: collaboration_scorecard
+    description: "Score each agent and the team on communication and planning (5-point scales per the paper's rubric), and check the milestones the run reached."
+    steps_key: steps
+    agent_key: agent
+    scale: 5
+    agent_dimensions: [communication, planning]
+    team_dimensions: [communication, planning]
+    milestones: [coherent plan formed, roles and tasks assigned, milestone KPI achieved, final deliverable produced]
+
+html_layout: |
+  <div style="padding: 15px; max-width: 900px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Scenario:</strong> {{scenario}} &nbsp;·&nbsp; <strong>Coordination structure:</strong> {{coordination}}
+    </div>
+    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 6px 0; color: #3730a3; font-size: 15px;">Task</h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #1e1b4b;">{{task}}</p>
+    </div>
+    <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
+      <h3 style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">Run transcript</h3>
+      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #1f2937;">{{transcript}}</div>
+    </div>
+    <p style="color: #6b7280; font-size: 13px; margin: 0;">The scorecard below lists each participating agent (derived from the run's turns), the team-level dimensions, and the milestone checklist.</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 20
+annotation_per_instance: 2
+allow_skip: true

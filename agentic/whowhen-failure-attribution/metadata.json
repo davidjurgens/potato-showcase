@@ -1,0 +1,71 @@
+{
+  "title": "Who&When Multi-Agent Failure Attribution",
+  "description": "Failure attribution for LLM multi-agent systems, based on the Who&When dataset (Zhang et al., ICML 2025 Spotlight). Annotators read the failure log of a run that did not solve its query and produce the attribution triple: the single responsible agent, the decisive error step (indexed from 0), and a natural-language reason, plus a certainty flag for group discussion. Complements agentic/mast-failure-taxonomy: MAST categorizes HOW multi-agent systems fail, while Who&When attributes WHO failed and WHEN.",
+  "overview": [
+    "Who&When is the dataset behind 'Which Agent Causes Task Failures and When?', which proposes automated failure attribution for LLM multi-agent systems as a research problem. It comprises failure logs from 127 multi-agent systems — both algorithm-generated systems and the hand-crafted Magnetic-One system run on GAIA and AssistantBench queries — with fine-grained annotations linking each failure to the responsible agent and the decisive error step.",
+    "The paper's annotation protocol is expert and multi-round. Three AI-agent experts first annotated independently under a standardized guideline (reproduced verbatim in this config from Appendix F): select the single agent directly responsible, then the first mistake step made by that agent (indexed from 0), then describe the reason in natural language, flagging any uncertain annotations. Uncertain cases then went through consensus discussion — persuasion rather than simple majority vote — followed by a cross-validation round in which each expert reviewed another's annotations.",
+    "The task is genuinely hard: annotators spent 30.9, 30.2, and 23.2 hours respectively, often re-executing searches and visiting websites to check whether an agent could have retrieved the information it missed. The paper's automated baselines underscore the difficulty — the best method identifies the responsible agent only 53.5 percent of the time and the decisive step 14.2 percent, motivating high-quality human annotation of the kind this config supports.",
+    "This Potato config uses the failure_attribution scheme, which populates the agent dropdown and step picker from the trace's own turns, so annotators choose among agents and steps that actually occurred. A radio captures the guideline's certain/uncertain flag for routing to discussion and voting. The sample data contains ten self-authored failure logs in the style of Magnetic-One and CaptainAgent runs, covering characteristic failure types: misread sources, premature termination, hallucinated content, silent constraint drops, and verification failures."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2025 (arXiv:2505.00212); ICML 2025 Spotlight, PMLR 267"
+    },
+    {
+      "label": "Multi-agent systems covered",
+      "value": "127"
+    },
+    {
+      "label": "Annotators",
+      "value": "3 AI-agent experts"
+    },
+    {
+      "label": "Annotation rounds",
+      "value": "3 (independent + consensus discussion + cross-validation)"
+    },
+    {
+      "label": "Annotation labor",
+      "value": "30.9 / 30.2 / 23.2 human-hours per annotator"
+    },
+    {
+      "label": "Label per failure",
+      "value": "responsible agent + decisive error step + natural-language reason"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "failure_attribution",
+    "radio"
+  ],
+  "domain": [
+    "Multi-Agent Systems",
+    "Agent Debugging"
+  ],
+  "useCase": [
+    "Failure Attribution",
+    "Agent Trace Analysis",
+    "System Debugging"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "multi-agent",
+    "failure-attribution",
+    "agent-debugging",
+    "who-and-when",
+    "llm-agents"
+  ],
+  "featured": false,
+  "paperReference": "Zhang et al., ICML 2025 (Spotlight)",
+  "paperUrl": "https://proceedings.mlr.press/v267/zhang25cq.html",
+  "datasetUrl": "https://huggingface.co/datasets/Kevin355/Who_and_When",
+  "citation": "@inproceedings{pmlr-v267-zhang25cq,\n  title = {Which Agent Causes Task Failures and When? {O}n Automated Failure Attribution of {LLM} Multi-Agent Systems},\n  author = {Zhang, Shaokun and Yin, Ming and Zhang, Jieyu and Liu, Jiale and Han, Zhiguang and Zhang, Jingyang and Li, Beibin and Wang, Chi and Wang, Huazheng and Chen, Yiran and Wu, Qingyun},\n  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},\n  pages = {76583--76599},\n  year = {2025},\n  volume = {267},\n  series = {Proceedings of Machine Learning Research},\n  publisher = {PMLR},\n  url = {https://proceedings.mlr.press/v267/zhang25cq.html}\n}"
+}

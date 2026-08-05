@@ -1,0 +1,71 @@
+{
+  "title": "API-Bank Tool Call Review",
+  "description": "Per-call review of API (tool) calls in tool-augmented assistant dialogues, based on API-Bank (Li et al., EMNLP 2023). Every API call in a dialogue becomes a reviewable card showing the tool name and arguments; annotators judge whether the right API was chosen, whether the arguments are correct, and whether the calls occur in the right order, then rate whether the assistant's final response is grounded in the API execution results.",
+  "overview": [
+    "API-Bank is a comprehensive benchmark for tool-augmented LLMs built around a pool of executable APIs spanning search engines, calendars, smart-home control, banking, health, and more. Its evaluation set contains 314 manually annotated dialogues with 753 API calls over 73 APIs, testing three graded abilities: Call (invoke a given API correctly), Retrieval+Call (find the right API first via an API Search), and Plan+Retrieval+Call (plan a chain of calls for a complex requirement).",
+    "The benchmark's human annotation was intensive: computer-science students designed queries against real API documents, annotated the calls and responses, and executed them against the system. Each dialogue required discussion between two annotators, and two additional annotators reviewed quality — the format, logical consistency, and reasonability of API calls — at a cost of about $8 per dialogue, with 21.5 percent of annotated dialogues discarded. Evaluation then scores predicted calls by consistency with the annotated calls (same database queries or modifications, same returned results) and scores responses against annotated references.",
+    "This Potato config turns that review process into a reusable annotation task using the tool_call_review scheme: tool calls are extracted from the dialogue steps at render time, and each gets a verdict (correct, wrong_tool, wrong_args, wrong_order) with notes — exactly the failure axes API-Bank's abilities isolate. A dialogue-level radio adds API-Bank's second evaluation perspective, judging whether the final response is grounded in the returned API results.",
+    "The sample dialogues are self-authored in API-Bank's style across its domains and three ability levels, and include deliberate faults to review: swapped transfer arguments, an unrequested thermostat call, an out-of-order email before the attendee list was retrieved, and a non-recurring reminder for a daily request."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2023 (arXiv:2304.08244); EMNLP 2023"
+    },
+    {
+      "label": "Evaluation dialogues",
+      "value": "314 (753 API calls, 73 APIs, 8 domains)"
+    },
+    {
+      "label": "Training dialogues",
+      "value": "1,888 (2,138 simulated APIs, 1,000 domains)"
+    },
+    {
+      "label": "Abilities tested",
+      "value": "Call, Retrieval+Call, Plan+Retrieval+Call"
+    },
+    {
+      "label": "Annotation cost",
+      "value": "$8 per dialogue; 21.5% of dialogues discarded in QA"
+    },
+    {
+      "label": "Annotators per dialogue",
+      "value": "2 annotators + 2 quality reviewers"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "tool_call_review",
+    "radio"
+  ],
+  "domain": [
+    "Tool Use",
+    "Dialogue"
+  ],
+  "useCase": [
+    "Tool-Augmented LLMs",
+    "Function Calling Evaluation",
+    "Agent Trace Review"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "tool-calling",
+    "api",
+    "function-calling",
+    "agent-evaluation",
+    "dialogue"
+  ],
+  "featured": false,
+  "paperReference": "Li et al., EMNLP 2023",
+  "paperUrl": "https://aclanthology.org/2023.emnlp-main.187/",
+  "datasetUrl": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank",
+  "citation": "@inproceedings{li-etal-2023-api,\n    title = \"{API}-Bank: A Comprehensive Benchmark for Tool-Augmented {LLM}s\",\n    author = \"Li, Minghao and Zhao, Yingxiu and Yu, Bowen and Song, Feifan and Li, Hangyu and Yu, Haiyang and Li, Zhoujun and Huang, Fei and Li, Yongbin\",\n    booktitle = \"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing\",\n    month = dec,\n    year = \"2023\",\n    address = \"Singapore\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2023.emnlp-main.187/\",\n    doi = \"10.18653/v1/2023.emnlp-main.187\",\n    pages = \"3102--3116\"\n}"
+}

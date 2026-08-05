@@ -1,0 +1,71 @@
+{
+  "title": "AITW Mobile Trajectory Review",
+  "description": "Step-by-step review of Android device-control episodes in the style of Android in the Wild (AITW; Rawles et al., NeurIPS 2023). Each step shows the screen and the action taken (tap, scroll, type, system button, or status action), with tap coordinates rendered as a grounding marker; annotators judge each action's correctness and grounding against the natural-language instruction, then give an episode-level verdict. Complements agentic/androidworld-mobile-agent-eval: AndroidWorld is a live-environment benchmark, while AITW is a static corpus of human demonstrations.",
+  "overview": [
+    "Android in the Wild (AITW) is a large-scale dataset for Android device control: 715,142 episodes of humans performing natural-language tasks on emulated Android devices, spanning 30,378 unique instructions. Each episode is a sequence of screenshots and precisely logged actions in a compact action space of dual-point gestures (taps and scrolls represented by start/end touch positions), typed text, the Home/Back/Enter buttons, and the status actions task_complete and task_impossible.",
+    "AITW is a demonstration corpus rather than a labeling corpus: paid raters carried out the tasks on emulators, guided by the prompt 'Imagine a friend is asking you to perform the task on their phone...', and were asked to interact naturally, avoid clicking on anything unrelated to the task, and avoid unnecessary scrolling. A second stage used hindsight language relabeling, in which raters watched recorded trajectories and wrote descriptive labels for short single-step sub-sequences.",
+    "This showcase task adapts that collection protocol into a review task over AITW-style episodes, the quality-control step needed whenever such demonstrations are collected or replayed by agents. The gui_trajectory scheme presents each step's screenshot and action together, draws the tap coordinate as a grounding marker on the screenshot, and records a per-step verdict (correct, wrong element, wrong action, or hallucinated) with notes, followed by an episode-level radio verdict that mirrors AITW's task_complete / task_impossible status semantics.",
+    "The sample data uses placeholder screenshot URLs and self-authored episodes covering AITW's task categories (Google apps, app install, web shopping, general Q&A), including deliberately flawed steps — an ad tapped instead of a search result, an unnecessary Force stop, an unverified answer — so reviewers have realistic judgments to make. Compare the agentic/androidworld-mobile-agent-eval task, which evaluates agents in a live AndroidWorld environment rather than reviewing static demonstrations."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2023 (arXiv:2307.10088); NeurIPS 2023 Datasets & Benchmarks"
+    },
+    {
+      "label": "Episodes",
+      "value": "715,142"
+    },
+    {
+      "label": "Screens",
+      "value": "5,689,993"
+    },
+    {
+      "label": "Unique prompts",
+      "value": "30,378"
+    },
+    {
+      "label": "Subsets",
+      "value": "GoogleApps, Install, WebShopping, General, Single"
+    },
+    {
+      "label": "Action space",
+      "value": "dual-point gesture, type, go_back, go_home, enter, task_complete, task_impossible"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "gui_trajectory",
+    "radio"
+  ],
+  "domain": [
+    "Mobile UI",
+    "GUI Agents"
+  ],
+  "useCase": [
+    "Device Control",
+    "Demonstration Quality Review",
+    "Agent Trajectory Evaluation"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "android",
+    "gui-trajectory",
+    "device-control",
+    "mobile-agent",
+    "demonstrations"
+  ],
+  "featured": false,
+  "paperReference": "Rawles et al., NeurIPS 2023 Datasets & Benchmarks",
+  "paperUrl": "https://arxiv.org/abs/2307.10088",
+  "datasetUrl": "https://github.com/google-research/google-research/tree/master/android_in_the_wild",
+  "citation": "@inproceedings{rawles2023android,\n  title={Android in the Wild: A Large-Scale Dataset for Android Device Control},\n  author={Rawles, Christopher and Li, Alice and Rodriguez, Daniel and Riva, Oriana and Lillicrap, Timothy},\n  booktitle={Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},\n  year={2023}\n}"
+}
