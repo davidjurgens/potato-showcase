@@ -1,0 +1,76 @@
+{
+  "title": "Ruddit: Offensiveness Best-Worst Scaling",
+  "description": "Best-worst scaling annotation of the degree of offensiveness of English Reddit comments, based on Ruddit (Hada, Sudhir, Mishra, Yannakoudakis, Mohammad, and Shutova, ACL-IJCNLP 2021). Annotators view 4-tuples of comments and mark the comment that is most offensive (least supportive) and the comment that is least offensive (most supportive); aggregating these judgments yields fine-grained real-valued offensiveness scores. It complements the pairwise/BWS design in evaluation/chatbot-arena-pairwise-bws and the NRC BWS lexicon tasks in text/emotion-sentiment/, which approximate BWS with radio buttons — here the native bws scheme handles tuple generation and scoring directly.",
+  "overview": [
+    "Ruddit is a dataset of 6,000 English Reddit comments annotated with fine-grained, real-valued scores of offensiveness ranging from -1 (maximally supportive) to 1 (maximally offensive). Rather than the coarse binary or ordinal labels used in most abusive-language datasets, the authors used best-worst scaling (BWS), a comparative annotation method that produces more reliable fine-grained scores than direct rating scales.",
+    "In the BWS setup, each comment appeared in 8 different 4-tuples, and each 4-tuple was annotated by 6 crowd-workers who selected the most offensive (least supportive) and least offensive (most supportive) comment in the tuple. Scores were computed with the standard counting procedure: the proportion of times a comment was chosen most offensive minus the proportion of times it was chosen least offensive. The resulting scores showed high split-half reliability (Pearson r of about 0.88).",
+    "The paper deliberately frames offensiveness and supportiveness as two ends of one scale, and its annotator guidelines define offensive comments broadly (denigration, name calling, hostility, bullying, hurtful sarcasm, with or without profanity) and supportive comments as agreeable, kind, pleasant, and respectful. The instructions in this config reproduce those guidelines verbatim from Figure 5 in the paper's appendix.",
+    "This config uses Potato's native bws scheme: the server samples 4-tuples from the comment pool (8 appearances per comment, matching the paper), presents best/worst questions with keyboard shortcuts, and computes counting, Bradley-Terry, or Plackett-Luce scores from the collected judgments. The sample data are self-authored comments spanning the supportive-to-offensive range, not comments from the released dataset."
+  ],
+  "datasetStats": [
+    {
+      "label": "Comments",
+      "value": "6,000"
+    },
+    {
+      "label": "Tuple size",
+      "value": "4"
+    },
+    {
+      "label": "Appearances per comment",
+      "value": "8 different 4-tuples"
+    },
+    {
+      "label": "Annotators per tuple",
+      "value": "6"
+    },
+    {
+      "label": "Unique annotators",
+      "value": "725"
+    },
+    {
+      "label": "Score range",
+      "value": "-1 (supportive) to 1 (offensive)"
+    },
+    {
+      "label": "Split-half reliability",
+      "value": "Pearson r = 0.8818"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "bws"
+  ],
+  "domain": [
+    "NLP",
+    "Computational Social Science",
+    "Content Moderation"
+  ],
+  "useCase": [
+    "Offensive Language Detection",
+    "Best-Worst Scaling",
+    "Fine-Grained Rating"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "best-worst-scaling",
+    "offensiveness",
+    "reddit",
+    "abusive-language",
+    "comparative-annotation",
+    "maxdiff"
+  ],
+  "featured": false,
+  "paperReference": "Rishav Hada, Sohi Sudhir, Pushkar Mishra, Helen Yannakoudakis, Saif M. Mohammad, and Ekaterina Shutova. 2021. Ruddit: Norms of Offensiveness for English Reddit Comments. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers), pages 2700-2717.",
+  "paperUrl": "https://aclanthology.org/2021.acl-long.210/",
+  "datasetUrl": "https://github.com/hadarishav/Ruddit",
+  "citation": "@inproceedings{hada-etal-2021-ruddit,\n    title = \"Ruddit: {N}orms of Offensiveness for {E}nglish {R}eddit Comments\",\n    author = \"Hada, Rishav  and\n      Sudhir, Sohi  and\n      Mishra, Pushkar  and\n      Yannakoudakis, Helen  and\n      Mohammad, Saif M.  and\n      Shutova, Ekaterina\",\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.acl-long.210/\",\n    doi = \"10.18653/v1/2021.acl-long.210\",\n    pages = \"2700--2717\"\n}"
+}

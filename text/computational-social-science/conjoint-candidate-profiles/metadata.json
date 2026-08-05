@@ -1,0 +1,69 @@
+{
+  "title": "Conjoint Analysis: Immigrant Admission Preferences",
+  "description": "Choice-based conjoint annotation modeled on the immigrant admission experiment in Hainmueller, Hopkins, and Yamamoto (Political Analysis, 2014), the paper that established the causal-inference framework for conjoint survey experiments. Respondents act as immigration officials: each task shows a pair of immigrant profiles with nine randomly assigned attributes (education, profession, country of origin, language skills, and more); the respondent makes a forced choice between the two profiles and then rates each on a 1-7 admission scale, exactly as in the paper's survey instrument.",
+  "overview": [
+    "Conjoint analysis presents respondents with multi-attribute profiles and asks them to choose or rate among them, allowing researchers to estimate the causal effect of each attribute on the overall choice. Hainmueller, Hopkins, and Yamamoto (2014) formalized this design in the potential-outcomes framework, introduced the average marginal component effect (AMCE), and showed it is nonparametrically identified under randomization assumptions that typical conjoint experiments satisfy.",
+    "The paper's running empirical examples are a presidential-candidate conjoint (311 respondents, six choice tasks each, eight candidate attributes) and an immigrant-admission conjoint fielded through Knowledge Networks, in which respondents acted as immigration officials, evaluated five pairings of immigrant profiles, made a forced choice within each pair, and rated each profile from 1 (should absolutely not admit) to 7 (should definitely admit).",
+    "The immigrant profiles combined nine attributes: gender, education level, language skills, country of origin, profession, job experience, employment plans, reason for application, and prior trips to the United States. Two randomization restrictions kept profiles plausible: applicants fleeing persecution came only from countries such as Iraq, Sudan, or Somalia, and high-skill professions required at least two years of college. Potato's conjoint scheme randomizes attributes independently, so this config does not enforce those restrictions.",
+    "This config uses Potato's conjoint scheme to generate the paired profiles from the paper's attribute-level sets (reproduced from Figure 3) and renders the forced-choice question below the profile cards, with two 1-7 likert items reproducing the per-profile rating questions. The annotation instructions are the survey instrument wording shown in Figure 1 of the paper. Because the design generates profiles from attributes, the sample-data items are self-authored task framings rather than dataset rows."
+  ],
+  "datasetStats": [
+    {
+      "label": "Published",
+      "value": "Political Analysis 22(1):1-30, 2014"
+    },
+    {
+      "label": "Design",
+      "value": "Paired-profile choice-based conjoint with per-profile 1-7 ratings"
+    },
+    {
+      "label": "Immigrant attributes",
+      "value": "9"
+    },
+    {
+      "label": "Pairings per respondent (immigrant experiment)",
+      "value": "5"
+    },
+    {
+      "label": "Candidate experiment",
+      "value": "311 respondents, 1,733 pairings, 8 attributes"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "conjoint",
+    "likert"
+  ],
+  "domain": [
+    "Computational Social Science",
+    "Political Science",
+    "Survey Research"
+  ],
+  "useCase": [
+    "Stated Preference Experiments",
+    "Attribute Importance Estimation",
+    "Preference Elicitation"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "conjoint-analysis",
+    "discrete-choice",
+    "survey-experiment",
+    "immigration",
+    "amce",
+    "forced-choice"
+  ],
+  "featured": false,
+  "paperReference": "Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto. 2014. Causal Inference in Conjoint Analysis: Understanding Multidimensional Choices via Stated Preference Experiments. Political Analysis 22(1):1-30.",
+  "paperUrl": "https://doi.org/10.1093/pan/mpt024",
+  "datasetUrl": "https://doi.org/10.1093/pan/mpt024",
+  "citation": "@article{hainmueller2014causal,\n    title = {Causal Inference in Conjoint Analysis: Understanding Multidimensional Choices via Stated Preference Experiments},\n    author = {Hainmueller, Jens and Hopkins, Daniel J. and Yamamoto, Teppei},\n    journal = {Political Analysis},\n    volume = {22},\n    number = {1},\n    pages = {1--30},\n    year = {2014},\n    publisher = {Cambridge University Press},\n    doi = {10.1093/pan/mpt024}\n}"
+}

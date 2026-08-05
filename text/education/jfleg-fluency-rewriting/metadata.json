@@ -1,0 +1,73 @@
+{
+  "title": "JFLEG Fluency Rewriting for Grammatical Error Correction",
+  "description": "Holistic fluency rewriting of learner-English sentences based on the JFLEG corpus (Napoles, Sakaguchi, and Tetreault, EACL 2017). Annotators edit sentences written by second-language learners of English so they sound natural and fluent to a native speaker — fixing grammar, spelling, and awkward phrasing while keeping the original wording as much as possible — and then rate how difficult each sentence was to correct on a 5-point scale.",
+  "overview": [
+    "JFLEG (JHU FLuency-Extended GUG) is a benchmark for grammatical error correction built by Napoles, Sakaguchi, and Tetreault and presented at EACL 2017. It departs from earlier GEC corpora by collecting holistic fluency rewrites rather than minimal edits: instead of only fixing individual grammatical mistakes, annotators rewrite each sentence so that it reads as natural, fluent English.",
+    "The source sentences come from essays written by English language learners for the TOEFL exam (the GUG corpus development and test sets). Fifty annotators from the United States, screened with a qualifying task, produced four independent corrections for each of 1,511 sentences, and additionally rated the difficulty of correcting each sentence on a 5-point scale.",
+    "The instructions ask for conservative edits — keep the original words, phrases, and structure as much as possible, do not split a sentence in two, and leave sentences unchanged when they already sound natural. This balance between fluency and conservatism is what distinguishes JFLEG-style annotation from both minimal-edit GEC and free paraphrasing.",
+    "The Potato config reproduces this workflow with the text_edit scheme, which pre-fills an editor with the learner sentence and tracks a live word-level diff and edit-distance counters as the annotator rewrites it, plus a 5-point Likert item for correction difficulty. Use it to collect fluency-edit references for GEC, post-editing, or text-simplification research."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "EACL 2017"
+    },
+    {
+      "label": "Sentences",
+      "value": "1,511 (GUG dev and test sets)"
+    },
+    {
+      "label": "Corrections per sentence",
+      "value": "4"
+    },
+    {
+      "label": "Annotators",
+      "value": "50 (qualification-screened, US-based)"
+    },
+    {
+      "label": "Source",
+      "value": "TOEFL essays by English learners"
+    },
+    {
+      "label": "Mean rated difficulty",
+      "value": "3.5 (on a 5-point scale)"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "text_edit",
+    "likert"
+  ],
+  "domain": [
+    "NLP",
+    "Education",
+    "Grammatical Error Correction"
+  ],
+  "useCase": [
+    "Grammatical Error Correction",
+    "Fluency Editing",
+    "Language Learning"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "grammatical-error-correction",
+    "fluency",
+    "text-editing",
+    "learner-english",
+    "post-editing",
+    "JFLEG"
+  ],
+  "featured": false,
+  "paperReference": "Courtney Napoles, Keisuke Sakaguchi, and Joel Tetreault. 2017. JFLEG: A Fluency Corpus and Benchmark for Grammatical Error Correction. In Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers, pages 229-234.",
+  "paperUrl": "https://aclanthology.org/E17-2037/",
+  "datasetUrl": "https://github.com/keisks/jfleg",
+  "citation": "@inproceedings{napoles-etal-2017-jfleg,\n    title = \"{JFLEG}: A Fluency Corpus and Benchmark for Grammatical Error Correction\",\n    author = \"Napoles, Courtney  and\n      Sakaguchi, Keisuke  and\n      Tetreault, Joel\",\n    editor = \"Lapata, Mirella  and\n      Blunsom, Phil  and\n      Koller, Alexander\",\n    booktitle = \"Proceedings of the 15th Conference of the {E}uropean Chapter of the Association for Computational Linguistics: Volume 2, Short Papers\",\n    month = apr,\n    year = \"2017\",\n    address = \"Valencia, Spain\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/E17-2037/\",\n    pages = \"229--234\"\n}"
+}

@@ -1,0 +1,72 @@
+{
+  "title": "RCV1: Hierarchical Topic Coding",
+  "description": "Hierarchical multi-label Topic coding of newswire stories, based on Reuters Corpus Volume 1 (Lewis, Yang, Rose, and Li, JMLR 2004). Annotators read an English news story and assign all applicable Topic codes from a tree-structured taxonomy spanning CCAT (Corporate/Industrial), ECAT (Economics), GCAT (Government/Social), and MCAT (Markets), following the documented Reuters coding policies: at least one Topic code per story and the most specific appropriate codes. Note that the original RCV1 coding was production editorial work by Reuters editors, partly machine-assisted, under the Reuters Business Briefing coding policies; this task recreates the manual Topic-coding judgment in isolation.",
+  "overview": [
+    "Reuters Corpus Volume 1 (RCV1) is an archive of 806,791 English newswire stories produced by Reuters journalists between August 1996 and August 1997, and remains one of the most influential benchmarks for multi-label text categorization. Each story carries category codes from three sets — Topics, Industries, and Regions — assigned to support retrieval in the Reuters Business Briefing product.",
+    "Topic codes capture the major subjects of a story and are organized in four hierarchical groups: CCAT (Corporate/Industrial), ECAT (Economics), GCAT (Government/Social), and MCAT (Markets). Lewis et al. determined that 103 Topic codes were actually available for assignment, alongside 354 valid Industry codes and 366 Region codes. Two documented coding policies governed assignment: the Minimum Code Policy (each story needed at least one Topic code and one Region code) and the Hierarchy Policy (assign the most specific appropriate codes, with ancestors added, usually automatically).",
+    "Unlike purpose-built research annotation, RCV1's labels came from a production editorial workflow: stories first passed through a rule-based autocoder (TIS), stories failing the Minimum Code check were routed to human editors, and all stories entered a holding queue that editors reviewed every six hours. The paper documents this pipeline in detail, which is one reason RCV1 is also a case study in how real-world coding practice shapes benchmark data.",
+    "This config uses Potato's hierarchical_multiselect scheme to recreate the manual Topic-coding judgment: an expandable code tree with search, no auto-propagation (matching the instruction to select the most specific codes and leave ancestor expansion to downstream processing), and a required-selection constraint reflecting the Minimum Code Policy. The taxonomy is a representative subset of the 103 valid Topic codes; Region and Industry coding are omitted. The sample stories are self-authored newswire-style texts, not Reuters articles."
+  ],
+  "datasetStats": [
+    {
+      "label": "Documents",
+      "value": "806,791 (RCV1-v1); 804,414 (RCV1-v2)"
+    },
+    {
+      "label": "Period",
+      "value": "August 1996 - August 1997"
+    },
+    {
+      "label": "Valid Topic codes",
+      "value": "103, in 4 hierarchical groups (CCAT, ECAT, GCAT, MCAT)"
+    },
+    {
+      "label": "Valid Industry codes",
+      "value": "354"
+    },
+    {
+      "label": "Valid Region codes",
+      "value": "366"
+    },
+    {
+      "label": "Coding effort",
+      "value": "~12 person-years (one estimate)"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "hierarchical_multiselect"
+  ],
+  "domain": [
+    "NLP",
+    "Text Categorization",
+    "News"
+  ],
+  "useCase": [
+    "Hierarchical Classification",
+    "Multi-Label Annotation",
+    "Editorial Coding"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "rcv1",
+    "reuters",
+    "topic-classification",
+    "hierarchical-labels",
+    "multi-label",
+    "newswire"
+  ],
+  "featured": false,
+  "paperReference": "David D. Lewis, Yiming Yang, Tony G. Rose, and Fan Li. 2004. RCV1: A New Benchmark Collection for Text Categorization Research. Journal of Machine Learning Research 5:361-397.",
+  "paperUrl": "https://www.jmlr.org/papers/v5/lewis04a.html",
+  "datasetUrl": "https://trec.nist.gov/data/reuters/reuters.html",
+  "citation": "@article{lewis2004rcv1,\n    title = {{RCV1}: A New Benchmark Collection for Text Categorization Research},\n    author = {Lewis, David D. and Yang, Yiming and Rose, Tony G. and Li, Fan},\n    journal = {Journal of Machine Learning Research},\n    volume = {5},\n    pages = {361--397},\n    year = {2004},\n    url = {https://www.jmlr.org/papers/v5/lewis04a.html}\n}"
+}

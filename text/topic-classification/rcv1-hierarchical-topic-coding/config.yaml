@@ -1,0 +1,157 @@
+# RCV1 — Hierarchical Topic Coding of Newswire Stories
+# Based on the Reuters Corpus Volume 1 benchmark:
+#   David D. Lewis, Yiming Yang, Tony G. Rose, and Fan Li (2004), "RCV1: A New
+#   Benchmark Collection for Text Categorization Research." Journal of Machine
+#   Learning Research 5:361-397.
+#   Paper: https://www.jmlr.org/papers/v5/lewis04a.html (no DOI; JMLR URL canonical)
+#   Dataset: https://trec.nist.gov/data/reuters/reuters.html
+#
+# Task: assign hierarchical Topic codes to an English newswire story. RCV1's
+# Topic codes are organized in four hierarchical groups — CCAT (Corporate/
+# Industrial), ECAT (Economics), GCAT (Government/Social), and MCAT (Markets) —
+# with 103 codes available for assignment. Coding followed two documented
+# Reuters policies: the Minimum Code Policy (every story gets at least one Topic
+# code and one Region code) and the Hierarchy Policy (assign the most specific
+# appropriate codes; ancestors are added, usually automatically).
+#
+# CAVEAT: the original RCV1 coding was production editorial work by Reuters
+# editors, partly machine-assisted (a rule-based autocoder followed by manual
+# editing and holding-queue correction), following the Reuters Business Briefing
+# coding policies. This config recreates the manual Topic-coding judgment as a
+# standalone annotation task.
+#
+# Deliberate simplifications: (1) only Topic coding is included — the Region
+# codes (366) and Industry codes (354) required by the full workflow are
+# omitted, so the Minimum Code Policy's Region requirement is not enforced;
+# (2) the taxonomy below is a representative subset of the 103 valid Topic
+# codes, not the complete set; (3) ancestor codes are not auto-assigned —
+# select the most specific codes and let downstream hierarchical expansion add
+# ancestors, per the Hierarchy Policy.
+#
+# The two coding policies in the instructions are reproduced verbatim from
+# Section 2.3 of the paper; the surrounding instructions are adapted from
+# Sections 2.2-2.4 — the paper does not publish Reuters' full annotator-facing
+# coding guidelines.
+
+annotation_task_name: "RCV1: Hierarchical Topic Coding"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: hierarchical_multiselect
+    name: topic_codes
+    description: "Select all Topic codes that capture the major subjects of this story. Assign the most specific appropriate codes; do not add ancestor codes yourself."
+    auto_select_children: false
+    auto_select_parent: false
+    show_search: true
+    max_selections: null
+    expand_depth: 1
+    taxonomy:
+      "CCAT (Corporate/Industrial)":
+        "C15 Performance":
+          - "C151 Accounts/Earnings"
+          - "C152 Comment/Forecasts"
+        "C17 Funding/Capital":
+          - "C171 Share Capital"
+          - "C172 Bonds/Debt Issues"
+          - "C173 Loans/Credits"
+          - "C174 Credit Ratings"
+        "C18 Ownership Changes":
+          - "C181 Mergers/Acquisitions"
+          - "C182 Asset Transfers"
+          - "C183 Privatisations"
+        "C41 Management":
+          - "C411 Management Moves"
+      "ECAT (Economics)":
+        "E12 Monetary/Economic":
+          - "E121 Money Supply"
+        "E13 Inflation/Prices":
+          - "E131 Consumer Prices"
+          - "E132 Wholesale Prices"
+        "E21 Government Finance":
+          - "E211 Expenditure/Revenue"
+          - "E212 Government Borrowing"
+        "E51 Trade/Reserves":
+          - "E511 Balance of Payments"
+          - "E512 Merchandise Trade"
+          - "E513 Reserves"
+      "GCAT (Government/Social)":
+        - "GCRIM Crime, Law Enforcement"
+        - "GDEF Defence"
+        - "GDIP International Relations"
+        - "GDIS Disasters and Accidents"
+        - "GENV Environment and Natural World"
+        - "GHEA Health"
+        - "GPOL Domestic Politics"
+        - "GSCI Science and Technology"
+        - "GSPO Sports"
+        - "GVIO War, Civil War"
+        - "GVOTE Elections"
+        - "GWEA Weather"
+      "MCAT (Markets)":
+        "M13 Money Markets":
+          - "M131 Interbank Markets"
+          - "M132 Forex Markets"
+        "M14 Commodity Markets":
+          - "M141 Soft Commodities"
+          - "M142 Metals Trading"
+          - "M143 Energy Markets"
+    label_requirement:
+      required: true
+
+annotation_instructions: |
+  You are coding an English newswire story with Topic codes from the Reuters
+  category scheme. Topic codes capture the major subjects of a story and are
+  organized in four hierarchical groups: CCAT (Corporate/Industrial), ECAT
+  (Economics), GCAT (Government/Social), and MCAT (Markets).
+
+  Reuters' guidance for coding included two broad policies (reproduced verbatim
+  from Section 2.3 of Lewis et al., 2004):
+
+  1. **Minimum Code Policy:** "Each story was required to have at least one
+     Topic code and one Region code."
+  2. **Hierarchy Policy:** "Coding was to assign the most specific appropriate
+     codes from the Topic and Industry sets, as well as (usually automatically)
+     all ancestors of those codes. In contrast to some coding systems, there was
+     no limit on the number of codes with the same parent that could be applied."
+
+  Applying these policies in this task:
+
+  - Assign **at least one Topic code** to every story. (Region coding is not part
+    of this task.)
+  - Select the **most specific** appropriate codes in the tree. Do not add
+    ancestor codes yourself; ancestors are added automatically downstream.
+  - You may assign as many codes as apply, including several codes with the same
+    parent.
+  - Code the major subjects of the story, not passing mentions. For example, a
+    story about a company's quarterly results belongs under C15 Performance
+    (most specifically C151 Accounts/Earnings), while a story about a merger
+    belongs under C181 Mergers/Acquisitions.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Dateline:</strong> {{dateline}}
+    </div>
+    <div style="background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 16px;">
+      <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">{{title}}</h3>
+      <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #374151;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true

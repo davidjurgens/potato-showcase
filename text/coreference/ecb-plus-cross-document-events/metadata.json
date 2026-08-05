@@ -1,0 +1,80 @@
+{
+  "title": "ECB+ Cross-Document Event Coreference",
+  "description": "Cross-document event coreference annotation based on the ECB+ corpus (Cybulska and Vossen, LREC 2014). Annotators mark event mentions — actions with their times, locations, and human and non-human participants — across multiple news documents describing similar but distinct event instances, and build shared event records that link coreferent event descriptions across documents by citing evidence spans. Complements the within-document MAVEN-ERE task (text/coreference/maven-ere-event-coreference): MAVEN-ERE links event mentions inside a single document, whereas ECB+ requires deciding whether descriptions in different documents refer to the same real-world event instance or merely to the same event type.",
+  "overview": [
+    "ECB+ extends the EventCorefBank (ECB) of Bejan and Harabagiu (2010) to make cross-document event coreference genuinely hard. The authors observed that each ECB topic covered a single seminal event, so systems could solve coreference by little more than topic classification and lemma matching. They added 502 new texts describing different instances of the same event types — for example, a second celebrity's rehab check-in alongside the original one — so that annotators and systems must distinguish same-type-but-different-instance events.",
+    "The annotation is event-centric: events are modeled as a combination of four components — an action (what happens or holds true), a time slot anchoring the action, a location, and participants, divided into human and non-human. Component mentions are marked from the point of view of the event action: only participants, times, and locations of the action count, not every entity or time expression in the sentence. Two action mentions corefer if they refer to the same instance of an action happening at the same time, in the same place, with the same participants.",
+    "The corpus was built in three rounds by two trained student annotators: component mentions and intra-document coreference in the new ECB+ texts, re-annotation of the original ECB, and finally cross-document coreference links per topic (using the CROMER tool, in which annotators create named event instances and attach coreferent mentions). Inter-annotator agreement reached Cohen's kappa of 0.74 on the full 30-tag set and 0.76 on cross-document coreference assignment.",
+    "The Potato config reproduces the cross-document stage with the multi_document_event scheme: annotators create one shared event record per real-world event instance, attach the member documents, and fill the action, time, location, and participant slots by citing evidence spans from the texts. The sample data mirrors the ECB+ design, pairing documents about the same instance with documents about a distinct instance of the same event type. ECB+'s token-level 30-tag inventory and separate intra-document layer are deliberately not reproduced."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "LREC 2014"
+    },
+    {
+      "label": "Topics",
+      "value": "43"
+    },
+    {
+      "label": "Texts",
+      "value": "982 (502 newly added ECB+ texts)"
+    },
+    {
+      "label": "Action mentions",
+      "value": "14,884"
+    },
+    {
+      "label": "Time / location mentions",
+      "value": "2,392 / 2,255"
+    },
+    {
+      "label": "Participant mentions",
+      "value": "9,577 human; 2,963 non-human"
+    },
+    {
+      "label": "Coreference chains",
+      "value": "7,671 intra-document; 2,204 cross-document"
+    },
+    {
+      "label": "Agreement",
+      "value": "Cohen's kappa 0.74 (mentions), 0.76 (cross-document coreference)"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "multi_document_event"
+  ],
+  "domain": [
+    "NLP",
+    "Coreference",
+    "News"
+  ],
+  "useCase": [
+    "Event Coreference Resolution",
+    "Cross-Document Information Extraction",
+    "Event Extraction"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "event-coreference",
+    "cross-document",
+    "event-extraction",
+    "ECB-plus",
+    "news",
+    "coreference"
+  ],
+  "featured": false,
+  "paperReference": "Agata Cybulska and Piek Vossen. 2014. Using a sledgehammer to crack a nut? Lexical diversity and event coreference resolution. In Proceedings of the Ninth International Conference on Language Resources and Evaluation (LREC'14), pages 4545-4552.",
+  "paperUrl": "https://aclanthology.org/L14-1646/",
+  "datasetUrl": "https://github.com/cltl/ecbPlus",
+  "citation": "@inproceedings{cybulska-vossen-2014-using,\n    title = \"Using a sledgehammer to crack a nut? Lexical diversity and event coreference resolution\",\n    author = \"Cybulska, Agata  and\n      Vossen, Piek\",\n    editor = \"Calzolari, Nicoletta  and\n      Choukri, Khalid  and\n      Declerck, Thierry  and\n      Loftsson, Hrafn  and\n      Maegaard, Bente  and\n      Mariani, Joseph  and\n      Moreno, Asuncion  and\n      Odijk, Jan  and\n      Piperidis, Stelios\",\n    booktitle = \"Proceedings of the Ninth International Conference on Language Resources and Evaluation ({LREC}'14)\",\n    month = may,\n    year = \"2014\",\n    address = \"Reykjavik, Iceland\",\n    publisher = \"European Language Resources Association (ELRA)\",\n    url = \"https://aclanthology.org/L14-1646/\",\n    pages = \"4545--4552\"\n}"
+}

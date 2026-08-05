@@ -1,0 +1,69 @@
+{
+  "title": "ChaosNLI: NLI Label Distributions",
+  "description": "Distributional annotation of Natural Language Inference judgments, based on ChaosNLI (Nie, Zhou, and Bansal, EMNLP 2020). Given a context and a statement, the annotator first makes the original 3-way judgment (Entailment / Neutral / Contradiction), then distributes 100 points across the three labels to express a belief distribution. Framing caveat: ChaosNLI's label distributions were collected as 100 independent categorical judgments per item from different crowd-workers; this showcase config demonstrates Potato's soft_label scheme as a direct-elicitation alternative that captures the same distributional signal per annotator.",
+  "overview": [
+    "ChaosNLI (Collective HumAn OpinionS for NLI) asks what the full distribution of human judgments — rather than a single majority label — reveals about natural language inference. Nie, Zhou, and Bansal collected 100 fresh annotations for each of 4,645 examples drawn from the SNLI and MNLI-matched development sets (low-agreement subsets) and the entire Abductive-NLI development set, for a total of 464,500 annotations.",
+    "With 100 opinions per item, the picture changes substantially: the original majority label fails to match the new prevailing human opinion on 10% to 31% of the data depending on the subset, and large human disagreements persist on a noticeable fraction of examples. The paper argues that models should be evaluated on their ability to predict the distribution over human judgments, not just a single gold label, and shows that state-of-the-art models capture these distributions poorly.",
+    "The original collection kept the standard 3-way categorical labeling schema: each Mechanical Turk worker made one single-choice judgment per item under the compressed instructions reproduced in Figure 1 of the paper, with an on-boarding test, a training phase, and continuous performance tracking against a set of unanimous examples for quality control.",
+    "This config pairs the original categorical judgment (radio) with Potato's soft_label scheme, in which the annotator allocates 100 points across Entailment, Neutral, and Contradiction with constrained sliders and a live distribution chart. Where ChaosNLI reconstructs a distribution by aggregating 100 one-shot votes, the soft_label scheme elicits each annotator's belief distribution directly — a cheaper way to capture the same distributional signal, at the cost of departing from the paper's exact protocol. The sample items are self-authored SNLI/MNLI-style pairs designed to invite disagreement, not rows from the released dataset."
+  ],
+  "datasetStats": [
+    {
+      "label": "Examples",
+      "value": "4,645 (1,514 SNLI + 1,599 MNLI-m + 1,532 Abductive-NLI)"
+    },
+    {
+      "label": "Annotations per example",
+      "value": "100"
+    },
+    {
+      "label": "Total annotations",
+      "value": "464,500"
+    },
+    {
+      "label": "Label schema",
+      "value": "3-way (Entailment / Neutral / Contradiction); H1/H2 for Abductive-NLI"
+    },
+    {
+      "label": "Majority label changed",
+      "value": "10% (alphaNLI), 20% (SNLI), 31% (MNLI-m) of collected data"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "radio",
+    "soft_label"
+  ],
+  "domain": [
+    "NLP",
+    "Natural Language Inference"
+  ],
+  "useCase": [
+    "Label Distribution Learning",
+    "Annotator Disagreement",
+    "Human Label Variation"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "nli",
+    "soft-labels",
+    "label-distributions",
+    "annotator-disagreement",
+    "snli",
+    "mnli",
+    "human-label-variation"
+  ],
+  "featured": false,
+  "paperReference": "Yixin Nie, Xiang Zhou, and Mohit Bansal. 2020. What Can We Learn from Collective Human Opinions on Natural Language Inference Data? In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 9131-9143.",
+  "paperUrl": "https://aclanthology.org/2020.emnlp-main.734/",
+  "datasetUrl": "https://github.com/easonnie/ChaosNLI",
+  "citation": "@inproceedings{nie-etal-2020-learn,\n    title = \"What Can We Learn from Collective Human Opinions on Natural Language Inference Data?\",\n    author = \"Nie, Yixin  and\n      Zhou, Xiang  and\n      Bansal, Mohit\",\n    booktitle = \"Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)\",\n    month = nov,\n    year = \"2020\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2020.emnlp-main.734/\",\n    doi = \"10.18653/v1/2020.emnlp-main.734\",\n    pages = \"9131--9143\"\n}"
+}

@@ -1,0 +1,116 @@
+# Conjoint Analysis — Immigrant Admission Preferences (Paired Profiles)
+# Based on the conjoint survey experiments in:
+#   Jens Hainmueller, Daniel J. Hopkins, and Teppei Yamamoto (2014), "Causal
+#   Inference in Conjoint Analysis: Understanding Multidimensional Choices via
+#   Stated Preference Experiments." Political Analysis 22(1):1-30.
+#   DOI: 10.1093/pan/mpt024
+#   Paper: https://doi.org/10.1093/pan/mpt024
+#
+# Task: respondents act as immigration officials. Each choice task presents a
+# pair of immigrant profiles whose nine attributes (gender, education, language
+# skills, country of origin, profession, job experience, job plans, reason for
+# application, prior trips to the U.S.) are randomly assigned. The respondent
+# makes a forced choice between the two profiles and then rates each profile on
+# a 1-7 admission scale. Attribute names and levels reproduce Figure 3 of the
+# paper. The paper also reports a companion presidential-candidate conjoint;
+# this config implements the immigrant experiment, whose survey instrument the
+# paper reproduces.
+#
+# Deliberate simplifications: the paper's randomization imposed two cross-
+# attribute restrictions (profiles fleeing persecution came only from plausible
+# countries such as Iraq, Sudan, or Somalia; high-skill professions required at
+# least two years of college). Potato's conjoint scheme randomizes attributes
+# independently, so these restrictions are not enforced. The two per-profile 1-7
+# ratings are approximated with two likert schemes rendered outside the profile
+# cards.
+#
+# Annotation instructions reproduced verbatim from Figure 1 ("Experimental
+# Design: Immigration Conjoint") of the paper, which shows the survey instrument
+# as fielded to Knowledge Networks respondents.
+
+annotation_task_name: "Conjoint Analysis: Immigrant Admission Preferences"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_schemes:
+  - annotation_type: conjoint
+    name: immigrant_choice
+    description: "If you had to choose between them, which of these two immigrants should be given priority to come to the United States to live?"
+    profiles_per_set: 2
+    show_none_option: false
+    attributes:
+      - name: "Gender"
+        levels: ["female", "male"]
+      - name: "Education Level"
+        levels: ["no formal", "4th grade", "8th grade", "high school", "two-year college", "college degree", "graduate degree"]
+      - name: "Language Skills"
+        levels: ["fluent English", "broken English", "tried English but unable", "used interpreter"]
+      - name: "Country of Origin"
+        levels: ["Germany", "France", "Mexico", "Philippines", "Poland", "India", "China", "Sudan", "Somalia", "Iraq"]
+      - name: "Profession"
+        levels: ["janitor", "waiter", "child care provider", "gardener", "financial analyst", "construction worker", "teacher", "computer programmer", "nurse", "research scientist", "doctor"]
+      - name: "Job Experience"
+        levels: ["none", "1-2 years", "3-5 years", "5+ years"]
+      - name: "Employment Plans"
+        levels: ["contract with employer", "interviews with employer", "will look for work", "no plans to look for work"]
+      - name: "Reason for Application"
+        levels: ["reunite with family", "seek better job", "escape persecution"]
+      - name: "Prior Trips to the U.S."
+        levels: ["never", "once as tourist", "many times as tourist", "six months with family", "once w/o authorization"]
+
+  - annotation_type: likert
+    name: rating_immigrant_1
+    description: "On a scale from 1 to 7, where 1 indicates that the United States should absolutely not admit the immigrant and 7 indicates that the United States should definitely admit the immigrant, how would you rate Immigrant 1?"
+    min_label: "Absolutely Not Admit"
+    max_label: "Definitely Admit"
+    size: 7
+
+  - annotation_type: likert
+    name: rating_immigrant_2
+    description: "Using the same scale, how would you rate Immigrant 2?"
+    min_label: "Absolutely Not Admit"
+    max_label: "Definitely Admit"
+    size: 7
+
+annotation_instructions: |
+  Please read the descriptions of the potential immigrants carefully. Then,
+  please indicate which of the two immigrants you would personally prefer to see
+  admitted to the United States.
+
+  [Two immigrant profiles are displayed side by side, each described by: Prior
+  Trips to the U.S., Reason for Application, Country of Origin, Language Skills,
+  Profession, Job Experience, Employment Plans, Education Level, and Gender.]
+
+  If you had to choose between them, which of these two immigrants should be
+  given priority to come to the United States to live?
+
+  On a scale from 1 to 7, where 1 indicates that the United States should
+  absolutely not admit the immigrant and 7 indicates that the United States
+  should definitely admit the immigrant, how would you rate Immigrant 1?
+
+  Using the same scale, how would you rate Immigrant 2?
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+      <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #166534;">{{text}}</p>
+    </div>
+    <p style="font-size: 13px; color: #6b7280; margin: 0;">Please read the descriptions of the potential immigrants carefully before answering the questions below.</p>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true

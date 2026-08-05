@@ -1,0 +1,81 @@
+{
+  "title": "DWIE Document-Level Entity Annotation and Linking",
+  "description": "Document-level entity mention annotation with knowledge-base linking based on DWIE (Zaporojets, Deleu, Develder, and Demeester, Information Processing & Management 2021). Annotators mark every entity mention in a full news article, assign an entity type, and link mentions to Wikipedia/Wikidata entries, leaving NIL entities unlinked. Complements the mention-level AIDA CoNLL-YAGO task (text/entity-linking/aida-conll-entity-disambiguation): AIDA presents one pre-marked mention at a time for disambiguation, whereas DWIE is entity-centric and document-level — annotators find all mentions themselves and keep links consistent across each entity's coreferent mentions.",
+  "overview": [
+    "DWIE (Deutsche Welle corpus for Information Extraction) is an entity-centric, document-level information extraction dataset built from 802 Deutsche Welle news articles. Unlike sentence- or mention-level datasets, DWIE annotates whole documents jointly for named entity recognition, coreference resolution, relation extraction, and entity linking.",
+    "Its defining design choice is that annotations attach to entities rather than to isolated mentions: all coreferent mentions of an entity form a cluster, and the cluster as a whole receives a single Wikipedia link (version 2018-11-15). Entities not present in the knowledge base are marked NIL. The corpus was built in three passes — an exploratory pass in which annotators proposed types freely, a schema-driven pass with a consolidated hierarchical tag set, and an inter-annotator refinement pass in which a second expert re-annotated 100 articles.",
+    "The full schema contains 311 multi-label entity types organized under top-level branches (entity, value, other) and 65 relation types. This Potato config reproduces the mention-finding and linking portion of the workflow with a span scheme plus Potato's entity_linking modal backed by Wikidata: annotators highlight mentions, choose one of seven top-level types, and search the knowledge base for the referent, keeping the same link across all mentions of an entity.",
+    "Two simplifications are deliberate: the 311 fine-grained multi-label types are collapsed to seven top-level types, and links are stored per mention rather than per cluster, with cluster consistency maintained by convention. Relation extraction, the fourth DWIE task, is out of scope here."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2021 (Information Processing & Management 58(4))"
+    },
+    {
+      "label": "Documents",
+      "value": "802 Deutsche Welle news articles"
+    },
+    {
+      "label": "Entity mentions",
+      "value": "43,373"
+    },
+    {
+      "label": "Entity clusters",
+      "value": "23,130"
+    },
+    {
+      "label": "Entity types",
+      "value": "311 (hierarchical, multi-label)"
+    },
+    {
+      "label": "Relation types",
+      "value": "65"
+    },
+    {
+      "label": "Knowledge base",
+      "value": "Wikipedia (2018-11-15), NIL allowed"
+    },
+    {
+      "label": "Tasks",
+      "value": "NER, coreference, relation extraction, entity linking"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "NLP",
+    "Information Extraction",
+    "News"
+  ],
+  "useCase": [
+    "Entity Linking",
+    "Named Entity Recognition",
+    "Knowledge Graph Construction"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "entity-linking",
+    "named-entity-recognition",
+    "document-level",
+    "wikidata",
+    "knowledge-base",
+    "NIL-entities",
+    "DWIE"
+  ],
+  "featured": false,
+  "paperReference": "Klim Zaporojets, Johannes Deleu, Chris Develder, and Thomas Demeester. 2021. DWIE: An entity-centric dataset for multi-task document-level information extraction. Information Processing & Management, 58(4), 102563.",
+  "paperUrl": "https://doi.org/10.1016/j.ipm.2021.102563",
+  "datasetUrl": "https://github.com/klimzaporojets/DWIE",
+  "citation": "@article{zaporojets2021dwie,\n    title = \"{DWIE}: An entity-centric dataset for multi-task document-level information extraction\",\n    author = \"Zaporojets, Klim and Deleu, Johannes and Develder, Chris and Demeester, Thomas\",\n    journal = \"Information Processing \\& Management\",\n    volume = \"58\",\n    number = \"4\",\n    pages = \"102563\",\n    year = \"2021\",\n    publisher = \"Elsevier\",\n    doi = \"10.1016/j.ipm.2021.102563\",\n    url = \"https://arxiv.org/abs/2009.12626\"\n}"
+}

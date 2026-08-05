@@ -1,0 +1,120 @@
+# Ruddit — Best-Worst Scaling of Reddit Comment Offensiveness
+# Based on the Ruddit dataset:
+#   Rishav Hada, Sohi Sudhir, Pushkar Mishra, Helen Yannakoudakis, Saif M. Mohammad,
+#   and Ekaterina Shutova (2021), "Ruddit: Norms of Offensiveness for English Reddit
+#   Comments." Proceedings of the 59th Annual Meeting of the Association for
+#   Computational Linguistics and the 11th International Joint Conference on Natural
+#   Language Processing (Volume 1: Long Papers), pp. 2700-2717.
+#   DOI: 10.18653/v1/2021.acl-long.210
+#   Paper: https://aclanthology.org/2021.acl-long.210/
+#   Dataset: https://github.com/hadarishav/Ruddit
+#
+# Task: annotators see 4-tuples of Reddit comments and mark the comment that is
+# MOST offensive (least supportive) and the comment that is LEAST offensive (most
+# supportive). Best-worst counting converts these judgments into fine-grained,
+# real-valued offensiveness scores in [-1, 1]. In the original study, each of the
+# 6,000 comments appeared in 8 different 4-tuples and each tuple was annotated by
+# 6 crowd-workers; this showcase config keeps the 4-tuple / 8-appearance design
+# with the standard counting scorer.
+#
+# Annotation instructions reproduced verbatim from Figure 5 (Appendix A.2) of the
+# paper; the tuple question wording follows the sample questionnaire in Figure 6.
+
+annotation_task_name: "Ruddit: Offensiveness Best-Worst Scaling"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+bws_config:
+  tuple_size: 4
+  num_tuples: null
+  seed: 42
+  min_item_appearances: 8
+  scoring:
+    method: counting
+
+annotation_schemes:
+  - annotation_type: bws
+    name: offensiveness_bws
+    description: "From the four comments below, choose the comment which is LEAST OFFENSIVE (most supportive) and the comment which is MOST OFFENSIVE (least supportive)."
+    best_description: "Which comment is the MOST offensive (LEAST supportive)?"
+    worst_description: "Which comment is the LEAST offensive (MOST supportive)?"
+    tuple_size: 4
+    sequential_key_binding: true
+
+annotation_instructions: |
+  Social media conversations often include an original post followed by other
+  comments in response to the original post. These response comments can vary from
+  being highly supportive and pleasant to highly offensive and abusive. We are
+  interested in determining the degree of offensiveness/supportiveness of response
+  comments. Specifically, in each HIT, you will be given four comments. Your task
+  is to mark:
+
+  - the comment that is the **MOST offensive (LEAST supportive)**.
+  - the comment that is the **LEAST offensive (MOST supportive)**.
+
+  **Purpose of the task:**
+
+  Your responses will be used to better understand the type, nature and degree of
+  offensive and supportive language.
+
+  **Notes:**
+
+  - The comments included in this task may contain foul, abusive language
+    (including but not limited to sexist, violent, vulgar or racist terms).
+  - Try not to overthink the answer. Let your instinct guide you.
+  - There are a certain number of gold annotations interspersed throughout the
+    data. If you mark these gold questions incorrectly, we will give you immediate
+    feedback in a pop-up box. We will keep track of your answers for these gold
+    questions. If you mark too many of these incorrectly, it might lead to
+    rejection of your HITs, upon further scrutiny.
+
+  **Instructions:**
+
+  - For the MOST offensive (LEAST supportive) question: If all four comments are
+    not offensive, then select the comment that is most negative or least
+    supportive. If two (or more) comments are equally offensive, and both are MOST
+    offensive (among the four options), then choose any one of these equally
+    offensive comments as the MOST offensive comment.
+  - For the LEAST offensive (MOST supportive) question: If all four comments are
+    not supportive, then select the comment that is most positive or least
+    offensive. If two (or more) comments are equally supportive, and both are MOST
+    supportive (among the four options), then choose any one of these equally
+    supportive comments as the MOST supportive comment.
+  - Consider 'offensive comments' to be a broad category that includes abhorrent,
+    abusive, rude, objectionable, disagreeable, and discourteous comments.
+    Offensive comments often denigrate, criticize, hurt, or harm the perception of
+    self of another person or group (with or without using offensive words).
+    Offensive comments tend to include aggressive outbursts, name calling, anger,
+    hostility, bullying, or hurtful sarcasm, but they can be more subtle as well.
+  - Consider 'supportive comments' to be a broad category that includes agreeable,
+    delightful, kind, nice, pleasant, pleasing, respectful, and soothing comments.
+  - You cannot pick the same comment for both the categories.
+  - Responses that are not in accordance with the instructions will not be paid for.
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 6px 12px; margin-bottom: 10px; font-size: 13px; color: #991b1b;">
+      <strong>Content warning:</strong> comments in this task may contain foul or abusive language.
+    </div>
+    <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px;">
+      <strong style="color: #334155;">Reddit comment:</strong>
+      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 3
+allow_skip: true

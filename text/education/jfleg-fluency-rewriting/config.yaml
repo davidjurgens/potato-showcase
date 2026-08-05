@@ -1,0 +1,80 @@
+# JFLEG: Fluency Rewriting of Learner English
+# Based on: Courtney Napoles, Keisuke Sakaguchi, and Joel Tetreault (2017),
+#   "JFLEG: A Fluency Corpus and Benchmark for Grammatical Error Correction."
+#   Proceedings of the 15th Conference of the European Chapter of the
+#   Association for Computational Linguistics (EACL 2017), Volume 2: Short
+#   Papers, pp. 229-234.
+#   Paper: https://aclanthology.org/E17-2037/
+#   Dataset: https://github.com/keisks/jfleg
+#
+# Task: rewrite a sentence written by a second-language learner of English so
+# that it sounds natural and fluent to a native speaker. Unlike minimal-edit
+# grammatical error correction, JFLEG collects holistic fluency rewrites that
+# may rephrase awkward constructions while still staying conservative and
+# preserving the original wording wherever possible. The text_edit scheme
+# tracks the word- and character-level diff between the learner sentence and
+# the rewrite. As in the paper, annotators also rate how difficult each
+# sentence was to correct on a 5-point scale.
+#
+# Annotation instructions reproduced verbatim from Table 3 of the paper.
+
+annotation_task_name: "JFLEG Fluency Rewriting"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "sentence"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  Please correct the following sentence to make it sound natural and fluent to
+  a native speaker of (American) English. The sentence is written by a second
+  language learner of English. You should fix grammatical mistakes, awkward
+  phrases, spelling errors, etc. following standard written usage conventions,
+  but your edits must be conservative. Please keep the original sentence
+  (words, phrases, and structure) as much as possible. The ultimate goal of
+  this task is to make the given sentence sound natural to native speakers of
+  English without making unnecessary changes. Please do not split the original
+  sentence into two or more. Edits are not required when the sentence is
+  already grammatical and sounds natural.
+
+annotation_schemes:
+  - annotation_type: text_edit
+    name: fluency_rewrite
+    description: "Edit the sentence so it sounds natural and fluent to a native speaker of English"
+    source_field: "sentence"
+    show_diff: true
+    show_edit_distance: true
+    allow_reset: true
+
+  - annotation_type: likert
+    name: correction_difficulty
+    description: "How difficult was this sentence to correct?"
+    size: 5
+    min_label: "1 - Very easy"
+    max_label: "5 - Very difficult"
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #1e40af;">Learner sentence:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{sentence}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px;">
+      Rewrite the sentence in the editor below so it sounds natural and fluent,
+      keeping the original words, phrases, and structure as much as possible.
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 50
+annotation_per_instance: 3
+allow_skip: true

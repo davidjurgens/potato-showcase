@@ -1,0 +1,62 @@
+[
+  {
+    "id": "chaosnli_001",
+    "source": "SNLI-style",
+    "context": "A woman in a yellow raincoat is waiting at a bus stop while holding a closed umbrella.",
+    "statement": "The woman is prepared for rain."
+  },
+  {
+    "id": "chaosnli_002",
+    "source": "SNLI-style",
+    "context": "Two children are building a sandcastle near the water's edge as a dog watches them.",
+    "statement": "The children are on vacation with their parents."
+  },
+  {
+    "id": "chaosnli_003",
+    "source": "MNLI-style",
+    "context": "The quarterly report showed that the company's overseas revenue declined for the third consecutive quarter, though domestic sales remained flat.",
+    "statement": "The company's overseas revenue increased last quarter."
+  },
+  {
+    "id": "chaosnli_004",
+    "source": "SNLI-style",
+    "context": "A chef in a white uniform garnishes a plate under bright kitchen lights.",
+    "statement": "The chef works at an expensive restaurant."
+  },
+  {
+    "id": "chaosnli_005",
+    "source": "MNLI-style",
+    "context": "Well, I suppose we could take the coastal road, but last time it took us nearly twice as long because of the roadwork.",
+    "statement": "The speaker has traveled on the coastal road before."
+  },
+  {
+    "id": "chaosnli_006",
+    "source": "SNLI-style",
+    "context": "A street performer juggles flaming torches while a small crowd gathers around him.",
+    "statement": "The performer is juggling knives."
+  },
+  {
+    "id": "chaosnli_007",
+    "source": "MNLI-style",
+    "context": "The museum's east wing, closed since the flood two years ago, will reopen to visitors next spring after extensive restoration.",
+    "statement": "The east wing has been closed for repairs."
+  },
+  {
+    "id": "chaosnli_008",
+    "source": "SNLI-style",
+    "context": "An elderly man reads a newspaper on a park bench beside a fountain.",
+    "statement": "The man is retired."
+  },
+  {
+    "id": "chaosnli_009",
+    "source": "MNLI-style",
+    "context": "Critics argued the bill would raise costs for small businesses, while supporters countered that the long-term savings would outweigh the initial burden.",
+    "statement": "Everyone agreed the bill would be good for small businesses."
+  },
+  {
+    "id": "chaosnli_010",
+    "source": "SNLI-style",
+    "context": "A group of cyclists in matching jerseys rides up a steep mountain road in the rain.",
+    "statement": "The cyclists are competing in a race."
+  }
+]

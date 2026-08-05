@@ -1,0 +1,42 @@
+[
+  {
+    "id": "conjoint_001",
+    "text": "Choice task 1 of 10. This study asks you to act as an immigration official deciding which applicants should be admitted to the United States. Two immigrant profiles are shown below with randomly assigned characteristics."
+  },
+  {
+    "id": "conjoint_002",
+    "text": "Choice task 2 of 10. Please consider each applicant's full profile. There are no right or wrong answers; we are interested in your personal preference between the two applicants shown below."
+  },
+  {
+    "id": "conjoint_003",
+    "text": "Choice task 3 of 10. Review both immigrant profiles below. The characteristics of each applicant were assigned at random, so some combinations may be unusual."
+  },
+  {
+    "id": "conjoint_004",
+    "text": "Choice task 4 of 10. As before, imagine you are an immigration official reviewing two new applications for admission to the United States."
+  },
+  {
+    "id": "conjoint_005",
+    "text": "Choice task 5 of 10. Compare the two applicant profiles below on all of their listed characteristics before making your choice and ratings."
+  },
+  {
+    "id": "conjoint_006",
+    "text": "Choice task 6 of 10. Two new immigrant profiles are shown below. Please weigh whichever characteristics matter most to you personally."
+  },
+  {
+    "id": "conjoint_007",
+    "text": "Choice task 7 of 10. Please evaluate the two applications below independently of the pairs you have already seen in earlier tasks."
+  },
+  {
+    "id": "conjoint_008",
+    "text": "Choice task 8 of 10. Consider both profiles below carefully. Remember to answer the choice question first, then rate each immigrant on the 1-7 scale."
+  },
+  {
+    "id": "conjoint_009",
+    "text": "Choice task 9 of 10. Two more applicants for admission to the United States are described below with randomly assigned characteristics."
+  },
+  {
+    "id": "conjoint_010",
+    "text": "Choice task 10 of 10. This is the final pair of immigrant profiles. Please review both applications below and answer all three questions."
+  }
+]

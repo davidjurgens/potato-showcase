@@ -1,0 +1,101 @@
+# DWIE: Document-Level Entity Mention Annotation and Linking
+# Based on: Klim Zaporojets, Johannes Deleu, Chris Develder, and Thomas
+#   Demeester (2021), "DWIE: An entity-centric dataset for multi-task
+#   document-level information extraction." Information Processing &
+#   Management 58(4), 102563.
+#   DOI: 10.1016/j.ipm.2021.102563 — arXiv: https://arxiv.org/abs/2009.12626
+#   Dataset: https://github.com/klimzaporojets/DWIE
+#
+# Task: mark every entity mention in a full news article, assign an entity
+# type, and link the mention to its Wikipedia/Wikidata entry via the entity
+# search modal. In DWIE, links are assigned at the level of entity clusters
+# (all coreferent mentions of an entity share one KB link, Wikipedia version
+# 2018-11-15), and entities absent from the knowledge base are left as NIL.
+# Deliberate simplifications: DWIE's 311 hierarchical, multi-label entity
+# types are collapsed to seven top-level types, and linking is performed per
+# mention (annotators keep cluster consistency by linking every mention of
+# the same entity to the same KB entry, or leaving all of them unlinked for
+# NIL entities).
+#
+# Annotation instructions adapted from Section 3 of the paper; the paper does
+# not publish the verbatim annotator guidelines.
+
+annotation_task_name: "DWIE Document-Level Entity Linking"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You are shown a complete news article. Mark **every mention** of an entity in
+  the article — an entity can be any physical or abstract object, typically
+  denoted by a proper noun (people, organizations, locations, events,
+  ethnicities and nationalities, numeric values, and other named objects).
+
+  For each mention:
+
+  1. Highlight the mention text and assign the entity type that best describes
+     it (PERSON, ORGANIZATION, LOCATION, EVENT, ETHNICITY, VALUE, or MISC).
+  2. Open the link icon on the span and search Wikidata for the entity the
+     mention refers to. Link the mention to the matching entry.
+  3. Annotate at the level of the underlying entity, not the surface string:
+     all mentions of the same real-world entity (e.g. "Angela Merkel", "the
+     chancellor", "Merkel") must be linked to the **same** knowledge-base
+     entry.
+  4. If the entity does not exist in the knowledge base, leave the mention
+     unlinked (a NIL entity). Do this consistently for every mention of that
+     entity.
+
+  Judge each mention in the context of the whole document — earlier mentions
+  often disambiguate later, shorter ones.
+
+annotation_schemes:
+  - annotation_type: span
+    name: entity_mentions
+    description: "Mark every entity mention, assign its type, and link it to the knowledge base"
+    labels:
+      - name: PERSON
+        tooltip: "Individual people, named or referred to by role"
+      - name: ORGANIZATION
+        tooltip: "Companies, institutions, governments, agencies, teams"
+      - name: LOCATION
+        tooltip: "Countries, cities, regions, geographic features, facilities"
+      - name: EVENT
+        tooltip: "Named events such as elections, wars, tournaments, disasters"
+      - name: ETHNICITY
+        tooltip: "Ethnic groups, nationalities, and peoples"
+      - name: VALUE
+        tooltip: "Numeric and temporal values: money, quantities, dates"
+      - name: MISC
+        tooltip: "Other named entities: products, works, laws, languages, etc."
+    entity_linking:
+      enabled: true
+      auto_search: true
+      required: false
+      knowledge_bases:
+        - name: wikidata
+          type: wikidata
+          language: en
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Article:</strong> {{title}}
+    </div>
+    <div style="font-size: 16px; line-height: 1.8;">{{text}}</div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true

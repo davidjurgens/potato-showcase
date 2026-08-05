@@ -1,0 +1,143 @@
+# ECB+: Cross-Document Event Coreference Annotation
+# Based on: Agata Cybulska and Piek Vossen (2014), "Using a Sledgehammer to
+#   Crack a Nut? Lexical Diversity and Event Coreference Resolution."
+#   Proceedings of the Ninth International Conference on Language Resources
+#   and Evaluation (LREC 2014), pp. 4545-4552.
+#   Paper: https://aclanthology.org/L14-1646/
+#   Dataset: https://github.com/cltl/ecbPlus
+#
+# Task: annotate event mentions — actions together with their times, locations,
+# and (human and non-human) participants — across multiple news documents that
+# describe similar but distinct event instances (e.g. two different celebrity
+# rehab check-ins), and establish which event descriptions corefer across
+# documents. Following the ECB+ event-centric design, annotators build one
+# shared event record per real-world event instance, attach the documents that
+# describe it, and fill the component slots by citing evidence spans from the
+# member documents; documents describing a different instance of the same event
+# type belong to a separate event record. Deliberate simplification: ECB+'s
+# token-level tagset (30 tags, including seven action classes and entity
+# subtypes) and its separate intra-document coreference layer are not
+# reproduced; cross-document event identity is captured through the shared
+# event records and their cited evidence.
+#
+# Annotation instructions reproduced verbatim (event-component definitions,
+# event-centric marking rules, and coreference criteria) from Sections 1, 4.2,
+# and 4.3 of the paper. The complete ECB+ guidelines are published separately
+# as Cybulska & Vossen (2014), "Guidelines for ECB+ annotation of events and
+# their coreference," Technical Report NWR-2014-1, VU University Amsterdam.
+
+annotation_task_name: "ECB+ Cross-Document Event Coreference"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You are annotating events across a collection of news documents, following
+  the ECB+ scheme. Events are modeled as a combination of four components:
+
+  1. "an event action component describing what happens or holds true"
+  2. "an event time slot anchoring an action in time describing when something
+     happens or holds true"
+  3. "an event location component specifying where something happens or holds
+     true"
+  4. "a participant component that gives the answer to the question: who or
+     what is involved with, undergoes change as a result of or facilitates an
+     event or a state; we divide event participants into human participants
+     and non-human participants."
+
+  Mentions of event components are annotated in text from the point of view of
+  an event action, marking:
+
+  1. "participants involved with an action as opposed to any participant
+     mention occurring in a sentence"
+  2. "time when an action happened as opposed to any time expression mentioned
+     in text"
+  3. "location in which the action was performed in contrast to a locational
+     expression that does not refer to the place where an action happened."
+
+  Coreference criteria: "Two or more time expressions, location or participant
+  mentions corefer with each other if they refer respectively to the same
+  time, place or participants. Two action mentions corefer if they refer to
+  the same instance of an action that happens or holds true: (1) in the same
+  time, (2) in the same place and (3) with the same participants involved."
+
+  Workflow: create one event record per real-world event instance. Attach
+  every document that describes that instance, and fill the action, time,
+  location, and participant slots by highlighting evidence spans in the member
+  documents. Different documents in this collection may describe similar but
+  distinct instances of the same event type (for example, two different rehab
+  check-ins or two different earthquakes) — these belong to separate event
+  records, not the same one.
+
+event_template:
+  enabled: true
+  name: ecb_plus_event
+  allow_annotator_create: true
+  slots:
+    - name: action
+      description: "The event action: what happens or holds true"
+      type: text
+    - name: time
+      description: "When the action happened (the time anchoring the action, not just any time expression)"
+      type: text
+    - name: location
+      description: "Where the action was performed (not just any locational expression)"
+      type: text
+    - name: human_participants
+      description: "Human participants involved with, changed by, or facilitating the action"
+      type: text
+    - name: non_human_participants
+      description: "Non-human participants involved with, changed by, or facilitating the action"
+      type: text
+
+annotation_schemes:
+  - annotation_type: multi_document_event
+    name: events
+    description: "Group documents into events and fill each component slot with evidence cited from the texts"
+    slots:
+      - name: action
+        description: "The event action: what happens or holds true"
+        type: text
+      - name: time
+        description: "When the action happened (the time anchoring the action, not just any time expression)"
+        type: text
+      - name: location
+        description: "Where the action was performed (not just any locational expression)"
+        type: text
+      - name: human_participants
+        description: "Human participants involved with, changed by, or facilitating the action"
+        type: text
+      - name: non_human_participants
+        description: "Non-human participants involved with, changed by, or facilitating the action"
+        type: text
+    allow_annotator_create: true
+
+instance_display:
+  fields:
+    - key: text
+      type: text
+      span_target: true
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>{{title}}</strong> &nbsp;·&nbsp; {{source}} &nbsp;·&nbsp; {{date}}
+    </div>
+    <div style="font-size: 16px; line-height: 1.8;">{{text}}</div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 2
+allow_skip: true
