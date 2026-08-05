@@ -1,6 +1,6 @@
 # Annotation Type Reference
 
-A guide to all **22** annotation types supported by [Potato](https://www.potatoannotator.com), with example configurations from this showcase. For the full reference, see the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect).
+A guide to the **39** annotation types demonstrated in this showcase, with example configurations for each. [Potato](https://www.potatoannotator.com) supports additional scheme types beyond these; see the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect) for the full list. For the full reference, see the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect).
 
 ---
 
@@ -183,6 +183,7 @@ A guide to all **22** annotation types supported by [Potato](https://www.potatoa
 
 **Example tasks:**
 - [Chatbot Arena BWS](./evaluation/chatbot-arena-pairwise-bws/) -- Best-worst scaling of chatbot responses
+- [Ruddit Offensiveness BWS](./text/computational-social-science/ruddit-offensiveness-bws/) -- Best-worst scaling of Reddit comment offensiveness (tuple size 4)
 
 ---
 
@@ -306,3 +307,237 @@ A guide to all **22** annotation types supported by [Potato](https://www.potatoa
 
 **Example tasks:**
 - [MMLU-Pro Tiered Evaluation](./preference-learning/mmlu-pro-tiered-eval/) -- Tiered topic and subtopic categorization for multi-subject QA
+
+---
+
+## ranking
+
+**Description:** Rank a set of items from best to worst. Produces a full or partial ordering rather than an absolute score.
+
+**Required fields:**
+- `labels`: Non-empty list of label strings (the ranking criterion labels)
+- Optional `items_key`: Data field holding the list of items to rank
+- Optional `allow_ties`: Whether annotators may assign the same rank to multiple items
+
+**Example tasks:**
+- [WMT15 Relative Ranking](./evaluation/wmt15-relative-ranking/) -- Five-way relative ranking of machine translations with ties allowed
+
+---
+
+## semantic_differential
+
+**Description:** Rating on bipolar adjective scales anchored by opposing terms at each end (e.g., Fake -- Natural). The standard instrument format in psychometrics and human--robot interaction research.
+
+**Required fields:**
+- `pairs`: List of bipolar adjective pairs, each with a left and right anchor
+- Optional `scale_points`: Number of points on each scale (typically 5 or 7)
+
+**Example tasks:**
+- [Godspeed Agent Perception](./evaluation/godspeed-agent-perception/) -- The Godspeed questionnaire's anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety series
+
+---
+
+## conjoint
+
+**Description:** Discrete-choice conjoint analysis: annotators choose between side-by-side profiles whose attributes are independently randomized, so that each attribute's causal effect on choice can be estimated.
+
+**Required fields:**
+- `attributes`: List of profile attributes with their possible levels
+- Optional `profiles_per_set`: Number of profiles shown per choice task (default 2)
+- Optional `show_none_option`: Whether to offer a "neither" choice
+
+**Example tasks:**
+- [Conjoint Candidate/Immigrant Profiles](./text/computational-social-science/conjoint-candidate-profiles/) -- Forced-choice profile comparison plus per-profile rating scales
+
+---
+
+## soft_label
+
+**Description:** Distribute a fixed budget of probability mass across labels instead of picking one. Captures genuine annotator uncertainty and legitimate label disagreement.
+
+**Required fields:**
+- `labels`: Non-empty list of label strings
+- Optional `total`: Budget to distribute (e.g., 100)
+- Optional `min_per_label`, `show_distribution_chart`
+
+**Example tasks:**
+- [ChaosNLI Label Distributions](./text/natural-language-inference/chaosnli-label-distributions/) -- Collective NLI label distributions over entailment/neutral/contradiction
+
+---
+
+## rubric_eval
+
+**Description:** Score a response against a list of named rubric criteria, each on its own scale. Used for fine-grained, skill-decomposed evaluation of model outputs.
+
+**Required fields:**
+- `criteria`: List of rubric criteria (name plus description/anchors)
+- Optional `scale_points`, `scale_labels`, `show_overall`
+
+**Example tasks:**
+- [FLASK Skill-based Rubric Evaluation](./evaluation/flask-skill-rubric-evaluation/) -- Twelve fine-grained alignment skills scored on the paper's 1--5 rubrics
+
+---
+
+## error_span
+
+**Description:** Mark spans of text as errors, assigning each a typed error category and a severity. The standard format for translation and generation quality error analysis.
+
+**Required fields:**
+- `error_types`: List (or nested hierarchy) of error categories
+- Optional `severities`: Severity levels applied per marked span
+- Optional `show_score`, `max_score`: Live quality score derived from marked errors
+
+**Example tasks:**
+- [MQM MT Error Annotation](./evaluation/mqm-mt-error-annotation/) -- Full MQM error hierarchy with major/minor/neutral severities
+- See also [ESA MT Error Spans](./evaluation/esa-mt-error-spans/) for the lighter Error Span Annotation protocol
+
+---
+
+## text_edit
+
+**Description:** Inline editing of a source text with diff tracking. Annotators rewrite rather than label, and the interface records what changed.
+
+**Required fields:**
+- `source_field`: The data field holding the text to be edited
+- Optional `show_diff`, `show_edit_distance`, `allow_reset`
+
+**Example tasks:**
+- [JFLEG Fluency Rewriting](./text/education/jfleg-fluency-rewriting/) -- Holistic fluency rewrites of learner sentences plus a fluency rating
+
+---
+
+## hierarchical_multiselect
+
+**Description:** Multi-label selection over a nested taxonomy, with expandable parent/child nodes, search, and optional automatic propagation of selections up or down the hierarchy.
+
+**Required fields:**
+- `taxonomy`: Nested label hierarchy
+- Optional `auto_select_parent`, `auto_select_children`, `expand_depth`, `show_search`, `max_selections`
+
+**Example tasks:**
+- [RCV1 Hierarchical Topic Coding](./text/topic-classification/rcv1-hierarchical-topic-coding/) -- Reuters topic hierarchy with the corpus's parent-propagation coding policy
+
+---
+
+## multi_document_event
+
+**Description:** Annotate events that recur across multiple documents, filling structured slots per event and linking mentions to shared cross-document event instances.
+
+**Required fields:**
+- `slots`: List of event slot definitions (e.g., action, time, location, participants)
+- Optional `allow_annotator_create`: Whether annotators may create new event instances
+
+**Example tasks:**
+- [ECB+ Cross-Document Event Coreference](./text/coreference/ecb-plus-cross-document-events/) -- Event and entity mention slots linked across documents in the same topic
+- See also [MAVEN-ERE](./text/coreference/maven-ere-event-coreference/) for within-document event relation annotation
+
+---
+
+## speech_transcript
+
+**Description:** Per-segment annotation over a time-aligned transcript: tag speech errors or disfluencies on each segment, optionally supplying a correction, with audio playback per segment.
+
+**Required fields:**
+- `segments_key`: Data field holding the aligned transcript segments
+- `error_types`: Tag set applied per segment
+- Optional `audio_key`, `allow_correction`
+
+**Example tasks:**
+- [PodcastFillers Disfluency Tagging](./audio/podcastfillers-disfluency-tagging/) -- Filler-word and disfluency tagging over aligned podcast transcripts
+
+---
+
+## temporal_grounding
+
+**Description:** Mark gold time intervals in a video that correspond to a natural-language query, with live IoU feedback against predicted moments.
+
+**Required fields:**
+- `video_key`: Data field holding the video source
+- `events_key`: Data field holding the query/event definitions to ground
+
+**Example tasks:**
+- [QVHighlights Moment Grounding and Saliency](./video/temporal-grounding/qvhighlights-moment-saliency/) -- Query-based moment boundaries plus saliency rating
+
+---
+
+## table_grid
+
+**Description:** Table structure annotation over an image: define the row and column grid, then assign each cell a role such as header, data, or empty.
+
+**Required fields:**
+- `image_key`: Data field holding the table image
+- `rows_key` / `cols_key`: Data fields holding the grid dimensions
+- `roles`: Per-cell role label set
+
+**Example tasks:**
+- [WTW Wired Table Structure Annotation](./image/wtw-table-structure-annotation/) -- Wired table structure recovery in natural scenes
+
+---
+
+## process_reward
+
+**Description:** Per-step reward signals over a reasoning or action trace, used to train and evaluate process reward models. Supports full per-step rating and first-error localization modes.
+
+**Required fields:**
+- `steps_key`: Data field holding the ordered list of steps
+- Optional `mode`: e.g. per-step rating or `first_error`
+- Optional `inline_with_trace`: Attach the controls inline to a chain-of-thought trace display
+
+**Example tasks:**
+- [ProcessBench Earliest-Error Identification](./agentic/processbench-math-error-steps/) -- Locate the earliest erroneous step in a math solution
+- [PRM800K Step Verification](./agentic/prm800k-step-verification/) -- Per-step positive/neutral/negative process supervision
+
+---
+
+## gui_trajectory
+
+**Description:** Step-by-step review of a computer-use or GUI agent episode: each step shows a screenshot and the action taken, and annotators judge action correctness and click grounding.
+
+**Required fields:**
+- `steps_key`: Data field holding the episode's ordered steps
+- `screenshot_key` / `action_key`: Per-step screenshot and action fields
+- Optional `coord_space`, `verdict_options`
+
+**Example tasks:**
+- [AITW Mobile Trajectory Review](./agentic/aitw-mobile-trajectory-review/) -- Android device-control episode review in the Android in the Wild style
+
+---
+
+## tool_call_review
+
+**Description:** Per-tool-call correctness review over an agent dialogue: was the right tool selected, were the arguments right, and was the call made in the right order.
+
+**Required fields:**
+- `steps_key`: Data field holding the ordered tool calls
+- Optional `verdict_options`: Per-call verdict label set
+
+**Example tasks:**
+- [API-Bank Tool Call Review](./agentic/apibank-tool-call-review/) -- Per-call review of API calls in tool-augmented assistant dialogues
+
+---
+
+## failure_attribution
+
+**Description:** Attribute a multi-agent system's failure to a responsible agent and a decisive step, with a free-text reason. Localizes blame rather than scoring overall quality.
+
+**Required fields:**
+- `steps_key`: Data field holding the ordered trace steps
+- `agent_key`: Per-step field naming the acting agent
+
+**Example tasks:**
+- [Who&When Multi-Agent Failure Attribution](./agentic/whowhen-failure-attribution/) -- Responsible agent, decisive step, and reason for the failure
+- See also [MAST Failure Taxonomy](./agentic/mast-failure-taxonomy/) for taxonomy-based failure mode labeling
+
+---
+
+## agent_scorecard
+
+**Description:** Per-agent and per-team scorecard over a multi-agent run: rate each agent and the team on named dimensions, and check off which run milestones were reached.
+
+**Required fields:**
+- `steps_key` / `agent_key`: Trace steps and the per-step agent field used to derive scorecard rows
+- `agent_dimensions` / `team_dimensions`: Dimensions rated per agent and per team
+- Optional `scale`, `milestones`
+
+**Example tasks:**
+- [MultiAgentBench Collaboration Scorecard](./agentic/multiagentbench-collaboration-scorecard/) -- Communication and planning ratings plus milestone checklist
