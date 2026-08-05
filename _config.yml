@@ -1,8 +1,8 @@
 title: Potato Annotation Showcase
-tagline: 379 annotation task examples for NLP research
+tagline: 437 annotation task examples for NLP research
 description: >-
-  379 example annotation task configurations for Potato, the open-source
-  text and multimodal annotation tool for NLP research. Covers all 22 Potato
+  437 example annotation task configurations for Potato, the open-source
+  text and multimodal annotation tool for NLP research. Covers 39 Potato
   annotation types, SemEval shared tasks, and benchmarks from ACL, EMNLP,
   NeurIPS, ICML, ICLR, and CVPR.
 theme: jekyll-theme-cayman
