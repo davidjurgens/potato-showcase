@@ -1,14 +1,14 @@
 # SemEval Shared Task Annotation Designs
 
-Recreations of the annotation designs behind **100 SemEval shared tasks** (2013–2026) as runnable [Potato](https://www.potatoannotator.com) configurations. Each folder reproduces the human annotation protocol that produced the task’s dataset — see the [documentation](https://www.potatoannotator.com/docs) to run them.
+Recreations of the annotation designs behind 100 SemEval shared tasks (2013-2026) as runnable [Potato](https://www.potatoannotator.com) configurations. Each folder reproduces the human annotation protocol that produced that task's dataset. See the [documentation](https://www.potatoannotator.com/docs) to run them.
 
-## 2013 (1 tasks)
+## 2013 (1 task)
 
 | Task | Title | Annotation Types | Directory |
 |------|-------|------------------|-----------|
 | Task 9 | Drug-Drug Interaction Extraction from Biomedical Texts | span, radio | [link](./2013/task09-drug-drug-interactions/) |
 
-## 2014 (1 tasks)
+## 2014 (1 task)
 
 | Task | Title | Annotation Types | Directory |
 |------|-------|------------------|-----------|

@@ -1,6 +1,6 @@
 # Annotation Type Reference
 
-A guide to the **39** annotation types demonstrated in this showcase, with example configurations for each. [Potato](https://www.potatoannotator.com) supports additional scheme types beyond these; see the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect) for the full list. For the full reference, see the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect).
+A guide to the 39 annotation types used in this showcase, with example configurations for each. [Potato](https://www.potatoannotator.com) supports more scheme types than these; the [annotation types documentation](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect) has the full list.
 
 ---
 
@@ -353,7 +353,7 @@ A guide to the **39** annotation types demonstrated in this showcase, with examp
 
 ## soft_label
 
-**Description:** Distribute a fixed budget of probability mass across labels instead of picking one. Captures genuine annotator uncertainty and legitimate label disagreement.
+**Description:** Distribute a fixed budget of probability mass across labels instead of picking one. Useful when annotators are uncertain, or when the disagreement itself is the signal you want to keep.
 
 **Required fields:**
 - `labels`: Non-empty list of label strings

@@ -1,6 +1,6 @@
 # Multimodal Annotation Tasks
 
-This category contains annotation task designs that combine text with images, charts, memes, or robotic action spaces — tasks where judgments require reasoning across modalities.
+This category contains annotation task designs that combine text with images, charts, memes, or robotic action spaces. In each one the judgment depends on more than one modality at a time.
 
 > Run these designs in [Potato](https://www.potatoannotator.com). See the [documentation](https://www.potatoannotator.com/docs) for multimodal display layouts.
 

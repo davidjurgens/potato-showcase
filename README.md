@@ -17,7 +17,7 @@ These **437** [text and multimodal annotation](https://www.potatoannotator.com/w
 
 The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most of these are built from a real dataset or paper, so each one shows how a published annotation scheme actually turns into a working Potato setup.
 
-The collection keeps growing. We add tasks as new datasets and SemEval tracks come out, and as Potato itself gains annotation types (the most recent additions demonstrate agent evaluation — `process_reward`, `gui_trajectory`, `tool_call_review`, `failure_attribution`, `agent_scorecard` — alongside `ranking`, `bws`, `error_span`, `text_edit`, `soft_label`, `conjoint`, `semantic_differential`, `hierarchical_multiselect`, `multi_document_event`, `rubric_eval`, `table_grid`, `speech_transcript`, and `temporal_grounding`). It's maintained by the Potato development team alongside the tool, so the examples stay in step with what Potato can currently do. If a task you need isn't here, [open a pull request](#contributing) or [submit a design](https://www.potatoannotator.com/showcase/submit).
+The collection keeps growing. We add tasks as new datasets and SemEval tracks come out, and as Potato itself gains annotation types. The newest batch covers agent evaluation (`process_reward`, `gui_trajectory`, `tool_call_review`, `failure_attribution`, `agent_scorecard`) plus thirteen other new schemes, among them `ranking`, `error_span`, `text_edit`, `soft_label`, and `rubric_eval`. It's maintained by the Potato development team alongside the tool, so the examples stay in step with what Potato can currently do. If a task you need isn't here, [open a pull request](#contributing) or [submit a design](https://www.potatoannotator.com/showcase/submit).
 
 If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com/docs/getting-started/quick-start) and [documentation](https://www.potatoannotator.com/docs) cover the basics, and you can try many of these designs live in the [Potato showcase](https://www.potatoannotator.com/showcase).
 
@@ -215,7 +215,7 @@ Comprehensive coverage of SemEval shared tasks from 2013-2026. Browse by year be
 
 ## Annotation Type Coverage
 
-**39** distinct Potato annotation types are demonstrated across these designs (counts are scheme instances, so one task may contribute to several rows):
+These designs use 39 distinct Potato annotation types. Counts below are scheme instances, so a task with three schemes appears in three rows.
 
 | Type | Count | Example Tasks |
 |------|-------|---------------|
