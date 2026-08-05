@@ -1,0 +1,77 @@
+{
+  "title": "PodcastFillers Disfluency Tagging",
+  "description": "Per-segment tagging of filler words and other audio events on podcast audio with time-aligned transcripts, based on the PodcastFillers dataset (Zhu, Caceres, Salamon, Interspeech 2022). Annotators tag each transcript segment with the fillers (uh, um, you know, like, other) and non-filler events (breaths, laughter, agreement sounds, repetitions, music, noise, simultaneous speakers) they hear. Note: this config also enables inline transcript correction, a showcase extension beyond the paper's tagging-only protocol.",
+  "overview": [
+    "PodcastFillers is the first large open dataset built specifically for filler word detection and classification in conversational speech. It contains 145 hours of audio from 199 full-length, gender-balanced English podcast episodes with over 350 speakers, carrying 85,803 manually annotated audio events, including approximately 35,000 filler words ('uh' and 'um').",
+    "In the original annotation pipeline, voice-activity detection proposed candidate events, each candidate was centered at 3 seconds inside a 5-second context clip and highlighted in the interface, and crowd workers first decided whether the candidate was a filler, then chose among five filler labels (uh, um, you know, like, other) or eight non-filler labels (laughter, breath, agreement sound, regular words, repetitions, simultaneous speakers, music, noise). Each candidate was annotated by two people, or three when the first two disagreed.",
+    "This showcase task reproduces the taxonomy with Potato's speech_transcript scheme: each time-aligned segment appears as a card with its timestamp, speaker, and ASR text next to an audio player, and annotators apply any number of event tags per segment. Untagged segments are implicitly 'regular words', so the paper's regular-words class is not a separate tag here.",
+    "One deliberate extension: the scheme's allow_correction option lets annotators type a corrected transcript for a segment, which goes beyond the PodcastFillers protocol (workers labeled highlighted candidates and never edited transcripts). The extension is flagged in the config header and instructions so the divergence from the paper is explicit.",
+    "Filler annotation at this granularity supports training and evaluating filler detectors and classifiers, and downstream uses such as automatic filler removal in podcast editing tools, the application that motivated the original dataset."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2022 (Interspeech; arXiv:2203.15135)"
+    },
+    {
+      "label": "Audio",
+      "value": "145 hours, 199 English podcast episodes"
+    },
+    {
+      "label": "Speakers",
+      "value": "350+ (gender-balanced)"
+    },
+    {
+      "label": "Annotated events",
+      "value": "85,803"
+    },
+    {
+      "label": "Filler words",
+      "value": "~35,000 ('uh' and 'um')"
+    },
+    {
+      "label": "Label taxonomy",
+      "value": "5 filler + 8 non-filler classes"
+    },
+    {
+      "label": "Judgments per candidate",
+      "value": "2, or 3 on disagreement"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "speech_transcript",
+    "radio"
+  ],
+  "domain": [
+    "Speech",
+    "Podcasts"
+  ],
+  "useCase": [
+    "Disfluency Detection",
+    "Speech Event Tagging",
+    "ASR Post-Processing"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "filler-words",
+    "disfluency",
+    "speech-events",
+    "podcast",
+    "speech-transcript",
+    "PodcastFillers"
+  ],
+  "featured": false,
+  "paperReference": "Zhu et al., Interspeech 2022",
+  "paperUrl": "https://www.isca-archive.org/interspeech_2022/zhu22e_interspeech.pdf",
+  "datasetUrl": "https://podcastfillers.github.io/",
+  "citation": "@inproceedings{zhu22e_interspeech,\n  title     = {{Filler Word Detection and Classification: A Dataset and Benchmark}},\n  author    = {Ge Zhu and Juan-Pablo Caceres and Justin Salamon},\n  year      = {2022},\n  booktitle = {{Interspeech 2022}},\n  pages     = {3769--3773},\n  doi       = {10.21437/Interspeech.2022-10992},\n  issn      = {2958-1796}\n}"
+}

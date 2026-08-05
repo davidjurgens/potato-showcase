@@ -1,0 +1,152 @@
+# SPoRC Podcast Speaker-Role and Turn Annotation
+# Based on: Benjamin Litterer, David Jurgens, and Dallas Card. "Mapping the
+#   Podcast Ecosystem with the Structured Podcast Research Corpus." Proceedings
+#   of the 63rd Annual Meeting of the Association for Computational Linguistics
+#   (Volume 1: Long Papers), 2025, pp. 25132-25154. arXiv:2411.07892.
+# Paper: https://aclanthology.org/2025.acl-long.1222/
+# Dataset: https://huggingface.co/datasets/blitt/SPoRC
+#
+# Task: Diarized podcast speaker turns are rendered as chat bubbles synced to
+# the episode audio (the audio_dialogue display). For each turn, the annotator
+# labels the speaker's role in the episode -- Host, Guest, or Neither -- and
+# validates the diarized turn boundary against the audio. Undiarized turns can
+# be assigned to a speaker directly in the transcript view. The paper's Prolific
+# validation study collected Host/Guest/Neither judgments for 2,000 extracted
+# speaker-entity names (3 judgments each; Krippendorff's alpha = 0.77 in round
+# 1) using textual context around each name. Deliberate simplification: the
+# paper's protocol presented one target entity name at a time with podcast/
+# episode descriptions and 150 words of transcript context; this showcase
+# adaptation makes the same three-way role judgment per diarized turn while
+# listening to the audio, and adds turn-boundary validation of the automatic
+# diarization.
+#
+# Annotation instructions adapted from Section 2.4 and Appendix C of the paper;
+# the paper does not publish the verbatim annotator guidelines.
+
+annotation_task_name: "SPoRC Podcast Speaker-Role and Turn Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "episode_title"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  ## Podcast Speaker Roles and Turn Boundaries
+
+  You will listen to a podcast episode while reading its diarized transcript.
+  Each speaker turn is shown as a bubble with a play button that plays just
+  that turn.
+
+  ### 1. Speaker role (every turn)
+  For each turn, decide the role of the person speaking **in this episode**:
+
+  - **Host** -- a person who hosts or moderates the episode: they introduce the
+    show or guests, drive the conversation, ask most of the questions, or read
+    sponsor messages.
+  - **Guest** -- a person who appears and speaks in the episode but is not a
+    host: an interviewee, panelist, or invited expert.
+  - **Neither** -- the audio at this turn is not a host or guest speaking:
+    for example, a clip of a third person being quoted or played back, an
+    advertisement voiced by someone outside the conversation, or a speaker who
+    is only mentioned but not actually part of the episode.
+
+  Use the whole episode as context: the same person keeps the same role across
+  their turns. If a turn is marked "Unassigned", click the speaker name to
+  assign it to an existing speaker or add a new one.
+
+  ### 2. Turn boundary (every turn)
+  Play the turn and check its automatic diarization boundary:
+
+  - **boundary-correct** -- the turn starts and ends where this speaker
+    actually starts and stops speaking.
+  - **starts-mid-utterance** -- the turn cuts in after the speaker has already
+    begun (or includes the tail of the previous speaker).
+  - **ends-mid-utterance** -- the turn cuts off before the speaker finishes
+    (or the next turn starts too early).
+  - **merges-speakers** -- the turn contains speech from more than one speaker.
+
+  ### 3. Overall diarization quality
+  After annotating all turns, rate how well the automatic transcript-and-turn
+  segmentation reflects what you heard, from 1 (very poor) to 5 (excellent).
+
+  ### 4. Host names
+  List the name(s) of the episode's host(s) as they are spoken or introduced,
+  separated by commas. Leave blank if no name is ever given.
+
+annotation_schemes:
+  - annotation_type: radio
+    name: speaker_role
+    description: "What is this speaker's role in the episode?"
+    turn_level: true
+    turn_binding:
+      field: conversation
+    labels:
+      - name: "Host"
+        tooltip: "Hosts or moderates the episode: introduces the show or guests, drives the conversation, asks most of the questions"
+        key_value: "1"
+      - name: "Guest"
+        tooltip: "Appears and speaks in the episode but is not a host: interviewee, panelist, or invited expert"
+        key_value: "2"
+      - name: "Neither"
+        tooltip: "Not a host or guest: quoted/played-back third party, outside ad voice, or a person mentioned but not part of the episode"
+        key_value: "3"
+
+  - annotation_type: radio
+    name: turn_boundary
+    description: "Is this turn's diarized boundary correct against the audio?"
+    turn_level: true
+    turn_binding:
+      field: conversation
+    labels:
+      - name: "boundary-correct"
+        tooltip: "The turn starts and ends where this speaker actually starts and stops speaking"
+        key_value: "q"
+      - name: "starts-mid-utterance"
+        tooltip: "The turn cuts in after the speaker has already begun, or includes the tail of the previous speaker"
+        key_value: "w"
+      - name: "ends-mid-utterance"
+        tooltip: "The turn cuts off before the speaker finishes, or the next turn starts too early"
+        key_value: "e"
+      - name: "merges-speakers"
+        tooltip: "The turn contains speech from more than one speaker"
+        key_value: "r"
+
+  - annotation_type: likert
+    name: diarization_quality
+    description: "Overall, how well does the diarized transcript reflect the audio? (1 = very poor, 5 = excellent)"
+    size: 5
+
+  - annotation_type: text
+    name: host_names
+    description: "List the name(s) of the episode's host(s) as spoken or introduced, separated by commas. Leave blank if never named."
+
+instance_display:
+  fields:
+    - key: conversation
+      type: audio_dialogue
+      label: "Episode transcript"
+      display_options:
+        audio_key: audio
+        turns_key: turns
+        speaker_key: speaker
+        text_key: text
+        scroll_height: 460px
+        show_timestamps: true
+        playback_rates: [1, 1.25, 1.5, 2]
+        speakers:
+          - {id: host,  name: Host,  color: "#7c3aed", side: left}
+          - {id: guest, name: Guest, color: "#059669", side: right}
+
+allow_all_users: true
+instances_per_annotator: 20
+annotation_per_instance: 3
+allow_skip: true

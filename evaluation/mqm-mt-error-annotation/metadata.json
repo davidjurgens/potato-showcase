@@ -1,0 +1,77 @@
+{
+  "title": "MQM Machine Translation Error Annotation",
+  "description": "Expert MQM (Multidimensional Quality Metrics) error annotation for machine translation based on Freitag, Foster, Grangier, Ratnakar, Tan, and Macherey (TACL 2021). Professional translators mark error spans in MT output with document context, assigning each error a category/sub-category from a broad-coverage MQM hierarchy (Accuracy, Fluency, Terminology, Style, Locale convention, plus Other, Source error, and Non-translation) and a severity (Major, Minor, or Neutral). This is the full-taxonomy expert protocol; it complements evaluation/esa-mt-error-spans, the lighter-weight ESA protocol (Kocmi et al., WMT 2024) in which annotators mark untyped minor/major spans plus a scalar score.",
+  "overview": [
+    "Freitag et al. carried out the largest MQM study to date, re-evaluating the top submissions to the WMT 2020 news translation task with professional translators instead of the crowd workers used in the official campaign. Their central argument is that any scoring of translations is implicitly based on identifying errors, so an explicit error listing — the MQM approach developed in the EU QTLaunchPad/QT21 projects — serves as a platinum standard for human evaluation.",
+    "Annotators work at the segment level with full document context, marking up to five error spans per segment (the five most severe, if more exist) and labeling each with a category from a broad-coverage hierarchy — Accuracy (Addition, Omission, Mistranslation, Untranslated text), Fluency (Punctuation, Spelling, Grammar, Register, Inconsistency, Character encoding), Terminology, Style, and Locale convention — plus special categories for Source error and Non-translation. Severities are Major, Minor, or Neutral; the paper's scoring weights Major errors 5, Minor errors 1, Minor Fluency/Punctuation 0.1, and Non-translation 25.",
+    "The resulting ratings sharply revised the official WMT 2020 ranking, showing a clear preference for human translation over MT and demonstrating that crowd-worker evaluations correlate poorly with expert MQM — and that several pretrained-embedding automatic metrics outperform human crowd workers. The corpus of MQM and pSQM annotations for over 100k segments in English-German and Chinese-English was released publicly.",
+    "The Potato config reproduces the protocol with the error_span scheme: annotators highlight spans in the displayed translation, pick a category/sub-category and severity from the paper's Table 2 hierarchy, and a running quality score is shown. Simplifications: spans cannot be placed in the source segment (affecting Source error and Omission marking), and the running score uses flat per-severity penalties rather than the paper's category-sensitive weighting."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2021 (TACL 9)"
+    },
+    {
+      "label": "Language pairs",
+      "value": "English-German, Chinese-English (WMT 2020)"
+    },
+    {
+      "label": "Segments rated",
+      "value": "1,418 EnDe (130 docs); 2,000 ZhEn (155 docs)"
+    },
+    {
+      "label": "Systems",
+      "value": "10 top WMT 2020 systems plus human references"
+    },
+    {
+      "label": "Ratings per segment",
+      "value": "3 (professional translators)"
+    },
+    {
+      "label": "Released corpus",
+      "value": "MQM + pSQM annotations for over 100k segments"
+    },
+    {
+      "label": "Severity weights",
+      "value": "Major 5; Minor 1; Minor Fluency/Punctuation 0.1; Non-translation 25"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "error_span"
+  ],
+  "domain": [
+    "NLP",
+    "Machine Translation",
+    "Evaluation"
+  ],
+  "useCase": [
+    "MT Quality Evaluation",
+    "Error Analysis",
+    "Metric Development"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "MQM",
+    "machine-translation",
+    "error-annotation",
+    "quality-evaluation",
+    "WMT",
+    "expert-annotation",
+    "severity"
+  ],
+  "featured": false,
+  "paperReference": "Markus Freitag, George Foster, David Grangier, Viresh Ratnakar, Qijun Tan, and Wolfgang Macherey. 2021. Experts, Errors, and Context: A Large-Scale Study of Human Evaluation for Machine Translation. Transactions of the Association for Computational Linguistics, 9:1460-1474.",
+  "paperUrl": "https://aclanthology.org/2021.tacl-1.87/",
+  "datasetUrl": "https://github.com/google/wmt-mqm-human-evaluation",
+  "citation": "@article{freitag-etal-2021-experts,\n    title = \"Experts, Errors, and Context: A Large-Scale Study of Human Evaluation for Machine Translation\",\n    author = \"Freitag, Markus  and\n      Foster, George  and\n      Grangier, David  and\n      Ratnakar, Viresh  and\n      Tan, Qijun  and\n      Macherey, Wolfgang\",\n    editor = \"Roark, Brian  and\n      Nenkova, Ani\",\n    journal = \"Transactions of the Association for Computational Linguistics\",\n    volume = \"9\",\n    year = \"2021\",\n    address = \"Cambridge, MA\",\n    publisher = \"MIT Press\",\n    url = \"https://aclanthology.org/2021.tacl-1.87/\",\n    doi = \"10.1162/tacl_a_00437\",\n    pages = \"1460--1474\"\n}"
+}

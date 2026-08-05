@@ -1,0 +1,146 @@
+# Godspeed Questionnaire Series — Perception of a Conversational AI Assistant
+# Based on: Christoph Bartneck, Dana Kulić, Elizabeth Croft, and Susana Zoghbi (2009),
+#   "Measurement Instruments for the Anthropomorphism, Animacy, Likeability,
+#    Perceived Intelligence, and Perceived Safety of Robots."
+#   International Journal of Social Robotics 1(1):71-81.
+#   DOI: 10.1007/s12369-008-0001-3
+#   Official instrument page: https://www.bartneck.de/2008/03/11/the-godspeed-questionnaire-series/
+#
+# Task: apply the standard HRI (human-robot interaction) measurement instrument to
+# conversational AI outputs. The respondent reads a user prompt and an AI
+# assistant's recorded response, then completes the Godspeed Questionnaire Series
+# (Godspeed I-V): 5-point semantic-differential ratings on bipolar adjective pairs
+# measuring Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and
+# Perceived Safety. Deliberate simplification (stated subset): the Godspeed I item
+# "Moving rigidly - Moving elegantly" is omitted because the assistant here
+# produces text only and exhibits no physical movement; all other items of all
+# five indices are administered.
+#
+# Annotation instructions reproduced verbatim from the published Godspeed
+# Questionnaire Series instrument (Bartneck et al., 2009; official instrument
+# page): the administration instructions ("Please rate your impression of the
+# robot on these scales:" for Godspeed I-IV, "Please rate your emotional state on
+# these scales:" for Godspeed V) and every bipolar item pair are the exact
+# published wording. The framing note mapping "the robot" to the AI assistant is
+# an addition for this application.
+
+annotation_task_name: "Godspeed Questionnaire: AI Assistant Perception"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "response"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  Read the user's message and the AI assistant's response shown above, then
+  complete the Godspeed Questionnaire Series below. This is the standard
+  measurement instrument from human-robot interaction research; in this study,
+  "the robot" refers to the AI assistant whose response you just read.
+
+  Administration instructions, reproduced verbatim from the instrument:
+
+  - Godspeed I (Anthropomorphism), II (Animacy), III (Likeability), and
+    IV (Perceived Intelligence): "Please rate your impression of the robot on
+    these scales:"
+  - Godspeed V (Perceived Safety): "Please rate your emotional state on these
+    scales:"
+
+  Rate every scale by selecting the point between the two adjectives that best
+  reflects your impression (for Godspeed V, your own emotional state while
+  reading the exchange). There are no right or wrong answers. Note that on some
+  scales the left-hand adjective is the more positive one; read each pair
+  carefully. (One movement-related item of Godspeed I is omitted because the
+  assistant produces text only.)
+
+annotation_schemes:
+  - annotation_type: semantic_differential
+    name: anthropomorphism
+    description: "Godspeed I: Anthropomorphism — Please rate your impression of the robot on these scales:"
+    scale_points: 5
+    pairs:
+      - [Fake, Natural]
+      - [Machinelike, Humanlike]
+      - [Unconscious, Conscious]
+      - [Artificial, Lifelike]
+    label_requirement:
+      required: true
+
+  - annotation_type: semantic_differential
+    name: animacy
+    description: "Godspeed II: Animacy — Please rate your impression of the robot on these scales:"
+    scale_points: 5
+    pairs:
+      - [Dead, Alive]
+      - [Stagnant, Lively]
+      - [Mechanical, Organic]
+      - [Artificial, Lifelike]
+      - [Inert, Interactive]
+      - [Apathetic, Responsive]
+    label_requirement:
+      required: true
+
+  - annotation_type: semantic_differential
+    name: likeability
+    description: "Godspeed III: Likeability — Please rate your impression of the robot on these scales:"
+    scale_points: 5
+    pairs:
+      - [Dislike, Like]
+      - [Unfriendly, Friendly]
+      - [Unkind, Kind]
+      - [Unpleasant, Pleasant]
+      - [Awful, Nice]
+    label_requirement:
+      required: true
+
+  - annotation_type: semantic_differential
+    name: perceived_intelligence
+    description: "Godspeed IV: Perceived Intelligence — Please rate your impression of the robot on these scales:"
+    scale_points: 5
+    pairs:
+      - [Incompetent, Competent]
+      - [Ignorant, Knowledgeable]
+      - [Irresponsible, Responsible]
+      - [Unintelligent, Intelligent]
+      - [Foolish, Sensible]
+    label_requirement:
+      required: true
+
+  - annotation_type: semantic_differential
+    name: perceived_safety
+    description: "Godspeed V: Perceived Safety — Please rate your emotional state on these scales:"
+    scale_points: 5
+    pairs:
+      - [Anxious, Relaxed]
+      - [Calm, Agitated]
+      - [Quiescent, Surprised]
+    label_requirement:
+      required: true
+
+html_layout: |
+  <div style="padding: 15px; max-width: 820px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Scenario:</strong> {{scenario}}
+    </div>
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
+      <strong style="color: #1e40af;">User:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{user_prompt}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px;">
+      <strong style="color: #166534;">AI assistant:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-wrap;">{{response}}</p>
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true

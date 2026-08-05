@@ -1,0 +1,75 @@
+{
+  "title": "SPoRC Podcast Speaker-Role and Turn Annotation",
+  "description": "Speaker-role labeling and diarization validation for podcast episodes, based on the Structured Podcast Research Corpus (SPoRC). Annotators read diarized speaker turns as chat bubbles synced to the episode audio, label each turn's speaker as Host, Guest, or Neither following the paper's Prolific validation protocol, flag incorrect turn boundaries, rate overall diarization quality, and record the hosts' names.",
+  "overview": [
+    "SPoRC (the Structured Podcast Research Corpus) is a dataset of over 1.1 million English-language podcast episode transcripts collected from public RSS feeds, with audio features and diarized speaker turns for a 370K-episode subset and inferred speaker roles for all episodes. The accompanying ACL 2025 paper by Litterer, Jurgens, and Card uses it for a foundational study of the podcast ecosystem's content, structure, and responsiveness.",
+    "A key piece of the corpus is knowing who is speaking and in what capacity. The authors validated their speaker-role inference with a Prolific annotation study: 2,000 extracted speaker-entity names were each judged by three annotators as Host, Guest, or Neither (people mentioned but not appearing in the episode), reaching Krippendorff's alpha of 0.77 on the first round, with final labels aggregated via MACE.",
+    "This showcase task adapts that protocol to Potato's audio_dialogue display. The diarized transcript renders as colored speaker bubbles synced to the episode audio; each turn has a play button that plays just that turn. Annotators make the Host/Guest/Neither judgment per turn while listening, and can assign speakers to undiarized turns directly in the transcript.",
+    "Because SPoRC's turns come from automatic transcription and diarization, the task also asks annotators to validate each turn's boundary (correct, starts or ends mid-utterance, or merges two speakers) and to rate the episode-level diarization quality, producing exactly the kind of human check the paper ran on its pipeline output.",
+    "SPoRC turn rows in both their JSONL and parquet forms ingest directly into the audio_dialogue display, so this config can be pointed at real exported SPoRC episodes after accepting the dataset's terms on Hugging Face."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2024 (arXiv:2411.07892); ACL 2025"
+    },
+    {
+      "label": "Episode transcripts",
+      "value": "1.1M+ (English, May-June 2020 RSS feeds)"
+    },
+    {
+      "label": "Audio features + speaker turns",
+      "value": "370K episodes"
+    },
+    {
+      "label": "Role-validation study",
+      "value": "2,000 speaker entities, 3 judgments each"
+    },
+    {
+      "label": "Agreement",
+      "value": "Krippendorff's alpha = 0.77 (round 1)"
+    },
+    {
+      "label": "Aggregated labels",
+      "value": "858 Hosts / 639 Guests / 503 Neither (MACE)"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "radio",
+    "likert",
+    "text"
+  ],
+  "domain": [
+    "Podcasts",
+    "Speech",
+    "Media Studies"
+  ],
+  "useCase": [
+    "Speaker Role Labeling",
+    "Diarization Validation",
+    "Corpus Construction"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "podcast",
+    "speaker-diarization",
+    "speaker-role",
+    "audio-dialogue",
+    "turn-annotation",
+    "SPoRC"
+  ],
+  "featured": false,
+  "paperReference": "Litterer et al., ACL 2025",
+  "paperUrl": "https://aclanthology.org/2025.acl-long.1222/",
+  "datasetUrl": "https://huggingface.co/datasets/blitt/SPoRC",
+  "citation": "@inproceedings{litterer-etal-2025-mapping,\n    title = \"Mapping the Podcast Ecosystem with the Structured Podcast Research Corpus\",\n    author = \"Litterer, Benjamin Roger and\n      Jurgens, David and\n      Card, Dallas\",\n    booktitle = \"Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2025\",\n    address = \"Vienna, Austria\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2025.acl-long.1222/\",\n    doi = \"10.18653/v1/2025.acl-long.1222\",\n    pages = \"25132--25154\"\n}"
+}

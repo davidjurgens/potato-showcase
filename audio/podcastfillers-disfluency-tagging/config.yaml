@@ -1,0 +1,111 @@
+# PodcastFillers Disfluency and Filler-Word Tagging
+# Based on: Ge Zhu, Juan-Pablo Caceres, and Justin Salamon. "Filler Word
+#   Detection and Classification: A Dataset and Benchmark." Proc. Interspeech
+#   2022, pp. 3769-3773. doi:10.21437/Interspeech.2022-10992. arXiv:2203.15135.
+# Paper: https://www.isca-archive.org/interspeech_2022/zhu22e_interspeech.pdf
+# Dataset: https://podcastfillers.github.io/
+#
+# Task: Time-aligned podcast transcript segments are shown as cards with an
+# inline audio player (the speech_transcript scheme). For each segment, the
+# annotator tags the filler words ("uh", "um", "you know", "like", other) and
+# other audio events (breaths, laughter, agreement sounds, repetitions, music,
+# noise, simultaneous speakers) that occur in it, following the PodcastFillers
+# label taxonomy. In the original pipeline, VAD-detected candidates were
+# centered at 3 s inside a 5 s context clip and crowd workers first judged
+# whether the highlighted candidate was a filler, then picked one of five
+# filler or eight non-filler labels; each candidate was annotated by two
+# people, or three when the first two disagreed.
+#
+# CAVEAT (deliberate showcase extension): this config enables the scheme's
+# inline transcript-correction affordance (allow_correction: true), which goes
+# beyond the paper's tagging-only protocol -- PodcastFillers annotators labeled
+# highlighted candidates and did not edit transcripts.
+#
+# Annotation instructions adapted from Section 2 (the PodcastFillers dataset
+# and its annotation pipeline) of the paper; the paper does not publish the
+# verbatim annotator guidelines.
+
+annotation_task_name: "PodcastFillers Disfluency Tagging"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "episode_title"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  ## Filler Words and Other Audio Events
+
+  You will hear short podcast audio clips with a time-aligned transcript,
+  broken into segments. Listen to each segment and tag every filler word and
+  other audio event that occurs in it.
+
+  ### Filler tags
+  A filler word is a sound or word a speaker utters to hold the floor or buy
+  time while thinking, without adding meaning:
+
+  - **uh** -- the filler sound "uh" ("we were, uh, surprised")
+  - **um** -- the filler sound "um" ("it's, um, complicated")
+  - **you_know** -- "you know" used as a filler, not as a real question
+  - **like** -- "like" used as a filler, not for comparison or preference
+  - **other_filler** -- any other filler ("er", "ah", "well", "so" used to stall)
+
+  Only tag these words when they are used as fillers. "I like coffee" is not a
+  filler; "it was, like, an hour" is.
+
+  ### Non-filler event tags
+  - **breath** -- an audible breath or inhale
+  - **laughter** -- the speaker or another person laughs
+  - **agreement_sound** -- a backchannel sound such as "uh-huh", "mm-hmm", "yeah"
+  - **repetition** -- a stuttered or repeated word or phrase ("I- I went", "we we tried")
+  - **simultaneous_speakers** -- two or more people talking over each other
+  - **music** -- music playing in the segment
+  - **noise** -- other non-speech noise (bumps, clicks, background sounds)
+
+  A segment can carry several tags; tag every event you hear. If a segment is
+  plain fluent speech with none of these events, leave it untagged.
+
+  ### Transcript correction
+  If the automatic transcript of a segment is wrong -- a missing or misheard
+  word, or a filler that was dropped -- type the corrected text for that
+  segment. (Note: this correction step is a showcase extension beyond the
+  original PodcastFillers protocol.)
+
+  ### Clip audio quality
+  Finally, rate the overall audio quality of the clip.
+
+annotation_schemes:
+  - annotation_type: speech_transcript
+    name: filler_events
+    description: "Tag filler words and other audio events on each segment, and correct the transcript where needed."
+    segments_key: segments
+    error_types: [uh, um, you_know, like, other_filler, breath, laughter, agreement_sound, repetition, simultaneous_speakers, music, noise]
+    allow_correction: true
+    audio_key: audio
+
+  - annotation_type: radio
+    name: clip_audio_quality
+    description: "Overall audio quality of this clip."
+    labels:
+      - name: "clean"
+        tooltip: "Clear studio-quality speech, no interfering sounds"
+        key_value: "1"
+      - name: "some-background"
+        tooltip: "Intelligible speech with noticeable background noise or a music bed"
+        key_value: "2"
+      - name: "degraded"
+        tooltip: "Speech is hard to hear: heavy noise, clipping, low volume, or crosstalk"
+        key_value: "3"
+
+allow_all_users: true
+instances_per_annotator: 40
+annotation_per_instance: 2
+allow_skip: true

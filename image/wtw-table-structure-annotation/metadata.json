@@ -1,0 +1,70 @@
+{
+  "title": "WTW Wired Table Structure Annotation",
+  "description": "Cell-grid structure annotation for photographed and scanned wired tables, based on the WTW (Wired Table in the Wild) dataset (Long et al., ICCV 2021). Annotators set each table's row/column grid dimensions and mark every cell's logical role, including headers, empty cells, and spanned continuations of merged cells, then record which of WTW's seven challenging conditions apply and the image source. Pixel-level cell quadrilaterals from the full WTW protocol are deliberately out of scope.",
+  "overview": [
+    "WTW (Wired Table in the Wild) is the first large dataset for parsing the structure of wired tables photographed outside clean documents: on bottles, boxes, and signs as well as in archival and printed documents. It contains 14,581 images (10,970 training / 3,611 testing), sourced roughly 50% from natural scenes, 30% from archival documents, and 20% from printed documents.",
+    "The dataset deliberately covers seven challenging cases that break document-centric table parsers: inclined tables, curved tables, occluded or blurred tables, extreme-aspect-ratio tables, overlaid tables, multi-color tables, and irregular tables. Annotations include cell coordinates (following the ICDAR2019 benchmark's convention of localizing cells by the inner table lines), row/column information, and table instance labels for multi-table images.",
+    "This showcase task reproduces the logical half of that protocol with Potato's table_grid scheme: the annotator sets the grid dimensions, then clicks cells to cycle through roles (data, column header, row header, empty, spanned). The 'spanned' role marks grid positions covered by a merged cell starting above or to the left, which encodes each spanning cell's row/column start-end extent in the ICDAR-2019 style.",
+    "One deliberate simplification, flagged in the config header: WTW's full annotation also draws each cell's physical quadrilateral along the inner table lines, and pixel-level coordinates are not captured by table_grid. Companion schemes record the applicable challenging cases from the WTW taxonomy and the image source category, mirroring how the dataset itself is organized.",
+    "Unlike the page-layout tasks in this showcase (OmniDocBench document parsing, DocBank), which draw region boxes around whole tables and figures, this task targets the structure inside a table: the cell grid that region boxes cannot express."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2021 (ICCV; arXiv:2109.02199)"
+    },
+    {
+      "label": "Images",
+      "value": "14,581 (10,970 train / 3,611 test)"
+    },
+    {
+      "label": "Sources",
+      "value": "~50% natural scenes / 30% archival / 20% printed"
+    },
+    {
+      "label": "Challenging cases",
+      "value": "7 (inclined, curved, occluded/blurred, extreme aspect ratio, overlaid, multi-color, irregular)"
+    },
+    {
+      "label": "Cell convention",
+      "value": "ICDAR2019 inner-table-line localization"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "table_grid",
+    "multiselect",
+    "radio"
+  ],
+  "domain": [
+    "Document Analysis",
+    "Computer Vision"
+  ],
+  "useCase": [
+    "Table Structure Recognition",
+    "OCR Pipelines",
+    "Scene Text Understanding"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "table-structure",
+    "table-grid",
+    "wired-tables",
+    "document-parsing",
+    "scene-images",
+    "WTW"
+  ],
+  "featured": false,
+  "paperReference": "Long et al., ICCV 2021",
+  "paperUrl": "https://openaccess.thecvf.com/content/ICCV2021/html/Long_Parsing_Table_Structures_in_the_Wild_ICCV_2021_paper.html",
+  "datasetUrl": "https://github.com/wangwen-whu/WTW-Dataset",
+  "citation": "@inproceedings{Long_2021_ICCV,\n  author={Long, Rujiao and Wang, Wen and Xue, Nan and Gao, Feiyu and Yang, Zhibo and Wang, Yongpan and Xia, Gui-Song},\n  title={Parsing Table Structures in the Wild},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n  month={October},\n  year={2021}\n}"
+}

@@ -1,0 +1,74 @@
+{
+  "title": "FLASK Skill-based Rubric Evaluation",
+  "description": "Fine-grained human evaluation of LLM responses based on FLASK (Fine-grained Language Model Evaluation based on Alignment Skill Sets) by Ye, Kim, Kim, Hwang, Kim, Jo, Thorne, Kim, and Seo (KAIST), ICLR 2024 Spotlight. The annotator reads an instruction, a reference answer, and a model response, then scores each instance-relevant alignment skill (of FLASK's 12, e.g., logical robustness, factuality, comprehension, harmlessness) from 1 to 5 against skill-specific rubrics, plus the instruction's difficulty level. Unlike this showcase's Prometheus rubric evaluation task — from the same KAIST group, where an LLM judge scores with a single instance-specific rubric — FLASK decomposes quality into a fixed skill set whose skill-specific rubrics are scored by both humans and models.",
+  "overview": [
+    "FLASK argues that a single overall score hides what actually distinguishes language models. It decomposes instruction-following quality into 12 alignment skills grouped under four primary abilities: Logical Thinking (logical robustness, logical correctness, logical efficiency), Background Knowledge (factuality, commonsense understanding), Problem Handling (comprehension, insightfulness, completeness, metacognition), and User Alignment (conciseness, readability, harmlessness).",
+    "The evaluation set contains 1,740 instances collected from 122 NLP datasets. Each instance is annotated with its relevant skills (the top-3 essential skills), domain, and a difficulty level from 1 (simple lifestyle knowledge) to 5 (expert-level knowledge). Evaluators — human labelers or an Eval LM — are given the instruction, a reference answer, and the target model's response, and assign a score from 1 to 5 for each relevant skill based on a predefined skill-specific score rubric.",
+    "In the paper's human study, 10 labelers evaluated 200 instances with responses from 4 anonymized models, 3 labelers per instance. The skill-specific decomposition improved the correlation between human-based and model-based evaluation and revealed per-skill differences between models that overall scores obscure. FLASK-Hard, the subset of 89 expert-difficulty instances, remains challenging even for the strongest models.",
+    "This config reproduces the human protocol with a rubric_eval grid over all 12 skills: annotators score the skills listed as relevant for the instance (leaving the rest blank) using the paper's verbatim score rubrics, and annotate difficulty with a companion radio scheme. In the original setup an Eval LM pre-selects the top-3 relevant skills and annotators may mark a wrongly assigned skill as N/A; here the relevant skills are displayed as part of the instance instead.",
+    "Related task in this showcase: evaluation/prometheus-rubric-evaluation. Prometheus (also from KAIST) trains an LLM judge to score with fine-grained instance-specific rubrics, whereas FLASK is the skill-set decomposition protocol designed for both human annotators and model evaluators — this task is the human-annotation side of that line of work."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2023 (arXiv:2307.10928); ICLR 2024 Spotlight"
+    },
+    {
+      "label": "Evaluation instances",
+      "value": "1,740 (from 122 NLP datasets)"
+    },
+    {
+      "label": "Alignment skills",
+      "value": "12, under 4 primary abilities"
+    },
+    {
+      "label": "Score scale",
+      "value": "1-5 per skill, skill-specific rubrics"
+    },
+    {
+      "label": "Human study",
+      "value": "10 labelers, 200 instances, 3 labelers per instance, 4 models"
+    },
+    {
+      "label": "FLASK-Hard",
+      "value": "89 expert-level instances"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "rubric_eval",
+    "radio"
+  ],
+  "domain": [
+    "LLM Evaluation",
+    "NLP"
+  ],
+  "useCase": [
+    "Fine-grained Model Evaluation",
+    "Human Evaluation Protocols",
+    "Alignment Research"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "flask",
+    "rubric-evaluation",
+    "skill-decomposition",
+    "llm-evaluation",
+    "alignment",
+    "fine-grained-evaluation",
+    "kaist"
+  ],
+  "featured": false,
+  "paperReference": "Seonghyeon Ye, Doyoung Kim, Sungdong Kim, Hyeonbin Hwang, Seungone Kim, Yongrae Jo, James Thorne, Juho Kim, and Minjoon Seo. 2024. FLASK: Fine-grained Language Model Evaluation based on Alignment Skill Sets. In The Twelfth International Conference on Learning Representations (ICLR 2024), Spotlight.",
+  "paperUrl": "https://arxiv.org/abs/2307.10928",
+  "datasetUrl": "https://github.com/kaistAI/FLASK",
+  "citation": "@inproceedings{ye2024flask,\n    title = {{FLASK}: Fine-grained Language Model Evaluation based on Alignment Skill Sets},\n    author = {Seonghyeon Ye and Doyoung Kim and Sungdong Kim and Hyeonbin Hwang and Seungone Kim and Yongrae Jo and James Thorne and Juho Kim and Minjoon Seo},\n    booktitle = {The Twelfth International Conference on Learning Representations},\n    year = {2024},\n    url = {https://openreview.net/forum?id=CYmF38ysDa}\n}"
+}

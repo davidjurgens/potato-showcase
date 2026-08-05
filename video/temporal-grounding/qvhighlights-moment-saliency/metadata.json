@@ -1,0 +1,77 @@
+{
+  "title": "QVHighlights Moment Grounding and Saliency",
+  "description": "Query-based moment localization and highlight rating based on the QVHighlights dataset (Lei, Berg, Bansal, NeurIPS 2021). Given a free-form natural-language event query, annotators mark the relevant moment interval(s) in the video with the dedicated temporal_grounding scheme, seeing a live IoU against a model's predicted interval when one is provided, and then rate the clip's saliency on the paper's five-point scale from Very Good to Very Bad.",
+  "overview": [
+    "QVHighlights pairs over 10,000 YouTube videos (10,148 videos; lifestyle vlogs and news footage segmented into 150-second clips) with 10,310 free-form human-written queries and 18,367 annotated moments, plus five-point saliency ratings for every 2-second clip inside each moment. It was introduced alongside Moment-DETR as the first unified benchmark for query-based moment retrieval and highlight detection.",
+    "In the original Amazon Mechanical Turk protocol, qualified workers watched a video, wrote a single-sentence event query describing a salient visual event, and selected all query-relevant 2-second segments from a clip grid. In a second stage, workers rated each clip in an annotated moment on a five-point Likert scale (Very Good, Good, Fair, Bad, Very Bad) answering 'Is the clip good as a cover or highlight for the video?', with ratings from 3 different workers per clip.",
+    "This showcase task reproduces the localization step with Potato's temporal_grounding scheme: for each given query, the annotator sets the gold [start, end] interval by capturing the playhead or typing seconds. When the data item carries a model's predicted interval, the interface shows a live IoU and a two-bar predicted-vs-gold mini-timeline, making the task directly usable for scoring moment-retrieval model predictions against human judgments.",
+    "The annotation instructions are reproduced verbatim from the AMT instruction screenshots in Appendix B of the paper (Figures 9 and 11), with bracketed notes flagging two deliberate simplifications: queries are provided rather than written by the annotator, and saliency is rated once per marked moment rather than per 2-second clip by three workers.",
+    "This task complements the three existing temporal-grounding showcases (ActivityNet Captions, Charades-STA, DiDeMo), which use the general video_annotation segment scheme; this one demonstrates the dedicated temporal_grounding scheme with predicted-vs-gold IoU support."
+  ],
+  "datasetStats": [
+    {
+      "label": "Released",
+      "value": "2021 (NeurIPS; arXiv:2107.09609)"
+    },
+    {
+      "label": "Videos",
+      "value": "10,148 (150-second segments)"
+    },
+    {
+      "label": "Queries",
+      "value": "10,310 free-form, human-written"
+    },
+    {
+      "label": "Moments",
+      "value": "18,367 (avg. 1.8 per query)"
+    },
+    {
+      "label": "Average moment length",
+      "value": "24.6 s of 150 s"
+    },
+    {
+      "label": "Saliency scale",
+      "value": "5-point (Very Good ... Very Bad), 3 workers per clip"
+    },
+    {
+      "label": "Clip unit",
+      "value": "2-second segments"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "temporal_grounding",
+    "radio"
+  ],
+  "domain": [
+    "Video Understanding",
+    "Vision and Language"
+  ],
+  "useCase": [
+    "Moment Retrieval",
+    "Highlight Detection",
+    "Model Evaluation"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "temporal-grounding",
+    "moment-retrieval",
+    "highlight-detection",
+    "saliency",
+    "video-queries",
+    "QVHighlights"
+  ],
+  "featured": false,
+  "paperReference": "Lei et al., NeurIPS 2021",
+  "paperUrl": "https://arxiv.org/abs/2107.09609",
+  "datasetUrl": "https://github.com/jayleicn/moment_detr",
+  "citation": "@inproceedings{lei2021detecting,\n  title={Detecting Moments and Highlights in Videos via Natural Language Queries},\n  author={Lei, Jie and Berg, Tamara L. and Bansal, Mohit},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  volume={34},\n  year={2021}\n}"
+}

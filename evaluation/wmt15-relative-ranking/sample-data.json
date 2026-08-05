@@ -1,0 +1,132 @@
+[
+  {
+    "id": "wmt15rr_001",
+    "language_pair": "German → English",
+    "source": "Die Bundesregierung kündigte am Dienstag ein neues Förderprogramm für kleine und mittlere Unternehmen an.",
+    "reference": "The federal government announced a new support programme for small and medium-sized enterprises on Tuesday.",
+    "translations": [
+      "The federal government announced a new funding programme for small and medium-sized enterprises on Tuesday.",
+      "On Tuesday the federal government has announced a new promotion program for small and middle enterprises.",
+      "The federal government announced a new funding programme for enterprises.",
+      "The government federal announced Tuesday new program of support for small and middle-standing companies.",
+      "The Federal Government announced on Tuesday a new subsidy programme for small and medium companies."
+    ]
+  },
+  {
+    "id": "wmt15rr_002",
+    "language_pair": "German → English",
+    "source": "Wegen des anhaltenden Regens mussten mehrere Straßen in der Innenstadt gesperrt werden.",
+    "reference": "Several roads in the city centre had to be closed because of the persistent rain.",
+    "translations": [
+      "Because of the continuing rain, several streets in the city centre had to be closed.",
+      "Due to the persistent rain several roads in the inner city must be blocked.",
+      "Because of the rain lasting, several streets in the downtown had to become blocked.",
+      "Several streets in the city center were closed due to ongoing rain.",
+      "Because of the persistent rain must several roads in the inner city be locked."
+    ]
+  },
+  {
+    "id": "wmt15rr_003",
+    "language_pair": "German → English",
+    "source": "Der Verein hofft, mit dem neuen Trainer in der kommenden Saison wieder um den Titel mitspielen zu können.",
+    "reference": "The club hopes to be able to compete for the title again next season with the new coach.",
+    "translations": [
+      "The club hopes to compete for the title again with the new coach in the coming season.",
+      "The club hopes to be able to play again for the title in the coming season with the new trainer.",
+      "The association hopes, with the new trainer in the coming season, to be able to play along for the title again.",
+      "The club hopes the new coach can win the title next season.",
+      "The verein hopes with the new coach in the coming season again around the title to play."
+    ]
+  },
+  {
+    "id": "wmt15rr_004",
+    "language_pair": "German → English",
+    "source": "Nach Angaben des Gesundheitsministeriums ist die Zahl der Grippefälle in den letzten zwei Wochen deutlich gestiegen.",
+    "reference": "According to the health ministry, the number of flu cases has risen significantly over the past two weeks.",
+    "translations": [
+      "According to the Ministry of Health, the number of flu cases has increased significantly in the last two weeks.",
+      "According to information of the health ministry, the number of influenza cases in the last two weeks clearly rose.",
+      "The health ministry said flu cases have risen sharply in the past two weeks.",
+      "After statements of the health ministry the number of the flu falls in the last two weeks is clearly climbed.",
+      "According to the health ministry, the number of flu cases rose."
+    ]
+  },
+  {
+    "id": "wmt15rr_005",
+    "language_pair": "German → English",
+    "source": "Die neue Bahnstrecke soll die Fahrzeit zwischen den beiden Städten um fast eine Stunde verkürzen.",
+    "reference": "The new railway line is expected to cut the journey time between the two cities by almost an hour.",
+    "translations": [
+      "The new railway line is intended to shorten the travel time between the two cities by almost an hour.",
+      "The new rail route should shorten the driving time between both cities by nearly one hour.",
+      "The new train line will reduce travel time between the two cities.",
+      "The new railway distance shall the driving time between the both towns around almost a hour shorten.",
+      "The new rail line is set to cut journey times between the two cities by nearly an hour."
+    ]
+  },
+  {
+    "id": "wmt15rr_006",
+    "language_pair": "French → English",
+    "source": "Le musée a accueilli plus de deux millions de visiteurs l'année dernière, un record depuis son ouverture.",
+    "reference": "The museum welcomed more than two million visitors last year, a record since it opened.",
+    "translations": [
+      "The museum welcomed more than two million visitors last year, a record since its opening.",
+      "The museum received over two million visitors last year, which is a record since the opening.",
+      "The museum has hosted more than two millions of visitors the last year, a record since his opening.",
+      "The museum welcomed more than two million visitors, a record.",
+      "The museum accueilled more than two million visitors last year, record since its opening."
+    ]
+  },
+  {
+    "id": "wmt15rr_007",
+    "language_pair": "French → English",
+    "source": "Selon les économistes, la baisse du prix du pétrole pourrait relancer la consommation des ménages.",
+    "reference": "According to economists, the drop in oil prices could boost household consumption.",
+    "translations": [
+      "According to economists, the fall in oil prices could revive household consumption.",
+      "According to the economists, the decrease of the oil price could relaunch the consumption of the households.",
+      "Economists say lower oil prices may boost consumer spending.",
+      "According to economists, the drop of the petrol price could restart the consumption of homes.",
+      "Following the economists, the fall of price of the oil could to revive the consumption of households."
+    ]
+  },
+  {
+    "id": "wmt15rr_008",
+    "language_pair": "Russian → English",
+    "source": "Космический аппарат успешно вышел на орбиту после девяти месяцев полёта.",
+    "reference": "The spacecraft successfully entered orbit after a nine-month flight.",
+    "translations": [
+      "The spacecraft successfully entered orbit after nine months of flight.",
+      "The space vehicle has successfully come out on the orbit after nine months of the flight.",
+      "The spacecraft reached orbit after nine months.",
+      "Space apparatus successfully went out to orbit after nine months flight.",
+      "The space probe successfully moved into orbit following a nine-month journey."
+    ]
+  },
+  {
+    "id": "wmt15rr_009",
+    "language_pair": "Russian → English",
+    "source": "Переговоры продолжатся на следующей неделе, сообщил представитель министерства иностранных дел.",
+    "reference": "The talks will continue next week, a foreign ministry spokesman said.",
+    "translations": [
+      "Negotiations will continue next week, a spokesman for the foreign ministry said.",
+      "The talks will be continued on the next week, reported the representative of the ministry of foreign affairs.",
+      "Negotiations continue next week, said the representative of foreign affairs ministry.",
+      "The negotiations will prolong on next week, communicated the representative of the ministry of the foreign business.",
+      "Talks are set to resume next week, according to a foreign ministry official."
+    ]
+  },
+  {
+    "id": "wmt15rr_010",
+    "language_pair": "Czech → English",
+    "source": "Praha zažila v pátek nejteplejší den letošního roku.",
+    "reference": "On Friday, Prague experienced the hottest day of this year.",
+    "translations": [
+      "Prague experienced the warmest day of this year on Friday.",
+      "On Friday Prague has experienced the most warm day of the this year.",
+      "Prague saw its hottest day of the year on Friday.",
+      "Prague lived through in Friday the warmest day of year.",
+      "Prague experienced the hottest day."
+    ]
+  }
+]

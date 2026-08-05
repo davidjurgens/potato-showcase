@@ -1,0 +1,131 @@
+# QVHighlights Moment Grounding and Saliency Rating
+# Based on: Jie Lei, Tamara L. Berg, and Mohit Bansal. "Detecting Moments and
+#   Highlights in Videos via Natural Language Queries." Advances in Neural
+#   Information Processing Systems (NeurIPS) 2021. arXiv:2107.09609.
+# Paper: https://arxiv.org/abs/2107.09609
+# Dataset: https://github.com/jayleicn/moment_detr
+#
+# Task: Given a free-form natural-language event query, mark the relevant
+# moment interval(s) in the video using the temporal_grounding scheme (set
+# in/out from the playhead or type seconds; when an item carries a model's
+# predicted interval, a live IoU and predicted-vs-gold mini-timeline are
+# shown), then rate whether the marked clip would make a good cover/highlight
+# for the video on the paper's 5-point scale (Very Good / Good / Fair / Bad /
+# Very Bad). Deliberate simplifications: in the original AMT protocol workers
+# (1) wrote the queries themselves before selecting relevant 2-second clips
+# from a grid -- here the query is given and the moment is marked as a
+# continuous interval; and (2) rated saliency separately for every 2-second
+# clip inside annotated moments, with 3 workers per clip -- here a single
+# clip-level saliency rating is given for the marked moment.
+#
+# Annotation instructions reproduced verbatim from Appendix B, Figures 9 and
+# 11 of the paper (the AMT annotation-instruction screenshots), with bracketed
+# notes and "[...]" trims marking showcase adaptations.
+
+annotation_task_name: "QVHighlights Moment Grounding and Saliency"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "video"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  ## Write a query and locate it in the video.
+
+  *(Verbatim from Figure 9 of the paper. In this showcase task the event query
+  is already provided with each video; read step 1 as the definition of what a
+  valid query describes, then perform step 2 by marking the interval(s) of the
+  video relevant to the given query.)*
+
+  You will be showing a 2-3 minutes long video. Your task is to find and write
+  a sentence that describes a salient visual event in the video, and select all
+  video segments/clips related to this event.
+
+  **Steps:**
+
+  1. Click to watch the video, then write a sentence (aka. **event query**) to
+     describe one of the main events in the video.
+     - An event can be:
+       - activities of people or animal, for example, "A man in blue top is surfing."
+       - or anything else that are **visually salient and important** in the
+         video. While describing what you hear from the video is also
+         acceptable, we encourage you to always **describe events that can be seen**.
+     - It should be relevant to >=10% of the video segments. [...] Note that
+       the whole video can be relevant to your query, in which you need to
+       select all the segments.
+     - The description should be **a single sentence** written in standard
+       English, and contains at least 5 words.
+     - **Be specific**, **avoid general and boring ones** like "Two people are
+       talking" (X), "people vlog their day" (X), "adventure to a hotel" (X).
+     - **Write different events for different videos**, repetitions should be avoid.
+     - Please describe events located at different parts of the videos, that
+       is, **do not always describe events at the beginning**.
+     - Some videos are in **foreign languages**, you can describe what is
+       happening from what you see.
+
+  2. Select **all** the video segments below that are **relevant to this event**.
+     - The long video is split into 2-seconds long segments and are shown in
+       the selection area below.
+     - **Select all query-relevant video segments**. They can be consecutive or
+       non-consecutive.
+
+  ## Rate the clips based on query
+
+  *(Verbatim from Figure 11 of the paper. In this showcase task, give one
+  rating for the moment you marked.)*
+
+  In this HIT, we will present you a sentence query that describes one or more
+  events, and multiple clips from a video (these clips might be
+  non-consecutive). For each clip, given the query, your task is to decide
+  whether it is good to be used as a cover/highlight for the video. [...]
+  There are 5 options, from *Very Good* to *Very Bad*:
+
+  **Is the clip good as a cover or highlight for the video?**
+
+  (1) A **Very Good** clip should be relevant to the query, clearly showing the
+  query events, objects, people. It should also look attractive and beautiful
+  to people, as we are gonna use it as a cover. (2) A **Fair** clip is still
+  relevant to the query, but the query event or object/people are small,
+  occluded, the video quality is lower compared to a "Very Good" clip. (3) A
+  **Very Bad** clip means it is completely irrelevant to the query. [...]
+
+annotation_schemes:
+  - annotation_type: temporal_grounding
+    name: moment_grounding
+    description: "Mark the gold start/end interval for each event query. IoU vs prediction updates live."
+    video_key: video
+    events_key: events
+
+  - annotation_type: radio
+    name: clip_saliency
+    description: "Is the clip good as a cover or highlight for the video?"
+    labels:
+      - name: "Very Good"
+        tooltip: "Relevant to the query, clearly showing the query events, objects, people; also looks attractive and beautiful, suitable as a cover"
+        key_value: "1"
+      - name: "Good"
+        tooltip: "Relevant and clearly visible, but slightly less attractive or clear than Very Good"
+        key_value: "2"
+      - name: "Fair"
+        tooltip: "Still relevant to the query, but the query event or object/people are small, occluded, or the video quality is lower"
+        key_value: "3"
+      - name: "Bad"
+        tooltip: "Only marginally relevant to the query, or the event is barely visible"
+        key_value: "4"
+      - name: "Very Bad"
+        tooltip: "Completely irrelevant to the query"
+        key_value: "5"
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "pf_001",
+    "episode_title": "Startup Diaries: Pitching Without a Deck",
+    "audio": "https://example.com/audio/podcastfillers/startup_diaries_clip01.wav",
+    "segments": [
+      {"start": 0.0, "end": 4.2, "text": "So the investor meeting was, uh, not what we expected at all.", "speaker": "spk_A"},
+      {"start": 4.2, "end": 9.6, "text": "They asked for numbers and I just, um, I froze for a second, honestly.", "speaker": "spk_A"},
+      {"start": 9.6, "end": 13.1, "text": "Mm-hmm, yeah, that first pitch is brutal for everyone.", "speaker": "spk_B"},
+      {"start": 13.1, "end": 18.4, "text": "But then Dana pulled up the revenue chart and the whole room changed.", "speaker": "spk_A"}
+    ]
+  },
+  {
+    "id": "pf_002",
+    "episode_title": "Trailhead Talks: Winter Camping Basics",
+    "audio": "https://example.com/audio/podcastfillers/trailhead_clip07.wav",
+    "segments": [
+      {"start": 0.0, "end": 5.0, "text": "The biggest mistake beginners make is, like, packing way too much fuel.", "speaker": "spk_A"},
+      {"start": 5.0, "end": 10.3, "text": "Wait, too much? I would have guessed the, uh, the opposite.", "speaker": "spk_B"},
+      {"start": 10.3, "end": 16.8, "text": "Right, everyone does, but a canister lasts longer in the cold than people think if you sleep with it.", "speaker": "spk_A"},
+      {"start": 16.8, "end": 19.2, "text": "Huh, sleep with the canister. Okay.", "speaker": "spk_B"}
+    ]
+  },
+  {
+    "id": "pf_003",
+    "episode_title": "The Film Vault: Practical Effects Roundtable",
+    "audio": "https://example.com/audio/podcastfillers/filmvault_clip12.wav",
+    "segments": [
+      {"start": 0.0, "end": 4.8, "text": "That corridor scene was all miniatures, which, um, still blows my mind.", "speaker": "spk_A"},
+      {"start": 4.8, "end": 8.9, "text": "No no, hang on, the corridor was a set, the exterior was the miniature.", "speaker": "spk_B"},
+      {"start": 8.9, "end": 12.4, "text": "Are you sure? I- I read an interview with the model shop lead.", "speaker": "spk_A"},
+      {"start": 12.4, "end": 17.7, "text": "We're both half right, they rebuilt it twice, once at each scale.", "speaker": "spk_C"},
+      {"start": 17.7, "end": 20.1, "text": "Okay that, uh, that settles it then.", "speaker": "spk_A"}
+    ]
+  },
+  {
+    "id": "pf_004",
+    "episode_title": "Garden Variety: Tomatoes in Small Spaces",
+    "audio": "https://example.com/audio/podcastfillers/gardenvariety_clip03.wav",
+    "segments": [
+      {"start": 0.0, "end": 6.1, "text": "A five gallon bucket is honestly enough for one determinate plant, you know, the compact kind.", "speaker": "spk_A"},
+      {"start": 6.1, "end": 9.0, "text": "Uh-huh, and you drill drainage holes in the bottom?", "speaker": "spk_B"},
+      {"start": 9.0, "end": 14.6, "text": "Exactly, four or five holes, then a layer of gravel so the roots never sit in water.", "speaker": "spk_A"},
+      {"start": 14.6, "end": 19.3, "text": "My balcony gets, um, maybe four hours of sun. Is that enough?", "speaker": "spk_B"}
+    ]
+  },
+  {
+    "id": "pf_005",
+    "episode_title": "Night Shift Stories: The ER at 3 AM",
+    "audio": "https://example.com/audio/podcastfillers/nightshift_clip09.wav",
+    "segments": [
+      {"start": 0.0, "end": 5.4, "text": "Three in the morning is when the, uh, the strange cases come in.", "speaker": "spk_A"},
+      {"start": 5.4, "end": 11.2, "text": "One night a guy walks in holding a fully decorated birthday cake, and he goes, this is for you all.", "speaker": "spk_A"},
+      {"start": 11.2, "end": 13.8, "text": "No way, a whole cake?", "speaker": "spk_B"},
+      {"start": 13.8, "end": 19.5, "text": "A whole cake. His wife had, um, delivered their baby there the year before, same shift, same team.", "speaker": "spk_A"}
+    ]
+  },
+  {
+    "id": "pf_006",
+    "episode_title": "Code and Coffee: Debugging War Stories",
+    "audio": "https://example.com/audio/podcastfillers/codecoffee_clip15.wav",
+    "segments": [
+      {"start": 0.0, "end": 5.7, "text": "The bug only happened on Tuesdays, which, like, made zero sense to any of us.", "speaker": "spk_A"},
+      {"start": 5.7, "end": 8.3, "text": "Tuesdays? That's, uh, that's cursed.", "speaker": "spk_B"},
+      {"start": 8.3, "end": 15.0, "text": "Turned out a backup job ran Monday nights and locked the table, so the the first request every Tuesday morning timed out.", "speaker": "spk_A"},
+      {"start": 15.0, "end": 17.9, "text": "Mm-hmm, classic. Always the cron job.", "speaker": "spk_B"}
+    ]
+  },
+  {
+    "id": "pf_007",
+    "episode_title": "Second Serve: Rebuilding a Tennis Career",
+    "audio": "https://example.com/audio/podcastfillers/secondserve_clip04.wav",
+    "segments": [
+      {"start": 0.0, "end": 6.2, "text": "After the surgery I couldn't, um, I couldn't even look at my racket for two months.", "speaker": "spk_A"},
+      {"start": 6.2, "end": 9.8, "text": "Yeah. What finally got you back on court?", "speaker": "spk_B"},
+      {"start": 9.8, "end": 16.4, "text": "My old coach called and said, er, he said the juniors needed a hitting partner, no pressure, just feed balls.", "speaker": "spk_A"},
+      {"start": 16.4, "end": 21.0, "text": "And feeding balls turned into drills, and drills turned into, you know, playing again.", "speaker": "spk_A"}
+    ]
+  },
+  {
+    "id": "pf_008",
+    "episode_title": "The Deep End: Octopus Intelligence",
+    "audio": "https://example.com/audio/podcastfillers/deepend_clip11.wav",
+    "segments": [
+      {"start": 0.0, "end": 5.9, "text": "Each arm has its own, uh, its own cluster of neurons, almost like a local brain.", "speaker": "spk_A"},
+      {"start": 5.9, "end": 8.1, "text": "Wait, so the arms think?", "speaker": "spk_B"},
+      {"start": 8.1, "end": 14.7, "text": "In a sense, yes. An arm can keep solving a task, um, even while the central brain attends to something else.", "speaker": "spk_A"},
+      {"start": 14.7, "end": 18.2, "text": "That is genuinely the coolest thing I've heard all week.", "speaker": "spk_B"}
+    ]
+  },
+  {
+    "id": "pf_009",
+    "episode_title": "Ledger Lines: Teaching Yourself Jazz Piano",
+    "audio": "https://example.com/audio/podcastfillers/ledgerlines_clip06.wav",
+    "segments": [
+      {"start": 0.0, "end": 4.6, "text": "I spent the first year just, like, transcribing solos by ear.", "speaker": "spk_A"},
+      {"start": 4.6, "end": 7.2, "text": "By ear? No sheet music at all?", "speaker": "spk_B"},
+      {"start": 7.2, "end": 13.5, "text": "None. It was slow, painfully slow, but it trained my ears in a way, uh, no book ever did.", "speaker": "spk_A"},
+      {"start": 13.5, "end": 18.9, "text": "And now when I hear a chord I can, you know, I can usually name it before my hands find it.", "speaker": "spk_A"}
+    ]
+  },
+  {
+    "id": "pf_010",
+    "episode_title": "Paper Trails: Inside a Rare Book Auction",
+    "audio": "https://example.com/audio/podcastfillers/papertrails_clip02.wav",
+    "segments": [
+      {"start": 0.0, "end": 5.3, "text": "The bidding opened at forty thousand and, um, the room went completely silent.", "speaker": "spk_A"},
+      {"start": 5.3, "end": 8.8, "text": "Silent like respectful, or silent like terrified?", "speaker": "spk_B"},
+      {"start": 8.8, "end": 14.2, "text": "Both? Then two phone bidders started trading jumps of, uh, ten thousand at a time.", "speaker": "spk_A"},
+      {"start": 14.2, "end": 18.6, "text": "And the the final hammer price ended up at a hundred and sixty.", "speaker": "spk_A"},
+      {"start": 18.6, "end": 20.4, "text": "Uh-huh. For one book.", "speaker": "spk_B"}
+    ]
+  }
+]

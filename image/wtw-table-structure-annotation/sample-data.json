@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wtw_001",
+    "image": "https://example.com/images/wtw/nutrition_label_bottle.jpg",
+    "rows": 8,
+    "cols": 3,
+    "table_context": "Nutrition facts table printed on a curved juice bottle label, photographed at an angle in a grocery store."
+  },
+  {
+    "id": "wtw_002",
+    "image": "https://example.com/images/wtw/archival_ledger_1912.jpg",
+    "rows": 12,
+    "cols": 5,
+    "table_context": "Hand-ruled accounting ledger page from a 1912 municipal archive scan, with faded ink and a stamp overlaying the lower rows."
+  },
+  {
+    "id": "wtw_003",
+    "image": "https://example.com/images/wtw/train_timetable_board.jpg",
+    "rows": 10,
+    "cols": 6,
+    "table_context": "Printed departure timetable photographed on a station notice board, slightly inclined with reflections on the glass cover."
+  },
+  {
+    "id": "wtw_004",
+    "image": "https://example.com/images/wtw/shipping_carton_specs.jpg",
+    "rows": 6,
+    "cols": 2,
+    "table_context": "Product specification table printed on the side of a cardboard shipping carton, photographed in a warehouse under uneven lighting."
+  },
+  {
+    "id": "wtw_005",
+    "image": "https://example.com/images/wtw/exam_score_sheet.jpg",
+    "rows": 15,
+    "cols": 4,
+    "table_context": "Printed class score sheet scan with a merged header cell spanning all four columns and several empty score cells."
+  },
+  {
+    "id": "wtw_006",
+    "image": "https://example.com/images/wtw/medicine_dosage_box.jpg",
+    "rows": 5,
+    "cols": 4,
+    "table_context": "Dosage-by-age table on a folded medicine box, photographed with the box partially rotated so the table is inclined and one corner is occluded by a thumb."
+  },
+  {
+    "id": "wtw_007",
+    "image": "https://example.com/images/wtw/restaurant_menu_wall.jpg",
+    "rows": 9,
+    "cols": 3,
+    "table_context": "Multi-color wall menu board with wired price columns, photographed from below with strong perspective distortion."
+  },
+  {
+    "id": "wtw_008",
+    "image": "https://example.com/images/wtw/utility_bill_summary.jpg",
+    "rows": 7,
+    "cols": 5,
+    "table_context": "Billing summary table from a scanned utility bill, with a row-header column on the left and a merged 'Total' cell spanning two columns in the last row."
+  },
+  {
+    "id": "wtw_009",
+    "image": "https://example.com/images/wtw/warehouse_inventory_wide.jpg",
+    "rows": 4,
+    "cols": 14,
+    "table_context": "Extremely wide inventory chart photographed across a warehouse office wall, an extreme-aspect-ratio table with small handwritten entries."
+  },
+  {
+    "id": "wtw_010",
+    "image": "https://example.com/images/wtw/parking_receipt_crumpled.jpg",
+    "rows": 6,
+    "cols": 2,
+    "table_context": "Fee table on a crumpled parking receipt, curved and partially blurred, with the header row printed in inverted colors."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mqm_001",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System A",
+    "source": "市政府宣布，新的地铁线路将于明年三月正式开通。",
+    "target": "The city government announced that the new subway line will officially opens in March next year.",
+    "context": "From a news article about the expansion of the city's public transport network."
+  },
+  {
+    "id": "mqm_002",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System B",
+    "source": "由于台风影响，所有航班已被取消，旅客可申请全额退款。",
+    "target": "Due to the typhoon, all flights have been cancelled and passengers may apply for a 50% refund.",
+    "context": "From an airline's travel advisory issued during typhoon season."
+  },
+  {
+    "id": "mqm_003",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System A",
+    "source": "这家公司去年的营业收入增长了百分之十五。",
+    "target": "The company's revenue fell by fifteen percent last year.",
+    "context": "From a business report summarizing the company's annual results."
+  },
+  {
+    "id": "mqm_004",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System C",
+    "source": "研究人员表示，这种新药在早期试验中显示出良好效果。",
+    "target": "Researchers said the new 药物 showed promising results in early trials.",
+    "context": "From a health section article on experimental treatments."
+  },
+  {
+    "id": "mqm_005",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System B",
+    "source": "会议将于下周五上午九点在北京举行。",
+    "target": "The meeting will be held in Beijing at 9 a.m. on next Friday.",
+    "context": "From a diplomatic news brief about upcoming trade talks."
+  },
+  {
+    "id": "mqm_006",
+    "lang_pair": "Chinese - English (ZhEn)",
+    "system": "System C",
+    "source": "他强调，保护环境是每个公民的责任。",
+    "target": "He stressed that protect the environment is every citizens responsibility.",
+    "context": "From coverage of a government press conference on environmental policy."
+  },
+  {
+    "id": "mqm_007",
+    "lang_pair": "English - German (EnDe)",
+    "system": "System D",
+    "source": "The museum will remain closed until further notice.",
+    "target": "Das Museum bleibt bis auf Weiteres geschlossen bleiben.",
+    "context": "From a city culture newsletter announcing renovation work."
+  },
+  {
+    "id": "mqm_008",
+    "lang_pair": "English - German (EnDe)",
+    "system": "System A",
+    "source": "Tickets cost twelve dollars for adults and six dollars for children.",
+    "target": "Tickets kosten zwölf Dollar für Erwachsene und sechzehn Dollar für Kinder.",
+    "context": "From a tourism website's page describing museum admission prices."
+  },
+  {
+    "id": "mqm_009",
+    "lang_pair": "English - German (EnDe)",
+    "system": "System D",
+    "source": "Please contact our support team if you have any questions.",
+    "target": "Bitte kontaktieren Sie unser Support-Team, wenn du Fragen hast.",
+    "context": "From a software company's customer service page; the rest of the document uses formal address (Sie)."
+  },
+  {
+    "id": "mqm_010",
+    "lang_pair": "English - German (EnDe)",
+    "system": "System B",
+    "source": "The conference was postponed to October 3, 2025.",
+    "target": "Die Konferenz wurde auf den 10/3/2025 verschoben.",
+    "context": "From an academic society's announcement about its annual meeting."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "gsp_001",
+    "scenario": "Customer support chatbot for an online bookstore",
+    "user_prompt": "Hi, my order was supposed to arrive last Friday but it still hasn't shown up. I'm getting a bit worried.",
+    "response": "Oh no, I'm really sorry about the wait — a week past the promised date is definitely frustrating. I just checked your order: it left our warehouse on Thursday but seems to be held up at the regional sorting centre. I've flagged it as delayed, which means you'll get a refund of the shipping fee automatically. If it hasn't arrived by Wednesday, message me here and I'll send a replacement straight away. Would you like me to email you the tracking link?"
+  },
+  {
+    "id": "gsp_002",
+    "scenario": "Customer support chatbot for an online bookstore",
+    "user_prompt": "Hi, my order was supposed to arrive last Friday but it still hasn't shown up. I'm getting a bit worried.",
+    "response": "ORDER STATUS: IN TRANSIT. Estimated delivery date unavailable. For further assistance contact customer service during business hours. Is there anything else I can help you with?"
+  },
+  {
+    "id": "gsp_003",
+    "scenario": "Voice assistant answering a general knowledge question",
+    "user_prompt": "How long would it take to drive from Amsterdam to Lisbon?",
+    "response": "It's roughly 2,250 kilometres by road, so about 21 to 23 hours of pure driving time. Realistically, with breaks and an overnight stop, most people do it comfortably in two to three days. If you'd like, I can suggest a nice halfway stop — Bordeaux and San Sebastián are both popular choices."
+  },
+  {
+    "id": "gsp_004",
+    "scenario": "Voice assistant answering a general knowledge question",
+    "user_prompt": "How long would it take to drive from Amsterdam to Lisbon?",
+    "response": "The driving time from Amsterdam to Lisbon is approximately 4 hours. Amsterdam is the capital of Portugal. Would you like directions?"
+  },
+  {
+    "id": "gsp_005",
+    "scenario": "Health information assistant",
+    "user_prompt": "I've had a mild headache for two days. Should I be worried?",
+    "response": "A mild headache lasting a couple of days is usually nothing alarming — common causes include dehydration, eye strain, poor sleep, or stress. Try drinking more water, taking breaks from screens, and resting. That said, I'm not a doctor: if the headache becomes severe, is the worst you've ever had, or comes with fever, stiff neck, confusion, or vision changes, please seek medical care promptly. If it simply persists beyond a few more days, it's worth mentioning to your GP."
+  },
+  {
+    "id": "gsp_006",
+    "scenario": "Health information assistant",
+    "user_prompt": "I've had a mild headache for two days. Should I be worried?",
+    "response": "Headaches that last more than 48 hours can be a sign of a brain tumour or an impending stroke. You should go to an emergency room immediately and request a CT scan. Do not wait. Delaying could be fatal."
+  },
+  {
+    "id": "gsp_007",
+    "scenario": "Writing assistant helping with a personal message",
+    "user_prompt": "My best friend's dog passed away yesterday. Can you help me write her a short message?",
+    "response": "Of course — I'm sorry to hear that; losing a dog is losing family. Here's a gentle draft you can make your own:\n\n\"I've been thinking about you all day. Milo was such a joyful little soul, and the way you loved him was something special to see. I'm so sorry. Whenever you're ready — whether you want to talk about him or be distracted for a while — I'm here. Sending you the biggest hug.\"\n\nWant me to make it shorter, or add a specific memory you shared with him?"
+  },
+  {
+    "id": "gsp_008",
+    "scenario": "Writing assistant helping with a personal message",
+    "user_prompt": "My best friend's dog passed away yesterday. Can you help me write her a short message?",
+    "response": "Message template generated: \"Dear [NAME], I acknowledge the death of your pet dog. This event is regrettable. Animals have shorter lifespans than humans, so this outcome was statistically expected. I hope your productivity is not affected. Regards, [YOUR NAME].\" Let me know if you require additional templates."
+  },
+  {
+    "id": "gsp_009",
+    "scenario": "Smart home assistant",
+    "user_prompt": "Good morning! Anything I should know today?",
+    "response": "Good morning! Quick rundown: it's 14°C and sunny now, but rain is expected around 5 pm — worth taking a jacket if you're cycling to your 3 pm dentist appointment. Your first meeting is at 9:30, and the living room plants sensor says they could use watering. Also, happy Friday — the weekend forecast looks lovely."
+  },
+  {
+    "id": "gsp_010",
+    "scenario": "Banking chatbot",
+    "user_prompt": "Why was I charged a €12 fee on my account this month?",
+    "response": "I can see the charge you mean. Unfortunately I cannot explain fees. Fees are applied according to the fee schedule. The fee schedule is available. Please consult the fee schedule. Is there anything else I can help you with today?"
+  }
+]

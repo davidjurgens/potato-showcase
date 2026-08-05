@@ -1,0 +1,157 @@
+[
+  {
+    "id": "sporc_001",
+    "episode_title": "Ep. 42: The Science of Sleep with Dr. Priya Raman",
+    "podcast_title": "Brainwaves Weekly",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/brainwaves_ep42.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 14.2, "text": "Welcome back to Brainwaves Weekly, I'm your host Marcus Chen. Today we're talking about why we sleep, and joining me is sleep researcher Dr. Priya Raman from the Center for Circadian Biology."},
+        {"turn_id": "t1", "speaker": "guest", "start": 14.2, "end": 19.8, "text": "Thanks for having me, Marcus. It's a topic I could talk about all night, which is ironic."},
+        {"turn_id": "t2", "speaker": "host", "start": 19.8, "end": 27.5, "text": "So let's start with the basics. What actually happens in the brain when we fall asleep?"},
+        {"turn_id": "t3", "speaker": "guest", "start": 27.5, "end": 52.1, "text": "So the first thing to understand is that sleep isn't one uniform state. You cycle through stages, and in deep slow-wave sleep your brain is doing something remarkable: it's flushing out metabolic waste through what we call the glymphatic system."},
+        {"turn_id": "t4", "start": 52.1, "end": 61.0, "text": "This episode is brought to you by RestWell mattresses. Use code BRAINWAVES for twenty percent off your first order."},
+        {"turn_id": "t5", "speaker": "host", "start": 61.0, "end": 68.4, "text": "Okay, we're back. Priya, before the break you mentioned the glymphatic system. Walk us through that."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_002",
+    "episode_title": "Small Towns, Big Stories: The Lighthouse Keeper of Port Alma",
+    "podcast_title": "Backroads",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/backroads_portalma.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 11.6, "text": "This is Backroads, stories from the places the interstate forgot. I'm Dana Whitfield. This week: Port Alma, population three hundred and twelve."},
+        {"turn_id": "t1", "speaker": "guest", "start": 11.6, "end": 24.9, "text": "My grandfather kept that light for forty-one years. People ask me why I stayed, and honestly, somebody has to wind the clock."},
+        {"turn_id": "t2", "speaker": "host", "start": 24.9, "end": 31.2, "text": "That's Eleanor Voss. She's the last lighthouse keeper on this stretch of coast, and she's ready to retire."},
+        {"turn_id": "t3", "speaker": "guest", "start": 31.2, "end": 47.8, "text": "The Coast Guard automated everything in the eighties, but the town council voted to keep a keeper on. Tourists come for it. Kids do school reports on me, which is strange."},
+        {"turn_id": "t4", "start": 47.8, "end": 55.3, "text": "The light must never go out. That's what my father told me, and his father told him."},
+        {"turn_id": "t5", "speaker": "host", "start": 55.3, "end": 62.0, "text": "That recording is from a 1963 interview with Eleanor's grandfather, preserved in the town archive."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_003",
+    "episode_title": "Market Mondays: Is the Housing Cooldown Real?",
+    "podcast_title": "The Ledger Line",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/ledgerline_mondays_0114.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 9.4, "text": "Good morning, it's Monday, January fourteenth, and this is The Ledger Line. I'm Sofia Reyes."},
+        {"turn_id": "t1", "speaker": "host", "start": 9.4, "end": 16.1, "text": "And I'm Tom Okafor. Sofia, the big number this week is housing starts, down four percent."},
+        {"turn_id": "t2", "speaker": "host", "start": 16.1, "end": 28.7, "text": "Right, and everyone's asking whether this is the start of a real cooldown or just a seasonal dip. We called up an economist to help us read the tea leaves."},
+        {"turn_id": "t3", "speaker": "guest", "start": 28.7, "end": 49.5, "text": "I'd be careful calling it a cooldown. Inventory is still historically tight. What we're seeing is buyers pausing, not leaving. If rates tick down even half a point, that pent-up demand comes right back."},
+        {"turn_id": "t4", "speaker": "host", "start": 49.5, "end": 55.9, "text": "That was Dr. Amara Osei of the Hutchins Institute. Tom, does that square with what you're hearing?"},
+        {"turn_id": "t5", "speaker": "host", "start": 55.9, "end": 63.2, "text": "It does, and the regional numbers back her up. The Midwest barely moved at all."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_004",
+    "episode_title": "Episode 7: The Vanishing of the Meridian Star",
+    "podcast_title": "Cold Water Cases",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/coldwater_ep7.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 13.8, "text": "In 1987, a fishing trawler called the Meridian Star left harbor with a crew of six and never came back. I'm Jonah Park, and this is Cold Water Cases."},
+        {"turn_id": "t1", "start": 13.8, "end": 22.4, "text": "Mayday, mayday, this is the Meridian Star, we are taking on water approximately twelve miles east of the shoals."},
+        {"turn_id": "t2", "speaker": "host", "start": 22.4, "end": 30.1, "text": "That distress call, played at the inquest, is the last confirmed contact. But two people in town swear they saw the boat afterward."},
+        {"turn_id": "t3", "speaker": "guest", "start": 30.1, "end": 44.6, "text": "I was on the jetty that night with my dog. I know that hull. I watched her pass the breakwater heading north, running dark. No lights at all."},
+        {"turn_id": "t4", "speaker": "host", "start": 44.6, "end": 51.0, "text": "Ruth Calloway was seventeen then. She's told the same story for nearly forty years."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_005",
+    "episode_title": "How I Built My Sourdough Micro-Bakery",
+    "podcast_title": "Flour Hour",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/flourhour_microbakery.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 10.5, "text": "Hey bread friends, welcome to Flour Hour. I'm Gabe, and today's guest went from baking in her apartment to selling out a farmers market stall every Saturday."},
+        {"turn_id": "t1", "speaker": "guest", "start": 10.5, "end": 23.2, "text": "Hi everyone! Yeah, it started during a rough winter. I gave loaves to neighbors, and one of them, uh, basically ordered me to start charging."},
+        {"turn_id": "t2", "speaker": "host", "start": 23.2, "end": 29.8, "text": "Let's talk numbers, because people romanticize this. How many loaves a week are we actually talking about?"},
+        {"turn_id": "t3", "speaker": "guest", "start": 29.8, "end": 46.3, "text": "Eighty on a normal week, a hundred and twenty before holidays. My oven fits eight at a time, so Fridays are just math and sweat. I keep a spreadsheet with proof times for every batch."},
+        {"turn_id": "t4", "speaker": "guest", "start": 46.3, "end": 53.9, "text": "And the cottage food license was the easy part. The hard part was learning to say no to wholesale."},
+        {"turn_id": "t5", "speaker": "host", "start": 53.9, "end": 58.7, "text": "We'll get into the wholesale trap after a quick word from our sponsor."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_006",
+    "episode_title": "Debate Night Recap: Who Won the Third District?",
+    "podcast_title": "Statehouse Signal",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/statehouse_debate_recap.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 8.9, "text": "It's the morning after the third district debate, and this is Statehouse Signal. I'm Priyanka Shah with our political editor, Warren Cole."},
+        {"turn_id": "t1", "speaker": "host", "start": 8.9, "end": 15.6, "text": "Morning, Priyanka. Three moments mattered last night, and only one of them was planned."},
+        {"turn_id": "t2", "start": 15.6, "end": 24.8, "text": "My opponent talks about fixing the levee, but she voted against the bond measure twice. Twice! The people of this district remember."},
+        {"turn_id": "t3", "speaker": "host", "start": 24.8, "end": 33.4, "text": "That's candidate Hal Brennan there, and Warren, that levee attack landed hard. The room turned on that exchange."},
+        {"turn_id": "t4", "speaker": "host", "start": 33.4, "end": 44.1, "text": "It did, but here's the thing: the bond votes he's citing were procedural. We fact-checked it this morning and the full story is messier than the applause line."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_007",
+    "episode_title": "Mind the Gap: Living with Adult ADHD",
+    "podcast_title": "The Quiet Loud Show",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/quietloud_adhd.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 12.3, "text": "Welcome to The Quiet Loud Show. I'm Bea Lindqvist. A warning up front: this episode discusses mental health. Today, psychiatrist Dr. Sam Whitaker is here to talk adult ADHD."},
+        {"turn_id": "t1", "speaker": "guest", "start": 12.3, "end": 20.0, "text": "Glad to be here, Bea. This is the most common question in my inbox, so let's do it properly."},
+        {"turn_id": "t2", "speaker": "host", "start": 20.0, "end": 28.6, "text": "Let's start with the myth I hear constantly: that if you weren't diagnosed as a kid, it can't be ADHD."},
+        {"turn_id": "t3", "speaker": "guest", "start": 28.6, "end": 51.4, "text": "Completely false, and it's a myth with consequences. Plenty of adults, especially women, were overlooked because they presented as inattentive rather than hyperactive. They built elaborate coping systems, and those systems collapse under adult workloads. That collapse is often what brings people to my office."},
+        {"turn_id": "t4", "start": 51.4, "end": 59.8, "text": "Support for this show comes from Halcyon Journals, the planner designed with neurodivergent brains in mind."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_008",
+    "episode_title": "Grill Talk #103: Brisket Myths, Busted",
+    "podcast_title": "Grill Talk",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/grilltalk_103.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 9.7, "text": "Grill Talk episode one-oh-three, I'm Denny, he's Rob, and today we are settling the wrapped-versus-unwrapped brisket argument forever."},
+        {"turn_id": "t1", "speaker": "host", "start": 9.7, "end": 17.2, "text": "We are not settling anything, Denny, but we did smoke four briskets this weekend to try."},
+        {"turn_id": "t2", "speaker": "host", "start": 17.2, "end": 26.5, "text": "Four briskets, two wrapped in butcher paper at the stall, two naked the whole way. Rob, give the people your verdict."},
+        {"turn_id": "t3", "speaker": "host", "start": 26.5, "end": 39.8, "text": "The paper-wrapped ones finished ninety minutes faster and the bark was still solid. The naked ones had better smoke ring but honestly, nobody eats a smoke ring. Paper wins."},
+        {"turn_id": "t4", "speaker": "host", "start": 39.8, "end": 46.4, "text": "Blasphemy. Fine, we'll let the listeners vote. The poll is up on our site now."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_009",
+    "episode_title": "Voices from the Flood: One Year Later",
+    "podcast_title": "River County Public Radio Hour",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/rcpr_flood_oneyear.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 13.1, "text": "One year ago this week, the Blackfork River crested at a record twenty-nine feet. I'm Andre Sullivan, and for the next hour we're returning to the neighborhoods that went under."},
+        {"turn_id": "t1", "speaker": "guest", "start": 13.1, "end": 27.9, "text": "We got eleven inches of water in the shop. Every amplifier, every guitar on the bottom row, gone. But the community fund got us reopened by August, and I will never forget that."},
+        {"turn_id": "t2", "speaker": "host", "start": 27.9, "end": 35.0, "text": "That's Miriam Duke, owner of Duke's Music on Canal Street. Down the block, the diner never reopened."},
+        {"turn_id": "t3", "start": 35.0, "end": 44.6, "text": "The county has approved a two-million-dollar levee study, with construction possible as early as next spring."},
+        {"turn_id": "t4", "speaker": "host", "start": 44.6, "end": 52.3, "text": "That clip is from the county commission's public briefing last month. Residents we spoke to are skeptical of the timeline."}
+      ]
+    }
+  },
+  {
+    "id": "sporc_010",
+    "episode_title": "Level Up #58: Why Speedrunners Break Games on Purpose",
+    "podcast_title": "Level Up",
+    "conversation": {
+      "audio": "https://example.com/audio/sporc/levelup_58.mp3",
+      "turns": [
+        {"turn_id": "t0", "speaker": "host", "start": 0.0, "end": 10.8, "text": "Welcome to Level Up, episode fifty-eight. I'm Casey, and with me today is one of the top speedrunners in the retro scene, known online as Pixelvault."},
+        {"turn_id": "t1", "speaker": "guest", "start": 10.8, "end": 18.5, "text": "Hey, thanks Casey. Longtime listener, so this is a little surreal."},
+        {"turn_id": "t2", "speaker": "host", "start": 18.5, "end": 26.9, "text": "Let's get right into it. Explain wrong warping to someone who has never watched a speedrun."},
+        {"turn_id": "t3", "speaker": "guest", "start": 26.9, "end": 48.2, "text": "Okay, so the game stores which door you entered as a number in memory. If you can corrupt that number, say by clipping through a wall while a cutscene loads, the game sends you to a room it never intended. Do it right and you skip forty minutes of the game in four seconds."},
+        {"turn_id": "t4", "speaker": "guest", "start": 48.2, "end": 56.1, "text": "And finding a new one is like, um, it's like finding a fossil. Months of digging for one moment of glory."},
+        {"turn_id": "t5", "speaker": "host", "start": 56.1, "end": 61.7, "text": "We'll watch a clip of your record run together right after the break."}
+      ]
+    }
+  }
+]

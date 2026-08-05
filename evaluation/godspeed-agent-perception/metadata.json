@@ -1,0 +1,69 @@
+{
+  "title": "Godspeed Questionnaire: AI Assistant Perception",
+  "description": "Applies the Godspeed Questionnaire Series — the standard human-robot interaction measurement instrument by Bartneck, Kulić, Croft, and Zoghbi (International Journal of Social Robotics, 2009) — to conversational AI outputs. The respondent reads a user prompt and an AI assistant's recorded response, then rates the assistant on the instrument's published 5-point bipolar adjective pairs across five indices: Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and Perceived Safety.",
+  "overview": [
+    "The Godspeed Questionnaire Series is among the most widely used standardized instruments in human-robot interaction research. Bartneck and colleagues assembled five semantic-differential questionnaires — Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and Perceived Safety — each consisting of 5-point bipolar adjective pairs such as Fake-Natural, Machinelike-Humanlike, Unfriendly-Friendly, and Incompetent-Competent.",
+    "The questionnaire items themselves are the instrument: respondents rate their impression of the robot (or, for Perceived Safety, their own emotional state) on each scale. This config transfers the instrument unchanged to conversational AI, a common practice in agent perception studies: 'the robot' is the AI assistant whose response the respondent has just read.",
+    "Each of the five indices is implemented as its own semantic_differential scheme so that scores can be averaged per index, as intended by the instrument. All published item pairs are administered verbatim, with one stated exception: the movement item of the Anthropomorphism index (Moving rigidly - Moving elegantly) is omitted because a text-only assistant exhibits no physical motion. Note that two Perceived Safety items are reverse-scored (Calm-Agitated, Quiescent-Surprised have their calm pole on the left).",
+    "The sample items pair the same user prompts with deliberately contrasting assistant responses — warm versus mechanical, competent versus confused, reassuring versus alarming — so annotators exercise the full range of the scales.",
+    "Use this task to measure how users perceive chatbots, voice assistants, or embodied agents, or copy it as a template for administering any standardized semantic-differential instrument in Potato."
+  ],
+  "datasetStats": [
+    {
+      "label": "Instrument",
+      "value": "Godspeed Questionnaire Series (I-V)"
+    },
+    {
+      "label": "Published",
+      "value": "International Journal of Social Robotics 1(1):71-81, 2009"
+    },
+    {
+      "label": "Indices",
+      "value": "Anthropomorphism, Animacy, Likeability, Perceived Intelligence, Perceived Safety"
+    },
+    {
+      "label": "Items",
+      "value": "24 bipolar pairs (23 administered here; one movement item omitted)"
+    },
+    {
+      "label": "Scale",
+      "value": "5-point semantic differential"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "semantic_differential"
+  ],
+  "domain": [
+    "Human-Computer Interaction",
+    "Conversational AI"
+  ],
+  "useCase": [
+    "Agent Perception Measurement",
+    "Chatbot Evaluation",
+    "User Studies"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "godspeed",
+    "semantic-differential",
+    "anthropomorphism",
+    "likeability",
+    "perceived-intelligence",
+    "hri",
+    "conversational-agents"
+  ],
+  "featured": false,
+  "paperReference": "Christoph Bartneck, Dana Kulić, Elizabeth Croft, and Susana Zoghbi. 2009. Measurement Instruments for the Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and Perceived Safety of Robots. International Journal of Social Robotics, 1(1):71-81.",
+  "paperUrl": "https://doi.org/10.1007/s12369-008-0001-3",
+  "datasetUrl": "https://www.bartneck.de/2008/03/11/the-godspeed-questionnaire-series/",
+  "citation": "@article{bartneck2009measurement,\n    title = {Measurement Instruments for the Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and Perceived Safety of Robots},\n    author = {Bartneck, Christoph and Kuli{\\'c}, Dana and Croft, Elizabeth and Zoghbi, Susana},\n    journal = {International Journal of Social Robotics},\n    volume = {1},\n    number = {1},\n    pages = {71--81},\n    year = {2009},\n    publisher = {Springer},\n    doi = {10.1007/s12369-008-0001-3}\n}"
+}

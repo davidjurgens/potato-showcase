@@ -1,0 +1,88 @@
+# WMT15 Relative Ranking (RR) — Machine Translation Human Evaluation
+# Based on: Ondřej Bojar, Rajen Chatterjee, Christian Federmann, Barry Haddow,
+#   Matthias Huck, Chris Hokamp, Philipp Koehn, Varvara Logacheva, Christof Monz,
+#   Matteo Negri, Matt Post, Carolina Scarton, Lucia Specia, and Marco Turchi (2015),
+#   "Findings of the 2015 Workshop on Statistical Machine Translation."
+#   Proceedings of the Tenth Workshop on Statistical Machine Translation (WMT 2015),
+#   Lisbon, Portugal, pp. 1-46.
+#   Paper: https://aclanthology.org/W15-3001/
+#   Human judgment data: http://www.statmt.org/wmt15/results.html
+#
+# Task: the classic WMT relative-ranking (RR) protocol for machine translation
+# evaluation. The annotator is shown a source segment, a human reference
+# translation, and the outputs of up to five anonymized candidate systems in
+# random order, and ranks the outputs from best (rank 1) to worst (rank 5), with
+# ties permitted. Rankings are reduced to pairwise judgments and aggregated with
+# TrueSkill to produce the official system ranking. Deliberate simplification: in
+# WMT15 each HIT bundled three ranking tasks and near-identical outputs were
+# merged into "multi-system translations"; here each Potato instance is a single
+# ranking task over exactly five distinct candidate translations.
+#
+# Annotation instructions reproduced verbatim from Section 3.2 ("Data collection")
+# of the paper, which quotes the instruction text provided at the top of each
+# Appraise HIT; the practical notes below the quote are adapted from the
+# surrounding protocol description in the same section.
+
+annotation_task_name: "WMT15 Relative Ranking of Machine Translations"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "source"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  > You are shown a source sentence followed by several candidate translations.
+  > Your task is to rank the translations from best to worst (ties are allowed).
+
+  (Instruction reproduced verbatim from Section 3.2 of Bojar et al., 2015 — the
+  instructions provided at the top of each HIT in the WMT15 evaluation campaign.)
+
+  Practical notes, following the WMT15 protocol: drag the candidate translations
+  so that the best translation is at the top and the worst is at the bottom; a
+  lower rank is better. Use the tie control to place equally good translations at
+  the same rank. The human reference translation is shown to help you judge
+  adequacy. Skip a ranking task only as a last resort, e.g., if the translation
+  candidates shown on screen are clearly misformatted or contain data issues
+  (wrong language or similar problems).
+
+annotation_schemes:
+  - annotation_type: ranking
+    name: translation_ranking
+    description: "Rank the candidate translations from best (top) to worst (bottom). Ties are allowed."
+    items_key: translations
+    allow_ties: true
+    label_requirement:
+      required: true
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Language pair:</strong> {{language_pair}}
+    </div>
+    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #1e40af;">Source sentence:</strong>
+      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{source}}</p>
+    </div>
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <strong style="color: #166534;">Human reference translation:</strong>
+      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{reference}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 13px;">
+      The candidate system translations appear below in random order. Drag them to
+      rank from best (top) to worst (bottom); ties are allowed.
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "qvh_001",
+    "video": "https://example.com/videos/qvhighlights/vlog_beach_day.mp4",
+    "events": [
+      {"prompt": "A woman in a yellow sundress builds a sandcastle with two children.", "predicted": {"start": 34.0, "end": 58.0}}
+    ]
+  },
+  {
+    "id": "qvh_002",
+    "video": "https://example.com/videos/qvhighlights/travel_market_tour.mp4",
+    "events": [
+      {"prompt": "A street vendor flips flatbread on a large round griddle.", "predicted": {"start": 12.0, "end": 26.0}},
+      {"prompt": "The vlogger samples skewers and gives a thumbs up to the camera.", "predicted": {"start": 96.0, "end": 112.0}}
+    ]
+  },
+  {
+    "id": "qvh_003",
+    "video": "https://example.com/videos/qvhighlights/news_flood_report.mp4",
+    "events": [
+      {"prompt": "A reporter in a raincoat stands in knee-deep water on a flooded street.", "predicted": {"start": 4.0, "end": 30.0}}
+    ]
+  },
+  {
+    "id": "qvh_004",
+    "video": "https://example.com/videos/qvhighlights/dog_agility_run.mp4",
+    "events": [
+      {"prompt": "A border collie weaves through a line of poles on an agility course."}
+    ]
+  },
+  {
+    "id": "qvh_005",
+    "video": "https://example.com/videos/qvhighlights/kitchen_pasta_night.mp4",
+    "events": [
+      {"prompt": "A man in a striped apron rolls out pasta dough with a wooden pin.", "predicted": {"start": 42.0, "end": 66.0}},
+      {"prompt": "Fresh noodles are dropped into a pot of boiling water."}
+    ]
+  },
+  {
+    "id": "qvh_006",
+    "video": "https://example.com/videos/qvhighlights/city_bike_commute.mp4",
+    "events": [
+      {"prompt": "A cyclist rides across a long bridge with the city skyline behind him.", "predicted": {"start": 74.0, "end": 102.0}}
+    ]
+  },
+  {
+    "id": "qvh_007",
+    "video": "https://example.com/videos/qvhighlights/diy_bookshelf_build.mp4",
+    "events": [
+      {"prompt": "A woman wearing safety glasses cuts a wooden plank with a circular saw.", "predicted": {"start": 18.0, "end": 36.0}},
+      {"prompt": "The finished white bookshelf is loaded with plants and books.", "predicted": {"start": 128.0, "end": 146.0}}
+    ]
+  },
+  {
+    "id": "qvh_008",
+    "video": "https://example.com/videos/qvhighlights/festival_lantern_release.mp4",
+    "events": [
+      {"prompt": "Hundreds of glowing paper lanterns rise into the night sky over a river."}
+    ]
+  },
+  {
+    "id": "qvh_009",
+    "video": "https://example.com/videos/qvhighlights/snow_cabin_vlog.mp4",
+    "events": [
+      {"prompt": "Two friends shovel deep snow away from the front door of a wooden cabin.", "predicted": {"start": 8.0, "end": 24.0}}
+    ]
+  },
+  {
+    "id": "qvh_010",
+    "video": "https://example.com/videos/qvhighlights/news_marathon_finish.mp4",
+    "events": [
+      {"prompt": "A runner in a red singlet crosses the finish line and raises both arms.", "predicted": {"start": 58.0, "end": 64.0}},
+      {"prompt": "Volunteers hand out foil blankets to exhausted runners."}
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+# WTW Wired Table Structure Annotation
+# Based on: Rujiao Long, Wen Wang, Nan Xue, Feiyu Gao, Zhibo Yang, Yongpan
+#   Wang, and Gui-Song Xia. "Parsing Table Structures in the Wild." IEEE/CVF
+#   International Conference on Computer Vision (ICCV) 2021. arXiv:2109.02199.
+# Paper: https://openaccess.thecvf.com/content/ICCV2021/html/Long_Parsing_Table_Structures_in_the_Wild_ICCV_2021_paper.html
+# Dataset: https://github.com/wangwen-whu/WTW-Dataset
+#
+# Task: Annotate the cell structure of photographed and scanned wired tables
+# from the WTW dataset (natural scenes, archival documents, and printed
+# documents, covering seven challenging cases: inclined, curved, occluded or
+# blurred, extreme aspect ratio, overlaid, multi-color, and irregular tables).
+# Using the table_grid scheme, the annotator sets the table's row/column grid
+# dimensions and clicks cells to mark their logical role: data, column header,
+# row header, empty, or spanned (a grid position covered by a merged cell that
+# starts above or to its left, which encodes the ICDAR-2019-style row/column
+# start-end extent of spanning cells at the logical level). Deliberate
+# simplification: WTW's full annotation also localizes each cell's physical
+# quadrilateral along the inner table lines (following the ICDAR2019
+# benchmark); pixel-level cell coordinates are not captured by table_grid, so
+# this showcase covers the logical-structure half of the protocol only.
+#
+# Annotation instructions adapted from Section 3 (the WTW dataset) of the
+# paper; the paper does not publish the verbatim annotator guidelines.
+
+annotation_task_name: "WTW Wired Table Structure Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "image"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  ## Wired Table Structure Annotation
+
+  You will see a photograph or scan of a table with visible (wired) borders,
+  taken in the wild: on bottles and boxes, in archival documents, or in
+  printed pages. Your job is to reconstruct the table's logical cell grid.
+
+  ### 1. Set the grid size
+  Count the rows and columns of the table as defined by its inner table lines
+  (following the ICDAR2019 convention, cell extents are defined by the inner
+  lines, not the outer border). Set the grid dimensions accordingly. A cell
+  that spans several rows or columns still occupies all of those grid
+  positions.
+
+  ### 2. Mark cell roles
+  Click each cell to cycle through its role:
+
+  - **data** -- an ordinary content cell (the default; you do not need to
+    mark these explicitly).
+  - **col_header** -- a cell that labels the column(s) below it.
+  - **row_header** -- a cell that labels the row(s) to its right.
+  - **empty** -- a cell position with no content at all.
+  - **spanned** -- a grid position covered by a merged cell that starts above
+    it or to its left. For a cell spanning columns 2-3, mark position 2 with
+    the cell's real role and position 3 as spanned; likewise for row spans.
+    This records each spanning cell's row/column start and end extent.
+
+  ### 3. Challenging cases
+  Select every challenging condition that applies to this table image:
+  inclined, curved, occluded or blurred, extreme aspect ratio, overlaid,
+  multi-color, or irregular. Select none if the table is a plain upright
+  scan.
+
+  ### 4. Image source
+  Finally, record whether the image is a natural-scene photograph, an
+  archival document, or a printed document.
+
+  Annotate the table exactly as printed, even if it contains errors. If the
+  image contains more than one table, annotate the largest fully visible one
+  and skip the item if that is ambiguous.
+
+annotation_schemes:
+  - annotation_type: table_grid
+    name: structure
+    description: "Set the grid size, then click cells to mark headers, empty cells, and spanned continuations."
+    image_key: image
+    rows_key: rows
+    cols_key: cols
+    roles: [data, col_header, row_header, empty, spanned]
+
+  - annotation_type: multiselect
+    name: challenging_cases
+    description: "Select all challenging conditions that apply to this table image (per the WTW taxonomy)."
+    labels:
+      - name: "inclined"
+        tooltip: "The table is rotated or tilted relative to the image frame"
+        key_value: "1"
+      - name: "curved"
+        tooltip: "The table surface is bent or warped, e.g., on a bottle or curved page"
+        key_value: "2"
+      - name: "occluded-or-blurred"
+        tooltip: "Parts of the table are hidden by objects, glare, or blur"
+        key_value: "3"
+      - name: "extreme-aspect-ratio"
+        tooltip: "The table is unusually wide or tall relative to its other dimension"
+        key_value: "4"
+      - name: "overlaid"
+        tooltip: "Text, stamps, or graphics are printed over the table lines"
+        key_value: "5"
+      - name: "multi-color"
+        tooltip: "Cells or lines use multiple colors that complicate line detection"
+        key_value: "6"
+      - name: "irregular"
+        tooltip: "Non-rectangular layout with unusual cell arrangements"
+        key_value: "7"
+
+  - annotation_type: radio
+    name: image_source
+    description: "What kind of image is this table from?"
+    labels:
+      - name: "natural-scene"
+        tooltip: "A photograph of a table in the wild, e.g., on packaging, signs, or labels"
+        key_value: "q"
+      - name: "archival-document"
+        tooltip: "A scan or photograph of a historical/archival document"
+        key_value: "w"
+      - name: "printed-document"
+        tooltip: "A scan or screenshot of a modern printed or digital document"
+        key_value: "e"
+
+allow_all_users: true
+instances_per_annotator: 25
+annotation_per_instance: 2
+allow_skip: true

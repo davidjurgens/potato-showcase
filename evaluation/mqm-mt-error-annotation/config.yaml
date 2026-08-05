@@ -1,0 +1,144 @@
+# MQM: Expert Error Annotation for Machine Translation
+# Based on: Markus Freitag, George Foster, David Grangier, Viresh Ratnakar,
+#   Qijun Tan, and Wolfgang Macherey (2021), "Experts, Errors, and Context:
+#   A Large-Scale Study of Human Evaluation for Machine Translation."
+#   Transactions of the Association for Computational Linguistics, 9,
+#   pp. 1460-1474. DOI: 10.1162/tacl_a_00437
+#   Paper: https://aclanthology.org/2021.tacl-1.87/
+#   Dataset: https://github.com/google/wmt-mqm-human-evaluation
+#
+# Task: professional translators mark error spans in machine translation
+# output, assigning each error a category/sub-category from the paper's
+# broad-coverage MQM hierarchy (Table 2: Accuracy, Fluency, Terminology,
+# Style, Locale convention, Other, Source error, Non-translation) and a
+# severity (Major / Minor / Neutral). The source segment and document context
+# are displayed alongside the translation. This is the full-taxonomy expert
+# protocol; see evaluation/esa-mt-error-spans for the lighter-weight ESA
+# protocol (Kocmi et al., WMT 2024) derived from it.
+# Deliberate simplifications: spans can only be marked in the displayed
+# translation, so Source error / Omission spans cannot be highlighted in the
+# source segment as the guidelines permit; and the running quality score uses
+# flat per-severity penalties (Major -5, Minor -1, Neutral 0) rather than the
+# paper's scoring-time weighting, which discounts Minor Fluency/Punctuation
+# errors to 0.1 and charges Non-translation 25 points.
+#
+# Annotation instructions reproduced verbatim from Table 1 (MQM annotator
+# guidelines) of the paper; severity definitions quoted verbatim from the
+# paper's severity table.
+
+annotation_task_name: "MQM Machine Translation Error Annotation"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "target"
+
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+port: 8000
+server_name: localhost
+
+annotation_instructions: |
+  You will be assessing translations at the segment level, where a segment may
+  contain one or more sentences. Each segment is aligned with a corresponding
+  source segment, and both segments are displayed within their respective
+  documents. Annotate segments in natural order, as if you were reading the
+  document. You may return to revise previous segments.
+
+  Please identify all errors within each translated segment, up to a maximum
+  of five. If there are more than five errors, identify only the five most
+  severe. If it is not possible to reliably identify distinct errors because
+  the translation is too badly garbled or is unrelated to the source, then
+  mark a single *Non-translation* error that spans the entire segment.
+
+  To identify an error, highlight the relevant span of text, and select a
+  category/sub-category and severity level from the available options. (The
+  span of text may be in the source segment if the error is a source error or
+  an omission.) When identifying errors, please be as fine-grained as
+  possible. For example, if a sentence contains two words that are each
+  mistranslated, two separate mistranslation errors should be recorded. If a
+  single stretch of text contains multiple errors, you only need to indicate
+  the one that is most severe. If all have the same severity, choose the first
+  matching category listed in the error typology (eg, *Accuracy*, then
+  *Fluency*, then *Terminology*, etc).
+
+  Please pay particular attention to document context when annotating. If a
+  translation might be questionable on its own but is fine in the context of
+  the document, it should not be considered erroneous; conversely, if a
+  translation might be acceptable in some context, but not within the current
+  document, it should be marked as wrong.
+
+  There are two special error categories: *Source error* and *Non-translation*.
+  Source errors should be annotated separately, highlighting the relevant span
+  in the source segment. They do not count against the five-error limit for
+  target errors, which should be handled in the usual way, whether or not they
+  resulted from a source error. There can be at most one *Non-translation*
+  error per segment, and it should span the entire segment. No other errors
+  should be identified if *Non-Translation* is selected.
+
+  **Severity levels:**
+
+  - **Major**: "Errors that may confuse or mislead the reader due to
+    significant change in meaning or because they appear in a visible or
+    important part of the content."
+  - **Minor**: "Errors that don't lead to loss of meaning and wouldn't confuse
+    or mislead the reader but would be noticed, would decrease stylistic
+    quality, fluency or clarity, or would make the content less appealing."
+  - **Neutral**: "Use to log additional information, problems or changes to be
+    made that don't count as errors, e.g. they reflect a reviewer's choice or
+    preferred style."
+
+annotation_schemes:
+  - annotation_type: error_span
+    name: mqm_errors
+    description: "Highlight each error span in the translation and assign an MQM category/sub-category and severity"
+    error_types:
+      - name: Accuracy
+        subtypes: ["Addition", "Omission", "Mistranslation", "Untranslated text"]
+      - name: Fluency
+        subtypes: ["Punctuation", "Spelling", "Grammar", "Register", "Inconsistency", "Character encoding"]
+      - name: Terminology
+        subtypes: ["Inappropriate for context", "Inconsistent use"]
+      - name: Style
+        subtypes: ["Awkward"]
+      - name: Locale convention
+        subtypes: ["Address format", "Currency format", "Date format", "Name format", "Telephone format", "Time format"]
+      - name: Other
+      - name: Source error
+      - name: Non-translation
+    severities:
+      - name: Major
+        weight: -5
+      - name: Minor
+        weight: -1
+      - name: Neutral
+        weight: 0
+    show_score: true
+    max_score: 100
+
+html_layout: |
+  <div style="padding: 15px; max-width: 860px; margin: auto;">
+    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
+      <strong>Language pair:</strong> {{lang_pair}} &nbsp;·&nbsp; <strong>System:</strong> {{system}}
+    </div>
+    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
+      <strong style="color: #065f46;">Source segment:</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 6px 0 0 0;">{{source}}</p>
+    </div>
+    <div style="background: #eff6ff; border: 2px solid #93c5fd; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
+      <strong style="color: #1e40af;">Translation (mark error spans below):</strong>
+      <p style="font-size: 16px; line-height: 1.7; margin: 6px 0 0 0;">{{target}}</p>
+    </div>
+    <div style="color: #6b7280; font-size: 14px; line-height: 1.6;">
+      <strong>Document context:</strong> {{context}}
+    </div>
+  </div>
+
+allow_all_users: true
+instances_per_annotator: 30
+annotation_per_instance: 3
+allow_skip: true

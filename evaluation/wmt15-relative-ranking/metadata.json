@@ -1,0 +1,72 @@
+{
+  "title": "WMT15 Relative Ranking of Machine Translations",
+  "description": "The classic WMT relative-ranking (RR) protocol for machine translation evaluation, from 'Findings of the 2015 Workshop on Statistical Machine Translation' by Bojar et al. (WMT 2015). The annotator sees a source sentence, a human reference translation, and the outputs of up to five anonymized MT systems in random order, and ranks the outputs from best to worst with ties allowed; the joint rankings are reduced to pairwise judgments and aggregated with TrueSkill into the official system ranking.",
+  "overview": [
+    "From 2007 through 2016, the official ranking of machine translation systems at the WMT shared tasks was produced by human relative-ranking judgments. The 2015 findings paper by Bojar and colleagues documents the largest such campaign to that date: researcher judges ranked anonymized system outputs collected across ten translation tasks between English and each of Czech, French, German, Finnish, and Russian.",
+    "In each ranking task, an annotator is presented with a source segment, a human reference translation, and the outputs of up to five anonymized candidate systems, randomly selected and displayed in random order. The instruction shown at the top of each HIT reads: 'You are shown a source sentence followed by several candidate translations. Your task is to rank the translations from best to worst (ties are allowed).'",
+    "Annotators rank the outputs from 1 (best) to 5 (worst), with ties permitted. Each joint ranking is expanded into up to ten pairwise judgments (A > B, A = F, ...), and the pairwise judgments are aggregated with TrueSkill into a partial ordering that clusters systems by quality. In 2015, redundancy cleanup of near-identical outputs let the campaign nearly double its yield, collecting 542,732 annotations.",
+    "This Potato config reproduces a single WMT ranking task per instance using the drag-and-drop ranking scheme with ties enabled: the source and reference are displayed above five candidate translations drawn from the instance data. The sample items are self-authored illustrations of typical MT quality variation, not sentences from the WMT test sets.",
+    "Use this template for any evaluation where a small set of system outputs for the same input should be totally ordered — MT hypotheses, summaries, or LLM responses — when full rankings are preferred over pairwise or best-worst designs."
+  ],
+  "datasetStats": [
+    {
+      "label": "Campaign",
+      "value": "WMT 2015 (Lisbon)"
+    },
+    {
+      "label": "Protocol",
+      "value": "Relative ranking (RR), ties allowed"
+    },
+    {
+      "label": "Annotations collected",
+      "value": "542,732"
+    },
+    {
+      "label": "Candidates per task",
+      "value": "Up to 5 anonymized system outputs"
+    },
+    {
+      "label": "Translation tasks",
+      "value": "10 (English ↔ Czech, French, German, Finnish, Russian)"
+    },
+    {
+      "label": "Aggregation",
+      "value": "TrueSkill over expanded pairwise judgments"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "annotationTypes": [
+    "ranking"
+  ],
+  "domain": [
+    "Machine Translation",
+    "NLP"
+  ],
+  "useCase": [
+    "MT System Evaluation",
+    "Human Evaluation Campaigns",
+    "System Comparison"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "machine-translation",
+    "relative-ranking",
+    "wmt",
+    "trueskill",
+    "human-evaluation",
+    "system-ranking"
+  ],
+  "featured": false,
+  "paperReference": "Ondřej Bojar, Rajen Chatterjee, Christian Federmann, Barry Haddow, Matthias Huck, Chris Hokamp, Philipp Koehn, Varvara Logacheva, Christof Monz, Matteo Negri, Matt Post, Carolina Scarton, Lucia Specia, and Marco Turchi. 2015. Findings of the 2015 Workshop on Statistical Machine Translation. In Proceedings of the Tenth Workshop on Statistical Machine Translation, pages 1-46, Lisbon, Portugal.",
+  "paperUrl": "https://aclanthology.org/W15-3001/",
+  "datasetUrl": "http://www.statmt.org/wmt15/results.html",
+  "citation": "@inproceedings{bojar-etal-2015-findings,\n    title = \"Findings of the 2015 Workshop on Statistical Machine Translation\",\n    author = \"Bojar, Ond{\\v{r}}ej  and\n      Chatterjee, Rajen  and\n      Federmann, Christian  and\n      Haddow, Barry  and\n      Huck, Matthias  and\n      Hokamp, Chris  and\n      Koehn, Philipp  and\n      Logacheva, Varvara  and\n      Monz, Christof  and\n      Negri, Matteo  and\n      Post, Matt  and\n      Scarton, Carolina  and\n      Specia, Lucia  and\n      Turchi, Marco\",\n    booktitle = \"Proceedings of the Tenth Workshop on Statistical Machine Translation\",\n    month = sep,\n    year = \"2015\",\n    address = \"Lisbon, Portugal\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/W15-3001/\",\n    doi = \"10.18653/v1/W15-3001\",\n    pages = \"1--46\"\n}"
+}
