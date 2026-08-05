@@ -23,8 +23,9 @@
 # errors to 0.1 and charges Non-translation 25 points.
 #
 # Annotation instructions reproduced verbatim from Table 1 (MQM annotator
-# guidelines) of the paper; severity definitions quoted verbatim from the
-# paper's severity table.
+# guidelines) of the paper. The severity gloss is quoted verbatim from the
+# paper's Section 3 prose; the paper has no separate severity-definition
+# table, so no such table is quoted here.
 
 annotation_task_name: "MQM Machine Translation Error Annotation"
 task_dir: "."
@@ -80,17 +81,15 @@ annotation_instructions: |
   error per segment, and it should span the entire segment. No other errors
   should be identified if *Non-Translation* is selected.
 
-  **Severity levels:**
+  **Severity levels** (the paper's definition, Section 3, verbatim):
 
-  - **Major**: "Errors that may confuse or mislead the reader due to
-    significant change in meaning or because they appear in a visible or
-    important part of the content."
-  - **Minor**: "Errors that don't lead to loss of meaning and wouldn't confuse
-    or mislead the reader but would be noticed, would decrease stylistic
-    quality, fluency or clarity, or would make the content less appealing."
-  - **Neutral**: "Use to log additional information, problems or changes to be
-    made that don't count as errors, e.g. they reflect a reviewer's choice or
-    preferred style."
+  "Error severities are assigned independent of category, and consist of
+  Major, Minor, and Neutral levels, corresponding, respectively, to actual
+  translation or grammatical errors, smaller imperfections, and purely
+  subjective opinions about the translation."
+
+  The paper notes that many MQM schemes add a Critical severity above Major,
+  which the authors dropped because its definition is often context-specific.
 
 annotation_schemes:
   - annotation_type: error_span
