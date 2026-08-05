@@ -1,22 +1,22 @@
 # Complete Task Catalog
 
-A flat catalog of all **392** annotation task configurations in the Potato Showcase, sorted alphabetically by title. Every design runs in [Potato](https://www.potatoannotator.com) — see the [documentation](https://www.potatoannotator.com/docs) to get started.
+A flat catalog of all **437** annotation task configurations in the Potato Showcase, sorted alphabetically by title. Every design runs in [Potato](https://www.potatoannotator.com) — see the [documentation](https://www.potatoannotator.com/docs) to get started.
 
 ## Quick Stats
 
 | Category | Count |
 |----------|-------|
-| text | 132 |
-| image | 33 |
-| video | 37 |
-| audio | 17 |
-| evaluation | 23 |
+| text | 144 |
+| image | 34 |
+| video | 40 |
+| audio | 19 |
+| evaluation | 27 |
 | preference-learning | 18 |
 | multimodal | 9 |
-| agentic | 3 |
+| agentic | 26 |
 | semeval | 100 |
 | templates | 20 |
-| **Total** | **392** |
+| **Total** | **437** |
 
 ---
 
@@ -25,394 +25,439 @@ A flat catalog of all **392** annotation task configurations in the Potato Showc
 | # | Title | Paper Reference | Category | Annotation Types | Complexity | Directory |
 |---|-------|----------------|----------|-----------------|------------|-----------|
 | 1 | #HashtagWars - Learning a Sense of Humor | Potash et al., SemEval 2017 | semeval | radio | beginner | [link](./semeval/2017/task06-hashtagwars-humor/) |
-| 2 | ActivityNet Captions Dense Annotation | Krishna et al., ICCV 2017 | video | video_annotation, text | advanced | [link](./video/temporal-grounding/activitynet-captions/) |
-| 3 | ActivityNet Temporal Localization | Heilbron et al., CVPR 2015 | video | video_annotation | intermediate | [link](./video/action-recognition/activitynet-temporal-localization/) |
-| 4 | ADE20K Semantic Segmentation | Zhou et al., CVPR 2017 | image | multiselect, radio | advanced | [link](./image/segmentation/ade20k/) |
-| 5 | ADMIRE - Multimodal Idiomaticity Recognition | Tayyar Madabushi et al., SemEval 2025 | semeval | radio, multiselect | intermediate | [link](./semeval/2025/task01-admire-multimodal-idiomaticity/) |
+| 2 | ActivityNet Captions: Dense Video Captioning Dataset | Krishna et al., ICCV 2017 | video | video_annotation, text | advanced | [link](./video/temporal-grounding/activitynet-captions/) |
+| 3 | ActivityNet: Temporal Action Localization Benchmark | Heilbron et al., CVPR 2015 | video | video_annotation | intermediate | [link](./video/action-recognition/activitynet-temporal-localization/) |
+| 4 | ADE20K: Scene Parsing and Semantic Segmentation Dataset | Zhou et al., CVPR 2017 | image | multiselect, radio | advanced | [link](./image/segmentation/ade20k/) |
+| 5 | AdMIRe - Advancing Multimodal Idiomaticity Representation | Tayyar Madabushi et al., SemEval 2025 | semeval | radio | intermediate | [link](./semeval/2025/task01-admire-multimodal-idiomaticity/) |
 | 6 | Adverse Drug Event Extraction (CADEC) | Karimi et al., J Biomed Inform 2015 | text | span, radio | intermediate | [link](./text/named-entity-recognition/adverse-drug-events/) |
 | 7 | AfriHate - Hate and Abusive Language for African Languages | Muhammad et al., NAACL 2025 | text | radio, multiselect | intermediate | [link](./text/hate-speech-moderation/afrihate-abusive-language/) |
 | 8 | AfriSenti - African Language Sentiment | Muhammad et al., SemEval 2023 | semeval | radio | beginner | [link](./semeval/2023/task12-afrisenti/) |
-| 9 | AlpacaEval: Instruction-Following Preference Evaluation | Li et al., arXiv 2023 | evaluation | pairwise, radio, text | intermediate | [link](./evaluation/alpacaeval-instruction-eval/) |
-| 10 | AlpacaFarm Preference Simulation | Dubois et al., NeurIPS 2023 | preference-learning | likert, radio | intermediate | [link](./preference-learning/alpacafarm-simulation/) |
-| 11 | AMI Meeting Multi-Tier Annotation | Carletta et al., MLMI 2005 | video | video_annotation, radio | advanced | [link](./video/ami-meeting-annotation/) |
-| 12 | Analysis of Clinical Text: Disorder Identification and Normalization | Elhadad et al., SemEval 2015 | semeval | span, radio | advanced | [link](./semeval/2015/task14-clinical-text-analysis/) |
-| 13 | AnnoMI Counselling Dialogue Annotation | Wu et al., ICASSP 2022 | text | radio, multiselect, likert | advanced | [link](./text/dialogue/annomi-counseling-dialogue/) |
-| 14 | Arena Hard Auto - LLM Pairwise Evaluation | Li et al., arXiv 2024 | evaluation | pairwise, likert | intermediate | [link](./evaluation/arena-hard-auto/) |
-| 15 | ArgSciChat Scientific Argumentation Dialogue | Ruiz-Dolz et al., ACL 2023 | text | multiselect, radio | intermediate | [link](./text/dialogue/argscichat-scientific-argumentation/) |
-| 16 | Argument Quality Assessment | Wachsmuth et al., EACL 2017 | text | multiselect, radio | intermediate | [link](./text/argumentation-stance/argument-quality/) |
-| 17 | Argument Reasoning Comprehension (ARCT) | Habernal et al., NAACL 2018 | text | likert, radio | advanced | [link](./text/argumentation-stance/argument-reasoning/) |
-| 18 | Argument Reasoning in Civil Procedure | Bongard et al., SemEval 2024 | semeval | radio, text | advanced | [link](./semeval/2024/task05-argument-civil-procedure/) |
-| 19 | Aspect-Based Sentiment Analysis | Pontiki et al., SemEval 2016 | semeval | span, radio | intermediate | [link](./semeval/2016/task05-aspect-sentiment/) |
-| 20 | Aspect-Based Sentiment Analysis (Original ABSA) | Pontiki et al., SemEval 2014 | semeval | span, radio | intermediate | [link](./semeval/2014/task04-absa-original/) |
-| 21 | Assessing Humor in Edited News Headlines | Hossain et al., SemEval 2020 | semeval | likert, radio | beginner | [link](./semeval/2020/task07-humor-headlines/) |
-| 22 | Audio Transcription Review |  | audio | likert, multiselect, radio, text | intermediate | [link](./audio/audio-transcription/) |
-| 23 | AudioHate - Audio Hate Speech Detection | Guo et al., SIGDIAL 2024 | audio | radio, multiselect | intermediate | [link](./audio/audiohate-speech-detection/) |
-| 24 | Automated Essay Scoring | Uto, arXiv 2022 | text | likert, slider, text | beginner | [link](./text/education/automated-essay-scoring/) |
-| 25 | AVA Atomic Visual Actions | Gu et al., CVPR 2018 | video | multiselect, video_annotation | advanced | [link](./video/action-recognition/ava-atomic-actions/) |
-| 26 | Aya Red-Teaming - Multilingual Global and Local Harm Annotation | Aakanksha et al., EMNLP 2024 | text | radio, multiselect | intermediate | [link](./text/bias-toxicity/aya-multilingual-redteaming/) |
-| 27 | BDD100K Autonomous Driving Segmentation | Yu et al., CVPR 2020 | image | multiselect, radio | advanced | [link](./image/driving/bdd100k/) |
-| 28 | BeaverTails Safety Preference | Ji et al., NeurIPS 2023 | preference-learning | multiselect, radio | advanced | [link](./preference-learning/beavertails-safety-preference/) |
-| 29 | Best-Worst Scaling |  | templates | radio, text | beginner | [link](./templates/comparison/best-worst-scaling/) |
-| 30 | Bias Benchmark for QA (BBQ) | Parrish et al., Findings of ACL 2022 | text | radio, text | intermediate | [link](./text/bias-toxicity/bbq-bias-benchmark/) |
-| 31 | BIG-Bench Task Evaluation | Srivastava et al., TMLR 2023 | evaluation | radio, text, number | intermediate | [link](./evaluation/big-bench-task-eval/) |
-| 32 | BigEarthNet Remote Sensing Classification | Sumbul et al., IGARSS 2019 | image | multiselect | intermediate | [link](./image/aerial/bigearth-net/) |
-| 33 | Biomedical Entity Linking (MedMentions) | Mohan & Li, AKBC 2019 | text | radio, span, text | advanced | [link](./text/entity-linking/medmentions-biomedical/) |
-| 34 | Biomedical Named Entity Recognition (JNLPBA) | Kim et al., BioNLP 2004 | text | span | advanced | [link](./text/named-entity-recognition/biomedical-ner/) |
-| 35 | BioNLP 2011 - Gene Regulation Event Extraction | Kim et al., ACL Workshop 2011 | text | event_annotation, span | advanced | [link](./text/domain-specific/bionlp-gene-regulation-events/) |
-| 36 | BRAINTEASER - Commonsense-Defying QA | Jiang et al., SemEval 2024 | semeval | radio, text | intermediate | [link](./semeval/2024/task09-brainteaser/) |
-| 37 | Breakfast Actions Segmentation | Kuehne et al., IJCV 2014 | video | text, video_annotation | advanced | [link](./video/action-recognition/breakfast-actions/) |
-| 38 | Camelyon17 - Breast Cancer Metastasis Detection in Pathology | Bejnordi et al., JAMA 2017 | image | image_annotation, radio | advanced | [link](./image/medical/camelyon-pathology/) |
-| 39 | Capturing Discriminative Attributes | Krebs et al., SemEval 2018 | semeval | radio | beginner | [link](./semeval/2018/task10-discriminative-attributes/) |
-| 40 | Causal Medical Claim Detection and PICO Extraction | Khetan et al., SemEval 2023 | semeval | span, radio | advanced | [link](./semeval/2023/task08-causal-medical-claim/) |
-| 41 | CelebA Face Attributes Classification | Liu et al., ICCV 2015 | image | multiselect | intermediate | [link](./image/specialized/celeba/) |
-| 42 | Character Identification on Multiparty Dialogues | Chen et al., SemEval 2018 | semeval | span, radio | intermediate | [link](./semeval/2018/task04-character-identification/) |
-| 43 | Charades Indoor Activity Segmentation | Sigurdsson et al., ECCV 2016 | video | video_annotation | intermediate | [link](./video/action-recognition/charades-activity-segmentation/) |
-| 44 | Charades-STA Temporal Grounding | Gao et al., ICCV 2017 | video | radio, video_annotation | intermediate | [link](./video/temporal-grounding/charades-sta-grounding/) |
-| 45 | CHART-Infographics: Chart and Infographic Analysis | Davila et al., ICPR 2024 | multimodal | image_annotation, radio, text | advanced | [link](./multimodal/chartinfo-chart-analysis/) |
-| 46 | Chatbot Arena - Pairwise Comparison with Best-Worst Scaling | Zheng et al., ICML 2024 | evaluation | bws, pairwise | intermediate | [link](./evaluation/chatbot-arena-pairwise-bws/) |
-| 47 | Check-COVID: Fact-Checking COVID-19 News Claims | Wang et al., Findings ACL 2023 | text | radio, span, text | intermediate | [link](./text/fact-verification/check-covid-fact-checking/) |
-| 48 | Chemical-Disease Relation Extraction (BC5CDR) | Li et al., Database 2016 | text | span, radio | advanced | [link](./text/information-extraction/chemical-disease-relations/) |
-| 49 | ChemProt - Chemical-Protein Interaction Annotation | Krallinger et al., BioCreative VI 2017 | text | span, radio | intermediate | [link](./text/domain-specific/chemprot-chemical-protein/) |
-| 50 | CheXpert Chest X-Ray Classification | Irvin et al., AAAI 2019 | image | radio | advanced | [link](./image/medical/chexpert/) |
-| 51 | CHILDES Child Language Multi-Tier Annotation | MacWhinney, Journal of Child Language 2000 | video | video_annotation, text, radio | intermediate | [link](./video/childes-child-language/) |
-| 52 | Citation Needed Detection (Multilingual Wikipedia) | Quaremba et al., ACL 2026 | text | radio | beginner | [link](./text/fact-verification/citation-needed-detection/) |
-| 53 | Cityscapes Instance Segmentation | Cordts et al., CVPR 2016 | image | multiselect | advanced | [link](./image/segmentation/cityscapes/) |
-| 54 | Claim Perspectives (Perspectrum) | Chen et al., NAACL 2019 | text | likert, radio | intermediate | [link](./text/argumentation-stance/claim-perspectives/) |
-| 55 | CLARITY: Unmasking Political Question Evasions | Thomas et al., SemEval 2026 | semeval | radio, text | intermediate | [link](./semeval/2026/task06-clarity-political-evasion/) |
-| 56 | Clickbait Detection (Webis Clickbait Corpus) | Potthast et al., ECIR 2016 | text | likert, multiselect, radio | beginner | [link](./text/fact-verification/clickbait-detection/) |
-| 57 | Clickbait Spoiling | Hagen et al., SemEval 2023 | semeval | text, radio, span | intermediate | [link](./semeval/2023/task05-clickbait-spoiling/) |
-| 58 | Clinical TempEval - Temporal Information Extraction from Clinical Notes | Bethard et al., SemEval 2016 | semeval | span, radio | advanced | [link](./semeval/2016/task12-clinical-tempeval/) |
-| 59 | Clinical Trial NLI | Jullien et al., SemEval 2023 | semeval | radio, text | advanced | [link](./semeval/2023/task07-clinical-trial-nli/) |
-| 60 | Clotho Audio Captioning | Drossos et al., ICASSP 2020 | audio | text, likert, radio | beginner | [link](./audio/clotho-audio-captioning/) |
-| 61 | CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation | Zadeh et al., ACL 2018 | video | video_annotation, radio, text | advanced | [link](./video/cmu-mosei-multimodal-sentiment/) |
-| 62 | Code Defect Detection (CodeXGLUE) | Lu et al., NeurIPS 2021 | text | radio, span, text | intermediate | [link](./text/code-annotation/codexglue-defect-detection/) |
-| 63 | Code Generation Evaluation (HumanEval) | Chen et al., arXiv 2021 | text | radio, text | intermediate | [link](./text/code-annotation/humaneval-code-generation/) |
-| 64 | Code Review Annotation (CodeReviewer) | Li et al., FSE 2022 | text | span, radio, text | advanced | [link](./text/code-annotation/codereviewer-review/) |
-| 65 | CODWOE - Comparing Dictionaries and Word Embeddings | Mickus et al., SemEval 2022 | semeval | text, radio | intermediate | [link](./semeval/2022/task01-codwoe/) |
-| 66 | Commonsense Inference (ATOMIC 2020) | Hwang et al., AAAI 2021 | text | radio | intermediate | [link](./text/commonsense-ethics/commonsense-inference/) |
-| 67 | Commonsense QA Explanation (ECQA) | Aggarwal et al., ACL 2021 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/commonsense-qa-explanation/) |
-| 68 | Commonsense Validation and Explanation | Wang et al., SemEval 2020 | semeval | radio, text | beginner | [link](./semeval/2020/task04-commonsense-validation/) |
-| 69 | Community Question Answering | Nakov et al., SemEval 2017 | semeval | radio | intermediate | [link](./semeval/2017/task03-community-qa/) |
-| 70 | Complex Named Entity Recognition (MultiCoNER) | Malmasi et al., SemEval 2022 | text | span | advanced | [link](./text/named-entity-recognition/complex-ner/) |
-| 71 | Complex Word Identification | Paetzold and Specia, SemEval 2016 | semeval | radio | beginner | [link](./semeval/2016/task11-complex-word-identification/) |
-| 72 | CoNLL-2003 NER with Triage | Tjong Kim Sang & De Meulder, CoNLL 2003 | text | triage, span | beginner | [link](./text/named-entity-recognition/conll2003-ner-triage/) |
-| 73 | Connotation Frames of Power and Agency | Sap et al., EMNLP 2017 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/power-agency-frames/) |
-| 74 | Constitutional AI Harmlessness Evaluation | Bai et al., arXiv 2022 | preference-learning | radio, likert, text | intermediate | [link](./preference-learning/constitutional-ai-harmlessness/) |
-| 75 | Conversation Quality Attributes | See et al., NAACL 2019 | text | radio, likert, multiselect | intermediate | [link](./text/dialogue/conversation-quality-attributes/) |
-| 76 | Coreference Resolution (OntoNotes) | Pradhan et al., CoNLL 2012 | text | likert, radio, text | advanced | [link](./text/information-extraction/coreference-resolution/) |
-| 77 | Counterfactual Detection and Reasoning | Yang et al., SemEval 2020 | semeval | radio, span | intermediate | [link](./semeval/2020/task05-counterfactual/) |
-| 78 | Counting Events and Participants in News | Postma et al., SemEval 2018 | semeval | number, text | intermediate | [link](./semeval/2018/task05-event-counting/) |
-| 79 | CoVoST 2 - Speech Translation Evaluation | Wang et al., arXiv 2020 | audio | text, radio, audio_annotation, likert | intermediate | [link](./audio/covost-speech-translation/) |
-| 80 | Cross-lingual Causal Commonsense Reasoning (XCOPA) | Ponti et al., EMNLP 2020 | text | radio | beginner | [link](./text/cross-lingual/xcopa-causal-reasoning/) |
-| 81 | CrossRE: Cross-Domain Relation Extraction | Bassignana & Plank, Findings EMNLP 2022 | text | span, span_link, text | intermediate | [link](./text/relation-extraction/crossre-cross-domain-relations/) |
-| 82 | CUB-200-2011 Fine-Grained Bird Classification | Wah et al., 2011 | image | multiselect, radio, text | advanced | [link](./image/classification/cub-200-birds/) |
-| 83 | Deceptive Review Detection | Ott et al., ACL 2011 | text | likert, multiselect, radio | intermediate | [link](./text/fact-verification/deceptive-review-detection/) |
-| 84 | DeepFashion Fine-Grained Fashion Classification | Liu et al., CVPR 2016 | image | multiselect, radio | intermediate | [link](./image/specialized/deepfashion/) |
-| 85 | DeftEval - Extracting Definitions from Free Text | Spala et al., SemEval 2020 | semeval | span, radio | intermediate | [link](./semeval/2020/task06-defteval-definitions/) |
-| 86 | Detecting Machine-Generated Code | Orel et al., SemEval 2026 | semeval | radio, text | advanced | [link](./semeval/2026/task13-machine-generated-code/) |
-| 87 | Detecting Minimal Semantic Units and Their Meanings (DiMSUM) | Schneider et al., SemEval 2016 | semeval | span | intermediate | [link](./semeval/2016/task10-minimal-semantic-units/) |
-| 88 | Detecting Persuasion Techniques in News | Piskorski et al., SemEval 2023 | semeval | multiselect, span | advanced | [link](./semeval/2023/task03-persuasion-news/) |
-| 89 | Detecting Stance in Tweets | Mohammad et al., SemEval 2016 | semeval | radio | beginner | [link](./semeval/2016/task06-stance-detection/) |
-| 90 | Detection and Interpretation of English Puns | Miller et al., SemEval 2017 | semeval | radio, span | intermediate | [link](./semeval/2017/task07-pun-detection/) |
-| 91 | Determining Sentiment Intensity of English and Arabic Phrases | Kiritchenko et al., SemEval 2016 | semeval | likert | beginner | [link](./semeval/2016/task07-sentiment-intensity/) |
-| 92 | DGS Corpus Sign Language Multi-Tier Annotation | Hanke et al., LREC 2020 | video | video_annotation, radio, text | advanced | [link](./video/dgs-corpus-sign-language/) |
-| 93 | Dialogue Act Labeling |  | templates | multiselect, radio | intermediate | [link](./templates/text/dialogue-act-labeling/) |
-| 94 | Dialogue Relation Extraction (DialogRE) | Yu et al., ACL 2020 | text | span, radio | advanced | [link](./text/information-extraction/dialogue-relation-extraction/) |
-| 95 | DiaSafety Dialogue Safety Annotation | Sun et al., Findings ACL 2022 | text | radio, multiselect | intermediate | [link](./text/dialogue/diasafety-dialogue-safety/) |
-| 96 | DICES Diversity in Conversational AI Safety | Aroyo et al., NeurIPS 2023 | text | radio, likert, multiselect | intermediate | [link](./text/dialogue/dices-diversity-safety/) |
-| 97 | DiDeMo Moment Retrieval | Hendricks et al., ICCV 2017 | video | radio, video_annotation | intermediate | [link](./video/temporal-grounding/didemo-moment-retrieval/) |
-| 98 | DimABSA: Dimensional Aspect-Based Sentiment Analysis | Yu et al., SemEval 2026 | semeval | span, slider, text | advanced | [link](./semeval/2026/task03-dimabsa/) |
-| 99 | DISPLACE 2024 - Speaker and Language Diarization | Kundu et al., INTERSPEECH 2024 | audio | radio, span | advanced | [link](./audio/displace-speaker-diarization/) |
-| 100 | DISRPT: Discourse Segmentation and Relation Classification | Braud et al., DISRPT@ACL 2023 | text | span, radio | advanced | [link](./text/discourse/disrpt-discourse-relations/) |
-| 101 | Do-Not-Answer: Safety Evaluation of LLM Responses | Wang et al., Findings EACL 2024 | evaluation | radio, multiselect | intermediate | [link](./evaluation/donotanswer-safety-eval/) |
-| 102 | DocBank Document Layout Detection | Li et al., COLING 2020 | image | multiselect, radio, text | intermediate | [link](./image/specialized/docbank/) |
-| 103 | DocLayNet Document Layout Analysis | Pfitzmann et al., KDD 2022 | image | multiselect, radio, text | intermediate | [link](./image/doclaynet-document-layout/) |
-| 104 | DoReCo Language Documentation Annotation | Paschen et al., Scientific Data 2022 | audio | span, text, radio | advanced | [link](./audio/doreco-language-documentation/) |
-| 105 | DOTA Aerial Image Object Detection | Xia et al., CVPR 2018 | image | multiselect, radio, text | advanced | [link](./image/aerial/dota-aerial/) |
-| 106 | DPO Preference Data Collection | Rafailov et al., NeurIPS 2023 | preference-learning | pairwise, radio, text | intermediate | [link](./preference-learning/dpo-preference-data/) |
-| 107 | Drug-Drug Interaction Extraction from Biomedical Texts | Segura-Bedmar et al., SemEval 2013 | semeval | span, radio | advanced | [link](./semeval/2013/task09-drug-drug-interactions/) |
-| 108 | Dynamic Hate Speech Detection | Vidgen et al., ACL 2021 | text | likert, multiselect, radio | intermediate | [link](./text/hate-speech-moderation/dynamic-hate-speech/) |
-| 109 | EA-MT - Entity-Aware Machine Translation | Knowles et al., SemEval 2025 | semeval | span, radio, text | advanced | [link](./semeval/2025/task02-entity-aware-mt/) |
-| 110 | Ego4D: Egocentric Video Episodic Memory Annotation | Grauman et al., CVPR 2022 | video | video_annotation, text, radio | advanced | [link](./video/ego4d-episodic-memory/) |
-| 111 | EmoBox - Multilingual Speech Emotion Recognition | Ma et al., INTERSPEECH 2024 | audio | radio, likert | intermediate | [link](./audio/emobox-multilingual-speech-emotion/) |
-| 112 | EmoContext - Contextual Emotion Detection in Text | Chatterjee et al., SemEval 2019 | semeval | radio | beginner | [link](./semeval/2019/task03-emocontext/) |
-| 113 | Emotion Cause Extraction (RECCON) | Poria et al., EMNLP 2020 | text | radio, span | advanced | [link](./text/emotion-sentiment/emotion-cause-extraction/) |
-| 114 | Emotion Detection (SemEval-2018 Task 1) | Mohammad et al., SemEval 2018 | text | multiselect, likert | intermediate | [link](./text/emotion-sentiment/semeval-emotion-detection/) |
-| 115 | Emotion Discovery and Reasoning its Flip | Kumar et al., SemEval 2024 | semeval | radio, span | advanced | [link](./semeval/2024/task10-emotion-flip/) |
-| 116 | Emotional Valence and Arousal over Time from Ecological Essays | Soni et al., SemEval 2026 | semeval | slider, text | intermediate | [link](./semeval/2026/task02-emotion-valence-arousal-dynamics/) |
-| 117 | Empathetic Dialogue Annotation | Rashkin et al., ACL 2019 | text | radio, likert | intermediate | [link](./text/emotion-sentiment/empathetic-dialogues/) |
-| 118 | Emphasis Selection for Written Text | Shirani et al., SemEval 2020 | semeval | span | beginner | [link](./semeval/2020/task10-emphasis-selection/) |
-| 119 | Entity Linking in Tweets | — | text | span, text | advanced | [link](./text/entity-linking/entity-linking-tweets/) |
-| 120 | EPIC-KITCHENS Egocentric Action Annotation | Damen et al., ECCV 2018 | video | radio, text, video_annotation | advanced | [link](./video/action-recognition/epic-kitchens-egocentric/) |
-| 121 | ESA: Error Span Annotation for Machine Translation | Kocmi et al., WMT@EMNLP 2024 | evaluation | span, radio, likert | advanced | [link](./evaluation/esa-mt-error-spans/) |
-| 122 | Event Argument Extraction (MAVEN-Arg) | Wang et al., ACL 2024 | text | span, radio | advanced | [link](./text/information-extraction/event-argument-extraction/) |
-| 123 | Event Coreference and Relations (MAVEN-ERE) | Wang et al., EMNLP 2022 | text | span, span_link | advanced | [link](./text/coreference/maven-ere-event-coreference/) |
-| 124 | Everyday Knowledge Across Diverse Languages and Cultures (BLEnD) | Ousidhoum et al., SemEval 2026 | semeval | text, radio | intermediate | [link](./semeval/2026/task07-blend-cultural-knowledge/) |
-| 125 | Explainable Online Sexism Detection | Kirk et al., SemEval 2023 | semeval | radio, span | intermediate | [link](./semeval/2023/task10-explainable-sexism/) |
-| 126 | Fact Verification |  | templates | likert, multiselect, radio, text | intermediate | [link](./templates/text/fact-verification/) |
-| 127 | Fact-Checking in Community Question Answering Forums | Mihaylova et al., SemEval 2019 | semeval | radio | intermediate | [link](./semeval/2019/task08-fact-checking-cqa/) |
-| 128 | FActScore: Fine-grained Atomic Evaluation of Factual Precision | Min et al., EMNLP 2023 | text | radio, text | intermediate | [link](./text/fact-verification/factscore-atomic-factuality/) |
-| 129 | FAVA: Fine-grained Hallucination Annotations for Faithful Generation | Mishra et al., ACL 2024 | text | span, radio | advanced | [link](./text/fact-verification/fava-hallucination-spans/) |
-| 130 | Financial PhraseBank - Sentiment Classification | Malo et al., JASIST 2014 | text | select, radio | beginner | [link](./text/financial/financial-phrasebank-sentiment/) |
-| 131 | FinBERT - Financial Headline Sentiment Analysis | Araci, arXiv 2019 | text | radio, text, likert | beginner | [link](./text/financial/finbert-headline-sentiment/) |
-| 132 | Fine-Grained Propaganda Detection | Da San Martino et al., EMNLP 2019 | text | span | advanced | [link](./text/fact-verification/propaganda-techniques/) |
-| 133 | Fine-Grained Sentiment Analysis on Financial Microblogs and News | Cortis et al., SemEval 2017 | semeval | likert, radio | intermediate | [link](./semeval/2017/task05-financial-sentiment/) |
-| 134 | FineGym Action Segmentation | Shao et al., CVPR 2020 | video | radio, video_annotation | advanced | [link](./video/action-recognition/finegym-action-segments/) |
-| 135 | FineSports Fine-grained Action Recognition | Xu et al., CVPR 2024 | video | multiselect, video_annotation | advanced | [link](./video/finesports-action-recognition/) |
-| 136 | FLAIR: French Land Cover from Aerospace Imagery | Garioud et al., NeurIPS 2023 | image | multiselect, radio, text | intermediate | [link](./image/flair-aerial-land-use/) |
-| 137 | FLARE - Financial Named Entity Recognition | Xie et al., arXiv 2024 | text | span, radio | intermediate | [link](./text/financial/flare-financial-ner/) |
-| 138 | FLORES - Machine Translation Quality Estimation | Goyal et al., TACL 2022 | text | likert, text, select | intermediate | [link](./text/cross-lingual/flores-mt-quality/) |
-| 139 | FLUTE: Figurative Language Understanding through Textual Explanations | Chakrabarty et al., EMNLP 2022 | text | radio, text, multiselect | intermediate | [link](./text/discourse/flute-figurative-nli/) |
-| 140 | Food Hazard Detection | SemEval 2025 Task 9 Organizers, SemEval 2025 | semeval | span, radio, multiselect | advanced | [link](./semeval/2025/task09-food-hazard-detection/) |
-| 141 | GoEmotions - Fine-Grained Emotion Classification | Demszky et al., ACL 2020 | text | multiselect, radio | intermediate | [link](./text/emotion-sentiment/goemotions/) |
-| 142 | GPQA - Graduate-Level Expert QA Evaluation | Rein et al., ICLR 2024 | evaluation | number, radio, text | intermediate | [link](./evaluation/gpqa-expert-qa/) |
-| 143 | Graded Word Similarity in Context | Armendariz et al., SemEval 2020 | semeval | likert, slider | intermediate | [link](./semeval/2020/task03-graded-word-similarity/) |
-| 144 | HaHackathon - Detecting and Rating Humor and Offense | Meaney et al., SemEval 2021 | semeval | radio, likert | beginner | [link](./semeval/2021/task07-hahackathon-humor/) |
-| 145 | Harmony4D Human Interaction Tracking | Jung et al., NeurIPS 2024 | video | multiselect, video_annotation | advanced | [link](./video/harmony4d-interaction-tracking/) |
-| 146 | Hate Speech Detection |  | templates | likert, multiselect, radio | intermediate | [link](./templates/text/hate-speech-detection/) |
-| 147 | HatEval - Multilingual Detection of Hate Speech Against Immigrants and Women | Basile et al., SemEval 2019 | semeval | radio, multiselect | intermediate | [link](./semeval/2019/task05-hateval/) |
-| 148 | HateXplain - Explainable Hate Speech Detection | Mathew et al., AAAI 2021 | text | radio, multiselect, span | advanced | [link](./text/hate-speech-moderation/hatexplain/) |
-| 149 | HatReD: Multi-Domain Hateful Meme Detection | Bhandari et al., IJCAI 2023 | multimodal | radio, text | intermediate | [link](./multimodal/hatred-hateful-memes/) |
-| 150 | HELM - Model Card Display and Evaluation | Liang et al., TMLR 2023 | evaluation | pure_display, likert | beginner | [link](./evaluation/helm-model-card-display/) |
-| 151 | HelpSteer Multi-Attribute Rating | Wang et al., NAACL 2024 | preference-learning | likert | intermediate | [link](./preference-learning/helpsteer-multiattribute-rating/) |
-| 152 | HH-RLHF Pairwise Preference | Bai et al., 2022 | preference-learning | radio | beginner | [link](./preference-learning/hh-rlhf-pairwise-preference/) |
-| 153 | How2Sign Sign Language Multi-Tier Annotation | Duarte et al., CVPR 2021 | video | video_annotation, radio, text | advanced | [link](./video/how2sign-sign-language/) |
-| 154 | HowTo100M Instructional Video Annotation | Miech et al., ICCV 2019 | video | radio, text, video_annotation | intermediate | [link](./video/instructional/howto100m-instructional/) |
-| 155 | Human Values in Arguments | Kiesel et al., ACL 2022 | text | multiselect, radio | intermediate | [link](./text/computational-social-science/human-values-arguments/) |
-| 156 | HumanEval Code Correctness Evaluation | Chen et al., arXiv 2021 | evaluation | radio, text, number | intermediate | [link](./evaluation/humaneval-code-correctness/) |
-| 157 | Hypernym Discovery | Camacho-Collados et al., SemEval 2018 | semeval | text, radio | intermediate | [link](./semeval/2018/task09-hypernym-discovery/) |
-| 158 | Hyperpartisan News Detection | Kiesel et al., SemEval 2019 | semeval | radio | intermediate | [link](./semeval/2019/task04-hyperpartisan-news/) |
-| 159 | i2b2 Clinical Named Entity Recognition | Stubbs et al., JAMIA 2015 | text | span, radio | intermediate | [link](./text/domain-specific/clinical-ner-i2b2/) |
-| 160 | Idiomaticity Detection | Tayyar Madabushi et al., SemEval 2022 | semeval | radio | beginner | [link](./semeval/2022/task02-idiomaticity/) |
-| 161 | IEMOCAP Dyadic Emotion Multi-Tier Annotation | Busso et al., Language Resources and Evaluation 2008 | video | video_annotation, radio | advanced | [link](./video/iemocap-dyadic-emotion/) |
-| 162 | IFEval: Instruction-Following Evaluation for LLMs | Zhou et al., arXiv 2023 | evaluation | radio, multiselect, text | intermediate | [link](./evaluation/ifeval-instruction-following/) |
-| 163 | Image Captioning Evaluation |  | evaluation | likert, radio | beginner | [link](./evaluation/image-captioning-eval/) |
-| 164 | Image Classification |  | templates | likert, multiselect, radio | beginner | [link](./templates/image/image-classification/) |
-| 165 | Image Segmentation |  | templates | image_annotation | advanced | [link](./templates/image/image-segmentation/) |
-| 166 | ImageNet Image Classification | Deng et al., CVPR 2009 | image | radio, text | intermediate | [link](./image/classification/imagenet/) |
-| 167 | Implicit Hate Speech Detection | ElSherief et al., EMNLP 2021 | text | likert, radio | advanced | [link](./text/hate-speech-moderation/implicit-hate-speech/) |
-| 168 | Implicit Hate Speech Detection (ToxiGen) | Hartvigsen et al., ACL 2022 | text | radio, text | intermediate | [link](./text/bias-toxicity/toxigen-implicit-hate/) |
-| 169 | IndicNLP Suite - Multilingual Sentiment Analysis | Kakwani et al., Findings of EMNLP 2020 | text | radio, text | beginner | [link](./text/cross-lingual/indicnlp-multilingual-sa/) |
-| 170 | InstructGPT Instruction Following | Ouyang et al., NeurIPS 2022 | preference-learning | likert, radio | intermediate | [link](./preference-learning/instructgpt-preference/) |
-| 171 | Intent Classification |  | templates | likert, multiselect, radio, text | beginner | [link](./templates/text/intent-classification/) |
-| 172 | Interlinear Glossing of Endangered Languages | Ginn et al., SIGMORPHON 2023 | text | span, text | advanced | [link](./text/parsing/sigmorphon-interlinear-glossing/) |
-| 173 | Interpretable Semantic Textual Similarity | Agirre et al., SemEval 2016 | semeval | span, likert | advanced | [link](./semeval/2016/task02-interpretable-sts/) |
-| 174 | Irony Detection in English Tweets | Van Hee et al., SemEval 2018 | semeval | radio | intermediate | [link](./semeval/2018/task03-irony-detection/) |
-| 175 | iSarcasmEval: Intended Sarcasm Detection | Abu Farha et al., SemEval 2022 | semeval | radio, multiselect, text | intermediate | [link](./semeval/2022/task06-isarcasmeval/) |
-| 176 | iWildCam Wildlife Detection & Classification | Beery et al., CVPR 2019 | image | multiselect, radio, text | intermediate | [link](./image/specialized/iwildcam/) |
-| 177 | KG-BERT Knowledge Graph Triple Validation | Yao et al., AAAI 2020 | text | radio, select, text | intermediate | [link](./text/information-extraction/kgbert-knowledge-graph/) |
-| 178 | KITTI Road Object Detection | Geiger et al., CVPR 2012 | image | multiselect, radio, text | advanced | [link](./image/driving/kitti/) |
-| 179 | Legal Event Coreference (LegalCore) | Semo et al., Findings ACL 2025 | text | span, span_link | advanced | [link](./text/coreference/legalcore-legal-coreference/) |
-| 180 | LegalEval - Legal Document Analysis | Modi et al., SemEval 2023 | semeval | radio, span | advanced | [link](./semeval/2023/task06-legaleval/) |
-| 181 | LexGLUE - Legal Document Understanding | Chalkidis et al., ACL 2022 | text | radio, multiselect, text | intermediate | [link](./text/domain-specific/lexglue-legal-understanding/) |
-| 182 | Lexical Complexity Prediction | Shardlow et al., SemEval 2021 | semeval | likert, slider | beginner | [link](./semeval/2021/task01-lexical-complexity/) |
-| 183 | LibriSpeech - Audio Transcription and Quality Rating | Panayotov et al., ICASSP 2015 | audio | slider, audio_annotation | beginner | [link](./audio/librispeech-transcription/) |
-| 184 | Likert Scale Survey |  | templates | likert, multiselect, text | beginner | [link](./templates/surveys/likert-scale-survey/) |
-| 185 | LIP Human Parsing | Gong et al., CVPR 2017 | image | multiselect, radio | advanced | [link](./image/segmentation/lip-human-parsing/) |
-| 186 | LLMs4Subjects - Automated Subject Tagging | Sinhababu et al., SemEval 2025 | semeval | multiselect, radio | intermediate | [link](./semeval/2025/task05-llms4subjects/) |
-| 187 | LongEval: Faithfulness Evaluation for Long-form Summarization | Krishna et al., EACL 2023 | evaluation | span, radio, likert | advanced | [link](./evaluation/longeval-faithfulness/) |
-| 188 | LSMDC Keyframe Selection | Rohrbach et al., IJCV 2017 | video | radio, video_annotation | intermediate | [link](./video/summarization/lsmdc-keyframe-selection/) |
-| 189 | Machine Comprehension Using Commonsense Knowledge | Ostermann et al., SemEval 2018 | semeval | radio, text | intermediate | [link](./semeval/2018/task11-commonsense-comprehension/) |
-| 190 | Machine Translation Evaluation |  | evaluation | likert, multiselect | intermediate | [link](./evaluation/machine-translation-eval/) |
-| 191 | Machine-Generated Text Detection | Wang et al., SemEval 2024 | semeval | radio | intermediate | [link](./semeval/2024/task08-machine-generated-text/) |
-| 192 | MAMI - Multimedia Automatic Misogyny Identification | Fersini et al., SemEval 2022 | semeval | radio, multiselect | intermediate | [link](./semeval/2022/task05-multimedia-misogyny/) |
-| 193 | MasakhaNER 2.0 - Named Entity Recognition for African Languages | Adelani et al., EMNLP 2022 | text | span, radio | intermediate | [link](./text/named-entity-recognition/masakhaner-african-ner/) |
-| 194 | MasakhaNEWS - News Topic Classification for African Languages | Adelani et al., IJCNLP-AACL 2023 | text | radio | beginner | [link](./text/cross-lingual/masakhanews-topic-classification/) |
-| 195 | MasakhaPOS - Part-of-Speech Tagging for African Languages | Dione et al., ACL 2023 | text | span | intermediate | [link](./text/parsing/masakhapos-african-pos/) |
-| 196 | MASSIVE - Multilingual Intent Classification and Slot Filling | FitzGerald et al., ACL 2023 | text | radio, span | intermediate | [link](./text/information-extraction/massive-intent-slot-filling/) |
-| 197 | Math Question Answering and Category Classification | Hopkins et al., SemEval 2019 | semeval | text, radio | advanced | [link](./semeval/2019/task10-math-qa/) |
-| 198 | MathDial - Tutoring Dialogue Quality Annotation | Macina et al., Findings ACL 2023 | text | radio, multiselect, span | intermediate | [link](./text/education/mathdial-tutoring-dialogue/) |
-| 199 | MAUD: Legal Merger Agreement Understanding | Wang et al., EMNLP 2023 | text | span, radio | advanced | [link](./text/domain-specific/maud-legal-merger-qa/) |
-| 200 | MeasEval - Counts and Measurements | Harper et al., SemEval 2021 | semeval | span, radio, text | advanced | [link](./semeval/2021/task08-measeval/) |
-| 201 | Media Frames Analysis | Card et al., ACL 2015 | text | multiselect, radio, text | intermediate | [link](./text/computational-social-science/media-frames-analysis/) |
-| 202 | MediTOD Medical Dialogue Annotation | Kazi et al., EMNLP 2024 | text | radio, span, text, multiselect | advanced | [link](./text/dialogue/meditod-medical-dialogue/) |
-| 203 | MedNLI: Clinical Natural Language Inference | Romanov & Shivade, EMNLP 2018 | text | radio, text | beginner | [link](./text/domain-specific/mednli-clinical-inference/) |
-| 204 | Memotion Analysis - Sentiment and Type Classification of Memes | Sharma et al., SemEval 2020 | semeval | radio, multiselect | intermediate | [link](./semeval/2020/task08-memotion-memes/) |
-| 205 | Miami Bangor Code-Switching Annotation | Deuchar et al., International Journal of Bilingualism 2014 | audio | span, radio, text | intermediate | [link](./audio/miami-code-switching/) |
-| 206 | MIMIC-CXR Chest Radiograph Classification | Johnson et al., Scientific Data 2019 | image | multiselect, radio, text | advanced | [link](./image/medical/mimic-cxr/) |
-| 207 | Mind2Web: Web Agent Task Annotation | Deng et al., NeurIPS 2023 | agentic | span, text, radio | advanced | [link](./agentic/mind2web-web-agent-tasks/) |
-| 208 | MMBench Multimodal Evaluation | Liu et al., ECCV 2024 | multimodal | radio, text, multiselect | intermediate | [link](./multimodal/mmbench-multimodal-eval/) |
-| 209 | MMLU Knowledge Evaluation | Hendrycks et al., ICLR 2021 | evaluation | radio, text | beginner | [link](./evaluation/mmlu-knowledge-eval/) |
-| 210 | MMLU-Pro - Tiered Multi-Subject Evaluation | Wang et al., NeurIPS 2024 | preference-learning | tiered_annotation, radio | intermediate | [link](./preference-learning/mmlu-pro-tiered-eval/) |
-| 211 | MMMU: Massive Multi-discipline Multimodal Understanding | Yue et al., CVPR 2024 | multimodal | radio | intermediate | [link](./multimodal/mmmu-multimodal-understanding/) |
-| 212 | MOCHEG: Multi-modal Multi-hop Fact-Checking with Explanations | Yao et al., SIGIR 2023 | multimodal | radio, text, span | advanced | [link](./multimodal/mocheg-multimodal-factcheck/) |
-| 213 | Moral Foundations in Tweets | Johnson & Goldwasser, ACL 2018 | text | multiselect, radio | intermediate | [link](./text/computational-social-science/moral-foundations-tweets/) |
-| 214 | Moral Stories Annotation | Emelin et al., EMNLP 2021 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/moral-stories/) |
-| 215 | MovieNet Scene Classification | Qian et al., ECCV 2020 | video | multiselect, radio | intermediate | [link](./video/scene-understanding/movienet-scene-classification/) |
-| 216 | MovieScenes Scene Detection | Rao et al., CVPR 2020 | video | radio, video_annotation | intermediate | [link](./video/boundary-detection/moviescenes-detection/) |
-| 217 | MS COCO Object Detection & Segmentation | Lin et al., ECCV 2014 | image | multiselect, radio, text | advanced | [link](./image/classification/ms-coco/) |
-| 218 | MS MARCO - Passage Relevance Ranking | Nguyen et al., NeurIPS 2016 Workshop | text | select, radio | beginner | [link](./text/information-retrieval/msmarco-passage-ranking/) |
-| 219 | MSAD Multi-Scenario Anomaly Detection | Zhang et al., NeurIPS 2024 | video | video_annotation, radio | intermediate | [link](./video/msad-anomaly-detection/) |
-| 220 | MT-Bench Judge Consistency Evaluation | Zheng et al., NeurIPS 2023 | evaluation | pairwise, likert, radio | intermediate | [link](./evaluation/mt-bench-judge-consistency/) |
-| 221 | MT-Bench: LLM Response Quality Evaluation | Zheng et al., NeurIPS 2023 | evaluation | pairwise, likert | intermediate | [link](./evaluation/mtbench-llm-evaluation/) |
-| 222 | MTRAGEval: Evaluating Multi-Turn RAG Conversations | Rosenthal et al., SemEval 2026 | semeval | radio, likert, text | advanced | [link](./semeval/2026/task08-mtrag-evaluation/) |
-| 223 | MultiCoNER II: Multilingual Complex Named Entity Recognition | Fetahu et al., SemEval@ACL 2023 | text | span | intermediate | [link](./text/domain-specific/multiconerii-complex-ner/) |
-| 224 | Multilingual Coreference Resolution (CorefUD) | Zabokrtsky et al., CRAC@EMNLP 2023 | text | span, span_link | advanced | [link](./text/coreference/corefud-multilingual-coreference/) |
-| 225 | Multilingual Emoji Prediction | Barbieri et al., SemEval 2018 | semeval | radio | beginner | [link](./semeval/2018/task02-emoji-prediction/) |
-| 226 | Multilingual Fact-Checked Claim Retrieval | Nakov et al., SemEval 2025 | semeval | radio, text | intermediate | [link](./semeval/2025/task07-factchecked-claim-retrieval/) |
-| 227 | Multilingual Narrative Extraction | SemEval 2025 Task 10 Organizers, SemEval 2025 | semeval | span, multiselect | advanced | [link](./semeval/2025/task10-narrative-extraction/) |
-| 228 | Multilingual News Article Similarity | Chen et al., SemEval 2022 | semeval | likert | beginner | [link](./semeval/2022/task08-news-similarity/) |
-| 229 | Multilingual Reading Comprehension (Belebele) | Bandarkar et al., ACL 2024 | text | radio | beginner | [link](./text/cross-lingual/belebele-reading-comprehension/) |
-| 230 | Multilingual Semantic Role Labeling | Blloshmi et al., SemEval 2021 | semeval | span, radio | advanced | [link](./semeval/2021/task03-multilingual-srl/) |
-| 231 | Multilingual Semantic Word Similarity | Camacho-Collados et al., SemEval 2017 | semeval | likert, slider | beginner | [link](./semeval/2017/task02-word-similarity/) |
-| 232 | Multilingual Word-in-Context | Martelli et al., SemEval 2021 | semeval | radio | intermediate | [link](./semeval/2021/task02-crosslingual-wic/) |
-| 233 | Multimodal Emotion Cause Analysis | Wang et al., SemEval 2024 | semeval | span, radio | advanced | [link](./semeval/2024/task03-multimodal-emotion-cause/) |
-| 234 | MultiNLI - Multi-Genre Natural Language Inference | Williams et al., NAACL 2018 | text | radio, text | beginner | [link](./text/natural-language-inference/multinli-genre-nli/) |
-| 235 | MultiTACRED: Multilingual TAC Relation Extraction | Hennig et al., ACL 2023 | text | radio, span, span_link | advanced | [link](./text/relation-extraction/multitacred-multilingual-relations/) |
-| 236 | Music Genre Classification |  | audio | multiselect, radio | beginner | [link](./audio/music-genre-classification/) |
-| 237 | MVBench Video Understanding | Li et al., arXiv 2023 | video | radio, text, video_annotation | intermediate | [link](./video/video-qa/mvbench-video-understanding/) |
-| 238 | MVTec AD Industrial Defect Detection | Bergmann et al., CVPR 2019 | image | multiselect, radio, text | intermediate | [link](./image/specialized/mvtec-ad/) |
-| 239 | n2c2 2022: Social Determinants of Health Extraction | Lybarger et al., JAMIA 2023 | text | span, radio | advanced | [link](./text/domain-specific/n2c2-sdoh-extraction/) |
-| 240 | Named Entity Disambiguation (AIDA-CoNLL) | Hoffart et al., EMNLP 2011 | text | radio, span, text | intermediate | [link](./text/entity-linking/aida-conll-entity-disambiguation/) |
-| 241 | Named Entity Recognition |  | templates | span | intermediate | [link](./templates/text/named-entity-recognition/) |
-| 242 | Narrative Story Similarity | Hatzel et al., SemEval 2026 | semeval | radio, multiselect | intermediate | [link](./semeval/2026/task04-narrative-similarity/) |
-| 243 | Natural Questions - Open-Domain Question Answering | Kwiatkowski et al., TACL 2019 | text | span, radio, text | intermediate | [link](./text/question-answering/natural-questions-qa/) |
-| 244 | News Headline Emotion Roles (GoodNewsEveryone) | Bostan et al., LREC 2020 | text | likert, radio, span | advanced | [link](./text/emotion-sentiment/news-emotion-roles/) |
-| 245 | NExT-QA - Temporal and Causal Video Question Answering | Xiao et al., CVPR 2021 | video | radio, text, video_annotation | intermediate | [link](./video/video-qa/nextqa-temporal/) |
-| 246 | NLI with Explanations (e-SNLI) | Camburu et al., NeurIPS 2018 | text | likert, radio, span | intermediate | [link](./text/explainability/nli-explanation/) |
-| 247 | NLPContributionGraph - Structured Extraction of NLP Contributions | D'Souza et al., SemEval 2021 | semeval | span, text | advanced | [link](./semeval/2021/task11-nlpcontributiongraph/) |
-| 248 | NRC Affect Intensity: Word Emotion Intensity via Best-Worst Scaling | Mohammad, LREC 2018 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-affect-intensity-bws/) |
-| 249 | NRC Emotion Lexicon (EmoLex): Word-Emotion Association | Mohammad & Turney, Computational Intelligence 2013 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-emolex-word-emotion/) |
-| 250 | NRC-VAD: Valence, Arousal & Dominance via Best-Worst Scaling | Mohammad, ACL 2018 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-vad-bws/) |
-| 251 | NumEval - Numeral-Aware Language Understanding | Chen et al., SemEval 2024 | semeval | number, radio, text | intermediate | [link](./semeval/2024/task07-numeval/) |
-| 252 | NusaX - Sentiment Analysis for Indonesian Local Languages | Winata et al., EACL 2023 | text | radio | beginner | [link](./text/cross-lingual/nusax-indonesian-sentiment/) |
-| 253 | Object Detection |  | templates | image_annotation | intermediate | [link](./templates/image/object-detection/) |
-| 254 | OffensEval - Offensive Language Target Identification | Zampieri et al., SemEval 2020 | text | radio, multiselect, span | intermediate | [link](./text/computational-social-science/offenseval-target-id/) |
-| 255 | OmniDocBench Comprehensive Document Parsing | Chen et al., CVPR 2025 | image | multiselect, radio, text | advanced | [link](./image/omnidocbench-document-parsing/) |
-| 256 | OntoNotes - Coreference Resolution | Pradhan et al., CoNLL 2012 | text | coreference, span | advanced | [link](./text/coreference/ontonotes-coreference-resolution/) |
-| 257 | Open Images V6 Object Detection | Kuznetsova et al., IJCV 2020 | image | multiselect, radio, text | advanced | [link](./image/classification/open-images/) |
-| 258 | OpenAssistant Conversation Quality | Köpf et al., NeurIPS 2023 | preference-learning | likert, radio, text | intermediate | [link](./preference-learning/oasst-conversation-quality/) |
-| 259 | Pairwise Preference |  | templates | multiselect, pairwise, text | beginner | [link](./templates/comparison/pairwise-preference/) |
-| 260 | Pairwise Preference with Rationale | Wang et al., 2024 | preference-learning | multiselect, radio, text | intermediate | [link](./preference-learning/pairwise-preference-rationale/) |
-| 261 | Parsing Time Normalizations | Laparra et al., SemEval 2018 | semeval | span, text | advanced | [link](./semeval/2018/task06-time-normalization/) |
-| 262 | PASCAL VOC Object Detection | Everingham et al., IJCV 2010 | image | multiselect, radio | intermediate | [link](./image/classification/pascal-voc/) |
-| 263 | Patient Forum Question Answering | — | text | text, radio | intermediate | [link](./text/question-answering/patient-forum-qa/) |
-| 264 | Patronizing and Condescending Language Detection | Perez-Almendros et al., SemEval 2022 | semeval | radio, span | intermediate | [link](./semeval/2022/task04-patronizing-language/) |
-| 265 | PDTB 2.0 - Discourse Relations Tree Annotation | Prasad et al., LREC 2008 | text | tree_annotation, span | advanced | [link](./text/discourse/pdtb-discourse-relations-tree/) |
-| 266 | Persuasion Techniques in Memes | Dimitrov et al., SemEval 2024 | semeval | multiselect, span | advanced | [link](./semeval/2024/task04-persuasion-memes/) |
-| 267 | Persuasive Techniques in Multimodal Content | Dimitrov et al., SemEval 2021 | semeval | multiselect, span | advanced | [link](./semeval/2021/task06-persuasion-multimodal/) |
-| 268 | Places365 Scene Classification | Zhou et al., TPAMI 2017 | image | multiselect, radio, text | intermediate | [link](./image/classification/places365/) |
-| 269 | Plausible Clarifications of Implicit and Underspecified Instructions | Roth and Anthonio, SemEval 2022 | semeval | radio | intermediate | [link](./semeval/2022/task07-plausible-clarifications/) |
-| 270 | POLAR: Detecting Multilingual, Multicultural and Multievent Online Polarization | Naseem et al., SemEval 2026 | semeval | radio, multiselect, text | intermediate | [link](./semeval/2026/task09-polar-polarization/) |
-| 271 | Politeness Transfer Annotation | Madaan et al., ACL 2020 | text | likert, radio, text | beginner | [link](./text/computational-social-science/politeness-annotation/) |
-| 272 | Political Discourse Analysis (AgoraSpeech) | Sermpezis et al., arXiv 2025 | text | radio, multiselect, span | intermediate | [link](./text/political-media/political-discourse/) |
-| 273 | Predicting Multilingual and Cross-Lingual Lexical Entailment | Glavavs et al., SemEval 2020 | semeval | radio | intermediate | [link](./semeval/2020/task02-lexical-entailment/) |
-| 274 | PreTENS - Presuppositional Acceptability | Jeretic et al., SemEval 2022 | semeval | radio | intermediate | [link](./semeval/2022/task03-pretens/) |
-| 275 | Prometheus: Rubric-based LLM Evaluation | Kim et al., ICLR 2024 | evaluation | likert, text | advanced | [link](./evaluation/prometheus-rubric-evaluation/) |
-| 276 | PromiseEval - Promise Verification in Political Discourse | Nakov et al., SemEval 2025 | semeval | radio, text | intermediate | [link](./semeval/2025/task06-promiseeval/) |
-| 277 | PsyCoMark: Psycholinguistic Conspiracy Marker Extraction and Detection | Samory et al., SemEval 2026 | semeval | radio, span | advanced | [link](./semeval/2026/task10-psycomark-conspiracy/) |
-| 278 | QA over Tabular Data | SemEval 2025 Task 8 Organizers, SemEval 2025 | semeval | text, radio | intermediate | [link](./semeval/2025/task08-tabular-qa/) |
-| 279 | Question Answering |  | evaluation | span, radio | intermediate | [link](./evaluation/question-answering/) |
-| 280 | R2VQ - Recipe Question Answering | Jia et al., SemEval 2022 | semeval | text, radio | intermediate | [link](./semeval/2022/task09-r2vq-recipe-qa/) |
-| 281 | RadGraph-XL: Radiology Entity and Relation Extraction | Khanna et al., Findings ACL 2024 | text | span, span_link | advanced | [link](./text/relation-extraction/radgraph-radiology-relations/) |
-| 282 | RadQA: Radiology Report Question Answering | Soni et al., ACL BioNLP Workshop 2022 | text | radio, span, text | intermediate | [link](./text/domain-specific/radqa-radiology-qa/) |
-| 283 | Ranking Task |  | templates | radio, likert, text | beginner | [link](./templates/comparison/ranking-task/) |
-| 284 | Rating Plausibility of Word Senses through Narrative Understanding | Gehring, Meyer & Roth, SemEval 2026 | semeval | likert | intermediate | [link](./semeval/2026/task05-word-sense-plausibility/) |
-| 285 | Rationale Annotation (ERASER) | DeYoung et al., ACL 2020 | text | radio, span | intermediate | [link](./text/explainability/rationale-annotation/) |
-| 286 | Reading Comprehension QA |  | templates | likert, radio, text | intermediate | [link](./templates/text/reading-comprehension/) |
-| 287 | ReCAM - Reading Comprehension of Abstract Meaning | Zheng et al., SemEval 2021 | semeval | radio | intermediate | [link](./semeval/2021/task04-recam-abstract-meaning/) |
-| 288 | Red Team Adversarial Evaluation | Ganguli et al., 2022 | preference-learning | radio, text | advanced | [link](./preference-learning/redteam-adversarial-eval/) |
-| 289 | REDFM: Filtered and Multilingual Relation Extraction | Huguet Cabot et al., ACL 2023 | text | span, span_link | advanced | [link](./text/relation-extraction/redfm-multilingual-relations/) |
-| 290 | RefCOCO - Referring Expression Grounding | Yu et al., ECCV 2016 | image | image_annotation, text | intermediate | [link](./image/visual-grounding/refcoco-expression/) |
-| 291 | Relation Extraction |  | templates | likert, radio, text | advanced | [link](./templates/text/relation-extraction/) |
-| 292 | RewardBench - Reward Model Evaluation | Lambert et al., ICML 2024 | evaluation | pairwise, radio, multirate | intermediate | [link](./evaluation/rewardbench-reward-eval/) |
-| 293 | RewardBench: Reward Model Evaluation via Pairwise Preference | Lambert et al., Findings NAACL 2025 | preference-learning | pairwise, radio | intermediate | [link](./preference-learning/rewardbench-reward-model-eval/) |
-| 294 | RT-2 - Robotic Action Annotation | Brohan et al., CoRL 2023 | multimodal | radio, text, likert, video_annotation | advanced | [link](./multimodal/rt2-robotic-action-annotation/) |
-| 295 | Rumor Stance Detection (PHEME) | Zubiaga et al., ACL 2016 | text | likert, radio | intermediate | [link](./text/argumentation-stance/rumor-stance/) |
-| 296 | RumourEval Stance and Verification | Gorrell et al., SemEval 2019 | text | radio, tree_annotation | intermediate | [link](./text/computational-social-science/rumoureval-verification/) |
-| 297 | RuSentiment - Social Media Sentiment | Rogers et al., COLING 2018 | text | radio | beginner | [link](./text/emotion-sentiment/rusentiment/) |
-| 298 | Safe Biomedical NLI | Jullien et al., SemEval 2024 | semeval | radio, text | advanced | [link](./semeval/2024/task02-safe-biomedical-nli/) |
-| 299 | SafeRLHF Dual-Dimension Preference | Ji et al., 2024 / Dai et al., ICLR 2024 | preference-learning | radio, multiselect, likert | advanced | [link](./preference-learning/saferlhf-dual-preference/) |
-| 300 | SaGA Gesture-Speech Alignment Multi-Tier Annotation | Luecking et al., Gesture 2013 | video | video_annotation, radio, text | advanced | [link](./video/saga-gesture-speech/) |
-| 301 | Sarcasm Detection |  | templates | likert, radio, text | intermediate | [link](./templates/text/sarcasm-detection/) |
-| 302 | SayCan - Robot Task Planning Evaluation | Ahn et al., CoRL 2022 | multimodal | radio, multiselect, text, likert | advanced | [link](./multimodal/saycan-robot-planning/) |
-| 303 | Scene Boundary Detection | Sidiropoulos et al., ACM MM 2011 | video | radio, video_annotation | intermediate | [link](./video/boundary-detection/scene-boundary-detection/) |
-| 304 | ScienceQA Multimodal Reasoning | Lu et al., NeurIPS 2022 | multimodal | radio, text, multiselect | intermediate | [link](./multimodal/scienceqa-multimodal-reasoning/) |
-| 305 | Scientific Claim Verification (SciFact) | Wadden et al., EMNLP 2020 | text | likert, radio, span | advanced | [link](./text/fact-verification/scientific-claim-verification/) |
-| 306 | SciER: Scientific Entity and Relation Extraction | Luan et al., EMNLP 2024 | text | span, span_link | advanced | [link](./text/relation-extraction/scier-scientific-entity-relations/) |
-| 307 | SecureNLP - Malware and Security Entity Recognition | Phandi et al., SemEval 2018 | semeval | span, radio | advanced | [link](./semeval/2018/task08-cybersecurity-ner/) |
-| 308 | Segment Anything (SA-1B) Interactive Segmentation | Kirillov et al., ICCV 2023 | image | radio, text | intermediate | [link](./image/sa1b-segment-anything/) |
-| 309 | Semantic Relation Extraction and Classification in Scientific Papers | Gabor et al., SemEval 2018 | semeval | span, radio | advanced | [link](./semeval/2018/task07-scientific-relations/) |
-| 310 | Semantic Similarity |  | templates | likert, multiselect, radio, slider | beginner | [link](./templates/text/semantic-similarity/) |
-| 311 | Semantic Textual Relatedness | Abdalla et al., SemEval 2024 | semeval | likert, slider | beginner | [link](./semeval/2024/task01-semantic-relatedness/) |
-| 312 | SemEval-2007 - Word Sense Disambiguation | Pradhan et al., SemEval 2007 | text | select, radio | intermediate | [link](./text/word-sense/wsd-semeval2007/) |
-| 313 | SemEval-2017 Task 4 - Sentiment Multi-Rating | Rosenthal et al., SemEval 2017 | text | multirate, radio | beginner | [link](./text/emotion-sentiment/semeval-sentiment-multirate/) |
-| 314 | SenseRel: Denotational and Connotational Meaning Relations | Cassotti et al., ACL 2026 | text | radio | advanced | [link](./text/word-sense/senserel-meaning-relations/) |
-| 315 | Sentiment Analysis |  | templates | radio | beginner | [link](./templates/text/sentiment-analysis/) |
-| 316 | Sentiment Analysis for Code-Mixed Social Media Text | Patwa et al., SemEval 2020 | semeval | radio | intermediate | [link](./semeval/2020/task09-code-mixed-sentiment/) |
-| 317 | Sentiment Composition of Phrases (SCL) via Best-Worst Scaling | Kiritchenko & Mohammad, NAACL 2016 | text | radio | intermediate | [link](./text/emotion-sentiment/scl-sentiment-composition-bws/) |
-| 318 | SHROOM: Shared-task on Hallucinations and Related Observable Overgeneration Mistakes | Mickus et al., SemEval@NAACL 2024 | text | radio, likert | beginner | [link](./text/fact-verification/shroom-hallucination-detection/) |
-| 319 | SNLI - Textual Entailment | Bowman et al., EMNLP 2015 | text | radio, text | beginner | [link](./text/natural-language-inference/snli-textual-entailment/) |
-| 320 | SoccerNet Action Spotting | Giancola et al., CVPR 2018 | video | video_annotation | intermediate | [link](./video/action-recognition/soccernet-action-spotting/) |
-| 321 | Social Bias Frames (SBIC) | Sap et al., ACL 2020 | text | multiselect, radio | advanced | [link](./text/hate-speech-moderation/social-bias-frames/) |
-| 322 | Social Chemistry 101 (Social Norms) | Forbes et al., EMNLP 2020 | text | radio, likert | advanced | [link](./text/commonsense-ethics/social-chemistry/) |
-| 323 | Social Determinants of Health (SDOH) Extraction | Lybarger et al., JAMIA 2023 | text | span, radio, multiselect | advanced | [link](./text/information-extraction/sdoh-extraction/) |
-| 324 | SODA: Social Dialogue Quality Evaluation | Kim et al., EMNLP 2023 | multimodal | radio, text | intermediate | [link](./multimodal/soda-eval-social-dialogue/) |
-| 325 | SORRY-Bench: Systematic LLM Safety Refusal Evaluation | Xie et al., ICLR 2025 | evaluation | radio, multiselect | advanced | [link](./evaluation/sorrybench-refusal-eval/) |
-| 326 | Speaker Diarization |  | audio | multiselect, radio, text | intermediate | [link](./audio/speaker-diarization/) |
-| 327 | Speech Accent Classification | Ardila et al., LREC 2020 | audio | radio, text | beginner | [link](./audio/speech-accent-classification/) |
-| 328 | Speech Commands - Keyword Recognition | Warden, arXiv 2018 | audio | radio, audio_annotation | beginner | [link](./audio/speech-commands-recognition/) |
-| 329 | Speech Emotion Recognition |  | audio | likert, multiselect, radio | intermediate | [link](./audio/emotion-recognition/) |
-| 330 | SPIN Self-Play Preference Annotation | Chen et al., ICML 2024 | preference-learning | pairwise, radio | intermediate | [link](./preference-learning/spin-self-play/) |
-| 331 | SQuAD - Extractive Question Answering | Rajpurkar et al., EMNLP 2016 | text | span, text, radio | beginner | [link](./text/reading-comprehension/squad-extractive-qa/) |
-| 332 | Stance Detection (VAST) | Allaway & McKeown, EMNLP 2020 | text | likert, radio | intermediate | [link](./text/argumentation-stance/stance-detection/) |
-| 333 | Statement Verification and Evidence Finding with Tables | Wang et al., SemEval 2021 | semeval | radio, span | intermediate | [link](./semeval/2021/task09-verification-tables/) |
-| 334 | Structured Fact Verification (FEVEROUS) | Aly et al., NeurIPS 2021 | text | radio, span, text | advanced | [link](./text/tabular/feverous-structured-factcheck/) |
-| 335 | Structured Sentiment Analysis | Barnes et al., SemEval 2022 | text | span, radio | advanced | [link](./text/computational-social-science/structured-sentiment/) |
-| 336 | STS Benchmark - Semantic Textual Similarity | Cer et al., SemEval 2017 | text | slider, likert | beginner | [link](./text/semantic-similarity/stsb-sentence-similarity/) |
-| 337 | Student Essay Discourse Element Classification | Song et al., COLING 2020 | text | span, radio, multiselect | intermediate | [link](./text/education/student-essay-discourse/) |
-| 338 | Suggestion Mining from Online Reviews and Forums | Negi et al., SemEval 2019 | semeval | radio | beginner | [link](./semeval/2019/task09-suggestion-mining/) |
-| 339 | Summary Preference Comparison | Stiennon et al., NeurIPS 2020 | preference-learning | radio, likert | intermediate | [link](./preference-learning/summary-preference-comparison/) |
-| 340 | SumMe Video Summarization | Gygli et al., ECCV 2014 | video | radio, video_annotation | intermediate | [link](./video/summarization/summe-summarization/) |
-| 341 | Survey Feedback |  | templates | likert, multiselect, radio, text | beginner | [link](./templates/surveys/survey-feedback/) |
-| 342 | SWBD-DAMSL Dialogue Acts | Jurafsky et al., 1997 | text | radio, multiselect | advanced | [link](./text/dialogue/swbd-damsl-dialogue-acts/) |
-| 343 | SWE-bench: Code Agent Solution Evaluation | Jimenez et al., ICLR 2024 | agentic | radio, text | advanced | [link](./agentic/swebench-code-agent-eval/) |
-| 344 | Symlink: Linking Mathematical Symbols to their Descriptions | Lai et al., SemEval 2022 | semeval | span, radio, text | advanced | [link](./semeval/2022/task12-symlink/) |
-| 345 | T2I-CompBench Text-to-Image Evaluation | Huang et al., NeurIPS 2023 | image | likert, radio, pairwise | intermediate | [link](./image/generation-eval/t2i-compbench/) |
-| 346 | Table-Based Fact Verification (TabFact) | Chen et al., ICLR 2020 | text | radio, span, text | intermediate | [link](./text/tabular/tabfact-table-verification/) |
-| 347 | Temporal Relation Annotation (TempEval-3) | UzZaman et al., SemEval 2013 | text | span, radio | advanced | [link](./text/information-extraction/temporal-relations/) |
-| 348 | Text Summarization Evaluation |  | evaluation | likert, text | intermediate | [link](./evaluation/text-summarization-eval/) |
-| 349 | Text-Based Emotion Detection | SemEval 2025 Task 11 Organizers, SemEval 2025 | semeval | radio, multiselect | intermediate | [link](./semeval/2025/task11-emotion-detection/) |
-| 350 | TextVQA - Reading Text in Images | Singh et al., CVPR 2019 | image | text, radio | intermediate | [link](./image/visual-qa/textvqa-reading-in-images/) |
-| 351 | THUMOS14 Action Localization | Jiang et al., ECCV 2014 Workshop | video | video_annotation | intermediate | [link](./video/action-recognition/thumos14-action-localization/) |
-| 352 | TimeLine: Cross-Document Event Ordering | Minard et al., SemEval 2015 | semeval | span, radio | advanced | [link](./semeval/2015/task04-timeline-event-ordering/) |
-| 353 | TIMELINE: Exhaustive Temporal Relation Annotation | Mathur et al., EMNLP 2023 | text | radio, span, span_link | advanced | [link](./text/discourse/timeline-temporal-relations/) |
-| 354 | ToBI Prosodic Annotation | Silverman et al., Speech Communication 1992 | audio | span, radio, text | advanced | [link](./audio/tobi-prosody-annotation/) |
-| 355 | Toponym Resolution in Scientific Papers | Weissenbacher et al., SemEval 2019 | semeval | span, text | advanced | [link](./semeval/2019/task12-toponym-resolution/) |
-| 356 | Toxic Spans Detection | Pavlopoulos et al., SemEval 2021 | text | multiselect, radio, span | intermediate | [link](./text/hate-speech-moderation/toxic-spans/) |
-| 357 | Toxicity Detection |  | templates | multiselect, radio | intermediate | [link](./templates/text/toxicity-detection/) |
-| 358 | TREC Deep Learning Passage Ranking | Craswell et al., TREC/SIGIR 2019 | text | select, likert | intermediate | [link](./text/information-retrieval/trec-dl-passage-ranking/) |
-| 359 | TRECVID Shot Boundary Detection | Over et al., TRECVID Overview | video | video_annotation | intermediate | [link](./video/boundary-detection/shot-boundary-detection/) |
-| 360 | Triage Quick Annotation Template | N/A (Template) | templates | triage, radio | beginner | [link](./templates/text/triage-quick-annotation/) |
-| 361 | TriviaQA - Reading Comprehension | Joshi et al., ACL 2017 | text | text, radio | beginner | [link](./text/question-answering/triviaqa-reading-comprehension/) |
-| 362 | TVSum Video Summarization | Song et al., CVPR 2015 | video | likert, video, video_annotation | intermediate | [link](./video/summarization/tvsum-summarization/) |
-| 363 | Tweet Emotion Intensity via Best-Worst Scaling (multilingual) | Mohammad & Bravo-Marquez, WASSA 2017 | text | radio | intermediate | [link](./text/emotion-sentiment/tweet-emotion-intensity-bws/) |
-| 364 | Tweet Intimacy Analysis | Pei et al., SemEval 2023 | semeval | likert | beginner | [link](./semeval/2023/task09-tweet-intimacy/) |
-| 365 | UltraFeedback Multi-Aspect Rating | Cui et al., ICML 2024 | preference-learning | multirate, likert, text | intermediate | [link](./preference-learning/ultrafeedback-multiaspect/) |
-| 366 | UltraFeedback Rubric Evaluation | OpenBMB, 2023 | preference-learning | likert, text | advanced | [link](./preference-learning/ultrafeedback-rubric-evaluation/) |
-| 367 | Universal Dependencies - Dependency Parsing Annotation | Nivre et al., LREC 2020 | text | tree_annotation, span | advanced | [link](./text/parsing/ud-dependency-parsing/) |
-| 368 | Unlearning Sensitive Content from LLMs | Choi et al., SemEval 2025 | semeval | radio, text, likert | intermediate | [link](./semeval/2025/task04-unlearning-sensitive-content/) |
-| 369 | V-WSD - Visual Word Sense Disambiguation | Raganato et al., SemEval 2023 | semeval | radio | intermediate | [link](./semeval/2023/task01-visual-wsd/) |
-| 370 | ValueEval - Human Values behind Arguments | Kiesel et al., SemEval 2023 | semeval | multiselect, radio | intermediate | [link](./semeval/2023/task04-valueeval/) |
-| 371 | VBench Video Generation Quality Assessment | Huang et al., CVPR 2024 | video | likert, pairwise, video_annotation | intermediate | [link](./video/vbench-generation-quality/) |
-| 372 | Video-ChatGPT - Video QA Display and Evaluation | Maaz et al., ACL 2024 | video | video, radio, likert | intermediate | [link](./video/video-chatgpt-qa-display/) |
-| 373 | Visual Question Answering |  | evaluation | radio, text | beginner | [link](./evaluation/visual-qa/) |
-| 374 | ViTPose Human Keypoint Annotation | Xu et al., NeurIPS 2022 | image | image_annotation, radio | intermediate | [link](./image/human-pose/vitpose-keypoint-annotation/) |
-| 375 | VoiceMOS Challenge 2024 - Speech Quality Assessment | Cooper et al., INTERSPEECH 2024 | audio | likert | intermediate | [link](./audio/voicemos-quality-assessment/) |
-| 376 | VQA v2.0 - Visual Question Answering | Goyal et al., CVPR 2017 | image | text, radio | intermediate | [link](./image/visual-qa/vqav2-visual-question-answering/) |
-| 377 | VSTAR Video-grounded Dialogue | Wang et al., ACL 2023 | video | video_annotation, text, radio | advanced | [link](./video/vstar-video-dialogue/) |
-| 378 | Warmth and Competence (Sentence-Level Social Perception) | Ayesh et al., ACL 2026 | text | likert | intermediate | [link](./text/emotion-sentiment/warmth-competence-sentences/) |
-| 379 | WavCaps - Audio Captioning | Mei et al., IEEE TASLP 2024 | audio | text | beginner | [link](./audio/wavcaps-audio-captioning/) |
-| 380 | WebArena: Web Agent Task Completion Evaluation | Zhou et al., ICLR 2024 | agentic | radio, text | advanced | [link](./agentic/webarena-web-agent-eval/) |
-| 381 | WebGPT Answer Comparison | Nakano et al., 2021 | preference-learning | radio | intermediate | [link](./preference-learning/webgpt-comparison/) |
-| 382 | WikiArt Artwork Classification | Saleh & Elgammal, 2015 | image | multiselect, radio, text | intermediate | [link](./image/specialized/wikiart/) |
-| 383 | WildBench - LLM Evaluation on Real-World Tasks | Lin et al., COLM 2024 | evaluation | pairwise, likert, text | intermediate | [link](./evaluation/wildbench-llm-eval/) |
-| 384 | WNUT-2017 - Emerging and Rare Entity Recognition | Derczynski et al., W-NUT@EMNLP 2017 | text | span, radio | intermediate | [link](./text/named-entity-recognition/wnut2017-emerging-entities/) |
-| 385 | Word-Colour Associations: Crowdsourcing a Colour Lexicon | Mohammad, ACL 2011 | text | radio | beginner | [link](./text/emotion-sentiment/word-colour-associations/) |
-| 386 | Words of Warmth: Social-Perception Norms via Best-Worst Scaling | Mohammad, ACL 2025 | text | radio | intermediate | [link](./text/emotion-sentiment/words-of-warmth-bws/) |
-| 387 | WorryWords: Word-Anxiety Association via Best-Worst Scaling | Mohammad, EMNLP 2024 | text | radio | intermediate | [link](./text/emotion-sentiment/worrywords-anxiety-bws/) |
-| 388 | xBD: Building Damage Assessment from Satellite Imagery | Gupta et al., CVPR Workshops 2019 | image | radio, text | advanced | [link](./image/xbd-building-damage/) |
-| 389 | XNLI - Cross-Lingual Natural Language Inference | Conneau et al., EMNLP 2018 | text | radio, text | beginner | [link](./text/cross-lingual/xnli-cross-lingual-nli/) |
-| 390 | xView Satellite Object Detection | Lam et al., arXiv 2018 | image | multiselect, radio, text | advanced | [link](./image/aerial/xview/) |
-| 391 | YouCook2 Recipe Step Annotation | Zhou et al., AAAI 2018 | video | radio, text, video_annotation | intermediate | [link](./video/instructional/youcook2-instructional/) |
-| 392 | YouTube Highlights Detection | Sun et al., ECCV 2014 | video | radio, video_annotation | beginner | [link](./video/summarization/youtube-highlights/) |
+| 9 | AgentBoard Progress Scoring | Ma et al., NeurIPS 2024 | agentic | multiselect, likert, radio, text | advanced | [link](./agentic/agentboard-progress-scoring/) |
+| 10 | AgentRewardBench Trajectory Scoring | Lù et al., arXiv 2025 | agentic | multirate, radio, text | advanced | [link](./agentic/agentrewardbench-trajectory-scoring/) |
+| 11 | AITW Mobile Trajectory Review | Rawles et al., NeurIPS 2023 | agentic | gui_trajectory, radio | advanced | [link](./agentic/aitw-mobile-trajectory-review/) |
+| 12 | AlpacaEval: Instruction-Following Preference Evaluation | Li et al., arXiv 2023 | evaluation | pairwise, radio, text | intermediate | [link](./evaluation/alpacaeval-instruction-eval/) |
+| 13 | AlpacaFarm Preference Simulation | Dubois et al., NeurIPS 2023 | preference-learning | likert, radio | intermediate | [link](./preference-learning/alpacafarm-simulation/) |
+| 14 | AMI Meeting Multi-Tier Annotation | Carletta et al., MLMI 2005 | video | video_annotation, radio | advanced | [link](./video/ami-meeting-annotation/) |
+| 15 | Analysis of Clinical Text: Disorder Identification and Normalization | Elhadad et al., SemEval 2015 | semeval | span, radio | advanced | [link](./semeval/2015/task14-clinical-text-analysis/) |
+| 16 | AndroidWorld: Mobile Agent Task Evaluation | Rawles et al., ICLR 2025 | agentic | radio, multiselect, text | advanced | [link](./agentic/androidworld-mobile-agent-eval/) |
+| 17 | AnnoMI Counselling Dialogue Annotation | Wu et al., ICASSP 2022 | text | radio, multiselect, likert | advanced | [link](./text/dialogue/annomi-counseling-dialogue/) |
+| 18 | API-Bank Tool Call Review | Li et al., EMNLP 2023 | agentic | tool_call_review, radio | advanced | [link](./agentic/apibank-tool-call-review/) |
+| 19 | Arena Hard Auto - LLM Pairwise Evaluation | Li et al., arXiv 2024 | evaluation | pairwise, likert | intermediate | [link](./evaluation/arena-hard-auto/) |
+| 20 | ArgSciChat Scientific Argumentation Dialogue | Ruiz-Dolz et al., ACL 2023 | text | multiselect, radio | intermediate | [link](./text/dialogue/argscichat-scientific-argumentation/) |
+| 21 | Argument Quality Assessment | Wachsmuth et al., EACL 2017 | text | multiselect, radio | intermediate | [link](./text/argumentation-stance/argument-quality/) |
+| 22 | Argument Reasoning Comprehension (ARCT) | Habernal et al., NAACL 2018 | text | likert, radio | advanced | [link](./text/argumentation-stance/argument-reasoning/) |
+| 23 | Argument Reasoning in Civil Procedure | Bongard et al., SemEval 2024 | semeval | radio | advanced | [link](./semeval/2024/task05-argument-civil-procedure/) |
+| 24 | Aspect-Based Sentiment Analysis | Pontiki et al., SemEval 2016 | semeval | span, radio | intermediate | [link](./semeval/2016/task05-aspect-sentiment/) |
+| 25 | Aspect-Based Sentiment Analysis (Original ABSA) | Pontiki et al., SemEval 2014 | semeval | span, radio | intermediate | [link](./semeval/2014/task04-absa-original/) |
+| 26 | Assessing Humor in Edited News Headlines | Hossain et al., SemEval 2020 | semeval | likert, radio | beginner | [link](./semeval/2020/task07-humor-headlines/) |
+| 27 | ATOMIC: If-Then Commonsense Reasoning (PersonX / PersonY) | Sap et al., AAAI 2019 | text | text | intermediate | [link](./text/commonsense-ethics/atomic-if-then-reasoning/) |
+| 28 | Audio Transcription Review | Template | audio | likert, multiselect, radio, text | intermediate | [link](./audio/audio-transcription/) |
+| 29 | AudioHate - Audio Hate Speech Detection | Guo et al., SIGDIAL 2024 | audio | radio, multiselect | intermediate | [link](./audio/audiohate-speech-detection/) |
+| 30 | Automated Essay Scoring | Uto, arXiv 2022 | text | likert, slider, text | beginner | [link](./text/education/automated-essay-scoring/) |
+| 31 | AVA: Atomic Visual Actions Dataset | Gu et al., CVPR 2018 | video | multiselect, video_annotation | advanced | [link](./video/action-recognition/ava-atomic-actions/) |
+| 32 | Aya Red-Teaming - Multilingual Global and Local Harm Annotation | Aakanksha et al., EMNLP 2024 | text | radio, multiselect | intermediate | [link](./text/bias-toxicity/aya-multilingual-redteaming/) |
+| 33 | BDD100K: Diverse Driving Dataset for Autonomous Driving | Yu et al., CVPR 2020 | image | multiselect, radio | advanced | [link](./image/driving/bdd100k/) |
+| 34 | BeaverTails Safety Preference | Ji et al., NeurIPS 2023 | preference-learning | multiselect, radio | advanced | [link](./preference-learning/beavertails-safety-preference/) |
+| 35 | Belebele Multilingual Reading Comprehension Benchmark | Bandarkar et al., ACL 2024 | text | radio | beginner | [link](./text/cross-lingual/belebele-reading-comprehension/) |
+| 36 | Best-Worst Scaling | Template | templates | radio, text | beginner | [link](./templates/comparison/best-worst-scaling/) |
+| 37 | Bias Benchmark for QA (BBQ) | Parrish et al., Findings of ACL 2022 | text | radio, text | intermediate | [link](./text/bias-toxicity/bbq-bias-benchmark/) |
+| 38 | BIG-Bench Task Evaluation | Srivastava et al., TMLR 2023 | evaluation | radio, text, number | intermediate | [link](./evaluation/big-bench-task-eval/) |
+| 39 | BigCodeBench Human Baseline Evaluation | Zhuo et al., ICLR 2025 | agentic | radio, likert, text | advanced | [link](./agentic/bigcodebench-human-baseline/) |
+| 40 | BigEarthNet Remote Sensing Classification | Sumbul et al., IGARSS 2019 | image | multiselect | intermediate | [link](./image/aerial/bigearth-net/) |
+| 41 | Biomedical Entity Linking (MedMentions) | Mohan & Li, AKBC 2019 | text | radio, span, text | advanced | [link](./text/entity-linking/medmentions-biomedical/) |
+| 42 | Biomedical Named Entity Recognition (JNLPBA) | Kim et al., BioNLP 2004 | text | span | advanced | [link](./text/named-entity-recognition/biomedical-ner/) |
+| 43 | BioNLP 2011 - Gene Regulation Event Extraction | Kim et al., ACL Workshop 2011 | text | event_annotation, span | advanced | [link](./text/domain-specific/bionlp-gene-regulation-events/) |
+| 44 | BRAINTEASER - Commonsense-Defying QA | Jiang et al., SemEval 2024 | semeval | radio, text | intermediate | [link](./semeval/2024/task09-brainteaser/) |
+| 45 | Breakfast Actions Segmentation | Kuehne et al., IJCV 2014 | video | text, video_annotation | advanced | [link](./video/action-recognition/breakfast-actions/) |
+| 46 | Camelyon17 - Breast Cancer Metastasis Detection in Pathology | Bejnordi et al., JAMA 2017 | image | image_annotation, radio | advanced | [link](./image/medical/camelyon-pathology/) |
+| 47 | Capturing Discriminative Attributes | Krebs et al., SemEval 2018 | semeval | radio | beginner | [link](./semeval/2018/task10-discriminative-attributes/) |
+| 48 | Causal Medical Claim Identification and PIO Frame Extraction | Khetan et al., SemEval 2023 | semeval | span | advanced | [link](./semeval/2023/task08-causal-medical-claim/) |
+| 49 | CelebA: Large-Scale Face Attributes Dataset | Liu et al., ICCV 2015 | image | multiselect | intermediate | [link](./image/specialized/celeba/) |
+| 50 | ChaosNLI: NLI Label Distributions | Nie et al., EMNLP 2020 | text | radio, soft_label | intermediate | [link](./text/natural-language-inference/chaosnli-label-distributions/) |
+| 51 | Character Identification on Multiparty Dialogues | Chen et al., SemEval 2018 | semeval | span, radio | intermediate | [link](./semeval/2018/task04-character-identification/) |
+| 52 | Charades Indoor Activity Segmentation | Sigurdsson et al., ECCV 2016 | video | video_annotation | intermediate | [link](./video/action-recognition/charades-activity-segmentation/) |
+| 53 | Charades-STA Temporal Grounding | Gao et al., ICCV 2017 | video | radio, video_annotation | intermediate | [link](./video/temporal-grounding/charades-sta-grounding/) |
+| 54 | CHART-Infographics: Chart and Infographic Analysis | Davila et al., ICPR 2024 | multimodal | image_annotation, radio, text | advanced | [link](./multimodal/chartinfo-chart-analysis/) |
+| 55 | Chatbot Arena: Pairwise LLM Preference Evaluation | Zheng et al., ICML 2024 | evaluation | bws, pairwise | intermediate | [link](./evaluation/chatbot-arena-pairwise-bws/) |
+| 56 | Check-COVID: Fact-Checking COVID-19 News Claims | Wang et al., Findings ACL 2023 | text | radio, span, text | intermediate | [link](./text/fact-verification/check-covid-fact-checking/) |
+| 57 | Chemical-Disease Relation Extraction (BC5CDR) | Li et al., Database 2016 | text | span, radio | advanced | [link](./text/information-extraction/chemical-disease-relations/) |
+| 58 | ChemProt - Chemical-Protein Interaction Annotation | Krallinger et al., BioCreative VI 2017 | text | span, radio | intermediate | [link](./text/domain-specific/chemprot-chemical-protein/) |
+| 59 | CheXpert Chest X-Ray Classification | Irvin et al., AAAI 2019 | image | radio | advanced | [link](./image/medical/chexpert/) |
+| 60 | CHILDES Child Language Multi-Tier Annotation | MacWhinney, Journal of Child Language 2000 | video | video_annotation, text, radio | intermediate | [link](./video/childes-child-language/) |
+| 61 | Citation Needed Detection (Multilingual Wikipedia) | Quaremba et al., ACL 2026 | text | radio | beginner | [link](./text/fact-verification/citation-needed-detection/) |
+| 62 | Cityscapes Instance Segmentation | Cordts et al., CVPR 2016 | image | multiselect | advanced | [link](./image/segmentation/cityscapes/) |
+| 63 | Claim Perspectives (Perspectrum) | Chen et al., NAACL 2019 | text | likert, radio | intermediate | [link](./text/argumentation-stance/claim-perspectives/) |
+| 64 | CLARITY: Unmasking Political Question Evasions | Thomas et al., SemEval 2026 | semeval | radio, text | intermediate | [link](./semeval/2026/task06-clarity-political-evasion/) |
+| 65 | Clickbait Detection (Webis Clickbait Corpus) | Potthast et al., ECIR 2016 | text | likert, multiselect, radio | beginner | [link](./text/fact-verification/clickbait-detection/) |
+| 66 | Clickbait Spoiling | Hagen et al., SemEval 2023 | semeval | text, radio, span | intermediate | [link](./semeval/2023/task05-clickbait-spoiling/) |
+| 67 | Clinical TempEval - Temporal Information Extraction from Clinical Notes | Bethard et al., SemEval 2016 | semeval | span, radio | advanced | [link](./semeval/2016/task12-clinical-tempeval/) |
+| 68 | Clinical Trial NLI | Jullien et al., SemEval 2023 | semeval | radio, text | advanced | [link](./semeval/2023/task07-clinical-trial-nli/) |
+| 69 | Clotho Audio Captioning | Drossos et al., ICASSP 2020 | audio | text, likert, radio | beginner | [link](./audio/clotho-audio-captioning/) |
+| 70 | CMU-MOSEI: Multimodal Sentiment and Emotion Dataset | Zadeh et al., ACL 2018 | video | video_annotation, radio, text | advanced | [link](./video/cmu-mosei-multimodal-sentiment/) |
+| 71 | Code Defect Detection (CodeXGLUE) | Lu et al., NeurIPS 2021 | text | radio, span, text | intermediate | [link](./text/code-annotation/codexglue-defect-detection/) |
+| 72 | Code Review Annotation (CodeReviewer) | Li et al., FSE 2022 | text | span, radio, text | advanced | [link](./text/code-annotation/codereviewer-review/) |
+| 73 | CodePRM Code Process Reward | Li et al., ACL 2025 Findings | agentic | radio, text | advanced | [link](./agentic/codeprm-code-process-reward/) |
+| 74 | CodeUltraFeedback: Code Preference Evaluation | Weyssow et al., arXiv 2024 | agentic | pairwise, multirate, text | advanced | [link](./agentic/codeultrafeedback-code-preference/) |
+| 75 | CODWOE - Comparing Dictionaries and Word Embeddings | Mickus et al., SemEval 2022 | semeval | text, radio | intermediate | [link](./semeval/2022/task01-codwoe/) |
+| 76 | Commonsense Inference (ATOMIC 2020) | Hwang et al., AAAI 2021 | text | radio | intermediate | [link](./text/commonsense-ethics/commonsense-inference/) |
+| 77 | Commonsense QA Explanation (ECQA) | Aggarwal et al., ACL 2021 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/commonsense-qa-explanation/) |
+| 78 | Commonsense Validation and Explanation | Wang et al., SemEval 2020 | semeval | radio, text | beginner | [link](./semeval/2020/task04-commonsense-validation/) |
+| 79 | Community Question Answering | Nakov et al., SemEval 2017 | semeval | radio | intermediate | [link](./semeval/2017/task03-community-qa/) |
+| 80 | Complex Named Entity Recognition (MultiCoNER) | Malmasi et al., SemEval 2022 | text | span | advanced | [link](./text/named-entity-recognition/complex-ner/) |
+| 81 | Complex Word Identification | Paetzold and Specia, SemEval 2016 | semeval | radio | beginner | [link](./semeval/2016/task11-complex-word-identification/) |
+| 82 | Conjoint Analysis: Immigrant Admission Preferences | Hainmueller et al., Political Analysis 2014 | text | conjoint, likert | advanced | [link](./text/computational-social-science/conjoint-candidate-profiles/) |
+| 83 | CoNLL-2003 NER with Triage | Tjong Kim Sang & De Meulder, CoNLL 2003 | text | triage, span | beginner | [link](./text/named-entity-recognition/conll2003-ner-triage/) |
+| 84 | Connotation Frames of Power and Agency | Sap et al., EMNLP 2017 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/power-agency-frames/) |
+| 85 | Constitutional AI Harmlessness Evaluation | Bai et al., arXiv 2022 | preference-learning | radio, likert, text | intermediate | [link](./preference-learning/constitutional-ai-harmlessness/) |
+| 86 | Conversation Quality Attributes | See et al., NAACL 2019 | text | radio, likert, multiselect | intermediate | [link](./text/dialogue/conversation-quality-attributes/) |
+| 87 | Coreference Resolution (OntoNotes) | Pradhan et al., CoNLL 2012 | text | likert, radio, text | advanced | [link](./text/information-extraction/coreference-resolution/) |
+| 88 | Counterfactual Detection and Reasoning | Yang et al., SemEval 2020 | semeval | radio, span | intermediate | [link](./semeval/2020/task05-counterfactual/) |
+| 89 | Counting Events and Participants in News | Postma et al., SemEval 2018 | semeval | number, text | intermediate | [link](./semeval/2018/task05-event-counting/) |
+| 90 | CoVoST 2 - Speech Translation Evaluation | Wang et al., arXiv 2020 | audio | text, radio, audio_annotation, likert | intermediate | [link](./audio/covost-speech-translation/) |
+| 91 | Cross-lingual Causal Commonsense Reasoning (XCOPA) | Ponti et al., EMNLP 2020 | text | radio | beginner | [link](./text/cross-lingual/xcopa-causal-reasoning/) |
+| 92 | CrossRE: Cross-Domain Relation Extraction | Bassignana & Plank, Findings EMNLP 2022 | text | span, span_link, text | intermediate | [link](./text/relation-extraction/crossre-cross-domain-relations/) |
+| 93 | CUB-200-2011: Fine-Grained Bird Species Dataset | Wah et al., 2011 | image | multiselect, radio, text | advanced | [link](./image/classification/cub-200-birds/) |
+| 94 | Deceptive Review Detection | Ott et al., ACL 2011 | text | likert, multiselect, radio | intermediate | [link](./text/fact-verification/deceptive-review-detection/) |
+| 95 | DeepFashion: Large-Scale Clothing Attributes Dataset | Liu et al., CVPR 2016 | image | multiselect, radio | intermediate | [link](./image/specialized/deepfashion/) |
+| 96 | DeftEval - Extracting Definitions from Free Text | Spala et al., SemEval 2020 | semeval | span, radio | intermediate | [link](./semeval/2020/task06-defteval-definitions/) |
+| 97 | Detecting Machine-Generated Code | Orel et al., SemEval 2026 | semeval | radio, text | advanced | [link](./semeval/2026/task13-machine-generated-code/) |
+| 98 | Detecting Minimal Semantic Units and Their Meanings (DiMSUM) | Schneider et al., SemEval 2016 | semeval | span | intermediate | [link](./semeval/2016/task10-minimal-semantic-units/) |
+| 99 | Detecting Persuasion Techniques in News | Piskorski et al., SemEval 2023 | semeval | multiselect, span | advanced | [link](./semeval/2023/task03-persuasion-news/) |
+| 100 | Detecting Stance in Tweets | Mohammad et al., SemEval 2016 | semeval | radio | beginner | [link](./semeval/2016/task06-stance-detection/) |
+| 101 | Detection and Interpretation of English Puns | Miller et al., SemEval 2017 | semeval | radio, span | intermediate | [link](./semeval/2017/task07-pun-detection/) |
+| 102 | Determining Sentiment Intensity of English and Arabic Phrases | Kiritchenko et al., SemEval 2016 | semeval | radio | beginner | [link](./semeval/2016/task07-sentiment-intensity/) |
+| 103 | DevBench Repository Evaluation | Li et al., arXiv 2024 | agentic | multirate, radio, text | advanced | [link](./agentic/devbench-repo-eval/) |
+| 104 | DGS Corpus Sign Language Multi-Tier Annotation | Hanke et al., LREC 2020 | video | video_annotation, radio, text | advanced | [link](./video/dgs-corpus-sign-language/) |
+| 105 | Dialogue Act Labeling | Template | templates | multiselect, radio | intermediate | [link](./templates/text/dialogue-act-labeling/) |
+| 106 | Dialogue Relation Extraction (DialogRE) | Yu et al., ACL 2020 | text | span, radio | advanced | [link](./text/information-extraction/dialogue-relation-extraction/) |
+| 107 | DiaSafety Dialogue Safety Annotation | Sun et al., Findings ACL 2022 | text | radio, multiselect | intermediate | [link](./text/dialogue/diasafety-dialogue-safety/) |
+| 108 | DICES Diversity in Conversational AI Safety | Aroyo et al., NeurIPS 2023 | text | radio, likert, multiselect | intermediate | [link](./text/dialogue/dices-diversity-safety/) |
+| 109 | DiDeMo Moment Retrieval | Hendricks et al., ICCV 2017 | video | radio, video_annotation | intermediate | [link](./video/temporal-grounding/didemo-moment-retrieval/) |
+| 110 | DimABSA: Dimensional Aspect-Based Sentiment Analysis | Yu et al., SemEval 2026 | semeval | span, slider, text | advanced | [link](./semeval/2026/task03-dimabsa/) |
+| 111 | DISPLACE 2024 - Speaker and Language Diarization | Kundu et al., INTERSPEECH 2024 | audio | radio, span | advanced | [link](./audio/displace-speaker-diarization/) |
+| 112 | DISRPT: Discourse Segmentation and Relation Classification | Braud et al., DISRPT@ACL 2023 | text | span, radio | advanced | [link](./text/discourse/disrpt-discourse-relations/) |
+| 113 | Do-Not-Answer: LLM Safety Refusal Dataset | Wang et al., Findings EACL 2024 | evaluation | radio, multiselect | intermediate | [link](./evaluation/donotanswer-safety-eval/) |
+| 114 | DocBank Document Layout Detection | Li et al., COLING 2020 | image | multiselect, radio, text | intermediate | [link](./image/specialized/docbank/) |
+| 115 | DocLayNet Document Layout Analysis | Pfitzmann et al., KDD 2022 | image | multiselect, radio, text | intermediate | [link](./image/doclaynet-document-layout/) |
+| 116 | DoReCo: Language Documentation Reference Corpus | Paschen et al., Scientific Data 2022 | audio | span, text, radio | advanced | [link](./audio/doreco-language-documentation/) |
+| 117 | DOTA Aerial Image Object Detection | Xia et al., CVPR 2018 | image | multiselect, radio, text | advanced | [link](./image/aerial/dota-aerial/) |
+| 118 | DPO Preference Data Collection | Rafailov et al., NeurIPS 2023 | preference-learning | pairwise, radio, text | intermediate | [link](./preference-learning/dpo-preference-data/) |
+| 119 | Drug-Drug Interaction Extraction from Biomedical Texts | Segura-Bedmar et al., SemEval 2013 | semeval | span, radio | advanced | [link](./semeval/2013/task09-drug-drug-interactions/) |
+| 120 | DWIE Document-Level Entity Annotation and Linking | Zaporojets et al., IPM 2021 | text | span | advanced | [link](./text/entity-linking/dwie-document-entity-linking/) |
+| 121 | Dynamic Hate Speech Detection | Vidgen et al., ACL 2021 | text | likert, multiselect, radio | intermediate | [link](./text/hate-speech-moderation/dynamic-hate-speech/) |
+| 122 | EA-MT - Entity-Aware Machine Translation | Knowles et al., SemEval 2025 | semeval | span, radio, text | advanced | [link](./semeval/2025/task02-entity-aware-mt/) |
+| 123 | ECB+ Cross-Document Event Coreference | Cybulska & Vossen, LREC 2014 | text | multi_document_event | advanced | [link](./text/coreference/ecb-plus-cross-document-events/) |
+| 124 | Ego4D: Egocentric Video Episodic Memory Annotation | Grauman et al., CVPR 2022 | video | video_annotation, text, radio | advanced | [link](./video/ego4d-episodic-memory/) |
+| 125 | EmoBox - Multilingual Speech Emotion Recognition | Ma et al., INTERSPEECH 2024 | audio | radio, likert | intermediate | [link](./audio/emobox-multilingual-speech-emotion/) |
+| 126 | EmoContext - Contextual Emotion Detection in Text | Chatterjee et al., SemEval 2019 | semeval | radio | beginner | [link](./semeval/2019/task03-emocontext/) |
+| 127 | Emotion Cause Extraction (RECCON) | Poria et al., EMNLP 2020 | text | radio, span | advanced | [link](./text/emotion-sentiment/emotion-cause-extraction/) |
+| 128 | Emotion Detection (SemEval-2018 Task 1) | Mohammad et al., SemEval 2018 | text | multiselect, likert | intermediate | [link](./text/emotion-sentiment/semeval-emotion-detection/) |
+| 129 | Emotion Discovery and Reasoning its Flip | Kumar et al., SemEval 2024 | semeval | radio, span | advanced | [link](./semeval/2024/task10-emotion-flip/) |
+| 130 | Emotional Valence and Arousal over Time from Ecological Essays | Soni et al., SemEval 2026 | semeval | slider, text | intermediate | [link](./semeval/2026/task02-emotion-valence-arousal-dynamics/) |
+| 131 | Empathetic Dialogue Annotation | Rashkin et al., ACL 2019 | text | radio, likert | intermediate | [link](./text/emotion-sentiment/empathetic-dialogues/) |
+| 132 | Emphasis Selection for Written Text | Shirani et al., SemEval 2020 | semeval | span | beginner | [link](./semeval/2020/task10-emphasis-selection/) |
+| 133 | Entity Linking in Tweets | — | text | span, text | advanced | [link](./text/entity-linking/entity-linking-tweets/) |
+| 134 | EPIC-KITCHENS Egocentric Action Annotation | Damen et al., ECCV 2018 | video | radio, text, video_annotation | advanced | [link](./video/action-recognition/epic-kitchens-egocentric/) |
+| 135 | ESA: Error Span Annotation for Machine Translation | Kocmi et al., WMT@EMNLP 2024 | evaluation | span, radio, likert | advanced | [link](./evaluation/esa-mt-error-spans/) |
+| 136 | Event Argument Extraction (MAVEN-Arg) | Wang et al., ACL 2024 | text | span, radio | advanced | [link](./text/information-extraction/event-argument-extraction/) |
+| 137 | Event Coreference and Relations (MAVEN-ERE) | Wang et al., EMNLP 2022 | text | span, span_link | advanced | [link](./text/coreference/maven-ere-event-coreference/) |
+| 138 | Everyday Knowledge Across Diverse Languages and Cultures (BLEnD) | Ousidhoum et al., SemEval 2026 | semeval | text, radio | intermediate | [link](./semeval/2026/task07-blend-cultural-knowledge/) |
+| 139 | Explainable Online Sexism Detection | Kirk et al., SemEval 2023 | semeval | radio, span | intermediate | [link](./semeval/2023/task10-explainable-sexism/) |
+| 140 | Fact Verification | Template | templates | likert, multiselect, radio, text | intermediate | [link](./templates/text/fact-verification/) |
+| 141 | Fact-Checking in Community Question Answering Forums | Mihaylova et al., SemEval 2019 | semeval | radio | intermediate | [link](./semeval/2019/task08-fact-checking-cqa/) |
+| 142 | FActScore: Atomic Factual Precision Evaluation for LLMs | Min et al., EMNLP 2023 | text | radio, text | intermediate | [link](./text/fact-verification/factscore-atomic-factuality/) |
+| 143 | FAVA: Fine-grained Hallucination Detection and Editing for Language Models | Mishra et al., ACL 2024 | text | span, radio | advanced | [link](./text/fact-verification/fava-hallucination-spans/) |
+| 144 | FEVEROUS Structured Fact Verification Annotation | Aly et al., NeurIPS 2021 | text | radio, span, text | advanced | [link](./text/tabular/feverous-structured-factcheck/) |
+| 145 | Financial PhraseBank: Financial News Sentiment Dataset | Malo et al., JASIST 2014 | text | select, radio | beginner | [link](./text/financial/financial-phrasebank-sentiment/) |
+| 146 | FinBERT - Financial Headline Sentiment Analysis | Araci, arXiv 2019 | text | radio, text, likert | beginner | [link](./text/financial/finbert-headline-sentiment/) |
+| 147 | Fine-Grained Propaganda Detection | Da San Martino et al., EMNLP 2019 | text | span | advanced | [link](./text/fact-verification/propaganda-techniques/) |
+| 148 | Fine-Grained Sentiment Analysis on Financial Microblogs and News | Cortis et al., SemEval 2017 | semeval | likert, radio | intermediate | [link](./semeval/2017/task05-financial-sentiment/) |
+| 149 | FineDiving: Procedure-aware Action Quality Assessment | Xu et al., CVPR 2022 | video | video_annotation, text | advanced | [link](./video/action-recognition/finediving-procedure-aqa/) |
+| 150 | FineGym Dataset: Fine-Grained Gymnastics Action Recognition | Shao et al., CVPR 2020 | video | radio, video_annotation | advanced | [link](./video/action-recognition/finegym-action-segments/) |
+| 151 | FineSports: Fine-grained Basketball Action Recognition | Xu et al., CVPR 2024 | video | video_annotation, radio | advanced | [link](./video/finesports-action-recognition/) |
+| 152 | Fis-V: Figure Skating Video Scoring | Xu et al., IEEE TCSVT 2020 | video | video_annotation, text | advanced | [link](./video/action-recognition/fisv-figure-skating-scoring/) |
+| 153 | FLAIR: French Land Cover from Aerospace Imagery | Garioud et al., NeurIPS 2023 | image | multiselect, radio, text | intermediate | [link](./image/flair-aerial-land-use/) |
+| 154 | FLARE - Financial Named Entity Recognition | Xie et al., arXiv 2024 | text | span, radio | intermediate | [link](./text/financial/flare-financial-ner/) |
+| 155 | FLASK Skill-based Rubric Evaluation | Ye et al., ICLR 2024 | evaluation | rubric_eval, radio | advanced | [link](./evaluation/flask-skill-rubric-evaluation/) |
+| 156 | FLORES - Machine Translation Quality Estimation | Goyal et al., TACL 2022 | text | likert, text, select | intermediate | [link](./text/cross-lingual/flores-mt-quality/) |
+| 157 | FLUTE: Figurative Language Understanding through Textual Explanations | Chakrabarty et al., EMNLP 2022 | text | radio, text, multiselect | intermediate | [link](./text/discourse/flute-figurative-nli/) |
+| 158 | Food Hazard Detection | SemEval 2025 Task 9 Organizers, SemEval 2025 | semeval | span, radio, multiselect | advanced | [link](./semeval/2025/task09-food-hazard-detection/) |
+| 159 | FQuAD: French Question Answering Dataset | d'Hoffschmidt et al., arXiv 2020 | text | text, span | intermediate | [link](./text/reading-comprehension/fquad-french-qa/) |
+| 160 | GermanQuAD: German Extractive Question Answering | Möller et al., MRQA 2021 | text | text, span | intermediate | [link](./text/reading-comprehension/germanquad-german-qa/) |
+| 161 | Godspeed Questionnaire: AI Assistant Perception | Bartneck et al., Int J Soc Robotics 2009 | evaluation | semantic_differential | intermediate | [link](./evaluation/godspeed-agent-perception/) |
+| 162 | GoEmotions - Fine-Grained Emotion Classification | Demszky et al., ACL 2020 | text | multiselect, radio | intermediate | [link](./text/emotion-sentiment/goemotions/) |
+| 163 | Google Speech Commands: Keyword Spotting Dataset | Warden, arXiv 2018 | audio | radio, audio_annotation | beginner | [link](./audio/speech-commands-recognition/) |
+| 164 | GPQA - Graduate-Level Expert QA Evaluation | Rein et al., ICLR 2024 | evaluation | number, radio, text | intermediate | [link](./evaluation/gpqa-expert-qa/) |
+| 165 | Graded Word Similarity in Context | Armendariz et al., SemEval 2020 | semeval | likert, slider | intermediate | [link](./semeval/2020/task03-graded-word-similarity/) |
+| 166 | Harmony4D Human Interaction Tracking | Jung et al., NeurIPS 2024 | video | multiselect, video_annotation | advanced | [link](./video/harmony4d-interaction-tracking/) |
+| 167 | Hate Speech Detection | Template | templates | likert, multiselect, radio | intermediate | [link](./templates/text/hate-speech-detection/) |
+| 168 | HatEval - Multilingual Detection of Hate Speech Against Immigrants and Women | Basile et al., SemEval 2019 | semeval | radio, multiselect | intermediate | [link](./semeval/2019/task05-hateval/) |
+| 169 | HateXplain - Explainable Hate Speech Detection | Mathew et al., AAAI 2021 | text | radio, multiselect, span | advanced | [link](./text/hate-speech-moderation/hatexplain/) |
+| 170 | HatReD: Multi-Domain Hateful Meme Detection | Bhandari et al., IJCAI 2023 | multimodal | radio, text | intermediate | [link](./multimodal/hatred-hateful-memes/) |
+| 171 | HELM - Model Card Display and Evaluation | Liang et al., TMLR 2023 | evaluation | pure_display, likert | beginner | [link](./evaluation/helm-model-card-display/) |
+| 172 | HelpSteer Multi-Attribute Rating | Wang et al., NAACL 2024 | preference-learning | likert | intermediate | [link](./preference-learning/helpsteer-multiattribute-rating/) |
+| 173 | HH-RLHF Pairwise Preference | Bai et al., 2022 | preference-learning | radio | beginner | [link](./preference-learning/hh-rlhf-pairwise-preference/) |
+| 174 | How2Sign Sign Language Multi-Tier Annotation | Duarte et al., CVPR 2021 | video | video_annotation, radio, text | advanced | [link](./video/how2sign-sign-language/) |
+| 175 | HowTo100M Instructional Video Annotation | Miech et al., ICCV 2019 | video | radio, text, video_annotation | intermediate | [link](./video/instructional/howto100m-instructional/) |
+| 176 | Human Values in Arguments | Kiesel et al., ACL 2022 | text | multiselect, radio | intermediate | [link](./text/computational-social-science/human-values-arguments/) |
+| 177 | HumanEval Code Correctness Evaluation | Chen et al., arXiv 2021 | evaluation | radio, text, number | intermediate | [link](./evaluation/humaneval-code-correctness/) |
+| 178 | HumanEval: Python Code Generation Benchmark | Chen et al., arXiv 2021 | text | radio, text | intermediate | [link](./text/code-annotation/humaneval-code-generation/) |
+| 179 | Hypernym Discovery | Camacho-Collados et al., SemEval 2018 | semeval | text, radio | intermediate | [link](./semeval/2018/task09-hypernym-discovery/) |
+| 180 | Hyperpartisan News Detection | Kiesel et al., SemEval 2019 | semeval | radio | intermediate | [link](./semeval/2019/task04-hyperpartisan-news/) |
+| 181 | i2b2 Clinical Named Entity Recognition | Stubbs et al., JAMIA 2015 | text | span, radio | intermediate | [link](./text/domain-specific/clinical-ner-i2b2/) |
+| 182 | Idiomaticity Detection | Tayyar Madabushi et al., SemEval 2022 | semeval | radio | beginner | [link](./semeval/2022/task02-idiomaticity/) |
+| 183 | IEMOCAP: Dyadic Emotion Recognition Dataset | Busso et al., Language Resources and Evaluation 2008 | video | video_annotation, radio | advanced | [link](./video/iemocap-dyadic-emotion/) |
+| 184 | IFEval: Instruction-Following Evaluation Benchmark for LLMs | Zhou et al., arXiv 2023 | evaluation | radio, multiselect, text | intermediate | [link](./evaluation/ifeval-instruction-following/) |
+| 185 | Image Captioning Evaluation | Template | evaluation | likert, radio | beginner | [link](./evaluation/image-captioning-eval/) |
+| 186 | Image Classification | Template | templates | likert, multiselect, radio | beginner | [link](./templates/image/image-classification/) |
+| 187 | Image Segmentation | Template | templates | image_annotation | advanced | [link](./templates/image/image-segmentation/) |
+| 188 | ImageNet Image Classification | Deng et al., CVPR 2009 | image | radio, text | intermediate | [link](./image/classification/imagenet/) |
+| 189 | Implicit Hate Speech Detection | ElSherief et al., EMNLP 2021 | text | likert, radio | advanced | [link](./text/hate-speech-moderation/implicit-hate-speech/) |
+| 190 | Implicit Hate Speech Detection (ToxiGen) | Hartvigsen et al., ACL 2022 | text | radio, text | intermediate | [link](./text/bias-toxicity/toxigen-implicit-hate/) |
+| 191 | IndicNLP Suite - Multilingual Sentiment Analysis | Kakwani et al., Findings of EMNLP 2020 | text | radio, text | beginner | [link](./text/cross-lingual/indicnlp-multilingual-sa/) |
+| 192 | InstructGPT Instruction Following | Ouyang et al., NeurIPS 2022 | preference-learning | likert, radio | intermediate | [link](./preference-learning/instructgpt-preference/) |
+| 193 | Intent Classification | Template | templates | likert, multiselect, radio, text | beginner | [link](./templates/text/intent-classification/) |
+| 194 | Interlinear Glossing of Endangered Languages | Ginn et al., SIGMORPHON 2023 | text | span, text | advanced | [link](./text/parsing/sigmorphon-interlinear-glossing/) |
+| 195 | Interpretable Semantic Textual Similarity | Agirre et al., SemEval 2016 | semeval | span, likert | advanced | [link](./semeval/2016/task02-interpretable-sts/) |
+| 196 | Irony Detection in English Tweets | Van Hee et al., SemEval 2018 | semeval | radio | intermediate | [link](./semeval/2018/task03-irony-detection/) |
+| 197 | iSarcasmEval: Intended Sarcasm Detection | Abu Farha et al., SemEval 2022 | semeval | radio, multiselect, text | intermediate | [link](./semeval/2022/task06-isarcasmeval/) |
+| 198 | iWildCam Wildlife Detection & Classification | Beery et al., CVPR 2019 | image | multiselect, radio, text | intermediate | [link](./image/specialized/iwildcam/) |
+| 199 | JFLEG Fluency Rewriting for Grammatical Error Correction | Napoles et al., EACL 2017 | text | text_edit, likert | beginner | [link](./text/education/jfleg-fluency-rewriting/) |
+| 200 | KG-BERT Knowledge Graph Triple Validation | Yao et al., AAAI 2020 | text | radio, select, text | intermediate | [link](./text/information-extraction/kgbert-knowledge-graph/) |
+| 201 | KITTI Road Object Detection | Geiger et al., CVPR 2012 | image | multiselect, radio, text | advanced | [link](./image/driving/kitti/) |
+| 202 | KorQuAD: Korean Extractive Question Answering | Lim et al., arXiv 2019 | text | text, span | intermediate | [link](./text/reading-comprehension/korquad-korean-qa/) |
+| 203 | Legal Event Coreference (LegalCore) | Semo et al., Findings ACL 2025 | text | span, span_link | advanced | [link](./text/coreference/legalcore-legal-coreference/) |
+| 204 | LegalEval - Legal Document Analysis | Modi et al., SemEval 2023 | semeval | radio, span | advanced | [link](./semeval/2023/task06-legaleval/) |
+| 205 | LexGLUE: Legal Language Understanding Benchmark | Chalkidis et al., ACL 2022 | text | radio, multiselect, text | intermediate | [link](./text/domain-specific/lexglue-legal-understanding/) |
+| 206 | Lexical Complexity Prediction | Shardlow et al., SemEval 2021 | semeval | likert, slider | beginner | [link](./semeval/2021/task01-lexical-complexity/) |
+| 207 | LibriSpeech - Audio Transcription and Quality Rating | Panayotov et al., ICASSP 2015 | audio | slider, audio_annotation | beginner | [link](./audio/librispeech-transcription/) |
+| 208 | Likert Scale Survey | Template | templates | likert, multiselect, text | beginner | [link](./templates/surveys/likert-scale-survey/) |
+| 209 | LIP Human Parsing | Gong et al., CVPR 2017 | image | multiselect, radio | advanced | [link](./image/segmentation/lip-human-parsing/) |
+| 210 | LLMs4Subjects - Subject Tagging for a Technical Library | Sinhababu et al., SemEval 2025 | semeval | multiselect, radio | intermediate | [link](./semeval/2025/task05-llms4subjects/) |
+| 211 | LongEval: Faithfulness Evaluation for Long-Form Summarization | Krishna et al., EACL 2023 | evaluation | span, radio, likert | advanced | [link](./evaluation/longeval-faithfulness/) |
+| 212 | LSMDC Keyframe Selection | Rohrbach et al., IJCV 2017 | video | radio, video_annotation | intermediate | [link](./video/summarization/lsmdc-keyframe-selection/) |
+| 213 | Machine Comprehension Using Commonsense Knowledge | Ostermann et al., SemEval 2018 | semeval | radio, text | intermediate | [link](./semeval/2018/task11-commonsense-comprehension/) |
+| 214 | Machine Translation Evaluation | Template | evaluation | likert, multiselect | intermediate | [link](./evaluation/machine-translation-eval/) |
+| 215 | Machine-Generated Text Detection | Wang et al., SemEval 2024 | semeval | radio | intermediate | [link](./semeval/2024/task08-machine-generated-text/) |
+| 216 | MasakhaNER 2.0 - Named Entity Recognition for African Languages | Adelani et al., EMNLP 2022 | text | span, radio | intermediate | [link](./text/named-entity-recognition/masakhaner-african-ner/) |
+| 217 | MasakhaNEWS - News Topic Classification for African Languages | Adelani et al., IJCNLP-AACL 2023 | text | radio | beginner | [link](./text/cross-lingual/masakhanews-topic-classification/) |
+| 218 | MasakhaPOS - Part-of-Speech Tagging for African Languages | Dione et al., ACL 2023 | text | span | intermediate | [link](./text/parsing/masakhapos-african-pos/) |
+| 219 | MASSIVE - Multilingual Intent Classification and Slot Filling | FitzGerald et al., ACL 2023 | text | radio, span | intermediate | [link](./text/information-extraction/massive-intent-slot-filling/) |
+| 220 | MAST Failure Taxonomy | Cemri et al., arXiv 2025 | agentic | multiselect, radio, text | advanced | [link](./agentic/mast-failure-taxonomy/) |
+| 221 | Math Question Answering and Category Classification | Hopkins et al., SemEval 2019 | semeval | text, radio | advanced | [link](./semeval/2019/task10-math-qa/) |
+| 222 | MathDial: Math Tutoring Dialogue Dataset | Macina et al., Findings ACL 2023 | text | radio, multiselect, span | intermediate | [link](./text/education/mathdial-tutoring-dialogue/) |
+| 223 | MAUD: Legal Merger Agreement Understanding | Wang et al., EMNLP 2023 | text | span, radio | advanced | [link](./text/domain-specific/maud-legal-merger-qa/) |
+| 224 | MeasEval - Counts and Measurements | Harper et al., SemEval 2021 | semeval | span, radio, text | advanced | [link](./semeval/2021/task08-measeval/) |
+| 225 | Media Frames Corpus: News Framing Annotation | Card et al., ACL 2015 | text | multiselect, radio, text | intermediate | [link](./text/computational-social-science/media-frames-analysis/) |
+| 226 | MediTOD Medical Dialogue Annotation | Kazi et al., EMNLP 2024 | text | radio, span, text, multiselect | advanced | [link](./text/dialogue/meditod-medical-dialogue/) |
+| 227 | MedNLI: Clinical Natural Language Inference | Romanov & Shivade, EMNLP 2018 | text | radio, text | beginner | [link](./text/domain-specific/mednli-clinical-inference/) |
+| 228 | Memotion Analysis - Sentiment and Type Classification of Memes | Sharma et al., SemEval 2020 | semeval | radio, multiselect | intermediate | [link](./semeval/2020/task08-memotion-memes/) |
+| 229 | Miami Bangor Code-Switching Annotation | Deuchar et al., International Journal of Bilingualism 2014 | audio | span, radio, text | intermediate | [link](./audio/miami-code-switching/) |
+| 230 | MIMIC-CXR Chest Radiograph Classification | Johnson et al., Scientific Data 2019 | image | multiselect, radio, text | advanced | [link](./image/medical/mimic-cxr/) |
+| 231 | Mind2Web: Web Agent Task Annotation | Deng et al., NeurIPS 2023 | agentic | span, text, radio | advanced | [link](./agentic/mind2web-web-agent-tasks/) |
+| 232 | MMBench: Multimodal Vision-Language Benchmark | Liu et al., ECCV 2024 | multimodal | radio, text, multiselect | intermediate | [link](./multimodal/mmbench-multimodal-eval/) |
+| 233 | MMLU Knowledge Evaluation | Hendrycks et al., ICLR 2021 | evaluation | radio, text | beginner | [link](./evaluation/mmlu-knowledge-eval/) |
+| 234 | MMLU-Pro - Tiered Multi-Subject Evaluation | Wang et al., NeurIPS 2024 | preference-learning | tiered_annotation, radio | intermediate | [link](./preference-learning/mmlu-pro-tiered-eval/) |
+| 235 | MMMU: Massive Multi-discipline Multimodal Understanding | Yue et al., CVPR 2024 | multimodal | radio | intermediate | [link](./multimodal/mmmu-multimodal-understanding/) |
+| 236 | MOCHEG: Multimodal Fact-Checking with Explanations | Yao et al., SIGIR 2023 | multimodal | radio, text, span | advanced | [link](./multimodal/mocheg-multimodal-factcheck/) |
+| 237 | Moral Foundations in Tweets | Johnson & Goldwasser, ACL 2018 | text | multiselect, radio | intermediate | [link](./text/computational-social-science/moral-foundations-tweets/) |
+| 238 | Moral Stories Annotation | Emelin et al., EMNLP 2021 | text | likert, radio | intermediate | [link](./text/commonsense-ethics/moral-stories/) |
+| 239 | MovieNet: Holistic Movie Understanding Dataset | Qian et al., ECCV 2020 | video | multiselect, radio | intermediate | [link](./video/scene-understanding/movienet-scene-classification/) |
+| 240 | MovieScenes Scene Detection | Rao et al., CVPR 2020 | video | radio, video_annotation | intermediate | [link](./video/boundary-detection/moviescenes-detection/) |
+| 241 | MQM Machine Translation Error Annotation | Freitag et al., TACL 2021 | evaluation | error_span | advanced | [link](./evaluation/mqm-mt-error-annotation/) |
+| 242 | MS COCO Object Detection & Categorization | Lin et al., ECCV 2014 | image | multiselect, radio, text | advanced | [link](./image/classification/ms-coco/) |
+| 243 | MS MARCO: Passage Ranking Benchmark | Nguyen et al., NeurIPS 2016 Workshop | text | select, radio | beginner | [link](./text/information-retrieval/msmarco-passage-ranking/) |
+| 244 | MSAD Multi-Scenario Anomaly Detection | Zhang et al., NeurIPS 2024 | video | video_annotation, radio | intermediate | [link](./video/msad-anomaly-detection/) |
+| 245 | MT-Bench Judge Consistency Evaluation | Zheng et al., NeurIPS 2023 | evaluation | pairwise, likert, radio | intermediate | [link](./evaluation/mt-bench-judge-consistency/) |
+| 246 | MT-Bench: Multi-Turn LLM Evaluation Benchmark | Zheng et al., NeurIPS 2023 | evaluation | pairwise, likert | intermediate | [link](./evaluation/mtbench-llm-evaluation/) |
+| 247 | MTRAGEval: Evaluating Multi-Turn RAG Conversations | Rosenthal et al., SemEval 2026 | semeval | radio, likert, text | advanced | [link](./semeval/2026/task08-mtrag-evaluation/) |
+| 248 | MultiAgentBench Collaboration Scorecard | Zhu et al., ACL 2025 | agentic | agent_scorecard | advanced | [link](./agentic/multiagentbench-collaboration-scorecard/) |
+| 249 | MultiCoNER II: Multilingual Complex Named Entity Recognition | Fetahu et al., SemEval@ACL 2023 | text | span | intermediate | [link](./text/domain-specific/multiconerii-complex-ner/) |
+| 250 | Multilingual and Crosslingual Fact-Checked Claim Retrieval | Nakov et al., SemEval 2025 | semeval | radio, text | intermediate | [link](./semeval/2025/task07-factchecked-claim-retrieval/) |
+| 251 | Multilingual Characterization and Extraction of Narratives | SemEval 2025 Task 10 Organizers, SemEval 2025 | semeval | span, multiselect, text | advanced | [link](./semeval/2025/task10-narrative-extraction/) |
+| 252 | Multilingual Coreference Resolution (CorefUD) | Zabokrtsky et al., CRAC@EMNLP 2023 | text | span, span_link | advanced | [link](./text/coreference/corefud-multilingual-coreference/) |
+| 253 | Multilingual Emoji Prediction | Barbieri et al., SemEval 2018 | semeval | radio | beginner | [link](./semeval/2018/task02-emoji-prediction/) |
+| 254 | Multilingual News Article Similarity | Chen et al., SemEval 2022 | semeval | likert | beginner | [link](./semeval/2022/task08-news-similarity/) |
+| 255 | Multilingual Semantic Role Labeling | Blloshmi et al., SemEval 2021 | semeval | span, radio | advanced | [link](./semeval/2021/task03-multilingual-srl/) |
+| 256 | Multilingual Semantic Word Similarity | Camacho-Collados et al., SemEval 2017 | semeval | likert, slider | beginner | [link](./semeval/2017/task02-word-similarity/) |
+| 257 | Multilingual Word-in-Context | Martelli et al., SemEval 2021 | semeval | radio | intermediate | [link](./semeval/2021/task02-crosslingual-wic/) |
+| 258 | Multimodal Emotion Cause Analysis | Wang et al., SemEval 2024 | semeval | span, radio | advanced | [link](./semeval/2024/task03-multimodal-emotion-cause/) |
+| 259 | MultiNLI - Multi-Genre Natural Language Inference | Williams et al., NAACL 2018 | text | radio, text | beginner | [link](./text/natural-language-inference/multinli-genre-nli/) |
+| 260 | MultiTACRED Multilingual Relation Extraction Dataset | Hennig et al., ACL 2023 | text | radio, span, span_link | advanced | [link](./text/relation-extraction/multitacred-multilingual-relations/) |
+| 261 | Music Genre Classification | Template | audio | multiselect, radio | beginner | [link](./audio/music-genre-classification/) |
+| 262 | MVBench Video Understanding | Li et al., arXiv 2023 | video | radio, text, video_annotation | intermediate | [link](./video/video-qa/mvbench-video-understanding/) |
+| 263 | MVTec AD Industrial Defect Detection | Bergmann et al., CVPR 2019 | image | multiselect, radio, text | intermediate | [link](./image/specialized/mvtec-ad/) |
+| 264 | n2c2 2022: Social Determinants of Health Extraction | Lybarger et al., JAMIA 2023 | text | span, radio | advanced | [link](./text/domain-specific/n2c2-sdoh-extraction/) |
+| 265 | Named Entity Disambiguation (AIDA-CoNLL) | Hoffart et al., EMNLP 2011 | text | radio, span, text | intermediate | [link](./text/entity-linking/aida-conll-entity-disambiguation/) |
+| 266 | Named Entity Recognition | Template | templates | span | intermediate | [link](./templates/text/named-entity-recognition/) |
+| 267 | Narrative Story Similarity | Hatzel et al., SemEval 2026 | semeval | radio, multiselect | intermediate | [link](./semeval/2026/task04-narrative-similarity/) |
+| 268 | Natural Questions - Open-Domain Question Answering | Kwiatkowski et al., TACL 2019 | text | span, radio, text | intermediate | [link](./text/question-answering/natural-questions-qa/) |
+| 269 | News Headline Emotion Roles (GoodNewsEveryone) | Bostan et al., LREC 2020 | text | likert, radio, span | advanced | [link](./text/emotion-sentiment/news-emotion-roles/) |
+| 270 | NExT-QA: Causal and Temporal Video QA Benchmark | Xiao et al., CVPR 2021 | video | radio, text, video_annotation | intermediate | [link](./video/video-qa/nextqa-temporal/) |
+| 271 | NLI with Explanations (e-SNLI) | Camburu et al., NeurIPS 2018 | text | likert, radio, span | intermediate | [link](./text/explainability/nli-explanation/) |
+| 272 | NLPContributionGraph - Structured Extraction of NLP Contributions | D'Souza et al., SemEval 2021 | semeval | span, text | advanced | [link](./semeval/2021/task11-nlpcontributiongraph/) |
+| 273 | NRC Affect Intensity: Word Emotion Intensity via Best-Worst Scaling | Mohammad, LREC 2018 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-affect-intensity-bws/) |
+| 274 | NRC Emotion Lexicon (EmoLex): Word-Emotion Association | Mohammad & Turney, Computational Intelligence 2013 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-emolex-word-emotion/) |
+| 275 | NRC-VAD: Valence, Arousal & Dominance via Best-Worst Scaling | Mohammad, ACL 2018 | text | radio | intermediate | [link](./text/emotion-sentiment/nrc-vad-bws/) |
+| 276 | NumEval - Numeral-Aware Language Understanding and Generation | Chen et al., SemEval 2024 | semeval | radio, number, text | intermediate | [link](./semeval/2024/task07-numeval/) |
+| 277 | NusaX - Sentiment Analysis for Indonesian Local Languages | Winata et al., EACL 2023 | text | radio | beginner | [link](./text/cross-lingual/nusax-indonesian-sentiment/) |
+| 278 | Object Detection | Template | templates | image_annotation | intermediate | [link](./templates/image/object-detection/) |
+| 279 | OffensEval - Offensive Language Target Identification | Zampieri et al., SemEval 2020 | text | radio, multiselect, span | intermediate | [link](./text/computational-social-science/offenseval-target-id/) |
+| 280 | OmniDocBench Comprehensive Document Parsing | Chen et al., CVPR 2025 | image | multiselect, radio, text | advanced | [link](./image/omnidocbench-document-parsing/) |
+| 281 | OntoNotes - Coreference Resolution | Pradhan et al., CoNLL 2012 | text | coreference, span | advanced | [link](./text/coreference/ontonotes-coreference-resolution/) |
+| 282 | Open Images Image Classification | Kuznetsova et al., IJCV 2020 | image | multiselect, radio, text | advanced | [link](./image/classification/open-images/) |
+| 283 | OpenAssistant Conversation Quality | Köpf et al., NeurIPS 2023 | preference-learning | likert, radio, text | intermediate | [link](./preference-learning/oasst-conversation-quality/) |
+| 284 | OSWorld: Desktop Agent Task Evaluation | Xie et al., NeurIPS 2024 | agentic | radio, multiselect, likert, text | advanced | [link](./agentic/osworld-desktop-agent-eval/) |
+| 285 | Pairwise Preference | Template | templates | multiselect, pairwise, text | beginner | [link](./templates/comparison/pairwise-preference/) |
+| 286 | Pairwise Preference with Rationale | Wang et al., 2024 | preference-learning | multiselect, radio, text | intermediate | [link](./preference-learning/pairwise-preference-rationale/) |
+| 287 | Parsing Time Normalizations | Laparra et al., SemEval 2018 | semeval | span, text | advanced | [link](./semeval/2018/task06-time-normalization/) |
+| 288 | PASCAL VOC Object Detection | Everingham et al., IJCV 2010 | image | multiselect, radio | intermediate | [link](./image/classification/pascal-voc/) |
+| 289 | Patient Forum Question Answering | — | text | text, radio | intermediate | [link](./text/question-answering/patient-forum-qa/) |
+| 290 | Patronizing and Condescending Language Detection | Perez-Almendros et al., SemEval 2022 | semeval | radio, span | intermediate | [link](./semeval/2022/task04-patronizing-language/) |
+| 291 | PDTB 2.0 - Discourse Relations Tree Annotation | Prasad et al., LREC 2008 | text | tree_annotation, span | advanced | [link](./text/discourse/pdtb-discourse-relations-tree/) |
+| 292 | Persuasion Techniques in Memes | Dimitrov et al., SemEval 2024 | semeval | multiselect, span | advanced | [link](./semeval/2024/task04-persuasion-memes/) |
+| 293 | Places365 Scene Classification | Zhou et al., TPAMI 2017 | image | multiselect, radio, text | intermediate | [link](./image/classification/places365/) |
+| 294 | Plausible Clarifications of Implicit and Underspecified Instructions | Roth and Anthonio, SemEval 2022 | semeval | radio | intermediate | [link](./semeval/2022/task07-plausible-clarifications/) |
+| 295 | PodcastFillers Disfluency Tagging | Zhu et al., Interspeech 2022 | audio | speech_transcript, radio | intermediate | [link](./audio/podcastfillers-disfluency-tagging/) |
+| 296 | POLAR: Detecting Multilingual, Multicultural and Multievent Online Polarization | Naseem et al., SemEval 2026 | semeval | radio, multiselect, text | intermediate | [link](./semeval/2026/task09-polar-polarization/) |
+| 297 | Politeness Transfer Annotation | Madaan et al., ACL 2020 | text | likert, radio, text | beginner | [link](./text/computational-social-science/politeness-annotation/) |
+| 298 | Political Discourse Analysis (AgoraSpeech) | Sermpezis et al., arXiv 2025 | text | radio, multiselect, span | intermediate | [link](./text/political-media/political-discourse/) |
+| 299 | Predicting Multilingual and Cross-Lingual Lexical Entailment | Glavavs et al., SemEval 2020 | semeval | radio | intermediate | [link](./semeval/2020/task02-lexical-entailment/) |
+| 300 | PreTENS - Presuppositional Acceptability | Jeretic et al., SemEval 2022 | semeval | radio, likert | intermediate | [link](./semeval/2022/task03-pretens/) |
+| 301 | PRM800K Step-by-Step Verification | Lightman et al., ICLR 2024 | agentic | radio, text | advanced | [link](./agentic/prm800k-step-verification/) |
+| 302 | ProcessBench Earliest-Error Identification | Zheng et al., ACL 2025 | agentic | process_reward | advanced | [link](./agentic/processbench-math-error-steps/) |
+| 303 | Prometheus: Rubric-Based LLM Evaluation | Kim et al., ICLR 2024 | evaluation | likert, text | advanced | [link](./evaluation/prometheus-rubric-evaluation/) |
+| 304 | PromiseEval - Corporate ESG Promise Verification | Nakov et al., SemEval 2025 | semeval | radio, text | intermediate | [link](./semeval/2025/task06-promiseeval/) |
+| 305 | PsyCoMark: Psycholinguistic Conspiracy Marker Extraction and Detection | Samory et al., SemEval 2026 | semeval | radio, span | advanced | [link](./semeval/2026/task10-psycomark-conspiracy/) |
+| 306 | QA over Tabular Data | SemEval 2025 Task 8 Organizers, SemEval 2025 | semeval | text, radio | intermediate | [link](./semeval/2025/task08-tabular-qa/) |
+| 307 | Question Answering | Template | evaluation | span, radio | intermediate | [link](./evaluation/question-answering/) |
+| 308 | QVHighlights Moment Grounding and Saliency | Lei et al., NeurIPS 2021 | video | temporal_grounding, radio | intermediate | [link](./video/temporal-grounding/qvhighlights-moment-saliency/) |
+| 309 | R-Judge: Agent Safety Risk Evaluation | Yuan et al., EMNLP Findings 2024 | agentic | radio, multiselect, text | advanced | [link](./agentic/r-judge-agent-safety/) |
+| 310 | R2VQ - Recipe Question Answering | Jia et al., SemEval 2022 | semeval | text, radio | intermediate | [link](./semeval/2022/task09-r2vq-recipe-qa/) |
+| 311 | RadGraph-XL: Radiology Entity and Relation Extraction | Khanna et al., Findings ACL 2024 | text | span, span_link | advanced | [link](./text/relation-extraction/radgraph-radiology-relations/) |
+| 312 | RadQA: Radiology Report Question Answering Dataset | Soni et al., ACL BioNLP Workshop 2022 | text | radio, span, text | intermediate | [link](./text/domain-specific/radqa-radiology-qa/) |
+| 313 | Ranking Task | Template | templates | radio, likert, text | beginner | [link](./templates/comparison/ranking-task/) |
+| 314 | Rating Plausibility of Word Senses through Narrative Understanding | Gehring, Meyer & Roth, SemEval 2026 | semeval | likert | intermediate | [link](./semeval/2026/task05-word-sense-plausibility/) |
+| 315 | Rationale Annotation (ERASER) | DeYoung et al., ACL 2020 | text | radio, span | intermediate | [link](./text/explainability/rationale-annotation/) |
+| 316 | RCV1: Hierarchical Topic Coding | Lewis et al., JMLR 2004 | text | hierarchical_multiselect | intermediate | [link](./text/topic-classification/rcv1-hierarchical-topic-coding/) |
+| 317 | Reading Comprehension QA | Template | templates | likert, radio, text | intermediate | [link](./templates/text/reading-comprehension/) |
+| 318 | ReCAM - Reading Comprehension of Abstract Meaning | Zheng et al., SemEval 2021 | semeval | radio | intermediate | [link](./semeval/2021/task04-recam-abstract-meaning/) |
+| 319 | Red Team Adversarial Evaluation | Ganguli et al., 2022 | preference-learning | radio, text | advanced | [link](./preference-learning/redteam-adversarial-eval/) |
+| 320 | REDFM: Filtered and Multilingual Relation Extraction | Huguet Cabot et al., ACL 2023 | text | span, span_link | advanced | [link](./text/relation-extraction/redfm-multilingual-relations/) |
+| 321 | RefactorBench Multi-File Evaluation | Gautam et al., ICLR 2025 | agentic | radio, multiselect, likert, text | advanced | [link](./agentic/refactorbench-multi-file-eval/) |
+| 322 | RefCOCO - Referring Expression Grounding | Yu et al., ECCV 2016 | image | image_annotation, text | intermediate | [link](./image/visual-grounding/refcoco-expression/) |
+| 323 | Relation Extraction | Template | templates | likert, radio, text | advanced | [link](./templates/text/relation-extraction/) |
+| 324 | RewardBench - Reward Model Evaluation | Lambert et al., ICML 2024 | evaluation | pairwise, radio, multirate | intermediate | [link](./evaluation/rewardbench-reward-eval/) |
+| 325 | RewardBench: Reward Model Evaluation via Pairwise Preference | Lambert et al., Findings NAACL 2025 | preference-learning | pairwise, radio | intermediate | [link](./preference-learning/rewardbench-reward-model-eval/) |
+| 326 | RT-2 - Robotic Action Annotation | Brohan et al., CoRL 2023 | multimodal | radio, text, likert, video_annotation | advanced | [link](./multimodal/rt2-robotic-action-annotation/) |
+| 327 | Ruddit: Offensiveness Best-Worst Scaling | Hada et al., ACL 2021 | text | bws | intermediate | [link](./text/computational-social-science/ruddit-offensiveness-bws/) |
+| 328 | Rumor Stance Detection (PHEME) | Zubiaga et al., ACL 2016 | text | likert, radio | intermediate | [link](./text/argumentation-stance/rumor-stance/) |
+| 329 | RumourEval Stance and Verification | Gorrell et al., SemEval 2019 | text | radio, tree_annotation | intermediate | [link](./text/computational-social-science/rumoureval-verification/) |
+| 330 | RuSentiment - Social Media Sentiment | Rogers et al., COLING 2018 | text | radio | beginner | [link](./text/emotion-sentiment/rusentiment/) |
+| 331 | Safe Biomedical NLI | Jullien et al., SemEval 2024 | semeval | radio, text | advanced | [link](./semeval/2024/task02-safe-biomedical-nli/) |
+| 332 | SafeRLHF Dual-Dimension Preference | Ji et al., 2024 / Dai et al., ICLR 2024 | preference-learning | radio, multiselect, likert | advanced | [link](./preference-learning/saferlhf-dual-preference/) |
+| 333 | SaGA Gesture-Speech Alignment Multi-Tier Annotation | Luecking et al., Gesture 2013 | video | video_annotation, radio, text | advanced | [link](./video/saga-gesture-speech/) |
+| 334 | Sarcasm Detection | Template | templates | likert, radio, text | intermediate | [link](./templates/text/sarcasm-detection/) |
+| 335 | SayCan: Grounding Language in Robotic Affordances | Ahn et al., CoRL 2022 | multimodal | radio, multiselect, text, likert | advanced | [link](./multimodal/saycan-robot-planning/) |
+| 336 | Scene Boundary Detection | Sidiropoulos et al., ACM MM 2011 | video | radio, video_annotation | intermediate | [link](./video/boundary-detection/scene-boundary-detection/) |
+| 337 | ScienceQA Multimodal Reasoning | Lu et al., NeurIPS 2022 | multimodal | radio, text, multiselect | intermediate | [link](./multimodal/scienceqa-multimodal-reasoning/) |
+| 338 | SciER Scientific Entity and Relation Extraction Dataset | Luan et al., EMNLP 2024 | text | span, span_link | advanced | [link](./text/relation-extraction/scier-scientific-entity-relations/) |
+| 339 | SciFact: Scientific Claim Verification Dataset | Wadden et al., EMNLP 2020 | text | likert, radio, span | advanced | [link](./text/fact-verification/scientific-claim-verification/) |
+| 340 | SecureNLP - Malware Report Semantic Extraction | Phandi et al., SemEval 2018 | semeval | span, radio, multiselect | advanced | [link](./semeval/2018/task08-cybersecurity-ner/) |
+| 341 | Segment Anything (SA-1B) Interactive Segmentation | Kirillov et al., ICCV 2023 | image | radio, text | intermediate | [link](./image/sa1b-segment-anything/) |
+| 342 | Semantic Relation Extraction and Classification in Scientific Papers | Gabor et al., SemEval 2018 | semeval | span, radio | advanced | [link](./semeval/2018/task07-scientific-relations/) |
+| 343 | Semantic Similarity | Template | templates | likert, multiselect, radio, slider | beginner | [link](./templates/text/semantic-similarity/) |
+| 344 | Semantic Textual Relatedness | Abdalla et al., SemEval 2024 | semeval | likert, slider | beginner | [link](./semeval/2024/task01-semantic-relatedness/) |
+| 345 | SemEval-2007 - Word Sense Disambiguation | Pradhan et al., SemEval 2007 | text | select, radio | intermediate | [link](./text/word-sense/wsd-semeval2007/) |
+| 346 | SemEval-2017 Task 4 - Sentiment Multi-Rating | Rosenthal et al., SemEval 2017 | text | multirate, radio | beginner | [link](./text/emotion-sentiment/semeval-sentiment-multirate/) |
+| 347 | SemEval-2019 Task 12: Toponym Resolution in Scientific Papers | Weissenbacher et al., SemEval 2019 | semeval | span, text | advanced | [link](./semeval/2019/task12-toponym-resolution/) |
+| 348 | SemEval-2020 Task 9: Code-Mixed Sentiment (SentiMix) | Patwa et al., SemEval 2020 | semeval | radio | intermediate | [link](./semeval/2020/task09-code-mixed-sentiment/) |
+| 349 | SemEval-2021 Task 6: Persuasion Techniques in Memes | Dimitrov et al., SemEval 2021 | semeval | multiselect, span | advanced | [link](./semeval/2021/task06-persuasion-multimodal/) |
+| 350 | SemEval-2021 Task 7: HaHackathon Humor Detection | Meaney et al., SemEval 2021 | semeval | radio, likert | beginner | [link](./semeval/2021/task07-hahackathon-humor/) |
+| 351 | SemEval-2022 Task 5: Multimedia Misogyny (MAMI) | Fersini et al., SemEval 2022 | semeval | radio, multiselect | intermediate | [link](./semeval/2022/task05-multimedia-misogyny/) |
+| 352 | SenseRel: Denotational and Connotational Meaning Relations | Cassotti et al., ACL 2026 | text | radio | advanced | [link](./text/word-sense/senserel-meaning-relations/) |
+| 353 | Sentiment Analysis | Template | templates | radio | beginner | [link](./templates/text/sentiment-analysis/) |
+| 354 | Sentiment Composition of Phrases (SCL) via Best-Worst Scaling | Kiritchenko & Mohammad, NAACL 2016 | text | radio | intermediate | [link](./text/emotion-sentiment/scl-sentiment-composition-bws/) |
+| 355 | SHROOM: Shared-task on Hallucinations and Related Observable Overgeneration Mistakes | Mickus et al., SemEval@NAACL 2024 | text | radio, likert | beginner | [link](./text/fact-verification/shroom-hallucination-detection/) |
+| 356 | SNLI: Stanford Natural Language Inference Corpus | Bowman et al., EMNLP 2015 | text | radio, text | beginner | [link](./text/natural-language-inference/snli-textual-entailment/) |
+| 357 | SoccerNet Action Spotting: The 17 Soccer Action Classes | Giancola et al., CVPR 2018 | video | video_annotation | intermediate | [link](./video/action-recognition/soccernet-action-spotting/) |
+| 358 | Social Bias Frames (SBIC) | Sap et al., ACL 2020 | text | multiselect, radio | advanced | [link](./text/hate-speech-moderation/social-bias-frames/) |
+| 359 | Social Chemistry 101 (Social Norms) | Forbes et al., EMNLP 2020 | text | radio, likert | advanced | [link](./text/commonsense-ethics/social-chemistry/) |
+| 360 | Social Determinants of Health (SDOH) Extraction | Lybarger et al., JAMIA 2023 | text | span, radio, multiselect | advanced | [link](./text/information-extraction/sdoh-extraction/) |
+| 361 | SODA: Social Dialogue Quality Evaluation | Kim et al., EMNLP 2023 | multimodal | radio, text | intermediate | [link](./multimodal/soda-eval-social-dialogue/) |
+| 362 | SORRY-Bench: LLM Safety Refusal Evaluation | Xie et al., ICLR 2025 | evaluation | radio, multiselect | advanced | [link](./evaluation/sorrybench-refusal-eval/) |
+| 363 | Speaker Diarization | Template | audio | multiselect, radio, text | intermediate | [link](./audio/speaker-diarization/) |
+| 364 | Speech Accent Classification | Ardila et al., LREC 2020 | audio | radio, text | beginner | [link](./audio/speech-accent-classification/) |
+| 365 | Speech Emotion Recognition | Template | audio | likert, multiselect, radio | intermediate | [link](./audio/emotion-recognition/) |
+| 366 | SPIN Self-Play Preference Annotation | Chen et al., ICML 2024 | preference-learning | pairwise, radio | intermediate | [link](./preference-learning/spin-self-play/) |
+| 367 | SPoRC Podcast Speaker-Role and Turn Annotation | Litterer et al., ACL 2025 | audio | radio, likert, text | intermediate | [link](./audio/sporc-podcast-turn-annotation/) |
+| 368 | SQuAD - Extractive Question Answering | Rajpurkar et al., EMNLP 2016 | text | span, text, radio | beginner | [link](./text/reading-comprehension/squad-extractive-qa/) |
+| 369 | Stance Detection (VAST) | Allaway & McKeown, EMNLP 2020 | text | likert, radio | intermediate | [link](./text/argumentation-stance/stance-detection/) |
+| 370 | Statement Verification and Evidence Finding with Tables | Wang et al., SemEval 2021 | semeval | radio, span | intermediate | [link](./semeval/2021/task09-verification-tables/) |
+| 371 | Structured Sentiment Analysis | Barnes et al., SemEval 2022 | text | span, radio | advanced | [link](./text/computational-social-science/structured-sentiment/) |
+| 372 | STS-B: Semantic Textual Similarity Benchmark | Cer et al., SemEval 2017 | text | slider, likert | beginner | [link](./text/semantic-similarity/stsb-sentence-similarity/) |
+| 373 | Student Essay Discourse Element Classification | Song et al., COLING 2020 | text | span, radio, multiselect | intermediate | [link](./text/education/student-essay-discourse/) |
+| 374 | Suggestion Mining from Online Reviews and Forums | Negi et al., SemEval 2019 | semeval | radio | beginner | [link](./semeval/2019/task09-suggestion-mining/) |
+| 375 | Summary Preference Comparison | Stiennon et al., NeurIPS 2020 | preference-learning | radio, likert | intermediate | [link](./preference-learning/summary-preference-comparison/) |
+| 376 | SumMe Video Summarization | Gygli et al., ECCV 2014 | video | radio, video_annotation | intermediate | [link](./video/summarization/summe-summarization/) |
+| 377 | Survey Feedback | Template | templates | likert, multiselect, radio, text | beginner | [link](./templates/surveys/survey-feedback/) |
+| 378 | SWE-bench Verified Issue Validation | Chowdhury et al., OpenAI 2024 | agentic | radio, text | advanced | [link](./agentic/swebench-verified-validation/) |
+| 379 | SWE-Bench+ Patch Screening | Aleithan et al., arXiv 2024 | agentic | radio, multiselect, pairwise, text | advanced | [link](./agentic/swebench-plus-patch-screening/) |
+| 380 | SWE-bench: Code Agent Solution Evaluation | Jimenez et al., ICLR 2024 | agentic | radio, text | advanced | [link](./agentic/swebench-code-agent-eval/) |
+| 381 | SWE-PRM Process Reward Labels for Coding Agents | Gandhi et al., arXiv 2025 | agentic | radio, multiselect, text | advanced | [link](./agentic/swe-prm-coding-process-reward/) |
+| 382 | Switchboard DAMSL Dialogue Act Corpus (SwDA) | Jurafsky et al., 1997 | text | radio, multiselect | advanced | [link](./text/dialogue/swbd-damsl-dialogue-acts/) |
+| 383 | Symlink: Linking Mathematical Symbols to their Descriptions | Lai et al., SemEval 2022 | semeval | span, radio, text | advanced | [link](./semeval/2022/task12-symlink/) |
+| 384 | T2I-CompBench: Compositional Text-to-Image Benchmark | Huang et al., NeurIPS 2023 | image | likert, radio, pairwise | intermediate | [link](./image/generation-eval/t2i-compbench/) |
+| 385 | Table-Based Fact Verification (TabFact) | Chen et al., ICLR 2020 | text | radio, span, text | intermediate | [link](./text/tabular/tabfact-table-verification/) |
+| 386 | tau-bench Agent Evaluation | Yao et al., arXiv 2024 | agentic | radio, likert, multiselect, text | advanced | [link](./agentic/tau-bench-agent-eval/) |
+| 387 | Temporal Relation Annotation (TempEval-3) | UzZaman et al., SemEval 2013 | text | span, radio | advanced | [link](./text/information-extraction/temporal-relations/) |
+| 388 | Text Summarization Evaluation | Template | evaluation | likert, text | intermediate | [link](./evaluation/text-summarization-eval/) |
+| 389 | Text-Based Emotion Detection | SemEval 2025 Task 11 Organizers, SemEval 2025 | semeval | radio, multiselect | intermediate | [link](./semeval/2025/task11-emotion-detection/) |
+| 390 | TextVQA: Reading Text in Images for VQA | Singh et al., CVPR 2019 | image | text, radio | intermediate | [link](./image/visual-qa/textvqa-reading-in-images/) |
+| 391 | THUMOS14 Action Localization | Jiang et al., ECCV 2014 Workshop | video | video_annotation | intermediate | [link](./video/action-recognition/thumos14-action-localization/) |
+| 392 | TimeLine: Cross-Document Event Ordering | Minard et al., SemEval 2015 | semeval | span, radio | advanced | [link](./semeval/2015/task04-timeline-event-ordering/) |
+| 393 | TIMELINE: Exhaustive Temporal Relation Annotation | Mathur et al., EMNLP 2023 | text | radio, span, span_link | advanced | [link](./text/discourse/timeline-temporal-relations/) |
+| 394 | ToBI Prosodic Annotation | Silverman et al., Speech Communication 1992 | audio | span, radio, text | advanced | [link](./audio/tobi-prosody-annotation/) |
+| 395 | Toxic Spans Detection | Pavlopoulos et al., SemEval 2021 | text | multiselect, radio, span | intermediate | [link](./text/hate-speech-moderation/toxic-spans/) |
+| 396 | Toxicity Detection | Template | templates | multiselect, radio | intermediate | [link](./templates/text/toxicity-detection/) |
+| 397 | TrajEval Staged Evaluation | Kim et al., arXiv 2026 | agentic | multirate, radio, text | advanced | [link](./agentic/trajeval-staged-evaluation/) |
+| 398 | TREC Deep Learning Passage Ranking | Craswell et al., TREC/SIGIR 2019 | text | select, likert | intermediate | [link](./text/information-retrieval/trec-dl-passage-ranking/) |
+| 399 | TRECVID Shot Boundary Detection | Over et al., TRECVID Overview | video | video_annotation | intermediate | [link](./video/boundary-detection/shot-boundary-detection/) |
+| 400 | Triage Quick Annotation Template | N/A (Template) | templates | triage, radio | beginner | [link](./templates/text/triage-quick-annotation/) |
+| 401 | TriviaQA - Reading Comprehension | Joshi et al., ACL 2017 | text | text, radio | beginner | [link](./text/question-answering/triviaqa-reading-comprehension/) |
+| 402 | TVSum Video Summarization | Song et al., CVPR 2015 | video | likert, video, video_annotation | intermediate | [link](./video/summarization/tvsum-summarization/) |
+| 403 | Tweet Emotion Intensity via Best-Worst Scaling (multilingual) | Mohammad & Bravo-Marquez, WASSA 2017 | text | radio | intermediate | [link](./text/emotion-sentiment/tweet-emotion-intensity-bws/) |
+| 404 | Tweet Intimacy Analysis | Pei et al., SemEval 2023 | semeval | likert | beginner | [link](./semeval/2023/task09-tweet-intimacy/) |
+| 405 | UltraFeedback Rubric Evaluation | OpenBMB, 2023 | preference-learning | likert, text | advanced | [link](./preference-learning/ultrafeedback-rubric-evaluation/) |
+| 406 | UltraFeedback: Fine-Grained AI Preference Dataset | Cui et al., ICML 2024 | preference-learning | multirate, likert, text | intermediate | [link](./preference-learning/ultrafeedback-multiaspect/) |
+| 407 | Universal Dependencies - Dependency Parsing Annotation | Nivre et al., LREC 2020 | text | tree_annotation, span | advanced | [link](./text/parsing/ud-dependency-parsing/) |
+| 408 | Unlearning Sensitive Content from LLMs | Choi et al., SemEval 2025 | semeval | radio, text, likert | intermediate | [link](./semeval/2025/task04-unlearning-sensitive-content/) |
+| 409 | V-WSD - Visual Word Sense Disambiguation | Raganato et al., SemEval 2023 | semeval | radio | intermediate | [link](./semeval/2023/task01-visual-wsd/) |
+| 410 | ValueEval - Human Values behind Arguments | Kiesel et al., SemEval 2023 | semeval | multiselect, radio | intermediate | [link](./semeval/2023/task04-valueeval/) |
+| 411 | VBench: Video Generation Quality Benchmark | Huang et al., CVPR 2024 | video | likert, pairwise, video_annotation | intermediate | [link](./video/vbench-generation-quality/) |
+| 412 | Video-ChatGPT - Video QA Display and Evaluation | Maaz et al., ACL 2024 | video | video, radio, likert | intermediate | [link](./video/video-chatgpt-qa-display/) |
+| 413 | Visual Question Answering | Template | evaluation | radio, text | beginner | [link](./evaluation/visual-qa/) |
+| 414 | VisualWebArena: Visual Web Agent Evaluation | Koh et al., ACL 2024 | agentic | radio, multiselect, text | advanced | [link](./agentic/visualwebarena-visual-agent-eval/) |
+| 415 | ViTPose Human Keypoint Annotation | Xu et al., NeurIPS 2022 | image | image_annotation, radio | intermediate | [link](./image/human-pose/vitpose-keypoint-annotation/) |
+| 416 | VoiceMOS Challenge 2024 - Speech Quality Assessment | Cooper et al., INTERSPEECH 2024 | audio | likert | intermediate | [link](./audio/voicemos-quality-assessment/) |
+| 417 | VQA v2.0: Visual Question Answering Dataset | Goyal et al., CVPR 2017 | image | text, radio | intermediate | [link](./image/visual-qa/vqav2-visual-question-answering/) |
+| 418 | VSTAR Video-grounded Dialogue | Wang et al., ACL 2023 | video | video_annotation, text, radio | advanced | [link](./video/vstar-video-dialogue/) |
+| 419 | Warmth and Competence (Sentence-Level Social Perception) | Ayesh et al., ACL 2026 | text | likert | intermediate | [link](./text/emotion-sentiment/warmth-competence-sentences/) |
+| 420 | WavCaps - Audio Captioning | Mei et al., IEEE TASLP 2024 | audio | text | beginner | [link](./audio/wavcaps-audio-captioning/) |
+| 421 | WebArena: Realistic Web Agent Evaluation Benchmark | Zhou et al., ICLR 2024 | agentic | radio, text | advanced | [link](./agentic/webarena-web-agent-eval/) |
+| 422 | WebGPT Answer Comparison | Nakano et al., 2021 | preference-learning | radio | intermediate | [link](./preference-learning/webgpt-comparison/) |
+| 423 | Who&When Multi-Agent Failure Attribution | Zhang et al., ICML 2025 | agentic | failure_attribution, radio | advanced | [link](./agentic/whowhen-failure-attribution/) |
+| 424 | WikiANN (PAN-X): Multilingual Named Entity Recognition | Pan et al., ACL 2017; Rahimi et al., ACL 2019 | text | span, radio | intermediate | [link](./text/named-entity-recognition/wikiann-multilingual-ner/) |
+| 425 | WikiArt Artwork Classification | Saleh & Elgammal, 2015 | image | multiselect, radio, text | intermediate | [link](./image/specialized/wikiart/) |
+| 426 | WildBench - LLM Evaluation on Real-World Tasks | Lin et al., COLM 2024 | evaluation | pairwise, likert, text | intermediate | [link](./evaluation/wildbench-llm-eval/) |
+| 427 | WMT15 Relative Ranking of Machine Translations | Bojar et al., WMT 2015 | evaluation | ranking | intermediate | [link](./evaluation/wmt15-relative-ranking/) |
+| 428 | WNUT-2017: Emerging and Rare Entity Recognition | Derczynski et al., W-NUT@EMNLP 2017 | text | span, radio | intermediate | [link](./text/named-entity-recognition/wnut2017-emerging-entities/) |
+| 429 | Word-Colour Associations: Crowdsourcing a Colour Lexicon | Mohammad, ACL 2011 | text | radio | beginner | [link](./text/emotion-sentiment/word-colour-associations/) |
+| 430 | Words of Warmth: Social-Perception Norms via Best-Worst Scaling | Mohammad, ACL 2025 | text | radio | intermediate | [link](./text/emotion-sentiment/words-of-warmth-bws/) |
+| 431 | WorryWords: Word-Anxiety Association via Best-Worst Scaling | Mohammad, EMNLP 2024 | text | radio | intermediate | [link](./text/emotion-sentiment/worrywords-anxiety-bws/) |
+| 432 | WTW Wired Table Structure Annotation | Long et al., ICCV 2021 | image | table_grid, multiselect, radio | advanced | [link](./image/wtw-table-structure-annotation/) |
+| 433 | xBD: Building Damage Assessment from Satellite Imagery | Gupta et al., CVPR Workshops 2019 | image | radio, text | advanced | [link](./image/xbd-building-damage/) |
+| 434 | XNLI - Cross-Lingual Natural Language Inference | Conneau et al., EMNLP 2018 | text | radio, text | beginner | [link](./text/cross-lingual/xnli-cross-lingual-nli/) |
+| 435 | xView Satellite Object Detection | Lam et al., arXiv 2018 | image | multiselect, radio, text | advanced | [link](./image/aerial/xview/) |
+| 436 | YouCook2 Dataset: Cooking Video Recipe-Step Annotation | Zhou et al., AAAI 2018 | video | radio, text, video_annotation | intermediate | [link](./video/instructional/youcook2-instructional/) |
+| 437 | YouTube Highlights Detection | Sun et al., ECCV 2014 | video | radio, video_annotation | beginner | [link](./video/summarization/youtube-highlights/) |
