@@ -6,48 +6,49 @@ This category contains generic annotation templates without specific paper refer
 
 ## Subcategories
 
-### [Text Annotation](./text/)
-General-purpose text annotation templates.
+### [Comparison Tasks](./comparison/)
+Templates for preference and ranking annotations.
 
-| Design | Description | Complexity |
-|--------|-------------|------------|
-| [sentiment-analysis](./text/sentiment-analysis) | Multi-class sentiment classification | Beginner |
-| [named-entity-recognition](./text/named-entity-recognition) | Span-based NER | Intermediate |
-| [toxicity-detection](./text/toxicity-detection) | Multi-label toxicity classification | Beginner |
-| [dialogue-act-labeling](./text/dialogue-act-labeling) | Utterance communicative function | Intermediate |
-| [fact-verification](./text/fact-verification) | Claim verification | Intermediate |
-| [hate-speech-detection](./text/hate-speech-detection) | Hate speech categorization | Intermediate |
-| [sarcasm-detection](./text/sarcasm-detection) | Sarcasm detection and typing | Intermediate |
-| [reading-comprehension](./text/reading-comprehension) | QA evaluation | Intermediate |
-| [relation-extraction](./text/relation-extraction) | Entity relationship identification | Advanced |
-| [semantic-similarity](./text/semantic-similarity) | Sentence pair similarity | Beginner |
-| [intent-classification](./text/intent-classification) | Chatbot intent classification | Beginner |
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [best-worst-scaling](./comparison/best-worst-scaling) | MaxDiff annotation | Beginner |
+| [pairwise-preference](./comparison/pairwise-preference) | Side-by-side preference | Beginner |
+| [ranking-task](./comparison/ranking-task) | Drag-and-drop ranking | Beginner |
 
 ### [Image Annotation](./image/)
 General-purpose image annotation templates.
 
-| Design | Description | Complexity |
-|--------|-------------|------------|
+| Design | Description | Reference |
+|--------|-------------|-----------|
 | [image-classification](./image/image-classification) | Multi-label image classification | Beginner |
-| [object-detection](./image/object-detection) | Bounding box annotation | Intermediate |
 | [image-segmentation](./image/image-segmentation) | Polygon segmentation | Advanced |
-
-### [Comparison Tasks](./comparison/)
-Templates for preference and ranking annotations.
-
-| Design | Description | Complexity |
-|--------|-------------|------------|
-| [pairwise-preference](./comparison/pairwise-preference) | Side-by-side preference | Beginner |
-| [best-worst-scaling](./comparison/best-worst-scaling) | MaxDiff annotation | Beginner |
-| [ranking-task](./comparison/ranking-task) | Drag-and-drop ranking | Beginner |
+| [object-detection](./image/object-detection) | Bounding box annotation | Intermediate |
 
 ### [Surveys](./surveys/)
 Templates for collecting user feedback and attitudes.
 
-| Design | Description | Complexity |
-|--------|-------------|------------|
-| [survey-feedback](./surveys/survey-feedback) | User experience survey | Beginner |
+| Design | Description | Reference |
+|--------|-------------|-----------|
 | [likert-scale-survey](./surveys/likert-scale-survey) | Attitude measurement | Beginner |
+| [survey-feedback](./surveys/survey-feedback) | User experience survey | Beginner |
+
+### [Text Annotation](./text/)
+General-purpose text annotation templates.
+
+| Design | Description | Reference |
+|--------|-------------|-----------|
+| [dialogue-act-labeling](./text/dialogue-act-labeling) | Utterance communicative function | Intermediate |
+| [fact-verification](./text/fact-verification) | Claim verification | Intermediate |
+| [hate-speech-detection](./text/hate-speech-detection) | Hate speech categorization | Intermediate |
+| [intent-classification](./text/intent-classification) | Chatbot intent classification | Beginner |
+| [named-entity-recognition](./text/named-entity-recognition) | Span-based NER | Intermediate |
+| [reading-comprehension](./text/reading-comprehension) | QA evaluation | Intermediate |
+| [relation-extraction](./text/relation-extraction) | Entity relationship identification | Advanced |
+| [sarcasm-detection](./text/sarcasm-detection) | Sarcasm detection and typing | Intermediate |
+| [semantic-similarity](./text/semantic-similarity) | Sentence pair similarity | Beginner |
+| [sentiment-analysis](./text/sentiment-analysis) | Multi-class sentiment classification | Beginner |
+| [toxicity-detection](./text/toxicity-detection) | Multi-label toxicity classification | Beginner |
+| [triage-quick-annotation](./text/triage-quick-annotation) | A reusable template for quick triage annotation | N/A (Template) |
 
 ## Quick Start
 
@@ -72,4 +73,4 @@ potato start config.yaml
 
 ## Task Count
 
-**Total: 19 template designs** across 4 subcategories
+**Total: 20 template designs** across 4 subcategories
