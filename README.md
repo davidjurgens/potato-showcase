@@ -11,6 +11,8 @@
 ![SemEval tasks](https://img.shields.io/badge/SemEval_tasks-100-555?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-4c9a2a?style=flat-square)
 
+**[Browse the showcase on the web →](https://davidjurgens.github.io/potato-showcase/)**
+
 </div>
 
 These **437** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 39 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
