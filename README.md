@@ -6,7 +6,7 @@
 
 [Website](https://www.potatoannotator.com) · [Docs](https://www.potatoannotator.com/docs) · [Quick Start](https://www.potatoannotator.com/docs/getting-started/quick-start) · [Showcase](https://www.potatoannotator.com/showcase) · [Blog](https://www.potatoannotator.com/blog) · [Community](https://www.potatoannotator.com/community)
 
-![Designs](https://img.shields.io/badge/designs-437-ff6b35?style=flat-square)
+![Designs](https://img.shields.io/badge/designs-440-ff6b35?style=flat-square)
 ![Annotation types](https://img.shields.io/badge/annotation_types-39-555?style=flat-square)
 ![SemEval tasks](https://img.shields.io/badge/SemEval_tasks-100-555?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-4c9a2a?style=flat-square)
@@ -15,7 +15,7 @@
 
 </div>
 
-These **437** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 39 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
+These **440** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 42 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
 The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most are built from a real dataset or paper, so they show how a published annotation scheme turns into a working Potato setup.
 
@@ -217,32 +217,34 @@ Comprehensive coverage of SemEval shared tasks from 2013-2026. Browse by year be
 
 ## Annotation Type Coverage
 
-These designs use 39 distinct Potato annotation types. Counts below are scheme instances, so a task with three schemes appears in three rows.
+These designs use 42 distinct Potato annotation types. Counts below are scheme instances, so a task with three schemes appears in three rows.
 
 | Type | Count | Example Tasks |
 |------|-------|---------------|
-| radio | 605 | GoEmotions, SNLI, MMLU, most classification tasks |
-| text | 211 | SQuAD, Natural Questions, code review, translations |
+| radio | 603 | GoEmotions, SNLI, MMLU, most classification tasks |
+| text | 215 | SQuAD, Natural Questions, code review, translations |
 | likert | 146 | STS-B, essay scoring, MT quality, humor ratings |
 | multiselect | 136 | GoEmotions, moral foundations, persuasion techniques |
 | span | 124 | NER tasks, PICO extraction, DWIE entity linking |
-| video_annotation | 48 | Action recognition, temporal grounding, MVBench |
+| video_annotation | 49 | Action recognition, temporal grounding, MVBench |
 | pairwise | 18 | DPO, Arena Hard, WildBench, MT-Bench |
 | slider | 12 | STS-B similarity, essay scoring, word similarity |
 | span_link | 9 | Chemical-disease relations, structured sentiment |
+| image_annotation | 7 | ViTPose, RefCOCO, Camelyon pathology |
 | multirate | 7 | UltraFeedback, RewardBench, AgentRewardBench |
-| image_annotation | 6 | ViTPose, RefCOCO, Camelyon pathology |
+| number | 6 | GPQA confidence, HumanEval, NumEval, event counting |
 | select | 6 | MS MARCO, WSD, Financial PhraseBank |
-| number | 5 | GPQA confidence, HumanEval, NumEval, event counting |
 | semantic_differential | 5 | Godspeed agent perception |
 | audio_annotation | 3 | LibriSpeech, Speech Commands, CoVoST |
 | tree_annotation | 3 | PDTB, UD parsing, RumourEval thread structure |
 | bws | 2 | Chatbot Arena, Ruddit offensiveness |
+| grounding_eval | 2 | RefCOCO grounding, PixMo-Points pointing |
 | triage | 2 | CoNLL-2003 triage, triage template |
 | video | 2 | Video-ChatGPT display, TVSum |
 | agent_scorecard | 1 | MultiAgentBench collaboration scorecard |
 | conjoint | 1 | Conjoint analysis of candidate/immigrant profiles |
 | coreference | 1 | OntoNotes coreference resolution |
+| episode_annotation | 1 | LeRobot robot episode review |
 | error_span | 1 | MQM machine translation error annotation |
 | event_annotation | 1 | BioNLP gene regulation events |
 | failure_attribution | 1 | Who&When multi-agent failure attribution |
@@ -254,6 +256,7 @@ These designs use 39 distinct Potato annotation types. Counts below are scheme i
 | ranking | 1 | WMT15 relative ranking of translations |
 | rubric_eval | 1 | FLASK skill-based rubric evaluation |
 | soft_label | 1 | ChaosNLI label distributions |
+| spatial_annotation | 1 | KITTI 3D lidar cuboids |
 | speech_transcript | 1 | PodcastFillers disfluency tagging |
 | table_grid | 1 | WTW wired table structure annotation |
 | temporal_grounding | 1 | QVHighlights moment grounding and saliency |
