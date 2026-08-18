@@ -1,6 +1,6 @@
 # Image Annotation Tasks
 
-This category contains annotation task designs for computer vision research, including image classification, object detection, semantic segmentation, and domain-specific applications.
+This category contains annotation task designs for computer vision research, including image classification, object detection, semantic segmentation, and medical and remote-sensing imagery.
 
 > Run these designs in [Potato](https://www.potatoannotator.com). See the [image annotation documentation](https://www.potatoannotator.com/docs/annotation-types/image-annotation) to configure bounding boxes, keypoints, and classification.
 
@@ -25,7 +25,7 @@ This category contains annotation task designs for computer vision research, inc
 | [pascal-voc](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/pascal-voc) | Multi-label object classification following the PASCAL Visual Object Classes challenge | Everingham et al., IJCV 2010 |
 | [places365](https://github.com/davidjurgens/potato-showcase/tree/main/image/classification/places365) | Scene recognition and classification following the Places365 dataset | Zhou et al., IEEE TPAMI 2017 |
 
-### [Doclaynet Document Layout](https://github.com/davidjurgens/potato-showcase/tree/main/image/doclaynet-document-layout)
+### [DocLayNet Document Layout Analysis](https://github.com/davidjurgens/potato-showcase/tree/main/image/doclaynet-document-layout)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -38,7 +38,7 @@ This category contains annotation task designs for computer vision research, inc
 | [bdd100k](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving/bdd100k) | BDD100K is a 100,000-video driving dataset from UC Berkeley spanning detection, segmentation, lane… | Yu et al., CVPR 2020 |
 | [kitti](https://github.com/davidjurgens/potato-showcase/tree/main/image/driving/kitti) | Autonomous driving benchmark for object detection | Geiger et al., CVPR 2012 |
 
-### [Flair Aerial Land Use](https://github.com/davidjurgens/potato-showcase/tree/main/image/flair-aerial-land-use)
+### [FLAIR: French Land Cover from Aerospace Imagery](https://github.com/davidjurgens/potato-showcase/tree/main/image/flair-aerial-land-use)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -64,13 +64,13 @@ This category contains annotation task designs for computer vision research, inc
 | [chexpert](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical/chexpert) | Multi-label classification of chest radiographs for 14 observations | Irvin et al., AAAI 2019 |
 | [mimic-cxr](https://github.com/davidjurgens/potato-showcase/tree/main/image/medical/mimic-cxr) | Large-scale chest radiograph classification based on MIMIC-CXR. Multi-label classification with 14… | Johnson et al., Scientific Data 2019 |
 
-### [Omnidocbench Document Parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/omnidocbench-document-parsing)
+### [OmniDocBench Comprehensive Document Parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/omnidocbench-document-parsing)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [omnidocbench-document-parsing](https://github.com/davidjurgens/potato-showcase/tree/main/image/omnidocbench-document-parsing) | Comprehensive document parsing annotation covering layout detection, text recognition, table structure,… | Ouyang et al., CVPR 2025 |
 
-### [Sa1B Segment Anything](https://github.com/davidjurgens/potato-showcase/tree/main/image/sa1b-segment-anything)
+### [Segment Anything (SA-1B) Interactive Segmentation](https://github.com/davidjurgens/potato-showcase/tree/main/image/sa1b-segment-anything)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -101,20 +101,20 @@ This category contains annotation task designs for computer vision research, inc
 |--------|-------------|-----------|
 | [refcoco-expression](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-grounding/refcoco-expression) | Visual grounding task where annotators draw bounding boxes around objects referred to by natural language… | Yu et al., ECCV 2016 |
 
-### [Visual Qa](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa)
+### [Visual QA](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [textvqa-reading-in-images](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa/textvqa-reading-in-images) | TextVQA is a visual question answering dataset where reading scene text in the image is needed to answer | Singh et al., CVPR 2019 |
 | [vqav2-visual-question-answering](https://github.com/davidjurgens/potato-showcase/tree/main/image/visual-qa/vqav2-visual-question-answering) | VQA v2.0 is a balanced visual question answering benchmark of open-ended questions over COCO images, with… | Goyal et al., CVPR 2017 |
 
-### [Wtw Table Structure Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation)
+### [WTW Wired Table Structure Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [wtw-table-structure-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/image/wtw-table-structure-annotation) | Cell-grid structure annotation for photographed and scanned wired tables, based on the WTW (Wired Table in… | Long et al., ICCV 2021 |
 
-### [Xbd Building Damage](https://github.com/davidjurgens/potato-showcase/tree/main/image/xbd-building-damage)
+### [xBD: Building Damage Assessment from Satellite Imagery](https://github.com/davidjurgens/potato-showcase/tree/main/image/xbd-building-damage)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|

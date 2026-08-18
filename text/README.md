@@ -1,22 +1,22 @@
 # Text Annotation Tasks
 
-This category contains annotation task designs for text-based NLP research, including sentiment analysis, named entity recognition, information extraction, and more.
+This category contains annotation task designs for text-based NLP research, including sentiment analysis, named entity recognition, and information extraction.
 
 > Run these designs in [Potato](https://www.potatoannotator.com), the open-source annotation tool. See the docs for [radio & multiselect schemes](https://www.potatoannotator.com/docs/annotation-types/radio-multiselect) and [span annotation](https://www.potatoannotator.com/docs/annotation-types/span-annotation) to configure text tasks.
 
 ## Subcategories
 
-### [Argumentation Stance](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance)
+### [Argumentation & Stance](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
-| [argument-quality](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/argument-quality) | Multi-dimensional argument quality annotation based on the Wachsmuth et al | Wachsmuth et al., EACL 2017 |
+| [argument-quality](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/argument-quality) | Multi-dimensional argument quality annotation based on the Wachsmuth et al. (2017) taxonomy | Wachsmuth et al., EACL 2017 |
 | [argument-reasoning](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/argument-reasoning) | Identify implicit warrants in arguments | Habernal et al., NAACL 2018 |
 | [claim-perspectives](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/claim-perspectives) | Annotate diverse perspectives on claims with stance and evidence | Chen et al., NAACL 2019 |
 | [rumor-stance](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/rumor-stance) | Classify stance toward rumors in social media threads | Zubiaga et al., COLING 2016 |
 | [stance-detection](https://github.com/davidjurgens/potato-showcase/tree/main/text/argumentation-stance/stance-detection) | Detect the stance of a text toward a given topic | Allaway & McKeown, EMNLP 2020 |
 
-### [Bias Toxicity](https://github.com/davidjurgens/potato-showcase/tree/main/text/bias-toxicity)
+### [Bias & Toxicity](https://github.com/davidjurgens/potato-showcase/tree/main/text/bias-toxicity)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -32,7 +32,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [codexglue-defect-detection](https://github.com/davidjurgens/potato-showcase/tree/main/text/code-annotation/codexglue-defect-detection) | Binary defect detection and vulnerability localization for C/C++ code based on the CodeXGLUE benchmark | Lu et al., NeurIPS 2021 |
 | [humaneval-code-generation](https://github.com/davidjurgens/potato-showcase/tree/main/text/code-annotation/humaneval-code-generation) | HumanEval is OpenAI's set of 164 hand-written Python problems that test whether generated code runs and… | Chen et al., arXiv 2021 |
 
-### [Commonsense Ethics](https://github.com/davidjurgens/potato-showcase/tree/main/text/commonsense-ethics)
+### [Commonsense & Ethics](https://github.com/davidjurgens/potato-showcase/tree/main/text/commonsense-ethics)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -48,7 +48,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [conjoint-candidate-profiles](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/conjoint-candidate-profiles) | Choice-based conjoint annotation modeled on the immigrant admission experiment in Hainmueller, Hopkins,… | Hainmueller et al., Political Analysis 2014 |
-| [human-values-arguments](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/human-values-arguments) | Identification of human values in arguments based on Kiesel et al | Kiesel et al., ACL 2022 |
+| [human-values-arguments](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/human-values-arguments) | Identification of human values in arguments, following Kiesel et al. (ACL 2022) | Kiesel et al., ACL 2022 |
 | [media-frames-analysis](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/media-frames-analysis) | The Media Frames Corpus labels U.S. news articles on immigration, smoking, and same-sex marriage with 15… | Card et al., ACL 2015 |
 | [moral-foundations-tweets](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/moral-foundations-tweets) | Classification of moral foundations in social media discourse, based on Moral Foundations Theory (Johnson… | Johnson & Goldwasser, ACL 2018 |
 | [offenseval-target-id](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/offenseval-target-id) | Multi-step offensive language annotation combining offensiveness detection, target type classification,… | Zampieri et al., NAACL 2019 (OLID) |
@@ -67,7 +67,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [maven-ere-event-coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference/maven-ere-event-coreference) | Unified event relation extraction covering coreference, temporal, causal, and subevent relations | Wang et al., EMNLP 2022 |
 | [ontonotes-coreference-resolution](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference/ontonotes-coreference-resolution) | Coreference resolution annotation based on the OntoNotes 5.0 corpus | Pradhan et al., CoNLL 2012 |
 
-### [Cross Lingual](https://github.com/davidjurgens/potato-showcase/tree/main/text/cross-lingual)
+### [Cross-lingual](https://github.com/davidjurgens/potato-showcase/tree/main/text/cross-lingual)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -100,7 +100,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [pdtb-discourse-relations-tree](https://github.com/davidjurgens/potato-showcase/tree/main/text/discourse/pdtb-discourse-relations-tree) | Discourse relation annotation with tree structure, based on the Penn Discourse TreeBank 2.0 | Prasad et al., LREC 2008 |
 | [timeline-temporal-relations](https://github.com/davidjurgens/potato-showcase/tree/main/text/discourse/timeline-temporal-relations) | Exhaustive temporal relation annotation between events in text | Alsayyahi & Batista-Navarro, EMNLP 2023 |
 
-### [Domain Specific](https://github.com/davidjurgens/potato-showcase/tree/main/text/domain-specific)
+### [Domain-specific](https://github.com/davidjurgens/potato-showcase/tree/main/text/domain-specific)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -121,9 +121,9 @@ This category contains annotation task designs for text-based NLP research, incl
 | [automated-essay-scoring](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/automated-essay-scoring) | Holistic and analytic scoring of student essays using a deep-neural approach to automated essay scoring… | Uto, Behaviormetrika 2021 |
 | [jfleg-fluency-rewriting](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/jfleg-fluency-rewriting) | Holistic fluency rewriting of learner-English sentences based on the JFLEG corpus (Napoles, Sakaguchi, and… | Napoles et al., EACL 2017 |
 | [mathdial-tutoring-dialogue](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/mathdial-tutoring-dialogue) | MathDial is a dataset of 2,861 one-to-one math tutoring dialogues grounded in GSM8K word problems,… | Macina et al., Findings of EMNLP 2023 |
-| [student-essay-discourse](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/student-essay-discourse) | Discourse element annotation of student essays based on Song et al | Song et al., EMNLP 2020 |
+| [student-essay-discourse](https://github.com/davidjurgens/potato-showcase/tree/main/text/education/student-essay-discourse) | Discourse element annotation of student essays, following Song et al. (EMNLP 2020) | Song et al., EMNLP 2020 |
 
-### [Emotion Sentiment](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment)
+### [Emotion & Sentiment](https://github.com/davidjurgens/potato-showcase/tree/main/text/emotion-sentiment)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -182,7 +182,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [finbert-headline-sentiment](https://github.com/davidjurgens/potato-showcase/tree/main/text/financial/finbert-headline-sentiment) | Classify sentiment of financial news headlines as positive, negative, or neutral, based on the FinBERT… | Araci, arXiv 2019 |
 | [flare-financial-ner](https://github.com/davidjurgens/potato-showcase/tree/main/text/financial/flare-financial-ner) | Named entity recognition and document classification for financial texts, based on the FLARE benchmark… | Xie et al., PIXIU (NeurIPS 2023 Datasets & Benchmarks) |
 
-### [Hate Speech Moderation](https://github.com/davidjurgens/potato-showcase/tree/main/text/hate-speech-moderation)
+### [Hate Speech & Moderation](https://github.com/davidjurgens/potato-showcase/tree/main/text/hate-speech-moderation)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|
@@ -241,7 +241,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [sigmorphon-interlinear-glossing](https://github.com/davidjurgens/potato-showcase/tree/main/text/parsing/sigmorphon-interlinear-glossing) | Morpheme-level interlinear glossing, the annotation design behind the SIGMORPHON 2023 Shared Task on… | Ginn et al., SIGMORPHON 2023 |
 | [ud-dependency-parsing](https://github.com/davidjurgens/potato-showcase/tree/main/text/parsing/ud-dependency-parsing) | Dependency parsing and POS tagging annotation based on Universal Dependencies v2 | Nivre et al., LREC 2020 |
 
-### [Political Media](https://github.com/davidjurgens/potato-showcase/tree/main/text/political-media)
+### [Political & Media](https://github.com/davidjurgens/potato-showcase/tree/main/text/political-media)
 
 | Design | Description | Reference |
 |--------|-------------|-----------|

@@ -1,6 +1,6 @@
 # Template Designs
 
-This category contains generic annotation templates without specific paper references. These templates provide starting points for common annotation patterns that can be customized for your specific needs.
+This category contains generic annotation templates without specific paper references. Copy one and change it for your task.
 
 > Copy any template and run it in [Potato](https://www.potatoannotator.com). New to the tool? Start with the [quick-start guide](https://www.potatoannotator.com/docs/getting-started/quick-start).
 
@@ -62,10 +62,10 @@ potato start config.yaml
 
 ## Customization Tips
 
-1. **Modify labels**: Update the label list in `config.yaml` for your categories
-2. **Add instructions**: Expand `annotation_instructions` with your guidelines
-3. **Adjust data format**: Update `sample-data.json` to match your data structure
-4. **Configure annotators**: Set `instances_per_annotator` and `annotation_per_instance`
+1. Replace the label list in `config.yaml` with your categories
+2. Write your own guidelines into `annotation_instructions`
+3. Match `sample-data.json` to the shape of your own data
+4. Set `instances_per_annotator` and `annotation_per_instance` for your annotator pool
 
 ## Task Count
 

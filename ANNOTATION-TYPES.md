@@ -6,7 +6,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## radio
 
-**Description:** Single-choice selection from a list of mutually exclusive labels. The most common annotation type, used for classification tasks where exactly one option applies.
+**Description:** Single-choice selection from a list of mutually exclusive labels, for classification tasks where exactly one option applies.
 
 **Required fields:**
 - `labels`: Non-empty list of label strings
@@ -78,7 +78,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## span
 
-**Description:** Text span annotation where annotators highlight words or character ranges and assign labels. The core annotation type for NER, keyphrase extraction, and any task requiring in-text markup.
+**Description:** Text span annotation where annotators highlight words or character ranges and assign labels. Used for NER, keyphrase extraction, and other in-text markup.
 
 **Required fields:**
 - `labels`: Non-empty list of span label strings
@@ -134,7 +134,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## multirate
 
-**Description:** Rate multiple items on the same scale simultaneously. Displays a matrix where rows are items (e.g., model responses, attributes) and columns are rating levels, enabling efficient batch rating.
+**Description:** Rate multiple items on the same scale simultaneously. Displays a matrix where rows are items (e.g., model responses, attributes) and columns are rating levels.
 
 **Required fields:**
 - `labels`: List of rating level strings
@@ -161,7 +161,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## pairwise
 
-**Description:** Side-by-side comparison of two items where annotators judge which is better, or rate relative quality. The standard annotation type for preference learning and RLHF data collection.
+**Description:** Side-by-side comparison of two items where annotators judge which is better, or rate relative quality. Used for preference learning and RLHF data collection.
 
 **Required fields:**
 - Optional `labels` (list of >= 2 labels for named choices)
@@ -235,7 +235,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## video (display only)
 
-**Description:** Embeds a video player for display purposes without collecting temporal annotations. Used when annotators need to watch video content before responding with other annotation types (radio, text, etc.).
+**Description:** Embeds a video player without collecting temporal annotations. Used when annotators need to watch video content before responding with other annotation types (radio, text, etc.).
 
 **Required fields:**
 - No extra required fields beyond standard scheme fields
@@ -248,7 +248,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## coreference
 
-**Description:** Coreference chain annotation where annotators link mentions (pronouns, noun phrases, names) that refer to the same real-world entity into clusters. Specialized for entity and event coreference resolution.
+**Description:** Coreference chain annotation where annotators link mentions (pronouns, noun phrases, names) that refer to the same real-world entity into clusters. Used for entity and event coreference resolution.
 
 **Required fields:**
 - No extra required fields beyond standard scheme fields
@@ -274,7 +274,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## triage
 
-**Description:** Quick pre-annotation filtering step where annotators flag whether an item needs detailed annotation. Designed to speed up annotation pipelines by letting annotators skip irrelevant items before applying more expensive annotation types.
+**Description:** Quick pre-annotation filtering step where annotators flag whether an item needs detailed annotation. Speeds up a pipeline by letting annotators skip irrelevant items before the more expensive schemes run.
 
 **Required fields:**
 - No extra required fields beyond standard scheme fields
@@ -287,7 +287,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## event_annotation
 
-**Description:** Structured event extraction annotation where annotators identify event triggers, arguments, and roles within text. Tailored for tasks that require marking complex event structures with typed participants.
+**Description:** Structured event extraction annotation where annotators identify event triggers, arguments, and roles within text. Used for tasks that mark event structures with typed participants.
 
 **Required fields:**
 - No extra required fields beyond standard scheme fields
@@ -299,7 +299,7 @@ A guide to the 39 annotation types used in this showcase, with example configura
 
 ## tiered_annotation
 
-**Description:** Multi-level hierarchical annotation where annotators assign labels at multiple tiers (e.g., topic then subtopic, coarse then fine category). Each tier can have its own label set, enabling structured taxonomic annotation.
+**Description:** Multi-level hierarchical annotation where annotators assign labels at multiple tiers (e.g., topic then subtopic, coarse then fine category). Each tier can have its own label set.
 
 **Required fields:**
 - `tiers`: List of tier definitions (each a dict with at least a `name` key)

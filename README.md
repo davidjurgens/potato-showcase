@@ -17,9 +17,9 @@
 
 These **437** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 39 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
-The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most of these are built from a real dataset or paper, so each one shows how a published annotation scheme actually turns into a working Potato setup.
+The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most are built from a real dataset or paper, so they show how a published annotation scheme turns into a working Potato setup.
 
-The collection keeps growing. We add tasks as new datasets and SemEval tracks come out, and as Potato itself gains annotation types. The newest batch covers agent evaluation (`process_reward`, `gui_trajectory`, `tool_call_review`, `failure_attribution`, `agent_scorecard`) plus thirteen other new schemes, among them `ranking`, `error_span`, `text_edit`, `soft_label`, and `rubric_eval`. It's maintained by the Potato development team alongside the tool, so the examples stay in step with what Potato can currently do. If a task you need isn't here, [open a pull request](#contributing) or [submit a design](https://www.potatoannotator.com/showcase/submit).
+We add tasks as new datasets and SemEval tracks come out, and as Potato itself gains annotation types. The newest batch covers agent evaluation (`process_reward`, `gui_trajectory`, `tool_call_review`, `failure_attribution`, `agent_scorecard`) plus thirteen other new schemes, among them `ranking`, `error_span`, `text_edit`, `soft_label`, and `rubric_eval`. It's maintained by the Potato development team alongside the tool, so the examples stay in step with what Potato can currently do. If a task you need isn't here, [open a pull request](#contributing) or [submit a design](https://www.potatoannotator.com/showcase/submit).
 
 If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com/docs/getting-started/quick-start) and [documentation](https://www.potatoannotator.com/docs) cover the basics, and you can try many of these designs live in the [Potato showcase](https://www.potatoannotator.com/showcase).
 
@@ -263,30 +263,6 @@ These designs use 39 distinct Potato annotation types. Counts below are scheme i
 
 See [ANNOTATION-TYPES.md](./ANNOTATION-TYPES.md) for a per-type reference with required fields and example configurations.
 
-------|-------|---------------|
-| radio | 483 | GoEmotions, SNLI, MMLU, most classification tasks |
-| text | 160 | SQuAD, Natural Questions, code review, translations |
-| likert | 128 | STS-B, essay scoring, MT quality, humor ratings |
-| multiselect | 126 | GoEmotions, moral foundations, persuasion techniques |
-| span | 110 | NER tasks, PICO extraction, SQuAD answer spans |
-| video_annotation | 46 | Action recognition, temporal grounding, MVBench |
-| pairwise | 16 | DPO, Arena Hard, WildBench, MT-Bench |
-| slider | 8 | STS-B similarity, essay scoring, word similarity |
-| image_annotation | 6 | ViTPose, RefCOCO, Camelyon pathology |
-| select | 6 | MS MARCO, WSD, Financial PhraseBank |
-| number | 5 | GPQA confidence, HumanEval, NumEval, event counting |
-| multirate | 3 | UltraFeedback, RewardBench, SemEval sentiment |
-| audio_annotation | 3 | LibriSpeech, Speech Commands, CoVoST |
-| tree_annotation | 3 | PDTB, UD parsing, RumourEval thread structure |
-| video | 2 | Video-ChatGPT display |
-| triage | 2 | CoNLL-2003 triage, triage template |
-| tiered_annotation | 1 | MMLU-Pro tiered evaluation |
-| bws | 1 | Chatbot Arena best-worst scaling |
-| pure_display | 1 | HELM model card display |
-| event_annotation | 1 | BioNLP gene regulation events |
-| coreference | 1 | OntoNotes coreference resolution |
-| span_link | 9 | Chemical-disease relations, structured sentiment |
-
 ---
 
 ## Structure
@@ -311,13 +287,7 @@ cd potato-showcase/text/emotion-sentiment/goemotions
 potato start config.yaml
 ```
 
-## Usage
-
-1. Clone this repository
-2. Browse categories to find a relevant task
-3. Copy the task folder to your project
-4. Customize the `config.yaml` for your needs
-5. Run with: `potato start config.yaml`
+To build your own task from one of these, copy the folder into your project, edit `config.yaml` for your labels and instructions, and run `potato start config.yaml`.
 
 ## Contributing
 

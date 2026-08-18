@@ -21,7 +21,7 @@ This category contains annotation task designs for reinforcement learning from h
 | [redteam-adversarial-eval](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/redteam-adversarial-eval) | Evaluate AI responses to adversarial prompts | Ganguli et al., 2022 |
 | [rewardbench-reward-model-eval](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/rewardbench-reward-model-eval) | Reward model evaluation through pairwise preference annotation | Lambert et al., Findings NAACL 2025 |
 | [saferlhf-dual-preference](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/saferlhf-dual-preference) | Safety-aware preference annotation with separate judgments for helpfulness and harmlessness | Dai et al., ICLR 2024 |
-| [spin-self-play](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/spin-self-play) | Human vs | Chen et al., ICML 2024 |
+| [spin-self-play](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/spin-self-play) | Human vs. AI response discrimination for Self-Play Fine-Tuning, plus fluency ratings for both responses | Chen et al., ICML 2024 |
 | [summary-preference-comparison](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/summary-preference-comparison) | Pairwise comparison of text summaries with axis-based quality ratings | Stiennon et al., NeurIPS 2020 |
 | [ultrafeedback-multiaspect](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/ultrafeedback-multiaspect) | UltraFeedback is a 64k-prompt preference dataset where GPT-4 rates model responses on four aspects | Cui et al., ICML 2024 |
 | [ultrafeedback-rubric-evaluation](https://github.com/davidjurgens/potato-showcase/tree/main/preference-learning/ultrafeedback-rubric-evaluation) | Fine-grained response evaluation across 4 dimensions with written rationales | Cui et al., ICML 2024 |
@@ -59,7 +59,7 @@ Identify harmful content and classify by harm type. Used in:
 - beavertails-safety-preference
 - redteam-adversarial-eval
 
-## The Three H's Framework
+## The Three H's
 
 Many RLHF tasks evaluate responses on:
 

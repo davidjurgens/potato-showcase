@@ -40,12 +40,7 @@ potato start config.yaml
 
 ## Annotation Features
 
-Audio annotation tasks in Potato support:
-
-- **Waveform visualization**: See audio amplitude over time
-- **Playback controls**: Play, pause, seek, and adjust speed
-- **Segment marking**: Define temporal boundaries for speech turns
-- **Multi-track support**: Handle multiple audio channels
+Potato draws the waveform so annotators can see amplitude over time, and gives them play, pause, seek, and speed controls. Annotators mark start and end times for speech turns, and the player handles files with more than one audio channel.
 
 ## Task Count
 

@@ -4,9 +4,7 @@ Simple 3-way sentiment classification with radio buttons.
 
 ## Features
 
-- **3-way classification**: Positive, Negative, Neutral
-- **Keyboard shortcuts**: Quick annotation with 1, 2, 3 keys
-- **Tooltips**: Hover descriptions for each label
+Three labels (positive, negative, neutral), each with a hover tooltip and bound to keys 1, 2, and 3.
 
 ## Quick Start
 
@@ -16,6 +14,4 @@ potato start config.yaml
 
 ## Use Cases
 
-- Social media sentiment analysis
-- Product review classification
-- Customer feedback categorization
+Social media posts, product reviews, and customer feedback.
