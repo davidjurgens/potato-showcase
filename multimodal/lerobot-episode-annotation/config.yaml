@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=https://potatoannotator.readthedocs.io/en/latest/schemas/potato-config.schema.json
+#
+# LeRobot — Robot Episode Annotation
+#
+# Paper:   Cadene et al., "LeRobot: An Open-Source Library for End-to-End
+#          Robot Learning", 2026 — https://arxiv.org/abs/2602.22818
+# Library: https://github.com/huggingface/lerobot
+#
+# A LeRobot episode is a teleoperated demonstration: one or more camera streams
+# recorded alongside the arm's own signals, sampled per frame. This config puts
+# the streams and the signals on one timeline and asks a human what the robot
+# was doing, when, and whether it worked.
+#
+# Reproduction notes
+# ------------------
+# `source_field` names the item field holding the episode. Potato reads
+# LeRobot v2 (pyarrow), RoboMimic and ALOHA HDF5 (h5py), and RLDS/TFDS
+# (tensorflow_datasets) through the same field, plus its own manifest format
+# which needs no extra dependency.
+#
+# Three layers are collected here. They cost very different amounts of
+# annotator time -- phases are seconds per episode, a dense reward curve is
+# minutes -- so most projects want a subset rather than all of them.
+#
+# The phase taxonomy below is for manipulation. Navigation or locomotion needs
+# an entirely different set, which is why it is a config value and not a fixed
+# list.
+#
+# Three outcomes, not two. "Partial" is the modal result in real robot data and
+# collapsing it into success or failure destroys the signal that makes the
+# dataset worth annotating.
+#
+# The series lanes are downsampled with a min/max-preserving reduction, so a
+# one-frame force spike survives the trip to a 300-pixel-wide lane instead of
+# being averaged away. That matters: a failed grasp is usually visible in the
+# gripper and force lanes well before it is obvious in the video.
+#
+# Two annotators per episode. Potato reports phase-boundary agreement as
+# temporal IoU, outcome agreement as alpha, and reward-curve agreement as ICC
+# plus Pearson -- each with coverage stated alongside, because a correlation
+# computed over 5% of a timeline says nothing about the other 95%.
+
+port: 8000
+annotation_task_name: "LeRobot - Robot Episode Annotation"
+task_dir: "."
+media_directory: media
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "instruction"
+
+user_config:
+  allow_all_users: true
+  users: []
+
+num_annotators_per_item:
+  default: 2
+
+annotation_schemes:
+  - annotation_type: episode_annotation
+    name: episode_review
+    description: "Mark the phases, judge the outcome, and draw the progress."
+    source_field: episode
+    layers:
+      - phases
+      - outcome
+      - reward
+    phases:
+      - name: reach
+        color: "#4ECDC4"
+        key_value: "1"
+      - name: grasp
+        color: "#FFD93D"
+        key_value: "2"
+      - name: transport
+        color: "#6C8AE4"
+        key_value: "3"
+      - name: place
+        color: "#95E1A3"
+        key_value: "4"
+      - name: retract
+        color: "#C9A0DC"
+        key_value: "5"
+    outcomes:
+      - success
+      - partial
+      - failure
+    failure_causes:
+      - missed grasp
+      - object slipped
+      - collision
+      - wrong object
+      - wrong placement
+      - timeout / stalled
+    reward_range: [0.0, 1.0]
+    series_shown:
+      - gripper
+      - wrist_force
+      - shoulder_lift
+      - elbow
+
+  - annotation_type: text
+    name: relabelled_instruction
+    description: "Write the instruction this episode actually demonstrates, if it differs from the one given."
+    placeholder: "e.g. put the red block in the left bin"
+
+  - annotation_type: text
+    name: notes
+    description: "Anything the phases and the outcome do not capture? (optional)"
+
+annotation_instructions: |
+  Each item is one robot demonstration: the camera views above, the arm's own
+  signals as lanes below, and one timeline running through all of them.
+
+  1. Segment the episode into phases. Drag a boundary where the robot's
+     sub-goal changes, not where the video happens to cut. Number keys 1-5
+     select phases directly.
+  2. Judge the outcome. Use "partial" when the task was advanced but not
+     completed; it is a real category, not a hedge.
+  3. If it failed or only partly succeeded, pick the cause.
+  4. Draw the dense progress reward: how close to done was the robot at each
+     point? This is the slowest layer, so it may be disabled for your project.
+
+  Watch the lanes, not only the video. A missed grasp is usually visible in the
+  gripper and wrist force traces several frames before it becomes obvious on
+  camera.
+
+  If the episode demonstrates something other than the instruction it was
+  recorded for, write what it actually shows. Hindsight relabelling turns a
+  failed demonstration into a usable one for a different instruction.

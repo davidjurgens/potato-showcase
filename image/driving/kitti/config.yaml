@@ -1,83 +1,141 @@
-# KITTI Road Object Detection Configuration
-# Based on Geiger et al., CVPR 2012
+# yaml-language-server: $schema=https://potatoannotator.readthedocs.io/en/latest/schemas/potato-config.schema.json
+#
+# KITTI — 3D Object Annotation on Lidar Point Clouds
+#
+# Paper:   Geiger, Lenz & Urtasun, "Are we ready for Autonomous Driving?
+#          The KITTI Vision Benchmark Suite", CVPR 2012
+#          https://www.cvlibs.net/publications/Geiger2012CVPR.pdf
+# Dataset: https://www.cvlibs.net/datasets/kitti/
+#
+# KITTI's object benchmark labels each traffic participant with an oriented 3D
+# box in the rectified reference camera frame, plus a 2D box in the image, a
+# truncation fraction and an occlusion code. Each `label_2/*.txt` line is
+# fifteen fields:
+#
+#   type truncated occluded alpha  x1 y1 x2 y2  h w l  x y z  ry
+#
+# This config annotates the lidar scan directly with `spatial_annotation`,
+# which is what the label format actually describes. Calibration is supplied
+# per item, so every cuboid drawn in 3D projects into the camera images and can
+# be checked in 2D without leaving the task.
+#
+# Reproduction notes
+# ------------------
+# Occlusion codes are the devkit's: 0 fully visible, 1 partly occluded,
+# 2 largely occluded, 3 unknown.
+#
+# `DontCare` is deliberately absent from the label list. KITTI uses it to mark
+# regions excluded from evaluation, usually distant or ambiguous objects, and
+# it is not an object class. Potato imports it under its own label so the
+# exclusion survives a round trip, but an annotator should not be drawing one.
+#
+# Potato stores cuboid rotation as a quaternion. KITTI stores a single yaw
+# (`ry`), so exporting back to KITTI discards pitch and roll and reports how
+# much orientation it had to drop. Importing from KITTI is lossless, including
+# the camera-to-lidar mounting tilt that a yaw-only field would silently
+# discard.
+#
+# Two annotators per scene, so agreement over the cuboids is defined. Potato
+# scores 3D box agreement with exact rotated 3D IoU, which is correct under
+# arbitrary rotation rather than only for axis-aligned boxes.
 
-annotation_task_name: "KITTI Object Detection"
+port: 8000
+annotation_task_name: "KITTI - 3D Object Annotation"
 task_dir: "."
+media_directory: media
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 data_files:
-  - "sample-data.json"
+  - sample-data.json
 
 item_properties:
   id_key: "id"
-  text_key: "image_url"
-  context_key: "context"
+  text_key: "point_cloud"
 
 user_config:
   allow_all_users: true
+  users: []
+
+num_annotators_per_item:
+  default: 2
 
 annotation_schemes:
-  - annotation_type: "multiselect"
-    name: "object_types"
-    description: "Select all object types visible"
+  - annotation_type: spatial_annotation
+    name: objects
+    description: "Put an oriented 3D box around every traffic participant."
+    source_field: point_cloud
+    tools:
+      - cuboid_3d
     labels:
-      - name: "car"
-        tooltip: "Cars, vans"
-      - name: "van"
-        tooltip: "Vans, minivans"
-      - name: "truck"
-        tooltip: "Trucks"
-      - name: "pedestrian"
-        tooltip: "People walking"
-      - name: "person_sitting"
-        tooltip: "Person sitting"
-      - name: "cyclist"
-        tooltip: "Person on bicycle"
-      - name: "tram"
-        tooltip: "Trams, streetcars"
-      - name: "misc"
-        tooltip: "Other objects"
-      - name: "dontcare"
-        tooltip: "Regions to ignore"
+      - name: Car
+        color: "#FF6B6B"
+        key_value: "1"
+      - name: Van
+        color: "#F79256"
+        key_value: "2"
+      - name: Truck
+        color: "#4ECDC4"
+        key_value: "3"
+      - name: Pedestrian
+        color: "#FFD93D"
+        key_value: "4"
+      - name: Person_sitting
+        color: "#C9A0DC"
+        key_value: "5"
+      - name: Cyclist
+        color: "#6C8AE4"
+        key_value: "6"
+      - name: Tram
+        color: "#95E1A3"
+        key_value: "7"
+      - name: Misc
+        color: "#9AA0A6"
+        key_value: "8"
+    # Projects each 3D box into every calibrated camera, so orientation can be
+    # verified against the image while editing in 3D.
+    calibration_field: calibration
+    color_mode: height
+    point_size: 2.0
+    lod: true
+    max_points: 400000
+    slab_thickness: 2.0
+    default_box_height: 1.7
+    fit_box_height: true
 
-  - annotation_type: "radio"
-    name: "occlusion_level"
-    description: "Occlusion level of primary object"
+  - annotation_type: radio
+    name: scene_occlusion
+    description: "Overall, how occluded are the objects in this scene?"
     labels:
-      - name: "fully_visible"
-        tooltip: "0: Fully visible"
-      - name: "partly_occluded"
-        tooltip: "1: Partly occluded"
-      - name: "largely_occluded"
-        tooltip: "2: Largely occluded"
-      - name: "unknown"
-        tooltip: "3: Unknown"
+      - name: fully_visible
+        tooltip: "KITTI occlusion code 0"
+      - name: partly_occluded
+        tooltip: "KITTI occlusion code 1"
+      - name: largely_occluded
+        tooltip: "KITTI occlusion code 2"
+      - name: unknown
+        tooltip: "KITTI occlusion code 3"
+    label_requirement:
+      required: true
 
-  - annotation_type: "radio"
-    name: "truncation"
-    description: "Truncation level (object leaving image)"
-    labels:
-      - name: "not_truncated"
-        tooltip: "Object fully within image"
-      - name: "truncated"
-        tooltip: "Object partially outside image"
+  - annotation_type: text
+    name: notes
+    description: "Anything unclear about this scene? (optional)"
 
-  - annotation_type: "radio"
-    name: "difficulty"
-    description: "Detection difficulty"
-    labels:
-      - name: "easy"
-        tooltip: "Min height 40px, fully visible"
-      - name: "moderate"
-        tooltip: "Min height 25px, partly occluded"
-      - name: "hard"
-        tooltip: "Min height 25px, difficult to see"
+annotation_instructions: |
+  Each item is one lidar scan from the KITTI recording platform, with the
+  synchronized camera images beside it.
 
-  - annotation_type: "text"
-    name: "bbox_coordinates"
-    description: "Bounding box: left, top, right, bottom (pixels)"
+  For every traffic participant in the scan:
+  1. Choose its class (Car, Van, Truck, Pedestrian, Person_sitting, Cyclist,
+     Tram or Misc). Number keys 1-8 select classes directly.
+  2. Draw an oriented 3D box around it. Fit the box to the object's own axes
+     rather than to the world axes: heading matters.
+  3. Check the box in the camera panels. A box that looks right in the bird's
+     eye view and wrong in the image is usually rotated.
 
-interface_config:
-  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
+  Use the orthographic slab panels for axis-aligned adjustment when a box is
+  close to correct but not tight.
 
-output_annotation_format: "json"
-output_annotation_dir: "annotations"
+  Do not draw boxes for regions KITTI would mark `DontCare`. That marker exists
+  to exclude distant or ambiguous objects from evaluation and is not a class.

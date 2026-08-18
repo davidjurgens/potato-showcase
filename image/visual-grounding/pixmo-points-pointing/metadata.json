@@ -1,0 +1,75 @@
+{
+  "title": "PixMo-Points - Pointing Annotation for Vision-Language Models",
+  "description": "Collect the pointing supervision behind Molmo: place a point on what each referring expression refers to. Scored as a point-in-region hit rate, because a point has no area and every IoU against one is zero.",
+  "overview": [
+    "PixMo-Points is a dataset of images paired with referring expressions and points marking the locations those expressions refer to. It is part of the PixMo collection released with Molmo, presented by Matt Deitke and colleagues in \"Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models\", and it is what provides the pointing capability of the Molmo family of models.",
+    "The collection's distinguishing property is that it was gathered from human annotators rather than distilled from a proprietary vision-language model, which is the paper's central argument: the strongest open-weight models had been relying on synthetic data from closed VLMs, leaving the community without foundational knowledge about how to build a performant VLM from scratch.",
+    "The released set has 2,376,222 training examples under an ODC-BY-1.0 licence. Each row carries an image URL and a SHA-256 hash of the image bytes so a download can be checked against what was annotated, a list of x and y point coordinates in pixels, a count, a label that ranges from a bare object name to a full referring expression, and a collection_method marking whether the image was chosen to target high-frequency counting or general pointing.",
+    "The config collects this with the grounding_eval schema in point mode, alongside an image_annotation schema that owns the canvas and supplies the landmark tool. A separate count field is collected because PixMo-Points targets counting as well as pointing, and the number of visible instances is a meaningful answer even when the annotator has not placed a point on every one.",
+    "Pointing is scored differently from grounding, and it has to be. A point has no area, so every IoU against one is zero, and scoring points the way boxes are scored would report total failure for a model that is pointing perfectly. Potato reports a point-in-region hit rate instead, with mean_miss_distance computed over the misses only, since averaging it over hits as well would mostly measure how large the objects are rather than how badly the model missed.",
+    "Agreement between annotators is reported as a distance in normalized image units rather than as a coefficient, for the same structural reason. An overlap measure applied to points saturates: two annotators pointing at opposite corners of the same image still score around 0.86, which a coefficient scale would band as strong agreement, so a pointing corpus scored that way looks near-perfect regardless of what the annotators actually did. A distance has no ceiling to saturate against, and is named a distance so that nothing bands it as a coefficient."
+  ],
+  "datasetStats": [
+    {
+      "label": "Training examples",
+      "value": "2,376,222"
+    },
+    {
+      "label": "Licence",
+      "value": "ODC-BY-1.0"
+    },
+    {
+      "label": "Collection methods",
+      "value": "pointing, counting"
+    },
+    {
+      "label": "Annotation",
+      "value": "Human, not distilled from another VLM"
+    },
+    {
+      "label": "Used by",
+      "value": "Molmo model family"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Deitke et al.",
+    "email": "",
+    "github": "allenai",
+    "affiliation": "Allen Institute for AI"
+  },
+  "createdAt": "2026-08-18",
+  "updatedAt": "2026-08-18",
+  "annotationTypes": [
+    "grounding_eval",
+    "image_annotation",
+    "number",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision",
+    "NLP"
+  ],
+  "useCase": [
+    "Pointing Evaluation",
+    "Visual Grounding",
+    "VLM Evaluation",
+    "Object Counting"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "pixmo",
+    "molmo",
+    "pointing",
+    "visual-grounding",
+    "vlm",
+    "referring-expression",
+    "allenai",
+    "counting"
+  ],
+  "featured": false,
+  "paperReference": "Deitke et al., 2024",
+  "paperUrl": "https://arxiv.org/abs/2409.17146",
+  "datasetUrl": "https://huggingface.co/datasets/allenai/pixmo-points",
+  "citation": "@article{deitke2024molmo,\n    title = {Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models},\n    author = {Deitke, Matt and Clark, Christopher and Lee, Sangho and Tripathi, Rohun and Yang, Yue and Park, Jae Sung and Salehi, Mohammadreza and Muennighoff, Niklas and Lo, Kyle and Soldaini, Luca and others},\n    journal = {arXiv:2409.17146},\n    year = {2024}\n}"
+}

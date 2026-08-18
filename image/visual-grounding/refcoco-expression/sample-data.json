@@ -1,52 +1,182 @@
 [
   {
     "id": "refcoco_001",
-    "text": "the woman in the red dress standing near the fountain",
-    "image_url": "https://example.com/refcoco/park_scene_001.jpg"
+    "image_url": "https://example.com/refcoco/park_scene_001.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_001_e1",
+        "text": "the woman in the red dress standing near the fountain"
+      },
+      {
+        "id": "refcoco_001_e2",
+        "text": "the woman on the far left"
+      },
+      {
+        "id": "refcoco_001_e3",
+        "text": "the man feeding the pigeons"
+      }
+    ]
   },
   {
     "id": "refcoco_002",
-    "text": "the small brown dog on the left side of the bench",
-    "image_url": "https://example.com/refcoco/bench_dogs_002.jpg"
+    "image_url": "https://example.com/refcoco/bench_dogs_002.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_002_e1",
+        "text": "the small brown dog on the left side of the bench"
+      },
+      {
+        "id": "refcoco_002_e2",
+        "text": "the larger dog lying down"
+      },
+      {
+        "id": "refcoco_002_e3",
+        "text": "the wooden bench"
+      }
+    ]
   },
   {
     "id": "refcoco_003",
-    "text": "the blue car parked behind the white truck",
-    "image_url": "https://example.com/refcoco/parking_lot_003.jpg"
+    "image_url": "https://example.com/refcoco/parking_lot_003.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_003_e1",
+        "text": "the blue car parked behind the white truck"
+      },
+      {
+        "id": "refcoco_003_e2",
+        "text": "the white truck"
+      },
+      {
+        "id": "refcoco_003_e3",
+        "text": "the car furthest from the camera"
+      }
+    ]
   },
   {
     "id": "refcoco_004",
-    "text": "the tallest person in the group photo",
-    "image_url": "https://example.com/refcoco/group_photo_004.jpg"
+    "image_url": "https://example.com/refcoco/group_photo_004.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_004_e1",
+        "text": "the tallest person in the group photo"
+      },
+      {
+        "id": "refcoco_004_e2",
+        "text": "the person kneeling in front"
+      },
+      {
+        "id": "refcoco_004_e3",
+        "text": "the woman holding a bouquet"
+      }
+    ]
   },
   {
     "id": "refcoco_005",
-    "text": "the half-eaten pizza on the table closest to the camera",
-    "image_url": "https://example.com/refcoco/restaurant_005.jpg"
+    "image_url": "https://example.com/refcoco/kitchen_005.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_005_e1",
+        "text": "the red mug closest to the edge of the counter"
+      },
+      {
+        "id": "refcoco_005_e2",
+        "text": "the stack of plates"
+      },
+      {
+        "id": "refcoco_005_e3",
+        "text": "the person reaching for the cupboard"
+      }
+    ]
   },
   {
     "id": "refcoco_006",
-    "text": "the cat sitting on top of the refrigerator",
-    "image_url": "https://example.com/refcoco/kitchen_006.jpg"
+    "image_url": "https://example.com/refcoco/street_006.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_006_e1",
+        "text": "the cyclist wearing a yellow helmet"
+      },
+      {
+        "id": "refcoco_006_e2",
+        "text": "the bus stopped at the light"
+      },
+      {
+        "id": "refcoco_006_e3",
+        "text": "the pedestrian crossing behind the bus"
+      }
+    ]
   },
   {
     "id": "refcoco_007",
-    "text": "the yellow umbrella in the middle of the crowd",
-    "image_url": "https://example.com/refcoco/street_crowd_007.jpg"
+    "image_url": "https://example.com/refcoco/beach_007.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_007_e1",
+        "text": "the child holding a green bucket"
+      },
+      {
+        "id": "refcoco_007_e2",
+        "text": "the umbrella furthest to the right"
+      },
+      {
+        "id": "refcoco_007_e3",
+        "text": "the surfer carrying a board"
+      }
+    ]
   },
   {
     "id": "refcoco_008",
-    "text": "the child wearing a striped shirt who is pointing at the giraffe",
-    "image_url": "https://example.com/refcoco/zoo_008.jpg"
+    "image_url": "https://example.com/refcoco/market_008.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_008_e1",
+        "text": "the vendor in the blue apron"
+      },
+      {
+        "id": "refcoco_008_e2",
+        "text": "the crate of oranges on the lower shelf"
+      },
+      {
+        "id": "refcoco_008_e3",
+        "text": "the woman paying with a card"
+      }
+    ]
   },
   {
     "id": "refcoco_009",
-    "text": "the laptop on the desk next to the coffee mug",
-    "image_url": "https://example.com/refcoco/office_009.jpg"
+    "image_url": "https://example.com/refcoco/living_room_009.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_009_e1",
+        "text": "the cat sitting on the back of the sofa"
+      },
+      {
+        "id": "refcoco_009_e2",
+        "text": "the lamp beside the armchair"
+      },
+      {
+        "id": "refcoco_009_e3",
+        "text": "the remote on the coffee table"
+      }
+    ]
   },
   {
     "id": "refcoco_010",
-    "text": "the bicycle leaning against the brick wall on the right",
-    "image_url": "https://example.com/refcoco/alley_010.jpg"
+    "image_url": "https://example.com/refcoco/train_platform_010.jpg",
+    "expressions": [
+      {
+        "id": "refcoco_010_e1",
+        "text": "the man in the grey coat checking his watch"
+      },
+      {
+        "id": "refcoco_010_e2",
+        "text": "the suitcase standing upright"
+      },
+      {
+        "id": "refcoco_010_e3",
+        "text": "the woman reading a newspaper"
+      }
+    ]
   }
 ]

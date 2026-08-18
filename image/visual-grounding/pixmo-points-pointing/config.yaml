@@ -1,0 +1,113 @@
+# yaml-language-server: $schema=https://potatoannotator.readthedocs.io/en/latest/schemas/potato-config.schema.json
+#
+# PixMo-Points — Pointing Annotation for Vision-Language Models
+#
+# Paper:   Deitke et al., "Molmo and PixMo: Open Weights and Open Data for
+#          State-of-the-Art Vision-Language Models"
+#          https://arxiv.org/abs/2409.17146
+# Dataset: https://huggingface.co/datasets/allenai/pixmo-points  (ODC-BY-1.0)
+#
+# PixMo-Points pairs images with referring expressions and the points marking
+# what each expression refers to. It was collected from human annotators, not
+# distilled from another VLM, and it is what gives the Molmo models their
+# pointing ability. The released set has 2,376,222 training examples. Each row
+# carries the image URL and SHA-256, a list of x/y points in pixels, a count, a
+# label that ranges from a bare object name to a full referring expression, and
+# a collection_method of either "pointing" or "counting".
+#
+# Reproduction notes
+# ------------------
+# `region_type: point` is the whole reason this design exists. A point has no
+# area, so every IoU against one is zero: scoring points the way boxes are
+# scored reports total failure for a model that is pointing perfectly. Potato
+# scores pointing as a point-in-region hit rate instead, and reports
+# mean_miss_distance over the misses only -- averaged over hits as well, it
+# would mostly measure how large the objects are.
+#
+# Agreement between annotators is likewise reported as a distance in normalized
+# image units rather than as a coefficient, because an overlap measure applied
+# to points saturates: two annotators pointing at opposite corners of the image
+# still score about 0.86, which any coefficient scale would band as strong
+# agreement. A distance has no ceiling to saturate against.
+#
+# `count` is collected separately because PixMo-Points targets high-frequency
+# counting as well as general pointing, and a count is the answer even when the
+# annotator does not place a point on every instance.
+#
+# Two annotators per image, so pointing agreement is defined.
+
+port: 8000
+annotation_task_name: "PixMo-Points - Pointing Annotation"
+task_dir: "."
+media_directory: media
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "image_url"
+
+instance_display:
+  fields:
+    - key: image_url
+      type: image
+      label: "Image"
+
+user_config:
+  allow_all_users: true
+  users: []
+
+num_annotators_per_item:
+  default: 2
+
+annotation_schemes:
+  # grounding_eval binds expressions to answers but does not draw, so an image
+  # schema owns the canvas. `landmark` is the point tool.
+  - annotation_type: image_annotation
+    name: region
+    description: "Place a point on each thing the selected expression names."
+    source_field: image_url
+    tools:
+      - landmark
+    labels:
+      - name: referent
+        color: "#6e56cf"
+
+  - annotation_type: grounding_eval
+    name: pointing
+    description: "Point at what each expression refers to."
+    region_type: point
+    expressions_field: expressions
+    require_all: false
+
+  - annotation_type: number
+    name: instance_count
+    description: "How many instances of the expression are visible?"
+    min: 0
+    max: 200
+    step: 1
+
+  - annotation_type: text
+    name: notes
+    description: "If the expression is ambiguous or nothing matches, say so. (optional)"
+
+annotation_instructions: |
+  Each image comes with one or more referring expressions.
+
+  For each expression:
+  1. Select it.
+  2. Place a point on every instance the expression refers to. Put the point
+     inside the object, roughly at its centre; it does not have to be exact,
+     but it must be unambiguously on the thing rather than near it.
+  3. Record how many instances are visible. If there are more instances than
+     you have pointed at, the count is still the true number.
+
+  If an expression refers to nothing in the image, mark it as not present
+  rather than pointing at your best guess. Not-present is a real answer and is
+  counted separately.
+
+  Point at the object, not at its label, shadow or reflection. For an object
+  that is partly hidden, point at a visible part.

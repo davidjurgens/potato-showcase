@@ -1,17 +1,112 @@
 [
   {
     "id": "kitti_001",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Great_Portland_Street_London_Traffic.jpg/1280px-Great_Portland_Street_London_Traffic.jpg",
-    "context": "Road scene from driving perspective. Annotate all vehicles, pedestrians, and cyclists with bounding boxes."
+    "point_cloud": "velodyne/0000000003.bin",
+    "calibration": "calib/0000000003.txt",
+    "cameras": {
+      "image_2": "image_2/0000000003.png",
+      "image_3": "image_3/0000000003.png"
+    },
+    "scene_type": "urban",
+    "context": "Residential street, parked cars on both sides, one cyclist."
   },
   {
     "id": "kitti_002",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rome_Traffic.jpg/1280px-Rome_Traffic.jpg",
-    "context": "Urban driving scene. Mark occlusion and truncation levels for each object."
+    "point_cloud": "velodyne/0000000017.bin",
+    "calibration": "calib/0000000017.txt",
+    "cameras": {
+      "image_2": "image_2/0000000017.png",
+      "image_3": "image_3/0000000017.png"
+    },
+    "scene_type": "city",
+    "context": "Intersection with a tram, several pedestrians on the crossing."
   },
   {
     "id": "kitti_003",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bucharest_Traffic_2x.JPG/1280px-Bucharest_Traffic_2x.JPG",
-    "context": "Street view. Detect cars, vans, trucks, pedestrians, and cyclists."
+    "point_cloud": "velodyne/0000000042.bin",
+    "calibration": "calib/0000000042.txt",
+    "cameras": {
+      "image_2": "image_2/0000000042.png",
+      "image_3": "image_3/0000000042.png"
+    },
+    "scene_type": "road",
+    "context": "Two-lane road, oncoming truck, cyclist in the bike lane."
+  },
+  {
+    "id": "kitti_004",
+    "point_cloud": "velodyne/0000000058.bin",
+    "calibration": "calib/0000000058.txt",
+    "cameras": {
+      "image_2": "image_2/0000000058.png",
+      "image_3": "image_3/0000000058.png"
+    },
+    "scene_type": "city",
+    "context": "Queue of cars at a light, pedestrians waiting on the kerb."
+  },
+  {
+    "id": "kitti_005",
+    "point_cloud": "velodyne/0000000071.bin",
+    "calibration": "calib/0000000071.txt",
+    "cameras": {
+      "image_2": "image_2/0000000071.png",
+      "image_3": "image_3/0000000071.png"
+    },
+    "scene_type": "residential",
+    "context": "Narrow street, a van unloading, person sitting on a bench."
+  },
+  {
+    "id": "kitti_006",
+    "point_cloud": "velodyne/0000000094.bin",
+    "calibration": "calib/0000000094.txt",
+    "cameras": {
+      "image_2": "image_2/0000000094.png",
+      "image_3": "image_3/0000000094.png"
+    },
+    "scene_type": "campus",
+    "context": "Pedestrian-heavy campus path, bicycles parked along the wall."
+  },
+  {
+    "id": "kitti_007",
+    "point_cloud": "velodyne/0000000112.bin",
+    "calibration": "calib/0000000112.txt",
+    "cameras": {
+      "image_2": "image_2/0000000112.png",
+      "image_3": "image_3/0000000112.png"
+    },
+    "scene_type": "city",
+    "context": "Busy junction, tram crossing, partial occlusion between vehicles."
+  },
+  {
+    "id": "kitti_008",
+    "point_cloud": "velodyne/0000000136.bin",
+    "calibration": "calib/0000000136.txt",
+    "cameras": {
+      "image_2": "image_2/0000000136.png",
+      "image_3": "image_3/0000000136.png"
+    },
+    "scene_type": "road",
+    "context": "Rural road, single car ahead, low object density."
+  },
+  {
+    "id": "kitti_009",
+    "point_cloud": "velodyne/0000000158.bin",
+    "calibration": "calib/0000000158.txt",
+    "cameras": {
+      "image_2": "image_2/0000000158.png",
+      "image_3": "image_3/0000000158.png"
+    },
+    "scene_type": "residential",
+    "context": "Cars parked at an angle, one van partly out of frame."
+  },
+  {
+    "id": "kitti_010",
+    "point_cloud": "velodyne/0000000173.bin",
+    "calibration": "calib/0000000173.txt",
+    "cameras": {
+      "image_2": "image_2/0000000173.png",
+      "image_3": "image_3/0000000173.png"
+    },
+    "scene_type": "city",
+    "context": "Crossing with a group of pedestrians and two cyclists."
   }
 ]

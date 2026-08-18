@@ -1,0 +1,82 @@
+[
+  {
+    "id": "lerobot_001",
+    "episode": "episodes/pick_place_block_001.parquet",
+    "instruction": "Put the red block in the left bin.",
+    "task": "pick_place_block",
+    "recorded_outcome": "success",
+    "context": ""
+  },
+  {
+    "id": "lerobot_002",
+    "episode": "episodes/pick_place_block_002.parquet",
+    "instruction": "Put the red block in the left bin.",
+    "task": "pick_place_block",
+    "recorded_outcome": "failure",
+    "context": "gripper closes on nothing; visible in the force lane first"
+  },
+  {
+    "id": "lerobot_003",
+    "episode": "episodes/stack_cubes_003.parquet",
+    "instruction": "Stack the blue cube on the green cube.",
+    "task": "stack_cubes",
+    "recorded_outcome": "partial",
+    "context": "cube placed but topples after release"
+  },
+  {
+    "id": "lerobot_004",
+    "episode": "episodes/open_drawer_004.parquet",
+    "instruction": "Open the top drawer.",
+    "task": "open_drawer",
+    "recorded_outcome": "success",
+    "context": ""
+  },
+  {
+    "id": "lerobot_005",
+    "episode": "episodes/open_drawer_005.parquet",
+    "instruction": "Open the top drawer.",
+    "task": "open_drawer",
+    "recorded_outcome": "failure",
+    "context": "handle missed, arm stalls against the front panel"
+  },
+  {
+    "id": "lerobot_006",
+    "episode": "episodes/pour_cup_006.parquet",
+    "instruction": "Pour the contents of the cup into the bowl.",
+    "task": "pour_cup",
+    "recorded_outcome": "partial",
+    "context": "some spill outside the bowl"
+  },
+  {
+    "id": "lerobot_007",
+    "episode": "episodes/wipe_table_007.parquet",
+    "instruction": "Wipe the spill on the table.",
+    "task": "wipe_table",
+    "recorded_outcome": "success",
+    "context": ""
+  },
+  {
+    "id": "lerobot_008",
+    "episode": "episodes/insert_peg_008.parquet",
+    "instruction": "Insert the peg into the hole.",
+    "task": "insert_peg",
+    "recorded_outcome": "failure",
+    "context": "peg jams at an angle, force spikes then plateaus"
+  },
+  {
+    "id": "lerobot_009",
+    "episode": "episodes/hand_over_009.parquet",
+    "instruction": "Hand the marker to the person.",
+    "task": "hand_over",
+    "recorded_outcome": "success",
+    "context": ""
+  },
+  {
+    "id": "lerobot_010",
+    "episode": "episodes/sort_utensils_010.parquet",
+    "instruction": "Put the fork in the cutlery tray.",
+    "task": "sort_utensils",
+    "recorded_outcome": "partial",
+    "context": "correct tray, wrong compartment"
+  }
+]

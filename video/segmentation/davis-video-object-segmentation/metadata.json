@@ -1,0 +1,72 @@
+{
+  "title": "DAVIS - Video Object Segmentation with Mask Propagation",
+  "description": "Semi-supervised video object segmentation on DAVIS (Pont-Tuset et al., 2017): mask each object on the first frame, then propagate it through the clip with SAM 2 and correct the frames where it drifts.",
+  "overview": [
+    "DAVIS, for Densely Annotated VIdeo Segmentation, is the reference benchmark for video object segmentation. The 2017 challenge was presented by Jordi Pont-Tuset, Federico Perazzi, Sergi Caelles, Pablo Arbelaez, Alexander Sorkine-Hornung and Luc Van Gool in \"The 2017 DAVIS Challenge on Video Object Segmentation\", with a dedicated workshop co-located with CVPR 2017. It comprises a dataset, an evaluation methodology and a public competition.",
+    "In the semi-supervised task the ground-truth mask for the first frame is given, and a method must segment the same object or objects through the remaining frames. DAVIS 2017 extended the single-object setting of the earlier DAVIS release to multiple objects within a clip. Official metrics are computed on images and annotations at 480p, with full-resolution frames also published.",
+    "In Potato this becomes an annotation workflow rather than a scoring harness. The annotator masks each object once, presses Track forward, and SAM 2 propagates the mask through the frames that follow, each result arriving as a keyframe they can scrub through and correct. Correcting a frame re-anchors the track from that point.",
+    "Propagation runs on the server by deliberate choice. The cost is per frame rather than per prompt and the model is large, so a hundred frames of it in a browser tab would be minutes of frozen UI. Potato's in-browser path is a separate, lighter carry-forward that re-prompts frame to frame; the two should not be confused. Measured against known ground truth, server-side propagation holds a per-frame IoU of 0.974 to 0.979 with no decay from the first frame to the last, at roughly 1.32 seconds per frame on CPU.",
+    "The model decides for itself when an object is occluded and returns an empty frame rather than guessing, which is the behaviour you want while correcting: a guessed mask on a hidden frame is work to undo. DAVIS sequences are chosen to exercise exactly these cases, so the config also asks the annotator to tag what made each clip hard. Masks are held rather than blended across interpolated frames and held frames are marked in the timeline.",
+    "Every clip is masked twice, independently, which is what makes mask agreement computable. Potato resolves mask consensus with STAPLE, which estimates a latent boundary together with each rater's sensitivity and specificity instead of taking a per-pixel majority vote. On a corpus where two careful annotators are outnumbered three-to-two by noisy ones, majority vote scores Dice 0.846 against truth where STAPLE scores 1.000."
+  ],
+  "datasetStats": [
+    {
+      "label": "Task",
+      "value": "Semi-supervised video object segmentation"
+    },
+    {
+      "label": "Given at inference",
+      "value": "First-frame mask"
+    },
+    {
+      "label": "Objects per clip",
+      "value": "One or more (multi-object from 2017)"
+    },
+    {
+      "label": "Official metric resolution",
+      "value": "480p"
+    },
+    {
+      "label": "Venue / Year",
+      "value": "CVPR 2017 workshop"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Pont-Tuset et al.",
+    "email": "",
+    "github": "davisvideochallenge",
+    "affiliation": ""
+  },
+  "createdAt": "2026-08-18",
+  "updatedAt": "2026-08-18",
+  "annotationTypes": [
+    "video_annotation",
+    "multiselect",
+    "text"
+  ],
+  "domain": [
+    "Computer Vision"
+  ],
+  "useCase": [
+    "Video Object Segmentation",
+    "Mask Propagation",
+    "Object Tracking"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "davis",
+    "video-object-segmentation",
+    "mask-propagation",
+    "sam2",
+    "tracking",
+    "segmentation",
+    "cvpr2017",
+    "staple"
+  ],
+  "featured": false,
+  "paperReference": "Pont-Tuset et al., 2017",
+  "paperUrl": "https://arxiv.org/abs/1704.00675",
+  "datasetUrl": "https://davischallenge.org/",
+  "citation": "@article{ponttuset2017davis,\n    title = {The 2017 {DAVIS} Challenge on Video Object Segmentation},\n    author = {Pont-Tuset, Jordi and Perazzi, Federico and Caelles, Sergi and Arbel\\'aez, Pablo and Sorkine-Hornung, Alexander and Van Gool, Luc},\n    journal = {arXiv:1704.00675},\n    year = {2017}\n}"
+}

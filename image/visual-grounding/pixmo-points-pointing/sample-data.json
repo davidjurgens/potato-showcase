@@ -1,0 +1,164 @@
+[
+  {
+    "id": "pixmo_001",
+    "image_url": "https://example.com/pixmo/kitchen_counter_001.jpg",
+    "collection_method": "pointing",
+    "expressions": [
+      {
+        "id": "pixmo_001_e1",
+        "text": "the coffee mug"
+      },
+      {
+        "id": "pixmo_001_e2",
+        "text": "the handle of the kettle"
+      },
+      {
+        "id": "pixmo_001_e3",
+        "text": "the person's left hand"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_002",
+    "image_url": "https://example.com/pixmo/bookshelf_002.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_002_e1",
+        "text": "a book with a red spine"
+      },
+      {
+        "id": "pixmo_002_e2",
+        "text": "the potted plant"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_003",
+    "image_url": "https://example.com/pixmo/street_market_003.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_003_e1",
+        "text": "an orange in the crate"
+      },
+      {
+        "id": "pixmo_003_e2",
+        "text": "the vendor's apron"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_004",
+    "image_url": "https://example.com/pixmo/classroom_004.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_004_e1",
+        "text": "a raised hand"
+      },
+      {
+        "id": "pixmo_004_e2",
+        "text": "the whiteboard marker"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_005",
+    "image_url": "https://example.com/pixmo/parking_lot_005.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_005_e1",
+        "text": "a car with its headlights on"
+      },
+      {
+        "id": "pixmo_005_e2",
+        "text": "the empty parking space"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_006",
+    "image_url": "https://example.com/pixmo/laboratory_006.jpg",
+    "collection_method": "pointing",
+    "expressions": [
+      {
+        "id": "pixmo_006_e1",
+        "text": "the pipette tip"
+      },
+      {
+        "id": "pixmo_006_e2",
+        "text": "the sample rack"
+      },
+      {
+        "id": "pixmo_006_e3",
+        "text": "the safety goggles"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_007",
+    "image_url": "https://example.com/pixmo/bakery_display_007.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_007_e1",
+        "text": "a croissant"
+      },
+      {
+        "id": "pixmo_007_e2",
+        "text": "the price tag on the sourdough"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_008",
+    "image_url": "https://example.com/pixmo/living_room_008.jpg",
+    "collection_method": "pointing",
+    "expressions": [
+      {
+        "id": "pixmo_008_e1",
+        "text": "the remote control"
+      },
+      {
+        "id": "pixmo_008_e2",
+        "text": "the cat's nose"
+      },
+      {
+        "id": "pixmo_008_e3",
+        "text": "the lamp switch"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_009",
+    "image_url": "https://example.com/pixmo/construction_site_009.jpg",
+    "collection_method": "pointing",
+    "expressions": [
+      {
+        "id": "pixmo_009_e1",
+        "text": "the worker's hard hat"
+      },
+      {
+        "id": "pixmo_009_e2",
+        "text": "the end of the scaffolding plank"
+      }
+    ]
+  },
+  {
+    "id": "pixmo_010",
+    "image_url": "https://example.com/pixmo/aquarium_010.jpg",
+    "collection_method": "counting",
+    "expressions": [
+      {
+        "id": "pixmo_010_e1",
+        "text": "a clownfish"
+      },
+      {
+        "id": "pixmo_010_e2",
+        "text": "the air stone"
+      }
+    ]
+  }
+]

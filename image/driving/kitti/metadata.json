@@ -1,40 +1,74 @@
 {
-  "title": "KITTI Road Object Detection",
-  "description": "Autonomous driving benchmark for object detection (Geiger et al., CVPR 2012). Annotate vehicles, pedestrians, and cyclists with 3D bounding boxes and occlusion/truncation labels.",
+  "title": "KITTI - 3D Object Annotation on Lidar Point Clouds",
+  "description": "Autonomous-driving benchmark from Geiger, Lenz and Urtasun (CVPR 2012). Annotators place oriented 3D cuboids on the lidar scan, with calibration projecting every box into the camera images for verification in 2D.",
   "version": "1.0.0",
   "author": {
     "name": "Geiger et al.",
     "email": "",
-    "github": "cvlibs",
-    "affiliation": "Karlsruhe Institute of Technology"
+    "github": "",
+    "affiliation": "Karlsruhe Institute of Technology / Toyota Technological Institute at Chicago"
   },
   "createdAt": "2025-01-16",
-  "updatedAt": "2025-01-16",
+  "updatedAt": "2026-08-18",
   "annotationTypes": [
-    "multiselect",
+    "spatial_annotation",
     "radio",
     "text"
   ],
   "domain": [
     "Computer Vision",
-    "Autonomous Driving"
+    "Robotics"
   ],
   "useCase": [
-    "Object Detection",
-    "3D Detection",
-    "Autonomous Vehicles"
+    "3D Object Detection",
+    "Autonomous Driving",
+    "Point Cloud Annotation",
+    "Sensor Fusion"
   ],
   "complexity": "advanced",
   "tags": [
     "kitti",
+    "3d-object-detection",
+    "point-cloud",
+    "lidar",
+    "cuboid",
     "autonomous-driving",
-    "3d-detection",
-    "vehicles",
-    "cvpr2012"
+    "cvpr2012",
+    "calibration",
+    "sensor-fusion"
   ],
   "featured": true,
   "paperReference": "Geiger et al., CVPR 2012",
-  "paperUrl": "https://ieeexplore.ieee.org/document/6248074",
-  "datasetUrl": "https://www.cvlibs.net/datasets/kitti",
-  "citation": "@inproceedings{geiger2012we,\n    title = \"Are we ready for Autonomous Driving? {The KITTI} Vision Benchmark Suite\",\n    author = \"Geiger, Andreas  and Lenz, Philip  and Urtasun, Raquel\",\n    booktitle = \"2012 IEEE Conference on Computer Vision and Pattern Recognition\",\n    pages = \"3354--3361\",\n    year = \"2012\",\n    organization = \"IEEE\",\n    doi = \"10.1109/CVPR.2012.6248074\",\n    url = \"https://ieeexplore.ieee.org/document/6248074\"\n}"
+  "paperUrl": "https://www.cvlibs.net/publications/Geiger2012CVPR.pdf",
+  "datasetUrl": "https://www.cvlibs.net/datasets/kitti/",
+  "citation": "@inproceedings{geiger2012kitti,\n    title = {Are we ready for Autonomous Driving? The {KITTI} Vision Benchmark Suite},\n    author = {Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},\n    booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n    year = {2012}\n}",
+  "overview": [
+    "The KITTI Vision Benchmark Suite was introduced by Andreas Geiger and Philip Lenz of the Karlsruhe Institute of Technology and Raquel Urtasun of the Toyota Technological Institute at Chicago, in \"Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite\" at CVPR 2012. The paper builds benchmarks for stereo, optical flow, visual odometry and SLAM, and 3D object detection from recordings made with an instrumented car.",
+    "The object benchmark labels each traffic participant with an oriented 3D box in the rectified reference camera frame, alongside a 2D box in the image, a truncation fraction, and an occlusion code. Each line of a label_2 file carries fifteen fields: type, truncated, occluded, alpha, the four 2D box corners, the three box dimensions, the three location coordinates, and the rotation about the vertical axis.",
+    "Object classes are Car, Van, Truck, Pedestrian, Person_sitting, Cyclist, Tram and Misc. DontCare is not a class: KITTI uses it to mark regions excluded from evaluation, usually distant or ambiguous objects. Occlusion is coded 0 for fully visible, 1 for partly occluded, 2 for largely occluded and 3 for unknown.",
+    "Potato annotates the lidar scan directly with the spatial_annotation schema. That is what the label format describes in the first place. Octree level-of-detail keeps a full scan interactive, orthographic slab panels give axis-aligned editing, and calibration supplied per item projects every cuboid into each camera image so orientation can be checked in 2D while editing in 3D.",
+    "Potato stores cuboid rotation as a quaternion rather than a single yaw angle. Importing from KITTI is therefore lossless, including the camera-to-lidar mounting tilt that a yaw-only field discards silently; exporting back to KITTI drops pitch and roll and reports how much orientation it had to discard. Each scene goes to two annotators, and agreement over the cuboids is computed with exact rotated 3D IoU, which is correct under arbitrary rotation rather than only for level boxes."
+  ],
+  "datasetStats": [
+    {
+      "label": "Object classes",
+      "value": "8 (plus DontCare as an exclusion marker)"
+    },
+    {
+      "label": "Occlusion codes",
+      "value": "0 fully visible - 3 unknown"
+    },
+    {
+      "label": "Label fields per object",
+      "value": "15"
+    },
+    {
+      "label": "Sensors",
+      "value": "Velodyne lidar, stereo cameras, GPS/IMU"
+    },
+    {
+      "label": "Venue / Year",
+      "value": "CVPR 2012"
+    }
+  ]
 }

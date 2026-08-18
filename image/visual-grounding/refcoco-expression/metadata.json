@@ -1,11 +1,12 @@
 {
   "title": "RefCOCO - Referring Expression Grounding",
-  "description": "Visual grounding task where annotators draw bounding boxes around objects referred to by natural language expressions. Based on the RefCOCO dataset (Yu et al., ECCV 2016), this task links referring expressions to spatial regions in images.",
+  "description": "Visual grounding task where annotators bind each referring expression to a region of the image. Based on RefCOCO (Yu et al., ECCV 2016), reproduced with Potato's grounding_eval schema, which scores grounding by IoU at four thresholds and counts ungroundedness separately.",
   "overview": [
     "Referring expression comprehension, a form of visual grounding, is the task of taking an image plus a natural-language phrase that names one specific object and locating that object in the image. The RefCOCO and RefCOCO+ datasets were introduced by Licheng Yu, Patrick Poirson, Shan Yang, Alexander C. Berg, and Tamara L. Berg in \"Modeling Context in Referring Expressions\" at ECCV 2016. The paper studies how visual context, meaning comparison to the other objects in an image, helps both generate and understand these expressions.",
     "The images come from MS COCO. The referring expressions were collected with the ReferItGame two-player interface (Kazemzadeh et al., EMNLP 2014): one player writes an expression for a marked object, and a second player has to click the region it describes, which keeps the expressions unambiguous. RefCOCO+ uses the same setup but forbids absolute spatial words like \"left\" or \"right,\" so its expressions rely on appearance and attributes and are harder to ground.",
     "RefCOCO contains 142,209 referring expressions for 50,000 objects across 19,994 images. RefCOCO+ contains 141,564 expressions for 49,856 objects across 19,992 images. Because the collection ran as a game where a second player had to identify the target, expressions that did not point clearly to the intended object were filtered out during play.",
-    "The Potato config below reproduces the grounding side of this task with an image_annotation scheme using the bbox tool, where the annotator draws a tight bounding box around the object named by the expression, plus an optional text field for rewriting the expression more precisely when it is ambiguous. Each item displays the image with its referring expression and is shown to two annotators. This is useful for building or auditing visual-grounding datasets."
+    "Potato reproduces the grounding side of this task with the grounding_eval schema, which owns the binding between each phrase and the region that answers it. An image_annotation schema sits alongside it to own the canvas, since grounding_eval does not draw. Each item carries all of its image's expressions, matching RefCOCO's structure of several expressions per object, and the annotator works through them one at a time.",
+    "Each image is grounded by two annotators, so grounding agreement has something to compare. Potato scores grounding by IoU at four thresholds and counts ungroundedness as a separate answer rather than a miss: an expression the annotator never answered is excluded from scoring, because counting it as a failure makes a model look worse the more phrases were skipped, which is a statement about the annotator rather than the model. Setting region_type to point instead of box collects Molmo-style pointing, which is scored as a point-in-region hit rate, because a point has no area and every IoU against one is zero."
   ],
   "datasetStats": [
     {
@@ -41,8 +42,9 @@
     "affiliation": "UNC Chapel Hill"
   },
   "createdAt": "2026-02-24",
-  "updatedAt": "2026-07-22",
+  "updatedAt": "2026-08-18",
   "annotationTypes": [
+    "grounding_eval",
     "image_annotation",
     "text"
   ],
@@ -53,7 +55,8 @@
   "useCase": [
     "Visual Grounding",
     "Referring Expression Comprehension",
-    "Object Localization"
+    "Object Localization",
+    "VLM Evaluation"
   ],
   "complexity": "intermediate",
   "tags": [
@@ -62,7 +65,9 @@
     "referring-expression",
     "bounding-box",
     "eccv2016",
-    "multimodal"
+    "multimodal",
+    "grounding-eval",
+    "pointing"
   ],
   "featured": false,
   "paperReference": "Yu et al., ECCV 2016",

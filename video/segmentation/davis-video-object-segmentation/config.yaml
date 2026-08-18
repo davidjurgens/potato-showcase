@@ -1,0 +1,133 @@
+# yaml-language-server: $schema=https://potatoannotator.readthedocs.io/en/latest/schemas/potato-config.schema.json
+#
+# DAVIS — Video Object Segmentation with Mask Propagation
+#
+# Paper:   Pont-Tuset, Perazzi, Caelles, Arbelaez, Sorkine-Hornung & Van Gool,
+#          "The 2017 DAVIS Challenge on Video Object Segmentation"
+#          https://arxiv.org/abs/1704.00675
+# Dataset: https://davischallenge.org/
+#
+# DAVIS (Densely Annotated VIdeo Segmentation) is the reference benchmark for
+# video object segmentation. In the semi-supervised task the annotator is given
+# the ground-truth mask on the first frame and the object must be segmented
+# through the rest of the clip. Official metrics are computed at 480p, though
+# full-resolution frames are published as well.
+#
+# This is exactly the loop Potato's mask propagation was built for: mask the
+# object once, press Track forward, and SAM 2 follows it through the frames
+# that follow, each result arriving as a keyframe you can scrub through and
+# correct.
+#
+# Reproduction notes
+# ------------------
+# `mode: tracking` gives the propagation workflow. Propagation runs on the
+# server by design: the cost is per frame rather than per prompt, and a hundred
+# frames of a video model in the browser would be minutes of a frozen tab. The
+# browser has a separate, lighter carry-forward path; the two are not the same
+# thing.
+#
+# The model decides for itself when an object is occluded and returns an empty
+# frame rather than guessing, which is the behaviour you want while correcting:
+# a guessed mask on a hidden frame is work to undo. DAVIS sequences are chosen
+# for exactly these cases, so expect it.
+#
+# Masks are held rather than blended across interpolated frames, and held
+# frames are marked in the timeline. An honest representation beats a smooth
+# wrong one.
+#
+# Multi-object sequences: add one label per object identity. DAVIS 2017 moved
+# from the single-object setting of DAVIS 2016 to multiple objects per clip,
+# and instance-keyed masks keep them separate.
+#
+# Two annotators per clip, so mask agreement is defined. Potato resolves mask
+# consensus with STAPLE, which estimates a latent boundary along with each
+# rater's sensitivity and specificity, rather than taking a majority vote per
+# pixel.
+
+port: 8000
+annotation_task_name: "DAVIS - Video Object Segmentation"
+task_dir: "."
+media_directory: media
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "video_url"
+
+user_config:
+  allow_all_users: true
+  users: []
+
+num_annotators_per_item:
+  default: 2
+
+annotation_schemes:
+  - annotation_type: video_annotation
+    name: object_masks
+    description: "Mask each object on the first frame, then track it through the clip."
+    source_field: video_url
+    mode: tracking
+    labels:
+      - name: object_1
+        color: "#d1495b"
+        key_value: "1"
+      - name: object_2
+        color: "#2f9e6f"
+        key_value: "2"
+      - name: object_3
+        color: "#6e56cf"
+        key_value: "3"
+    tracking_options:
+      interpolation: linear
+      auto_advance_frames: 5
+    video_fps: 24
+    show_timecode: true
+    frame_stepping: true
+    zoom_enabled: true
+
+  - annotation_type: multiselect
+    name: difficulties
+    description: "Which of these make this clip hard? (select all that apply)"
+    labels:
+      - name: occlusion
+        tooltip: "The object is hidden, fully or partly, for some frames"
+      - name: fast_motion
+        tooltip: "The object moves far between consecutive frames"
+      - name: motion_blur
+        tooltip: "The object's edges are blurred by motion"
+      - name: deformation
+        tooltip: "The object changes shape substantially"
+      - name: scale_variation
+        tooltip: "The object's size changes substantially"
+      - name: appearance_change
+        tooltip: "Lighting or viewpoint changes the object's appearance"
+      - name: similar_objects
+        tooltip: "Another object of the same category could be confused with it"
+
+  - annotation_type: text
+    name: notes
+    description: "Where did tracking need the most correction? (optional)"
+
+annotation_instructions: |
+  Each clip contains one or more objects to segment through time.
+
+  1. On the first frame, mask each object. Use click-to-segment for a first
+     pass and the brush to correct the boundary.
+  2. Press Track forward. The mask is propagated through the following frames
+     and each result arrives as a keyframe.
+  3. Scrub through the keyframes and correct any frame where the mask has
+     drifted. Correcting a frame re-anchors the track from that point.
+
+  If the object is fully hidden on a frame, leave it empty. An empty frame is
+  the correct answer for an occluded object, and the model will usually return
+  one rather than guessing.
+
+  Mask the whole object including parts that are thin or low-contrast. Where
+  the object is partly occluded, mask only the visible part.
+
+  Finally, tag what made the clip hard. These attributes are what DAVIS
+  sequences were selected to exercise.

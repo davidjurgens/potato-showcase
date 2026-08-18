@@ -1,82 +1,110 @@
-# RefCOCO - Referring Expression Grounding
-# Based on Yu et al., ECCV 2016
-# Paper: https://arxiv.org/abs/1608.00272
+# yaml-language-server: $schema=https://potatoannotator.readthedocs.io/en/latest/schemas/potato-config.schema.json
+#
+# RefCOCO — Referring Expression Grounding
+#
+# Paper:   Yu, Poirson, Yang, Berg & Berg, "Modeling Context in Referring
+#          Expressions", ECCV 2016 — https://arxiv.org/abs/1608.00272
 # Dataset: https://github.com/lichengunc/refer
 #
-# Visual grounding task: given an image and a referring expression, annotators
-# draw a bounding box around the object described by the expression. This tests
-# the ability to link natural language to spatial image regions.
+# Referring expression comprehension: given an image and a phrase naming one
+# specific object, locate that object. RefCOCO's expressions were collected
+# with the ReferItGame two-player interface (Kazemzadeh et al., EMNLP 2014),
+# where a second player had to click the region the phrase described, so
+# expressions that did not identify their target unambiguously were filtered
+# out during play.
 #
-# Annotation Guidelines:
-# 1. Read the referring expression carefully
-# 2. Examine the image and identify the object being described
-# 3. Draw a tight bounding box around the referred object
-# 4. If the expression is ambiguous, optionally write a clarification
-# 5. The bounding box should be as tight as possible around the object
+# RefCOCO:  142,209 expressions for 50,000 objects across 19,994 images.
+# RefCOCO+: 141,564 expressions for 49,856 objects across 19,992 images.
+#           Same setup, but absolute spatial words ("left", "right") are
+#           forbidden, so expressions rely on appearance and are harder.
+# Images come from MS COCO.
+#
+# Reproduction notes
+# ------------------
+# `grounding_eval` owns the phrase-to-region binding; it does not draw, so an
+# `image_annotation` schema sits beside it to own the canvas. Each item carries
+# every expression for its image in `expressions`, which matches RefCOCO's
+# structure (several expressions per object) and means the annotator works
+# through them one at a time against a single image.
+#
+# `region_type: box` is the RefCOCO convention. Set `point` instead to collect
+# Molmo-style pointing, which Potato scores as a point-in-region hit rate
+# rather than IoU — a point has no area, so IoU against one is always zero.
+#
+# Two annotators per item, so grounding agreement is defined. Potato scores
+# grounding by IoU at four thresholds and counts ungroundedness separately.
 
+port: 8000
 annotation_task_name: "RefCOCO - Referring Expression Grounding"
 task_dir: "."
+output_annotation_dir: "annotation_output/"
+output_annotation_format: "json"
 
 data_files:
   - sample-data.json
 
 item_properties:
   id_key: "id"
-  text_key: "text"
+  text_key: "image_url"
 
-output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+instance_display:
+  fields:
+    - key: image_url
+      type: image
+      label: "Image"
 
-port: 8000
-server_name: localhost
+user_config:
+  allow_all_users: true
+  users: []
+
+# Grounding agreement needs at least two independent annotations per image.
+num_annotators_per_item:
+  default: 2
 
 annotation_schemes:
-  # Step 1: Draw bounding box around the referred object
+  # The canvas. grounding_eval binds phrases to regions but does not draw them,
+  # so it needs an image schema alongside it.
   - annotation_type: image_annotation
-    name: referred_object
-    description: "Draw a bounding box around the object described by the referring expression."
+    name: region
+    description: "Draw a tight box around the object the selected phrase names."
+    source_field: image_url
     tools:
       - bbox
     labels:
-      - "Referred Object"
+      - name: referent
+        color: "#6e56cf"
 
-  # Step 2: Optionally provide a clarifying expression
+  - annotation_type: grounding_eval
+    name: grounding
+    description: "What does each referring expression refer to?"
+    region_type: box
+    expressions_field: expressions
+    # Warn once before advancing with phrases still unanswered. An expression
+    # the annotator never answered is excluded from scoring rather than counted
+    # as a miss, so leaving one blank is not the same as saying "not present".
+    require_all: false
+
   - annotation_type: text
     name: clarification
-    description: "If the original expression is ambiguous, write a more precise referring expression."
-    textarea: false
-    required: false
-    placeholder: "Optional: write a clearer referring expression..."
+    description: "If an expression is ambiguous, write a clearer one. (optional)"
+    placeholder: "Optional: a more precise referring expression"
 
 annotation_instructions: |
-  You will see an image and a referring expression that describes one specific object in the image.
+  Each image comes with one or more referring expressions. Every expression
+  names exactly one object.
 
-  For each item:
-  1. Read the referring expression below the image.
-  2. Identify which object in the image is being described.
-  3. Use the bounding box tool to draw a tight box around that object.
-  4. If the expression is ambiguous or could refer to multiple objects,
-     draw the box around the most likely referent and optionally write
-     a clearer expression in the text field.
+  For each expression:
+  1. Select it from the list.
+  2. Find the object it names.
+  3. Draw a tight bounding box around that object.
 
-  Tips:
-  - Draw the box as tightly as possible around the entire object.
-  - Referring expressions often use spatial relationships (e.g., "the dog on the left").
-  - Consider attributes like color, size, and position to disambiguate.
+  Draw the box as tight as the object allows — include the whole object and as
+  little else as possible.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="text-align: center; margin-bottom: 16px; background: #1a1a1a; padding: 12px; border-radius: 8px;">
-      <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border-radius: 4px;" alt="Image for grounding" />
-    </div>
-    <div style="background: #fef3c7; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #92400e;">Referring Expression:</strong>
-      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0; font-style: italic;">{{text}}</p>
-    </div>
-  </div>
+  Expressions often disambiguate by comparison to other objects in the image
+  ("the dog on the left", "the taller man"), so read the whole scene before
+  deciding. RefCOCO+ expressions avoid absolute spatial words, so they lean on
+  colour, size and other attributes instead.
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+  If an expression genuinely does not pick out anything in the image, mark it
+  as not present rather than boxing your best guess.

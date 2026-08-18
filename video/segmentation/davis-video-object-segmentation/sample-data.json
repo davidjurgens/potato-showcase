@@ -1,0 +1,72 @@
+[
+  {
+    "id": "davis_001",
+    "video_url": "sequences/blackswan.mp4",
+    "sequence": "blackswan",
+    "first_frame_mask": "annotations/blackswan/00000.png",
+    "context": "A swan glides across water; reflections and ripples confuse the boundary."
+  },
+  {
+    "id": "davis_002",
+    "video_url": "sequences/bmx-trees.mp4",
+    "sequence": "bmx-trees",
+    "first_frame_mask": "annotations/bmx-trees/00000.png",
+    "context": "A rider passes behind trees, so the object is repeatedly occluded."
+  },
+  {
+    "id": "davis_003",
+    "video_url": "sequences/car-shadow.mp4",
+    "sequence": "car-shadow",
+    "first_frame_mask": "annotations/car-shadow/00000.png",
+    "context": "A car moves through strong shadow; contrast drops sharply."
+  },
+  {
+    "id": "davis_004",
+    "video_url": "sequences/dance-twirl.mp4",
+    "sequence": "dance-twirl",
+    "first_frame_mask": "annotations/dance-twirl/00000.png",
+    "context": "A dancer spins, deforming quickly and blurring at the edges."
+  },
+  {
+    "id": "davis_005",
+    "video_url": "sequences/dogs-jump.mp4",
+    "sequence": "dogs-jump",
+    "first_frame_mask": "annotations/dogs-jump/00000.png",
+    "context": "Two similar dogs cross paths, which is an identity-confusion case."
+  },
+  {
+    "id": "davis_006",
+    "video_url": "sequences/horsejump-high.mp4",
+    "sequence": "horsejump-high",
+    "first_frame_mask": "annotations/horsejump-high/00000.png",
+    "context": "A horse and rider clear a jump; fast vertical motion."
+  },
+  {
+    "id": "davis_007",
+    "video_url": "sequences/kite-surf.mp4",
+    "sequence": "kite-surf",
+    "first_frame_mask": "annotations/kite-surf/00000.png",
+    "context": "A small, fast object against a textured sea."
+  },
+  {
+    "id": "davis_008",
+    "video_url": "sequences/motocross-jump.mp4",
+    "sequence": "motocross-jump",
+    "first_frame_mask": "annotations/motocross-jump/00000.png",
+    "context": "Heavy motion blur through the apex of a jump."
+  },
+  {
+    "id": "davis_009",
+    "video_url": "sequences/parkour.mp4",
+    "sequence": "parkour",
+    "first_frame_mask": "annotations/parkour/00000.png",
+    "context": "A runner moves through clutter with frequent partial occlusion."
+  },
+  {
+    "id": "davis_010",
+    "video_url": "sequences/soapbox.mp4",
+    "sequence": "soapbox",
+    "first_frame_mask": "annotations/soapbox/00000.png",
+    "context": "Three objects of similar appearance travel together."
+  }
+]

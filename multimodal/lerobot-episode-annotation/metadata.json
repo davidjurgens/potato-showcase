@@ -1,0 +1,74 @@
+{
+  "title": "LeRobot - Robot Episode Annotation",
+  "description": "Annotate teleoperated robot demonstrations: synchronized camera streams and per-frame arm signals on one timeline, with phase segmentation, outcome and failure cause, and a dense progress-reward curve.",
+  "overview": [
+    "LeRobot is an open-source library for end-to-end robot learning from Hugging Face, presented by Remi Cadene and colleagues in \"LeRobot: An Open-Source Library for End-to-End Robot Learning\". It spans the robot learning stack, from low-level middleware for motor control to large-scale dataset collection, storage and streaming, with a focus on real-world robotics and accessible hardware.",
+    "A LeRobot episode is a recorded demonstration: one or more camera streams alongside the robot's own signals, sampled per frame. What the library does not provide is the human judgement about those episodes, which is what a policy trained on them ultimately depends on: where one sub-goal ends and the next begins, whether the demonstration actually succeeded, and how close to done the robot was at each moment.",
+    "Potato puts N synchronized video streams and M time-series lanes on a single timeline and collects three layers over them. Phase segmentation marks where the robot's sub-goal changes. Outcome records success, partial or failure, with a failure-cause taxonomy. Dense progress reward is drawn as a curve across the episode. The layers cost very different amounts of annotator time, so most projects enable a subset.",
+    "Three outcomes rather than two is a deliberate choice. \"Partial\" is the modal result in real robot data, and collapsing it into success or failure destroys the signal that makes the dataset worth annotating in the first place. The config also collects a relabelled instruction, so an episode that failed at the task it was recorded for can be reused as a successful demonstration of the task it actually performed.",
+    "The time-series lanes are downsampled with a min/max-preserving reduction, so a one-frame force spike survives being drawn into a 300-pixel-wide lane rather than being averaged away. This matters in practice: a missed grasp is usually visible in the gripper and wrist-force traces several frames before it becomes obvious in the video, which is why the lanes sit beside the video rather than behind a tab.",
+    "Potato reads LeRobot v2 through pyarrow, RoboMimic and ALOHA HDF5 through h5py, and RLDS/TFDS through tensorflow_datasets, all via the same source field, and exports a per-frame JSONL sidecar so a read-only public dataset does not have to be rewritten. Each episode is reviewed twice. Phase-boundary agreement is reported as temporal IoU, outcome agreement as Krippendorff's alpha, and reward-curve agreement as ICC plus Pearson, each with coverage stated alongside, because a correlation computed over 5% of a timeline says nothing about the other 95%."
+  ],
+  "datasetStats": [
+    {
+      "label": "Episode layers",
+      "value": "Phases, outcome, dense reward"
+    },
+    {
+      "label": "Outcomes",
+      "value": "success / partial / failure"
+    },
+    {
+      "label": "Import formats",
+      "value": "LeRobot v2, RLDS/TFDS, HDF5 (RoboMimic, ALOHA)"
+    },
+    {
+      "label": "Agreement",
+      "value": "Temporal IoU, alpha, ICC + Pearson"
+    },
+    {
+      "label": "Library",
+      "value": "Hugging Face LeRobot"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Cadene et al.",
+    "email": "",
+    "github": "huggingface",
+    "affiliation": "Hugging Face"
+  },
+  "createdAt": "2026-08-18",
+  "updatedAt": "2026-08-18",
+  "annotationTypes": [
+    "episode_annotation",
+    "text"
+  ],
+  "domain": [
+    "Robotics",
+    "Multimodal"
+  ],
+  "useCase": [
+    "Robot Episode Annotation",
+    "Phase Segmentation",
+    "Reward Labelling",
+    "Video Timeline Annotation"
+  ],
+  "complexity": "advanced",
+  "tags": [
+    "lerobot",
+    "robotics",
+    "episode-annotation",
+    "imitation-learning",
+    "teleoperation",
+    "rlds",
+    "hdf5",
+    "time-series",
+    "embodied"
+  ],
+  "featured": false,
+  "paperReference": "Cadene et al., 2026",
+  "paperUrl": "https://arxiv.org/abs/2602.22818",
+  "datasetUrl": "https://github.com/huggingface/lerobot",
+  "citation": "@article{cadene2026lerobot,\n    title = {LeRobot: An Open-Source Library for End-to-End Robot Learning},\n    author = {Cadene, Remi and Aliberts, Simon and Capuano, Francesco and Aractingi, Michel and Zouitine, Adil and Kooijmans, Pepijn and Choghari, Jade and Russi, Martino and Pascal, Caroline and Palma, Steven and Shukor, Mustafa and Moss, Jess and Soare, Alexander and Aubakirova, Dana and Lhoest, Quentin and Gallouédec, Quentin and Wolf, Thomas},\n    journal = {arXiv:2602.22818},\n    year = {2026}\n}"
+}
