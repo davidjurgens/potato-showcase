@@ -6426,7 +6426,7 @@
    "paper_url": "https://openaccess.thecvf.com/content_iccv_2015/html/Liu_Deep_Learning_Face_ICCV_2015_paper.html",
    "dataset_url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html",
    "featured": true,
-   "sample_items": 3,
+   "sample_items": 4,
    "annotation_types_in_config": [
     "multiselect"
    ],

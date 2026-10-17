@@ -1,17 +1,22 @@
 [
   {
     "id": "celeba_001",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Aiga_toiletsq_men.svg/800px-Aiga_toiletsq_men.svg.png",
-    "context": "Annotate face attributes: hair, facial features, facial hair, accessories, and demographics."
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/960px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
+    "context": "Albert Einstein, 1921. Photograph by Ferdinand Schmutzer, public domain, via Wikimedia Commons."
   },
   {
     "id": "celeba_002",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg",
-    "context": "Select all applicable face attributes from the CelebA attribute list."
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/960px-Marie_Curie_c._1920s.jpg",
+    "context": "Marie Curie, c. 1920. Photograph by Henri Manuel, public domain, via Wikimedia Commons."
   },
   {
     "id": "celeba_003",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_coat.jpg/800px-Red_coat.jpg",
-    "context": "Face attribute annotation task. Label 40 binary attributes."
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/960px-Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+    "context": "Abraham Lincoln, 8 November 1863. Photograph by Alexander Gardner, public domain, via Wikimedia Commons."
+  },
+  {
+    "id": "celeba_004",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Frederick_Douglass_%28circa_1879%29.jpg/960px-Frederick_Douglass_%28circa_1879%29.jpg",
+    "context": "Frederick Douglass, c. 1879. Photograph by George Kendall Warren, public domain, via Wikimedia Commons."
   }
 ]
