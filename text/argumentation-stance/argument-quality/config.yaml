@@ -30,10 +30,17 @@ item_properties:
   id_key: "id"
   text_key: "argument"
 
-context_key: topic
+instance_display:
+  fields:
+    - key: topic
+      type: text
+      label: "Topic"
+    - key: argument
+      type: text
+      label: "Argument"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Overall Quality Rating
@@ -153,8 +160,7 @@ annotation_schemes:
       "Overgeneralization": "Makes sweeping claims from limited evidence"
       "No issues detected": "No significant quality issues identified"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+max_annotations_per_item: 3

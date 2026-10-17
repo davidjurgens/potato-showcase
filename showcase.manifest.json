@@ -6430,7 +6430,10 @@
    "annotation_types_in_config": [
     "multiselect"
    ],
-   "display_types": [],
+   "display_types": [
+    "image",
+    "text"
+   ],
    "scheme_names": [
     "hair_attributes",
     "facial_features",
@@ -15424,7 +15427,9 @@
     "multiselect",
     "radio"
    ],
-   "display_types": [],
+   "display_types": [
+    "text"
+   ],
    "scheme_names": [
     "overall_quality",
     "cogency",
