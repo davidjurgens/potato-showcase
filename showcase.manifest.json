@@ -5975,7 +5975,9 @@
     "image_annotation",
     "radio"
    ],
-   "display_types": [],
+   "display_types": [
+    "text"
+   ],
    "scheme_names": [
     "tissue_regions",
     "slide_diagnosis"

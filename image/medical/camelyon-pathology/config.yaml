@@ -30,17 +30,32 @@ item_properties:
   id_key: "id"
   text_key: "text"
 
+instance_display:
+  fields:
+    - key: tissue_type
+      type: text
+      label: "Tissue Type"
+    - key: text
+      type: text
+      label: "Slide Description"
+
+user_config:
+  allow_all_users: true
+
+max_annotations_per_user: 30
+max_annotations_per_item: 3
+
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Annotate regions in the pathology image
   - annotation_type: image_annotation
     name: tissue_regions
     description: "Delineate tissue regions in the pathology slide. Use polygon for precise boundaries, bounding box for quick marking."
+    source_field: image_url
     tools:
       - polygon
       - bbox
@@ -55,17 +70,15 @@ annotation_schemes:
     name: slide_diagnosis
     description: "What is the overall slide-level diagnosis for metastasis?"
     labels:
-      - "Positive (Metastasis Present)"
-      - "Negative (No Metastasis)"
-      - "Uncertain"
-    keyboard_shortcuts:
-      "Positive (Metastasis Present)": "1"
-      "Negative (No Metastasis)": "2"
-      "Uncertain": "3"
-    tooltips:
-      "Positive (Metastasis Present)": "One or more tumor regions are clearly identifiable in the slide"
-      "Negative (No Metastasis)": "No tumor cells are visible; the tissue appears entirely normal"
-      "Uncertain": "Suspicious regions are present but a definitive diagnosis cannot be made"
+      - name: "Positive (Metastasis Present)"
+        key_value: "1"
+        tooltip: "One or more tumor regions are clearly identifiable in the slide"
+      - name: "Negative (No Metastasis)"
+        key_value: "2"
+        tooltip: "No tumor cells are visible; the tissue appears entirely normal"
+      - name: "Uncertain"
+        key_value: "3"
+        tooltip: "Suspicious regions are present but a definitive diagnosis cannot be made"
 
 annotation_instructions: |
   You will annotate histopathology images of sentinel lymph node tissue sections
@@ -86,25 +99,3 @@ annotation_instructions: |
   - Artifacts (tissue folds, air bubbles, poor staining) should not be confused with tumor.
   - When uncertain, mark as Uncertain and outline the suspicious region.
   - This task requires familiarity with histopathology.
-
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
-      <div style="background: #fce4ec; padding: 7px 14px; border-radius: 8px;">
-        <strong>Tissue Type:</strong> {{tissue_type}}
-      </div>
-    </div>
-    <div style="text-align: center; margin-bottom: 16px; background: #212121; padding: 12px; border-radius: 8px;">
-      <img src="{{image_url}}" style="max-width: 100%; max-height: 600px; border-radius: 4px;" alt="Histopathology slide" />
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Slide Description:</strong>
-      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
