@@ -1,0 +1,73 @@
+{
+  "title": "Gallup Most Important Problem: Open-Ended Answer Coding with the Policy Agendas Codebook",
+  "description": "Deductive coding of open-ended answers to Gallup's \"most important problem\" question into the Policy Agendas Project major topics, with a fixed codebook, two independent coders per answer, Krippendorff's alpha on the admin dashboard, private memos, and adjudication of disagreements. The Policy Agendas data are yearly topic shares and carry no individual answers, so the ten sample answers are synthetic.",
+  "overview": [
+    "The Policy Agendas Project's Most Important Problem dataset codes the responses reported in Gallup's Most Important Problem polls by policy topic. The current release on the Comparative Agendas Project site holds 1,575 observations spanning 1947 to 2023, aggregated to the yearly share of responses in each major topic.",
+    "According to the dataset's codebook, the project used the standard Policy Agendas major topics plus major topic 25 for answers of \"don't know\" or an \"other\" topic, and assigned each entry one and only one content code. The topic numbers and names in the config are the major topics of the Comparative Agendas Project Master Topics Codebook (version 1.1, August 2022), and each code's tooltip lists the subtopics that topic covers.",
+    "The design applies the same code frame to individual answers, coded by two people working independently. Once both coders finish the shared answers, Potato reports Krippendorff's alpha for the topic scheme on the admin dashboard, and answers the coders disagree on go to an adjudicator, who must write a note when overriding a coder. The codebook is fixed, so neither coder can add a code partway through, and memos are private until reliability has been computed. The Policy Agendas codebook describes no two-coder procedure, so that part comes from this design.",
+    "The ten synthetic answers sit on boundaries the master codebook settles. Inflation and the unemployment rate fall under Macroeconomics rather than Labor, gas prices under Energy, climate change under Environment, border enforcement agencies under Law and Crime while immigration itself has its own topic, drug trafficking under Law and Crime while drug abuse treatment falls under Health, and homelessness under Housing. Wlezien (2005) discusses what answers to the most important problem question measure.",
+    "Comparative Agendas Project datasets and codebooks are released under CC BY-NC-SA 4.0. The Policy Agendas data carry no individual answers, so every sample answer is synthetic."
+  ],
+  "datasetStats": [
+    {
+      "label": "Observations",
+      "value": "1,575"
+    },
+    {
+      "label": "Years covered",
+      "value": "1947 to 2023"
+    },
+    {
+      "label": "Codes",
+      "value": "21 major topics plus topic 25 (don't know / other)"
+    },
+    {
+      "label": "Codes per entry",
+      "value": "One"
+    },
+    {
+      "label": "Licence",
+      "value": "CC BY-NC-SA 4.0"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "annotationTypes": [
+    "radio"
+  ],
+  "domain": [
+    "Qualitative Research",
+    "Political Science",
+    "Survey Research"
+  ],
+  "useCase": [
+    "Open-Ended Survey Coding",
+    "Intercoder Reliability",
+    "Content Analysis"
+  ],
+  "complexity": "beginner",
+  "tags": [
+    "most-important-problem",
+    "gallup",
+    "policy-agendas-project",
+    "comparative-agendas-project",
+    "open-ended-survey",
+    "codebook",
+    "intercoder-reliability",
+    "krippendorff-alpha",
+    "adjudication",
+    "memos"
+  ],
+  "featured": false,
+  "paperReference": "Christopher Wlezien. 2005. On the salience of political issues: The problem with 'most important problem'. Electoral Studies 24(4): 555-579.",
+  "paperUrl": "https://doi.org/10.1016/j.electstud.2005.01.009",
+  "datasetUrl": "https://www.comparativeagendas.net/datasets_codebooks",
+  "citation": "@misc{jones2025pap_mip,\n  title = {Policy Agendas Project: Most Important Problem},\n  author = {Jones, Bryan D. and Baumgartner, Frank R. and Theriault, Sean M. and Epp, Derek A. and Khandekar, Shruti and Little, Daniel},\n  year = {2025},\n  howpublished = {Comparative Agendas Project},\n  url = {https://www.comparativeagendas.net/datasets_codebooks}\n}\n\n@article{wlezien2005salience,\n  title = {On the salience of political issues: The problem with `most important problem'},\n  author = {Wlezien, Christopher},\n  journal = {Electoral Studies},\n  volume = {24},\n  number = {4},\n  pages = {555--579},\n  year = {2005},\n  doi = {10.1016/j.electstud.2005.01.009}\n}"
+}

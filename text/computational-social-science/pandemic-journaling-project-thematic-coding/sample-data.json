@@ -1,0 +1,102 @@
+[
+  {
+    "id": "pjp_001",
+    "participant_id": "PJP_SYN01_EN",
+    "language": "EN",
+    "week": "1",
+    "prompt_id": "N1",
+    "prompt": "How is the coronavirus pandemic affecting your life right now? Tell us about your experiences, feelings, and thoughts. This is a space to share what's on your mind, and save it for the future.",
+    "text": "My university sent everyone home in March and I am back in my childhood bedroom finishing the semester on a laptop. Lectures are recorded now, so I watch them at 2am and feel like I am falling behind no matter what I do. My little brother is doing school at the kitchen table and we fight over the wifi. I keep telling myself this is temporary but nobody can say how long temporary is.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_002",
+    "participant_id": "PJP_SYN01_EN",
+    "language": "EN",
+    "week": "1",
+    "prompt_id": "N2",
+    "prompt": "Many of us have experienced restrictions on movement and social contact during the pandemic. Talk about any restrictions that have especially affected you.",
+    "text": "The hardest one is not seeing my friends. We do video calls on Fridays but it is not the same as sitting in someone's dorm room doing nothing together. I was supposed to go to my best friend's graduation in May and that is cancelled. My grandmother lives twenty minutes away and we wave at her through the window on Sundays.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_003",
+    "participant_id": "PJP_SYN01_EN",
+    "language": "EN",
+    "week": "2",
+    "prompt_id": "N36",
+    "prompt": "Some people are feeling intense feelings right now as a result of the pandemic. Is anything making you especially sad, angry, or hopeful right now? If so, what's on your mind?",
+    "text": "Angry, mostly. I watched a video of people packed into a beach with no masks and I just shut my laptop. We are doing everything right in this house and it feels pointless. Hopeful about one thing though: my campus counseling center started phone appointments and I had my first one on Tuesday. It helped more than I expected.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_004",
+    "participant_id": "PJP_SYN01_EN",
+    "language": "EN",
+    "week": "5",
+    "prompt_id": "N67",
+    "prompt": "Talk about how the events of recent months have affected either your work or your ability to work.",
+    "text": "I lost my campus job at the library when everything closed. My manager said they might bring student workers back when the building reopens but there is no date. I applied to stock shelves at the grocery store near my parents' house. My mom is worried about me being around so many people, and honestly so am I, but I need the money for rent in the fall.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_005",
+    "participant_id": "PJP_SYN02_EN",
+    "language": "EN",
+    "week": "1",
+    "prompt_id": "N3",
+    "prompt": "Think about the people closest to you. Tell us about how the coronavirus has affected them, and their life.",
+    "text": "My husband is a respiratory therapist and he sleeps in the guest room now so he does not bring anything home to the kids. He showers in the garage before he comes inside. My father is 81 and lives alone across the state, and I call him every night at seven so he hears a voice. He pretends he is fine. I can tell he is not.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_006",
+    "participant_id": "PJP_SYN02_EN",
+    "language": "EN",
+    "week": "8",
+    "prompt_id": "N28",
+    "prompt": "Talk about what brings you happiness these days.",
+    "text": "Our evening walk. After dinner the four of us walk the loop around the reservoir and the kids name every dog we pass. It is the only hour of the day when nobody is on a screen. Last week we saw a heron and my daughter talked about it for three days. Small things, but I am holding on to them.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_007",
+    "participant_id": "PJP_SYN02_EN",
+    "language": "EN",
+    "week": "12",
+    "prompt_id": "optional third entry",
+    "prompt": "Would you like to add anything else to your journal this week?",
+    "text": "The school district voted to reopen in person in September. Half the parents in our group chat are relieved and half are furious, and it has gotten ugly. I don't know what we will do. My son needs to be with other kids. My husband sees what this virus does every single shift.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_008",
+    "participant_id": "PJP_SYN03_SP",
+    "language": "SP",
+    "week": "1",
+    "prompt_id": "N1",
+    "prompt": "¿De qué manera el coronavirus le está afectando su vida en este momento? Cuéntenos de sus experiencias, sensaciones/emociones, y pensamientos. Este es un espacio para compartir lo que está pensando, y guardarlo para el futuro.",
+    "text": "Trabajo limpiando oficinas y ahora casi no hay nadie en los edificios, así que nos redujeron las horas. Mis hijos toman clases por el teléfono porque solo tenemos uno en la casa. Me da miedo enfermarme porque si yo no trabajo no comemos. Mi mamá está en Guatemala y no sé cuándo la voy a volver a ver.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_009",
+    "participant_id": "PJP_SYN03_SP",
+    "language": "SP",
+    "week": "5",
+    "prompt_id": "N69",
+    "prompt": "En estos tiempos, hemos escuchado hablar mucho del impacto económico de la pandemia. ¿Ha pensado en eso? Si es así, cuéntenos lo que ha pensado.",
+    "text": "Sí, todos los días. Debemos dos meses de renta y el dueño dice que tiene que cobrar. En las noticias dicen que va a haber ayuda pero nosotros no sabemos si podemos pedirla. Una vecina nos pasó información de una iglesia que reparte comida los sábados y fuimos la semana pasada.",
+    "synthetic": true
+  },
+  {
+    "id": "pjp_010",
+    "participant_id": "PJP_SYN03_SP",
+    "language": "SP",
+    "week": "7",
+    "prompt_id": "N13",
+    "prompt": "¿Cuál es un obstáculo que usted ha encarado durante la última semana? ¿Cómo lo ha enfrentado?",
+    "text": "Mi hijo menor tuvo fiebre y no sabíamos si era el virus. No tenemos seguro médico. Llamamos a una clínica comunitaria y nos hicieron la prueba gratis en el carro. Salió negativa. Esa noche fue la primera vez en semanas que dormí completa.",
+    "synthetic": true
+  }
+]

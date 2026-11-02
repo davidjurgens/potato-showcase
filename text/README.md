@@ -48,10 +48,12 @@ This category contains annotation task designs for text-based NLP research, incl
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [conjoint-candidate-profiles](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/conjoint-candidate-profiles) | Choice-based conjoint annotation modeled on the immigrant admission experiment in Hainmueller, Hopkins,… | Hainmueller et al., Political Analysis 2014 |
+| [gallup-most-important-problem-coding](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/gallup-most-important-problem-coding) | Deductive coding of open-ended answers to Gallup's "most important problem" question into the Policy Agendas… | Policy Agendas Project MIP; Wlezien, Electoral Studies 2005 |
 | [human-values-arguments](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/human-values-arguments) | Identification of human values in arguments, following Kiesel et al. (ACL 2022) | Kiesel et al., ACL 2022 |
 | [media-frames-analysis](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/media-frames-analysis) | The Media Frames Corpus labels U.S. news articles on immigration, smoking, and same-sex marriage with 15… | Card et al., ACL 2015 |
 | [moral-foundations-tweets](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/moral-foundations-tweets) | Classification of moral foundations in social media discourse, based on Moral Foundations Theory (Johnson… | Johnson & Goldwasser, ACL 2018 |
 | [offenseval-target-id](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/offenseval-target-id) | Multi-step offensive language annotation combining offensiveness detection, target type classification,… | Zampieri et al., NAACL 2019 (OLID) |
+| [pandemic-journaling-project-thematic-coding](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/pandemic-journaling-project-thematic-coding) | Qualitative coding of COVID-19 journal entries in the format of the Pandemic Journaling Project (PJP-1), run… | Wurtz et al., SSM - Mental Health 2022 |
 | [politeness-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/politeness-annotation) | Annotate text for politeness level, speech act type, and optional rewrite suggestions based on the… | Madaan et al., ACL 2020 |
 | [ruddit-offensiveness-bws](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/ruddit-offensiveness-bws) | Best-worst scaling annotation of the degree of offensiveness of English Reddit comments, based on Ruddit… | Hada et al., ACL 2021 |
 | [rumoureval-verification](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/rumoureval-verification) | Annotate social media posts for rumour stance classification and thread structure analysis based on the… | Gorrell et al., SemEval 2019 |
@@ -312,4 +314,4 @@ potato start config.yaml
 
 ## Task Count
 
-**Total: 144 text annotation tasks** across 30 subcategories
+**Total: 146 text annotation tasks** across 30 subcategories

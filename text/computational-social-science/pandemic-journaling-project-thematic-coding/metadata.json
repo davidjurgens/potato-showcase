@@ -1,0 +1,82 @@
+{
+  "title": "Pandemic Journaling Project: Thematic Coding of Journal Entries in QDA Mode",
+  "description": "Qualitative coding of COVID-19 journal entries in the format of the Pandemic Journaling Project (PJP-1), run in Potato's QDA Mode with an open codebook seeded from PJP's preliminary tag list, excerpt-level and in-vivo coding, private memos, and one case per journaler. PJP-1 entries are controlled-access data at the Qualitative Data Repository, so the ten sample entries are synthetic.",
+  "overview": [
+    "The Pandemic Journaling Project (PJP) is an online journaling platform and mixed-methods study created by anthropologists Sarah Willen and Katherine Mason. In its first phase (PJP-1), which ran weekly from May 2020 to May 2022 in English and Spanish, participants answered narrative prompts about how the pandemic was affecting their lives. The deposit at the Qualitative Data Repository holds nearly 27,000 journal entries from more than 1,800 participants in 55 countries.",
+    "Each week a journaler could write up to three entries. The first answered a recurring prompt (\"How is the coronavirus pandemic affecting your life right now?\"), the second answered one of two topical prompts on subjects such as restrictions, work, trust, or mental health, and the third was optional. The prompts in the sample data are quoted from the deposit's prompt list.",
+    "PJP's undergraduate research assistants took a first pass at coding with a preliminary tag list, applied to short descriptions of each entry. The public audio catalog in the deposit records the tags on 385 audio entries from 97 participants. The codebook in this design starts from the 21 tags applied to 17 or more of those entries, spelled as PJP spells them. PJP publishes tag names only, so the one-line code definitions are working definitions for a coding team to revise.",
+    "The design uses Potato's QDA Mode. Coders highlight excerpts and apply codes, create new codes from a journaler's own words with the in-vivo key, tag each entry as a whole the way PJP's assistants did, and keep private memos. Entries are grouped into one case per participant through the participant_id field, so a journal can be read from week to week and codes can be counted by case and compared between English and Spanish journals.",
+    "PJP-1 is controlled-access data, available to approved researchers through QDR under the project's terms of access. All ten sample entries are synthetic, written for this design in the deposit's format, and their participant IDs contain SYN so they cannot be mistaken for real journalers."
+  ],
+  "datasetStats": [
+    {
+      "label": "Journal entries",
+      "value": "Nearly 27,000"
+    },
+    {
+      "label": "Participants",
+      "value": "More than 1,800"
+    },
+    {
+      "label": "Countries",
+      "value": "55"
+    },
+    {
+      "label": "Languages",
+      "value": "English and Spanish"
+    },
+    {
+      "label": "Collection period",
+      "value": "May 2020 to May 2022"
+    },
+    {
+      "label": "Access",
+      "value": "Controlled access at the Qualitative Data Repository"
+    },
+    {
+      "label": "Seed codebook",
+      "value": "21 preliminary tags"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "annotationTypes": [
+    "span",
+    "multiselect"
+  ],
+  "domain": [
+    "Qualitative Research",
+    "Computational Social Science",
+    "Public Health"
+  ],
+  "useCase": [
+    "Thematic Analysis",
+    "Qualitative Coding",
+    "Diary Studies"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "qda-mode",
+    "thematic-analysis",
+    "qualitative-coding",
+    "codebook",
+    "memos",
+    "cases",
+    "in-vivo-coding",
+    "covid-19",
+    "journaling",
+    "qualitative-data-repository"
+  ],
+  "featured": false,
+  "paperReference": "Heather M. Wurtz, Sarah S. Willen, and Katherine A. Mason. 2022. Introduction: Journaling and Mental Health during COVID-19: Insights from the Pandemic Journaling Project. SSM - Mental Health 2: 100141.",
+  "paperUrl": "https://doi.org/10.1016/j.ssmmh.2022.100141",
+  "datasetUrl": "https://pandemic-journaling-project.chip.uconn.edu/",
+  "citation": "@article{wurtz2022journaling,\n  title = {Introduction: Journaling and Mental Health during {COVID}-19: Insights from the Pandemic Journaling Project},\n  author = {Wurtz, Heather M. and Willen, Sarah S. and Mason, Katherine A.},\n  journal = {SSM - Mental Health},\n  volume = {2},\n  pages = {100141},\n  year = {2022},\n  doi = {10.1016/j.ssmmh.2022.100141}\n}\n\n@misc{willen2024pjp1,\n  title = {Data for: The Pandemic Journaling Project, Phase One ({PJP}-1)},\n  author = {Willen, Sarah and Mason, Katherine},\n  publisher = {Qualitative Data Repository},\n  year = {2024},\n  doi = {10.5064/F6PXS9ZK}\n}"
+}

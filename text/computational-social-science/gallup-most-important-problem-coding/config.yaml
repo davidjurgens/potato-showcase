@@ -1,0 +1,171 @@
+# Gallup "Most Important Problem": Coding Open-Ended Answers with the
+# Policy Agendas Project Codebook, Two Coders
+#
+# Dataset and code frame:
+#   Bryan D. Jones, Frank R. Baumgartner, Sean M. Theriault, Derek A. Epp,
+#   Shruti Khandekar, and Daniel Little (2025). "Policy Agendas Project: Most
+#   Important Problem." Comparative Agendas Project. 1,575 observations, 1947
+#   to 2023. https://www.comparativeagendas.net/datasets_codebooks
+#   Codebook: "Gallup's Most Important Problem Data Codebook", Policy Agendas
+#   Project (2015).
+#   Topic system: Comparative Agendas Project Master Topics Codebook, version
+#   1.1 (August 9, 2022). https://www.comparativeagendas.net/pages/master-codebook
+# Background on the measure:
+#   Christopher Wlezien (2005). "On the salience of political issues: The
+#   problem with 'most important problem'." Electoral Studies 24(4): 555-579.
+#   https://doi.org/10.1016/j.electstud.2005.01.009
+#
+# What the Policy Agendas Project did (from its MIP codebook): it coded the
+# responses reported in Gallup's Most Important Problem polls by policy
+# content, using the standard Policy Agendas major topics "with the addition
+# of a category for those answering 'don't know' or an 'other' topic: major
+# topic 25", and "each entry was assigned one and only one content code".
+# The published dataset is aggregated to yearly proportions per major topic.
+#
+# What this design adds: the same code frame applied to individual open-ended
+# answers by two independent coders, so intercoder reliability can be reported
+# before the codes are used. Krippendorff's alpha for each scheme appears on
+# the admin dashboard once both coders have finished the shared items, and
+# disagreements go to an adjudication queue. The two-coder procedure is this
+# design's, not something the Policy Agendas codebook describes.
+#
+# Licence: Comparative Agendas Project datasets and codebooks are
+# (c) Comparative Agendas Project, released under CC BY-NC-SA 4.0. The topic
+# numbers and names below are the CAP major topics; each tooltip lists the
+# subtopics that topic contains. Read the master codebook's subtopic
+# descriptions before coding: they settle most boundary cases.
+#
+# Reproduction notes:
+#   - The Policy Agendas data are yearly topic shares and carry no individual
+#     answers, so every answer in sample-data.json is SYNTHETIC. The ten
+#     answers are chosen to land on documented topic boundaries:
+#       * inflation, prices, and cost of living are subtopic 101, and the
+#         unemployment rate is 103, both under 1 Macroeconomics, not 5 Labor;
+#       * oil and gas prices are subtopic 803, under 8 Energy;
+#       * climate change is subtopic 705, under 7 Environment;
+#       * border enforcement agencies are subtopic 1201 (12 Law and Crime),
+#         while immigration and refugees are 900 (9 Immigration);
+#       * illegal drug crime and trafficking are 1203 (12 Law and Crime),
+#         while drug and alcohol abuse treatment is 342 (3 Health);
+#       * homelessness is subtopic 1409, under 14 Housing.
+#   - One code per answer, as in the PAP data. When an answer names two
+#     problems, code the one named first and write a memo; this rule is this
+#     design's.
+#   - The codebook is fixed: coders cannot add or change codes during coding.
+
+annotation_task_name: "Gallup Most Important Problem: Policy Agendas Topic Coding"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+export_annotation_format: "jsonl"
+
+port: 8000
+
+# A deductive code frame: the codebook page shows each code's definition,
+# and codes change only through the config or the command line.
+codebook_mode: fixed
+
+# Coders keep memos on hard cases. Private memos keep the two coders from
+# seeing each other's reasoning before reliability is computed.
+annotation_ui:
+  memos: true
+  visibility: private
+
+# Every answer is coded by two people.
+num_annotators_per_item: 2
+
+agreement_metrics:
+  enabled: true
+  min_overlap: 2
+
+# Answers the two coders disagree on go to an adjudicator, who records why.
+adjudication:
+  enabled: true
+  adjudicator_users:
+    - adjudicator
+  min_annotations: 2
+  show_annotator_names: false
+  require_notes_on_override: true
+
+annotation_instructions: |
+  Each item is one answer to Gallup's question about the most important
+  problem facing the country. Assign it to exactly one Policy Agendas Project
+  major topic.
+
+  1. Code what the answer names, not what you think caused it. "Gas prices"
+     is Energy, even if the respondent is worried about inflation in general.
+  2. Hover over a topic to see the subtopics it covers. When two topics both
+     seem to fit, find the subtopic that names the issue and use its topic.
+  3. Use 25 for "don't know", for no answer, and for answers that fit no
+     major topic.
+  4. If an answer names more than one problem, code the first one named and
+     write a memo listing the others.
+  5. Code on your own. Do not discuss items with the other coder until
+     reliability has been computed; disagreements are settled in adjudication.
+
+instance_display:
+  fields:
+    - key: text
+      type: text
+      label: "Answer to the most important problem question"
+
+annotation_schemes:
+  - annotation_type: radio
+    name: major_topic
+    description: "Which Policy Agendas Project major topic does this answer name?"
+    codebook: true
+    labels:
+      - name: "1 Macroeconomics"
+        tooltip: "Interest rates, inflation, cost of living and prices (101); unemployment rate (103); monetary policy; national budget and debt; tax code; industrial policy; price control."
+      - name: "2 Civil Rights"
+        tooltip: "Minority, gender, age, and disability discrimination; voting rights; freedom of speech; right to privacy; anti-government activity."
+      - name: "3 Health"
+        tooltip: "Health care reform; health insurance; drug industry; medical facilities; providers; medical liability; disease prevention; mental health; long-term care; drug costs; tobacco, drug, and alcohol abuse (342)."
+      - name: "4 Agriculture"
+        tooltip: "Agricultural trade; subsidies to farmers; food inspection and safety; food marketing; animal and crop disease; fisheries."
+      - name: "5 Labor"
+        tooltip: "Worker safety; employment training; employee benefits and pensions; labor unions; minimum wage and fair labor standards; youth employment; migrant and seasonal workers."
+      - name: "6 Education"
+        tooltip: "Higher education; elementary and secondary schools; education of underprivileged students; vocational and special education; educational excellence."
+      - name: "7 Environment"
+        tooltip: "Drinking water; waste disposal; hazardous waste; air pollution and climate change (705); recycling; indoor hazards; species and forest protection; land and water conservation."
+      - name: "8 Energy"
+        tooltip: "Nuclear energy; electricity; natural gas and oil, including oil and gas prices and shortages (803); coal; alternative and renewable energy; energy conservation."
+      - name: "9 Immigration"
+        tooltip: "Immigration, refugees, and citizenship (900)."
+      - name: "10 Transportation"
+        tooltip: "Mass transit; highways; air travel; railroads; maritime transport; infrastructure."
+      - name: "12 Law and Crime"
+        tooltip: "Law enforcement agencies, including border agencies (1201); white collar crime; illegal drug crime and trafficking (1203); courts; prisons; juvenile crime; child abuse; family issues and domestic violence; criminal code; crime control; police."
+      - name: "13 Social Welfare"
+        tooltip: "Low-income assistance; elderly assistance and government pensions; disability assistance; volunteer associations; child care."
+      - name: "14 Housing"
+        tooltip: "Community and urban development; rural housing and development; low-income housing; veterans' and elderly housing; homelessness (1409)."
+      - name: "15 Domestic Commerce"
+        tooltip: "Banking; securities; consumer finance; insurance regulation; bankruptcy; corporate management; small business; patents and copyrights; disaster relief; tourism; consumer safety; sports regulation."
+      - name: "16 Defense"
+        tooltip: "Alliances; intelligence; military readiness; nuclear arms; military aid; personnel; procurement; installations; reserve forces; foreign military operations."
+      - name: "17 Technology"
+        tooltip: "Space; science transfer; telecommunications; broadcasting; weather forecasting; computers."
+      - name: "18 Foreign Trade"
+        tooltip: "Trade agreements; exports; private investment; competitiveness; tariffs and imports; exchange rates."
+      - name: "19 International Affairs"
+        tooltip: "Foreign aid; resource exploitation; developing countries; international finance; specific regions and countries; human rights; international organizations; terrorism; diplomats."
+      - name: "20 Government Operations"
+        tooltip: "Intergovernmental relations; bureaucracy; postal service; government employees and appointments; currency; procurement; tax administration; scandals; branch relations; political campaigns; census."
+      - name: "21 Public Lands"
+        tooltip: "National parks; indigenous affairs; public lands; water resources; dependencies and territories."
+      - name: "23 Culture"
+        tooltip: "General cultural policy."
+      - name: "25 Don't know / Other"
+        tooltip: "Don't know, no answer, or a problem outside every major topic. Major topic 25 in the Policy Agendas MIP data."
+
+user_config:
+  allow_all_users: true

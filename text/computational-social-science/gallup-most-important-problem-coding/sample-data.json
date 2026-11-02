@@ -1,0 +1,52 @@
+[
+  {
+    "id": "mip_001",
+    "text": "Inflation. Groceries cost twice what they did a few years ago.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_002",
+    "text": "Unemployment. People can't find decent jobs around here.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_003",
+    "text": "Gas prices",
+    "synthetic": true
+  },
+  {
+    "id": "mip_004",
+    "text": "Climate change and all the extreme weather.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_005",
+    "text": "The border. Nobody is controlling who comes in.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_006",
+    "text": "Drugs, fentanyl coming into every town.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_007",
+    "text": "Homelessness in the cities is out of control.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_008",
+    "text": "The politicians in Washington. They fight and nothing gets done.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_009",
+    "text": "Health care costs too much, even with insurance.",
+    "synthetic": true
+  },
+  {
+    "id": "mip_010",
+    "text": "I don't know, there are so many.",
+    "synthetic": true
+  }
+]

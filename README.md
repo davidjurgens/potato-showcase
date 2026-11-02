@@ -6,7 +6,7 @@
 
 [Website](https://www.potatoannotator.com) · [Docs](https://www.potatoannotator.com/docs) · [Quick Start](https://www.potatoannotator.com/docs/getting-started/quick-start) · [Showcase](https://www.potatoannotator.com/showcase) · [Blog](https://www.potatoannotator.com/blog) · [Community](https://www.potatoannotator.com/community)
 
-![Designs](https://img.shields.io/badge/designs-440-ff6b35?style=flat-square)
+![Designs](https://img.shields.io/badge/designs-442-ff6b35?style=flat-square)
 ![Annotation types](https://img.shields.io/badge/annotation_types-39-555?style=flat-square)
 ![SemEval tasks](https://img.shields.io/badge/SemEval_tasks-100-555?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-4c9a2a?style=flat-square)
@@ -15,7 +15,7 @@
 
 </div>
 
-These **440** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 42 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
+These **442** [text and multimodal annotation](https://www.potatoannotator.com/why-potato) designs cover 42 Potato annotation types, 100 SemEval shared tasks (2013-2026), 26 agentic evaluation tasks, and benchmarks from ACL, EMNLP, NeurIPS, ICML, ICLR, and CVPR.
 
 The point is to save you from starting an annotation project at a blank config file. Find a task close to what you need, copy the folder, and change the labels and instructions. Most are built from a real dataset or paper, so they show how a published annotation scheme turns into a working Potato setup.
 
@@ -27,7 +27,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 | Category | Description | Tasks |
 |----------|-------------|-------|
-| [**text/**](./text/) | Text-based NLP tasks (emotion, NER, IE, QA, parsing, etc.) | 144 |
+| [**text/**](./text/) | Text-based NLP tasks (emotion, NER, IE, QA, parsing, etc.) | 146 |
 | [**image/**](./image/) | Image annotation (classification, VQA, grounding, medical) | 34 |
 | [**video/**](./video/) | Video annotation (action recognition, QA, summarization) | 40 |
 | [**audio/**](./audio/) | Audio annotation (transcription, commands, captioning) | 19 |
@@ -40,7 +40,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 
 ---
 
-## Text Annotation (144 tasks)
+## Text Annotation (146 tasks)
 
 *Guides: [Creating a sentiment task](https://www.potatoannotator.com/blog/sentiment-analysis-tutorial) · [Building an NER task](https://www.potatoannotator.com/blog/building-ner-task) · [Content moderation setup](https://www.potatoannotator.com/blog/content-moderation-annotation) · [Finding hallucinations with span annotation](https://www.potatoannotator.com/blog/finding-hallucinations-with-span-annotation)*
 
@@ -60,7 +60,7 @@ If you're new to Potato, the [quick-start guide](https://www.potatoannotator.com
 | [Coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference) | 5 | OntoNotes, CorefUD, MAVEN-ERE, ECB+ cross-document events |
 | [Cross-lingual](https://github.com/davidjurgens/potato-showcase/tree/main/text/cross-lingual) | 7 | XNLI, Belebele, FLORES MT Quality, IndicNLP, MasakhaNEWS, NusaX |
 | [Domain-specific](https://github.com/davidjurgens/potato-showcase/tree/main/text/domain-specific) | 9 | BioNLP, ChemProt, Clinical NER, Legal, Medical |
-| [Computational Social Science](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science) | 9 | OffensEval, Moral Foundations, Ruddit (best-worst scaling), conjoint profiles |
+| [Computational Social Science](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science) | 11 | OffensEval, Moral Foundations, Ruddit (best-worst scaling), conjoint profiles, Pandemic Journaling Project (QDA Mode), Gallup Most Important Problem |
 | [Relation Extraction](https://github.com/davidjurgens/potato-showcase/tree/main/text/relation-extraction) | 5 | MultiTACRED, CrossRE, RadGraph, SciER |
 | [Entity Linking](https://github.com/davidjurgens/potato-showcase/tree/main/text/entity-linking) | 4 | AIDA-CoNLL, MedMentions, DWIE document-level linking |
 | [Code Annotation](https://github.com/davidjurgens/potato-showcase/tree/main/text/code-annotation) | 3 | CodeXGLUE Defect Detection |
@@ -221,11 +221,11 @@ These designs use 42 distinct Potato annotation types. Counts below are scheme i
 
 | Type | Count | Example Tasks |
 |------|-------|---------------|
-| radio | 603 | GoEmotions, SNLI, MMLU, most classification tasks |
+| radio | 604 | GoEmotions, SNLI, MMLU, most classification tasks |
 | text | 215 | SQuAD, Natural Questions, code review, translations |
 | likert | 146 | STS-B, essay scoring, MT quality, humor ratings |
-| multiselect | 136 | GoEmotions, moral foundations, persuasion techniques |
-| span | 124 | NER tasks, PICO extraction, DWIE entity linking |
+| multiselect | 137 | GoEmotions, moral foundations, persuasion techniques |
+| span | 125 | NER tasks, PICO extraction, DWIE entity linking |
 | video_annotation | 49 | Action recognition, temporal grounding, MVBench |
 | pairwise | 18 | DPO, Arena Hard, WildBench, MT-Bench |
 | slider | 12 | STS-B similarity, essay scoring, word similarity |

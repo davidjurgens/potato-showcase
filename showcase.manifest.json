@@ -1,6 +1,6 @@
 {
  "schema": "potato-showcase-manifest/1",
- "count": 440,
+ "count": 442,
  "categories": {
   "agentic": 26,
   "audio": 19,
@@ -10,7 +10,7 @@
   "preference-learning": 18,
   "semeval": 100,
   "templates": 20,
-  "text": 144,
+  "text": 146,
   "video": 41
  },
  "annotation_types": {
@@ -247,6 +247,7 @@
    "text/computational-social-science/media-frames-analysis",
    "text/computational-social-science/moral-foundations-tweets",
    "text/computational-social-science/offenseval-target-id",
+   "text/computational-social-science/pandemic-journaling-project-thematic-coding",
    "text/dialogue/annomi-counseling-dialogue",
    "text/dialogue/argscichat-scientific-argumentation",
    "text/dialogue/conversation-quality-attributes",
@@ -526,6 +527,7 @@
    "text/commonsense-ethics/moral-stories",
    "text/commonsense-ethics/power-agency-frames",
    "text/commonsense-ethics/social-chemistry",
+   "text/computational-social-science/gallup-most-important-problem-coding",
    "text/computational-social-science/human-values-arguments",
    "text/computational-social-science/media-frames-analysis",
    "text/computational-social-science/moral-foundations-tweets",
@@ -729,6 +731,7 @@
    "text/code-annotation/codereviewer-review",
    "text/code-annotation/codexglue-defect-detection",
    "text/computational-social-science/offenseval-target-id",
+   "text/computational-social-science/pandemic-journaling-project-thematic-coding",
    "text/computational-social-science/structured-sentiment",
    "text/coreference/corefud-multilingual-coreference",
    "text/coreference/legalcore-legal-coreference",
@@ -1057,7 +1060,7 @@
    "video/vstar-video-dialogue"
   ]
  },
- "with_instructions": 281,
+ "with_instructions": 283,
  "designs": [
   {
    "id": "agentic/agentboard-progress-scoring",
@@ -16426,6 +16429,64 @@
    "config": "text/computational-social-science/conjoint-candidate-profiles/config.yaml"
   },
   {
+   "id": "text/computational-social-science/gallup-most-important-problem-coding",
+   "path": "text/computational-social-science/gallup-most-important-problem-coding",
+   "category": "text",
+   "subcategory": "computational-social-science",
+   "name": "gallup-most-important-problem-coding",
+   "title": "Gallup Most Important Problem: Open-Ended Answer Coding with the Policy Agendas Codebook",
+   "description": "Deductive coding of open-ended answers to Gallup's \"most important problem\" question into the Policy Agendas Project major topics, with a fixed codebook, two independent coders per answer, Krippendorff's alpha on the admin dashboard, private memos, and adjudication of disagreements. The Policy Agendas data are yearly topic shares and carry no individual answers, so the ten sample answers are synthetic.",
+   "complexity": "beginner",
+   "tags": [
+    "most-important-problem",
+    "gallup",
+    "policy-agendas-project",
+    "comparative-agendas-project",
+    "open-ended-survey",
+    "codebook",
+    "intercoder-reliability",
+    "krippendorff-alpha",
+    "adjudication",
+    "memos"
+   ],
+   "domain": [
+    "Qualitative Research",
+    "Political Science",
+    "Survey Research"
+   ],
+   "use_case": [
+    "Open-Ended Survey Coding",
+    "Intercoder Reliability",
+    "Content Analysis"
+   ],
+   "annotation_types": [
+    "radio"
+   ],
+   "paper_reference": "Christopher Wlezien. 2005. On the salience of political issues: The problem with 'most important problem'. Electoral Studies 24(4): 555-579.",
+   "paper_url": "https://doi.org/10.1016/j.electstud.2005.01.009",
+   "dataset_url": "https://www.comparativeagendas.net/datasets_codebooks",
+   "featured": false,
+   "sample_items": 10,
+   "annotation_types_in_config": [
+    "radio"
+   ],
+   "display_types": [
+    "text"
+   ],
+   "scheme_names": [
+    "major_topic"
+   ],
+   "scheme_count": 1,
+   "has_instructions": true,
+   "instruction_words": 142,
+   "has_codebook_url": false,
+   "has_phases": false,
+   "has_training": false,
+   "annotators_per_item": 2,
+   "task_name": "Gallup Most Important Problem: Policy Agendas Topic Coding",
+   "config": "text/computational-social-science/gallup-most-important-problem-coding/config.yaml"
+  },
+  {
    "id": "text/computational-social-science/human-values-arguments",
    "path": "text/computational-social-science/human-values-arguments",
    "category": "text",
@@ -16645,6 +16706,67 @@
    "annotators_per_item": null,
    "task_name": "OffensEval - Offensive Language Target Identification",
    "config": "text/computational-social-science/offenseval-target-id/config.yaml"
+  },
+  {
+   "id": "text/computational-social-science/pandemic-journaling-project-thematic-coding",
+   "path": "text/computational-social-science/pandemic-journaling-project-thematic-coding",
+   "category": "text",
+   "subcategory": "computational-social-science",
+   "name": "pandemic-journaling-project-thematic-coding",
+   "title": "Pandemic Journaling Project: Thematic Coding of Journal Entries in QDA Mode",
+   "description": "Qualitative coding of COVID-19 journal entries in the format of the Pandemic Journaling Project (PJP-1), run in Potato's QDA Mode with an open codebook seeded from PJP's preliminary tag list, excerpt-level and in-vivo coding, private memos, and one case per journaler. PJP-1 entries are controlled-access data at the Qualitative Data Repository, so the ten sample entries are synthetic.",
+   "complexity": "intermediate",
+   "tags": [
+    "qda-mode",
+    "thematic-analysis",
+    "qualitative-coding",
+    "codebook",
+    "memos",
+    "cases",
+    "in-vivo-coding",
+    "covid-19",
+    "journaling",
+    "qualitative-data-repository"
+   ],
+   "domain": [
+    "Qualitative Research",
+    "Computational Social Science",
+    "Public Health"
+   ],
+   "use_case": [
+    "Thematic Analysis",
+    "Qualitative Coding",
+    "Diary Studies"
+   ],
+   "annotation_types": [
+    "span",
+    "multiselect"
+   ],
+   "paper_reference": "Heather M. Wurtz, Sarah S. Willen, and Katherine A. Mason. 2022. Introduction: Journaling and Mental Health during COVID-19: Insights from the Pandemic Journaling Project. SSM - Mental Health 2: 100141.",
+   "paper_url": "https://doi.org/10.1016/j.ssmmh.2022.100141",
+   "dataset_url": "https://pandemic-journaling-project.chip.uconn.edu/",
+   "featured": false,
+   "sample_items": 10,
+   "annotation_types_in_config": [
+    "multiselect",
+    "span"
+   ],
+   "display_types": [
+    "text"
+   ],
+   "scheme_names": [
+    "excerpt_codes",
+    "entry_tags"
+   ],
+   "scheme_count": 2,
+   "has_instructions": true,
+   "instruction_words": 155,
+   "has_codebook_url": false,
+   "has_phases": false,
+   "has_training": false,
+   "annotators_per_item": null,
+   "task_name": "Pandemic Journaling Project: Thematic Coding in QDA Mode",
+   "config": "text/computational-social-science/pandemic-journaling-project-thematic-coding/config.yaml"
   },
   {
    "id": "text/computational-social-science/politeness-annotation",

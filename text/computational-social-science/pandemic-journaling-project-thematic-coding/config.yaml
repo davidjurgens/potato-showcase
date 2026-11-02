@@ -1,0 +1,181 @@
+# Pandemic Journaling Project (PJP-1): Thematic Coding in QDA Mode
+#
+# Dataset:
+#   Sarah Willen and Katherine Mason (2024). "Data for: The Pandemic Journaling
+#   Project, Phase One (PJP-1)." Qualitative Data Repository.
+#   https://doi.org/10.5064/F6PXS9ZK   (controlled access)
+# Paper:
+#   Heather M. Wurtz, Sarah S. Willen, and Katherine A. Mason (2022).
+#   "Introduction: Journaling and Mental Health during COVID-19: Insights from
+#   the Pandemic Journaling Project." SSM - Mental Health 2: 100141.
+#   https://doi.org/10.1016/j.ssmmh.2022.100141
+# Project page: https://pandemic-journaling-project.chip.uconn.edu/
+#
+# What PJP-1 is (from the deposit's data narrative, PJP_A-01): a weekly online
+# journaling study that ran from May 2020 to May 2022 in English and Spanish.
+# Nearly 27,000 journal entries from more than 1,800 participants in 55
+# countries. Each week a participant could write up to three entries: one to
+# the recurring prompt, one to a choice of two topical prompts, and an optional
+# third. The prompts in sample-data.json are quoted from the deposit's prompt
+# list (PJP_A-06_QualitativeNarrativePrompts.xlsx).
+#
+# The codebook: PJP's undergraduate research assistants tagged entries with a
+# "preliminary tag list" (PJP_A-12 for audio entries). They tagged a short
+# description of each entry rather than its transcript. The public audio
+# catalog (PJP_A-11_AudioCatalog_PUBLIC.xlsx) lists the tags applied to 385
+# audio entries from 97 participants. This config seeds the codebook with the
+# 21 tags applied to 17 or more of those entries, spelled as PJP spells them,
+# and leaves out the tag "covid", which fits nearly every entry. PJP publishes
+# tag names only. The one-line definitions below are this design's working
+# definitions, written to be revised by the coding team.
+#
+# Reproduction notes:
+#   - PJP-1 journal entries are controlled-access data. Every entry in
+#     sample-data.json is SYNTHETIC, written for this design in the format of
+#     the deposit (participant IDs ending in _EN or _SP, weekly prompts).
+#     Participant IDs contain "SYN" so they cannot be mistaken for real ones.
+#   - entry_tags reproduces PJP's whole-entry tagging. excerpt_codes adds what a
+#     QDA package adds: codes on highlighted excerpts, with in-vivo coding.
+#   - One case per participant, keyed on participant_id, so the code-by-case
+#     view shows each journaler's entries together across weeks.
+
+annotation_task_name: "Pandemic Journaling Project: Thematic Coding in QDA Mode"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+export_annotation_format: "jsonl"
+
+port: 8000
+
+# QDA Mode turns on the codebook, memos, and case grouping together.
+qda_mode:
+  enabled: true
+  memos:
+    enabled: true
+    show_sidebar_by_default: true
+  codebook:
+    enabled: true
+    mode: open
+
+# With text selected in excerpt_codes, press "i" to create a code from the
+# selected words (in-vivo coding).
+codebook_invivo_key: i
+
+# New memos are private to their author (and admins) unless shared.
+annotation_ui:
+  memos: true
+  visibility: private
+
+# One case per journaler. `language` is lifted onto the case so the code
+# crosstab can compare English and Spanish journals.
+cases:
+  enabled: true
+  key: participant_id
+  auto_detect: true
+  attributes:
+    - language
+
+# Full-text search over all entries; in QDA Mode the coder may open any
+# matching entry from the search panel.
+search:
+  enabled: true
+  backend: fts5
+  annotator_claim: true
+
+annotation_instructions: |
+  You are coding journal entries written for the Pandemic Journaling Project,
+  in which people chronicled how the COVID-19 pandemic affected their lives,
+  week by week, in English or Spanish.
+
+  Each entry answers the prompt shown above it. Entries from the same person
+  belong to one case, so you can read a journal from week to week.
+
+  1. Read the whole entry before coding anything.
+  2. Highlight passages and apply codes in "Excerpt codes". To create a new
+     code from the journaler's own words, select the words and press "i".
+  3. In "Entry tags", tick every tag that describes the entry as a whole, as
+     PJP's research assistants did.
+  4. Write a memo whenever a code feels like a stretch, when an entry connects
+     to the same person's earlier weeks, or when you notice a pattern across
+     journals.
+
+  Spanish entries are coded with the same codebook. Quote the original words
+  in memos rather than translating them.
+
+instance_display:
+  fields:
+    - key: week
+      type: text
+      label: "Week"
+    - key: prompt
+      type: text
+      label: "Narrative prompt"
+    - key: text
+      type: text
+      label: "Journal entry"
+      span_target: true
+
+annotation_schemes:
+  - annotation_type: span
+    name: excerpt_codes
+    description: "Highlight a passage and apply a code. Select words and press i to code in vivo."
+    codebook: true
+    labels: &pjp_tags
+      - name: "work"
+        tooltip: "Paid work, jobs, and workplaces, including job loss and changes in how or where someone works."
+      - name: "family"
+        tooltip: "Family members and family life, including relatives the journaler lives with or cares for."
+      - name: "school/academics"
+        tooltip: "Schooling, classes, coursework, and academic life at any level."
+      - name: "strong emotions"
+        tooltip: "An intense feeling the entry names or describes, such as fear, grief, anger, or relief."
+      - name: "isolation/quarantine"
+        tooltip: "Being kept apart from others by quarantine, illness, stay-at-home orders, or distancing."
+      - name: "news/current events"
+        tooltip: "News coverage and current events the journaler reacts to."
+      - name: "vaccines"
+        tooltip: "COVID-19 vaccines: getting one, appointments, side effects, and views about vaccination."
+      - name: "socializing"
+        tooltip: "Seeing or talking with other people, in person or online."
+      - name: "college students"
+        tooltip: "The journaler, or someone they write about, is a college or university student."
+      - name: "health"
+        tooltip: "Physical health and illness, including COVID-19 infection and testing."
+      - name: "home"
+        tooltip: "Home as a place: being at home, housework, and the household's space."
+      - name: "mental health"
+        tooltip: "Psychological wellbeing or distress, therapy, and ways of coping."
+      - name: "reopening"
+        tooltip: "Businesses, schools, or public life reopening, and returns to in-person activity."
+      - name: "older people"
+        tooltip: "Older adults, such as parents or grandparents, including their risk and their care."
+      - name: "politics"
+        tooltip: "Elections, parties, politicians, and political conflict."
+      - name: "children"
+        tooltip: "Children and childcare, including the journaler's own children."
+      - name: "masks"
+        tooltip: "Wearing masks, mask rules, and disputes about masks."
+      - name: "friendship"
+        tooltip: "Friends and friendships."
+      - name: "relationships"
+        tooltip: "Romantic, family, or social relationships and how they changed."
+      - name: "travel"
+        tooltip: "Trips, travel plans, and limits on travel."
+      - name: "nature"
+        tooltip: "Time outdoors and the natural world: parks, gardens, walks, and weather."
+
+  - annotation_type: multiselect
+    name: entry_tags
+    description: "Which tags describe this entry as a whole?"
+    codebook: true
+    labels: *pjp_tags
+
+user_config:
+  allow_all_users: true
