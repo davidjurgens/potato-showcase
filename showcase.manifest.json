@@ -1,6 +1,6 @@
 {
  "schema": "potato-showcase-manifest/1",
- "count": 442,
+ "count": 444,
  "categories": {
   "agentic": 26,
   "audio": 19,
@@ -10,7 +10,7 @@
   "preference-learning": 18,
   "semeval": 100,
   "templates": 20,
-  "text": 146,
+  "text": 148,
   "video": 41
  },
  "annotation_types": {
@@ -527,6 +527,7 @@
    "text/commonsense-ethics/moral-stories",
    "text/commonsense-ethics/power-agency-frames",
    "text/commonsense-ethics/social-chemistry",
+   "text/computational-social-science/ftc-noncompete-public-comments-qda",
    "text/computational-social-science/gallup-most-important-problem-coding",
    "text/computational-social-science/human-values-arguments",
    "text/computational-social-science/media-frames-analysis",
@@ -730,8 +731,10 @@
    "templates/text/named-entity-recognition",
    "text/code-annotation/codereviewer-review",
    "text/code-annotation/codexglue-defect-detection",
+   "text/computational-social-science/ftc-noncompete-public-comments-qda",
    "text/computational-social-science/offenseval-target-id",
    "text/computational-social-science/pandemic-journaling-project-thematic-coding",
+   "text/computational-social-science/senate-oversight-of-ai-hearings-qda",
    "text/computational-social-science/structured-sentiment",
    "text/coreference/corefud-multilingual-coreference",
    "text/coreference/legalcore-legal-coreference",
@@ -1060,7 +1063,7 @@
    "video/vstar-video-dialogue"
   ]
  },
- "with_instructions": 283,
+ "with_instructions": 285,
  "designs": [
   {
    "id": "agentic/agentboard-progress-scoring",
@@ -16429,6 +16432,67 @@
    "config": "text/computational-social-science/conjoint-candidate-profiles/config.yaml"
   },
   {
+   "id": "text/computational-social-science/ftc-noncompete-public-comments-qda",
+   "path": "text/computational-social-science/ftc-noncompete-public-comments-qda",
+   "category": "text",
+   "subcategory": "computational-social-science",
+   "name": "ftc-noncompete-public-comments-qda",
+   "title": "FTC Non-Compete Rule Public Comments: Open Coding in QDA Mode",
+   "description": "Open coding of public comments on the FTC's Non-Compete Clause Rule (docket FTC-2023-0007) in Potato's QDA Mode. The design demonstrates a codebook grown while reading, in-vivo codes, full-text search with search-and-claim, and shared memos raised as issues. Commenters keep the rights to their comments, so the ten sample comments are synthetic.",
+   "complexity": "intermediate",
+   "tags": [
+    "qda-mode",
+    "open-coding",
+    "in-vivo-coding",
+    "codebook",
+    "memos",
+    "full-text-search",
+    "public-comments",
+    "regulations-gov",
+    "federal-trade-commission",
+    "non-compete"
+   ],
+   "domain": [
+    "Qualitative Research",
+    "Public Policy",
+    "Computational Social Science"
+   ],
+   "use_case": [
+    "Open Coding",
+    "Public Comment Analysis",
+    "Qualitative Coding"
+   ],
+   "annotation_types": [
+    "span",
+    "radio"
+   ],
+   "paper_reference": "Federal Trade Commission. 2024. Non-Compete Clause Rule. Federal Register 89: 38342 (May 7, 2024).",
+   "paper_url": "https://www.federalregister.gov/documents/2024/05/07/2024-09171/non-compete-clause-rule",
+   "dataset_url": "https://www.federalregister.gov/documents/2023/01/19/2023-00414/non-compete-clause-rule",
+   "featured": false,
+   "sample_items": 10,
+   "annotation_types_in_config": [
+    "radio",
+    "span"
+   ],
+   "display_types": [
+    "text"
+   ],
+   "scheme_names": [
+    "comment_codes",
+    "position"
+   ],
+   "scheme_count": 2,
+   "has_instructions": true,
+   "instruction_words": 154,
+   "has_codebook_url": false,
+   "has_phases": false,
+   "has_training": false,
+   "annotators_per_item": null,
+   "task_name": "FTC Non-Compete Rule Public Comments: Open Coding in QDA Mode",
+   "config": "text/computational-social-science/ftc-noncompete-public-comments-qda/config.yaml"
+  },
+  {
    "id": "text/computational-social-science/gallup-most-important-problem-coding",
    "path": "text/computational-social-science/gallup-most-important-problem-coding",
    "category": "text",
@@ -16932,6 +16996,64 @@
    "annotators_per_item": null,
    "task_name": "RumourEval Stance and Verification",
    "config": "text/computational-social-science/rumoureval-verification/config.yaml"
+  },
+  {
+   "id": "text/computational-social-science/senate-oversight-of-ai-hearings-qda",
+   "path": "text/computational-social-science/senate-oversight-of-ai-hearings-qda",
+   "category": "text",
+   "subcategory": "computational-social-science",
+   "name": "senate-oversight-of-ai-hearings-qda",
+   "title": "Senate Oversight of A.I. Hearings: Coding Senators' Remarks with Cases and a Code Hierarchy",
+   "description": "Qualitative coding of senators' remarks from the four Senate Judiciary subcommittee hearings titled \"Oversight of A.I.\" (2023-2024), in Potato's QDA Mode. The design demonstrates cases with attributes (one case per senator, with party and state), the code-by-case crosstab on the admin API, and a codebook of parent and child codes. The ten sample passages are real public-domain remarks taken from the govinfo transcripts.",
+   "complexity": "intermediate",
+   "tags": [
+    "qda-mode",
+    "cases",
+    "crosstab",
+    "hierarchical-codes",
+    "codebook",
+    "congressional-hearings",
+    "govinfo",
+    "ai-policy",
+    "senate-judiciary",
+    "public-domain"
+   ],
+   "domain": [
+    "Qualitative Research",
+    "Political Science",
+    "AI Policy"
+   ],
+   "use_case": [
+    "Thematic Analysis",
+    "Case-Based Comparison",
+    "Qualitative Coding"
+   ],
+   "annotation_types": [
+    "span"
+   ],
+   "paper_reference": "Oversight of A.I.: Rules for Artificial Intelligence. Hearing before the Subcommittee on Privacy, Technology, and the Law of the Committee on the Judiciary, United States Senate, 118th Congress, May 16, 2023. S. Hrg. 118-037.",
+   "paper_url": "https://www.govinfo.gov/app/details/CHRG-118shrg52706",
+   "dataset_url": "https://www.govinfo.gov/app/collection/chrg",
+   "featured": false,
+   "sample_items": 10,
+   "annotation_types_in_config": [
+    "span"
+   ],
+   "display_types": [
+    "text"
+   ],
+   "scheme_names": [
+    "remarks_codes"
+   ],
+   "scheme_count": 1,
+   "has_instructions": true,
+   "instruction_words": 132,
+   "has_codebook_url": false,
+   "has_phases": false,
+   "has_training": false,
+   "annotators_per_item": null,
+   "task_name": "Senate Oversight of A.I. Hearings: Cases and Code Hierarchy in QDA Mode",
+   "config": "text/computational-social-science/senate-oversight-of-ai-hearings-qda/config.yaml"
   },
   {
    "id": "text/computational-social-science/structured-sentiment",

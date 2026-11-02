@@ -48,6 +48,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | Design | Description | Reference |
 |--------|-------------|-----------|
 | [conjoint-candidate-profiles](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/conjoint-candidate-profiles) | Choice-based conjoint annotation modeled on the immigrant admission experiment in Hainmueller, Hopkins,… | Hainmueller et al., Political Analysis 2014 |
+| [ftc-noncompete-public-comments-qda](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/ftc-noncompete-public-comments-qda) | Open coding of public comments on the FTC's Non-Compete Clause Rule (docket FTC-2023-0007) in Potato's QDA… | FTC, 89 FR 38342 (2024) |
 | [gallup-most-important-problem-coding](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/gallup-most-important-problem-coding) | Deductive coding of open-ended answers to Gallup's "most important problem" question into the Policy Agendas… | Policy Agendas Project MIP; Wlezien, Electoral Studies 2005 |
 | [human-values-arguments](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/human-values-arguments) | Identification of human values in arguments, following Kiesel et al. (ACL 2022) | Kiesel et al., ACL 2022 |
 | [media-frames-analysis](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/media-frames-analysis) | The Media Frames Corpus labels U.S. news articles on immigration, smoking, and same-sex marriage with 15… | Card et al., ACL 2015 |
@@ -57,6 +58,7 @@ This category contains annotation task designs for text-based NLP research, incl
 | [politeness-annotation](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/politeness-annotation) | Annotate text for politeness level, speech act type, and optional rewrite suggestions based on the… | Madaan et al., ACL 2020 |
 | [ruddit-offensiveness-bws](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/ruddit-offensiveness-bws) | Best-worst scaling annotation of the degree of offensiveness of English Reddit comments, based on Ruddit… | Hada et al., ACL 2021 |
 | [rumoureval-verification](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/rumoureval-verification) | Annotate social media posts for rumour stance classification and thread structure analysis based on the… | Gorrell et al., SemEval 2019 |
+| [senate-oversight-of-ai-hearings-qda](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/senate-oversight-of-ai-hearings-qda) | Qualitative coding of senators' remarks from the four Senate Judiciary subcommittee hearings titled "Oversight of… | S. Hrg. 118-037 (2023) |
 | [structured-sentiment](https://github.com/davidjurgens/potato-showcase/tree/main/text/computational-social-science/structured-sentiment) | Fine-grained structured sentiment annotation identifying opinion holders, targets, and polar expressions… | Barnes et al., SemEval 2022 |
 
 ### [Coreference](https://github.com/davidjurgens/potato-showcase/tree/main/text/coreference)
@@ -314,4 +316,4 @@ potato start config.yaml
 
 ## Task Count
 
-**Total: 146 text annotation tasks** across 30 subcategories
+**Total: 148 text annotation tasks** across 30 subcategories

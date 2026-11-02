@@ -1,0 +1,73 @@
+{
+  "title": "Senate Oversight of A.I. Hearings: Coding Senators' Remarks with Cases and a Code Hierarchy",
+  "description": "Qualitative coding of senators' remarks from the four Senate Judiciary subcommittee hearings titled \"Oversight of A.I.\" (2023-2024), in Potato's QDA Mode. The design demonstrates cases with attributes (one case per senator, with party and state), the code-by-case crosstab on the admin API, and a codebook of parent and child codes. The ten sample passages are real public-domain remarks taken from the govinfo transcripts.",
+  "overview": [
+    "Between May 2023 and January 2024 the Senate Judiciary Subcommittee on Privacy, Technology, and the Law held four hearings under the title \"Oversight of A.I.\": Rules for Artificial Intelligence (May 16, 2023), Principles for Regulation (July 25, 2023), Legislating on Artificial Intelligence (September 12, 2023), and The Future of Journalism (January 10, 2024). The Government Publishing Office prints each hearing as a Senate hearing record, and the full text is on govinfo.",
+    "QDA Mode features demonstrated: cases with attributes, the code-by-case crosstab, and hierarchical codes. Each passage carries the senator's name, party, and state. Potato groups the passages into one case per senator and lifts party and state onto the case, and the admin crosstab endpoint counts how many passages carry each code for each party, or for each hearing.",
+    "The codebook has three parent codes (harms named, remedies proposed, and how the problem is framed) and thirteen child codes beneath them, such as elections and deepfakes, liability and right to sue, and lessons from social media. In Potato 2.13.1 the config seeds codes as a flat list and the browser adds new codes at the top level, so the children are nested once through the codebook REST API, as the config header shows. The crosstab counts each child code as itself and does not roll it up into its parent.",
+    "The sample data are ten passages spoken by five senators (Blumenthal, Durbin, and Klobuchar, Democrats, and Hawley and Blackburn, Republicans), copied from the govinfo text. A senator's remarks at a hearing are made as part of official duties, the kind of work 17 U.S.C. 105 places in the public domain. Witness testimony is left out, since witnesses are not federal officers and GPO warns that government publications may contain copyrighted material. Party and state come from the CC0 congress-legislators dataset.",
+    "A .qdpx export of this project carries the codes as a flat list and leaves out cases and memos, so keep the JSONL export and the crosstab output for the case structure."
+  ],
+  "datasetStats": [
+    {
+      "label": "Hearings",
+      "value": "4 (May 2023 to January 2024)"
+    },
+    {
+      "label": "Records",
+      "value": "S. Hrg. 118-037, 118-108, 118-154, 118-439"
+    },
+    {
+      "label": "Sample passages",
+      "value": "10, from 5 senators"
+    },
+    {
+      "label": "Codebook",
+      "value": "3 parent codes, 13 child codes"
+    },
+    {
+      "label": "Licence",
+      "value": "Public domain (senators' remarks)"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "annotationTypes": [
+    "span"
+  ],
+  "domain": [
+    "Qualitative Research",
+    "Political Science",
+    "AI Policy"
+  ],
+  "useCase": [
+    "Thematic Analysis",
+    "Case-Based Comparison",
+    "Qualitative Coding"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "qda-mode",
+    "cases",
+    "crosstab",
+    "hierarchical-codes",
+    "codebook",
+    "congressional-hearings",
+    "govinfo",
+    "ai-policy",
+    "senate-judiciary",
+    "public-domain"
+  ],
+  "featured": false,
+  "paperReference": "Oversight of A.I.: Rules for Artificial Intelligence. Hearing before the Subcommittee on Privacy, Technology, and the Law of the Committee on the Judiciary, United States Senate, 118th Congress, May 16, 2023. S. Hrg. 118-037.",
+  "paperUrl": "https://www.govinfo.gov/app/details/CHRG-118shrg52706",
+  "datasetUrl": "https://www.govinfo.gov/app/collection/chrg",
+  "citation": "@misc{shrg118_037,\n  title = {Oversight of {A.I.}: Rules for Artificial Intelligence},\n  author = {{U.S. Senate Committee on the Judiciary, Subcommittee on Privacy, Technology, and the Law}},\n  howpublished = {S. Hrg. 118-037, U.S. Government Publishing Office},\n  year = {2023},\n  note = {Hearing held May 16, 2023},\n  url = {https://www.govinfo.gov/app/details/CHRG-118shrg52706}\n}\n\n@misc{shrg118_108,\n  title = {Oversight of {A.I.}: Principles for Regulation},\n  author = {{U.S. Senate Committee on the Judiciary, Subcommittee on Privacy, Technology, and the Law}},\n  howpublished = {S. Hrg. 118-108, U.S. Government Publishing Office},\n  year = {2023},\n  note = {Hearing held July 25, 2023},\n  url = {https://www.govinfo.gov/app/details/CHRG-118shrg53503}\n}\n\n@misc{shrg118_154,\n  title = {Oversight of {A.I.}: Legislating on Artificial Intelligence},\n  author = {{U.S. Senate Committee on the Judiciary, Subcommittee on Privacy, Technology, and the Law}},\n  howpublished = {S. Hrg. 118-154, U.S. Government Publishing Office},\n  year = {2023},\n  note = {Hearing held September 12, 2023},\n  url = {https://www.govinfo.gov/app/details/CHRG-118shrg53879}\n}\n\n@misc{shrg118_439,\n  title = {Oversight of {A.I.}: The Future of Journalism},\n  author = {{U.S. Senate Committee on the Judiciary, Subcommittee on Privacy, Technology, and the Law}},\n  howpublished = {S. Hrg. 118-439, U.S. Government Publishing Office},\n  year = {2024},\n  note = {Hearing held January 10, 2024},\n  url = {https://www.govinfo.gov/app/details/CHRG-118shrg57061}\n}"
+}

@@ -1,0 +1,172 @@
+# Senate "Oversight of A.I." Hearings (2023-2024): Coding Senators' Remarks
+# QDA Mode features shown here: cases with attributes (one case per senator,
+# with party and state), the code-by-case crosstab on the admin API, and a
+# hierarchical codebook of parent and child codes.
+#
+# Source: four hearings of the Subcommittee on Privacy, Technology, and the
+# Law, Senate Committee on the Judiciary, 118th Congress, as printed by the
+# U.S. Government Publishing Office on govinfo:
+#   2023-05-16  Oversight of A.I.: Rules for Artificial Intelligence
+#               (S. Hrg. 118-037)  CHRG-118shrg52706
+#   2023-07-25  Oversight of A.I.: Principles for Regulation
+#               (S. Hrg. 118-108)  CHRG-118shrg53503
+#   2023-09-12  Oversight of A.I.: Legislating on Artificial Intelligence
+#               (S. Hrg. 118-154)  CHRG-118shrg53879
+#   2024-01-10  Oversight of A.I.: The Future of Journalism
+#               (S. Hrg. 118-439)  CHRG-118shrg57061
+#   Collection: https://www.govinfo.gov/app/collection/chrg
+#   Example:    https://www.govinfo.gov/app/details/CHRG-118shrg52706
+#
+# Sample data: ten passages spoken by five senators, copied from the govinfo
+# text of the hearings, with the printed transcript's double backquotes turned
+# into straight quotation marks. A senator's remarks at a hearing are made as
+# part of official duties, the kind of work 17 U.S.C. 105 places in the
+# public domain. The design leaves out witness testimony:
+# GPO's copyright notice warns that government publications may contain
+# copyrighted material, and witnesses are not federal officers. Party and
+# state come from the unitedstates/congress-legislators data (CC0).
+#
+# Hierarchical codes: in Potato 2.13.1 the YAML labels seed the codebook as a
+# flat list, and codes added in the browser are added at the top level. Nest
+# the child codes once after the first start, through the codebook REST API
+# from a logged-in session:
+#   GET   /api/codebook                    -> each code's id, in "tree"
+#   PATCH /api/codebook/<child code id>    body {"parent_id": "<parent id>"}
+#   (POST /api/codebook with {"name": ..., "parent_id": ...} adds a new child.)
+# Children of "Harms named": the five codes from "jobs and labor" to
+# "creators' rights and compensation". Children of "Remedies proposed": the
+# five from "new agency or licensing" to "watermarks and labeling". Children
+# of "How the problem is framed": the last three. The annotation form keeps
+# listing every code by name, in tree order.
+#
+# Cases and the crosstab: items are grouped into one case per senator on the
+# `senator` field, and `party` and `state` are lifted onto each case. The
+# admin endpoint
+#   GET /admin/api/code_crosstab?attribute=party
+# counts how many items carry each code for each party (attribute=hearing
+# compares the four hearings). Child codes are counted as themselves; the
+# crosstab does not roll them up into their parent. It needs admin access:
+# send the admin API key in an X-API-Key header. Unless admin_api_key or
+# POTATO_ADMIN_API_KEY is set, Potato generates a key on first use and writes
+# it to admin_api_key.txt in the task folder.
+#
+# Export: a .qdpx export of this project carries the codes as a flat list and
+# leaves out cases and memos. Use the JSONL export and the crosstab endpoint to
+# keep the case structure.
+
+annotation_task_name: "Senate Oversight of A.I. Hearings: Cases and Code Hierarchy in QDA Mode"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+export_annotation_format: "jsonl"
+
+port: 8000
+
+qda_mode:
+  enabled: true
+  memos:
+    enabled: true
+    show_sidebar_by_default: true
+  codebook:
+    enabled: true
+    mode: open
+
+codebook_invivo_key: i
+
+annotation_ui:
+  memos: true
+  visibility: private
+
+# One case per senator. `party` and `state` become case attributes for the
+# code-by-case crosstab.
+cases:
+  enabled: true
+  key: senator
+  auto_detect: true
+  attributes:
+    - party
+    - state
+
+search:
+  enabled: true
+  backend: fts5
+
+annotation_instructions: |
+  Each item is a passage spoken by a senator at one of four Senate Judiciary
+  subcommittee hearings on artificial intelligence held between May 2023 and
+  January 2024. Passages from the same senator form one case.
+
+  1. Read the passage, then highlight the words that name a harm, propose a
+     remedy, or frame the problem, and apply the most specific code that fits.
+  2. Use a child code wherever one fits. Apply a parent code on its own only
+     when a passage names the category without a specific instance ("the
+     harms", "some kind of regulation").
+  3. A passage can carry several codes, and one span can carry a harm and a
+     remedy at once.
+  4. Write a memo when a senator's framing shifts between hearings, or when a
+     passage could support two readings.
+
+instance_display:
+  fields:
+    - key: senator
+      type: text
+      label: "Senator"
+    - key: hearing
+      type: text
+      label: "Hearing"
+    - key: hearing_date
+      type: text
+      label: "Date"
+    - key: text
+      type: text
+      label: "Remarks"
+      span_target: true
+
+annotation_schemes:
+  - annotation_type: span
+    name: remarks_codes
+    description: "Highlight words that name a harm, propose a remedy, or frame the problem, and apply the most specific code."
+    codebook: true
+    labels:
+      - name: "Harms named"
+        tooltip: "Parent code. A harm or risk from AI that the senator names."
+      - name: "Remedies proposed"
+        tooltip: "Parent code. A policy response the senator proposes, endorses, or asks witnesses about."
+      - name: "How the problem is framed"
+        tooltip: "Parent code. How the senator frames AI regulation as a problem for Congress."
+      - name: "jobs and labor"
+        tooltip: "Child of Harms named. Job losses, displacement, or working conditions."
+      - name: "elections and deepfakes"
+        tooltip: "Child of Harms named. Fake or manipulated content about candidates, or other threats to elections."
+      - name: "kids' safety"
+        tooltip: "Child of Harms named. Risks to children and teenagers who use AI products."
+      - name: "privacy and personal data"
+        tooltip: "Child of Harms named. Collection or use of personal data, voice, or likeness."
+      - name: "creators' rights and compensation"
+        tooltip: "Child of Harms named. Use of copyrighted work, journalism, or artists' output without consent or payment."
+      - name: "new agency or licensing"
+        tooltip: "Child of Remedies proposed. A new federal agency, or licensing of AI models or companies."
+      - name: "liability and right to sue"
+        tooltip: "Child of Remedies proposed. Making companies liable in court, including Section 230 and private rights of action."
+      - name: "transparency and disclosure"
+        tooltip: "Child of Remedies proposed. Required disclosure of training data, record keeping, or researcher access."
+      - name: "incident reporting"
+        tooltip: "Child of Remedies proposed. Required public reporting of failures or incidents."
+      - name: "watermarks and labeling"
+        tooltip: "Child of Remedies proposed. Marking AI-generated content, and limits on deceptive AI content."
+      - name: "industry asking for regulation"
+        tooltip: "Child of How the problem is framed. Companies asking Congress to regulate them, and whether to trust that."
+      - name: "lessons from social media"
+        tooltip: "Child of How the problem is framed. Comparisons with how Congress handled social media."
+      - name: "pace of technology"
+        tooltip: "Child of How the problem is framed. Congress or agencies moving more slowly than the technology or other countries."
+
+user_config:
+  allow_all_users: true

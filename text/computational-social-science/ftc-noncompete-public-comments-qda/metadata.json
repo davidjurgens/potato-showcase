@@ -1,0 +1,78 @@
+{
+  "title": "FTC Non-Compete Rule Public Comments: Open Coding in QDA Mode",
+  "description": "Open coding of public comments on the FTC's Non-Compete Clause Rule (docket FTC-2023-0007) in Potato's QDA Mode. The design demonstrates a codebook grown while reading, in-vivo codes, full-text search with search-and-claim, and shared memos raised as issues. Commenters keep the rights to their comments, so the ten sample comments are synthetic.",
+  "overview": [
+    "In January 2023 the Federal Trade Commission proposed a rule that would ban most non-compete clauses in employment. In the final rule, published in May 2024, the Commission reported receiving over 26,000 public comments from employers and workers in a wide range of industries and from every State. The FTC removed the rule from the Code of Federal Regulations in February 2026 after federal courts vacated it. The comments remain in Regulations.gov docket FTC-2023-0007.",
+    "QDA Mode features demonstrated: an open codebook grown while reading, in-vivo coding, full-text search with search-and-claim, and shared memos raised as issues. The codebook starts with five codes that paraphrase the FTC's own summary of the comments (blocked from a better job, blocked from starting a business, suppressed wages, a climate of fear, and the opposing argument that non-competes protect employer investment). Coders add the rest while reading, most often by selecting a commenter's words and pressing the in-vivo key.",
+    "Search covers the comment text. With search-and-claim turned on, a coder who has just created a code can search the docket for words that might carry the code and pull the matching comments into their own queue to test it. New memos default to shared, so a coder who sees two codes drifting together can write a memo, mark it as an issue, and assign it to the lead coder, whose list of open issues shows it until it is resolved.",
+    "Potato 2.13.1 has limits worth planning around. Codes added in the browser are added at the top level of the codebook. Merging two codes is an admin API call, and a merge does not re-point codings already saved under the old code, so settle duplicates early and record each decision in a memo. A .qdpx export carries the codes as a flat list and leaves out memos.",
+    "Commenters keep the rights to their own submissions, so all ten sample comments are synthetic, written in the form of a Regulations.gov submission with comment IDs that match no real comment."
+  ],
+  "datasetStats": [
+    {
+      "label": "Public comments",
+      "value": "Over 26,000 (as reported in the final rule)"
+    },
+    {
+      "label": "Docket",
+      "value": "FTC-2023-0007"
+    },
+    {
+      "label": "Proposed rule",
+      "value": "88 FR 3482, January 19, 2023"
+    },
+    {
+      "label": "Final rule",
+      "value": "89 FR 38342, May 7, 2024"
+    },
+    {
+      "label": "Rule removed",
+      "value": "91 FR 6507, February 12, 2026"
+    },
+    {
+      "label": "Seed codes",
+      "value": "5"
+    }
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Potato Team",
+    "email": "",
+    "github": "davidjurgens",
+    "affiliation": "University of Michigan"
+  },
+  "createdAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "annotationTypes": [
+    "span",
+    "radio"
+  ],
+  "domain": [
+    "Qualitative Research",
+    "Public Policy",
+    "Computational Social Science"
+  ],
+  "useCase": [
+    "Open Coding",
+    "Public Comment Analysis",
+    "Qualitative Coding"
+  ],
+  "complexity": "intermediate",
+  "tags": [
+    "qda-mode",
+    "open-coding",
+    "in-vivo-coding",
+    "codebook",
+    "memos",
+    "full-text-search",
+    "public-comments",
+    "regulations-gov",
+    "federal-trade-commission",
+    "non-compete"
+  ],
+  "featured": false,
+  "paperReference": "Federal Trade Commission. 2024. Non-Compete Clause Rule. Federal Register 89: 38342 (May 7, 2024).",
+  "paperUrl": "https://www.federalregister.gov/documents/2024/05/07/2024-09171/non-compete-clause-rule",
+  "datasetUrl": "https://www.federalregister.gov/documents/2023/01/19/2023-00414/non-compete-clause-rule",
+  "citation": "@misc{ftc2024noncompete,\n  title = {Non-Compete Clause Rule},\n  author = {{Federal Trade Commission}},\n  howpublished = {Federal Register 89: 38342},\n  year = {2024},\n  note = {Final rule, FR Doc. 2024-09171. Public comments: Regulations.gov docket FTC-2023-0007},\n  url = {https://www.federalregister.gov/documents/2024/05/07/2024-09171/non-compete-clause-rule}\n}\n\n@misc{ftc2023noncompete_nprm,\n  title = {Non-Compete Clause Rule},\n  author = {{Federal Trade Commission}},\n  howpublished = {Federal Register 88: 3482},\n  year = {2023},\n  note = {Notice of proposed rulemaking, FR Doc. 2023-00414},\n  url = {https://www.federalregister.gov/documents/2023/01/19/2023-00414/non-compete-clause-rule}\n}"
+}

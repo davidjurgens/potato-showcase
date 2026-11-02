@@ -1,0 +1,148 @@
+# FTC Non-Compete Clause Rule: Public Comments (Docket FTC-2023-0007)
+# QDA Mode features shown here: an open codebook grown while reading, in-vivo
+# codes, full-text search with search-and-claim, and shared memos raised as
+# issues.
+#
+# Source documents (Federal Register, works of the U.S. Government):
+#   Proposed rule: Federal Trade Commission, "Non-Compete Clause Rule,"
+#     88 FR 3482 (January 19, 2023).
+#     https://www.federalregister.gov/documents/2023/01/19/2023-00414/non-compete-clause-rule
+#   Final rule: Federal Trade Commission, "Non-Compete Clause Rule,"
+#     89 FR 38342 (May 7, 2024).
+#     https://www.federalregister.gov/documents/2024/05/07/2024-09171/non-compete-clause-rule
+#   Removal: "Revision of the Negative Option Rule, Withdrawal of the CARS Rule,
+#     Removal of the Non-Compete Rule To Conform These Rules to Federal Court
+#     Decisions," 91 FR 6507 (February 12, 2026).
+# Comments: Regulations.gov docket FTC-2023-0007.
+#
+# What the final rule says about the comments (89 FR 38342): "In response to
+# the NPRM, the Commission received over 26,000 public comments," from
+# employers and workers "in a wide range of industries and from every State".
+# The FTC summarized what commenters reported: non-competes "prevented them
+# from taking a better job or starting a competing business," "suppressed
+# their wages," and "created a climate of fear that deters competitive
+# activity," while commenters opposed to the rule argued that non-competes
+# protect firms' investments. The five seed codes below paraphrase those
+# summaries. Everything else in the codebook is meant to be added while
+# reading, mostly as in-vivo codes taken from commenters' own words.
+#
+# The rule itself no longer stands: the FTC removed it from the Code of
+# Federal Regulations in February 2026 after federal courts vacated it. The
+# comment record on Regulations.gov is unchanged.
+#
+# Reproduction notes:
+#   - Commenters keep the rights to their own comments, so every comment in
+#     sample-data.json is SYNTHETIC, written in the form of a Regulations.gov
+#     submission. Comment IDs end in SYN01 to SYN10 and match no real comment.
+#   - Codebook edits made in the browser are additions at the top level. Merging
+#     two codes is an admin API call (POST /api/codebook/admin/merge), and in
+#     Potato 2.13.1 a merge does not re-point codings already saved under the
+#     old code, so settle duplicates early and record each decision in a memo.
+#   - A .qdpx export of this project carries the codes as a flat list and
+#     leaves out memos.
+
+annotation_task_name: "FTC Non-Compete Rule Public Comments: Open Coding in QDA Mode"
+task_dir: "."
+
+data_files:
+  - sample-data.json
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+output_annotation_dir: "annotation_output/"
+export_annotation_format: "jsonl"
+
+port: 8000
+
+qda_mode:
+  enabled: true
+  memos:
+    enabled: true
+    show_sidebar_by_default: true
+  codebook:
+    enabled: true
+    mode: open
+
+# With text selected in comment_codes, press "i" to turn the selected words
+# into a new code. The composer shows similar existing codes, so a coder can
+# reuse one instead of creating a near-duplicate.
+codebook_invivo_key: i
+
+# A coding team reads one docket together, so new memos default to shared.
+# Mark a memo as an issue and assign it to someone to put a codebook question
+# on that person's list of open issues.
+annotation_ui:
+  memos: true
+  visibility: shared
+
+# Full-text search over the comment text (the text_key field; the submitter
+# and state fields are not indexed). With annotator_claim, a coder can search
+# for words such as "lawyer" or "trade secrets" and pull the matching comments
+# into their own queue.
+search:
+  enabled: true
+  backend: fts5
+  annotator_claim: true
+
+annotation_instructions: |
+  Each item is one public comment submitted to the Federal Trade Commission
+  on its proposed Non-Compete Clause Rule (docket FTC-2023-0007).
+
+  1. Read the whole comment first.
+  2. Highlight passages and apply codes in "Comment codes". The codebook
+     starts with five codes taken from the FTC's own summary of the comments.
+     When a passage needs a code that does not exist, select the commenter's
+     words and press "i" to create an in-vivo code from them.
+  3. Record the commenter's position on the proposed ban in "Position".
+  4. Use search to find comments that touch a code you just created, and
+     claim them into your queue to check whether the code holds up.
+  5. Write memos as you go. If two codes seem to overlap, or a code's meaning
+     is drifting, write a shared memo, mark it as an issue, and assign it to
+     the lead coder. Resolve the issue once the codebook decision is made.
+
+instance_display:
+  fields:
+    - key: comment_id
+      type: text
+      label: "Comment ID"
+    - key: submitter_type
+      type: text
+      label: "Submitter (self-described)"
+    - key: state
+      type: text
+      label: "State"
+    - key: text
+      type: text
+      label: "Comment"
+      span_target: true
+
+annotation_schemes:
+  - annotation_type: span
+    name: comment_codes
+    description: "Highlight a passage and apply a code. Select words and press i to code in vivo."
+    codebook: true
+    labels:
+      - name: "blocked from a better job"
+        tooltip: "The commenter says a non-compete kept them, or workers they know, from taking a better job."
+      - name: "blocked from starting a business"
+        tooltip: "The commenter says a non-compete kept them from starting a competing business."
+      - name: "suppressed wages"
+        tooltip: "The commenter links a non-compete to lower pay or smaller raises."
+      - name: "climate of fear"
+        tooltip: "The commenter describes fear of being sued, or of the employer, as what keeps workers in place, whether or not the clause is enforceable."
+      - name: "protects employer investment"
+        tooltip: "The commenter argues that non-competes protect an employer's investment in training, clients, or confidential information."
+
+  - annotation_type: radio
+    name: position
+    description: "What position does the comment take on the proposed ban?"
+    labels:
+      - name: "supports the ban"
+      - name: "opposes the ban"
+      - name: "supports with changes"
+      - name: "no clear position"
+
+user_config:
+  allow_all_users: true

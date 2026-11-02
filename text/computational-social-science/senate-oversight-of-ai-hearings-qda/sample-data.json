@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ovai_001",
+    "senator": "Richard J. Durbin",
+    "party": "Democrat",
+    "state": "IL",
+    "speaker_label": "Chair Durbin",
+    "hearing": "Oversight of A.I.: Rules for Artificial Intelligence",
+    "hearing_date": "2023-05-16",
+    "govinfo_package": "CHRG-118shrg52706",
+    "excerpt": "part of a longer turn",
+    "text": "I think what's happening today in this hearing room is historic. I can't recall when we've had people representing large corporations or private sector entities come before us and plead with us to regulate them. In fact, many people in the Senate have based their careers on the opposite, that the economy will thrive if Government gets the hell out of the way. And what I'm hearing instead today is that \"stop me before I innovate again\" message. And I'm just curious as to how we're going to achieve this. As I mentioned Section 230 in my opening remarks--we learned something there. We decided that under Section 230 that we were basically going to absolve the industry from liability for a period of time as it came into being. Well, Mr. Altman, on a podcast earlier this year, you agreed with host Kara Swisher that Section 230 doesn't apply to generative AI and that developers like OpenAI should not be entitled to full immunity for harms caused by their products. So, what have we learned from 230 that applies to your situation with AI?"
+  },
+  {
+    "id": "ovai_002",
+    "senator": "Josh Hawley",
+    "party": "Republican",
+    "state": "MO",
+    "speaker_label": "Senator Hawley",
+    "hearing": "Oversight of A.I.: Rules for Artificial Intelligence",
+    "hearing_date": "2023-05-16",
+    "govinfo_package": "CHRG-118shrg52706",
+    "excerpt": "part of a longer turn",
+    "text": "So, I've been keeping a little list here of the potential downsides or harms, risks of generative AI, even in its current form. Let's just run through it. Loss of jobs. And this isn't speculative, I think your company, Ms. Montgomery, has announced that it's potentially laying off 7,800 people, a third of your non-consumer-facing workforce, because of AI. So, loss of jobs; invasion of privacy, personal privacy, on a scale we've never before seen; manipulation of personal behavior; manipulation of personal opinions; and potentially the degradation of free elections in America. Did I miss anything?"
+  },
+  {
+    "id": "ovai_003",
+    "senator": "Josh Hawley",
+    "party": "Republican",
+    "state": "MO",
+    "speaker_label": "Senator Hawley",
+    "hearing": "Oversight of A.I.: Rules for Artificial Intelligence",
+    "hearing_date": "2023-05-16",
+    "govinfo_package": "CHRG-118shrg52706",
+    "excerpt": "part of a longer turn",
+    "text": "I'm interested in this talk about an agency, and, you know, maybe that would work. Although, having seen how agencies work in this Government, they usually get captured by the interests that they're supposed to regulate. They usually get controlled by the people who they're supposed to be watching. I mean, that's just been our history for 100 years. Maybe this agency would be different. I have a little different idea. Why don't we just let people sue you? Why don't we just make you liable in court? We can do that. We know how to do that. We can pass a statute. We can create a Federal right of action that will allow private individuals who are harmed by this technology to get into court and to bring evidence into court. And it can be anybody. I mean, you want to talk about crowdsourcing, we'll just open the courthouse doors. We'll define a broad right of action, private right of action, private citizens to be class actions. We'll just open it up. We'll allow people to go into court."
+  },
+  {
+    "id": "ovai_004",
+    "senator": "Marsha Blackburn",
+    "party": "Republican",
+    "state": "TN",
+    "speaker_label": "Senator Blackburn",
+    "hearing": "Oversight of A.I.: Rules for Artificial Intelligence",
+    "hearing_date": "2023-05-16",
+    "govinfo_package": "CHRG-118shrg52706",
+    "excerpt": "whole turn",
+    "text": "Okay. So, on privacy, then, how do you plan to account for the collection of voice and other user- specific data, things that are copyrighted, user-specific data through your AI applications? Because if I can go in and say, \"Write me a song that sounds like Garth Brooks,\" and it takes part of an existing song, there has to be a compensation to that artist for that utilization and that use. If it was RadioPlay, it would be there. If it was streaming, it would be there. So, if you're going to do that, what is your policy for making certain you're accounting for that and you're protecting that individual's right to privacy and their right to secure that data and that created work?"
+  },
+  {
+    "id": "ovai_005",
+    "senator": "Richard Blumenthal",
+    "party": "Democrat",
+    "state": "CT",
+    "speaker_label": "Chair Blumenthal",
+    "hearing": "Oversight of A.I.: Rules for Artificial Intelligence",
+    "hearing_date": "2023-05-16",
+    "govinfo_package": "CHRG-118shrg52706",
+    "excerpt": "part of a longer turn",
+    "text": "And as Senator Hawley has pointed out, Congress doesn't always move at the pace of technology, and that may be a reason why we need a new agency, but we also need to recognize the rest of the world is going to be moving, as well."
+  },
+  {
+    "id": "ovai_006",
+    "senator": "Amy Klobuchar",
+    "party": "Democrat",
+    "state": "MN",
+    "speaker_label": "Senator Klobuchar",
+    "hearing": "Oversight of A.I.: Principles for Regulation",
+    "hearing_date": "2023-07-25",
+    "govinfo_package": "CHRG-118shrg53503",
+    "excerpt": "part of a longer turn",
+    "text": "But one bill is, you know, watermarks and making sure that the election materials say, \"Produced by AI.\" But I don't think that's enough, when you look at the fact that someone's going to watch a fake Joe Biden or a fake Donald Trump or a fake Elizabeth Warren--all of this has really happened--and then not know who the person is and not know if it's really them. And it's not going to help, just at the very end. It might, for some things, but to just say at the end, \"Oh, by the way, that was `Produced by AI.' Hope you saw our little mark at the end that says that.\" So, could you address that, Professor Russell? How, within the clear confines of the Constitution, for things like satire, we're going to have to do more than just watermarks?"
+  },
+  {
+    "id": "ovai_007",
+    "senator": "Richard Blumenthal",
+    "party": "Democrat",
+    "state": "CT",
+    "speaker_label": "Chair Blumenthal",
+    "hearing": "Oversight of A.I.: Principles for Regulation",
+    "hearing_date": "2023-07-25",
+    "govinfo_package": "CHRG-118shrg53503",
+    "excerpt": "part of a longer turn",
+    "text": "You know, in some of the areas that have been mentioned like medicines and transportation, there are public reporting requirements. For example, when there's a failure, the FAA's system has an accident and incident report. They collect data about failures in those kinds of machinery, and it serves as a warning to consumers. It creates a deterrence for putting unsafe products on the market, and it adds to oversight of public safety issues. We've discussed this afternoon both short-term and long- term kinds of risks that can cause very significant public harm. It doesn't seem like AI companies have an obligation to report issues right now. In other words, there's no place to report it. They have no obligation to make it known. If they discover the \"Oh, my God, how did that happen?\" incident, it can be entirely undisclosed. Would you all favor some kind of requirement for that kind of reporting?"
+  },
+  {
+    "id": "ovai_008",
+    "senator": "Amy Klobuchar",
+    "party": "Democrat",
+    "state": "MN",
+    "speaker_label": "Senator Klobuchar",
+    "hearing": "Oversight of A.I.: Legislating on Artificial Intelligence",
+    "hearing_date": "2023-09-12",
+    "govinfo_package": "CHRG-118shrg53879",
+    "excerpt": "part of a longer turn",
+    "text": "Some AI platforms use local news content without compensating journalists and papers, including by using their content to train AI algorithms. The Journalism Competition and Preservation Act, a bill I have with Senator Kennedy, would allow local news organizations to negotiate with online platforms, including generative AI platforms, that use their content without compensation. Could you talk about the impacts that AI could have on local journalism? You talked about, in your testimony, about the importance of investment and quality journalism. But where we're getting at, we've got to find a way that we make sure that the people who are actually doing the work are compensated in many ways, but also in journalism. Mr. Smith."
+  },
+  {
+    "id": "ovai_009",
+    "senator": "Josh Hawley",
+    "party": "Republican",
+    "state": "MO",
+    "speaker_label": "Senator Hawley",
+    "hearing": "Oversight of A.I.: Legislating on Artificial Intelligence",
+    "hearing_date": "2023-09-12",
+    "govinfo_package": "CHRG-118shrg53879",
+    "excerpt": "part of a longer turn",
+    "text": "I don't want 13-year-olds to be your guinea pig. I don't want 14-year-olds to be your guinea pig. I don't want any kids to be your guinea pig. I don't want you to learn from their failures. You want to learn from the failures of your scientists, go right ahead. Let's not learn from the failures of America's kids. This is what happened with social media. We had social media who made billions of dollars giving us a mental health crisis in this country. They got rich, the kids got depressed, committed suicide. Why would we want to run that experiment again with AI? Why not raise the age? You could do it."
+  },
+  {
+    "id": "ovai_010",
+    "senator": "Richard Blumenthal",
+    "party": "Democrat",
+    "state": "CT",
+    "speaker_label": "Chair Blumenthal",
+    "hearing": "Oversight of A.I.: The Future of Journalism",
+    "hearing_date": "2024-01-10",
+    "govinfo_package": "CHRG-118shrg57061",
+    "excerpt": "part of a longer turn",
+    "text": "One of the core principles of the framework that Senator Hawley and I have proposed is record keeping and transparency. Developers ought to be required to disclose essential information about the training, data, and safety of AI models to users and other companies. Ms. Coffey, you make the point that this is important for newspapers. The AI companies have been intensely secretive about where they get their data, but we know based on even the limited transparency that's available to us, that they use copyright material, and it's the bedrock for many of their models. For example, Meta and other companies use a data base called Books3, which is a collection of nearly 200,000 pirated books. That's not public information. That's theft, in my view. I'm a former prosecutor, so I don't use that term lightly, but seems to me that's the right term for it. Part of the problem is that AI companies are using this hard work, not just the sweat, and tears, and sometimes blood, but also the financial investment that is made to produce news. It doesn't appear magically, it's not out of thin air. It's an investment, and the kind of lack of transparency makes it harder for you to protect your rights."
+  }
+]
