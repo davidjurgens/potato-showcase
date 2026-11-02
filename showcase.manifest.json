@@ -16970,7 +16970,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ECB+ Cross-Document Event Coreference",
    "config": "text/coreference/ecb-plus-cross-document-events/config.yaml"
   },
