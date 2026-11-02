@@ -4,7 +4,7 @@
   "overview": [
     "IEMOCAP (Interactive Emotional Dyadic Motion Capture database) is a multimodal corpus of acted emotional conversations recorded by the Speech Analysis and Interpretation Laboratory (SAIL) at the University of Southern California. It was released by Busso et al. in Language Resources and Evaluation in 2008.",
     "The corpus holds roughly 12 hours of audiovisual data from ten actors (five male, five female) recorded across five dyadic sessions. Each session pairs two actors of opposite gender in scripted plays and improvised scenarios. Markers on the face, head, and hands captured facial expression and hand motion alongside the speech and video.",
-    "Two to four annotators labeled each segment two ways: categorical emotions (anger, happiness, sadness, neutrality, frustration, excitement, and others) and dimensional affect, rating valence, activation, and dominance on a 5-point Likert scale. Both label sets are widely used to train and benchmark speech and multimodal emotion recognition models.",
+    "Three evaluators labeled each turn with categorical emotions (anger, happiness, sadness, neutrality, frustration, excitement, and others), and two evaluators rated valence, activation, and dominance on a 5-point scale. Both label sets are widely used to train and benchmark speech and multimodal emotion recognition models.",
     "The Potato config below reproduces this multi-tier annotation: annotators segment per-speaker behavior on parallel timeline tiers, assign a discrete emotion category, and rate valence, activation, and dominance on Likert-style scales."
   ],
   "datasetStats": [

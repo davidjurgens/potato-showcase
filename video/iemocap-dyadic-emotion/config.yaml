@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -78,25 +78,23 @@ annotation_schemes:
     description: "Classify the dominant emotion expressed in this segment of the interaction."
     annotation_type: radio
     labels:
-      - "neutral"
-      - "happiness"
-      - "sadness"
-      - "anger"
-      - "frustration"
-      - "excitement"
-      - "fear"
-      - "surprise"
-      - "disgust"
-      - "other"
-    keyboard_shortcuts:
-      neutral: "0"
-      happiness: "1"
-      sadness: "2"
-      anger: "3"
-      frustration: "4"
-      excitement: "5"
+      - name: "neutral"
+        key_value: "0"
+      - name: "happiness"
+        key_value: "1"
+      - name: "sadness"
+        key_value: "2"
+      - name: "anger"
+        key_value: "3"
+      - name: "frustration"
+        key_value: "4"
+      - name: "excitement"
+        key_value: "5"
+      - name: "fear"
+      - name: "surprise"
+      - name: "disgust"
+      - name: "other"
 
-  # Tier 4: Valence rating (7-point Likert-style)
   - name: "valence"
     description: "Rate the emotional valence (pleasantness) on a 5-point scale from very negative to very positive."
     annotation_type: radio
@@ -130,35 +128,12 @@ annotation_schemes:
       - "5-very-dominant"
 
 # HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">IEMOCAP: Multi-Tier Dyadic Emotion Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate emotional dyadic interactions across parallel tiers for speaker behaviors,
-      emotion categories, and dimensional affect ratings (valence, activation, dominance).
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Annotate the dyadic interaction across six
-      parallel tiers: Speaker A behavior, Speaker B behavior, emotion category, valence,
-      activation, and dominance. The two speaker tiers run in parallel to capture the
-      dynamics of turn-taking and emotional co-regulation.
-    </div>
-  </div>
+user_config:
+  allow_all_users: true
 
-# User configuration
-allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
-# Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
-
-# Instructions
 annotation_instructions: |
   ## IEMOCAP Dyadic Emotion Multi-Tier Annotation
 
@@ -197,16 +172,16 @@ annotation_instructions: |
 
   ### Tier 4: Valence (7-point scale)
   - How pleasant or unpleasant is the expressed emotion?
-  - 1 = very negative/unpleasant, 4 = neutral, 7 = very positive/pleasant
+  - 1 = very negative/unpleasant, 3 = neutral, 5 = very positive/pleasant
 
   ### Tier 5: Activation (7-point scale)
   - How energetic or calm is the emotional expression?
-  - 1 = very calm/low energy, 4 = neutral, 7 = very active/high energy
+  - 1 = very calm/low energy, 3 = neutral, 5 = very active/high energy
   - Note: Both positive (excitement) and negative (anger) emotions can be high activation
 
   ### Tier 6: Dominance (7-point scale)
   - How dominant or submissive does the speaker appear?
-  - 1 = very submissive/controlled, 4 = neutral, 7 = very dominant/in control
+  - 1 = very submissive/controlled, 3 = neutral, 5 = very dominant/in control
   - Consider vocal power, posture, and conversational control
 
   ### Annotation Strategy
