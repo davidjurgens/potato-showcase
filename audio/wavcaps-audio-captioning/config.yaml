@@ -24,30 +24,22 @@ item_properties:
   text_key: "audio_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: text
     name: caption
     description: "Write a detailed natural language caption describing the audio content. Include all sounds, events, and acoustic scenes you hear."
-    min_length: 10
-    max_length: 500
+    min_chars: 10
     placeholder: "Describe what you hear in this audio clip..."
 
   - annotation_type: text
     name: sound_events
     description: "List the individual sound events heard in the clip, separated by commas (e.g., 'dog barking, car engine, wind blowing')"
-    min_length: 3
-    max_length: 300
+    min_chars: 3
     placeholder: "List sound events separated by commas..."
 
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: true
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

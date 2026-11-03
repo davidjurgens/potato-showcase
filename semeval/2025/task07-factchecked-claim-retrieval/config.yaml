@@ -20,30 +20,27 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: match_judgment
     description: "How well does the previously fact-checked claim match the claim in the social media post?"
     labels:
-      - "Exact Match"
-      - "Partial Match"
-      - "Related But Different"
-      - "Not Related"
-    keyboard_shortcuts:
-      "Exact Match": "1"
-      "Partial Match": "2"
-      "Related But Different": "3"
-      "Not Related": "4"
-    tooltips:
-      "Exact Match": "The fact-checked claim addresses the exact same claim made in the post"
-      "Partial Match": "The fact-checked claim addresses part of the post's claim or a closely related variant"
-      "Related But Different": "The fact-checked claim covers the same topic but a different specific claim"
-      "Not Related": "The fact-checked claim is about a different topic or claim entirely"
+      - name: "Exact Match"
+        tooltip: "The fact-checked claim addresses the exact same claim made in the post"
+        key_value: "1"
+      - name: "Partial Match"
+        tooltip: "The fact-checked claim addresses part of the post's claim or a closely related variant"
+        key_value: "2"
+      - name: "Related But Different"
+        tooltip: "The fact-checked claim covers the same topic but a different specific claim"
+        key_value: "3"
+      - name: "Not Related"
+        tooltip: "The fact-checked claim is about a different topic or claim entirely"
+        key_value: "4"
 
   - annotation_type: text
     name: justification
@@ -58,23 +55,7 @@ annotation_instructions: |
   3. Judge how well the fact-checked claim matches the post's claim using the four categories.
   4. Provide a brief justification explaining your reasoning.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Claim from Social Media Post:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Previously Fact-Checked Claim:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{fact_check}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
-      <strong style="color: #166534;">Source Language:</strong> <span>{{source_language}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

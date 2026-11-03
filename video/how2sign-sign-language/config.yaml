@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -72,13 +72,12 @@ annotation_schemes:
     description: "Classify the dominant handedness pattern for the current sign segment."
     annotation_type: radio
     labels:
-      - "one-handed"
-      - "two-handed"
-      - "body-anchored"
-    keyboard_shortcuts:
-      one-handed: "1"
-      two-handed: "2"
-      body-anchored: "3"
+      - name: "one-handed"
+        key_value: "1"
+      - name: "two-handed"
+        key_value: "2"
+      - name: "body-anchored"
+        key_value: "3"
 
   # Tier 4: English translation (free text)
   - name: "english_translation"
@@ -95,32 +94,13 @@ annotation_schemes:
     annotation_type: text
     textarea: true
 
-# HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">How2Sign: Multi-Tier ASL Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate the signing video across multiple parallel tiers, similar to ELAN annotation.
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Use the timeline-aligned tiers below to annotate
-      sign glosses, mouthing patterns, handedness, and provide translations. Each tier captures
-      a different linguistic dimension of the signing.
-    </div>
-  </div>
-
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

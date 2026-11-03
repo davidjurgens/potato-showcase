@@ -25,10 +25,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Is the post offensive?
@@ -36,40 +35,36 @@ annotation_schemes:
     name: offensiveness
     description: "Is this post offensive?"
     labels:
-      - "Offensive"
-      - "Not Offensive"
-    keyboard_shortcuts:
-      "Offensive": "1"
-      "Not Offensive": "2"
-    tooltips:
-      "Offensive": "The post contains any form of offensive language, insult, or profanity"
-      "Not Offensive": "The post does not contain offensive language"
+      - name: "Offensive"
+        tooltip: "The post contains any form of offensive language, insult, or profanity"
+        key_value: "1"
+      - name: "Not Offensive"
+        tooltip: "The post does not contain offensive language"
+        key_value: "2"
 
   # Step 2: What type of target?
   - annotation_type: multiselect
     name: target_type
     description: "If offensive, what type of target is addressed? (select all that apply)"
     labels:
-      - "Individual"
-      - "Group"
-      - "Other"
-      - "Untargeted"
-    tooltips:
-      "Individual": "The offense targets a specific named or unnamed individual"
-      "Group": "The offense targets a group of people based on identity, affiliation, or characteristics"
-      "Other": "The offense targets an organization, event, or abstract entity"
-      "Untargeted": "The post is offensive but does not target any specific entity"
+      - name: "Individual"
+        tooltip: "The offense targets a specific named or unnamed individual"
+      - name: "Group"
+        tooltip: "The offense targets a group of people based on identity, affiliation, or characteristics"
+      - name: "Other"
+        tooltip: "The offense targets an organization, event, or abstract entity"
+      - name: "Untargeted"
+        tooltip: "The post is offensive but does not target any specific entity"
 
   # Step 3: Highlight offensive spans and target mentions
   - annotation_type: span
     name: offensive_spans
     description: "Highlight the offensive expressions and target mentions in the text"
     labels:
-      - "Offensive Span"
-      - "Target Mention"
-    tooltips:
-      "Offensive Span": "A word or phrase that constitutes the offensive expression"
-      "Target Mention": "A word or phrase that refers to the target of the offense"
+      - name: "Offensive Span"
+        tooltip: "A word or phrase that constitutes the offensive expression"
+      - name: "Target Mention"
+        tooltip: "A word or phrase that refers to the target of the offense"
 
 annotation_instructions: |
   You will be shown social media posts. Your task is to:
@@ -80,16 +75,7 @@ annotation_instructions: |
   Offensive language includes insults, threats, profanity directed at someone, and derogatory language.
   A post can be offensive without targeting anyone specifically (e.g., general profanity or vulgarity).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Post:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

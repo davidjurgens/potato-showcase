@@ -5,22 +5,11 @@ item_properties:
   text_key: "image_url"
   image_key: "image_url"
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-
-task_name: "Image Classification"
+export_annotation_format: "jsonl"
 
 # Server configuration
 server:
   port: 8000
-
-# Image display settings
-image:
-  enabled: true
-  max_width: 800
-  max_height: 600
-  zoom_enabled: true
-  preserve_aspect_ratio: true
 
 # Data configuration
 data_files:
@@ -33,25 +22,24 @@ annotation_schemes:
     name: primary_category
     description: "What is the main subject of this image?"
     labels:
-      - Person/People
-      - Animal
-      - Vehicle
-      - Building/Architecture
-      - Nature/Landscape
-      - Food
-      - Object/Product
-      - Text/Document
-      - Other
-    keyboard_shortcuts:
-      "Person/People": "1"
-      "Animal": "2"
-      "Vehicle": "3"
-      "Building/Architecture": "4"
-      "Nature/Landscape": "5"
-      "Food": "6"
-      "Object/Product": "7"
-      "Text/Document": "8"
-      "Other": "9"
+      - name: Person/People
+        key_value: "1"
+      - name: Animal
+        key_value: "2"
+      - name: Vehicle
+        key_value: "3"
+      - name: Building/Architecture
+        key_value: "4"
+      - name: Nature/Landscape
+        key_value: "5"
+      - name: Food
+        key_value: "6"
+      - name: Object/Product
+        key_value: "7"
+      - name: Text/Document
+        key_value: "8"
+      - name: Other
+        key_value: "9"
 
   # Additional tags (multi-label)
   - annotation_type: multiselect
@@ -115,11 +103,7 @@ annotation_schemes:
       - No issues
 
 # User settings
-allow_all_users: true
-instances_per_annotator: 200
-annotation_per_instance: 2
-
-# Output
-output:
-  path: annotations/
-  format: json
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 200
+num_annotators_per_item: 2

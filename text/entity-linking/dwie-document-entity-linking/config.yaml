@@ -31,10 +31,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   You are shown a complete news article. Mark **every mention** of an entity in
@@ -87,15 +86,7 @@ annotation_schemes:
           type: wikidata
           language: en
 
-html_layout: |
-  <div style="padding: 15px; max-width: 860px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Article:</strong> {{title}}
-    </div>
-    <div style="font-size: 16px; line-height: 1.8;">{{text}}</div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

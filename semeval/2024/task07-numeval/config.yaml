@@ -27,39 +27,36 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: subtask
     description: "Which NumEval subtask does this item belong to?"
     labels:
-      - "QP (Quantitative Prediction)"
-      - "QNLI (Quantitative NLI)"
-      - "QQA (Quantitative Question Answering)"
-      - "Reading Comprehension (NQuAD)"
-      - "Headline Generation (Num-HG)"
-    tooltips:
-      "QP (Quantitative Prediction)": "Predict the magnitude of the masked number in the sentence."
-      "QNLI (Quantitative NLI)": "Decide the inference relation between two number-bearing sentences."
-      "QQA (Quantitative Question Answering)": "Compare the numbers and choose the correct option."
-      "Reading Comprehension (NQuAD)": "Select the number that best fills the blank in the question stem, given the news article."
-      "Headline Generation (Num-HG)": "Reason about the numeral and/or write a numeral-aware headline for the news article."
+      - name: "QP (Quantitative Prediction)"
+        tooltip: "Predict the magnitude of the masked number in the sentence."
+      - name: "QNLI (Quantitative NLI)"
+        tooltip: "Decide the inference relation between two number-bearing sentences."
+      - name: "QQA (Quantitative Question Answering)"
+        tooltip: "Compare the numbers and choose the correct option."
+      - name: "Reading Comprehension (NQuAD)"
+        tooltip: "Select the number that best fills the blank in the question stem, given the news article."
+      - name: "Headline Generation (Num-HG)"
+        tooltip: "Reason about the numeral and/or write a numeral-aware headline for the news article."
 
   - annotation_type: radio
     name: qnli_label
     description: "QNLI only: inference relation between the two sentences."
     labels:
-      - "Entailment"
-      - "Contradiction"
-      - "Neutral"
-    tooltips:
-      "Entailment": "The second sentence is entailed by the first."
-      "Contradiction": "The two sentences numerically contradict each other."
-      "Neutral": "Neither entailment nor contradiction holds."
+      - name: "Entailment"
+        tooltip: "The second sentence is entailed by the first."
+      - name: "Contradiction"
+        tooltip: "The two sentences numerically contradict each other."
+      - name: "Neutral"
+        tooltip: "Neither entailment nor contradiction holds."
 
   - annotation_type: radio
     name: qqa_answer
@@ -101,16 +98,7 @@ annotation_instructions: |
      for headline generation write a numeral-aware headline.
   7. Optionally record your reasoning.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Subtask:</strong> <span>{{subtask}}</span>
-      <p style="font-size: 16px; line-height: 1.7; margin: 12px 0 0 0; white-space: pre-wrap;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

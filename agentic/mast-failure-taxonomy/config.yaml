@@ -12,24 +12,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-html_layout: |
-  <div class="container" style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto;">
-    <div style="background: #e8f4fd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
-      <h3 style="margin: 0 0 8px 0; color: #1a5276;">Task</h3>
-      <p style="margin: 0; font-size: 15px;">{{text}}</p>
-      <span style="display: inline-block; margin-top: 8px; background: #8e44ad; color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 12px;">{{agent_type}}</span>
-    </div>
-    <div style="background: #fafafa; border: 1px solid #ddd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
-      <h3 style="margin: 0 0 10px 0; color: #2c3e50;">Multi-Agent Trace</h3>
-      <div style="font-size: 14px; line-height: 1.8; white-space: pre-wrap;">{{trajectory}}</div>
-    </div>
-    <div style="background: #fdedec; border: 1px solid #e74c3c; padding: 14px; border-radius: 8px;">
-      <h4 style="margin: 0 0 8px 0; color: #922b21;">Outcome</h4>
-      <p style="margin: 0; font-size: 14px;">{{outcome}}</p>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: failure_modes
@@ -56,15 +39,14 @@ annotation_schemes:
     description: "How severe is the overall failure in this trace?"
     annotation_type: radio
     labels:
-      - "Critical"
-      - "Major"
-      - "Minor"
-      - "None"
-    keyboard_shortcuts:
-      "Critical": "1"
-      "Major": "2"
-      "Minor": "3"
-      "None": "4"
+      - name: "Critical"
+        key_value: "1"
+      - name: "Major"
+        key_value: "2"
+      - name: "Minor"
+        key_value: "3"
+      - name: "None"
+        key_value: "4"
 
   - name: first_failure_step
     description: "At which step did the first failure occur?"
@@ -82,6 +64,7 @@ annotation_schemes:
     description: "Explain the failure: what went wrong, why, and how it affected the outcome."
     annotation_type: text
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "image_url"
-  context_key: "scene_description"
 
 user_config:
   allow_all_users: true
@@ -69,8 +68,5 @@ annotation_schemes:
       - name: "hard"
         tooltip: "Complex shapes, heavy occlusion, or low contrast"
 
-interface_config:
-  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{scene_description}}</small>"
-
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 output_annotation_dir: "annotations"

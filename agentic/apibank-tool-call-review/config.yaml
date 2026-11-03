@@ -33,10 +33,9 @@ item_properties:
   text_key: "query"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   You are shown a dialogue between a user and a tool-augmented assistant. The
@@ -78,31 +77,14 @@ annotation_schemes:
     name: response_grounding
     description: "Is the assistant's final response grounded in the API execution results and responsive to the user's query?"
     labels:
-      - "Grounded and responsive — response matches the API results and answers the query"
-      - "Partially grounded — response answers the query but misreports or omits API results"
-      - "Not grounded — response contradicts or ignores the API results"
-    keyboard_shortcuts:
-      "Grounded and responsive — response matches the API results and answers the query": "1"
-      "Partially grounded — response answers the query but misreports or omits API results": "2"
-      "Not grounded — response contradicts or ignores the API results": "3"
+      - name: "Grounded and responsive — response matches the API results and answers the query"
+        key_value: "1"
+      - name: "Partially grounded — response answers the query but misreports or omits API results"
+        key_value: "2"
+      - name: "Not grounded — response contradicts or ignores the API results"
+        key_value: "3"
 
-html_layout: |
-  <div style="padding: 15px; max-width: 860px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Ability level:</strong> {{ability}} &nbsp;·&nbsp; <strong>Domain:</strong> {{domain}}
-    </div>
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
-      <h3 style="margin: 0 0 6px 0; color: #3730a3; font-size: 15px;">User's requirement</h3>
-      <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #1e1b4b;">{{query}}</p>
-    </div>
-    <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px;">
-      <h3 style="margin: 0 0 8px 0; color: #374151; font-size: 14px;">Dialogue transcript (with API execution results)</h3>
-      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #1f2937;">{{transcript}}</div>
-    </div>
-    <p style="color: #6b7280; font-size: 13px; margin: 0;">Each API call extracted from the dialogue appears below as a card. Give a verdict per call, then rate the final response's grounding.</p>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

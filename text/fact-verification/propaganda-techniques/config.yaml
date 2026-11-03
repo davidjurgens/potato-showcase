@@ -34,7 +34,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: span
@@ -42,59 +42,52 @@ annotation_schemes:
     description: "Highlight text spans and label them with the propaganda technique used"
     labels:
       # Pathos - Appeal to Emotions
-      - Loaded Language
-      - Name Calling/Labeling
-      - Exaggeration/Minimisation
-      - Appeal to Fear/Prejudice
-      - Flag-Waving
-      - Slogans
-      - Doubt
+      - name: Loaded Language
+        tooltip: "Words with strong emotional connotations to influence the audience (e.g., 'brutal regime', 'freedom fighters')"
+        color: "#ef4444"
+      - name: Name Calling/Labeling
+        tooltip: "Assigning labels that the audience despises or fears (e.g., 'radical', 'extremist')"
+        color: "#f97316"
+      - name: Exaggeration/Minimisation
+        tooltip: "Making something bigger or smaller than reality (e.g., 'the greatest disaster ever')"
+        color: "#eab308"
+      - name: Appeal to Fear/Prejudice
+        tooltip: "Building support by creating anxiety, often leveraging existing biases"
+        color: "#84cc16"
+      - name: Flag-Waving
+        tooltip: "Exploiting patriotism or group pride to promote a position (e.g., 'true Americans believe...')"
+        color: "#22c55e"
+      - name: Slogans
+        tooltip: "Brief, striking phrases that combine labeling with emotional appeal (e.g., 'Make X Great Again')"
+        color: "#14b8a6"
+      - name: Doubt
+        tooltip: "Questioning someone's credibility or character to undermine their argument"
+        color: "#06b6d4"
       # Logos - Appeal to Logic
-      - Causal Oversimplification
-      - Black-and-White Fallacy
-      - Thought-terminating Cliches
-      - Whataboutism/Straw Man/Red Herring
+      - name: Causal Oversimplification
+        tooltip: "Attributing complex problems to a single cause (e.g., 'immigration is why...')"
+        color: "#0ea5e9"
+      - name: Black-and-White Fallacy
+        tooltip: "Presenting only two choices when more exist (e.g., 'you're either with us or against us')"
+        color: "#3b82f6"
+      - name: Thought-terminating Cliches
+        tooltip: "Phrases that discourage critical thinking (e.g., 'it is what it is')"
+        color: "#6366f1"
+      - name: Whataboutism/Straw Man/Red Herring
+        tooltip: "Deflecting by changing the subject or misrepresenting the opponent's position"
+        color: "#8b5cf6"
       # Ethos - Appeal to Authority
-      - Appeal to Authority
-      - Bandwagon
-      - Repetition
+      - name: Appeal to Authority
+        tooltip: "Claiming truth based on expert endorsement without evidence"
+        color: "#a855f7"
+      - name: Bandwagon
+        tooltip: "Suggesting everyone supports something to pressure agreement (e.g., 'millions of people agree')"
+        color: "#d946ef"
+      - name: Repetition
+        tooltip: "Repeating a message until it becomes accepted through familiarity"
+        color: "#ec4899"
 
-    label_colors:
-      "Loaded Language": "#ef4444"
-      "Name Calling/Labeling": "#f97316"
-      "Exaggeration/Minimisation": "#eab308"
-      "Appeal to Fear/Prejudice": "#84cc16"
-      "Flag-Waving": "#22c55e"
-      "Slogans": "#14b8a6"
-      "Doubt": "#06b6d4"
-      "Causal Oversimplification": "#0ea5e9"
-      "Black-and-White Fallacy": "#3b82f6"
-      "Thought-terminating Cliches": "#6366f1"
-      "Whataboutism/Straw Man/Red Herring": "#8b5cf6"
-      "Appeal to Authority": "#a855f7"
-      "Bandwagon": "#d946ef"
-      "Repetition": "#ec4899"
-
-    tooltips:
-      "Loaded Language": "Words with strong emotional connotations to influence the audience (e.g., 'brutal regime', 'freedom fighters')"
-      "Name Calling/Labeling": "Assigning labels that the audience despises or fears (e.g., 'radical', 'extremist')"
-      "Exaggeration/Minimisation": "Making something bigger or smaller than reality (e.g., 'the greatest disaster ever')"
-      "Appeal to Fear/Prejudice": "Building support by creating anxiety, often leveraging existing biases"
-      "Flag-Waving": "Exploiting patriotism or group pride to promote a position (e.g., 'true Americans believe...')"
-      "Slogans": "Brief, striking phrases that combine labeling with emotional appeal (e.g., 'Make X Great Again')"
-      "Doubt": "Questioning someone's credibility or character to undermine their argument"
-      "Causal Oversimplification": "Attributing complex problems to a single cause (e.g., 'immigration is why...')"
-      "Black-and-White Fallacy": "Presenting only two choices when more exist (e.g., 'you're either with us or against us')"
-      "Thought-terminating Cliches": "Phrases that discourage critical thinking (e.g., 'it is what it is')"
-      "Whataboutism/Straw Man/Red Herring": "Deflecting by changing the subject or misrepresenting the opponent's position"
-      "Appeal to Authority": "Claiming truth based on expert endorsement without evidence"
-      "Bandwagon": "Suggesting everyone supports something to pressure agreement (e.g., 'millions of people agree')"
-      "Repetition": "Repeating a message until it becomes accepted through familiarity"
-
-    allow_overlapping: true
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

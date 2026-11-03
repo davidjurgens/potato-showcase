@@ -32,10 +32,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: select
@@ -52,17 +51,15 @@ annotation_schemes:
     name: overall_sentiment
     description: "What is the overall sentiment of this financial sentence?"
     labels:
-      - "Positive"
-      - "Negative"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Positive": "1"
-      "Negative": "2"
-      "Neutral": "3"
-    tooltips:
-      "Positive": "The sentence conveys positive financial news or outlook"
-      "Negative": "The sentence conveys negative financial news or outlook"
-      "Neutral": "The sentence is neutral or purely factual without sentiment"
+      - name: "Positive"
+        tooltip: "The sentence conveys positive financial news or outlook"
+        key_value: "1"
+      - name: "Negative"
+        tooltip: "The sentence conveys negative financial news or outlook"
+        key_value: "2"
+      - name: "Neutral"
+        tooltip: "The sentence is neutral or purely factual without sentiment"
+        key_value: "3"
 
 annotation_instructions: |
   You will be shown a sentence from a financial news article. Your task is to:
@@ -73,16 +70,7 @@ annotation_instructions: |
   For example, "layoffs" might be negative generally but could be positive for investors
   if it signals cost-cutting measures.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Financial News Sentence:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

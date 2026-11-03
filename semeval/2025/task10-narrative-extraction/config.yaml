@@ -23,10 +23,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Subtask 1: Entity Framing - highlight each named entity and assign the
@@ -36,13 +35,12 @@ annotation_schemes:
     name: entity_framing
     description: "Highlight each key named entity and label the role it plays in the narrative."
     labels:
-      - "Protagonist"
-      - "Antagonist"
-      - "Innocent"
-    tooltips:
-      "Protagonist": "A positively framed actor: e.g. guardian, martyr, peacemaker, rebel, underdog, virtuous"
-      "Antagonist": "A negatively framed actor: e.g. instigator, conspirator, tyrant, foreign adversary, traitor, terrorist, deceiver, corrupt, incompetent"
-      "Innocent": "A party framed as harmed or blameless: e.g. victim, exploited, scapegoat, forgotten"
+      - name: "Protagonist"
+        tooltip: "A positively framed actor: e.g. guardian, martyr, peacemaker, rebel, underdog, virtuous"
+      - name: "Antagonist"
+        tooltip: "A negatively framed actor: e.g. instigator, conspirator, tyrant, foreign adversary, traitor, terrorist, deceiver, corrupt, incompetent"
+      - name: "Innocent"
+        tooltip: "A party framed as harmed or blameless: e.g. victim, exploited, scapegoat, forgotten"
 
   # Subtask 2: Narrative Classification - assign topic-specific narrative
   # labels to the whole document.
@@ -50,25 +48,24 @@ annotation_schemes:
     name: narrative_classification
     description: "Select all narrative categories present in this article."
     labels:
-      - "Blaming the West / NATO"
-      - "Discrediting Ukraine"
-      - "Praising / justifying Russia"
-      - "Amplifying war consequences"
-      - "Climate change is not real / not urgent"
-      - "Criticism of climate policies"
-      - "Criticism of climate movement"
-      - "Green technology is unreliable"
-      - "Other narrative"
-    tooltips:
-      "Blaming the West / NATO": "Ukraine-Russia domain: narratives attributing the conflict to Western actors"
-      "Discrediting Ukraine": "Ukraine-Russia domain: narratives undermining Ukraine or its leadership"
-      "Praising / justifying Russia": "Ukraine-Russia domain: narratives defending Russian actions"
-      "Amplifying war consequences": "Ukraine-Russia domain: narratives emphasizing costs or threats of the war"
-      "Climate change is not real / not urgent": "Climate domain: denial or downplaying narratives"
-      "Criticism of climate policies": "Climate domain: narratives attacking climate regulations or measures"
-      "Criticism of climate movement": "Climate domain: narratives attacking activists or institutions"
-      "Green technology is unreliable": "Climate domain: narratives casting doubt on renewable/green technology"
-      "Other narrative": "A dominant narrative not captured by the categories above"
+      - name: "Blaming the West / NATO"
+        tooltip: "Ukraine-Russia domain: narratives attributing the conflict to Western actors"
+      - name: "Discrediting Ukraine"
+        tooltip: "Ukraine-Russia domain: narratives undermining Ukraine or its leadership"
+      - name: "Praising / justifying Russia"
+        tooltip: "Ukraine-Russia domain: narratives defending Russian actions"
+      - name: "Amplifying war consequences"
+        tooltip: "Ukraine-Russia domain: narratives emphasizing costs or threats of the war"
+      - name: "Climate change is not real / not urgent"
+        tooltip: "Climate domain: denial or downplaying narratives"
+      - name: "Criticism of climate policies"
+        tooltip: "Climate domain: narratives attacking climate regulations or measures"
+      - name: "Criticism of climate movement"
+        tooltip: "Climate domain: narratives attacking activists or institutions"
+      - name: "Green technology is unreliable"
+        tooltip: "Climate domain: narratives casting doubt on renewable/green technology"
+      - name: "Other narrative"
+        tooltip: "A dominant narrative not captured by the categories above"
 
   # Subtask 3: Narrative Extraction - free-text justification of the
   # dominant narrative (SemEval limits responses to ~80 words).
@@ -86,21 +83,7 @@ annotation_instructions: |
   3. Narrative Extraction: write a short justification (up to 80 words) for
      the article's dominant narrative, grounded in the text.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">News Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 8px;">
-      <strong style="color: #166534;">Source:</strong> <span>{{source}}</span>
-      &nbsp; | &nbsp;
-      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

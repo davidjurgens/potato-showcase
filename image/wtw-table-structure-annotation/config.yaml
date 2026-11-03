@@ -33,10 +33,9 @@ item_properties:
   text_key: "image"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   ## Wired Table Structure Annotation
@@ -128,7 +127,7 @@ annotation_schemes:
         tooltip: "A scan or screenshot of a modern printed or digital document"
         key_value: "e"
 
-allow_all_users: true
-instances_per_annotator: 25
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 25
+num_annotators_per_item: 2

@@ -31,7 +31,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Factuality verdict
@@ -39,36 +39,22 @@ annotation_schemes:
     name: factuality
     description: "Is this atomic fact supported by the reference source?"
     labels:
-      - "Supported"
-      - "Not Supported"
-      - "Irrelevant"
-    keyboard_shortcuts:
-      "Supported": "s"
-      "Not Supported": "n"
-      "Irrelevant": "i"
-    tooltips:
-      "Supported": "The reference source explicitly confirms this atomic fact"
-      "Not Supported": "The reference source contradicts this fact or does not contain information to confirm it"
-      "Irrelevant": "The fact is an opinion, trivially true, or cannot be verified against the reference"
+      - name: "Supported"
+        tooltip: "The reference source explicitly confirms this atomic fact"
+        key_value: "s"
+      - name: "Not Supported"
+        tooltip: "The reference source contradicts this fact or does not contain information to confirm it"
+        key_value: "n"
+      - name: "Irrelevant"
+        tooltip: "The fact is an opinion, trivially true, or cannot be verified against the reference"
+        key_value: "i"
 
   # Step 2: Correction (if Not Supported)
   - annotation_type: text
     name: correction
     description: "If the fact is Not Supported, provide the correct information from the reference source (leave blank if Supported or Irrelevant)"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 10px; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 4px;">
-    <strong>Generated Paragraph:</strong><br>{{text}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 10px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
-    <strong>Atomic Fact to Verify:</strong> {{atomic_fact}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
-    <strong>Reference Source:</strong><br>{{reference_source}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

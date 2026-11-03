@@ -40,7 +40,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify EDU boundaries
@@ -48,61 +48,47 @@ annotation_schemes:
     name: edu_segments
     description: "Highlight each Elementary Discourse Unit (EDU) in the text. Each EDU should be a minimal clause-level segment."
     labels:
-      - "EDU"
-    label_colors:
-      "EDU": "#3b82f6"
-    tooltips:
-      "EDU": "A minimal discourse unit that conveys a single proposition or idea, roughly clause-level"
-    allow_overlapping: false
+      - name: "EDU"
+        tooltip: "A minimal discourse unit that conveys a single proposition or idea, roughly clause-level"
+        color: "#3b82f6"
 
   # Step 2: Classify discourse relations between adjacent EDUs
   - annotation_type: radio
     name: discourse_relation
     description: "What is the primary discourse relation between the highlighted EDU segments?"
     labels:
-      - "Elaboration"
-      - "Contrast"
-      - "Cause"
-      - "Result"
-      - "Background"
-      - "Condition"
-      - "Purpose"
-      - "Temporal"
-      - "Joint"
-      - "Attribution"
-    keyboard_shortcuts:
-      "Elaboration": "1"
-      "Contrast": "2"
-      "Cause": "3"
-      "Result": "4"
-      "Background": "5"
-      "Condition": "6"
-      "Purpose": "7"
-      "Temporal": "8"
-      "Joint": "9"
-      "Attribution": "0"
-    tooltips:
-      "Elaboration": "One unit provides additional detail, specification, or explanation of the other"
-      "Contrast": "Two units present opposing, contrasting, or comparative information"
-      "Cause": "One unit presents the cause or reason for the situation described in the other"
-      "Result": "One unit presents the result, effect, or consequence of the other"
-      "Background": "One unit provides background information or context for understanding the other"
-      "Condition": "One unit specifies a condition under which the other holds"
-      "Purpose": "One unit states the purpose, goal, or intention of the action in the other"
-      "Temporal": "Units are related by temporal sequence or temporal framing"
-      "Joint": "Units are equally important and coordinated (neither is subordinate)"
-      "Attribution": "One unit attributes the content of the other to a source"
+      - name: "Elaboration"
+        tooltip: "One unit provides additional detail, specification, or explanation of the other"
+        key_value: "1"
+      - name: "Contrast"
+        tooltip: "Two units present opposing, contrasting, or comparative information"
+        key_value: "2"
+      - name: "Cause"
+        tooltip: "One unit presents the cause or reason for the situation described in the other"
+        key_value: "3"
+      - name: "Result"
+        tooltip: "One unit presents the result, effect, or consequence of the other"
+        key_value: "4"
+      - name: "Background"
+        tooltip: "One unit provides background information or context for understanding the other"
+        key_value: "5"
+      - name: "Condition"
+        tooltip: "One unit specifies a condition under which the other holds"
+        key_value: "6"
+      - name: "Purpose"
+        tooltip: "One unit states the purpose, goal, or intention of the action in the other"
+        key_value: "7"
+      - name: "Temporal"
+        tooltip: "Units are related by temporal sequence or temporal framing"
+        key_value: "8"
+      - name: "Joint"
+        tooltip: "Units are equally important and coordinated (neither is subordinate)"
+        key_value: "9"
+      - name: "Attribution"
+        tooltip: "One unit attributes the content of the other to a source"
+        key_value: "0"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-    <strong>Genre:</strong> {{genre}}
-  </div>
-  <div style="font-size: 16px; line-height: 1.8;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

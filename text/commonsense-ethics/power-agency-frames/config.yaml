@@ -36,7 +36,7 @@ item_properties:
   text_key: "sentence"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Agency of the subject
@@ -44,50 +44,45 @@ annotation_schemes:
     name: agency
     description: "How much AGENCY (control, initiative) does the verb imply for the subject?"
     labels:
-      - "High agency"
-      - "Moderate agency"
-      - "Low agency"
-      - "Neutral"
-    tooltips:
-      "High agency": "The subject is active, in control, making decisions (e.g., 'decides', 'leads', 'creates')"
-      "Moderate agency": "The subject has some control but within constraints"
-      "Low agency": "The subject is passive, reactive, or acted upon (e.g., 'follows', 'receives', 'is told')"
-      "Neutral": "The verb doesn't clearly convey agency level"
+      - name: "High agency"
+        tooltip: "The subject is active, in control, making decisions (e.g., 'decides', 'leads', 'creates')"
+      - name: "Moderate agency"
+        tooltip: "The subject has some control but within constraints"
+      - name: "Low agency"
+        tooltip: "The subject is passive, reactive, or acted upon (e.g., 'follows', 'receives', 'is told')"
+      - name: "Neutral"
+        tooltip: "The verb doesn't clearly convey agency level"
 
   # Step 2: Power dynamics
   - annotation_type: radio
     name: power
     description: "Who has POWER in the relationship implied by the verb?"
     labels:
-      - "Subject has power"
-      - "Object has power"
-      - "Equal power"
-      - "No power dynamic"
-    tooltips:
-      "Subject has power": "The subject dominates or controls the object (e.g., 'commands', 'criticizes')"
-      "Object has power": "The object has power over the subject (e.g., 'obeys', 'serves')"
-      "Equal power": "Neither has power over the other (e.g., 'collaborates', 'discusses')"
-      "No power dynamic": "The verb doesn't imply a power relationship"
+      - name: "Subject has power"
+        tooltip: "The subject dominates or controls the object (e.g., 'commands', 'criticizes')"
+      - name: "Object has power"
+        tooltip: "The object has power over the subject (e.g., 'obeys', 'serves')"
+      - name: "Equal power"
+        tooltip: "Neither has power over the other (e.g., 'collaborates', 'discusses')"
+      - name: "No power dynamic"
+        tooltip: "The verb doesn't imply a power relationship"
 
   # Step 3: Sentiment toward subject
   - annotation_type: radio
     name: subject_sentiment
     description: "Does the verb cast the subject in a positive or negative light?"
     labels:
-      - "Positive"
-      - "Neutral"
-      - "Negative"
-    tooltips:
-      "Positive": "The verb portrays the subject favorably"
-      "Neutral": "The verb is neutral toward the subject"
-      "Negative": "The verb portrays the subject unfavorably"
+      - name: "Positive"
+        tooltip: "The verb portrays the subject favorably"
+      - name: "Neutral"
+        tooltip: "The verb is neutral toward the subject"
+      - name: "Negative"
+        tooltip: "The verb portrays the subject unfavorably"
 
   # Step 4: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your annotations?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -95,8 +90,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

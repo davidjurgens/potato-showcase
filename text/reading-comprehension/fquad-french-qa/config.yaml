@@ -26,10 +26,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Write a French question answerable by a span
@@ -42,9 +41,8 @@ annotation_schemes:
     name: answer_span
     description: "Sélectionnez le plus petit passage qui contient la réponse (Select the smallest span containing the answer)"
     labels:
-      - "Réponse (Answer)"
-    label_colors:
-      "Réponse (Answer)": "#3b82f6"
+      - name: "Réponse (Answer)"
+        color: "#3b82f6"
 
 annotation_instructions: |
   You will be shown a paragraph from a French Wikipedia quality article. Following
@@ -59,16 +57,7 @@ annotation_instructions: |
   Repeat for several questions per paragraph. Every question must be answerable
   from the paragraph — FQuAD 1.0/1.1 contain no unanswerable questions.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Paragraphe (Passage):</strong>
-      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

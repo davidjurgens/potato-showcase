@@ -14,29 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing conversation and both responses
-html_layout: |
-  <div class="preference-container">
-    <div class="conversation-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">💬 Conversation Context:</h3>
-      <div class="conversation-text" style="white-space: pre-wrap;">{{conversation}}</div>
-    </div>
-    <div class="responses-section">
-      <h3>Choose the better assistant response:</h3>
-      <div style="display: flex; gap: 20px;">
-        <div class="response-a" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
-          <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
-          <div class="response-text" style="white-space: pre-wrap;">{{response_a}}</div>
-        </div>
-        <div class="response-b" style="flex: 1; background: #fce4ec; padding: 15px; border-radius: 8px; border: 2px solid #c62828;">
-          <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
-          <div class="response-text" style="white-space: pre-wrap;">{{response_b}}</div>
-        </div>
-      </div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -44,54 +22,51 @@ annotation_schemes:
     description: "Which response is better? Consider both helpfulness AND harmlessness."
     annotation_type: radio
     labels:
-      - "Response A is better"
-      - "Response B is better"
-    keyboard_shortcuts:
-      "Response A is better": "a"
-      "Response B is better": "b"
+      - name: "Response A is better"
+        key_value: "a"
+      - name: "Response B is better"
+        key_value: "b"
 
   - name: "evaluation_type"
     description: "What type of evaluation is this? (Select based on the conversation content)"
     annotation_type: radio
     labels:
-      - "Helpfulness evaluation"
-      - "Harmlessness evaluation"
-      - "Both (helpfulness and harmlessness)"
-    keyboard_shortcuts:
-      "Helpfulness evaluation": "1"
-      "Harmlessness evaluation": "2"
-      "Both (helpfulness and harmlessness)": "3"
+      - name: "Helpfulness evaluation"
+        key_value: "1"
+      - name: "Harmlessness evaluation"
+        key_value: "2"
+      - name: "Both (helpfulness and harmlessness)"
+        key_value: "3"
 
   - name: "confidence"
     description: "How confident are you in your choice?"
     annotation_type: radio
     labels:
-      - "Very confident"
-      - "Somewhat confident"
-      - "Not confident"
-    keyboard_shortcuts:
-      "Very confident": "q"
-      "Somewhat confident": "w"
-      "Not confident": "e"
+      - name: "Very confident"
+        key_value: "q"
+      - name: "Somewhat confident"
+        key_value: "w"
+      - name: "Not confident"
+        key_value: "e"
 
   - name: "difficulty"
     description: "How difficult was this comparison?"
     annotation_type: radio
     labels:
-      - "Easy - clear winner"
-      - "Medium - required some thought"
-      - "Hard - very close or complex"
-    keyboard_shortcuts:
-      "Easy - clear winner": "z"
-      "Medium - required some thought": "x"
-      "Hard - very close or complex": "c"
+      - name: "Easy - clear winner"
+        key_value: "z"
+      - name: "Medium - required some thought"
+        key_value: "x"
+      - name: "Hard - very close or complex"
+        key_value: "c"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 150
-annotation_per_instance: 2
+max_annotations_per_user: 150
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

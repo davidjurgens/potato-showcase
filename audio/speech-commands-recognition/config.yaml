@@ -34,27 +34,24 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: audio_quality
     description: "Assess the quality of the audio clip"
     labels:
-      - "Clear"
-      - "Noisy"
-      - "Ambiguous"
-    keyboard_shortcuts:
-      "Clear": "1"
-      "Noisy": "2"
-      "Ambiguous": "3"
-    tooltips:
-      "Clear": "Audio is clean with clearly audible speech"
-      "Noisy": "Background noise is present but speech is still identifiable"
-      "Ambiguous": "Speech is unclear or could be interpreted as multiple different words"
+      - name: "Clear"
+        tooltip: "Audio is clean with clearly audible speech"
+        key_value: "1"
+      - name: "Noisy"
+        tooltip: "Background noise is present but speech is still identifiable"
+        key_value: "2"
+      - name: "Ambiguous"
+        tooltip: "Speech is unclear or could be interpreted as multiple different words"
+        key_value: "3"
 
   - annotation_type: audio_annotation
     name: command_label
@@ -85,22 +82,7 @@ annotation_instructions: |
   The expected command is shown for reference, but your label should
   reflect what you actually hear in the audio.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
-      <audio controls style="width: 100%;">
-        <source src="{{audio_url}}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 12px;">
-      <strong style="color: #92400e;">Expected Command:</strong>
-      <span style="font-size: 16px; color: #78350f;">{{text}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

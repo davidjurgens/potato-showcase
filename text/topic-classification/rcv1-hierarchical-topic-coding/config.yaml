@@ -44,10 +44,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: hierarchical_multiselect
@@ -57,7 +56,6 @@ annotation_schemes:
     auto_select_parent: false
     show_search: true
     max_selections: null
-    expand_depth: 1
     taxonomy:
       "CCAT (Corporate/Industrial)":
         "C15 Performance":
@@ -140,18 +138,7 @@ annotation_instructions: |
     (most specifically C151 Accounts/Earnings), while a story about a merger
     belongs under C181 Mergers/Acquisitions.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Dateline:</strong> {{dateline}}
-    </div>
-    <div style="background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 16px;">
-      <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">{{title}}</h3>
-      <p style="font-size: 15px; line-height: 1.7; margin: 0; color: #374151;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

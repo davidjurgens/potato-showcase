@@ -30,7 +30,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Argument component type
@@ -38,90 +38,84 @@ annotation_schemes:
     name: argument_component
     description: "Select the PRIMARY argument component type for this dialogue turn"
     labels:
-      - "Claim"
-      - "Evidence"
-      - "Rebuttal"
-      - "Clarification Request"
-      - "Clarification Response"
-      - "Concession"
-      - "Question"
-      - "Agreement"
-      - "Meta-Discussion"
-      - "Other"
-    keyboard_shortcuts:
-      "Claim": "c"
-      "Evidence": "e"
-      "Rebuttal": "r"
-      "Clarification Request": "q"
-      "Clarification Response": "a"
-      "Concession": "o"
-      "Question": "u"
-      "Agreement": "g"
-    tooltips:
-      "Claim": "A statement or assertion the speaker wants the listener to accept (e.g., 'This method outperforms the baseline')"
-      "Evidence": "Data, experimental results, citations, or facts supporting or undermining a claim"
-      "Rebuttal": "A counter-argument that challenges a previous claim, evidence, or reasoning"
-      "Clarification Request": "Asking for more details, definitions, or explanation of an argument"
-      "Clarification Response": "Providing additional details or explanation in response to a question"
-      "Concession": "Acknowledging the validity of a counterpoint while potentially maintaining one's position"
-      "Question": "A general question about the paper or topic (not specifically requesting clarification)"
-      "Agreement": "Expressing agreement with a previous claim or argument"
-      "Meta-Discussion": "Discussion about the dialogue process itself, not the scientific content"
-      "Other": "Turns that do not fit the above categories (e.g., greetings, tangents)"
+      - name: "Claim"
+        tooltip: "A statement or assertion the speaker wants the listener to accept (e.g., 'This method outperforms the baseline')"
+        key_value: "c"
+      - name: "Evidence"
+        tooltip: "Data, experimental results, citations, or facts supporting or undermining a claim"
+        key_value: "e"
+      - name: "Rebuttal"
+        tooltip: "A counter-argument that challenges a previous claim, evidence, or reasoning"
+        key_value: "r"
+      - name: "Clarification Request"
+        tooltip: "Asking for more details, definitions, or explanation of an argument"
+        key_value: "q"
+      - name: "Clarification Response"
+        tooltip: "Providing additional details or explanation in response to a question"
+        key_value: "a"
+      - name: "Concession"
+        tooltip: "Acknowledging the validity of a counterpoint while potentially maintaining one's position"
+        key_value: "o"
+      - name: "Question"
+        tooltip: "A general question about the paper or topic (not specifically requesting clarification)"
+        key_value: "u"
+      - name: "Agreement"
+        tooltip: "Expressing agreement with a previous claim or argument"
+        key_value: "g"
+      - name: "Meta-Discussion"
+        tooltip: "Discussion about the dialogue process itself, not the scientific content"
+      - name: "Other"
+        tooltip: "Turns that do not fit the above categories (e.g., greetings, tangents)"
 
   # Argument quality dimensions (multiselect)
   - annotation_type: multiselect
     name: quality_dimensions
     description: "Select all quality dimensions that are WELL demonstrated in this argument turn"
     labels:
-      - "Clarity"
-      - "Relevance"
-      - "Sufficiency"
-      - "Logical Soundness"
-      - "Specificity"
-      - "Novelty"
-      - "Grounded in Paper"
-      - "Acknowledges Limitations"
-      - "None Notable"
-    tooltips:
-      "Clarity": "The argument is clearly articulated and easy to understand"
-      "Relevance": "The argument is directly relevant to the paper or topic under discussion"
-      "Sufficiency": "Adequate evidence or reasoning is provided to support the claim"
-      "Logical Soundness": "The reasoning follows logically without fallacies"
-      "Specificity": "The argument references specific methods, results, or sections of the paper"
-      "Novelty": "The argument raises a new point or perspective not previously discussed"
-      "Grounded in Paper": "The argument is directly supported by content from the paper"
-      "Acknowledges Limitations": "The speaker acknowledges limitations or caveats in their argument"
-      "None Notable": "No quality dimensions are particularly well demonstrated"
+      - name: "Clarity"
+        tooltip: "The argument is clearly articulated and easy to understand"
+      - name: "Relevance"
+        tooltip: "The argument is directly relevant to the paper or topic under discussion"
+      - name: "Sufficiency"
+        tooltip: "Adequate evidence or reasoning is provided to support the claim"
+      - name: "Logical Soundness"
+        tooltip: "The reasoning follows logically without fallacies"
+      - name: "Specificity"
+        tooltip: "The argument references specific methods, results, or sections of the paper"
+      - name: "Novelty"
+        tooltip: "The argument raises a new point or perspective not previously discussed"
+      - name: "Grounded in Paper"
+        tooltip: "The argument is directly supported by content from the paper"
+      - name: "Acknowledges Limitations"
+        tooltip: "The speaker acknowledges limitations or caveats in their argument"
+      - name: "None Notable"
+        tooltip: "No quality dimensions are particularly well demonstrated"
 
   # Persuasiveness rating
   - annotation_type: radio
     name: persuasiveness
     description: "How persuasive is this argument turn?"
     labels:
-      - "Very Persuasive"
-      - "Somewhat Persuasive"
-      - "Neutral"
-      - "Somewhat Unpersuasive"
-      - "Not Persuasive"
-      - "Not Applicable"
-    keyboard_shortcuts:
-      "Very Persuasive": "1"
-      "Somewhat Persuasive": "2"
-      "Neutral": "3"
-      "Somewhat Unpersuasive": "4"
-      "Not Persuasive": "5"
-      "Not Applicable": "6"
-    tooltips:
-      "Very Persuasive": "Strong, well-supported argument that would likely convince most readers"
-      "Somewhat Persuasive": "Reasonable argument with some support, moderately convincing"
-      "Neutral": "Neither particularly persuasive nor unpersuasive"
-      "Somewhat Unpersuasive": "Weak argument with limited support or questionable reasoning"
-      "Not Persuasive": "Poorly constructed argument, unsupported, or logically flawed"
-      "Not Applicable": "The turn is not argumentative (e.g., a question or greeting)"
+      - name: "Very Persuasive"
+        tooltip: "Strong, well-supported argument that would likely convince most readers"
+        key_value: "1"
+      - name: "Somewhat Persuasive"
+        tooltip: "Reasonable argument with some support, moderately convincing"
+        key_value: "2"
+      - name: "Neutral"
+        tooltip: "Neither particularly persuasive nor unpersuasive"
+        key_value: "3"
+      - name: "Somewhat Unpersuasive"
+        tooltip: "Weak argument with limited support or questionable reasoning"
+        key_value: "4"
+      - name: "Not Persuasive"
+        tooltip: "Poorly constructed argument, unsupported, or logically flawed"
+        key_value: "5"
+      - name: "Not Applicable"
+        tooltip: "The turn is not argumentative (e.g., a question or greeting)"
+        key_value: "6"
 
-allow_all_users: true
-instances_per_annotator: 150
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 150
+num_annotators_per_item: 3

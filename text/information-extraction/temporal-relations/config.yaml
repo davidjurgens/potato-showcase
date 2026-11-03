@@ -31,7 +31,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Mark events
@@ -39,73 +39,65 @@ annotation_schemes:
     name: events
     description: "Highlight all events (actions, states, occurrences) in the text"
     labels:
-      - "Event"
-      - "State"
-      - "Reporting"
-      - "Perception"
-      - "Aspectual"
-      - "Intentional"
-      - "Occurrence"
-    label_colors:
-      "Event": "#3b82f6"
-      "State": "#22c55e"
-      "Reporting": "#f59e0b"
-      "Perception": "#8b5cf6"
-      "Aspectual": "#06b6d4"
-      "Intentional": "#ec4899"
-      "Occurrence": "#6366f1"
-    tooltips:
-      "Event": "General action or happening (e.g., 'attacked', 'meeting')"
-      "State": "Ongoing condition or state (e.g., 'is president', 'remained')"
-      "Reporting": "Speech or communication act (e.g., 'said', 'announced')"
-      "Perception": "Sensing or perceiving (e.g., 'saw', 'heard', 'felt')"
-      "Aspectual": "Beginning, continuing, or ending (e.g., 'started', 'continued', 'finished')"
-      "Intentional": "Planning or wanting (e.g., 'planned', 'intended', 'tried')"
-      "Occurrence": "Natural or uncontrolled event (e.g., 'earthquake', 'storm')"
-    allow_overlapping: false
+      - name: "Event"
+        tooltip: "General action or happening (e.g., 'attacked', 'meeting')"
+        color: "#3b82f6"
+      - name: "State"
+        tooltip: "Ongoing condition or state (e.g., 'is president', 'remained')"
+        color: "#22c55e"
+      - name: "Reporting"
+        tooltip: "Speech or communication act (e.g., 'said', 'announced')"
+        color: "#f59e0b"
+      - name: "Perception"
+        tooltip: "Sensing or perceiving (e.g., 'saw', 'heard', 'felt')"
+        color: "#8b5cf6"
+      - name: "Aspectual"
+        tooltip: "Beginning, continuing, or ending (e.g., 'started', 'continued', 'finished')"
+        color: "#06b6d4"
+      - name: "Intentional"
+        tooltip: "Planning or wanting (e.g., 'planned', 'intended', 'tried')"
+        color: "#ec4899"
+      - name: "Occurrence"
+        tooltip: "Natural or uncontrolled event (e.g., 'earthquake', 'storm')"
+        color: "#6366f1"
 
   # Step 2: Mark time expressions
   - annotation_type: span
     name: time_expressions
     description: "Highlight all time expressions (dates, times, durations)"
     labels:
-      - "DATE"
-      - "TIME"
-      - "DURATION"
-      - "SET"
-    label_colors:
-      "DATE": "#f97316"
-      "TIME": "#eab308"
-      "DURATION": "#84cc16"
-      "SET": "#14b8a6"
-    tooltips:
-      "DATE": "Calendar date (e.g., 'January 15', '2024', 'last Monday')"
-      "TIME": "Clock time (e.g., '3 PM', 'noon', 'midnight')"
-      "DURATION": "Length of time (e.g., 'three hours', 'for a week')"
-      "SET": "Recurring time (e.g., 'every Monday', 'daily', 'annually')"
-    allow_overlapping: false
+      - name: "DATE"
+        tooltip: "Calendar date (e.g., 'January 15', '2024', 'last Monday')"
+        color: "#f97316"
+      - name: "TIME"
+        tooltip: "Clock time (e.g., '3 PM', 'noon', 'midnight')"
+        color: "#eab308"
+      - name: "DURATION"
+        tooltip: "Length of time (e.g., 'three hours', 'for a week')"
+        color: "#84cc16"
+      - name: "SET"
+        tooltip: "Recurring time (e.g., 'every Monday', 'daily', 'annually')"
+        color: "#14b8a6"
 
   # Step 3: Temporal relation between consecutive events
   - annotation_type: radio
     name: temporal_relation
     description: "What is the temporal relation between the two most recently marked events?"
     labels:
-      - "BEFORE"
-      - "AFTER"
-      - "SIMULTANEOUS"
-      - "INCLUDES"
-      - "IS_INCLUDED"
-      - "VAGUE"
-    tooltips:
-      "BEFORE": "First event ends before the second event begins"
-      "AFTER": "First event begins after the second event ends"
-      "SIMULTANEOUS": "Events occur at the same time or overlap significantly"
-      "INCLUDES": "First event's timespan fully contains the second event"
-      "IS_INCLUDED": "First event is fully contained within the second event's timespan"
-      "VAGUE": "Temporal relationship cannot be determined from the text"
+      - name: "BEFORE"
+        tooltip: "First event ends before the second event begins"
+      - name: "AFTER"
+        tooltip: "First event begins after the second event ends"
+      - name: "SIMULTANEOUS"
+        tooltip: "Events occur at the same time or overlap significantly"
+      - name: "INCLUDES"
+        tooltip: "First event's timespan fully contains the second event"
+      - name: "IS_INCLUDED"
+        tooltip: "First event is fully contained within the second event's timespan"
+      - name: "VAGUE"
+        tooltip: "Temporal relationship cannot be determined from the text"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

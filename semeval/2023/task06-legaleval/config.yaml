@@ -25,43 +25,41 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: rhetorical_role
     description: "Task A - Assign the rhetorical role of this sentence in the legal judgment"
     labels:
-      - "PREAMBLE"
-      - "FAC"
-      - "RLC"
-      - "ISSUE"
-      - "ARG_PETITIONER"
-      - "ARG_RESPONDENT"
-      - "ANALYSIS"
-      - "STA"
-      - "PRE_RELIED"
-      - "PRE_NOT_RELIED"
-      - "RATIO"
-      - "RPC"
-      - "NONE"
-    tooltips:
-      "PREAMBLE": "Metadata / header of the judgment (court, parties, judges)"
-      "FAC": "Facts - events or circumstances that led to the case"
-      "RLC": "Ruling by Lower Court"
-      "ISSUE": "Legal issues framed by the court"
-      "ARG_PETITIONER": "Arguments advanced by the petitioner/appellant"
-      "ARG_RESPONDENT": "Arguments advanced by the respondent"
-      "ANALYSIS": "Court's analysis / reasoning and application of law to facts"
-      "STA": "Statute - relevant statutory provisions cited"
-      "PRE_RELIED": "Precedent relied upon by the court"
-      "PRE_NOT_RELIED": "Precedent cited but not relied upon"
-      "RATIO": "Ratio of the decision - the reason for the final decision"
-      "RPC": "Ruling by Present Court - final decision / order"
-      "NONE": "No rhetorical role applies"
+      - name: "PREAMBLE"
+        tooltip: "Metadata / header of the judgment (court, parties, judges)"
+      - name: "FAC"
+        tooltip: "Facts - events or circumstances that led to the case"
+      - name: "RLC"
+        tooltip: "Ruling by Lower Court"
+      - name: "ISSUE"
+        tooltip: "Legal issues framed by the court"
+      - name: "ARG_PETITIONER"
+        tooltip: "Arguments advanced by the petitioner/appellant"
+      - name: "ARG_RESPONDENT"
+        tooltip: "Arguments advanced by the respondent"
+      - name: "ANALYSIS"
+        tooltip: "Court's analysis / reasoning and application of law to facts"
+      - name: "STA"
+        tooltip: "Statute - relevant statutory provisions cited"
+      - name: "PRE_RELIED"
+        tooltip: "Precedent relied upon by the court"
+      - name: "PRE_NOT_RELIED"
+        tooltip: "Precedent cited but not relied upon"
+      - name: "RATIO"
+        tooltip: "Ratio of the decision - the reason for the final decision"
+      - name: "RPC"
+        tooltip: "Ruling by Present Court - final decision / order"
+      - name: "NONE"
+        tooltip: "No rhetorical role applies"
 
   - annotation_type: span
     name: legal_entities
@@ -92,20 +90,7 @@ annotation_instructions: |
      RESPONDENT, JUDGE, LAWYER, DATE, ORG, GPE, STATUTE, PROVISION, PRECEDENT,
      CASE_NUMBER, WITNESS, and OTHER_PERSON.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #065f46;">Case Type:</strong>
-      <span style="font-size: 15px; margin-left: 8px;">{{case_type}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Legal Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

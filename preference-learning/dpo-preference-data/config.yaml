@@ -36,10 +36,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Pairwise preference
@@ -52,33 +51,21 @@ annotation_schemes:
       - "Response B Preferred"
       - "Equally Good"
       - "Both Bad"
-    keyboard_shortcuts:
-      "Response A Preferred": "a"
-      "Response B Preferred": "b"
-      "Equally Good": "e"
-      "Both Bad": "x"
-    tooltips:
-      "Response A Preferred": "Response A is clearly better overall"
-      "Response B Preferred": "Response B is clearly better overall"
-      "Equally Good": "Both responses are of comparable quality"
-      "Both Bad": "Neither response adequately addresses the prompt"
 
   # Step 2: Alignment dimension
   - annotation_type: radio
     name: alignment_dimension
     description: "Which alignment dimension best characterizes the difference between the responses?"
     labels:
-      - "Helpful"
-      - "Harmless"
-      - "Honest"
-    keyboard_shortcuts:
-      "Helpful": "1"
-      "Harmless": "2"
-      "Honest": "3"
-    tooltips:
-      "Helpful": "The key differentiator is how helpful each response is"
-      "Harmless": "The key differentiator is safety and avoidance of harm"
-      "Honest": "The key differentiator is truthfulness and transparency"
+      - name: "Helpful"
+        tooltip: "The key differentiator is how helpful each response is"
+        key_value: "1"
+      - name: "Harmless"
+        tooltip: "The key differentiator is safety and avoidance of harm"
+        key_value: "2"
+      - name: "Honest"
+        tooltip: "The key differentiator is truthfulness and transparency"
+        key_value: "3"
 
   # Step 3: Preference reasoning
   - annotation_type: text
@@ -103,26 +90,7 @@ annotation_instructions: |
   - Honest responses that acknowledge limitations are valued over confident but wrong answers.
   - Consider the overall quality, not just one dimension.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Prompt:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="display: flex; gap: 16px;">
-      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
-      </div>
-      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2

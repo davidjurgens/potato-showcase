@@ -44,7 +44,7 @@ item_properties:
   text_key: "event"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # ---- If-Event-Then-Mental-State -------------------------------------
@@ -116,4 +116,4 @@ annotation_schemes:
 # Pool several annotators per event to recover ATOMIC's many-answers-per-event set.
 per_annotator_quota:
   default: 25
-min_annotators_per_instance: 4
+num_annotators_per_item: 4

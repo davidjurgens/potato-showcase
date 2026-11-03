@@ -10,8 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "prompt"
-  text_display_key: "prompt"
-  list_display_key: "options"
 
 user_config:
   allow_all_users: true
@@ -51,7 +49,5 @@ annotation_schemes:
       - name: "Hard"
         tooltip: "Very similar quality, difficult to choose"
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

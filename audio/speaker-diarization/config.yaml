@@ -10,8 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "transcript"
-  audio_key: "audio_url"
-  text_display_key: "transcript"
 
 user_config:
   allow_all_users: true
@@ -69,13 +67,5 @@ annotation_schemes:
     name: "notes"
     description: "Additional notes about this segment"
 
-audio_display:
-  show_waveform: true
-  show_spectrogram: false
-  playback_controls: true
-  loop_segment: true
-
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

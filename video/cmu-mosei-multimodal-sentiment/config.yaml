@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -90,19 +90,18 @@ annotation_schemes:
     description: "Classify the dominant emotion expressed by the speaker in this segment."
     annotation_type: radio
     labels:
-      - "happiness"
-      - "sadness"
-      - "anger"
-      - "fear"
-      - "disgust"
-      - "surprise"
-    keyboard_shortcuts:
-      happiness: "1"
-      sadness: "2"
-      anger: "3"
-      fear: "4"
-      disgust: "5"
-      surprise: "6"
+      - name: "happiness"
+        key_value: "1"
+      - name: "sadness"
+        key_value: "2"
+      - name: "anger"
+        key_value: "3"
+      - name: "fear"
+        key_value: "4"
+      - name: "disgust"
+        key_value: "5"
+      - name: "surprise"
+        key_value: "6"
 
   # Tier 4: Sentiment polarity (7-point Likert-style scale)
   - name: "sentiment_polarity"
@@ -123,33 +122,13 @@ annotation_schemes:
     annotation_type: text
     textarea: true
 
-# HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">CMU-MOSEI: Multi-Tier Multimodal Sentiment Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate visual behaviors, acoustic events, emotion, and sentiment across
-      parallel timeline tiers for multimodal sentiment analysis.
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Annotate the video across five parallel tiers:
-      visual behavior segments, acoustic event segments, emotion category, sentiment polarity,
-      and verbatim transcription. Each modality provides complementary sentiment cues.
-    </div>
-  </div>
-
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

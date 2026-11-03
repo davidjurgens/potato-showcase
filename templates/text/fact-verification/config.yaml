@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "display"
-  text_display_key: "display"
 
 user_config:
   allow_all_users: true
@@ -59,7 +58,5 @@ annotation_schemes:
     description: "Explain your reasoning"
     required: false
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

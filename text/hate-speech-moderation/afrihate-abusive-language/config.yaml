@@ -38,10 +38,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: three-way primary label
@@ -49,36 +48,33 @@ annotation_schemes:
     name: moderation_label
     description: "How would you categorize this tweet?"
     labels:
-      - "Hate"
-      - "Abusive"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Hate": "1"
-      "Abusive": "2"
-      "Neutral": "3"
-    tooltips:
-      "Hate": "Attacks or dehumanizes people because of a protected-group attribute (ethnicity, religion, politics, gender, disability, etc.)"
-      "Abusive": "Insulting, offensive, or profane, but not targeting a protected group"
-      "Neutral": "Neither hateful nor abusive"
+      - name: "Hate"
+        tooltip: "Attacks or dehumanizes people because of a protected-group attribute (ethnicity, religion, politics, gender, disability, etc.)"
+        key_value: "1"
+      - name: "Abusive"
+        tooltip: "Insulting, offensive, or profane, but not targeting a protected group"
+        key_value: "2"
+      - name: "Neutral"
+        tooltip: "Neither hateful nor abusive"
+        key_value: "3"
 
   # Step 2: targeted attribute - only fill in when the label is Hate
   - annotation_type: multiselect
     name: hate_target
     description: "If the tweet is HATE, which attribute(s) does it target? (leave blank otherwise)"
     labels:
-      - "Ethnicity"
-      - "Religion"
-      - "Politics"
-      - "Gender"
-      - "Disability"
-      - "Other"
-    tooltips:
-      "Ethnicity": "Targets an ethnic, racial, or national group"
-      "Religion": "Targets a religious group or belief"
-      "Politics": "Targets a political affiliation or party"
-      "Gender": "Targets gender or sexual identity"
-      "Disability": "Targets disability or health condition"
-      "Other": "Targets some other protected attribute"
+      - name: "Ethnicity"
+        tooltip: "Targets an ethnic, racial, or national group"
+      - name: "Religion"
+        tooltip: "Targets a religious group or belief"
+      - name: "Politics"
+        tooltip: "Targets a political affiliation or party"
+      - name: "Gender"
+        tooltip: "Targets gender or sexual identity"
+      - name: "Disability"
+        tooltip: "Targets disability or health condition"
+      - name: "Other"
+        tooltip: "Targets some other protected attribute"
 
 annotation_instructions: |
   You will see a tweet written in an African language, with its language
@@ -94,23 +90,7 @@ annotation_instructions: |
   a protected group attribute (Hate) versus an individual or nobody in
   particular (Abusive).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #065f46;">Language:</strong>
-      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
-    </div>
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #991b1b;">Tweet:</strong>
-      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
-      English gloss (reference only): {{gloss}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

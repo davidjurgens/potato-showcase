@@ -23,7 +23,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Primary entity annotation
@@ -31,95 +31,86 @@ annotation_schemes:
     name: entities
     description: "Highlight and classify medical entities in the text"
     labels:
-      - Drug
-      - ADR
-      - Disease
-      - Symptom
-      - Finding
-    label_colors:
-      Drug: "#3b82f6"
-      ADR: "#ef4444"
-      Disease: "#8b5cf6"
-      Symptom: "#f59e0b"
-      Finding: "#6b7280"
-    tooltips:
-      Drug: "Medication name - brand name (e.g., Lipitor) or generic name (e.g., atorvastatin)"
-      ADR: "Adverse Drug Reaction - side effect or negative reaction caused by the drug (e.g., 'terrible muscle pain', 'made me dizzy')"
-      Disease: "Medical condition for which the patient takes the medication (e.g., 'high cholesterol', 'arthritis')"
-      Symptom: "Symptom of the underlying disease, not caused by the drug (e.g., 'joint pain' that led to taking the drug)"
-      Finding: "Other clinical concepts that don't clearly fit above categories"
-    allow_overlapping: false
+      - name: Drug
+        tooltip: "Medication name - brand name (e.g., Lipitor) or generic name (e.g., atorvastatin)"
+        color: "#3b82f6"
+      - name: ADR
+        tooltip: "Adverse Drug Reaction - side effect or negative reaction caused by the drug (e.g., 'terrible muscle pain', 'made me dizzy')"
+        color: "#ef4444"
+      - name: Disease
+        tooltip: "Medical condition for which the patient takes the medication (e.g., 'high cholesterol', 'arthritis')"
+        color: "#8b5cf6"
+      - name: Symptom
+        tooltip: "Symptom of the underlying disease, not caused by the drug (e.g., 'joint pain' that led to taking the drug)"
+        color: "#f59e0b"
+      - name: Finding
+        tooltip: "Other clinical concepts that don't clearly fit above categories"
+        color: "#6b7280"
 
   # Severity of ADR (for ADR spans)
   - annotation_type: radio
     name: adr_severity
     description: "If an ADR is present, how severe does the patient describe it?"
     labels:
-      - Mild
-      - Moderate
-      - Severe
-      - Life-threatening
-      - Not specified
-      - N/A (no ADR)
-    keyboard_shortcuts:
-      Mild: "1"
-      Moderate: "2"
-      Severe: "3"
-      "Life-threatening": "4"
-      "Not specified": "5"
-      "N/A (no ADR)": "0"
-    tooltips:
-      Mild: "Minor inconvenience, patient continued medication"
-      Moderate: "Significant discomfort, may have affected daily activities"
-      Severe: "Serious reaction, patient stopped medication or sought medical help"
-      "Life-threatening": "Emergency situation, hospitalization, or risk of death"
-      "Not specified": "Severity not clearly indicated in text"
-      "N/A (no ADR)": "No adverse drug reaction in this text"
+      - name: Mild
+        tooltip: "Minor inconvenience, patient continued medication"
+        key_value: "1"
+      - name: Moderate
+        tooltip: "Significant discomfort, may have affected daily activities"
+        key_value: "2"
+      - name: Severe
+        tooltip: "Serious reaction, patient stopped medication or sought medical help"
+        key_value: "3"
+      - name: Life-threatening
+        tooltip: "Emergency situation, hospitalization, or risk of death"
+        key_value: "4"
+      - name: Not specified
+        tooltip: "Severity not clearly indicated in text"
+        key_value: "5"
+      - name: N/A (no ADR)
+        tooltip: "No adverse drug reaction in this text"
+        key_value: "0"
 
   # Temporal relation to drug
   - annotation_type: radio
     name: temporal_relation
     description: "When did the ADR occur relative to taking the drug?"
     labels:
-      - "Immediate (within hours)"
-      - "Short-term (days to weeks)"
-      - "Long-term (months)"
-      - "After stopping drug"
-      - "Not specified"
-      - "N/A"
-    tooltips:
-      "Immediate (within hours)": "Reaction occurred shortly after taking the medication"
-      "Short-term (days to weeks)": "Reaction developed within days or weeks of starting"
-      "Long-term (months)": "Reaction appeared after prolonged use"
-      "After stopping drug": "Reaction occurred after discontinuing the medication"
-      "Not specified": "Timing not clearly indicated"
-      "N/A": "Not applicable (no ADR present)"
+      - name: "Immediate (within hours)"
+        tooltip: "Reaction occurred shortly after taking the medication"
+      - name: "Short-term (days to weeks)"
+        tooltip: "Reaction developed within days or weeks of starting"
+      - name: "Long-term (months)"
+        tooltip: "Reaction appeared after prolonged use"
+      - name: "After stopping drug"
+        tooltip: "Reaction occurred after discontinuing the medication"
+      - name: "Not specified"
+        tooltip: "Timing not clearly indicated"
+      - name: "N/A"
+        tooltip: "Not applicable (no ADR present)"
 
   # Drug-ADR relationship certainty
   - annotation_type: radio
     name: causality_certainty
     description: "How certain is the patient that the drug caused the reaction?"
     labels:
-      - "Definite"
-      - "Probable"
-      - "Possible"
-      - "Uncertain"
-      - "N/A"
-    keyboard_shortcuts:
-      "Definite": "d"
-      "Probable": "p"
-      "Possible": "o"
-      "Uncertain": "u"
-      "N/A": "n"
-    tooltips:
-      "Definite": "Patient explicitly states drug caused the reaction (e.g., 'this drug gave me...')"
-      "Probable": "Strong implication of causation (e.g., 'started having X after taking Y')"
-      "Possible": "Temporal association but causation unclear"
-      "Uncertain": "Patient unsure if drug is responsible"
-      "N/A": "Not applicable (no ADR present)"
+      - name: "Definite"
+        tooltip: "Patient explicitly states drug caused the reaction (e.g., 'this drug gave me...')"
+        key_value: "d"
+      - name: "Probable"
+        tooltip: "Strong implication of causation (e.g., 'started having X after taking Y')"
+        key_value: "p"
+      - name: "Possible"
+        tooltip: "Temporal association but causation unclear"
+        key_value: "o"
+      - name: "Uncertain"
+        tooltip: "Patient unsure if drug is responsible"
+        key_value: "u"
+      - name: "N/A"
+        tooltip: "Not applicable (no ADR present)"
+        key_value: "n"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2

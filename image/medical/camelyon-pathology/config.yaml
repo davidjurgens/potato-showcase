@@ -43,7 +43,7 @@ user_config:
   allow_all_users: true
 
 max_annotations_per_user: 30
-max_annotations_per_item: 3
+num_annotators_per_item: 3
 
 output_annotation_dir: "annotation_output/"
 export_annotation_format: "jsonl"

@@ -12,7 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "event_segments"
@@ -36,13 +36,13 @@ annotation_schemes:
       Write a natural language description of the event you just marked.
       Be specific about WHO does WHAT. Start with a verb.
     annotation_type: text
-    min_length: 10
-    max_length: 200
+    min_chars: 10
     placeholder: "e.g., 'A man in a red shirt kicks a soccer ball into the goal'"
 
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 annotation_instructions: |
   ## Dense Video Captioning Task

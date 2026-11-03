@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "product_description"
-  text_display_key: "product_description"
 
 user_config:
   allow_all_users: true
@@ -67,7 +66,5 @@ annotation_schemes:
     description: "Any additional feedback?"
     required: false
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

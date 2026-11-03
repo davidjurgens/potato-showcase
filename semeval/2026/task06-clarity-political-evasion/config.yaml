@@ -33,27 +33,24 @@ item_properties:
   text_key: "answer"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: clarity
     description: "How directly does the answer address the question?"
     labels:
-      - "Clear Reply"
-      - "Ambiguous"
-      - "Clear Non-Reply"
-    keyboard_shortcuts:
-      "Clear Reply": "1"
-      "Ambiguous": "2"
-      "Clear Non-Reply": "3"
-    tooltips:
-      "Clear Reply": "The answer directly and unambiguously addresses the question"
-      "Ambiguous": "The answer only partially addresses the question or is unclear"
-      "Clear Non-Reply": "The answer avoids or does not address the question"
+      - name: "Clear Reply"
+        tooltip: "The answer directly and unambiguously addresses the question"
+        key_value: "1"
+      - name: "Ambiguous"
+        tooltip: "The answer only partially addresses the question or is unclear"
+        key_value: "2"
+      - name: "Clear Non-Reply"
+        tooltip: "The answer avoids or does not address the question"
+        key_value: "3"
 
   - annotation_type: text
     name: evasion_technique
@@ -68,19 +65,7 @@ annotation_instructions: |
   question. If it is not a Clear Reply, note which evasion technique the
   respondent used.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
-      <strong style="color: #1e40af;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 6px 0 0 0;">{{question}}</p>
-    </div>
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-      <strong style="color: #334155;">Answer:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 6px 0 0 0;">{{answer}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

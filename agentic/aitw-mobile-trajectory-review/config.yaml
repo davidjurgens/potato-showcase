@@ -36,10 +36,9 @@ item_properties:
   text_key: "instruction"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   You are shown an Android device-control episode: a natural-language
@@ -85,29 +84,16 @@ annotation_schemes:
     name: episode_verdict
     description: "Overall, does this episode correctly demonstrate the instruction?"
     labels:
-      - "Successful demonstration — instruction achieved, appropriate status action"
-      - "Achieved with flaws — instruction achieved, but with unrelated or wasted steps"
-      - "Not achieved — episode ends without completing the instruction"
-      - "task_impossible correctly used — instruction invalid or unavailable in this environment"
-    keyboard_shortcuts:
-      "Successful demonstration — instruction achieved, appropriate status action": "1"
-      "Achieved with flaws — instruction achieved, but with unrelated or wasted steps": "2"
-      "Not achieved — episode ends without completing the instruction": "3"
-      "task_impossible correctly used — instruction invalid or unavailable in this environment": "4"
+      - name: "Successful demonstration — instruction achieved, appropriate status action"
+        key_value: "1"
+      - name: "Achieved with flaws — instruction achieved, but with unrelated or wasted steps"
+        key_value: "2"
+      - name: "Not achieved — episode ends without completing the instruction"
+        key_value: "3"
+      - name: "task_impossible correctly used — instruction invalid or unavailable in this environment"
+        key_value: "4"
 
-html_layout: |
-  <div style="padding: 15px; max-width: 860px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Device:</strong> {{device}} &nbsp;·&nbsp; <strong>Android version:</strong> {{android_version}}
-    </div>
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px;">
-      <h3 style="margin: 0 0 6px 0; color: #3730a3; font-size: 15px;">Instruction</h3>
-      <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #1e1b4b;">{{instruction}}</p>
-    </div>
-    <p style="color: #6b7280; font-size: 13px; margin: 0;">The episode's per-step screenshots and actions are shown below. Judge each action, then give the episode-level verdict.</p>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 25
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 25
+num_annotators_per_item: 3

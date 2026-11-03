@@ -31,10 +31,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Pairwise comparison
@@ -46,14 +45,6 @@ annotation_schemes:
       - "Model A Better"
       - "Model B Better"
       - "Tie"
-    keyboard_shortcuts:
-      "Model A Better": "a"
-      "Model B Better": "b"
-      "Tie": "t"
-    tooltips:
-      "Model A Better": "Response A is clearly superior in addressing the query"
-      "Model B Better": "Response B is clearly superior in addressing the query"
-      "Tie": "Both responses are roughly equal in quality"
 
   # Step 2: Overall quality rating
   - annotation_type: likert
@@ -83,26 +74,7 @@ annotation_instructions: |
 
   Consider: helpfulness, accuracy, depth, clarity, and relevance to the query.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">User Query:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="display: flex; gap: 16px;">
-      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
-      </div>
-      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

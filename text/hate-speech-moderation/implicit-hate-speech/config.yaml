@@ -35,7 +35,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Hate classification
@@ -43,60 +43,55 @@ annotation_schemes:
     name: hate_type
     description: "Does this text contain hate speech?"
     labels:
-      - "Explicit hate"
-      - "Implicit hate"
-      - "Not hateful"
-    tooltips:
-      "Explicit hate": "Contains clear slurs, direct insults, or obvious threats"
-      "Implicit hate": "Conveys hate through stereotypes, coded language, or indirect means"
-      "Not hateful": "Does not contain hateful content"
+      - name: "Explicit hate"
+        tooltip: "Contains clear slurs, direct insults, or obvious threats"
+      - name: "Implicit hate"
+        tooltip: "Conveys hate through stereotypes, coded language, or indirect means"
+      - name: "Not hateful"
+        tooltip: "Does not contain hateful content"
 
   # Step 2: Implicit hate category (if implicit)
   - annotation_type: radio
     name: implicit_category
     description: "What type of implicit hate is expressed?"
     labels:
-      - "Grievance"
-      - "Incitement"
-      - "Stereotypes"
-      - "Inferiority"
-      - "Irony"
-      - "Threats"
-    tooltips:
-      "Grievance": "Positions majority groups as unfairly disadvantaged (e.g., 'reverse racism', 'they get special treatment')"
-      "Incitement": "Promotes hate groups/ideologies, celebrates in-group power (e.g., praising extremist symbols)"
-      "Stereotypes": "Associates groups with negative attributes using euphemisms or coded language"
-      "Inferiority": "Implies some group or person is of lesser value or capability"
-      "Irony": "Uses sarcasm, humor, or satire to mock or demean a group"
-      "Threats": "Indirect threats to body, well-being, reputation, or rights"
+      - name: "Grievance"
+        tooltip: "Positions majority groups as unfairly disadvantaged (e.g., 'reverse racism', 'they get special treatment')"
+      - name: "Incitement"
+        tooltip: "Promotes hate groups/ideologies, celebrates in-group power (e.g., praising extremist symbols)"
+      - name: "Stereotypes"
+        tooltip: "Associates groups with negative attributes using euphemisms or coded language"
+      - name: "Inferiority"
+        tooltip: "Implies some group or person is of lesser value or capability"
+      - name: "Irony"
+        tooltip: "Uses sarcasm, humor, or satire to mock or demean a group"
+      - name: "Threats"
+        tooltip: "Indirect threats to body, well-being, reputation, or rights"
 
   # Step 3: Target group
   - annotation_type: radio
     name: target
     description: "Which group is targeted?"
     labels:
-      - "Racial/ethnic minority"
-      - "Religious group"
-      - "Women"
-      - "LGBTQ+ people"
-      - "Immigrants"
-      - "Other group"
-      - "No specific group"
-    tooltips:
-      "Racial/ethnic minority": "Black, Asian, Hispanic, Indigenous, or other racial/ethnic groups"
-      "Religious group": "Muslims, Jewish people, or other religious groups"
-      "Women": "Women or girls based on gender"
-      "LGBTQ+ people": "Gay, lesbian, bisexual, transgender, or other LGBTQ+ individuals"
-      "Immigrants": "Immigrants, refugees, or non-citizens"
-      "Other group": "Another identifiable group not listed"
-      "No specific group": "No clear target group identified"
+      - name: "Racial/ethnic minority"
+        tooltip: "Black, Asian, Hispanic, Indigenous, or other racial/ethnic groups"
+      - name: "Religious group"
+        tooltip: "Muslims, Jewish people, or other religious groups"
+      - name: "Women"
+        tooltip: "Women or girls based on gender"
+      - name: "LGBTQ+ people"
+        tooltip: "Gay, lesbian, bisexual, transgender, or other LGBTQ+ individuals"
+      - name: "Immigrants"
+        tooltip: "Immigrants, refugees, or non-citizens"
+      - name: "Other group"
+        tooltip: "Another identifiable group not listed"
+      - name: "No specific group"
+        tooltip: "No clear target group identified"
 
   # Step 4: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your annotation?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -104,8 +99,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

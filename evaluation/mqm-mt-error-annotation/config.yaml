@@ -38,10 +38,9 @@ item_properties:
   text_key: "target"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   You will be assessing translations at the segment level, where a segment may
@@ -119,25 +118,7 @@ annotation_schemes:
     show_score: true
     max_score: 100
 
-html_layout: |
-  <div style="padding: 15px; max-width: 860px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Language pair:</strong> {{lang_pair}} &nbsp;·&nbsp; <strong>System:</strong> {{system}}
-    </div>
-    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
-      <strong style="color: #065f46;">Source segment:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 6px 0 0 0;">{{source}}</p>
-    </div>
-    <div style="background: #eff6ff; border: 2px solid #93c5fd; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
-      <strong style="color: #1e40af;">Translation (mark error spans below):</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 6px 0 0 0;">{{target}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 14px; line-height: 1.6;">
-      <strong>Document context:</strong> {{context}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 3

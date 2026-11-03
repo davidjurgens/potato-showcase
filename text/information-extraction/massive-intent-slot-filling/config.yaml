@@ -28,10 +28,9 @@ item_properties:
   text_key: "utterance"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: domain / scenario
@@ -85,31 +84,30 @@ annotation_schemes:
     name: slots
     description: "Highlight each slot and label the type of value it holds"
     labels:
-      - "time"
-      - "date"
-      - "location"
-      - "person"
-      - "device_type"
-      - "media_type"
-      - "app_name"
-      - "food_type"
-      - "weather_descriptor"
-      - "number"
-      - "event_name"
-      - "other"
-    label_colors:
-      "time": "#3b82f6"
-      "date": "#0ea5e9"
-      "location": "#ef4444"
-      "person": "#ec4899"
-      "device_type": "#a855f7"
-      "media_type": "#8b5cf6"
-      "app_name": "#14b8a6"
-      "food_type": "#f97316"
-      "weather_descriptor": "#eab308"
-      "number": "#22c55e"
-      "event_name": "#f59e0b"
-      "other": "#6b7280"
+      - name: "time"
+        color: "#3b82f6"
+      - name: "date"
+        color: "#0ea5e9"
+      - name: "location"
+        color: "#ef4444"
+      - name: "person"
+        color: "#ec4899"
+      - name: "device_type"
+        color: "#a855f7"
+      - name: "media_type"
+        color: "#8b5cf6"
+      - name: "app_name"
+        color: "#14b8a6"
+      - name: "food_type"
+        color: "#f97316"
+      - name: "weather_descriptor"
+        color: "#eab308"
+      - name: "number"
+        color: "#22c55e"
+      - name: "event_name"
+        color: "#f59e0b"
+      - name: "other"
+        color: "#6b7280"
 
 annotation_instructions: |
   You will see a short command spoken to a virtual assistant, with its
@@ -122,23 +120,7 @@ annotation_instructions: |
        location, person, device_type, ...).
   Not every command has slots; some (e.g. "tell me a joke") are intent-only.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #065f46;">Language:</strong>
-      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #0369a1;">Command:</strong>
-      <p style="font-size: 18px; line-height: 1.7; margin: 8px 0 0 0;">{{utterance}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
-      English gloss (reference only): {{gloss}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

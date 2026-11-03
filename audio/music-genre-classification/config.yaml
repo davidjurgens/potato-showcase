@@ -10,8 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "title"
-  audio_key: "audio_url"
-  text_display_key: "title"
 
 user_config:
   allow_all_users: true
@@ -93,12 +91,5 @@ annotation_schemes:
       - name: "Medium (80-120 BPM)"
       - name: "Fast (> 120 BPM)"
 
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: false
-
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

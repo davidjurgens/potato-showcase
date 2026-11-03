@@ -4,10 +4,7 @@ item_properties:
   id_key: "id"
   text_key: "product_name"
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-
-task_name: "User Feedback Survey"
+export_annotation_format: "jsonl"
 
 # Server configuration
 server:
@@ -27,7 +24,7 @@ annotation_schemes:
     size: 5
     min_label: "Very Dissatisfied"
     max_label: "Very Satisfied"
-    keyboard_shortcuts: true
+    sequential_key_binding: true
 
   # Ease of use
   - annotation_type: likert
@@ -36,7 +33,7 @@ annotation_schemes:
     size: 5
     min_label: "Very Difficult"
     max_label: "Very Easy"
-    keyboard_shortcuts: true
+    sequential_key_binding: true
 
   # Feature completeness
   - annotation_type: likert
@@ -45,7 +42,7 @@ annotation_schemes:
     size: 5
     min_label: "Not at All"
     max_label: "Completely"
-    keyboard_shortcuts: true
+    sequential_key_binding: true
 
   # Recommendation likelihood (NPS-style)
   - annotation_type: likert
@@ -59,7 +56,6 @@ annotation_schemes:
   - annotation_type: multiselect
     name: valuable_features
     description: "Which features do you find most valuable? (Select up to 3)"
-    max_selections: 3
     labels:
       - Easy configuration
       - Multiple annotation types
@@ -132,10 +128,5 @@ annotation_schemes:
     placeholder: "Anything else you'd like to share..."
 
 # User settings
-allow_all_users: true
-instances_per_annotator: 1
-
-# Output
-output:
-  path: survey_responses/
-  format: json
+user_config:
+  allow_all_users: true

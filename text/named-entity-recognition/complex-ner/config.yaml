@@ -38,37 +38,33 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: span
     name: entities
     description: "Highlight all named entities in the text"
     labels:
-      - "Person"
-      - "Location"
-      - "Corporation"
-      - "Group"
-      - "Product"
-      - "Creative Work"
-    label_colors:
-      "Person": "#3b82f6"
-      "Location": "#22c55e"
-      "Corporation": "#8b5cf6"
-      "Group": "#f59e0b"
-      "Product": "#06b6d4"
-      "Creative Work": "#ec4899"
-    tooltips:
-      "Person": "Names of people (including fictional characters)"
-      "Location": "Places, addresses, facilities, geographic features"
-      "Corporation": "Companies, businesses, corporations"
-      "Group": "Other groups: bands, sports teams, movements, organizations"
-      "Product": "Consumer products: devices, vehicles, software, games"
-      "Creative Work": "Movies, TV shows, books, songs, albums, artworks"
-    allow_overlapping: false
+      - name: "Person"
+        tooltip: "Names of people (including fictional characters)"
+        color: "#3b82f6"
+      - name: "Location"
+        tooltip: "Places, addresses, facilities, geographic features"
+        color: "#22c55e"
+      - name: "Corporation"
+        tooltip: "Companies, businesses, corporations"
+        color: "#8b5cf6"
+      - name: "Group"
+        tooltip: "Other groups: bands, sports teams, movements, organizations"
+        color: "#f59e0b"
+      - name: "Product"
+        tooltip: "Consumer products: devices, vehicles, software, games"
+        color: "#06b6d4"
+      - name: "Creative Work"
+        tooltip: "Movies, TV shows, books, songs, albums, artworks"
+        color: "#ec4899"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

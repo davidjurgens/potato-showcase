@@ -41,34 +41,30 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: span
     name: entities
     description: "Highlight all bio-entities in the text using the five JNLPBA classes"
     labels:
-      - "Protein"
-      - "DNA"
-      - "RNA"
-      - "Cell_line"
-      - "Cell_type"
-    label_colors:
-      "Protein": "#0891b2"
-      "DNA": "#3b82f6"
-      "RNA": "#8b5cf6"
-      "Cell_line": "#ef4444"
-      "Cell_type": "#22c55e"
-    tooltips:
-      "Protein": "Proteins, protein families/complexes/subunits, receptors, transcription factors (e.g., 'NF-kappa B', 'IL-2', 'STAT1', 'TNF-alpha')"
-      "DNA": "Genes, gene families, DNA regions, promoters and binding sites (e.g., 'IL-2 gene', 'kappa B site', 'IL-2 promoter')"
-      "RNA": "RNA and mRNA (e.g., 'IL-6 mRNA', 'CD23 mRNA')"
-      "Cell_line": "Established cell lines (e.g., 'Jurkat cells', 'HeLa cells', 'HL-60 cells', 'U937 cell line')"
-      "Cell_type": "Cell types (e.g., 'T cells', 'monocytes', 'peripheral blood lymphocytes', 'B cells')"
-    allow_overlapping: false
+      - name: "Protein"
+        tooltip: "Proteins, protein families/complexes/subunits, receptors, transcription factors (e.g., 'NF-kappa B', 'IL-2', 'STAT1', 'TNF-alpha')"
+        color: "#0891b2"
+      - name: "DNA"
+        tooltip: "Genes, gene families, DNA regions, promoters and binding sites (e.g., 'IL-2 gene', 'kappa B site', 'IL-2 promoter')"
+        color: "#3b82f6"
+      - name: "RNA"
+        tooltip: "RNA and mRNA (e.g., 'IL-6 mRNA', 'CD23 mRNA')"
+        color: "#8b5cf6"
+      - name: "Cell_line"
+        tooltip: "Established cell lines (e.g., 'Jurkat cells', 'HeLa cells', 'HL-60 cells', 'U937 cell line')"
+        color: "#ef4444"
+      - name: "Cell_type"
+        tooltip: "Cell types (e.g., 'T cells', 'monocytes', 'peripheral blood lymphocytes', 'B cells')"
+        color: "#22c55e"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

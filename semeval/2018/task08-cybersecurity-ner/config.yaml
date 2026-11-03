@@ -36,24 +36,21 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: sentence_relevance
     description: "SubTask 1: Is this sentence relevant to malware actions or capabilities?"
     labels:
-      - "Relevant"
-      - "Irrelevant"
-    keyboard_shortcuts:
-      "Relevant": "1"
-      "Irrelevant": "2"
-    tooltips:
-      "Relevant": "The sentence describes a malware action or capability"
-      "Irrelevant": "The sentence provides no information about malware behaviour"
+      - name: "Relevant"
+        tooltip: "The sentence describes a malware action or capability"
+        key_value: "1"
+      - name: "Irrelevant"
+        tooltip: "The sentence provides no information about malware behaviour"
+        key_value: "2"
 
   - annotation_type: span
     name: token_labels
@@ -67,15 +64,14 @@ annotation_schemes:
     name: attribute_category
     description: "SubTask 4: Which MAEC attribute categories apply to the Action tokens?"
     labels:
-      - "ActionName"
-      - "Capability"
-      - "StrategicObjectives"
-      - "TacticalObjectives"
-    tooltips:
-      "ActionName": "Specific named action from the MAEC vocabulary (211 labels)"
-      "Capability": "Malware capability, e.g. data exfiltration (20 labels)"
-      "StrategicObjectives": "Higher-level strategic objective of the action (65 labels)"
-      "TacticalObjectives": "Tactical objective realising a capability (148 labels)"
+      - name: "ActionName"
+        tooltip: "Specific named action from the MAEC vocabulary (211 labels)"
+      - name: "Capability"
+        tooltip: "Malware capability, e.g. data exfiltration (20 labels)"
+      - name: "StrategicObjectives"
+        tooltip: "Higher-level strategic objective of the action (65 labels)"
+      - name: "TacticalObjectives"
+        tooltip: "Tactical objective realising a capability (148 labels)"
 
 annotation_instructions: |
   You will be shown a sentence from a malware / APT cybersecurity report.
@@ -87,16 +83,7 @@ annotation_instructions: |
      Subject/Object of the Action; Modifier links to elaborating phrases.
   3. Select the MAEC attribute categories that apply to the Action tokens.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Sentence:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

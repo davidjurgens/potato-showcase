@@ -32,30 +32,27 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: stance
     description: "What is the stance of this reply toward the source claim?"
     labels:
-      - "Support"
-      - "Deny"
-      - "Query"
-      - "Comment"
-    keyboard_shortcuts:
-      "Support": "1"
-      "Deny": "2"
-      "Query": "3"
-      "Comment": "4"
-    tooltips:
-      "Support": "The reply agrees with, endorses, or supports the claim"
-      "Deny": "The reply disputes, contradicts, or refutes the claim"
-      "Query": "The reply asks for more information, evidence, or clarification"
-      "Comment": "The reply is neutral, off-topic, or does not take a clear stance"
+      - name: "Support"
+        tooltip: "The reply agrees with, endorses, or supports the claim"
+        key_value: "1"
+      - name: "Deny"
+        tooltip: "The reply disputes, contradicts, or refutes the claim"
+        key_value: "2"
+      - name: "Query"
+        tooltip: "The reply asks for more information, evidence, or clarification"
+        key_value: "3"
+      - name: "Comment"
+        tooltip: "The reply is neutral, off-topic, or does not take a clear stance"
+        key_value: "4"
 
   - annotation_type: tree_annotation
     name: thread_structure
@@ -79,21 +76,7 @@ annotation_instructions: |
   - Rhetorical questions that may actually express denial.
   - Implicit stances conveyed through tone or word choice.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
-      <strong style="color: #991b1b;">Source Claim:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0; font-style: italic;">{{source_claim}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
-      <strong style="color: #0369a1;">Reply Post:</strong>
-      <span style="font-size: 12px; color: #64748b; margin-left: 8px;">[{{platform}}]</span>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

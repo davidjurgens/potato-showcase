@@ -35,7 +35,7 @@ item_properties:
   text_key: "event"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: PersonX's intent
@@ -43,87 +43,82 @@ annotation_schemes:
     name: xIntent
     description: "Why did PersonX do this? What was their motivation?"
     labels:
-      - "To be helpful"
-      - "To achieve a goal"
-      - "To express emotions"
-      - "To fulfill an obligation"
-      - "To satisfy a need"
-      - "For enjoyment"
-      - "Other/unclear"
-    tooltips:
-      "To be helpful": "PersonX wanted to help someone or make things easier"
-      "To achieve a goal": "PersonX wanted to accomplish something specific"
-      "To express emotions": "PersonX wanted to show how they feel"
-      "To fulfill an obligation": "PersonX had to do this (duty, promise, expectation)"
-      "To satisfy a need": "PersonX needed something (hunger, comfort, etc.)"
-      "For enjoyment": "PersonX did this for fun or pleasure"
-      "Other/unclear": "The motivation doesn't fit other categories or is unclear"
+      - name: "To be helpful"
+        tooltip: "PersonX wanted to help someone or make things easier"
+      - name: "To achieve a goal"
+        tooltip: "PersonX wanted to accomplish something specific"
+      - name: "To express emotions"
+        tooltip: "PersonX wanted to show how they feel"
+      - name: "To fulfill an obligation"
+        tooltip: "PersonX had to do this (duty, promise, expectation)"
+      - name: "To satisfy a need"
+        tooltip: "PersonX needed something (hunger, comfort, etc.)"
+      - name: "For enjoyment"
+        tooltip: "PersonX did this for fun or pleasure"
+      - name: "Other/unclear"
+        tooltip: "The motivation doesn't fit other categories or is unclear"
 
   # Step 2: PersonX's reaction
   - annotation_type: radio
     name: xReact
     description: "How does PersonX feel as a result of this event?"
     labels:
-      - "Happy/satisfied"
-      - "Relieved"
-      - "Proud"
-      - "Anxious/worried"
-      - "Tired/exhausted"
-      - "Frustrated"
-      - "Neutral"
-    tooltips:
-      "Happy/satisfied": "PersonX feels good about what happened"
-      "Relieved": "PersonX feels relief that something is done/resolved"
-      "Proud": "PersonX feels accomplished"
-      "Anxious/worried": "PersonX feels nervous or concerned"
-      "Tired/exhausted": "PersonX feels drained of energy"
-      "Frustrated": "PersonX feels annoyed or disappointed"
-      "Neutral": "No strong emotional reaction"
+      - name: "Happy/satisfied"
+        tooltip: "PersonX feels good about what happened"
+      - name: "Relieved"
+        tooltip: "PersonX feels relief that something is done/resolved"
+      - name: "Proud"
+        tooltip: "PersonX feels accomplished"
+      - name: "Anxious/worried"
+        tooltip: "PersonX feels nervous or concerned"
+      - name: "Tired/exhausted"
+        tooltip: "PersonX feels drained of energy"
+      - name: "Frustrated"
+        tooltip: "PersonX feels annoyed or disappointed"
+      - name: "Neutral"
+        tooltip: "No strong emotional reaction"
 
   # Step 3: Others' reaction
   - annotation_type: radio
     name: oReact
     description: "How do OTHER people (not PersonX) feel about this?"
     labels:
-      - "Grateful/appreciative"
-      - "Happy for PersonX"
-      - "Impressed"
-      - "Indifferent"
-      - "Annoyed"
-      - "Concerned"
-      - "Other"
-    tooltips:
-      "Grateful/appreciative": "Others are thankful for what PersonX did"
-      "Happy for PersonX": "Others feel joy on PersonX's behalf"
-      "Impressed": "Others admire what PersonX did"
-      "Indifferent": "Others don't have strong feelings about it"
-      "Annoyed": "Others are bothered by what PersonX did"
-      "Concerned": "Others are worried about PersonX or the situation"
-      "Other": "Other reaction not listed"
+      - name: "Grateful/appreciative"
+        tooltip: "Others are thankful for what PersonX did"
+      - name: "Happy for PersonX"
+        tooltip: "Others feel joy on PersonX's behalf"
+      - name: "Impressed"
+        tooltip: "Others admire what PersonX did"
+      - name: "Indifferent"
+        tooltip: "Others don't have strong feelings about it"
+      - name: "Annoyed"
+        tooltip: "Others are bothered by what PersonX did"
+      - name: "Concerned"
+        tooltip: "Others are worried about PersonX or the situation"
+      - name: "Other"
+        tooltip: "Other reaction not listed"
 
   # Step 4: What PersonX wants next
   - annotation_type: radio
     name: xWant
     description: "What will PersonX likely want to do next?"
     labels:
-      - "Relax/rest"
-      - "Continue with related activity"
-      - "Celebrate/reward themselves"
-      - "Move on to something else"
-      - "Get feedback/validation"
-      - "Fix a problem"
-      - "Nothing specific"
-    tooltips:
-      "Relax/rest": "PersonX wants to take a break"
-      "Continue with related activity": "PersonX wants to keep doing similar things"
-      "Celebrate/reward themselves": "PersonX wants to enjoy their success"
-      "Move on to something else": "PersonX wants to do something different"
-      "Get feedback/validation": "PersonX wants others' opinions or approval"
-      "Fix a problem": "PersonX needs to address an issue"
-      "Nothing specific": "No clear next desire"
+      - name: "Relax/rest"
+        tooltip: "PersonX wants to take a break"
+      - name: "Continue with related activity"
+        tooltip: "PersonX wants to keep doing similar things"
+      - name: "Celebrate/reward themselves"
+        tooltip: "PersonX wants to enjoy their success"
+      - name: "Move on to something else"
+        tooltip: "PersonX wants to do something different"
+      - name: "Get feedback/validation"
+        tooltip: "PersonX wants others' opinions or approval"
+      - name: "Fix a problem"
+        tooltip: "PersonX needs to address an issue"
+      - name: "Nothing specific"
+        tooltip: "No clear next desire"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

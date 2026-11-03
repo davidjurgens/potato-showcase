@@ -46,10 +46,9 @@ item_properties:
   text_key: "passage"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Select the correct answer
@@ -57,48 +56,44 @@ annotation_schemes:
     name: correct_answer
     description: "Based on the passage, which answer is correct?"
     labels:
-      - "A"
-      - "B"
-      - "C"
-      - "D"
-    keyboard_shortcuts:
-      "A": "1"
-      "B": "2"
-      "C": "3"
-      "D": "4"
-    tooltips:
-      "A": "Select if option A is the correct answer"
-      "B": "Select if option B is the correct answer"
-      "C": "Select if option C is the correct answer"
-      "D": "Select if option D is the correct answer"
+      - name: "A"
+        tooltip: "Select if option A is the correct answer"
+        key_value: "1"
+      - name: "B"
+        tooltip: "Select if option B is the correct answer"
+        key_value: "2"
+      - name: "C"
+        tooltip: "Select if option C is the correct answer"
+        key_value: "3"
+      - name: "D"
+        tooltip: "Select if option D is the correct answer"
+        key_value: "4"
 
   # Step 2: Rate difficulty
   - annotation_type: radio
     name: difficulty
     description: "How difficult is this question to answer correctly?"
     labels:
-      - "easy"
-      - "medium"
-      - "hard"
-    tooltips:
-      "easy": "The answer is explicitly stated in the passage with minimal reasoning"
-      "medium": "The answer requires some inference or paraphrasing"
-      "hard": "The answer requires complex reasoning or synthesis of multiple passage parts"
+      - name: "easy"
+        tooltip: "The answer is explicitly stated in the passage with minimal reasoning"
+      - name: "medium"
+        tooltip: "The answer requires some inference or paraphrasing"
+      - name: "hard"
+        tooltip: "The answer requires complex reasoning or synthesis of multiple passage parts"
 
   # Step 3: Reasoning type
   - annotation_type: radio
     name: reasoning_type
     description: "What type of reasoning is required to answer this question?"
     labels:
-      - "factual"
-      - "inferential"
-      - "lexical"
-      - "structural"
-    tooltips:
-      "factual": "The answer is directly stated in the passage (fact lookup)"
-      "inferential": "The answer requires drawing a conclusion from passage information"
-      "lexical": "The answer requires understanding vocabulary, synonyms, or paraphrases"
-      "structural": "The answer requires understanding how the passage is organized"
+      - name: "factual"
+        tooltip: "The answer is directly stated in the passage (fact lookup)"
+      - name: "inferential"
+        tooltip: "The answer requires drawing a conclusion from passage information"
+      - name: "lexical"
+        tooltip: "The answer requires understanding vocabulary, synonyms, or paraphrases"
+      - name: "structural"
+        tooltip: "The answer requires understanding how the passage is organized"
 
 annotation_instructions: |
   You will be shown a passage followed by a question and four answer options (A, B, C, D). Your task is to:
@@ -109,34 +104,7 @@ annotation_instructions: |
 
   Remember: base your answer only on the passage content, not on external knowledge.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Passage:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{passage}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{question}}</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">A:</strong> {{option_a}}
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">B:</strong> {{option_b}}
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">C:</strong> {{option_c}}
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">D:</strong> {{option_d}}
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

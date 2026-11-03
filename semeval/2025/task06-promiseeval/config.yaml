@@ -22,72 +22,63 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: promise_identification
     description: "Does this paragraph contain a promise (a commitment about future action)?"
     labels:
-      - "Yes"
-      - "No"
-    keyboard_shortcuts:
-      "Yes": "1"
-      "No": "2"
-    tooltips:
-      "Yes": "The paragraph contains a promise or commitment about future action"
-      "No": "The paragraph does not contain any promise or commitment"
+      - name: "Yes"
+        tooltip: "The paragraph contains a promise or commitment about future action"
+        key_value: "1"
+      - name: "No"
+        tooltip: "The paragraph does not contain any promise or commitment"
+        key_value: "2"
 
   - annotation_type: radio
     name: supporting_evidence
     description: "Is there supporting evidence for the promise? (Answer only if a promise is present.)"
     labels:
-      - "Yes"
-      - "No"
-    keyboard_shortcuts:
-      "Yes": "3"
-      "No": "4"
-    tooltips:
-      "Yes": "Evidence is provided that supports the identified promise"
-      "No": "No supporting evidence is provided for the promise"
+      - name: "Yes"
+        tooltip: "Evidence is provided that supports the identified promise"
+        key_value: "3"
+      - name: "No"
+        tooltip: "No supporting evidence is provided for the promise"
+        key_value: "4"
 
   - annotation_type: radio
     name: evidence_clarity
     description: "How clearly does the evidence relate to and support the promise?"
     labels:
-      - "Clear"
-      - "Not Clear"
-      - "Misleading"
-    keyboard_shortcuts:
-      "Clear": "5"
-      "Not Clear": "6"
-      "Misleading": "7"
-    tooltips:
-      "Clear": "The evidence directly and clearly supports the promise"
-      "Not Clear": "The relationship between evidence and promise is vague or weak"
-      "Misleading": "The evidence is potentially misleading with respect to the promise"
+      - name: "Clear"
+        tooltip: "The evidence directly and clearly supports the promise"
+        key_value: "5"
+      - name: "Not Clear"
+        tooltip: "The relationship between evidence and promise is vague or weak"
+        key_value: "6"
+      - name: "Misleading"
+        tooltip: "The evidence is potentially misleading with respect to the promise"
+        key_value: "7"
 
   - annotation_type: radio
     name: verification_timing
     description: "When should a reader be able to verify whether the promise is fulfilled?"
     labels:
-      - "Within 2 years"
-      - "2-5 years"
-      - "Longer than 5 years"
-      - "Other"
-    keyboard_shortcuts:
-      "Within 2 years": "q"
-      "2-5 years": "w"
-      "Longer than 5 years": "e"
-      "Other": "r"
-    tooltips:
-      "Within 2 years": "The promise can be verified within two years"
-      "2-5 years": "The promise can be verified in two to five years"
-      "Longer than 5 years": "The promise can be verified more than five years out"
-      "Other": "Already verifiable, or no specific timeline is given"
+      - name: "Within 2 years"
+        tooltip: "The promise can be verified within two years"
+        key_value: "q"
+      - name: "2-5 years"
+        tooltip: "The promise can be verified in two to five years"
+        key_value: "w"
+      - name: "Longer than 5 years"
+        tooltip: "The promise can be verified more than five years out"
+        key_value: "e"
+      - name: "Other"
+        tooltip: "Already verifiable, or no specific timeline is given"
+        key_value: "r"
 
   - annotation_type: text
     name: evidence_reasoning
@@ -104,27 +95,7 @@ annotation_instructions: |
   4. Judge when a reader could verify whether the promise was fulfilled.
   Optionally record the evidence or reasoning behind your assessment.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Report Paragraph:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px;">
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">Company:</strong> {{company}}
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">Year:</strong> {{year}}
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">Source:</strong> {{source}}
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

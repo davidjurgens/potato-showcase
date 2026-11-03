@@ -32,7 +32,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Binary hate classification
@@ -40,70 +40,63 @@ annotation_schemes:
     name: is_hateful
     description: "Is this content hateful?"
     labels:
-      - "Hate"
-      - "Not Hate"
-    tooltips:
-      "Hate": "Content that attacks, demeans, or threatens individuals or groups based on protected characteristics"
-      "Not Hate": "Content that is not hateful, including legitimate criticism, counter-speech, or neutral discussion"
+      - name: "Hate"
+        tooltip: "Content that attacks, demeans, or threatens individuals or groups based on protected characteristics"
+      - name: "Not Hate"
+        tooltip: "Content that is not hateful, including legitimate criticism, counter-speech, or neutral discussion"
 
   # Step 2: Hate type classification (if hateful)
   - annotation_type: radio
     name: hate_type
     description: "What type of hate is expressed? (Select the primary type)"
     labels:
-      - "Animosity"
-      - "Derogation"
-      - "Dehumanization"
-      - "Threatening"
-      - "Support for Hateful Entities"
-    tooltips:
-      "Animosity": "Expression of negative feelings, hostility, antipathy, or opposition toward a group"
-      "Derogation": "Insulting, demeaning, belittling, or degrading language about a group"
-      "Dehumanization": "Comparing a group to animals, vermin, diseases, or subhuman entities"
-      "Threatening": "Direct or implicit threats of violence, harm, or calls for exclusion/extermination"
-      "Support for Hateful Entities": "Praising, supporting, or glorifying hateful groups, symbols, figures, or ideologies"
+      - name: "Animosity"
+        tooltip: "Expression of negative feelings, hostility, antipathy, or opposition toward a group"
+      - name: "Derogation"
+        tooltip: "Insulting, demeaning, belittling, or degrading language about a group"
+      - name: "Dehumanization"
+        tooltip: "Comparing a group to animals, vermin, diseases, or subhuman entities"
+      - name: "Threatening"
+        tooltip: "Direct or implicit threats of violence, harm, or calls for exclusion/extermination"
+      - name: "Support for Hateful Entities"
+        tooltip: "Praising, supporting, or glorifying hateful groups, symbols, figures, or ideologies"
 
   # Step 3: Target group identification
   - annotation_type: multiselect
     name: target_groups
     description: "Which groups are targeted? (Select all that apply)"
     labels:
-      - "Black people"
-      - "Asian people"
-      - "Hispanic/Latino people"
-      - "Arab/Middle Eastern people"
-      - "Indigenous people"
-      - "Jewish people"
-      - "Muslims"
-      - "Women"
-      - "LGBTQ+ people"
-      - "Trans people"
-      - "People with disabilities"
-      - "Immigrants/Refugees"
-      - "Other group"
-    label_colors:
-      "Black people": "#3b82f6"
-      "Asian people": "#06b6d4"
-      "Hispanic/Latino people": "#8b5cf6"
-      "Arab/Middle Eastern people": "#f59e0b"
-      "Indigenous people": "#22c55e"
-      "Jewish people": "#6366f1"
-      "Muslims": "#14b8a6"
-      "Women": "#ec4899"
-      "LGBTQ+ people": "#a855f7"
-      "Trans people": "#d946ef"
-      "People with disabilities": "#f97316"
-      "Immigrants/Refugees": "#0ea5e9"
-      "Other group": "#9ca3af"
-    min_selections: 0
-    max_selections: 13
+      - name: "Black people"
+        color: "#3b82f6"
+      - name: "Asian people"
+        color: "#06b6d4"
+      - name: "Hispanic/Latino people"
+        color: "#8b5cf6"
+      - name: "Arab/Middle Eastern people"
+        color: "#f59e0b"
+      - name: "Indigenous people"
+        color: "#22c55e"
+      - name: "Jewish people"
+        color: "#6366f1"
+      - name: "Muslims"
+        color: "#14b8a6"
+      - name: "Women"
+        color: "#ec4899"
+      - name: "LGBTQ+ people"
+        color: "#a855f7"
+      - name: "Trans people"
+        color: "#d946ef"
+      - name: "People with disabilities"
+        color: "#f97316"
+      - name: "Immigrants/Refugees"
+        color: "#0ea5e9"
+      - name: "Other group"
+        color: "#9ca3af"
 
   # Step 4: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your annotation?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -111,8 +104,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -39,10 +39,9 @@ item_properties:
   text_key: "instruction"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   You are shown an instruction (question), a reference answer, and the response
@@ -179,38 +178,18 @@ annotation_schemes:
     name: difficulty
     description: "Annotate the difficulty level of the instruction (Level 1 = simple lifestyle knowledge, Level 5 = expert-level knowledge)."
     labels:
-      - "1 - Simple Lifestyle Knowledge"
-      - "2 - Advanced Lifestyle Knowledge"
-      - "3 - Formal Education Knowledge"
-      - "4 - Major Level Knowledge"
-      - "5 - Expert Level Knowledge"
-    keyboard_shortcuts:
-      "1 - Simple Lifestyle Knowledge": "1"
-      "2 - Advanced Lifestyle Knowledge": "2"
-      "3 - Formal Education Knowledge": "3"
-      "4 - Major Level Knowledge": "4"
-      "5 - Expert Level Knowledge": "5"
+      - name: "1 - Simple Lifestyle Knowledge"
+        key_value: "1"
+      - name: "2 - Advanced Lifestyle Knowledge"
+        key_value: "2"
+      - name: "3 - Formal Education Knowledge"
+        key_value: "3"
+      - name: "4 - Major Level Knowledge"
+        key_value: "4"
+      - name: "5 - Expert Level Knowledge"
+        key_value: "5"
 
-html_layout: |
-  <div style="padding: 15px; max-width: 880px; margin: auto;">
-    <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 12px; margin-bottom: 8px; font-size: 13px; color: #475569;">
-      <strong>Domain:</strong> {{domain}} &nbsp;·&nbsp; <strong>Relevant skills:</strong> {{annotated_skills}}
-    </div>
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
-      <strong style="color: #1e40af;">Instruction:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-wrap;">{{instruction}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; margin-bottom: 8px;">
-      <strong style="color: #166534;">Reference answer:</strong>
-      <p style="font-size: 14px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-wrap;">{{reference_answer}}</p>
-    </div>
-    <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 14px;">
-      <strong style="color: #92400e;">Model response:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-wrap;">{{response}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 3

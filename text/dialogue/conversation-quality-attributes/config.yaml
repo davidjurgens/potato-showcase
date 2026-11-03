@@ -39,30 +39,27 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: engagement
     description: "How engaging is this conversation turn?"
     labels:
-      - "Engaging"
-      - "Boring"
-      - "Confusing"
-      - "Offensive"
-    keyboard_shortcuts:
-      "Engaging": "1"
-      "Boring": "2"
-      "Confusing": "3"
-      "Offensive": "4"
-    tooltips:
-      "Engaging": "The conversation holds attention and invites further interaction"
-      "Boring": "The conversation is dull, repetitive, or uninteresting"
-      "Confusing": "The conversation is difficult to follow or understand"
-      "Offensive": "The conversation contains inappropriate or harmful content"
+      - name: "Engaging"
+        tooltip: "The conversation holds attention and invites further interaction"
+        key_value: "1"
+      - name: "Boring"
+        tooltip: "The conversation is dull, repetitive, or uninteresting"
+        key_value: "2"
+      - name: "Confusing"
+        tooltip: "The conversation is difficult to follow or understand"
+        key_value: "3"
+      - name: "Offensive"
+        tooltip: "The conversation contains inappropriate or harmful content"
+        key_value: "4"
 
   - annotation_type: likert
     name: overall_quality
@@ -75,19 +72,18 @@ annotation_schemes:
     name: conversation_attributes
     description: "Which attributes describe this conversation turn?"
     labels:
-      - "Interesting"
-      - "Repetitive"
-      - "Coherent"
-      - "Informative"
-      - "Empathetic"
-      - "Generic"
-    tooltips:
-      "Interesting": "Contains novel, intriguing, or thought-provoking content"
-      "Repetitive": "Repeats the same ideas, phrases, or patterns"
-      "Coherent": "Logically connected and easy to follow in the conversation context"
-      "Informative": "Provides useful information, facts, or knowledge"
-      "Empathetic": "Shows understanding of or sensitivity to emotions and feelings"
-      "Generic": "Uses vague, non-specific, or boilerplate responses"
+      - name: "Interesting"
+        tooltip: "Contains novel, intriguing, or thought-provoking content"
+      - name: "Repetitive"
+        tooltip: "Repeats the same ideas, phrases, or patterns"
+      - name: "Coherent"
+        tooltip: "Logically connected and easy to follow in the conversation context"
+      - name: "Informative"
+        tooltip: "Provides useful information, facts, or knowledge"
+      - name: "Empathetic"
+        tooltip: "Shows understanding of or sensitivity to emotions and feelings"
+      - name: "Generic"
+        tooltip: "Uses vague, non-specific, or boilerplate responses"
 
 annotation_instructions: |
   You will be shown a dialogue turn from a conversation, along with the speaker.
@@ -96,20 +92,7 @@ annotation_instructions: |
   3. Rate the overall quality on a 5-point scale from Very Poor to Excellent.
   4. Select all attributes that describe this conversation turn.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
-      <strong style="color: #92400e;">Speaker:</strong>
-      <span style="color: #78350f;">{{speaker}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Dialogue:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-line;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

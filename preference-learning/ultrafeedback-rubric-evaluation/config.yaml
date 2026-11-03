@@ -14,20 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout
-html_layout: |
-  <div class="evaluation-container">
-    <div class="instruction-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-      <h3 style="margin-top: 0;">📝 Instruction:</h3>
-      <div class="instruction-text">{{instruction}}</div>
-    </div>
-    <div class="response-section" style="background: #fff; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
-      <h3 style="margin-top: 0; color: #1976d2;">🤖 Model Response:</h3>
-      <div class="response-text">{{response}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes - 4 dimensions with rationales
 annotation_schemes:
@@ -46,18 +33,11 @@ annotation_schemes:
       - "3 - Somewhat helpful, addresses basics"
       - "4 - Helpful, addresses most needs well"
       - "5 - Extremely helpful, exceeds expectations"
-    keyboard_shortcuts:
-      "1 - Fails to help, irrelevant or wrong": "1"
-      "2 - Minimally helpful, misses key points": "2"
-      "3 - Somewhat helpful, addresses basics": "3"
-      "4 - Helpful, addresses most needs well": "4"
-      "5 - Extremely helpful, exceeds expectations": "5"
 
   - name: "helpfulness_rationale"
     description: "Explain your helpfulness rating (what made it helpful or unhelpful?)"
     annotation_type: text
-    min_length: 10
-    max_length: 300
+    min_chars: 10
     placeholder: "e.g., 'Provides clear step-by-step instructions but lacks examples...'"
 
   # HONESTY (Confidence Calibration)
@@ -75,18 +55,11 @@ annotation_schemes:
       - "3 - Mixed - some appropriate hedging"
       - "4 - Generally honest with minor issues"
       - "5 - Perfectly calibrated, acknowledges limits"
-    keyboard_shortcuts:
-      "1 - Confidently wrong or fabricates information": "q"
-      "2 - Overconfident about uncertain claims": "w"
-      "3 - Mixed - some appropriate hedging": "e"
-      "4 - Generally honest with minor issues": "r"
-      "5 - Perfectly calibrated, acknowledges limits": "t"
 
   - name: "honesty_rationale"
     description: "Explain your honesty rating (appropriate confidence? acknowledges uncertainty?)"
     annotation_type: text
-    min_length: 10
-    max_length: 300
+    min_chars: 10
     placeholder: "e.g., 'Correctly hedges on uncertain claims but could be more explicit about limitations...'"
 
   # INSTRUCTION FOLLOWING
@@ -104,18 +77,11 @@ annotation_schemes:
       - "3 - Follows basic instruction, misses details"
       - "4 - Follows well with minor deviations"
       - "5 - Perfectly follows all requirements"
-    keyboard_shortcuts:
-      "1 - Completely ignores the instruction": "a"
-      "2 - Partially addresses, misses key requirements": "s"
-      "3 - Follows basic instruction, misses details": "d"
-      "4 - Follows well with minor deviations": "f"
-      "5 - Perfectly follows all requirements": "g"
 
   - name: "instruction_following_rationale"
     description: "Explain your instruction-following rating (what requirements were met or missed?)"
     annotation_type: text
-    min_length: 10
-    max_length: 300
+    min_chars: 10
     placeholder: "e.g., 'Addresses the main question but ignores the requested format...'"
 
   # TRUTHFULNESS
@@ -133,18 +99,11 @@ annotation_schemes:
       - "3 - Mostly true with some errors"
       - "4 - Accurate with minor issues"
       - "5 - Completely truthful and verifiable"
-    keyboard_shortcuts:
-      "1 - Major factual errors or hallucinations": "z"
-      "2 - Several inaccuracies or unsupported claims": "x"
-      "3 - Mostly true with some errors": "c"
-      "4 - Accurate with minor issues": "v"
-      "5 - Completely truthful and verifiable": "b"
 
   - name: "truthfulness_rationale"
     description: "Explain your truthfulness rating (any factual errors or hallucinations?)"
     annotation_type: text
-    min_length: 10
-    max_length: 300
+    min_chars: 10
     placeholder: "e.g., 'All facts verified except the claim about X which is incorrect...'"
 
   # OVERALL
@@ -164,16 +123,16 @@ annotation_schemes:
   - name: "critique"
     description: "Provide a brief overall critique of the response (1-2 sentences)"
     annotation_type: text
-    min_length: 20
-    max_length: 400
+    min_chars: 20
     placeholder: "Summarize the main strengths and weaknesses of this response..."
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 50
-annotation_per_instance: 2
+max_annotations_per_user: 50
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

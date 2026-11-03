@@ -32,25 +32,23 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: select
     name: relevance_category
     description: "How relevant is this passage to the query?"
     labels:
-      - "Perfectly Relevant"
-      - "Highly Relevant"
-      - "Related"
-      - "Irrelevant"
-    tooltips:
-      "Perfectly Relevant": "The passage fully and directly answers the query"
-      "Highly Relevant": "The passage contains most of the answer or key information"
-      "Related": "The passage is topically related but does not directly answer the query"
-      "Irrelevant": "The passage has no meaningful connection to the query"
+      - name: "Perfectly Relevant"
+        tooltip: "The passage fully and directly answers the query"
+      - name: "Highly Relevant"
+        tooltip: "The passage contains most of the answer or key information"
+      - name: "Related"
+        tooltip: "The passage is topically related but does not directly answer the query"
+      - name: "Irrelevant"
+        tooltip: "The passage has no meaningful connection to the query"
 
   - annotation_type: likert
     name: relevance_score
@@ -74,20 +72,7 @@ annotation_instructions: |
   - Partial answers should be rated as Highly Relevant, not Perfectly Relevant.
   - Passages that mention query terms but are off-topic should be rated as Irrelevant.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #92400e;">Search Query:</strong>
-      <p style="font-size: 18px; font-weight: 600; line-height: 1.5; margin: 8px 0 0 0;">{{query}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Candidate Passage:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

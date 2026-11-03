@@ -14,26 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing prompt and both responses
-html_layout: |
-  <div class="comparison-container">
-    <div class="prompt-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">User Prompt:</h3>
-      <div class="prompt-text">{{prompt}}</div>
-    </div>
-    <div class="responses-row" style="display: flex; gap: 20px;">
-      <div class="response-a" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #1565c0;">Response A:</h3>
-        <div class="response-text">{{response_a}}</div>
-      </div>
-      <div class="response-b" style="flex: 1; background: #fce4ec; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #c62828;">Response B:</h3>
-        <div class="response-text">{{response_b}}</div>
-      </div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -41,37 +22,34 @@ annotation_schemes:
     description: "Which response is better overall?"
     annotation_type: radio
     labels:
-      - "Response A is significantly better"
-      - "Response A is slightly better"
-      - "About the same (tie)"
-      - "Response B is slightly better"
-      - "Response B is significantly better"
-    keyboard_shortcuts:
-      "Response A is significantly better": "1"
-      "Response A is slightly better": "2"
-      "About the same (tie)": "3"
-      "Response B is slightly better": "4"
-      "Response B is significantly better": "5"
+      - name: "Response A is significantly better"
+        key_value: "1"
+      - name: "Response A is slightly better"
+        key_value: "2"
+      - name: "About the same (tie)"
+        key_value: "3"
+      - name: "Response B is slightly better"
+        key_value: "4"
+      - name: "Response B is significantly better"
+        key_value: "5"
 
   - name: "confidence"
     description: "How confident are you in your preference judgment?"
     annotation_type: radio
     labels:
-      - "Very confident"
-      - "Somewhat confident"
-      - "Not very confident"
-    keyboard_shortcuts:
-      "Very confident": "q"
-      "Somewhat confident": "w"
-      "Not very confident": "e"
+      - name: "Very confident"
+        key_value: "q"
+      - name: "Somewhat confident"
+        key_value: "w"
+      - name: "Not very confident"
+        key_value: "e"
 
   - name: "rationale"
     description: |
       Explain why you prefer one response over the other.
       Consider: helpfulness, accuracy, clarity, completeness, and appropriateness.
     annotation_type: text
-    min_length: 20
-    max_length: 500
+    min_chars: 20
     placeholder: "Explain your preference (e.g., 'Response A is better because it provides more specific examples and addresses the question directly, while Response B is too vague and misses key points...')"
 
   - name: "key_differences"
@@ -89,11 +67,12 @@ annotation_schemes:
       - "Safety/Appropriateness"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 80
-annotation_per_instance: 2
+max_annotations_per_user: 80
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

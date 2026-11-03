@@ -33,7 +33,7 @@ item_properties:
   text_key: "audio_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_instructions: |
   ## Miami Bangor Code-Switching Annotation
@@ -79,7 +79,6 @@ annotation_schemes:
   - annotation_type: span
     name: word_tier
     description: "Per-word language identification. Select each word span and assign its language."
-    span_mode: temporal
     labels:
       - name: "english"
         color: "#3B82F6"
@@ -105,7 +104,6 @@ annotation_schemes:
   - annotation_type: span
     name: code_switch_boundary
     description: "Mark the points where code-switching occurs and classify the switch type."
-    span_mode: temporal
     labels:
       - name: "inter-sentential"
         color: "#059669"
@@ -162,74 +160,7 @@ annotation_schemes:
     name: transcription
     description: "Orthographic transcription with optional language boundary markers (e.g., <en>word</en> <es>palabra</es>)."
 
-html_layout: |
-  <div class="annotator-container" style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
-    <h3 style="margin-bottom: 4px;">Miami Bangor Code-Switching Annotation</h3>
-    <p style="color: #6B7280; margin-top: 0;">
-      Speaker: <strong>{{speaker_id}}</strong> ({{speaker_age_group}}, {{speaker_gender}}) |
-      Topic: <strong>{{conversation_topic}}</strong> |
-      Setting: <strong>{{recording_setting}}</strong>
-    </p>
-
-    <div class="audio-container" style="background: #F3F4F6; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <audio controls style="width: 100%;">
-        <source src="{{audio_url}}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-      <div id="waveform" style="width: 100%; height: 128px; margin-top: 8px; background: #E5E7EB; border-radius: 4px;"></div>
-      <p style="font-size: 0.85em; color: #9CA3AF; margin: 4px 0 0;">
-        Click and drag on the waveform to select word spans for language annotation.
-      </p>
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #3B82F6;">Tier 1 -- Word-Level Language ID</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Select each word and label its language (English, Spanish, mixed, ambiguous, or other).
-      </p>
-      {{word_tier}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #059669;">Tier 2 -- Code-Switch Boundaries</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Mark the points where language switching occurs and classify the switch type.
-      </p>
-      {{code_switch_boundary}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #D97706;">Tier 3 -- Switch Direction</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Indicate the direction of the language switch.
-      </p>
-      {{switch_direction}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #EF4444;">Tier 4 -- Utterance Language</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Classify the predominant language of this utterance.
-      </p>
-      {{utterance_language}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #8B5CF6;">Tier 5 -- Transcription</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Provide orthographic transcription with optional language markers.
-      </p>
-      {{transcription}}
-    </div>
-  </div>
-
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: true
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

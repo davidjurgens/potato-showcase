@@ -12,15 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-html_layout: |
-  <div class="moment-retrieval">
-    <div class="query-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-      <h3 style="margin-top: 0;">🔍 Find this moment:</h3>
-      <div class="query-text" style="font-size: 18px; font-weight: bold;">{{query}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "moment_segment"
@@ -55,9 +47,10 @@ annotation_schemes:
       - "Slightly ambiguous - 1-2 alternatives"
       - "Very ambiguous - multiple valid matches"
 
-allow_all_users: true
-instances_per_annotator: 60
-annotation_per_instance: 3
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 60
+num_annotators_per_item: 3
 
 annotation_instructions: |
   ## Video Moment Retrieval Task

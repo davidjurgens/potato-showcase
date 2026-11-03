@@ -34,7 +34,7 @@ item_properties:
   text_key: "audio_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_instructions: |
   ## ToBI Prosodic Annotation
@@ -83,7 +83,6 @@ annotation_schemes:
   - annotation_type: span
     name: tone_tier
     description: "Pitch accent annotation on words. Select each word span and assign its pitch accent type."
-    span_mode: temporal
     labels:
       - name: "H*"
         color: "#3B82F6"
@@ -113,7 +112,6 @@ annotation_schemes:
   - annotation_type: span
     name: break_index_tier
     description: "Prosodic boundary strength between words. Annotate the juncture after each word on a 0-4 scale."
-    span_mode: temporal
     labels:
       - name: "0-clitic"
         color: "#E5E7EB"
@@ -177,76 +175,7 @@ annotation_schemes:
     name: transcription
     description: "Orthographic transcription of the utterance. Type the words exactly as spoken."
 
-html_layout: |
-  <div class="annotator-container" style="max-width: 900px; margin: 0 auto; font-family: sans-serif;">
-    <h3 style="margin-bottom: 4px;">ToBI Prosodic Annotation</h3>
-    <p style="color: #6B7280; margin-top: 0;">
-      Speaker: <strong>{{speaker_id}}</strong> | Genre: <strong>{{genre}}</strong>
-    </p>
-
-    <div class="audio-container" style="background: #F3F4F6; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <audio controls style="width: 100%;">
-        <source src="{{audio_url}}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-      <div id="waveform" style="width: 100%; height: 128px; margin-top: 8px; background: #E5E7EB; border-radius: 4px;"></div>
-      <p style="font-size: 0.85em; color: #9CA3AF; margin: 4px 0 0;">
-        Click and drag on the waveform to select a time span for annotation.
-      </p>
-    </div>
-
-    <div class="utterance-text" style="background: #FEF3C7; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
-      <strong>Reference text:</strong> {{utterance_text}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #3B82F6;">Tier 1 -- Tone (Pitch Accents)</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Select word spans and assign pitch accent labels.
-      </p>
-      {{tone_tier}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #F59E0B;">Tier 2 -- Break Index</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Annotate prosodic boundary strength at each word juncture.
-      </p>
-      {{break_index_tier}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #EF4444;">Tier 3 -- Boundary Tone</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Select the boundary tone for this intonational phrase.
-      </p>
-      {{boundary_tone}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #8B5CF6;">Tier 4 -- Phrase Accent</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Select the phrase accent at the intermediate phrase edge.
-      </p>
-      {{phrase_accent}}
-    </div>
-
-    <div class="tier-panel" style="border: 1px solid #D1D5DB; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <h4 style="margin: 0 0 6px; color: #10B981;">Tier 5 -- Transcription</h4>
-      <p style="font-size: 0.85em; color: #6B7280; margin: 0 0 8px;">
-        Provide the orthographic transcription of the utterance.
-      </p>
-      {{transcription}}
-    </div>
-  </div>
-
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: true
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

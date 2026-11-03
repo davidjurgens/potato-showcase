@@ -27,38 +27,34 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: aspect_term_spans
     description: "Highlight all aspect terms (specific features or attributes) mentioned in the review."
     labels:
-      - "Aspect Term"
-    tooltips:
-      "Aspect Term": "A specific feature, attribute, or entity being evaluated (e.g., battery life, pasta, service, screen resolution)"
+      - name: "Aspect Term"
+        tooltip: "A specific feature, attribute, or entity being evaluated (e.g., battery life, pasta, service, screen resolution)"
 
   - annotation_type: radio
     name: sentiment_polarity
     description: "What is the overall sentiment polarity of this review toward the identified aspects?"
     labels:
-      - "Positive"
-      - "Negative"
-      - "Neutral"
-      - "Conflict"
-    keyboard_shortcuts:
-      "Positive": "1"
-      "Negative": "2"
-      "Neutral": "3"
-      "Conflict": "4"
-    tooltips:
-      "Positive": "The opinion expressed toward the aspect is clearly favorable or positive"
-      "Negative": "The opinion expressed toward the aspect is clearly unfavorable or negative"
-      "Neutral": "The aspect is mentioned factually without expressing positive or negative sentiment"
-      "Conflict": "Both positive and negative sentiments are expressed toward the aspect"
+      - name: "Positive"
+        tooltip: "The opinion expressed toward the aspect is clearly favorable or positive"
+        key_value: "1"
+      - name: "Negative"
+        tooltip: "The opinion expressed toward the aspect is clearly unfavorable or negative"
+        key_value: "2"
+      - name: "Neutral"
+        tooltip: "The aspect is mentioned factually without expressing positive or negative sentiment"
+        key_value: "3"
+      - name: "Conflict"
+        tooltip: "Both positive and negative sentiments are expressed toward the aspect"
+        key_value: "4"
 
 annotation_instructions: |
   You will be shown review text from the restaurant or laptop domain.
@@ -76,20 +72,7 @@ annotation_instructions: |
   - **Neutral**: Factual mention without sentiment (e.g., "the menu has 10 items")
   - **Conflict**: Mixed sentiments (e.g., "the food is great but overpriced")
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #1e40af;">Review Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f5f3ff; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
-      <strong style="color: #5b21b6;">Domain:</strong>
-      <span style="font-size: 15px; margin-left: 8px; text-transform: capitalize;">{{domain}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

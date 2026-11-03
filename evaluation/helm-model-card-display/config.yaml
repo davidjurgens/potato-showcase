@@ -24,10 +24,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: pure_display
@@ -47,20 +46,7 @@ annotation_instructions: |
   1. Review the model name, description, and metrics summary.
   2. Rate the overall quality of the model on a 5-point scale from Poor to Excellent.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <h3 style="margin: 0 0 8px 0; color: #1e40af;">{{model_name}}</h3>
-      <p style="font-size: 15px; line-height: 1.6; color: #374151; margin: 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px;">
-      <strong style="color: #166534;">Metrics Summary:</strong>
-      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0; color: #374151;">{{metrics_summary}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -38,11 +38,9 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "prompt"
-  text_display_key: "prompt"
-  list_display_key: "choices"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1 - sense disambiguation / attention check
@@ -107,8 +105,7 @@ annotation_schemes:
     description: "Association with TRUST"
     labels: ["Not at all", "Weakly", "Moderately", "Strongly"]
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 5
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 5

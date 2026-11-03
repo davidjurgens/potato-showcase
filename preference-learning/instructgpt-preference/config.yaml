@@ -12,7 +12,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "overall_preference"
@@ -75,9 +75,10 @@ annotation_schemes:
     max_label: "7 - Excellent"
     size: 7
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3
 
 annotation_instructions: |
   ## InstructGPT Instruction Following Evaluation

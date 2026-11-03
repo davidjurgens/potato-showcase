@@ -26,52 +26,48 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: radio
     name: sentiment
     description: "Classify the sentiment of this social media post"
     labels:
-      - Positive
-      - Negative
-      - Neutral
-      - Speech Act
-      - Skip
-    keyboard_shortcuts:
-      Positive: "1"
-      Negative: "2"
-      Neutral: "3"
-      "Speech Act": "4"
-      Skip: "5"
-    tooltips:
-      Positive: "Post expresses positive emotion or favorable attitude (explicit or implicit)"
-      Negative: "Post expresses negative emotion or unfavorable attitude (explicit or implicit)"
-      Neutral: "Post contains no sentiment markers; purely informational"
-      "Speech Act": "Formulaic posts: greetings, thank-yous, congratulations, wishes (may not reflect true sentiment)"
-      Skip: "Unclear posts, excessive noise, user-generated content like poems or lyrics"
+      - name: Positive
+        tooltip: "Post expresses positive emotion or favorable attitude (explicit or implicit)"
+        key_value: "1"
+      - name: Negative
+        tooltip: "Post expresses negative emotion or unfavorable attitude (explicit or implicit)"
+        key_value: "2"
+      - name: Neutral
+        tooltip: "Post contains no sentiment markers; purely informational"
+        key_value: "3"
+      - name: Speech Act
+        tooltip: "Formulaic posts: greetings, thank-yous, congratulations, wishes (may not reflect true sentiment)"
+        key_value: "4"
+      - name: Skip
+        tooltip: "Unclear posts, excessive noise, user-generated content like poems or lyrics"
+        key_value: "5"
 
   # Optional: For mixed sentiment posts
   - annotation_type: radio
     name: mixed_sentiment
     description: "Does this post contain mixed sentiment?"
     labels:
-      - "No - single sentiment"
-      - "Yes - but positive dominant"
-      - "Yes - but negative dominant"
-      - "Yes - balanced/unclear"
-    keyboard_shortcuts:
-      "No - single sentiment": "n"
-      "Yes - but positive dominant": "p"
-      "Yes - but negative dominant": "g"
-      "Yes - balanced/unclear": "b"
-    tooltips:
-      "No - single sentiment": "The post expresses only one type of sentiment"
-      "Yes - but positive dominant": "Mixed, but overall more positive"
-      "Yes - but negative dominant": "Mixed, but overall more negative"
-      "Yes - balanced/unclear": "Cannot determine dominant sentiment"
+      - name: "No - single sentiment"
+        tooltip: "The post expresses only one type of sentiment"
+        key_value: "n"
+      - name: "Yes - but positive dominant"
+        tooltip: "Mixed, but overall more positive"
+        key_value: "p"
+      - name: "Yes - but negative dominant"
+        tooltip: "Mixed, but overall more negative"
+        key_value: "g"
+      - name: "Yes - balanced/unclear"
+        tooltip: "Cannot determine dominant sentiment"
+        key_value: "b"
 
-allow_all_users: true
-instances_per_annotator: 500
-annotation_per_instance: 3
-allow_skip: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 500
+num_annotators_per_item: 3

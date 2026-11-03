@@ -30,7 +30,7 @@ item_properties:
   text_key: "question"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Verify the correct answer
@@ -38,52 +38,47 @@ annotation_schemes:
     name: answer_verification
     description: "Is the marked answer correct?"
     labels:
-      - "Yes, correct"
-      - "No, incorrect"
-      - "Ambiguous"
-    tooltips:
-      "Yes, correct": "The marked answer is definitely correct"
-      "No, incorrect": "The marked answer is wrong"
-      "Ambiguous": "Multiple answers could be correct"
+      - name: "Yes, correct"
+        tooltip: "The marked answer is definitely correct"
+      - name: "No, incorrect"
+        tooltip: "The marked answer is wrong"
+      - name: "Ambiguous"
+        tooltip: "Multiple answers could be correct"
 
   # Step 2: Explanation completeness
   - annotation_type: radio
     name: explanation_quality
     description: "How complete is a good explanation for this question?"
     labels:
-      - "Simple - one fact needed"
-      - "Moderate - few facts needed"
-      - "Complex - many facts needed"
-    tooltips:
-      "Simple - one fact needed": "One commonsense fact explains the answer"
-      "Moderate - few facts needed": "2-3 facts are needed"
-      "Complex - many facts needed": "Requires combining multiple pieces of knowledge"
+      - name: "Simple - one fact needed"
+        tooltip: "One commonsense fact explains the answer"
+      - name: "Moderate - few facts needed"
+        tooltip: "2-3 facts are needed"
+      - name: "Complex - many facts needed"
+        tooltip: "Requires combining multiple pieces of knowledge"
 
   # Step 3: Knowledge type required
   - annotation_type: radio
     name: knowledge_type
     description: "What type of knowledge is primarily needed to answer this?"
     labels:
-      - "Physical/spatial"
-      - "Social/cultural"
-      - "Temporal"
-      - "Causal"
-      - "Definitional"
-      - "Other"
-    tooltips:
-      "Physical/spatial": "Knowledge about physical properties or locations"
-      "Social/cultural": "Knowledge about social norms or cultural practices"
-      "Temporal": "Knowledge about time, sequences, or duration"
-      "Causal": "Knowledge about cause and effect"
-      "Definitional": "Knowledge about what things are or mean"
-      "Other": "Other type of commonsense knowledge"
+      - name: "Physical/spatial"
+        tooltip: "Knowledge about physical properties or locations"
+      - name: "Social/cultural"
+        tooltip: "Knowledge about social norms or cultural practices"
+      - name: "Temporal"
+        tooltip: "Knowledge about time, sequences, or duration"
+      - name: "Causal"
+        tooltip: "Knowledge about cause and effect"
+      - name: "Definitional"
+        tooltip: "Knowledge about what things are or mean"
+      - name: "Other"
+        tooltip: "Other type of commonsense knowledge"
 
   # Step 4: Difficulty
   - annotation_type: likert
     name: difficulty
     description: "How difficult is this question for most people?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very easy"
       2: "Easy"
@@ -91,8 +86,7 @@ annotation_schemes:
       4: "Hard"
       5: "Very hard"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

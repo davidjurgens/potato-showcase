@@ -44,7 +44,7 @@ item_properties:
   text_key: "claim"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Overall verdict
@@ -52,51 +52,45 @@ annotation_schemes:
     name: verdict
     description: "Based on the page content (text, tables, lists), is the claim supported, refuted, or is there not enough information?"
     labels:
-      - "supports"
-      - "refutes"
-      - "not-enough-info"
-    keyboard_shortcuts:
-      "supports": "s"
-      "refutes": "r"
-      "not-enough-info": "n"
-    tooltips:
-      "supports": "The page provides sufficient evidence that the claim is true"
-      "refutes": "The page provides evidence that contradicts the claim"
-      "not-enough-info": "The page does not contain enough information to verify or refute"
+      - name: "supports"
+        tooltip: "The page provides sufficient evidence that the claim is true"
+        key_value: "s"
+      - name: "refutes"
+        tooltip: "The page provides evidence that contradicts the claim"
+        key_value: "r"
+      - name: "not-enough-info"
+        tooltip: "The page does not contain enough information to verify or refute"
+        key_value: "n"
 
   # Step 2: Evidence type highlighting
   - annotation_type: span
     name: evidence_type
     description: "Highlight evidence in the page content and classify by source type"
     labels:
-      - "text-evidence"
-      - "table-evidence"
-      - "list-evidence"
-      - "infobox-evidence"
-    label_colors:
-      "text-evidence": "#3b82f6"
-      "table-evidence": "#22c55e"
-      "list-evidence": "#f59e0b"
-      "infobox-evidence": "#a855f7"
-    tooltips:
-      "text-evidence": "Evidence from paragraph text on the page"
-      "table-evidence": "Evidence from table cells or rows"
-      "list-evidence": "Evidence from bulleted or numbered lists"
-      "infobox-evidence": "Evidence from the page infobox or sidebar"
-    allow_overlapping: false
+      - name: "text-evidence"
+        tooltip: "Evidence from paragraph text on the page"
+        color: "#3b82f6"
+      - name: "table-evidence"
+        tooltip: "Evidence from table cells or rows"
+        color: "#22c55e"
+      - name: "list-evidence"
+        tooltip: "Evidence from bulleted or numbered lists"
+        color: "#f59e0b"
+      - name: "infobox-evidence"
+        tooltip: "Evidence from the page infobox or sidebar"
+        color: "#a855f7"
 
   # Step 3: Evidence sufficiency
   - annotation_type: radio
     name: evidence_sufficiency
     description: "How sufficient is the evidence on this page for making a verdict?"
     labels:
-      - "sufficient"
-      - "partial"
-      - "insufficient"
-    tooltips:
-      "sufficient": "The page contains all evidence needed to conclusively determine the verdict"
-      "partial": "The page contains some relevant evidence but not enough for full certainty"
-      "insufficient": "The page lacks meaningful evidence related to the claim"
+      - name: "sufficient"
+        tooltip: "The page contains all evidence needed to conclusively determine the verdict"
+      - name: "partial"
+        tooltip: "The page contains some relevant evidence but not enough for full certainty"
+      - name: "insufficient"
+        tooltip: "The page lacks meaningful evidence related to the claim"
 
   # Step 4: Justification
   - annotation_type: text
@@ -115,20 +109,7 @@ annotation_instructions: |
   - A claim with partially correct information may still be REFUTED if key details are wrong.
   - If the page simply does not address the claim, choose NOT ENOUGH INFO.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px; margin-bottom: 20px;">
-      <strong style="color: #92400e;">Claim:</strong>
-      <span style="font-size: 16px; line-height: 1.6;">{{claim}}</span>
-    </div>
-    <h3 style="color: #1e40af; margin-bottom: 10px; border-bottom: 2px solid #dbeafe; padding-bottom: 6px;">{{page_title}}</h3>
-    <div style="font-size: 15px; line-height: 1.7; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background: #f9fafb;">
-      {{page_content}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

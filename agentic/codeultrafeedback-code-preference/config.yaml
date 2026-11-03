@@ -9,31 +9,7 @@ item_properties:
   id_key: "id"
   text_key: "text"
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-html_layout: |
-  <div class="container" style="font-family: Arial, sans-serif; max-width: 1100px; margin: 0 auto;">
-    <div style="background: #dbeafe; border-left: 4px solid #2563eb; padding: 14px 18px; margin-bottom: 16px; border-radius: 4px;">
-      <h3 style="margin: 0 0 6px 0; color: #1e3a8a;">Coding Instruction</h3>
-      <p style="margin: 0; color: #1e293b; font-size: 15px; line-height: 1.5;">{{text}}</p>
-      <span style="display: inline-block; margin-top: 8px; background: #1e3a8a; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 12px;">{{language}}</span>
-    </div>
-
-    <div style="display: flex; gap: 16px; margin-bottom: 16px;">
-      <div style="flex: 1; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; overflow-x: auto;">
-        <h4 style="margin: 0 0 10px 0; color: #166534;">Response A</h4>
-        <pre style="margin: 0; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.5; white-space: pre-wrap; color: #1e293b;">{{response_a}}</pre>
-      </div>
-      <div style="flex: 1; background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; overflow-x: auto;">
-        <h4 style="margin: 0 0 10px 0; color: #6b21a8;">Response B</h4>
-        <pre style="margin: 0; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.5; white-space: pre-wrap; color: #1e293b;">{{response_b}}</pre>
-      </div>
-    </div>
-
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 18px;">
-      <p style="margin: 0; color: #64748b; font-size: 13px;">Compare both responses and rate their quality on each dimension below. Then select your overall preference.</p>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "preference"
@@ -64,6 +40,7 @@ annotation_schemes:
     annotation_type: text
     description: "Explain why you prefer one response over the other."
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -24,7 +24,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Entity mention identification
@@ -32,58 +32,29 @@ annotation_schemes:
     name: entity_mentions
     description: "Highlight all entity mentions in the text and classify their mention type."
     labels:
-      - "Name"
-      - "Nominal"
-      - "Pronoun"
-    label_colors:
-      "Name": "#3b82f6"
-      "Nominal": "#22c55e"
-      "Pronoun": "#f59e0b"
-    tooltips:
-      "Name": "Proper noun or named entity (e.g., 'Marie Curie', 'Paris', 'the Sorbonne')"
-      "Nominal": "Common noun phrase referring to an entity (e.g., 'the scientist', 'the committee', 'a new plan')"
-      "Pronoun": "Pronominal reference (e.g., 'she', 'it', 'they', 'his', 'her')"
-    keyboard_shortcuts:
-      "Name": "n"
-      "Nominal": "m"
-      "Pronoun": "p"
-    allow_overlapping: false
+      - name: "Name"
+        tooltip: "Proper noun or named entity (e.g., 'Marie Curie', 'Paris', 'the Sorbonne')"
+        key_value: "n"
+        color: "#3b82f6"
+      - name: "Nominal"
+        tooltip: "Common noun phrase referring to an entity (e.g., 'the scientist', 'the committee', 'a new plan')"
+        key_value: "m"
+        color: "#22c55e"
+      - name: "Pronoun"
+        tooltip: "Pronominal reference (e.g., 'she', 'it', 'they', 'his', 'her')"
+        key_value: "p"
+        color: "#f59e0b"
 
   # Step 2: Coreference chain linking
   - annotation_type: span_link
     name: coreference_chains
     description: "Link entity mentions that refer to the same real-world entity. Connect each mention to an earlier mention in the same coreference chain."
-    source_scheme: entity_mentions
-    target_scheme: entity_mentions
-    labels:
-      - "Coreference"
-    label_colors:
-      "Coreference": "#6366f1"
-    tooltips:
-      "Coreference": "Both mentions refer to the same real-world entity (e.g., 'Marie Curie' and 'She' referring to the same person)"
-    keyboard_shortcuts:
-      "Coreference": "c"
+    span_schema: entity_mentions
+    link_types:
+      - name: "Coreference"
+        color: "#6366f1"
 
-html_layout: |
-  <div style="margin-bottom: 10px;">
-    <span style="background: #e0e7ff; padding: 2px 8px; border-radius: 3px; font-size: 13px;">
-      Language: <strong>{{language}}</strong>
-    </span>
-  </div>
-  <div style="margin-bottom: 10px;">
-    <p style="line-height: 1.8; font-size: 15px;">{{text}}</p>
-  </div>
-  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
-    <strong>Instructions:</strong>
-    <ol>
-      <li>Highlight all entity mentions (names, nominals, pronouns) in the text.</li>
-      <li>Link mentions that refer to the same entity by creating coreference links.</li>
-      <li>Each mention should be linked to the nearest preceding coreferent mention to form a chain.</li>
-    </ol>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

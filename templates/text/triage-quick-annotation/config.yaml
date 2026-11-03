@@ -33,10 +33,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Triage flag
@@ -49,20 +48,18 @@ annotation_schemes:
     name: priority
     description: "Assign a priority level for this item."
     labels:
-      - "High Priority"
-      - "Medium Priority"
-      - "Low Priority"
-      - "Skip"
-    keyboard_shortcuts:
-      "High Priority": "1"
-      "Medium Priority": "2"
-      "Low Priority": "3"
-      "Skip": "4"
-    tooltips:
-      "High Priority": "Requires immediate detailed annotation or review"
-      "Medium Priority": "Should be annotated but not urgent"
-      "Low Priority": "Can be annotated later if time permits"
-      "Skip": "Does not require annotation; can be excluded"
+      - name: "High Priority"
+        tooltip: "Requires immediate detailed annotation or review"
+        key_value: "1"
+      - name: "Medium Priority"
+        tooltip: "Should be annotated but not urgent"
+        key_value: "2"
+      - name: "Low Priority"
+        tooltip: "Can be annotated later if time permits"
+        key_value: "3"
+      - name: "Skip"
+        tooltip: "Does not require annotation; can be excluded"
+        key_value: "4"
 
 annotation_instructions: |
   This is a quick triage annotation task. Your goal is to rapidly assess items
@@ -83,16 +80,7 @@ annotation_instructions: |
   - Use keyboard shortcuts (1-4) for speed
   - Flag anything uncertain as Medium or High Priority
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 500
-annotation_per_instance: 1
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 500
+num_annotators_per_item: 1

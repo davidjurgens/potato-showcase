@@ -26,7 +26,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: multiselect
@@ -34,89 +34,83 @@ annotation_schemes:
     description: "Select ALL emotions expressed in this text (multiple selections allowed)"
     labels:
       # Positive emotions (12)
-      - Admiration
-      - Amusement
-      - Approval
-      - Caring
-      - Desire
-      - Excitement
-      - Gratitude
-      - Joy
-      - Love
-      - Optimism
-      - Pride
-      - Relief
+      - name: Admiration
+        tooltip: "Finding something impressive or worthy of respect"
+        key_value: "1"
+      - name: Amusement
+        tooltip: "Finding something funny or being entertained"
+        key_value: "2"
+      - name: Approval
+        tooltip: "Having or expressing a favorable opinion"
+        key_value: "3"
+      - name: Caring
+        tooltip: "Displaying kindness and concern for others"
+        key_value: "4"
+      - name: Desire
+        tooltip: "A strong feeling of wanting something"
+      - name: Excitement
+        tooltip: "Feeling very enthusiastic and eager"
+      - name: Gratitude
+        tooltip: "Being thankful, ready to show appreciation"
+      - name: Joy
+        tooltip: "A feeling of great pleasure and happiness"
+        key_value: "5"
+      - name: Love
+        tooltip: "A strong positive feeling of affection"
+        key_value: "6"
+      - name: Optimism
+        tooltip: "Hopefulness and confidence about the future"
+      - name: Pride
+        tooltip: "Pleasure or satisfaction from achievements"
+      - name: Relief
+        tooltip: "Reassurance and relaxation after anxiety"
       # Negative emotions (11)
-      - Anger
-      - Annoyance
-      - Disappointment
-      - Disapproval
-      - Disgust
-      - Embarrassment
-      - Fear
-      - Grief
-      - Nervousness
-      - Remorse
-      - Sadness
+      - name: Anger
+        tooltip: "A strong feeling of displeasure or hostility"
+        key_value: "7"
+      - name: Annoyance
+        tooltip: "Slight irritation or frustration"
+      - name: Disappointment
+        tooltip: "Sadness caused by unfulfilled expectations"
+      - name: Disapproval
+        tooltip: "Possession or expression of an unfavorable opinion"
+      - name: Disgust
+        tooltip: "A strong feeling of aversion or revulsion"
+      - name: Embarrassment
+        tooltip: "Self-conscious awkwardness or shame"
+      - name: Fear
+        tooltip: "Being afraid or worried about something"
+        key_value: "9"
+      - name: Grief
+        tooltip: "Deep sorrow, especially caused by loss"
+      - name: Nervousness
+        tooltip: "Easily agitated or worried"
+      - name: Remorse
+        tooltip: "Deep regret or guilt for wrongdoing"
+      - name: Sadness
+        tooltip: "Feeling or showing sorrow; unhappiness"
+        key_value: "8"
       # Ambiguous emotions (4)
-      - Confusion
-      - Curiosity
-      - Realization
-      - Surprise
-
-    keyboard_shortcuts:
-      Admiration: "1"
-      Amusement: "2"
-      Approval: "3"
-      Caring: "4"
-      Joy: "5"
-      Love: "6"
-      Anger: "7"
-      Sadness: "8"
-      Fear: "9"
-      Surprise: "0"
-
-    tooltips:
-      Admiration: "Finding something impressive or worthy of respect"
-      Amusement: "Finding something funny or being entertained"
-      Approval: "Having or expressing a favorable opinion"
-      Caring: "Displaying kindness and concern for others"
-      Desire: "A strong feeling of wanting something"
-      Excitement: "Feeling very enthusiastic and eager"
-      Gratitude: "Being thankful, ready to show appreciation"
-      Joy: "A feeling of great pleasure and happiness"
-      Love: "A strong positive feeling of affection"
-      Optimism: "Hopefulness and confidence about the future"
-      Pride: "Pleasure or satisfaction from achievements"
-      Relief: "Reassurance and relaxation after anxiety"
-      Anger: "A strong feeling of displeasure or hostility"
-      Annoyance: "Slight irritation or frustration"
-      Disappointment: "Sadness caused by unfulfilled expectations"
-      Disapproval: "Possession or expression of an unfavorable opinion"
-      Disgust: "A strong feeling of aversion or revulsion"
-      Embarrassment: "Self-conscious awkwardness or shame"
-      Fear: "Being afraid or worried about something"
-      Grief: "Deep sorrow, especially caused by loss"
-      Nervousness: "Easily agitated or worried"
-      Remorse: "Deep regret or guilt for wrongdoing"
-      Sadness: "Feeling or showing sorrow; unhappiness"
-      Confusion: "Lack of understanding; uncertainty"
-      Curiosity: "A strong desire to know or learn something"
-      Realization: "Becoming fully aware of something"
-      Surprise: "Feeling of astonishment or shock"
+      - name: Confusion
+        tooltip: "Lack of understanding; uncertainty"
+      - name: Curiosity
+        tooltip: "A strong desire to know or learn something"
+      - name: Realization
+        tooltip: "Becoming fully aware of something"
+      - name: Surprise
+        tooltip: "Feeling of astonishment or shock"
+        key_value: "0"
 
   - annotation_type: radio
     name: is_neutral
     description: "Is this text emotionally neutral?"
     labels:
-      - "Contains emotion(s)"
-      - "Neutral (no emotion)"
-    keyboard_shortcuts:
-      "Contains emotion(s)": "e"
-      "Neutral (no emotion)": "n"
+      - name: "Contains emotion(s)"
+        key_value: "e"
+      - name: "Neutral (no emotion)"
+        key_value: "n"
 
-allow_all_users: true
-instances_per_annotator: 200
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 200
+num_annotators_per_item: 3

@@ -30,10 +30,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
@@ -48,20 +47,18 @@ annotation_schemes:
     name: translation_quality
     description: "What is the overall quality of this translation with respect to entities?"
     labels:
-      - "Correct Translation"
-      - "Entity Error"
-      - "Other Error"
-      - "Multiple Errors"
-    keyboard_shortcuts:
-      "Correct Translation": "1"
-      "Entity Error": "2"
-      "Other Error": "3"
-      "Multiple Errors": "4"
-    tooltips:
-      "Correct Translation": "The translation is accurate and entities are correctly handled"
-      "Entity Error": "The translation contains errors specifically in entity translation"
-      "Other Error": "The translation has errors unrelated to entities"
-      "Multiple Errors": "The translation contains both entity and non-entity errors"
+      - name: "Correct Translation"
+        tooltip: "The translation is accurate and entities are correctly handled"
+        key_value: "1"
+      - name: "Entity Error"
+        tooltip: "The translation contains errors specifically in entity translation"
+        key_value: "2"
+      - name: "Other Error"
+        tooltip: "The translation has errors unrelated to entities"
+        key_value: "3"
+      - name: "Multiple Errors"
+        tooltip: "The translation contains both entity and non-entity errors"
+        key_value: "4"
 
   - annotation_type: text
     name: corrected_translation
@@ -74,20 +71,7 @@ annotation_instructions: |
   3. Assess the overall translation quality with respect to entities.
   4. If entity errors exist, provide a corrected translation.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #166534;">Source ({{source_lang}}):</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Translation ({{target_lang}}):</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{translation}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

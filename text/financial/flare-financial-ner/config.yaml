@@ -39,53 +39,49 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: financial_entities
     description: "Highlight and label financial entities in the text"
     labels:
-      - "Company"
-      - "Person"
-      - "Currency"
-      - "Amount"
-      - "Date"
-      - "Percentage"
-      - "Stock Ticker"
-    tooltips:
-      "Company": "Corporate entity name (e.g., Apple Inc., Goldman Sachs Group)"
-      "Person": "Individual name, typically executives, analysts, or public figures"
-      "Currency": "Currency name or code (e.g., USD, Euro, British pound)"
-      "Amount": "Monetary value with or without currency symbol (e.g., $5.2 billion)"
-      "Date": "Temporal expression including quarters, years, and specific dates"
-      "Percentage": "Percentage value (e.g., 12%, 3.5 percent)"
-      "Stock Ticker": "Stock exchange ticker symbol (e.g., AAPL, MSFT)"
+      - name: "Company"
+        tooltip: "Corporate entity name (e.g., Apple Inc., Goldman Sachs Group)"
+      - name: "Person"
+        tooltip: "Individual name, typically executives, analysts, or public figures"
+      - name: "Currency"
+        tooltip: "Currency name or code (e.g., USD, Euro, British pound)"
+      - name: "Amount"
+        tooltip: "Monetary value with or without currency symbol (e.g., $5.2 billion)"
+      - name: "Date"
+        tooltip: "Temporal expression including quarters, years, and specific dates"
+      - name: "Percentage"
+        tooltip: "Percentage value (e.g., 12%, 3.5 percent)"
+      - name: "Stock Ticker"
+        tooltip: "Stock exchange ticker symbol (e.g., AAPL, MSFT)"
 
   - annotation_type: radio
     name: document_type
     description: "What type of financial document is this text from?"
     labels:
-      - "Earnings Report"
-      - "Market Analysis"
-      - "Regulatory Filing"
-      - "Merger/Acquisition"
-      - "Other"
-    keyboard_shortcuts:
-      "Earnings Report": "1"
-      "Market Analysis": "2"
-      "Regulatory Filing": "3"
-      "Merger/Acquisition": "4"
-      "Other": "5"
-    tooltips:
-      "Earnings Report": "Quarterly or annual financial results and performance discussion"
-      "Market Analysis": "Commentary on market trends, forecasts, and economic outlook"
-      "Regulatory Filing": "SEC filings, compliance documents, legal/regulatory matters"
-      "Merger/Acquisition": "M&A announcements, deal terms, acquisition coverage"
-      "Other": "General financial news, press releases, or other document types"
+      - name: "Earnings Report"
+        tooltip: "Quarterly or annual financial results and performance discussion"
+        key_value: "1"
+      - name: "Market Analysis"
+        tooltip: "Commentary on market trends, forecasts, and economic outlook"
+        key_value: "2"
+      - name: "Regulatory Filing"
+        tooltip: "SEC filings, compliance documents, legal/regulatory matters"
+        key_value: "3"
+      - name: "Merger/Acquisition"
+        tooltip: "M&A announcements, deal terms, acquisition coverage"
+        key_value: "4"
+      - name: "Other"
+        tooltip: "General financial news, press releases, or other document types"
+        key_value: "5"
 
 annotation_instructions: |
   Annotate financial text for named entities and classify the document type.
@@ -101,16 +97,7 @@ annotation_instructions: |
   - Mark all instances of each entity, even if repeated
   - Stock tickers should include just the symbol (e.g., "AAPL")
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
-      <strong style="color: #0369a1;">Financial Text:</strong>
-      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

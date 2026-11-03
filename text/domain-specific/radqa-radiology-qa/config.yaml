@@ -24,7 +24,7 @@ item_properties:
   text_key: "report"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_task_name: "RadQA Answer Extraction"
 
@@ -52,15 +52,12 @@ annotation_schemes:
     name: answer_span
     description: "Highlight the text span(s) in the report that answer the clinical question"
     labels:
-      - "answer"
-      - "partial-answer"
-    label_colors:
-      "answer": "#4caf50"
-      "partial-answer": "#ff9800"
-    tooltips:
-      "answer": "Text that directly and fully answers the question"
-      "partial-answer": "Text that provides relevant but incomplete information toward answering the question"
-    allow_overlapping: false
+      - name: "answer"
+        tooltip: "Text that directly and fully answers the question"
+        color: "#4caf50"
+      - name: "partial-answer"
+        tooltip: "Text that provides relevant but incomplete information toward answering the question"
+        color: "#ff9800"
 
   - annotation_type: radio
     name: answerability
@@ -68,14 +65,13 @@ annotation_schemes:
     labels:
       - name: "answerable"
         tooltip: "The report contains sufficient information to fully answer the question"
+        key_value: "a"
       - name: "unanswerable"
         tooltip: "The report does not contain information needed to answer the question"
+        key_value: "u"
       - name: "partially-answerable"
         tooltip: "The report contains some relevant information but not enough for a complete answer"
-    keyboard_shortcuts:
-      "answerable": "a"
-      "unanswerable": "u"
-      "partially-answerable": "p"
+        key_value: "p"
 
   - annotation_type: radio
     name: answer_type
@@ -83,40 +79,28 @@ annotation_schemes:
     labels:
       - name: "finding"
         tooltip: "A clinical observation or abnormality (e.g., opacity, mass, effusion)"
+        key_value: "f"
       - name: "measurement"
         tooltip: "A quantitative value (e.g., size, volume, Hounsfield units)"
+        key_value: "m"
       - name: "location"
         tooltip: "An anatomical location or spatial relationship"
+        key_value: "l"
       - name: "comparison"
         tooltip: "A comparison with prior studies or temporal change"
+        key_value: "c"
       - name: "recommendation"
         tooltip: "A suggested follow-up action or further workup"
+        key_value: "r"
       - name: "diagnosis"
         tooltip: "A diagnostic impression or differential diagnosis"
-    keyboard_shortcuts:
-      "finding": "f"
-      "measurement": "m"
-      "location": "l"
-      "comparison": "c"
-      "recommendation": "r"
-      "diagnosis": "d"
+        key_value: "d"
 
   - annotation_type: text
     name: answer_text
     description: "Copy the extracted answer text here (the text you highlighted as answering the question)"
 
-html_layout: |
-  <div style="margin-bottom: 12px; padding: 12px; background: #e3f2fd; border-radius: 6px; border-left: 4px solid #1565c0;">
-    <strong>Report Type:</strong> {{report_type}}<br/>
-    <strong style="font-size: 1.1em;">Question:</strong>
-    <span style="font-size: 1.1em; color: #1565c0;">{{question}}</span>
-  </div>
-  <div style="padding: 12px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-family: 'Courier New', monospace; background: #fafafa;">
-    {{report}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

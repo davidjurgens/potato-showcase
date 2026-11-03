@@ -25,33 +25,30 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: sexism_category
     description: "Classify the type of sexism present in this text"
     labels:
-      - "Not Sexist"
-      - "Threats"
-      - "Derogation"
-      - "Animosity"
-      - "Prejudiced Discussion"
-    keyboard_shortcuts:
-      "Not Sexist": "1"
-      "Threats": "2"
-      "Derogation": "3"
-      "Animosity": "4"
-      "Prejudiced Discussion": "5"
-    tooltips:
-      "Not Sexist": "The text does not contain sexist content"
-      "Threats": "Direct or indirect threats of harm, violence, or intimidation based on gender"
-      "Derogation": "Derogatory, demeaning, or belittling language targeting a gender"
-      "Animosity": "Expression of hostility, contempt, or ill-will toward a gender group"
-      "Prejudiced Discussion": "Stereotyping, generalizing, or expressing prejudiced views about gender"
+      - name: "Not Sexist"
+        tooltip: "The text does not contain sexist content"
+        key_value: "1"
+      - name: "Threats"
+        tooltip: "Direct or indirect threats of harm, violence, or intimidation based on gender"
+        key_value: "2"
+      - name: "Derogation"
+        tooltip: "Derogatory, demeaning, or belittling language targeting a gender"
+        key_value: "3"
+      - name: "Animosity"
+        tooltip: "Expression of hostility, contempt, or ill-will toward a gender group"
+        key_value: "4"
+      - name: "Prejudiced Discussion"
+        tooltip: "Stereotyping, generalizing, or expressing prejudiced views about gender"
+        key_value: "5"
 
   - annotation_type: span
     name: sexist_expression
@@ -66,16 +63,7 @@ annotation_instructions: |
   3. Highlight the specific text spans that contain the sexist language.
   Note: Focus on the content, not the speaker's identity. Consider context carefully.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Post:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

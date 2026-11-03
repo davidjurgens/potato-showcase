@@ -28,24 +28,21 @@ item_properties:
   text_key: "context"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: sense_used
     description: "How is the highlighted nominal compound used in this sentence?"
     labels:
-      - "Idiomatic"
-      - "Literal"
-    keyboard_shortcuts:
-      "Idiomatic": "i"
-      "Literal": "l"
-    tooltips:
-      "Idiomatic": "The compound is used in its figurative or idiomatic sense"
-      "Literal": "The compound is used in its literal, compositional sense"
+      - name: "Idiomatic"
+        tooltip: "The compound is used in its figurative or idiomatic sense"
+        key_value: "i"
+      - name: "Literal"
+        tooltip: "The compound is used in its literal, compositional sense"
+        key_value: "l"
 
   - annotation_type: radio
     name: image1_rank
@@ -83,27 +80,7 @@ annotation_instructions: |
      best represents the sense in which the compound is used in this context
      and 5 is the image that represents it least well.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Nominal compound:</strong>
-      <span style="font-size: 16px; font-weight: 600;">{{compound}}</span>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{context}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Candidate images:</strong>
-      <ol style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">
-        <li>{{image1}}</li>
-        <li>{{image2}}</li>
-        <li>{{image3}}</li>
-        <li>{{image4}}</li>
-        <li>{{image5}}</li>
-      </ol>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

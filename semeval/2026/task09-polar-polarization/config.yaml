@@ -25,35 +25,32 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: polarized
     description: "Is this post polarized?"
     labels:
-      - "Polarized"
-      - "Not polarized"
-    keyboard_shortcuts:
-      "Polarized": "1"
-      "Not polarized": "2"
+      - name: "Polarized"
+        key_value: "1"
+      - name: "Not polarized"
+        key_value: "2"
 
   - annotation_type: multiselect
     name: manifestation
     description: "If polarized, how is it manifested? (Select all that apply)"
     labels:
-      - "Stereotyping"
-      - "Vilification"
-      - "Dehumanization"
-      - "Intolerance"
-    tooltips:
-      "Stereotyping": "Attributing fixed, oversimplified traits to a group"
-      "Vilification": "Portraying a group as evil, blameworthy, or threatening"
-      "Dehumanization": "Denying a group's humanity (e.g. comparing to animals/objects)"
-      "Intolerance": "Rejecting a group's right to exist, speak, or participate"
+      - name: "Stereotyping"
+        tooltip: "Attributing fixed, oversimplified traits to a group"
+      - name: "Vilification"
+        tooltip: "Portraying a group as evil, blameworthy, or threatening"
+      - name: "Dehumanization"
+        tooltip: "Denying a group's humanity (e.g. comparing to animals/objects)"
+      - name: "Intolerance"
+        tooltip: "Rejecting a group's right to exist, speak, or participate"
 
   - annotation_type: text
     name: polarization_type
@@ -68,19 +65,7 @@ annotation_instructions: |
   intolerance) and note the target dimension (e.g. political, religious,
   ethnic, gender).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;">
-      <strong style="color: #9f1239;">Language:</strong> <span>{{language}}</span>
-    </div>
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #991b1b;">Post:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 13px; font-style: italic;">English gloss (reference): {{gloss}}</div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

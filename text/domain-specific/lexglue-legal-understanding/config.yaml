@@ -33,42 +33,38 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: relevance
     description: "Is this legal case summary relevant to the query?"
     labels:
-      - "Relevant"
-      - "Not Relevant"
-    keyboard_shortcuts:
-      "Relevant": "1"
-      "Not Relevant": "2"
-    tooltips:
-      "Relevant": "The case summary addresses or is pertinent to the stated legal question"
-      "Not Relevant": "The case summary does not address the stated legal question"
+      - name: "Relevant"
+        tooltip: "The case summary addresses or is pertinent to the stated legal question"
+        key_value: "1"
+      - name: "Not Relevant"
+        tooltip: "The case summary does not address the stated legal question"
+        key_value: "2"
 
   - annotation_type: multiselect
     name: areas_of_law
     description: "Which areas of law does this case involve?"
     labels:
-      - "Contract Law"
-      - "Criminal Law"
-      - "Constitutional Law"
-      - "Tax Law"
-      - "Property Law"
-      - "Administrative Law"
-    tooltips:
-      "Contract Law": "Disputes involving agreements, obligations, and breach of contract"
-      "Criminal Law": "Cases involving criminal offenses, prosecution, and sentencing"
-      "Constitutional Law": "Cases involving constitutional rights, powers, and interpretation"
-      "Tax Law": "Disputes involving taxation, tax liability, and tax regulations"
-      "Property Law": "Cases involving ownership, transfer, and use of property"
-      "Administrative Law": "Cases involving government agency actions and regulations"
+      - name: "Contract Law"
+        tooltip: "Disputes involving agreements, obligations, and breach of contract"
+      - name: "Criminal Law"
+        tooltip: "Cases involving criminal offenses, prosecution, and sentencing"
+      - name: "Constitutional Law"
+        tooltip: "Cases involving constitutional rights, powers, and interpretation"
+      - name: "Tax Law"
+        tooltip: "Disputes involving taxation, tax liability, and tax regulations"
+      - name: "Property Law"
+        tooltip: "Cases involving ownership, transfer, and use of property"
+      - name: "Administrative Law"
+        tooltip: "Cases involving government agency actions and regulations"
 
   - annotation_type: text
     name: legal_reasoning
@@ -81,20 +77,7 @@ annotation_instructions: |
   3. Select all areas of law that apply to this case.
   4. Write a brief explanation of your legal reasoning.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; display: inline-block;">
-      <strong style="color: #92400e;">Jurisdiction:</strong>
-      <span style="color: #78350f;">{{jurisdiction}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Case Summary:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

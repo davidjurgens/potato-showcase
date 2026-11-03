@@ -21,10 +21,8 @@ item_properties:
   id_key: "id"
   text_key: "text"
 
-context_key: dialogue_context
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Medical entity spans
@@ -32,89 +30,82 @@ annotation_schemes:
     name: medical_entities
     description: "Highlight all medical entities in the dialogue turn"
     labels:
-      - "Symptom"
-      - "Condition"
-      - "Medication"
-      - "Test"
-    label_colors:
-      "Symptom": "#f97316"
-      "Condition": "#ef4444"
-      "Medication": "#3b82f6"
-      "Test": "#8b5cf6"
-    tooltips:
-      "Symptom": "Signs and symptoms reported by patient (e.g., 'chest pain', 'nausea', 'shortness of breath')"
-      "Condition": "Diagnosed conditions or diseases (e.g., 'diabetes', 'hypertension', 'asthma')"
-      "Medication": "Medications, drugs, or treatments mentioned (e.g., 'metformin', 'ibuprofen', 'insulin')"
-      "Test": "Medical tests, procedures, or examinations (e.g., 'blood test', 'X-ray', 'MRI')"
-    allow_overlapping: false
+      - name: "Symptom"
+        tooltip: "Signs and symptoms reported by patient (e.g., 'chest pain', 'nausea', 'shortness of breath')"
+        color: "#f97316"
+      - name: "Condition"
+        tooltip: "Diagnosed conditions or diseases (e.g., 'diabetes', 'hypertension', 'asthma')"
+        color: "#ef4444"
+      - name: "Medication"
+        tooltip: "Medications, drugs, or treatments mentioned (e.g., 'metformin', 'ibuprofen', 'insulin')"
+        color: "#3b82f6"
+      - name: "Test"
+        tooltip: "Medical tests, procedures, or examinations (e.g., 'blood test', 'X-ray', 'MRI')"
+        color: "#8b5cf6"
 
   # Dialogue act classification
   - annotation_type: radio
     name: dialogue_act
     description: "Select the primary dialogue act for this turn"
     labels:
-      - "Inform-Symptom"
-      - "Inform-Medical-History"
-      - "Inform-Medication"
-      - "Inform-Lifestyle"
-      - "Request-Information"
-      - "Request-Clarification"
-      - "Confirm"
-      - "Deny"
-      - "Greet"
-      - "Farewell"
-      - "Other"
-    keyboard_shortcuts:
-      "Inform-Symptom": "s"
-      "Inform-Medical-History": "h"
-      "Inform-Medication": "m"
-      "Request-Information": "r"
-      "Request-Clarification": "c"
-      "Confirm": "y"
-      "Deny": "n"
-    tooltips:
-      "Inform-Symptom": "Speaker describes a symptom, pain, or physical complaint"
-      "Inform-Medical-History": "Speaker provides past medical history or family history"
-      "Inform-Medication": "Speaker mentions current or past medications"
-      "Inform-Lifestyle": "Speaker describes lifestyle factors (diet, exercise, smoking, alcohol)"
-      "Request-Information": "Speaker asks for medical information or asks about symptoms"
-      "Request-Clarification": "Speaker asks to clarify a previous statement"
-      "Confirm": "Speaker confirms or agrees with a previous statement"
-      "Deny": "Speaker denies or disagrees with a previous statement"
-      "Greet": "Opening greeting or introduction"
-      "Farewell": "Closing or farewell statement"
-      "Other": "Other dialogue acts not covered above"
+      - name: "Inform-Symptom"
+        tooltip: "Speaker describes a symptom, pain, or physical complaint"
+        key_value: "s"
+      - name: "Inform-Medical-History"
+        tooltip: "Speaker provides past medical history or family history"
+        key_value: "h"
+      - name: "Inform-Medication"
+        tooltip: "Speaker mentions current or past medications"
+        key_value: "m"
+      - name: "Inform-Lifestyle"
+        tooltip: "Speaker describes lifestyle factors (diet, exercise, smoking, alcohol)"
+      - name: "Request-Information"
+        tooltip: "Speaker asks for medical information or asks about symptoms"
+        key_value: "r"
+      - name: "Request-Clarification"
+        tooltip: "Speaker asks to clarify a previous statement"
+        key_value: "c"
+      - name: "Confirm"
+        tooltip: "Speaker confirms or agrees with a previous statement"
+        key_value: "y"
+      - name: "Deny"
+        tooltip: "Speaker denies or disagrees with a previous statement"
+        key_value: "n"
+      - name: "Greet"
+        tooltip: "Opening greeting or introduction"
+      - name: "Farewell"
+        tooltip: "Closing or farewell statement"
+      - name: "Other"
+        tooltip: "Other dialogue acts not covered above"
 
   # Communication quality dimensions
   - annotation_type: multiselect
     name: communication_quality
     description: "Select all communication quality dimensions demonstrated in this turn (if any)"
     labels:
-      - "Empathy"
-      - "Active Listening"
-      - "Clear Explanation"
-      - "Open-ended Questioning"
-      - "Summarization"
-      - "Patient Education"
-      - "Shared Decision Making"
-      - "None Notable"
-    tooltips:
-      "Empathy": "Speaker shows understanding of the other party's feelings or concerns"
-      "Active Listening": "Speaker reflects back or acknowledges what was said"
-      "Clear Explanation": "Speaker explains medical concepts in understandable terms"
-      "Open-ended Questioning": "Doctor uses open-ended questions to elicit information"
-      "Summarization": "Speaker summarizes key points from the conversation"
-      "Patient Education": "Doctor provides educational information about condition or treatment"
-      "Shared Decision Making": "Doctor involves patient in treatment decisions"
-      "None Notable": "No notable communication quality dimensions in this turn"
+      - name: "Empathy"
+        tooltip: "Speaker shows understanding of the other party's feelings or concerns"
+      - name: "Active Listening"
+        tooltip: "Speaker reflects back or acknowledges what was said"
+      - name: "Clear Explanation"
+        tooltip: "Speaker explains medical concepts in understandable terms"
+      - name: "Open-ended Questioning"
+        tooltip: "Doctor uses open-ended questions to elicit information"
+      - name: "Summarization"
+        tooltip: "Speaker summarizes key points from the conversation"
+      - name: "Patient Education"
+        tooltip: "Doctor provides educational information about condition or treatment"
+      - name: "Shared Decision Making"
+        tooltip: "Doctor involves patient in treatment decisions"
+      - name: "None Notable"
+        tooltip: "No notable communication quality dimensions in this turn"
 
   # Free-text notes
   - annotation_type: text
     name: notes
     description: "Optional notes about this annotation (e.g., ambiguous entities, context-dependent interpretation)"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2

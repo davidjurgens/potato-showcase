@@ -18,37 +18,35 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: multiselect
     name: persuasion_techniques
     description: "Select all persuasive techniques present in the text."
     labels:
-      - "Loaded Language"
-      - "Name Calling"
-      - "Bandwagon"
-      - "Appeal to Fear"
-      - "Exaggeration"
-      - "Flag Waving"
-      - "Black and White"
-      - "Thought-Terminating Cliche"
-      - "Appeal to Authority"
-      - "Slogans"
-    tooltips:
-      "Loaded Language": "Using words or phrases with strong emotional implications to influence the audience"
-      "Name Calling": "Labeling the object of the campaign as something the audience fears or loathes"
-      "Bandwagon": "Attempting to persuade by claiming that many people support the idea"
-      "Appeal to Fear": "Building support by instilling fear or anxiety in the audience"
-      "Exaggeration": "Representing something in an excessive manner beyond what the facts warrant"
-      "Flag Waving": "Playing on strong national or group feelings to justify an action"
-      "Black and White": "Presenting only two choices when more options exist"
-      "Thought-Terminating Cliche": "Using a commonly used phrase to quell cognitive dissonance"
-      "Appeal to Authority": "Citing an authority figure to support a claim without relevant evidence"
-      "Slogans": "Using a brief, striking phrase to provoke desired responses"
+      - name: "Loaded Language"
+        tooltip: "Using words or phrases with strong emotional implications to influence the audience"
+      - name: "Name Calling"
+        tooltip: "Labeling the object of the campaign as something the audience fears or loathes"
+      - name: "Bandwagon"
+        tooltip: "Attempting to persuade by claiming that many people support the idea"
+      - name: "Appeal to Fear"
+        tooltip: "Building support by instilling fear or anxiety in the audience"
+      - name: "Exaggeration"
+        tooltip: "Representing something in an excessive manner beyond what the facts warrant"
+      - name: "Flag Waving"
+        tooltip: "Playing on strong national or group feelings to justify an action"
+      - name: "Black and White"
+        tooltip: "Presenting only two choices when more options exist"
+      - name: "Thought-Terminating Cliche"
+        tooltip: "Using a commonly used phrase to quell cognitive dissonance"
+      - name: "Appeal to Authority"
+        tooltip: "Citing an authority figure to support a claim without relevant evidence"
+      - name: "Slogans"
+        tooltip: "Using a brief, striking phrase to provoke desired responses"
 
   - annotation_type: span
     name: technique_span
@@ -64,20 +62,7 @@ annotation_instructions: |
 
   A single text may contain multiple techniques, and techniques may overlap in spans.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Source Type:</strong>
-      <span style="font-size: 14px; background: #fee2e2; padding: 2px 8px; border-radius: 4px;">{{source_type}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

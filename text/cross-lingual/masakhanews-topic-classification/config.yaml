@@ -34,42 +34,39 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: news_topic
     description: "What is the main topic of this news article?"
     labels:
-      - "Business"
-      - "Entertainment"
-      - "Health"
-      - "Politics"
-      - "Religion"
-      - "Sports"
-      - "Technology"
-      - "Uncategorized"
-    keyboard_shortcuts:
-      "Business": "1"
-      "Entertainment": "2"
-      "Health": "3"
-      "Politics": "4"
-      "Religion": "5"
-      "Sports": "6"
-      "Technology": "7"
-      "Uncategorized": "8"
-    tooltips:
-      "Business": "Economy, markets, trade, companies, finance"
-      "Entertainment": "Music, film, celebrities, arts, culture, lifestyle"
-      "Health": "Medicine, disease, public health, wellbeing"
-      "Politics": "Government, elections, policy, diplomacy, governance"
-      "Religion": "Faith, worship, religious events and institutions"
-      "Sports": "Matches, athletes, tournaments, teams"
-      "Technology": "Science, computing, internet, innovation"
-      "Uncategorized": "Does not clearly fit any of the other topics"
+      - name: "Business"
+        tooltip: "Economy, markets, trade, companies, finance"
+        key_value: "1"
+      - name: "Entertainment"
+        tooltip: "Music, film, celebrities, arts, culture, lifestyle"
+        key_value: "2"
+      - name: "Health"
+        tooltip: "Medicine, disease, public health, wellbeing"
+        key_value: "3"
+      - name: "Politics"
+        tooltip: "Government, elections, policy, diplomacy, governance"
+        key_value: "4"
+      - name: "Religion"
+        tooltip: "Faith, worship, religious events and institutions"
+        key_value: "5"
+      - name: "Sports"
+        tooltip: "Matches, athletes, tournaments, teams"
+        key_value: "6"
+      - name: "Technology"
+        tooltip: "Science, computing, internet, innovation"
+        key_value: "7"
+      - name: "Uncategorized"
+        tooltip: "Does not clearly fit any of the other topics"
+        key_value: "8"
 
 annotation_instructions: |
   You will see a news headline and a short snippet written in an African
@@ -77,23 +74,7 @@ annotation_instructions: |
   English gloss. Choose the single topic that best describes what the article
   is mainly about. Pick "Uncategorized" only if no other topic clearly fits.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #065f46;">Language:</strong>
-      <span style="font-size: 15px; margin-left: 8px;">{{language}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #0369a1;">News article:</strong>
-      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 13px; font-style: italic; margin-bottom: 16px;">
-      English gloss (reference only): {{gloss}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -114,71 +114,49 @@ annotation_schemes:
     description: "Classify the dialogue act type of the current speaker turn or utterance."
     annotation_type: radio
     labels:
-      - "inform"
-      - "suggest"
-      - "assess"
-      - "comment"
+      - name: "inform"
+        key_value: "1"
+      - name: "suggest"
+        key_value: "2"
+      - name: "assess"
+        key_value: "3"
+      - name: "comment"
+        key_value: "4"
       - "elicit-inform"
       - "elicit-suggest"
       - "elicit-assessment"
-      - "backchannel"
+      - name: "backchannel"
+        key_value: "5"
       - "stall"
       - "fragment"
-    keyboard_shortcuts:
-      inform: "1"
-      suggest: "2"
-      assess: "3"
-      comment: "4"
-      backchannel: "5"
 
   # Tier 5: Topic segment classification
   - name: "topic_segment"
     description: "Classify the meeting topic or phase that this segment belongs to."
     annotation_type: radio
     labels:
-      - "opening"
-      - "agenda"
-      - "design-discussion"
-      - "budget"
-      - "action-items"
-      - "closing"
-      - "off-topic"
-    keyboard_shortcuts:
-      opening: "q"
-      agenda: "w"
-      design-discussion: "e"
-      budget: "r"
-      action-items: "t"
-      closing: "y"
-      off-topic: "u"
-
-# HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">AMI Meeting: Multi-Tier Meeting Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate multi-party meeting recordings across parallel tiers for speaker turns,
-      head gestures, visual attention, dialogue acts, and topic segments.
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Annotate the meeting across five parallel tiers:
-      speaker turns, head gestures, focus of attention, dialogue acts, and topic segments.
-      Use the video controls to navigate frame by frame for precise boundary placement.
-    </div>
-  </div>
+      - name: "opening"
+        key_value: "q"
+      - name: "agenda"
+        key_value: "w"
+      - name: "design-discussion"
+        key_value: "e"
+      - name: "budget"
+        key_value: "r"
+      - name: "action-items"
+        key_value: "t"
+      - name: "closing"
+        key_value: "y"
+      - name: "off-topic"
+        key_value: "u"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

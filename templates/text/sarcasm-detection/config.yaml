@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "text"
-  text_display_key: "text"
 
 user_config:
   allow_all_users: true
@@ -44,9 +43,11 @@ annotation_schemes:
         tooltip: "Over-the-top statements"
       - name: "Understatement"
         tooltip: "Downplaying something significant"
-    show_if:
-      field: "is_sarcastic"
-      value: "Sarcastic"
+    display_logic:
+      show_when:
+        - schema: "is_sarcastic"
+          operator: "equals"
+          value: "Sarcastic"
 
   - annotation_type: "radio"
     name: "sarcasm_target"
@@ -57,9 +58,11 @@ annotation_schemes:
       - name: "Organization/Company"
       - name: "Situation/Event"
       - name: "General/Unclear"
-    show_if:
-      field: "is_sarcastic"
-      value: "Sarcastic"
+    display_logic:
+      show_when:
+        - schema: "is_sarcastic"
+          operator: "equals"
+          value: "Sarcastic"
 
   - annotation_type: "likert"
     name: "confidence"
@@ -73,7 +76,5 @@ annotation_schemes:
     description: "What would this mean if taken literally?"
     required: false
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

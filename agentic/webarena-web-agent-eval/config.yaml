@@ -14,27 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing task, trajectory, and final state
-html_layout: |
-  <div class="webarena-container">
-    <div class="task-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-      <h3 style="margin-top: 0;">Task Instruction:</h3>
-      <div class="task-text" style="font-size: 16px; font-weight: bold;">{{text}}</div>
-    </div>
-    <div class="website-info" style="background: #e8eaf6; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
-      <strong>Website Type:</strong> {{website_type}}
-    </div>
-    <div class="trajectory-section" style="background: #fff8e1; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f9a825;">
-      <h3 style="margin-top: 0; color: #f9a825;">Agent Action Trajectory:</h3>
-      <div class="trajectory-text" style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.6;">{{trajectory}}</div>
-    </div>
-    <div class="final-state-section" style="background: #f3e5f5; padding: 15px; border-radius: 8px; border: 2px solid #7b1fa2;">
-      <h3 style="margin-top: 0; color: #7b1fa2;">Final State:</h3>
-      <div class="final-state-text" style="white-space: pre-wrap; font-size: 14px;">{{final_state}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -43,15 +23,14 @@ annotation_schemes:
     description: "Did the agent successfully complete the task?"
     annotation_type: radio
     labels:
-      - "Fully Complete - task achieved correctly"
-      - "Partially Complete - some subtasks done"
-      - "Failed - task not completed"
-      - "Wrong - completed a different task"
-    keyboard_shortcuts:
-      "Fully Complete - task achieved correctly": "1"
-      "Partially Complete - some subtasks done": "2"
-      "Failed - task not completed": "3"
-      "Wrong - completed a different task": "4"
+      - name: "Fully Complete - task achieved correctly"
+        key_value: "1"
+      - name: "Partially Complete - some subtasks done"
+        key_value: "2"
+      - name: "Failed - task not completed"
+        key_value: "3"
+      - name: "Wrong - completed a different task"
+        key_value: "4"
 
   # Failure explanation
   - name: "failure_explanation"
@@ -65,42 +44,41 @@ annotation_schemes:
     description: "If the task failed or was partially complete, what type of failure occurred?"
     annotation_type: radio
     labels:
-      - "Navigation error - went to wrong page/section"
-      - "Element selection error - interacted with wrong element"
-      - "Input error - typed wrong value or parameters"
-      - "Sequence error - correct actions in wrong order"
-      - "Missing step - skipped a required action"
-      - "Premature termination - stopped too early"
-      - "Infinite loop - repeated actions without progress"
-      - "N/A - task was fully completed"
-    keyboard_shortcuts:
-      "Navigation error - went to wrong page/section": "q"
-      "Element selection error - interacted with wrong element": "w"
-      "Input error - typed wrong value or parameters": "e"
-      "Sequence error - correct actions in wrong order": "r"
-      "Missing step - skipped a required action": "t"
-      "Premature termination - stopped too early": "y"
-      "Infinite loop - repeated actions without progress": "u"
-      "N/A - task was fully completed": "i"
+      - name: "Navigation error - went to wrong page/section"
+        key_value: "q"
+      - name: "Element selection error - interacted with wrong element"
+        key_value: "w"
+      - name: "Input error - typed wrong value or parameters"
+        key_value: "e"
+      - name: "Sequence error - correct actions in wrong order"
+        key_value: "r"
+      - name: "Missing step - skipped a required action"
+        key_value: "t"
+      - name: "Premature termination - stopped too early"
+        key_value: "y"
+      - name: "Infinite loop - repeated actions without progress"
+        key_value: "u"
+      - name: "N/A - task was fully completed"
+        key_value: "i"
 
   # Trajectory efficiency
   - name: "trajectory_efficiency"
     description: "How efficient was the agent's action trajectory?"
     annotation_type: radio
     labels:
-      - "Optimal - minimal steps needed"
-      - "Acceptable - some unnecessary steps but reasonable"
-      - "Inefficient - many unnecessary steps"
-      - "Very inefficient - excessive wandering or backtracking"
-    keyboard_shortcuts:
-      "Optimal - minimal steps needed": "a"
-      "Acceptable - some unnecessary steps but reasonable": "s"
-      "Inefficient - many unnecessary steps": "d"
-      "Very inefficient - excessive wandering or backtracking": "f"
+      - name: "Optimal - minimal steps needed"
+        key_value: "a"
+      - name: "Acceptable - some unnecessary steps but reasonable"
+        key_value: "s"
+      - name: "Inefficient - many unnecessary steps"
+        key_value: "d"
+      - name: "Very inefficient - excessive wandering or backtracking"
+        key_value: "f"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 100
-annotation_per_instance: 2
+max_annotations_per_user: 100
+num_annotators_per_item: 2

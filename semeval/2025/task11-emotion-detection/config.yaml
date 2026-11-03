@@ -18,53 +18,49 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: primary_emotion
     description: "What is the primary emotion expressed in this text?"
     labels:
-      - "Joy"
-      - "Sadness"
-      - "Anger"
-      - "Fear"
-      - "Surprise"
-      - "Disgust"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Joy": "1"
-      "Sadness": "2"
-      "Anger": "3"
-      "Fear": "4"
-      "Surprise": "5"
-      "Disgust": "6"
-      "Neutral": "7"
-    tooltips:
-      "Joy": "Happiness, delight, excitement, or positive emotion"
-      "Sadness": "Grief, sorrow, melancholy, or loss"
-      "Anger": "Irritation, frustration, rage, or hostility"
-      "Fear": "Anxiety, worry, dread, or apprehension"
-      "Surprise": "Astonishment, shock, or unexpectedness"
-      "Disgust": "Revulsion, contempt, or strong disapproval"
-      "Neutral": "No clear emotion or purely informational"
+      - name: "Joy"
+        tooltip: "Happiness, delight, excitement, or positive emotion"
+        key_value: "1"
+      - name: "Sadness"
+        tooltip: "Grief, sorrow, melancholy, or loss"
+        key_value: "2"
+      - name: "Anger"
+        tooltip: "Irritation, frustration, rage, or hostility"
+        key_value: "3"
+      - name: "Fear"
+        tooltip: "Anxiety, worry, dread, or apprehension"
+        key_value: "4"
+      - name: "Surprise"
+        tooltip: "Astonishment, shock, or unexpectedness"
+        key_value: "5"
+      - name: "Disgust"
+        tooltip: "Revulsion, contempt, or strong disapproval"
+        key_value: "6"
+      - name: "Neutral"
+        tooltip: "No clear emotion or purely informational"
+        key_value: "7"
 
   - annotation_type: multiselect
     name: expression_type
     description: "How is the emotion expressed? Select all that apply."
     labels:
-      - "Explicit"
-      - "Implicit"
-      - "Sarcastic"
-      - "Mixed Emotion"
-    tooltips:
-      "Explicit": "The emotion is directly stated using emotion words"
-      "Implicit": "The emotion is conveyed indirectly through context or description"
-      "Sarcastic": "The text uses sarcasm or irony to convey emotion"
-      "Mixed Emotion": "Multiple emotions are present simultaneously"
+      - name: "Explicit"
+        tooltip: "The emotion is directly stated using emotion words"
+      - name: "Implicit"
+        tooltip: "The emotion is conveyed indirectly through context or description"
+      - name: "Sarcastic"
+        tooltip: "The text uses sarcasm or irony to convey emotion"
+      - name: "Mixed Emotion"
+        tooltip: "Multiple emotions are present simultaneously"
 
 annotation_instructions: |
   You will be shown a text passage. Your task is to:
@@ -72,19 +68,7 @@ annotation_instructions: |
   2. Identify the primary emotion expressed in the text.
   3. Select how the emotion is expressed (explicit, implicit, sarcastic, or mixed).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
-      <strong style="color: #166534;">Language:</strong> <span>{{language}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -13,7 +13,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -22,49 +22,43 @@ annotation_schemes:
     name: toxicity_labels
     description: "Select ALL toxicity categories that apply to this text"
     labels:
-      - Toxic
-      - Severe Toxic
-      - Obscene
-      - Threat
-      - Insult
-      - Identity Hate
-    keyboard_shortcuts:
-      Toxic: "1"
-      Severe Toxic: "2"
-      Obscene: "3"
-      Threat: "4"
-      Insult: "5"
-      Identity Hate: "6"
-    tooltips:
-      Toxic: "Rude, disrespectful, or unreasonable content likely to make someone leave a discussion"
-      Severe Toxic: "Extremely hateful, aggressive, or disrespectful content"
-      Obscene: "Lewd, indecent, or profane language"
-      Threat: "Content that expresses intention to inflict harm"
-      Insult: "Insulting, inflammatory, or provocative content directed at a person"
-      Identity Hate: "Hateful content targeting someone's identity (race, religion, gender, etc.)"
+      - name: Toxic
+        tooltip: "Rude, disrespectful, or unreasonable content likely to make someone leave a discussion"
+        key_value: "1"
+      - name: Severe Toxic
+        tooltip: "Extremely hateful, aggressive, or disrespectful content"
+        key_value: "2"
+      - name: Obscene
+        tooltip: "Lewd, indecent, or profane language"
+        key_value: "3"
+      - name: Threat
+        tooltip: "Content that expresses intention to inflict harm"
+        key_value: "4"
+      - name: Insult
+        tooltip: "Insulting, inflammatory, or provocative content directed at a person"
+        key_value: "5"
+      - name: Identity Hate
+        tooltip: "Hateful content targeting someone's identity (race, religion, gender, etc.)"
+        key_value: "6"
 
   # Overall severity rating
   - annotation_type: radio
     name: overall_severity
     description: "Rate the overall severity of toxicity"
     labels:
-      - Not Toxic
-      - Mildly Toxic
-      - Moderately Toxic
-      - Severely Toxic
-    keyboard_shortcuts:
-      Not Toxic: "q"
-      Mildly Toxic: "w"
-      Moderately Toxic: "e"
-      Severely Toxic: "r"
+      - name: Not Toxic
+        key_value: "q"
+      - name: Mildly Toxic
+        key_value: "w"
+      - name: Moderately Toxic
+        key_value: "e"
+      - name: Severely Toxic
+        key_value: "r"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 100
-annotation_per_instance: 3
-
-# Allow skipping difficult content
-allow_skip: true
-skip_reason_required: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

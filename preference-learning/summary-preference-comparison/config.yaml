@@ -14,26 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing source text and both summaries
-html_layout: |
-  <div class="summary-comparison">
-    <div class="source-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px; max-height: 300px; overflow-y: auto;">
-      <h3 style="margin-top: 0;">📄 Original Text:</h3>
-      <div class="source-text" style="font-size: 14px; line-height: 1.6;">{{source_text}}</div>
-    </div>
-    <div class="summaries-row" style="display: flex; gap: 20px;">
-      <div class="summary-a" style="flex: 1; background: #e8f5e9; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #2e7d32;">Summary A:</h3>
-        <div class="summary-text">{{summary_a}}</div>
-      </div>
-      <div class="summary-b" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #1565c0;">Summary B:</h3>
-        <div class="summary-text">{{summary_b}}</div>
-      </div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -42,17 +23,16 @@ annotation_schemes:
     description: "Which summary is better overall?"
     annotation_type: radio
     labels:
-      - "Summary A is clearly better"
-      - "Summary A is slightly better"
-      - "About the same"
-      - "Summary B is slightly better"
-      - "Summary B is clearly better"
-    keyboard_shortcuts:
-      "Summary A is clearly better": "1"
-      "Summary A is slightly better": "2"
-      "About the same": "3"
-      "Summary B is slightly better": "4"
-      "Summary B is clearly better": "5"
+      - name: "Summary A is clearly better"
+        key_value: "1"
+      - name: "Summary A is slightly better"
+        key_value: "2"
+      - name: "About the same"
+        key_value: "3"
+      - name: "Summary B is slightly better"
+        key_value: "4"
+      - name: "Summary B is clearly better"
+        key_value: "5"
 
   # Confidence in preference
   - name: "confidence"
@@ -161,11 +141,12 @@ annotation_schemes:
       - "7 - Clear and well-written"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 100
-annotation_per_instance: 2
+max_annotations_per_user: 100
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

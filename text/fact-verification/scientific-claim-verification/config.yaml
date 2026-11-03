@@ -36,7 +36,7 @@ item_properties:
   text_key: "abstract"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Verification label
@@ -44,32 +44,26 @@ annotation_schemes:
     name: verification
     description: "Based on the abstract, is the CLAIM supported, refuted, or is there not enough information?"
     labels:
-      - "SUPPORTS"
-      - "REFUTES"
-      - "NOT ENOUGH INFO"
-    tooltips:
-      "SUPPORTS": "The abstract provides evidence that confirms the claim is true"
-      "REFUTES": "The abstract provides evidence that contradicts the claim (claim is false)"
-      "NOT ENOUGH INFO": "The abstract doesn't contain sufficient information to verify or refute the claim"
+      - name: "SUPPORTS"
+        tooltip: "The abstract provides evidence that confirms the claim is true"
+      - name: "REFUTES"
+        tooltip: "The abstract provides evidence that contradicts the claim (claim is false)"
+      - name: "NOT ENOUGH INFO"
+        tooltip: "The abstract doesn't contain sufficient information to verify or refute the claim"
 
   # Step 2: Evidence/rationale identification
   - annotation_type: span
     name: evidence
     description: "Highlight the sentence(s) that provide evidence for your verification decision"
     labels:
-      - "Evidence"
-    label_colors:
-      "Evidence": "#22c55e"
-    tooltips:
-      "Evidence": "Sentences that directly support or refute the claim"
-    allow_overlapping: false
+      - name: "Evidence"
+        tooltip: "Sentences that directly support or refute the claim"
+        color: "#22c55e"
 
   # Step 3: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your verification?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -77,8 +71,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

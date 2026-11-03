@@ -34,7 +34,7 @@ item_properties:
   text_key: "reply"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Stance classification
@@ -42,41 +42,30 @@ annotation_schemes:
     name: stance
     description: "What is the stance of this REPLY toward the RUMOR?"
     labels:
-      - "Support"
-      - "Deny"
-      - "Query"
-      - "Comment"
-    tooltips:
-      "Support": "The reply endorses, agrees with, or spreads the rumor as true"
-      "Deny": "The reply refutes, contradicts, or provides evidence against the rumor"
-      "Query": "The reply questions the rumor, asks for evidence, or expresses doubt"
-      "Comment": "The reply discusses the topic without taking a clear stance on truth/falsity"
+      - name: "Support"
+        tooltip: "The reply endorses, agrees with, or spreads the rumor as true"
+      - name: "Deny"
+        tooltip: "The reply refutes, contradicts, or provides evidence against the rumor"
+      - name: "Query"
+        tooltip: "The reply questions the rumor, asks for evidence, or expresses doubt"
+      - name: "Comment"
+        tooltip: "The reply discusses the topic without taking a clear stance on truth/falsity"
 
   # Step 2: Certainty
   - annotation_type: likert
     name: certainty
     description: "How certain does the reply author seem about their stance?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
       3: "Neutral"
       4: "Somewhat certain"
       5: "Very certain"
-    tooltips:
-      1: "Expresses strong doubt or hedging"
-      2: "Shows some hesitation"
-      3: "Neutral tone"
-      4: "Fairly confident expression"
-      5: "Expresses strong conviction"
 
   # Step 3: Confidence in annotation
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your stance classification?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -84,8 +73,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -34,49 +34,45 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: triple_validity
     description: "Is this knowledge graph triple valid?"
     labels:
-      - "Valid Triple"
-      - "Invalid Triple"
-      - "Uncertain"
-    keyboard_shortcuts:
-      "Valid Triple": "1"
-      "Invalid Triple": "2"
-      "Uncertain": "3"
-    tooltips:
-      "Valid Triple": "The stated relationship between the entities is factually correct"
-      "Invalid Triple": "The stated relationship is factually incorrect or nonsensical"
-      "Uncertain": "Cannot determine the validity with reasonable confidence"
+      - name: "Valid Triple"
+        tooltip: "The stated relationship between the entities is factually correct"
+        key_value: "1"
+      - name: "Invalid Triple"
+        tooltip: "The stated relationship is factually incorrect or nonsensical"
+        key_value: "2"
+      - name: "Uncertain"
+        tooltip: "Cannot determine the validity with reasonable confidence"
+        key_value: "3"
 
   - annotation_type: select
     name: relation_type
     description: "What type of relation best describes this triple?"
     labels:
-      - "hypernym_of"
-      - "part_of"
-      - "located_in"
-      - "instance_of"
-      - "member_of"
-      - "has_property"
-      - "cause_of"
-      - "used_for"
-    tooltips:
-      "hypernym_of": "The head entity is a broader category of the tail entity"
-      "part_of": "The head entity is a component or part of the tail entity"
-      "located_in": "The head entity is geographically or physically located in the tail entity"
-      "instance_of": "The head entity is a specific instance of the tail entity class"
-      "member_of": "The head entity belongs to or is a member of the tail entity group"
-      "has_property": "The head entity possesses the property described by the tail entity"
-      "cause_of": "The head entity causes or leads to the tail entity"
-      "used_for": "The head entity is used for the purpose described by the tail entity"
+      - name: "hypernym_of"
+        tooltip: "The head entity is a broader category of the tail entity"
+      - name: "part_of"
+        tooltip: "The head entity is a component or part of the tail entity"
+      - name: "located_in"
+        tooltip: "The head entity is geographically or physically located in the tail entity"
+      - name: "instance_of"
+        tooltip: "The head entity is a specific instance of the tail entity class"
+      - name: "member_of"
+        tooltip: "The head entity belongs to or is a member of the tail entity group"
+      - name: "has_property"
+        tooltip: "The head entity possesses the property described by the tail entity"
+      - name: "cause_of"
+        tooltip: "The head entity causes or leads to the tail entity"
+      - name: "used_for"
+        tooltip: "The head entity is used for the purpose described by the tail entity"
 
   - annotation_type: text
     name: entity_description
@@ -98,30 +94,7 @@ annotation_instructions: |
 
   When uncertain, consider common knowledge and widely accepted facts.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Triple Description:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px;">
-      <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px; text-align: center;">
-        <strong style="color: #166534;">Head Entity</strong>
-        <p style="font-size: 15px; margin: 6px 0 0 0;">{{head_entity}}</p>
-      </div>
-      <div style="background: #f5f3ff; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; text-align: center;">
-        <strong style="color: #6d28d9;">Relation</strong>
-        <p style="font-size: 15px; margin: 6px 0 0 0;">{{relation}}</p>
-      </div>
-      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px; text-align: center;">
-        <strong style="color: #0369a1;">Tail Entity</strong>
-        <p style="font-size: 15px; margin: 6px 0 0 0;">{{tail_entity}}</p>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

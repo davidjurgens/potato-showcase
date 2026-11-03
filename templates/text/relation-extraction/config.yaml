@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "display"
-  text_display_key: "display"
 
 user_config:
   allow_all_users: true
@@ -54,9 +53,11 @@ annotation_schemes:
   - annotation_type: "text"
     name: "other_relation"
     description: "If 'other', describe the relationship"
-    show_if:
-      field: "relation_type"
-      value: "other"
+    display_logic:
+      show_when:
+        - schema: "relation_type"
+          operator: "equals"
+          value: "other"
 
   - annotation_type: "radio"
     name: "direction"
@@ -76,7 +77,5 @@ annotation_schemes:
     min_label: "Not confident"
     max_label: "Very confident"
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

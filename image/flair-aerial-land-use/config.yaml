@@ -24,7 +24,7 @@ item_properties:
   text_key: "image_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_task_name: "FLAIR Land Cover Classification"
 
@@ -61,50 +61,49 @@ annotation_schemes:
     labels:
       - name: "building"
         tooltip: "Residential, commercial, or industrial structures"
+        color: "#e63946"
       - name: "pervious-surface"
         tooltip: "Natural permeable surfaces such as grass or soil in gardens and parks"
+        color: "#a8dadc"
       - name: "impervious-surface"
         tooltip: "Artificial sealed surfaces such as roads, parking lots, and sidewalks"
+        color: "#6c757d"
       - name: "bare-soil"
         tooltip: "Exposed earth without vegetation or artificial covering"
+        color: "#d4a373"
       - name: "water"
         tooltip: "Rivers, lakes, ponds, canals"
+        color: "#1d3557"
       - name: "coniferous"
         tooltip: "Evergreen needle-leaved trees (pine, spruce, fir)"
+        color: "#2d6a4f"
       - name: "deciduous"
         tooltip: "Broadleaf trees that shed leaves seasonally (oak, beech, maple)"
+        color: "#52b788"
       - name: "brushwood"
         tooltip: "Shrubs, bushes, and low woody vegetation"
+        color: "#95d5b2"
       - name: "vineyard"
         tooltip: "Cultivated grapevines arranged in rows"
+        color: "#7b2cbf"
       - name: "herbaceous-vegetation"
         tooltip: "Grass, meadows, lawns, and non-woody plants"
+        color: "#b7e4c7"
       - name: "agricultural-land"
         tooltip: "Active cropland with visible cultivation patterns"
+        color: "#ffd166"
       - name: "plowed-land"
         tooltip: "Recently tilled fields without standing crops"
+        color: "#c9b99a"
       - name: "swimming-pool"
         tooltip: "Artificial water basins for recreation"
+        color: "#00b4d8"
       - name: "snow"
         tooltip: "Snow-covered areas"
+        color: "#f8f9fa"
       - name: "greenhouse"
         tooltip: "Glass or plastic covered agricultural structures"
-    label_colors:
-      "building": "#e63946"
-      "pervious-surface": "#a8dadc"
-      "impervious-surface": "#6c757d"
-      "bare-soil": "#d4a373"
-      "water": "#1d3557"
-      "coniferous": "#2d6a4f"
-      "deciduous": "#52b788"
-      "brushwood": "#95d5b2"
-      "vineyard": "#7b2cbf"
-      "herbaceous-vegetation": "#b7e4c7"
-      "agricultural-land": "#ffd166"
-      "plowed-land": "#c9b99a"
-      "swimming-pool": "#00b4d8"
-      "snow": "#f8f9fa"
-      "greenhouse": "#e9ecef"
+        color: "#e9ecef"
 
   - annotation_type: multiselect
     name: secondary_land_uses
@@ -160,19 +159,7 @@ annotation_schemes:
     name: notes
     description: "Additional observations about the image patch (e.g., mixed-use areas, unusual features, boundary cases)"
 
-html_layout: |
-  <div style="margin-bottom: 12px; padding: 10px; background: #e8f5e9; border-radius: 6px; border-left: 4px solid #2e7d32;">
-    <strong>Patch ID:</strong> {{patch_id}} &nbsp;|&nbsp;
-    <strong>Region:</strong> {{region}} &nbsp;|&nbsp;
-    <strong>Resolution:</strong> {{spatial_resolution}} &nbsp;|&nbsp;
-    <strong>Acquired:</strong> {{acquisition_date}}
-  </div>
-  <div style="text-align: center; margin-bottom: 12px;">
-    <img src="{{image_url}}" style="max-width: 100%; max-height: 600px; border: 2px solid #2e7d32; border-radius: 4px;" />
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

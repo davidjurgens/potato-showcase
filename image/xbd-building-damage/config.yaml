@@ -23,7 +23,7 @@ item_properties:
   text_key: "post_image_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_task_name: "xBD Building Damage Assessment"
 
@@ -50,17 +50,16 @@ annotation_schemes:
     labels:
       - name: "no-damage"
         tooltip: "Building appears intact with no visible changes between pre- and post-disaster images"
+        key_value: "1"
       - name: "minor-damage"
         tooltip: "Small visible changes such as roof damage, broken windows, minor debris, or cosmetic damage"
+        key_value: "2"
       - name: "major-damage"
         tooltip: "Significant structural damage — partial collapse, large sections of roof missing, heavy debris fields"
+        key_value: "3"
       - name: "destroyed"
         tooltip: "Building is completely or nearly completely destroyed — only foundation or rubble visible"
-    keyboard_shortcuts:
-      "no-damage": "1"
-      "minor-damage": "2"
-      "major-damage": "3"
-      "destroyed": "4"
+        key_value: "4"
 
   - annotation_type: radio
     name: building_type
@@ -68,23 +67,22 @@ annotation_schemes:
     labels:
       - name: "residential"
         tooltip: "Single-family homes, apartments, housing complexes"
+        key_value: "r"
       - name: "commercial"
         tooltip: "Shops, offices, malls, hotels, restaurants"
+        key_value: "c"
       - name: "industrial"
         tooltip: "Factories, warehouses, manufacturing plants, storage facilities"
+        key_value: "i"
       - name: "institutional"
         tooltip: "Schools, hospitals, government buildings, religious structures"
+        key_value: "t"
       - name: "infrastructure"
         tooltip: "Bridges, roads, utility structures, communication towers"
+        key_value: "f"
       - name: "unknown"
         tooltip: "Building type cannot be determined from the satellite imagery"
-    keyboard_shortcuts:
-      "residential": "r"
-      "commercial": "c"
-      "industrial": "i"
-      "institutional": "t"
-      "infrastructure": "f"
-      "unknown": "u"
+        key_value: "u"
 
   - annotation_type: radio
     name: disaster_type
@@ -107,30 +105,7 @@ annotation_schemes:
     name: damage_notes
     description: "Describe specific damage features visible in the post-disaster image (e.g., roof collapse, debris field, foundation only, partial wall collapse)"
 
-html_layout: |
-  <div style="margin-bottom: 12px; padding: 10px; background: #fff3e0; border-radius: 6px; border-left: 4px solid #e65100;">
-    <strong>Disaster:</strong> {{disaster_name}} &nbsp;|&nbsp;
-    <strong>Location:</strong> {{location}} &nbsp;|&nbsp;
-    <strong>Pre-capture:</strong> {{capture_date_pre}} &nbsp;|&nbsp;
-    <strong>Post-capture:</strong> {{capture_date_post}}
-  </div>
-  <div style="display: flex; gap: 16px; margin-bottom: 12px;">
-    <div style="flex: 1; text-align: center;">
-      <div style="font-weight: bold; margin-bottom: 6px; padding: 4px; background: #e8f5e9; border-radius: 4px;">
-        Pre-Disaster
-      </div>
-      <img src="{{pre_image_url}}" style="max-width: 100%; border: 2px solid #4caf50; border-radius: 4px;" />
-    </div>
-    <div style="flex: 1; text-align: center;">
-      <div style="font-weight: bold; margin-bottom: 6px; padding: 4px; background: #ffebee; border-radius: 4px;">
-        Post-Disaster
-      </div>
-      <img src="{{post_image_url}}" style="max-width: 100%; border: 2px solid #f44336; border-radius: 4px;" />
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -10,8 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "prompt"
-  text_display_key: "prompt"
-  list_display_key: "responses"
 
 user_config:
   allow_all_users: true
@@ -80,7 +78,5 @@ annotation_schemes:
     description: "Any notes about your ranking decision"
     required: false
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

@@ -33,47 +33,43 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: drug_entity_spans
     description: "Highlight all drug entities in the text and classify their type."
     labels:
-      - "Drug"
-      - "Brand"
-      - "Group"
-      - "Drug_n"
-    tooltips:
-      "Drug": "Generic drug name (e.g., warfarin, cyclosporine, methotrexate)"
-      "Brand": "Trade or brand name of a drug (e.g., Zocor, Prilosec)"
-      "Group": "Drug class or family name (e.g., NSAIDs, ACE inhibitors, statins)"
-      "Drug_n": "Active substance not approved for human use or experimental compound"
+      - name: "Drug"
+        tooltip: "Generic drug name (e.g., warfarin, cyclosporine, methotrexate)"
+      - name: "Brand"
+        tooltip: "Trade or brand name of a drug (e.g., Zocor, Prilosec)"
+      - name: "Group"
+        tooltip: "Drug class or family name (e.g., NSAIDs, ACE inhibitors, statins)"
+      - name: "Drug_n"
+        tooltip: "Active substance not approved for human use or experimental compound"
 
   - annotation_type: radio
     name: interaction_type
     description: "What type of drug-drug interaction is described in this text?"
     labels:
-      - "Mechanism"
-      - "Effect"
-      - "Advice"
-      - "Int"
-      - "No Interaction"
-    keyboard_shortcuts:
-      "Mechanism": "1"
-      "Effect": "2"
-      "Advice": "3"
-      "Int": "4"
-      "No Interaction": "5"
-    tooltips:
-      "Mechanism": "The interaction is described at the pharmacokinetic level (e.g., inhibits metabolism, reduces clearance)"
-      "Effect": "The interaction produces a specific pharmacodynamic effect (e.g., increased bleeding risk)"
-      "Advice": "A recommendation or warning about the drug combination (e.g., avoid concomitant use)"
-      "Int": "An interaction is mentioned without specifying mechanism or effect"
-      "No Interaction": "The text describes drugs but no interaction between them"
+      - name: "Mechanism"
+        tooltip: "The interaction is described at the pharmacokinetic level (e.g., inhibits metabolism, reduces clearance)"
+        key_value: "1"
+      - name: "Effect"
+        tooltip: "The interaction produces a specific pharmacodynamic effect (e.g., increased bleeding risk)"
+        key_value: "2"
+      - name: "Advice"
+        tooltip: "A recommendation or warning about the drug combination (e.g., avoid concomitant use)"
+        key_value: "3"
+      - name: "Int"
+        tooltip: "An interaction is mentioned without specifying mechanism or effect"
+        key_value: "4"
+      - name: "No Interaction"
+        tooltip: "The text describes drugs but no interaction between them"
+        key_value: "5"
 
 annotation_instructions: |
   You will be shown biomedical text that may describe drug-drug interactions.
@@ -93,16 +89,7 @@ annotation_instructions: |
   - **Int**: Interaction stated without specific details
   - **No Interaction**: No interaction between the mentioned drugs
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #166534;">Biomedical Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

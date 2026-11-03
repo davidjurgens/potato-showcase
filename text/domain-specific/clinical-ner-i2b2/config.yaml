@@ -40,56 +40,52 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: clinical_entities
     description: "Highlight and label clinical entities in the text"
     labels:
-      - "Problem"
-      - "Treatment"
-      - "Test"
-      - "Medication"
-      - "Dosage"
-      - "Duration"
-      - "Frequency"
-    tooltips:
-      "Problem": "Medical condition, diagnosis, or symptom (e.g., pneumonia, chest pain, diabetes)"
-      "Treatment": "Procedure, therapy, or intervention (e.g., appendectomy, physical therapy)"
-      "Test": "Diagnostic test or examination (e.g., CBC, chest X-ray, blood glucose)"
-      "Medication": "Drug or medication name (e.g., metformin, lisinopril, aspirin)"
-      "Dosage": "Drug dosage amount (e.g., 500 mg, 10 mg/day, 2 tablets)"
-      "Duration": "Time span for a treatment or condition (e.g., 7 days, 3 weeks, since 2020)"
-      "Frequency": "How often something is administered or occurs (e.g., twice daily, q6h, PRN)"
+      - name: "Problem"
+        tooltip: "Medical condition, diagnosis, or symptom (e.g., pneumonia, chest pain, diabetes)"
+      - name: "Treatment"
+        tooltip: "Procedure, therapy, or intervention (e.g., appendectomy, physical therapy)"
+      - name: "Test"
+        tooltip: "Diagnostic test or examination (e.g., CBC, chest X-ray, blood glucose)"
+      - name: "Medication"
+        tooltip: "Drug or medication name (e.g., metformin, lisinopril, aspirin)"
+      - name: "Dosage"
+        tooltip: "Drug dosage amount (e.g., 500 mg, 10 mg/day, 2 tablets)"
+      - name: "Duration"
+        tooltip: "Time span for a treatment or condition (e.g., 7 days, 3 weeks, since 2020)"
+      - name: "Frequency"
+        tooltip: "How often something is administered or occurs (e.g., twice daily, q6h, PRN)"
 
   - annotation_type: radio
     name: assertion_status
     description: "What is the assertion status of the primary clinical finding in this note?"
     labels:
-      - "Present"
-      - "Absent"
-      - "Possible"
-      - "Conditional"
-      - "Associated with Patient"
-      - "Associated with Other"
-    keyboard_shortcuts:
-      "Present": "1"
-      "Absent": "2"
-      "Possible": "3"
-      "Conditional": "4"
-      "Associated with Patient": "5"
-      "Associated with Other": "6"
-    tooltips:
-      "Present": "The clinical finding is currently present and active"
-      "Absent": "The finding is explicitly negated or denied (e.g., 'no fever', 'denies pain')"
-      "Possible": "The finding is uncertain or suspected (e.g., 'possible pneumonia', 'rule out MI')"
-      "Conditional": "The finding depends on a condition (e.g., 'chest pain if exerting')"
-      "Associated with Patient": "The finding directly pertains to the patient"
-      "Associated with Other": "The finding pertains to a family member or other individual"
+      - name: "Present"
+        tooltip: "The clinical finding is currently present and active"
+        key_value: "1"
+      - name: "Absent"
+        tooltip: "The finding is explicitly negated or denied (e.g., 'no fever', 'denies pain')"
+        key_value: "2"
+      - name: "Possible"
+        tooltip: "The finding is uncertain or suspected (e.g., 'possible pneumonia', 'rule out MI')"
+        key_value: "3"
+      - name: "Conditional"
+        tooltip: "The finding depends on a condition (e.g., 'chest pain if exerting')"
+        key_value: "4"
+      - name: "Associated with Patient"
+        tooltip: "The finding directly pertains to the patient"
+        key_value: "5"
+      - name: "Associated with Other"
+        tooltip: "The finding pertains to a family member or other individual"
+        key_value: "6"
 
 annotation_instructions: |
   Annotate de-identified clinical notes for medical entities and assertion status.
@@ -104,16 +100,7 @@ annotation_instructions: |
   - Pay attention to negation cues (no, denies, without, negative for)
   - Distinguish between patient conditions and family history mentions
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px;">
-      <strong style="color: #166534;">Clinical Note:</strong>
-      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

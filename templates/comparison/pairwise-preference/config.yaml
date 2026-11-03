@@ -4,10 +4,7 @@ item_properties:
   id_key: "id"
   text_key: "text"
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-
-task_name: "LLM Response Preference Collection"
+export_annotation_format: "jsonl"
 
 # Server configuration
 server:
@@ -20,74 +17,44 @@ data_files:
     item_b_field: response_b
     context_field: prompt
 
-# Display settings
-display:
-  layout: side_by_side
-  show_context: true
-  context_title: "User Prompt"
-  item_a_title: "Response A"
-  item_b_title: "Response B"
-
-# Randomize to prevent position bias
-randomize_pair_order: true
-
 # Annotation schemes
 annotation_schemes:
   # Main preference rating
   - annotation_type: pairwise
     name: overall_preference
     description: "Overall, which response is better?"
-    options:
-      - label: "A is much better"
-        value: "A++"
-      - label: "A is slightly better"
-        value: "A+"
-      - label: "About equal"
-        value: "="
-      - label: "B is slightly better"
-        value: "B+"
-      - label: "B is much better"
-        value: "B++"
-    keyboard_shortcuts:
-      "A++": "1"
-      "A+": "2"
-      "=": "3"
-      "B+": "4"
-      "B++": "5"
+    mode: "scale"
+    scale:
+      min: -2
+      max: 2
+      step: 1
+      labels:
+        min: "A is much better"
+        max: "B is much better"
+        center: "About equal"
+    randomize_order: true
 
   # Individual aspect ratings
   - annotation_type: pairwise
     name: helpfulness
     description: "Which response is more helpful?"
-    options:
-      - label: "A"
-        value: "A"
-      - label: "Equal"
-        value: "="
-      - label: "B"
-        value: "B"
+    allow_tie: true
+    tie_label: "Equal"
+    randomize_order: true
 
   - annotation_type: pairwise
     name: accuracy
     description: "Which response is more accurate?"
-    options:
-      - label: "A"
-        value: "A"
-      - label: "Equal"
-        value: "="
-      - label: "B"
-        value: "B"
+    allow_tie: true
+    tie_label: "Equal"
+    randomize_order: true
 
   - annotation_type: pairwise
     name: safety
     description: "Which response is safer/less harmful?"
-    options:
-      - label: "A"
-        value: "A"
-      - label: "Equal"
-        value: "="
-      - label: "B"
-        value: "B"
+    allow_tie: true
+    tie_label: "Equal"
+    randomize_order: true
 
   # Reasons for preference
   - annotation_type: multiselect
@@ -111,11 +78,7 @@ annotation_schemes:
     placeholder: "Why did you prefer one response over the other?"
 
 # User settings
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-
-# Output
-output:
-  path: annotations/
-  format: json
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

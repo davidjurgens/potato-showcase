@@ -12,7 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "highlights"
@@ -53,9 +53,10 @@ annotation_schemes:
       - "Somewhat relevant - partial fit"
       - "Not very relevant - miscategorized"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3
 
 annotation_instructions: |
   ## YouTube Highlights Detection

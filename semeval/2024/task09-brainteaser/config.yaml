@@ -18,30 +18,27 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: answer_choice
     description: "Select the best answer to the brain teaser."
     labels:
-      - "A"
-      - "B"
-      - "C"
-      - "D"
-    keyboard_shortcuts:
-      "A": "1"
-      "B": "2"
-      "C": "3"
-      "D": "4"
-    tooltips:
-      "A": "Option A"
-      "B": "Option B"
-      "C": "Option C"
-      "D": "Option D"
+      - name: "A"
+        tooltip: "Option A"
+        key_value: "1"
+      - name: "B"
+        tooltip: "Option B"
+        key_value: "2"
+      - name: "C"
+        tooltip: "Option C"
+        key_value: "3"
+      - name: "D"
+        tooltip: "Option D"
+        key_value: "4"
 
   - annotation_type: text
     name: explanation
@@ -60,25 +57,7 @@ annotation_instructions: |
      or challenging default assumptions.
   4. Provide a brief explanation of your reasoning.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Options:</strong>
-      <ul style="font-size: 15px; line-height: 1.8; margin: 8px 0 0 0;">
-        <li><strong>A:</strong> {{option_a}}</li>
-        <li><strong>B:</strong> {{option_b}}</li>
-        <li><strong>C:</strong> {{option_c}}</li>
-        <li><strong>D:</strong> {{option_d}}</li>
-      </ul>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

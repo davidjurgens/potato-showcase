@@ -49,7 +49,7 @@ item_properties:
   text_key: "premise"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Select the more plausible alternative
@@ -57,42 +57,38 @@ annotation_schemes:
     name: correct_answer
     description: "Which alternative is the more plausible cause or effect of the premise?"
     labels:
-      - "choice_1"
-      - "choice_2"
-    keyboard_shortcuts:
-      "choice_1": "1"
-      "choice_2": "2"
-    tooltips:
-      "choice_1": "The first alternative is more plausible"
-      "choice_2": "The second alternative is more plausible"
+      - name: "choice_1"
+        tooltip: "The first alternative is more plausible"
+        key_value: "1"
+      - name: "choice_2"
+        tooltip: "The second alternative is more plausible"
+        key_value: "2"
 
   # Step 2: Confidence rating
   - annotation_type: radio
     name: confidence
     description: "How confident are you in your answer?"
     labels:
-      - "certain"
-      - "fairly-certain"
-      - "uncertain"
-    tooltips:
-      "certain": "Very confident -- one alternative is clearly more plausible"
-      "fairly-certain": "Reasonably confident but can see some ambiguity"
-      "uncertain": "Both alternatives seem somewhat plausible; difficult to decide"
+      - name: "certain"
+        tooltip: "Very confident -- one alternative is clearly more plausible"
+      - name: "fairly-certain"
+        tooltip: "Reasonably confident but can see some ambiguity"
+      - name: "uncertain"
+        tooltip: "Both alternatives seem somewhat plausible; difficult to decide"
 
   # Step 3: Reasoning difficulty
   - annotation_type: radio
     name: reasoning_difficulty
     description: "What kind of reasoning was needed to answer this question?"
     labels:
-      - "straightforward"
-      - "requires-world-knowledge"
-      - "requires-cultural-knowledge"
-      - "ambiguous"
-    tooltips:
-      "straightforward": "Common everyday causal relationship that most people would agree on"
-      "requires-world-knowledge": "Needs factual or scientific knowledge about how the world works"
-      "requires-cultural-knowledge": "Needs understanding of cultural practices, norms, or conventions"
-      "ambiguous": "Both alternatives are roughly equally plausible; genuinely hard to choose"
+      - name: "straightforward"
+        tooltip: "Common everyday causal relationship that most people would agree on"
+      - name: "requires-world-knowledge"
+        tooltip: "Needs factual or scientific knowledge about how the world works"
+      - name: "requires-cultural-knowledge"
+        tooltip: "Needs understanding of cultural practices, norms, or conventions"
+      - name: "ambiguous"
+        tooltip: "Both alternatives are roughly equally plausible; genuinely hard to choose"
 
 annotation_instructions: |
   You will be shown a premise (a short sentence describing a situation) and a question type (CAUSE or EFFECT). Two alternative sentences are provided:
@@ -101,29 +97,7 @@ annotation_instructions: |
 
   Use your common sense to pick the more plausible alternative. Both may be possible, but one should be clearly better. Rate your confidence and the type of reasoning required.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Premise:</strong>
-      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{premise}}</p>
-    </div>
-    <div style="background: #fefce8; border-left: 4px solid #f59e0b; padding: 10px 16px; border-radius: 4px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Question type:</strong> What is the most plausible <strong>{{question_type}}</strong>?
-    </div>
-    <div style="display: flex; gap: 12px;">
-      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-        <strong style="color: #475569;">Choice 1:</strong>
-        <p style="margin: 6px 0 0 0; font-size: 15px;">{{choice_1}}</p>
-      </div>
-      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-        <strong style="color: #475569;">Choice 2:</strong>
-        <p style="margin: 6px 0 0 0; font-size: 15px;">{{choice_2}}</p>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

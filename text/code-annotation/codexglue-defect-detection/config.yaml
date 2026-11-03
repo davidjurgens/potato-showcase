@@ -40,7 +40,7 @@ item_properties:
   text_key: "code"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Binary defect classification
@@ -48,65 +48,59 @@ annotation_schemes:
     name: has_defect
     description: "Does this function contain a defect or vulnerability?"
     labels:
-      - "defective"
-      - "non-defective"
-      - "uncertain"
-    keyboard_shortcuts:
-      "defective": "1"
-      "non-defective": "2"
-      "uncertain": "3"
-    tooltips:
-      "defective": "Function contains one or more bugs, vulnerabilities, or security issues"
-      "non-defective": "Function appears correct and free of vulnerabilities"
-      "uncertain": "Cannot determine with confidence; code is complex or context-dependent"
+      - name: "defective"
+        tooltip: "Function contains one or more bugs, vulnerabilities, or security issues"
+        key_value: "1"
+      - name: "non-defective"
+        tooltip: "Function appears correct and free of vulnerabilities"
+        key_value: "2"
+      - name: "uncertain"
+        tooltip: "Cannot determine with confidence; code is complex or context-dependent"
+        key_value: "3"
 
   # Step 2: Defect location (span annotation)
   - annotation_type: span
     name: defect_location
     description: "If defective, highlight the specific code region containing the vulnerability."
     labels:
-      - "buffer-overflow"
-      - "null-pointer"
-      - "memory-leak"
-      - "use-after-free"
-      - "integer-overflow"
-      - "resource-leak"
-      - "race-condition"
-      - "other"
-    label_colors:
-      "buffer-overflow": "#ef4444"
-      "null-pointer": "#f97316"
-      "memory-leak": "#8b5cf6"
-      "use-after-free": "#dc2626"
-      "integer-overflow": "#f59e0b"
-      "resource-leak": "#3b82f6"
-      "race-condition": "#06b6d4"
-      "other": "#9ca3af"
-    tooltips:
-      "buffer-overflow": "Writing beyond allocated buffer boundaries (e.g., strcpy without size check)"
-      "null-pointer": "Dereferencing null or uninitialized pointers (e.g., missing NULL check after malloc)"
-      "memory-leak": "Allocated memory not properly freed on all code paths"
-      "use-after-free": "Accessing memory after it has been deallocated"
-      "integer-overflow": "Arithmetic operation exceeding integer bounds, signed/unsigned mismatch"
-      "resource-leak": "File handles, sockets, or locks not properly released"
-      "race-condition": "Concurrent access to shared data without proper synchronization"
-      "other": "Other vulnerability types (describe in explanation field)"
-    allow_overlapping: false
+      - name: "buffer-overflow"
+        tooltip: "Writing beyond allocated buffer boundaries (e.g., strcpy without size check)"
+        color: "#ef4444"
+      - name: "null-pointer"
+        tooltip: "Dereferencing null or uninitialized pointers (e.g., missing NULL check after malloc)"
+        color: "#f97316"
+      - name: "memory-leak"
+        tooltip: "Allocated memory not properly freed on all code paths"
+        color: "#8b5cf6"
+      - name: "use-after-free"
+        tooltip: "Accessing memory after it has been deallocated"
+        color: "#dc2626"
+      - name: "integer-overflow"
+        tooltip: "Arithmetic operation exceeding integer bounds, signed/unsigned mismatch"
+        color: "#f59e0b"
+      - name: "resource-leak"
+        tooltip: "File handles, sockets, or locks not properly released"
+        color: "#3b82f6"
+      - name: "race-condition"
+        tooltip: "Concurrent access to shared data without proper synchronization"
+        color: "#06b6d4"
+      - name: "other"
+        tooltip: "Other vulnerability types (describe in explanation field)"
+        color: "#9ca3af"
 
   # Step 3: Defect severity
   - annotation_type: radio
     name: defect_severity
     description: "If defective, how severe is the vulnerability?"
     labels:
-      - "critical"
-      - "high"
-      - "medium"
-      - "low"
-    tooltips:
-      "critical": "Remotely exploitable, leads to arbitrary code execution or data breach"
-      "high": "Significant security impact, denial of service, or data corruption"
-      "medium": "Limited impact, requires specific conditions to exploit"
-      "low": "Minor issue, unlikely to be exploitable in practice"
+      - name: "critical"
+        tooltip: "Remotely exploitable, leads to arbitrary code execution or data breach"
+      - name: "high"
+        tooltip: "Significant security impact, denial of service, or data corruption"
+      - name: "medium"
+        tooltip: "Limited impact, requires specific conditions to exploit"
+      - name: "low"
+        tooltip: "Minor issue, unlikely to be exploitable in practice"
 
   # Step 4: Defect explanation
   - annotation_type: text
@@ -121,18 +115,7 @@ annotation_instructions: |
   3. Rate the severity of the defect (critical, high, medium, or low)
   4. Explain the defect: what is wrong, how it could be triggered, and how to fix it
 
-html_layout: |
-  <div style="padding: 15px; font-family: sans-serif;">
-    <div style="margin-bottom: 10px; color: #6b7280; font-size: 13px;">
-      <strong>Function:</strong> <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 3px;">{{function_name}}</code> |
-      <strong>Project:</strong> {{project}} |
-      <strong>Commit:</strong> <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 3px;">{{commit_id}}</code>
-    </div>
-    <pre style="background: #0d1117; color: #c9d1d9; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; counter-reset: line;">{{code}}</pre>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

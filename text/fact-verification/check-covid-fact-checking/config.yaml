@@ -32,7 +32,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Verdict
@@ -40,51 +40,34 @@ annotation_schemes:
     name: verdict
     description: "Based on the evidence, is the COVID-19 claim supported, refuted, or is there not enough evidence?"
     labels:
-      - "Supported"
-      - "Refuted"
-      - "Not Enough Evidence"
-    keyboard_shortcuts:
-      "Supported": "s"
-      "Refuted": "r"
-      "Not Enough Evidence": "n"
-    tooltips:
-      "Supported": "The evidence confirms or is consistent with the claim"
-      "Refuted": "The evidence directly contradicts the claim"
-      "Not Enough Evidence": "The evidence does not provide sufficient information to verify or refute the claim"
+      - name: "Supported"
+        tooltip: "The evidence confirms or is consistent with the claim"
+        key_value: "s"
+      - name: "Refuted"
+        tooltip: "The evidence directly contradicts the claim"
+        key_value: "r"
+      - name: "Not Enough Evidence"
+        tooltip: "The evidence does not provide sufficient information to verify or refute the claim"
+        key_value: "n"
 
   # Step 2: Evidence highlighting
   - annotation_type: span
     name: evidence_spans
     description: "Highlight the sentence(s) in the evidence that are most relevant to your verdict"
     labels:
-      - "Supporting Evidence"
-      - "Refuting Evidence"
-    label_colors:
-      "Supporting Evidence": "#22c55e"
-      "Refuting Evidence": "#ef4444"
-    tooltips:
-      "Supporting Evidence": "Text that supports or confirms the claim"
-      "Refuting Evidence": "Text that contradicts or refutes the claim"
-    allow_overlapping: false
+      - name: "Supporting Evidence"
+        tooltip: "Text that supports or confirms the claim"
+        color: "#22c55e"
+      - name: "Refuting Evidence"
+        tooltip: "Text that contradicts or refutes the claim"
+        color: "#ef4444"
 
   # Step 3: Explanation
   - annotation_type: text
     name: explanation
     description: "Briefly explain why the evidence supports, refutes, or is insufficient for the claim"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 10px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px;">
-    <strong>Claim:</strong> {{text}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
-    <strong>Evidence:</strong> {{evidence}}
-  </div>
-  <div style="padding: 6px; background: #f5f5f5; border-radius: 4px; font-size: 13px;">
-    <em>Source:</em> {{source}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 60
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 60
+num_annotators_per_item: 3

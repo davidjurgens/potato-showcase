@@ -12,29 +12,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-html_layout: |
-  <div class="container" style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto;">
-    <div style="background: #e8f4fd; padding: 14px; border-radius: 8px; margin-bottom: 14px;">
-      <h3 style="margin: 0 0 8px 0; color: #1a5276;">GitHub Issue</h3>
-      <p style="margin: 0; font-size: 15px;">{{text}}</p>
-      <p style="margin: 8px 0 0 0; font-size: 13px; color: #555;"><strong>Repository:</strong> {{repo_name}}</p>
-      <p style="margin: 4px 0 0 0; font-size: 13px; color: #555;"><strong>Final Result:</strong> {{final_result}}</p>
-    </div>
-    <details style="margin-bottom: 10px;" open>
-      <summary style="cursor: pointer; font-weight: bold; font-size: 15px; padding: 8px; background: #d5f5e3; border-radius: 6px; color: #1e8449;">Search Stage</summary>
-      <div style="padding: 12px; border: 1px solid #27ae60; border-top: none; border-radius: 0 0 6px 6px; font-size: 13px; line-height: 1.7; white-space: pre-wrap; font-family: monospace; background: #f8f9fa;">{{search_stage}}</div>
-    </details>
-    <details style="margin-bottom: 10px;" open>
-      <summary style="cursor: pointer; font-weight: bold; font-size: 15px; padding: 8px; background: #fdebd0; border-radius: 6px; color: #a04000;">Edit Stage</summary>
-      <div style="padding: 12px; border: 1px solid #e67e22; border-top: none; border-radius: 0 0 6px 6px; font-size: 13px; line-height: 1.7; white-space: pre-wrap; font-family: monospace; background: #f8f9fa;">{{edit_stage}}</div>
-    </details>
-    <details style="margin-bottom: 10px;" open>
-      <summary style="cursor: pointer; font-weight: bold; font-size: 15px; padding: 8px; background: #d6eaf8; border-radius: 6px; color: #1a5276;">Verification Stage</summary>
-      <div style="padding: 12px; border: 1px solid #2980b9; border-top: none; border-radius: 0 0 6px 6px; font-size: 13px; line-height: 1.7; white-space: pre-wrap; font-family: monospace; background: #f8f9fa;">{{verify_stage}}</div>
-    </details>
-  </div>
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: multirate
@@ -57,18 +35,18 @@ annotation_schemes:
     description: "What is the overall verdict for this code agent trajectory?"
     annotation_type: radio
     labels:
-      - "Pass"
-      - "Marginal Pass"
-      - "Fail"
-    keyboard_shortcuts:
-      "Pass": "1"
-      "Marginal Pass": "2"
-      "Fail": "3"
+      - name: "Pass"
+        key_value: "1"
+      - name: "Marginal Pass"
+        key_value: "2"
+      - name: "Fail"
+        key_value: "3"
 
   - name: stage_justification
     description: "Justify which stage had the most impact on the outcome (positive or negative)."
     annotation_type: text
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

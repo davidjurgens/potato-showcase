@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "image_url"
-  context_key: "document_type"
 
 user_config:
   allow_all_users: true
@@ -83,8 +82,5 @@ annotation_schemes:
       - name: "very_hard"
         tooltip: "Highly complex layout with many overlapping element types"
 
-interface_config:
-  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:600px; border:1px solid #ccc;'/><br/><small>Document type: {{document_type}} | Page: {{page_number}} | Source: {{source}}</small>"
-
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 output_annotation_dir: "annotations"

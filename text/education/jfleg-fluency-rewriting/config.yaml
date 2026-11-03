@@ -29,10 +29,9 @@ item_properties:
   text_key: "sentence"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   Please correct the following sentence to make it sound natural and fluent to
@@ -62,19 +61,7 @@ annotation_schemes:
     min_label: "1 - Very easy"
     max_label: "5 - Very difficult"
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #1e40af;">Learner sentence:</strong>
-      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{sentence}}</p>
-    </div>
-    <div style="color: #6b7280; font-size: 13px;">
-      Rewrite the sentence in the editor below so it sounds natural and fluent,
-      keeping the original words, phrases, and structure as much as possible.
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

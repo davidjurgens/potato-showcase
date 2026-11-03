@@ -12,7 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "action_segments"
@@ -83,9 +83,10 @@ annotation_schemes:
       - "Partially visible - some occlusion"
       - "Mostly occluded - hard to see"
 
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 annotation_instructions: |
   ## EPIC-KITCHENS Egocentric Action Annotation

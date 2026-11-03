@@ -33,10 +33,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Highlight entity spans
@@ -44,43 +43,39 @@ annotation_schemes:
     name: entity_spans
     description: "Highlight all named entities in the text"
     labels:
-      - "Person"
-      - "Location"
-      - "Corporation"
-      - "Product"
-      - "Creative Work"
-      - "Group"
-    label_colors:
-      "Person": "#3b82f6"
-      "Location": "#ef4444"
-      "Corporation": "#22c55e"
-      "Product": "#f59e0b"
-      "Creative Work": "#8b5cf6"
-      "Group": "#06b6d4"
-    keyboard_shortcuts:
-      "Person": "1"
-      "Location": "2"
-      "Corporation": "3"
-      "Product": "4"
-      "Creative Work": "5"
-      "Group": "6"
+      - name: "Person"
+        key_value: "1"
+        color: "#3b82f6"
+      - name: "Location"
+        key_value: "2"
+        color: "#ef4444"
+      - name: "Corporation"
+        key_value: "3"
+        color: "#22c55e"
+      - name: "Product"
+        key_value: "4"
+        color: "#f59e0b"
+      - name: "Creative Work"
+        key_value: "5"
+        color: "#8b5cf6"
+      - name: "Group"
+        key_value: "6"
+        color: "#06b6d4"
 
   # Step 2: Entity composition classification
   - annotation_type: radio
     name: entity_composition
     description: "What type of entities does this text contain?"
     labels:
-      - "Contains Novel Entities"
-      - "Standard Entities Only"
-      - "No Entities"
-    keyboard_shortcuts:
-      "Contains Novel Entities": "7"
-      "Standard Entities Only": "8"
-      "No Entities": "9"
-    tooltips:
-      "Contains Novel Entities": "Text mentions emerging, recently created, or rarely seen entities"
-      "Standard Entities Only": "Text mentions only well-known, established entities"
-      "No Entities": "Text contains no named entities"
+      - name: "Contains Novel Entities"
+        tooltip: "Text mentions emerging, recently created, or rarely seen entities"
+        key_value: "7"
+      - name: "Standard Entities Only"
+        tooltip: "Text mentions only well-known, established entities"
+        key_value: "8"
+      - name: "No Entities"
+        tooltip: "Text contains no named entities"
+        key_value: "9"
 
 annotation_instructions: |
   You will be shown a social media post (from Twitter or Reddit). Your task is to:
@@ -97,16 +92,7 @@ annotation_instructions: |
 
   Pay special attention to emerging or novel entities that may not be well-known.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Social Media Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

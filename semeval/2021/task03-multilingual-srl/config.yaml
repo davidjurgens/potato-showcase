@@ -20,10 +20,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
@@ -43,17 +42,15 @@ annotation_schemes:
     name: voice_type
     description: "What is the voice type of the main predicate?"
     labels:
-      - "Active"
-      - "Passive"
-      - "Middle"
-    keyboard_shortcuts:
-      "Active": "1"
-      "Passive": "2"
-      "Middle": "3"
-    tooltips:
-      "Active": "The subject performs the action (e.g., 'The cat chased the mouse')"
-      "Passive": "The subject receives the action (e.g., 'The mouse was chased by the cat')"
-      "Middle": "The subject is both agent and patient (e.g., 'The door opened')"
+      - name: "Active"
+        tooltip: "The subject performs the action (e.g., 'The cat chased the mouse')"
+        key_value: "1"
+      - name: "Passive"
+        tooltip: "The subject receives the action (e.g., 'The mouse was chased by the cat')"
+        key_value: "2"
+      - name: "Middle"
+        tooltip: "The subject is both agent and patient (e.g., 'The door opened')"
+        key_value: "3"
 
 annotation_instructions: |
   You will see a sentence in a given language. Your tasks:
@@ -69,20 +66,7 @@ annotation_instructions: |
 
   Not every role will be present in every sentence. Mark only the roles you find.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Sentence:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
-      <strong style="color: #475569;">Language:</strong>
-      <span style="font-size: 15px;">{{language}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

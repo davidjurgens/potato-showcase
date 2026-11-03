@@ -14,20 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing source and translation
-html_layout: |
-  <div class="esa-container">
-    <div class="source-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-      <h3 style="margin-top: 0;">Source Text ({{language_pair}}):</h3>
-      <div class="source-text" style="font-size: 16px; line-height: 1.6;">{{source_text}}</div>
-    </div>
-    <div class="translation-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; border: 2px solid #1976d2;">
-      <h3 style="margin-top: 0; color: #1976d2;">Translation (select error spans below):</h3>
-      <div class="translation-text" style="font-size: 16px; line-height: 1.6;">{{text}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -36,28 +23,26 @@ annotation_schemes:
     description: "Highlight each span in the translation that contains an error and mark its severity. In ESA, annotators mark spans as minor or major errors (no need to classify the error type)."
     annotation_type: span
     labels:
-      - "Minor error"
-      - "Major error"
-    label_colors:
-      "Minor error": "#ffb74d"
-      "Major error": "#ff5252"
+      - name: "Minor error"
+        color: "#ffb74d"
+      - name: "Major error"
+        color: "#ff5252"
 
   # Error type classification
   - name: "primary_error_type"
     description: "What is the primary (most severe) error type in this translation?"
     annotation_type: radio
     labels:
-      - "Accuracy"
-      - "Fluency"
-      - "Terminology"
-      - "Style"
-      - "No errors found"
-    keyboard_shortcuts:
-      "Accuracy": "1"
-      "Fluency": "2"
-      "Terminology": "3"
-      "Style": "4"
-      "No errors found": "0"
+      - name: "Accuracy"
+        key_value: "1"
+      - name: "Fluency"
+        key_value: "2"
+      - name: "Terminology"
+        key_value: "3"
+      - name: "Style"
+        key_value: "4"
+      - name: "No errors found"
+        key_value: "0"
 
   # Severity rating
   - name: "error_severity"
@@ -72,33 +57,27 @@ annotation_schemes:
       - "3 - Moderate errors (some meaning lost)"
       - "4 - Major errors (significant meaning loss)"
       - "5 - Critical errors (wrong or incomprehensible)"
-    keyboard_shortcuts:
-      "1 - No errors (perfect translation)": "q"
-      "2 - Minor errors (meaning preserved)": "w"
-      "3 - Moderate errors (some meaning lost)": "e"
-      "4 - Major errors (significant meaning loss)": "r"
-      "5 - Critical errors (wrong or incomprehensible)": "t"
 
   # Overall quality rating
   - name: "overall_quality"
     description: "Rate the overall translation quality."
     annotation_type: radio
     labels:
-      - "Perfect"
-      - "Good"
-      - "Acceptable"
-      - "Poor"
-      - "Unacceptable"
-    keyboard_shortcuts:
-      "Perfect": "z"
-      "Good": "x"
-      "Acceptable": "c"
-      "Poor": "v"
-      "Unacceptable": "b"
+      - name: "Perfect"
+        key_value: "z"
+      - name: "Good"
+        key_value: "x"
+      - name: "Acceptable"
+        key_value: "c"
+      - name: "Poor"
+        key_value: "v"
+      - name: "Unacceptable"
+        key_value: "b"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 100
-annotation_per_instance: 2
+max_annotations_per_user: 100
+num_annotators_per_item: 2

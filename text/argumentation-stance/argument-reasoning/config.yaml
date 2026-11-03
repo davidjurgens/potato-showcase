@@ -35,7 +35,7 @@ item_properties:
   text_key: "argument"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Select correct warrant
@@ -43,18 +43,15 @@ annotation_schemes:
     name: warrant_choice
     description: "Which warrant correctly connects the premise to the claim?"
     labels:
-      - "Warrant A"
-      - "Warrant B"
-    tooltips:
-      "Warrant A": "The first warrant option"
-      "Warrant B": "The second warrant option"
+      - name: "Warrant A"
+        tooltip: "The first warrant option"
+      - name: "Warrant B"
+        tooltip: "The second warrant option"
 
   # Step 2: Confidence in choice
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your choice?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Guessing"
       2: "Somewhat uncertain"
@@ -67,20 +64,18 @@ annotation_schemes:
     name: argument_quality
     description: "How strong is this argument overall?"
     labels:
-      - "Very weak"
-      - "Weak"
-      - "Moderate"
-      - "Strong"
-      - "Very strong"
-    tooltips:
-      "Very weak": "The reasoning is fundamentally flawed"
-      "Weak": "The argument has significant gaps"
-      "Moderate": "The argument is reasonable but not compelling"
-      "Strong": "The argument is well-reasoned"
-      "Very strong": "The argument is highly compelling"
+      - name: "Very weak"
+        tooltip: "The reasoning is fundamentally flawed"
+      - name: "Weak"
+        tooltip: "The argument has significant gaps"
+      - name: "Moderate"
+        tooltip: "The argument is reasonable but not compelling"
+      - name: "Strong"
+        tooltip: "The argument is well-reasoned"
+      - name: "Very strong"
+        tooltip: "The argument is highly compelling"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

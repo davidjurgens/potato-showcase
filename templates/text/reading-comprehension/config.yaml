@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "display"
-  text_display_key: "display"
 
 user_config:
   allow_all_users: true
@@ -53,9 +52,13 @@ annotation_schemes:
   - annotation_type: "text"
     name: "correct_answer"
     description: "If incorrect/partially correct, what is the right answer?"
-    show_if:
-      field: "answer_correctness"
-      value_in: ["Partially Correct", "Incorrect"]
+    display_logic:
+      show_when:
+        - schema: "answer_correctness"
+          operator: "equals"
+          value:
+            - "Partially Correct"
+            - "Incorrect"
 
   - annotation_type: "text"
     name: "evidence_span"
@@ -68,7 +71,5 @@ annotation_schemes:
     min_label: "Poor question"
     max_label: "Excellent question"
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

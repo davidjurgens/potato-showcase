@@ -23,24 +23,21 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: nli_judgment
     description: "Is the statement entailed or contradicted by the clinical trial evidence?"
     labels:
-      - "Entailment"
-      - "Contradiction"
-    keyboard_shortcuts:
-      "Entailment": "1"
-      "Contradiction": "2"
-    tooltips:
-      "Entailment": "The statement is supported by or can be inferred from the trial evidence"
-      "Contradiction": "The statement conflicts with or is negated by the trial evidence"
+      - name: "Entailment"
+        tooltip: "The statement is supported by or can be inferred from the trial evidence"
+        key_value: "1"
+      - name: "Contradiction"
+        tooltip: "The statement conflicts with or is negated by the trial evidence"
+        key_value: "2"
 
   - annotation_type: text
     name: evidence_explanation
@@ -53,24 +50,7 @@ annotation_instructions: |
   3. Determine whether the statement is entailed (supported) or contradicted by the evidence.
   4. Write a brief explanation of which evidence supports your judgment.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #1e40af;">Trial ID:</strong>
-      <span style="font-size: 14px; margin-left: 8px; font-family: monospace;">{{trial_id}}</span>
-    </div>
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #92400e;">Statement:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Trial Evidence:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{evidence}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

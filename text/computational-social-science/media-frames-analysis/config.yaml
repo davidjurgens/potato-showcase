@@ -42,10 +42,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Select applicable framing dimensions
@@ -53,37 +52,36 @@ annotation_schemes:
     name: frame_dimensions
     description: "Which framing dimensions are present in this text? (select all that apply)"
     labels:
-      - "Economic"
-      - "Capacity and Resources"
-      - "Morality"
-      - "Fairness and Equality"
-      - "Legality"
-      - "Policy"
-      - "Crime and Punishment"
-      - "Security"
-      - "Health"
-      - "Quality of Life"
-      - "Cultural Identity"
-      - "Public Opinion"
-      - "Political"
-      - "External Regulation"
-      - "Other"
-    tooltips:
-      "Economic": "Discusses costs, benefits, economic impact, or financial considerations"
-      "Capacity and Resources": "Focuses on availability of resources, infrastructure, or logistical capacity"
-      "Morality": "Frames the issue in religious, ethical, or moral terms"
-      "Fairness and Equality": "Discusses equal treatment, discrimination, rights, or justice"
-      "Legality": "Addresses legal aspects, constitutionality, court decisions, or law enforcement"
-      "Policy": "Discusses specific policies, regulations, or legislative proposals"
-      "Crime and Punishment": "Frames the issue around criminal activity, enforcement, or penalties"
-      "Security": "Focuses on national security, public safety, or threats"
-      "Health": "Discusses public health, medical impact, or wellness"
-      "Quality of Life": "Addresses well-being, lifestyle, or community impact"
-      "Cultural Identity": "Discusses cultural values, heritage, or national identity"
-      "Public Opinion": "References polls, public sentiment, or popular support"
-      "Political": "Focuses on political strategy, partisanship, or electoral implications"
-      "External Regulation": "Discusses international bodies, foreign policy, or treaties"
-      "Other": "Any coherent group of frames not covered by the other categories"
+      - name: "Economic"
+        tooltip: "Discusses costs, benefits, economic impact, or financial considerations"
+      - name: "Capacity and Resources"
+        tooltip: "Focuses on availability of resources, infrastructure, or logistical capacity"
+      - name: "Morality"
+        tooltip: "Frames the issue in religious, ethical, or moral terms"
+      - name: "Fairness and Equality"
+        tooltip: "Discusses equal treatment, discrimination, rights, or justice"
+      - name: "Legality"
+        tooltip: "Addresses legal aspects, constitutionality, court decisions, or law enforcement"
+      - name: "Policy"
+        tooltip: "Discusses specific policies, regulations, or legislative proposals"
+      - name: "Crime and Punishment"
+        tooltip: "Frames the issue around criminal activity, enforcement, or penalties"
+      - name: "Security"
+        tooltip: "Focuses on national security, public safety, or threats"
+      - name: "Health"
+        tooltip: "Discusses public health, medical impact, or wellness"
+      - name: "Quality of Life"
+        tooltip: "Addresses well-being, lifestyle, or community impact"
+      - name: "Cultural Identity"
+        tooltip: "Discusses cultural values, heritage, or national identity"
+      - name: "Public Opinion"
+        tooltip: "References polls, public sentiment, or popular support"
+      - name: "Political"
+        tooltip: "Focuses on political strategy, partisanship, or electoral implications"
+      - name: "External Regulation"
+        tooltip: "Discusses international bodies, foreign policy, or treaties"
+      - name: "Other"
+        tooltip: "Any coherent group of frames not covered by the other categories"
 
   # Step 2: Select the primary (dominant) frame
   - annotation_type: radio
@@ -120,19 +118,7 @@ annotation_instructions: |
   Media frames shape how readers interpret issues. Look for the underlying perspective
   or emphasis the article uses, not just the topic itself.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
-      <span style="background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Topic: {{topic}}</span>
-      <span style="background: #f3e8ff; color: #7e22ce; padding: 3px 10px; border-radius: 12px; font-size: 13px;">Source: {{source}}</span>
-    </div>
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <p style="font-size: 16px; line-height: 1.7; margin: 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

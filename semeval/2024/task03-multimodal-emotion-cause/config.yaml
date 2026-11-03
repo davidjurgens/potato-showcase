@@ -18,10 +18,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
@@ -35,29 +34,27 @@ annotation_schemes:
     name: emotion_type
     description: "What is the primary emotion expressed in the target utterance?"
     labels:
-      - "Happiness"
-      - "Sadness"
-      - "Anger"
-      - "Surprise"
-      - "Disgust"
-      - "Fear"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Happiness": "1"
-      "Sadness": "2"
-      "Anger": "3"
-      "Surprise": "4"
-      "Disgust": "5"
-      "Fear": "6"
-      "Neutral": "7"
-    tooltips:
-      "Happiness": "Joy, delight, satisfaction, or amusement"
-      "Sadness": "Grief, sorrow, disappointment, or melancholy"
-      "Anger": "Frustration, irritation, rage, or hostility"
-      "Surprise": "Astonishment, shock, or unexpectedness"
-      "Disgust": "Revulsion, contempt, or strong disapproval"
-      "Fear": "Anxiety, worry, dread, or apprehension"
-      "Neutral": "No clear emotional expression"
+      - name: "Happiness"
+        tooltip: "Joy, delight, satisfaction, or amusement"
+        key_value: "1"
+      - name: "Sadness"
+        tooltip: "Grief, sorrow, disappointment, or melancholy"
+        key_value: "2"
+      - name: "Anger"
+        tooltip: "Frustration, irritation, rage, or hostility"
+        key_value: "3"
+      - name: "Surprise"
+        tooltip: "Astonishment, shock, or unexpectedness"
+        key_value: "4"
+      - name: "Disgust"
+        tooltip: "Revulsion, contempt, or strong disapproval"
+        key_value: "5"
+      - name: "Fear"
+        tooltip: "Anxiety, worry, dread, or apprehension"
+        key_value: "6"
+      - name: "Neutral"
+        tooltip: "No clear emotional expression"
+        key_value: "7"
 
 annotation_instructions: |
   You will be shown a dialogue utterance with its speaker and conversation context. Your task is to:
@@ -65,20 +62,7 @@ annotation_instructions: |
   2. Highlight the span that expresses the emotion and the span that caused it.
   3. Classify the primary emotion in the target utterance.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #1e40af;">Conversation Context:</strong>
-      <p style="font-size: 14px; line-height: 1.6; margin: 8px 0 0 0; color: #475569;">{{conversation_context}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">{{speaker}} says:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

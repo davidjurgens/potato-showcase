@@ -19,10 +19,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Subtask 1: grade the funniness of each edited headline on the 0-3 scale
@@ -47,17 +46,15 @@ annotation_schemes:
     name: humor_comparison
     description: "Which edited version is funnier?"
     labels:
-      - "Edit A Funnier"
-      - "Edit B Funnier"
-      - "Equally Funny"
-    keyboard_shortcuts:
-      "Edit A Funnier": "1"
-      "Edit B Funnier": "2"
-      "Equally Funny": "3"
-    tooltips:
-      "Edit A Funnier": "Edit A is more humorous than Edit B"
-      "Edit B Funnier": "Edit B is more humorous than Edit A"
-      "Equally Funny": "Both edits are equally funny (or equally unfunny)"
+      - name: "Edit A Funnier"
+        tooltip: "Edit A is more humorous than Edit B"
+        key_value: "1"
+      - name: "Edit B Funnier"
+        tooltip: "Edit B is more humorous than Edit A"
+        key_value: "2"
+      - name: "Equally Funny"
+        tooltip: "Both edits are equally funny (or equally unfunny)"
+        key_value: "3"
 
 annotation_instructions: |
   You will see an original news headline together with two edited versions (Edit A
@@ -66,24 +63,7 @@ annotation_instructions: |
   2. Grade how funny each edited version is on the 0-3 scale (0 = Not Funny, 3 = Funny).
   3. Decide which of the two edits is funnier (or whether they are equally funny).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Original Headline:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Edit A</strong> <span style="color: #a16207;">(replaced with "<strong>{{edit_word_a}}</strong>"):</span>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edit_a}}</p>
-    </div>
-    <div style="background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #be185d;">Edit B</strong> <span style="color: #be185d;">(replaced with "<strong>{{edit_word_b}}</strong>"):</span>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{edit_b}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

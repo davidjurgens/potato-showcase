@@ -12,7 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "step_segments"
@@ -69,9 +69,10 @@ annotation_schemes:
       - "Somewhat clear - some confusion"
       - "Unclear - hard to follow"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2
 
 annotation_instructions: |
   ## HowTo100M Instructional Video Annotation

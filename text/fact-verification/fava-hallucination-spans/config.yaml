@@ -37,7 +37,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify hallucinated spans and classify type
@@ -45,68 +45,53 @@ annotation_schemes:
     name: hallucination_spans
     description: "Highlight spans in the generated text that contain hallucinations and select the hallucination type"
     labels:
-      - "Entity Error"
-      - "Relation Error"
-      - "Contradicted"
-      - "Invented"
-      - "Subjective"
-      - "Unverifiable"
-    label_colors:
-      "Entity Error": "#ef4444"
-      "Relation Error": "#f97316"
-      "Contradicted": "#dc2626"
-      "Invented": "#8b5cf6"
-      "Subjective": "#f59e0b"
-      "Unverifiable": "#6b7280"
-    keyboard_shortcuts:
-      "Entity Error": "1"
-      "Relation Error": "2"
-      "Contradicted": "3"
-      "Invented": "4"
-      "Subjective": "5"
-      "Unverifiable": "6"
-    tooltips:
-      "Entity Error": "A wrong entity is mentioned (wrong name, place, date, number, etc.)"
-      "Relation Error": "Entities are correct but the relationship between them is wrong"
-      "Contradicted": "The information directly contradicts what the source says"
-      "Invented": "The information is fabricated and not present anywhere in the source"
-      "Subjective": "A subjective opinion or value judgment presented as objective fact"
-      "Unverifiable": "The claim cannot be verified or refuted using the given source"
-    allow_overlapping: false
+      - name: "Entity Error"
+        tooltip: "A wrong entity is mentioned (wrong name, place, date, number, etc.)"
+        key_value: "1"
+        color: "#ef4444"
+      - name: "Relation Error"
+        tooltip: "Entities are correct but the relationship between them is wrong"
+        key_value: "2"
+        color: "#f97316"
+      - name: "Contradicted"
+        tooltip: "The information directly contradicts what the source says"
+        key_value: "3"
+        color: "#dc2626"
+      - name: "Invented"
+        tooltip: "The information is fabricated and not present anywhere in the source"
+        key_value: "4"
+        color: "#8b5cf6"
+      - name: "Subjective"
+        tooltip: "A subjective opinion or value judgment presented as objective fact"
+        key_value: "5"
+        color: "#f59e0b"
+      - name: "Unverifiable"
+        tooltip: "The claim cannot be verified or refuted using the given source"
+        key_value: "6"
+        color: "#6b7280"
 
   # Step 2: Overall faithfulness rating
   - annotation_type: radio
     name: overall_faithfulness
     description: "Overall, how faithful is the generated text to the source?"
     labels:
-      - "Fully Faithful"
-      - "Mostly Faithful"
-      - "Partially Faithful"
-      - "Mostly Unfaithful"
-      - "Completely Unfaithful"
-    keyboard_shortcuts:
-      "Fully Faithful": "a"
-      "Mostly Faithful": "b"
-      "Partially Faithful": "c"
-      "Mostly Unfaithful": "d"
-      "Completely Unfaithful": "f"
-    tooltips:
-      "Fully Faithful": "No hallucinations detected; all information matches the source"
-      "Mostly Faithful": "Minor hallucinations that do not change the overall meaning"
-      "Partially Faithful": "Some significant hallucinations mixed with faithful content"
-      "Mostly Unfaithful": "Most of the generated text contains hallucinated information"
-      "Completely Unfaithful": "The generated text is almost entirely hallucinated"
+      - name: "Fully Faithful"
+        tooltip: "No hallucinations detected; all information matches the source"
+        key_value: "a"
+      - name: "Mostly Faithful"
+        tooltip: "Minor hallucinations that do not change the overall meaning"
+        key_value: "b"
+      - name: "Partially Faithful"
+        tooltip: "Some significant hallucinations mixed with faithful content"
+        key_value: "c"
+      - name: "Mostly Unfaithful"
+        tooltip: "Most of the generated text contains hallucinated information"
+        key_value: "d"
+      - name: "Completely Unfaithful"
+        tooltip: "The generated text is almost entirely hallucinated"
+        key_value: "f"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
-    <strong>Source Text:</strong><br>{{source_text}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 10px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px;">
-    <strong>Generated Text (annotate hallucinations below):</strong><br>{{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

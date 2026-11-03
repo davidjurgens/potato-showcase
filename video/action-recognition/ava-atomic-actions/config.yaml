@@ -14,7 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -38,21 +38,20 @@ annotation_schemes:
     description: "Select all POSE actions the person is performing"
     annotation_type: multiselect
     labels:
-      - "stand"
-      - "sit"
+      - name: "stand"
+        key_value: "1"
+      - name: "sit"
+        key_value: "2"
       - "lie/sleep"
       - "bend/bow"
       - "crouch/kneel"
-      - "walk"
-      - "run/jog"
+      - name: "walk"
+        key_value: "3"
+      - name: "run/jog"
+        key_value: "4"
       - "jump/leap"
       - "swim"
       - "dance"
-    keyboard_shortcuts:
-      stand: "1"
-      sit: "2"
-      walk: "3"
-      run/jog: "4"
 
   - name: "object_interactions"
     description: "Select all PERSON-OBJECT interactions"
@@ -96,11 +95,12 @@ annotation_schemes:
       - "martial art"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

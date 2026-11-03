@@ -14,7 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -45,8 +45,7 @@ annotation_schemes:
       Ground your answer in specific visual evidence from the marked segments.
       Be detailed and specific about what you see.
     annotation_type: text
-    min_length: 15
-    max_length: 500
+    min_chars: 15
     placeholder: "e.g., 'The person in the blue shirt picks up the book from the table and hands it to the woman standing by the door...'"
 
   # Answer type classification
@@ -88,16 +87,16 @@ annotation_schemes:
       about this video. The question should require watching a different
       part of the video or reasoning about what was discussed.
     annotation_type: text
-    min_length: 10
-    max_length: 200
+    min_chars: 10
     placeholder: "e.g., 'What happens after the person leaves the room?'"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 25
-annotation_per_instance: 3
+max_annotations_per_user: 25
+num_annotators_per_item: 3
 
 # Instructions
 annotation_instructions: |

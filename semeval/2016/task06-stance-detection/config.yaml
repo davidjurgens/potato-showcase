@@ -22,27 +22,24 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: stance
     description: "What stance does this tweet express toward the target?"
     labels:
-      - "Favor"
-      - "Against"
-      - "Neither"
-    keyboard_shortcuts:
-      "Favor": "1"
-      "Against": "2"
-      "Neither": "3"
-    tooltips:
-      "Favor": "The tweet expresses support for or positive stance toward the target"
-      "Against": "The tweet expresses opposition to or negative stance toward the target"
-      "Neither": "The tweet does not clearly express a stance, or is unrelated to the target"
+      - name: "Favor"
+        tooltip: "The tweet expresses support for or positive stance toward the target"
+        key_value: "1"
+      - name: "Against"
+        tooltip: "The tweet expresses opposition to or negative stance toward the target"
+        key_value: "2"
+      - name: "Neither"
+        tooltip: "The tweet does not clearly express a stance, or is unrelated to the target"
+        key_value: "3"
 
 annotation_instructions: |
   You will be shown a tweet and a target topic or entity. Your task is to determine
@@ -50,20 +47,7 @@ annotation_instructions: |
   author's position, not sentiment -- a tweet can be negative in tone but still
   express favor toward the target.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #a16207;">Target:</strong>
-      <span style="font-size: 15px; font-weight: bold;">{{target}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Tweet:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

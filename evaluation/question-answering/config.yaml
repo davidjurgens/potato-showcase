@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: id
   text_key: passage
-  context_key: question
 
 annotation_schemes:
   - annotation_type: span
@@ -19,7 +18,6 @@ annotation_schemes:
     labels:
       - name: "Answer"
         color: "#22c55e"
-    allow_overlapping: false
     required: true
 
   - annotation_type: radio
@@ -31,4 +29,4 @@ annotation_schemes:
     required: true
 
 output_annotation_dir: "output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

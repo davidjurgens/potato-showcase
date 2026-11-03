@@ -31,10 +31,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Write a caption
@@ -42,8 +41,7 @@ annotation_schemes:
     name: caption
     description: "Write a natural language caption describing the audio content. Include all notable sounds and events."
     textarea: true
-    min_length: 10
-    max_length: 500
+    min_chars: 10
     placeholder: "Describe what you hear in this audio clip..."
 
   # Step 2: Accuracy/clarity rating
@@ -59,20 +57,18 @@ annotation_schemes:
     name: environment
     description: "What type of environment does this audio clip come from?"
     labels:
-      - "Indoor"
-      - "Outdoor"
-      - "Mixed"
-      - "Unclear"
-    keyboard_shortcuts:
-      "Indoor": "1"
-      "Outdoor": "2"
-      "Mixed": "3"
-      "Unclear": "4"
-    tooltips:
-      "Indoor": "Sounds from inside buildings (kitchen, office, factory, etc.)"
-      "Outdoor": "Sounds from outside (street, park, forest, beach, etc.)"
-      "Mixed": "Combination of indoor and outdoor sounds"
-      "Unclear": "Cannot determine the environment from the audio"
+      - name: "Indoor"
+        tooltip: "Sounds from inside buildings (kitchen, office, factory, etc.)"
+        key_value: "1"
+      - name: "Outdoor"
+        tooltip: "Sounds from outside (street, park, forest, beach, etc.)"
+        key_value: "2"
+      - name: "Mixed"
+        tooltip: "Combination of indoor and outdoor sounds"
+        key_value: "3"
+      - name: "Unclear"
+        tooltip: "Cannot determine the environment from the audio"
+        key_value: "4"
 
 annotation_instructions: |
   You will write captions for audio clips from the Clotho dataset.
@@ -89,23 +85,7 @@ annotation_instructions: |
   - Describe both foreground events and background ambience
   - Use natural, descriptive language
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Audio Description:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #1e1e1e; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
-      <audio controls style="width: 100%;">
-        <source src="{{audio_url}}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-      <p style="color: #9ca3af; margin: 8px 0 0 0;">Duration: {{duration}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 5
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 5

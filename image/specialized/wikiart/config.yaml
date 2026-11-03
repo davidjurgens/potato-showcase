@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "image_url"
-  context_key: "context"
 
 user_config:
   allow_all_users: true
@@ -112,8 +111,5 @@ annotation_schemes:
     name: "artist_guess"
     description: "Artist attribution guess (if recognizable)"
 
-interface_config:
-  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px;'/><br/><small>{{context}}</small>"
-
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 output_annotation_dir: "annotations"

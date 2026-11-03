@@ -14,29 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing prompt and both responses side-by-side
-html_layout: |
-  <div class="rewardbench-container">
-    <div class="category-bar" style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px; margin-bottom: 15px;">
-      <strong>Category:</strong> {{category}}
-    </div>
-    <div class="prompt-section" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-      <h3 style="margin-top: 0;">Prompt:</h3>
-      <div class="prompt-text" style="font-size: 15px; white-space: pre-wrap;">{{text}}</div>
-    </div>
-    <div class="responses-section" style="display: flex; gap: 20px;">
-      <div class="chosen-response" style="flex: 1; background: #e8f5e9; padding: 15px; border-radius: 8px; border: 2px solid #2e7d32;">
-        <h4 style="margin-top: 0; color: #2e7d32;">Response A (Chosen):</h4>
-        <div class="response-text" style="white-space: pre-wrap; font-size: 14px;">{{chosen}}</div>
-      </div>
-      <div class="rejected-response" style="flex: 1; background: #ffebee; padding: 15px; border-radius: 8px; border: 2px solid #c62828;">
-        <h4 style="margin-top: 0; color: #c62828;">Response B (Rejected):</h4>
-        <div class="response-text" style="white-space: pre-wrap; font-size: 14px;">{{rejected}}</div>
-      </div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -49,41 +27,35 @@ annotation_schemes:
       - "Rejected (B) is better"
       - "Tie - both equally good"
       - "Tie - both equally bad"
-    keyboard_shortcuts:
-      "Chosen (A) is better": "a"
-      "Rejected (B) is better": "b"
-      "Tie - both equally good": "t"
-      "Tie - both equally bad": "n"
 
   # Confidence
   - name: "confidence"
     description: "How confident are you in your preference judgment?"
     annotation_type: radio
     labels:
-      - "Very confident"
-      - "Somewhat confident"
-      - "Not confident"
-    keyboard_shortcuts:
-      "Very confident": "1"
-      "Somewhat confident": "2"
-      "Not confident": "3"
+      - name: "Very confident"
+        key_value: "1"
+      - name: "Somewhat confident"
+        key_value: "2"
+      - name: "Not confident"
+        key_value: "3"
 
   # Difficulty
   - name: "difficulty"
     description: "How difficult was this comparison?"
     annotation_type: radio
     labels:
-      - "Easy - clear difference"
-      - "Medium - required thought"
-      - "Hard - very close"
-    keyboard_shortcuts:
-      "Easy - clear difference": "z"
-      "Medium - required thought": "x"
-      "Hard - very close": "c"
+      - name: "Easy - clear difference"
+        key_value: "z"
+      - name: "Medium - required thought"
+        key_value: "x"
+      - name: "Hard - very close"
+        key_value: "c"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 200
-annotation_per_instance: 2
+max_annotations_per_user: 200
+num_annotators_per_item: 2

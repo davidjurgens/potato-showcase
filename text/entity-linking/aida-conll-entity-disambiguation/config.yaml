@@ -35,7 +35,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Span annotation for entity mentions
@@ -43,26 +43,22 @@ annotation_schemes:
     name: entity_mentions
     description: "Highlight all named entity mentions in the text and classify by type."
     labels:
-      - "PER"
-      - "ORG"
-      - "LOC"
-      - "MISC"
-    label_colors:
-      "PER": "#ef4444"
-      "ORG": "#3b82f6"
-      "LOC": "#22c55e"
-      "MISC": "#f59e0b"
-    keyboard_shortcuts:
-      "PER": "1"
-      "ORG": "2"
-      "LOC": "3"
-      "MISC": "4"
-    tooltips:
-      "PER": "Person names: individuals, fictional characters (e.g., 'Barack Obama', 'Sherlock Holmes')"
-      "ORG": "Organizations: companies, agencies, teams, institutions (e.g., 'Google', 'United Nations', 'FC Barcelona')"
-      "LOC": "Locations: countries, cities, geographic features (e.g., 'France', 'Mount Everest', 'Amazon River')"
-      "MISC": "Miscellaneous: events, products, nationalities, works of art (e.g., 'Nobel Prize', 'iPhone', 'French')"
-    allow_overlapping: false
+      - name: "PER"
+        tooltip: "Person names: individuals, fictional characters (e.g., 'Barack Obama', 'Sherlock Holmes')"
+        key_value: "1"
+        color: "#ef4444"
+      - name: "ORG"
+        tooltip: "Organizations: companies, agencies, teams, institutions (e.g., 'Google', 'United Nations', 'FC Barcelona')"
+        key_value: "2"
+        color: "#3b82f6"
+      - name: "LOC"
+        tooltip: "Locations: countries, cities, geographic features (e.g., 'France', 'Mount Everest', 'Amazon River')"
+        key_value: "3"
+        color: "#22c55e"
+      - name: "MISC"
+        tooltip: "Miscellaneous: events, products, nationalities, works of art (e.g., 'Nobel Prize', 'iPhone', 'French')"
+        key_value: "4"
+        color: "#f59e0b"
 
   # Step 2: Wikidata QID entry
   - annotation_type: text
@@ -74,15 +70,14 @@ annotation_schemes:
     name: entity_status
     description: "What is the linking status of this entity mention?"
     labels:
-      - "linkable"
-      - "nil-entity"
-      - "ambiguous"
-      - "not-an-entity"
-    tooltips:
-      "linkable": "Entity can be unambiguously linked to a Wikidata entry"
-      "nil-entity": "Entity is real but has no Wikidata entry (e.g., obscure local business)"
-      "ambiguous": "Entity mention is genuinely ambiguous between multiple Wikidata entries"
-      "not-an-entity": "Highlighted span is not actually a named entity upon closer inspection"
+      - name: "linkable"
+        tooltip: "Entity can be unambiguously linked to a Wikidata entry"
+      - name: "nil-entity"
+        tooltip: "Entity is real but has no Wikidata entry (e.g., obscure local business)"
+      - name: "ambiguous"
+        tooltip: "Entity mention is genuinely ambiguous between multiple Wikidata entries"
+      - name: "not-an-entity"
+        tooltip: "Highlighted span is not actually a named entity upon closer inspection"
 
   # Step 4: Disambiguation notes
   - annotation_type: text
@@ -98,18 +93,7 @@ annotation_instructions: |
   4. Optionally add notes explaining your disambiguation reasoning
   Pay special attention to ambiguous mentions like "Washington", "Paris", or "Jordan".
 
-html_layout: |
-  <div style="padding: 15px; font-family: Georgia, serif;">
-    <div style="margin-bottom: 8px; color: #6b7280; font-size: 13px;">
-      <strong>Source:</strong> {{source}}
-    </div>
-    <div style="font-size: 16px; line-height: 1.8; background: #f9fafb; padding: 15px; border-left: 4px solid #22c55e; border-radius: 4px;">
-      {{text}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -22,23 +22,21 @@ item_properties:
   text_key: "response"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: faithfulness
     description: "Is the response faithful to (grounded in) the reference passages?"
     labels:
-      - "Fully grounded"
-      - "Partially grounded"
-      - "Not grounded / hallucinated"
-    keyboard_shortcuts:
-      "Fully grounded": "1"
-      "Partially grounded": "2"
-      "Not grounded / hallucinated": "3"
+      - name: "Fully grounded"
+        key_value: "1"
+      - name: "Partially grounded"
+        key_value: "2"
+      - name: "Not grounded / hallucinated"
+        key_value: "3"
 
   - annotation_type: likert
     name: answer_quality
@@ -68,23 +66,7 @@ annotation_instructions: |
   appropriately handles questions that cannot be fully answered from the
   passages.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 860px; margin: auto;">
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
-      <strong style="color: #334155;">Conversation:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-line;">{{conversation}}</p>
-    </div>
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
-      <strong style="color: #3730a3;">Reference passages:</strong>
-      <p style="font-size: 14px; line-height: 1.6; margin: 6px 0 0 0; white-space: pre-line;">{{passages}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px;">
-      <strong style="color: #166534;">System response:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 6px 0 0 0;">{{response}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 3

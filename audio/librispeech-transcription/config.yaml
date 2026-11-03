@@ -30,10 +30,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: slider
@@ -61,20 +60,7 @@ annotation_instructions: |
   3. Classify the audio content type (clean speech, noisy speech, music, silence, or other).
   4. Consider background noise, speaker clarity, and recording quality in your rating.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Audio Sample:</strong>
-      <p style="margin: 8px 0 0 0;"><audio controls src="{{audio_url}}" style="width: 100%;"></audio></p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Reference Transcript:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; font-style: italic;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

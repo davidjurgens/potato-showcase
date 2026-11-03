@@ -24,7 +24,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # First: determine if the text contains toxicity
@@ -32,48 +32,41 @@ annotation_schemes:
     name: contains_toxicity
     description: "Does this text contain any toxic content?"
     labels:
-      - "Yes - contains toxic content"
-      - "No - not toxic"
-    keyboard_shortcuts:
-      "Yes - contains toxic content": "y"
-      "No - not toxic": "n"
-    tooltips:
-      "Yes - contains toxic content": "The text contains language that is abusive, offensive, or harmful"
-      "No - not toxic": "The text does not contain toxic language (may be critical but not abusive)"
+      - name: "Yes - contains toxic content"
+        tooltip: "The text contains language that is abusive, offensive, or harmful"
+        key_value: "y"
+      - name: "No - not toxic"
+        tooltip: "The text does not contain toxic language (may be critical but not abusive)"
+        key_value: "n"
 
   # Then: highlight the specific toxic spans
   - annotation_type: span
     name: toxic_spans
     description: "Highlight the specific words or phrases that make this text toxic"
     labels:
-      - Toxic
-    label_colors:
-      Toxic: "#ef4444"
-    tooltips:
-      Toxic: "Words or phrases that are abusive, offensive, threatening, or otherwise harmful"
-    allow_overlapping: false
+      - name: Toxic
+        tooltip: "Words or phrases that are abusive, offensive, threatening, or otherwise harmful"
+        color: "#ef4444"
 
   # Optional: categorize the type of toxicity
   - annotation_type: multiselect
     name: toxicity_type
     description: "What type(s) of toxicity are present? (select all that apply)"
     labels:
-      - Insult
-      - Profanity
-      - Threat
-      - Identity Attack
-      - Sexual Content
-      - Other
-    tooltips:
-      Insult: "Personal attacks or demeaning language"
-      Profanity: "Vulgar or obscene language"
-      Threat: "Expressions of intent to harm"
-      "Identity Attack": "Attacks based on identity (race, gender, religion, etc.)"
-      "Sexual Content": "Sexually explicit or inappropriate content"
-      Other: "Other forms of toxic content"
+      - name: Insult
+        tooltip: "Personal attacks or demeaning language"
+      - name: Profanity
+        tooltip: "Vulgar or obscene language"
+      - name: Threat
+        tooltip: "Expressions of intent to harm"
+      - name: Identity Attack
+        tooltip: "Attacks based on identity (race, gender, religion, etc.)"
+      - name: Sexual Content
+        tooltip: "Sexually explicit or inappropriate content"
+      - name: Other
+        tooltip: "Other forms of toxic content"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

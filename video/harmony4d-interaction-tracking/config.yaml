@@ -14,7 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -105,11 +105,12 @@ annotation_schemes:
     timeline_height: 60
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 20
-annotation_per_instance: 2
+max_annotations_per_user: 20
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

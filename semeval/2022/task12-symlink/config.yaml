@@ -30,10 +30,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
@@ -47,15 +46,14 @@ annotation_schemes:
     name: relation_type
     description: "For the primary symbol-description pair, what is the relation?"
     labels:
-      - "Direct"
-      - "Count"
-      - "Coref-Symbol"
-      - "Coref-Description"
-    tooltips:
-      "Direct": "A symbol is directly linked to its description"
-      "Count": "A description quantifies a set of symbols"
-      "Coref-Symbol": "Two symbol mentions refer to the same entity"
-      "Coref-Description": "Two description mentions refer to the same entity"
+      - name: "Direct"
+        tooltip: "A symbol is directly linked to its description"
+      - name: "Count"
+        tooltip: "A description quantifies a set of symbols"
+      - name: "Coref-Symbol"
+        tooltip: "Two symbol mentions refer to the same entity"
+      - name: "Coref-Description"
+        tooltip: "Two description mentions refer to the same entity"
 
   - annotation_type: text
     name: notes
@@ -69,15 +67,7 @@ annotation_instructions: |
   symbol-description pair, select the relation type that links them. Use the
   notes field to record any additional links present in the passage.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
-      <strong style="color: #1e40af;">Passage:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

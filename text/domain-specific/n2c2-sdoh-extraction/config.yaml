@@ -26,7 +26,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify SDOH entity mentions
@@ -34,55 +34,41 @@ annotation_schemes:
     name: sdoh_entity
     description: "Highlight mentions of social determinants of health in the clinical text"
     labels:
-      - "Employment"
-      - "LivingStatus"
-      - "Alcohol"
-      - "Drug"
-      - "Tobacco"
-    label_colors:
-      "Employment": "#22c55e"
-      "LivingStatus": "#3b82f6"
-      "Alcohol": "#ef4444"
-      "Drug": "#f97316"
-      "Tobacco": "#eab308"
-    tooltips:
-      "Employment": "Mentions of job status, occupation, work, unemployment, retirement, or disability"
-      "LivingStatus": "Mentions of housing situation, living arrangements, homelessness, or shelter"
-      "Alcohol": "Mentions of alcohol consumption, drinking, or alcohol-related behaviors"
-      "Drug": "Mentions of illicit drug use, substance abuse, or recreational drug use"
-      "Tobacco": "Mentions of smoking, tobacco use, vaping, chewing tobacco, or nicotine"
-    allow_overlapping: false
+      - name: "Employment"
+        tooltip: "Mentions of job status, occupation, work, unemployment, retirement, or disability"
+        color: "#22c55e"
+      - name: "LivingStatus"
+        tooltip: "Mentions of housing situation, living arrangements, homelessness, or shelter"
+        color: "#3b82f6"
+      - name: "Alcohol"
+        tooltip: "Mentions of alcohol consumption, drinking, or alcohol-related behaviors"
+        color: "#ef4444"
+      - name: "Drug"
+        tooltip: "Mentions of illicit drug use, substance abuse, or recreational drug use"
+        color: "#f97316"
+      - name: "Tobacco"
+        tooltip: "Mentions of smoking, tobacco use, vaping, chewing tobacco, or nicotine"
+        color: "#eab308"
 
   # Step 2: Status of the identified SDOH entity
   - annotation_type: radio
     name: entity_status
     description: "What is the current status of the identified SDOH factor?"
     labels:
-      - "Current"
-      - "Past"
-      - "None"
-      - "Unknown"
-    keyboard_shortcuts:
-      "Current": "c"
-      "Past": "p"
-      "None": "n"
-      "Unknown": "u"
-    tooltips:
-      "Current": "The patient currently has this SDOH status (e.g., currently smokes, currently employed)"
-      "Past": "The patient had this status in the past (e.g., former smoker, previously homeless)"
-      "None": "The patient explicitly does not have this status (e.g., denies alcohol, never smoked)"
-      "Unknown": "The status cannot be determined from the available text"
+      - name: "Current"
+        tooltip: "The patient currently has this SDOH status (e.g., currently smokes, currently employed)"
+        key_value: "c"
+      - name: "Past"
+        tooltip: "The patient had this status in the past (e.g., former smoker, previously homeless)"
+        key_value: "p"
+      - name: "None"
+        tooltip: "The patient explicitly does not have this status (e.g., denies alcohol, never smoked)"
+        key_value: "n"
+      - name: "Unknown"
+        tooltip: "The status cannot be determined from the available text"
+        key_value: "u"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 8px; background: #f8f9fa; border-radius: 6px;">
-    <strong>Note Type:</strong> {{note_type}}
-  </div>
-  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-family: monospace; white-space: pre-wrap;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2

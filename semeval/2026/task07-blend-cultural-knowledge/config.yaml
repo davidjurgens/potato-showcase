@@ -24,10 +24,9 @@ item_properties:
   text_key: "question"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: text
@@ -41,15 +40,14 @@ annotation_schemes:
     name: mcq_answer
     description: "Subtask 2 (MCQ): select the correct option"
     labels:
-      - "A"
-      - "B"
-      - "C"
-      - "D"
-    keyboard_shortcuts:
-      "A": "1"
-      "B": "2"
-      "C": "3"
-      "D": "4"
+      - name: "A"
+        key_value: "1"
+      - name: "B"
+        key_value: "2"
+      - name: "C"
+        key_value: "3"
+      - name: "D"
+        key_value: "4"
 
   - annotation_type: radio
     name: applicability
@@ -65,21 +63,7 @@ annotation_instructions: |
   correct multiple-choice option (Subtask 2), and indicate whether the
   question has a clear culturally-shared answer.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 12px; margin-bottom: 10px;">
-      <strong style="color: #155e75;">Region:</strong>
-      <span style="margin-left: 8px;">{{region}}</span>
-      <span style="color:#64748b; margin-left: 12px;">Language: {{language}}</span>
-    </div>
-    <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
-      <strong style="color: #115e59;">Question:</strong>
-      <p style="font-size: 17px; line-height: 1.6; margin: 8px 0 0 0;">{{question}}</p>
-    </div>
-    <div style="color:#334155; font-size: 15px;">{{options}}</div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

@@ -20,10 +20,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: text
@@ -34,23 +33,21 @@ annotation_schemes:
     name: answer_type
     description: "What is the type of the answer? (DataBench answer typology)"
     labels:
-      - "Boolean"
-      - "Category"
-      - "Number"
-      - "List of Categories"
-      - "List of Numbers"
-    keyboard_shortcuts:
-      "Boolean": "1"
-      "Category": "2"
-      "Number": "3"
-      "List of Categories": "4"
-      "List of Numbers": "5"
-    tooltips:
-      "Boolean": "The answer is True or False"
-      "Category": "The answer is a single value drawn from the table (e.g. a name or label)"
-      "Number": "The answer is a single numeric value"
-      "List of Categories": "The answer is a list of values from the table"
-      "List of Numbers": "The answer is a list of numeric values"
+      - name: "Boolean"
+        tooltip: "The answer is True or False"
+        key_value: "1"
+      - name: "Category"
+        tooltip: "The answer is a single value drawn from the table (e.g. a name or label)"
+        key_value: "2"
+      - name: "Number"
+        tooltip: "The answer is a single numeric value"
+        key_value: "3"
+      - name: "List of Categories"
+        tooltip: "The answer is a list of values from the table"
+        key_value: "4"
+      - name: "List of Numbers"
+        tooltip: "The answer is a list of numeric values"
+        key_value: "5"
 
 annotation_instructions: |
   You will be shown a question and a table. Your task is to:
@@ -59,20 +56,7 @@ annotation_instructions: |
   3. Provide the exact answer as a value or list derived from the table.
   4. Label the type of the answer (boolean, category, number, or list).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Table: {{table_title}}</strong>
-      <pre style="font-size: 14px; line-height: 1.5; margin: 8px 0 0 0; white-space: pre-wrap;">{{table_content}}</pre>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

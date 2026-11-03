@@ -31,7 +31,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Verdict
@@ -39,75 +39,49 @@ annotation_schemes:
     name: verdict
     description: "Based on the text and image evidence, what is the verdict for this claim?"
     labels:
-      - "Supported"
-      - "Refuted"
-      - "Not Enough Evidence"
-    keyboard_shortcuts:
-      "Supported": "s"
-      "Refuted": "r"
-      "Not Enough Evidence": "n"
-    tooltips:
-      "Supported": "The claim is fully supported by the combined multimodal evidence"
-      "Refuted": "The evidence directly contradicts the claim"
-      "Not Enough Evidence": "The available evidence is insufficient to confirm or deny the claim"
+      - name: "Supported"
+        tooltip: "The claim is fully supported by the combined multimodal evidence"
+        key_value: "s"
+      - name: "Refuted"
+        tooltip: "The evidence directly contradicts the claim"
+        key_value: "r"
+      - name: "Not Enough Evidence"
+        tooltip: "The available evidence is insufficient to confirm or deny the claim"
+        key_value: "n"
 
   # Step 2: Highlight relevant evidence spans
   - annotation_type: span
     name: evidence_spans
     description: "Highlight the specific parts of the text evidence that are relevant to your verdict."
     labels:
-      - "Supporting Evidence"
-      - "Contradicting Evidence"
-      - "Contextual Information"
-    label_colors:
-      "Supporting Evidence": "#22c55e"
-      "Contradicting Evidence": "#ef4444"
-      "Contextual Information": "#3b82f6"
-    tooltips:
-      "Supporting Evidence": "Text that directly supports the claim"
-      "Contradicting Evidence": "Text that directly contradicts the claim"
-      "Contextual Information": "Text that provides useful context but does not directly support or refute"
-    allow_overlapping: false
+      - name: "Supporting Evidence"
+        tooltip: "Text that directly supports the claim"
+        color: "#22c55e"
+      - name: "Contradicting Evidence"
+        tooltip: "Text that directly contradicts the claim"
+        color: "#ef4444"
+      - name: "Contextual Information"
+        tooltip: "Text that provides useful context but does not directly support or refute"
+        color: "#3b82f6"
 
   # Step 3: Image relevance
   - annotation_type: radio
     name: image_relevance
     description: "How relevant is the image evidence to verifying this claim?"
     labels:
-      - "Highly relevant - key to verdict"
-      - "Somewhat relevant - provides additional context"
-      - "Not relevant - does not help verify the claim"
-    tooltips:
-      "Highly relevant - key to verdict": "The image is essential for determining the verdict"
-      "Somewhat relevant - provides additional context": "The image provides useful but non-essential context"
-      "Not relevant - does not help verify the claim": "The image does not contribute to fact-checking"
+      - name: "Highly relevant - key to verdict"
+        tooltip: "The image is essential for determining the verdict"
+      - name: "Somewhat relevant - provides additional context"
+        tooltip: "The image provides useful but non-essential context"
+      - name: "Not relevant - does not help verify the claim"
+        tooltip: "The image does not contribute to fact-checking"
 
   # Step 4: Explanation
   - annotation_type: text
     name: explanation
     description: "Explain your verdict. Describe how the text and image evidence together support your conclusion."
 
-html_layout: |
-  <div style="margin-bottom: 15px; padding: 12px; background: #fef3c7; border-radius: 6px; border-left: 4px solid #f59e0b;">
-    <strong>Claim to Verify:</strong>
-    <div style="font-size: 17px; margin-top: 6px;">{{text}}</div>
-  </div>
-  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-    <strong>Source:</strong> {{source}}
-  </div>
-  <div style="display: flex; gap: 15px; margin-bottom: 15px;">
-    <div style="flex: 1; padding: 12px; background: #f9fafb; border-radius: 6px; border: 1px solid #e5e7eb;">
-      <strong>Text Evidence:</strong>
-      <div style="margin-top: 8px; line-height: 1.6;">{{evidence_text}}</div>
-    </div>
-    <div style="flex: 1; text-align: center;">
-      <strong>Image Evidence:</strong><br/>
-      <img src="{{image_url}}" style="max-width: 100%; max-height: 400px; margin-top: 8px; border: 1px solid #ddd; border-radius: 4px;" />
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

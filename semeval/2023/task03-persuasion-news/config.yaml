@@ -26,37 +26,35 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: multiselect
     name: persuasion_techniques
     description: "Select all persuasion techniques present in this text"
     labels:
-      - "Loaded Language"
-      - "Name Calling"
-      - "Repetition"
-      - "Exaggeration"
-      - "Appeal to Fear"
-      - "Flag Waving"
-      - "Causal Oversimplification"
-      - "Appeal to Authority"
-      - "False Dilemma"
-      - "Appeal to Popularity"
-    tooltips:
-      "Loaded Language": "Using words with strong emotional connotations to influence the audience"
-      "Name Calling": "Labeling the target with negative terms to discredit them"
-      "Repetition": "Repeating the same message or phrase to reinforce it"
-      "Exaggeration": "Overstating claims or magnifying events beyond reality"
-      "Appeal to Fear": "Building support by instilling fear or anxiety in the audience"
-      "Flag Waving": "Appealing to patriotic or group identity feelings"
-      "Causal Oversimplification": "Assuming a single cause for a complex situation"
-      "Appeal to Authority": "Citing an authority figure to support a claim without evidence"
-      "False Dilemma": "Presenting only two options when more exist"
-      "Appeal to Popularity": "Suggesting everyone is doing it so the reader should too"
+      - name: "Loaded Language"
+        tooltip: "Using words with strong emotional connotations to influence the audience"
+      - name: "Name Calling"
+        tooltip: "Labeling the target with negative terms to discredit them"
+      - name: "Repetition"
+        tooltip: "Repeating the same message or phrase to reinforce it"
+      - name: "Exaggeration"
+        tooltip: "Overstating claims or magnifying events beyond reality"
+      - name: "Appeal to Fear"
+        tooltip: "Building support by instilling fear or anxiety in the audience"
+      - name: "Flag Waving"
+        tooltip: "Appealing to patriotic or group identity feelings"
+      - name: "Causal Oversimplification"
+        tooltip: "Assuming a single cause for a complex situation"
+      - name: "Appeal to Authority"
+        tooltip: "Citing an authority figure to support a claim without evidence"
+      - name: "False Dilemma"
+        tooltip: "Presenting only two options when more exist"
+      - name: "Appeal to Popularity"
+        tooltip: "Suggesting everyone is doing it so the reader should too"
 
   - annotation_type: span
     name: persuasion_span
@@ -70,16 +68,7 @@ annotation_instructions: |
   2. Then highlight the specific text spans where persuasive language occurs.
   A paragraph may contain multiple techniques, and techniques may overlap in the same span.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">News Paragraph:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

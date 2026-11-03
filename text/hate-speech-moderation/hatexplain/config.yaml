@@ -24,7 +24,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Task 1: Classification
@@ -32,63 +32,56 @@ annotation_schemes:
     name: classification
     description: "Classify this text as hate speech, offensive, or normal"
     labels:
-      - Hate Speech
-      - Offensive
-      - Normal
-    keyboard_shortcuts:
-      "Hate Speech": "h"
-      "Offensive": "o"
-      "Normal": "n"
-    tooltips:
-      "Hate Speech": "Content that attacks or demeans a group based on identity attributes (race, religion, gender, etc.)"
-      "Offensive": "Rude, disrespectful, or profane content that does NOT target identity groups"
-      "Normal": "Content that is neither hateful nor offensive"
+      - name: Hate Speech
+        tooltip: "Content that attacks or demeans a group based on identity attributes (race, religion, gender, etc.)"
+        key_value: "h"
+      - name: Offensive
+        tooltip: "Rude, disrespectful, or profane content that does NOT target identity groups"
+        key_value: "o"
+      - name: Normal
+        tooltip: "Content that is neither hateful nor offensive"
+        key_value: "n"
 
   # Task 2: Target community (only for hate/offensive)
   - annotation_type: multiselect
     name: target_community
     description: "If hate/offensive, select the targeted community/communities"
     labels:
-      - African
-      - Arab
-      - Asian
-      - Caucasian
-      - Hispanic
-      - Jewish
-      - LGBTQ
-      - Islam
-      - Women
-      - Refugee
-      - Other
-      - None/Not Applicable
-    tooltips:
-      African: "People of African descent"
-      Arab: "People of Arab descent or from Arab countries"
-      Asian: "People of Asian descent"
-      Caucasian: "People of European/white descent"
-      Hispanic: "People of Hispanic/Latino descent"
-      Jewish: "Jewish people (ethnic or religious)"
-      LGBTQ: "Lesbian, gay, bisexual, transgender, queer individuals"
-      Islam: "Muslims or Islamic religion"
-      Women: "Women or girls"
-      Refugee: "Refugees, immigrants, or asylum seekers"
-      Other: "Other identity group not listed"
-      "None/Not Applicable": "No specific group targeted (for Normal texts)"
+      - name: African
+        tooltip: "People of African descent"
+      - name: Arab
+        tooltip: "People of Arab descent or from Arab countries"
+      - name: Asian
+        tooltip: "People of Asian descent"
+      - name: Caucasian
+        tooltip: "People of European/white descent"
+      - name: Hispanic
+        tooltip: "People of Hispanic/Latino descent"
+      - name: Jewish
+        tooltip: "Jewish people (ethnic or religious)"
+      - name: LGBTQ
+        tooltip: "Lesbian, gay, bisexual, transgender, queer individuals"
+      - name: Islam
+        tooltip: "Muslims or Islamic religion"
+      - name: Women
+        tooltip: "Women or girls"
+      - name: Refugee
+        tooltip: "Refugees, immigrants, or asylum seekers"
+      - name: Other
+        tooltip: "Other identity group not listed"
+      - name: None/Not Applicable
+        tooltip: "No specific group targeted (for Normal texts)"
 
   # Task 3: Rationale span annotation
   - annotation_type: span
     name: rationale
     description: "Highlight the words/phrases that justify your classification decision"
     labels:
-      - Rationale
-    label_colors:
-      Rationale: "#ef4444"
-    tooltips:
-      Rationale: "Words or phrases that are the reason for classifying as hate/offensive (avg ~5.5 tokens per post)"
-    allow_overlapping: false
+      - name: Rationale
+        tooltip: "Words or phrases that are the reason for classifying as hate/offensive (avg ~5.5 tokens per post)"
+        color: "#ef4444"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

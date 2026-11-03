@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "utterance"
-  text_display_key: "utterance"
 
 user_config:
   allow_all_users: true
@@ -92,7 +91,5 @@ annotation_schemes:
     description: "List any key entities (product names, dates, etc.)"
     required: false
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

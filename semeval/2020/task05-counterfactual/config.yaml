@@ -18,24 +18,21 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: counterfactual_label
     description: "Is this statement counterfactual?"
     labels:
-      - "Counterfactual"
-      - "Not Counterfactual"
-    keyboard_shortcuts:
-      "Counterfactual": "1"
-      "Not Counterfactual": "2"
-    tooltips:
-      "Counterfactual": "The statement describes a hypothetical situation that is contrary to known facts"
-      "Not Counterfactual": "The statement does not describe a counterfactual scenario"
+      - name: "Counterfactual"
+        tooltip: "The statement describes a hypothetical situation that is contrary to known facts"
+        key_value: "1"
+      - name: "Not Counterfactual"
+        tooltip: "The statement does not describe a counterfactual scenario"
+        key_value: "2"
 
   - annotation_type: span
     name: counterfactual_spans
@@ -54,16 +51,7 @@ annotation_instructions: |
   Examples of counterfactual: "If I had studied harder, I would have passed the exam."
   Examples of non-counterfactual: "If it rains tomorrow, I will bring an umbrella."
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Statement:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

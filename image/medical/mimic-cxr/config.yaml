@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "image_url"
-  context_key: "report_excerpt"
 
 user_config:
   allow_all_users: true
@@ -71,8 +70,5 @@ annotation_schemes:
     name: "additional_notes"
     description: "Additional clinical notes or observations"
 
-interface_config:
-  item_display_format: "<img src='{{text}}' style='max-width:100%; max-height:500px; background:#000;'/><br/><small>Report: {{context}}</small>"
-
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 output_annotation_dir: "annotations"

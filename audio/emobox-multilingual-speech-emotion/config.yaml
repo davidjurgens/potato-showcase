@@ -22,7 +22,7 @@ item_properties:
   text_key: "audio_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: radio
@@ -72,13 +72,7 @@ annotation_schemes:
         tooltip: "Excited, agitated, high-energy speech"
         key_value: "i"
 
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: true
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

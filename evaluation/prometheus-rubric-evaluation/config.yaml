@@ -14,28 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing instruction, response, rubric, and reference answer
-html_layout: |
-  <div class="prometheus-container">
-    <div class="instruction-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-      <h3 style="margin-top: 0;">Instruction:</h3>
-      <div class="instruction-text" style="font-size: 15px;">{{text}}</div>
-    </div>
-    <div class="response-section" style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #1976d2;">
-      <h3 style="margin-top: 0; color: #1976d2;">Model Response:</h3>
-      <div class="response-text" style="font-size: 15px; white-space: pre-wrap;">{{response}}</div>
-    </div>
-    <div class="rubric-section" style="background: #fff8e1; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f9a825;">
-      <h3 style="margin-top: 0; color: #f9a825;">Scoring Rubric:</h3>
-      <div class="rubric-text" style="font-size: 14px; white-space: pre-wrap;">{{rubric}}</div>
-    </div>
-    <div class="reference-section" style="background: #f3e5f5; padding: 15px; border-radius: 8px; border: 2px solid #7b1fa2;">
-      <h3 style="margin-top: 0; color: #7b1fa2;">Reference Answer:</h3>
-      <div class="reference-text" style="font-size: 14px; white-space: pre-wrap;">{{reference_answer}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -52,19 +31,12 @@ annotation_schemes:
       - "3 - Partially meets rubric criteria"
       - "4 - Meets most rubric criteria well"
       - "5 - Fully meets or exceeds all rubric criteria"
-    keyboard_shortcuts:
-      "1 - Does not meet rubric criteria at all": "1"
-      "2 - Meets few rubric criteria with major gaps": "2"
-      "3 - Partially meets rubric criteria": "3"
-      "4 - Meets most rubric criteria well": "4"
-      "5 - Fully meets or exceeds all rubric criteria": "5"
 
   # Written feedback
   - name: "feedback"
     description: "Provide detailed written feedback explaining your score. Reference specific rubric criteria and cite examples from the response."
     annotation_type: text
-    min_length: 50
-    max_length: 800
+    min_chars: 50
     placeholder: "Explain how the response meets or fails to meet each rubric criterion. Cite specific examples from the response..."
 
   # Comparison to reference
@@ -82,8 +54,9 @@ annotation_schemes:
       - "5 - Much better than reference"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 50
-annotation_per_instance: 3
+max_annotations_per_user: 50
+num_annotators_per_item: 3

@@ -32,42 +32,38 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: is_sarcastic
     description: "Is this text sarcastic (as intended by its author)?"
     labels:
-      - "Sarcastic"
-      - "Not Sarcastic"
-    keyboard_shortcuts:
-      "Sarcastic": "1"
-      "Not Sarcastic": "2"
-    tooltips:
-      "Sarcastic": "The author intended the text to be sarcastic or ironic"
-      "Not Sarcastic": "The text is meant literally"
+      - name: "Sarcastic"
+        tooltip: "The author intended the text to be sarcastic or ironic"
+        key_value: "1"
+      - name: "Not Sarcastic"
+        tooltip: "The text is meant literally"
+        key_value: "2"
 
   - annotation_type: multiselect
     name: sarcasm_category
     description: "If sarcastic, which category of ironic speech applies? (Select all that apply)"
     labels:
-      - "Sarcasm"
-      - "Irony"
-      - "Satire"
-      - "Understatement"
-      - "Overstatement"
-      - "Rhetorical Question"
-    tooltips:
-      "Sarcasm": "Contradicts the state of affairs and is critical toward someone/something"
-      "Irony": "Contradicts the state of affairs but is not necessarily critical"
-      "Satire": "Ridicules a subject through humor, irony, or exaggeration"
-      "Understatement": "Undermines the magnitude of a state of affairs"
-      "Overstatement": "Exaggerates the magnitude of a state of affairs"
-      "Rhetorical Question": "A question posed without expecting an answer"
+      - name: "Sarcasm"
+        tooltip: "Contradicts the state of affairs and is critical toward someone/something"
+      - name: "Irony"
+        tooltip: "Contradicts the state of affairs but is not necessarily critical"
+      - name: "Satire"
+        tooltip: "Ridicules a subject through humor, irony, or exaggeration"
+      - name: "Understatement"
+        tooltip: "Undermines the magnitude of a state of affairs"
+      - name: "Overstatement"
+        tooltip: "Exaggerates the magnitude of a state of affairs"
+      - name: "Rhetorical Question"
+        tooltip: "A question posed without expecting an answer"
 
   - annotation_type: text
     name: rephrase
@@ -82,15 +78,7 @@ annotation_instructions: |
   categories of ironic speech it expresses, and optionally write a
   non-sarcastic rephrase that conveys the same intended meaning.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
-      <strong style="color: #9a3412;">Text:</strong>
-      <p style="font-size: 17px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

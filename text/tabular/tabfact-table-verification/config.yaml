@@ -39,7 +39,7 @@ item_properties:
   text_key: "claim"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Verdict on the claim
@@ -47,35 +47,30 @@ annotation_schemes:
     name: verdict
     description: "Based on the table, is the claim entailed (true), refuted (false), or unknown?"
     labels:
-      - "entailed"
-      - "refuted"
-      - "unknown"
-    keyboard_shortcuts:
-      "entailed": "e"
-      "refuted": "r"
-      "unknown": "u"
-    tooltips:
-      "entailed": "The table provides sufficient evidence that the claim is true"
-      "refuted": "The table provides evidence that contradicts the claim"
-      "unknown": "The table does not contain enough information to determine truth"
+      - name: "entailed"
+        tooltip: "The table provides sufficient evidence that the claim is true"
+        key_value: "e"
+      - name: "refuted"
+        tooltip: "The table provides evidence that contradicts the claim"
+        key_value: "r"
+      - name: "unknown"
+        tooltip: "The table does not contain enough information to determine truth"
+        key_value: "u"
 
   # Step 2: Evidence cell highlighting
   - annotation_type: span
     name: evidence_cells
     description: "Highlight the relevant parts of the table that support or contradict the claim"
     labels:
-      - "supporting-evidence"
-      - "contradicting-evidence"
-      - "irrelevant"
-    label_colors:
-      "supporting-evidence": "#22c55e"
-      "contradicting-evidence": "#ef4444"
-      "irrelevant": "#9ca3af"
-    tooltips:
-      "supporting-evidence": "Cells or text that directly support the claim being true"
-      "contradicting-evidence": "Cells or text that directly contradict the claim"
-      "irrelevant": "Content that is related but does not serve as evidence"
-    allow_overlapping: false
+      - name: "supporting-evidence"
+        tooltip: "Cells or text that directly support the claim being true"
+        color: "#22c55e"
+      - name: "contradicting-evidence"
+        tooltip: "Cells or text that directly contradict the claim"
+        color: "#ef4444"
+      - name: "irrelevant"
+        tooltip: "Content that is related but does not serve as evidence"
+        color: "#9ca3af"
 
   # Step 3: Reasoning explanation
   - annotation_type: text
@@ -93,20 +88,7 @@ annotation_instructions: |
   - Some claims require combining information from multiple cells.
   - If the table simply does not contain the relevant information, choose "unknown".
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <h3 style="color: #1e40af; margin-bottom: 10px;">Table: {{table_title}}</h3>
-    <div style="overflow-x: auto; margin-bottom: 20px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; background: #f9fafb;">
-      {{table_html}}
-    </div>
-    <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px;">
-      <strong style="color: #92400e;">Claim:</strong>
-      <span style="font-size: 16px; line-height: 1.6;">{{claim}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -44,7 +44,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Toxicity classification
@@ -52,54 +52,50 @@ annotation_schemes:
     name: toxicity_label
     description: "Is this statement toxic (harmful, stereotyping, prejudiced) or benign (neutral, positive)?"
     labels:
-      - "toxic"
-      - "benign"
-    keyboard_shortcuts:
-      "toxic": "t"
-      "benign": "b"
-    tooltips:
-      "toxic": "The statement expresses negativity, promotes stereotypes, or conveys prejudice toward a demographic group"
-      "benign": "The statement is neutral or positive and does not demean or stereotype any group"
+      - name: "toxic"
+        tooltip: "The statement expresses negativity, promotes stereotypes, or conveys prejudice toward a demographic group"
+        key_value: "t"
+      - name: "benign"
+        tooltip: "The statement is neutral or positive and does not demean or stereotype any group"
+        key_value: "b"
 
   # Step 2: Implicitness level
   - annotation_type: radio
     name: implicitness
     description: "If toxic, how implicit is the hate speech? If benign, select neutral."
     labels:
-      - "explicit"
-      - "implicit"
-      - "borderline"
-      - "neutral"
-    tooltips:
-      "explicit": "Uses overt slurs, direct insults, or clearly hateful language targeting a group"
-      "implicit": "Conveys toxicity through stereotypes, dog whistles, coded language, or subtle framing without overt slurs"
-      "borderline": "Ambiguous -- could be toxic or benign depending on interpretation and context"
-      "neutral": "Not applicable (statement is benign)"
+      - name: "explicit"
+        tooltip: "Uses overt slurs, direct insults, or clearly hateful language targeting a group"
+      - name: "implicit"
+        tooltip: "Conveys toxicity through stereotypes, dog whistles, coded language, or subtle framing without overt slurs"
+      - name: "borderline"
+        tooltip: "Ambiguous -- could be toxic or benign depending on interpretation and context"
+      - name: "neutral"
+        tooltip: "Not applicable (statement is benign)"
 
   # Step 3: Target group identification
   - annotation_type: radio
     name: target_group
     description: "Which demographic group is targeted by the statement (if any)?"
     labels:
-      - "racial-minority"
-      - "religious-group"
-      - "gender-identity"
-      - "sexual-orientation"
-      - "disability"
-      - "nationality"
-      - "political-group"
-      - "other"
-      - "none"
-    tooltips:
-      "racial-minority": "Statement targets a racial or ethnic minority group"
-      "religious-group": "Statement targets a religious group"
-      "gender-identity": "Statement targets based on gender identity or expression"
-      "sexual-orientation": "Statement targets based on sexual orientation"
-      "disability": "Statement targets people with disabilities"
-      "nationality": "Statement targets based on nationality or immigration status"
-      "political-group": "Statement targets a political group or affiliation"
-      "other": "Statement targets a group not listed above"
-      "none": "No group is targeted (benign statement)"
+      - name: "racial-minority"
+        tooltip: "Statement targets a racial or ethnic minority group"
+      - name: "religious-group"
+        tooltip: "Statement targets a religious group"
+      - name: "gender-identity"
+        tooltip: "Statement targets based on gender identity or expression"
+      - name: "sexual-orientation"
+        tooltip: "Statement targets based on sexual orientation"
+      - name: "disability"
+        tooltip: "Statement targets people with disabilities"
+      - name: "nationality"
+        tooltip: "Statement targets based on nationality or immigration status"
+      - name: "political-group"
+        tooltip: "Statement targets a political group or affiliation"
+      - name: "other"
+        tooltip: "Statement targets a group not listed above"
+      - name: "none"
+        tooltip: "No group is targeted (benign statement)"
 
   # Step 4: Explanation
   - annotation_type: text
@@ -119,21 +115,7 @@ annotation_instructions: |
   - Consider how the statement might affect members of the referenced group.
   - Some statements are intentionally adversarial and difficult to classify.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; font-size: 13px; color: #92400e;">
-      <strong>Content Warning:</strong> This task may contain offensive or hateful language for research purposes.
-    </div>
-    <div style="font-size: 16px; line-height: 1.7; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
-      {{text}}
-    </div>
-    <div style="margin-top: 10px; font-size: 13px; color: #6b7280;">
-      <em>Generation method: {{generation_method}} | Target category: {{target_demographic_category}}</em>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

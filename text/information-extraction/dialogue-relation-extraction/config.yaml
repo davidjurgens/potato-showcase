@@ -37,7 +37,7 @@ item_properties:
   text_key: "dialogue"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Mark entities
@@ -45,63 +45,55 @@ annotation_schemes:
     name: entities
     description: "Highlight all person and organization entities"
     labels:
-      - "Person"
-      - "Organization"
-    label_colors:
-      "Person": "#3b82f6"
-      "Organization": "#22c55e"
-    tooltips:
-      "Person": "Names of people, including nicknames and references"
-      "Organization": "Companies, institutions, groups"
-    allow_overlapping: false
+      - name: "Person"
+        tooltip: "Names of people, including nicknames and references"
+        color: "#3b82f6"
+      - name: "Organization"
+        tooltip: "Companies, institutions, groups"
+        color: "#22c55e"
 
   # Step 2: Relation type
   - annotation_type: radio
     name: relation_type
     description: "What is the relationship between the two most recently marked entities?"
     labels:
-      - "per:spouse"
-      - "per:children"
-      - "per:parents"
-      - "per:siblings"
-      - "per:friends"
-      - "per:colleagues"
-      - "per:employee_of"
-      - "per:boss"
-      - "per:roommate"
-      - "per:neighbor"
-      - "per:schools_attended"
-      - "Other relation"
-      - "No relation"
-    tooltips:
-      "per:spouse": "Married or romantic partners"
-      "per:children": "Parent-child relationship (first entity is parent)"
-      "per:parents": "Parent-child relationship (first entity is child)"
-      "per:siblings": "Brothers, sisters"
-      "per:friends": "Friends"
-      "per:colleagues": "Work together"
-      "per:employee_of": "Works for (person-organization)"
-      "per:boss": "Manager/supervisor relationship"
-      "per:roommate": "Live together"
-      "per:neighbor": "Live near each other"
-      "per:schools_attended": "Person attended school/university"
-      "Other relation": "Another type of relationship"
-      "No relation": "No clear relationship between entities"
+      - name: "per:spouse"
+        tooltip: "Married or romantic partners"
+      - name: "per:children"
+        tooltip: "Parent-child relationship (first entity is parent)"
+      - name: "per:parents"
+        tooltip: "Parent-child relationship (first entity is child)"
+      - name: "per:siblings"
+        tooltip: "Brothers, sisters"
+      - name: "per:friends"
+        tooltip: "Friends"
+      - name: "per:colleagues"
+        tooltip: "Work together"
+      - name: "per:employee_of"
+        tooltip: "Works for (person-organization)"
+      - name: "per:boss"
+        tooltip: "Manager/supervisor relationship"
+      - name: "per:roommate"
+        tooltip: "Live together"
+      - name: "per:neighbor"
+        tooltip: "Live near each other"
+      - name: "per:schools_attended"
+        tooltip: "Person attended school/university"
+      - name: "Other relation"
+        tooltip: "Another type of relationship"
+      - name: "No relation"
+        tooltip: "No clear relationship between entities"
 
   # Step 3: Mark evidence
   - annotation_type: span
     name: evidence
     description: "Highlight the text that supports this relation"
     labels:
-      - "Evidence"
-    label_colors:
-      "Evidence": "#f59e0b"
-    tooltips:
-      "Evidence": "Text that indicates or proves the relationship"
-    allow_overlapping: true
+      - name: "Evidence"
+        tooltip: "Text that indicates or proves the relationship"
+        color: "#f59e0b"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

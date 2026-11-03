@@ -31,7 +31,7 @@ item_properties:
   text_key: "headline"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Emotion classification
@@ -39,36 +39,33 @@ annotation_schemes:
     name: emotion
     description: "What is the primary emotion in this headline?"
     labels:
-      - "Joy"
-      - "Sadness"
-      - "Fear"
-      - "Anger"
-      - "Positive Surprise"
-      - "Negative Surprise"
-      - "Disgust"
-      - "Trust"
-      - "Positive Anticipation"
-      - "Negative Anticipation"
-      - "No emotion"
-    tooltips:
-      "Joy": "Happiness, delight, celebration"
-      "Sadness": "Grief, sorrow, disappointment"
-      "Fear": "Anxiety, worry, terror"
-      "Anger": "Frustration, outrage, annoyance"
-      "Positive Surprise": "Pleasant amazement, good news"
-      "Negative Surprise": "Shock, disbelief at bad news"
-      "Disgust": "Revulsion, disapproval"
-      "Trust": "Confidence, faith, security"
-      "Positive Anticipation": "Hope, excitement for future"
-      "Negative Anticipation": "Dread, pessimism"
-      "No emotion": "Neutral, factual headline"
+      - name: "Joy"
+        tooltip: "Happiness, delight, celebration"
+      - name: "Sadness"
+        tooltip: "Grief, sorrow, disappointment"
+      - name: "Fear"
+        tooltip: "Anxiety, worry, terror"
+      - name: "Anger"
+        tooltip: "Frustration, outrage, annoyance"
+      - name: "Positive Surprise"
+        tooltip: "Pleasant amazement, good news"
+      - name: "Negative Surprise"
+        tooltip: "Shock, disbelief at bad news"
+      - name: "Disgust"
+        tooltip: "Revulsion, disapproval"
+      - name: "Trust"
+        tooltip: "Confidence, faith, security"
+      - name: "Positive Anticipation"
+        tooltip: "Hope, excitement for future"
+      - name: "Negative Anticipation"
+        tooltip: "Dread, pessimism"
+      - name: "No emotion"
+        tooltip: "Neutral, factual headline"
 
   # Step 2: Emotion intensity
   - annotation_type: likert
     name: intensity
     description: "How intense is the emotion?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very weak"
       2: "Weak"
@@ -81,42 +78,34 @@ annotation_schemes:
     name: emotion_cue
     description: "Highlight words that signal the emotion (if any)"
     labels:
-      - "Emotion Cue"
-    label_colors:
-      "Emotion Cue": "#ef4444"
-    tooltips:
-      "Emotion Cue": "Words or phrases that indicate the emotion"
-    allow_overlapping: false
+      - name: "Emotion Cue"
+        tooltip: "Words or phrases that indicate the emotion"
+        color: "#ef4444"
 
   # Step 4: Mark cause
   - annotation_type: span
     name: cause
     description: "Highlight what CAUSED the emotion (if present)"
     labels:
-      - "Cause"
-    label_colors:
-      "Cause": "#3b82f6"
-    tooltips:
-      "Cause": "The event or entity that caused the emotion"
-    allow_overlapping: false
+      - name: "Cause"
+        tooltip: "The event or entity that caused the emotion"
+        color: "#3b82f6"
 
   # Step 5: Reader vs writer emotion
   - annotation_type: radio
     name: perspective
     description: "Whose emotion is this primarily?"
     labels:
-      - "Writer/Subject's emotion"
-      - "Intended reader reaction"
-      - "Both"
-      - "Unclear"
-    tooltips:
-      "Writer/Subject's emotion": "The emotion of people in the story"
-      "Intended reader reaction": "The emotion the headline is meant to evoke in readers"
-      "Both": "Both writer and reader perspective"
-      "Unclear": "Cannot determine the perspective"
+      - name: "Writer/Subject's emotion"
+        tooltip: "The emotion of people in the story"
+      - name: "Intended reader reaction"
+        tooltip: "The emotion the headline is meant to evoke in readers"
+      - name: "Both"
+        tooltip: "Both writer and reader perspective"
+      - name: "Unclear"
+        tooltip: "Cannot determine the perspective"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

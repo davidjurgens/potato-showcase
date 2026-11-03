@@ -30,27 +30,24 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: correctness
     description: "Is the model response correct for this task?"
     labels:
-      - "Correct"
-      - "Partially Correct"
-      - "Incorrect"
-    keyboard_shortcuts:
-      "Correct": "1"
-      "Partially Correct": "2"
-      "Incorrect": "3"
-    tooltips:
-      "Correct": "The model response is fully accurate and complete"
-      "Partially Correct": "Some aspects are right but the response is incomplete or contains minor errors"
-      "Incorrect": "The model response is wrong or fundamentally flawed"
+      - name: "Correct"
+        tooltip: "The model response is fully accurate and complete"
+        key_value: "1"
+      - name: "Partially Correct"
+        tooltip: "Some aspects are right but the response is incomplete or contains minor errors"
+        key_value: "2"
+      - name: "Incorrect"
+        tooltip: "The model response is wrong or fundamentally flawed"
+        key_value: "3"
 
   - annotation_type: text
     name: reasoning
@@ -72,24 +69,7 @@ annotation_instructions: |
 
   Task categories include logical reasoning, language understanding, mathematics, common sense, and more.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f5f3ff; border: 1px solid #c4b5fd; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #6d28d9;">Task Category:</strong>
-      <span style="font-size: 14px; background: #ede9fe; padding: 2px 8px; border-radius: 4px;">{{task_category}}</span>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Task Prompt:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Model Response:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{model_response}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

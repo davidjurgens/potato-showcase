@@ -1119,7 +1119,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AgentBoard Progress Scoring",
    "config": "agentic/agentboard-progress-scoring/config.yaml"
   },
@@ -1174,7 +1174,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AgentRewardBench Trajectory Scoring",
    "config": "agentic/agentrewardbench-trajectory-scoring/config.yaml"
   },
@@ -1227,7 +1227,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "AITW Mobile Trajectory Review",
    "config": "agentic/aitw-mobile-trajectory-review/config.yaml"
   },
@@ -1287,7 +1287,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AndroidWorld Mobile Agent Evaluation",
    "config": "agentic/androidworld-mobile-agent-eval/config.yaml"
   },
@@ -1340,7 +1340,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "API-Bank Tool Call Review",
    "config": "agentic/apibank-tool-call-review/config.yaml"
   },
@@ -1396,7 +1396,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "BigCodeBench Human Baseline Evaluation",
    "config": "agentic/bigcodebench-human-baseline/config.yaml"
   },
@@ -1449,7 +1449,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CodePRM Code Process Reward",
    "config": "agentic/codeprm-code-process-reward/config.yaml"
   },
@@ -1504,7 +1504,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CodeUltraFeedback Code Preference",
    "config": "agentic/codeultrafeedback-code-preference/config.yaml"
   },
@@ -1559,7 +1559,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DevBench Repository Evaluation",
    "config": "agentic/devbench-repo-eval/config.yaml"
   },
@@ -1616,7 +1616,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MAST Failure Taxonomy",
    "config": "agentic/mast-failure-taxonomy/config.yaml"
   },
@@ -1675,7 +1675,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Mind2Web Web Agent Task Annotation",
    "config": "agentic/mind2web-web-agent-tasks/config.yaml"
   },
@@ -1726,7 +1726,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MultiAgentBench Collaboration Scorecard",
    "config": "agentic/multiagentbench-collaboration-scorecard/config.yaml"
   },
@@ -1788,7 +1788,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "OSWorld Desktop Agent Evaluation",
    "config": "agentic/osworld-desktop-agent-eval/config.yaml"
   },
@@ -1842,7 +1842,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "PRM800K Step-by-Step Verification",
    "config": "agentic/prm800k-step-verification/config.yaml"
   },
@@ -1894,7 +1894,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "ProcessBench Earliest-Error Identification",
    "config": "agentic/processbench-math-error-steps/config.yaml"
   },
@@ -1949,7 +1949,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "R-Judge Agent Safety Evaluation",
    "config": "agentic/r-judge-agent-safety/config.yaml"
   },
@@ -2007,7 +2007,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RefactorBench Multi-File Evaluation",
    "config": "agentic/refactorbench-multi-file-eval/config.yaml"
   },
@@ -2063,7 +2063,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SWE-PRM Coding Process Reward",
    "config": "agentic/swe-prm-coding-process-reward/config.yaml"
   },
@@ -2120,7 +2120,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SWE-bench Code Agent Evaluation",
    "config": "agentic/swebench-code-agent-eval/config.yaml"
   },
@@ -2178,7 +2178,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SWE-Bench+ Patch Screening",
    "config": "agentic/swebench-plus-patch-screening/config.yaml"
   },
@@ -2232,7 +2232,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SWE-bench Verified Issue Validation",
    "config": "agentic/swebench-verified-validation/config.yaml"
   },
@@ -2291,7 +2291,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "tau-bench Agent Evaluation",
    "config": "agentic/tau-bench-agent-eval/config.yaml"
   },
@@ -2347,7 +2347,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "TrajEval Staged Evaluation",
    "config": "agentic/trajeval-staged-evaluation/config.yaml"
   },
@@ -2407,7 +2407,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "VisualWebArena Visual Agent Evaluation",
    "config": "agentic/visualwebarena-visual-agent-eval/config.yaml"
   },
@@ -2464,7 +2464,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "WebArena Web Agent Evaluation",
    "config": "agentic/webarena-web-agent-eval/config.yaml"
   },
@@ -2517,7 +2517,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Who&When Multi-Agent Failure Attribution",
    "config": "agentic/whowhen-failure-attribution/config.yaml"
   },
@@ -2631,7 +2631,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "AudioHate: Explainable Audio Hate Speech Detection",
    "config": "audio/audiohate-speech-detection/config.yaml"
   },
@@ -2686,7 +2686,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "Clotho Audio Captioning",
    "config": "audio/clotho-audio-captioning/config.yaml"
   },
@@ -2746,7 +2746,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CoVoST 2 - Speech Translation Evaluation",
    "config": "audio/covost-speech-translation/config.yaml"
   },
@@ -2802,7 +2802,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DISPLACE 2024: Speaker and Language Diarization",
    "config": "audio/displace-speaker-diarization/config.yaml"
   },
@@ -2863,7 +2863,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DoReCo Language Documentation Annotation",
    "config": "audio/doreco-language-documentation/config.yaml"
   },
@@ -2917,7 +2917,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "EmoBox: Multilingual Speech Emotion Recognition",
    "config": "audio/emobox-multilingual-speech-emotion/config.yaml"
   },
@@ -3028,7 +3028,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "LibriSpeech: Audio Transcription and Quality Rating",
    "config": "audio/librispeech-transcription/config.yaml"
   },
@@ -3089,7 +3089,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Miami Bangor Code-Switching Annotation",
    "config": "audio/miami-code-switching/config.yaml"
   },
@@ -3198,7 +3198,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "PodcastFillers Disfluency Tagging",
    "config": "audio/podcastfillers-disfluency-tagging/config.yaml"
   },
@@ -3313,7 +3313,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Speech Accent Classification",
    "config": "audio/speech-accent-classification/config.yaml"
   },
@@ -3366,7 +3366,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Speech Commands - Keyword Recognition",
    "config": "audio/speech-commands-recognition/config.yaml"
   },
@@ -3427,7 +3427,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SPoRC Podcast Speaker-Role and Turn Annotation",
    "config": "audio/sporc-podcast-turn-annotation/config.yaml"
   },
@@ -3488,7 +3488,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ToBI Prosodic Annotation",
    "config": "audio/tobi-prosody-annotation/config.yaml"
   },
@@ -3541,7 +3541,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "VoiceMOS Challenge 2024: Speech Quality Assessment",
    "config": "audio/voicemos-quality-assessment/config.yaml"
   },
@@ -3593,7 +3593,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "WavCaps: Audio Captioning",
    "config": "audio/wavcaps-audio-captioning/config.yaml"
   },
@@ -3652,7 +3652,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AlpacaEval Instruction Preference Evaluation",
    "config": "evaluation/alpacaeval-instruction-eval/config.yaml"
   },
@@ -3706,7 +3706,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Arena Hard Auto - LLM Pairwise Evaluation",
    "config": "evaluation/arena-hard-auto/config.yaml"
   },
@@ -3763,7 +3763,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "BIG-Bench Task Evaluation",
    "config": "evaluation/big-bench-task-eval/config.yaml"
   },
@@ -3817,7 +3817,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Chatbot Arena: Pairwise Comparison with BWS",
    "config": "evaluation/chatbot-arena-pairwise-bws/config.yaml"
   },
@@ -3874,7 +3874,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Do-Not-Answer Safety Evaluation",
    "config": "evaluation/donotanswer-safety-eval/config.yaml"
   },
@@ -3933,7 +3933,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ESA: Error Span Annotation for MT",
    "config": "evaluation/esa-mt-error-spans/config.yaml"
   },
@@ -3988,7 +3988,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "FLASK Skill-based Rubric Evaluation",
    "config": "evaluation/flask-skill-rubric-evaluation/config.yaml"
   },
@@ -4044,7 +4044,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Godspeed Questionnaire: AI Assistant Perception",
    "config": "evaluation/godspeed-agent-perception/config.yaml"
   },
@@ -4102,7 +4102,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "GPQA - Graduate-Level Expert QA Evaluation",
    "config": "evaluation/gpqa-expert-qa/config.yaml"
   },
@@ -4156,7 +4156,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HELM - Model Card Display and Evaluation",
    "config": "evaluation/helm-model-card-display/config.yaml"
   },
@@ -4213,7 +4213,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HumanEval Code Correctness Evaluation",
    "config": "evaluation/humaneval-code-correctness/config.yaml"
   },
@@ -4271,7 +4271,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "IFEval Instruction-Following Evaluation",
    "config": "evaluation/ifeval-instruction-following/config.yaml"
   },
@@ -4381,7 +4381,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "LongEval Faithfulness Evaluation",
    "config": "evaluation/longeval-faithfulness/config.yaml"
   },
@@ -4486,7 +4486,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MMLU Knowledge Evaluation",
    "config": "evaluation/mmlu-knowledge-eval/config.yaml"
   },
@@ -4539,7 +4539,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MQM Machine Translation Error Annotation",
    "config": "evaluation/mqm-mt-error-annotation/config.yaml"
   },
@@ -4595,7 +4595,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MT-Bench Judge Consistency Evaluation",
    "config": "evaluation/mt-bench-judge-consistency/config.yaml"
   },
@@ -4650,7 +4650,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MT-Bench LLM Evaluation",
    "config": "evaluation/mtbench-llm-evaluation/config.yaml"
   },
@@ -4706,7 +4706,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Prometheus Rubric-based Evaluation",
    "config": "evaluation/prometheus-rubric-evaluation/config.yaml"
   },
@@ -4812,7 +4812,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RewardBench Reward Model Evaluation",
    "config": "evaluation/rewardbench-reward-eval/config.yaml"
   },
@@ -4868,7 +4868,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SORRY-Bench Refusal Evaluation",
    "config": "evaluation/sorrybench-refusal-eval/config.yaml"
   },
@@ -5029,7 +5029,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "WildBench LLM Evaluation",
    "config": "evaluation/wildbench-llm-eval/config.yaml"
   },
@@ -5080,7 +5080,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "WMT15 Relative Ranking of Machine Translations",
    "config": "evaluation/wmt15-relative-ranking/config.yaml"
   },
@@ -5826,7 +5826,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FLAIR Land Cover Classification",
    "config": "image/flair-aerial-land-use/config.yaml"
   },
@@ -5882,7 +5882,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "T2I-CompBench Text-to-Image Evaluation",
    "config": "image/generation-eval/t2i-compbench/config.yaml"
   },
@@ -5936,7 +5936,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Human Keypoint Annotation",
    "config": "image/human-pose/vitpose-keypoint-annotation/config.yaml"
   },
@@ -5994,7 +5994,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Camelyon17 - Pathology Metastasis Detection",
    "config": "image/medical/camelyon-pathology/config.yaml"
   },
@@ -6931,7 +6931,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "TextVQA - Reading Text in Images",
    "config": "image/visual-qa/textvqa-reading-in-images/config.yaml"
   },
@@ -6984,7 +6984,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "VQA v2.0 - Visual Question Answering",
    "config": "image/visual-qa/vqav2-visual-question-answering/config.yaml"
   },
@@ -7041,7 +7041,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "WTW Wired Table Structure Annotation",
    "config": "image/wtw-table-structure-annotation/config.yaml"
   },
@@ -7099,7 +7099,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "xBD Building Damage Assessment",
    "config": "image/xbd-building-damage/config.yaml"
   },
@@ -7160,7 +7160,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CHART-Infographics: Chart Analysis",
    "config": "multimodal/chartinfo-chart-analysis/config.yaml"
   },
@@ -7217,7 +7217,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "HatReD: Hateful Meme Detection",
    "config": "multimodal/hatred-hateful-memes/config.yaml"
   },
@@ -7334,7 +7334,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MMBench Multimodal Evaluation",
    "config": "multimodal/mmbench-multimodal-eval/config.yaml"
   },
@@ -7390,7 +7390,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MMMU: Multimodal Understanding",
    "config": "multimodal/mmmu-multimodal-understanding/config.yaml"
   },
@@ -7449,7 +7449,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MOCHEG: Multimodal Fact-Checking",
    "config": "multimodal/mocheg-multimodal-factcheck/config.yaml"
   },
@@ -7510,7 +7510,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RT-2 - Robotic Action Annotation",
    "config": "multimodal/rt2-robotic-action-annotation/config.yaml"
   },
@@ -7571,7 +7571,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SayCan: Robot Task Planning Evaluation",
    "config": "multimodal/saycan-robot-planning/config.yaml"
   },
@@ -7628,7 +7628,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ScienceQA Multimodal Reasoning",
    "config": "multimodal/scienceqa-multimodal-reasoning/config.yaml"
   },
@@ -7686,7 +7686,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SODA Social Dialogue Evaluation",
    "config": "multimodal/soda-eval-social-dialogue/config.yaml"
   },
@@ -7744,7 +7744,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AlpacaFarm Preference Simulation",
    "config": "preference-learning/alpacafarm-simulation/config.yaml"
   },
@@ -7801,7 +7801,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "BeaverTails Safety Preference",
    "config": "preference-learning/beavertails-safety-preference/config.yaml"
   },
@@ -7858,7 +7858,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Constitutional AI Harmlessness Evaluation",
    "config": "preference-learning/constitutional-ai-harmlessness/config.yaml"
   },
@@ -7915,7 +7915,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DPO Preference Data Collection",
    "config": "preference-learning/dpo-preference-data/config.yaml"
   },
@@ -7970,7 +7970,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HelpSteer Multi-Attribute Rating",
    "config": "preference-learning/helpsteer-multiattribute-rating/config.yaml"
   },
@@ -8024,7 +8024,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HH-RLHF Pairwise Preference",
    "config": "preference-learning/hh-rlhf-pairwise-preference/config.yaml"
   },
@@ -8083,7 +8083,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "InstructGPT Instruction Following",
    "config": "preference-learning/instructgpt-preference/config.yaml"
   },
@@ -8138,7 +8138,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MMLU-Pro: Tiered Multi-Subject Evaluation",
    "config": "preference-learning/mmlu-pro-tiered-eval/config.yaml"
   },
@@ -8201,7 +8201,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "OpenAssistant Conversation Quality",
    "config": "preference-learning/oasst-conversation-quality/config.yaml"
   },
@@ -8259,7 +8259,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Pairwise Preference with Rationale",
    "config": "preference-learning/pairwise-preference-rationale/config.yaml"
   },
@@ -8317,7 +8317,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Red Team Adversarial Evaluation",
    "config": "preference-learning/redteam-adversarial-eval/config.yaml"
   },
@@ -8373,7 +8373,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RewardBench Reward Model Evaluation",
    "config": "preference-learning/rewardbench-reward-model-eval/config.yaml"
   },
@@ -8435,7 +8435,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SafeRLHF Dual-Dimension Preference",
    "config": "preference-learning/saferlhf-dual-preference/config.yaml"
   },
@@ -8488,7 +8488,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SPIN Self-Play Preference Annotation",
    "config": "preference-learning/spin-self-play/config.yaml"
   },
@@ -8547,7 +8547,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Summary Preference Comparison",
    "config": "preference-learning/summary-preference-comparison/config.yaml"
   },
@@ -8603,7 +8603,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "UltraFeedback Multi-Aspect Rating",
    "config": "preference-learning/ultrafeedback-multiaspect/config.yaml"
   },
@@ -8665,7 +8665,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "UltraFeedback Rubric Evaluation",
    "config": "preference-learning/ultrafeedback-rubric-evaluation/config.yaml"
   },
@@ -8721,7 +8721,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "WebGPT Answer Comparison",
    "config": "preference-learning/webgpt-comparison/config.yaml"
   },
@@ -8779,7 +8779,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DDI Extraction from Biomedical Texts",
    "config": "semeval/2013/task09-drug-drug-interactions/config.yaml"
   },
@@ -8836,7 +8836,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Original ABSA - Aspect-Based Sentiment Analysis",
    "config": "semeval/2014/task04-absa-original/config.yaml"
   },
@@ -8893,7 +8893,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "TimeLine - Cross-Document Event Ordering",
    "config": "semeval/2015/task04-timeline-event-ordering/config.yaml"
   },
@@ -8951,7 +8951,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Clinical Text Analysis - Disorder Identification",
    "config": "semeval/2015/task14-clinical-text-analysis/config.yaml"
   },
@@ -9008,7 +9008,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Interpretable Semantic Textual Similarity",
    "config": "semeval/2016/task02-interpretable-sts/config.yaml"
   },
@@ -9066,7 +9066,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Aspect-Based Sentiment Analysis",
    "config": "semeval/2016/task05-aspect-sentiment/config.yaml"
   },
@@ -9120,7 +9120,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Detecting Stance in Tweets",
    "config": "semeval/2016/task06-stance-detection/config.yaml"
   },
@@ -9174,7 +9174,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Sentiment Intensity (Best-Worst Scaling)",
    "config": "semeval/2016/task07-sentiment-intensity/config.yaml"
   },
@@ -9228,7 +9228,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Detecting Minimal Semantic Units (DiMSUM)",
    "config": "semeval/2016/task10-minimal-semantic-units/config.yaml"
   },
@@ -9282,7 +9282,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Complex Word Identification",
    "config": "semeval/2016/task11-complex-word-identification/config.yaml"
   },
@@ -9339,7 +9339,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Clinical TempEval - Temporal Extraction",
    "config": "semeval/2016/task12-clinical-tempeval/config.yaml"
   },
@@ -9394,7 +9394,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Semantic Word Similarity",
    "config": "semeval/2017/task02-word-similarity/config.yaml"
   },
@@ -9446,7 +9446,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Community Question Answering",
    "config": "semeval/2017/task03-community-qa/config.yaml"
   },
@@ -9503,7 +9503,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Fine-Grained Financial Sentiment Analysis",
    "config": "semeval/2017/task05-financial-sentiment/config.yaml"
   },
@@ -9557,7 +9557,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "#HashtagWars - Humor Rating",
    "config": "semeval/2017/task06-hashtagwars-humor/config.yaml"
   },
@@ -9614,7 +9614,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Detection and Interpretation of English Puns",
    "config": "semeval/2017/task07-pun-detection/config.yaml"
   },
@@ -9668,7 +9668,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Emoji Prediction",
    "config": "semeval/2018/task02-emoji-prediction/config.yaml"
   },
@@ -9722,7 +9722,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Irony Detection in English Tweets",
    "config": "semeval/2018/task03-irony-detection/config.yaml"
   },
@@ -9779,7 +9779,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Character Identification on Multiparty Dialogues",
    "config": "semeval/2018/task04-character-identification/config.yaml"
   },
@@ -9836,7 +9836,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Counting Events and Participants in News",
    "config": "semeval/2018/task05-event-counting/config.yaml"
   },
@@ -9893,7 +9893,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Parsing Time Normalizations",
    "config": "semeval/2018/task06-time-normalization/config.yaml"
   },
@@ -9949,7 +9949,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Semantic Relation Extraction in Scientific Papers",
    "config": "semeval/2018/task07-scientific-relations/config.yaml"
   },
@@ -10009,7 +10009,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SecureNLP - Malware Report Semantic Extraction",
    "config": "semeval/2018/task08-cybersecurity-ner/config.yaml"
   },
@@ -10066,7 +10066,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Hypernym Discovery",
    "config": "semeval/2018/task09-hypernym-discovery/config.yaml"
   },
@@ -10119,7 +10119,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Capturing Discriminative Attributes",
    "config": "semeval/2018/task10-discriminative-attributes/config.yaml"
   },
@@ -10176,7 +10176,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Machine Comprehension Using Commonsense Knowledge",
    "config": "semeval/2018/task11-commonsense-comprehension/config.yaml"
   },
@@ -10230,7 +10230,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "EmoContext - Contextual Emotion Detection",
    "config": "semeval/2019/task03-emocontext/config.yaml"
   },
@@ -10284,7 +10284,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Hyperpartisan News Detection",
    "config": "semeval/2019/task04-hyperpartisan-news/config.yaml"
   },
@@ -10341,7 +10341,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HatEval - Hate Speech Detection",
    "config": "semeval/2019/task05-hateval/config.yaml"
   },
@@ -10395,7 +10395,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Fact-Checking in Community QA Forums",
    "config": "semeval/2019/task08-fact-checking-cqa/config.yaml"
   },
@@ -10448,7 +10448,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Suggestion Mining from Online Reviews",
    "config": "semeval/2019/task09-suggestion-mining/config.yaml"
   },
@@ -10504,7 +10504,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Math Question Answering",
    "config": "semeval/2019/task10-math-qa/config.yaml"
   },
@@ -10562,7 +10562,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Toponym Resolution in Scientific Papers",
    "config": "semeval/2019/task12-toponym-resolution/config.yaml"
   },
@@ -10614,7 +10614,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Predicting Multilingual and Cross-Lingual Lexical Entailment",
    "config": "semeval/2020/task02-lexical-entailment/config.yaml"
   },
@@ -10669,7 +10669,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Graded Word Similarity in Context",
    "config": "semeval/2020/task03-graded-word-similarity/config.yaml"
   },
@@ -10724,7 +10724,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Commonsense Validation and Explanation",
    "config": "semeval/2020/task04-commonsense-validation/config.yaml"
   },
@@ -10778,7 +10778,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Counterfactual Detection and Reasoning",
    "config": "semeval/2020/task05-counterfactual/config.yaml"
   },
@@ -10832,7 +10832,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DeftEval - Extracting Definitions from Free Text",
    "config": "semeval/2020/task06-defteval-definitions/config.yaml"
   },
@@ -10888,7 +10888,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Assessing Humor in Edited News Headlines",
    "config": "semeval/2020/task07-humor-headlines/config.yaml"
   },
@@ -10943,7 +10943,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Memotion Analysis - Sentiment and Type Classification of Memes",
    "config": "semeval/2020/task08-memotion-memes/config.yaml"
   },
@@ -10995,7 +10995,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Sentiment Analysis for Code-Mixed Social Media Text",
    "config": "semeval/2020/task09-code-mixed-sentiment/config.yaml"
   },
@@ -11046,7 +11046,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Emphasis Selection for Written Text",
    "config": "semeval/2020/task10-emphasis-selection/config.yaml"
   },
@@ -11099,7 +11099,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Lexical Complexity Prediction",
    "config": "semeval/2021/task01-lexical-complexity/config.yaml"
   },
@@ -11149,7 +11149,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Word-in-Context",
    "config": "semeval/2021/task02-crosslingual-wic/config.yaml"
   },
@@ -11202,7 +11202,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Semantic Role Labeling",
    "config": "semeval/2021/task03-multilingual-srl/config.yaml"
   },
@@ -11252,7 +11252,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ReCAM - Reading Comprehension of Abstract Meaning",
    "config": "semeval/2021/task04-recam-abstract-meaning/config.yaml"
   },
@@ -11307,7 +11307,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Persuasive Techniques in Multimodal Content",
    "config": "semeval/2021/task06-persuasion-multimodal/config.yaml"
   },
@@ -11361,7 +11361,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HaHackathon - Detecting and Rating Humor and Offense",
    "config": "semeval/2021/task07-hahackathon-humor/config.yaml"
   },
@@ -11419,7 +11419,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MeasEval - Counts and Measurements",
    "config": "semeval/2021/task08-measeval/config.yaml"
   },
@@ -11474,7 +11474,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Statement Verification and Evidence Finding with Tables",
    "config": "semeval/2021/task09-verification-tables/config.yaml"
   },
@@ -11529,7 +11529,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "NLPContributionGraph - Structured Extraction of NLP Contributions",
    "config": "semeval/2021/task11-nlpcontributiongraph/config.yaml"
   },
@@ -11585,7 +11585,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CODWOE - Comparing Dictionaries and Word Embeddings",
    "config": "semeval/2022/task01-codwoe/config.yaml"
   },
@@ -11637,7 +11637,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Idiomaticity Detection",
    "config": "semeval/2022/task02-idiomaticity/config.yaml"
   },
@@ -11693,7 +11693,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "PreTENS - Presuppositional Acceptability",
    "config": "semeval/2022/task03-pretens/config.yaml"
   },
@@ -11749,7 +11749,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Patronizing and Condescending Language Detection",
    "config": "semeval/2022/task04-patronizing-language/config.yaml"
   },
@@ -11805,7 +11805,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MAMI - Multimedia Automatic Misogyny Identification",
    "config": "semeval/2022/task05-multimedia-misogyny/config.yaml"
   },
@@ -11863,7 +11863,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "iSarcasmEval - Intended Sarcasm Detection",
    "config": "semeval/2022/task06-isarcasmeval/config.yaml"
   },
@@ -11917,7 +11917,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Plausible Clarifications of Instructions",
    "config": "semeval/2022/task07-plausible-clarifications/config.yaml"
   },
@@ -11975,7 +11975,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Multilingual News Article Similarity",
    "config": "semeval/2022/task08-news-similarity/config.yaml"
   },
@@ -12030,7 +12030,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "R2VQ - Recipe Question Answering",
    "config": "semeval/2022/task09-r2vq-recipe-qa/config.yaml"
   },
@@ -12089,7 +12089,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Symlink - Symbols and Descriptions",
    "config": "semeval/2022/task12-symlink/config.yaml"
   },
@@ -12140,7 +12140,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "V-WSD - Visual Word Sense Disambiguation",
    "config": "semeval/2023/task01-visual-wsd/config.yaml"
   },
@@ -12196,7 +12196,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Detecting Persuasion Techniques in News",
    "config": "semeval/2023/task03-persuasion-news/config.yaml"
   },
@@ -12251,7 +12251,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ValueEval - Human Values behind Arguments",
    "config": "semeval/2023/task04-valueeval/config.yaml"
   },
@@ -12309,7 +12309,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Clickbait Spoiling",
    "config": "semeval/2023/task05-clickbait-spoiling/config.yaml"
   },
@@ -12364,7 +12364,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "LegalEval - Legal Document Analysis",
    "config": "semeval/2023/task06-legaleval/config.yaml"
   },
@@ -12420,7 +12420,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Clinical Trial NLI",
    "config": "semeval/2023/task07-clinical-trial-nli/config.yaml"
   },
@@ -12474,7 +12474,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Causal Medical Claim Identification and PIO Frame Extraction",
    "config": "semeval/2023/task08-causal-medical-claim/config.yaml"
   },
@@ -12527,7 +12527,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Tweet Intimacy Analysis",
    "config": "semeval/2023/task09-tweet-intimacy/config.yaml"
   },
@@ -12583,7 +12583,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Explainable Online Sexism Detection",
    "config": "semeval/2023/task10-explainable-sexism/config.yaml"
   },
@@ -12636,7 +12636,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "AfriSenti - African Language Sentiment",
    "config": "semeval/2023/task12-afrisenti/config.yaml"
   },
@@ -12692,7 +12692,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Semantic Textual Relatedness",
    "config": "semeval/2024/task01-semantic-relatedness/config.yaml"
   },
@@ -12749,7 +12749,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Safe Biomedical NLI",
    "config": "semeval/2024/task02-safe-biomedical-nli/config.yaml"
   },
@@ -12805,7 +12805,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multimodal Emotion Cause Analysis",
    "config": "semeval/2024/task03-multimodal-emotion-cause/config.yaml"
   },
@@ -12862,7 +12862,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Persuasion Techniques in Memes",
    "config": "semeval/2024/task04-persuasion-memes/config.yaml"
   },
@@ -12916,7 +12916,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Argument Reasoning in Civil Procedure",
    "config": "semeval/2024/task05-argument-civil-procedure/config.yaml"
   },
@@ -12979,7 +12979,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "NumEval - Numeral-Aware Language Understanding and Generation",
    "config": "semeval/2024/task07-numeval/config.yaml"
   },
@@ -13032,7 +13032,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Machine-Generated Text Detection",
    "config": "semeval/2024/task08-machine-generated-text/config.yaml"
   },
@@ -13089,7 +13089,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "BRAINTEASER - Commonsense-Defying QA",
    "config": "semeval/2024/task09-brainteaser/config.yaml"
   },
@@ -13145,7 +13145,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Emotion Discovery and Reasoning its Flip",
    "config": "semeval/2024/task10-emotion-flip/config.yaml"
   },
@@ -13203,7 +13203,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AdMIRe - Advancing Multimodal Idiomaticity Representation",
    "config": "semeval/2025/task01-admire-multimodal-idiomaticity/config.yaml"
   },
@@ -13262,7 +13262,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "EA-MT - Entity-Aware Machine Translation",
    "config": "semeval/2025/task02-entity-aware-mt/config.yaml"
   },
@@ -13322,7 +13322,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Unlearning Sensitive Content from LLMs",
    "config": "semeval/2025/task04-unlearning-sensitive-content/config.yaml"
   },
@@ -13378,7 +13378,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "LLMs4Subjects - Subject Tagging for a Technical Library",
    "config": "semeval/2025/task05-llms4subjects/config.yaml"
   },
@@ -13440,7 +13440,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "PromiseEval - Corporate ESG Promise Verification",
    "config": "semeval/2025/task06-promiseeval/config.yaml"
   },
@@ -13496,7 +13496,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual and Crosslingual Fact-Checked Claim Retrieval",
    "config": "semeval/2025/task07-factchecked-claim-retrieval/config.yaml"
   },
@@ -13552,7 +13552,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "QA over Tabular Data",
    "config": "semeval/2025/task08-tabular-qa/config.yaml"
   },
@@ -13610,7 +13610,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Food Hazard Detection",
    "config": "semeval/2025/task09-food-hazard-detection/config.yaml"
   },
@@ -13670,7 +13670,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Characterization and Extraction of Narratives",
    "config": "semeval/2025/task10-narrative-extraction/config.yaml"
   },
@@ -13726,7 +13726,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Text-Based Emotion Detection",
    "config": "semeval/2025/task11-emotion-detection/config.yaml"
   },
@@ -13782,7 +13782,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Ecological Essay Valence & Arousal",
    "config": "semeval/2026/task02-emotion-valence-arousal-dynamics/config.yaml"
   },
@@ -13842,7 +13842,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "DimABSA - Dimensional Aspect Sentiment",
    "config": "semeval/2026/task03-dimabsa/config.yaml"
   },
@@ -13897,7 +13897,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Narrative Story Similarity",
    "config": "semeval/2026/task04-narrative-similarity/config.yaml"
   },
@@ -13949,7 +13949,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "Word-Sense Plausibility in Narratives",
    "config": "semeval/2026/task05-word-sense-plausibility/config.yaml"
   },
@@ -14004,7 +14004,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "CLARITY - Political Question Evasion",
    "config": "semeval/2026/task06-clarity-political-evasion/config.yaml"
   },
@@ -14061,7 +14061,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "BLEnD - Everyday Cultural Knowledge",
    "config": "semeval/2026/task07-blend-cultural-knowledge/config.yaml"
   },
@@ -14121,7 +14121,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MTRAGEval - RAG Response Evaluation",
    "config": "semeval/2026/task08-mtrag-evaluation/config.yaml"
   },
@@ -14179,7 +14179,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "POLAR - Online Polarization",
    "config": "semeval/2026/task09-polar-polarization/config.yaml"
   },
@@ -14234,7 +14234,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "PsyCoMark - Conspiracy Markers",
    "config": "semeval/2026/task10-psycomark-conspiracy/config.yaml"
   },
@@ -14290,7 +14290,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Machine-Generated Code Detection",
    "config": "semeval/2026/task13-machine-generated-code/config.yaml"
   },
@@ -14403,7 +14403,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "LLM Response Preference Collection",
    "config": "templates/comparison/pairwise-preference/config.yaml"
   },
@@ -14518,7 +14518,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Image Classification",
    "config": "templates/image/image-classification/config.yaml"
   },
@@ -15012,7 +15012,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Named Entity Recognition",
    "config": "templates/text/named-entity-recognition/config.yaml"
   },
@@ -15288,7 +15288,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 1,
    "task_name": "Sentiment Analysis",
    "config": "templates/text/sentiment-analysis/config.yaml"
   },
@@ -15340,7 +15340,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Toxicity Detection",
    "config": "templates/text/toxicity-detection/config.yaml"
   },
@@ -15392,7 +15392,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 1,
    "task_name": "Triage Quick Annotation",
    "config": "templates/text/triage-quick-annotation/config.yaml"
   },
@@ -15451,7 +15451,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Argument Quality Assessment",
    "config": "text/argumentation-stance/argument-quality/config.yaml"
   },
@@ -15507,7 +15507,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Argument Reasoning Comprehension",
    "config": "text/argumentation-stance/argument-reasoning/config.yaml"
   },
@@ -15563,7 +15563,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Claim Perspectives",
    "config": "text/argumentation-stance/claim-perspectives/config.yaml"
   },
@@ -15619,7 +15619,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Rumor Stance Detection",
    "config": "text/argumentation-stance/rumor-stance/config.yaml"
   },
@@ -15675,7 +15675,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Stance Detection",
    "config": "text/argumentation-stance/stance-detection/config.yaml"
   },
@@ -15737,7 +15737,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Aya Red-Teaming - Multilingual Harm Annotation",
    "config": "text/bias-toxicity/aya-multilingual-redteaming/config.yaml"
   },
@@ -15796,7 +15796,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Bias Benchmark for QA (BBQ)",
    "config": "text/bias-toxicity/bbq-bias-benchmark/config.yaml"
   },
@@ -15853,7 +15853,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Implicit Hate Speech Detection (ToxiGen)",
    "config": "text/bias-toxicity/toxigen-implicit-hate/config.yaml"
   },
@@ -15911,7 +15911,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Code Review Annotation (CodeReviewer)",
    "config": "text/code-annotation/codereviewer-review/config.yaml"
   },
@@ -15970,7 +15970,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Code Defect Detection (CodeXGLUE)",
    "config": "text/code-annotation/codexglue-defect-detection/config.yaml"
   },
@@ -16027,7 +16027,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Code Generation Evaluation (HumanEval)",
    "config": "text/code-annotation/humaneval-code-generation/config.yaml"
   },
@@ -16088,7 +16088,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "ATOMIC - If-Then Commonsense Inference",
    "config": "text/commonsense-ethics/atomic-if-then-reasoning/config.yaml"
   },
@@ -16143,7 +16143,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Commonsense Inference",
    "config": "text/commonsense-ethics/commonsense-inference/config.yaml"
   },
@@ -16200,7 +16200,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Commonsense QA Explanation",
    "config": "text/commonsense-ethics/commonsense-qa-explanation/config.yaml"
   },
@@ -16257,7 +16257,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Moral Stories Annotation",
    "config": "text/commonsense-ethics/moral-stories/config.yaml"
   },
@@ -16314,7 +16314,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Power and Agency Frames",
    "config": "text/commonsense-ethics/power-agency-frames/config.yaml"
   },
@@ -16371,7 +16371,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Social Chemistry - Social Norms",
    "config": "text/commonsense-ethics/social-chemistry/config.yaml"
   },
@@ -16427,7 +16427,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Conjoint Analysis: Immigrant Admission Preferences",
    "config": "text/computational-social-science/conjoint-candidate-profiles/config.yaml"
   },
@@ -16600,7 +16600,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Human Values in Arguments",
    "config": "text/computational-social-science/human-values-arguments/config.yaml"
   },
@@ -16657,7 +16657,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Media Frames Analysis",
    "config": "text/computational-social-science/media-frames-analysis/config.yaml"
   },
@@ -16711,7 +16711,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Moral Foundations in Tweets",
    "config": "text/computational-social-science/moral-foundations-tweets/config.yaml"
   },
@@ -16767,7 +16767,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "OffensEval - Offensive Language Target Identification",
    "config": "text/computational-social-science/offenseval-target-id/config.yaml"
   },
@@ -16886,7 +16886,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Politeness Transfer Annotation",
    "config": "text/computational-social-science/politeness-annotation/config.yaml"
   },
@@ -16938,7 +16938,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Ruddit: Offensiveness Best-Worst Scaling",
    "config": "text/computational-social-science/ruddit-offensiveness-bws/config.yaml"
   },
@@ -16993,7 +16993,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RumourEval Stance and Verification",
    "config": "text/computational-social-science/rumoureval-verification/config.yaml"
   },
@@ -17104,7 +17104,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Structured Sentiment Analysis",
    "config": "text/computational-social-science/structured-sentiment/config.yaml"
   },
@@ -17160,7 +17160,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CorefUD Multilingual Coreference Resolution",
    "config": "text/coreference/corefud-multilingual-coreference/config.yaml"
   },
@@ -17268,7 +17268,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "LegalCore Legal Event Coreference",
    "config": "text/coreference/legalcore-legal-coreference/config.yaml"
   },
@@ -17324,7 +17324,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MAVEN-ERE Event Coreference and Relations",
    "config": "text/coreference/maven-ere-event-coreference/config.yaml"
   },
@@ -17377,7 +17377,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "OntoNotes: Coreference Resolution",
    "config": "text/coreference/ontonotes-coreference-resolution/config.yaml"
   },
@@ -17431,7 +17431,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Multilingual Reading Comprehension (Belebele)",
    "config": "text/cross-lingual/belebele-reading-comprehension/config.yaml"
   },
@@ -17488,7 +17488,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FLORES - Machine Translation Quality Estimation",
    "config": "text/cross-lingual/flores-mt-quality/config.yaml"
   },
@@ -17542,7 +17542,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "IndicNLP Suite - Multilingual Sentiment Analysis",
    "config": "text/cross-lingual/indicnlp-multilingual-sa/config.yaml"
   },
@@ -17599,7 +17599,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MasakhaNEWS - African News Topic Classification",
    "config": "text/cross-lingual/masakhanews-topic-classification/config.yaml"
   },
@@ -17657,7 +17657,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "NusaX - Indonesian Local Language Sentiment",
    "config": "text/cross-lingual/nusax-indonesian-sentiment/config.yaml"
   },
@@ -17711,7 +17711,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Cross-lingual Causal Commonsense Reasoning (XCOPA)",
    "config": "text/cross-lingual/xcopa-causal-reasoning/config.yaml"
   },
@@ -17764,7 +17764,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "XNLI - Cross-Lingual Natural Language Inference",
    "config": "text/cross-lingual/xnli-cross-lingual-nli/config.yaml"
   },
@@ -17822,7 +17822,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AnnoMI Counselling Dialogue Annotation",
    "config": "text/dialogue/annomi-counseling-dialogue/config.yaml"
   },
@@ -17878,7 +17878,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "ArgSciChat Scientific Argumentation Annotation",
    "config": "text/dialogue/argscichat-scientific-argumentation/config.yaml"
   },
@@ -17935,7 +17935,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Conversation Quality Attributes",
    "config": "text/dialogue/conversation-quality-attributes/config.yaml"
   },
@@ -17991,7 +17991,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "DiaSafety Dialogue Safety Annotation",
    "config": "text/dialogue/diasafety-dialogue-safety/config.yaml"
   },
@@ -18051,7 +18051,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "DICES Conversational AI Safety Evaluation",
    "config": "text/dialogue/dices-diversity-safety/config.yaml"
   },
@@ -18112,7 +18112,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MediTOD Medical Dialogue Annotation",
    "config": "text/dialogue/meditod-medical-dialogue/config.yaml"
   },
@@ -18166,7 +18166,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SWBD-DAMSL Dialogue Act Annotation",
    "config": "text/dialogue/swbd-damsl-dialogue-acts/config.yaml"
   },
@@ -18221,7 +18221,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DISRPT: Discourse Relations",
    "config": "text/discourse/disrpt-discourse-relations/config.yaml"
   },
@@ -18281,7 +18281,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "FLUTE: Figurative Language NLI",
    "config": "text/discourse/flute-figurative-nli/config.yaml"
   },
@@ -18335,7 +18335,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "PDTB 2.0: Discourse Relations Tree Annotation",
    "config": "text/discourse/pdtb-discourse-relations-tree/config.yaml"
   },
@@ -18392,7 +18392,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "TIMELINE: Exhaustive Temporal Relations",
    "config": "text/discourse/timeline-temporal-relations/config.yaml"
   },
@@ -18446,7 +18446,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "BioNLP 2011: Gene Regulation Event Extraction",
    "config": "text/domain-specific/bionlp-gene-regulation-events/config.yaml"
   },
@@ -18500,7 +18500,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ChemProt: Chemical-Protein Interaction Annotation",
    "config": "text/domain-specific/chemprot-chemical-protein/config.yaml"
   },
@@ -18554,7 +18554,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "i2b2 Clinical Named Entity Recognition",
    "config": "text/domain-specific/clinical-ner-i2b2/config.yaml"
   },
@@ -18610,7 +18610,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "LexGLUE - Legal Document Understanding",
    "config": "text/domain-specific/lexglue-legal-understanding/config.yaml"
   },
@@ -18664,7 +18664,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MAUD: Legal Merger Agreement Understanding",
    "config": "text/domain-specific/maud-legal-merger-qa/config.yaml"
   },
@@ -18720,7 +18720,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MedNLI Clinical Inference",
    "config": "text/domain-specific/mednli-clinical-inference/config.yaml"
   },
@@ -18772,7 +18772,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MultiCoNER II: Complex Named Entity Recognition",
    "config": "text/domain-specific/multiconerii-complex-ner/config.yaml"
   },
@@ -18827,7 +18827,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "n2c2 SDOH Extraction from Clinical Notes",
    "config": "text/domain-specific/n2c2-sdoh-extraction/config.yaml"
   },
@@ -18885,7 +18885,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RadQA Answer Extraction",
    "config": "text/domain-specific/radqa-radiology-qa/config.yaml"
   },
@@ -18942,7 +18942,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Automated Essay Scoring",
    "config": "text/education/automated-essay-scoring/config.yaml"
   },
@@ -18997,7 +18997,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "JFLEG Fluency Rewriting",
    "config": "text/education/jfleg-fluency-rewriting/config.yaml"
   },
@@ -19055,7 +19055,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MathDial: Tutoring Dialogue Quality Annotation",
    "config": "text/education/mathdial-tutoring-dialogue/config.yaml"
   },
@@ -19112,7 +19112,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Student Essay Discourse Element Classification",
    "config": "text/education/student-essay-discourse/config.yaml"
   },
@@ -19167,7 +19167,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Emotion Cause Extraction",
    "config": "text/emotion-sentiment/emotion-cause-extraction/config.yaml"
   },
@@ -19223,7 +19223,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Empathetic Dialogue Annotation",
    "config": "text/emotion-sentiment/empathetic-dialogues/config.yaml"
   },
@@ -19277,7 +19277,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "GoEmotions: Fine-Grained Emotion Classification",
    "config": "text/emotion-sentiment/goemotions/config.yaml"
   },
@@ -19336,7 +19336,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "News Emotion Roles",
    "config": "text/emotion-sentiment/news-emotion-roles/config.yaml"
   },
@@ -19392,7 +19392,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "NRC Affect Intensity Best-Worst Scaling",
    "config": "text/emotion-sentiment/nrc-affect-intensity-bws/config.yaml"
   },
@@ -19456,7 +19456,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "NRC EmoLex Word-Emotion Association",
    "config": "text/emotion-sentiment/nrc-emolex-word-emotion/config.yaml"
   },
@@ -19516,7 +19516,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "NRC-VAD Best-Worst Scaling",
    "config": "text/emotion-sentiment/nrc-vad-bws/config.yaml"
   },
@@ -19566,7 +19566,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "RuSentiment: Social Media Sentiment Classification",
    "config": "text/emotion-sentiment/rusentiment/config.yaml"
   },
@@ -19624,7 +19624,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "Sentiment Composition (BWS)",
    "config": "text/emotion-sentiment/scl-sentiment-composition-bws/config.yaml"
   },
@@ -19678,7 +19678,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Emotion Detection",
    "config": "text/emotion-sentiment/semeval-emotion-detection/config.yaml"
   },
@@ -19732,7 +19732,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SemEval-2017 Task 4 - Sentiment Multi-Rating",
    "config": "text/emotion-sentiment/semeval-sentiment-multirate/config.yaml"
   },
@@ -19791,7 +19791,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "Tweet Emotion Intensity (BWS)",
    "config": "text/emotion-sentiment/tweet-emotion-intensity-bws/config.yaml"
   },
@@ -19845,7 +19845,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 5,
    "task_name": "Warmth and Competence - Social Perception",
    "config": "text/emotion-sentiment/warmth-competence-sentences/config.yaml"
   },
@@ -19904,7 +19904,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "Word-Colour Associations",
    "config": "text/emotion-sentiment/word-colour-associations/config.yaml"
   },
@@ -19969,7 +19969,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "Words of Warmth Best-Worst Scaling",
    "config": "text/emotion-sentiment/words-of-warmth-bws/config.yaml"
   },
@@ -20026,7 +20026,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 4,
    "task_name": "WorryWords Anxiety Association (BWS)",
    "config": "text/emotion-sentiment/worrywords-anxiety-bws/config.yaml"
   },
@@ -20085,7 +20085,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Named Entity Disambiguation (AIDA-CoNLL)",
    "config": "text/entity-linking/aida-conll-entity-disambiguation/config.yaml"
   },
@@ -20138,7 +20138,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DWIE Document-Level Entity Linking",
    "config": "text/entity-linking/dwie-document-entity-linking/config.yaml"
   },
@@ -20191,7 +20191,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Entity Linking in Tweets",
    "config": "text/entity-linking/entity-linking-tweets/config.yaml"
   },
@@ -20250,7 +20250,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Biomedical Entity Linking (MedMentions)",
    "config": "text/entity-linking/medmentions-biomedical/config.yaml"
   },
@@ -20311,7 +20311,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "NLI with Explanations",
    "config": "text/explainability/nli-explanation/config.yaml"
   },
@@ -20367,7 +20367,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Rationale Annotation",
    "config": "text/explainability/rationale-annotation/config.yaml"
   },
@@ -20425,7 +20425,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Check-COVID: Fact-Checking",
    "config": "text/fact-verification/check-covid-fact-checking/config.yaml"
   },
@@ -20477,7 +20477,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Citation Needed Detection",
    "config": "text/fact-verification/citation-needed-detection/config.yaml"
   },
@@ -20534,7 +20534,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Clickbait Detection",
    "config": "text/fact-verification/clickbait-detection/config.yaml"
   },
@@ -20592,7 +20592,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Deceptive Review Detection",
    "config": "text/fact-verification/deceptive-review-detection/config.yaml"
   },
@@ -20647,7 +20647,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "FActScore: Atomic Factuality",
    "config": "text/fact-verification/factscore-atomic-factuality/config.yaml"
   },
@@ -20703,7 +20703,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FAVA: Hallucination Span Annotation",
    "config": "text/fact-verification/fava-hallucination-spans/config.yaml"
   },
@@ -20755,7 +20755,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Fine-Grained Propaganda Technique Detection",
    "config": "text/fact-verification/propaganda-techniques/config.yaml"
   },
@@ -20813,7 +20813,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Scientific Claim Verification",
    "config": "text/fact-verification/scientific-claim-verification/config.yaml"
   },
@@ -20868,7 +20868,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SHROOM: Hallucination Detection",
    "config": "text/fact-verification/shroom-hallucination-detection/config.yaml"
   },
@@ -20922,7 +20922,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Financial PhraseBank - Sentiment Classification",
    "config": "text/financial/financial-phrasebank-sentiment/config.yaml"
   },
@@ -20979,7 +20979,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "FinBERT: Financial Headline Sentiment Analysis",
    "config": "text/financial/finbert-headline-sentiment/config.yaml"
   },
@@ -21033,7 +21033,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FLARE: Financial Named Entity Recognition",
    "config": "text/financial/flare-financial-ner/config.yaml"
   },
@@ -21093,7 +21093,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "AfriHate - African Hate and Abusive Language",
    "config": "text/hate-speech-moderation/afrihate-abusive-language/config.yaml"
   },
@@ -21151,7 +21151,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Hate Speech Detection",
    "config": "text/hate-speech-moderation/dynamic-hate-speech/config.yaml"
   },
@@ -21208,7 +21208,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "HateXplain: Explainable Hate Speech Detection",
    "config": "text/hate-speech-moderation/hatexplain/config.yaml"
   },
@@ -21264,7 +21264,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Implicit Hate Speech Detection",
    "config": "text/hate-speech-moderation/implicit-hate-speech/config.yaml"
   },
@@ -21322,7 +21322,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Social Bias Frames",
    "config": "text/hate-speech-moderation/social-bias-frames/config.yaml"
   },
@@ -21378,7 +21378,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Toxic Spans Detection",
    "config": "text/hate-speech-moderation/toxic-spans/config.yaml"
   },
@@ -21435,7 +21435,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Chemical-Disease Relation Extraction",
    "config": "text/information-extraction/chemical-disease-relations/config.yaml"
   },
@@ -21548,7 +21548,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Dialogue Relation Extraction",
    "config": "text/information-extraction/dialogue-relation-extraction/config.yaml"
   },
@@ -21603,7 +21603,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Event Argument Extraction",
    "config": "text/information-extraction/event-argument-extraction/config.yaml"
   },
@@ -21659,7 +21659,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "KG-BERT Knowledge Graph Triple Validation",
    "config": "text/information-extraction/kgbert-knowledge-graph/config.yaml"
   },
@@ -21721,7 +21721,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MASSIVE - Intent Classification & Slot Filling",
    "config": "text/information-extraction/massive-intent-slot-filling/config.yaml"
   },
@@ -21780,7 +21780,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Social Determinants of Health (SDOH) Extraction",
    "config": "text/information-extraction/sdoh-extraction/config.yaml"
   },
@@ -21835,7 +21835,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Temporal Relation Annotation",
    "config": "text/information-extraction/temporal-relations/config.yaml"
   },
@@ -21889,7 +21889,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MS MARCO: Passage Relevance Ranking",
    "config": "text/information-retrieval/msmarco-passage-ranking/config.yaml"
   },
@@ -21943,7 +21943,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "TREC Deep Learning Passage Ranking",
    "config": "text/information-retrieval/trec-dl-passage-ranking/config.yaml"
   },
@@ -21999,7 +21999,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Adverse Drug Event Extraction",
    "config": "text/named-entity-recognition/adverse-drug-events/config.yaml"
   },
@@ -22052,7 +22052,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Biomedical Named Entity Recognition",
    "config": "text/named-entity-recognition/biomedical-ner/config.yaml"
   },
@@ -22102,7 +22102,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Complex Named Entity Recognition",
    "config": "text/named-entity-recognition/complex-ner/config.yaml"
   },
@@ -22155,7 +22155,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CoNLL-2003 NER with Triage",
    "config": "text/named-entity-recognition/conll2003-ner-triage/config.yaml"
   },
@@ -22216,7 +22216,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MasakhaNER 2.0 - African Language NER",
    "config": "text/named-entity-recognition/masakhaner-african-ner/config.yaml"
   },
@@ -22272,7 +22272,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "WikiANN - Multilingual NER",
    "config": "text/named-entity-recognition/wikiann-multilingual-ner/config.yaml"
   },
@@ -22326,7 +22326,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "WNUT-2017 - Emerging and Rare Entity Recognition",
    "config": "text/named-entity-recognition/wnut2017-emerging-entities/config.yaml"
   },
@@ -22381,7 +22381,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "ChaosNLI: NLI Label Distributions",
    "config": "text/natural-language-inference/chaosnli-label-distributions/config.yaml"
   },
@@ -22435,7 +22435,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MultiNLI - Multi-Genre Natural Language Inference",
    "config": "text/natural-language-inference/multinli-genre-nli/config.yaml"
   },
@@ -22489,7 +22489,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SNLI - Textual Entailment",
    "config": "text/natural-language-inference/snli-textual-entailment/config.yaml"
   },
@@ -22548,7 +22548,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MasakhaPOS - African POS Tagging",
    "config": "text/parsing/masakhapos-african-pos/config.yaml"
   },
@@ -22611,7 +22611,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Interlinear Glossing",
    "config": "text/parsing/sigmorphon-interlinear-glossing/config.yaml"
   },
@@ -22666,7 +22666,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Universal Dependencies - Dependency Parsing Annotation",
    "config": "text/parsing/ud-dependency-parsing/config.yaml"
   },
@@ -22726,7 +22726,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "Political Discourse Analysis",
    "config": "text/political-media/political-discourse/config.yaml"
   },
@@ -22782,7 +22782,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Natural Questions - Open-Domain Question Answering",
    "config": "text/question-answering/natural-questions-qa/config.yaml"
   },
@@ -22835,7 +22835,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Patient Forum Question Answering",
    "config": "text/question-answering/patient-forum-qa/config.yaml"
   },
@@ -22888,7 +22888,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "TriviaQA - Reading Comprehension",
    "config": "text/question-answering/triviaqa-reading-comprehension/config.yaml"
   },
@@ -22944,7 +22944,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FQuAD - French Extractive QA",
    "config": "text/reading-comprehension/fquad-french-qa/config.yaml"
   },
@@ -23000,7 +23000,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "GermanQuAD - German Extractive QA",
    "config": "text/reading-comprehension/germanquad-german-qa/config.yaml"
   },
@@ -23056,7 +23056,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "KorQuAD - Korean Extractive QA",
    "config": "text/reading-comprehension/korquad-korean-qa/config.yaml"
   },
@@ -23110,7 +23110,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SQuAD - Extractive Question Answering",
    "config": "text/reading-comprehension/squad-extractive-qa/config.yaml"
   },
@@ -23167,7 +23167,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CrossRE: Cross-Domain Relation Extraction",
    "config": "text/relation-extraction/crossre-cross-domain-relations/config.yaml"
   },
@@ -23225,7 +23225,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MultiTACRED: Multilingual Relation Extraction",
    "config": "text/relation-extraction/multitacred-multilingual-relations/config.yaml"
   },
@@ -23281,7 +23281,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RadGraph-XL: Radiology Relation Extraction",
    "config": "text/relation-extraction/radgraph-radiology-relations/config.yaml"
   },
@@ -23336,7 +23336,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "REDFM: Multilingual Relation Extraction",
    "config": "text/relation-extraction/redfm-multilingual-relations/config.yaml"
   },
@@ -23390,7 +23390,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SciER: Scientific Entity and Relation Extraction",
    "config": "text/relation-extraction/scier-scientific-entity-relations/config.yaml"
   },
@@ -23443,7 +23443,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "STS Benchmark - Semantic Textual Similarity",
    "config": "text/semantic-similarity/stsb-sentence-similarity/config.yaml"
   },
@@ -23502,7 +23502,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Structured Fact Verification (FEVEROUS)",
    "config": "text/tabular/feverous-structured-factcheck/config.yaml"
   },
@@ -23559,7 +23559,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Table-Based Fact Verification (TabFact)",
    "config": "text/tabular/tabfact-table-verification/config.yaml"
   },
@@ -23611,7 +23611,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "RCV1: Hierarchical Topic Coding",
    "config": "text/topic-classification/rcv1-hierarchical-topic-coding/config.yaml"
   },
@@ -23665,7 +23665,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SenseRel - Meaning Relations",
    "config": "text/word-sense/senserel-meaning-relations/config.yaml"
   },
@@ -23719,7 +23719,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SemEval-2007 - Word Sense Disambiguation",
    "config": "text/word-sense/wsd-semeval2007/config.yaml"
   },
@@ -23770,7 +23770,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ActivityNet Temporal Localization",
    "config": "video/action-recognition/activitynet-temporal-localization/config.yaml"
   },
@@ -23826,7 +23826,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AVA Atomic Visual Actions",
    "config": "video/action-recognition/ava-atomic-actions/config.yaml"
   },
@@ -23880,7 +23880,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Breakfast Actions Segmentation",
    "config": "video/action-recognition/breakfast-actions/config.yaml"
   },
@@ -23931,7 +23931,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Charades Activity Segmentation",
    "config": "video/action-recognition/charades-activity-segmentation/config.yaml"
   },
@@ -23992,7 +23992,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "EPIC-KITCHENS Egocentric Action Annotation",
    "config": "video/action-recognition/epic-kitchens-egocentric/config.yaml"
   },
@@ -24051,7 +24051,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FineDiving - Procedure-aware Action Quality Assessment",
    "config": "video/action-recognition/finediving-procedure-aqa/config.yaml"
   },
@@ -24109,7 +24109,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FineGym Action Segmentation",
    "config": "video/action-recognition/finegym-action-segments/config.yaml"
   },
@@ -24166,7 +24166,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Fis-V - Figure Skating Video Scoring",
    "config": "video/action-recognition/fisv-figure-skating-scoring/config.yaml"
   },
@@ -24217,7 +24217,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SoccerNet Action Spotting",
    "config": "video/action-recognition/soccernet-action-spotting/config.yaml"
   },
@@ -24268,7 +24268,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "THUMOS14 Action Localization",
    "config": "video/action-recognition/thumos14-action-localization/config.yaml"
   },
@@ -24327,7 +24327,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "AMI Meeting Multi-Tier Annotation",
    "config": "video/ami-meeting-annotation/config.yaml"
   },
@@ -24384,7 +24384,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MovieScenes Scene Detection",
    "config": "video/boundary-detection/moviescenes-detection/config.yaml"
   },
@@ -24437,7 +24437,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Scene Boundary Detection",
    "config": "video/boundary-detection/scene-boundary-detection/config.yaml"
   },
@@ -24488,7 +24488,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Shot Boundary Detection",
    "config": "video/boundary-detection/shot-boundary-detection/config.yaml"
   },
@@ -24549,7 +24549,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CHILDES Child Language Multi-Tier Annotation",
    "config": "video/childes-child-language/config.yaml"
   },
@@ -24610,7 +24610,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "CMU-MOSEI Multimodal Sentiment Multi-Tier Annotation",
    "config": "video/cmu-mosei-multimodal-sentiment/config.yaml"
   },
@@ -24671,7 +24671,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "DGS Corpus Sign Language Multi-Tier Annotation",
    "config": "video/dgs-corpus-sign-language/config.yaml"
   },
@@ -24731,7 +24731,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Ego4D Episodic Memory Annotation",
    "config": "video/ego4d-episodic-memory/config.yaml"
   },
@@ -24788,7 +24788,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "FineSports - Fine-grained Basketball Action Recognition",
    "config": "video/finesports-action-recognition/config.yaml"
   },
@@ -24847,7 +24847,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Harmony4D Human Interaction Tracking",
    "config": "video/harmony4d-interaction-tracking/config.yaml"
   },
@@ -24908,7 +24908,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "How2Sign Sign Language Multi-Tier Annotation",
    "config": "video/how2sign-sign-language/config.yaml"
   },
@@ -25028,7 +25028,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "HowTo100M Instructional Video Annotation",
    "config": "video/instructional/howto100m-instructional/config.yaml"
   },
@@ -25088,7 +25088,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "YouCook2 Recipe Step Annotation",
    "config": "video/instructional/youcook2-instructional/config.yaml"
   },
@@ -25144,7 +25144,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MSAD Multi-Scenario Anomaly Detection",
    "config": "video/msad-anomaly-detection/config.yaml"
   },
@@ -25204,7 +25204,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "SaGA Gesture-Speech Alignment Multi-Tier Annotation",
    "config": "video/saga-gesture-speech/config.yaml"
   },
@@ -25261,7 +25261,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "MovieNet Scene Classification",
    "config": "video/scene-understanding/movienet-scene-classification/config.yaml"
   },
@@ -25376,7 +25376,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "LSMDC Keyframe Selection",
    "config": "video/summarization/lsmdc-keyframe-selection/config.yaml"
   },
@@ -25431,7 +25431,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "SumMe Video Summarization",
    "config": "video/summarization/summe-summarization/config.yaml"
   },
@@ -25486,7 +25486,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "TVSum Video Summarization",
    "config": "video/summarization/tvsum-summarization/config.yaml"
   },
@@ -25540,7 +25540,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "YouTube Highlights Detection",
    "config": "video/summarization/youtube-highlights/config.yaml"
   },
@@ -25595,7 +25595,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "ActivityNet Dense Captioning",
    "config": "video/temporal-grounding/activitynet-captions/config.yaml"
   },
@@ -25652,7 +25652,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Charades-STA Temporal Grounding",
    "config": "video/temporal-grounding/charades-sta-grounding/config.yaml"
   },
@@ -25708,7 +25708,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "DiDeMo Moment Retrieval",
    "config": "video/temporal-grounding/didemo-moment-retrieval/config.yaml"
   },
@@ -25762,7 +25762,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "QVHighlights Moment Grounding and Saliency",
    "config": "video/temporal-grounding/qvhighlights-moment-saliency/config.yaml"
   },
@@ -25825,7 +25825,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "VBench Video Generation Quality Assessment",
    "config": "video/vbench-generation-quality/config.yaml"
   },
@@ -25882,7 +25882,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 2,
    "task_name": "Video-ChatGPT - Video QA Display and Evaluation",
    "config": "video/video-chatgpt-qa-display/config.yaml"
   },
@@ -25937,7 +25937,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "MVBench Video Understanding",
    "config": "video/video-qa/mvbench-video-understanding/config.yaml"
   },
@@ -25995,7 +25995,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "NExT-QA - Temporal Video QA",
    "config": "video/video-qa/nextqa-temporal/config.yaml"
   },
@@ -26056,7 +26056,7 @@
    "has_codebook_url": false,
    "has_phases": false,
    "has_training": false,
-   "annotators_per_item": null,
+   "annotators_per_item": 3,
    "task_name": "VSTAR Video-grounded Dialogue",
    "config": "video/vstar-video-dialogue/config.yaml"
   }

@@ -44,10 +44,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Primary: MathDial four-category teacher-move taxonomy
@@ -55,68 +54,62 @@ annotation_schemes:
     name: teacher_move
     description: "Which MathDial teacher move does this tutor utterance make?"
     labels:
-      - "Focus"
-      - "Probing"
-      - "Telling"
-      - "Generic"
-    keyboard_shortcuts:
-      "Focus": "1"
-      "Probing": "2"
-      "Telling": "3"
-      "Generic": "4"
-    tooltips:
-      "Focus": "Guide or narrow the student's attention, seek a strategy, or recall relevant information"
-      "Probing": "Ask whether the student understands, seek self-correction, or elicit reasoning/world knowledge"
-      "Telling": "Directly reveal the answer or the strategy"
-      "Generic": "Greetings, farewells, and other general conversational moves"
+      - name: "Focus"
+        tooltip: "Guide or narrow the student's attention, seek a strategy, or recall relevant information"
+        key_value: "1"
+      - name: "Probing"
+        tooltip: "Ask whether the student understands, seek self-correction, or elicit reasoning/world knowledge"
+        key_value: "2"
+      - name: "Telling"
+        tooltip: "Directly reveal the answer or the strategy"
+        key_value: "3"
+      - name: "Generic"
+        tooltip: "Greetings, farewells, and other general conversational moves"
+        key_value: "4"
 
   # Supplementary (Potato additions, not part of MathDial's taxonomy)
   - annotation_type: radio
     name: guidance_quality
     description: "How correct is the tutor's mathematical guidance in this dialogue turn?"
     labels:
-      - "Correct Guidance"
-      - "Incorrect Guidance"
-      - "Partially Correct"
-      - "Off-topic"
-    keyboard_shortcuts:
-      "Correct Guidance": "5"
-      "Incorrect Guidance": "6"
-      "Partially Correct": "7"
-      "Off-topic": "8"
-    tooltips:
-      "Correct Guidance": "The tutor provides mathematically correct and helpful guidance"
-      "Incorrect Guidance": "The tutor makes a mathematical error or provides wrong information"
-      "Partially Correct": "Some elements are correct but there are errors or important omissions"
-      "Off-topic": "The tutor's response does not address the math problem at hand"
+      - name: "Correct Guidance"
+        tooltip: "The tutor provides mathematically correct and helpful guidance"
+        key_value: "5"
+      - name: "Incorrect Guidance"
+        tooltip: "The tutor makes a mathematical error or provides wrong information"
+        key_value: "6"
+      - name: "Partially Correct"
+        tooltip: "Some elements are correct but there are errors or important omissions"
+        key_value: "7"
+      - name: "Off-topic"
+        tooltip: "The tutor's response does not address the math problem at hand"
+        key_value: "8"
 
   - annotation_type: multiselect
     name: tutoring_strategies
     description: "Which tutoring strategies are used in this dialogue turn? Select all that apply."
     labels:
-      - "Scaffolding"
-      - "Direct Instruction"
-      - "Questioning"
-      - "Encouragement"
-      - "Error Correction"
-    tooltips:
-      "Scaffolding": "Breaking the problem into smaller steps to guide the student gradually"
-      "Direct Instruction": "Explicitly telling the student the answer, method, or formula"
-      "Questioning": "Asking questions to prompt the student to think and reason"
-      "Encouragement": "Providing positive reinforcement, praise, or motivational support"
-      "Error Correction": "Identifying a student mistake and correcting it with explanation"
+      - name: "Scaffolding"
+        tooltip: "Breaking the problem into smaller steps to guide the student gradually"
+      - name: "Direct Instruction"
+        tooltip: "Explicitly telling the student the answer, method, or formula"
+      - name: "Questioning"
+        tooltip: "Asking questions to prompt the student to think and reason"
+      - name: "Encouragement"
+        tooltip: "Providing positive reinforcement, praise, or motivational support"
+      - name: "Error Correction"
+        tooltip: "Identifying a student mistake and correcting it with explanation"
 
   - annotation_type: span
     name: key_spans
     description: "Highlight key spans in the dialogue turn"
     labels:
-      - "Math Concept"
-      - "Student Error"
-      - "Tutor Strategy"
-    tooltips:
-      "Math Concept": "A mathematical concept, formula, term, or operation mentioned"
-      "Student Error": "A mistake or misconception expressed by the student"
-      "Tutor Strategy": "A phrase where the tutor applies a specific pedagogical strategy"
+      - name: "Math Concept"
+        tooltip: "A mathematical concept, formula, term, or operation mentioned"
+      - name: "Student Error"
+        tooltip: "A mistake or misconception expressed by the student"
+      - name: "Tutor Strategy"
+        tooltip: "A phrase where the tutor applies a specific pedagogical strategy"
 
 annotation_instructions: |
   You will annotate math tutoring dialogue turns from the MathDial dataset.
@@ -128,25 +121,7 @@ annotation_instructions: |
   4. Optionally rate guidance quality and select tutoring strategies.
   5. Optionally highlight spans for math concepts, student errors, and tutor strategies.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
-      <div style="background: #e8eaf6; padding: 7px 14px; border-radius: 8px;">
-        <strong>Student Level:</strong> {{student_level}}
-      </div>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Math Problem:</strong>
-      <p style="font-size: 15px; line-height: 1.6; margin: 8px 0 0 0;">{{math_problem}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
-      <strong style="color: #0369a1;">Dialogue Turn:</strong>
-      <p style="font-size: 16px; line-height: 1.8; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

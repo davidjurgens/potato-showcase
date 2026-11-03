@@ -22,7 +22,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: mark the technical elements on the timeline
@@ -73,16 +73,7 @@ annotation_instructions: |
   In the official competition these two scores come from a panel of nine
   referees; here you record the values that summarize the performance.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #3730a3;">
-      Skating performance {{clip_id}} — mark the elements and record TES and PCS.
-    </div>
-    <video controls style="width: 100%; border-radius: 8px;" src="{{video_url}}"></video>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: id
   text_key: source
-  context_key: translation
 
 annotation_schemes:
   - annotation_type: likert
@@ -42,4 +41,4 @@ annotation_schemes:
     required: false
 
 output_annotation_dir: "output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

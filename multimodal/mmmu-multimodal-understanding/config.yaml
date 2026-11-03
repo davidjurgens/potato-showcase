@@ -23,7 +23,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Select the correct answer
@@ -31,33 +31,30 @@ annotation_schemes:
     name: answer
     description: "Select the best answer to the question based on the image and text."
     labels:
-      - "A"
-      - "B"
-      - "C"
-      - "D"
-    keyboard_shortcuts:
-      "A": "a"
-      "B": "b"
-      "C": "c"
-      "D": "d"
-    tooltips:
-      "A": "Select option A"
-      "B": "Select option B"
-      "C": "Select option C"
-      "D": "Select option D"
+      - name: "A"
+        tooltip: "Select option A"
+        key_value: "a"
+      - name: "B"
+        tooltip: "Select option B"
+        key_value: "b"
+      - name: "C"
+        tooltip: "Select option C"
+        key_value: "c"
+      - name: "D"
+        tooltip: "Select option D"
+        key_value: "d"
 
   # Step 2: Rate difficulty
   - annotation_type: radio
     name: difficulty
     description: "How difficult was this question?"
     labels:
-      - "Easy"
-      - "Medium"
-      - "Hard"
-    tooltips:
-      "Easy": "Answer is straightforward with basic subject knowledge"
-      "Medium": "Requires moderate reasoning or domain expertise"
-      "Hard": "Requires deep expertise or multi-step reasoning"
+      - name: "Easy"
+        tooltip: "Answer is straightforward with basic subject knowledge"
+      - name: "Medium"
+        tooltip: "Requires moderate reasoning or domain expertise"
+      - name: "Hard"
+        tooltip: "Requires deep expertise or multi-step reasoning"
 
   # Step 3: Confidence
   - annotation_type: radio
@@ -68,23 +65,7 @@ annotation_schemes:
       - "Somewhat confident"
       - "Not confident"
 
-html_layout: |
-  <div style="margin-bottom: 15px; padding: 10px; background: #f0f4f8; border-radius: 6px;">
-    <strong>Subject:</strong> {{subject}} &mdash; <strong>Subfield:</strong> {{subfield}}
-  </div>
-  <div style="text-align: center; margin-bottom: 15px;">
-    <img src="{{image_url}}" style="max-width: 100%; max-height: 500px; border: 1px solid #ddd; border-radius: 4px;" />
-  </div>
-  <div style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-    <strong>Question:</strong> {{text}}
-  </div>
-  <div style="padding: 10px; background: #fafafa; border-radius: 6px; line-height: 1.8;">
-    <strong>Options:</strong><br/>
-    {{options}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

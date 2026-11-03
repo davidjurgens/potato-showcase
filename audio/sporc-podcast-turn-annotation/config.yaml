@@ -34,10 +34,9 @@ item_properties:
   text_key: "episode_title"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   ## Podcast Speaker Roles and Turn Boundaries
@@ -146,7 +145,7 @@ instance_display:
           - {id: host,  name: Host,  color: "#7c3aed", side: left}
           - {id: guest, name: Guest, color: "#059669", side: right}
 
-allow_all_users: true
-instances_per_annotator: 20
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 20
+num_annotators_per_item: 3

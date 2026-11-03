@@ -24,7 +24,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify relevant clause spans
@@ -32,62 +32,47 @@ annotation_schemes:
     name: clause_span
     description: "Highlight the clause or provision that answers the question"
     labels:
-      - "Deal Protection"
-      - "Conditions to Closing"
-      - "Material Adverse Effect"
-      - "Termination"
-      - "Representations & Warranties"
-      - "Indemnification"
-    label_colors:
-      "Deal Protection": "#3b82f6"
-      "Conditions to Closing": "#22c55e"
-      "Material Adverse Effect": "#ef4444"
-      "Termination": "#f97316"
-      "Representations & Warranties": "#8b5cf6"
-      "Indemnification": "#eab308"
-    tooltips:
-      "Deal Protection": "Provisions protecting the deal (no-shop, matching rights, break-up fees)"
-      "Conditions to Closing": "Conditions that must be satisfied before closing (regulatory approval, shareholder vote)"
-      "Material Adverse Effect": "Clauses defining or referencing material adverse effects/changes"
-      "Termination": "Provisions related to termination rights, fees, or conditions"
-      "Representations & Warranties": "Statements of fact about the company (financial, legal, operational)"
-      "Indemnification": "Provisions for indemnification, liability, or damage recovery"
-    allow_overlapping: false
+      - name: "Deal Protection"
+        tooltip: "Provisions protecting the deal (no-shop, matching rights, break-up fees)"
+        color: "#3b82f6"
+      - name: "Conditions to Closing"
+        tooltip: "Conditions that must be satisfied before closing (regulatory approval, shareholder vote)"
+        color: "#22c55e"
+      - name: "Material Adverse Effect"
+        tooltip: "Clauses defining or referencing material adverse effects/changes"
+        color: "#ef4444"
+      - name: "Termination"
+        tooltip: "Provisions related to termination rights, fees, or conditions"
+        color: "#f97316"
+      - name: "Representations & Warranties"
+        tooltip: "Statements of fact about the company (financial, legal, operational)"
+        color: "#8b5cf6"
+      - name: "Indemnification"
+        tooltip: "Provisions for indemnification, liability, or damage recovery"
+        color: "#eab308"
 
   # Step 2: Structured answer to the legal question
   - annotation_type: radio
     name: answer
     description: "Based on the clause, select the answer to the question shown above"
     labels:
-      - "Yes"
-      - "No"
-      - "Partial / Qualified"
-      - "Not Addressed"
-      - "Ambiguous"
-    keyboard_shortcuts:
-      "Yes": "y"
-      "No": "n"
-      "Partial / Qualified": "p"
-      "Not Addressed": "a"
-      "Ambiguous": "b"
-    tooltips:
-      "Yes": "The agreement clearly and fully addresses the question in the affirmative"
-      "No": "The agreement clearly addresses the question in the negative"
-      "Partial / Qualified": "The agreement addresses the question but with qualifications, exceptions, or limitations"
-      "Not Addressed": "The agreement does not contain a provision addressing this question"
-      "Ambiguous": "The language is unclear or could be interpreted in multiple ways"
+      - name: "Yes"
+        tooltip: "The agreement clearly and fully addresses the question in the affirmative"
+        key_value: "y"
+      - name: "No"
+        tooltip: "The agreement clearly addresses the question in the negative"
+        key_value: "n"
+      - name: "Partial / Qualified"
+        tooltip: "The agreement addresses the question but with qualifications, exceptions, or limitations"
+        key_value: "p"
+      - name: "Not Addressed"
+        tooltip: "The agreement does not contain a provision addressing this question"
+        key_value: "a"
+      - name: "Ambiguous"
+        tooltip: "The language is unclear or could be interpreted in multiple ways"
+        key_value: "b"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 10px; background: #f0f4ff; border-radius: 6px;">
-    <strong>Category:</strong> {{category}}<br/>
-    <strong>Question:</strong> {{question}}
-  </div>
-  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -12,32 +12,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-html_layout: |
-  <div class="container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 1500px; margin: 0 auto;">
-    <div style="background: #24292f; color: #ffffff; padding: 10px 16px; border-radius: 6px 6px 0 0; font-size: 14px; font-weight: 600;">
-      Project: {{language}} Repository
-    </div>
-    <div style="border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin: 8px 0; background: #f6f8fa;">
-      <h3 style="margin-top: 0; color: #24292f;">Project Specification</h3>
-      <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: #1f2328;">{{text}}</div>
-    </div>
-    <div style="display: flex; gap: 12px; margin-top: 8px;">
-      <div style="flex: 0 0 280px; border: 1px solid #d0d7de; border-radius: 6px; overflow: hidden;">
-        <div style="background: #2d333b; color: #adbac7; padding: 8px 12px; font-weight: 600; font-size: 13px;">Repository Structure</div>
-        <pre style="margin: 0; padding: 12px; background: #22272e; color: #adbac7; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 12px; line-height: 1.6; overflow-x: auto; white-space: pre;">{{repo_structure}}</pre>
-      </div>
-      <div style="flex: 1; border: 1px solid #d0d7de; border-radius: 6px; overflow: hidden;">
-        <div style="background: #2d333b; color: #adbac7; padding: 8px 12px; font-weight: 600; font-size: 13px;">Key Source Files</div>
-        <pre style="margin: 0; padding: 12px; background: #22272e; color: #adbac7; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{key_files}}</pre>
-      </div>
-    </div>
-    <div style="margin-top: 8px; border: 1px solid #30363d; border-radius: 6px; overflow: hidden;">
-      <div style="background: #0d1117; color: #3fb950; padding: 8px 12px; font-weight: 600; font-size: 13px;">Test Output</div>
-      <pre style="margin: 0; padding: 12px; background: #161b22; color: #c9d1d9; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 12px; line-height: 1.5; overflow-x: auto; white-space: pre;">{{test_output}}</pre>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "repo_criteria"
@@ -60,22 +35,22 @@ annotation_schemes:
     description: "Assign an overall letter grade to this repository"
     annotation_type: radio
     labels:
-      - "A — Excellent"
-      - "B — Good"
-      - "C — Average"
-      - "D — Below Average"
-      - "F — Failing"
-    keyboard_shortcuts:
-      "A — Excellent": "1"
-      "B — Good": "2"
-      "C — Average": "3"
-      "D — Below Average": "4"
-      "F — Failing": "5"
+      - name: "A — Excellent"
+        key_value: "1"
+      - name: "B — Good"
+        key_value: "2"
+      - name: "C — Average"
+        key_value: "3"
+      - name: "D — Below Average"
+        key_value: "4"
+      - name: "F — Failing"
+        key_value: "5"
 
   - name: "review_comments"
     description: "Detailed code review notes referencing specific files"
     annotation_type: text
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

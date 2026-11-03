@@ -31,44 +31,39 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: hate_speech
     description: "Task A (HS): Does this tweet contain hate speech against immigrants or women?"
     labels:
-      - "Hateful"
-      - "Not Hateful"
-    keyboard_shortcuts:
-      "Hateful": "1"
-      "Not Hateful": "2"
-    tooltips:
-      "Hateful": "The tweet contains hate speech against immigrants or women"
-      "Not Hateful": "The tweet does not contain hate speech"
+      - name: "Hateful"
+        tooltip: "The tweet contains hate speech against immigrants or women"
+        key_value: "1"
+      - name: "Not Hateful"
+        tooltip: "The tweet does not contain hate speech"
+        key_value: "2"
 
   - annotation_type: radio
     name: target_range
     description: "Task B (TR): If hateful, is the target an individual or a group?"
     labels:
-      - "Individual"
-      - "Generic"
-    tooltips:
-      "Individual": "Hate directed at a specific person"
-      "Generic": "Hate directed at a group or class of people"
+      - name: "Individual"
+        tooltip: "Hate directed at a specific person"
+      - name: "Generic"
+        tooltip: "Hate directed at a group or class of people"
 
   - annotation_type: radio
     name: aggressiveness
     description: "Task B (AG): If hateful, is the tweet aggressive?"
     labels:
-      - "Aggressive"
-      - "Not Aggressive"
-    tooltips:
-      "Aggressive": "The tweet incites harm or aggressive action against the target"
-      "Not Aggressive": "Hateful but does not incite aggression"
+      - name: "Aggressive"
+        tooltip: "The tweet incites harm or aggressive action against the target"
+      - name: "Not Aggressive"
+        tooltip: "Hateful but does not incite aggression"
 
 annotation_instructions: |
   You will be shown a tweet. Your task is to:
@@ -78,20 +73,7 @@ annotation_instructions: |
      generic group) and whether the tweet is aggressive.
   Leave the Task B fields unanswered when the tweet is not hateful.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
-      <strong style="color: #a16207;">Target Group:</strong>
-      <span style="font-size: 15px;">{{target_group}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Tweet:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

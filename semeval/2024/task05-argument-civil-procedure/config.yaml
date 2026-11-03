@@ -19,24 +19,21 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: answer_correctness
     description: "Is the candidate answer a correct solution to the question?"
     labels:
-      - "Correct"
-      - "Incorrect"
-    keyboard_shortcuts:
-      "Correct": "1"
-      "Incorrect": "2"
-    tooltips:
-      "Correct": "The candidate answer correctly resolves the question (True)."
-      "Incorrect": "The candidate answer does not correctly resolve the question (False)."
+      - name: "Correct"
+        tooltip: "The candidate answer correctly resolves the question (True)."
+        key_value: "1"
+      - name: "Incorrect"
+        tooltip: "The candidate answer does not correctly resolve the question (False)."
+        key_value: "2"
 
 annotation_instructions: |
   You will be shown a short introduction to a topic in U.S. civil procedure,
@@ -49,24 +46,7 @@ annotation_instructions: |
      question. Select "Correct" (True) if it correctly resolves the question,
      or "Incorrect" (False) if it does not.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Introduction:</strong>
-      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{introduction}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #15803d;">Candidate Answer:</strong>
-      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{answer_candidate}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

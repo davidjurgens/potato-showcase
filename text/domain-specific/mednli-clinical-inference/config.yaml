@@ -24,7 +24,7 @@ item_properties:
   text_key: "premise"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_task_name: "MedNLI Clinical Inference"
 
@@ -56,14 +56,13 @@ annotation_schemes:
     labels:
       - name: "entailment"
         tooltip: "The hypothesis is definitely true given the premise — the premise provides sufficient evidence to conclude the hypothesis"
+        key_value: "e"
       - name: "contradiction"
         tooltip: "The hypothesis is definitely false given the premise — the premise provides evidence that directly contradicts the hypothesis"
+        key_value: "c"
       - name: "neutral"
         tooltip: "The hypothesis might or might not be true — the premise does not provide enough information to determine the relationship"
-    keyboard_shortcuts:
-      "entailment": "e"
-      "contradiction": "c"
-      "neutral": "n"
+        key_value: "n"
 
   - annotation_type: radio
     name: confidence
@@ -71,34 +70,19 @@ annotation_schemes:
     labels:
       - name: "high"
         tooltip: "Very confident — the relationship is clear and unambiguous"
+        key_value: "h"
       - name: "medium"
         tooltip: "Moderately confident — the relationship seems likely but there is some ambiguity"
+        key_value: "m"
       - name: "low"
         tooltip: "Low confidence — the relationship is difficult to determine, possibly requiring specialist knowledge"
-    keyboard_shortcuts:
-      "high": "h"
-      "medium": "m"
-      "low": "l"
+        key_value: "l"
 
   - annotation_type: text
     name: reasoning
     description: "Optional: Briefly explain your reasoning for the chosen label"
 
-html_layout: |
-  <div style="margin-bottom: 14px; padding: 14px; background: #e8eaf6; border-radius: 6px; border-left: 4px solid #3f51b5;">
-    <div style="font-size: 0.85em; color: #666; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Department: {{clinical_department}}</div>
-  </div>
-  <div style="margin-bottom: 12px; padding: 14px; background: #fff8e1; border-radius: 6px; border-left: 4px solid #f9a825;">
-    <strong style="color: #f57f17;">Premise (from clinical note):</strong>
-    <p style="margin: 8px 0 0 0; font-size: 1.05em; line-height: 1.6;">{{premise}}</p>
-  </div>
-  <div style="margin-bottom: 12px; padding: 14px; background: #e0f2f1; border-radius: 6px; border-left: 4px solid #00897b;">
-    <strong style="color: #00695c;">Hypothesis:</strong>
-    <p style="margin: 8px 0 0 0; font-size: 1.05em; line-height: 1.6;">{{hypothesis}}</p>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

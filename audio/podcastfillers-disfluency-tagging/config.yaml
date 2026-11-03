@@ -36,10 +36,9 @@ item_properties:
   text_key: "episode_title"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_instructions: |
   ## Filler Words and Other Audio Events
@@ -105,7 +104,7 @@ annotation_schemes:
         tooltip: "Speech is hard to hear: heavy noise, clipping, low volume, or crosstalk"
         key_value: "3"
 
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 2
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 2

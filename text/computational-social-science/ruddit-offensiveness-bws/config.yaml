@@ -31,10 +31,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 bws_config:
   tuple_size: 4
@@ -103,18 +102,7 @@ annotation_instructions: |
   - You cannot pick the same comment for both the categories.
   - Responses that are not in accordance with the instructions will not be paid for.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 6px 12px; margin-bottom: 10px; font-size: 13px; color: #991b1b;">
-      <strong>Content warning:</strong> comments in this task may contain foul or abusive language.
-    </div>
-    <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px;">
-      <strong style="color: #334155;">Reddit comment:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 3

@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -81,32 +81,30 @@ annotation_schemes:
     description: "Classify which hand(s) are used for the current gesture."
     annotation_type: radio
     labels:
-      - "right-hand"
-      - "left-hand"
-      - "both-hands"
-      - "no-hands"
-    keyboard_shortcuts:
-      right-hand: "1"
-      left-hand: "2"
-      both-hands: "3"
-      no-hands: "4"
+      - name: "right-hand"
+        key_value: "1"
+      - name: "left-hand"
+        key_value: "2"
+      - name: "both-hands"
+        key_value: "3"
+      - name: "no-hands"
+        key_value: "4"
 
   # Tier 4: Spatial reference frame
   - name: "spatial_reference"
     description: "Classify the spatial reference frame used by the gesture, if applicable."
     annotation_type: radio
     labels:
-      - "concrete-space"
-      - "abstract-space"
-      - "gesture-space"
-      - "body-anchored"
-      - "none"
-    keyboard_shortcuts:
-      concrete-space: "q"
-      abstract-space: "w"
-      gesture-space: "e"
-      body-anchored: "r"
-      none: "t"
+      - name: "concrete-space"
+        key_value: "q"
+      - name: "abstract-space"
+        key_value: "w"
+      - name: "gesture-space"
+        key_value: "e"
+      - name: "body-anchored"
+        key_value: "r"
+      - name: "none"
+        key_value: "t"
 
   # Tier 5: Speech transcript (free text)
   - name: "speech_transcript"
@@ -116,33 +114,13 @@ annotation_schemes:
     annotation_type: text
     textarea: true
 
-# HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">SaGA: Multi-Tier Gesture-Speech Alignment Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate co-speech gestures and their temporal alignment with spoken language
-      across multiple parallel tiers following ELAN-style conventions.
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Annotate gesture phases, gesture types,
-      handedness, spatial reference, and concurrent speech on parallel tiers. Pay close
-      attention to how gesture strokes align with stressed syllables in speech.
-    </div>
-  </div>
-
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

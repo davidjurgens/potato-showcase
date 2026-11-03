@@ -12,7 +12,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "preference"
@@ -73,9 +73,10 @@ annotation_schemes:
       - "Somewhat confident"
       - "Not very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2
 
 annotation_instructions: |
   ## AlpacaFarm Preference Annotation

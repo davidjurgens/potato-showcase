@@ -34,10 +34,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Pairwise preference
@@ -49,14 +48,6 @@ annotation_schemes:
       - "Assistant A"
       - "Assistant B"
       - "Tie"
-    keyboard_shortcuts:
-      "Assistant A": "a"
-      "Assistant B": "b"
-      "Tie": "t"
-    tooltips:
-      "Assistant A": "Response A is clearly better overall"
-      "Assistant B": "Response B is clearly better overall"
-      "Tie": "Both responses are of comparable quality"
 
   # Step 2: Quality rating on 1-10 scale
   - annotation_type: likert
@@ -71,32 +62,30 @@ annotation_schemes:
     name: category
     description: "What category does this conversation belong to?"
     labels:
-      - "Writing"
-      - "Roleplay"
-      - "Reasoning"
-      - "Math"
-      - "Coding"
-      - "Extraction"
-      - "STEM"
-      - "Humanities"
-    keyboard_shortcuts:
-      "Writing": "1"
-      "Roleplay": "2"
-      "Reasoning": "3"
-      "Math": "4"
-      "Coding": "5"
-      "Extraction": "6"
-      "STEM": "7"
-      "Humanities": "8"
-    tooltips:
-      "Writing": "Creative writing, editing, summarization"
-      "Roleplay": "Role-playing scenarios, character simulation"
-      "Reasoning": "Logical and analytical reasoning tasks"
-      "Math": "Mathematical problems and calculations"
-      "Coding": "Programming and software development tasks"
-      "Extraction": "Information extraction and data parsing"
-      "STEM": "Science, technology, engineering topics"
-      "Humanities": "History, philosophy, social sciences, arts"
+      - name: "Writing"
+        tooltip: "Creative writing, editing, summarization"
+        key_value: "1"
+      - name: "Roleplay"
+        tooltip: "Role-playing scenarios, character simulation"
+        key_value: "2"
+      - name: "Reasoning"
+        tooltip: "Logical and analytical reasoning tasks"
+        key_value: "3"
+      - name: "Math"
+        tooltip: "Mathematical problems and calculations"
+        key_value: "4"
+      - name: "Coding"
+        tooltip: "Programming and software development tasks"
+        key_value: "5"
+      - name: "Extraction"
+        tooltip: "Information extraction and data parsing"
+        key_value: "6"
+      - name: "STEM"
+        tooltip: "Science, technology, engineering topics"
+        key_value: "7"
+      - name: "Humanities"
+        tooltip: "History, philosophy, social sciences, arts"
+        key_value: "8"
 
 annotation_instructions: |
   You will evaluate pairs of LLM assistant responses from the MT-Bench benchmark.
@@ -115,29 +104,7 @@ annotation_instructions: |
   - 7-8: Good, addresses the query well with minor issues
   - 9-10: Excellent, comprehensive and high-quality response
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px; margin-bottom: 16px;">
-      <strong>Category:</strong> {{category}}
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Conversation:</strong>
-      <div style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</div>
-    </div>
-    <div style="display: flex; gap: 16px;">
-      <div style="flex: 1; background: #e3f2fd; border: 2px solid #1976d2; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #1976d2;">Response A:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
-      </div>
-      <div style="flex: 1; background: #fce4ec; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

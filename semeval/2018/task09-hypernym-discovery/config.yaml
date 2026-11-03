@@ -23,10 +23,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: text
@@ -37,17 +36,15 @@ annotation_schemes:
     name: hypernym_type
     description: "Is the target term an entity, a concept, or both?"
     labels:
-      - "Entity"
-      - "Concept"
-      - "Both"
-    keyboard_shortcuts:
-      "Entity": "1"
-      "Concept": "2"
-      "Both": "3"
-    tooltips:
-      "Entity": "The target term is a named entity (person, place, organization)"
-      "Concept": "The target term is a general concept, class, or category"
-      "Both": "The target term can be interpreted as both an entity and a concept"
+      - name: "Entity"
+        tooltip: "The target term is a named entity (person, place, organization)"
+        key_value: "1"
+      - name: "Concept"
+        tooltip: "The target term is a general concept, class, or category"
+        key_value: "2"
+      - name: "Both"
+        tooltip: "The target term can be interpreted as both an entity and a concept"
+        key_value: "3"
 
 annotation_instructions: |
   You will be shown a sentence containing a target term (highlighted) along with its domain.
@@ -56,26 +53,7 @@ annotation_instructions: |
   2. Classify whether the target is an entity, concept, or both.
   For example, the hypernym of "dog" is "animal", and the hypernym of "Paris" is "city".
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-      <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 12px; flex: 1;">
-        <strong style="color: #a16207;">Target Term:</strong>
-        <span style="font-size: 15px; font-weight: bold;">{{target_term}}</span>
-      </div>
-      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; flex: 1;">
-        <strong style="color: #15803d;">Domain:</strong>
-        <span style="font-size: 15px;">{{domain}}</span>
-      </div>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Context:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

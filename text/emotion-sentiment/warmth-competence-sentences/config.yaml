@@ -27,17 +27,14 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: likert
     name: trust
     description: "TRUST (a component of warmth): how much does the sentence express trust vs. distrust toward the target?"
-    min_value: -3
-    max_value: 3
     labels:
       -3: "-3 high distrust"
       -2: "-2 moderate distrust"
@@ -50,8 +47,6 @@ annotation_schemes:
   - annotation_type: likert
     name: sociability
     description: "SOCIABILITY (a component of warmth): how much does the sentence express sociability vs. unsociability toward the target?"
-    min_value: -3
-    max_value: 3
     labels:
       -3: "-3 high unsociability"
       -2: "-2 moderate unsociability"
@@ -64,8 +59,6 @@ annotation_schemes:
   - annotation_type: likert
     name: competence
     description: "COMPETENCE: how much does the sentence express competence vs. incompetence toward the target?"
-    min_value: -3
-    max_value: 3
     labels:
       -3: "-3 high incompetence"
       -2: "-2 moderate incompetence"
@@ -88,18 +81,7 @@ annotation_instructions: |
   applicable, or not expressed. Judge only what the sentence conveys about the
   named target, not your own opinion of that target.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;">
-      <strong style="color: #1e40af;">Target:</strong> <span>{{target}}</span>
-    </div>
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
-      <strong style="color: #334155;">Post:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 5
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 5

@@ -31,7 +31,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Multi-label emotion classification
@@ -39,57 +39,43 @@ annotation_schemes:
     name: emotions
     description: "Select ALL emotions expressed or evoked by this text (select multiple if applicable)"
     labels:
-      - "Joy"
-      - "Sadness"
-      - "Fear"
-      - "Anger"
-      - "Surprise"
-      - "Disgust"
-      - "Neutral"
-    label_colors:
-      "Joy": "#22c55e"
-      "Sadness": "#3b82f6"
-      "Fear": "#8b5cf6"
-      "Anger": "#ef4444"
-      "Surprise": "#f59e0b"
-      "Disgust": "#84cc16"
-      "Neutral": "#9ca3af"
-    tooltips:
-      "Joy": "Happiness, pleasure, contentment, elation, amusement, or positive excitement"
-      "Sadness": "Grief, sorrow, melancholy, disappointment, or loneliness"
-      "Fear": "Anxiety, worry, terror, apprehension, or nervousness about potential threats"
-      "Anger": "Frustration, irritation, rage, annoyance, or hostility"
-      "Surprise": "Astonishment, amazement, or unexpectedness (can be positive or negative)"
-      "Disgust": "Revulsion, aversion, distaste, or strong disapproval"
-      "Neutral": "No discernible emotion - factual or emotionally flat content"
-    min_selections: 1
-    max_selections: 7
+      - name: "Joy"
+        tooltip: "Happiness, pleasure, contentment, elation, amusement, or positive excitement"
+        color: "#22c55e"
+      - name: "Sadness"
+        tooltip: "Grief, sorrow, melancholy, disappointment, or loneliness"
+        color: "#3b82f6"
+      - name: "Fear"
+        tooltip: "Anxiety, worry, terror, apprehension, or nervousness about potential threats"
+        color: "#8b5cf6"
+      - name: "Anger"
+        tooltip: "Frustration, irritation, rage, annoyance, or hostility"
+        color: "#ef4444"
+      - name: "Surprise"
+        tooltip: "Astonishment, amazement, or unexpectedness (can be positive or negative)"
+        color: "#f59e0b"
+      - name: "Disgust"
+        tooltip: "Revulsion, aversion, distaste, or strong disapproval"
+        color: "#84cc16"
+      - name: "Neutral"
+        tooltip: "No discernible emotion - factual or emotionally flat content"
+        color: "#9ca3af"
 
   # Step 2: Intensity rating for primary emotion
   - annotation_type: likert
     name: intensity
     description: "How intense is the strongest emotion in this text?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very weak"
       2: "Weak"
       3: "Moderate"
       4: "Strong"
       5: "Very strong"
-    tooltips:
-      1: "Barely perceptible emotion, subtle hints"
-      2: "Mild emotional content, understated"
-      3: "Clear but not overwhelming emotion"
-      4: "Strong emotional language, clearly intense"
-      5: "Extremely intense, powerful emotional expression"
 
   # Step 3: Confidence in annotation
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your emotion labels?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -97,8 +83,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -19,10 +19,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Subtask 1 (coarse): single hazard-category label (1 of 10)
@@ -30,27 +29,26 @@ annotation_schemes:
     name: hazard_category
     description: "Which hazard-category does this text imply? (choose one)"
     labels:
-      - "allergens"
-      - "biological"
-      - "chemical"
-      - "foreign bodies"
-      - "fraud"
-      - "organoleptic aspects"
-      - "packaging defect"
-      - "food additives and flavourings"
-      - "migration"
-      - "other hazard"
-    tooltips:
-      "allergens": "Undeclared or mislabelled allergens (e.g., milk, nuts, gluten)"
-      "biological": "Microbiological contamination (e.g., Listeria, Salmonella, E. coli)"
-      "chemical": "Chemical contamination (e.g., pesticides, heavy metals, toxins, aflatoxins)"
-      "foreign bodies": "Physical contaminants such as glass, metal, or plastic fragments"
-      "fraud": "Adulteration, mislabelling, or fraudulent substitution"
-      "organoleptic aspects": "Abnormal smell, taste, colour, or texture"
-      "packaging defect": "Faulty or damaged packaging affecting safety"
-      "food additives and flavourings": "Unauthorised or excessive additives/flavourings"
-      "migration": "Migration of substances from packaging or contact materials"
-      "other hazard": "Any hazard not covered by the categories above"
+      - name: "allergens"
+        tooltip: "Undeclared or mislabelled allergens (e.g., milk, nuts, gluten)"
+      - name: "biological"
+        tooltip: "Microbiological contamination (e.g., Listeria, Salmonella, E. coli)"
+      - name: "chemical"
+        tooltip: "Chemical contamination (e.g., pesticides, heavy metals, toxins, aflatoxins)"
+      - name: "foreign bodies"
+        tooltip: "Physical contaminants such as glass, metal, or plastic fragments"
+      - name: "fraud"
+        tooltip: "Adulteration, mislabelling, or fraudulent substitution"
+      - name: "organoleptic aspects"
+        tooltip: "Abnormal smell, taste, colour, or texture"
+      - name: "packaging defect"
+        tooltip: "Faulty or damaged packaging affecting safety"
+      - name: "food additives and flavourings"
+        tooltip: "Unauthorised or excessive additives/flavourings"
+      - name: "migration"
+        tooltip: "Migration of substances from packaging or contact materials"
+      - name: "other hazard"
+        tooltip: "Any hazard not covered by the categories above"
 
   # Subtask 1 (coarse): single product-category label (1 of 22)
   - annotation_type: radio
@@ -95,16 +93,7 @@ annotation_instructions: |
   3. Assign the single best product-category (Subtask 1).
   4. Highlight the specific hazard and product mentions in the text (Subtask 2).
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Food Safety Incident Report:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

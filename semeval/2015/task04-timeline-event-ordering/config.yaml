@@ -32,48 +32,44 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: timeline_entity_spans
     description: "Highlight event mentions, time expressions, and entities in the text."
     labels:
-      - "Event Mention"
-      - "Time Expression"
-      - "Entity"
-    tooltips:
-      "Event Mention": "An action, occurrence, or state described in the text (e.g., launched, elected, exploded, declared)"
-      "Time Expression": "A temporal reference such as a date, duration, or relative time (e.g., January 2007, after three days)"
-      "Entity": "A named entity relevant to the timeline being constructed (e.g., person, organization, location)"
+      - name: "Event Mention"
+        tooltip: "An action, occurrence, or state described in the text (e.g., launched, elected, exploded, declared)"
+      - name: "Time Expression"
+        tooltip: "A temporal reference such as a date, duration, or relative time (e.g., January 2007, after three days)"
+      - name: "Entity"
+        tooltip: "A named entity relevant to the timeline being constructed (e.g., person, organization, location)"
 
   - annotation_type: radio
     name: temporal_relation
     description: "What is the primary temporal relation between the key events in this passage?"
     labels:
-      - "Before"
-      - "After"
-      - "Simultaneous"
-      - "Includes"
-      - "Is Included"
-      - "Vague"
-    keyboard_shortcuts:
-      "Before": "1"
-      "After": "2"
-      "Simultaneous": "3"
-      "Includes": "4"
-      "Is Included": "5"
-      "Vague": "6"
-    tooltips:
-      "Before": "The first mentioned event occurs before the second event in time"
-      "After": "The first mentioned event occurs after the second event in time"
-      "Simultaneous": "The events occur at approximately the same time"
-      "Includes": "The first event temporally includes or encompasses the second event"
-      "Is Included": "The first event is temporally included within the second event"
-      "Vague": "The temporal relation between events cannot be clearly determined"
+      - name: "Before"
+        tooltip: "The first mentioned event occurs before the second event in time"
+        key_value: "1"
+      - name: "After"
+        tooltip: "The first mentioned event occurs after the second event in time"
+        key_value: "2"
+      - name: "Simultaneous"
+        tooltip: "The events occur at approximately the same time"
+        key_value: "3"
+      - name: "Includes"
+        tooltip: "The first event temporally includes or encompasses the second event"
+        key_value: "4"
+      - name: "Is Included"
+        tooltip: "The first event is temporally included within the second event"
+        key_value: "5"
+      - name: "Vague"
+        tooltip: "The temporal relation between events cannot be clearly determined"
+        key_value: "6"
 
 annotation_instructions: |
   You will be shown news text related to a target entity. Your task is to:
@@ -93,20 +89,7 @@ annotation_instructions: |
 
   The target entity for timeline construction is shown above the text.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
-      <strong style="color: #92400e;">Target Entity:</strong>
-      <span style="font-size: 16px; font-weight: 600; margin-left: 8px;">{{target_entity}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

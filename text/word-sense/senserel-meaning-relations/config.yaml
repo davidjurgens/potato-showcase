@@ -26,51 +26,47 @@ item_properties:
   text_key: "word"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: denotational_relation
     description: "What is the denotational (conceptual) relation from Sense A (original) to Sense B (new)?"
     labels:
-      - "Generalization"
-      - "Specialization"
-      - "Metonymy"
-      - "Metaphor"
-      - "Homonymy"
-    tooltips:
-      "Generalization": "Sense A is a sub-case of Sense B (broadening/widening), e.g. calf: young cow -> young of various large mammals"
-      "Specialization": "Sense B is a sub-case of Sense A (narrowing/restriction), e.g. escort: any companion -> a specific kind of companion"
-      "Metonymy": "Sense B's referent is related to Sense A's by contiguity, e.g. head: body part -> the mind/intellect"
-      "Metaphor": "Sense B's referent is related to Sense A's by figurative similarity, e.g. wing: bird's wing -> wing of a building"
-      "Homonymy": "Sense B is etymologically unrelated to Sense A (different lexemes that happen to share a form) - a control case"
+      - name: "Generalization"
+        tooltip: "Sense A is a sub-case of Sense B (broadening/widening), e.g. calf: young cow -> young of various large mammals"
+      - name: "Specialization"
+        tooltip: "Sense B is a sub-case of Sense A (narrowing/restriction), e.g. escort: any companion -> a specific kind of companion"
+      - name: "Metonymy"
+        tooltip: "Sense B's referent is related to Sense A's by contiguity, e.g. head: body part -> the mind/intellect"
+      - name: "Metaphor"
+        tooltip: "Sense B's referent is related to Sense A's by figurative similarity, e.g. wing: bird's wing -> wing of a building"
+      - name: "Homonymy"
+        tooltip: "Sense B is etymologically unrelated to Sense A (different lexemes that happen to share a form) - a control case"
 
   - annotation_type: radio
     name: valence_difference
     description: "How much do the two senses differ in VALENCE (pleasantness / good-bad)?"
     labels:
-      - "Same"
-      - "Small"
-      - "Big"
-    tooltips:
-      "Same": "No meaningful difference in pleasantness between the senses"
-      "Small": "A small shift in pleasantness/unpleasantness"
-      "Big": "A large shift in pleasantness/unpleasantness"
+      - name: "Same"
+        tooltip: "No meaningful difference in pleasantness between the senses"
+      - name: "Small"
+        tooltip: "A small shift in pleasantness/unpleasantness"
+      - name: "Big"
+        tooltip: "A large shift in pleasantness/unpleasantness"
 
   - annotation_type: radio
     name: arousal_difference
     description: "How much do the two senses differ in AROUSAL (energy / calm-excited)?"
     labels:
-      - "Same"
-      - "Small"
-      - "Big"
-    tooltips:
-      "Same": "No meaningful difference in arousal/energy between the senses"
-      "Small": "A small shift in arousal/energy"
-      "Big": "A large shift in arousal/energy"
+      - name: "Same"
+        tooltip: "No meaningful difference in arousal/energy between the senses"
+      - name: "Small"
+        tooltip: "A small shift in arousal/energy"
+      - name: "Big"
+        tooltip: "A large shift in arousal/energy"
 
 annotation_instructions: |
   Each item shows a WORD and two of its senses: Sense A (the original meaning)
@@ -87,24 +83,7 @@ annotation_instructions: |
   (pleasant vs. unpleasant) and arousal (calm vs. excited), each as Same, Small,
   or Big difference.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 820px; margin: auto;">
-    <div style="text-align: center; margin-bottom: 12px;">
-      <span style="font-size: 24px; font-weight: 700; color: #4338ca;">{{word}}</span>
-    </div>
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;">
-      <strong style="color: #3730a3;">Sense A (original):</strong>
-      <div style="margin: 4px 0;">{{sense_a}}</div>
-      <div style="color: #6366f1; font-style: italic; font-size: 14px;">e.g. {{example_a}}</div>
-    </div>
-    <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 12px 16px;">
-      <strong style="color: #5b21b6;">Sense B (new):</strong>
-      <div style="margin: 4px 0;">{{sense_b}}</div>
-      <div style="color: #7c3aed; font-style: italic; font-size: 14px;">e.g. {{example_b}}</div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 40
-annotation_per_instance: 3
-allow_skip: true
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 40
+num_annotators_per_item: 3

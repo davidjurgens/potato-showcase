@@ -37,7 +37,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Mark chemical entities
@@ -45,52 +45,41 @@ annotation_schemes:
     name: chemicals
     description: "Highlight all CHEMICAL mentions (drugs, compounds, elements)"
     labels:
-      - "Chemical"
-    label_colors:
-      "Chemical": "#3b82f6"
-    tooltips:
-      "Chemical": "Drugs, medications, chemical compounds, elements, or small molecules"
-    allow_overlapping: false
+      - name: "Chemical"
+        tooltip: "Drugs, medications, chemical compounds, elements, or small molecules"
+        color: "#3b82f6"
 
   # Step 2: Mark disease entities
   - annotation_type: span
     name: diseases
     description: "Highlight all DISEASE mentions (diseases, disorders, symptoms, adverse effects)"
     labels:
-      - "Disease"
-    label_colors:
-      "Disease": "#ef4444"
-    tooltips:
-      "Disease": "Diseases, disorders, medical conditions, symptoms, or adverse effects"
-    allow_overlapping: false
+      - name: "Disease"
+        tooltip: "Diseases, disorders, medical conditions, symptoms, or adverse effects"
+        color: "#ef4444"
 
   # Step 3: Identify CID relations
   - annotation_type: radio
     name: cid_relation
     description: "Is there a Chemical-Induced Disease (CID) relation in this text?"
     labels:
-      - "Yes - CID relation present"
-      - "No - No causal relation"
-      - "Uncertain"
-    tooltips:
-      "Yes - CID relation present": "The text states or implies that a chemical causes/induces a disease"
-      "No - No causal relation": "Chemicals and diseases are mentioned but no causation is stated"
-      "Uncertain": "The relationship is ambiguous or hypothetical"
+      - name: "Yes - CID relation present"
+        tooltip: "The text states or implies that a chemical causes/induces a disease"
+      - name: "No - No causal relation"
+        tooltip: "Chemicals and diseases are mentioned but no causation is stated"
+      - name: "Uncertain"
+        tooltip: "The relationship is ambiguous or hypothetical"
 
   # Step 4: Relation evidence
   - annotation_type: span
     name: evidence
     description: "Highlight the text that indicates the CID relationship (if present)"
     labels:
-      - "CID Evidence"
-    label_colors:
-      "CID Evidence": "#22c55e"
-    tooltips:
-      "CID Evidence": "Words or phrases that indicate the chemical causes the disease"
-    allow_overlapping: true
+      - name: "CID Evidence"
+        tooltip: "Words or phrases that indicate the chemical causes the disease"
+        color: "#22c55e"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

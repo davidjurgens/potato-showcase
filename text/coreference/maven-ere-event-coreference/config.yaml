@@ -24,7 +24,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Event mention identification
@@ -32,99 +32,65 @@ annotation_schemes:
     name: event_mentions
     description: "Highlight all event mentions (triggers) in the text. Select the event type for each mention."
     labels:
-      - "Action"
-      - "State_change"
-      - "Movement"
-      - "Communication"
-      - "Conflict"
-      - "Life"
-      - "Transaction"
-      - "Natural_disaster"
-      - "Creation"
-      - "Perception"
-      - "Other"
-    label_colors:
-      "Action": "#3b82f6"
-      "State_change": "#22c55e"
-      "Movement": "#f59e0b"
-      "Communication": "#8b5cf6"
-      "Conflict": "#ef4444"
-      "Life": "#ec4899"
-      "Transaction": "#06b6d4"
-      "Natural_disaster": "#f97316"
-      "Creation": "#14b8a6"
-      "Perception": "#a855f7"
-      "Other": "#9ca3af"
-    tooltips:
-      "Action": "Deliberate action performed by an agent (e.g., 'arrested', 'built', 'signed')"
-      "State_change": "Change in state or condition (e.g., 'collapsed', 'increased', 'dissolved')"
-      "Movement": "Physical movement or transportation (e.g., 'moved', 'traveled', 'deployed')"
-      "Communication": "Speech, writing, or reporting (e.g., 'announced', 'said', 'published')"
-      "Conflict": "Violent or adversarial event (e.g., 'attacked', 'protested', 'clashed')"
-      "Life": "Birth, death, injury (e.g., 'born', 'died', 'injured')"
-      "Transaction": "Exchange or transfer (e.g., 'purchased', 'sold', 'donated')"
-      "Natural_disaster": "Natural event (e.g., 'earthquake', 'flood', 'erupted')"
-      "Creation": "Making or producing something (e.g., 'created', 'founded', 'invented')"
-      "Perception": "Sensing or observing (e.g., 'detected', 'observed', 'discovered')"
-      "Other": "Event type not covered by the above categories"
-    keyboard_shortcuts:
-      "Action": "1"
-      "State_change": "2"
-      "Movement": "3"
-      "Communication": "4"
-      "Conflict": "5"
-    allow_overlapping: false
+      - name: "Action"
+        tooltip: "Deliberate action performed by an agent (e.g., 'arrested', 'built', 'signed')"
+        key_value: "1"
+        color: "#3b82f6"
+      - name: "State_change"
+        tooltip: "Change in state or condition (e.g., 'collapsed', 'increased', 'dissolved')"
+        key_value: "2"
+        color: "#22c55e"
+      - name: "Movement"
+        tooltip: "Physical movement or transportation (e.g., 'moved', 'traveled', 'deployed')"
+        key_value: "3"
+        color: "#f59e0b"
+      - name: "Communication"
+        tooltip: "Speech, writing, or reporting (e.g., 'announced', 'said', 'published')"
+        key_value: "4"
+        color: "#8b5cf6"
+      - name: "Conflict"
+        tooltip: "Violent or adversarial event (e.g., 'attacked', 'protested', 'clashed')"
+        key_value: "5"
+        color: "#ef4444"
+      - name: "Life"
+        tooltip: "Birth, death, injury (e.g., 'born', 'died', 'injured')"
+        color: "#ec4899"
+      - name: "Transaction"
+        tooltip: "Exchange or transfer (e.g., 'purchased', 'sold', 'donated')"
+        color: "#06b6d4"
+      - name: "Natural_disaster"
+        tooltip: "Natural event (e.g., 'earthquake', 'flood', 'erupted')"
+        color: "#f97316"
+      - name: "Creation"
+        tooltip: "Making or producing something (e.g., 'created', 'founded', 'invented')"
+        color: "#14b8a6"
+      - name: "Perception"
+        tooltip: "Sensing or observing (e.g., 'detected', 'observed', 'discovered')"
+        color: "#a855f7"
+      - name: "Other"
+        tooltip: "Event type not covered by the above categories"
+        color: "#9ca3af"
 
   # Step 2: Event relation linking
   - annotation_type: span_link
     name: event_relations
     description: "Link pairs of event mentions with their relation type. Select two previously annotated event spans and specify the relation."
-    source_scheme: event_mentions
-    target_scheme: event_mentions
-    labels:
-      - "Coreference"
-      - "Temporal_before"
-      - "Temporal_after"
-      - "Temporal_overlap"
-      - "Causal"
-      - "Subevent"
-    label_colors:
-      "Coreference": "#3b82f6"
-      "Temporal_before": "#f59e0b"
-      "Temporal_after": "#f97316"
-      "Temporal_overlap": "#eab308"
-      "Causal": "#ef4444"
-      "Subevent": "#22c55e"
-    tooltips:
-      "Coreference": "Both mentions refer to the same real-world event"
-      "Temporal_before": "The source event occurs before the target event"
-      "Temporal_after": "The source event occurs after the target event"
-      "Temporal_overlap": "The two events overlap in time"
-      "Causal": "The source event causes or enables the target event"
-      "Subevent": "The source event is a component or subevent of the target event"
-    keyboard_shortcuts:
-      "Coreference": "c"
-      "Temporal_before": "b"
-      "Temporal_after": "a"
-      "Temporal_overlap": "o"
-      "Causal": "u"
-      "Subevent": "s"
+    span_schema: event_mentions
+    link_types:
+      - name: "Coreference"
+        color: "#3b82f6"
+      - name: "Temporal_before"
+        color: "#f59e0b"
+      - name: "Temporal_after"
+        color: "#f97316"
+      - name: "Temporal_overlap"
+        color: "#eab308"
+      - name: "Causal"
+        color: "#ef4444"
+      - name: "Subevent"
+        color: "#22c55e"
 
-html_layout: |
-  <div style="margin-bottom: 10px;">
-    <h4>Document: {{document_id}}</h4>
-    <p style="line-height: 1.8; font-size: 15px;">{{text}}</p>
-  </div>
-  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
-    <strong>Instructions:</strong>
-    <ol>
-      <li>Highlight all event mentions and classify their type.</li>
-      <li>Link event pairs with relation labels: coreference, temporal, causal, or subevent.</li>
-    </ol>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

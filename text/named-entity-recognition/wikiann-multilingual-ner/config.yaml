@@ -33,10 +33,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Highlight entity spans and label each with its type
@@ -44,34 +43,30 @@ annotation_schemes:
     name: entity_spans
     description: "Highlight every named entity and label it PER, ORG, or LOC"
     labels:
-      - "PER (Person)"
-      - "ORG (Organization)"
-      - "LOC (Location)"
-    label_colors:
-      "PER (Person)": "#3b82f6"
-      "ORG (Organization)": "#22c55e"
-      "LOC (Location)": "#ef4444"
-    keyboard_shortcuts:
-      "PER (Person)": "1"
-      "ORG (Organization)": "2"
-      "LOC (Location)": "3"
+      - name: "PER (Person)"
+        key_value: "1"
+        color: "#3b82f6"
+      - name: "ORG (Organization)"
+        key_value: "2"
+        color: "#22c55e"
+      - name: "LOC (Location)"
+        key_value: "3"
+        color: "#ef4444"
 
   # Whether the auto-projected silver labels (if any) were correct
   - annotation_type: radio
     name: silver_label_check
     description: "If this sentence came with silver WikiANN labels, were they correct?"
     labels:
-      - "Correct"
-      - "Needs fixing"
-      - "No silver labels"
-    keyboard_shortcuts:
-      "Correct": "4"
-      "Needs fixing": "5"
-      "No silver labels": "6"
-    tooltips:
-      "Correct": "The pre-existing WikiANN labels matched your annotation"
-      "Needs fixing": "The pre-existing WikiANN labels were wrong or incomplete"
-      "No silver labels": "This sentence was annotated from scratch"
+      - name: "Correct"
+        tooltip: "The pre-existing WikiANN labels matched your annotation"
+        key_value: "4"
+      - name: "Needs fixing"
+        tooltip: "The pre-existing WikiANN labels were wrong or incomplete"
+        key_value: "5"
+      - name: "No silver labels"
+        tooltip: "This sentence was annotated from scratch"
+        key_value: "6"
 
 annotation_instructions: |
   You will see a short sentence, typically from Wikipedia, in one of many
@@ -87,18 +82,7 @@ annotation_instructions: |
   Note: WikiANN labels are generated automatically from Wikipedia links, so they
   are noisy. Your job is to produce clean, gold-standard PER/ORG/LOC labels.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; color: #4338ca;">
-      Language: {{lang}}
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
-      <p style="font-size: 18px; line-height: 1.8; margin: 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

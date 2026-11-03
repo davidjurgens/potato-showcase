@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "display"
-  text_display_key: "display"
 
 user_config:
   allow_all_users: true
@@ -55,9 +54,11 @@ annotation_schemes:
       - name: "Tag Question"
       - name: "Rhetorical Question"
       - name: "N/A (not a question)"
-    show_if:
-      field: "dialogue_act"
-      value: "Question"
+    display_logic:
+      show_when:
+        - schema: "dialogue_act"
+          operator: "equals"
+          value: "Question"
 
   - annotation_type: "multiselect"
     name: "secondary_acts"
@@ -70,7 +71,5 @@ annotation_schemes:
       - name: "Elaboration"
       - name: "Correction"
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

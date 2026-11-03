@@ -35,52 +35,48 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: span
     name: clinical_entity_spans
     description: "Highlight disorder mentions and their associated attributes in the clinical text."
     labels:
-      - "Disorder Mention"
-      - "Body Location"
-      - "Severity"
-      - "Course"
-      - "Negation Indicator"
-    tooltips:
-      "Disorder Mention": "A disease, condition, symptom, or clinical finding (e.g., congestive heart failure, pneumonia, diabetes mellitus)"
-      "Body Location": "An anatomical site or body part associated with a disorder (e.g., right knee, lower extremity, chest)"
-      "Severity": "An indicator of how severe the disorder is (e.g., severe, mild, moderate, significant)"
-      "Course": "A marker describing disease progression or trajectory (e.g., progressive, worsening, stable, acute)"
-      "Negation Indicator": "A word or phrase that negates the presence of a disorder (e.g., denies, no, negative for, ruled out)"
+      - name: "Disorder Mention"
+        tooltip: "A disease, condition, symptom, or clinical finding (e.g., congestive heart failure, pneumonia, diabetes mellitus)"
+      - name: "Body Location"
+        tooltip: "An anatomical site or body part associated with a disorder (e.g., right knee, lower extremity, chest)"
+      - name: "Severity"
+        tooltip: "An indicator of how severe the disorder is (e.g., severe, mild, moderate, significant)"
+      - name: "Course"
+        tooltip: "A marker describing disease progression or trajectory (e.g., progressive, worsening, stable, acute)"
+      - name: "Negation Indicator"
+        tooltip: "A word or phrase that negates the presence of a disorder (e.g., denies, no, negative for, ruled out)"
 
   - annotation_type: radio
     name: assertion_status
     description: "What is the assertion status of the primary disorder mentioned in this text?"
     labels:
-      - "Present"
-      - "Absent"
-      - "Possible"
-      - "Conditional"
-      - "Hypothetical"
-      - "Associated with Someone Else"
-    keyboard_shortcuts:
-      "Present": "1"
-      "Absent": "2"
-      "Possible": "3"
-      "Conditional": "4"
-      "Hypothetical": "5"
-      "Associated with Someone Else": "6"
-    tooltips:
-      "Present": "The disorder is currently present and confirmed in the patient"
-      "Absent": "The disorder has been ruled out or is explicitly stated as not present"
-      "Possible": "The disorder is suspected or being considered but not yet confirmed"
-      "Conditional": "The disorder is present only under specific conditions or circumstances"
-      "Hypothetical": "The disorder is discussed as a future possibility or preventive concern"
-      "Associated with Someone Else": "The disorder is mentioned in reference to someone other than the patient (e.g., family history)"
+      - name: "Present"
+        tooltip: "The disorder is currently present and confirmed in the patient"
+        key_value: "1"
+      - name: "Absent"
+        tooltip: "The disorder has been ruled out or is explicitly stated as not present"
+        key_value: "2"
+      - name: "Possible"
+        tooltip: "The disorder is suspected or being considered but not yet confirmed"
+        key_value: "3"
+      - name: "Conditional"
+        tooltip: "The disorder is present only under specific conditions or circumstances"
+        key_value: "4"
+      - name: "Hypothetical"
+        tooltip: "The disorder is discussed as a future possibility or preventive concern"
+        key_value: "5"
+      - name: "Associated with Someone Else"
+        tooltip: "The disorder is mentioned in reference to someone other than the patient (e.g., family history)"
+        key_value: "6"
 
 annotation_instructions: |
   You will be shown de-identified clinical text from discharge summaries
@@ -105,20 +101,7 @@ annotation_instructions: |
   - **Hypothetical**: Discussed as a future possibility
   - **Associated with Someone Else**: Attributed to another person
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
-      <strong style="color: #991b1b;">Note Type:</strong>
-      <span style="font-size: 15px; margin-left: 8px; text-transform: capitalize;">{{note_type}}</span>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Clinical Text:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

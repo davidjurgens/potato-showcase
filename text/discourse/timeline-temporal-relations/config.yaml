@@ -36,7 +36,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify events and temporal expressions
@@ -44,65 +44,43 @@ annotation_schemes:
     name: temporal_mentions
     description: "Highlight all event mentions and temporal expressions in the text"
     labels:
-      - "Event"
-      - "Time Expression"
-    label_colors:
-      "Event": "#3b82f6"
-      "Time Expression": "#f59e0b"
-    keyboard_shortcuts:
-      "Event": "1"
-      "Time Expression": "2"
-    tooltips:
-      "Event": "Actions, states, or occurrences (e.g., attacked, signed, meeting, earthquake)"
-      "Time Expression": "Temporal references (e.g., Monday, last year, 2023, three days later)"
-    allow_overlapping: false
+      - name: "Event"
+        tooltip: "Actions, states, or occurrences (e.g., attacked, signed, meeting, earthquake)"
+        key_value: "1"
+        color: "#3b82f6"
+      - name: "Time Expression"
+        tooltip: "Temporal references (e.g., Monday, last year, 2023, three days later)"
+        key_value: "2"
+        color: "#f59e0b"
 
   # Step 2: Link pairs with temporal relations
   - annotation_type: span_link
     name: temporal_relations
     description: "Draw temporal relations between pairs of events/time expressions"
-    labels:
-      - "BEFORE"
-      - "AFTER"
-      - "INCLUDES"
-      - "IS_INCLUDED"
-      - "SIMULTANEOUS"
-      - "VAGUE"
-    tooltips:
-      "BEFORE": "The source event occurs before the target event"
-      "AFTER": "The source event occurs after the target event"
-      "INCLUDES": "The source event temporally includes the target event"
-      "IS_INCLUDED": "The source event is temporally included in the target event"
-      "SIMULTANEOUS": "Both events occur at the same time"
-      "VAGUE": "The temporal relation cannot be determined from context"
+    link_types:
+      - name: "BEFORE"
+      - name: "AFTER"
+      - name: "INCLUDES"
+      - name: "IS_INCLUDED"
+      - name: "SIMULTANEOUS"
+      - name: "VAGUE"
 
   # Step 3: Confidence in relation judgments
   - annotation_type: radio
     name: confidence
     description: "How confident are you in the temporal relations you assigned?"
     labels:
-      - "High"
-      - "Medium"
-      - "Low"
-    keyboard_shortcuts:
-      "High": "h"
-      "Medium": "m"
-      "Low": "l"
-    tooltips:
-      "High": "Temporal relations are clearly indicated by text cues"
-      "Medium": "Some relations required inference but are fairly clear"
-      "Low": "Many relations were ambiguous and required guessing"
+      - name: "High"
+        tooltip: "Temporal relations are clearly indicated by text cues"
+        key_value: "h"
+      - name: "Medium"
+        tooltip: "Some relations required inference but are fairly clear"
+        key_value: "m"
+      - name: "Low"
+        tooltip: "Many relations were ambiguous and required guessing"
+        key_value: "l"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-    <strong>Genre:</strong> {{genre}}
-  </div>
-  <div style="font-size: 16px; line-height: 1.8;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

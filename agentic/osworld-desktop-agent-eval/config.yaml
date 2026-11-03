@@ -14,36 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout with desktop screenshots and multi-app trajectory
-html_layout: |
-  <div class="osworld-container" style="max-width: 900px; margin: 0 auto;">
-    <div class="task-section" style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #2e7d32;">
-      <h3 style="margin-top: 0; color: #2e7d32;">Task Instruction</h3>
-      <div style="font-size: 16px; font-weight: bold;">{{text}}</div>
-    </div>
-    <div class="env-info" style="display: flex; gap: 15px; margin-bottom: 15px;">
-      <div style="background: #e3f2fd; padding: 10px 15px; border-radius: 8px; flex: 1;">
-        <strong>OS:</strong> {{os_type}}
-      </div>
-      <div style="background: #fce4ec; padding: 10px 15px; border-radius: 8px; flex: 1;">
-        <strong>Applications:</strong> {{applications}}
-      </div>
-    </div>
-    <div class="screenshot-gallery" style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #78909c;">
-      <h3 style="margin-top: 0; color: #37474f;">Desktop State Sequence</h3>
-      <div style="white-space: pre-wrap; font-size: 13px; line-height: 1.8; font-family: monospace; background: #fff; padding: 12px; border-radius: 6px;">{{screenshots}}</div>
-    </div>
-    <div class="trajectory-section" style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #ef6c00;">
-      <h3 style="margin-top: 0; color: #e65100;">Agent Trajectory</h3>
-      <div style="white-space: pre-wrap; font-family: monospace; font-size: 13px; line-height: 1.6;">{{trajectory}}</div>
-    </div>
-    <div class="final-state-section" style="background: #ede7f6; padding: 15px; border-radius: 8px; border: 2px solid #5e35b1;">
-      <h3 style="margin-top: 0; color: #5e35b1;">Final State</h3>
-      <div style="white-space: pre-wrap; font-size: 14px;">{{final_state}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -52,13 +23,12 @@ annotation_schemes:
     description: "Did the agent successfully complete the desktop task?"
     annotation_type: radio
     labels:
-      - "Success — task completed correctly"
-      - "Partial — some steps completed"
-      - "Failed — task not completed"
-    keyboard_shortcuts:
-      "Success — task completed correctly": "1"
-      "Partial — some steps completed": "2"
-      "Failed — task not completed": "3"
+      - name: "Success — task completed correctly"
+        key_value: "1"
+      - name: "Partial — some steps completed"
+        key_value: "2"
+      - name: "Failed — task not completed"
+        key_value: "3"
 
   # OS action types used
   - name: "os_actions"
@@ -91,8 +61,9 @@ annotation_schemes:
     placeholder: "Describe what went wrong: wrong application used, incorrect sequence, missed steps, UI misunderstanding..."
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 50
-annotation_per_instance: 2
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -15,7 +15,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 # Annotation schemes - ELAN-style parallel tiers aligned to the video timeline
 annotation_schemes:
@@ -69,68 +69,46 @@ annotation_schemes:
     description: "Classify the communicative context or function of the child's utterance."
     annotation_type: radio
     labels:
-      - "spontaneous"
-      - "imitation"
-      - "routine"
-      - "response"
-      - "question"
-      - "self-talk"
-      - "directed-speech"
-    keyboard_shortcuts:
-      spontaneous: "1"
-      imitation: "2"
-      routine: "3"
-      response: "4"
-      question: "5"
-      self-talk: "6"
-      directed-speech: "7"
+      - name: "spontaneous"
+        key_value: "1"
+      - name: "imitation"
+        key_value: "2"
+      - name: "routine"
+        key_value: "3"
+      - name: "response"
+        key_value: "4"
+      - name: "question"
+        key_value: "5"
+      - name: "self-talk"
+        key_value: "6"
+      - name: "directed-speech"
+        key_value: "7"
 
   # Tier 5: Error type classification
   - name: "error_type"
     description: "Classify the type of linguistic error in the child's utterance, if any."
     annotation_type: radio
     labels:
-      - "none"
-      - "phonological"
-      - "morphological"
-      - "syntactic"
-      - "lexical"
-      - "pragmatic"
-    keyboard_shortcuts:
-      none: "q"
-      phonological: "w"
-      morphological: "e"
-      syntactic: "r"
-      lexical: "t"
-      pragmatic: "y"
-
-# HTML layout
-html_layout: |
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h3 style="margin-bottom: 8px;">CHILDES: Multi-Tier Child Language Annotation</h3>
-    <p style="color: #666; font-size: 14px; margin-bottom: 16px;">
-      Annotate child-adult interaction videos across multiple tiers for utterance
-      boundaries, morphology, syntax, communicative context, and error analysis.
-    </p>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <video controls width="720" style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-    </div>
-    <div style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
-      <strong>Multi-Tier Instructions:</strong> Annotate the child-adult interaction across
-      five parallel tiers: utterance segmentation, morphological coding, syntactic structure,
-      communicative context, and error classification. Focus primarily on the child's productions.
-    </div>
-  </div>
+      - name: "none"
+        key_value: "q"
+      - name: "phonological"
+        key_value: "w"
+      - name: "morphological"
+        key_value: "e"
+      - name: "syntactic"
+        key_value: "r"
+      - name: "lexical"
+        key_value: "t"
+      - name: "pragmatic"
+        key_value: "y"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

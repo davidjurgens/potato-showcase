@@ -36,7 +36,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Span annotation for entity mentions
@@ -44,33 +44,30 @@ annotation_schemes:
     name: entity_mentions
     description: "Highlight all biomedical entity mentions in the text. Select the most specific entity type for each mention."
     labels:
-      - "Disease"
-      - "Chemical"
-      - "Procedure"
-      - "Anatomy"
-      - "Gene"
-      - "Device"
-      - "Finding"
-      - "Other"
-    label_colors:
-      "Disease": "#ef4444"
-      "Chemical": "#3b82f6"
-      "Procedure": "#8b5cf6"
-      "Anatomy": "#22c55e"
-      "Gene": "#06b6d4"
-      "Device": "#f59e0b"
-      "Finding": "#f97316"
-      "Other": "#9ca3af"
-    tooltips:
-      "Disease": "Diseases, disorders, syndromes, pathological conditions (e.g., 'diabetes mellitus', 'hypertension', 'pneumonia')"
-      "Chemical": "Drugs, chemicals, metabolites, therapeutic agents (e.g., 'metformin', 'glucose', 'aspirin')"
-      "Procedure": "Medical/surgical procedures, diagnostic tests, therapies (e.g., 'biopsy', 'MRI', 'chemotherapy')"
-      "Anatomy": "Body parts, organs, tissues, cell components (e.g., 'liver', 'mitochondria', 'cerebral cortex')"
-      "Gene": "Genes, gene products, genetic variants (e.g., 'BRCA1', 'TP53', 'insulin receptor')"
-      "Device": "Medical devices, instruments, implants (e.g., 'stent', 'pacemaker', 'catheter')"
-      "Finding": "Clinical findings, lab results, vital signs (e.g., 'elevated blood pressure', 'leukocytosis')"
-      "Other": "Other biomedical concepts not fitting above categories"
-    allow_overlapping: false
+      - name: "Disease"
+        tooltip: "Diseases, disorders, syndromes, pathological conditions (e.g., 'diabetes mellitus', 'hypertension', 'pneumonia')"
+        color: "#ef4444"
+      - name: "Chemical"
+        tooltip: "Drugs, chemicals, metabolites, therapeutic agents (e.g., 'metformin', 'glucose', 'aspirin')"
+        color: "#3b82f6"
+      - name: "Procedure"
+        tooltip: "Medical/surgical procedures, diagnostic tests, therapies (e.g., 'biopsy', 'MRI', 'chemotherapy')"
+        color: "#8b5cf6"
+      - name: "Anatomy"
+        tooltip: "Body parts, organs, tissues, cell components (e.g., 'liver', 'mitochondria', 'cerebral cortex')"
+        color: "#22c55e"
+      - name: "Gene"
+        tooltip: "Genes, gene products, genetic variants (e.g., 'BRCA1', 'TP53', 'insulin receptor')"
+        color: "#06b6d4"
+      - name: "Device"
+        tooltip: "Medical devices, instruments, implants (e.g., 'stent', 'pacemaker', 'catheter')"
+        color: "#f59e0b"
+      - name: "Finding"
+        tooltip: "Clinical findings, lab results, vital signs (e.g., 'elevated blood pressure', 'leukocytosis')"
+        color: "#f97316"
+      - name: "Other"
+        tooltip: "Other biomedical concepts not fitting above categories"
+        color: "#9ca3af"
 
   # Step 2: UMLS CUI entry
   - annotation_type: text
@@ -82,32 +79,30 @@ annotation_schemes:
     name: mention_type
     description: "How does the text mention refer to the concept?"
     labels:
-      - "exact"
-      - "abbreviation"
-      - "acronym"
-      - "synonym"
-      - "metonymy"
-      - "implicit"
-    tooltips:
-      "exact": "The mention matches the preferred UMLS term exactly (e.g., 'diabetes mellitus')"
-      "abbreviation": "The mention is an abbreviated form (e.g., 'DM' for diabetes mellitus)"
-      "acronym": "The mention is an acronym (e.g., 'HIV' for human immunodeficiency virus)"
-      "synonym": "The mention is a known synonym (e.g., 'sugar disease' for diabetes)"
-      "metonymy": "The mention uses a related concept to refer to the entity (e.g., 'the virus' for SARS-CoV-2)"
-      "implicit": "The concept is implied but not directly named in text"
+      - name: "exact"
+        tooltip: "The mention matches the preferred UMLS term exactly (e.g., 'diabetes mellitus')"
+      - name: "abbreviation"
+        tooltip: "The mention is an abbreviated form (e.g., 'DM' for diabetes mellitus)"
+      - name: "acronym"
+        tooltip: "The mention is an acronym (e.g., 'HIV' for human immunodeficiency virus)"
+      - name: "synonym"
+        tooltip: "The mention is a known synonym (e.g., 'sugar disease' for diabetes)"
+      - name: "metonymy"
+        tooltip: "The mention uses a related concept to refer to the entity (e.g., 'the virus' for SARS-CoV-2)"
+      - name: "implicit"
+        tooltip: "The concept is implied but not directly named in text"
 
   # Step 4: Linking confidence
   - annotation_type: radio
     name: linking_confidence
     description: "How confident are you in the UMLS concept linking?"
     labels:
-      - "certain"
-      - "probable"
-      - "uncertain"
-    tooltips:
-      "certain": "Confident the CUI is correct; unambiguous mapping"
-      "probable": "Likely correct but some ambiguity exists among similar concepts"
-      "uncertain": "Low confidence; multiple plausible CUIs or unfamiliar concept"
+      - name: "certain"
+        tooltip: "Confident the CUI is correct; unambiguous mapping"
+      - name: "probable"
+        tooltip: "Likely correct but some ambiguity exists among similar concepts"
+      - name: "uncertain"
+        tooltip: "Low confidence; multiple plausible CUIs or unfamiliar concept"
 
 annotation_instructions: |
   You are annotating biomedical text from PubMed abstracts for entity linking.
@@ -118,18 +113,7 @@ annotation_instructions: |
   4. Indicate the mention type (exact match, abbreviation, synonym, etc.)
   5. Rate your confidence in the linking decision
 
-html_layout: |
-  <div style="padding: 15px; font-family: Georgia, serif;">
-    <div style="margin-bottom: 8px; color: #6b7280; font-size: 13px;">
-      <strong>Source:</strong> {{source}} | <strong>PMID:</strong> {{pmid}}
-    </div>
-    <div style="font-size: 16px; line-height: 1.8; background: #f9fafb; padding: 15px; border-left: 4px solid #3b82f6; border-radius: 4px;">
-      {{text}}
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

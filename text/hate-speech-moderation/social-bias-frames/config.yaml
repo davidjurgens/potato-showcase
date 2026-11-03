@@ -34,7 +34,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Offensiveness
@@ -42,54 +42,50 @@ annotation_schemes:
     name: offensive
     description: "Could this post be considered offensive to anyone?"
     labels:
-      - "Yes, offensive"
-      - "Maybe offensive"
-      - "Not offensive"
-    tooltips:
-      "Yes, offensive": "The post would likely offend members of some group"
-      "Maybe offensive": "The post could be seen as offensive by some people"
-      "Not offensive": "The post is unlikely to offend anyone"
+      - name: "Yes, offensive"
+        tooltip: "The post would likely offend members of some group"
+      - name: "Maybe offensive"
+        tooltip: "The post could be seen as offensive by some people"
+      - name: "Not offensive"
+        tooltip: "The post is unlikely to offend anyone"
 
   # Step 2: Intent
   - annotation_type: radio
     name: intent
     description: "Was the intent of the post to be offensive or hurtful?"
     labels:
-      - "Intentionally offensive"
-      - "Possibly intentional"
-      - "Not intentional"
-      - "Can't tell"
-    tooltips:
-      "Intentionally offensive": "The speaker clearly meant to offend or demean"
-      "Possibly intentional": "The offense might have been deliberate"
-      "Not intentional": "The speaker likely didn't mean to offend (ignorance, poor wording)"
-      "Can't tell": "Intent is unclear from the post"
+      - name: "Intentionally offensive"
+        tooltip: "The speaker clearly meant to offend or demean"
+      - name: "Possibly intentional"
+        tooltip: "The offense might have been deliberate"
+      - name: "Not intentional"
+        tooltip: "The speaker likely didn't mean to offend (ignorance, poor wording)"
+      - name: "Can't tell"
+        tooltip: "Intent is unclear from the post"
 
   # Step 3: Lewdness
   - annotation_type: radio
     name: lewd
     description: "Is the post lewd or sexual in nature?"
     labels:
-      - "Yes"
-      - "Somewhat"
-      - "No"
-    tooltips:
-      "Yes": "The post is explicitly sexual or lewd"
-      "Somewhat": "The post has sexual undertones or innuendo"
-      "No": "The post is not sexual"
+      - name: "Yes"
+        tooltip: "The post is explicitly sexual or lewd"
+      - name: "Somewhat"
+        tooltip: "The post has sexual undertones or innuendo"
+      - name: "No"
+        tooltip: "The post is not sexual"
 
   # Step 4: Group implication
   - annotation_type: radio
     name: group_implication
     description: "Does the post imply something negative about a group of people?"
     labels:
-      - "Yes, implies stereotype"
-      - "Mentions group but no stereotype"
-      - "No group mentioned"
-    tooltips:
-      "Yes, implies stereotype": "The post implies a generalization or stereotype about a demographic group"
-      "Mentions group but no stereotype": "A group is mentioned but no stereotype is implied"
-      "No group mentioned": "No demographic group is referenced"
+      - name: "Yes, implies stereotype"
+        tooltip: "The post implies a generalization or stereotype about a demographic group"
+      - name: "Mentions group but no stereotype"
+        tooltip: "A group is mentioned but no stereotype is implied"
+      - name: "No group mentioned"
+        tooltip: "No demographic group is referenced"
 
   # Step 5: Target group (if applicable)
   - annotation_type: multiselect
@@ -110,11 +106,8 @@ annotation_schemes:
       - "Elderly people"
       - "Poor/working class"
       - "Other group"
-    min_selections: 0
-    max_selections: 14
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

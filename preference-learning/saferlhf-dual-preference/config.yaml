@@ -14,26 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout showing prompt and both responses
-html_layout: |
-  <div class="comparison-container">
-    <div class="prompt-section" style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ff9800;">
-      <h3 style="margin-top: 0;">⚠️ User Prompt:</h3>
-      <div class="prompt-text">{{prompt}}</div>
-    </div>
-    <div class="responses-row" style="display: flex; gap: 20px;">
-      <div class="response-0" style="flex: 1; background: #e8f5e9; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #2e7d32;">Response 0:</h3>
-        <div class="response-text">{{response_0}}</div>
-      </div>
-      <div class="response-1" style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
-        <h3 style="margin-top: 0; color: #1565c0;">Response 1:</h3>
-        <div class="response-text">{{response_1}}</div>
-      </div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -42,48 +23,44 @@ annotation_schemes:
     description: "Which response is MORE HELPFUL in addressing the user's request? (Ignoring safety concerns for this question)"
     annotation_type: radio
     labels:
-      - "Response 0 is more helpful"
-      - "About equally helpful"
-      - "Response 1 is more helpful"
-    keyboard_shortcuts:
-      "Response 0 is more helpful": "1"
-      "About equally helpful": "2"
-      "Response 1 is more helpful": "3"
+      - name: "Response 0 is more helpful"
+        key_value: "1"
+      - name: "About equally helpful"
+        key_value: "2"
+      - name: "Response 1 is more helpful"
+        key_value: "3"
 
   # HARMLESSNESS preference (which response is safer?)
   - name: "safety_preference"
     description: "Which response is SAFER / LESS HARMFUL? Consider potential for misuse, harmful content, or dangerous advice."
     annotation_type: radio
     labels:
-      - "Response 0 is safer"
-      - "About equally safe"
-      - "Response 1 is safer"
-    keyboard_shortcuts:
-      "Response 0 is safer": "q"
-      "About equally safe": "w"
-      "Response 1 is safer": "e"
+      - name: "Response 0 is safer"
+        key_value: "q"
+      - name: "About equally safe"
+        key_value: "w"
+      - name: "Response 1 is safer"
+        key_value: "e"
 
   # Safety flags for Response 0
   - name: "response_0_safe"
     description: "Is Response 0 safe? (Free from harmful content)"
     annotation_type: radio
     labels:
-      - "Safe"
-      - "Unsafe"
-    keyboard_shortcuts:
-      "Safe": "a"
-      "Unsafe": "s"
+      - name: "Safe"
+        key_value: "a"
+      - name: "Unsafe"
+        key_value: "s"
 
   # Safety flags for Response 1
   - name: "response_1_safe"
     description: "Is Response 1 safe? (Free from harmful content)"
     annotation_type: radio
     labels:
-      - "Safe"
-      - "Unsafe"
-    keyboard_shortcuts:
-      "Safe": "z"
-      "Unsafe": "x"
+      - name: "Safe"
+        key_value: "z"
+      - name: "Unsafe"
+        key_value: "x"
 
   # Harm categories for Response 0 (if unsafe)
   - name: "response_0_harm_categories"
@@ -143,11 +120,12 @@ annotation_schemes:
       - "4 - Severe (immediate danger or major harm)"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 60
-annotation_per_instance: 3
+max_annotations_per_user: 60
+num_annotators_per_item: 3
 
 # Instructions
 annotation_instructions: |

@@ -37,7 +37,7 @@ item_properties:
   text_key: "pair"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: NLI label
@@ -45,37 +45,30 @@ annotation_schemes:
     name: label
     description: "Given the PREMISE, what is the relationship with the HYPOTHESIS?"
     labels:
-      - "Entailment"
-      - "Contradiction"
-      - "Neutral"
-    tooltips:
-      "Entailment": "If the premise is true, the hypothesis MUST be true"
-      "Contradiction": "If the premise is true, the hypothesis MUST be false"
-      "Neutral": "The premise doesn't determine whether the hypothesis is true or false"
+      - name: "Entailment"
+        tooltip: "If the premise is true, the hypothesis MUST be true"
+      - name: "Contradiction"
+        tooltip: "If the premise is true, the hypothesis MUST be false"
+      - name: "Neutral"
+        tooltip: "The premise doesn't determine whether the hypothesis is true or false"
 
   # Step 2: Highlight key words in premise
   - annotation_type: span
     name: premise_highlights
     description: "Highlight the words in the PREMISE that are most relevant to your decision"
     labels:
-      - "Key Evidence"
-    label_colors:
-      "Key Evidence": "#3b82f6"
-    tooltips:
-      "Key Evidence": "Words or phrases that are crucial for determining the relationship"
-    allow_overlapping: false
+      - name: "Key Evidence"
+        tooltip: "Words or phrases that are crucial for determining the relationship"
+        color: "#3b82f6"
 
   # Step 3: Highlight key words in hypothesis
   - annotation_type: span
     name: hypothesis_highlights
     description: "Highlight the words in the HYPOTHESIS that are most relevant to your decision"
     labels:
-      - "Key Evidence"
-    label_colors:
-      "Key Evidence": "#22c55e"
-    tooltips:
-      "Key Evidence": "Words or phrases that are crucial for determining the relationship"
-    allow_overlapping: false
+      - name: "Key Evidence"
+        tooltip: "Words or phrases that are crucial for determining the relationship"
+        color: "#22c55e"
 
   # Step 4: Natural language explanation (the defining e-SNLI output)
   - annotation_type: text
@@ -86,8 +79,6 @@ annotation_schemes:
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your classification?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -95,8 +86,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -14,20 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display the response being evaluated
-html_layout: |
-  <div class="annotation-container">
-    <div class="prompt-section">
-      <h3>User Prompt:</h3>
-      <div class="prompt-text">{{prompt}}</div>
-    </div>
-    <div class="response-section">
-      <h3>AI Response:</h3>
-      <div class="response-text">{{response}}</div>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes - 5 dimensions on 0-4 scale
 annotation_schemes:
@@ -45,12 +32,6 @@ annotation_schemes:
       - "2 - Moderately helpful, partially addresses request"
       - "3 - Helpful, addresses most of the request well"
       - "4 - Extremely helpful, fully addresses request with excellence"
-    keyboard_shortcuts:
-      "0 - Not helpful at all, fails to address the request": "1"
-      "1 - Slightly helpful, addresses request minimally": "2"
-      "2 - Moderately helpful, partially addresses request": "3"
-      "3 - Helpful, addresses most of the request well": "4"
-      "4 - Extremely helpful, fully addresses request with excellence": "5"
 
   - name: "correctness"
     description: |
@@ -66,12 +47,6 @@ annotation_schemes:
       - "2 - Mostly correct with some minor errors"
       - "3 - Correct with negligible issues"
       - "4 - Fully correct and accurate"
-    keyboard_shortcuts:
-      "0 - Contains major errors or false information": "q"
-      "1 - Contains several inaccuracies": "w"
-      "2 - Mostly correct with some minor errors": "e"
-      "3 - Correct with negligible issues": "r"
-      "4 - Fully correct and accurate": "t"
 
   - name: "coherence"
     description: |
@@ -87,12 +62,6 @@ annotation_schemes:
       - "2 - Reasonably clear but could be better organized"
       - "3 - Clear and well-organized"
       - "4 - Exceptionally clear, logical, and well-structured"
-    keyboard_shortcuts:
-      "0 - Confusing, disorganized, hard to follow": "a"
-      "1 - Somewhat unclear or poorly structured": "s"
-      "2 - Reasonably clear but could be better organized": "d"
-      "3 - Clear and well-organized": "f"
-      "4 - Exceptionally clear, logical, and well-structured": "g"
 
   - name: "complexity"
     description: |
@@ -108,12 +77,6 @@ annotation_schemes:
       - "2 - Moderate, requires some subject familiarity"
       - "3 - Advanced, requires substantial domain knowledge"
       - "4 - Expert, requires deep domain expertise"
-    keyboard_shortcuts:
-      "0 - Basic, writable by anyone with basic language competency": "z"
-      "1 - Simple, requires only common knowledge": "x"
-      "2 - Moderate, requires some subject familiarity": "c"
-      "3 - Advanced, requires substantial domain knowledge": "v"
-      "4 - Expert, requires deep domain expertise": "b"
 
   - name: "verbosity"
     description: |
@@ -129,19 +92,14 @@ annotation_schemes:
       - "2 - Moderate amount of detail"
       - "3 - Somewhat verbose"
       - "4 - Very verbose, highly detailed"
-    keyboard_shortcuts:
-      "0 - Very terse, minimal detail": "n"
-      "1 - Somewhat terse": "m"
-      "2 - Moderate amount of detail": ","
-      "3 - Somewhat verbose": "."
-      "4 - Very verbose, highly detailed": "/"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 100
-annotation_per_instance: 2
+max_annotations_per_user: 100
+num_annotators_per_item: 2
 
 # Instructions
 annotation_instructions: |

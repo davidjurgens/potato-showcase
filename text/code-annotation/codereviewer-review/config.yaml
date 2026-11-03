@@ -34,7 +34,7 @@ item_properties:
   text_key: "code_diff"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Span annotation for code issues
@@ -42,65 +42,60 @@ annotation_schemes:
     name: code_issues
     description: "Highlight code regions that contain issues. Select the appropriate issue type for each highlighted region."
     labels:
-      - "bug"
-      - "style-violation"
-      - "performance"
-      - "security"
-      - "logic-error"
-      - "naming"
-      - "documentation"
-      - "redundancy"
-    label_colors:
-      "bug": "#ef4444"
-      "style-violation": "#f59e0b"
-      "performance": "#f97316"
-      "security": "#dc2626"
-      "logic-error": "#8b5cf6"
-      "naming": "#06b6d4"
-      "documentation": "#3b82f6"
-      "redundancy": "#9ca3af"
-    tooltips:
-      "bug": "Functional bugs: incorrect logic, wrong return values, missing error handling, crashes"
-      "style-violation": "Code style issues: formatting, indentation, convention violations, inconsistent patterns"
-      "performance": "Performance problems: unnecessary loops, inefficient algorithms, excessive memory usage"
-      "security": "Security vulnerabilities: SQL injection, XSS, hardcoded credentials, buffer overflows"
-      "logic-error": "Logical flaws: wrong conditions, off-by-one errors, missed edge cases, race conditions"
-      "naming": "Poor naming: unclear variable names, misleading function names, single-letter variables in large scope"
-      "documentation": "Missing or wrong documentation: absent docstrings, outdated comments, misleading descriptions"
-      "redundancy": "Redundant code: dead code, unnecessary checks, duplicated logic, over-engineering"
-    allow_overlapping: false
+      - name: "bug"
+        tooltip: "Functional bugs: incorrect logic, wrong return values, missing error handling, crashes"
+        color: "#ef4444"
+      - name: "style-violation"
+        tooltip: "Code style issues: formatting, indentation, convention violations, inconsistent patterns"
+        color: "#f59e0b"
+      - name: "performance"
+        tooltip: "Performance problems: unnecessary loops, inefficient algorithms, excessive memory usage"
+        color: "#f97316"
+      - name: "security"
+        tooltip: "Security vulnerabilities: SQL injection, XSS, hardcoded credentials, buffer overflows"
+        color: "#dc2626"
+      - name: "logic-error"
+        tooltip: "Logical flaws: wrong conditions, off-by-one errors, missed edge cases, race conditions"
+        color: "#8b5cf6"
+      - name: "naming"
+        tooltip: "Poor naming: unclear variable names, misleading function names, single-letter variables in large scope"
+        color: "#06b6d4"
+      - name: "documentation"
+        tooltip: "Missing or wrong documentation: absent docstrings, outdated comments, misleading descriptions"
+        color: "#3b82f6"
+      - name: "redundancy"
+        tooltip: "Redundant code: dead code, unnecessary checks, duplicated logic, over-engineering"
+        color: "#9ca3af"
 
   # Step 2: Overall review decision
   - annotation_type: radio
     name: review_decision
     description: "What is your overall review decision for this code change?"
     labels:
-      - "approve"
-      - "request-changes"
-      - "comment-only"
-      - "needs-discussion"
-    tooltips:
-      "approve": "Code is acceptable and can be merged as-is or with minor tweaks"
-      "request-changes": "Code has issues that must be fixed before merging"
-      "comment-only": "Leaving feedback but not blocking the merge"
-      "needs-discussion": "Code raises questions that require discussion with the author or team"
+      - name: "approve"
+        tooltip: "Code is acceptable and can be merged as-is or with minor tweaks"
+      - name: "request-changes"
+        tooltip: "Code has issues that must be fixed before merging"
+      - name: "comment-only"
+        tooltip: "Leaving feedback but not blocking the merge"
+      - name: "needs-discussion"
+        tooltip: "Code raises questions that require discussion with the author or team"
 
   # Step 3: Severity of most critical issue
   - annotation_type: radio
     name: severity
     description: "What is the severity of the most critical issue found?"
     labels:
-      - "critical"
-      - "major"
-      - "minor"
-      - "nitpick"
-      - "praise"
-    tooltips:
-      "critical": "Blocks merge: data loss, security vulnerability, crash, or broken functionality"
-      "major": "Significant issue: incorrect behavior, missing error handling, or design flaw"
-      "minor": "Small issue: could be improved but not blocking (e.g., naming, minor refactor)"
-      "nitpick": "Trivial: style preference, optional improvement, cosmetic change"
-      "praise": "No issues found; the code is well-written and worth highlighting"
+      - name: "critical"
+        tooltip: "Blocks merge: data loss, security vulnerability, crash, or broken functionality"
+      - name: "major"
+        tooltip: "Significant issue: incorrect behavior, missing error handling, or design flaw"
+      - name: "minor"
+        tooltip: "Small issue: could be improved but not blocking (e.g., naming, minor refactor)"
+      - name: "nitpick"
+        tooltip: "Trivial: style preference, optional improvement, cosmetic change"
+      - name: "praise"
+        tooltip: "No issues found; the code is well-written and worth highlighting"
 
   # Step 4: Free text review comment
   - annotation_type: text
@@ -116,18 +111,7 @@ annotation_instructions: |
   4. Rate the severity of the most critical issue
   5. Write a constructive review comment with specific, actionable feedback
 
-html_layout: |
-  <div style="padding: 15px; font-family: monospace;">
-    <div style="margin-bottom: 10px; font-family: sans-serif; color: #6b7280; font-size: 13px;">
-      <strong>Repository:</strong> {{repository}} |
-      <strong>Language:</strong> {{language}} |
-      <strong>Change Type:</strong> {{change_type}}
-    </div>
-    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 14px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">{{code_diff}}</pre>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

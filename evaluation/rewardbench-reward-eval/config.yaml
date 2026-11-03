@@ -31,10 +31,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   # Step 1: Pairwise preference
@@ -45,32 +44,24 @@ annotation_schemes:
     labels:
       - "Chosen"
       - "Rejected"
-    keyboard_shortcuts:
-      "Chosen": "a"
-      "Rejected": "b"
-    tooltips:
-      "Chosen": "Response A is the better response"
-      "Rejected": "Response B is the better response"
 
   # Step 2: Category classification
   - annotation_type: radio
     name: category_type
     description: "What category does this prompt belong to?"
     labels:
-      - "Chat"
-      - "Safety"
-      - "Reasoning"
-      - "Chat Hard"
-    keyboard_shortcuts:
-      "Chat": "1"
-      "Safety": "2"
-      "Reasoning": "3"
-      "Chat Hard": "4"
-    tooltips:
-      "Chat": "General conversational ability and helpfulness"
-      "Safety": "Handling of harmful, sensitive, or inappropriate content"
-      "Reasoning": "Logical, mathematical, or analytical reasoning tasks"
-      "Chat Hard": "Challenging or nuanced conversational scenarios"
+      - name: "Chat"
+        tooltip: "General conversational ability and helpfulness"
+        key_value: "1"
+      - name: "Safety"
+        tooltip: "Handling of harmful, sensitive, or inappropriate content"
+        key_value: "2"
+      - name: "Reasoning"
+        tooltip: "Logical, mathematical, or analytical reasoning tasks"
+        key_value: "3"
+      - name: "Chat Hard"
+        tooltip: "Challenging or nuanced conversational scenarios"
+        key_value: "4"
 
   # Step 3: Multi-dimensional quality rating
   - annotation_type: multirate
@@ -100,31 +91,7 @@ annotation_instructions: |
   - Harmlessness: Does the response avoid harmful, biased, or dangerous content?
   - Honesty: Is the response truthful and transparent about uncertainty?
 
-html_layout: |
-  <div style="padding: 15px; max-width: 900px; margin: auto;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-      <div style="background: #e8eaf6; padding: 8px 15px; border-radius: 8px;">
-        <strong>Category:</strong> {{category}}
-      </div>
-    </div>
-    <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-      <strong>Prompt:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0; white-space: pre-wrap;">{{text}}</p>
-    </div>
-    <div style="display: flex; gap: 16px;">
-      <div style="flex: 1; background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #2e7d32;">Response A:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_a}}</div>
-      </div>
-      <div style="flex: 1; background: #ffebee; border: 2px solid #c62828; border-radius: 8px; padding: 16px;">
-        <h4 style="margin-top: 0; color: #c62828;">Response B:</h4>
-        <div style="white-space: pre-wrap; font-size: 14px; line-height: 1.6;">{{response_b}}</div>
-      </div>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -30,10 +30,9 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: video
@@ -44,17 +43,15 @@ annotation_schemes:
     name: correctness
     description: "How correct is the model's response based on the video content?"
     labels:
-      - "Correct"
-      - "Partially Correct"
-      - "Incorrect"
-    keyboard_shortcuts:
-      "Correct": "1"
-      "Partially Correct": "2"
-      "Incorrect": "3"
-    tooltips:
-      "Correct": "The response accurately and fully answers the question based on the video"
-      "Partially Correct": "The response contains some correct elements but is incomplete or partially wrong"
-      "Incorrect": "The response does not accurately answer the question based on the video"
+      - name: "Correct"
+        tooltip: "The response accurately and fully answers the question based on the video"
+        key_value: "1"
+      - name: "Partially Correct"
+        tooltip: "The response contains some correct elements but is incomplete or partially wrong"
+        key_value: "2"
+      - name: "Incorrect"
+        tooltip: "The response does not accurately answer the question based on the video"
+        key_value: "3"
 
   - annotation_type: likert
     name: response_quality
@@ -70,26 +67,7 @@ annotation_instructions: |
   3. Judge the correctness: Correct, Partially Correct, or Incorrect.
   4. Rate the overall response quality on a 5-point scale.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #1e293b; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
-      <video controls style="max-width: 100%; border-radius: 4px;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px;">
-      <strong style="color: #0369a1;">Model Response:</strong>
-      <p style="font-size: 15px; line-height: 1.7; margin: 8px 0 0 0;">{{model_response}}</p>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

@@ -35,7 +35,7 @@ item_properties:
   text_key: "pair"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Stance classification
@@ -43,54 +43,42 @@ annotation_schemes:
     name: stance
     description: "Does the PERSPECTIVE support or oppose the CLAIM?"
     labels:
-      - "Supports"
-      - "Opposes"
-      - "Neutral/Unclear"
-    tooltips:
-      "Supports": "The perspective, if true, would support the claim"
-      "Opposes": "The perspective, if true, would oppose or undermine the claim"
-      "Neutral/Unclear": "The perspective doesn't clearly support or oppose"
+      - name: "Supports"
+        tooltip: "The perspective, if true, would support the claim"
+      - name: "Opposes"
+        tooltip: "The perspective, if true, would oppose or undermine the claim"
+      - name: "Neutral/Unclear"
+        tooltip: "The perspective doesn't clearly support or oppose"
 
   # Step 2: Relevance
   - annotation_type: radio
     name: relevance
     description: "How relevant is this perspective to the claim?"
     labels:
-      - "Highly relevant"
-      - "Somewhat relevant"
-      - "Barely relevant"
-      - "Not relevant"
-    tooltips:
-      "Highly relevant": "Directly addresses the core of the claim"
-      "Somewhat relevant": "Related but not central to the claim"
-      "Barely relevant": "Only tangentially related"
-      "Not relevant": "Not related to the claim at all"
+      - name: "Highly relevant"
+        tooltip: "Directly addresses the core of the claim"
+      - name: "Somewhat relevant"
+        tooltip: "Related but not central to the claim"
+      - name: "Barely relevant"
+        tooltip: "Only tangentially related"
+      - name: "Not relevant"
+        tooltip: "Not related to the claim at all"
 
   # Step 3: Perspective strength
   - annotation_type: likert
     name: strength
     description: "How strong/convincing is this perspective?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very weak"
       2: "Weak"
       3: "Moderate"
       4: "Strong"
       5: "Very strong"
-    tooltips:
-      1: "Unconvincing or poorly reasoned"
-      2: "Has some merit but not compelling"
-      3: "Reasonable argument"
-      4: "Compelling argument"
-      5: "Highly convincing argument"
 
   # Step 4: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in your annotation?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -98,8 +86,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

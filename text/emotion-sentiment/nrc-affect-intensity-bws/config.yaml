@@ -36,11 +36,9 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "prompt"
-  text_display_key: "prompt"
-  list_display_key: "options"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: radio
@@ -61,8 +59,7 @@ annotation_schemes:
       - "Word 3"
       - "Word 4"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 4
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 4

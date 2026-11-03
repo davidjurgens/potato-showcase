@@ -23,13 +23,12 @@ item_properties:
   text_key: "audio_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: span
     name: speaker_segments
     description: "Mark temporal speaker segments with start and end times (in seconds)"
-    span_mode: temporal
     labels:
       - name: "Speaker 1"
         color: "#3B82F6"
@@ -112,14 +111,7 @@ annotation_schemes:
       - name: "Unintelligible"
         tooltip: "Cannot understand the speech"
 
-audio_display:
-  show_waveform: true
-  playback_controls: true
-  allow_speed_control: true
-  show_spectrogram: true
-
-allow_all_users: true
-instances_per_annotator: 30
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 30
+num_annotators_per_item: 2

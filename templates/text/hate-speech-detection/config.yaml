@@ -10,7 +10,6 @@ data_files:
 item_properties:
   id_key: "id"
   text_key: "text"
-  text_display_key: "text"
 
 user_config:
   allow_all_users: true
@@ -45,9 +44,11 @@ annotation_schemes:
       - name: "National Origin"
       - name: "Age"
       - name: "Other"
-    show_if:
-      field: "primary_label"
-      value: "Hate Speech"
+    display_logic:
+      show_when:
+        - schema: "primary_label"
+          operator: "equals"
+          value: "Hate Speech"
 
   - annotation_type: "multiselect"
     name: "hate_type"
@@ -58,9 +59,11 @@ annotation_schemes:
       - name: "Stereotyping"
       - name: "Threats/Incitement"
       - name: "Exclusion/Marginalization"
-    show_if:
-      field: "primary_label"
-      value: "Hate Speech"
+    display_logic:
+      show_when:
+        - schema: "primary_label"
+          operator: "equals"
+          value: "Hate Speech"
 
   - annotation_type: "likert"
     name: "severity"
@@ -79,7 +82,5 @@ annotation_schemes:
       - name: "Remove content"
       - name: "Remove + ban user"
 
-output: "annotation_output/"
-
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

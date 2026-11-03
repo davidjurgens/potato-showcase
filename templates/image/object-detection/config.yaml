@@ -1,5 +1,4 @@
 annotation_task_name: "Object Detection"
-task_name: "Object Detection"
 task_description: "Draw bounding boxes around all objects of interest."
 task_dir: "."
 port: 8000
@@ -25,4 +24,4 @@ annotation_schemes:
       - "Cat"
 
 output_annotation_dir: "output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

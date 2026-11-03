@@ -44,7 +44,7 @@ item_properties:
   text_key: "context"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Correct answer selection
@@ -52,57 +52,53 @@ annotation_schemes:
     name: correct_answer
     description: "Based on the context, which answer is correct?"
     labels:
-      - "answer_a"
-      - "answer_b"
-      - "unknown"
-    keyboard_shortcuts:
-      "answer_a": "a"
-      "answer_b": "b"
-      "unknown": "u"
-    tooltips:
-      "answer_a": "The first answer option is correct based on the context"
-      "answer_b": "The second answer option is correct based on the context"
-      "unknown": "The context does not provide enough information to determine the answer"
+      - name: "answer_a"
+        tooltip: "The first answer option is correct based on the context"
+        key_value: "a"
+      - name: "answer_b"
+        tooltip: "The second answer option is correct based on the context"
+        key_value: "b"
+      - name: "unknown"
+        tooltip: "The context does not provide enough information to determine the answer"
+        key_value: "u"
 
   # Step 2: Bias direction assessment
   - annotation_type: radio
     name: bias_direction
     description: "Does the expected or stereotypical answer align with common social biases?"
     labels:
-      - "stereotypical"
-      - "anti-stereotypical"
-      - "neutral"
-      - "ambiguous"
-    tooltips:
-      "stereotypical": "Selecting a specific answer would align with a common social stereotype"
-      "anti-stereotypical": "Selecting a specific answer would go against common social stereotypes"
-      "neutral": "Neither answer choice invokes or relates to social stereotypes"
-      "ambiguous": "The context is too ambiguous to determine bias direction"
+      - name: "stereotypical"
+        tooltip: "Selecting a specific answer would align with a common social stereotype"
+      - name: "anti-stereotypical"
+        tooltip: "Selecting a specific answer would go against common social stereotypes"
+      - name: "neutral"
+        tooltip: "Neither answer choice invokes or relates to social stereotypes"
+      - name: "ambiguous"
+        tooltip: "The context is too ambiguous to determine bias direction"
 
   # Step 3: Bias category
   - annotation_type: radio
     name: bias_category
     description: "What category of social bias does this question probe?"
     labels:
-      - "age"
-      - "disability"
-      - "gender"
-      - "nationality"
-      - "physical-appearance"
-      - "race-ethnicity"
-      - "religion"
-      - "socioeconomic"
-      - "sexual-orientation"
-    tooltips:
-      "age": "Bias related to a person's age (young vs. old)"
-      "disability": "Bias related to disability status"
-      "gender": "Bias related to gender identity or expression"
-      "nationality": "Bias related to nationality or country of origin"
-      "physical-appearance": "Bias related to physical appearance or body type"
-      "race-ethnicity": "Bias related to race or ethnicity"
-      "religion": "Bias related to religious affiliation"
-      "socioeconomic": "Bias related to socioeconomic status or class"
-      "sexual-orientation": "Bias related to sexual orientation"
+      - name: "age"
+        tooltip: "Bias related to a person's age (young vs. old)"
+      - name: "disability"
+        tooltip: "Bias related to disability status"
+      - name: "gender"
+        tooltip: "Bias related to gender identity or expression"
+      - name: "nationality"
+        tooltip: "Bias related to nationality or country of origin"
+      - name: "physical-appearance"
+        tooltip: "Bias related to physical appearance or body type"
+      - name: "race-ethnicity"
+        tooltip: "Bias related to race or ethnicity"
+      - name: "religion"
+        tooltip: "Bias related to religious affiliation"
+      - name: "socioeconomic"
+        tooltip: "Bias related to socioeconomic status or class"
+      - name: "sexual-orientation"
+        tooltip: "Bias related to sexual orientation"
 
   # Step 4: Reasoning
   - annotation_type: text
@@ -119,31 +115,7 @@ annotation_instructions: |
 
   CRITICAL: Do NOT use stereotypes to fill in missing information. If the context does not provide enough detail, the answer is UNKNOWN.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Context:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{context}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Question:</strong>
-      <p style="font-size: 16px; line-height: 1.6; margin: 8px 0 0 0;">{{question}}</p>
-    </div>
-    <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">A:</strong> {{answer_a}}
-      </div>
-      <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-        <strong style="color: #475569;">B:</strong> {{answer_b}}
-      </div>
-    </div>
-    <div style="font-size: 13px; color: #6b7280;">
-      <em>Bias category: {{bias_category}} | Type: {{disambiguation_type}}</em>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 3

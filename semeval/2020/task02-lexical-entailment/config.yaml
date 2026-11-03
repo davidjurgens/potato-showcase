@@ -19,50 +19,45 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 port: 8000
-server_name: localhost
 
 annotation_schemes:
   - annotation_type: radio
     name: entailment_degree
     description: "To what degree is word 1 (X) a type of word 2 (Y)?"
     labels:
-      - "6 - Definitely a type of"
-      - "5"
-      - "4"
-      - "3 - Somewhat / loosely a type of"
-      - "2"
-      - "1"
-      - "0 - Not at all a type of"
-    keyboard_shortcuts:
-      "6 - Definitely a type of": "6"
-      "5": "5"
-      "4": "4"
-      "3 - Somewhat / loosely a type of": "3"
-      "2": "2"
-      "1": "1"
-      "0 - Not at all a type of": "0"
-    tooltips:
-      "6 - Definitely a type of": "X is fully a type of Y (e.g., sparrow is a type of bird)"
-      "3 - Somewhat / loosely a type of": "There is a partial or weak type-of relation"
-      "0 - Not at all a type of": "X is not a type of Y (no is-a / hyponym-hypernym relation)"
+      - name: "6 - Definitely a type of"
+        tooltip: "X is fully a type of Y (e.g., sparrow is a type of bird)"
+        key_value: "6"
+      - name: "5"
+        key_value: "5"
+      - name: "4"
+        key_value: "4"
+      - name: "3 - Somewhat / loosely a type of"
+        tooltip: "There is a partial or weak type-of relation"
+        key_value: "3"
+      - name: "2"
+        key_value: "2"
+      - name: "1"
+        key_value: "1"
+      - name: "0 - Not at all a type of"
+        tooltip: "X is not a type of Y (no is-a / hyponym-hypernym relation)"
+        key_value: "0"
   - annotation_type: radio
     name: entailment_direction
     description: "Direction of the type-of (is-a) relation"
     labels:
-      - "X is a type of Y (forward)"
-      - "Y is a type of X (reverse)"
-      - "No type-of relation"
-    keyboard_shortcuts:
-      "X is a type of Y (forward)": "f"
-      "Y is a type of X (reverse)": "r"
-      "No type-of relation": "n"
-    tooltips:
-      "X is a type of Y (forward)": "Word 1 is more specific (e.g., dog -> animal)"
-      "Y is a type of X (reverse)": "Word 2 is more specific (e.g., animal -> dog)"
-      "No type-of relation": "Neither word is a type of the other"
+      - name: "X is a type of Y (forward)"
+        tooltip: "Word 1 is more specific (e.g., dog -> animal)"
+        key_value: "f"
+      - name: "Y is a type of X (reverse)"
+        tooltip: "Word 2 is more specific (e.g., animal -> dog)"
+        key_value: "r"
+      - name: "No type-of relation"
+        tooltip: "Neither word is a type of the other"
+        key_value: "n"
 
 annotation_instructions: |
   Following the HyperLex graded lexical entailment protocol, you will see word 1
@@ -76,24 +71,7 @@ annotation_instructions: |
   3. Mark the DIRECTION of the relation: whether X is a type of Y (forward),
      Y is a type of X (reverse), or there is no type-of relation.
 
-html_layout: |
-  <div style="padding: 15px; max-width: 800px; margin: auto;">
-    <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #0369a1;">Word 1 in Context:</strong>
-      <p style="font-size: 16px; line-height: 1.7; margin: 8px 0 0 0;">{{text}}</p>
-    </div>
-    <div style="background: #fefce8; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #a16207;">Word 2:</strong>
-      <span style="font-size: 18px; font-weight: bold; color: #b45309;">{{word_2}}</span>
-    </div>
-    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-      <strong style="color: #166534;">Language:</strong>
-      <span style="font-size: 14px;">{{language}}</span>
-    </div>
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2

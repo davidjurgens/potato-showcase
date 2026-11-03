@@ -34,7 +34,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Stance classification
@@ -42,39 +42,28 @@ annotation_schemes:
     name: stance
     description: "What is the author's stance toward the given TOPIC?"
     labels:
-      - "FAVOR"
-      - "AGAINST"
-      - "NEUTRAL"
-    tooltips:
-      "FAVOR": "The author supports, agrees with, or promotes the topic"
-      "AGAINST": "The author opposes, disagrees with, or argues against the topic"
-      "NEUTRAL": "The author discusses the topic without taking a clear position"
+      - name: "FAVOR"
+        tooltip: "The author supports, agrees with, or promotes the topic"
+      - name: "AGAINST"
+        tooltip: "The author opposes, disagrees with, or argues against the topic"
+      - name: "NEUTRAL"
+        tooltip: "The author discusses the topic without taking a clear position"
 
   # Step 2: Stance strength
   - annotation_type: likert
     name: strength
     description: "How strong is the expressed stance?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very weak/implicit"
       2: "Weak"
       3: "Moderate"
       4: "Strong"
       5: "Very strong/explicit"
-    tooltips:
-      1: "Stance is barely detectable, highly implicit"
-      2: "Stance is present but understated"
-      3: "Clear stance without strong language"
-      4: "Explicit stance with conviction"
-      5: "Extremely strong, emphatic stance"
 
   # Step 3: Confidence
   - annotation_type: likert
     name: confidence
     description: "How confident are you in this annotation?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Very uncertain"
       2: "Somewhat uncertain"
@@ -82,8 +71,7 @@ annotation_schemes:
       4: "Confident"
       5: "Very confident"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -34,7 +34,7 @@ item_properties:
   text_key: "dialogue"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Emotional situation classification
@@ -43,82 +43,71 @@ annotation_schemes:
     description: "What emotion is the speaker experiencing in this situation?"
     labels:
       # Positive emotions
-      - "Joyful"
-      - "Excited"
-      - "Proud"
-      - "Grateful"
-      - "Hopeful"
-      - "Content"
+      - name: "Joyful"
+        tooltip: "Feeling happy, delighted, or cheerful"
+      - name: "Excited"
+        tooltip: "Feeling enthusiastic, eager, or thrilled"
+      - name: "Proud"
+        tooltip: "Feeling accomplished or pleased with achievements"
+      - name: "Grateful"
+        tooltip: "Feeling thankful or appreciative"
+      - name: "Hopeful"
+        tooltip: "Feeling optimistic about the future"
+      - name: "Content"
+        tooltip: "Feeling satisfied and at peace"
       # Negative emotions
-      - "Sad"
-      - "Anxious"
-      - "Angry"
-      - "Afraid"
-      - "Lonely"
-      - "Embarrassed"
-      - "Disappointed"
-      - "Devastated"
+      - name: "Sad"
+        tooltip: "Feeling unhappy, sorrowful, or down"
+      - name: "Anxious"
+        tooltip: "Feeling worried, nervous, or uneasy"
+      - name: "Angry"
+        tooltip: "Feeling frustrated, irritated, or mad"
+      - name: "Afraid"
+        tooltip: "Feeling scared, fearful, or terrified"
+      - name: "Lonely"
+        tooltip: "Feeling isolated, alone, or disconnected"
+      - name: "Embarrassed"
+        tooltip: "Feeling self-conscious, ashamed, or awkward"
+      - name: "Disappointed"
+        tooltip: "Feeling let down when expectations weren't met"
+      - name: "Devastated"
+        tooltip: "Feeling extremely upset or heartbroken"
       # Other
-      - "Surprised"
-      - "Nostalgic"
-      - "Jealous"
-    tooltips:
-      "Joyful": "Feeling happy, delighted, or cheerful"
-      "Excited": "Feeling enthusiastic, eager, or thrilled"
-      "Proud": "Feeling accomplished or pleased with achievements"
-      "Grateful": "Feeling thankful or appreciative"
-      "Hopeful": "Feeling optimistic about the future"
-      "Content": "Feeling satisfied and at peace"
-      "Sad": "Feeling unhappy, sorrowful, or down"
-      "Anxious": "Feeling worried, nervous, or uneasy"
-      "Angry": "Feeling frustrated, irritated, or mad"
-      "Afraid": "Feeling scared, fearful, or terrified"
-      "Lonely": "Feeling isolated, alone, or disconnected"
-      "Embarrassed": "Feeling self-conscious, ashamed, or awkward"
-      "Disappointed": "Feeling let down when expectations weren't met"
-      "Devastated": "Feeling extremely upset or heartbroken"
-      "Surprised": "Feeling astonished or caught off guard"
-      "Nostalgic": "Feeling wistful about the past"
-      "Jealous": "Feeling envious of others"
+      - name: "Surprised"
+        tooltip: "Feeling astonished or caught off guard"
+      - name: "Nostalgic"
+        tooltip: "Feeling wistful about the past"
+      - name: "Jealous"
+        tooltip: "Feeling envious of others"
 
   # Step 2: Empathy rating
   - annotation_type: likert
     name: empathy_level
     description: "How empathetic is the RESPONSE to the speaker's emotional situation?"
-    min_value: 1
-    max_value: 5
     labels:
       1: "Not empathetic"
       2: "Slightly empathetic"
       3: "Moderately empathetic"
       4: "Very empathetic"
       5: "Extremely empathetic"
-    tooltips:
-      1: "Response ignores or dismisses the emotion"
-      2: "Response shows minimal acknowledgment"
-      3: "Response acknowledges the emotion appropriately"
-      4: "Response shows genuine understanding and care"
-      5: "Response is deeply understanding and supportive"
 
   # Step 3: Empathy type
   - annotation_type: radio
     name: empathy_type
     description: "What type of empathetic response is this?"
     labels:
-      - "Emotional Reaction"
-      - "Interpretation"
-      - "Exploration"
-      - "Mixed"
-      - "Not Empathetic"
-    tooltips:
-      "Emotional Reaction": "Expresses emotions in response (e.g., 'That's wonderful!' or 'I'm so sorry')"
-      "Interpretation": "Shows understanding of the situation (e.g., 'That must have been hard')"
-      "Exploration": "Asks questions to understand better (e.g., 'What happened next?')"
-      "Mixed": "Combines multiple empathy strategies"
-      "Not Empathetic": "Response doesn't demonstrate empathy"
+      - name: "Emotional Reaction"
+        tooltip: "Expresses emotions in response (e.g., 'That's wonderful!' or 'I'm so sorry')"
+      - name: "Interpretation"
+        tooltip: "Shows understanding of the situation (e.g., 'That must have been hard')"
+      - name: "Exploration"
+        tooltip: "Asks questions to understand better (e.g., 'What happened next?')"
+      - name: "Mixed"
+        tooltip: "Combines multiple empathy strategies"
+      - name: "Not Empathetic"
+        tooltip: "Response doesn't demonstrate empathy"
 
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 3

@@ -32,45 +32,33 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - annotation_type: span
     name: entities
     description: "Highlight all named entities and assign their fine-grained type"
     labels:
-      - "Person"
-      - "Location"
-      - "Group"
-      - "CreativeWork"
-      - "Product"
-      - "Medical"
-    label_colors:
-      "Person": "#3b82f6"
-      "Location": "#22c55e"
-      "Group": "#f59e0b"
-      "CreativeWork": "#ec4899"
-      "Product": "#06b6d4"
-      "Medical": "#ef4444"
-    tooltips:
-      "Person": "People: scientists, artists, athletes, politicians, clerics, sports managers, others (e.g., Albert Einstein, Lamine Yamal)"
-      "Location": "Facilities, human settlements, stations, other locations (e.g., Tokyo, Elbphilharmonie, Ohio State Reformatory)"
-      "Group": "Musical groups, public/private corporations, sports groups, aerospace/car manufacturers, and other organizations (e.g., Daft Punk, FC Barcelona, Sony, WHO)"
-      "CreativeWork": "Visual works, musical works, written works, artworks, software (e.g., The Shawshank Redemption, PlayStation 5 Pro games)"
-      "Product": "Clothing, vehicles, food, drink, other products (e.g., iPhone, Boeing 747, Snapdragon 8 Gen 3)"
-      "Medical": "Medications/vaccines, medical procedures, anatomical structures, symptoms, diseases (e.g., COVID-19, remdesivir, rVSV-ZEBOV)"
-    allow_overlapping: false
+      - name: "Person"
+        tooltip: "People: scientists, artists, athletes, politicians, clerics, sports managers, others (e.g., Albert Einstein, Lamine Yamal)"
+        color: "#3b82f6"
+      - name: "Location"
+        tooltip: "Facilities, human settlements, stations, other locations (e.g., Tokyo, Elbphilharmonie, Ohio State Reformatory)"
+        color: "#22c55e"
+      - name: "Group"
+        tooltip: "Musical groups, public/private corporations, sports groups, aerospace/car manufacturers, and other organizations (e.g., Daft Punk, FC Barcelona, Sony, WHO)"
+        color: "#f59e0b"
+      - name: "CreativeWork"
+        tooltip: "Visual works, musical works, written works, artworks, software (e.g., The Shawshank Redemption, PlayStation 5 Pro games)"
+        color: "#ec4899"
+      - name: "Product"
+        tooltip: "Clothing, vehicles, food, drink, other products (e.g., iPhone, Boeing 747, Snapdragon 8 Gen 3)"
+        color: "#06b6d4"
+      - name: "Medical"
+        tooltip: "Medications/vaccines, medical procedures, anatomical structures, symptoms, diseases (e.g., COVID-19, remdesivir, rVSV-ZEBOV)"
+        color: "#ef4444"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4ff; border-radius: 6px;">
-    <strong>Language:</strong> {{language}}
-  </div>
-  <div style="padding: 10px; border: 1px solid #ddd; border-radius: 6px; line-height: 1.8; font-size: 16px;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 100
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 100
+num_annotators_per_item: 2

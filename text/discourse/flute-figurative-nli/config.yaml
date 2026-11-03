@@ -36,7 +36,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Entailment label
@@ -44,51 +44,36 @@ annotation_schemes:
     name: entailment_label
     description: "Based on the figurative meaning of the PREMISE, what is the relationship with the HYPOTHESIS?"
     labels:
-      - "Entailment"
-      - "Contradiction"
-      - "Neutral"
-    keyboard_shortcuts:
-      "Entailment": "e"
-      "Contradiction": "c"
-      "Neutral": "n"
-    tooltips:
-      "Entailment": "The hypothesis follows from the intended (figurative) meaning of the premise"
-      "Contradiction": "The hypothesis contradicts the intended (figurative) meaning of the premise"
-      "Neutral": "The hypothesis is not clearly supported or contradicted by the figurative meaning"
+      - name: "Entailment"
+        tooltip: "The hypothesis follows from the intended (figurative) meaning of the premise"
+        key_value: "e"
+      - name: "Contradiction"
+        tooltip: "The hypothesis contradicts the intended (figurative) meaning of the premise"
+        key_value: "c"
+      - name: "Neutral"
+        tooltip: "The hypothesis is not clearly supported or contradicted by the figurative meaning"
+        key_value: "n"
 
   # Step 2: Figurative language type
   - annotation_type: multiselect
     name: figure_type
     description: "What type(s) of figurative language are present in the premise? (select all that apply)"
     labels:
-      - "Sarcasm"
-      - "Simile"
-      - "Metaphor"
-      - "Idiom"
-    tooltips:
-      "Sarcasm": "The speaker says the opposite of what they mean, often with mocking or ironic intent"
-      "Simile": "An explicit comparison using 'like' or 'as' (e.g., 'fast as lightning')"
-      "Metaphor": "An implicit comparison without 'like' or 'as' (e.g., 'time is money')"
-      "Idiom": "A fixed expression with non-literal meaning (e.g., 'break the ice')"
+      - name: "Sarcasm"
+        tooltip: "The speaker says the opposite of what they mean, often with mocking or ironic intent"
+      - name: "Simile"
+        tooltip: "An explicit comparison using 'like' or 'as' (e.g., 'fast as lightning')"
+      - name: "Metaphor"
+        tooltip: "An implicit comparison without 'like' or 'as' (e.g., 'time is money')"
+      - name: "Idiom"
+        tooltip: "A fixed expression with non-literal meaning (e.g., 'break the ice')"
 
   # Step 3: Explanation of figurative meaning
   - annotation_type: text
     name: explanation
     description: "Explain what the figurative language in the premise literally means and how it relates to the hypothesis"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 10px; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 4px;">
-    <strong>Premise:</strong> {{text}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 4px;">
-    <strong>Hypothesis:</strong> {{hypothesis}}
-  </div>
-  <div style="margin-bottom: 10px; padding: 6px; background: #fefce8; border-radius: 4px;">
-    <em>Figurative type hint:</em> {{figure_type}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 80
-annotation_per_instance: 3
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 80
+num_annotators_per_item: 3

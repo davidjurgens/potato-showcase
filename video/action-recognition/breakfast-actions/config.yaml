@@ -12,7 +12,7 @@ item_properties:
   text_key: "video_url"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   - name: "breakfast_actions"
@@ -80,9 +80,10 @@ annotation_schemes:
     annotation_type: text
     placeholder: "e.g., cup, egg, pan, butter, cereal"
 
-allow_all_users: true
-instances_per_annotator: 25
-annotation_per_instance: 2
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 25
+num_annotators_per_item: 2
 
 annotation_instructions: |
   ## Breakfast Actions Segmentation Task

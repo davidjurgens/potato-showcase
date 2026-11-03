@@ -1,5 +1,4 @@
 annotation_task_name: "Image Segmentation"
-task_name: "Image Segmentation"
 task_description: "Draw precise polygon boundaries around objects."
 task_dir: "."
 port: 8000
@@ -25,4 +24,4 @@ annotation_schemes:
       - "Object"
 
 output_annotation_dir: "output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"

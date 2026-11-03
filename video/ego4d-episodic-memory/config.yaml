@@ -14,36 +14,7 @@ item_properties:
 
 # Output
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
-
-# Display layout for egocentric video
-html_layout: |
-  <div class="ego4d-container" style="font-family: Arial, sans-serif; max-width: 960px; margin: 0 auto;">
-    <div class="metadata-bar" style="display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
-      <div style="background: #e8f5e9; padding: 7px 14px; border-radius: 8px;">
-        <strong>Participant:</strong> {{participant_id}}
-      </div>
-      <div style="background: #e3f2fd; padding: 7px 14px; border-radius: 8px;">
-        <strong>Scenario:</strong> {{scenario}}
-      </div>
-      <div style="background: #fff3e0; padding: 7px 14px; border-radius: 8px;">
-        <strong>Location:</strong> {{location_type}}
-      </div>
-      <div style="background: #f3e5f5; padding: 7px 14px; border-radius: 8px;">
-        <strong>Duration:</strong> {{duration_seconds}}s
-      </div>
-      <div style="background: #e0f2f1; padding: 7px 14px; border-radius: 8px;">
-        <strong>Country:</strong> {{country}}
-      </div>
-    </div>
-    <div class="video-section" style="background: #212121; padding: 12px; border-radius: 8px; margin-bottom: 16px; text-align: center;">
-      <video controls width="100%" style="max-height: 540px; border-radius: 4px;">
-        <source src="{{video_url}}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p style="color: #bdbdbd; font-size: 12px; margin-top: 8px;">Egocentric (first-person) view</p>
-    </div>
-  </div>
+export_annotation_format: "jsonl"
 
 # Annotation schemes
 annotation_schemes:
@@ -138,11 +109,12 @@ annotation_schemes:
         key_value: "6"
 
 # User configuration
-allow_all_users: true
+user_config:
+  allow_all_users: true
 
 # Task assignment
-instances_per_annotator: 30
-annotation_per_instance: 2
+max_annotations_per_user: 30
+num_annotators_per_item: 2
 
 # Detailed annotation instructions
 annotation_instructions: |

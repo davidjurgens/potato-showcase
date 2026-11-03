@@ -38,7 +38,7 @@ item_properties:
   text_key: "text"
 
 output_annotation_dir: "annotation_output/"
-output_annotation_format: "json"
+export_annotation_format: "jsonl"
 
 annotation_schemes:
   # Step 1: Identify clinical entities (Anatomy / Observation) with certainty
@@ -46,58 +46,41 @@ annotation_schemes:
     name: clinical_entities
     description: "Highlight all Anatomy and Observation entities, marking each with a certainty level"
     labels:
-      - "Observation: Definitely Present"
-      - "Observation: Uncertain"
-      - "Observation: Definitely Absent"
-      - "Anatomy: Definitely Present"
-      - "Anatomy: Uncertain"
-      - "Anatomy: Definitely Absent"
-    label_colors:
-      "Observation: Definitely Present": "#ef4444"
-      "Observation: Uncertain": "#f59e0b"
-      "Observation: Definitely Absent": "#9ca3af"
-      "Anatomy: Definitely Present": "#3b82f6"
-      "Anatomy: Uncertain": "#38bdf8"
-      "Anatomy: Definitely Absent": "#a5b4fc"
-    keyboard_shortcuts:
-      "Observation: Definitely Present": "1"
-      "Observation: Uncertain": "2"
-      "Observation: Definitely Absent": "3"
-      "Anatomy: Definitely Present": "4"
-      "Anatomy: Uncertain": "5"
-      "Anatomy: Definitely Absent": "6"
-    tooltips:
-      "Observation: Definitely Present": "A finding stated to be present (e.g., opacity, effusion, consolidation, pneumothorax)"
-      "Observation: Uncertain": "A finding stated with hedging or uncertainty (e.g., 'concerning for', 'possible', 'may represent')"
-      "Observation: Definitely Absent": "A finding explicitly negated (e.g., 'no pericardial effusion', 'lungs are clear')"
-      "Anatomy: Definitely Present": "A body part or anatomical structure referenced as present (e.g., lungs, heart, mediastinum)"
-      "Anatomy: Uncertain": "An anatomical structure referenced with uncertainty"
-      "Anatomy: Definitely Absent": "An anatomical structure referenced as absent (e.g., surgically removed)"
-    allow_overlapping: false
+      - name: "Observation: Definitely Present"
+        tooltip: "A finding stated to be present (e.g., opacity, effusion, consolidation, pneumothorax)"
+        key_value: "1"
+        color: "#ef4444"
+      - name: "Observation: Uncertain"
+        tooltip: "A finding stated with hedging or uncertainty (e.g., 'concerning for', 'possible', 'may represent')"
+        key_value: "2"
+        color: "#f59e0b"
+      - name: "Observation: Definitely Absent"
+        tooltip: "A finding explicitly negated (e.g., 'no pericardial effusion', 'lungs are clear')"
+        key_value: "3"
+        color: "#9ca3af"
+      - name: "Anatomy: Definitely Present"
+        tooltip: "A body part or anatomical structure referenced as present (e.g., lungs, heart, mediastinum)"
+        key_value: "4"
+        color: "#3b82f6"
+      - name: "Anatomy: Uncertain"
+        tooltip: "An anatomical structure referenced with uncertainty"
+        key_value: "5"
+        color: "#38bdf8"
+      - name: "Anatomy: Definitely Absent"
+        tooltip: "An anatomical structure referenced as absent (e.g., surgically removed)"
+        key_value: "6"
+        color: "#a5b4fc"
 
   # Step 2: Link entities with clinical relation types
   - annotation_type: span_link
     name: clinical_relations
     description: "Draw relations between clinical entities"
-    labels:
-      - "located_at"
-      - "suggestive_of"
-      - "modify"
-    tooltips:
-      "located_at": "An Observation is located at an anatomical structure (e.g., opacity located_at right lung)"
-      "suggestive_of": "An Observation suggests or indicates another Observation/condition (e.g., air-fluid level suggestive_of abscess)"
-      "modify": "One entity modifies another of the same type (e.g., 'small' modify effusion; 'lower' modify lobe)"
+    link_types:
+      - name: "located_at"
+      - name: "suggestive_of"
+      - name: "modify"
 
-html_layout: |
-  <div style="margin-bottom: 10px; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-    <strong>Report Section:</strong> {{report_section}}
-  </div>
-  <div style="font-size: 16px; line-height: 1.6; font-family: 'Courier New', monospace;">
-    {{text}}
-  </div>
-
-allow_all_users: true
-instances_per_annotator: 50
-annotation_per_instance: 2
-allow_skip: true
-skip_reason_required: false
+user_config:
+  allow_all_users: true
+max_annotations_per_user: 50
+num_annotators_per_item: 2
