@@ -68,7 +68,7 @@ annotation_schemes:
   - annotation_type: text
     name: rephrase
     description: "If sarcastic, provide a non-sarcastic rephrase that conveys the intended meaning (optional)"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Non-sarcastic rephrase..."
 

@@ -59,7 +59,7 @@ annotation_schemes:
   - annotation_type: text
     name: review_comments
     description: "Provide code review comments noting any issues, bugs, or improvements."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Describe any issues, bugs, or suggested improvements..."
 

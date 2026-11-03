@@ -71,7 +71,7 @@ annotation_schemes:
   - annotation_type: text
     name: reasoning
     description: "Briefly explain why you preferred one response over the other."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "What factors influenced your preference?"
 

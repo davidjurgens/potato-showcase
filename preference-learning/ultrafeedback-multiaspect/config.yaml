@@ -65,7 +65,7 @@ annotation_schemes:
   - annotation_type: text
     name: feedback
     description: "Provide any additional feedback on the response quality."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "What are the strengths and weaknesses of this response?"
 

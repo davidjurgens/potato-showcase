@@ -64,7 +64,7 @@ annotation_schemes:
   - annotation_type: text
     name: explanation
     description: "Briefly explain your reasoning for the selected answer."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Why did you choose this answer?"
 

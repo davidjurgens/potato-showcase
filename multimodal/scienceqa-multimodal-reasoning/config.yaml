@@ -62,7 +62,7 @@ annotation_schemes:
   - annotation_type: text
     name: chain_of_thought
     description: "Provide a step-by-step chain-of-thought explanation for your answer."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Step 1: ... Step 2: ... Therefore, the answer is ..."
 

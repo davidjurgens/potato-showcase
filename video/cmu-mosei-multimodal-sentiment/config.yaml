@@ -120,7 +120,7 @@ annotation_schemes:
   - name: "transcription"
     description: "Transcribe the speaker's utterance verbatim, including fillers and false starts."
     annotation_type: text
-    textarea: true
+    multiline: true
 
 # User configuration
 user_config:

@@ -56,7 +56,7 @@ annotation_schemes:
   - annotation_type: text
     name: notes
     description: "Optional notes (e.g. unsupported claims, missing context)"
-    textarea: true
+    multiline: true
     required: false
 
 annotation_instructions: |

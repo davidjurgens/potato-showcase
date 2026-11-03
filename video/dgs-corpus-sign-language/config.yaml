@@ -131,7 +131,7 @@ annotation_schemes:
   - name: "german_translation"
     description: "Provide a fluent German translation of the signed content in this clip."
     annotation_type: text
-    textarea: true
+    multiline: true
 
 # User configuration
 user_config:

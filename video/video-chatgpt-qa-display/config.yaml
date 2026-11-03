@@ -35,10 +35,6 @@ export_annotation_format: "jsonl"
 port: 8000
 
 annotation_schemes:
-  - annotation_type: video
-    name: video_display
-    description: "Video display for evaluation"
-
   - annotation_type: radio
     name: correctness
     description: "How correct is the model's response based on the video content?"
@@ -59,6 +55,18 @@ annotation_schemes:
     min_label: "Very Poor"
     max_label: "Excellent"
     size: 5
+
+instance_display:
+  fields:
+    - key: "video_url"
+      type: "video"
+      label: "Video"
+    - key: "text"
+      type: "text"
+      label: "Question"
+    - key: "model_response"
+      type: "text"
+      label: "Model response"
 
 annotation_instructions: |
   You will be shown a video, a question about the video, and a model-generated response.

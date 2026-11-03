@@ -75,6 +75,7 @@ annotation_schemes:
       - name: "SUBCLASS-OF"
       - name: "PART-OF"
       - name: "SYNONYM-OF"
+    span_schema: "scientific_entities"
 
 user_config:
   allow_all_users: true

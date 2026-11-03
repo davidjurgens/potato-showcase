@@ -63,7 +63,7 @@ annotation_schemes:
   - annotation_type: text
     name: reasoning
     description: "Explain your reasoning. Reference specific moments or events in the video."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Why did you choose this answer? Reference specific video moments..."
 

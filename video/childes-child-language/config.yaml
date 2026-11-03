@@ -53,7 +53,7 @@ annotation_schemes:
       conventions. Break words into morphemes and mark inflectional morphology
       (e.g., want-3SG, go-PAST, dog-PL).
     annotation_type: text
-    textarea: true
+    multiline: true
 
   # Tier 3: Syntactic annotation (free text)
   - name: "syntax"
@@ -62,7 +62,7 @@ annotation_schemes:
       structure, word order patterns, and any syntactic constructions
       (e.g., SVO, Wh-question, negation, relative clause).
     annotation_type: text
-    textarea: true
+    multiline: true
 
   # Tier 4: Communicative context classification
   - name: "communicative_context"

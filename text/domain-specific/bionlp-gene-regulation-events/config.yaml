@@ -53,6 +53,16 @@ annotation_schemes:
   - annotation_type: event_annotation
     name: regulation_events
     description: "Identify gene regulation events and their types in the text"
+    span_schema: "entity_types"
+    event_types:
+      - type: "Gene_expression"
+      - type: "Transcription"
+      - type: "Protein_catabolism"
+      - type: "Localization"
+      - type: "Binding"
+      - type: "Positive_regulation"
+      - type: "Negative_regulation"
+      - type: "Regulation"
 
 annotation_instructions: |
   Annotate biomedical text for gene regulation events:

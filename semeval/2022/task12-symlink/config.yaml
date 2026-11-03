@@ -58,7 +58,7 @@ annotation_schemes:
   - annotation_type: text
     name: notes
     description: "Notes on additional symbol-description links in this passage (optional)"
-    textarea: true
+    multiline: true
     required: false
 
 annotation_instructions: |

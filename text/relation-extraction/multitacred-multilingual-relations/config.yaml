@@ -133,6 +133,7 @@ annotation_schemes:
       - name: "org:city_of_headquarters"
       - name: "org:country_of_headquarters"
       - name: "no_relation"
+    span_schema: "entities"
 
   # Step 3: Assess translation quality
   - annotation_type: radio

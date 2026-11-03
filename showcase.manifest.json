@@ -1018,8 +1018,7 @@
    "text/named-entity-recognition/conll2003-ner-triage"
   ],
   "video": [
-   "video/summarization/tvsum-summarization",
-   "video/video-chatgpt-qa-display"
+   "video/summarization/tvsum-summarization"
   ],
   "video_annotation": [
    "multimodal/rt2-robotic-action-annotation",
@@ -25867,16 +25866,17 @@
    "sample_items": 10,
    "annotation_types_in_config": [
     "likert",
-    "radio",
+    "radio"
+   ],
+   "display_types": [
+    "text",
     "video"
    ],
-   "display_types": [],
    "scheme_names": [
-    "video_display",
     "correctness",
     "response_quality"
    ],
-   "scheme_count": 3,
+   "scheme_count": 2,
    "has_instructions": true,
    "instruction_words": 53,
    "has_codebook_url": false,

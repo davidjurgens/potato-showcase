@@ -109,6 +109,7 @@ annotation_schemes:
       - name: "type-of"
       - name: "usage"
       - name: "win-defeat"
+    span_schema: "entities"
 
   # Step 3: Optional annotator notes
   - annotation_type: text

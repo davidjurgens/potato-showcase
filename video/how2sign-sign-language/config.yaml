@@ -83,7 +83,7 @@ annotation_schemes:
   - name: "english_translation"
     description: "Provide a fluent English translation of the signed content in this clip."
     annotation_type: text
-    textarea: true
+    multiline: true
 
   # Tier 5: ASL gloss notation (free text)
   - name: "gloss_text"
@@ -92,7 +92,7 @@ annotation_schemes:
       conventions (e.g., UPPERCASE for glosses, fs- prefix for fingerspelling,
       IX for pointing, CL: for classifiers).
     annotation_type: text
-    textarea: true
+    multiline: true
 
 # User configuration
 user_config:

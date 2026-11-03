@@ -64,6 +64,7 @@ annotation_schemes:
       - name: "IS_INCLUDED"
       - name: "SIMULTANEOUS"
       - name: "VAGUE"
+    span_schema: "temporal_mentions"
 
   # Step 3: Confidence in relation judgments
   - annotation_type: radio

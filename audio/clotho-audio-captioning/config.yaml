@@ -40,7 +40,7 @@ annotation_schemes:
   - annotation_type: text
     name: caption
     description: "Write a natural language caption describing the audio content. Include all notable sounds and events."
-    textarea: true
+    multiline: true
     min_chars: 10
     placeholder: "Describe what you hear in this audio clip..."
 

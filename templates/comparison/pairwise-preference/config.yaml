@@ -73,7 +73,7 @@ annotation_schemes:
   - annotation_type: text
     name: justification
     description: "Briefly explain your preference"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Why did you prefer one response over the other?"
 

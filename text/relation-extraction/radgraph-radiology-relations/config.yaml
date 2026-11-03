@@ -79,6 +79,7 @@ annotation_schemes:
       - name: "located_at"
       - name: "suggestive_of"
       - name: "modify"
+    span_schema: "clinical_entities"
 
 user_config:
   allow_all_users: true

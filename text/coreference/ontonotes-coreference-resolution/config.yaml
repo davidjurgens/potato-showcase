@@ -45,6 +45,7 @@ annotation_schemes:
   - annotation_type: coreference
     name: coreference_chains
     description: "Link mentions that refer to the same real-world entity into coreference chains"
+    span_schema: "mention_spans"
 
 annotation_instructions: |
   Annotate coreference relations in the text:

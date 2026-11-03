@@ -37,17 +37,19 @@ annotation_schemes:
     description: "Valence: how pleasant/positive does the writer feel? (1 = very unpleasant, 9 = very pleasant)"
     min_value: 1
     max_value: 9
+    starting_value: 5
 
   - annotation_type: slider
     name: arousal
     description: "Arousal: how activated/energized does the writer feel? (1 = very calm, 9 = very activated)"
     min_value: 1
     max_value: 9
+    starting_value: 5
 
   - annotation_type: text
     name: notes
     description: "Optional notes on cues that informed your rating"
-    textarea: true
+    multiline: true
     required: false
 
 annotation_instructions: |

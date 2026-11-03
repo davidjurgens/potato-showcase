@@ -50,12 +50,14 @@ annotation_schemes:
     description: "Valence of the sentiment toward this aspect (1 = very negative, 5 = neutral, 9 = very positive)"
     min_value: 1
     max_value: 9
+    starting_value: 5
 
   - annotation_type: slider
     name: arousal
     description: "Arousal of the sentiment toward this aspect (1 = very calm, 9 = very intense)"
     min_value: 1
     max_value: 9
+    starting_value: 5
 
   - annotation_type: text
     name: aspect_category

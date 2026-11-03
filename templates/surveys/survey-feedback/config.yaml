@@ -107,7 +107,7 @@ annotation_schemes:
   - annotation_type: text
     name: likes
     description: "What do you like most about the product?"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Tell us what's working well..."
 
@@ -115,7 +115,7 @@ annotation_schemes:
   - annotation_type: text
     name: improvements
     description: "What could be improved?"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Share your suggestions..."
 
@@ -123,7 +123,7 @@ annotation_schemes:
   - annotation_type: text
     name: additional_feedback
     description: "Any other feedback or comments?"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Anything else you'd like to share..."
 

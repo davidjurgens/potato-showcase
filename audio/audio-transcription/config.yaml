@@ -52,7 +52,7 @@ annotation_schemes:
   - annotation_type: text
     name: corrected_transcript
     description: "Provide the corrected transcript (if needed)"
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Type the corrected version here..."
 
@@ -77,7 +77,7 @@ annotation_schemes:
   - annotation_type: text
     name: notes
     description: "Any additional notes? (Optional)"
-    textarea: true
+    multiline: true
     required: false
 
 max_annotations_per_user: 100

@@ -60,7 +60,7 @@ annotation_schemes:
   - annotation_type: text
     name: reasoning
     description: "Briefly explain why you chose this answer. Reference specific events or moments in the video."
-    textarea: true
+    multiline: true
     required: false
     placeholder: "Explain your reasoning..."
 

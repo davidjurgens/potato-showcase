@@ -105,6 +105,7 @@ annotation_schemes:
       - name: "capital (P36)"
       - name: "language (P407)"
       - name: "inception (P571)"
+    span_schema: "entities"
 
 user_config:
   allow_all_users: true

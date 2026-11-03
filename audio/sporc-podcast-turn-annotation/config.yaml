@@ -123,6 +123,8 @@ annotation_schemes:
     name: diarization_quality
     description: "Overall, how well does the diarized transcript reflect the audio? (1 = very poor, 5 = excellent)"
     size: 5
+    min_label: "Very poor"
+    max_label: "Excellent"
 
   - annotation_type: text
     name: host_names
